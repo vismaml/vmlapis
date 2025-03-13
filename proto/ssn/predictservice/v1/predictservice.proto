@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ssn.predictservice.v1;
+
+// Import Triton's gRPC service definitions
+import "triton-inference-server/common/protobuf/grpc_service.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/predictservice/v1;predictservice";
+option java_outer_classname = "PredictServiceProtos";
+
+service PredictService {
+  rpc Predict(ModelInferRequest) returns (ModelInferResponse);
+}
