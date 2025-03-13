@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package ssn.predictservice.v1;
 
-
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/predictservice/v1;predictservice";
 option java_outer_classname = "PredictServiceProtos";
 
@@ -31,7 +30,6 @@ message InferTensorContents {
   repeated double fp64_contents = 7;
   repeated bytes bytes_contents = 8;
 }
-
 
 message ModelInferRequest {
   message InferInputTensor {
@@ -72,4 +70,3 @@ message ModelInferResponse {
   repeated InferOutputTensor outputs = 5;
   repeated bytes raw_output_contents = 6;
 }
-
