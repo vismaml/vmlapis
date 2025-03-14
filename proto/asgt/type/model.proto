@@ -25,6 +25,7 @@ message Model {
   string dataset_type = 9;
   repeated asgt.type.ModelFile model_files = 10 [(gen_bq_schema.bigquery).ignore = true];
   map<string, ConfidenceThresholds> target_to_confidence_thresholds = 12 [(gen_bq_schema.bigquery).ignore = true];
+  map<string, ConfidenceThresholds> target_tail_to_confidence_thresholds = 13 [(gen_bq_schema.bigquery).ignore = true];
 }
 
 message ConfidenceThresholds {
