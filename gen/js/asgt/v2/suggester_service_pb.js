@@ -23,6 +23,8 @@ var global =
 
 var asgt_type_model_pb = require('../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_model_type_pb = require('../../asgt/type/model_type_pb.js');
+goog.object.extend(proto, asgt_type_model_type_pb);
 var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js');
@@ -176,7 +178,8 @@ proto.asgt.v2.SuggestOptions.prototype.toObject = function(opt_includeInstance) 
 proto.asgt.v2.SuggestOptions.toObject = function(includeInstance, msg) {
   var f, obj = {
     suggestLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -221,6 +224,10 @@ proto.asgt.v2.SuggestOptions.deserializeBinaryFromReader = function(msg, reader)
       var value = /** @type {!proto.asgt.type.Confidence.Level} */ (reader.readEnum());
       msg.setMinConfidence(value);
       break;
+    case 3:
+      var value = /** @type {!proto.asgt.type.ModelType} */ (reader.readEnum());
+      msg.setModelType(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -264,6 +271,13 @@ proto.asgt.v2.SuggestOptions.serializeBinaryToWriter = function(message, writer)
       f
     );
   }
+  f = message.getModelType();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -300,6 +314,24 @@ proto.asgt.v2.SuggestOptions.prototype.getMinConfidence = function() {
  */
 proto.asgt.v2.SuggestOptions.prototype.setMinConfidence = function(value) {
   return jspb.Message.setProto3EnumField(this, 2, value);
+};
+
+
+/**
+ * optional asgt.type.ModelType model_type = 3;
+ * @return {!proto.asgt.type.ModelType}
+ */
+proto.asgt.v2.SuggestOptions.prototype.getModelType = function() {
+  return /** @type {!proto.asgt.type.ModelType} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {!proto.asgt.type.ModelType} value
+ * @return {!proto.asgt.v2.SuggestOptions} returns this
+ */
+proto.asgt.v2.SuggestOptions.prototype.setModelType = function(value) {
+  return jspb.Message.setProto3EnumField(this, 3, value);
 };
 
 

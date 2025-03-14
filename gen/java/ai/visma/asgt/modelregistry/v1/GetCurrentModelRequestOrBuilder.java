@@ -23,4 +23,15 @@ public interface GetCurrentModelRequestOrBuilder extends
    * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
    */
   ai.visma.asgt.type.DatasetOrBuilder getDatasetOrBuilder();
+
+  /**
+   * <code>.asgt.type.ModelType model_type = 2 [json_name = "modelType"];</code>
+   * @return The enum numeric value on the wire for modelType.
+   */
+  int getModelTypeValue();
+  /**
+   * <code>.asgt.type.ModelType model_type = 2 [json_name = "modelType"];</code>
+   * @return The modelType.
+   */
+  ai.visma.asgt.type.ModelType getModelType();
 }

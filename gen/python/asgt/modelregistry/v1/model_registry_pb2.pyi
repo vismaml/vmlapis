@@ -1,6 +1,7 @@
 from asgt.type import dataset_pb2 as _dataset_pb2
 from asgt.type import dataset_statistics_pb2 as _dataset_statistics_pb2
 from asgt.type import model_pb2 as _model_pb2
+from asgt.type import model_type_pb2 as _model_type_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.type import revision_pb2 as _revision_pb2
 from asgt.type import target_metrics_pb2 as _target_metrics_pb2
@@ -52,10 +53,12 @@ class RegisterModelRequest(_message.Message):
     def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., revision: _Optional[_Union[_revision_pb2.Revision, _Mapping]] = ..., model_version: _Optional[int] = ..., metrics: _Optional[_Mapping[str, int]] = ..., target_metrics: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[_model_pb2.Model.InputType, str]] = ..., train_statistics: _Optional[_Union[_train_statistics_pb2.TrainStatistics, _Mapping]] = ..., dataset_statistics: _Optional[_Union[_dataset_statistics_pb2.DatasetStatistics, _Mapping]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, _model_pb2.ConfidenceThresholds]] = ..., metric_version: _Optional[str] = ...) -> None: ...
 
 class GetCurrentModelRequest(_message.Message):
-    __slots__ = ("dataset",)
+    __slots__ = ("dataset", "model_type")
     DATASET_FIELD_NUMBER: _ClassVar[int]
+    MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     dataset: _dataset_pb2.Dataset
-    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ...) -> None: ...
+    model_type: _model_type_pb2.ModelType
+    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ...) -> None: ...
 
 class GetCurrentModelResponse(_message.Message):
     __slots__ = ("model",)

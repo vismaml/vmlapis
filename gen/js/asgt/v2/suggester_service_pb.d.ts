@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as asgt_type_model_pb from '../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_model_type_pb from '../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
 import * as asgt_v2_type_data_pb from '../../asgt/v2/type/data_pb'; // proto import: "asgt/v2/type/data.proto"
 import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
@@ -15,6 +16,9 @@ export class SuggestOptions extends jspb.Message {
   getMinConfidence(): asgt_type_prediction_pb.Confidence.Level;
   setMinConfidence(value: asgt_type_prediction_pb.Confidence.Level): SuggestOptions;
 
+  getModelType(): asgt_type_model_type_pb.ModelType;
+  setModelType(value: asgt_type_model_type_pb.ModelType): SuggestOptions;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestOptions.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestOptions): SuggestOptions.AsObject;
@@ -27,6 +31,7 @@ export namespace SuggestOptions {
   export type AsObject = {
     suggestLimit: number,
     minConfidence: asgt_type_prediction_pb.Confidence.Level,
+    modelType: asgt_type_model_type_pb.ModelType,
   }
 }
 

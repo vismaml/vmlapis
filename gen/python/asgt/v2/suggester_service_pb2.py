@@ -23,6 +23,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from vml_proto.asgt.type import model_type_pb2 as asgt_dot_type_dot_model__type__pb2
 from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from vml_proto.asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
 from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -30,7 +31,7 @@ from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__ge
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/suggester_service.proto\x12\x07\x61sgt.v2\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x9e\x01\n\x0eSuggestOptions\x12#\n\rsuggest_limit\x18\x01 \x01(\x05R\x0csuggestLimit\x12L\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\rminConfidence:\x19\x92\x41\x16\x32\x14{\"suggest_limit\": 3}\"\xba\x01\n\x0eSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x05input\x18\x02 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x05input\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"p\n\x0fSuggestResponse\x12\x35\n\nprediction\x18\x01 \x01(\x0b\x32\x15.asgt.type.PredictionR\nprediction\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\"\xc1\x01\n\x13\x42\x61tchSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12*\n\x06inputs\x18\x02 \x03(\x0b\x32\x12.asgt.v2.type.DataR\x06inputs\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"w\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\xbb\x03\n\x10SuggesterService\x12l\n\x07Suggest\x12\x17.asgt.v2.SuggestRequest\x1a\x18.asgt.v2.SuggestResponse\".\x82\xd3\xe4\x93\x02(\"#/v2/datasets/{dataset_name}:suggest:\x01*\x12\x80\x01\n\x0c\x42\x61tchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"3\x82\xd3\xe4\x93\x02-\"(/v2/datasets/{dataset_name}:batchSuggest:\x01*\x12\x8b\x01\n\x11ModelBatchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"9\x82\xd3\xe4\x93\x02\x33\"./v2/datasets/{dataset_name}/model:batchSuggest:\x01*\x1a(\x92\x41%\x12#Make predictions against a dataset.BjZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/suggester_service.proto\x12\x07\x61sgt.v2\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/model_type.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xdd\x01\n\x0eSuggestOptions\x12#\n\rsuggest_limit\x18\x01 \x01(\x05R\x0csuggestLimit\x12L\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\rminConfidence\x12=\n\nmodel_type\x18\x03 \x01(\x0e\x32\x14.asgt.type.ModelTypeB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\tmodelType:\x19\x92\x41\x16\x32\x14{\"suggest_limit\": 3}\"\xba\x01\n\x0eSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x05input\x18\x02 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x05input\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"p\n\x0fSuggestResponse\x12\x35\n\nprediction\x18\x01 \x01(\x0b\x32\x15.asgt.type.PredictionR\nprediction\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\"\xc1\x01\n\x13\x42\x61tchSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12*\n\x06inputs\x18\x02 \x03(\x0b\x32\x12.asgt.v2.type.DataR\x06inputs\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"w\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\xbb\x03\n\x10SuggesterService\x12l\n\x07Suggest\x12\x17.asgt.v2.SuggestRequest\x1a\x18.asgt.v2.SuggestResponse\".\x82\xd3\xe4\x93\x02(\"#/v2/datasets/{dataset_name}:suggest:\x01*\x12\x80\x01\n\x0c\x42\x61tchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"3\x82\xd3\xe4\x93\x02-\"(/v2/datasets/{dataset_name}:batchSuggest:\x01*\x12\x8b\x01\n\x11ModelBatchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"9\x82\xd3\xe4\x93\x02\x33\"./v2/datasets/{dataset_name}/model:batchSuggest:\x01*\x1a(\x92\x41%\x12#Make predictions against a dataset.BjZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -40,6 +41,8 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._serialized_options = b'Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2\222A:\022\021\n\013AutoSuggest2\002v2*\001\0022\020application/json:\020application/json'
   _globals['_SUGGESTOPTIONS'].fields_by_name['min_confidence']._loaded_options = None
   _globals['_SUGGESTOPTIONS'].fields_by_name['min_confidence']._serialized_options = b'\372B\005\202\001\002\020\001'
+  _globals['_SUGGESTOPTIONS'].fields_by_name['model_type']._loaded_options = None
+  _globals['_SUGGESTOPTIONS'].fields_by_name['model_type']._serialized_options = b'\372B\005\202\001\002\020\001'
   _globals['_SUGGESTOPTIONS']._loaded_options = None
   _globals['_SUGGESTOPTIONS']._serialized_options = b'\222A\0262\024{\"suggest_limit\": 3}'
   _globals['_SUGGESTREQUEST'].fields_by_name['dataset_name']._loaded_options = None
@@ -54,16 +57,16 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_SUGGESTERSERVICE'].methods_by_name['BatchSuggest']._serialized_options = b'\202\323\344\223\002-\"(/v2/datasets/{dataset_name}:batchSuggest:\001*'
   _globals['_SUGGESTERSERVICE'].methods_by_name['ModelBatchSuggest']._loaded_options = None
   _globals['_SUGGESTERSERVICE'].methods_by_name['ModelBatchSuggest']._serialized_options = b'\202\323\344\223\0023\"./v2/datasets/{dataset_name}/model:batchSuggest:\001*'
-  _globals['_SUGGESTOPTIONS']._serialized_start=224
-  _globals['_SUGGESTOPTIONS']._serialized_end=382
-  _globals['_SUGGESTREQUEST']._serialized_start=385
-  _globals['_SUGGESTREQUEST']._serialized_end=571
-  _globals['_SUGGESTRESPONSE']._serialized_start=573
-  _globals['_SUGGESTRESPONSE']._serialized_end=685
-  _globals['_BATCHSUGGESTREQUEST']._serialized_start=688
-  _globals['_BATCHSUGGESTREQUEST']._serialized_end=881
-  _globals['_BATCHSUGGESTRESPONSE']._serialized_start=883
-  _globals['_BATCHSUGGESTRESPONSE']._serialized_end=1002
-  _globals['_SUGGESTERSERVICE']._serialized_start=1005
-  _globals['_SUGGESTERSERVICE']._serialized_end=1448
+  _globals['_SUGGESTOPTIONS']._serialized_start=252
+  _globals['_SUGGESTOPTIONS']._serialized_end=473
+  _globals['_SUGGESTREQUEST']._serialized_start=476
+  _globals['_SUGGESTREQUEST']._serialized_end=662
+  _globals['_SUGGESTRESPONSE']._serialized_start=664
+  _globals['_SUGGESTRESPONSE']._serialized_end=776
+  _globals['_BATCHSUGGESTREQUEST']._serialized_start=779
+  _globals['_BATCHSUGGESTREQUEST']._serialized_end=972
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_start=974
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_end=1093
+  _globals['_SUGGESTERSERVICE']._serialized_start=1096
+  _globals['_SUGGESTERSERVICE']._serialized_end=1539
 # @@protoc_insertion_point(module_scope)

@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
 import * as asgt_type_dataset_statistics_pb from '../../../asgt/type/dataset_statistics_pb'; // proto import: "asgt/type/dataset_statistics.proto"
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_model_type_pb from '../../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
 import * as asgt_type_revision_pb from '../../../asgt/type/revision_pb'; // proto import: "asgt/type/revision.proto"
 import * as asgt_type_target_metrics_pb from '../../../asgt/type/target_metrics_pb'; // proto import: "asgt/type/target_metrics.proto"
@@ -80,6 +81,9 @@ export class GetCurrentModelRequest extends jspb.Message {
   hasDataset(): boolean;
   clearDataset(): GetCurrentModelRequest;
 
+  getModelType(): asgt_type_model_type_pb.ModelType;
+  setModelType(value: asgt_type_model_type_pb.ModelType): GetCurrentModelRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetCurrentModelRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetCurrentModelRequest): GetCurrentModelRequest.AsObject;
@@ -91,6 +95,7 @@ export class GetCurrentModelRequest extends jspb.Message {
 export namespace GetCurrentModelRequest {
   export type AsObject = {
     dataset?: asgt_type_dataset_pb.Dataset.AsObject,
+    modelType: asgt_type_model_type_pb.ModelType,
   }
 }
 

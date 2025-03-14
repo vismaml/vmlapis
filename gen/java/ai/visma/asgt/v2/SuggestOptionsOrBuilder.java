@@ -37,4 +37,23 @@ public interface SuggestOptionsOrBuilder extends
    * @return The minConfidence.
    */
   ai.visma.asgt.type.Confidence.Level getMinConfidence();
+
+  /**
+   * <pre>
+   * Model type requested
+   * </pre>
+   *
+   * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
+   * @return The enum numeric value on the wire for modelType.
+   */
+  int getModelTypeValue();
+  /**
+   * <pre>
+   * Model type requested
+   * </pre>
+   *
+   * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
+   * @return The modelType.
+   */
+  ai.visma.asgt.type.ModelType getModelType();
 }
