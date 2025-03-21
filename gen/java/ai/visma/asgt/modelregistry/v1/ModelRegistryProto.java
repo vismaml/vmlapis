@@ -63,50 +63,52 @@ public final class ModelRegistryProto {
       "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
       "ataset.proto\032\"asgt/type/dataset_statisti" +
       "cs.proto\032\025asgt/type/model.proto\032\032asgt/ty" +
-      "pe/prediction.proto\032\030asgt/type/revision." +
-      "proto\032\036asgt/type/target_metrics.proto\032 a" +
-      "sgt/type/train_statistics.proto\032\033google/" +
-      "protobuf/empty.proto\"\360\006\n\024RegisterModelRe" +
-      "quest\022,\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
-      "etR\007dataset\022/\n\010revision\030\002 \001(\0132\023.asgt.typ" +
-      "e.RevisionR\010revision\022#\n\rmodel_version\030\003 " +
-      "\001(\003R\014modelVersion\022R\n\007metrics\030\004 \003(\01328.asg" +
-      "t.modelregistry.v1.RegisterModelRequest." +
-      "MetricsEntryR\007metrics\022?\n\016target_metrics\030" +
-      "\005 \003(\0132\030.asgt.type.TargetMetricsR\rtargetM" +
-      "etrics\0229\n\ninput_type\030\006 \001(\0162\032.asgt.type.M" +
-      "odel.InputTypeR\tinputType\022E\n\020train_stati" +
-      "stics\030\007 \001(\0132\032.asgt.type.TrainStatisticsR" +
-      "\017trainStatistics\022K\n\022dataset_statistics\030\010" +
-      " \001(\0132\034.asgt.type.DatasetStatisticsR\021data" +
-      "setStatistics\022\224\001\n\037target_to_confidence_t" +
-      "hresholds\030\n \003(\0132M.asgt.modelregistry.v1." +
-      "RegisterModelRequest.TargetToConfidenceT" +
-      "hresholdsEntryR\034targetToConfidenceThresh" +
-      "olds\022%\n\016metric_version\030\013 \001(\tR\rmetricVers" +
-      "ion\032:\n\014MetricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\005R\005value:\0028\001\032p\n!TargetToConfi" +
-      "denceThresholdsEntry\022\020\n\003key\030\001 \001(\tR\003key\0225" +
-      "\n\005value\030\002 \001(\0132\037.asgt.type.ConfidenceThre" +
-      "sholdsR\005value:\0028\001J\004\010\t\020\n\"F\n\026GetCurrentMod" +
-      "elRequest\022,\n\007dataset\030\001 \001(\0132\022.asgt.type.D" +
-      "atasetR\007dataset\"A\n\027GetCurrentModelRespon" +
-      "se\022&\n\005model\030\001 \001(\0132\020.asgt.type.ModelR\005mod" +
-      "el2\315\002\n\rModelRegistry\022T\n\rRegisterModel\022+." +
-      "asgt.modelregistry.v1.RegisterModelReque" +
-      "st\032\026.google.protobuf.Empty\022p\n\017GetCurrent" +
-      "Model\022-.asgt.modelregistry.v1.GetCurrent" +
-      "ModelRequest\032..asgt.modelregistry.v1.Get" +
-      "CurrentModelResponse\022t\n\023GetCurrentFullMo" +
-      "del\022-.asgt.modelregistry.v1.GetCurrentMo" +
-      "delRequest\032..asgt.modelregistry.v1.GetCu" +
-      "rrentModelResponseB\363\001\n\036ai.visma.asgt.mod" +
-      "elregistry.v1B\022ModelRegistryProtoP\001ZGgit" +
-      "hub.com/e-conomic/vmlapis/gen/go/asgt/mo" +
-      "delregistry/v1;modelregistry\242\002\003AMX\252\002\025Asg" +
-      "t.Modelregistry.V1\312\002\025Asgt\\Modelregistry\\" +
-      "V1\342\002!Asgt\\Modelregistry\\V1\\GPBMetadata\352\002" +
-      "\027Asgt::Modelregistry::V1b\006proto3"
+      "pe/model_type.proto\032\032asgt/type/predictio" +
+      "n.proto\032\030asgt/type/revision.proto\032\036asgt/" +
+      "type/target_metrics.proto\032 asgt/type/tra" +
+      "in_statistics.proto\032\033google/protobuf/emp" +
+      "ty.proto\"\360\006\n\024RegisterModelRequest\022,\n\007dat" +
+      "aset\030\001 \001(\0132\022.asgt.type.DatasetR\007dataset\022" +
+      "/\n\010revision\030\002 \001(\0132\023.asgt.type.RevisionR\010" +
+      "revision\022#\n\rmodel_version\030\003 \001(\003R\014modelVe" +
+      "rsion\022R\n\007metrics\030\004 \003(\01328.asgt.modelregis" +
+      "try.v1.RegisterModelRequest.MetricsEntry" +
+      "R\007metrics\022?\n\016target_metrics\030\005 \003(\0132\030.asgt" +
+      ".type.TargetMetricsR\rtargetMetrics\0229\n\nin" +
+      "put_type\030\006 \001(\0162\032.asgt.type.Model.InputTy" +
+      "peR\tinputType\022E\n\020train_statistics\030\007 \001(\0132" +
+      "\032.asgt.type.TrainStatisticsR\017trainStatis" +
+      "tics\022K\n\022dataset_statistics\030\010 \001(\0132\034.asgt." +
+      "type.DatasetStatisticsR\021datasetStatistic" +
+      "s\022\224\001\n\037target_to_confidence_thresholds\030\n " +
+      "\003(\0132M.asgt.modelregistry.v1.RegisterMode" +
+      "lRequest.TargetToConfidenceThresholdsEnt" +
+      "ryR\034targetToConfidenceThresholds\022%\n\016metr" +
+      "ic_version\030\013 \001(\tR\rmetricVersion\032:\n\014Metri" +
+      "csEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\005" +
+      "R\005value:\0028\001\032p\n!TargetToConfidenceThresho" +
+      "ldsEntry\022\020\n\003key\030\001 \001(\tR\003key\0225\n\005value\030\002 \001(" +
+      "\0132\037.asgt.type.ConfidenceThresholdsR\005valu" +
+      "e:\0028\001J\004\010\t\020\n\"{\n\026GetCurrentModelRequest\022,\n" +
+      "\007dataset\030\001 \001(\0132\022.asgt.type.DatasetR\007data" +
+      "set\0223\n\nmodel_type\030\002 \001(\0162\024.asgt.type.Mode" +
+      "lTypeR\tmodelType\"A\n\027GetCurrentModelRespo" +
+      "nse\022&\n\005model\030\001 \001(\0132\020.asgt.type.ModelR\005mo" +
+      "del2\315\002\n\rModelRegistry\022T\n\rRegisterModel\022+" +
+      ".asgt.modelregistry.v1.RegisterModelRequ" +
+      "est\032\026.google.protobuf.Empty\022p\n\017GetCurren" +
+      "tModel\022-.asgt.modelregistry.v1.GetCurren" +
+      "tModelRequest\032..asgt.modelregistry.v1.Ge" +
+      "tCurrentModelResponse\022t\n\023GetCurrentFullM" +
+      "odel\022-.asgt.modelregistry.v1.GetCurrentM" +
+      "odelRequest\032..asgt.modelregistry.v1.GetC" +
+      "urrentModelResponseB\363\001\n\036ai.visma.asgt.mo" +
+      "delregistry.v1B\022ModelRegistryProtoP\001ZGgi" +
+      "thub.com/e-conomic/vmlapis/gen/go/asgt/m" +
+      "odelregistry/v1;modelregistry\242\002\003AMX\252\002\025As" +
+      "gt.Modelregistry.V1\312\002\025Asgt\\Modelregistry" +
+      "\\V1\342\002!Asgt\\Modelregistry\\V1\\GPBMetadata\352" +
+      "\002\027Asgt::Modelregistry::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -114,6 +116,7 @@ public final class ModelRegistryProto {
           ai.visma.asgt.type.DatasetProto.getDescriptor(),
           ai.visma.asgt.type.DatasetStatisticsProto.getDescriptor(),
           ai.visma.asgt.type.ModelProto.getDescriptor(),
+          ai.visma.asgt.type.ModelTypeProto.getDescriptor(),
           ai.visma.asgt.type.PredictionProto.getDescriptor(),
           ai.visma.asgt.type.RevisionProto.getDescriptor(),
           ai.visma.asgt.type.TargetMetricsProto.getDescriptor(),
@@ -143,7 +146,7 @@ public final class ModelRegistryProto {
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", });
+        new java.lang.String[] { "Dataset", "ModelType", });
     internal_static_asgt_modelregistry_v1_GetCurrentModelResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_modelregistry_v1_GetCurrentModelResponse_fieldAccessorTable = new
@@ -154,6 +157,7 @@ public final class ModelRegistryProto {
     ai.visma.asgt.type.DatasetProto.getDescriptor();
     ai.visma.asgt.type.DatasetStatisticsProto.getDescriptor();
     ai.visma.asgt.type.ModelProto.getDescriptor();
+    ai.visma.asgt.type.ModelTypeProto.getDescriptor();
     ai.visma.asgt.type.PredictionProto.getDescriptor();
     ai.visma.asgt.type.RevisionProto.getDescriptor();
     ai.visma.asgt.type.TargetMetricsProto.getDescriptor();

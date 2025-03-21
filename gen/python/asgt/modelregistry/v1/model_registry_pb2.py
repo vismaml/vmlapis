@@ -25,6 +25,7 @@ _sym_db = _symbol_database.Default()
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.type import dataset_statistics_pb2 as asgt_dot_type_dot_dataset__statistics__pb2
 from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from vml_proto.asgt.type import model_type_pb2 as asgt_dot_type_dot_model__type__pb2
 from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from vml_proto.asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
 from vml_proto.asgt.type import target_metrics_pb2 as asgt_dot_type_dot_target__metrics__pb2
@@ -32,7 +33,7 @@ from vml_proto.asgt.type import train_statistics_pb2 as asgt_dot_type_dot_train_
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\"asgt/type/dataset_statistics.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a asgt/type/train_statistics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xf0\x06\n\x14RegisterModelRequest\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12/\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.RevisionR\x08revision\x12#\n\rmodel_version\x18\x03 \x01(\x03R\x0cmodelVersion\x12R\n\x07metrics\x18\x04 \x03(\x0b\x32\x38.asgt.modelregistry.v1.RegisterModelRequest.MetricsEntryR\x07metrics\x12?\n\x0etarget_metrics\x18\x05 \x03(\x0b\x32\x18.asgt.type.TargetMetricsR\rtargetMetrics\x12\x39\n\ninput_type\x18\x06 \x01(\x0e\x32\x1a.asgt.type.Model.InputTypeR\tinputType\x12\x45\n\x10train_statistics\x18\x07 \x01(\x0b\x32\x1a.asgt.type.TrainStatisticsR\x0ftrainStatistics\x12K\n\x12\x64\x61taset_statistics\x18\x08 \x01(\x0b\x32\x1c.asgt.type.DatasetStatisticsR\x11\x64\x61tasetStatistics\x12\x94\x01\n\x1ftarget_to_confidence_thresholds\x18\n \x03(\x0b\x32M.asgt.modelregistry.v1.RegisterModelRequest.TargetToConfidenceThresholdsEntryR\x1ctargetToConfidenceThresholds\x12%\n\x0emetric_version\x18\x0b \x01(\tR\rmetricVersion\x1a:\n\x0cMetricsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x05R\x05value:\x02\x38\x01\x1ap\n!TargetToConfidenceThresholdsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x35\n\x05value\x18\x02 \x01(\x0b\x32\x1f.asgt.type.ConfidenceThresholdsR\x05value:\x02\x38\x01J\x04\x08\t\x10\n\"F\n\x16GetCurrentModelRequest\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\"A\n\x17GetCurrentModelResponse\x12&\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\xcd\x02\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponse\x12t\n\x13GetCurrentFullModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseBIZGgithub.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistryb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\"asgt/type/dataset_statistics.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/model_type.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a asgt/type/train_statistics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xf0\x06\n\x14RegisterModelRequest\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12/\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.RevisionR\x08revision\x12#\n\rmodel_version\x18\x03 \x01(\x03R\x0cmodelVersion\x12R\n\x07metrics\x18\x04 \x03(\x0b\x32\x38.asgt.modelregistry.v1.RegisterModelRequest.MetricsEntryR\x07metrics\x12?\n\x0etarget_metrics\x18\x05 \x03(\x0b\x32\x18.asgt.type.TargetMetricsR\rtargetMetrics\x12\x39\n\ninput_type\x18\x06 \x01(\x0e\x32\x1a.asgt.type.Model.InputTypeR\tinputType\x12\x45\n\x10train_statistics\x18\x07 \x01(\x0b\x32\x1a.asgt.type.TrainStatisticsR\x0ftrainStatistics\x12K\n\x12\x64\x61taset_statistics\x18\x08 \x01(\x0b\x32\x1c.asgt.type.DatasetStatisticsR\x11\x64\x61tasetStatistics\x12\x94\x01\n\x1ftarget_to_confidence_thresholds\x18\n \x03(\x0b\x32M.asgt.modelregistry.v1.RegisterModelRequest.TargetToConfidenceThresholdsEntryR\x1ctargetToConfidenceThresholds\x12%\n\x0emetric_version\x18\x0b \x01(\tR\rmetricVersion\x1a:\n\x0cMetricsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x05R\x05value:\x02\x38\x01\x1ap\n!TargetToConfidenceThresholdsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x35\n\x05value\x18\x02 \x01(\x0b\x32\x1f.asgt.type.ConfidenceThresholdsR\x05value:\x02\x38\x01J\x04\x08\t\x10\n\"{\n\x16GetCurrentModelRequest\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12\x33\n\nmodel_type\x18\x02 \x01(\x0e\x32\x14.asgt.type.ModelTypeR\tmodelType\"A\n\x17GetCurrentModelResponse\x12&\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\xcd\x02\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponse\x12t\n\x13GetCurrentFullModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseBIZGgithub.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistryb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -44,16 +45,16 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_REGISTERMODELREQUEST_METRICSENTRY']._serialized_options = b'8\001'
   _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._loaded_options = None
   _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._serialized_options = b'8\001'
-  _globals['_REGISTERMODELREQUEST']._serialized_start=303
-  _globals['_REGISTERMODELREQUEST']._serialized_end=1183
-  _globals['_REGISTERMODELREQUEST_METRICSENTRY']._serialized_start=1005
-  _globals['_REGISTERMODELREQUEST_METRICSENTRY']._serialized_end=1063
-  _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._serialized_start=1065
-  _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._serialized_end=1177
-  _globals['_GETCURRENTMODELREQUEST']._serialized_start=1185
-  _globals['_GETCURRENTMODELREQUEST']._serialized_end=1255
-  _globals['_GETCURRENTMODELRESPONSE']._serialized_start=1257
-  _globals['_GETCURRENTMODELRESPONSE']._serialized_end=1322
-  _globals['_MODELREGISTRY']._serialized_start=1325
-  _globals['_MODELREGISTRY']._serialized_end=1658
+  _globals['_REGISTERMODELREQUEST']._serialized_start=331
+  _globals['_REGISTERMODELREQUEST']._serialized_end=1211
+  _globals['_REGISTERMODELREQUEST_METRICSENTRY']._serialized_start=1033
+  _globals['_REGISTERMODELREQUEST_METRICSENTRY']._serialized_end=1091
+  _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._serialized_start=1093
+  _globals['_REGISTERMODELREQUEST_TARGETTOCONFIDENCETHRESHOLDSENTRY']._serialized_end=1205
+  _globals['_GETCURRENTMODELREQUEST']._serialized_start=1213
+  _globals['_GETCURRENTMODELREQUEST']._serialized_end=1336
+  _globals['_GETCURRENTMODELRESPONSE']._serialized_start=1338
+  _globals['_GETCURRENTMODELRESPONSE']._serialized_end=1403
+  _globals['_MODELREGISTRY']._serialized_start=1406
+  _globals['_MODELREGISTRY']._serialized_end=1739
 # @@protoc_insertion_point(module_scope)

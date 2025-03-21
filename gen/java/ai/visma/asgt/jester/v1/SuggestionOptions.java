@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private SuggestionOptions() {
     minConfidence_ = 0;
+    modelType_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -72,6 +73,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.asgt.type.Confidence.Level.UNRECOGNIZED : result;
   }
 
+  public static final int MODEL_TYPE_FIELD_NUMBER = 3;
+  private int modelType_ = 0;
+  /**
+   * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+   * @return The enum numeric value on the wire for modelType.
+   */
+  @java.lang.Override public int getModelTypeValue() {
+    return modelType_;
+  }
+  /**
+   * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+   * @return The modelType.
+   */
+  @java.lang.Override public ai.visma.asgt.type.ModelType getModelType() {
+    ai.visma.asgt.type.ModelType result = ai.visma.asgt.type.ModelType.forNumber(modelType_);
+    return result == null ? ai.visma.asgt.type.ModelType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,6 +111,9 @@ private static final long serialVersionUID = 0L;
     if (minConfidence_ != ai.visma.asgt.type.Confidence.Level.UNKNOWN.getNumber()) {
       output.writeEnum(2, minConfidence_);
     }
+    if (modelType_ != ai.visma.asgt.type.ModelType.DEFAULT.getNumber()) {
+      output.writeEnum(3, modelType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -108,6 +130,10 @@ private static final long serialVersionUID = 0L;
     if (minConfidence_ != ai.visma.asgt.type.Confidence.Level.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, minConfidence_);
+    }
+    if (modelType_ != ai.visma.asgt.type.ModelType.DEFAULT.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, modelType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -127,6 +153,7 @@ private static final long serialVersionUID = 0L;
     if (getSuggestionLimit()
         != other.getSuggestionLimit()) return false;
     if (minConfidence_ != other.minConfidence_) return false;
+    if (modelType_ != other.modelType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +169,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSuggestionLimit();
     hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
     hash = (53 * hash) + minConfidence_;
+    hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + modelType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -275,6 +304,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       suggestionLimit_ = 0;
       minConfidence_ = 0;
+      modelType_ = 0;
       return this;
     }
 
@@ -314,6 +344,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.minConfidence_ = minConfidence_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.modelType_ = modelType_;
+      }
     }
 
     @java.lang.Override
@@ -333,6 +366,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.minConfidence_ != 0) {
         setMinConfidenceValue(other.getMinConfidenceValue());
+      }
+      if (other.modelType_ != 0) {
+        setModelTypeValue(other.getModelTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -370,6 +406,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              modelType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -468,6 +509,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearMinConfidence() {
       bitField0_ = (bitField0_ & ~0x00000002);
       minConfidence_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int modelType_ = 0;
+    /**
+     * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+     * @return The enum numeric value on the wire for modelType.
+     */
+    @java.lang.Override public int getModelTypeValue() {
+      return modelType_;
+    }
+    /**
+     * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+     * @param value The enum numeric value on the wire for modelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelTypeValue(int value) {
+      modelType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+     * @return The modelType.
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.ModelType getModelType() {
+      ai.visma.asgt.type.ModelType result = ai.visma.asgt.type.ModelType.forNumber(modelType_);
+      return result == null ? ai.visma.asgt.type.ModelType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+     * @param value The modelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModelType(ai.visma.asgt.type.ModelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      modelType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModelType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      modelType_ = 0;
       onChanged();
       return this;
     }

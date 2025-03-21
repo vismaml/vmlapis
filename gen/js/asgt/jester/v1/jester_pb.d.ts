@@ -2,6 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as asgt_type_data_pb from '../../../asgt/type/data_pb'; // proto import: "asgt/type/data.proto"
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_model_type_pb from '../../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
@@ -40,6 +41,9 @@ export class SuggestionOptions extends jspb.Message {
   getMinConfidence(): asgt_type_prediction_pb.Confidence.Level;
   setMinConfidence(value: asgt_type_prediction_pb.Confidence.Level): SuggestionOptions;
 
+  getModelType(): asgt_type_model_type_pb.ModelType;
+  setModelType(value: asgt_type_model_type_pb.ModelType): SuggestionOptions;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestionOptions.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestionOptions): SuggestionOptions.AsObject;
@@ -52,6 +56,7 @@ export namespace SuggestionOptions {
   export type AsObject = {
     suggestionLimit: number,
     minConfidence: asgt_type_prediction_pb.Confidence.Level,
+    modelType: asgt_type_model_type_pb.ModelType,
   }
 }
 

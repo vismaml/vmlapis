@@ -36,7 +36,7 @@ var (
 	_ = anypb.Any{}
 	_ = sort.Sort
 
-	_ = asgttype.Confidence_Level(0)
+	_ = asgttype.ModelType(0)
 )
 
 // Validate checks the field values on SuggestOptions with the rules defined in
@@ -66,6 +66,17 @@ func (m *SuggestOptions) validate(all bool) error {
 	if _, ok := asgttype.Confidence_Level_name[int32(m.GetMinConfidence())]; !ok {
 		err := SuggestOptionsValidationError{
 			field:  "MinConfidence",
+			reason: "value must be one of the defined enum values",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if _, ok := asgttype.ModelType_name[int32(m.GetModelType())]; !ok {
+		err := SuggestOptionsValidationError{
+			field:  "ModelType",
 			reason: "value must be one of the defined enum values",
 		}
 		if !all {

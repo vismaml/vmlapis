@@ -26,34 +26,36 @@ namespace Asgt.Jester.V1 {
           string.Concat(
             "Chthc2d0L2plc3Rlci92MS9qZXN0ZXIucHJvdG8SDmFzZ3QuamVzdGVyLnYx",
             "GhRhc2d0L3R5cGUvZGF0YS5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3Rv",
-            "Ghphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9h",
-            "bm5vdGF0aW9ucy5wcm90byJ1ChJTdWdnZXN0aW9uUmVzcG9uc2USNwoLcHJl",
-            "ZGljdGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblILcHJlZGlj",
-            "dGlvbnMSJgoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVs",
-            "IoIBChFTdWdnZXN0aW9uT3B0aW9ucxIpChBzdWdnZXN0aW9uX2xpbWl0GAEg",
-            "ASgFUg9zdWdnZXN0aW9uTGltaXQSQgoObWluX2NvbmZpZGVuY2UYAiABKA4y",
-            "Gy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbFINbWluQ29uZmlkZW5jZSK1",
-            "AQoRU3VnZ2VzdGlvblJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0",
-            "eXBlGAIgASgJUgR0eXBlEicKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5E",
-            "YXRhUgZpbnB1dHMSOwoHb3B0aW9ucxgEIAEoCzIhLmFzZ3QuamVzdGVyLnYx",
-            "LlN1Z2dlc3Rpb25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRh",
-            "Z3My2gEKBkplc3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3Vn",
-            "Z2VzdGlvblJlcXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVz",
-            "cG9uc2UiJILT5JMCHiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKhJY",
-            "Cg9JbnRlcm5hbFN1Z2dlc3QSIS5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9u",
-            "UmVxdWVzdBoiLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25SZXNwb25zZUL4",
-            "AQoXYWkudmlzbWEuYXNndC5qZXN0ZXIudjFCC0plc3RlclByb3RvUAFaOWdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVy",
-            "L3YxO2plc3RlcqICA0FKWKoCDkFzZ3QuSmVzdGVyLlYxygIOQXNndFxKZXN0",
-            "ZXJcVjHiAhpBc2d0XEplc3RlclxWMVxHUEJNZXRhZGF0YeoCEEFzZ3Q6Okpl",
-            "c3Rlcjo6VjGSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBsaWNhdGlv",
-            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "Ghphc2d0L3R5cGUvbW9kZWxfdHlwZS5wcm90bxoaYXNndC90eXBlL3ByZWRp",
+            "Y3Rpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aLnBy",
+            "b3RvYy1nZW4tb3BlbmFwaXYyL29wdGlvbnMvYW5ub3RhdGlvbnMucHJvdG8i",
+            "dQoSU3VnZ2VzdGlvblJlc3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygLMhUu",
+            "YXNndC50eXBlLlByZWRpY3Rpb25SC3ByZWRpY3Rpb25zEiYKBW1vZGVsGAIg",
+            "ASgLMhAuYXNndC50eXBlLk1vZGVsUgVtb2RlbCK3AQoRU3VnZ2VzdGlvbk9w",
+            "dGlvbnMSKQoQc3VnZ2VzdGlvbl9saW1pdBgBIAEoBVIPc3VnZ2VzdGlvbkxp",
+            "bWl0EkIKDm1pbl9jb25maWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNvbmZp",
+            "ZGVuY2UuTGV2ZWxSDW1pbkNvbmZpZGVuY2USMwoKbW9kZWxfdHlwZRgDIAEo",
+            "DjIULmFzZ3QudHlwZS5Nb2RlbFR5cGVSCW1vZGVsVHlwZSK1AQoRU3VnZ2Vz",
+            "dGlvblJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIgASgJ",
+            "UgR0eXBlEicKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5EYXRhUgZpbnB1",
+            "dHMSOwoHb3B0aW9ucxgEIAEoCzIhLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rp",
+            "b25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRhZ3My2gEKBkpl",
+            "c3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJl",
+            "cXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVzcG9uc2UiJILT",
+            "5JMCHiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKhJYCg9JbnRlcm5h",
+            "bFN1Z2dlc3QSIS5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVxdWVzdBoi",
+            "LmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25SZXNwb25zZUL4AQoXYWkudmlz",
+            "bWEuYXNndC5qZXN0ZXIudjFCC0plc3RlclByb3RvUAFaOWdpdGh1Yi5jb20v",
+            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVyL3YxO2plc3Rl",
+            "cqICA0FKWKoCDkFzZ3QuSmVzdGVyLlYxygIOQXNndFxKZXN0ZXJcVjHiAhpB",
+            "c2d0XEplc3RlclxWMVxHUEJNZXRhZGF0YeoCEEFzZ3Q6Okplc3Rlcjo6VjGS",
+            "QToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBh",
+            "cHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence", "ModelType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null, null)
           }));
     }
@@ -334,6 +336,7 @@ namespace Asgt.Jester.V1 {
     public SuggestionOptions(SuggestionOptions other) : this() {
       suggestionLimit_ = other.suggestionLimit_;
       minConfidence_ = other.minConfidence_;
+      modelType_ = other.modelType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -367,6 +370,18 @@ namespace Asgt.Jester.V1 {
       }
     }
 
+    /// <summary>Field number for the "model_type" field.</summary>
+    public const int ModelTypeFieldNumber = 3;
+    private global::Asgt.Type.ModelType modelType_ = global::Asgt.Type.ModelType.Default;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.Type.ModelType ModelType {
+      get { return modelType_; }
+      set {
+        modelType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -384,6 +399,7 @@ namespace Asgt.Jester.V1 {
       }
       if (SuggestionLimit != other.SuggestionLimit) return false;
       if (MinConfidence != other.MinConfidence) return false;
+      if (ModelType != other.ModelType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -393,6 +409,7 @@ namespace Asgt.Jester.V1 {
       int hash = 1;
       if (SuggestionLimit != 0) hash ^= SuggestionLimit.GetHashCode();
       if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
+      if (ModelType != global::Asgt.Type.ModelType.Default) hash ^= ModelType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -419,6 +436,10 @@ namespace Asgt.Jester.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinConfidence);
       }
+      if (ModelType != global::Asgt.Type.ModelType.Default) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ModelType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -437,6 +458,10 @@ namespace Asgt.Jester.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinConfidence);
       }
+      if (ModelType != global::Asgt.Type.ModelType.Default) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ModelType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -452,6 +477,9 @@ namespace Asgt.Jester.V1 {
       }
       if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
+      }
+      if (ModelType != global::Asgt.Type.ModelType.Default) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -470,6 +498,9 @@ namespace Asgt.Jester.V1 {
       }
       if (other.MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
         MinConfidence = other.MinConfidence;
+      }
+      if (other.ModelType != global::Asgt.Type.ModelType.Default) {
+        ModelType = other.ModelType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -498,6 +529,10 @@ namespace Asgt.Jester.V1 {
             MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
+          case 24: {
+            ModelType = (global::Asgt.Type.ModelType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -523,6 +558,10 @@ namespace Asgt.Jester.V1 {
           }
           case 16: {
             MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            ModelType = (global::Asgt.Type.ModelType) input.ReadEnum();
             break;
           }
         }

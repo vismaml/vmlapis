@@ -1017,6 +1017,15 @@
         }
       }
     },
+    "typeModelType": {
+      "type": "string",
+      "enum": [
+        "DEFAULT",
+        "TENSORFLOW",
+        "ONNX"
+      ],
+      "default": "DEFAULT"
+    },
     "typePrediction": {
       "type": "object",
       "properties": {
@@ -1202,6 +1211,10 @@
         "minConfidence": {
           "$ref": "#/definitions/ConfidenceLevel",
           "description": "Not implemented yet."
+        },
+        "modelType": {
+          "$ref": "#/definitions/typeModelType",
+          "title": "Model type requested"
         }
       }
     },

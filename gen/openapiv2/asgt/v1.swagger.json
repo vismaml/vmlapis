@@ -686,6 +686,15 @@
         }
       }
     },
+    "typeModelType": {
+      "type": "string",
+      "enum": [
+        "DEFAULT",
+        "TENSORFLOW",
+        "ONNX"
+      ],
+      "default": "DEFAULT"
+    },
     "typePrediction": {
       "type": "object",
       "properties": {
@@ -837,6 +846,9 @@
         },
         "minConfidence": {
           "$ref": "#/definitions/asgttypeConfidenceLevel"
+        },
+        "modelType": {
+          "$ref": "#/definitions/typeModelType"
         }
       }
     },

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+enum ModelType {
+  DEFAULT = 0;
+  TENSORFLOW = 1;
+  ONNX = 2;
+}

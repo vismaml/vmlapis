@@ -1,4 +1,5 @@
 from asgt.type import model_pb2 as _model_pb2
+from asgt.type import model_type_pb2 as _model_type_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.v2.type import data_pb2 as _data_pb2
 from google.api import annotations_pb2 as _annotations_pb2
@@ -12,12 +13,14 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class SuggestOptions(_message.Message):
-    __slots__ = ("suggest_limit", "min_confidence")
+    __slots__ = ("suggest_limit", "min_confidence", "model_type")
     SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     suggest_limit: int
     min_confidence: _prediction_pb2.Confidence.Level
-    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ...) -> None: ...
+    model_type: _model_type_pb2.ModelType
+    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ...) -> None: ...
 
 class SuggestRequest(_message.Message):
     __slots__ = ("dataset_name", "input", "options")

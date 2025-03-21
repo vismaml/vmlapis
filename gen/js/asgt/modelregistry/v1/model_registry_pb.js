@@ -27,6 +27,8 @@ var asgt_type_dataset_statistics_pb = require('../../../asgt/type/dataset_statis
 goog.object.extend(proto, asgt_type_dataset_statistics_pb);
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_model_type_pb = require('../../../asgt/type/model_type_pb.js');
+goog.object.extend(proto, asgt_type_model_type_pb);
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
@@ -657,7 +659,8 @@ proto.asgt.modelregistry.v1.GetCurrentModelRequest.prototype.toObject = function
  */
 proto.asgt.modelregistry.v1.GetCurrentModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f)
+    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
+    modelType: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -699,6 +702,10 @@ proto.asgt.modelregistry.v1.GetCurrentModelRequest.deserializeBinaryFromReader =
       reader.readMessage(value,asgt_type_dataset_pb.Dataset.deserializeBinaryFromReader);
       msg.setDataset(value);
       break;
+    case 2:
+      var value = /** @type {!proto.asgt.type.ModelType} */ (reader.readEnum());
+      msg.setModelType(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -734,6 +741,13 @@ proto.asgt.modelregistry.v1.GetCurrentModelRequest.serializeBinaryToWriter = fun
       1,
       f,
       asgt_type_dataset_pb.Dataset.serializeBinaryToWriter
+    );
+  }
+  f = message.getModelType();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      2,
+      f
     );
   }
 };
@@ -773,6 +787,24 @@ proto.asgt.modelregistry.v1.GetCurrentModelRequest.prototype.clearDataset = func
  */
 proto.asgt.modelregistry.v1.GetCurrentModelRequest.prototype.hasDataset = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional asgt.type.ModelType model_type = 2;
+ * @return {!proto.asgt.type.ModelType}
+ */
+proto.asgt.modelregistry.v1.GetCurrentModelRequest.prototype.getModelType = function() {
+  return /** @type {!proto.asgt.type.ModelType} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {!proto.asgt.type.ModelType} value
+ * @return {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} returns this
+ */
+proto.asgt.modelregistry.v1.GetCurrentModelRequest.prototype.setModelType = function(value) {
+  return jspb.Message.setProto3EnumField(this, 2, value);
 };
 
 

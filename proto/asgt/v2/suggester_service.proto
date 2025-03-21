@@ -3,6 +3,7 @@ syntax = "proto3";
 package asgt.v2;
 
 import "asgt/type/model.proto";
+import "asgt/type/model_type.proto";
 import "asgt/type/prediction.proto";
 import "asgt/v2/type/data.proto";
 import "google/api/annotations.proto";
@@ -57,6 +58,8 @@ message SuggestOptions {
   int32 suggest_limit = 1;
   // Not implemented yet.
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
+  // Model type requested
+  asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
 }
 
 message SuggestRequest {
