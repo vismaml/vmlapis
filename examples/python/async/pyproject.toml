@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "async"
+version = "0.1.0"
+description = ""
+authors = ["Michal Derdak <michalderdak@gmail.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "vml"
+url = "https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/simple/"
+priority = "explicit"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+vml-proto = {version="1.4.1", source="vml"}
+grpcio = ">=1.60.0"
+protobuf = ">=4.21.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
