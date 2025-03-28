@@ -85,6 +85,21 @@ private static final long serialVersionUID = 0L;
      * @return The incorrect.
      */
     int getIncorrect();
+
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     * @return Whether the confidenceLevel field is set.
+     */
+    boolean hasConfidenceLevel();
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     * @return The confidenceLevel.
+     */
+    ai.visma.asgt.type.Confidence getConfidenceLevel();
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     */
+    ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceLevelOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsResponse.MetricRow}
@@ -212,6 +227,32 @@ private static final long serialVersionUID = 0L;
       return incorrect_;
     }
 
+    public static final int CONFIDENCE_LEVEL_FIELD_NUMBER = 5;
+    private ai.visma.asgt.type.Confidence confidenceLevel_;
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     * @return Whether the confidenceLevel field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidenceLevel() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     * @return The confidenceLevel.
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.Confidence getConfidenceLevel() {
+      return confidenceLevel_ == null ? ai.visma.asgt.type.Confidence.getDefaultInstance() : confidenceLevel_;
+    }
+    /**
+     * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceLevelOrBuilder() {
+      return confidenceLevel_ == null ? ai.visma.asgt.type.Confidence.getDefaultInstance() : confidenceLevel_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -238,6 +279,9 @@ private static final long serialVersionUID = 0L;
       if (incorrect_ != 0) {
         output.writeInt32(4, incorrect_);
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(5, getConfidenceLevel());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -261,6 +305,10 @@ private static final long serialVersionUID = 0L;
       if (incorrect_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, incorrect_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getConfidenceLevel());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -288,6 +336,11 @@ private static final long serialVersionUID = 0L;
           != other.getCorrect()) return false;
       if (getIncorrect()
           != other.getIncorrect()) return false;
+      if (hasConfidenceLevel() != other.hasConfidenceLevel()) return false;
+      if (hasConfidenceLevel()) {
+        if (!getConfidenceLevel()
+            .equals(other.getConfidenceLevel())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -309,6 +362,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getCorrect();
       hash = (37 * hash) + INCORRECT_FIELD_NUMBER;
       hash = (53 * hash) + getIncorrect();
+      if (hasConfidenceLevel()) {
+        hash = (37 * hash) + CONFIDENCE_LEVEL_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidenceLevel().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -440,6 +497,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           getConfidenceFieldBuilder();
+          getConfidenceLevelFieldBuilder();
         }
       }
       @java.lang.Override
@@ -454,6 +512,11 @@ private static final long serialVersionUID = 0L;
         }
         correct_ = 0;
         incorrect_ = 0;
+        confidenceLevel_ = null;
+        if (confidenceLevelBuilder_ != null) {
+          confidenceLevelBuilder_.dispose();
+          confidenceLevelBuilder_ = null;
+        }
         return this;
       }
 
@@ -503,6 +566,12 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.incorrect_ = incorrect_;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.confidenceLevel_ = confidenceLevelBuilder_ == null
+              ? confidenceLevel_
+              : confidenceLevelBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -531,6 +600,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getIncorrect() != 0) {
           setIncorrect(other.getIncorrect());
+        }
+        if (other.hasConfidenceLevel()) {
+          mergeConfidenceLevel(other.getConfidenceLevel());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -580,6 +652,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
+              case 42: {
+                input.readMessage(
+                    getConfidenceLevelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -852,6 +931,127 @@ private static final long serialVersionUID = 0L;
         incorrect_ = 0;
         onChanged();
         return this;
+      }
+
+      private ai.visma.asgt.type.Confidence confidenceLevel_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> confidenceLevelBuilder_;
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       * @return Whether the confidenceLevel field is set.
+       */
+      public boolean hasConfidenceLevel() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       * @return The confidenceLevel.
+       */
+      public ai.visma.asgt.type.Confidence getConfidenceLevel() {
+        if (confidenceLevelBuilder_ == null) {
+          return confidenceLevel_ == null ? ai.visma.asgt.type.Confidence.getDefaultInstance() : confidenceLevel_;
+        } else {
+          return confidenceLevelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public Builder setConfidenceLevel(ai.visma.asgt.type.Confidence value) {
+        if (confidenceLevelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidenceLevel_ = value;
+        } else {
+          confidenceLevelBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public Builder setConfidenceLevel(
+          ai.visma.asgt.type.Confidence.Builder builderForValue) {
+        if (confidenceLevelBuilder_ == null) {
+          confidenceLevel_ = builderForValue.build();
+        } else {
+          confidenceLevelBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public Builder mergeConfidenceLevel(ai.visma.asgt.type.Confidence value) {
+        if (confidenceLevelBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            confidenceLevel_ != null &&
+            confidenceLevel_ != ai.visma.asgt.type.Confidence.getDefaultInstance()) {
+            getConfidenceLevelBuilder().mergeFrom(value);
+          } else {
+            confidenceLevel_ = value;
+          }
+        } else {
+          confidenceLevelBuilder_.mergeFrom(value);
+        }
+        if (confidenceLevel_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public Builder clearConfidenceLevel() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        confidenceLevel_ = null;
+        if (confidenceLevelBuilder_ != null) {
+          confidenceLevelBuilder_.dispose();
+          confidenceLevelBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public ai.visma.asgt.type.Confidence.Builder getConfidenceLevelBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getConfidenceLevelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      public ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceLevelOrBuilder() {
+        if (confidenceLevelBuilder_ != null) {
+          return confidenceLevelBuilder_.getMessageOrBuilder();
+        } else {
+          return confidenceLevel_ == null ?
+              ai.visma.asgt.type.Confidence.getDefaultInstance() : confidenceLevel_;
+        }
+      }
+      /**
+       * <code>.asgt.type.Confidence confidence_level = 5 [json_name = "confidenceLevel"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> 
+          getConfidenceLevelFieldBuilder() {
+        if (confidenceLevelBuilder_ == null) {
+          confidenceLevelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder>(
+                  getConfidenceLevel(),
+                  getParentForChildren(),
+                  isClean());
+          confidenceLevel_ = null;
+        }
+        return confidenceLevelBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1.CalculateMetricsResponse.MetricRow)

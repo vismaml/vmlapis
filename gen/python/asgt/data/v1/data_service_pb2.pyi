@@ -1,5 +1,6 @@
 from asgt.type import dataset_pb2 as _dataset_pb2
 from asgt.type import model_pb2 as _model_pb2
+from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.type import retention_policy_pb2 as _retention_policy_pb2
 from asgt.type import sample_pb2 as _sample_pb2
 from google.api import annotations_pb2 as _annotations_pb2
@@ -27,16 +28,18 @@ class CalculateMetricsRequest(_message.Message):
 class CalculateMetricsResponse(_message.Message):
     __slots__ = ("metrics",)
     class MetricRow(_message.Message):
-        __slots__ = ("target", "confidence", "correct", "incorrect")
+        __slots__ = ("target", "confidence", "correct", "incorrect", "confidence_level")
         TARGET_FIELD_NUMBER: _ClassVar[int]
         CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
         CORRECT_FIELD_NUMBER: _ClassVar[int]
         INCORRECT_FIELD_NUMBER: _ClassVar[int]
+        CONFIDENCE_LEVEL_FIELD_NUMBER: _ClassVar[int]
         target: str
         confidence: _wrappers_pb2.FloatValue
         correct: int
         incorrect: int
-        def __init__(self, target: _Optional[str] = ..., confidence: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ..., correct: _Optional[int] = ..., incorrect: _Optional[int] = ...) -> None: ...
+        confidence_level: _prediction_pb2.Confidence
+        def __init__(self, target: _Optional[str] = ..., confidence: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ..., correct: _Optional[int] = ..., incorrect: _Optional[int] = ..., confidence_level: _Optional[_Union[_prediction_pb2.Confidence, _Mapping]] = ...) -> None: ...
     METRICS_FIELD_NUMBER: _ClassVar[int]
     metrics: _containers.RepeatedCompositeFieldContainer[CalculateMetricsResponse.MetricRow]
     def __init__(self, metrics: _Optional[_Iterable[_Union[CalculateMetricsResponse.MetricRow, _Mapping]]] = ...) -> None: ...

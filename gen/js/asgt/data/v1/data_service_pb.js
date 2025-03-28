@@ -25,6 +25,8 @@ var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 goog.object.extend(proto, asgt_type_dataset_pb);
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
+goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js');
 goog.object.extend(proto, asgt_type_retention_policy_pb);
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
@@ -675,7 +677,8 @@ proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.toObject = function
     target: jspb.Message.getFieldWithDefault(msg, 1, ""),
     confidence: (f = msg.getConfidence()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
     correct: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    incorrect: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    incorrect: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    confidenceLevel: (f = msg.getConfidenceLevel()) && asgt_type_prediction_pb.Confidence.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -728,6 +731,11 @@ proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.deserializeBinaryFr
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setIncorrect(value);
+      break;
+    case 5:
+      var value = new asgt_type_prediction_pb.Confidence;
+      reader.readMessage(value,asgt_type_prediction_pb.Confidence.deserializeBinaryFromReader);
+      msg.setConfidenceLevel(value);
       break;
     default:
       reader.skipField();
@@ -785,6 +793,14 @@ proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.serializeBinaryToWr
     writer.writeInt32(
       4,
       f
+    );
+  }
+  f = message.getConfidenceLevel();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      asgt_type_prediction_pb.Confidence.serializeBinaryToWriter
     );
   }
 };
@@ -878,6 +894,43 @@ proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.getIncorr
  */
 proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.setIncorrect = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional asgt.type.Confidence confidence_level = 5;
+ * @return {?proto.asgt.type.Confidence}
+ */
+proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.getConfidenceLevel = function() {
+  return /** @type{?proto.asgt.type.Confidence} */ (
+    jspb.Message.getWrapperField(this, asgt_type_prediction_pb.Confidence, 5));
+};
+
+
+/**
+ * @param {?proto.asgt.type.Confidence|undefined} value
+ * @return {!proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow} returns this
+*/
+proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.setConfidenceLevel = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow} returns this
+ */
+proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.clearConfidenceLevel = function() {
+  return this.setConfidenceLevel(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow.prototype.hasConfidenceLevel = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
