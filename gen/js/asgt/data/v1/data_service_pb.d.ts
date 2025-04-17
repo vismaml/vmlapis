@@ -2,6 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
 import * as asgt_type_retention_policy_pb from '../../../asgt/type/retention_policy_pb'; // proto import: "asgt/type/retention_policy.proto"
 import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb'; // proto import: "asgt/type/sample.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
@@ -77,6 +78,11 @@ export namespace CalculateMetricsResponse {
     getIncorrect(): number;
     setIncorrect(value: number): MetricRow;
 
+    getConfidenceLevel(): asgt_type_prediction_pb.Confidence | undefined;
+    setConfidenceLevel(value?: asgt_type_prediction_pb.Confidence): MetricRow;
+    hasConfidenceLevel(): boolean;
+    clearConfidenceLevel(): MetricRow;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): MetricRow.AsObject;
     static toObject(includeInstance: boolean, msg: MetricRow): MetricRow.AsObject;
@@ -91,6 +97,7 @@ export namespace CalculateMetricsResponse {
       confidence?: google_protobuf_wrappers_pb.FloatValue.AsObject,
       correct: number,
       incorrect: number,
+      confidenceLevel?: asgt_type_prediction_pb.Confidence.AsObject,
     }
   }
 

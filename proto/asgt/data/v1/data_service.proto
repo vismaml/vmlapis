@@ -4,6 +4,7 @@ package asgt.dataservice.v1;
 
 import "asgt/type/dataset.proto";
 import "asgt/type/model.proto";
+import "asgt/type/prediction.proto";
 import "asgt/type/retention_policy.proto";
 import "asgt/type/sample.proto";
 import "google/api/annotations.proto";
@@ -68,6 +69,7 @@ message CalculateMetricsResponse {
     google.protobuf.FloatValue confidence = 2;
     int32 correct = 3;
     int32 incorrect = 4;
+    asgt.type.Confidence confidence_level = 5;
   }
   repeated MetricRow metrics = 1;
 }

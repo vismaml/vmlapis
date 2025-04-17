@@ -24,6 +24,8 @@ var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js')
 
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 
+var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
+
 var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js')
 
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js')
