@@ -1215,6 +1215,11 @@
         "modelType": {
           "$ref": "#/definitions/typeModelType",
           "title": "Model type requested"
+        },
+        "consumerName": {
+          "type": "string",
+          "description": "text-no-spaces",
+          "title": "Consumer name"
         }
       }
     },

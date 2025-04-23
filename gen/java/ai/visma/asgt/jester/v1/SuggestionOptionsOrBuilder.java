@@ -36,4 +36,16 @@ public interface SuggestionOptionsOrBuilder extends
    * @return The modelType.
    */
   ai.visma.asgt.type.ModelType getModelType();
+
+  /**
+   * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+   * @return The consumerName.
+   */
+  java.lang.String getConsumerName();
+  /**
+   * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+   * @return The bytes for consumerName.
+   */
+  com.google.protobuf.ByteString
+      getConsumerNameBytes();
 }

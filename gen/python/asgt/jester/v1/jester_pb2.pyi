@@ -20,14 +20,16 @@ class SuggestionResponse(_message.Message):
     def __init__(self, predictions: _Optional[_Iterable[_Union[_prediction_pb2.Prediction, _Mapping]]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class SuggestionOptions(_message.Message):
-    __slots__ = ("suggestion_limit", "min_confidence", "model_type")
+    __slots__ = ("suggestion_limit", "min_confidence", "model_type", "consumer_name")
     SUGGESTION_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
+    CONSUMER_NAME_FIELD_NUMBER: _ClassVar[int]
     suggestion_limit: int
     min_confidence: _prediction_pb2.Confidence.Level
     model_type: _model_type_pb2.ModelType
-    def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ...) -> None: ...
+    consumer_name: str
+    def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., consumer_name: _Optional[str] = ...) -> None: ...
 
 class SuggestionRequest(_message.Message):
     __slots__ = ("name", "type", "inputs", "options", "tags")

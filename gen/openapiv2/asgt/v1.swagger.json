@@ -852,6 +852,9 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        },
+        "consumerName": {
+          "type": "string"
         }
       }
     },

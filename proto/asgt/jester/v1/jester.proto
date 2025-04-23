@@ -41,6 +41,7 @@ message SuggestionOptions {
   int32 suggestion_limit = 1;
   asgt.type.Confidence.Level min_confidence = 2;
   asgt.type.ModelType model_type = 3;
+  string consumer_name = 4;
 }
 
 message SuggestionRequest {

@@ -65,44 +65,46 @@ public final class SuggesterServiceProto {
       "o\032\027asgt/v2/type/data.proto\032\034google/api/a" +
       "nnotations.proto\032.protoc-gen-openapiv2/o" +
       "ptions/annotations.proto\032\027validate/valid" +
-      "ate.proto\"\335\001\n\016SuggestOptions\022#\n\rsuggest_" +
+      "ate.proto\"\237\002\n\016SuggestOptions\022#\n\rsuggest_" +
       "limit\030\001 \001(\005R\014suggestLimit\022L\n\016min_confide" +
       "nce\030\002 \001(\0162\033.asgt.type.Confidence.LevelB\010" +
       "\372B\005\202\001\002\020\001R\rminConfidence\022=\n\nmodel_type\030\003 " +
       "\001(\0162\024.asgt.type.ModelTypeB\010\372B\005\202\001\002\020\001R\tmod" +
-      "elType:\031\222A\0262\024{\"suggest_limit\": 3}\"\272\001\n\016Su" +
-      "ggestRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r" +
-      "#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013da" +
-      "tasetName\022(\n\005input\030\002 \001(\0132\022.asgt.v2.type." +
-      "DataR\005input\0221\n\007options\030\003 \001(\0132\027.asgt.v2.S" +
-      "uggestOptionsR\007options\"p\n\017SuggestRespons" +
-      "e\0225\n\nprediction\030\001 \001(\0132\025.asgt.type.Predic" +
-      "tionR\nprediction\022&\n\005model\030\002 \001(\0132\020.asgt.t" +
-      "ype.ModelR\005model\"\301\001\n\023BatchSuggestRequest" +
-      "\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za" +
-      "-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022*\n" +
-      "\006inputs\030\002 \003(\0132\022.asgt.v2.type.DataR\006input" +
-      "s\0221\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestOpti" +
-      "onsR\007options\"w\n\024BatchSuggestResponse\0227\n\013" +
-      "predictions\030\001 \003(\0132\025.asgt.type.Prediction" +
-      "R\013predictions\022&\n\005model\030\002 \001(\0132\020.asgt.type" +
-      ".ModelR\005model2\273\003\n\020SuggesterService\022l\n\007Su" +
-      "ggest\022\027.asgt.v2.SuggestRequest\032\030.asgt.v2" +
-      ".SuggestResponse\".\202\323\344\223\002(\"#/v2/datasets/{" +
-      "dataset_name}:suggest:\001*\022\200\001\n\014BatchSugges" +
-      "t\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt.v" +
-      "2.BatchSuggestResponse\"3\202\323\344\223\002-\"(/v2/data" +
-      "sets/{dataset_name}:batchSuggest:\001*\022\213\001\n\021" +
-      "ModelBatchSuggest\022\034.asgt.v2.BatchSuggest" +
-      "Request\032\035.asgt.v2.BatchSuggestResponse\"9" +
-      "\202\323\344\223\0023\"./v2/datasets/{dataset_name}/mode" +
-      "l:batchSuggest:\001*\032(\222A%\022#Make predictions" +
-      " against a dataset.B\320\001\n\020ai.visma.asgt.v2" +
-      "B\025SuggesterServiceProtoP\001Z+github.com/e-" +
-      "conomic/vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007A" +
-      "sgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002" +
-      "\010Asgt::V2\222A:\022\021\n\013AutoSuggest2\002v2*\001\0022\020appl" +
-      "ication/json:\020application/jsonb\006proto3"
+      "elType\022@\n\rconsumer_name\030\004 \001(\tB\033\372B\030r\026(\200\0022" +
+      "\021^[A-Za-z0-9_.-]+$R\014consumerName:\031\222A\0262\024{" +
+      "\"suggest_limit\": 3}\"\272\001\n\016SuggestRequest\022K" +
+      "\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z" +
+      "0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022(\n\005i" +
+      "nput\030\002 \001(\0132\022.asgt.v2.type.DataR\005input\0221\n" +
+      "\007options\030\003 \001(\0132\027.asgt.v2.SuggestOptionsR" +
+      "\007options\"p\n\017SuggestResponse\0225\n\npredictio" +
+      "n\030\001 \001(\0132\025.asgt.type.PredictionR\npredicti" +
+      "on\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005mod" +
+      "el\"\301\001\n\023BatchSuggestRequest\022K\n\014dataset_na" +
+      "me\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z" +
+      "0-9_.>-]*$R\013datasetName\022*\n\006inputs\030\002 \003(\0132" +
+      "\022.asgt.v2.type.DataR\006inputs\0221\n\007options\030\003" +
+      " \001(\0132\027.asgt.v2.SuggestOptionsR\007options\"w" +
+      "\n\024BatchSuggestResponse\0227\n\013predictions\030\001 " +
+      "\003(\0132\025.asgt.type.PredictionR\013predictions\022" +
+      "&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005model2" +
+      "\273\003\n\020SuggesterService\022l\n\007Suggest\022\027.asgt.v" +
+      "2.SuggestRequest\032\030.asgt.v2.SuggestRespon" +
+      "se\".\202\323\344\223\002(\"#/v2/datasets/{dataset_name}:" +
+      "suggest:\001*\022\200\001\n\014BatchSuggest\022\034.asgt.v2.Ba" +
+      "tchSuggestRequest\032\035.asgt.v2.BatchSuggest" +
+      "Response\"3\202\323\344\223\002-\"(/v2/datasets/{dataset_" +
+      "name}:batchSuggest:\001*\022\213\001\n\021ModelBatchSugg" +
+      "est\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt" +
+      ".v2.BatchSuggestResponse\"9\202\323\344\223\0023\"./v2/da" +
+      "tasets/{dataset_name}/model:batchSuggest" +
+      ":\001*\032(\222A%\022#Make predictions against a dat" +
+      "aset.B\320\001\n\020ai.visma.asgt.v2B\025SuggesterSer" +
+      "viceProtoP\001Z+github.com/e-conomic/vmlapi" +
+      "s/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\" +
+      "V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V2\222A:\022\021" +
+      "\n\013AutoSuggest2\002v2*\001\0022\020application/json:\020" +
+      "application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -120,7 +122,7 @@ public final class SuggesterServiceProto {
     internal_static_asgt_v2_SuggestOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_SuggestOptions_descriptor,
-        new java.lang.String[] { "SuggestLimit", "MinConfidence", "ModelType", });
+        new java.lang.String[] { "SuggestLimit", "MinConfidence", "ModelType", "ConsumerName", });
     internal_static_asgt_v2_SuggestRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2_SuggestRequest_fieldAccessorTable = new

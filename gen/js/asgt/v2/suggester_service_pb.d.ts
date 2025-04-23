@@ -19,6 +19,9 @@ export class SuggestOptions extends jspb.Message {
   getModelType(): asgt_type_model_type_pb.ModelType;
   setModelType(value: asgt_type_model_type_pb.ModelType): SuggestOptions;
 
+  getConsumerName(): string;
+  setConsumerName(value: string): SuggestOptions;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestOptions.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestOptions): SuggestOptions.AsObject;
@@ -32,6 +35,7 @@ export namespace SuggestOptions {
     suggestLimit: number,
     minConfidence: asgt_type_prediction_pb.Confidence.Level,
     modelType: asgt_type_model_type_pb.ModelType,
+    consumerName: string,
   }
 }
 

@@ -57,28 +57,29 @@ public final class JesterProto {
       "ptions/annotations.proto\"u\n\022SuggestionRe" +
       "sponse\0227\n\013predictions\030\001 \003(\0132\025.asgt.type." +
       "PredictionR\013predictions\022&\n\005model\030\002 \001(\0132\020" +
-      ".asgt.type.ModelR\005model\"\267\001\n\021SuggestionOp" +
+      ".asgt.type.ModelR\005model\"\334\001\n\021SuggestionOp" +
       "tions\022)\n\020suggestion_limit\030\001 \001(\005R\017suggest" +
       "ionLimit\022B\n\016min_confidence\030\002 \001(\0162\033.asgt." +
       "type.Confidence.LevelR\rminConfidence\0223\n\n" +
       "model_type\030\003 \001(\0162\024.asgt.type.ModelTypeR\t" +
-      "modelType\"\265\001\n\021SuggestionRequest\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006input" +
-      "s\030\003 \003(\0132\017.asgt.type.DataR\006inputs\022;\n\007opti" +
-      "ons\030\004 \001(\0132!.asgt.jester.v1.SuggestionOpt" +
-      "ionsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\332\001\n\006Je" +
-      "ster\022v\n\007Suggest\022!.asgt.jester.v1.Suggest" +
-      "ionRequest\032\".asgt.jester.v1.SuggestionRe" +
-      "sponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:sugges" +
-      "t:\001*\022X\n\017InternalSuggest\022!.asgt.jester.v1" +
-      ".SuggestionRequest\032\".asgt.jester.v1.Sugg" +
-      "estionResponseB\370\001\n\027ai.visma.asgt.jester." +
-      "v1B\013JesterProtoP\001Z9github.com/e-conomic/" +
-      "vmlapis/gen/go/asgt/jester/v1;jester\242\002\003A" +
-      "JX\252\002\016Asgt.Jester.V1\312\002\016Asgt\\Jester\\V1\342\002\032A" +
-      "sgt\\Jester\\V1\\GPBMetadata\352\002\020Asgt::Jester" +
-      "::V1\222A:\022\021\n\013AutoSuggest2\002v1*\001\0022\020applicati" +
-      "on/json:\020application/jsonb\006proto3"
+      "modelType\022#\n\rconsumer_name\030\004 \001(\tR\014consum" +
+      "erName\"\265\001\n\021SuggestionRequest\022\022\n\004name\030\001 \001" +
+      "(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006inputs\030\003" +
+      " \003(\0132\017.asgt.type.DataR\006inputs\022;\n\007options" +
+      "\030\004 \001(\0132!.asgt.jester.v1.SuggestionOption" +
+      "sR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\332\001\n\006Jeste" +
+      "r\022v\n\007Suggest\022!.asgt.jester.v1.Suggestion" +
+      "Request\032\".asgt.jester.v1.SuggestionRespo" +
+      "nse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:suggest:\001" +
+      "*\022X\n\017InternalSuggest\022!.asgt.jester.v1.Su" +
+      "ggestionRequest\032\".asgt.jester.v1.Suggest" +
+      "ionResponseB\370\001\n\027ai.visma.asgt.jester.v1B" +
+      "\013JesterProtoP\001Z9github.com/e-conomic/vml" +
+      "apis/gen/go/asgt/jester/v1;jester\242\002\003AJX\252" +
+      "\002\016Asgt.Jester.V1\312\002\016Asgt\\Jester\\V1\342\002\032Asgt" +
+      "\\Jester\\V1\\GPBMetadata\352\002\020Asgt::Jester::V" +
+      "1\222A:\022\021\n\013AutoSuggest2\002v1*\001\0022\020application/" +
+      "json:\020application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -101,7 +102,7 @@ public final class JesterProto {
     internal_static_asgt_jester_v1_SuggestionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_jester_v1_SuggestionOptions_descriptor,
-        new java.lang.String[] { "SuggestionLimit", "MinConfidence", "ModelType", });
+        new java.lang.String[] { "SuggestionLimit", "MinConfidence", "ModelType", "ConsumerName", });
     internal_static_asgt_jester_v1_SuggestionRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_jester_v1_SuggestionRequest_fieldAccessorTable = new

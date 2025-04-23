@@ -85,6 +85,28 @@ func (m *SuggestOptions) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
+	if len(m.GetConsumerName()) > 256 {
+		err := SuggestOptionsValidationError{
+			field:  "ConsumerName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_SuggestOptions_ConsumerName_Pattern.MatchString(m.GetConsumerName()) {
+		err := SuggestOptionsValidationError{
+			field:  "ConsumerName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9_.-]+$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
 	if len(errors) > 0 {
 		return SuggestOptionsMultiError(errors)
 	}
@@ -162,6 +184,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SuggestOptionsValidationError{}
+
+var _SuggestOptions_ConsumerName_Pattern = regexp.MustCompile("^[A-Za-z0-9_.-]+$")
 
 // Validate checks the field values on SuggestRequest with the rules defined in
 // the proto definition for this message. If any rules are violated, the first

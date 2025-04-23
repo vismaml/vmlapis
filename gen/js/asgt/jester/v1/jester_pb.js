@@ -344,7 +344,8 @@ proto.asgt.jester.v1.SuggestionOptions.toObject = function(includeInstance, msg)
   var f, obj = {
     suggestionLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
     minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    consumerName: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -393,6 +394,10 @@ proto.asgt.jester.v1.SuggestionOptions.deserializeBinaryFromReader = function(ms
       var value = /** @type {!proto.asgt.type.ModelType} */ (reader.readEnum());
       msg.setModelType(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setConsumerName(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -440,6 +445,13 @@ proto.asgt.jester.v1.SuggestionOptions.serializeBinaryToWriter = function(messag
   if (f !== 0.0) {
     writer.writeEnum(
       3,
+      f
+    );
+  }
+  f = message.getConsumerName();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -497,6 +509,24 @@ proto.asgt.jester.v1.SuggestionOptions.prototype.getModelType = function() {
  */
 proto.asgt.jester.v1.SuggestionOptions.prototype.setModelType = function(value) {
   return jspb.Message.setProto3EnumField(this, 3, value);
+};
+
+
+/**
+ * optional string consumer_name = 4;
+ * @return {string}
+ */
+proto.asgt.jester.v1.SuggestionOptions.prototype.getConsumerName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.jester.v1.SuggestionOptions} returns this
+ */
+proto.asgt.jester.v1.SuggestionOptions.prototype.setConsumerName = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 

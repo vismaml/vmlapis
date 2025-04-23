@@ -60,6 +60,11 @@ message SuggestOptions {
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
   // Model type requested
   asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
+  // Consumer name
+  string consumer_name = 4 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9_.-]+$"
+    max_bytes: 256
+  }]; // text-no-spaces
 }
 
 message SuggestRequest {

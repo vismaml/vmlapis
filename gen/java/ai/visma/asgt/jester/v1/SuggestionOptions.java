@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   private SuggestionOptions() {
     minConfidence_ = 0;
     modelType_ = 0;
+    consumerName_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -91,6 +92,45 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.asgt.type.ModelType.UNRECOGNIZED : result;
   }
 
+  public static final int CONSUMER_NAME_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object consumerName_ = "";
+  /**
+   * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+   * @return The consumerName.
+   */
+  @java.lang.Override
+  public java.lang.String getConsumerName() {
+    java.lang.Object ref = consumerName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      consumerName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+   * @return The bytes for consumerName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConsumerNameBytes() {
+    java.lang.Object ref = consumerName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      consumerName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -114,6 +154,9 @@ private static final long serialVersionUID = 0L;
     if (modelType_ != ai.visma.asgt.type.ModelType.DEFAULT.getNumber()) {
       output.writeEnum(3, modelType_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(consumerName_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, consumerName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -135,6 +178,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, modelType_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(consumerName_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, consumerName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -154,6 +200,8 @@ private static final long serialVersionUID = 0L;
         != other.getSuggestionLimit()) return false;
     if (minConfidence_ != other.minConfidence_) return false;
     if (modelType_ != other.modelType_) return false;
+    if (!getConsumerName()
+        .equals(other.getConsumerName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,6 +219,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + minConfidence_;
     hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + modelType_;
+    hash = (37 * hash) + CONSUMER_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getConsumerName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -305,6 +355,7 @@ private static final long serialVersionUID = 0L;
       suggestionLimit_ = 0;
       minConfidence_ = 0;
       modelType_ = 0;
+      consumerName_ = "";
       return this;
     }
 
@@ -347,6 +398,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.modelType_ = modelType_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.consumerName_ = consumerName_;
+      }
     }
 
     @java.lang.Override
@@ -369,6 +423,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.modelType_ != 0) {
         setModelTypeValue(other.getModelTypeValue());
+      }
+      if (!other.getConsumerName().isEmpty()) {
+        consumerName_ = other.consumerName_;
+        bitField0_ |= 0x00000008;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -411,6 +470,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              consumerName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -562,6 +626,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearModelType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       modelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object consumerName_ = "";
+    /**
+     * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+     * @return The consumerName.
+     */
+    public java.lang.String getConsumerName() {
+      java.lang.Object ref = consumerName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumerName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+     * @return The bytes for consumerName.
+     */
+    public com.google.protobuf.ByteString
+        getConsumerNameBytes() {
+      java.lang.Object ref = consumerName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+     * @param value The consumerName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConsumerName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      consumerName_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConsumerName() {
+      consumerName_ = getDefaultInstance().getConsumerName();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string consumer_name = 4 [json_name = "consumerName"];</code>
+     * @param value The bytes for consumerName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConsumerNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      consumerName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
