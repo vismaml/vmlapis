@@ -134,6 +134,17 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int LEGACY_FIELD_NUMBER = 4;
+  private boolean legacy_ = false;
+  /**
+   * <code>bool legacy = 4 [json_name = "legacy"];</code>
+   * @return The legacy.
+   */
+  @java.lang.Override
+  public boolean getLegacy() {
+    return legacy_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -156,6 +167,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, tags_.getRaw(i));
+    }
+    if (legacy_ != false) {
+      output.writeBool(4, legacy_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -181,6 +195,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getTagsList().size();
+    }
+    if (legacy_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, legacy_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -209,6 +227,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (getLegacy()
+        != other.getLegacy()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -232,6 +252,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
     }
+    hash = (37 * hash) + LEGACY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getLegacy());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -382,6 +405,7 @@ private static final long serialVersionUID = 0L;
       }
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      legacy_ = false;
       return this;
     }
 
@@ -432,6 +456,9 @@ private static final long serialVersionUID = 0L;
         tags_.makeImmutable();
         result.tags_ = tags_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.legacy_ = legacy_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -462,6 +489,9 @@ private static final long serialVersionUID = 0L;
           tags_.addAll(other.tags_);
         }
         onChanged();
+      }
+      if (other.getLegacy() != false) {
+        setLegacy(other.getLegacy());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -509,6 +539,11 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 26
+            case 32: {
+              legacy_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -875,6 +910,38 @@ private static final long serialVersionUID = 0L;
       ensureTagsIsMutable();
       tags_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean legacy_ ;
+    /**
+     * <code>bool legacy = 4 [json_name = "legacy"];</code>
+     * @return The legacy.
+     */
+    @java.lang.Override
+    public boolean getLegacy() {
+      return legacy_;
+    }
+    /**
+     * <code>bool legacy = 4 [json_name = "legacy"];</code>
+     * @param value The legacy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLegacy(boolean value) {
+
+      legacy_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool legacy = 4 [json_name = "legacy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLegacy() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      legacy_ = false;
       onChanged();
       return this;
     }

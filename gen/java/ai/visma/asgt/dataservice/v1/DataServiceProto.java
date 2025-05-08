@@ -92,68 +92,69 @@ public final class DataServiceProto {
       "/annotations.proto\032\033google/protobuf/empt" +
       "y.proto\032\037google/protobuf/timestamp.proto" +
       "\032\036google/protobuf/wrappers.proto\032$ssn/da" +
-      "taservice/v1/dataservice.proto\"\237\001\n\027Calcu" +
+      "taservice/v1/dataservice.proto\"\267\001\n\027Calcu" +
       "lateMetricsRequest\0229\n\nstart_time\030\001 \001(\0132\032" +
       ".google.protobuf.TimestampR\tstartTime\0225\n" +
       "\010end_time\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\007endTime\022\022\n\004tags\030\003 \003(\tR\004tags\"\312\002\n\030Cal" +
-      "culateMetricsResponse\022Q\n\007metrics\030\001 \003(\01327" +
-      ".asgt.dataservice.v1.CalculateMetricsRes" +
-      "ponse.MetricRowR\007metrics\032\332\001\n\tMetricRow\022\026" +
-      "\n\006target\030\001 \001(\tR\006target\022;\n\nconfidence\030\002 \001" +
-      "(\0132\033.google.protobuf.FloatValueR\nconfide" +
-      "nce\022\030\n\007correct\030\003 \001(\005R\007correct\022\034\n\tincorre" +
-      "ct\030\004 \001(\005R\tincorrect\022@\n\020confidence_level\030" +
-      "\005 \001(\0132\025.asgt.type.ConfidenceR\017confidence" +
-      "Level\"\331\001\n\rCreateRequest\022\022\n\004name\030\001 \001(\tR\004n" +
-      "ame\022\022\n\004type\030\002 \001(\tR\004type\022\022\n\004tags\030\003 \003(\tR\004t" +
-      "ags\022\030\n\007targets\030\006 \003(\tR\007targets\022+\n\007samples" +
-      "\030\004 \003(\0132\021.asgt.type.SampleR\007samples\022E\n\020re" +
-      "tention_policy\030\005 \001(\0132\032.asgt.type.Retenti" +
-      "onPolicyR\017retentionPolicy\"h\n\021AppendDataR" +
+      "ampR\007endTime\022\022\n\004tags\030\003 \003(\tR\004tags\022\026\n\006lega" +
+      "cy\030\004 \001(\010R\006legacy\"\312\002\n\030CalculateMetricsRes" +
+      "ponse\022Q\n\007metrics\030\001 \003(\01327.asgt.dataservic" +
+      "e.v1.CalculateMetricsResponse.MetricRowR" +
+      "\007metrics\032\332\001\n\tMetricRow\022\026\n\006target\030\001 \001(\tR\006" +
+      "target\022;\n\nconfidence\030\002 \001(\0132\033.google.prot" +
+      "obuf.FloatValueR\nconfidence\022\030\n\007correct\030\003" +
+      " \001(\005R\007correct\022\034\n\tincorrect\030\004 \001(\005R\tincorr" +
+      "ect\022@\n\020confidence_level\030\005 \001(\0132\025.asgt.typ" +
+      "e.ConfidenceR\017confidenceLevel\"\331\001\n\rCreate" +
+      "Request\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001(" +
+      "\tR\004type\022\022\n\004tags\030\003 \003(\tR\004tags\022\030\n\007targets\030\006" +
+      " \003(\tR\007targets\022+\n\007samples\030\004 \003(\0132\021.asgt.ty" +
+      "pe.SampleR\007samples\022E\n\020retention_policy\030\005" +
+      " \001(\0132\032.asgt.type.RetentionPolicyR\017retent" +
+      "ionPolicy\"h\n\021AppendDataRequest\022\022\n\004name\030\001" +
+      " \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022+\n\007sample" +
+      "s\030\003 \003(\0132\021.asgt.type.SampleR\007samples\"V\n\rD" +
+      "eleteRequest\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\004name" +
+      "\030\002 \001(\tH\000R\004name\022\022\n\003tag\030\003 \001(\tH\000R\003tagB\007\n\005ma" +
+      "tch\"8\n\016GetInfoRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
+      "e\022\022\n\004type\030\002 \001(\tR\004type\"\205\001\n\024UpdateDatasetR" +
       "equest\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001(\t" +
-      "R\004type\022+\n\007samples\030\003 \003(\0132\021.asgt.type.Samp" +
-      "leR\007samples\"V\n\rDeleteRequest\022\022\n\004type\030\001 \001" +
-      "(\tR\004type\022\024\n\004name\030\002 \001(\tH\000R\004name\022\022\n\003tag\030\003 " +
-      "\001(\tH\000R\003tagB\007\n\005match\"8\n\016GetInfoRequest\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\"\205\001" +
-      "\n\024UpdateDatasetRequest\022\022\n\004name\030\001 \001(\tR\004na" +
-      "me\022\022\n\004type\030\002 \001(\tR\004type\022E\n\020retention_poli" +
-      "cy\030\003 \001(\0132\032.asgt.type.RetentionPolicyR\017re" +
-      "tentionPolicy\"g\n\017GetInfoResponse\022,\n\007data" +
-      "set\030\001 \001(\0132\022.asgt.type.DatasetR\007dataset\022&" +
-      "\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005model\"\207" +
-      "\001\n\031RegisterQueryStatsRequest\022\030\n\007dataset\030" +
-      "\001 \001(\tR\007dataset\022\035\n\nmodel_type\030\002 \001(\tR\tmode" +
-      "lType\022\035\n\nbatch_size\030\003 \001(\005R\tbatchSize\022\022\n\004" +
-      "tags\030\004 \003(\tR\004tags2\353\006\n\013DataService\022i\n\rCrea" +
-      "teDataset\022\".asgt.dataservice.v1.CreateRe" +
-      "quest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/" +
-      "v1/{type}:create:\001*\022q\n\nAppendData\022&.asgt" +
-      ".dataservice.v1.AppendDataRequest\032\026.goog" +
-      "le.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{n" +
-      "ame}:append:\001*\022f\n\nDeleteData\022\".asgt.data" +
-      "service.v1.DeleteRequest\032\026.google.protob" +
-      "uf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t" +
-      "\n\007GetInfo\022#.asgt.dataservice.v1.GetInfoR" +
-      "equest\032$.asgt.dataservice.v1.GetInfoResp" +
-      "onse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\r" +
-      "UpdateDataset\022).asgt.dataservice.v1.Upda" +
-      "teDatasetRequest\032\026.google.protobuf.Empty" +
-      "\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n" +
-      "\022RegisterQueryStats\022..asgt.dataservice.v" +
-      "1.RegisterQueryStatsRequest\032\026.google.pro" +
-      "tobuf.Empty\022X\n\023CallsPerMonthMetric\022\026.goo" +
-      "gle.protobuf.Empty\032).ssn.dataservice.v1." +
-      "CallsPerMonthResponse\022o\n\020CalculateMetric" +
-      "s\022,.asgt.dataservice.v1.CalculateMetrics" +
-      "Request\032-.asgt.dataservice.v1.CalculateM" +
-      "etricsResponseB\325\001\n\034ai.visma.asgt.dataser" +
-      "vice.v1B\020DataServiceProtoP\001Z5github.com/" +
-      "e-conomic/vmlapis/gen/go/asgt/data/v1;da" +
-      "ta\242\002\003ADX\252\002\023Asgt.Dataservice.V1\312\002\023Asgt\\Da" +
-      "taservice\\V1\342\002\037Asgt\\Dataservice\\V1\\GPBMe" +
-      "tadata\352\002\025Asgt::Dataservice::V1b\006proto3"
+      "R\004type\022E\n\020retention_policy\030\003 \001(\0132\032.asgt." +
+      "type.RetentionPolicyR\017retentionPolicy\"g\n" +
+      "\017GetInfoResponse\022,\n\007dataset\030\001 \001(\0132\022.asgt" +
+      ".type.DatasetR\007dataset\022&\n\005model\030\002 \001(\0132\020." +
+      "asgt.type.ModelR\005model\"\207\001\n\031RegisterQuery" +
+      "StatsRequest\022\030\n\007dataset\030\001 \001(\tR\007dataset\022\035" +
+      "\n\nmodel_type\030\002 \001(\tR\tmodelType\022\035\n\nbatch_s" +
+      "ize\030\003 \001(\005R\tbatchSize\022\022\n\004tags\030\004 \003(\tR\004tags" +
+      "2\353\006\n\013DataService\022i\n\rCreateDataset\022\".asgt" +
+      ".dataservice.v1.CreateRequest\032\026.google.p" +
+      "rotobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:create" +
+      ":\001*\022q\n\nAppendData\022&.asgt.dataservice.v1." +
+      "AppendDataRequest\032\026.google.protobuf.Empt" +
+      "y\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*\022f" +
+      "\n\nDeleteData\022\".asgt.dataservice.v1.Delet" +
+      "eRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026" +
+      "\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.asgt" +
+      ".dataservice.v1.GetInfoRequest\032$.asgt.da" +
+      "taservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026/v" +
+      "1/{type}/{name}:info\022w\n\rUpdateDataset\022)." +
+      "asgt.dataservice.v1.UpdateDatasetRequest" +
+      "\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/{t" +
+      "ype}/{name}:update:\001*\022\\\n\022RegisterQuerySt" +
+      "ats\022..asgt.dataservice.v1.RegisterQueryS" +
+      "tatsRequest\032\026.google.protobuf.Empty\022X\n\023C" +
+      "allsPerMonthMetric\022\026.google.protobuf.Emp" +
+      "ty\032).ssn.dataservice.v1.CallsPerMonthRes" +
+      "ponse\022o\n\020CalculateMetrics\022,.asgt.dataser" +
+      "vice.v1.CalculateMetricsRequest\032-.asgt.d" +
+      "ataservice.v1.CalculateMetricsResponseB\325" +
+      "\001\n\034ai.visma.asgt.dataservice.v1B\020DataSer" +
+      "viceProtoP\001Z5github.com/e-conomic/vmlapi" +
+      "s/gen/go/asgt/data/v1;data\242\002\003ADX\252\002\023Asgt." +
+      "Dataservice.V1\312\002\023Asgt\\Dataservice\\V1\342\002\037A" +
+      "sgt\\Dataservice\\V1\\GPBMetadata\352\002\025Asgt::D" +
+      "ataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -174,7 +175,7 @@ public final class DataServiceProto {
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor,
-        new java.lang.String[] { "StartTime", "EndTime", "Tags", });
+        new java.lang.String[] { "StartTime", "EndTime", "Tags", "Legacy", });
     internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable = new
