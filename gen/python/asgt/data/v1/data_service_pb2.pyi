@@ -16,14 +16,16 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CalculateMetricsRequest(_message.Message):
-    __slots__ = ("start_time", "end_time", "tags")
+    __slots__ = ("start_time", "end_time", "tags", "legacy")
     START_TIME_FIELD_NUMBER: _ClassVar[int]
     END_TIME_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    LEGACY_FIELD_NUMBER: _ClassVar[int]
     start_time: _timestamp_pb2.Timestamp
     end_time: _timestamp_pb2.Timestamp
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    legacy: bool
+    def __init__(self, start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., legacy: bool = ...) -> None: ...
 
 class CalculateMetricsResponse(_message.Message):
     __slots__ = ("metrics",)

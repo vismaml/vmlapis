@@ -63,4 +63,10 @@ public interface CalculateMetricsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <code>bool legacy = 4 [json_name = "legacy"];</code>
+   * @return The legacy.
+   */
+  boolean getLegacy();
 }

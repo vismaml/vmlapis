@@ -61,6 +61,7 @@ message CalculateMetricsRequest {
   google.protobuf.Timestamp start_time = 1;
   google.protobuf.Timestamp end_time = 2;
   repeated string tags = 3;
+  bool legacy = 4;
 }
 
 message CalculateMetricsResponse {

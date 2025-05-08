@@ -303,7 +303,8 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.toObject = function(includeIns
   var f, obj = {
     startTime: (f = msg.getStartTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     endTime: (f = msg.getEndTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    legacy: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -354,6 +355,10 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.deserializeBinaryFromReader = 
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLegacy(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -403,6 +408,13 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.serializeBinaryToWriter = func
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
+      f
+    );
+  }
+  f = message.getLegacy();
+  if (f) {
+    writer.writeBool(
+      4,
       f
     );
   }
@@ -517,6 +529,24 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.addTags = function(v
  */
 proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * optional bool legacy = 4;
+ * @return {boolean}
+ */
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.getLegacy = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.asgt.dataservice.v1.CalculateMetricsRequest} returns this
+ */
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.setLegacy = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 

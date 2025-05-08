@@ -28,6 +28,9 @@ export class CalculateMetricsRequest extends jspb.Message {
   clearTagsList(): CalculateMetricsRequest;
   addTags(value: string, index?: number): CalculateMetricsRequest;
 
+  getLegacy(): boolean;
+  setLegacy(value: boolean): CalculateMetricsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CalculateMetricsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CalculateMetricsRequest): CalculateMetricsRequest.AsObject;
@@ -41,6 +44,7 @@ export namespace CalculateMetricsRequest {
     startTime?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     endTime?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     tagsList: Array<string>,
+    legacy: boolean,
   }
 }
 
