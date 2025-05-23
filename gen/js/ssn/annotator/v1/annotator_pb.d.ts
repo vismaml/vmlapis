@@ -530,3 +530,45 @@ export namespace DocumentQuestionResponse {
   }
 }
 
+export class GenerateStructuredAnswerRequest extends jspb.Message {
+  getDocument(): Document | undefined;
+  setDocument(value?: Document): GenerateStructuredAnswerRequest;
+  hasDocument(): boolean;
+  clearDocument(): GenerateStructuredAnswerRequest;
+
+  getJsonSchema(): string;
+  setJsonSchema(value: string): GenerateStructuredAnswerRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GenerateStructuredAnswerRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GenerateStructuredAnswerRequest): GenerateStructuredAnswerRequest.AsObject;
+  static serializeBinaryToWriter(message: GenerateStructuredAnswerRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GenerateStructuredAnswerRequest;
+  static deserializeBinaryFromReader(message: GenerateStructuredAnswerRequest, reader: jspb.BinaryReader): GenerateStructuredAnswerRequest;
+}
+
+export namespace GenerateStructuredAnswerRequest {
+  export type AsObject = {
+    document?: Document.AsObject,
+    jsonSchema: string,
+  }
+}
+
+export class GenerateStructuredAnswerResponse extends jspb.Message {
+  getJson(): string;
+  setJson(value: string): GenerateStructuredAnswerResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GenerateStructuredAnswerResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GenerateStructuredAnswerResponse): GenerateStructuredAnswerResponse.AsObject;
+  static serializeBinaryToWriter(message: GenerateStructuredAnswerResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GenerateStructuredAnswerResponse;
+  static deserializeBinaryFromReader(message: GenerateStructuredAnswerResponse, reader: jspb.BinaryReader): GenerateStructuredAnswerResponse;
+}
+
+export namespace GenerateStructuredAnswerResponse {
+  export type AsObject = {
+    json: string,
+  }
+}
+

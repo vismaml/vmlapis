@@ -89,6 +89,47 @@
         ]
       }
     },
+    "/v1/document:generateStructuredAnswer": {
+      "post": {
+        "operationId": "DocumentAnnotator_GenerateStructuredAnswer",
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/v1GenerateStructuredAnswerResponse"
+                },
+                "error": {
+                  "$ref": "#/definitions/rpcStatus"
+                }
+              },
+              "title": "Stream result of v1GenerateStructuredAnswerResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GenerateStructuredAnswerRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DocumentAnnotator"
+        ]
+      }
+    },
     "/v1/feedback:create": {
       "post": {
         "operationId": "DataService_Feedback",
@@ -1858,6 +1899,25 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "v1GenerateStructuredAnswerRequest": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "$ref": "#/definitions/ssnannotatorv1Document"
+        },
+        "jsonSchema": {
+          "type": "string"
+        }
+      }
+    },
+    "v1GenerateStructuredAnswerResponse": {
+      "type": "object",
+      "properties": {
+        "json": {
+          "type": "string"
         }
       }
     },

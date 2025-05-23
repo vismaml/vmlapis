@@ -208,5 +208,61 @@ proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.answerDocumentQu
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.annotator.v1.GenerateStructuredAnswerRequest,
+ *   !proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
+ */
+const methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer = new grpc.web.MethodDescriptor(
+  '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
+  grpc.web.MethodType.SERVER_STREAMING,
+  proto.ssn.annotator.v1.GenerateStructuredAnswerRequest,
+  proto.ssn.annotator.v1.GenerateStructuredAnswerResponse,
+  /**
+   * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.annotator.v1.GenerateStructuredAnswerResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorClient.prototype.generateStructuredAnswer =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer);
+};
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.generateStructuredAnswer =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer);
+};
+
+
 module.exports = proto.ssn.annotator.v1;
 

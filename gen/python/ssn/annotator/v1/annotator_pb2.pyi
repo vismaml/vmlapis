@@ -266,3 +266,17 @@ class DocumentQuestionResponse(_message.Message):
     ANSWERS_FIELD_NUMBER: _ClassVar[int]
     answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
+
+class GenerateStructuredAnswerRequest(_message.Message):
+    __slots__ = ("document", "json_schema")
+    DOCUMENT_FIELD_NUMBER: _ClassVar[int]
+    JSON_SCHEMA_FIELD_NUMBER: _ClassVar[int]
+    document: Document
+    json_schema: str
+    def __init__(self, document: _Optional[_Union[Document, _Mapping]] = ..., json_schema: _Optional[str] = ...) -> None: ...
+
+class GenerateStructuredAnswerResponse(_message.Message):
+    __slots__ = ("json",)
+    JSON_FIELD_NUMBER: _ClassVar[int]
+    json: str
+    def __init__(self, json: _Optional[str] = ...) -> None: ...

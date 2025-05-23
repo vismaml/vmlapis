@@ -22,6 +22,11 @@ export class DocumentAnnotatorClient {
                response: ssn_annotator_v1_annotator_pb.DocumentQuestionResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.DocumentQuestionResponse>;
 
+  generateStructuredAnswer(
+    request: ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse>;
+
 }
 
 export class DocumentAnnotatorPromiseClient {
@@ -38,6 +43,11 @@ export class DocumentAnnotatorPromiseClient {
     request: ssn_annotator_v1_annotator_pb.DocumentQuestionRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_annotator_v1_annotator_pb.DocumentQuestionResponse>;
+
+  generateStructuredAnswer(
+    request: ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse>;
 
 }
 

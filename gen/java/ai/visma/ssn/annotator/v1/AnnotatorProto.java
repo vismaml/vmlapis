@@ -60,6 +60,16 @@ public final class AnnotatorProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_annotator_v1_DocumentQuestionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_annotator_v1_GenerateStructuredAnswerRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_annotator_v1_GenerateStructuredAnswerResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -199,22 +209,31 @@ public final class AnnotatorProto {
       "ocumentR\010document\022\034\n\tquestions\030\002 \003(\tR\tqu" +
       "estions\"U\n\030DocumentQuestionResponse\0223\n\007a" +
       "nswers\030\002 \003(\0132\031.ssn.type.AnswerCandidateR" +
-      "\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022\215\001\n" +
-      "\020AnnotateDocument\022*.ssn.annotator.v1.Doc" +
-      "umentAnnotatorRequest\032+.ssn.annotator.v1" +
-      ".DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/" +
-      "document:annotate:\001*\022\227\001\n\026AnswerDocumentQ" +
-      "uestion\022).ssn.annotator.v1.DocumentQuest" +
-      "ionRequest\032*.ssn.annotator.v1.DocumentQu" +
-      "estionResponse\"&\202\323\344\223\002 \"\033/v1/document:ans" +
-      "werquestion:\001*B\210\002\n\031ai.visma.ssn.annotato" +
-      "r.v1B\016AnnotatorProtoP\001Z>github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/annotator/v1;ann" +
-      "otator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\An" +
-      "notator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadat" +
-      "a\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002" +
-      "v1*\001\0022\020application/json:\020application/jso" +
-      "nb\006proto3"
+      "\007answersJ\004\010\001\020\002\"z\n\037GenerateStructuredAnsw" +
+      "erRequest\0226\n\010document\030\001 \001(\0132\032.ssn.annota" +
+      "tor.v1.DocumentR\010document\022\037\n\013json_schema" +
+      "\030\002 \001(\tR\njsonSchema\"6\n GenerateStructured" +
+      "AnswerResponse\022\022\n\004json\030\001 \001(\tR\004json2\365\003\n\021D" +
+      "ocumentAnnotator\022\215\001\n\020AnnotateDocument\022*." +
+      "ssn.annotator.v1.DocumentAnnotatorReques" +
+      "t\032+.ssn.annotator.v1.DocumentAnnotatorRe" +
+      "sponse\" \202\323\344\223\002\032\"\025/v1/document:annotate:\001*" +
+      "\022\227\001\n\026AnswerDocumentQuestion\022).ssn.annota" +
+      "tor.v1.DocumentQuestionRequest\032*.ssn.ann" +
+      "otator.v1.DocumentQuestionResponse\"&\202\323\344\223" +
+      "\002 \"\033/v1/document:answerquestion:\001*\022\265\001\n\030G" +
+      "enerateStructuredAnswer\0221.ssn.annotator." +
+      "v1.GenerateStructuredAnswerRequest\0322.ssn" +
+      ".annotator.v1.GenerateStructuredAnswerRe" +
+      "sponse\"0\202\323\344\223\002*\"%/v1/document:generateStr" +
+      "ucturedAnswer:\001*0\001B\210\002\n\031ai.visma.ssn.anno" +
+      "tator.v1B\016AnnotatorProtoP\001Z>github.com/e" +
+      "-conomic/vmlapis/gen/go/ssn/annotator/v1" +
+      ";annotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ss" +
+      "n\\Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMet" +
+      "adata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartSc" +
+      "an2\002v1*\001\0022\020application/json:\020application" +
+      "/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -267,6 +286,18 @@ public final class AnnotatorProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentQuestionResponse_descriptor,
         new java.lang.String[] { "Answers", });
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_annotator_v1_GenerateStructuredAnswerRequest_descriptor,
+        new java.lang.String[] { "Document", "JsonSchema", });
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_ssn_annotator_v1_GenerateStructuredAnswerResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_annotator_v1_GenerateStructuredAnswerResponse_descriptor,
+        new java.lang.String[] { "Json", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();

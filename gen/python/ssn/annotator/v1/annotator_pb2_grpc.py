@@ -24,6 +24,11 @@ class DocumentAnnotatorStub(object):
                 request_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionRequest.SerializeToString,
                 response_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionResponse.FromString,
                 _registered_method=True)
+        self.GenerateStructuredAnswer = channel.unary_stream(
+                '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
+                request_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerRequest.SerializeToString,
+                response_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerResponse.FromString,
+                _registered_method=True)
 
 
 class DocumentAnnotatorServicer(object):
@@ -41,6 +46,12 @@ class DocumentAnnotatorServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GenerateStructuredAnswer(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DocumentAnnotatorServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -53,6 +64,11 @@ def add_DocumentAnnotatorServicer_to_server(servicer, server):
                     servicer.AnswerDocumentQuestion,
                     request_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionRequest.FromString,
                     response_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionResponse.SerializeToString,
+            ),
+            'GenerateStructuredAnswer': grpc.unary_stream_rpc_method_handler(
+                    servicer.GenerateStructuredAnswer,
+                    request_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerRequest.FromString,
+                    response_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -109,6 +125,33 @@ class DocumentAnnotator(object):
             '/ssn.annotator.v1.DocumentAnnotator/AnswerDocumentQuestion',
             ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionRequest.SerializeToString,
             ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GenerateStructuredAnswer(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(
+            request,
+            target,
+            '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
+            ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerRequest.SerializeToString,
+            ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerResponse.FromString,
             options,
             channel_credentials,
             insecure,

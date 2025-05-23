@@ -33,6 +33,12 @@ service DocumentAnnotator {
       body: "*"
     };
   }
+  rpc GenerateStructuredAnswer(GenerateStructuredAnswerRequest) returns (stream GenerateStructuredAnswerResponse) {
+    option (google.api.http) = {
+      post: "/v1/document:generateStructuredAnswer"
+      body: "*"
+    };
+  }
 }
 
 message Feature {
@@ -329,4 +335,13 @@ message DocumentQuestionRequest {
 message DocumentQuestionResponse {
   reserved 1;
   repeated ssn.type.AnswerCandidate answers = 2;
+}
+
+message GenerateStructuredAnswerRequest {
+  Document document = 1;
+  string json_schema = 2;
+}
+
+message GenerateStructuredAnswerResponse {
+  string json = 1;
 }
