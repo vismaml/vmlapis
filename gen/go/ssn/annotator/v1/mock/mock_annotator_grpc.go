@@ -11,7 +11,6 @@ import (
 	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
-	metadata "google.golang.org/grpc/metadata"
 )
 
 // MockDocumentAnnotatorClient is a mock of DocumentAnnotatorClient interface.
@@ -78,14 +77,14 @@ func (mr *MockDocumentAnnotatorClientMockRecorder) AnswerDocumentQuestion(ctx, i
 }
 
 // GenerateStructuredAnswer mocks base method.
-func (m *MockDocumentAnnotatorClient) GenerateStructuredAnswer(ctx context.Context, in *v1.GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (v1.DocumentAnnotator_GenerateStructuredAnswerClient, error) {
+func (m *MockDocumentAnnotatorClient) GenerateStructuredAnswer(ctx context.Context, in *v1.GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (*v1.GenerateStructuredAnswerResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GenerateStructuredAnswer", varargs...)
-	ret0, _ := ret[0].(v1.DocumentAnnotator_GenerateStructuredAnswerClient)
+	ret0, _ := ret[0].(*v1.GenerateStructuredAnswerResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -95,129 +94,6 @@ func (mr *MockDocumentAnnotatorClientMockRecorder) GenerateStructuredAnswer(ctx,
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateStructuredAnswer", reflect.TypeOf((*MockDocumentAnnotatorClient)(nil).GenerateStructuredAnswer), varargs...)
-}
-
-// MockDocumentAnnotator_GenerateStructuredAnswerClient is a mock of DocumentAnnotator_GenerateStructuredAnswerClient interface.
-type MockDocumentAnnotator_GenerateStructuredAnswerClient struct {
-	ctrl     *gomock.Controller
-	recorder *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder
-}
-
-// MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder is the mock recorder for MockDocumentAnnotator_GenerateStructuredAnswerClient.
-type MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder struct {
-	mock *MockDocumentAnnotator_GenerateStructuredAnswerClient
-}
-
-// NewMockDocumentAnnotator_GenerateStructuredAnswerClient creates a new mock instance.
-func NewMockDocumentAnnotator_GenerateStructuredAnswerClient(ctrl *gomock.Controller) *MockDocumentAnnotator_GenerateStructuredAnswerClient {
-	mock := &MockDocumentAnnotator_GenerateStructuredAnswerClient{ctrl: ctrl}
-	mock.recorder = &MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder{mock}
-	return mock
-}
-
-// EXPECT returns an object that allows the caller to indicate expected use.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) EXPECT() *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder {
-	return m.recorder
-}
-
-// CloseSend mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) CloseSend() error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CloseSend")
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// CloseSend indicates an expected call of CloseSend.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) CloseSend() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseSend", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).CloseSend))
-}
-
-// Context mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) Context() context.Context {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Context")
-	ret0, _ := ret[0].(context.Context)
-	return ret0
-}
-
-// Context indicates an expected call of Context.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) Context() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).Context))
-}
-
-// Header mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) Header() (metadata.MD, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Header")
-	ret0, _ := ret[0].(metadata.MD)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// Header indicates an expected call of Header.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) Header() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Header", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).Header))
-}
-
-// Recv mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) Recv() (*v1.GenerateStructuredAnswerResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Recv")
-	ret0, _ := ret[0].(*v1.GenerateStructuredAnswerResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// Recv indicates an expected call of Recv.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) Recv() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Recv", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).Recv))
-}
-
-// RecvMsg mocks base method.
-func (m_2 *MockDocumentAnnotator_GenerateStructuredAnswerClient) RecvMsg(m interface{}) error {
-	m_2.ctrl.T.Helper()
-	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// RecvMsg indicates an expected call of RecvMsg.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) RecvMsg(m interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecvMsg", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).RecvMsg), m)
-}
-
-// SendMsg mocks base method.
-func (m_2 *MockDocumentAnnotator_GenerateStructuredAnswerClient) SendMsg(m interface{}) error {
-	m_2.ctrl.T.Helper()
-	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// SendMsg indicates an expected call of SendMsg.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) SendMsg(m interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).SendMsg), m)
-}
-
-// Trailer mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerClient) Trailer() metadata.MD {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Trailer")
-	ret0, _ := ret[0].(metadata.MD)
-	return ret0
-}
-
-// Trailer indicates an expected call of Trailer.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerClientMockRecorder) Trailer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Trailer", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerClient)(nil).Trailer))
 }
 
 // MockDocumentAnnotatorServer is a mock of DocumentAnnotatorServer interface.
@@ -274,11 +150,12 @@ func (mr *MockDocumentAnnotatorServerMockRecorder) AnswerDocumentQuestion(arg0, 
 }
 
 // GenerateStructuredAnswer mocks base method.
-func (m *MockDocumentAnnotatorServer) GenerateStructuredAnswer(arg0 *v1.GenerateStructuredAnswerRequest, arg1 v1.DocumentAnnotator_GenerateStructuredAnswerServer) error {
+func (m *MockDocumentAnnotatorServer) GenerateStructuredAnswer(arg0 context.Context, arg1 *v1.GenerateStructuredAnswerRequest) (*v1.GenerateStructuredAnswerResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GenerateStructuredAnswer", arg0, arg1)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret0, _ := ret[0].(*v1.GenerateStructuredAnswerResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // GenerateStructuredAnswer indicates an expected call of GenerateStructuredAnswer.
@@ -320,123 +197,4 @@ func (m *MockUnsafeDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnota
 func (mr *MockUnsafeDocumentAnnotatorServerMockRecorder) mustEmbedUnimplementedDocumentAnnotatorServer() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedDocumentAnnotatorServer", reflect.TypeOf((*MockUnsafeDocumentAnnotatorServer)(nil).mustEmbedUnimplementedDocumentAnnotatorServer))
-}
-
-// MockDocumentAnnotator_GenerateStructuredAnswerServer is a mock of DocumentAnnotator_GenerateStructuredAnswerServer interface.
-type MockDocumentAnnotator_GenerateStructuredAnswerServer struct {
-	ctrl     *gomock.Controller
-	recorder *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder
-}
-
-// MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder is the mock recorder for MockDocumentAnnotator_GenerateStructuredAnswerServer.
-type MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder struct {
-	mock *MockDocumentAnnotator_GenerateStructuredAnswerServer
-}
-
-// NewMockDocumentAnnotator_GenerateStructuredAnswerServer creates a new mock instance.
-func NewMockDocumentAnnotator_GenerateStructuredAnswerServer(ctrl *gomock.Controller) *MockDocumentAnnotator_GenerateStructuredAnswerServer {
-	mock := &MockDocumentAnnotator_GenerateStructuredAnswerServer{ctrl: ctrl}
-	mock.recorder = &MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder{mock}
-	return mock
-}
-
-// EXPECT returns an object that allows the caller to indicate expected use.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) EXPECT() *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder {
-	return m.recorder
-}
-
-// Context mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) Context() context.Context {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Context")
-	ret0, _ := ret[0].(context.Context)
-	return ret0
-}
-
-// Context indicates an expected call of Context.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) Context() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).Context))
-}
-
-// RecvMsg mocks base method.
-func (m_2 *MockDocumentAnnotator_GenerateStructuredAnswerServer) RecvMsg(m interface{}) error {
-	m_2.ctrl.T.Helper()
-	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// RecvMsg indicates an expected call of RecvMsg.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) RecvMsg(m interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecvMsg", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).RecvMsg), m)
-}
-
-// Send mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) Send(arg0 *v1.GenerateStructuredAnswerResponse) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Send", arg0)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// Send indicates an expected call of Send.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) Send(arg0 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Send", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).Send), arg0)
-}
-
-// SendHeader mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) SendHeader(arg0 metadata.MD) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SendHeader", arg0)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// SendHeader indicates an expected call of SendHeader.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) SendHeader(arg0 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendHeader", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).SendHeader), arg0)
-}
-
-// SendMsg mocks base method.
-func (m_2 *MockDocumentAnnotator_GenerateStructuredAnswerServer) SendMsg(m interface{}) error {
-	m_2.ctrl.T.Helper()
-	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// SendMsg indicates an expected call of SendMsg.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) SendMsg(m interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).SendMsg), m)
-}
-
-// SetHeader mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) SetHeader(arg0 metadata.MD) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SetHeader", arg0)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// SetHeader indicates an expected call of SetHeader.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) SetHeader(arg0 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetHeader", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).SetHeader), arg0)
-}
-
-// SetTrailer mocks base method.
-func (m *MockDocumentAnnotator_GenerateStructuredAnswerServer) SetTrailer(arg0 metadata.MD) {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "SetTrailer", arg0)
-}
-
-// SetTrailer indicates an expected call of SetTrailer.
-func (mr *MockDocumentAnnotator_GenerateStructuredAnswerServerMockRecorder) SetTrailer(arg0 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetTrailer", reflect.TypeOf((*MockDocumentAnnotator_GenerateStructuredAnswerServer)(nil).SetTrailer), arg0)
 }

@@ -33,7 +33,7 @@ service DocumentAnnotator {
       body: "*"
     };
   }
-  rpc GenerateStructuredAnswer(GenerateStructuredAnswerRequest) returns (stream GenerateStructuredAnswerResponse) {
+  rpc GenerateStructuredAnswer(GenerateStructuredAnswerRequest) returns (GenerateStructuredAnswerResponse) {
     option (google.api.http) = {
       post: "/v1/document:generateStructuredAnswer"
       body: "*"

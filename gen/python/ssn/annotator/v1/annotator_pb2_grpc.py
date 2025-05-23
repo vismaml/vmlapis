@@ -24,7 +24,7 @@ class DocumentAnnotatorStub(object):
                 request_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionRequest.SerializeToString,
                 response_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionResponse.FromString,
                 _registered_method=True)
-        self.GenerateStructuredAnswer = channel.unary_stream(
+        self.GenerateStructuredAnswer = channel.unary_unary(
                 '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
                 request_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerRequest.SerializeToString,
                 response_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerResponse.FromString,
@@ -65,7 +65,7 @@ def add_DocumentAnnotatorServicer_to_server(servicer, server):
                     request_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionRequest.FromString,
                     response_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.DocumentQuestionResponse.SerializeToString,
             ),
-            'GenerateStructuredAnswer': grpc.unary_stream_rpc_method_handler(
+            'GenerateStructuredAnswer': grpc.unary_unary_rpc_method_handler(
                     servicer.GenerateStructuredAnswer,
                     request_deserializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerRequest.FromString,
                     response_serializer=ssn_dot_annotator_dot_v1_dot_annotator__pb2.GenerateStructuredAnswerResponse.SerializeToString,
@@ -146,7 +146,7 @@ class DocumentAnnotator(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(
+        return grpc.experimental.unary_unary(
             request,
             target,
             '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',

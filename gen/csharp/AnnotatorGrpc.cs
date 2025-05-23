@@ -76,7 +76,7 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest, global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> __Method_GenerateStructuredAnswer = new grpc::Method<global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest, global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse>(
-        grpc::MethodType.ServerStreaming,
+        grpc::MethodType.Unary,
         __ServiceName,
         "GenerateStructuredAnswer",
         __Marshaller_ssn_annotator_v1_GenerateStructuredAnswerRequest,
@@ -105,7 +105,7 @@ namespace Ssn.Annotator.V1 {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::IServerStreamWriter<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -180,14 +180,24 @@ namespace Ssn.Annotator.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AnswerDocumentQuestion, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateStructuredAnswer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::CallOptions options)
+      public virtual global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse GenerateStructuredAnswer(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncServerStreamingCall(__Method_GenerateStructuredAnswer, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateStructuredAnswer, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> GenerateStructuredAnswerAsync(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateStructuredAnswerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse> GenerateStructuredAnswerAsync(global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateStructuredAnswer, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -217,7 +227,7 @@ namespace Ssn.Annotator.V1 {
     {
       serviceBinder.AddMethod(__Method_AnnotateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Annotator.V1.DocumentAnnotatorRequest, global::Ssn.Annotator.V1.DocumentAnnotatorResponse>(serviceImpl.AnnotateDocument));
       serviceBinder.AddMethod(__Method_AnswerDocumentQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Annotator.V1.DocumentQuestionRequest, global::Ssn.Annotator.V1.DocumentQuestionResponse>(serviceImpl.AnswerDocumentQuestion));
-      serviceBinder.AddMethod(__Method_GenerateStructuredAnswer, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest, global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse>(serviceImpl.GenerateStructuredAnswer));
+      serviceBinder.AddMethod(__Method_GenerateStructuredAnswer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Annotator.V1.GenerateStructuredAnswerRequest, global::Ssn.Annotator.V1.GenerateStructuredAnswerResponse>(serviceImpl.GenerateStructuredAnswer));
     }
 
   }

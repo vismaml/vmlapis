@@ -24,7 +24,9 @@ export class DocumentAnnotatorClient {
 
   generateStructuredAnswer(
     request: ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerRequest,
-    metadata?: grpcWeb.Metadata
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse>;
 
 }
@@ -47,7 +49,7 @@ export class DocumentAnnotatorPromiseClient {
   generateStructuredAnswer(
     request: ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerRequest,
     metadata?: grpcWeb.Metadata
-  ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse>;
+  ): Promise<ssn_annotator_v1_annotator_pb.GenerateStructuredAnswerResponse>;
 
 }
 

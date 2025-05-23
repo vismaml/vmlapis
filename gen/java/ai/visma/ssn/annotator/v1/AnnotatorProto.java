@@ -213,7 +213,7 @@ public final class AnnotatorProto {
       "erRequest\0226\n\010document\030\001 \001(\0132\032.ssn.annota" +
       "tor.v1.DocumentR\010document\022\037\n\013json_schema" +
       "\030\002 \001(\tR\njsonSchema\"6\n GenerateStructured" +
-      "AnswerResponse\022\022\n\004json\030\001 \001(\tR\004json2\365\003\n\021D" +
+      "AnswerResponse\022\022\n\004json\030\001 \001(\tR\004json2\363\003\n\021D" +
       "ocumentAnnotator\022\215\001\n\020AnnotateDocument\022*." +
       "ssn.annotator.v1.DocumentAnnotatorReques" +
       "t\032+.ssn.annotator.v1.DocumentAnnotatorRe" +
@@ -221,19 +221,19 @@ public final class AnnotatorProto {
       "\022\227\001\n\026AnswerDocumentQuestion\022).ssn.annota" +
       "tor.v1.DocumentQuestionRequest\032*.ssn.ann" +
       "otator.v1.DocumentQuestionResponse\"&\202\323\344\223" +
-      "\002 \"\033/v1/document:answerquestion:\001*\022\265\001\n\030G" +
+      "\002 \"\033/v1/document:answerquestion:\001*\022\263\001\n\030G" +
       "enerateStructuredAnswer\0221.ssn.annotator." +
       "v1.GenerateStructuredAnswerRequest\0322.ssn" +
       ".annotator.v1.GenerateStructuredAnswerRe" +
       "sponse\"0\202\323\344\223\002*\"%/v1/document:generateStr" +
-      "ucturedAnswer:\001*0\001B\210\002\n\031ai.visma.ssn.anno" +
-      "tator.v1B\016AnnotatorProtoP\001Z>github.com/e" +
-      "-conomic/vmlapis/gen/go/ssn/annotator/v1" +
-      ";annotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ss" +
-      "n\\Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMet" +
-      "adata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartSc" +
-      "an2\002v1*\001\0022\020application/json:\020application" +
-      "/jsonb\006proto3"
+      "ucturedAnswer:\001*B\210\002\n\031ai.visma.ssn.annota" +
+      "tor.v1B\016AnnotatorProtoP\001Z>github.com/e-c" +
+      "onomic/vmlapis/gen/go/ssn/annotator/v1;a" +
+      "nnotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\" +
+      "Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetad" +
+      "ata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan" +
+      "2\002v1*\001\0022\020application/json:\020application/j" +
+      "sonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

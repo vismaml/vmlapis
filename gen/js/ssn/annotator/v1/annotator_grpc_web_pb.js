@@ -216,7 +216,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.answerDocumentQu
  */
 const methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer = new grpc.web.MethodDescriptor(
   '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
-  grpc.web.MethodType.SERVER_STREAMING,
+  grpc.web.MethodType.UNARY,
   proto.ssn.annotator.v1.GenerateStructuredAnswerRequest,
   proto.ssn.annotator.v1.GenerateStructuredAnswerResponse,
   /**
@@ -231,32 +231,37 @@ const methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer = new grpc.web
 
 
 /**
- * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The request proto
- * @param {?Object<string, string>=} metadata User defined
+ * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.annotator.v1.GenerateStructuredAnswerResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.ssn.annotator.v1.DocumentAnnotatorClient.prototype.generateStructuredAnswer =
-    function(request, metadata) {
-  return this.client_.serverStreaming(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
       request,
       metadata || {},
-      methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer);
+      methodDescriptor_DocumentAnnotator_GenerateStructuredAnswer,
+      callback);
 };
 
 
 /**
- * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The request proto
+ * @param {!proto.ssn.annotator.v1.GenerateStructuredAnswerRequest} request The
+ *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
- *     The XHR Node Readable Stream
+ * @return {!Promise<!proto.ssn.annotator.v1.GenerateStructuredAnswerResponse>}
+ *     Promise that resolves to the response
  */
 proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.generateStructuredAnswer =
     function(request, metadata) {
-  return this.client_.serverStreaming(this.hostname_ +
+  return this.client_.unaryCall(this.hostname_ +
       '/ssn.annotator.v1.DocumentAnnotator/GenerateStructuredAnswer',
       request,
       metadata || {},

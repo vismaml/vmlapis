@@ -84,7 +84,7 @@ public final class DocumentAnnotatorGrpc {
       fullMethodName = SERVICE_NAME + '/' + "GenerateStructuredAnswer",
       requestType = ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest.class,
       responseType = ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest,
       ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse> getGenerateStructuredAnswerMethod() {
     io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest, ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse> getGenerateStructuredAnswerMethod;
@@ -93,7 +93,7 @@ public final class DocumentAnnotatorGrpc {
         if ((getGenerateStructuredAnswerMethod = DocumentAnnotatorGrpc.getGenerateStructuredAnswerMethod) == null) {
           DocumentAnnotatorGrpc.getGenerateStructuredAnswerMethod = getGenerateStructuredAnswerMethod =
               io.grpc.MethodDescriptor.<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest, ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateStructuredAnswer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -240,7 +240,7 @@ public final class DocumentAnnotatorGrpc {
      */
     public void generateStructuredAnswer(ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateStructuredAnswerMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -277,10 +277,8 @@ public final class DocumentAnnotatorGrpc {
 
     /**
      */
-    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
-    public io.grpc.stub.BlockingClientCall<?, ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse>
-        generateStructuredAnswer(ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request) {
-      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+    public ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse generateStructuredAnswer(ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateStructuredAnswerMethod(), getCallOptions(), request);
     }
   }
@@ -317,9 +315,8 @@ public final class DocumentAnnotatorGrpc {
 
     /**
      */
-    public java.util.Iterator<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse> generateStructuredAnswer(
-        ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+    public ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse generateStructuredAnswer(ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateStructuredAnswerMethod(), getCallOptions(), request);
     }
   }
@@ -354,6 +351,14 @@ public final class DocumentAnnotatorGrpc {
         ai.visma.ssn.annotator.v1.DocumentQuestionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAnswerDocumentQuestionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse> generateStructuredAnswer(
+        ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateStructuredAnswerMethod(), getCallOptions()), request);
     }
   }
 
@@ -424,7 +429,7 @@ public final class DocumentAnnotatorGrpc {
                 service, METHODID_ANSWER_DOCUMENT_QUESTION)))
         .addMethod(
           getGenerateStructuredAnswerMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               ai.visma.ssn.annotator.v1.GenerateStructuredAnswerRequest,
               ai.visma.ssn.annotator.v1.GenerateStructuredAnswerResponse>(

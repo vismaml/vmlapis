@@ -30,7 +30,7 @@ const (
 type DocumentAnnotatorClient interface {
 	AnnotateDocument(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error)
 	AnswerDocumentQuestion(ctx context.Context, in *DocumentQuestionRequest, opts ...grpc.CallOption) (*DocumentQuestionResponse, error)
-	GenerateStructuredAnswer(ctx context.Context, in *GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (DocumentAnnotator_GenerateStructuredAnswerClient, error)
+	GenerateStructuredAnswer(ctx context.Context, in *GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (*GenerateStructuredAnswerResponse, error)
 }
 
 type documentAnnotatorClient struct {
@@ -59,36 +59,13 @@ func (c *documentAnnotatorClient) AnswerDocumentQuestion(ctx context.Context, in
 	return out, nil
 }
 
-func (c *documentAnnotatorClient) GenerateStructuredAnswer(ctx context.Context, in *GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (DocumentAnnotator_GenerateStructuredAnswerClient, error) {
-	stream, err := c.cc.NewStream(ctx, &DocumentAnnotator_ServiceDesc.Streams[0], DocumentAnnotator_GenerateStructuredAnswer_FullMethodName, opts...)
+func (c *documentAnnotatorClient) GenerateStructuredAnswer(ctx context.Context, in *GenerateStructuredAnswerRequest, opts ...grpc.CallOption) (*GenerateStructuredAnswerResponse, error) {
+	out := new(GenerateStructuredAnswerResponse)
+	err := c.cc.Invoke(ctx, DocumentAnnotator_GenerateStructuredAnswer_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &documentAnnotatorGenerateStructuredAnswerClient{stream}
-	if err := x.ClientStream.SendMsg(in); err != nil {
-		return nil, err
-	}
-	if err := x.ClientStream.CloseSend(); err != nil {
-		return nil, err
-	}
-	return x, nil
-}
-
-type DocumentAnnotator_GenerateStructuredAnswerClient interface {
-	Recv() (*GenerateStructuredAnswerResponse, error)
-	grpc.ClientStream
-}
-
-type documentAnnotatorGenerateStructuredAnswerClient struct {
-	grpc.ClientStream
-}
-
-func (x *documentAnnotatorGenerateStructuredAnswerClient) Recv() (*GenerateStructuredAnswerResponse, error) {
-	m := new(GenerateStructuredAnswerResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
+	return out, nil
 }
 
 // DocumentAnnotatorServer is the server API for DocumentAnnotator service.
@@ -97,7 +74,7 @@ func (x *documentAnnotatorGenerateStructuredAnswerClient) Recv() (*GenerateStruc
 type DocumentAnnotatorServer interface {
 	AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error)
 	AnswerDocumentQuestion(context.Context, *DocumentQuestionRequest) (*DocumentQuestionResponse, error)
-	GenerateStructuredAnswer(*GenerateStructuredAnswerRequest, DocumentAnnotator_GenerateStructuredAnswerServer) error
+	GenerateStructuredAnswer(context.Context, *GenerateStructuredAnswerRequest) (*GenerateStructuredAnswerResponse, error)
 }
 
 // UnimplementedDocumentAnnotatorServer should be embedded to have forward compatible implementations.
@@ -110,8 +87,8 @@ func (UnimplementedDocumentAnnotatorServer) AnnotateDocument(context.Context, *D
 func (UnimplementedDocumentAnnotatorServer) AnswerDocumentQuestion(context.Context, *DocumentQuestionRequest) (*DocumentQuestionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AnswerDocumentQuestion not implemented")
 }
-func (UnimplementedDocumentAnnotatorServer) GenerateStructuredAnswer(*GenerateStructuredAnswerRequest, DocumentAnnotator_GenerateStructuredAnswerServer) error {
-	return status.Errorf(codes.Unimplemented, "method GenerateStructuredAnswer not implemented")
+func (UnimplementedDocumentAnnotatorServer) GenerateStructuredAnswer(context.Context, *GenerateStructuredAnswerRequest) (*GenerateStructuredAnswerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GenerateStructuredAnswer not implemented")
 }
 
 // UnsafeDocumentAnnotatorServer may be embedded to opt out of forward compatibility for this service.
@@ -161,25 +138,22 @@ func _DocumentAnnotator_AnswerDocumentQuestion_Handler(srv interface{}, ctx cont
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DocumentAnnotator_GenerateStructuredAnswer_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(GenerateStructuredAnswerRequest)
-	if err := stream.RecvMsg(m); err != nil {
-		return err
+func _DocumentAnnotator_GenerateStructuredAnswer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GenerateStructuredAnswerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
 	}
-	return srv.(DocumentAnnotatorServer).GenerateStructuredAnswer(m, &documentAnnotatorGenerateStructuredAnswerServer{stream})
-}
-
-type DocumentAnnotator_GenerateStructuredAnswerServer interface {
-	Send(*GenerateStructuredAnswerResponse) error
-	grpc.ServerStream
-}
-
-type documentAnnotatorGenerateStructuredAnswerServer struct {
-	grpc.ServerStream
-}
-
-func (x *documentAnnotatorGenerateStructuredAnswerServer) Send(m *GenerateStructuredAnswerResponse) error {
-	return x.ServerStream.SendMsg(m)
+	if interceptor == nil {
+		return srv.(DocumentAnnotatorServer).GenerateStructuredAnswer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DocumentAnnotator_GenerateStructuredAnswer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentAnnotatorServer).GenerateStructuredAnswer(ctx, req.(*GenerateStructuredAnswerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 // DocumentAnnotator_ServiceDesc is the grpc.ServiceDesc for DocumentAnnotator service.
@@ -197,13 +171,11 @@ var DocumentAnnotator_ServiceDesc = grpc.ServiceDesc{
 			MethodName: "AnswerDocumentQuestion",
 			Handler:    _DocumentAnnotator_AnswerDocumentQuestion_Handler,
 		},
-	},
-	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "GenerateStructuredAnswer",
-			Handler:       _DocumentAnnotator_GenerateStructuredAnswer_Handler,
-			ServerStreams: true,
+			MethodName: "GenerateStructuredAnswer",
+			Handler:    _DocumentAnnotator_GenerateStructuredAnswer_Handler,
 		},
 	},
+	Streams:  []grpc.StreamDesc{},
 	Metadata: "ssn/annotator/v1/annotator.proto",
 }

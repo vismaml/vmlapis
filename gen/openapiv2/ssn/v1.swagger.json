@@ -94,18 +94,9 @@
         "operationId": "DocumentAnnotator_GenerateStructuredAnswer",
         "responses": {
           "200": {
-            "description": "A successful response.(streaming responses)",
+            "description": "A successful response.",
             "schema": {
-              "type": "object",
-              "properties": {
-                "result": {
-                  "$ref": "#/definitions/v1GenerateStructuredAnswerResponse"
-                },
-                "error": {
-                  "$ref": "#/definitions/rpcStatus"
-                }
-              },
-              "title": "Stream result of v1GenerateStructuredAnswerResponse"
+              "$ref": "#/definitions/v1GenerateStructuredAnswerResponse"
             }
           },
           "default": {
