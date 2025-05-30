@@ -134,6 +134,8 @@ message Feature {
     VAT_DISTRIBUTION = 46;
     // Langauge code
     LANGUAGE_CODE = 47;
+    // Run document summary generation
+    SUMMARY = 48;
   }
   // The feature type.
   Type type = 1;
@@ -297,6 +299,7 @@ message DocumentAnnotatorResponse {
   ssn.type.DocumentMetadata document_metadata = 49;
   // Information about the text language detected from OCR
   repeated ssn.type.Candidate language_code = 50;
+  string summary = 51;
 }
 
 message Document {
