@@ -434,6 +434,14 @@ private static final long serialVersionUID = 0L;
      * <code>LANGUAGE_CODE = 47;</code>
      */
     LANGUAGE_CODE(47),
+    /**
+     * <pre>
+     * Run document summary generation
+     * </pre>
+     *
+     * <code>SUMMARY = 48;</code>
+     */
+    SUMMARY(48),
     UNRECOGNIZED(-1),
     ;
 
@@ -831,6 +839,14 @@ private static final long serialVersionUID = 0L;
      * <code>LANGUAGE_CODE = 47;</code>
      */
     public static final int LANGUAGE_CODE_VALUE = 47;
+    /**
+     * <pre>
+     * Run document summary generation
+     * </pre>
+     *
+     * <code>SUMMARY = 48;</code>
+     */
+    public static final int SUMMARY_VALUE = 48;
 
 
     public final int getNumber() {
@@ -905,6 +921,7 @@ private static final long serialVersionUID = 0L;
         case 45: return PAGE_TEXTS;
         case 46: return VAT_DISTRIBUTION;
         case 47: return LANGUAGE_CODE;
+        case 48: return SUMMARY;
         default: return null;
       }
     }

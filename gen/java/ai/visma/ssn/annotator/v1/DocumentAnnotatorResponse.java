@@ -75,6 +75,7 @@ private static final long serialVersionUID = 0L;
     pageTexts_ = java.util.Collections.emptyList();
     vatDistribution_ = java.util.Collections.emptyList();
     languageCode_ = java.util.Collections.emptyList();
+    summary_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -3260,6 +3261,45 @@ private static final long serialVersionUID = 0L;
     return languageCode_.get(index);
   }
 
+  public static final int SUMMARY_FIELD_NUMBER = 51;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object summary_ = "";
+  /**
+   * <code>string summary = 51 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  @java.lang.Override
+  public java.lang.String getSummary() {
+    java.lang.Object ref = summary_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      summary_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string summary = 51 [json_name = "summary"];</code>
+   * @return The bytes for summary.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSummaryBytes() {
+    java.lang.Object ref = summary_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      summary_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3423,6 +3463,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < languageCode_.size(); i++) {
       output.writeMessage(50, languageCode_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(summary_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 51, summary_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -3630,6 +3673,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, languageCode_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(summary_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(51, summary_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3751,6 +3797,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getLanguageCodeList()
         .equals(other.getLanguageCodeList())) return false;
+    if (!getSummary()
+        .equals(other.getSummary())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3956,6 +4004,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getLanguageCodeList().hashCode();
     }
+    hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+    hash = (53 * hash) + getSummary().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4468,6 +4518,7 @@ private static final long serialVersionUID = 0L;
         languageCodeBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00020000);
+      summary_ = "";
       return this;
     }
 
@@ -4938,6 +4989,9 @@ private static final long serialVersionUID = 0L;
             ? documentMetadata_
             : documentMetadataBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField1_ & 0x00040000) != 0)) {
+        result.summary_ = summary_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -6145,6 +6199,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getSummary().isEmpty()) {
+        summary_ = other.summary_;
+        bitField1_ |= 0x00040000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6785,6 +6844,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 402
+            case 410: {
+              summary_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00040000;
+              break;
+            } // case 410
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -22174,6 +22238,78 @@ private static final long serialVersionUID = 0L;
         languageCode_ = null;
       }
       return languageCodeBuilder_;
+    }
+
+    private java.lang.Object summary_ = "";
+    /**
+     * <code>string summary = 51 [json_name = "summary"];</code>
+     * @return The summary.
+     */
+    public java.lang.String getSummary() {
+      java.lang.Object ref = summary_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        summary_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string summary = 51 [json_name = "summary"];</code>
+     * @return The bytes for summary.
+     */
+    public com.google.protobuf.ByteString
+        getSummaryBytes() {
+      java.lang.Object ref = summary_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        summary_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string summary = 51 [json_name = "summary"];</code>
+     * @param value The summary to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSummary(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      summary_ = value;
+      bitField1_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string summary = 51 [json_name = "summary"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSummary() {
+      summary_ = getDefaultInstance().getSummary();
+      bitField1_ = (bitField1_ & ~0x00040000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string summary = 51 [json_name = "summary"];</code>
+     * @param value The bytes for summary to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSummaryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      summary_ = value;
+      bitField1_ |= 0x00040000;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

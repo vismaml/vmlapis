@@ -373,7 +373,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   PURCHASE_LINES: 44,
   PAGE_TEXTS: 45,
   VAT_DISTRIBUTION: 46,
-  LANGUAGE_CODE: 47
+  LANGUAGE_CODE: 47,
+  SUMMARY: 48
 };
 
 /**
@@ -951,7 +952,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
     documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f),
     languageCodeList: jspb.Message.toObjectList(msg.getLanguageCodeList(),
-    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    summary: jspb.Message.getFieldWithDefault(msg, 51, "")
   };
 
   if (includeInstance) {
@@ -1234,6 +1236,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addLanguageCode(value);
+      break;
+    case 51:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSummary(value);
       break;
     default:
       reader.skipField();
@@ -1659,6 +1665,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       50,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSummary();
+  if (f.length > 0) {
+    writer.writeString(
+      51,
+      f
     );
   }
 };
@@ -3499,6 +3512,24 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addLanguageCode = fun
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearLanguageCodeList = function() {
   return this.setLanguageCodeList([]);
+};
+
+
+/**
+ * optional string summary = 51;
+ * @return {string}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getSummary = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 51, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setSummary = function(value) {
+  return jspb.Message.setProto3StringField(this, 51, value);
 };
 
 

@@ -2309,4 +2309,16 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
       int index);
+
+  /**
+   * <code>string summary = 51 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  java.lang.String getSummary();
+  /**
+   * <code>string summary = 51 [json_name = "summary"];</code>
+   * @return The bytes for summary.
+   */
+  com.google.protobuf.ByteString
+      getSummaryBytes();
 }

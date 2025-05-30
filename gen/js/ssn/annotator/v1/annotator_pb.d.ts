@@ -81,6 +81,7 @@ export namespace Feature {
     PAGE_TEXTS = 45,
     VAT_DISTRIBUTION = 46,
     LANGUAGE_CODE = 47,
+    SUMMARY = 48,
   }
 }
 
@@ -377,6 +378,9 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearLanguageCodeList(): DocumentAnnotatorResponse;
   addLanguageCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getSummary(): string;
+  setSummary(value: string): DocumentAnnotatorResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -437,6 +441,7 @@ export namespace DocumentAnnotatorResponse {
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     documentMetadata?: ssn_type_candidate_pb.DocumentMetadata.AsObject,
     languageCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    summary: string,
   }
 }
 
