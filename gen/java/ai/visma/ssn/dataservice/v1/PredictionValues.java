@@ -85,6 +85,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.dataservice.v1.PredictionValues.class, ai.visma.ssn.dataservice.v1.PredictionValues.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_;
@@ -1848,6 +1849,32 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_.get(index);
   }
 
+  public static final int SUMMARY_FIELD_NUMBER = 44;
+  private com.google.protobuf.StringValue summary_;
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  @java.lang.Override
+  public boolean hasSummary() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getSummary() {
+    return summary_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : summary_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getSummaryOrBuilder() {
+    return summary_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : summary_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1990,6 +2017,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < vatDistribution_.size(); i++) {
       output.writeMessage(43, vatDistribution_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(44, getSummary());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2172,6 +2202,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, vatDistribution_.get(i));
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(44, getSummary());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2273,6 +2307,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAnswersList())) return false;
     if (!getVatDistributionList()
         .equals(other.getVatDistributionList())) return false;
+    if (hasSummary() != other.hasSummary()) return false;
+    if (hasSummary()) {
+      if (!getSummary()
+          .equals(other.getSummary())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2456,6 +2495,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VAT_DISTRIBUTION_FIELD_NUMBER;
       hash = (53 * hash) + getVatDistributionList().hashCode();
     }
+    if (hasSummary()) {
+      hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getSummary().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2575,13 +2618,62 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.dataservice.v1.PredictionValues.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getTotalInclVatFieldBuilder();
+        getTotalVatFieldBuilder();
+        getTotalExclVatFieldBuilder();
+        getOrderDateFieldBuilder();
+        getPaymentDueDateFieldBuilder();
+        getDocumentTypeFieldBuilder();
+        getCurrencyFieldBuilder();
+        getCreditCardLastFourFieldBuilder();
+        getPaymentMethodFieldBuilder();
+        getOcrLineDkTypeFieldBuilder();
+        getOcrLineDkPaymentIdFieldBuilder();
+        getOcrLineDkCreditorIdFieldBuilder();
+        getOcrLineSePaymentIdFieldBuilder();
+        getOcrLineSeBankgiroCreditorIdFieldBuilder();
+        getOcrLineSePlusgiroCreditorIdFieldBuilder();
+        getOcrLineNoPaymentIdFieldBuilder();
+        getOcrLineFiPaymentIdFieldBuilder();
+        getOcrLineNlPaymentIdFieldBuilder();
+        getSupplierCorporateIdFieldBuilder();
+        getSupplierCountryCodeFieldBuilder();
+        getInvoiceNumberFieldBuilder();
+        getIbanFieldBuilder();
+        getOrderReferenceFieldBuilder();
+        getBankAccountNumberFieldBuilder();
+        getBankRegistrationNumberFieldBuilder();
+        getSupplierNameFieldBuilder();
+        getBicFieldBuilder();
+        getDocumentNumberFieldBuilder();
+        getDocumentDateFieldBuilder();
+        getOrderNumberFieldBuilder();
+        getSupplierVatNumberFieldBuilder();
+        getSupplierOrganisationNumberFieldBuilder();
+        getSupplierAddressFieldBuilder();
+        getCustomerNumberFieldBuilder();
+        getReceiverOrderNumberFieldBuilder();
+        getOcrLineBePaymentIdFieldBuilder();
+        getReceiverAddressFieldBuilder();
+        getReceiverCountryCodeFieldBuilder();
+        getReceiverNameFieldBuilder();
+        getReceiverVatNumberFieldBuilder();
+        getPurchaseLinesFieldBuilder();
+        getAnswersFieldBuilder();
+        getVatDistributionFieldBuilder();
+        getSummaryFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2889,6 +2981,11 @@ private static final long serialVersionUID = 0L;
         vatDistributionBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000400);
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
       return this;
     }
 
@@ -3318,6 +3415,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(ai.visma.ssn.dataservice.v1.PredictionValues result) {
       int from_bitField1_ = bitField1_;
+      int to_bitField0_ = 0;
+      if (((from_bitField1_ & 0x00000800) != 0)) {
+        result.summary_ = summaryBuilder_ == null
+            ? summary_
+            : summaryBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4450,6 +4555,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasSummary()) {
+        mergeSummary(other.getSummary());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -5035,6 +5143,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 346
+            case 354: {
+              input.readMessage(
+                  getSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 354
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -15371,6 +15486,127 @@ private static final long serialVersionUID = 0L;
         vatDistribution_ = null;
       }
       return vatDistributionBuilder_;
+    }
+
+    private com.google.protobuf.StringValue summary_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> summaryBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     * @return Whether the summary field is set.
+     */
+    public boolean hasSummary() {
+      return ((bitField1_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     * @return The summary.
+     */
+    public com.google.protobuf.StringValue getSummary() {
+      if (summaryBuilder_ == null) {
+        return summary_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : summary_;
+      } else {
+        return summaryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(com.google.protobuf.StringValue value) {
+      if (summaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        summary_ = value;
+      } else {
+        summaryBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public Builder setSummary(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (summaryBuilder_ == null) {
+        summary_ = builderForValue.build();
+      } else {
+        summaryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public Builder mergeSummary(com.google.protobuf.StringValue value) {
+      if (summaryBuilder_ == null) {
+        if (((bitField1_ & 0x00000800) != 0) &&
+          summary_ != null &&
+          summary_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getSummaryBuilder().mergeFrom(value);
+        } else {
+          summary_ = value;
+        }
+      } else {
+        summaryBuilder_.mergeFrom(value);
+      }
+      if (summary_ != null) {
+        bitField1_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public Builder clearSummary() {
+      bitField1_ = (bitField1_ & ~0x00000800);
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
+        summaryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getSummaryBuilder() {
+      bitField1_ |= 0x00000800;
+      onChanged();
+      return getSummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSummaryOrBuilder() {
+      if (summaryBuilder_ != null) {
+        return summaryBuilder_.getMessageOrBuilder();
+      } else {
+        return summary_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : summary_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getSummaryFieldBuilder() {
+      if (summaryBuilder_ == null) {
+        summaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getSummary(),
+                getParentForChildren(),
+                isClean());
+        summary_ = null;
+      }
+      return summaryBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionValues)

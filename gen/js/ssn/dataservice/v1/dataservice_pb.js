@@ -3398,7 +3398,8 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    summary: (f = msg.getSummary()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3649,6 +3650,11 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistribution(value);
+      break;
+    case 44:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setSummary(value);
       break;
     default:
       reader.skipField();
@@ -4021,6 +4027,14 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
       43,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getSummary();
+  if (f != null) {
+    writer.writeMessage(
+      44,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
 };
@@ -5657,6 +5671,43 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.addVatDistribution = functio
  */
 proto.ssn.dataservice.v1.PredictionValues.prototype.clearVatDistributionList = function() {
   return this.setVatDistributionList([]);
+};
+
+
+/**
+ * optional google.protobuf.StringValue summary = 44;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getSummary = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 44));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setSummary = function(value) {
+  return jspb.Message.setWrapperField(this, 44, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearSummary = function() {
+  return this.setSummary(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.hasSummary = function() {
+  return jspb.Message.getField(this, 44) != null;
 };
 
 
@@ -7893,7 +7944,7 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverVatNumberL
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
 
 
 
@@ -8005,6 +8056,8 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    summaryList: jspb.Message.toObjectList(msg.getSummaryList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -8241,6 +8294,11 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addSummary(value);
       break;
     default:
       reader.skipField();
@@ -8587,6 +8645,14 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       40,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getSummaryList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -10111,6 +10177,44 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverVatNumber = fun
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec summary = 41;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getSummaryList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setSummaryList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addSummary = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearSummaryList = function() {
+  return this.setSummaryList([]);
 };
 
 

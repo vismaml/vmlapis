@@ -2474,6 +2474,13 @@
             "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
+        },
+        "summary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
         }
       }
     },
@@ -2746,6 +2753,9 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
           }
+        },
+        "summary": {
+          "type": "string"
         }
       }
     },

@@ -567,6 +567,11 @@ export class PredictionValues extends jspb.Message {
   clearVatDistributionList(): PredictionValues;
   addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
+  getSummary(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setSummary(value?: google_protobuf_wrappers_pb.StringValue): PredictionValues;
+  hasSummary(): boolean;
+  clearSummary(): PredictionValues;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -620,6 +625,7 @@ export namespace PredictionValues {
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    summary?: google_protobuf_wrappers_pb.StringValue.AsObject,
   }
 }
 
@@ -1078,6 +1084,11 @@ export class PredictionMetadata extends jspb.Message {
   clearReceiverVatNumberList(): PredictionMetadata;
   addReceiverVatNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
+  getSummaryList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setSummaryList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearSummaryList(): PredictionMetadata;
+  addSummary(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -1128,6 +1139,7 @@ export namespace PredictionMetadata {
     receiverCountryCodeList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverNameList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    summaryList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 

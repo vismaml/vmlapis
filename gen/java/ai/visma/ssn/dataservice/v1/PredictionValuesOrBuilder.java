@@ -1040,4 +1040,19 @@ public interface PredictionValuesOrBuilder extends
    */
   ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
       int index);
+
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   * @return Whether the summary field is set.
+   */
+  boolean hasSummary();
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   * @return The summary.
+   */
+  com.google.protobuf.StringValue getSummary();
+  /**
+   * <code>.google.protobuf.StringValue summary = 44 [json_name = "summary"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getSummaryOrBuilder();
 }
