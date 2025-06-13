@@ -237,7 +237,6 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec receiver_country_code = 38;
   repeated ssn.type.ModelSpec receiver_name = 39;
   repeated ssn.type.ModelSpec receiver_vat_number = 40;
-  repeated ssn.type.ModelSpec summary = 41;
 }
 
 message CreateDocumentRequest {
