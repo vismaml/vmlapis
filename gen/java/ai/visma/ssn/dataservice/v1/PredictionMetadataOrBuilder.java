@@ -968,28 +968,4 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getReceiverVatNumberOrBuilder(
       int index);
-
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  java.util.List<ai.visma.ssn.type.ModelSpec> 
-      getSummaryList();
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  ai.visma.ssn.type.ModelSpec getSummary(int index);
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  int getSummaryCount();
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
-      getSummaryOrBuilderList();
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  ai.visma.ssn.type.ModelSpecOrBuilder getSummaryOrBuilder(
-      int index);
 }

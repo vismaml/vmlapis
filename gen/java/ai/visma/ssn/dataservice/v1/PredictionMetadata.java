@@ -67,7 +67,6 @@ private static final long serialVersionUID = 0L;
     receiverCountryCode_ = java.util.Collections.emptyList();
     receiverName_ = java.util.Collections.emptyList();
     receiverVatNumber_ = java.util.Collections.emptyList();
-    summary_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1723,47 +1722,6 @@ private static final long serialVersionUID = 0L;
     return receiverVatNumber_.get(index);
   }
 
-  public static final int SUMMARY_FIELD_NUMBER = 41;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.ModelSpec> summary_;
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.ModelSpec> getSummaryList() {
-    return summary_;
-  }
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
-      getSummaryOrBuilderList() {
-    return summary_;
-  }
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  @java.lang.Override
-  public int getSummaryCount() {
-    return summary_.size();
-  }
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.ModelSpec getSummary(int index) {
-    return summary_.get(index);
-  }
-  /**
-   * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.ModelSpecOrBuilder getSummaryOrBuilder(
-      int index) {
-    return summary_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1897,9 +1855,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < receiverVatNumber_.size(); i++) {
       output.writeMessage(40, receiverVatNumber_.get(i));
-    }
-    for (int i = 0; i < summary_.size(); i++) {
-      output.writeMessage(41, summary_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2070,10 +2025,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(40, receiverVatNumber_.get(i));
     }
-    for (int i = 0; i < summary_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(41, summary_.get(i));
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2169,8 +2120,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverNameList())) return false;
     if (!getReceiverVatNumberList()
         .equals(other.getReceiverVatNumberList())) return false;
-    if (!getSummaryList()
-        .equals(other.getSummaryList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2341,10 +2290,6 @@ private static final long serialVersionUID = 0L;
     if (getReceiverVatNumberCount() > 0) {
       hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getReceiverVatNumberList().hashCode();
-    }
-    if (getSummaryCount() > 0) {
-      hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
-      hash = (53 * hash) + getSummaryList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2758,13 +2703,6 @@ private static final long serialVersionUID = 0L;
         receiverVatNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000080);
-      if (summaryBuilder_ == null) {
-        summary_ = java.util.Collections.emptyList();
-      } else {
-        summary_ = null;
-        summaryBuilder_.clear();
-      }
-      bitField1_ = (bitField1_ & ~0x00000100);
       return this;
     }
 
@@ -3158,15 +3096,6 @@ private static final long serialVersionUID = 0L;
         result.receiverVatNumber_ = receiverVatNumber_;
       } else {
         result.receiverVatNumber_ = receiverVatNumberBuilder_.build();
-      }
-      if (summaryBuilder_ == null) {
-        if (((bitField1_ & 0x00000100) != 0)) {
-          summary_ = java.util.Collections.unmodifiableList(summary_);
-          bitField1_ = (bitField1_ & ~0x00000100);
-        }
-        result.summary_ = summary_;
-      } else {
-        result.summary_ = summaryBuilder_.build();
       }
     }
 
@@ -4230,32 +4159,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (summaryBuilder_ == null) {
-        if (!other.summary_.isEmpty()) {
-          if (summary_.isEmpty()) {
-            summary_ = other.summary_;
-            bitField1_ = (bitField1_ & ~0x00000100);
-          } else {
-            ensureSummaryIsMutable();
-            summary_.addAll(other.summary_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.summary_.isEmpty()) {
-          if (summaryBuilder_.isEmpty()) {
-            summaryBuilder_.dispose();
-            summaryBuilder_ = null;
-            summary_ = other.summary_;
-            bitField1_ = (bitField1_ & ~0x00000100);
-            summaryBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getSummaryFieldBuilder() : null;
-          } else {
-            summaryBuilder_.addAllMessages(other.summary_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4802,19 +4705,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 322
-            case 330: {
-              ai.visma.ssn.type.ModelSpec m =
-                  input.readMessage(
-                      ai.visma.ssn.type.ModelSpec.parser(),
-                      extensionRegistry);
-              if (summaryBuilder_ == null) {
-                ensureSummaryIsMutable();
-                summary_.add(m);
-              } else {
-                summaryBuilder_.addMessage(m);
-              }
-              break;
-            } // case 330
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -14431,246 +14321,6 @@ private static final long serialVersionUID = 0L;
         receiverVatNumber_ = null;
       }
       return receiverVatNumberBuilder_;
-    }
-
-    private java.util.List<ai.visma.ssn.type.ModelSpec> summary_ =
-      java.util.Collections.emptyList();
-    private void ensureSummaryIsMutable() {
-      if (!((bitField1_ & 0x00000100) != 0)) {
-        summary_ = new java.util.ArrayList<ai.visma.ssn.type.ModelSpec>(summary_);
-        bitField1_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> summaryBuilder_;
-
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.ModelSpec> getSummaryList() {
-      if (summaryBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(summary_);
-      } else {
-        return summaryBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public int getSummaryCount() {
-      if (summaryBuilder_ == null) {
-        return summary_.size();
-      } else {
-        return summaryBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public ai.visma.ssn.type.ModelSpec getSummary(int index) {
-      if (summaryBuilder_ == null) {
-        return summary_.get(index);
-      } else {
-        return summaryBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder setSummary(
-        int index, ai.visma.ssn.type.ModelSpec value) {
-      if (summaryBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSummaryIsMutable();
-        summary_.set(index, value);
-        onChanged();
-      } else {
-        summaryBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder setSummary(
-        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
-      if (summaryBuilder_ == null) {
-        ensureSummaryIsMutable();
-        summary_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        summaryBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder addSummary(ai.visma.ssn.type.ModelSpec value) {
-      if (summaryBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSummaryIsMutable();
-        summary_.add(value);
-        onChanged();
-      } else {
-        summaryBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder addSummary(
-        int index, ai.visma.ssn.type.ModelSpec value) {
-      if (summaryBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSummaryIsMutable();
-        summary_.add(index, value);
-        onChanged();
-      } else {
-        summaryBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder addSummary(
-        ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
-      if (summaryBuilder_ == null) {
-        ensureSummaryIsMutable();
-        summary_.add(builderForValue.build());
-        onChanged();
-      } else {
-        summaryBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder addSummary(
-        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
-      if (summaryBuilder_ == null) {
-        ensureSummaryIsMutable();
-        summary_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        summaryBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder addAllSummary(
-        java.lang.Iterable<? extends ai.visma.ssn.type.ModelSpec> values) {
-      if (summaryBuilder_ == null) {
-        ensureSummaryIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, summary_);
-        onChanged();
-      } else {
-        summaryBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder clearSummary() {
-      if (summaryBuilder_ == null) {
-        summary_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00000100);
-        onChanged();
-      } else {
-        summaryBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public Builder removeSummary(int index) {
-      if (summaryBuilder_ == null) {
-        ensureSummaryIsMutable();
-        summary_.remove(index);
-        onChanged();
-      } else {
-        summaryBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public ai.visma.ssn.type.ModelSpec.Builder getSummaryBuilder(
-        int index) {
-      return getSummaryFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public ai.visma.ssn.type.ModelSpecOrBuilder getSummaryOrBuilder(
-        int index) {
-      if (summaryBuilder_ == null) {
-        return summary_.get(index);  } else {
-        return summaryBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
-         getSummaryOrBuilderList() {
-      if (summaryBuilder_ != null) {
-        return summaryBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(summary_);
-      }
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public ai.visma.ssn.type.ModelSpec.Builder addSummaryBuilder() {
-      return getSummaryFieldBuilder().addBuilder(
-          ai.visma.ssn.type.ModelSpec.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public ai.visma.ssn.type.ModelSpec.Builder addSummaryBuilder(
-        int index) {
-      return getSummaryFieldBuilder().addBuilder(
-          index, ai.visma.ssn.type.ModelSpec.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.type.ModelSpec summary = 41 [json_name = "summary"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.ModelSpec.Builder> 
-         getSummaryBuilderList() {
-      return getSummaryFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 
-        getSummaryFieldBuilder() {
-      if (summaryBuilder_ == null) {
-        summaryBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder>(
-                summary_,
-                ((bitField1_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        summary_ = null;
-      }
-      return summaryBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionMetadata)

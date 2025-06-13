@@ -2474,13 +2474,6 @@
             "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
-        },
-        "summary": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeModelSpec"
-          }
         }
       }
     },

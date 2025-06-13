@@ -7944,7 +7944,7 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverVatNumberL
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
 
 
 
@@ -8056,8 +8056,6 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
-    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
-    summaryList: jspb.Message.toObjectList(msg.getSummaryList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -8294,11 +8292,6 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
-      break;
-    case 41:
-      var value = new ssn_type_candidate_pb.ModelSpec;
-      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
-      msg.addSummary(value);
       break;
     default:
       reader.skipField();
@@ -8645,14 +8638,6 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       40,
-      f,
-      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getSummaryList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      41,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -10177,44 +10162,6 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverVatNumber = fun
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
-};
-
-
-/**
- * repeated ssn.type.ModelSpec summary = 41;
- * @return {!Array<!proto.ssn.type.ModelSpec>}
- */
-proto.ssn.dataservice.v1.PredictionMetadata.prototype.getSummaryList = function() {
-  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 41));
-};
-
-
-/**
- * @param {!Array<!proto.ssn.type.ModelSpec>} value
- * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
-*/
-proto.ssn.dataservice.v1.PredictionMetadata.prototype.setSummaryList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 41, value);
-};
-
-
-/**
- * @param {!proto.ssn.type.ModelSpec=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ssn.type.ModelSpec}
- */
-proto.ssn.dataservice.v1.PredictionMetadata.prototype.addSummary = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.ModelSpec, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
- */
-proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearSummaryList = function() {
-  return this.setSummaryList([]);
 };
 
 

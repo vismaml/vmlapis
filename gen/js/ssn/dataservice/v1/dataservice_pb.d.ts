@@ -1084,11 +1084,6 @@ export class PredictionMetadata extends jspb.Message {
   clearReceiverVatNumberList(): PredictionMetadata;
   addReceiverVatNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
-  getSummaryList(): Array<ssn_type_candidate_pb.ModelSpec>;
-  setSummaryList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
-  clearSummaryList(): PredictionMetadata;
-  addSummary(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -1139,7 +1134,6 @@ export namespace PredictionMetadata {
     receiverCountryCodeList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverNameList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
-    summaryList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 
