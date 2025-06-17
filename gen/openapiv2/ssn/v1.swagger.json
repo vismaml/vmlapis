@@ -55,6 +55,36 @@
         "tags": [
           "DocumentAnnotator"
         ]
+      },
+      "options": {
+        "operationId": "DocumentAnnotator_AnnotateDocument2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1DocumentAnnotatorResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DocumentAnnotatorRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DocumentAnnotator"
+        ]
       }
     },
     "/v1/document:answerquestion": {

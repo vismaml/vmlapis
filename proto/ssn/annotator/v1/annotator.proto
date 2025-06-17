@@ -25,6 +25,13 @@ service DocumentAnnotator {
     option (google.api.http) = {
       post: "/v1/document:annotate"
       body: "*"
+      additional_bindings: {
+        custom: {
+          kind: "OPTIONS"
+          path: "/v1/document:annotate"
+        }
+        body: "*"
+      }
     };
   }
   rpc AnswerDocumentQuestion(DocumentQuestionRequest) returns (DocumentQuestionResponse) {
