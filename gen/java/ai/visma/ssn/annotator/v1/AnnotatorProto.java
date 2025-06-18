@@ -199,23 +199,23 @@ public final class AnnotatorProto {
       "ocumentR\010document\022\034\n\tquestions\030\002 \003(\tR\tqu" +
       "estions\"U\n\030DocumentQuestionResponse\0223\n\007a" +
       "nswers\030\002 \003(\0132\031.ssn.type.AnswerCandidateR" +
-      "\007answersJ\004\010\001\020\0022\344\002\n\021DocumentAnnotator\022\264\001\n" +
+      "\007answersJ\004\010\001\020\0022\341\002\n\021DocumentAnnotator\022\261\001\n" +
       "\020AnnotateDocument\022*.ssn.annotator.v1.Doc" +
       "umentAnnotatorRequest\032+.ssn.annotator.v1" +
-      ".DocumentAnnotatorResponse\"G\202\323\344\223\002A\"\025/v1/" +
-      "document:annotate:\001*Z%:\001*B \n\007OPTIONS\022\025/v" +
-      "1/document:annotate\022\227\001\n\026AnswerDocumentQu" +
-      "estion\022).ssn.annotator.v1.DocumentQuesti" +
-      "onRequest\032*.ssn.annotator.v1.DocumentQue" +
-      "stionResponse\"&\202\323\344\223\002 \"\033/v1/document:answ" +
-      "erquestion:\001*B\210\002\n\031ai.visma.ssn.annotator" +
-      ".v1B\016AnnotatorProtoP\001Z>github.com/e-cono" +
-      "mic/vmlapis/gen/go/ssn/annotator/v1;anno" +
-      "tator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\Ann" +
-      "otator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadata" +
-      "\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002v" +
-      "1*\001\0022\020application/json:\020application/json" +
-      "b\006proto3"
+      ".DocumentAnnotatorResponse\"D\202\323\344\223\002>\"\025/v1/" +
+      "document:annotate:\001*Z\"B \n\007OPTIONS\022\025/v1/d" +
+      "ocument:annotate\022\227\001\n\026AnswerDocumentQuest" +
+      "ion\022).ssn.annotator.v1.DocumentQuestionR" +
+      "equest\032*.ssn.annotator.v1.DocumentQuesti" +
+      "onResponse\"&\202\323\344\223\002 \"\033/v1/document:answerq" +
+      "uestion:\001*B\210\002\n\031ai.visma.ssn.annotator.v1" +
+      "B\016AnnotatorProtoP\001Z>github.com/e-conomic" +
+      "/vmlapis/gen/go/ssn/annotator/v1;annotat" +
+      "or\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\Annota" +
+      "tor\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadata\352\002\022" +
+      "Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002v1*\001" +
+      "\0022\020application/json:\020application/jsonb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
