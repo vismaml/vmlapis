@@ -269,3 +269,53 @@ export namespace DeleteTagRequest {
   }
 }
 
+export class UpdateTransactionResultsRequest extends jspb.Message {
+  getId(): string;
+  setId(value: string): UpdateTransactionResultsRequest;
+
+  getCustomId(): string;
+  setCustomId(value: string): UpdateTransactionResultsRequest;
+
+  getAnnotationsList(): Array<Annotation>;
+  setAnnotationsList(value: Array<Annotation>): UpdateTransactionResultsRequest;
+  clearAnnotationsList(): UpdateTransactionResultsRequest;
+  addAnnotations(value?: Annotation, index?: number): Annotation;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateTransactionResultsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateTransactionResultsRequest): UpdateTransactionResultsRequest.AsObject;
+  static serializeBinaryToWriter(message: UpdateTransactionResultsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateTransactionResultsRequest;
+  static deserializeBinaryFromReader(message: UpdateTransactionResultsRequest, reader: jspb.BinaryReader): UpdateTransactionResultsRequest;
+}
+
+export namespace UpdateTransactionResultsRequest {
+  export type AsObject = {
+    id: string,
+    customId: string,
+    annotationsList: Array<Annotation.AsObject>,
+  }
+}
+
+export class UpdateTransactionResultsResponse extends jspb.Message {
+  getId(): string;
+  setId(value: string): UpdateTransactionResultsResponse;
+
+  getCustomId(): string;
+  setCustomId(value: string): UpdateTransactionResultsResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UpdateTransactionResultsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateTransactionResultsResponse): UpdateTransactionResultsResponse.AsObject;
+  static serializeBinaryToWriter(message: UpdateTransactionResultsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateTransactionResultsResponse;
+  static deserializeBinaryFromReader(message: UpdateTransactionResultsResponse, reader: jspb.BinaryReader): UpdateTransactionResultsResponse;
+}
+
+export namespace UpdateTransactionResultsResponse {
+  export type AsObject = {
+    id: string,
+    customId: string,
+  }
+}
+

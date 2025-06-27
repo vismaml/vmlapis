@@ -60,9 +60,9 @@ service TransactionService {
   //   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
   // }
   // essentially a feedback endpoint
-  // rpc UpdateTransactionResults(UpdateTransactionResultsRequest) returns (UpdateTransactionResultsResponse) {
-  //   option (google.api.http) = {put: "/v1/transactions/{id}/results"};
-  // }
+  rpc UpdateTransactionResults(UpdateTransactionResultsRequest) returns (UpdateTransactionResultsResponse) {
+    option (google.api.http) = {put: "/v1/transactions/{id}/results"};
+  }
   // streaming status back
   // rpc WatchTransactionStatus(WatchTransactionStatusRequest) returns (stream WatchTransactionStatusResponse) {
   //   option (google.api.http) = {get: "/v1/transactions/{id}/status:watch"};
@@ -150,3 +150,16 @@ message DeleteTagRequest {
   }]; // text-no-spaces
 }
 // --- delete: "/v1/tags/{tag_name}" ---
+
+// --- put: "/v1/transactions/{id}/results" ---
+message UpdateTransactionResultsRequest {
+  string id = 1;
+  string custom_id = 2;
+  repeated Annotation annotations = 3;
+}
+
+message UpdateTransactionResultsResponse {
+  string id = 1;
+  string custom_id = 2;
+}
+// --- put: "/v1/transactions/{id}/results" ---

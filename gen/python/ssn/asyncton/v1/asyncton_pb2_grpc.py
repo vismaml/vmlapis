@@ -42,6 +42,11 @@ class TransactionServiceStub(object):
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTagRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 _registered_method=True)
+        self.UpdateTransactionResults = channel.unary_unary(
+                '/ssn.asyncton.v1.TransactionService/UpdateTransactionResults',
+                request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsRequest.SerializeToString,
+                response_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsResponse.FromString,
+                _registered_method=True)
 
 
 class TransactionServiceServicer(object):
@@ -79,6 +84,19 @@ class TransactionServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def UpdateTransactionResults(self, request, context):
+        """below are more ideas how the API could progress
+        ---------------------
+        e.g. add more features for processing
+        rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+        option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+        }
+        essentially a feedback endpoint
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_TransactionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -106,6 +124,11 @@ def add_TransactionServiceServicer_to_server(servicer, server):
                     servicer.DeleteTag,
                     request_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTagRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'UpdateTransactionResults': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateTransactionResults,
+                    request_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsRequest.FromString,
+                    response_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -245,6 +268,33 @@ class TransactionService(object):
             '/ssn.asyncton.v1.TransactionService/DeleteTag',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTagRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def UpdateTransactionResults(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/UpdateTransactionResults',
+            ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsRequest.SerializeToString,
+            ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.UpdateTransactionResultsResponse.FromString,
             options,
             channel_credentials,
             insecure,

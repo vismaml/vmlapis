@@ -44,6 +44,13 @@ export class TransactionServiceClient {
                response: google_protobuf_empty_pb.Empty) => void
   ): grpcWeb.ClientReadableStream<google_protobuf_empty_pb.Empty>;
 
+  updateTransactionResults(
+    request: ssn_asyncton_v1_asyncton_pb.UpdateTransactionResultsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_asyncton_v1_asyncton_pb.UpdateTransactionResultsResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_asyncton_v1_asyncton_pb.UpdateTransactionResultsResponse>;
+
 }
 
 export class TransactionServicePromiseClient {
@@ -75,6 +82,11 @@ export class TransactionServicePromiseClient {
     request: ssn_asyncton_v1_asyncton_pb.DeleteTagRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<google_protobuf_empty_pb.Empty>;
+
+  updateTransactionResults(
+    request: ssn_asyncton_v1_asyncton_pb.UpdateTransactionResultsRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_asyncton_v1_asyncton_pb.UpdateTransactionResultsResponse>;
 
 }
 

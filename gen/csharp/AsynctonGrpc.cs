@@ -67,6 +67,10 @@ namespace Ssn.Asyncton.V1 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Asyncton.V1.DeleteTagRequest> __Marshaller_ssn_asyncton_v1_DeleteTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Asyncton.V1.DeleteTagRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest> __Marshaller_ssn_asyncton_v1_UpdateTransactionResultsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> __Marshaller_ssn_asyncton_v1_UpdateTransactionResultsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Asyncton.V1.CreateTransactionRequest, global::Ssn.Asyncton.V1.CreateTransactionResponse> __Method_CreateTransaction = new grpc::Method<global::Ssn.Asyncton.V1.CreateTransactionRequest, global::Ssn.Asyncton.V1.CreateTransactionResponse>(
@@ -108,6 +112,14 @@ namespace Ssn.Asyncton.V1 {
         __Marshaller_ssn_asyncton_v1_DeleteTagRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest, global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> __Method_UpdateTransactionResults = new grpc::Method<global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest, global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTransactionResults",
+        __Marshaller_ssn_asyncton_v1_UpdateTransactionResultsRequest,
+        __Marshaller_ssn_asyncton_v1_UpdateTransactionResultsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -144,6 +156,24 @@ namespace Ssn.Asyncton.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTag(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// below are more ideas how the API could progress
+      /// ---------------------
+      /// e.g. add more features for processing
+      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+      /// }
+      /// essentially a feedback endpoint
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -277,6 +307,78 @@ namespace Ssn.Asyncton.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
       }
+      /// <summary>
+      /// below are more ideas how the API could progress
+      /// ---------------------
+      /// e.g. add more features for processing
+      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+      /// }
+      /// essentially a feedback endpoint
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTransactionResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// below are more ideas how the API could progress
+      /// ---------------------
+      /// e.g. add more features for processing
+      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+      /// }
+      /// essentially a feedback endpoint
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTransactionResults, null, options, request);
+      }
+      /// <summary>
+      /// below are more ideas how the API could progress
+      /// ---------------------
+      /// e.g. add more features for processing
+      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+      /// }
+      /// essentially a feedback endpoint
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTransactionResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// below are more ideas how the API could progress
+      /// ---------------------
+      /// e.g. add more features for processing
+      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+      /// }
+      /// essentially a feedback endpoint
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTransactionResults, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TransactionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -295,7 +397,8 @@ namespace Ssn.Asyncton.V1 {
           .AddMethod(__Method_GetTransactionResults, serviceImpl.GetTransactionResults)
           .AddMethod(__Method_GetTransactionStatus, serviceImpl.GetTransactionStatus)
           .AddMethod(__Method_DeleteTransaction, serviceImpl.DeleteTransaction)
-          .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag).Build();
+          .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
+          .AddMethod(__Method_UpdateTransactionResults, serviceImpl.UpdateTransactionResults).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -310,6 +413,7 @@ namespace Ssn.Asyncton.V1 {
       serviceBinder.AddMethod(__Method_GetTransactionStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Asyncton.V1.GetTransactionStatusRequest, global::Ssn.Asyncton.V1.GetTransactionStatusResponse>(serviceImpl.GetTransactionStatus));
       serviceBinder.AddMethod(__Method_DeleteTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Asyncton.V1.DeleteTransactionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTransaction));
       serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Asyncton.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
+      serviceBinder.AddMethod(__Method_UpdateTransactionResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest, global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse>(serviceImpl.UpdateTransactionResults));
     }
 
   }

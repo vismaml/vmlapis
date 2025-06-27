@@ -20,11 +20,12 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	TransactionService_CreateTransaction_FullMethodName     = "/ssn.asyncton.v1.TransactionService/CreateTransaction"
-	TransactionService_GetTransactionResults_FullMethodName = "/ssn.asyncton.v1.TransactionService/GetTransactionResults"
-	TransactionService_GetTransactionStatus_FullMethodName  = "/ssn.asyncton.v1.TransactionService/GetTransactionStatus"
-	TransactionService_DeleteTransaction_FullMethodName     = "/ssn.asyncton.v1.TransactionService/DeleteTransaction"
-	TransactionService_DeleteTag_FullMethodName             = "/ssn.asyncton.v1.TransactionService/DeleteTag"
+	TransactionService_CreateTransaction_FullMethodName        = "/ssn.asyncton.v1.TransactionService/CreateTransaction"
+	TransactionService_GetTransactionResults_FullMethodName    = "/ssn.asyncton.v1.TransactionService/GetTransactionResults"
+	TransactionService_GetTransactionStatus_FullMethodName     = "/ssn.asyncton.v1.TransactionService/GetTransactionStatus"
+	TransactionService_DeleteTransaction_FullMethodName        = "/ssn.asyncton.v1.TransactionService/DeleteTransaction"
+	TransactionService_DeleteTag_FullMethodName                = "/ssn.asyncton.v1.TransactionService/DeleteTag"
+	TransactionService_UpdateTransactionResults_FullMethodName = "/ssn.asyncton.v1.TransactionService/UpdateTransactionResults"
 )
 
 // TransactionServiceClient is the client API for TransactionService service.
@@ -36,6 +37,16 @@ type TransactionServiceClient interface {
 	GetTransactionStatus(ctx context.Context, in *GetTransactionStatusRequest, opts ...grpc.CallOption) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(ctx context.Context, in *DeleteTransactionRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	// below are more ideas how the API could progress
+	// ---------------------
+	// e.g. add more features for processing
+	//
+	//	rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+	//	  option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+	//	}
+	//
+	// essentially a feedback endpoint
+	UpdateTransactionResults(ctx context.Context, in *UpdateTransactionResultsRequest, opts ...grpc.CallOption) (*UpdateTransactionResultsResponse, error)
 }
 
 type transactionServiceClient struct {
@@ -91,6 +102,15 @@ func (c *transactionServiceClient) DeleteTag(ctx context.Context, in *DeleteTagR
 	return out, nil
 }
 
+func (c *transactionServiceClient) UpdateTransactionResults(ctx context.Context, in *UpdateTransactionResultsRequest, opts ...grpc.CallOption) (*UpdateTransactionResultsResponse, error) {
+	out := new(UpdateTransactionResultsResponse)
+	err := c.cc.Invoke(ctx, TransactionService_UpdateTransactionResults_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TransactionServiceServer is the server API for TransactionService service.
 // All implementations should embed UnimplementedTransactionServiceServer
 // for forward compatibility
@@ -100,6 +120,16 @@ type TransactionServiceServer interface {
 	GetTransactionStatus(context.Context, *GetTransactionStatusRequest) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(context.Context, *DeleteTransactionRequest) (*emptypb.Empty, error)
 	DeleteTag(context.Context, *DeleteTagRequest) (*emptypb.Empty, error)
+	// below are more ideas how the API could progress
+	// ---------------------
+	// e.g. add more features for processing
+	//
+	//	rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+	//	  option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+	//	}
+	//
+	// essentially a feedback endpoint
+	UpdateTransactionResults(context.Context, *UpdateTransactionResultsRequest) (*UpdateTransactionResultsResponse, error)
 }
 
 // UnimplementedTransactionServiceServer should be embedded to have forward compatible implementations.
@@ -120,6 +150,9 @@ func (UnimplementedTransactionServiceServer) DeleteTransaction(context.Context, 
 }
 func (UnimplementedTransactionServiceServer) DeleteTag(context.Context, *DeleteTagRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteTag not implemented")
+}
+func (UnimplementedTransactionServiceServer) UpdateTransactionResults(context.Context, *UpdateTransactionResultsRequest) (*UpdateTransactionResultsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateTransactionResults not implemented")
 }
 
 // UnsafeTransactionServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -223,6 +256,24 @@ func _TransactionService_DeleteTag_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TransactionService_UpdateTransactionResults_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateTransactionResultsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransactionServiceServer).UpdateTransactionResults(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransactionService_UpdateTransactionResults_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransactionServiceServer).UpdateTransactionResults(ctx, req.(*UpdateTransactionResultsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TransactionService_ServiceDesc is the grpc.ServiceDesc for TransactionService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -249,6 +300,10 @@ var TransactionService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteTag",
 			Handler:    _TransactionService_DeleteTag_Handler,
+		},
+		{
+			MethodName: "UpdateTransactionResults",
+			Handler:    _TransactionService_UpdateTransactionResults_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -105,3 +105,21 @@ class DeleteTagRequest(_message.Message):
     TAG_NAME_FIELD_NUMBER: _ClassVar[int]
     tag_name: str
     def __init__(self, tag_name: _Optional[str] = ...) -> None: ...
+
+class UpdateTransactionResultsRequest(_message.Message):
+    __slots__ = ("id", "custom_id", "annotations")
+    ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
+    ANNOTATIONS_FIELD_NUMBER: _ClassVar[int]
+    id: str
+    custom_id: str
+    annotations: _containers.RepeatedCompositeFieldContainer[Annotation]
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ...) -> None: ...
+
+class UpdateTransactionResultsResponse(_message.Message):
+    __slots__ = ("id", "custom_id")
+    ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
+    id: str
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...

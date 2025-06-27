@@ -395,5 +395,66 @@ proto.ssn.asyncton.v1.TransactionServicePromiseClient.prototype.deleteTag =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.asyncton.v1.UpdateTransactionResultsRequest,
+ *   !proto.ssn.asyncton.v1.UpdateTransactionResultsResponse>}
+ */
+const methodDescriptor_TransactionService_UpdateTransactionResults = new grpc.web.MethodDescriptor(
+  '/ssn.asyncton.v1.TransactionService/UpdateTransactionResults',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.asyncton.v1.UpdateTransactionResultsRequest,
+  proto.ssn.asyncton.v1.UpdateTransactionResultsResponse,
+  /**
+   * @param {!proto.ssn.asyncton.v1.UpdateTransactionResultsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.asyncton.v1.UpdateTransactionResultsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.asyncton.v1.UpdateTransactionResultsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.asyncton.v1.UpdateTransactionResultsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.asyncton.v1.UpdateTransactionResultsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.asyncton.v1.TransactionServiceClient.prototype.updateTransactionResults =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.asyncton.v1.TransactionService/UpdateTransactionResults',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_UpdateTransactionResults,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.asyncton.v1.UpdateTransactionResultsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.asyncton.v1.UpdateTransactionResultsResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.asyncton.v1.TransactionServicePromiseClient.prototype.updateTransactionResults =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.asyncton.v1.TransactionService/UpdateTransactionResults',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_UpdateTransactionResults);
+};
+
+
 module.exports = proto.ssn.asyncton.v1;
 
