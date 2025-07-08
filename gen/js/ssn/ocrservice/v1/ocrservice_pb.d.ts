@@ -17,6 +17,9 @@ export class GetTextAnnotationRequest extends jspb.Message {
   getPreviewLast(): boolean;
   setPreviewLast(value: boolean): GetTextAnnotationRequest;
 
+  getQuestions(): boolean;
+  setQuestions(value: boolean): GetTextAnnotationRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTextAnnotationRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetTextAnnotationRequest): GetTextAnnotationRequest.AsObject;
@@ -30,6 +33,7 @@ export namespace GetTextAnnotationRequest {
     document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
     preview: boolean,
     previewLast: boolean,
+    questions: boolean,
   }
 }
 
@@ -49,6 +53,11 @@ export class GetTextAnnotationResponse extends jspb.Message {
   hasLastImage(): boolean;
   clearLastImage(): GetTextAnnotationResponse;
 
+  getQuestionsImage(): google_protobuf_wrappers_pb.BytesValue | undefined;
+  setQuestionsImage(value?: google_protobuf_wrappers_pb.BytesValue): GetTextAnnotationResponse;
+  hasQuestionsImage(): boolean;
+  clearQuestionsImage(): GetTextAnnotationResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTextAnnotationResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetTextAnnotationResponse): GetTextAnnotationResponse.AsObject;
@@ -62,6 +71,7 @@ export namespace GetTextAnnotationResponse {
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     image?: google_protobuf_wrappers_pb.BytesValue.AsObject,
     lastImage?: google_protobuf_wrappers_pb.BytesValue.AsObject,
+    questionsImage?: google_protobuf_wrappers_pb.BytesValue.AsObject,
   }
 }
 

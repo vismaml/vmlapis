@@ -91,6 +91,17 @@ private static final long serialVersionUID = 0L;
     return previewLast_;
   }
 
+  public static final int QUESTIONS_FIELD_NUMBER = 5;
+  private boolean questions_ = false;
+  /**
+   * <code>bool questions = 5 [json_name = "questions"];</code>
+   * @return The questions.
+   */
+  @java.lang.Override
+  public boolean getQuestions() {
+    return questions_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -114,6 +125,9 @@ private static final long serialVersionUID = 0L;
     if (previewLast_ != false) {
       output.writeBool(4, previewLast_);
     }
+    if (questions_ != false) {
+      output.writeBool(5, questions_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -134,6 +148,10 @@ private static final long serialVersionUID = 0L;
     if (previewLast_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, previewLast_);
+    }
+    if (questions_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, questions_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -159,6 +177,8 @@ private static final long serialVersionUID = 0L;
         != other.getPreview()) return false;
     if (getPreviewLast()
         != other.getPreviewLast()) return false;
+    if (getQuestions()
+        != other.getQuestions()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -180,6 +200,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PREVIEW_LAST_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPreviewLast());
+    hash = (37 * hash) + QUESTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getQuestions());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -324,6 +347,7 @@ private static final long serialVersionUID = 0L;
       }
       preview_ = false;
       previewLast_ = false;
+      questions_ = false;
       return this;
     }
 
@@ -370,6 +394,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.previewLast_ = previewLast_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.questions_ = questions_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -393,6 +420,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getPreviewLast() != false) {
         setPreviewLast(other.getPreviewLast());
+      }
+      if (other.getQuestions() != false) {
+        setQuestions(other.getQuestions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -437,6 +467,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 32
+            case 40: {
+              questions_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -635,6 +670,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearPreviewLast() {
       bitField0_ = (bitField0_ & ~0x00000004);
       previewLast_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean questions_ ;
+    /**
+     * <code>bool questions = 5 [json_name = "questions"];</code>
+     * @return The questions.
+     */
+    @java.lang.Override
+    public boolean getQuestions() {
+      return questions_;
+    }
+    /**
+     * <code>bool questions = 5 [json_name = "questions"];</code>
+     * @param value The questions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuestions(boolean value) {
+
+      questions_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool questions = 5 [json_name = "questions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuestions() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      questions_ = false;
       onChanged();
       return this;
     }

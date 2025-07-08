@@ -121,6 +121,32 @@ private static final long serialVersionUID = 0L;
     return lastImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
   }
 
+  public static final int QUESTIONS_IMAGE_FIELD_NUMBER = 5;
+  private com.google.protobuf.BytesValue questionsImage_;
+  /**
+   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+   * @return Whether the questionsImage field is set.
+   */
+  @java.lang.Override
+  public boolean hasQuestionsImage() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+   * @return The questionsImage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BytesValue getQuestionsImage() {
+    return questionsImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : questionsImage_;
+  }
+  /**
+   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BytesValueOrBuilder getQuestionsImageOrBuilder() {
+    return questionsImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : questionsImage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -144,6 +170,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getLastImage());
     }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(5, getQuestionsImage());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -164,6 +193,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getLastImage());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getQuestionsImage());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -195,6 +228,11 @@ private static final long serialVersionUID = 0L;
       if (!getLastImage()
           .equals(other.getLastImage())) return false;
     }
+    if (hasQuestionsImage() != other.hasQuestionsImage()) return false;
+    if (hasQuestionsImage()) {
+      if (!getQuestionsImage()
+          .equals(other.getQuestionsImage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -217,6 +255,10 @@ private static final long serialVersionUID = 0L;
     if (hasLastImage()) {
       hash = (37 * hash) + LAST_IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getLastImage().hashCode();
+    }
+    if (hasQuestionsImage()) {
+      hash = (37 * hash) + QUESTIONS_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestionsImage().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -351,6 +393,7 @@ private static final long serialVersionUID = 0L;
         getTextAnnotationFieldBuilder();
         getImageFieldBuilder();
         getLastImageFieldBuilder();
+        getQuestionsImageFieldBuilder();
       }
     }
     @java.lang.Override
@@ -371,6 +414,11 @@ private static final long serialVersionUID = 0L;
       if (lastImageBuilder_ != null) {
         lastImageBuilder_.dispose();
         lastImageBuilder_ = null;
+      }
+      questionsImage_ = null;
+      if (questionsImageBuilder_ != null) {
+        questionsImageBuilder_.dispose();
+        questionsImageBuilder_ = null;
       }
       return this;
     }
@@ -424,6 +472,12 @@ private static final long serialVersionUID = 0L;
             : lastImageBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.questionsImage_ = questionsImageBuilder_ == null
+            ? questionsImage_
+            : questionsImageBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -447,6 +501,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLastImage()) {
         mergeLastImage(other.getLastImage());
+      }
+      if (other.hasQuestionsImage()) {
+        mergeQuestionsImage(other.getQuestionsImage());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -495,6 +552,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getQuestionsImageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -873,6 +937,127 @@ private static final long serialVersionUID = 0L;
         lastImage_ = null;
       }
       return lastImageBuilder_;
+    }
+
+    private com.google.protobuf.BytesValue questionsImage_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> questionsImageBuilder_;
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     * @return Whether the questionsImage field is set.
+     */
+    public boolean hasQuestionsImage() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     * @return The questionsImage.
+     */
+    public com.google.protobuf.BytesValue getQuestionsImage() {
+      if (questionsImageBuilder_ == null) {
+        return questionsImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : questionsImage_;
+      } else {
+        return questionsImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public Builder setQuestionsImage(com.google.protobuf.BytesValue value) {
+      if (questionsImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        questionsImage_ = value;
+      } else {
+        questionsImageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public Builder setQuestionsImage(
+        com.google.protobuf.BytesValue.Builder builderForValue) {
+      if (questionsImageBuilder_ == null) {
+        questionsImage_ = builderForValue.build();
+      } else {
+        questionsImageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public Builder mergeQuestionsImage(com.google.protobuf.BytesValue value) {
+      if (questionsImageBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          questionsImage_ != null &&
+          questionsImage_ != com.google.protobuf.BytesValue.getDefaultInstance()) {
+          getQuestionsImageBuilder().mergeFrom(value);
+        } else {
+          questionsImage_ = value;
+        }
+      } else {
+        questionsImageBuilder_.mergeFrom(value);
+      }
+      if (questionsImage_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public Builder clearQuestionsImage() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      questionsImage_ = null;
+      if (questionsImageBuilder_ != null) {
+        questionsImageBuilder_.dispose();
+        questionsImageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public com.google.protobuf.BytesValue.Builder getQuestionsImageBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getQuestionsImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    public com.google.protobuf.BytesValueOrBuilder getQuestionsImageOrBuilder() {
+      if (questionsImageBuilder_ != null) {
+        return questionsImageBuilder_.getMessageOrBuilder();
+      } else {
+        return questionsImage_ == null ?
+            com.google.protobuf.BytesValue.getDefaultInstance() : questionsImage_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 
+        getQuestionsImageFieldBuilder() {
+      if (questionsImageBuilder_ == null) {
+        questionsImageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder>(
+                getQuestionsImage(),
+                getParentForChildren(),
+                isClean());
+        questionsImage_ = null;
+      }
+      return questionsImageBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.ocrservice.v1.GetTextAnnotationResponse)
