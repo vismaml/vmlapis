@@ -53,10 +53,10 @@ export class GetTextAnnotationResponse extends jspb.Message {
   hasLastImage(): boolean;
   clearLastImage(): GetTextAnnotationResponse;
 
-  getQuestionsImage(): google_protobuf_wrappers_pb.BytesValue | undefined;
-  setQuestionsImage(value?: google_protobuf_wrappers_pb.BytesValue): GetTextAnnotationResponse;
-  hasQuestionsImage(): boolean;
-  clearQuestionsImage(): GetTextAnnotationResponse;
+  getQuestionsImagesList(): Array<google_protobuf_wrappers_pb.BytesValue>;
+  setQuestionsImagesList(value: Array<google_protobuf_wrappers_pb.BytesValue>): GetTextAnnotationResponse;
+  clearQuestionsImagesList(): GetTextAnnotationResponse;
+  addQuestionsImages(value?: google_protobuf_wrappers_pb.BytesValue, index?: number): google_protobuf_wrappers_pb.BytesValue;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTextAnnotationResponse.AsObject;
@@ -71,7 +71,7 @@ export namespace GetTextAnnotationResponse {
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     image?: google_protobuf_wrappers_pb.BytesValue.AsObject,
     lastImage?: google_protobuf_wrappers_pb.BytesValue.AsObject,
-    questionsImage?: google_protobuf_wrappers_pb.BytesValue.AsObject,
+    questionsImagesList: Array<google_protobuf_wrappers_pb.BytesValue.AsObject>,
   }
 }
 

@@ -67,7 +67,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.ocrservice.v1.GetTextAnnotationResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ssn.ocrservice.v1.GetTextAnnotationResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -445,6 +445,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.setQuestions = functi
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.repeatedFields_ = [5];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -479,7 +486,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeIns
     textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     image: (f = msg.getImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f),
     lastImage: (f = msg.getLastImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f),
-    questionsImage: (f = msg.getQuestionsImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f)
+    questionsImagesList: jspb.Message.toObjectList(msg.getQuestionsImagesList(),
+    google_protobuf_wrappers_pb.BytesValue.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -534,7 +542,7 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
     case 5:
       var value = new google_protobuf_wrappers_pb.BytesValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.BytesValue.deserializeBinaryFromReader);
-      msg.setQuestionsImage(value);
+      msg.addQuestionsImages(value);
       break;
     default:
       reader.skipField();
@@ -589,9 +597,9 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
       google_protobuf_wrappers_pb.BytesValue.serializeBinaryToWriter
     );
   }
-  f = message.getQuestionsImage();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getQuestionsImagesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       5,
       f,
       google_protobuf_wrappers_pb.BytesValue.serializeBinaryToWriter
@@ -712,39 +720,40 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasLastImage = funct
 
 
 /**
- * optional google.protobuf.BytesValue questions_image = 5;
- * @return {?proto.google.protobuf.BytesValue}
+ * repeated google.protobuf.BytesValue questions_images = 5;
+ * @return {!Array<!proto.google.protobuf.BytesValue>}
  */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getQuestionsImage = function() {
-  return /** @type{?proto.google.protobuf.BytesValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BytesValue, 5));
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getQuestionsImagesList = function() {
+  return /** @type{!Array<!proto.google.protobuf.BytesValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.BytesValue, 5));
 };
 
 
 /**
- * @param {?proto.google.protobuf.BytesValue|undefined} value
+ * @param {!Array<!proto.google.protobuf.BytesValue>} value
  * @return {!proto.ssn.ocrservice.v1.GetTextAnnotationResponse} returns this
 */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setQuestionsImage = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setQuestionsImagesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.google.protobuf.BytesValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.BytesValue}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.addQuestionsImages = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.google.protobuf.BytesValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.ssn.ocrservice.v1.GetTextAnnotationResponse} returns this
  */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearQuestionsImage = function() {
-  return this.setQuestionsImage(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasQuestionsImage = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearQuestionsImagesList = function() {
+  return this.setQuestionsImagesList([]);
 };
 
 

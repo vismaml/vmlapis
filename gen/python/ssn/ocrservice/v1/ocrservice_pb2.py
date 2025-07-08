@@ -27,7 +27,7 @@ from vml_proto.ssn.annotator.v1 import annotator_pb2 as ssn_dot_annotator_dot_v1
 from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"\xad\x01\n\x18GetTextAnnotationRequest\x12\x36\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x18\n\x07preview\x18\x03 \x01(\x08R\x07preview\x12!\n\x0cpreview_last\x18\x04 \x01(\x08R\x0bpreviewLast\x12\x1c\n\tquestions\x18\x05 \x01(\x08R\tquestions\"\x93\x02\n\x19GetTextAnnotationResponse\x12\x41\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x31\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\x05image\x12:\n\nlast_image\x18\x04 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\tlastImage\x12\x44\n\x0fquestions_image\x18\x05 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\x0equestionsImage\"_\n\x1b\x41syncCreateOperationRequest\x12\x1f\n\x0binput_paths\x18\x01 \x03(\tR\ninputPaths\x12\x1f\n\x0boutput_path\x18\x02 \x01(\tR\noutputPath\"E\n\x1c\x41syncCreateOperationResponse\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\"G\n\x1e\x41syncGetOperationStatusRequest\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\"\xa2\x01\n\x1f\x41syncGetOperationStatusResponse\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\x12\x12\n\x04\x64one\x18\x02 \x01(\x08R\x04\x64one\x12\x1f\n\x0bstatus_code\x18\x03 \x01(\x05R\nstatusCode\x12#\n\rerror_message\x18\x04 \x01(\tR\x0c\x65rrorMessage\")\n\x13OcrScanImageRequest\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\"3\n\x14OcrScanImageResponse\x12\x1b\n\ttess_hocr\x18\x01 \x01(\tR\x08tessHocr2\xce\x04\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse\x12q\n\x12GetTextAnnotations\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse0\x01\x12w\n\x14\x41syncCreateOperation\x12..ssn.ocrservice.v1.AsyncCreateOperationRequest\x1a/.ssn.ocrservice.v1.AsyncCreateOperationResponse\x12\x82\x01\n\x17\x41syncGetOperationStatus\x12\x31.ssn.ocrservice.v1.AsyncGetOperationStatusRequest\x1a\x32.ssn.ocrservice.v1.AsyncGetOperationStatusResponse0\x01\x42SB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"\xad\x01\n\x18GetTextAnnotationRequest\x12\x36\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x18\n\x07preview\x18\x03 \x01(\x08R\x07preview\x12!\n\x0cpreview_last\x18\x04 \x01(\x08R\x0bpreviewLast\x12\x1c\n\tquestions\x18\x05 \x01(\x08R\tquestions\"\x95\x02\n\x19GetTextAnnotationResponse\x12\x41\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x31\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\x05image\x12:\n\nlast_image\x18\x04 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\tlastImage\x12\x46\n\x10questions_images\x18\x05 \x03(\x0b\x32\x1b.google.protobuf.BytesValueR\x0fquestionsImages\"_\n\x1b\x41syncCreateOperationRequest\x12\x1f\n\x0binput_paths\x18\x01 \x03(\tR\ninputPaths\x12\x1f\n\x0boutput_path\x18\x02 \x01(\tR\noutputPath\"E\n\x1c\x41syncCreateOperationResponse\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\"G\n\x1e\x41syncGetOperationStatusRequest\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\"\xa2\x01\n\x1f\x41syncGetOperationStatusResponse\x12%\n\x0eoperation_name\x18\x01 \x01(\tR\roperationName\x12\x12\n\x04\x64one\x18\x02 \x01(\x08R\x04\x64one\x12\x1f\n\x0bstatus_code\x18\x03 \x01(\x05R\nstatusCode\x12#\n\rerror_message\x18\x04 \x01(\tR\x0c\x65rrorMessage\")\n\x13OcrScanImageRequest\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\"3\n\x14OcrScanImageResponse\x12\x1b\n\ttess_hocr\x18\x01 \x01(\tR\x08tessHocr2\xce\x04\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse\x12q\n\x12GetTextAnnotations\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse0\x01\x12w\n\x14\x41syncCreateOperation\x12..ssn.ocrservice.v1.AsyncCreateOperationRequest\x1a/.ssn.ocrservice.v1.AsyncCreateOperationResponse\x12\x82\x01\n\x17\x41syncGetOperationStatus\x12\x31.ssn.ocrservice.v1.AsyncGetOperationStatusRequest\x1a\x32.ssn.ocrservice.v1.AsyncGetOperationStatusResponse0\x01\x42SB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -38,19 +38,19 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_GETTEXTANNOTATIONREQUEST']._serialized_start=156
   _globals['_GETTEXTANNOTATIONREQUEST']._serialized_end=329
   _globals['_GETTEXTANNOTATIONRESPONSE']._serialized_start=332
-  _globals['_GETTEXTANNOTATIONRESPONSE']._serialized_end=607
-  _globals['_ASYNCCREATEOPERATIONREQUEST']._serialized_start=609
-  _globals['_ASYNCCREATEOPERATIONREQUEST']._serialized_end=704
-  _globals['_ASYNCCREATEOPERATIONRESPONSE']._serialized_start=706
-  _globals['_ASYNCCREATEOPERATIONRESPONSE']._serialized_end=775
-  _globals['_ASYNCGETOPERATIONSTATUSREQUEST']._serialized_start=777
-  _globals['_ASYNCGETOPERATIONSTATUSREQUEST']._serialized_end=848
-  _globals['_ASYNCGETOPERATIONSTATUSRESPONSE']._serialized_start=851
-  _globals['_ASYNCGETOPERATIONSTATUSRESPONSE']._serialized_end=1013
-  _globals['_OCRSCANIMAGEREQUEST']._serialized_start=1015
-  _globals['_OCRSCANIMAGEREQUEST']._serialized_end=1056
-  _globals['_OCRSCANIMAGERESPONSE']._serialized_start=1058
-  _globals['_OCRSCANIMAGERESPONSE']._serialized_end=1109
-  _globals['_OCRSERVICE']._serialized_start=1112
-  _globals['_OCRSERVICE']._serialized_end=1702
+  _globals['_GETTEXTANNOTATIONRESPONSE']._serialized_end=609
+  _globals['_ASYNCCREATEOPERATIONREQUEST']._serialized_start=611
+  _globals['_ASYNCCREATEOPERATIONREQUEST']._serialized_end=706
+  _globals['_ASYNCCREATEOPERATIONRESPONSE']._serialized_start=708
+  _globals['_ASYNCCREATEOPERATIONRESPONSE']._serialized_end=777
+  _globals['_ASYNCGETOPERATIONSTATUSREQUEST']._serialized_start=779
+  _globals['_ASYNCGETOPERATIONSTATUSREQUEST']._serialized_end=850
+  _globals['_ASYNCGETOPERATIONSTATUSRESPONSE']._serialized_start=853
+  _globals['_ASYNCGETOPERATIONSTATUSRESPONSE']._serialized_end=1015
+  _globals['_OCRSCANIMAGEREQUEST']._serialized_start=1017
+  _globals['_OCRSCANIMAGEREQUEST']._serialized_end=1058
+  _globals['_OCRSCANIMAGERESPONSE']._serialized_start=1060
+  _globals['_OCRSCANIMAGERESPONSE']._serialized_end=1111
+  _globals['_OCRSERVICE']._serialized_start=1114
+  _globals['_OCRSERVICE']._serialized_end=1704
 # @@protoc_insertion_point(module_scope)

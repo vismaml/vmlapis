@@ -29,7 +29,7 @@ message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
   google.protobuf.BytesValue image = 3;
   google.protobuf.BytesValue last_image = 4;
-  google.protobuf.BytesValue questions_image = 5;
+  repeated google.protobuf.BytesValue questions_images = 5;
 }
 
 message AsyncCreateOperationRequest {

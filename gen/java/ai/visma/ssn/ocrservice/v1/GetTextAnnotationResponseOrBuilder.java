@@ -55,17 +55,26 @@ public interface GetTextAnnotationResponseOrBuilder extends
   com.google.protobuf.BytesValueOrBuilder getLastImageOrBuilder();
 
   /**
-   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
-   * @return Whether the questionsImage field is set.
+   * <code>repeated .google.protobuf.BytesValue questions_images = 5 [json_name = "questionsImages"];</code>
    */
-  boolean hasQuestionsImage();
+  java.util.List<com.google.protobuf.BytesValue> 
+      getQuestionsImagesList();
   /**
-   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
-   * @return The questionsImage.
+   * <code>repeated .google.protobuf.BytesValue questions_images = 5 [json_name = "questionsImages"];</code>
    */
-  com.google.protobuf.BytesValue getQuestionsImage();
+  com.google.protobuf.BytesValue getQuestionsImages(int index);
   /**
-   * <code>.google.protobuf.BytesValue questions_image = 5 [json_name = "questionsImage"];</code>
+   * <code>repeated .google.protobuf.BytesValue questions_images = 5 [json_name = "questionsImages"];</code>
    */
-  com.google.protobuf.BytesValueOrBuilder getQuestionsImageOrBuilder();
+  int getQuestionsImagesCount();
+  /**
+   * <code>repeated .google.protobuf.BytesValue questions_images = 5 [json_name = "questionsImages"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.BytesValueOrBuilder> 
+      getQuestionsImagesOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.BytesValue questions_images = 5 [json_name = "questionsImages"];</code>
+   */
+  com.google.protobuf.BytesValueOrBuilder getQuestionsImagesOrBuilder(
+      int index);
 }
