@@ -1,0 +1,42 @@
+[build-system]
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "gen/python"
+
+[project]
+name = "vml_proto"
+version = "0.0.1"
+description = "A package containing vml protobuf definitions for python"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "vismaml", email = "worksmarter@visma.com"}
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "protobuf~=5.29.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/vismaml/vmlapis"
+Repository = "https://github.com/vismaml/vmlapis"
+Documentation = "http://docs.vml.visma.ai/"
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+vml_proto = { path = "gen/python", editable = false }
+
+
+[tool.uv.extra-build-dependencies]
+vml-proto = ["uv_build"]
