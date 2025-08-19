@@ -87,6 +87,7 @@ docker:
 	docker build --progress plain --build-arg BUF_TOKEN=$$BUF_TOKEN -t vmlapis .
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
+	docker cp $$DOCKERID:/app/pyproject.toml ./pyproject.toml 
 	docker rm $$DOCKERID
 
 .PHONY: all
