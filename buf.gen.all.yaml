@@ -11,7 +11,7 @@ plugins:
     out: gen/go
     opt: paths=source_relative
   - plugin: buf.build/protocolbuffers/python:v29.3
-    out: gen/python
+    out: gen/python/vml_proto
   - plugin: buf.build/protocolbuffers/js:v3.21.2
     out: gen/js
     opt: import_style=commonjs,binary

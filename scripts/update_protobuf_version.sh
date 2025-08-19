@@ -1,7 +1,7 @@
 #!/bin/bash
-
+ls -la
 # Extract protobuf version from generated Python files
-PROTOBUF_VERSION=$(find gen/python -name "*.py" -exec grep "# Protobuf Python Version:" {} \; | head -1 | sed 's/.*: \([0-9.]*\).*/\1/')
+PROTOBUF_VERSION=$(find gen/python/vml_proto -name "*.py" -exec grep "# Protobuf Python Version:" {} \; | head -1 | sed 's/.*: \([0-9.]*\).*/\1/')
 
 if [ -z "$PROTOBUF_VERSION" ]; then
     echo "Warning: Could not extract protobuf version from generated files"
