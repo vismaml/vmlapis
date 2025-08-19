@@ -1,5 +1,4 @@
 #!/bin/bash
-ls -la
 # Extract protobuf version from generated Python files
 PROTOBUF_VERSION=$(find gen/python/vml_proto -name "*.py" -exec grep "# Protobuf Python Version:" {} \; | head -1 | sed 's/.*: \([0-9.]*\).*/\1/')
 
