@@ -38,39 +38,26 @@ class IndentYAMLDumper(YAMLDumper):
     
 
 def pass_plugin_info(plugin):
-    lang = plugin.get("output_languages")
-
-    if not lang or len(lang) > 1:
+    output_languages = plugin.get("output_languages", [])
+    if len(output_languages) != 1:
         return None, None, None
+    lang = output_languages[0]
 
-    lang = lang[0]
+
+    lang_map = {
+        "python": ("python", "requires_python"),
+        "go": ("go", "min_version"),
+        "javascript": ("npm", None),
+        "java": ("maven", None),
+        "csharp": ("nuget", "target_frameworks"),
+    }
+
+    reg_key, ver_key = lang_map.get(lang, (None, None))
 
     registry = plugin.get("registry", {})
-
-    # Extract dependencies based on language
-    deps = []
-    # print(json.dumps(plugin, indent=2))
-
-    if lang == "python":
-        lang_registry = registry.get("python", {})
-        deps = lang_registry.get("deps", [])
-        lang_version = lang_registry.get("requires_python")
-    elif lang == "go":
-        lang_registry = registry.get("go", {})
-        deps = lang_registry.get("deps", [])
-        lang_version = lang_registry.get("min_version")
-    elif lang == "javascript":
-        lang_registry = registry.get("npm", {})
-        deps = lang_registry.get("deps", [])
-        lang_version = None
-    elif lang == "java":
-        lang_registry = registry.get("maven", {})
-        deps = lang_registry.get("deps", [])
-        lang_version = None
-    elif lang == "csharp":
-        lang_registry = registry.get("nuget", {})
-        deps = lang_registry.get("deps", [])
-        lang_version = lang_registry.get("target_frameworks")
+    lang_registry = registry.get(reg_key, {})
+    deps = lang_registry.get("deps", [])
+    lang_version = lang_registry.get(ver_key) if ver_key else None
 
     return lang, lang_version, deps
 
