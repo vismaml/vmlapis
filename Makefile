@@ -71,9 +71,6 @@ all:
 #	rewrite python import prefixes to match the hosted package name
 	./scripts/py_fixes.sh
 
-#	update protobuf version constraint in pyproject.toml based on generated files
-	./scripts/update_protobuf_version.sh
-
 docker:
 #	format files in the proto/ directory
 	buf format proto -w
@@ -87,7 +84,6 @@ docker:
 	docker build --progress plain --build-arg BUF_TOKEN=$$BUF_TOKEN -t vmlapis .
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
-	docker cp $$DOCKERID:/app/pyproject.toml ./pyproject.toml ;\
 	docker rm $$DOCKERID
 
 .PHONY: all

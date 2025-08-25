@@ -36,6 +36,5 @@ RUN go get all \
 COPY Makefile /app/
 COPY deps deps
 COPY scripts scripts
-COPY pyproject.toml pyproject.toml
 COPY proto proto
 RUN make all
