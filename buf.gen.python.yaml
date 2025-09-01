@@ -1,6 +1,6 @@
 version: v1
 plugins:
   - plugin: buf.build/protocolbuffers/pyi:v29.3
-    out: gen/python
+    out: gen/python/vml_proto
   - plugin: buf.build/protocolbuffers/python:v29.3
-    out: gen/python
+    out: gen/python/vml_proto

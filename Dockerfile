@@ -19,7 +19,7 @@ RUN apt-get update && \
   golang-goprotobuf-dev
 
 ARG BIN=/usr/local/bin
-ARG VERSION=1.8.0 
+ARG VERSION=1.56.0
 RUN curl -sSL \
   https://github.com/bufbuild/buf/releases/download/v${VERSION}/buf-$(uname -s)-$(uname -m) \
   -o ${BIN}/buf && \  
@@ -36,5 +36,6 @@ RUN go get all \
 COPY Makefile /app/
 COPY deps deps
 COPY scripts scripts
+COPY pyproject.toml pyproject.toml
 COPY proto proto
 RUN make all

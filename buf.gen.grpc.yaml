@@ -16,7 +16,7 @@ plugins:
       - paths=source_relative
       - require_unimplemented_servers=false
   - plugin: buf.build/grpc/python:v1.70.1
-    out: gen/python
+    out: gen/python/vml_proto
   - plugin: buf.build/grpc/web:v1.5.0
     out: gen/js
     opt: import_style=commonjs+dts,mode=grpcwebtext
