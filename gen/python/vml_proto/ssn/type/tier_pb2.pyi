@@ -9,6 +9,8 @@ class Tier(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     DEFAULT: _ClassVar[Tier]
     STANDARD: _ClassVar[Tier]
     PREMIUM: _ClassVar[Tier]
+    AUDIT: _ClassVar[Tier]
 DEFAULT: Tier
 STANDARD: Tier
 PREMIUM: Tier
+AUDIT: Tier

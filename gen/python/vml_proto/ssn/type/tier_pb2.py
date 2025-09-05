@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13ssn/type/tier.proto\x12\x08ssn.type*.\n\x04Tier\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0c\n\x08STANDARD\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x42\x36Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13ssn/type/tier.proto\x12\x08ssn.type*9\n\x04Tier\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0c\n\x08STANDARD\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x12\t\n\x05\x41UDIT\x10\x03\x42\x36Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,5 +33,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype'
   _globals['_TIER']._serialized_start=33
-  _globals['_TIER']._serialized_end=79
+  _globals['_TIER']._serialized_end=90
 # @@protoc_insertion_point(module_scope)

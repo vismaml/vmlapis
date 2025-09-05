@@ -1124,7 +1124,8 @@
       "enum": [
         "DEFAULT",
         "STANDARD",
-        "PREMIUM"
+        "PREMIUM",
+        "AUDIT"
       ],
       "default": "DEFAULT",
       "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
