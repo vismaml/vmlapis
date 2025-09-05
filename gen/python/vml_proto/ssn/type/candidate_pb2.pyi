@@ -30,7 +30,7 @@ class Confidence(_message.Message):
     def __init__(self, level: _Optional[_Union[Confidence.Level, str]] = ..., value: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ...) -> None: ...
 
 class Candidate(_message.Message):
-    __slots__ = ("value", "text", "confidence", "bounding_box", "type", "page_ref", "model_metadata")
+    __slots__ = ("value", "text", "confidence", "bounding_box", "type", "page_ref", "model_metadata", "verified", "reason")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         UNKNOWN: _ClassVar[Candidate.Type]
@@ -46,6 +46,8 @@ class Candidate(_message.Message):
     TYPE_FIELD_NUMBER: _ClassVar[int]
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    VERIFIED_FIELD_NUMBER: _ClassVar[int]
+    REASON_FIELD_NUMBER: _ClassVar[int]
     value: str
     text: str
     confidence: Confidence
@@ -53,7 +55,9 @@ class Candidate(_message.Message):
     type: Candidate.Type
     page_ref: int
     model_metadata: ModelSpec
-    def __init__(self, value: _Optional[str] = ..., text: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., type: _Optional[_Union[Candidate.Type, str]] = ..., page_ref: _Optional[int] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
+    verified: bool
+    reason: str
+    def __init__(self, value: _Optional[str] = ..., text: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., type: _Optional[_Union[Candidate.Type, str]] = ..., page_ref: _Optional[int] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., verified: bool = ..., reason: _Optional[str] = ...) -> None: ...
 
 class ModelSpec(_message.Message):
     __slots__ = ("model_name", "model_ver")
@@ -74,7 +78,7 @@ class LineCandidate(_message.Message):
     def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ..., page_ref: _Optional[int] = ...) -> None: ...
 
 class PurchaseLineCandidate(_message.Message):
-    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata")
+    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "verified", "reason")
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     CODE_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -92,6 +96,8 @@ class PurchaseLineCandidate(_message.Message):
     TOTAL_FIELD_NUMBER: _ClassVar[int]
     UNIT_PRICE_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    VERIFIED_FIELD_NUMBER: _ClassVar[int]
+    REASON_FIELD_NUMBER: _ClassVar[int]
     page_ref: int
     code: str
     description: str
@@ -109,7 +115,9 @@ class PurchaseLineCandidate(_message.Message):
     total: str
     unit_price: str
     model_metadata: ModelSpec
-    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
+    verified: bool
+    reason: str
+    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., verified: bool = ..., reason: _Optional[str] = ...) -> None: ...
 
 class AnswerCandidate(_message.Message):
     __slots__ = ("question", "answer", "confidence", "model_metadata", "page_ref")

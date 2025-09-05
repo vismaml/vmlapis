@@ -65,6 +65,12 @@ export class Candidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): Candidate;
 
+  getVerified(): boolean;
+  setVerified(value: boolean): Candidate;
+
+  getReason(): string;
+  setReason(value: string): Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Candidate.AsObject;
   static toObject(includeInstance: boolean, msg: Candidate): Candidate.AsObject;
@@ -82,6 +88,8 @@ export namespace Candidate {
     type: Candidate.Type,
     pageRef: number,
     modelMetadata?: ModelSpec.AsObject,
+    verified: boolean,
+    reason: string,
   }
 
   export enum Type { 
@@ -195,6 +203,12 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLineCandidate;
 
+  getVerified(): boolean;
+  setVerified(value: boolean): PurchaseLineCandidate;
+
+  getReason(): string;
+  setReason(value: string): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -222,6 +236,8 @@ export namespace PurchaseLineCandidate {
     total: string,
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
+    verified: boolean,
+    reason: string,
   }
 }
 

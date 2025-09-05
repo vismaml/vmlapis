@@ -807,6 +807,14 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model spec of the TensorFlow Serving model that predicted this candidate"
+        },
+        "verified": {
+          "type": "boolean",
+          "title": "If true, this candidate has been verified by a human"
+        },
+        "reason": {
+          "type": "string",
+          "title": "reason for setting verified to true"
         }
       }
     },
@@ -1059,6 +1067,14 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model metadata"
+        },
+        "verified": {
+          "type": "boolean",
+          "title": "verified line candidate"
+        },
+        "reason": {
+          "type": "string",
+          "title": "reason for setting verified to true"
         }
       }
     },

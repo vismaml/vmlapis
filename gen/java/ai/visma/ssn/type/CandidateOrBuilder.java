@@ -218,4 +218,34 @@ public interface CandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * If true, this candidate has been verified by a human
+   * </pre>
+   *
+   * <code>bool verified = 8 [json_name = "verified"];</code>
+   * @return The verified.
+   */
+  boolean getVerified();
+
+  /**
+   * <pre>
+   * reason for setting verified to true
+   * </pre>
+   *
+   * <code>string reason = 9 [json_name = "reason"];</code>
+   * @return The reason.
+   */
+  java.lang.String getReason();
+  /**
+   * <pre>
+   * reason for setting verified to true
+   * </pre>
+   *
+   * <code>string reason = 9 [json_name = "reason"];</code>
+   * @return The bytes for reason.
+   */
+  com.google.protobuf.ByteString
+      getReasonBytes();
 }

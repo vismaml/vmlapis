@@ -64,6 +64,10 @@ message Candidate {
   uint32 page_ref = 6;
   // Model spec of the TensorFlow Serving model that predicted this candidate
   ModelSpec model_metadata = 7;
+  // If true, this candidate has been verified by a human
+  bool verified = 8;
+  // reason for setting verified to true
+  string reason = 9;
 }
 
 message ModelSpec {
@@ -122,6 +126,10 @@ message PurchaseLineCandidate {
   string unit_price = 18;
   // Model metadata
   ModelSpec model_metadata = 19;
+  // verified line candidate
+  bool verified = 20;
+  // reason for setting verified to true
+  string reason = 21;
 }
 
 message AnswerCandidate {

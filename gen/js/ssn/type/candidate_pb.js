@@ -456,7 +456,9 @@ proto.ssn.type.Candidate.toObject = function(includeInstance, msg) {
     boundingBox: (f = msg.getBoundingBox()) && ssn_type_geometry_pb.BoundingPoly.toObject(includeInstance, f),
     type: jspb.Message.getFieldWithDefault(msg, 5, 0),
     pageRef: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    verified: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    reason: jspb.Message.getFieldWithDefault(msg, 9, "")
   };
 
   if (includeInstance) {
@@ -523,6 +525,14 @@ proto.ssn.type.Candidate.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setVerified(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReason(value);
       break;
     default:
       reader.skipField();
@@ -603,6 +613,20 @@ proto.ssn.type.Candidate.serializeBinaryToWriter = function(message, writer) {
       7,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getVerified();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+  f = message.getReason();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
+      f
     );
   }
 };
@@ -797,6 +821,42 @@ proto.ssn.type.Candidate.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.Candidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional bool verified = 8;
+ * @return {boolean}
+ */
+proto.ssn.type.Candidate.prototype.getVerified = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.type.Candidate} returns this
+ */
+proto.ssn.type.Candidate.prototype.setVerified = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * optional string reason = 9;
+ * @return {string}
+ */
+proto.ssn.type.Candidate.prototype.getReason = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.Candidate} returns this
+ */
+proto.ssn.type.Candidate.prototype.setReason = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
@@ -1219,7 +1279,9 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, ""),
     total: jspb.Message.getFieldWithDefault(msg, 17, ""),
     unitPrice: jspb.Message.getFieldWithDefault(msg, 18, ""),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    verified: jspb.Message.getBooleanFieldWithDefault(msg, 20, false),
+    reason: jspb.Message.getFieldWithDefault(msg, 21, "")
   };
 
   if (includeInstance) {
@@ -1324,6 +1386,14 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 20:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setVerified(value);
+      break;
+    case 21:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReason(value);
       break;
     default:
       reader.skipField();
@@ -1472,6 +1542,20 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
       19,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getVerified();
+  if (f) {
+    writer.writeBool(
+      20,
+      f
+    );
+  }
+  f = message.getReason();
+  if (f.length > 0) {
+    writer.writeString(
+      21,
+      f
     );
   }
 };
@@ -1799,6 +1883,42 @@ proto.ssn.type.PurchaseLineCandidate.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional bool verified = 20;
+ * @return {boolean}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getVerified = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 20, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.setVerified = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 20, value);
+};
+
+
+/**
+ * optional string reason = 21;
+ * @return {string}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getReason = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 21, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.setReason = function(value) {
+  return jspb.Message.setProto3StringField(this, 21, value);
 };
 
 

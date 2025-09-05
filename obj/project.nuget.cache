@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "e6pmbPJeIxI=",
+  "success": true,
+  "projectFilePath": "/Users/miroslav.jascur/Documents/visma/vmlapis/vmlapis.csproj",
+  "expectedPackageFiles": [
+    "/Users/miroslav.jascur/.nuget/packages/google.protobuf/3.23.0/google.protobuf.3.23.0.nupkg.sha512",
+    "/Users/miroslav.jascur/.nuget/packages/grpc.core/2.46.5/grpc.core.2.46.5.nupkg.sha512",
+    "/Users/miroslav.jascur/.nuget/packages/grpc.core.api/2.46.5/grpc.core.api.2.46.5.nupkg.sha512",
+    "/Users/miroslav.jascur/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/miroslav.jascur/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/Users/miroslav.jascur/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}

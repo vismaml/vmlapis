@@ -346,4 +346,34 @@ public interface PurchaseLineCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * verified line candidate
+   * </pre>
+   *
+   * <code>bool verified = 20 [json_name = "verified"];</code>
+   * @return The verified.
+   */
+  boolean getVerified();
+
+  /**
+   * <pre>
+   * reason for setting verified to true
+   * </pre>
+   *
+   * <code>string reason = 21 [json_name = "reason"];</code>
+   * @return The reason.
+   */
+  java.lang.String getReason();
+  /**
+   * <pre>
+   * reason for setting verified to true
+   * </pre>
+   *
+   * <code>string reason = 21 [json_name = "reason"];</code>
+   * @return The bytes for reason.
+   */
+  com.google.protobuf.ByteString
+      getReasonBytes();
 }

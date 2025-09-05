@@ -30,57 +30,59 @@ namespace Ssn.Type {
             "Q29uZmlkZW5jZS5MZXZlbFIFbGV2ZWwSMQoFdmFsdWUYAiABKAsyGy5nb29n",
             "bGUucHJvdG9idWYuRmxvYXRWYWx1ZVIFdmFsdWUiTQoFTGV2ZWwSCwoHVU5L",
             "Tk9XThAAEgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoDTUlEEAMSCAoESElH",
-            "SBAEEg0KCVZFUllfSElHSBAFItkCCglDYW5kaWRhdGUSFAoFdmFsdWUYASAB",
+            "SBAEEg0KCVZFUllfSElHSBAFIo0DCglDYW5kaWRhdGUSFAoFdmFsdWUYASAB",
             "KAlSBXZhbHVlEhIKBHRleHQYAiABKAlSBHRleHQSNAoKY29uZmlkZW5jZRgD",
             "IAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2VSCmNvbmZpZGVuY2USOQoMYm91",
             "bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5Ugtib3Vu",
             "ZGluZ0JveBIsCgR0eXBlGAUgASgOMhguc3NuLnR5cGUuQ2FuZGlkYXRlLlR5",
             "cGVSBHR5cGUSGQoIcGFnZV9yZWYYBiABKA1SB3BhZ2VSZWYSOgoObW9kZWxf",
             "bWV0YWRhdGEYByABKAsyEy5zc24udHlwZS5Nb2RlbFNwZWNSDW1vZGVsTWV0",
-            "YWRhdGEiLAoEVHlwZRILCgdVTktOT1dOEAASCQoFRklFTEQQARIMCghET0NV",
-            "TUVOVBACImQKCU1vZGVsU3BlYxIdCgptb2RlbF9uYW1lGAEgASgJUgltb2Rl",
-            "bE5hbWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
-            "dDY0VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgB",
-            "IAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3Jl",
-            "ZhgGIAEoDVIHcGFnZVJlZiL8BAoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkK",
-            "CHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUS",
-            "IAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5",
-            "GAQgASgJUghxdWFudGl0eRIfCgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51",
-            "bWJlchISCgR1bml0GAYgASgJUgR1bml0EiUKDnRvdGFsX2Rpc2NvdW50GAcg",
-            "ASgJUg10b3RhbERpc2NvdW50Ei8KE3BlcmNlbnRhZ2VfZGlzY291bnQYCCAB",
-            "KAlSEnBlcmNlbnRhZ2VEaXNjb3VudBIkCg50b3RhbF9pbmNsX3ZhdBgJIAEo",
-            "CVIMdG90YWxJbmNsVmF0EiQKDnRvdGFsX2V4Y2xfdmF0GAogASgJUgx0b3Rh",
-            "bEV4Y2xWYXQSGwoJdG90YWxfdmF0GAsgASgJUgh0b3RhbFZhdBIlCg5wZXJj",
-            "ZW50YWdlX3ZhdBgMIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNl",
-            "X2luY2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
-            "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXQSFAoFdG90YWwY",
-            "ESABKAlSBXRvdGFsEh0KCnVuaXRfcHJpY2UYEiABKAlSCXVuaXRQcmljZRI6",
-            "Cg5tb2RlbF9tZXRhZGF0YRgTIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1IN",
-            "bW9kZWxNZXRhZGF0YUoECA8QEEoECBAQESLSAQoPQW5zd2VyQ2FuZGlkYXRl",
-            "EhoKCHF1ZXN0aW9uGAEgASgJUghxdWVzdGlvbhIWCgZhbnN3ZXIYAiABKAlS",
-            "BmFuc3dlchI0Cgpjb25maWRlbmNlGAMgASgLMhQuc3NuLnR5cGUuQ29uZmlk",
-            "ZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNz",
-            "bi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgI",
-            "IAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIH",
-            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0It8BChhWYXREaXN0cmlidXRp",
-            "b25DYW5kaWRhdGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIW",
-            "CgZhbW91bnQYAiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEo",
-            "CzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdl",
-            "X3JlZhgEIAEoDVIHcGFnZVJlZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZh",
-            "dBIZCghpbmNsX3ZhdBgGIAEoCVIHaW5jbFZhdCIxChBEb2N1bWVudE1ldGFk",
-            "YXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlz",
-            "bWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1j",
-            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiq",
-            "AghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHq",
-            "AglTc246OlR5cGViBnByb3RvMw=="));
+            "YWRhdGESGgoIdmVyaWZpZWQYCCABKAhSCHZlcmlmaWVkEhYKBnJlYXNvbhgJ",
+            "IAEoCVIGcmVhc29uIiwKBFR5cGUSCwoHVU5LTk9XThAAEgkKBUZJRUxEEAES",
+            "DAoIRE9DVU1FTlQQAiJkCglNb2RlbFNwZWMSHQoKbW9kZWxfbmFtZRgBIAEo",
+            "CVIJbW9kZWxOYW1lEjgKCW1vZGVsX3ZlchgCIAEoCzIbLmdvb2dsZS5wcm90",
+            "b2J1Zi5JbnQ2NFZhbHVlUghtb2RlbFZlciJWCg1MaW5lQ2FuZGlkYXRlEhIK",
+            "BHRleHQYASABKAlSBHRleHQSFgoGYW1vdW50GAIgASgBUgZhbW91bnQSGQoI",
+            "cGFnZV9yZWYYBiABKA1SB3BhZ2VSZWYisAUKFVB1cmNoYXNlTGluZUNhbmRp",
+            "ZGF0ZRIZCghwYWdlX3JlZhgBIAEoDVIHcGFnZVJlZhISCgRjb2RlGAIgASgJ",
+            "UgRjb2RlEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhIaCghx",
+            "dWFudGl0eRgEIAEoCVIIcXVhbnRpdHkSHwoLaXRlbV9udW1iZXIYBSABKAlS",
+            "Cml0ZW1OdW1iZXISEgoEdW5pdBgGIAEoCVIEdW5pdBIlCg50b3RhbF9kaXNj",
+            "b3VudBgHIAEoCVINdG90YWxEaXNjb3VudBIvChNwZXJjZW50YWdlX2Rpc2Nv",
+            "dW50GAggASgJUhJwZXJjZW50YWdlRGlzY291bnQSJAoOdG90YWxfaW5jbF92",
+            "YXQYCSABKAlSDHRvdGFsSW5jbFZhdBIkCg50b3RhbF9leGNsX3ZhdBgKIAEo",
+            "CVIMdG90YWxFeGNsVmF0EhsKCXRvdGFsX3ZhdBgLIAEoCVIIdG90YWxWYXQS",
+            "JQoOcGVyY2VudGFnZV92YXQYDCABKAlSDXBlcmNlbnRhZ2VWYXQSLQoTdW5p",
+            "dF9wcmljZV9pbmNsX3ZhdBgNIAEoCVIQdW5pdFByaWNlSW5jbFZhdBItChN1",
+            "bml0X3ByaWNlX2V4Y2xfdmF0GA4gASgJUhB1bml0UHJpY2VFeGNsVmF0EhQK",
+            "BXRvdGFsGBEgASgJUgV0b3RhbBIdCgp1bml0X3ByaWNlGBIgASgJUgl1bml0",
+            "UHJpY2USOgoObW9kZWxfbWV0YWRhdGEYEyABKAsyEy5zc24udHlwZS5Nb2Rl",
+            "bFNwZWNSDW1vZGVsTWV0YWRhdGESGgoIdmVyaWZpZWQYFCABKAhSCHZlcmlm",
+            "aWVkEhYKBnJlYXNvbhgVIAEoCVIGcmVhc29uSgQIDxAQSgQIEBARItIBCg9B",
+            "bnN3ZXJDYW5kaWRhdGUSGgoIcXVlc3Rpb24YASABKAlSCHF1ZXN0aW9uEhYK",
+            "BmFuc3dlchgCIAEoCVIGYW5zd2VyEjQKCmNvbmZpZGVuY2UYAyABKAsyFC5z",
+            "c24udHlwZS5Db25maWRlbmNlUgpjb25maWRlbmNlEjoKDm1vZGVsX21ldGFk",
+            "YXRhGAcgASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2RlbE1ldGFkYXRh",
+            "EhkKCHBhZ2VfcmVmGAggASgNUgdwYWdlUmVmIjkKCFBhZ2VUZXh0EhkKCHBh",
+            "Z2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBHRleHQYAiABKAlSBHRleHQi3wEK",
+            "GFZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZRIeCgpwZXJjZW50YWdlGAEgASgJ",
+            "UgpwZXJjZW50YWdlEhYKBmFtb3VudBgCIAEoCVIGYW1vdW50EjoKDm1vZGVs",
+            "X21ldGFkYXRhGAMgASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2RlbE1l",
+            "dGFkYXRhEhkKCHBhZ2VfcmVmGAQgASgNUgdwYWdlUmVmEhkKCGV4Y2xfdmF0",
+            "GAUgASgJUgdleGNsVmF0EhkKCGluY2xfdmF0GAYgASgJUgdpbmNsVmF0IjEK",
+            "EERvY3VtZW50TWV0YWRhdGESHQoKcGFnZV9jb3VudBgBIAEoDVIJcGFnZUNv",
+            "dW50QpoBChFhaS52aXNtYS5zc24udHlwZUIOQ2FuZGlkYXRlUHJvdG9QAVo0",
+            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL3R5cGU7",
+            "c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygIIU3NuXFR5cGXiAhRTc25cVHlw",
+            "ZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", "Verified", "Reason" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "Verified", "Reason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
@@ -400,6 +402,8 @@ namespace Ssn.Type {
       type_ = other.type_;
       pageRef_ = other.pageRef_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      verified_ = other.verified_;
+      reason_ = other.reason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -535,6 +539,36 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "verified" field.</summary>
+    public const int VerifiedFieldNumber = 8;
+    private bool verified_;
+    /// <summary>
+    /// If true, this candidate has been verified by a human
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Verified {
+      get { return verified_; }
+      set {
+        verified_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 9;
+    private string reason_ = "";
+    /// <summary>
+    /// reason for setting verified to true
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reason {
+      get { return reason_; }
+      set {
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -557,6 +591,8 @@ namespace Ssn.Type {
       if (Type != other.Type) return false;
       if (PageRef != other.PageRef) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (Verified != other.Verified) return false;
+      if (Reason != other.Reason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -571,6 +607,8 @@ namespace Ssn.Type {
       if (Type != global::Ssn.Type.Candidate.Types.Type.Unknown) hash ^= Type.GetHashCode();
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (Verified != false) hash ^= Verified.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -617,6 +655,14 @@ namespace Ssn.Type {
         output.WriteRawTag(58);
         output.WriteMessage(ModelMetadata);
       }
+      if (Verified != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Verified);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Reason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -655,6 +701,14 @@ namespace Ssn.Type {
         output.WriteRawTag(58);
         output.WriteMessage(ModelMetadata);
       }
+      if (Verified != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Verified);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Reason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -685,6 +739,12 @@ namespace Ssn.Type {
       }
       if (modelMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (Verified != false) {
+        size += 1 + 1;
+      }
+      if (Reason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -727,6 +787,12 @@ namespace Ssn.Type {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.Verified != false) {
+        Verified = other.Verified;
+      }
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -784,6 +850,14 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 64: {
+            Verified = input.ReadBool();
+            break;
+          }
+          case 74: {
+            Reason = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -838,6 +912,14 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 64: {
+            Verified = input.ReadBool();
+            break;
+          }
+          case 74: {
+            Reason = input.ReadString();
             break;
           }
         }
@@ -1446,6 +1528,8 @@ namespace Ssn.Type {
       total_ = other.total_;
       unitPrice_ = other.unitPrice_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      verified_ = other.verified_;
+      reason_ = other.reason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1711,6 +1795,36 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "verified" field.</summary>
+    public const int VerifiedFieldNumber = 20;
+    private bool verified_;
+    /// <summary>
+    /// verified line candidate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Verified {
+      get { return verified_; }
+      set {
+        verified_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 21;
+    private string reason_ = "";
+    /// <summary>
+    /// reason for setting verified to true
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reason {
+      get { return reason_; }
+      set {
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1743,6 +1857,8 @@ namespace Ssn.Type {
       if (Total != other.Total) return false;
       if (UnitPrice != other.UnitPrice) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (Verified != other.Verified) return false;
+      if (Reason != other.Reason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1767,6 +1883,8 @@ namespace Ssn.Type {
       if (Total.Length != 0) hash ^= Total.GetHashCode();
       if (UnitPrice.Length != 0) hash ^= UnitPrice.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (Verified != false) hash ^= Verified.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1853,6 +1971,14 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (Verified != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(Verified);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Reason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1931,6 +2057,14 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (Verified != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(Verified);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Reason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1991,6 +2125,12 @@ namespace Ssn.Type {
       }
       if (modelMetadata_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (Verified != false) {
+        size += 2 + 1;
+      }
+      if (Reason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Reason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2057,6 +2197,12 @@ namespace Ssn.Type {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.Verified != false) {
+        Verified = other.Verified;
+      }
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2148,6 +2294,14 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 160: {
+            Verified = input.ReadBool();
+            break;
+          }
+          case 170: {
+            Reason = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2236,6 +2390,14 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 160: {
+            Verified = input.ReadBool();
+            break;
+          }
+          case 170: {
+            Reason = input.ReadString();
             break;
           }
         }
