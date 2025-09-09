@@ -65,6 +65,21 @@ public final class OcrserviceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_GetQrCodesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_GetQrCodesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_GetQrCodesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_GetQrCodesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_QrCodeData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_QrCodeData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -77,55 +92,67 @@ public final class OcrserviceProto {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
       "n.ocrservice.v1\032\036google/protobuf/wrapper" +
       "s.proto\032 ssn/annotator/v1/annotator.prot" +
-      "o\032\036ssn/type/text_annotation.proto\"\217\001\n\030Ge" +
-      "tTextAnnotationRequest\0226\n\010document\030\002 \001(\013" +
-      "2\032.ssn.annotator.v1.DocumentR\010document\022\030" +
-      "\n\007preview\030\003 \001(\010R\007preview\022!\n\014preview_last" +
-      "\030\004 \001(\010R\013previewLast\"\315\001\n\031GetTextAnnotatio" +
-      "nResponse\022A\n\017text_annotation\030\002 \001(\0132\030.ssn" +
-      ".type.TextAnnotationR\016textAnnotation\0221\n\005" +
-      "image\030\003 \001(\0132\033.google.protobuf.BytesValue" +
-      "R\005image\022:\n\nlast_image\030\004 \001(\0132\033.google.pro" +
-      "tobuf.BytesValueR\tlastImage\"_\n\033AsyncCrea" +
-      "teOperationRequest\022\037\n\013input_paths\030\001 \003(\tR" +
-      "\ninputPaths\022\037\n\013output_path\030\002 \001(\tR\noutput" +
-      "Path\"E\n\034AsyncCreateOperationResponse\022%\n\016" +
-      "operation_name\030\001 \001(\tR\roperationName\"G\n\036A" +
-      "syncGetOperationStatusRequest\022%\n\016operati" +
-      "on_name\030\001 \001(\tR\roperationName\"\242\001\n\037AsyncGe" +
-      "tOperationStatusResponse\022%\n\016operation_na" +
-      "me\030\001 \001(\tR\roperationName\022\022\n\004done\030\002 \001(\010R\004d" +
-      "one\022\037\n\013status_code\030\003 \001(\005R\nstatusCode\022#\n\r" +
-      "error_message\030\004 \001(\tR\014errorMessage\")\n\023Ocr" +
-      "ScanImageRequest\022\022\n\004data\030\001 \001(\014R\004data\"3\n\024" +
-      "OcrScanImageResponse\022\033\n\ttess_hocr\030\001 \001(\tR" +
-      "\010tessHocr2\316\004\n\nOcrService\022_\n\014OcrScanImage" +
-      "\022&.ssn.ocrservice.v1.OcrScanImageRequest" +
-      "\032\'.ssn.ocrservice.v1.OcrScanImageRespons" +
-      "e\022n\n\021GetTextAnnotation\022+.ssn.ocrservice." +
-      "v1.GetTextAnnotationRequest\032,.ssn.ocrser" +
-      "vice.v1.GetTextAnnotationResponse\022q\n\022Get" +
-      "TextAnnotations\022+.ssn.ocrservice.v1.GetT" +
-      "extAnnotationRequest\032,.ssn.ocrservice.v1" +
-      ".GetTextAnnotationResponse0\001\022w\n\024AsyncCre" +
-      "ateOperation\022..ssn.ocrservice.v1.AsyncCr" +
-      "eateOperationRequest\032/.ssn.ocrservice.v1" +
-      ".AsyncCreateOperationResponse\022\202\001\n\027AsyncG" +
-      "etOperationStatus\0221.ssn.ocrservice.v1.As" +
-      "yncGetOperationStatusRequest\0322.ssn.ocrse" +
-      "rvice.v1.AsyncGetOperationStatusResponse" +
-      "0\001B\325\001\n\032ai.visma.ssn.ocrservice.v1B\017Ocrse" +
-      "rviceProtoP\001Z@github.com/e-conomic/vmlap" +
-      "is/gen/go/ssn/ocrservice/v1;ocrservice\242\002" +
-      "\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrservic" +
-      "e\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata\352\002\023S" +
-      "sn::Ocrservice::V1b\006proto3"
+      "o\032\034ssn/type/swiss_qr_bill.proto\032\036ssn/typ" +
+      "e/text_annotation.proto\"\217\001\n\030GetTextAnnot" +
+      "ationRequest\0226\n\010document\030\002 \001(\0132\032.ssn.ann" +
+      "otator.v1.DocumentR\010document\022\030\n\007preview\030" +
+      "\003 \001(\010R\007preview\022!\n\014preview_last\030\004 \001(\010R\013pr" +
+      "eviewLast\"\315\001\n\031GetTextAnnotationResponse\022" +
+      "A\n\017text_annotation\030\002 \001(\0132\030.ssn.type.Text" +
+      "AnnotationR\016textAnnotation\0221\n\005image\030\003 \001(" +
+      "\0132\033.google.protobuf.BytesValueR\005image\022:\n" +
+      "\nlast_image\030\004 \001(\0132\033.google.protobuf.Byte" +
+      "sValueR\tlastImage\"_\n\033AsyncCreateOperatio" +
+      "nRequest\022\037\n\013input_paths\030\001 \003(\tR\ninputPath" +
+      "s\022\037\n\013output_path\030\002 \001(\tR\noutputPath\"E\n\034As" +
+      "yncCreateOperationResponse\022%\n\016operation_" +
+      "name\030\001 \001(\tR\roperationName\"G\n\036AsyncGetOpe" +
+      "rationStatusRequest\022%\n\016operation_name\030\001 " +
+      "\001(\tR\roperationName\"\242\001\n\037AsyncGetOperation" +
+      "StatusResponse\022%\n\016operation_name\030\001 \001(\tR\r" +
+      "operationName\022\022\n\004done\030\002 \001(\010R\004done\022\037\n\013sta" +
+      "tus_code\030\003 \001(\005R\nstatusCode\022#\n\rerror_mess" +
+      "age\030\004 \001(\tR\014errorMessage\")\n\023OcrScanImageR" +
+      "equest\022\022\n\004data\030\001 \001(\014R\004data\"3\n\024OcrScanIma" +
+      "geResponse\022\033\n\ttess_hocr\030\001 \001(\tR\010tessHocr\"" +
+      "K\n\021GetQrCodesRequest\0226\n\010document\030\001 \001(\0132\032" +
+      ".ssn.annotator.v1.DocumentR\010document\"N\n\022" +
+      "GetQrCodesResponse\0228\n\010qr_codes\030\001 \003(\0132\035.s" +
+      "sn.ocrservice.v1.QrCodeDataR\007qrCodes\"\220\001\n" +
+      "\nQrCodeData\022\030\n\007content\030\001 \001(\tR\007content\022\031\n" +
+      "\010page_ref\030\002 \001(\rR\007pageRef\022\022\n\004type\030\003 \001(\tR\004" +
+      "type\0229\n\rswiss_qr_bill\030\004 \001(\0132\025.ssn.type.S" +
+      "wissQrBillR\013swissQrBill2\251\005\n\nOcrService\022_" +
+      "\n\014OcrScanImage\022&.ssn.ocrservice.v1.OcrSc" +
+      "anImageRequest\032\'.ssn.ocrservice.v1.OcrSc" +
+      "anImageResponse\022n\n\021GetTextAnnotation\022+.s" +
+      "sn.ocrservice.v1.GetTextAnnotationReques" +
+      "t\032,.ssn.ocrservice.v1.GetTextAnnotationR" +
+      "esponse\022q\n\022GetTextAnnotations\022+.ssn.ocrs" +
+      "ervice.v1.GetTextAnnotationRequest\032,.ssn" +
+      ".ocrservice.v1.GetTextAnnotationResponse" +
+      "0\001\022w\n\024AsyncCreateOperation\022..ssn.ocrserv" +
+      "ice.v1.AsyncCreateOperationRequest\032/.ssn" +
+      ".ocrservice.v1.AsyncCreateOperationRespo" +
+      "nse\022\202\001\n\027AsyncGetOperationStatus\0221.ssn.oc" +
+      "rservice.v1.AsyncGetOperationStatusReque" +
+      "st\0322.ssn.ocrservice.v1.AsyncGetOperation" +
+      "StatusResponse0\001\022Y\n\nGetQrCodes\022$.ssn.ocr" +
+      "service.v1.GetQrCodesRequest\032%.ssn.ocrse" +
+      "rvice.v1.GetQrCodesResponseB\325\001\n\032ai.visma" +
+      ".ssn.ocrservice.v1B\017OcrserviceProtoP\001Z@g" +
+      "ithub.com/e-conomic/vmlapis/gen/go/ssn/o" +
+      "crservice/v1;ocrservice\242\002\003SOX\252\002\021Ssn.Ocrs" +
+      "ervice.V1\312\002\021Ssn\\Ocrservice\\V1\342\002\035Ssn\\Ocrs" +
+      "ervice\\V1\\GPBMetadata\352\002\023Ssn::Ocrservice:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor(),
+          ai.visma.ssn.type.SwissQrBillProto.getDescriptor(),
           ai.visma.ssn.type.TextAnnotationProto.getDescriptor(),
         });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor =
@@ -176,9 +203,28 @@ public final class OcrserviceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,
         new java.lang.String[] { "TessHocr", });
+    internal_static_ssn_ocrservice_v1_GetQrCodesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_ssn_ocrservice_v1_GetQrCodesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_GetQrCodesRequest_descriptor,
+        new java.lang.String[] { "Document", });
+    internal_static_ssn_ocrservice_v1_GetQrCodesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_ssn_ocrservice_v1_GetQrCodesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_GetQrCodesResponse_descriptor,
+        new java.lang.String[] { "QrCodes", });
+    internal_static_ssn_ocrservice_v1_QrCodeData_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_ocrservice_v1_QrCodeData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_QrCodeData_descriptor,
+        new java.lang.String[] { "Content", "PageRef", "Type", "SwissQrBill", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor();
+    ai.visma.ssn.type.SwissQrBillProto.getDescriptor();
     ai.visma.ssn.type.TextAnnotationProto.getDescriptor();
   }
 

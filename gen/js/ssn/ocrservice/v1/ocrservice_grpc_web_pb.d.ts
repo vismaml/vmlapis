@@ -39,6 +39,13 @@ export class OcrServiceClient {
     metadata?: grpcWeb.Metadata
   ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.AsyncGetOperationStatusResponse>;
 
+  getQrCodes(
+    request: ssn_ocrservice_v1_ocrservice_pb.GetQrCodesRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_ocrservice_v1_ocrservice_pb.GetQrCodesResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetQrCodesResponse>;
+
 }
 
 export class OcrServicePromiseClient {
@@ -70,6 +77,11 @@ export class OcrServicePromiseClient {
     request: ssn_ocrservice_v1_ocrservice_pb.AsyncGetOperationStatusRequest,
     metadata?: grpcWeb.Metadata
   ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.AsyncGetOperationStatusResponse>;
+
+  getQrCodes(
+    request: ssn_ocrservice_v1_ocrservice_pb.GetQrCodesRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_ocrservice_v1_ocrservice_pb.GetQrCodesResponse>;
 
 }
 

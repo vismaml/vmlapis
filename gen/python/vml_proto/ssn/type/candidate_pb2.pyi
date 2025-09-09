@@ -149,6 +149,16 @@ class VatDistributionCandidate(_message.Message):
     incl_vat: str
     def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ..., excl_vat: _Optional[str] = ..., incl_vat: _Optional[str] = ...) -> None: ...
 
+class QrCodeData(_message.Message):
+    __slots__ = ("content", "page_ref", "type")
+    CONTENT_FIELD_NUMBER: _ClassVar[int]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    content: str
+    page_ref: int
+    type: str
+    def __init__(self, content: _Optional[str] = ..., page_ref: _Optional[int] = ..., type: _Optional[str] = ...) -> None: ...
+
 class DocumentMetadata(_message.Message):
     __slots__ = ("page_count",)
     PAGE_COUNT_FIELD_NUMBER: _ClassVar[int]

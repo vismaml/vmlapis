@@ -173,6 +173,37 @@ public final class OcrServiceGrpc {
     return getAsyncGetOperationStatusMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetQrCodesRequest,
+      ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> getGetQrCodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetQrCodes",
+      requestType = ai.visma.ssn.ocrservice.v1.GetQrCodesRequest.class,
+      responseType = ai.visma.ssn.ocrservice.v1.GetQrCodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetQrCodesRequest,
+      ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> getGetQrCodesMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetQrCodesRequest, ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> getGetQrCodesMethod;
+    if ((getGetQrCodesMethod = OcrServiceGrpc.getGetQrCodesMethod) == null) {
+      synchronized (OcrServiceGrpc.class) {
+        if ((getGetQrCodesMethod = OcrServiceGrpc.getGetQrCodesMethod) == null) {
+          OcrServiceGrpc.getGetQrCodesMethod = getGetQrCodesMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.GetQrCodesRequest, ai.visma.ssn.ocrservice.v1.GetQrCodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQrCodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.GetQrCodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.GetQrCodesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OcrServiceMethodDescriptorSupplier("GetQrCodes"))
+              .build();
+        }
+      }
+    }
+    return getGetQrCodesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -273,6 +304,13 @@ public final class OcrServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAsyncGetOperationStatusMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getQrCodes(ai.visma.ssn.ocrservice.v1.GetQrCodesRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQrCodesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -347,6 +385,14 @@ public final class OcrServiceGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getAsyncGetOperationStatusMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getQrCodes(ai.visma.ssn.ocrservice.v1.GetQrCodesRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetQrCodesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -406,6 +452,13 @@ public final class OcrServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
           getChannel(), getAsyncGetOperationStatusMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.GetQrCodesResponse getQrCodes(ai.visma.ssn.ocrservice.v1.GetQrCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetQrCodesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -463,6 +516,13 @@ public final class OcrServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getAsyncGetOperationStatusMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.GetQrCodesResponse getQrCodes(ai.visma.ssn.ocrservice.v1.GetQrCodesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetQrCodesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -507,6 +567,14 @@ public final class OcrServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAsyncCreateOperationMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.ocrservice.v1.GetQrCodesResponse> getQrCodes(
+        ai.visma.ssn.ocrservice.v1.GetQrCodesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetQrCodesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_OCR_SCAN_IMAGE = 0;
@@ -514,6 +582,7 @@ public final class OcrServiceGrpc {
   private static final int METHODID_GET_TEXT_ANNOTATIONS = 2;
   private static final int METHODID_ASYNC_CREATE_OPERATION = 3;
   private static final int METHODID_ASYNC_GET_OPERATION_STATUS = 4;
+  private static final int METHODID_GET_QR_CODES = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -551,6 +620,10 @@ public final class OcrServiceGrpc {
         case METHODID_ASYNC_GET_OPERATION_STATUS:
           serviceImpl.asyncGetOperationStatus((ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>) responseObserver);
+          break;
+        case METHODID_GET_QR_CODES:
+          serviceImpl.getQrCodes((ai.visma.ssn.ocrservice.v1.GetQrCodesRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetQrCodesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -605,6 +678,13 @@ public final class OcrServiceGrpc {
               ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
               ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>(
                 service, METHODID_ASYNC_GET_OPERATION_STATUS)))
+        .addMethod(
+          getGetQrCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.GetQrCodesRequest,
+              ai.visma.ssn.ocrservice.v1.GetQrCodesResponse>(
+                service, METHODID_GET_QR_CODES)))
         .build();
   }
 
@@ -658,6 +738,7 @@ public final class OcrServiceGrpc {
               .addMethod(getGetTextAnnotationsMethod())
               .addMethod(getAsyncCreateOperationMethod())
               .addMethod(getAsyncGetOperationStatusMethod())
+              .addMethod(getGetQrCodesMethod())
               .build();
         }
       }

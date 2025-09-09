@@ -30,6 +30,8 @@ var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator
 
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
+var ssn_type_swiss_qr_bill_pb = require('../../../ssn/type/swiss_qr_bill_pb.js')
+
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 
 var validate_validate_pb = require('../../../validate/validate_pb.js')

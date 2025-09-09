@@ -5,6 +5,7 @@ import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
+import * as ssn_type_swiss_qr_bill_pb from '../../../ssn/type/swiss_qr_bill_pb'; // proto import: "ssn/type/swiss_qr_bill.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
@@ -158,6 +159,16 @@ export class Annotation extends jspb.Message {
   clearPageTextsList(): Annotation;
   addPageTexts(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
 
+  getQrCodesList(): Array<ssn_type_candidate_pb.QrCodeData>;
+  setQrCodesList(value: Array<ssn_type_candidate_pb.QrCodeData>): Annotation;
+  clearQrCodesList(): Annotation;
+  addQrCodes(value?: ssn_type_candidate_pb.QrCodeData, index?: number): ssn_type_candidate_pb.QrCodeData;
+
+  getSwissQrBillsList(): Array<ssn_type_swiss_qr_bill_pb.SwissQrBill>;
+  setSwissQrBillsList(value: Array<ssn_type_swiss_qr_bill_pb.SwissQrBill>): Annotation;
+  clearSwissQrBillsList(): Annotation;
+  addSwissQrBills(value?: ssn_type_swiss_qr_bill_pb.SwissQrBill, index?: number): ssn_type_swiss_qr_bill_pb.SwissQrBill;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
   static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
@@ -174,6 +185,8 @@ export namespace Annotation {
     answerCandidatesList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
+    qrCodesList: Array<ssn_type_candidate_pb.QrCodeData.AsObject>,
+    swissQrBillsList: Array<ssn_type_swiss_qr_bill_pb.SwissQrBill.AsObject>,
   }
 }
 

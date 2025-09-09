@@ -24,6 +24,7 @@ const (
 	OcrService_GetTextAnnotations_FullMethodName      = "/ssn.ocrservice.v1.OcrService/GetTextAnnotations"
 	OcrService_AsyncCreateOperation_FullMethodName    = "/ssn.ocrservice.v1.OcrService/AsyncCreateOperation"
 	OcrService_AsyncGetOperationStatus_FullMethodName = "/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus"
+	OcrService_GetQrCodes_FullMethodName              = "/ssn.ocrservice.v1.OcrService/GetQrCodes"
 )
 
 // OcrServiceClient is the client API for OcrService service.
@@ -35,6 +36,7 @@ type OcrServiceClient interface {
 	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
 	AsyncCreateOperation(ctx context.Context, in *AsyncCreateOperationRequest, opts ...grpc.CallOption) (*AsyncCreateOperationResponse, error)
 	AsyncGetOperationStatus(ctx context.Context, in *AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (OcrService_AsyncGetOperationStatusClient, error)
+	GetQrCodes(ctx context.Context, in *GetQrCodesRequest, opts ...grpc.CallOption) (*GetQrCodesResponse, error)
 }
 
 type ocrServiceClient struct {
@@ -136,6 +138,15 @@ func (x *ocrServiceAsyncGetOperationStatusClient) Recv() (*AsyncGetOperationStat
 	return m, nil
 }
 
+func (c *ocrServiceClient) GetQrCodes(ctx context.Context, in *GetQrCodesRequest, opts ...grpc.CallOption) (*GetQrCodesResponse, error) {
+	out := new(GetQrCodesResponse)
+	err := c.cc.Invoke(ctx, OcrService_GetQrCodes_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // OcrServiceServer is the server API for OcrService service.
 // All implementations should embed UnimplementedOcrServiceServer
 // for forward compatibility
@@ -145,6 +156,7 @@ type OcrServiceServer interface {
 	GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error
 	AsyncCreateOperation(context.Context, *AsyncCreateOperationRequest) (*AsyncCreateOperationResponse, error)
 	AsyncGetOperationStatus(*AsyncGetOperationStatusRequest, OcrService_AsyncGetOperationStatusServer) error
+	GetQrCodes(context.Context, *GetQrCodesRequest) (*GetQrCodesResponse, error)
 }
 
 // UnimplementedOcrServiceServer should be embedded to have forward compatible implementations.
@@ -165,6 +177,9 @@ func (UnimplementedOcrServiceServer) AsyncCreateOperation(context.Context, *Asyn
 }
 func (UnimplementedOcrServiceServer) AsyncGetOperationStatus(*AsyncGetOperationStatusRequest, OcrService_AsyncGetOperationStatusServer) error {
 	return status.Errorf(codes.Unimplemented, "method AsyncGetOperationStatus not implemented")
+}
+func (UnimplementedOcrServiceServer) GetQrCodes(context.Context, *GetQrCodesRequest) (*GetQrCodesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetQrCodes not implemented")
 }
 
 // UnsafeOcrServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -274,6 +289,24 @@ func (x *ocrServiceAsyncGetOperationStatusServer) Send(m *AsyncGetOperationStatu
 	return x.ServerStream.SendMsg(m)
 }
 
+func _OcrService_GetQrCodes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetQrCodesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OcrServiceServer).GetQrCodes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: OcrService_GetQrCodes_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OcrServiceServer).GetQrCodes(ctx, req.(*GetQrCodesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // OcrService_ServiceDesc is the grpc.ServiceDesc for OcrService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -292,6 +325,10 @@ var OcrService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AsyncCreateOperation",
 			Handler:    _OcrService_AsyncCreateOperation_Handler,
+		},
+		{
+			MethodName: "GetQrCodes",
+			Handler:    _OcrService_GetQrCodes_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

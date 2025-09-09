@@ -2,6 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
+import * as ssn_type_swiss_qr_bill_pb from '../../../ssn/type/swiss_qr_bill_pb'; // proto import: "ssn/type/swiss_qr_bill.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 
 
@@ -190,6 +191,78 @@ export class OcrScanImageResponse extends jspb.Message {
 export namespace OcrScanImageResponse {
   export type AsObject = {
     tessHocr: string,
+  }
+}
+
+export class GetQrCodesRequest extends jspb.Message {
+  getDocument(): ssn_annotator_v1_annotator_pb.Document | undefined;
+  setDocument(value?: ssn_annotator_v1_annotator_pb.Document): GetQrCodesRequest;
+  hasDocument(): boolean;
+  clearDocument(): GetQrCodesRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetQrCodesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetQrCodesRequest): GetQrCodesRequest.AsObject;
+  static serializeBinaryToWriter(message: GetQrCodesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetQrCodesRequest;
+  static deserializeBinaryFromReader(message: GetQrCodesRequest, reader: jspb.BinaryReader): GetQrCodesRequest;
+}
+
+export namespace GetQrCodesRequest {
+  export type AsObject = {
+    document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
+  }
+}
+
+export class GetQrCodesResponse extends jspb.Message {
+  getQrCodesList(): Array<QrCodeData>;
+  setQrCodesList(value: Array<QrCodeData>): GetQrCodesResponse;
+  clearQrCodesList(): GetQrCodesResponse;
+  addQrCodes(value?: QrCodeData, index?: number): QrCodeData;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetQrCodesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetQrCodesResponse): GetQrCodesResponse.AsObject;
+  static serializeBinaryToWriter(message: GetQrCodesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetQrCodesResponse;
+  static deserializeBinaryFromReader(message: GetQrCodesResponse, reader: jspb.BinaryReader): GetQrCodesResponse;
+}
+
+export namespace GetQrCodesResponse {
+  export type AsObject = {
+    qrCodesList: Array<QrCodeData.AsObject>,
+  }
+}
+
+export class QrCodeData extends jspb.Message {
+  getContent(): string;
+  setContent(value: string): QrCodeData;
+
+  getPageRef(): number;
+  setPageRef(value: number): QrCodeData;
+
+  getType(): string;
+  setType(value: string): QrCodeData;
+
+  getSwissQrBill(): ssn_type_swiss_qr_bill_pb.SwissQrBill | undefined;
+  setSwissQrBill(value?: ssn_type_swiss_qr_bill_pb.SwissQrBill): QrCodeData;
+  hasSwissQrBill(): boolean;
+  clearSwissQrBill(): QrCodeData;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): QrCodeData.AsObject;
+  static toObject(includeInstance: boolean, msg: QrCodeData): QrCodeData.AsObject;
+  static serializeBinaryToWriter(message: QrCodeData, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QrCodeData;
+  static deserializeBinaryFromReader(message: QrCodeData, reader: jspb.BinaryReader): QrCodeData;
+}
+
+export namespace QrCodeData {
+  export type AsObject = {
+    content: string,
+    pageRef: number,
+    type: string,
+    swissQrBill?: ssn_type_swiss_qr_bill_pb.SwissQrBill.AsObject,
   }
 }
 

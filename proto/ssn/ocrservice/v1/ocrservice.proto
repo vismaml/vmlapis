@@ -74,5 +74,3 @@ message QrCodeData {
   string type = 3;
   ssn.type.SwissQrBill swiss_qr_bill = 4;
 }
-
-

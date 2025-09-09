@@ -40,6 +40,11 @@ class OcrServiceStub(object):
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusResponse.FromString,
                 _registered_method=True)
+        self.GetQrCodes = channel.unary_unary(
+                '/ssn.ocrservice.v1.OcrService/GetQrCodes',
+                request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesRequest.SerializeToString,
+                response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesResponse.FromString,
+                _registered_method=True)
 
 
 class OcrServiceServicer(object):
@@ -76,6 +81,12 @@ class OcrServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetQrCodes(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_OcrServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -103,6 +114,11 @@ def add_OcrServiceServicer_to_server(servicer, server):
                     servicer.AsyncGetOperationStatus,
                     request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusRequest.FromString,
                     response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusResponse.SerializeToString,
+            ),
+            'GetQrCodes': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetQrCodes,
+                    request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesRequest.FromString,
+                    response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -241,6 +257,33 @@ class OcrService(object):
             '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetQrCodes(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/GetQrCodes',
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesRequest.SerializeToString,
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetQrCodesResponse.FromString,
             options,
             channel_credentials,
             insecure,

@@ -2309,4 +2309,92 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Raw QR code content found in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.QrCodeData> 
+      getQrCodesList();
+  /**
+   * <pre>
+   * Raw QR code content found in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeData getQrCodes(int index);
+  /**
+   * <pre>
+   * Raw QR code content found in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  int getQrCodesCount();
+  /**
+   * <pre>
+   * Raw QR code content found in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+      getQrCodesOrBuilderList();
+  /**
+   * <pre>
+   * Raw QR code content found in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Parsed Swiss QR bill data
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.SwissQrBill> 
+      getSwissQrBillsList();
+  /**
+   * <pre>
+   * Parsed Swiss QR bill data
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index);
+  /**
+   * <pre>
+   * Parsed Swiss QR bill data
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  int getSwissQrBillsCount();
+  /**
+   * <pre>
+   * Parsed Swiss QR bill data
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+      getSwissQrBillsOrBuilderList();
+  /**
+   * <pre>
+   * Parsed Swiss QR bill data
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index);
 }

@@ -307,7 +307,7 @@ message DocumentAnnotatorResponse {
   // Parsed Swiss QR bill data
   repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
 
-  // 
+  //
 }
 
 message Document {

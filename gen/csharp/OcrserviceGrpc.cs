@@ -64,6 +64,10 @@ namespace Ssn.Ocrservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetQrCodesRequest> __Marshaller_ssn_ocrservice_v1_GetQrCodesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetQrCodesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetQrCodesResponse> __Marshaller_ssn_ocrservice_v1_GetQrCodesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetQrCodesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse> __Method_OcrScanImage = new grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse>(
@@ -105,6 +109,14 @@ namespace Ssn.Ocrservice.V1 {
         __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusRequest,
         __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Ocrservice.V1.GetQrCodesRequest, global::Ssn.Ocrservice.V1.GetQrCodesResponse> __Method_GetQrCodes = new grpc::Method<global::Ssn.Ocrservice.V1.GetQrCodesRequest, global::Ssn.Ocrservice.V1.GetQrCodesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQrCodes",
+        __Marshaller_ssn_ocrservice_v1_GetQrCodesRequest,
+        __Marshaller_ssn_ocrservice_v1_GetQrCodesResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -141,6 +153,12 @@ namespace Ssn.Ocrservice.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task AsyncGetOperationStatus(global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest request, grpc::IServerStreamWriter<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Ocrservice.V1.GetQrCodesResponse> GetQrCodes(global::Ssn.Ocrservice.V1.GetQrCodesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -254,6 +272,26 @@ namespace Ssn.Ocrservice.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_AsyncGetOperationStatus, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Ocrservice.V1.GetQrCodesResponse GetQrCodes(global::Ssn.Ocrservice.V1.GetQrCodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQrCodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Ocrservice.V1.GetQrCodesResponse GetQrCodes(global::Ssn.Ocrservice.V1.GetQrCodesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQrCodes, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Ocrservice.V1.GetQrCodesResponse> GetQrCodesAsync(global::Ssn.Ocrservice.V1.GetQrCodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQrCodesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Ocrservice.V1.GetQrCodesResponse> GetQrCodesAsync(global::Ssn.Ocrservice.V1.GetQrCodesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQrCodes, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OcrServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -272,7 +310,8 @@ namespace Ssn.Ocrservice.V1 {
           .AddMethod(__Method_GetTextAnnotation, serviceImpl.GetTextAnnotation)
           .AddMethod(__Method_GetTextAnnotations, serviceImpl.GetTextAnnotations)
           .AddMethod(__Method_AsyncCreateOperation, serviceImpl.AsyncCreateOperation)
-          .AddMethod(__Method_AsyncGetOperationStatus, serviceImpl.AsyncGetOperationStatus).Build();
+          .AddMethod(__Method_AsyncGetOperationStatus, serviceImpl.AsyncGetOperationStatus)
+          .AddMethod(__Method_GetQrCodes, serviceImpl.GetQrCodes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -287,6 +326,7 @@ namespace Ssn.Ocrservice.V1 {
       serviceBinder.AddMethod(__Method_GetTextAnnotations, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse>(serviceImpl.GetTextAnnotations));
       serviceBinder.AddMethod(__Method_AsyncCreateOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest, global::Ssn.Ocrservice.V1.AsyncCreateOperationResponse>(serviceImpl.AsyncCreateOperation));
       serviceBinder.AddMethod(__Method_AsyncGetOperationStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse>(serviceImpl.AsyncGetOperationStatus));
+      serviceBinder.AddMethod(__Method_GetQrCodes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.GetQrCodesRequest, global::Ssn.Ocrservice.V1.GetQrCodesResponse>(serviceImpl.GetQrCodes));
     }
 
   }

@@ -66,6 +66,11 @@ public final class CandidateProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_QrCodeData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_type_QrCodeData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_type_DocumentMetadata_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -128,12 +133,14 @@ public final class CandidateProto {
       "\030\003 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetada" +
       "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_va" +
       "t\030\005 \001(\tR\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007incl" +
-      "Vat\"1\n\020DocumentMetadata\022\035\n\npage_count\030\001 " +
-      "\001(\rR\tpageCountB\232\001\n\021ai.visma.ssn.typeB\016Ca" +
-      "ndidateProtoP\001Z4github.com/e-conomic/vml" +
-      "apis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn" +
-      ".Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352" +
-      "\002\tSsn::Typeb\006proto3"
+      "Vat\"U\n\nQrCodeData\022\030\n\007content\030\001 \001(\tR\007cont" +
+      "ent\022\031\n\010page_ref\030\002 \001(\rR\007pageRef\022\022\n\004type\030\003" +
+      " \001(\tR\004type\"1\n\020DocumentMetadata\022\035\n\npage_c" +
+      "ount\030\001 \001(\rR\tpageCountB\232\001\n\021ai.visma.ssn.t" +
+      "ypeB\016CandidateProtoP\001Z4github.com/e-cono" +
+      "mic/vmlapis/gen/go/ssn/type;ssntype\242\002\003ST" +
+      "X\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMe" +
+      "tadata\352\002\tSsn::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -189,8 +196,14 @@ public final class CandidateProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_VatDistributionCandidate_descriptor,
         new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat", });
-    internal_static_ssn_type_DocumentMetadata_descriptor =
+    internal_static_ssn_type_QrCodeData_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_ssn_type_QrCodeData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_type_QrCodeData_descriptor,
+        new java.lang.String[] { "Content", "PageRef", "Type", });
+    internal_static_ssn_type_DocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_ssn_type_DocumentMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_DocumentMetadata_descriptor,

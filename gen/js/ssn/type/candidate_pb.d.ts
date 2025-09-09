@@ -325,6 +325,32 @@ export namespace VatDistributionCandidate {
   }
 }
 
+export class QrCodeData extends jspb.Message {
+  getContent(): string;
+  setContent(value: string): QrCodeData;
+
+  getPageRef(): number;
+  setPageRef(value: number): QrCodeData;
+
+  getType(): string;
+  setType(value: string): QrCodeData;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): QrCodeData.AsObject;
+  static toObject(includeInstance: boolean, msg: QrCodeData): QrCodeData.AsObject;
+  static serializeBinaryToWriter(message: QrCodeData, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QrCodeData;
+  static deserializeBinaryFromReader(message: QrCodeData, reader: jspb.BinaryReader): QrCodeData;
+}
+
+export namespace QrCodeData {
+  export type AsObject = {
+    content: string,
+    pageRef: number,
+    type: string,
+  }
+}
+
 export class DocumentMetadata extends jspb.Message {
   getPageCount(): number;
   setPageCount(value: number): DocumentMetadata;

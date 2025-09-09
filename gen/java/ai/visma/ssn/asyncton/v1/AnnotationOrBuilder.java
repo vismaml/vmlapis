@@ -231,4 +231,92 @@ public interface AnnotationOrBuilder extends
    */
   ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * qr code candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 7 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.QrCodeData> 
+      getQrCodesList();
+  /**
+   * <pre>
+   * qr code candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 7 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeData getQrCodes(int index);
+  /**
+   * <pre>
+   * qr code candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 7 [json_name = "qrCodes"];</code>
+   */
+  int getQrCodesCount();
+  /**
+   * <pre>
+   * qr code candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 7 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+      getQrCodesOrBuilderList();
+  /**
+   * <pre>
+   * qr code candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 7 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * swiss qr bill candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 8 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.SwissQrBill> 
+      getSwissQrBillsList();
+  /**
+   * <pre>
+   * swiss qr bill candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 8 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index);
+  /**
+   * <pre>
+   * swiss qr bill candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 8 [json_name = "swissQrBills"];</code>
+   */
+  int getSwissQrBillsCount();
+  /**
+   * <pre>
+   * swiss qr bill candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 8 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+      getSwissQrBillsOrBuilderList();
+  /**
+   * <pre>
+   * swiss qr bill candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 8 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index);
 }

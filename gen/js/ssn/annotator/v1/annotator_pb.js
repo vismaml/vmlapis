@@ -27,6 +27,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
+var ssn_type_swiss_qr_bill_pb = require('../../../ssn/type/swiss_qr_bill_pb.js');
+goog.object.extend(proto, ssn_type_swiss_qr_bill_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
 var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
@@ -373,7 +375,9 @@ proto.ssn.annotator.v1.Feature.Type = {
   PURCHASE_LINES: 44,
   PAGE_TEXTS: 45,
   VAT_DISTRIBUTION: 46,
-  LANGUAGE_CODE: 47
+  LANGUAGE_CODE: 47,
+  QR_CODES: 48,
+  SWISS_QR_BILL: 49
 };
 
 /**
@@ -824,7 +828,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52];
 
 
 
@@ -951,7 +955,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
     documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f),
     languageCodeList: jspb.Message.toObjectList(msg.getLanguageCodeList(),
-    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    qrCodesList: jspb.Message.toObjectList(msg.getQrCodesList(),
+    ssn_type_candidate_pb.QrCodeData.toObject, includeInstance),
+    swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
+    ssn_type_swiss_qr_bill_pb.SwissQrBill.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1234,6 +1242,16 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addLanguageCode(value);
+      break;
+    case 51:
+      var value = new ssn_type_candidate_pb.QrCodeData;
+      reader.readMessage(value,ssn_type_candidate_pb.QrCodeData.deserializeBinaryFromReader);
+      msg.addQrCodes(value);
+      break;
+    case 52:
+      var value = new ssn_type_swiss_qr_bill_pb.SwissQrBill;
+      reader.readMessage(value,ssn_type_swiss_qr_bill_pb.SwissQrBill.deserializeBinaryFromReader);
+      msg.addSwissQrBills(value);
       break;
     default:
       reader.skipField();
@@ -1659,6 +1677,22 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       50,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getQrCodesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      51,
+      f,
+      ssn_type_candidate_pb.QrCodeData.serializeBinaryToWriter
+    );
+  }
+  f = message.getSwissQrBillsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      52,
+      f,
+      ssn_type_swiss_qr_bill_pb.SwissQrBill.serializeBinaryToWriter
     );
   }
 };
@@ -3499,6 +3533,82 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addLanguageCode = fun
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearLanguageCodeList = function() {
   return this.setLanguageCodeList([]);
+};
+
+
+/**
+ * repeated ssn.type.QrCodeData qr_codes = 51;
+ * @return {!Array<!proto.ssn.type.QrCodeData>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getQrCodesList = function() {
+  return /** @type{!Array<!proto.ssn.type.QrCodeData>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.QrCodeData, 51));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.QrCodeData>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setQrCodesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 51, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.QrCodeData=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.QrCodeData}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addQrCodes = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 51, opt_value, proto.ssn.type.QrCodeData, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearQrCodesList = function() {
+  return this.setQrCodesList([]);
+};
+
+
+/**
+ * repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
+ * @return {!Array<!proto.ssn.type.SwissQrBill>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getSwissQrBillsList = function() {
+  return /** @type{!Array<!proto.ssn.type.SwissQrBill>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_swiss_qr_bill_pb.SwissQrBill, 52));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.SwissQrBill>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setSwissQrBillsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 52, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.SwissQrBill=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.SwissQrBill}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addSwissQrBills = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 52, opt_value, proto.ssn.type.SwissQrBill, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSwissQrBillsList = function() {
+  return this.setSwissQrBillsList([]);
 };
 
 

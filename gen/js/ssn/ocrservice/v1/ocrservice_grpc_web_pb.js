@@ -24,6 +24,8 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
 
+var ssn_type_swiss_qr_bill_pb = require('../../../ssn/type/swiss_qr_bill_pb.js')
+
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 const proto = {};
 proto.ssn = {};
@@ -374,6 +376,67 @@ proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.asyncGetOperationStatu
       request,
       metadata || {},
       methodDescriptor_OcrService_AsyncGetOperationStatus);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.ocrservice.v1.GetQrCodesRequest,
+ *   !proto.ssn.ocrservice.v1.GetQrCodesResponse>}
+ */
+const methodDescriptor_OcrService_GetQrCodes = new grpc.web.MethodDescriptor(
+  '/ssn.ocrservice.v1.OcrService/GetQrCodes',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.ocrservice.v1.GetQrCodesRequest,
+  proto.ssn.ocrservice.v1.GetQrCodesResponse,
+  /**
+   * @param {!proto.ssn.ocrservice.v1.GetQrCodesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.ocrservice.v1.GetQrCodesResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.GetQrCodesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.ocrservice.v1.GetQrCodesResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.GetQrCodesResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServiceClient.prototype.getQrCodes =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/GetQrCodes',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_GetQrCodes,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.GetQrCodesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.ocrservice.v1.GetQrCodesResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getQrCodes =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/GetQrCodes',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_GetQrCodes);
 };
 
 

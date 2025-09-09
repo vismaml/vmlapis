@@ -77,6 +77,26 @@ func (mr *MockOcrServiceClientMockRecorder) AsyncGetOperationStatus(ctx, in inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationStatus", reflect.TypeOf((*MockOcrServiceClient)(nil).AsyncGetOperationStatus), varargs...)
 }
 
+// GetQrCodes mocks base method.
+func (m *MockOcrServiceClient) GetQrCodes(ctx context.Context, in *v1.GetQrCodesRequest, opts ...grpc.CallOption) (*v1.GetQrCodesResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetQrCodes", varargs...)
+	ret0, _ := ret[0].(*v1.GetQrCodesResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetQrCodes indicates an expected call of GetQrCodes.
+func (mr *MockOcrServiceClientMockRecorder) GetQrCodes(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQrCodes", reflect.TypeOf((*MockOcrServiceClient)(nil).GetQrCodes), varargs...)
+}
+
 // GetTextAnnotation mocks base method.
 func (m *MockOcrServiceClient) GetTextAnnotation(ctx context.Context, in *v1.GetTextAnnotationRequest, opts ...grpc.CallOption) (*v1.GetTextAnnotationResponse, error) {
 	m.ctrl.T.Helper()
@@ -433,6 +453,21 @@ func (m *MockOcrServiceServer) AsyncGetOperationStatus(arg0 *v1.AsyncGetOperatio
 func (mr *MockOcrServiceServerMockRecorder) AsyncGetOperationStatus(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationStatus", reflect.TypeOf((*MockOcrServiceServer)(nil).AsyncGetOperationStatus), arg0, arg1)
+}
+
+// GetQrCodes mocks base method.
+func (m *MockOcrServiceServer) GetQrCodes(arg0 context.Context, arg1 *v1.GetQrCodesRequest) (*v1.GetQrCodesResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetQrCodes", arg0, arg1)
+	ret0, _ := ret[0].(*v1.GetQrCodesResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetQrCodes indicates an expected call of GetQrCodes.
+func (mr *MockOcrServiceServerMockRecorder) GetQrCodes(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQrCodes", reflect.TypeOf((*MockOcrServiceServer)(nil).GetQrCodes), arg0, arg1)
 }
 
 // GetTextAnnotation mocks base method.
