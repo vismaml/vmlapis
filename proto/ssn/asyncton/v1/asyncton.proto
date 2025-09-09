@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/swiss_qr_bill.proto";
 import "ssn/type/text_annotation.proto";
 import "validate/validate.proto";
 
@@ -114,6 +115,8 @@ message Annotation {
   repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
   ssn.type.TextAnnotation text_annotation = 5; // text annotation
   repeated ssn.type.PageText page_texts = 6; // page texts
+  repeated ssn.type.QrCodeData qr_codes = 7; // qr code candidates
+  repeated ssn.type.SwissQrBill swiss_qr_bills = 8; // swiss qr bill candidates
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

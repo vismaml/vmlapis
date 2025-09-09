@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package ssn.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
+
+message SwissQrBill {
+  SwissQrPayment payment = 1;
+  bool is_valid = 2;
+  string validation_error = 3;
+}
+
+message SwissQrPayment {
+  // Header (0-2)
+  string qr_type = 1;      // Field 1 (pos 0)
+  string version = 2;      // Field 2 (pos 1)
+  string coding_type = 3;  // Field 3 (pos 2)
+
+  // Account (3)
+  string account = 4;      // Field 4 (pos 3)
+
+  // Creditor (4-10)
+  string creditor_address_type = 5;  // Field 5 (pos 4) - "S" or "K"
+  string creditor_name = 6;          // Field 6 (pos 5)
+  string creditor_field_1 = 7;       // Field 7 (pos 6) - Street OR Address Line 1
+  string creditor_field_2 = 8;       // Field 8 (pos 7) - Building Number OR Address Line 2
+  string creditor_field_3 = 9;       // Field 9 (pos 8) - Postal Code OR empty
+  string creditor_field_4 = 10;      // Field 10 (pos 9) - City OR empty
+  string creditor_country = 11;      // Field 11 (pos 10)
+
+  // Ultimate Creditor (11-17)
+  string ultimate_creditor_address_type = 12;  // Field 12 (pos 11) - "S" or "K"
+  string ultimate_creditor_name = 13;          // Field 13 (pos 12)
+  string ultimate_creditor_field_1 = 14;       // Field 14 (pos 13)
+  string ultimate_creditor_field_2 = 15;       // Field 15 (pos 14)
+  string ultimate_creditor_field_3 = 16;       // Field 16 (pos 15)
+  string ultimate_creditor_field_4 = 17;       // Field 17 (pos 16)
+  string ultimate_creditor_country = 18;       // Field 18 (pos 17)
+
+  // Payment Information (18-19)
+  string amount = 19;    // Field 19 (pos 18)
+  string currency = 20;  // Field 20 (pos 19)
+
+  // Ultimate Debtor (20-26)
+  string ultimate_debtor_address_type = 21;  // Field 21 (pos 20) - "S" or "K"
+  string ultimate_debtor_name = 22;          // Field 22 (pos 21)
+  string ultimate_debtor_field_1 = 23;       // Field 23 (pos 22)
+  string ultimate_debtor_field_2 = 24;       // Field 24 (pos 23)
+  string ultimate_debtor_field_3 = 25;       // Field 25 (pos 24)
+  string ultimate_debtor_field_4 = 26;       // Field 26 (pos 25)
+  string ultimate_debtor_country = 27;       // Field 27 (pos 26)
+
+  // Reference Information (27-28)
+  string payment_reference_type = 28;  // Field 28 (pos 27)
+  string payment_reference = 29;       // Field 29 (pos 28)
+
+  // Additional Information (29-30)
+  string unstructured_message = 30;  // Field 30 (pos 29)
+  string bill_information = 31;      // Field 31 (pos 30)
+
+  // Trailer (31)
+  string trailer = 32;  // Field 32 (pos 31) - "EPD"
+}

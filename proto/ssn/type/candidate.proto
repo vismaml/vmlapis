@@ -159,6 +159,12 @@ message VatDistributionCandidate {
   string incl_vat = 6;
 }
 
+message QrCodeData {
+  string content = 1;
+  uint32 page_ref = 2;
+  string type = 3;
+}
+
 message DocumentMetadata {
   // Number of pages in the document
   uint32 page_count = 1;

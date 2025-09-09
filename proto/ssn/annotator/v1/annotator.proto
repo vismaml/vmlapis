@@ -5,6 +5,7 @@ package ssn.annotator.v1;
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/swiss_qr_bill.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
@@ -134,6 +135,10 @@ message Feature {
     VAT_DISTRIBUTION = 46;
     // Langauge code
     LANGUAGE_CODE = 47;
+    // Run QR code detection (raw content)
+    QR_CODES = 48;
+    // Run Swiss QR bill detection (parsed data)
+    SWISS_QR_BILL = 49;
   }
   // The feature type.
   Type type = 1;
@@ -297,6 +302,12 @@ message DocumentAnnotatorResponse {
   ssn.type.DocumentMetadata document_metadata = 49;
   // Information about the text language detected from OCR
   repeated ssn.type.Candidate language_code = 50;
+  // Raw QR code content found in the document
+  repeated ssn.type.QrCodeData qr_codes = 51;
+  // Parsed Swiss QR bill data
+  repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
+
+  // 
 }
 
 message Document {

@@ -4,6 +4,7 @@ package ssn.ocrservice.v1;
 
 import "google/protobuf/wrappers.proto";
 import "ssn/annotator/v1/annotator.proto";
+import "ssn/type/swiss_qr_bill.proto";
 import "ssn/type/text_annotation.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice";
@@ -16,6 +17,7 @@ service OcrService {
   rpc GetTextAnnotations(GetTextAnnotationRequest) returns (stream GetTextAnnotationResponse);
   rpc AsyncCreateOperation(AsyncCreateOperationRequest) returns (AsyncCreateOperationResponse);
   rpc AsyncGetOperationStatus(AsyncGetOperationStatusRequest) returns (stream AsyncGetOperationStatusResponse);
+  rpc GetQrCodes(GetQrCodesRequest) returns (GetQrCodesResponse);
 }
 
 message GetTextAnnotationRequest {
@@ -57,3 +59,20 @@ message OcrScanImageRequest {
 message OcrScanImageResponse {
   string tess_hocr = 1;
 }
+
+message GetQrCodesRequest {
+  ssn.annotator.v1.Document document = 1;
+}
+
+message GetQrCodesResponse {
+  repeated QrCodeData qr_codes = 1;
+}
+
+message QrCodeData {
+  string content = 1;
+  uint32 page_ref = 2;
+  string type = 3;
+  ssn.type.SwissQrBill swiss_qr_bill = 4;
+}
+
+
