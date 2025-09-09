@@ -338,8 +338,7 @@ proto.ssn.type.SwissQrPayment.toObject = function(includeInstance, msg) {
     paymentReferenceType: jspb.Message.getFieldWithDefault(msg, 28, ""),
     paymentReference: jspb.Message.getFieldWithDefault(msg, 29, ""),
     unstructuredMessage: jspb.Message.getFieldWithDefault(msg, 30, ""),
-    billInformation: jspb.Message.getFieldWithDefault(msg, 31, ""),
-    trailer: jspb.Message.getFieldWithDefault(msg, 32, "")
+    trailer: jspb.Message.getFieldWithDefault(msg, 31, "")
   };
 
   if (includeInstance) {
@@ -497,10 +496,6 @@ proto.ssn.type.SwissQrPayment.deserializeBinaryFromReader = function(msg, reader
       msg.setUnstructuredMessage(value);
       break;
     case 31:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBillInformation(value);
-      break;
-    case 32:
       var value = /** @type {string} */ (reader.readString());
       msg.setTrailer(value);
       break;
@@ -743,17 +738,10 @@ proto.ssn.type.SwissQrPayment.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = message.getBillInformation();
-  if (f.length > 0) {
-    writer.writeString(
-      31,
-      f
-    );
-  }
   f = message.getTrailer();
   if (f.length > 0) {
     writer.writeString(
-      32,
+      31,
       f
     );
   }
@@ -1301,10 +1289,10 @@ proto.ssn.type.SwissQrPayment.prototype.setUnstructuredMessage = function(value)
 
 
 /**
- * optional string bill_information = 31;
+ * optional string trailer = 31;
  * @return {string}
  */
-proto.ssn.type.SwissQrPayment.prototype.getBillInformation = function() {
+proto.ssn.type.SwissQrPayment.prototype.getTrailer = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 31, ""));
 };
 
@@ -1313,26 +1301,8 @@ proto.ssn.type.SwissQrPayment.prototype.getBillInformation = function() {
  * @param {string} value
  * @return {!proto.ssn.type.SwissQrPayment} returns this
  */
-proto.ssn.type.SwissQrPayment.prototype.setBillInformation = function(value) {
-  return jspb.Message.setProto3StringField(this, 31, value);
-};
-
-
-/**
- * optional string trailer = 32;
- * @return {string}
- */
-proto.ssn.type.SwissQrPayment.prototype.getTrailer = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 32, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.type.SwissQrPayment} returns this
- */
 proto.ssn.type.SwissQrPayment.prototype.setTrailer = function(value) {
-  return jspb.Message.setProto3StringField(this, 32, value);
+  return jspb.Message.setProto3StringField(this, 31, value);
 };
 
 

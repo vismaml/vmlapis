@@ -57,7 +57,6 @@ private static final long serialVersionUID = 0L;
     paymentReferenceType_ = "";
     paymentReference_ = "";
     unstructuredMessage_ = "";
-    billInformation_ = "";
     trailer_ = "";
   }
 
@@ -1484,62 +1483,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int BILL_INFORMATION_FIELD_NUMBER = 31;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object billInformation_ = "";
-  /**
-   * <pre>
-   * Field 31 (pos 30)
-   * </pre>
-   *
-   * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-   * @return The billInformation.
-   */
-  @java.lang.Override
-  public java.lang.String getBillInformation() {
-    java.lang.Object ref = billInformation_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      billInformation_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Field 31 (pos 30)
-   * </pre>
-   *
-   * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-   * @return The bytes for billInformation.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBillInformationBytes() {
-    java.lang.Object ref = billInformation_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      billInformation_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TRAILER_FIELD_NUMBER = 32;
+  public static final int TRAILER_FIELD_NUMBER = 31;
   @SuppressWarnings("serial")
   private volatile java.lang.Object trailer_ = "";
   /**
    * <pre>
-   * Trailer (31)
+   * Field 31 (pos 30) - "EPD"
    * </pre>
    *
-   * <code>string trailer = 32 [json_name = "trailer"];</code>
+   * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The trailer.
    */
   @java.lang.Override
@@ -1557,10 +1509,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Trailer (31)
+   * Field 31 (pos 30) - "EPD"
    * </pre>
    *
-   * <code>string trailer = 32 [json_name = "trailer"];</code>
+   * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The bytes for trailer.
    */
   @java.lang.Override
@@ -1682,11 +1634,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(unstructuredMessage_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 30, unstructuredMessage_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(billInformation_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 31, billInformation_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trailer_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 32, trailer_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 31, trailer_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1787,11 +1736,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(unstructuredMessage_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(30, unstructuredMessage_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(billInformation_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(31, billInformation_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trailer_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(32, trailer_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(31, trailer_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1868,8 +1814,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPaymentReference())) return false;
     if (!getUnstructuredMessage()
         .equals(other.getUnstructuredMessage())) return false;
-    if (!getBillInformation()
-        .equals(other.getBillInformation())) return false;
     if (!getTrailer()
         .equals(other.getTrailer())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1943,8 +1887,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPaymentReference().hashCode();
     hash = (37 * hash) + UNSTRUCTURED_MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getUnstructuredMessage().hashCode();
-    hash = (37 * hash) + BILL_INFORMATION_FIELD_NUMBER;
-    hash = (53 * hash) + getBillInformation().hashCode();
     hash = (37 * hash) + TRAILER_FIELD_NUMBER;
     hash = (53 * hash) + getTrailer().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -2108,7 +2050,6 @@ private static final long serialVersionUID = 0L;
       paymentReferenceType_ = "";
       paymentReference_ = "";
       unstructuredMessage_ = "";
-      billInformation_ = "";
       trailer_ = "";
       return this;
     }
@@ -2234,9 +2175,6 @@ private static final long serialVersionUID = 0L;
         result.unstructuredMessage_ = unstructuredMessage_;
       }
       if (((from_bitField0_ & 0x40000000) != 0)) {
-        result.billInformation_ = billInformation_;
-      }
-      if (((from_bitField0_ & 0x80000000) != 0)) {
         result.trailer_ = trailer_;
       }
     }
@@ -2403,14 +2341,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x20000000;
         onChanged();
       }
-      if (!other.getBillInformation().isEmpty()) {
-        billInformation_ = other.billInformation_;
-        bitField0_ |= 0x40000000;
-        onChanged();
-      }
       if (!other.getTrailer().isEmpty()) {
         trailer_ = other.trailer_;
-        bitField0_ |= 0x80000000;
+        bitField0_ |= 0x40000000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2590,15 +2523,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 242
             case 250: {
-              billInformation_ = input.readStringRequireUtf8();
+              trailer_ = input.readStringRequireUtf8();
               bitField0_ |= 0x40000000;
               break;
             } // case 250
-            case 258: {
-              trailer_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x80000000;
-              break;
-            } // case 258
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5376,105 +5304,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object billInformation_ = "";
-    /**
-     * <pre>
-     * Field 31 (pos 30)
-     * </pre>
-     *
-     * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-     * @return The billInformation.
-     */
-    public java.lang.String getBillInformation() {
-      java.lang.Object ref = billInformation_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        billInformation_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Field 31 (pos 30)
-     * </pre>
-     *
-     * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-     * @return The bytes for billInformation.
-     */
-    public com.google.protobuf.ByteString
-        getBillInformationBytes() {
-      java.lang.Object ref = billInformation_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        billInformation_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Field 31 (pos 30)
-     * </pre>
-     *
-     * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-     * @param value The billInformation to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBillInformation(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      billInformation_ = value;
-      bitField0_ |= 0x40000000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Field 31 (pos 30)
-     * </pre>
-     *
-     * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBillInformation() {
-      billInformation_ = getDefaultInstance().getBillInformation();
-      bitField0_ = (bitField0_ & ~0x40000000);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Field 31 (pos 30)
-     * </pre>
-     *
-     * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-     * @param value The bytes for billInformation to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBillInformationBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      billInformation_ = value;
-      bitField0_ |= 0x40000000;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object trailer_ = "";
     /**
      * <pre>
-     * Trailer (31)
+     * Field 31 (pos 30) - "EPD"
      * </pre>
      *
-     * <code>string trailer = 32 [json_name = "trailer"];</code>
+     * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return The trailer.
      */
     public java.lang.String getTrailer() {
@@ -5491,10 +5327,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Trailer (31)
+     * Field 31 (pos 30) - "EPD"
      * </pre>
      *
-     * <code>string trailer = 32 [json_name = "trailer"];</code>
+     * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return The bytes for trailer.
      */
     public com.google.protobuf.ByteString
@@ -5512,10 +5348,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Trailer (31)
+     * Field 31 (pos 30) - "EPD"
      * </pre>
      *
-     * <code>string trailer = 32 [json_name = "trailer"];</code>
+     * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @param value The trailer to set.
      * @return This builder for chaining.
      */
@@ -5523,30 +5359,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       trailer_ = value;
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Trailer (31)
+     * Field 31 (pos 30) - "EPD"
      * </pre>
      *
-     * <code>string trailer = 32 [json_name = "trailer"];</code>
+     * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTrailer() {
       trailer_ = getDefaultInstance().getTrailer();
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Trailer (31)
+     * Field 31 (pos 30) - "EPD"
      * </pre>
      *
-     * <code>string trailer = 32 [json_name = "trailer"];</code>
+     * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @param value The bytes for trailer to set.
      * @return This builder for chaining.
      */
@@ -5555,7 +5391,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       trailer_ = value;
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }

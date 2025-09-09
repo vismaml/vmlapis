@@ -1273,14 +1273,9 @@
           "description": "Field 30 (pos 29)",
           "title": "Additional Information (29-30)"
         },
-        "billInformation": {
-          "type": "string",
-          "title": "Field 31 (pos 30)"
-        },
         "trailer": {
           "type": "string",
-          "description": "Field 32 (pos 31) - \"EPD\"",
-          "title": "Trailer (31)"
+          "title": "Field 31 (pos 30) - \"EPD\""
         }
       }
     },

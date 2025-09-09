@@ -27,7 +27,7 @@ namespace Ssn.Type {
             "Chxzc24vdHlwZS9zd2lzc19xcl9iaWxsLnByb3RvEghzc24udHlwZSKHAQoL",
             "U3dpc3NRckJpbGwSMgoHcGF5bWVudBgBIAEoCzIYLnNzbi50eXBlLlN3aXNz",
             "UXJQYXltZW50UgdwYXltZW50EhkKCGlzX3ZhbGlkGAIgASgIUgdpc1ZhbGlk",
-            "EikKEHZhbGlkYXRpb25fZXJyb3IYAyABKAlSD3ZhbGlkYXRpb25FcnJvciLj",
+            "EikKEHZhbGlkYXRpb25fZXJyb3IYAyABKAlSD3ZhbGlkYXRpb25FcnJvciK4",
             "CwoOU3dpc3NRclBheW1lbnQSFwoHcXJfdHlwZRgBIAEoCVIGcXJUeXBlEhgK",
             "B3ZlcnNpb24YAiABKAlSB3ZlcnNpb24SHwoLY29kaW5nX3R5cGUYAyABKAlS",
             "CmNvZGluZ1R5cGUSGAoHYWNjb3VudBgEIAEoCVIHYWNjb3VudBIyChVjcmVk",
@@ -60,17 +60,16 @@ namespace Ssn.Type {
             "cmVuY2VfdHlwZRgcIAEoCVIUcGF5bWVudFJlZmVyZW5jZVR5cGUSKwoRcGF5",
             "bWVudF9yZWZlcmVuY2UYHSABKAlSEHBheW1lbnRSZWZlcmVuY2USMQoUdW5z",
             "dHJ1Y3R1cmVkX21lc3NhZ2UYHiABKAlSE3Vuc3RydWN0dXJlZE1lc3NhZ2US",
-            "KQoQYmlsbF9pbmZvcm1hdGlvbhgfIAEoCVIPYmlsbEluZm9ybWF0aW9uEhgK",
-            "B3RyYWlsZXIYICABKAlSB3RyYWlsZXJCnAEKEWFpLnZpc21hLnNzbi50eXBl",
-            "QhBTd2lzc1FyQmlsbFByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlw",
-            "ZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5",
-            "cGViBnByb3RvMw=="));
+            "GAoHdHJhaWxlchgfIAEoCVIHdHJhaWxlckKcAQoRYWkudmlzbWEuc3NuLnR5",
+            "cGVCEFN3aXNzUXJCaWxsUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMv",
+            "dm1sYXBpcy9nZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5U",
+            "eXBlygIIU3NuXFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6",
+            "VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.SwissQrBill), global::Ssn.Type.SwissQrBill.Parser, new[]{ "Payment", "IsValid", "ValidationError" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.SwissQrPayment), global::Ssn.Type.SwissQrPayment.Parser, new[]{ "QrType", "Version", "CodingType", "Account", "CreditorAddressType", "CreditorName", "CreditorField1", "CreditorField2", "CreditorField3", "CreditorField4", "CreditorCountry", "UltimateCreditorAddressType", "UltimateCreditorName", "UltimateCreditorField1", "UltimateCreditorField2", "UltimateCreditorField3", "UltimateCreditorField4", "UltimateCreditorCountry", "Amount", "Currency", "UltimateDebtorAddressType", "UltimateDebtorName", "UltimateDebtorField1", "UltimateDebtorField2", "UltimateDebtorField3", "UltimateDebtorField4", "UltimateDebtorCountry", "PaymentReferenceType", "PaymentReference", "UnstructuredMessage", "BillInformation", "Trailer" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.SwissQrPayment), global::Ssn.Type.SwissQrPayment.Parser, new[]{ "QrType", "Version", "CodingType", "Account", "CreditorAddressType", "CreditorName", "CreditorField1", "CreditorField2", "CreditorField3", "CreditorField4", "CreditorCountry", "UltimateCreditorAddressType", "UltimateCreditorName", "UltimateCreditorField1", "UltimateCreditorField2", "UltimateCreditorField3", "UltimateCreditorField4", "UltimateCreditorCountry", "Amount", "Currency", "UltimateDebtorAddressType", "UltimateDebtorName", "UltimateDebtorField1", "UltimateDebtorField2", "UltimateDebtorField3", "UltimateDebtorField4", "UltimateDebtorCountry", "PaymentReferenceType", "PaymentReference", "UnstructuredMessage", "Trailer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -423,7 +422,6 @@ namespace Ssn.Type {
       paymentReferenceType_ = other.paymentReferenceType_;
       paymentReference_ = other.paymentReference_;
       unstructuredMessage_ = other.unstructuredMessage_;
-      billInformation_ = other.billInformation_;
       trailer_ = other.trailer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -884,26 +882,11 @@ namespace Ssn.Type {
       }
     }
 
-    /// <summary>Field number for the "bill_information" field.</summary>
-    public const int BillInformationFieldNumber = 31;
-    private string billInformation_ = "";
-    /// <summary>
-    /// Field 31 (pos 30)
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BillInformation {
-      get { return billInformation_; }
-      set {
-        billInformation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "trailer" field.</summary>
-    public const int TrailerFieldNumber = 32;
+    public const int TrailerFieldNumber = 31;
     private string trailer_ = "";
     /// <summary>
-    /// Trailer (31)
+    /// Field 31 (pos 30) - "EPD"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -959,7 +942,6 @@ namespace Ssn.Type {
       if (PaymentReferenceType != other.PaymentReferenceType) return false;
       if (PaymentReference != other.PaymentReference) return false;
       if (UnstructuredMessage != other.UnstructuredMessage) return false;
-      if (BillInformation != other.BillInformation) return false;
       if (Trailer != other.Trailer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -998,7 +980,6 @@ namespace Ssn.Type {
       if (PaymentReferenceType.Length != 0) hash ^= PaymentReferenceType.GetHashCode();
       if (PaymentReference.Length != 0) hash ^= PaymentReference.GetHashCode();
       if (UnstructuredMessage.Length != 0) hash ^= UnstructuredMessage.GetHashCode();
-      if (BillInformation.Length != 0) hash ^= BillInformation.GetHashCode();
       if (Trailer.Length != 0) hash ^= Trailer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1138,12 +1119,8 @@ namespace Ssn.Type {
         output.WriteRawTag(242, 1);
         output.WriteString(UnstructuredMessage);
       }
-      if (BillInformation.Length != 0) {
-        output.WriteRawTag(250, 1);
-        output.WriteString(BillInformation);
-      }
       if (Trailer.Length != 0) {
-        output.WriteRawTag(130, 2);
+        output.WriteRawTag(250, 1);
         output.WriteString(Trailer);
       }
       if (_unknownFields != null) {
@@ -1276,12 +1253,8 @@ namespace Ssn.Type {
         output.WriteRawTag(242, 1);
         output.WriteString(UnstructuredMessage);
       }
-      if (BillInformation.Length != 0) {
-        output.WriteRawTag(250, 1);
-        output.WriteString(BillInformation);
-      }
       if (Trailer.Length != 0) {
-        output.WriteRawTag(130, 2);
+        output.WriteRawTag(250, 1);
         output.WriteString(Trailer);
       }
       if (_unknownFields != null) {
@@ -1383,9 +1356,6 @@ namespace Ssn.Type {
       }
       if (UnstructuredMessage.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(UnstructuredMessage);
-      }
-      if (BillInformation.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BillInformation);
       }
       if (Trailer.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Trailer);
@@ -1491,9 +1461,6 @@ namespace Ssn.Type {
       }
       if (other.UnstructuredMessage.Length != 0) {
         UnstructuredMessage = other.UnstructuredMessage;
-      }
-      if (other.BillInformation.Length != 0) {
-        BillInformation = other.BillInformation;
       }
       if (other.Trailer.Length != 0) {
         Trailer = other.Trailer;
@@ -1638,10 +1605,6 @@ namespace Ssn.Type {
             break;
           }
           case 250: {
-            BillInformation = input.ReadString();
-            break;
-          }
-          case 258: {
             Trailer = input.ReadString();
             break;
           }
@@ -1785,10 +1748,6 @@ namespace Ssn.Type {
             break;
           }
           case 250: {
-            BillInformation = input.ReadString();
-            break;
-          }
-          case 258: {
             Trailer = input.ReadString();
             break;
           }

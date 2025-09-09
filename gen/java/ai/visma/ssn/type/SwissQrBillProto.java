@@ -48,7 +48,7 @@ public final class SwissQrBillProto {
       "\"\207\001\n\013SwissQrBill\0222\n\007payment\030\001 \001(\0132\030.ssn." +
       "type.SwissQrPaymentR\007payment\022\031\n\010is_valid" +
       "\030\002 \001(\010R\007isValid\022)\n\020validation_error\030\003 \001(" +
-      "\tR\017validationError\"\343\013\n\016SwissQrPayment\022\027\n" +
+      "\tR\017validationError\"\270\013\n\016SwissQrPayment\022\027\n" +
       "\007qr_type\030\001 \001(\tR\006qrType\022\030\n\007version\030\002 \001(\tR" +
       "\007version\022\037\n\013coding_type\030\003 \001(\tR\ncodingTyp" +
       "e\022\030\n\007account\030\004 \001(\tR\007account\0222\n\025creditor_" +
@@ -84,13 +84,12 @@ public final class SwissQrBillProto {
       "_reference_type\030\034 \001(\tR\024paymentReferenceT" +
       "ype\022+\n\021payment_reference\030\035 \001(\tR\020paymentR" +
       "eference\0221\n\024unstructured_message\030\036 \001(\tR\023" +
-      "unstructuredMessage\022)\n\020bill_information\030" +
-      "\037 \001(\tR\017billInformation\022\030\n\007trailer\030  \001(\tR" +
-      "\007trailerB\234\001\n\021ai.visma.ssn.typeB\020SwissQrB" +
-      "illProtoP\001Z4github.com/e-conomic/vmlapis" +
-      "/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Typ" +
-      "e\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSs" +
-      "n::Typeb\006proto3"
+      "unstructuredMessage\022\030\n\007trailer\030\037 \001(\tR\007tr" +
+      "ailerB\234\001\n\021ai.visma.ssn.typeB\020SwissQrBill" +
+      "ProtoP\001Z4github.com/e-conomic/vmlapis/ge" +
+      "n/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002" +
+      "\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::" +
+      "Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -107,7 +106,7 @@ public final class SwissQrBillProto {
     internal_static_ssn_type_SwissQrPayment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_SwissQrPayment_descriptor,
-        new java.lang.String[] { "QrType", "Version", "CodingType", "Account", "CreditorAddressType", "CreditorName", "CreditorField1", "CreditorField2", "CreditorField3", "CreditorField4", "CreditorCountry", "UltimateCreditorAddressType", "UltimateCreditorName", "UltimateCreditorField1", "UltimateCreditorField2", "UltimateCreditorField3", "UltimateCreditorField4", "UltimateCreditorCountry", "Amount", "Currency", "UltimateDebtorAddressType", "UltimateDebtorName", "UltimateDebtorField1", "UltimateDebtorField2", "UltimateDebtorField3", "UltimateDebtorField4", "UltimateDebtorCountry", "PaymentReferenceType", "PaymentReference", "UnstructuredMessage", "BillInformation", "Trailer", });
+        new java.lang.String[] { "QrType", "Version", "CodingType", "Account", "CreditorAddressType", "CreditorName", "CreditorField1", "CreditorField2", "CreditorField3", "CreditorField4", "CreditorCountry", "UltimateCreditorAddressType", "UltimateCreditorName", "UltimateCreditorField1", "UltimateCreditorField2", "UltimateCreditorField3", "UltimateCreditorField4", "UltimateCreditorCountry", "Amount", "Currency", "UltimateDebtorAddressType", "UltimateDebtorName", "UltimateDebtorField1", "UltimateDebtorField2", "UltimateDebtorField3", "UltimateDebtorField4", "UltimateDebtorCountry", "PaymentReferenceType", "PaymentReference", "UnstructuredMessage", "Trailer", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

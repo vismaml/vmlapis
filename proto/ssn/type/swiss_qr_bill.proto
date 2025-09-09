@@ -56,8 +56,5 @@ message SwissQrPayment {
 
   // Additional Information (29-30)
   string unstructured_message = 30; // Field 30 (pos 29)
-  string bill_information = 31; // Field 31 (pos 30)
-
-  // Trailer (31)
-  string trailer = 32; // Field 32 (pos 31) - "EPD"
+  string trailer = 31; // Field 31 (pos 30) - "EPD"
 }

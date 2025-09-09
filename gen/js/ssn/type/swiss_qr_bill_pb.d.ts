@@ -121,9 +121,6 @@ export class SwissQrPayment extends jspb.Message {
   getUnstructuredMessage(): string;
   setUnstructuredMessage(value: string): SwissQrPayment;
 
-  getBillInformation(): string;
-  setBillInformation(value: string): SwissQrPayment;
-
   getTrailer(): string;
   setTrailer(value: string): SwissQrPayment;
 
@@ -167,7 +164,6 @@ export namespace SwissQrPayment {
     paymentReferenceType: string,
     paymentReference: string,
     unstructuredMessage: string,
-    billInformation: string,
     trailer: string,
   }
 }

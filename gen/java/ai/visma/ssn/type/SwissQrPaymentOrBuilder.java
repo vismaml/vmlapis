@@ -611,39 +611,19 @@ public interface SwissQrPaymentOrBuilder extends
 
   /**
    * <pre>
-   * Field 31 (pos 30)
+   * Field 31 (pos 30) - "EPD"
    * </pre>
    *
-   * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-   * @return The billInformation.
-   */
-  java.lang.String getBillInformation();
-  /**
-   * <pre>
-   * Field 31 (pos 30)
-   * </pre>
-   *
-   * <code>string bill_information = 31 [json_name = "billInformation"];</code>
-   * @return The bytes for billInformation.
-   */
-  com.google.protobuf.ByteString
-      getBillInformationBytes();
-
-  /**
-   * <pre>
-   * Trailer (31)
-   * </pre>
-   *
-   * <code>string trailer = 32 [json_name = "trailer"];</code>
+   * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The trailer.
    */
   java.lang.String getTrailer();
   /**
    * <pre>
-   * Trailer (31)
+   * Field 31 (pos 30) - "EPD"
    * </pre>
    *
-   * <code>string trailer = 32 [json_name = "trailer"];</code>
+   * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The bytes for trailer.
    */
   com.google.protobuf.ByteString
