@@ -7,6 +7,7 @@ import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
+import "ssn/type/qr.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
@@ -134,6 +135,10 @@ message Feature {
     VAT_DISTRIBUTION = 46;
     // Langauge code
     LANGUAGE_CODE = 47;
+    // QR code
+    QR_CODES = 48;
+    // Swiss QR bill
+    SWISS_QR_BILLS = 49;
   }
   // The feature type.
   Type type = 1;
@@ -297,6 +302,10 @@ message DocumentAnnotatorResponse {
   ssn.type.DocumentMetadata document_metadata = 49;
   // Information about the text language detected from OCR
   repeated ssn.type.Candidate language_code = 50;
+  // QR codes detected in the document
+  repeated ssn.type.QrCodeData qr_codes = 51;
+  // Swiss QR bills detected in the document
+  repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
 }
 
 message Document {
