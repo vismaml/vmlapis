@@ -75,6 +75,8 @@ private static final long serialVersionUID = 0L;
     pageTexts_ = java.util.Collections.emptyList();
     vatDistribution_ = java.util.Collections.emptyList();
     languageCode_ = java.util.Collections.emptyList();
+    qrCodes_ = java.util.Collections.emptyList();
+    swissQrBills_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -3260,6 +3262,128 @@ private static final long serialVersionUID = 0L;
     return languageCode_.get(index);
   }
 
+  public static final int QR_CODES_FIELD_NUMBER = 51;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_;
+  /**
+   * <pre>
+   * QR codes detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.QrCodeData> getQrCodesList() {
+    return qrCodes_;
+  }
+  /**
+   * <pre>
+   * QR codes detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+      getQrCodesOrBuilderList() {
+    return qrCodes_;
+  }
+  /**
+   * <pre>
+   * QR codes detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public int getQrCodesCount() {
+    return qrCodes_.size();
+  }
+  /**
+   * <pre>
+   * QR codes detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.QrCodeData getQrCodes(int index) {
+    return qrCodes_.get(index);
+  }
+  /**
+   * <pre>
+   * QR codes detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+      int index) {
+    return qrCodes_.get(index);
+  }
+
+  public static final int SWISS_QR_BILLS_FIELD_NUMBER = 52;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_;
+  /**
+   * <pre>
+   * Swiss QR bills detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.SwissQrBill> getSwissQrBillsList() {
+    return swissQrBills_;
+  }
+  /**
+   * <pre>
+   * Swiss QR bills detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+      getSwissQrBillsOrBuilderList() {
+    return swissQrBills_;
+  }
+  /**
+   * <pre>
+   * Swiss QR bills detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public int getSwissQrBillsCount() {
+    return swissQrBills_.size();
+  }
+  /**
+   * <pre>
+   * Swiss QR bills detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index) {
+    return swissQrBills_.get(index);
+  }
+  /**
+   * <pre>
+   * Swiss QR bills detected in the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index) {
+    return swissQrBills_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3423,6 +3547,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < languageCode_.size(); i++) {
       output.writeMessage(50, languageCode_.get(i));
+    }
+    for (int i = 0; i < qrCodes_.size(); i++) {
+      output.writeMessage(51, qrCodes_.get(i));
+    }
+    for (int i = 0; i < swissQrBills_.size(); i++) {
+      output.writeMessage(52, swissQrBills_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3630,6 +3760,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, languageCode_.get(i));
     }
+    for (int i = 0; i < qrCodes_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(51, qrCodes_.get(i));
+    }
+    for (int i = 0; i < swissQrBills_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(52, swissQrBills_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3751,6 +3889,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getLanguageCodeList()
         .equals(other.getLanguageCodeList())) return false;
+    if (!getQrCodesList()
+        .equals(other.getQrCodesList())) return false;
+    if (!getSwissQrBillsList()
+        .equals(other.getSwissQrBillsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3956,6 +4098,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getLanguageCodeList().hashCode();
     }
+    if (getQrCodesCount() > 0) {
+      hash = (37 * hash) + QR_CODES_FIELD_NUMBER;
+      hash = (53 * hash) + getQrCodesList().hashCode();
+    }
+    if (getSwissQrBillsCount() > 0) {
+      hash = (37 * hash) + SWISS_QR_BILLS_FIELD_NUMBER;
+      hash = (53 * hash) + getSwissQrBillsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4133,6 +4283,8 @@ private static final long serialVersionUID = 0L;
         getVatDistributionFieldBuilder();
         getDocumentMetadataFieldBuilder();
         getLanguageCodeFieldBuilder();
+        getQrCodesFieldBuilder();
+        getSwissQrBillsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -4468,6 +4620,20 @@ private static final long serialVersionUID = 0L;
         languageCodeBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00020000);
+      if (qrCodesBuilder_ == null) {
+        qrCodes_ = java.util.Collections.emptyList();
+      } else {
+        qrCodes_ = null;
+        qrCodesBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00040000);
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBills_ = java.util.Collections.emptyList();
+      } else {
+        swissQrBills_ = null;
+        swissQrBillsBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00080000);
       return this;
     }
 
@@ -4906,6 +5072,24 @@ private static final long serialVersionUID = 0L;
         result.languageCode_ = languageCode_;
       } else {
         result.languageCode_ = languageCodeBuilder_.build();
+      }
+      if (qrCodesBuilder_ == null) {
+        if (((bitField1_ & 0x00040000) != 0)) {
+          qrCodes_ = java.util.Collections.unmodifiableList(qrCodes_);
+          bitField1_ = (bitField1_ & ~0x00040000);
+        }
+        result.qrCodes_ = qrCodes_;
+      } else {
+        result.qrCodes_ = qrCodesBuilder_.build();
+      }
+      if (swissQrBillsBuilder_ == null) {
+        if (((bitField1_ & 0x00080000) != 0)) {
+          swissQrBills_ = java.util.Collections.unmodifiableList(swissQrBills_);
+          bitField1_ = (bitField1_ & ~0x00080000);
+        }
+        result.swissQrBills_ = swissQrBills_;
+      } else {
+        result.swissQrBills_ = swissQrBillsBuilder_.build();
       }
     }
 
@@ -6145,6 +6329,58 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (qrCodesBuilder_ == null) {
+        if (!other.qrCodes_.isEmpty()) {
+          if (qrCodes_.isEmpty()) {
+            qrCodes_ = other.qrCodes_;
+            bitField1_ = (bitField1_ & ~0x00040000);
+          } else {
+            ensureQrCodesIsMutable();
+            qrCodes_.addAll(other.qrCodes_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.qrCodes_.isEmpty()) {
+          if (qrCodesBuilder_.isEmpty()) {
+            qrCodesBuilder_.dispose();
+            qrCodesBuilder_ = null;
+            qrCodes_ = other.qrCodes_;
+            bitField1_ = (bitField1_ & ~0x00040000);
+            qrCodesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getQrCodesFieldBuilder() : null;
+          } else {
+            qrCodesBuilder_.addAllMessages(other.qrCodes_);
+          }
+        }
+      }
+      if (swissQrBillsBuilder_ == null) {
+        if (!other.swissQrBills_.isEmpty()) {
+          if (swissQrBills_.isEmpty()) {
+            swissQrBills_ = other.swissQrBills_;
+            bitField1_ = (bitField1_ & ~0x00080000);
+          } else {
+            ensureSwissQrBillsIsMutable();
+            swissQrBills_.addAll(other.swissQrBills_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.swissQrBills_.isEmpty()) {
+          if (swissQrBillsBuilder_.isEmpty()) {
+            swissQrBillsBuilder_.dispose();
+            swissQrBillsBuilder_ = null;
+            swissQrBills_ = other.swissQrBills_;
+            bitField1_ = (bitField1_ & ~0x00080000);
+            swissQrBillsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getSwissQrBillsFieldBuilder() : null;
+          } else {
+            swissQrBillsBuilder_.addAllMessages(other.swissQrBills_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6785,6 +7021,32 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 402
+            case 410: {
+              ai.visma.ssn.type.QrCodeData m =
+                  input.readMessage(
+                      ai.visma.ssn.type.QrCodeData.parser(),
+                      extensionRegistry);
+              if (qrCodesBuilder_ == null) {
+                ensureQrCodesIsMutable();
+                qrCodes_.add(m);
+              } else {
+                qrCodesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 410
+            case 418: {
+              ai.visma.ssn.type.SwissQrBill m =
+                  input.readMessage(
+                      ai.visma.ssn.type.SwissQrBill.parser(),
+                      extensionRegistry);
+              if (swissQrBillsBuilder_ == null) {
+                ensureSwissQrBillsIsMutable();
+                swissQrBills_.add(m);
+              } else {
+                swissQrBillsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 418
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -22174,6 +22436,630 @@ private static final long serialVersionUID = 0L;
         languageCode_ = null;
       }
       return languageCodeBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_ =
+      java.util.Collections.emptyList();
+    private void ensureQrCodesIsMutable() {
+      if (!((bitField1_ & 0x00040000) != 0)) {
+        qrCodes_ = new java.util.ArrayList<ai.visma.ssn.type.QrCodeData>(qrCodes_);
+        bitField1_ |= 0x00040000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder> qrCodesBuilder_;
+
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.QrCodeData> getQrCodesList() {
+      if (qrCodesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(qrCodes_);
+      } else {
+        return qrCodesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public int getQrCodesCount() {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.size();
+      } else {
+        return qrCodesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData getQrCodes(int index) {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.get(index);
+      } else {
+        return qrCodesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder setQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.set(index, value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder setQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.add(value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.add(index, value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.add(builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder addAllQrCodes(
+        java.lang.Iterable<? extends ai.visma.ssn.type.QrCodeData> values) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, qrCodes_);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder clearQrCodes() {
+      if (qrCodesBuilder_ == null) {
+        qrCodes_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00040000);
+        onChanged();
+      } else {
+        qrCodesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public Builder removeQrCodes(int index) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.remove(index);
+        onChanged();
+      } else {
+        qrCodesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder getQrCodesBuilder(
+        int index) {
+      return getQrCodesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+        int index) {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.get(index);  } else {
+        return qrCodesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+         getQrCodesOrBuilderList() {
+      if (qrCodesBuilder_ != null) {
+        return qrCodesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(qrCodes_);
+      }
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder addQrCodesBuilder() {
+      return getQrCodesFieldBuilder().addBuilder(
+          ai.visma.ssn.type.QrCodeData.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder addQrCodesBuilder(
+        int index) {
+      return getQrCodesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.QrCodeData.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * QR codes detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.QrCodeData.Builder> 
+         getQrCodesBuilderList() {
+      return getQrCodesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder> 
+        getQrCodesFieldBuilder() {
+      if (qrCodesBuilder_ == null) {
+        qrCodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder>(
+                qrCodes_,
+                ((bitField1_ & 0x00040000) != 0),
+                getParentForChildren(),
+                isClean());
+        qrCodes_ = null;
+      }
+      return qrCodesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_ =
+      java.util.Collections.emptyList();
+    private void ensureSwissQrBillsIsMutable() {
+      if (!((bitField1_ & 0x00080000) != 0)) {
+        swissQrBills_ = new java.util.ArrayList<ai.visma.ssn.type.SwissQrBill>(swissQrBills_);
+        bitField1_ |= 0x00080000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder> swissQrBillsBuilder_;
+
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.SwissQrBill> getSwissQrBillsList() {
+      if (swissQrBillsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(swissQrBills_);
+      } else {
+        return swissQrBillsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public int getSwissQrBillsCount() {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.size();
+      } else {
+        return swissQrBillsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index) {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.get(index);
+      } else {
+        return swissQrBillsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder setSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.set(index, value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder setSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(index, value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addAllSwissQrBills(
+        java.lang.Iterable<? extends ai.visma.ssn.type.SwissQrBill> values) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, swissQrBills_);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder clearSwissQrBills() {
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBills_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00080000);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public Builder removeSwissQrBills(int index) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.remove(index);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder getSwissQrBillsBuilder(
+        int index) {
+      return getSwissQrBillsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+        int index) {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.get(index);  } else {
+        return swissQrBillsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+         getSwissQrBillsOrBuilderList() {
+      if (swissQrBillsBuilder_ != null) {
+        return swissQrBillsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(swissQrBills_);
+      }
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder addSwissQrBillsBuilder() {
+      return getSwissQrBillsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.SwissQrBill.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder addSwissQrBillsBuilder(
+        int index) {
+      return getSwissQrBillsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.SwissQrBill.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Swiss QR bills detected in the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.SwissQrBill.Builder> 
+         getSwissQrBillsBuilderList() {
+      return getSwissQrBillsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder> 
+        getSwissQrBillsFieldBuilder() {
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder>(
+                swissQrBills_,
+                ((bitField1_ & 0x00080000) != 0),
+                getParentForChildren(),
+                isClean());
+        swissQrBills_ = null;
+      }
+      return swissQrBillsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

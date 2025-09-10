@@ -5,8 +5,8 @@ package ssn.type;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
 message QrCodeData {
-    string content = 1;
-  }
+  string content = 1;
+}
 
 message SwissQrBill {
   // Header (0-2)

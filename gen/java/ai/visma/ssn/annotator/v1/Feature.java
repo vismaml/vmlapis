@@ -434,6 +434,22 @@ private static final long serialVersionUID = 0L;
      * <code>LANGUAGE_CODE = 47;</code>
      */
     LANGUAGE_CODE(47),
+    /**
+     * <pre>
+     * QR code
+     * </pre>
+     *
+     * <code>QR_CODES = 48;</code>
+     */
+    QR_CODES(48),
+    /**
+     * <pre>
+     * Swiss QR bill
+     * </pre>
+     *
+     * <code>SWISS_QR_BILLS = 49;</code>
+     */
+    SWISS_QR_BILLS(49),
     UNRECOGNIZED(-1),
     ;
 
@@ -831,6 +847,22 @@ private static final long serialVersionUID = 0L;
      * <code>LANGUAGE_CODE = 47;</code>
      */
     public static final int LANGUAGE_CODE_VALUE = 47;
+    /**
+     * <pre>
+     * QR code
+     * </pre>
+     *
+     * <code>QR_CODES = 48;</code>
+     */
+    public static final int QR_CODES_VALUE = 48;
+    /**
+     * <pre>
+     * Swiss QR bill
+     * </pre>
+     *
+     * <code>SWISS_QR_BILLS = 49;</code>
+     */
+    public static final int SWISS_QR_BILLS_VALUE = 49;
 
 
     public final int getNumber() {
@@ -905,6 +937,8 @@ private static final long serialVersionUID = 0L;
         case 45: return PAGE_TEXTS;
         case 46: return VAT_DISTRIBUTION;
         case 47: return LANGUAGE_CODE;
+        case 48: return QR_CODES;
+        case 49: return SWISS_QR_BILLS;
         default: return null;
       }
     }

@@ -5,9 +5,9 @@ package ssn.annotator.v1;
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
-import "ssn/type/qr.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
