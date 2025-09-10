@@ -1097,6 +1097,164 @@
         }
       }
     },
+    "typeQrCodeData": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "typeSwissQrBill": {
+      "type": "object",
+      "properties": {
+        "qrType": {
+          "type": "string",
+          "description": "Field 1 (pos 0)",
+          "title": "Header (0-2)"
+        },
+        "version": {
+          "type": "string",
+          "title": "Field 2 (pos 1)"
+        },
+        "codingType": {
+          "type": "string",
+          "title": "Field 3 (pos 2)"
+        },
+        "account": {
+          "type": "string",
+          "description": "Field 4 (pos 3)",
+          "title": "Account (3)"
+        },
+        "creditorAddressType": {
+          "type": "string",
+          "description": "Field 5 (pos 4) - \"S\" or \"K\"",
+          "title": "Creditor (4-10)"
+        },
+        "creditorName": {
+          "type": "string",
+          "title": "Field 6 (pos 5)"
+        },
+        "creditorAddressLine1": {
+          "type": "string",
+          "title": "Field 7 (pos 6) - Street OR Address Line 1"
+        },
+        "creditorAddressLine2": {
+          "type": "string",
+          "title": "Field 8 (pos 7) - Building Number OR Address Line 2"
+        },
+        "creditorAddressPostalCode": {
+          "type": "string",
+          "title": "Field 9 (pos 8) - Postal Code OR empty"
+        },
+        "creditorAddressCity": {
+          "type": "string",
+          "title": "Field 10 (pos 9) - City OR empty"
+        },
+        "creditorAddressCountry": {
+          "type": "string",
+          "title": "Field 11 (pos 10)"
+        },
+        "ultimateCreditorAddressType": {
+          "type": "string",
+          "description": "Field 12 (pos 11) - \"S\" or \"K\"",
+          "title": "Ultimate Creditor (11-17)"
+        },
+        "ultimateCreditorName": {
+          "type": "string",
+          "title": "Field 13 (pos 12)"
+        },
+        "ultimateCreditorAddressLine1": {
+          "type": "string",
+          "title": "Field 14 (pos 13)"
+        },
+        "ultimateCreditorAddressLine2": {
+          "type": "string",
+          "title": "Field 15 (pos 14)"
+        },
+        "ultimateCreditorAddressPostalCode": {
+          "type": "string",
+          "title": "Field 16 (pos 15)"
+        },
+        "ultimateCreditorAddressCity": {
+          "type": "string",
+          "title": "Field 17 (pos 16)"
+        },
+        "ultimateCreditorAddressCountry": {
+          "type": "string",
+          "title": "Field 18 (pos 17)"
+        },
+        "amount": {
+          "type": "string",
+          "description": "Field 19 (pos 18)",
+          "title": "Payment Information (18-19)"
+        },
+        "currency": {
+          "type": "string",
+          "title": "Field 20 (pos 19)"
+        },
+        "ultimateDebtorAddressType": {
+          "type": "string",
+          "description": "Field 21 (pos 20) - \"S\" or \"K\"",
+          "title": "Ultimate Debtor (20-26)"
+        },
+        "ultimateDebtorName": {
+          "type": "string",
+          "title": "Field 22 (pos 21)"
+        },
+        "ultimateDebtorAddressLine1": {
+          "type": "string",
+          "title": "Field 23 (pos 22)"
+        },
+        "ultimateDebtorAddressLine2": {
+          "type": "string",
+          "title": "Field 24 (pos 23)"
+        },
+        "ultimateDebtorAddressPostalCode": {
+          "type": "string",
+          "title": "Field 25 (pos 24)"
+        },
+        "ultimateDebtorAddressCity": {
+          "type": "string",
+          "title": "Field 26 (pos 25)"
+        },
+        "ultimateDebtorAddressCountry": {
+          "type": "string",
+          "title": "Field 27 (pos 26)"
+        },
+        "paymentReferenceType": {
+          "type": "string",
+          "description": "Field 28 (pos 27)",
+          "title": "Reference Information (27-28)"
+        },
+        "paymentReference": {
+          "type": "string",
+          "title": "Field 29 (pos 28)"
+        },
+        "unstructuredMessage": {
+          "type": "string",
+          "description": "Field 30 (pos 29)",
+          "title": "Additional Information (29-30)"
+        },
+        "trailer": {
+          "type": "string",
+          "title": "Field 31 (pos 30) - \"EPD\""
+        },
+        "billingInformation": {
+          "type": "string",
+          "description": "Field 32 (pos 30)",
+          "title": "Additional Information (30-31)"
+        },
+        "av1Parameters": {
+          "type": "string",
+          "title": "Field 33 (pos 31)"
+        },
+        "av2Parameters": {
+          "type": "string",
+          "title": "Field 34 (pos 32)"
+        }
+      }
+    },
     "typeSymbol": {
       "type": "object",
       "properties": {
@@ -1744,6 +1902,22 @@
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Information about the text language detected from OCR"
+        },
+        "qrCodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeQrCodeData"
+          },
+          "title": "QR codes detected in the document"
+        },
+        "swissQrBills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSwissQrBill"
+          },
+          "title": "Swiss QR bills detected in the document"
         }
       }
     },
@@ -1851,10 +2025,12 @@
         "PURCHASE_LINES",
         "PAGE_TEXTS",
         "VAT_DISTRIBUTION",
-        "LANGUAGE_CODE"
+        "LANGUAGE_CODE",
+        "QR_CODES",
+        "SWISS_QR_BILLS"
       ],
       "default": "DEFAULT",
-      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number\n - PURCHASE_LINES: Purchase Lines\n - PAGE_TEXTS: Page texts\n - VAT_DISTRIBUTION: VAT distribution\n - LANGUAGE_CODE: Langauge code"
+      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number\n - PURCHASE_LINES: Purchase Lines\n - PAGE_TEXTS: Page texts\n - VAT_DISTRIBUTION: VAT distribution\n - LANGUAGE_CODE: Langauge code\n - QR_CODES: QR code\n - SWISS_QR_BILLS: Swiss QR bill"
     },
     "v1FeedbackMetrics": {
       "type": "object",
