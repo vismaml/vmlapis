@@ -1,0 +1,60 @@
+[project]
+name = "vml-buf"
+version = "0.1.0"
+description = "VML Buf plugin and package management tools"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "vismaml", email = "worksmarter@visma.com" },
+]
+classifiers = [
+    "Private :: Do Not Upload",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "typer",
+    "rich",
+    "pydantic",
+    "tomli-w",
+    "packaging",
+    "pyyaml",
+    "lxml",
+]
+
+[project.scripts]
+vml-buf = "main:app"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "E", 
+    "F",
+    "I",
+    "ISC",
+]
+ignore = [
+    "B905",
+]
+fixable = [
+    "ALL",
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.lint.flake8-implicit-str-concat]
+allow-multiline = false
