@@ -242,7 +242,6 @@ def sync_command(
     ) as progress:
         try:
             if Language.PYTHON in language:
-                print(python_path)
                 sync_python(plugins, progress, python_path)
                 ending_messages.append("🐍 python synced")
             if Language.GO in language:
