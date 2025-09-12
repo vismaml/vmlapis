@@ -1,6 +1,6 @@
 version: v1
 plugins:
-  - plugin: buf.build/grpc-ecosystem/openapiv2:v2.26.1
+  - plugin: buf.build/grpc-ecosystem/openapiv2:v2.27.2
     out: gen/openapiv2
     opt:
       - logtostderr=true
