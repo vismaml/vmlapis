@@ -1,18 +1,18 @@
 [[plugins]]
 name = "buf.build/grpc-ecosystem/openapiv2"
-plugin_version = "v2.26.1"
+plugin_version = "v2.27.2"
 output_languages = [
     "application_plugins",
 ]
 
 [[plugins]]
 name = "buf.build/grpc/csharp"
-plugin_version = "v1.70.1"
+plugin_version = "v1.74.1"
 output_languages = [
     "csharp",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/csharp", version = "v29.3" },
+    { p_name = "buf.build/protocolbuffers/csharp", version = "v31.1" },
 ]
 
 [plugins.registry]
@@ -25,12 +25,12 @@ target_frameworks = [
     "netstandard2.0",
 ]
 deps = [
-    { name = "Grpc.Net.Common", version = "2.67.0" },
+    { name = "Grpc.Net.Common", version = "2.71.0" },
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/csharp"
-plugin_version = "v29.3"
+plugin_version = "v32.0"
 output_languages = [
     "csharp",
 ]
@@ -45,17 +45,17 @@ target_frameworks = [
     "netstandard2.0",
 ]
 deps = [
-    { name = "Google.Protobuf", version = "3.29.3" },
+    { name = "Google.Protobuf", version = "3.32.0" },
 ]
 
 [[plugins]]
 name = "buf.build/grpc/go"
-plugin_version = "v1.3.0"
+plugin_version = "v1.5.1"
 output_languages = [
     "go",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/go", version = "v1.34.0" },
+    { p_name = "buf.build/protocolbuffers/go", version = "v1.36.1" },
 ]
 
 [plugins.registry]
@@ -66,13 +66,14 @@ opts = [
 ]
 
 [plugins.registry.go]
+min_version = 1.19
 deps = [
-    { name = "google.golang.org/grpc", version = "v1.61.2" },
+    { name = "google.golang.org/grpc", version = "v1.64.1" },
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/go"
-plugin_version = "v1.33.0"
+plugin_version = "v1.36.9"
 output_languages = [
     "go",
 ]
@@ -80,52 +81,54 @@ output_languages = [
 [plugins.registry]
 opts = [
     "paths=source_relative",
+    "default_api_level=API_HYBRID",
 ]
 
 [plugins.registry.go]
+min_version = 1.23
 deps = [
-    { name = "google.golang.org/protobuf", version = "v1.33.0" },
+    { name = "google.golang.org/protobuf", version = "v1.36.9" },
 ]
 
 [[plugins]]
 name = "buf.build/grpc/java"
-plugin_version = "v1.70.0"
+plugin_version = "v1.75.0"
 output_languages = [
     "java",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/java", version = "v29.3" },
+    { p_name = "buf.build/protocolbuffers/java", version = "v32.0" },
 ]
 
 [plugins.registry.maven]
 deps = [
-    "io.grpc:grpc-core:1.70.0",
-    "io.grpc:grpc-protobuf:1.70.0",
-    "io.grpc:grpc-stub:1.70.0",
-    "com.google.protobuf:protobuf-java:4.29.3",
+    "io.grpc:grpc-core:1.75.0",
+    "io.grpc:grpc-protobuf:1.75.0",
+    "io.grpc:grpc-stub:1.75.0",
+    "com.google.protobuf:protobuf-java:4.32.0",
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/java"
-plugin_version = "v29.3"
+plugin_version = "v32.0"
 output_languages = [
     "java",
 ]
 
 [plugins.registry.maven]
 deps = [
-    "com.google.protobuf:protobuf-java:4.29.3",
+    "com.google.protobuf:protobuf-java:4.32.0",
 ]
 
 [[plugins]]
 name = "buf.build/grpc/web"
-plugin_version = "v1.5.0"
+plugin_version = "v2.0.1"
 output_languages = [
     "javascript",
     "typescript",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/js", version = "v3.21.2" },
+    { p_name = "buf.build/protocolbuffers/js", version = "v3.21.4" },
 ]
 
 [plugins.registry]
@@ -137,13 +140,13 @@ opts = [
 [plugins.registry.npm]
 import_style = "commonjs"
 deps = [
-    { name = "grpc-web", version = "^1.5.0" },
-    { name = "google-protobuf", version = "^3.21.2" },
+    { name = "grpc-web", version = "^2.0.1" },
+    { name = "google-protobuf", version = "^3.21.4" },
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/js"
-plugin_version = "v3.21.2"
+plugin_version = "v4.0.0"
 output_languages = [
     "javascript",
 ]
@@ -157,54 +160,54 @@ opts = [
 [plugins.registry.npm]
 import_style = "commonjs"
 deps = [
-    { name = "google-protobuf", version = "^3.21.2" },
+    { name = "google-protobuf", version = "^4.0.0" },
 ]
 
 [[plugins]]
 name = "buf.build/grpc/python"
-plugin_version = "v1.70.1"
+plugin_version = "v1.74.1"
 output_languages = [
     "python",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/python", version = "v29.3" },
+    { p_name = "buf.build/protocolbuffers/python", version = "v31.1" },
 ]
 
 [plugins.registry.python]
 package_type = "runtime"
-requires_python = ">=3.8"
+requires_python = ">=3.9"
 deps = [
     "grpcio",
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/pyi"
-plugin_version = "v29.3"
+plugin_version = "v32.0"
 output_languages = [
     "python",
 ]
 
 [plugins.registry.python]
 package_type = "stub-only"
-requires_python = ">=3.8"
+requires_python = ">=3.9"
 deps = [
-    "protobuf~=5.29.3",
-    "types-protobuf~=5.29",
+    "protobuf~=6.32.0",
+    "types-protobuf~=6.30",
 ]
 
 [[plugins]]
 name = "buf.build/protocolbuffers/python"
-plugin_version = "v29.3"
+plugin_version = "v32.0"
 output_languages = [
     "python",
 ]
 deps = [
-    { p_name = "buf.build/protocolbuffers/pyi", version = "v29.3" },
+    { p_name = "buf.build/protocolbuffers/pyi", version = "v32.0" },
 ]
 
 [plugins.registry.python]
 package_type = "runtime"
-requires_python = ">=3.8"
+requires_python = ">=3.9"
 deps = [
-    "protobuf~=5.29.3",
+    "protobuf~=6.32.0",
 ]

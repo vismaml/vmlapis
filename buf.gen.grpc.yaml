@@ -10,17 +10,17 @@ managed:
       - buf.build/validate/validate
 plugins:
   # the go-grpc plugin can also be in the .gen.all file as it ignores .proto files with no grpc endpoints, but it's here to keep it consistent
-  - plugin: buf.build/grpc/go:v1.3.0
+  - plugin: buf.build/grpc/go:v1.5.1
     out: gen/go
     opt:
       - paths=source_relative
       - require_unimplemented_servers=false
-  - plugin: buf.build/grpc/python:v1.70.1
+  - plugin: buf.build/grpc/python:v1.74.1
     out: gen/python/vml_proto
-  - plugin: buf.build/grpc/web:v1.5.0
+  - plugin: buf.build/grpc/web:v2.0.1
     out: gen/js
     opt: import_style=commonjs+dts,mode=grpcwebtext
-  - plugin: buf.build/grpc/java:v1.70.0
+  - plugin: buf.build/grpc/java:v1.75.0
     out: gen/java
-  - plugin: buf.build/grpc/csharp:v1.70.1
+  - plugin: buf.build/grpc/csharp:v1.74.1
     out: gen/csharp
