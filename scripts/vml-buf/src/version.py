@@ -2,12 +2,12 @@ import difflib
 import json
 import re
 import subprocess
+import tomllib
 from pathlib import Path
 from typing import NamedTuple
 from urllib.request import urlopen
 
 import tomli_w
-import tomllib
 import typer
 from packaging.version import parse
 from rich import print

@@ -1,9 +1,9 @@
 import subprocess
+import tomllib
 from enum import StrEnum
 from pathlib import Path
 from typing import Annotated
 
-import tomllib
 import typer
 from lxml import etree
 from packaging.requirements import Requirement
@@ -183,7 +183,8 @@ def sync_csharp(plugins: Plugins, progress, csharp_path: Path):
         progress.add_task(description=f"dotnet add {package}@{str(version)}...", total=None)
         subprocess.run(
             ["dotnet", "add", "vmlapis.csproj", "package", package, "-v", str(version), "-n"],
-            capture_output=True, cwd=csharp_path
+            capture_output=True,
+            cwd=csharp_path,
         )
 
 
