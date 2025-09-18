@@ -61,7 +61,10 @@ service TransactionService {
   // }
   // essentially a feedback endpoint
   rpc UpdateTransactionResults(UpdateTransactionResultsRequest) returns (UpdateTransactionResultsResponse) {
-    option (google.api.http) = {put: "/v1/transactions/{id}/results"};
+    option (google.api.http) = {
+      put: "/v1/transactions/{id}/results"
+      body: "*"
+    };
   }
   // streaming status back
   // rpc WatchTransactionStatus(WatchTransactionStatusRequest) returns (stream WatchTransactionStatusResponse) {
