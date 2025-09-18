@@ -469,10 +469,12 @@
             "type": "string"
           },
           {
-            "name": "customId",
-            "in": "query",
-            "required": false,
-            "type": "string"
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TransactionServiceUpdateTransactionResultsBody"
+            }
           }
         ],
         "tags": [
@@ -602,6 +604,22 @@
         }
       },
       "description": "Additional information detected on the structural component."
+    },
+    "TransactionServiceUpdateTransactionResultsBody": {
+      "type": "object",
+      "properties": {
+        "customId": {
+          "type": "string"
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asynctonv1Annotation"
+          }
+        }
+      },
+      "title": "--- put: \"/v1/transactions/{id}/results\" ---"
     },
     "asynctonv1Annotation": {
       "type": "object",
