@@ -104,6 +104,10 @@ def sync_go(plugins: Plugins, progress, go_path: Path):
     for k, v in safe_deps.items():
         progress.add_task(description=f"go get {k}@{v}...", total=None)
         subprocess.run(["go", "get", f"{k}@v{v}"], cwd=go_path)
+    
+    subprocess.run(["go", "mod", "tidy"])
+    subprocess.run(["go", "mod", "download"])
+
 
 
 def sync_java(plugins: Plugins, progress, java_path: Path):
