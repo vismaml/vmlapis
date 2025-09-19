@@ -36,7 +36,7 @@ var (
 	_ = anypb.Any{}
 	_ = sort.Sort
 
-	_ = asgttype.ModelType(0)
+	_ = asgttype.Confidence_Level(0)
 )
 
 // Validate checks the field values on SuggestOptions with the rules defined in
@@ -99,7 +99,7 @@ type SuggestOptionsMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestOptionsMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -279,7 +279,7 @@ type SuggestRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -439,7 +439,7 @@ type SuggestResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -624,7 +624,7 @@ type BatchSuggestRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BatchSuggestRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -791,7 +791,7 @@ type BatchSuggestResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BatchSuggestResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}

@@ -8,7 +8,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
+	annotator "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
 )
@@ -37,14 +37,14 @@ func (m *MockDocumentAnnotatorClient) EXPECT() *MockDocumentAnnotatorClientMockR
 }
 
 // AnnotateDocument mocks base method.
-func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *v1.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*v1.DocumentAnnotatorResponse, error) {
+func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *annotator.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*annotator.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "AnnotateDocument", varargs...)
-	ret0, _ := ret[0].(*v1.DocumentAnnotatorResponse)
+	ret0, _ := ret[0].(*annotator.DocumentAnnotatorResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -57,14 +57,14 @@ func (mr *MockDocumentAnnotatorClientMockRecorder) AnnotateDocument(ctx, in inte
 }
 
 // AnswerDocumentQuestion mocks base method.
-func (m *MockDocumentAnnotatorClient) AnswerDocumentQuestion(ctx context.Context, in *v1.DocumentQuestionRequest, opts ...grpc.CallOption) (*v1.DocumentQuestionResponse, error) {
+func (m *MockDocumentAnnotatorClient) AnswerDocumentQuestion(ctx context.Context, in *annotator.DocumentQuestionRequest, opts ...grpc.CallOption) (*annotator.DocumentQuestionResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "AnswerDocumentQuestion", varargs...)
-	ret0, _ := ret[0].(*v1.DocumentQuestionResponse)
+	ret0, _ := ret[0].(*annotator.DocumentQuestionResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -100,10 +100,10 @@ func (m *MockDocumentAnnotatorServer) EXPECT() *MockDocumentAnnotatorServerMockR
 }
 
 // AnnotateDocument mocks base method.
-func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg1 *v1.DocumentAnnotatorRequest) (*v1.DocumentAnnotatorResponse, error) {
+func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg1 *annotator.DocumentAnnotatorRequest) (*annotator.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnnotateDocument", arg0, arg1)
-	ret0, _ := ret[0].(*v1.DocumentAnnotatorResponse)
+	ret0, _ := ret[0].(*annotator.DocumentAnnotatorResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -115,10 +115,10 @@ func (mr *MockDocumentAnnotatorServerMockRecorder) AnnotateDocument(arg0, arg1 i
 }
 
 // AnswerDocumentQuestion mocks base method.
-func (m *MockDocumentAnnotatorServer) AnswerDocumentQuestion(arg0 context.Context, arg1 *v1.DocumentQuestionRequest) (*v1.DocumentQuestionResponse, error) {
+func (m *MockDocumentAnnotatorServer) AnswerDocumentQuestion(arg0 context.Context, arg1 *annotator.DocumentQuestionRequest) (*annotator.DocumentQuestionResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnswerDocumentQuestion", arg0, arg1)
-	ret0, _ := ret[0].(*v1.DocumentQuestionResponse)
+	ret0, _ := ret[0].(*annotator.DocumentQuestionResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
