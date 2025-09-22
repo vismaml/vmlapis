@@ -72,49 +72,40 @@ type SwissQrBill struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Header (0-2)
-	QrType     string `protobuf:"bytes,1,opt,name=qr_type,json=qrType,proto3" json:"qr_type,omitempty"`             // Field 1 (pos 0)
-	Version    string `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`                         // Field 2 (pos 1)
-	CodingType string `protobuf:"bytes,3,opt,name=coding_type,json=codingType,proto3" json:"coding_type,omitempty"` // Field 3 (pos 2)
-	// Account (3)
-	Account string `protobuf:"bytes,4,opt,name=account,proto3" json:"account,omitempty"` // Field 4 (pos 3)
-	// Creditor (4-10)
-	CreditorAddressType       string `protobuf:"bytes,5,opt,name=creditor_address_type,json=creditorAddressType,proto3" json:"creditor_address_type,omitempty"`                     // Field 5 (pos 4) - "S" or "K"
-	CreditorName              string `protobuf:"bytes,6,opt,name=creditor_name,json=creditorName,proto3" json:"creditor_name,omitempty"`                                            // Field 6 (pos 5)
-	CreditorAddressLine_1     string `protobuf:"bytes,7,opt,name=creditor_address_line_1,json=creditorAddressLine1,proto3" json:"creditor_address_line_1,omitempty"`                // Field 7 (pos 6) - Street OR Address Line 1
-	CreditorAddressLine_2     string `protobuf:"bytes,8,opt,name=creditor_address_line_2,json=creditorAddressLine2,proto3" json:"creditor_address_line_2,omitempty"`                // Field 8 (pos 7) - Building Number OR Address Line 2
-	CreditorAddressPostalCode string `protobuf:"bytes,9,opt,name=creditor_address_postal_code,json=creditorAddressPostalCode,proto3" json:"creditor_address_postal_code,omitempty"` // Field 9 (pos 8) - Postal Code OR empty
-	CreditorAddressCity       string `protobuf:"bytes,10,opt,name=creditor_address_city,json=creditorAddressCity,proto3" json:"creditor_address_city,omitempty"`                    // Field 10 (pos 9) - City OR empty
-	CreditorAddressCountry    string `protobuf:"bytes,11,opt,name=creditor_address_country,json=creditorAddressCountry,proto3" json:"creditor_address_country,omitempty"`           // Field 11 (pos 10)
-	// Ultimate Creditor (11-17)
-	UltimateCreditorAddressType       string `protobuf:"bytes,12,opt,name=ultimate_creditor_address_type,json=ultimateCreditorAddressType,proto3" json:"ultimate_creditor_address_type,omitempty"`                     // Field 12 (pos 11) - "S" or "K"
-	UltimateCreditorName              string `protobuf:"bytes,13,opt,name=ultimate_creditor_name,json=ultimateCreditorName,proto3" json:"ultimate_creditor_name,omitempty"`                                            // Field 13 (pos 12)
-	UltimateCreditorAddressLine_1     string `protobuf:"bytes,14,opt,name=ultimate_creditor_address_line_1,json=ultimateCreditorAddressLine1,proto3" json:"ultimate_creditor_address_line_1,omitempty"`                // Field 14 (pos 13)
-	UltimateCreditorAddressLine_2     string `protobuf:"bytes,15,opt,name=ultimate_creditor_address_line_2,json=ultimateCreditorAddressLine2,proto3" json:"ultimate_creditor_address_line_2,omitempty"`                // Field 15 (pos 14)
-	UltimateCreditorAddressPostalCode string `protobuf:"bytes,16,opt,name=ultimate_creditor_address_postal_code,json=ultimateCreditorAddressPostalCode,proto3" json:"ultimate_creditor_address_postal_code,omitempty"` // Field 16 (pos 15)
-	UltimateCreditorAddressCity       string `protobuf:"bytes,17,opt,name=ultimate_creditor_address_city,json=ultimateCreditorAddressCity,proto3" json:"ultimate_creditor_address_city,omitempty"`                     // Field 17 (pos 16)
-	UltimateCreditorAddressCountry    string `protobuf:"bytes,18,opt,name=ultimate_creditor_address_country,json=ultimateCreditorAddressCountry,proto3" json:"ultimate_creditor_address_country,omitempty"`            // Field 18 (pos 17)
-	// Payment Information (18-19)
-	Amount   string `protobuf:"bytes,19,opt,name=amount,proto3" json:"amount,omitempty"`     // Field 19 (pos 18)
-	Currency string `protobuf:"bytes,20,opt,name=currency,proto3" json:"currency,omitempty"` // Field 20 (pos 19)
-	// Ultimate Debtor (20-26)
-	UltimateDebtorAddressType       string `protobuf:"bytes,21,opt,name=ultimate_debtor_address_type,json=ultimateDebtorAddressType,proto3" json:"ultimate_debtor_address_type,omitempty"`                     // Field 21 (pos 20) - "S" or "K"
-	UltimateDebtorName              string `protobuf:"bytes,22,opt,name=ultimate_debtor_name,json=ultimateDebtorName,proto3" json:"ultimate_debtor_name,omitempty"`                                            // Field 22 (pos 21)
-	UltimateDebtorAddressLine_1     string `protobuf:"bytes,23,opt,name=ultimate_debtor_address_line_1,json=ultimateDebtorAddressLine1,proto3" json:"ultimate_debtor_address_line_1,omitempty"`                // Field 23 (pos 22)
-	UltimateDebtorAddressLine_2     string `protobuf:"bytes,24,opt,name=ultimate_debtor_address_line_2,json=ultimateDebtorAddressLine2,proto3" json:"ultimate_debtor_address_line_2,omitempty"`                // Field 24 (pos 23)
-	UltimateDebtorAddressPostalCode string `protobuf:"bytes,25,opt,name=ultimate_debtor_address_postal_code,json=ultimateDebtorAddressPostalCode,proto3" json:"ultimate_debtor_address_postal_code,omitempty"` // Field 25 (pos 24)
-	UltimateDebtorAddressCity       string `protobuf:"bytes,26,opt,name=ultimate_debtor_address_city,json=ultimateDebtorAddressCity,proto3" json:"ultimate_debtor_address_city,omitempty"`                     // Field 26 (pos 25)
-	UltimateDebtorAddressCountry    string `protobuf:"bytes,27,opt,name=ultimate_debtor_address_country,json=ultimateDebtorAddressCountry,proto3" json:"ultimate_debtor_address_country,omitempty"`            // Field 27 (pos 26)
-	// Reference Information (27-28)
-	PaymentReferenceType string `protobuf:"bytes,28,opt,name=payment_reference_type,json=paymentReferenceType,proto3" json:"payment_reference_type,omitempty"` // Field 28 (pos 27)
-	PaymentReference     string `protobuf:"bytes,29,opt,name=payment_reference,json=paymentReference,proto3" json:"payment_reference,omitempty"`               // Field 29 (pos 28)
-	// Additional Information (29-30)
-	UnstructuredMessage string `protobuf:"bytes,30,opt,name=unstructured_message,json=unstructuredMessage,proto3" json:"unstructured_message,omitempty"` // Field 30 (pos 29)
-	Trailer             string `protobuf:"bytes,31,opt,name=trailer,proto3" json:"trailer,omitempty"`                                                    // Field 31 (pos 30) - "EPD"
-	// Additional Information (30-31)
-	BillingInformation string `protobuf:"bytes,32,opt,name=billing_information,json=billingInformation,proto3" json:"billing_information,omitempty"` // Field 32 (pos 30)
-	Av1Parameters      string `protobuf:"bytes,33,opt,name=av1_parameters,json=av1Parameters,proto3" json:"av1_parameters,omitempty"`                // Field 33 (pos 31)
-	Av2Parameters      string `protobuf:"bytes,34,opt,name=av2_parameters,json=av2Parameters,proto3" json:"av2_parameters,omitempty"`                // Field 34 (pos 32)
+	QrType                            string `protobuf:"bytes,1,opt,name=qr_type,json=qrType,proto3" json:"qr_type,omitempty"`
+	Version                           string `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
+	CodingType                        string `protobuf:"bytes,3,opt,name=coding_type,json=codingType,proto3" json:"coding_type,omitempty"`
+	Account                           string `protobuf:"bytes,4,opt,name=account,proto3" json:"account,omitempty"`
+	CreditorAddressType               string `protobuf:"bytes,5,opt,name=creditor_address_type,json=creditorAddressType,proto3" json:"creditor_address_type,omitempty"`
+	CreditorName                      string `protobuf:"bytes,6,opt,name=creditor_name,json=creditorName,proto3" json:"creditor_name,omitempty"`
+	CreditorAddressLine_1             string `protobuf:"bytes,7,opt,name=creditor_address_line_1,json=creditorAddressLine1,proto3" json:"creditor_address_line_1,omitempty"`
+	CreditorAddressLine_2             string `protobuf:"bytes,8,opt,name=creditor_address_line_2,json=creditorAddressLine2,proto3" json:"creditor_address_line_2,omitempty"`
+	CreditorAddressPostalCode         string `protobuf:"bytes,9,opt,name=creditor_address_postal_code,json=creditorAddressPostalCode,proto3" json:"creditor_address_postal_code,omitempty"`
+	CreditorAddressCity               string `protobuf:"bytes,10,opt,name=creditor_address_city,json=creditorAddressCity,proto3" json:"creditor_address_city,omitempty"`
+	CreditorAddressCountry            string `protobuf:"bytes,11,opt,name=creditor_address_country,json=creditorAddressCountry,proto3" json:"creditor_address_country,omitempty"`
+	UltimateCreditorAddressType       string `protobuf:"bytes,12,opt,name=ultimate_creditor_address_type,json=ultimateCreditorAddressType,proto3" json:"ultimate_creditor_address_type,omitempty"`
+	UltimateCreditorName              string `protobuf:"bytes,13,opt,name=ultimate_creditor_name,json=ultimateCreditorName,proto3" json:"ultimate_creditor_name,omitempty"`
+	UltimateCreditorAddressLine_1     string `protobuf:"bytes,14,opt,name=ultimate_creditor_address_line_1,json=ultimateCreditorAddressLine1,proto3" json:"ultimate_creditor_address_line_1,omitempty"`
+	UltimateCreditorAddressLine_2     string `protobuf:"bytes,15,opt,name=ultimate_creditor_address_line_2,json=ultimateCreditorAddressLine2,proto3" json:"ultimate_creditor_address_line_2,omitempty"`
+	UltimateCreditorAddressPostalCode string `protobuf:"bytes,16,opt,name=ultimate_creditor_address_postal_code,json=ultimateCreditorAddressPostalCode,proto3" json:"ultimate_creditor_address_postal_code,omitempty"`
+	UltimateCreditorAddressCity       string `protobuf:"bytes,17,opt,name=ultimate_creditor_address_city,json=ultimateCreditorAddressCity,proto3" json:"ultimate_creditor_address_city,omitempty"`
+	UltimateCreditorAddressCountry    string `protobuf:"bytes,18,opt,name=ultimate_creditor_address_country,json=ultimateCreditorAddressCountry,proto3" json:"ultimate_creditor_address_country,omitempty"`
+	Amount                            string `protobuf:"bytes,19,opt,name=amount,proto3" json:"amount,omitempty"`
+	Currency                          string `protobuf:"bytes,20,opt,name=currency,proto3" json:"currency,omitempty"`
+	UltimateDebtorAddressType         string `protobuf:"bytes,21,opt,name=ultimate_debtor_address_type,json=ultimateDebtorAddressType,proto3" json:"ultimate_debtor_address_type,omitempty"`
+	UltimateDebtorName                string `protobuf:"bytes,22,opt,name=ultimate_debtor_name,json=ultimateDebtorName,proto3" json:"ultimate_debtor_name,omitempty"`
+	UltimateDebtorAddressLine_1       string `protobuf:"bytes,23,opt,name=ultimate_debtor_address_line_1,json=ultimateDebtorAddressLine1,proto3" json:"ultimate_debtor_address_line_1,omitempty"`
+	UltimateDebtorAddressLine_2       string `protobuf:"bytes,24,opt,name=ultimate_debtor_address_line_2,json=ultimateDebtorAddressLine2,proto3" json:"ultimate_debtor_address_line_2,omitempty"`
+	UltimateDebtorAddressPostalCode   string `protobuf:"bytes,25,opt,name=ultimate_debtor_address_postal_code,json=ultimateDebtorAddressPostalCode,proto3" json:"ultimate_debtor_address_postal_code,omitempty"`
+	UltimateDebtorAddressCity         string `protobuf:"bytes,26,opt,name=ultimate_debtor_address_city,json=ultimateDebtorAddressCity,proto3" json:"ultimate_debtor_address_city,omitempty"`
+	UltimateDebtorAddressCountry      string `protobuf:"bytes,27,opt,name=ultimate_debtor_address_country,json=ultimateDebtorAddressCountry,proto3" json:"ultimate_debtor_address_country,omitempty"`
+	PaymentReferenceType              string `protobuf:"bytes,28,opt,name=payment_reference_type,json=paymentReferenceType,proto3" json:"payment_reference_type,omitempty"`
+	PaymentReference                  string `protobuf:"bytes,29,opt,name=payment_reference,json=paymentReference,proto3" json:"payment_reference,omitempty"`
+	UnstructuredMessage               string `protobuf:"bytes,30,opt,name=unstructured_message,json=unstructuredMessage,proto3" json:"unstructured_message,omitempty"`
+	Trailer                           string `protobuf:"bytes,31,opt,name=trailer,proto3" json:"trailer,omitempty"`
+	BillingInformation                string `protobuf:"bytes,32,opt,name=billing_information,json=billingInformation,proto3" json:"billing_information,omitempty"`
+	Av1Parameters                     string `protobuf:"bytes,33,opt,name=av1_parameters,json=av1Parameters,proto3" json:"av1_parameters,omitempty"`
+	Av2Parameters                     string `protobuf:"bytes,34,opt,name=av2_parameters,json=av2Parameters,proto3" json:"av2_parameters,omitempty"`
 }
 
 func (x *SwissQrBill) Reset() {

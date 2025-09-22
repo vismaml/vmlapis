@@ -135,7 +135,7 @@ public final class AsynctonProto {
       "2\033.ssn.asyncton.v1.AnnotationR\013annotatio" +
       "ns\"O\n UpdateTransactionResultsResponse\022\016" +
       "\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010custo" +
-      "mId2\253\007\n\022TransactionService\022\207\001\n\021CreateTra" +
+      "mId2\256\007\n\022TransactionService\022\207\001\n\021CreateTra" +
       "nsaction\022).ssn.asyncton.v1.CreateTransac" +
       "tionRequest\032*.ssn.asyncton.v1.CreateTran" +
       "sactionResponse\"\033\202\323\344\223\002\025\"\020/v1/transaction" +
@@ -154,18 +154,18 @@ public final class AsynctonProto {
       "ansactions/{id}Z\022*\020/v1/transactions\022c\n\tD" +
       "eleteTag\022!.ssn.asyncton.v1.DeleteTagRequ" +
       "est\032\026.google.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v1" +
-      "/tags/{tag_name}\022\246\001\n\030UpdateTransactionRe" +
+      "/tags/{tag_name}\022\251\001\n\030UpdateTransactionRe" +
       "sults\0220.ssn.asyncton.v1.UpdateTransactio" +
       "nResultsRequest\0321.ssn.asyncton.v1.Update" +
-      "TransactionResultsResponse\"%\202\323\344\223\002\037\032\035/v1/" +
-      "transactions/{id}/resultsB\203\002\n\030ai.visma.s" +
-      "sn.asyncton.v1B\rAsynctonProtoP\001Z?github." +
-      "com/e-conomic/vmlapis/gen/go/ssn/asyncto" +
-      "n/v1;transaction\242\002\003SAX\252\002\017Ssn.Asyncton.V1" +
-      "\312\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\GPB" +
-      "Metadata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n\tAsync" +
-      " API2\002v1*\001\0022\020application/json:\020applicati" +
-      "on/jsonb\006proto3"
+      "TransactionResultsResponse\"(\202\323\344\223\002\"\032\035/v1/" +
+      "transactions/{id}/results:\001*B\203\002\n\030ai.vism" +
+      "a.ssn.asyncton.v1B\rAsynctonProtoP\001Z?gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/ssn/asyn" +
+      "cton/v1;transaction\242\002\003SAX\252\002\017Ssn.Asyncton" +
+      ".V1\312\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\" +
+      "GPBMetadata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n\tAs" +
+      "ync API2\002v1*\001\0022\020application/json:\020applic" +
+      "ation/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

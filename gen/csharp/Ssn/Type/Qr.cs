@@ -360,9 +360,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "qr_type" field.</summary>
     public const int QrTypeFieldNumber = 1;
     private string qrType_ = "";
-    /// <summary>
-    /// Header (0-2)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QrType {
@@ -375,9 +372,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 2;
     private string version_ = "";
-    /// <summary>
-    /// Field 2 (pos 1)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
@@ -390,9 +384,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "coding_type" field.</summary>
     public const int CodingTypeFieldNumber = 3;
     private string codingType_ = "";
-    /// <summary>
-    /// Field 3 (pos 2)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CodingType {
@@ -405,9 +396,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "account" field.</summary>
     public const int AccountFieldNumber = 4;
     private string account_ = "";
-    /// <summary>
-    /// Account (3)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Account {
@@ -420,9 +408,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_type" field.</summary>
     public const int CreditorAddressTypeFieldNumber = 5;
     private string creditorAddressType_ = "";
-    /// <summary>
-    /// Creditor (4-10)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressType {
@@ -435,9 +420,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_name" field.</summary>
     public const int CreditorNameFieldNumber = 6;
     private string creditorName_ = "";
-    /// <summary>
-    /// Field 6 (pos 5)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorName {
@@ -450,9 +432,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_line_1" field.</summary>
     public const int CreditorAddressLine1FieldNumber = 7;
     private string creditorAddressLine1_ = "";
-    /// <summary>
-    /// Field 7 (pos 6) - Street OR Address Line 1
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressLine1 {
@@ -465,9 +444,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_line_2" field.</summary>
     public const int CreditorAddressLine2FieldNumber = 8;
     private string creditorAddressLine2_ = "";
-    /// <summary>
-    /// Field 8 (pos 7) - Building Number OR Address Line 2
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressLine2 {
@@ -480,9 +456,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_postal_code" field.</summary>
     public const int CreditorAddressPostalCodeFieldNumber = 9;
     private string creditorAddressPostalCode_ = "";
-    /// <summary>
-    /// Field 9 (pos 8) - Postal Code OR empty
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressPostalCode {
@@ -495,9 +468,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_city" field.</summary>
     public const int CreditorAddressCityFieldNumber = 10;
     private string creditorAddressCity_ = "";
-    /// <summary>
-    /// Field 10 (pos 9) - City OR empty
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressCity {
@@ -510,9 +480,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_country" field.</summary>
     public const int CreditorAddressCountryFieldNumber = 11;
     private string creditorAddressCountry_ = "";
-    /// <summary>
-    /// Field 11 (pos 10)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressCountry {
@@ -525,9 +492,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_type" field.</summary>
     public const int UltimateCreditorAddressTypeFieldNumber = 12;
     private string ultimateCreditorAddressType_ = "";
-    /// <summary>
-    /// Ultimate Creditor (11-17)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressType {
@@ -540,9 +504,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_name" field.</summary>
     public const int UltimateCreditorNameFieldNumber = 13;
     private string ultimateCreditorName_ = "";
-    /// <summary>
-    /// Field 13 (pos 12)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorName {
@@ -555,9 +516,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_line_1" field.</summary>
     public const int UltimateCreditorAddressLine1FieldNumber = 14;
     private string ultimateCreditorAddressLine1_ = "";
-    /// <summary>
-    /// Field 14 (pos 13)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressLine1 {
@@ -570,9 +528,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_line_2" field.</summary>
     public const int UltimateCreditorAddressLine2FieldNumber = 15;
     private string ultimateCreditorAddressLine2_ = "";
-    /// <summary>
-    /// Field 15 (pos 14)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressLine2 {
@@ -585,9 +540,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_postal_code" field.</summary>
     public const int UltimateCreditorAddressPostalCodeFieldNumber = 16;
     private string ultimateCreditorAddressPostalCode_ = "";
-    /// <summary>
-    /// Field 16 (pos 15)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressPostalCode {
@@ -600,9 +552,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_city" field.</summary>
     public const int UltimateCreditorAddressCityFieldNumber = 17;
     private string ultimateCreditorAddressCity_ = "";
-    /// <summary>
-    /// Field 17 (pos 16)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressCity {
@@ -615,9 +564,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_country" field.</summary>
     public const int UltimateCreditorAddressCountryFieldNumber = 18;
     private string ultimateCreditorAddressCountry_ = "";
-    /// <summary>
-    /// Field 18 (pos 17)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressCountry {
@@ -630,9 +576,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 19;
     private string amount_ = "";
-    /// <summary>
-    /// Payment Information (18-19)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
@@ -645,9 +588,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "currency" field.</summary>
     public const int CurrencyFieldNumber = 20;
     private string currency_ = "";
-    /// <summary>
-    /// Field 20 (pos 19)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Currency {
@@ -660,9 +600,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_type" field.</summary>
     public const int UltimateDebtorAddressTypeFieldNumber = 21;
     private string ultimateDebtorAddressType_ = "";
-    /// <summary>
-    /// Ultimate Debtor (20-26)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressType {
@@ -675,9 +612,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_name" field.</summary>
     public const int UltimateDebtorNameFieldNumber = 22;
     private string ultimateDebtorName_ = "";
-    /// <summary>
-    /// Field 22 (pos 21)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorName {
@@ -690,9 +624,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_line_1" field.</summary>
     public const int UltimateDebtorAddressLine1FieldNumber = 23;
     private string ultimateDebtorAddressLine1_ = "";
-    /// <summary>
-    /// Field 23 (pos 22)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressLine1 {
@@ -705,9 +636,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_line_2" field.</summary>
     public const int UltimateDebtorAddressLine2FieldNumber = 24;
     private string ultimateDebtorAddressLine2_ = "";
-    /// <summary>
-    /// Field 24 (pos 23)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressLine2 {
@@ -720,9 +648,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_postal_code" field.</summary>
     public const int UltimateDebtorAddressPostalCodeFieldNumber = 25;
     private string ultimateDebtorAddressPostalCode_ = "";
-    /// <summary>
-    /// Field 25 (pos 24)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressPostalCode {
@@ -735,9 +660,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_city" field.</summary>
     public const int UltimateDebtorAddressCityFieldNumber = 26;
     private string ultimateDebtorAddressCity_ = "";
-    /// <summary>
-    /// Field 26 (pos 25)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressCity {
@@ -750,9 +672,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_country" field.</summary>
     public const int UltimateDebtorAddressCountryFieldNumber = 27;
     private string ultimateDebtorAddressCountry_ = "";
-    /// <summary>
-    /// Field 27 (pos 26)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressCountry {
@@ -765,9 +684,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "payment_reference_type" field.</summary>
     public const int PaymentReferenceTypeFieldNumber = 28;
     private string paymentReferenceType_ = "";
-    /// <summary>
-    /// Reference Information (27-28)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PaymentReferenceType {
@@ -780,9 +696,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "payment_reference" field.</summary>
     public const int PaymentReferenceFieldNumber = 29;
     private string paymentReference_ = "";
-    /// <summary>
-    /// Field 29 (pos 28)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PaymentReference {
@@ -795,9 +708,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "unstructured_message" field.</summary>
     public const int UnstructuredMessageFieldNumber = 30;
     private string unstructuredMessage_ = "";
-    /// <summary>
-    /// Additional Information (29-30)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UnstructuredMessage {
@@ -810,9 +720,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "trailer" field.</summary>
     public const int TrailerFieldNumber = 31;
     private string trailer_ = "";
-    /// <summary>
-    /// Field 31 (pos 30) - "EPD"
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Trailer {
@@ -825,9 +732,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "billing_information" field.</summary>
     public const int BillingInformationFieldNumber = 32;
     private string billingInformation_ = "";
-    /// <summary>
-    /// Additional Information (30-31)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BillingInformation {
@@ -840,9 +744,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "av1_parameters" field.</summary>
     public const int Av1ParametersFieldNumber = 33;
     private string av1Parameters_ = "";
-    /// <summary>
-    /// Field 33 (pos 31)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Av1Parameters {
@@ -855,9 +756,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "av2_parameters" field.</summary>
     public const int Av2ParametersFieldNumber = 34;
     private string av2Parameters_ = "";
-    /// <summary>
-    /// Field 34 (pos 32)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Av2Parameters {

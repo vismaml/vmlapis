@@ -469,10 +469,12 @@
             "type": "string"
           },
           {
-            "name": "customId",
-            "in": "query",
-            "required": false,
-            "type": "string"
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TransactionServiceUpdateTransactionResultsBody"
+            }
           }
         ],
         "tags": [
@@ -602,6 +604,22 @@
         }
       },
       "description": "Additional information detected on the structural component."
+    },
+    "TransactionServiceUpdateTransactionResultsBody": {
+      "type": "object",
+      "properties": {
+        "customId": {
+          "type": "string"
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asynctonv1Annotation"
+          }
+        }
+      },
+      "title": "--- put: \"/v1/transactions/{id}/results\" ---"
     },
     "asynctonv1Annotation": {
       "type": "object",
@@ -1109,149 +1127,106 @@
       "type": "object",
       "properties": {
         "qrType": {
-          "type": "string",
-          "description": "Field 1 (pos 0)",
-          "title": "Header (0-2)"
+          "type": "string"
         },
         "version": {
-          "type": "string",
-          "title": "Field 2 (pos 1)"
+          "type": "string"
         },
         "codingType": {
-          "type": "string",
-          "title": "Field 3 (pos 2)"
+          "type": "string"
         },
         "account": {
-          "type": "string",
-          "description": "Field 4 (pos 3)",
-          "title": "Account (3)"
+          "type": "string"
         },
         "creditorAddressType": {
-          "type": "string",
-          "description": "Field 5 (pos 4) - \"S\" or \"K\"",
-          "title": "Creditor (4-10)"
+          "type": "string"
         },
         "creditorName": {
-          "type": "string",
-          "title": "Field 6 (pos 5)"
+          "type": "string"
         },
         "creditorAddressLine1": {
-          "type": "string",
-          "title": "Field 7 (pos 6) - Street OR Address Line 1"
+          "type": "string"
         },
         "creditorAddressLine2": {
-          "type": "string",
-          "title": "Field 8 (pos 7) - Building Number OR Address Line 2"
+          "type": "string"
         },
         "creditorAddressPostalCode": {
-          "type": "string",
-          "title": "Field 9 (pos 8) - Postal Code OR empty"
+          "type": "string"
         },
         "creditorAddressCity": {
-          "type": "string",
-          "title": "Field 10 (pos 9) - City OR empty"
+          "type": "string"
         },
         "creditorAddressCountry": {
-          "type": "string",
-          "title": "Field 11 (pos 10)"
+          "type": "string"
         },
         "ultimateCreditorAddressType": {
-          "type": "string",
-          "description": "Field 12 (pos 11) - \"S\" or \"K\"",
-          "title": "Ultimate Creditor (11-17)"
+          "type": "string"
         },
         "ultimateCreditorName": {
-          "type": "string",
-          "title": "Field 13 (pos 12)"
+          "type": "string"
         },
         "ultimateCreditorAddressLine1": {
-          "type": "string",
-          "title": "Field 14 (pos 13)"
+          "type": "string"
         },
         "ultimateCreditorAddressLine2": {
-          "type": "string",
-          "title": "Field 15 (pos 14)"
+          "type": "string"
         },
         "ultimateCreditorAddressPostalCode": {
-          "type": "string",
-          "title": "Field 16 (pos 15)"
+          "type": "string"
         },
         "ultimateCreditorAddressCity": {
-          "type": "string",
-          "title": "Field 17 (pos 16)"
+          "type": "string"
         },
         "ultimateCreditorAddressCountry": {
-          "type": "string",
-          "title": "Field 18 (pos 17)"
+          "type": "string"
         },
         "amount": {
-          "type": "string",
-          "description": "Field 19 (pos 18)",
-          "title": "Payment Information (18-19)"
+          "type": "string"
         },
         "currency": {
-          "type": "string",
-          "title": "Field 20 (pos 19)"
+          "type": "string"
         },
         "ultimateDebtorAddressType": {
-          "type": "string",
-          "description": "Field 21 (pos 20) - \"S\" or \"K\"",
-          "title": "Ultimate Debtor (20-26)"
+          "type": "string"
         },
         "ultimateDebtorName": {
-          "type": "string",
-          "title": "Field 22 (pos 21)"
+          "type": "string"
         },
         "ultimateDebtorAddressLine1": {
-          "type": "string",
-          "title": "Field 23 (pos 22)"
+          "type": "string"
         },
         "ultimateDebtorAddressLine2": {
-          "type": "string",
-          "title": "Field 24 (pos 23)"
+          "type": "string"
         },
         "ultimateDebtorAddressPostalCode": {
-          "type": "string",
-          "title": "Field 25 (pos 24)"
+          "type": "string"
         },
         "ultimateDebtorAddressCity": {
-          "type": "string",
-          "title": "Field 26 (pos 25)"
+          "type": "string"
         },
         "ultimateDebtorAddressCountry": {
-          "type": "string",
-          "title": "Field 27 (pos 26)"
+          "type": "string"
         },
         "paymentReferenceType": {
-          "type": "string",
-          "description": "Field 28 (pos 27)",
-          "title": "Reference Information (27-28)"
+          "type": "string"
         },
         "paymentReference": {
-          "type": "string",
-          "title": "Field 29 (pos 28)"
+          "type": "string"
         },
         "unstructuredMessage": {
-          "type": "string",
-          "description": "Field 30 (pos 29)",
-          "title": "Additional Information (29-30)"
+          "type": "string"
         },
         "trailer": {
-          "type": "string",
-          "title": "Field 31 (pos 30) - \"EPD\""
+          "type": "string"
         },
         "billingInformation": {
-          "type": "string",
-          "description": "Field 32 (pos 30)",
-          "title": "Additional Information (30-31)"
+          "type": "string"
         },
         "av1Parameters": {
-          "type": "string",
-          "title": "Field 33 (pos 31)"
+          "type": "string"
         },
         "av2Parameters": {
-          "type": "string",
-          "title": "Field 34 (pos 32)"
+          "type": "string"
         }
       }
     },

@@ -28,14 +28,12 @@ RUN curl -sSL \
 WORKDIR /app
 
 COPY ["go.mod", "go.sum", "buf.gen.*", "/app/"]
-RUN go get all \
-  && go install \
-  github.com/golang/mock/mockgen \
-  github.com/envoyproxy/protoc-gen-validate
+RUN go mod download \
+  && go get github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate \
+  && go install github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate
 
 COPY Makefile /app/
 COPY deps deps
 COPY scripts scripts
-COPY pyproject.toml pyproject.toml
 COPY proto proto
 RUN make all

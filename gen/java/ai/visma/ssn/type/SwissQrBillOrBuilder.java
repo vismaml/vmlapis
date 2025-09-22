@@ -10,19 +10,11 @@ public interface SwissQrBillOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Header (0-2)
-   * </pre>
-   *
    * <code>string qr_type = 1 [json_name = "qrType"];</code>
    * @return The qrType.
    */
   java.lang.String getQrType();
   /**
-   * <pre>
-   * Header (0-2)
-   * </pre>
-   *
    * <code>string qr_type = 1 [json_name = "qrType"];</code>
    * @return The bytes for qrType.
    */
@@ -30,19 +22,11 @@ public interface SwissQrBillOrBuilder extends
       getQrTypeBytes();
 
   /**
-   * <pre>
-   * Field 2 (pos 1)
-   * </pre>
-   *
    * <code>string version = 2 [json_name = "version"];</code>
    * @return The version.
    */
   java.lang.String getVersion();
   /**
-   * <pre>
-   * Field 2 (pos 1)
-   * </pre>
-   *
    * <code>string version = 2 [json_name = "version"];</code>
    * @return The bytes for version.
    */
@@ -50,19 +34,11 @@ public interface SwissQrBillOrBuilder extends
       getVersionBytes();
 
   /**
-   * <pre>
-   * Field 3 (pos 2)
-   * </pre>
-   *
    * <code>string coding_type = 3 [json_name = "codingType"];</code>
    * @return The codingType.
    */
   java.lang.String getCodingType();
   /**
-   * <pre>
-   * Field 3 (pos 2)
-   * </pre>
-   *
    * <code>string coding_type = 3 [json_name = "codingType"];</code>
    * @return The bytes for codingType.
    */
@@ -70,19 +46,11 @@ public interface SwissQrBillOrBuilder extends
       getCodingTypeBytes();
 
   /**
-   * <pre>
-   * Account (3)
-   * </pre>
-   *
    * <code>string account = 4 [json_name = "account"];</code>
    * @return The account.
    */
   java.lang.String getAccount();
   /**
-   * <pre>
-   * Account (3)
-   * </pre>
-   *
    * <code>string account = 4 [json_name = "account"];</code>
    * @return The bytes for account.
    */
@@ -90,19 +58,11 @@ public interface SwissQrBillOrBuilder extends
       getAccountBytes();
 
   /**
-   * <pre>
-   * Creditor (4-10)
-   * </pre>
-   *
    * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
    * @return The creditorAddressType.
    */
   java.lang.String getCreditorAddressType();
   /**
-   * <pre>
-   * Creditor (4-10)
-   * </pre>
-   *
    * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
    * @return The bytes for creditorAddressType.
    */
@@ -110,19 +70,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressTypeBytes();
 
   /**
-   * <pre>
-   * Field 6 (pos 5)
-   * </pre>
-   *
    * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
    * @return The creditorName.
    */
   java.lang.String getCreditorName();
   /**
-   * <pre>
-   * Field 6 (pos 5)
-   * </pre>
-   *
    * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
    * @return The bytes for creditorName.
    */
@@ -130,19 +82,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorNameBytes();
 
   /**
-   * <pre>
-   * Field 7 (pos 6) - Street OR Address Line 1
-   * </pre>
-   *
    * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
    * @return The creditorAddressLine1.
    */
   java.lang.String getCreditorAddressLine1();
   /**
-   * <pre>
-   * Field 7 (pos 6) - Street OR Address Line 1
-   * </pre>
-   *
    * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
    * @return The bytes for creditorAddressLine1.
    */
@@ -150,19 +94,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressLine1Bytes();
 
   /**
-   * <pre>
-   * Field 8 (pos 7) - Building Number OR Address Line 2
-   * </pre>
-   *
    * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
    * @return The creditorAddressLine2.
    */
   java.lang.String getCreditorAddressLine2();
   /**
-   * <pre>
-   * Field 8 (pos 7) - Building Number OR Address Line 2
-   * </pre>
-   *
    * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
    * @return The bytes for creditorAddressLine2.
    */
@@ -170,19 +106,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressLine2Bytes();
 
   /**
-   * <pre>
-   * Field 9 (pos 8) - Postal Code OR empty
-   * </pre>
-   *
    * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
    * @return The creditorAddressPostalCode.
    */
   java.lang.String getCreditorAddressPostalCode();
   /**
-   * <pre>
-   * Field 9 (pos 8) - Postal Code OR empty
-   * </pre>
-   *
    * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
    * @return The bytes for creditorAddressPostalCode.
    */
@@ -190,19 +118,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressPostalCodeBytes();
 
   /**
-   * <pre>
-   * Field 10 (pos 9) - City OR empty
-   * </pre>
-   *
    * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
    * @return The creditorAddressCity.
    */
   java.lang.String getCreditorAddressCity();
   /**
-   * <pre>
-   * Field 10 (pos 9) - City OR empty
-   * </pre>
-   *
    * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
    * @return The bytes for creditorAddressCity.
    */
@@ -210,19 +130,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressCityBytes();
 
   /**
-   * <pre>
-   * Field 11 (pos 10)
-   * </pre>
-   *
    * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
    * @return The creditorAddressCountry.
    */
   java.lang.String getCreditorAddressCountry();
   /**
-   * <pre>
-   * Field 11 (pos 10)
-   * </pre>
-   *
    * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
    * @return The bytes for creditorAddressCountry.
    */
@@ -230,19 +142,11 @@ public interface SwissQrBillOrBuilder extends
       getCreditorAddressCountryBytes();
 
   /**
-   * <pre>
-   * Ultimate Creditor (11-17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
    * @return The ultimateCreditorAddressType.
    */
   java.lang.String getUltimateCreditorAddressType();
   /**
-   * <pre>
-   * Ultimate Creditor (11-17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
    * @return The bytes for ultimateCreditorAddressType.
    */
@@ -250,19 +154,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressTypeBytes();
 
   /**
-   * <pre>
-   * Field 13 (pos 12)
-   * </pre>
-   *
    * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
    * @return The ultimateCreditorName.
    */
   java.lang.String getUltimateCreditorName();
   /**
-   * <pre>
-   * Field 13 (pos 12)
-   * </pre>
-   *
    * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
    * @return The bytes for ultimateCreditorName.
    */
@@ -270,19 +166,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorNameBytes();
 
   /**
-   * <pre>
-   * Field 14 (pos 13)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
    * @return The ultimateCreditorAddressLine1.
    */
   java.lang.String getUltimateCreditorAddressLine1();
   /**
-   * <pre>
-   * Field 14 (pos 13)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
    * @return The bytes for ultimateCreditorAddressLine1.
    */
@@ -290,19 +178,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressLine1Bytes();
 
   /**
-   * <pre>
-   * Field 15 (pos 14)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
    * @return The ultimateCreditorAddressLine2.
    */
   java.lang.String getUltimateCreditorAddressLine2();
   /**
-   * <pre>
-   * Field 15 (pos 14)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
    * @return The bytes for ultimateCreditorAddressLine2.
    */
@@ -310,19 +190,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressLine2Bytes();
 
   /**
-   * <pre>
-   * Field 16 (pos 15)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
    * @return The ultimateCreditorAddressPostalCode.
    */
   java.lang.String getUltimateCreditorAddressPostalCode();
   /**
-   * <pre>
-   * Field 16 (pos 15)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
    * @return The bytes for ultimateCreditorAddressPostalCode.
    */
@@ -330,19 +202,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressPostalCodeBytes();
 
   /**
-   * <pre>
-   * Field 17 (pos 16)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
    * @return The ultimateCreditorAddressCity.
    */
   java.lang.String getUltimateCreditorAddressCity();
   /**
-   * <pre>
-   * Field 17 (pos 16)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
    * @return The bytes for ultimateCreditorAddressCity.
    */
@@ -350,19 +214,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressCityBytes();
 
   /**
-   * <pre>
-   * Field 18 (pos 17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
    * @return The ultimateCreditorAddressCountry.
    */
   java.lang.String getUltimateCreditorAddressCountry();
   /**
-   * <pre>
-   * Field 18 (pos 17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
    * @return The bytes for ultimateCreditorAddressCountry.
    */
@@ -370,19 +226,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateCreditorAddressCountryBytes();
 
   /**
-   * <pre>
-   * Payment Information (18-19)
-   * </pre>
-   *
    * <code>string amount = 19 [json_name = "amount"];</code>
    * @return The amount.
    */
   java.lang.String getAmount();
   /**
-   * <pre>
-   * Payment Information (18-19)
-   * </pre>
-   *
    * <code>string amount = 19 [json_name = "amount"];</code>
    * @return The bytes for amount.
    */
@@ -390,19 +238,11 @@ public interface SwissQrBillOrBuilder extends
       getAmountBytes();
 
   /**
-   * <pre>
-   * Field 20 (pos 19)
-   * </pre>
-   *
    * <code>string currency = 20 [json_name = "currency"];</code>
    * @return The currency.
    */
   java.lang.String getCurrency();
   /**
-   * <pre>
-   * Field 20 (pos 19)
-   * </pre>
-   *
    * <code>string currency = 20 [json_name = "currency"];</code>
    * @return The bytes for currency.
    */
@@ -410,19 +250,11 @@ public interface SwissQrBillOrBuilder extends
       getCurrencyBytes();
 
   /**
-   * <pre>
-   * Ultimate Debtor (20-26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
    * @return The ultimateDebtorAddressType.
    */
   java.lang.String getUltimateDebtorAddressType();
   /**
-   * <pre>
-   * Ultimate Debtor (20-26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
    * @return The bytes for ultimateDebtorAddressType.
    */
@@ -430,19 +262,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressTypeBytes();
 
   /**
-   * <pre>
-   * Field 22 (pos 21)
-   * </pre>
-   *
    * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
    * @return The ultimateDebtorName.
    */
   java.lang.String getUltimateDebtorName();
   /**
-   * <pre>
-   * Field 22 (pos 21)
-   * </pre>
-   *
    * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
    * @return The bytes for ultimateDebtorName.
    */
@@ -450,19 +274,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorNameBytes();
 
   /**
-   * <pre>
-   * Field 23 (pos 22)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
    * @return The ultimateDebtorAddressLine1.
    */
   java.lang.String getUltimateDebtorAddressLine1();
   /**
-   * <pre>
-   * Field 23 (pos 22)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
    * @return The bytes for ultimateDebtorAddressLine1.
    */
@@ -470,19 +286,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressLine1Bytes();
 
   /**
-   * <pre>
-   * Field 24 (pos 23)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
    * @return The ultimateDebtorAddressLine2.
    */
   java.lang.String getUltimateDebtorAddressLine2();
   /**
-   * <pre>
-   * Field 24 (pos 23)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
    * @return The bytes for ultimateDebtorAddressLine2.
    */
@@ -490,19 +298,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressLine2Bytes();
 
   /**
-   * <pre>
-   * Field 25 (pos 24)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
    * @return The ultimateDebtorAddressPostalCode.
    */
   java.lang.String getUltimateDebtorAddressPostalCode();
   /**
-   * <pre>
-   * Field 25 (pos 24)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
    * @return The bytes for ultimateDebtorAddressPostalCode.
    */
@@ -510,19 +310,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressPostalCodeBytes();
 
   /**
-   * <pre>
-   * Field 26 (pos 25)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
    * @return The ultimateDebtorAddressCity.
    */
   java.lang.String getUltimateDebtorAddressCity();
   /**
-   * <pre>
-   * Field 26 (pos 25)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
    * @return The bytes for ultimateDebtorAddressCity.
    */
@@ -530,19 +322,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressCityBytes();
 
   /**
-   * <pre>
-   * Field 27 (pos 26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
    * @return The ultimateDebtorAddressCountry.
    */
   java.lang.String getUltimateDebtorAddressCountry();
   /**
-   * <pre>
-   * Field 27 (pos 26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
    * @return The bytes for ultimateDebtorAddressCountry.
    */
@@ -550,19 +334,11 @@ public interface SwissQrBillOrBuilder extends
       getUltimateDebtorAddressCountryBytes();
 
   /**
-   * <pre>
-   * Reference Information (27-28)
-   * </pre>
-   *
    * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
    * @return The paymentReferenceType.
    */
   java.lang.String getPaymentReferenceType();
   /**
-   * <pre>
-   * Reference Information (27-28)
-   * </pre>
-   *
    * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
    * @return The bytes for paymentReferenceType.
    */
@@ -570,19 +346,11 @@ public interface SwissQrBillOrBuilder extends
       getPaymentReferenceTypeBytes();
 
   /**
-   * <pre>
-   * Field 29 (pos 28)
-   * </pre>
-   *
    * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
    * @return The paymentReference.
    */
   java.lang.String getPaymentReference();
   /**
-   * <pre>
-   * Field 29 (pos 28)
-   * </pre>
-   *
    * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
    * @return The bytes for paymentReference.
    */
@@ -590,19 +358,11 @@ public interface SwissQrBillOrBuilder extends
       getPaymentReferenceBytes();
 
   /**
-   * <pre>
-   * Additional Information (29-30)
-   * </pre>
-   *
    * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
    * @return The unstructuredMessage.
    */
   java.lang.String getUnstructuredMessage();
   /**
-   * <pre>
-   * Additional Information (29-30)
-   * </pre>
-   *
    * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
    * @return The bytes for unstructuredMessage.
    */
@@ -610,19 +370,11 @@ public interface SwissQrBillOrBuilder extends
       getUnstructuredMessageBytes();
 
   /**
-   * <pre>
-   * Field 31 (pos 30) - "EPD"
-   * </pre>
-   *
    * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The trailer.
    */
   java.lang.String getTrailer();
   /**
-   * <pre>
-   * Field 31 (pos 30) - "EPD"
-   * </pre>
-   *
    * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The bytes for trailer.
    */
@@ -630,19 +382,11 @@ public interface SwissQrBillOrBuilder extends
       getTrailerBytes();
 
   /**
-   * <pre>
-   * Additional Information (30-31)
-   * </pre>
-   *
    * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
    * @return The billingInformation.
    */
   java.lang.String getBillingInformation();
   /**
-   * <pre>
-   * Additional Information (30-31)
-   * </pre>
-   *
    * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
    * @return The bytes for billingInformation.
    */
@@ -650,19 +394,11 @@ public interface SwissQrBillOrBuilder extends
       getBillingInformationBytes();
 
   /**
-   * <pre>
-   * Field 33 (pos 31)
-   * </pre>
-   *
    * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
    * @return The av1Parameters.
    */
   java.lang.String getAv1Parameters();
   /**
-   * <pre>
-   * Field 33 (pos 31)
-   * </pre>
-   *
    * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
    * @return The bytes for av1Parameters.
    */
@@ -670,19 +406,11 @@ public interface SwissQrBillOrBuilder extends
       getAv1ParametersBytes();
 
   /**
-   * <pre>
-   * Field 34 (pos 32)
-   * </pre>
-   *
    * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
    * @return The av2Parameters.
    */
   java.lang.String getAv2Parameters();
   /**
-   * <pre>
-   * Field 34 (pos 32)
-   * </pre>
-   *
    * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
    * @return The bytes for av2Parameters.
    */

@@ -80,10 +80,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object qrType_ = "";
   /**
-   * <pre>
-   * Header (0-2)
-   * </pre>
-   *
    * <code>string qr_type = 1 [json_name = "qrType"];</code>
    * @return The qrType.
    */
@@ -101,10 +97,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Header (0-2)
-   * </pre>
-   *
    * <code>string qr_type = 1 [json_name = "qrType"];</code>
    * @return The bytes for qrType.
    */
@@ -127,10 +119,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object version_ = "";
   /**
-   * <pre>
-   * Field 2 (pos 1)
-   * </pre>
-   *
    * <code>string version = 2 [json_name = "version"];</code>
    * @return The version.
    */
@@ -148,10 +136,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 2 (pos 1)
-   * </pre>
-   *
    * <code>string version = 2 [json_name = "version"];</code>
    * @return The bytes for version.
    */
@@ -174,10 +158,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object codingType_ = "";
   /**
-   * <pre>
-   * Field 3 (pos 2)
-   * </pre>
-   *
    * <code>string coding_type = 3 [json_name = "codingType"];</code>
    * @return The codingType.
    */
@@ -195,10 +175,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 3 (pos 2)
-   * </pre>
-   *
    * <code>string coding_type = 3 [json_name = "codingType"];</code>
    * @return The bytes for codingType.
    */
@@ -221,10 +197,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object account_ = "";
   /**
-   * <pre>
-   * Account (3)
-   * </pre>
-   *
    * <code>string account = 4 [json_name = "account"];</code>
    * @return The account.
    */
@@ -242,10 +214,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Account (3)
-   * </pre>
-   *
    * <code>string account = 4 [json_name = "account"];</code>
    * @return The bytes for account.
    */
@@ -268,10 +236,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressType_ = "";
   /**
-   * <pre>
-   * Creditor (4-10)
-   * </pre>
-   *
    * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
    * @return The creditorAddressType.
    */
@@ -289,10 +253,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Creditor (4-10)
-   * </pre>
-   *
    * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
    * @return The bytes for creditorAddressType.
    */
@@ -315,10 +275,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorName_ = "";
   /**
-   * <pre>
-   * Field 6 (pos 5)
-   * </pre>
-   *
    * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
    * @return The creditorName.
    */
@@ -336,10 +292,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 6 (pos 5)
-   * </pre>
-   *
    * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
    * @return The bytes for creditorName.
    */
@@ -362,10 +314,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressLine1_ = "";
   /**
-   * <pre>
-   * Field 7 (pos 6) - Street OR Address Line 1
-   * </pre>
-   *
    * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
    * @return The creditorAddressLine1.
    */
@@ -383,10 +331,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 7 (pos 6) - Street OR Address Line 1
-   * </pre>
-   *
    * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
    * @return The bytes for creditorAddressLine1.
    */
@@ -409,10 +353,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressLine2_ = "";
   /**
-   * <pre>
-   * Field 8 (pos 7) - Building Number OR Address Line 2
-   * </pre>
-   *
    * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
    * @return The creditorAddressLine2.
    */
@@ -430,10 +370,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 8 (pos 7) - Building Number OR Address Line 2
-   * </pre>
-   *
    * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
    * @return The bytes for creditorAddressLine2.
    */
@@ -456,10 +392,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressPostalCode_ = "";
   /**
-   * <pre>
-   * Field 9 (pos 8) - Postal Code OR empty
-   * </pre>
-   *
    * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
    * @return The creditorAddressPostalCode.
    */
@@ -477,10 +409,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 9 (pos 8) - Postal Code OR empty
-   * </pre>
-   *
    * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
    * @return The bytes for creditorAddressPostalCode.
    */
@@ -503,10 +431,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressCity_ = "";
   /**
-   * <pre>
-   * Field 10 (pos 9) - City OR empty
-   * </pre>
-   *
    * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
    * @return The creditorAddressCity.
    */
@@ -524,10 +448,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 10 (pos 9) - City OR empty
-   * </pre>
-   *
    * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
    * @return The bytes for creditorAddressCity.
    */
@@ -550,10 +470,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object creditorAddressCountry_ = "";
   /**
-   * <pre>
-   * Field 11 (pos 10)
-   * </pre>
-   *
    * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
    * @return The creditorAddressCountry.
    */
@@ -571,10 +487,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 11 (pos 10)
-   * </pre>
-   *
    * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
    * @return The bytes for creditorAddressCountry.
    */
@@ -597,10 +509,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressType_ = "";
   /**
-   * <pre>
-   * Ultimate Creditor (11-17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
    * @return The ultimateCreditorAddressType.
    */
@@ -618,10 +526,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Ultimate Creditor (11-17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
    * @return The bytes for ultimateCreditorAddressType.
    */
@@ -644,10 +548,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorName_ = "";
   /**
-   * <pre>
-   * Field 13 (pos 12)
-   * </pre>
-   *
    * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
    * @return The ultimateCreditorName.
    */
@@ -665,10 +565,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 13 (pos 12)
-   * </pre>
-   *
    * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
    * @return The bytes for ultimateCreditorName.
    */
@@ -691,10 +587,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressLine1_ = "";
   /**
-   * <pre>
-   * Field 14 (pos 13)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
    * @return The ultimateCreditorAddressLine1.
    */
@@ -712,10 +604,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 14 (pos 13)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
    * @return The bytes for ultimateCreditorAddressLine1.
    */
@@ -738,10 +626,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressLine2_ = "";
   /**
-   * <pre>
-   * Field 15 (pos 14)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
    * @return The ultimateCreditorAddressLine2.
    */
@@ -759,10 +643,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 15 (pos 14)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
    * @return The bytes for ultimateCreditorAddressLine2.
    */
@@ -785,10 +665,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressPostalCode_ = "";
   /**
-   * <pre>
-   * Field 16 (pos 15)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
    * @return The ultimateCreditorAddressPostalCode.
    */
@@ -806,10 +682,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 16 (pos 15)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
    * @return The bytes for ultimateCreditorAddressPostalCode.
    */
@@ -832,10 +704,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressCity_ = "";
   /**
-   * <pre>
-   * Field 17 (pos 16)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
    * @return The ultimateCreditorAddressCity.
    */
@@ -853,10 +721,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 17 (pos 16)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
    * @return The bytes for ultimateCreditorAddressCity.
    */
@@ -879,10 +743,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateCreditorAddressCountry_ = "";
   /**
-   * <pre>
-   * Field 18 (pos 17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
    * @return The ultimateCreditorAddressCountry.
    */
@@ -900,10 +760,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 18 (pos 17)
-   * </pre>
-   *
    * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
    * @return The bytes for ultimateCreditorAddressCountry.
    */
@@ -926,10 +782,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object amount_ = "";
   /**
-   * <pre>
-   * Payment Information (18-19)
-   * </pre>
-   *
    * <code>string amount = 19 [json_name = "amount"];</code>
    * @return The amount.
    */
@@ -947,10 +799,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Payment Information (18-19)
-   * </pre>
-   *
    * <code>string amount = 19 [json_name = "amount"];</code>
    * @return The bytes for amount.
    */
@@ -973,10 +821,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object currency_ = "";
   /**
-   * <pre>
-   * Field 20 (pos 19)
-   * </pre>
-   *
    * <code>string currency = 20 [json_name = "currency"];</code>
    * @return The currency.
    */
@@ -994,10 +838,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 20 (pos 19)
-   * </pre>
-   *
    * <code>string currency = 20 [json_name = "currency"];</code>
    * @return The bytes for currency.
    */
@@ -1020,10 +860,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressType_ = "";
   /**
-   * <pre>
-   * Ultimate Debtor (20-26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
    * @return The ultimateDebtorAddressType.
    */
@@ -1041,10 +877,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Ultimate Debtor (20-26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
    * @return The bytes for ultimateDebtorAddressType.
    */
@@ -1067,10 +899,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorName_ = "";
   /**
-   * <pre>
-   * Field 22 (pos 21)
-   * </pre>
-   *
    * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
    * @return The ultimateDebtorName.
    */
@@ -1088,10 +916,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 22 (pos 21)
-   * </pre>
-   *
    * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
    * @return The bytes for ultimateDebtorName.
    */
@@ -1114,10 +938,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressLine1_ = "";
   /**
-   * <pre>
-   * Field 23 (pos 22)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
    * @return The ultimateDebtorAddressLine1.
    */
@@ -1135,10 +955,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 23 (pos 22)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
    * @return The bytes for ultimateDebtorAddressLine1.
    */
@@ -1161,10 +977,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressLine2_ = "";
   /**
-   * <pre>
-   * Field 24 (pos 23)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
    * @return The ultimateDebtorAddressLine2.
    */
@@ -1182,10 +994,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 24 (pos 23)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
    * @return The bytes for ultimateDebtorAddressLine2.
    */
@@ -1208,10 +1016,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressPostalCode_ = "";
   /**
-   * <pre>
-   * Field 25 (pos 24)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
    * @return The ultimateDebtorAddressPostalCode.
    */
@@ -1229,10 +1033,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 25 (pos 24)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
    * @return The bytes for ultimateDebtorAddressPostalCode.
    */
@@ -1255,10 +1055,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressCity_ = "";
   /**
-   * <pre>
-   * Field 26 (pos 25)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
    * @return The ultimateDebtorAddressCity.
    */
@@ -1276,10 +1072,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 26 (pos 25)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
    * @return The bytes for ultimateDebtorAddressCity.
    */
@@ -1302,10 +1094,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ultimateDebtorAddressCountry_ = "";
   /**
-   * <pre>
-   * Field 27 (pos 26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
    * @return The ultimateDebtorAddressCountry.
    */
@@ -1323,10 +1111,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 27 (pos 26)
-   * </pre>
-   *
    * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
    * @return The bytes for ultimateDebtorAddressCountry.
    */
@@ -1349,10 +1133,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object paymentReferenceType_ = "";
   /**
-   * <pre>
-   * Reference Information (27-28)
-   * </pre>
-   *
    * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
    * @return The paymentReferenceType.
    */
@@ -1370,10 +1150,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Reference Information (27-28)
-   * </pre>
-   *
    * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
    * @return The bytes for paymentReferenceType.
    */
@@ -1396,10 +1172,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object paymentReference_ = "";
   /**
-   * <pre>
-   * Field 29 (pos 28)
-   * </pre>
-   *
    * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
    * @return The paymentReference.
    */
@@ -1417,10 +1189,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 29 (pos 28)
-   * </pre>
-   *
    * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
    * @return The bytes for paymentReference.
    */
@@ -1443,10 +1211,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object unstructuredMessage_ = "";
   /**
-   * <pre>
-   * Additional Information (29-30)
-   * </pre>
-   *
    * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
    * @return The unstructuredMessage.
    */
@@ -1464,10 +1228,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Additional Information (29-30)
-   * </pre>
-   *
    * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
    * @return The bytes for unstructuredMessage.
    */
@@ -1490,10 +1250,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object trailer_ = "";
   /**
-   * <pre>
-   * Field 31 (pos 30) - "EPD"
-   * </pre>
-   *
    * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The trailer.
    */
@@ -1511,10 +1267,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 31 (pos 30) - "EPD"
-   * </pre>
-   *
    * <code>string trailer = 31 [json_name = "trailer"];</code>
    * @return The bytes for trailer.
    */
@@ -1537,10 +1289,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object billingInformation_ = "";
   /**
-   * <pre>
-   * Additional Information (30-31)
-   * </pre>
-   *
    * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
    * @return The billingInformation.
    */
@@ -1558,10 +1306,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Additional Information (30-31)
-   * </pre>
-   *
    * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
    * @return The bytes for billingInformation.
    */
@@ -1584,10 +1328,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object av1Parameters_ = "";
   /**
-   * <pre>
-   * Field 33 (pos 31)
-   * </pre>
-   *
    * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
    * @return The av1Parameters.
    */
@@ -1605,10 +1345,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 33 (pos 31)
-   * </pre>
-   *
    * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
    * @return The bytes for av1Parameters.
    */
@@ -1631,10 +1367,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object av2Parameters_ = "";
   /**
-   * <pre>
-   * Field 34 (pos 32)
-   * </pre>
-   *
    * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
    * @return The av2Parameters.
    */
@@ -1652,10 +1384,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Field 34 (pos 32)
-   * </pre>
-   *
    * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
    * @return The bytes for av2Parameters.
    */
@@ -2769,10 +2497,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object qrType_ = "";
     /**
-     * <pre>
-     * Header (0-2)
-     * </pre>
-     *
      * <code>string qr_type = 1 [json_name = "qrType"];</code>
      * @return The qrType.
      */
@@ -2789,10 +2513,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Header (0-2)
-     * </pre>
-     *
      * <code>string qr_type = 1 [json_name = "qrType"];</code>
      * @return The bytes for qrType.
      */
@@ -2810,10 +2530,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Header (0-2)
-     * </pre>
-     *
      * <code>string qr_type = 1 [json_name = "qrType"];</code>
      * @param value The qrType to set.
      * @return This builder for chaining.
@@ -2827,10 +2543,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Header (0-2)
-     * </pre>
-     *
      * <code>string qr_type = 1 [json_name = "qrType"];</code>
      * @return This builder for chaining.
      */
@@ -2841,10 +2553,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Header (0-2)
-     * </pre>
-     *
      * <code>string qr_type = 1 [json_name = "qrType"];</code>
      * @param value The bytes for qrType to set.
      * @return This builder for chaining.
@@ -2861,10 +2569,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object version_ = "";
     /**
-     * <pre>
-     * Field 2 (pos 1)
-     * </pre>
-     *
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The version.
      */
@@ -2881,10 +2585,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 2 (pos 1)
-     * </pre>
-     *
      * <code>string version = 2 [json_name = "version"];</code>
      * @return The bytes for version.
      */
@@ -2902,10 +2602,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 2 (pos 1)
-     * </pre>
-     *
      * <code>string version = 2 [json_name = "version"];</code>
      * @param value The version to set.
      * @return This builder for chaining.
@@ -2919,10 +2615,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 2 (pos 1)
-     * </pre>
-     *
      * <code>string version = 2 [json_name = "version"];</code>
      * @return This builder for chaining.
      */
@@ -2933,10 +2625,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 2 (pos 1)
-     * </pre>
-     *
      * <code>string version = 2 [json_name = "version"];</code>
      * @param value The bytes for version to set.
      * @return This builder for chaining.
@@ -2953,10 +2641,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object codingType_ = "";
     /**
-     * <pre>
-     * Field 3 (pos 2)
-     * </pre>
-     *
      * <code>string coding_type = 3 [json_name = "codingType"];</code>
      * @return The codingType.
      */
@@ -2973,10 +2657,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 3 (pos 2)
-     * </pre>
-     *
      * <code>string coding_type = 3 [json_name = "codingType"];</code>
      * @return The bytes for codingType.
      */
@@ -2994,10 +2674,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 3 (pos 2)
-     * </pre>
-     *
      * <code>string coding_type = 3 [json_name = "codingType"];</code>
      * @param value The codingType to set.
      * @return This builder for chaining.
@@ -3011,10 +2687,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 3 (pos 2)
-     * </pre>
-     *
      * <code>string coding_type = 3 [json_name = "codingType"];</code>
      * @return This builder for chaining.
      */
@@ -3025,10 +2697,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 3 (pos 2)
-     * </pre>
-     *
      * <code>string coding_type = 3 [json_name = "codingType"];</code>
      * @param value The bytes for codingType to set.
      * @return This builder for chaining.
@@ -3045,10 +2713,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object account_ = "";
     /**
-     * <pre>
-     * Account (3)
-     * </pre>
-     *
      * <code>string account = 4 [json_name = "account"];</code>
      * @return The account.
      */
@@ -3065,10 +2729,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Account (3)
-     * </pre>
-     *
      * <code>string account = 4 [json_name = "account"];</code>
      * @return The bytes for account.
      */
@@ -3086,10 +2746,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Account (3)
-     * </pre>
-     *
      * <code>string account = 4 [json_name = "account"];</code>
      * @param value The account to set.
      * @return This builder for chaining.
@@ -3103,10 +2759,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Account (3)
-     * </pre>
-     *
      * <code>string account = 4 [json_name = "account"];</code>
      * @return This builder for chaining.
      */
@@ -3117,10 +2769,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Account (3)
-     * </pre>
-     *
      * <code>string account = 4 [json_name = "account"];</code>
      * @param value The bytes for account to set.
      * @return This builder for chaining.
@@ -3137,10 +2785,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressType_ = "";
     /**
-     * <pre>
-     * Creditor (4-10)
-     * </pre>
-     *
      * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
      * @return The creditorAddressType.
      */
@@ -3157,10 +2801,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Creditor (4-10)
-     * </pre>
-     *
      * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
      * @return The bytes for creditorAddressType.
      */
@@ -3178,10 +2818,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Creditor (4-10)
-     * </pre>
-     *
      * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
      * @param value The creditorAddressType to set.
      * @return This builder for chaining.
@@ -3195,10 +2831,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Creditor (4-10)
-     * </pre>
-     *
      * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
      * @return This builder for chaining.
      */
@@ -3209,10 +2841,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Creditor (4-10)
-     * </pre>
-     *
      * <code>string creditor_address_type = 5 [json_name = "creditorAddressType"];</code>
      * @param value The bytes for creditorAddressType to set.
      * @return This builder for chaining.
@@ -3229,10 +2857,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorName_ = "";
     /**
-     * <pre>
-     * Field 6 (pos 5)
-     * </pre>
-     *
      * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
      * @return The creditorName.
      */
@@ -3249,10 +2873,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 6 (pos 5)
-     * </pre>
-     *
      * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
      * @return The bytes for creditorName.
      */
@@ -3270,10 +2890,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 6 (pos 5)
-     * </pre>
-     *
      * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
      * @param value The creditorName to set.
      * @return This builder for chaining.
@@ -3287,10 +2903,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 6 (pos 5)
-     * </pre>
-     *
      * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
      * @return This builder for chaining.
      */
@@ -3301,10 +2913,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 6 (pos 5)
-     * </pre>
-     *
      * <code>string creditor_name = 6 [json_name = "creditorName"];</code>
      * @param value The bytes for creditorName to set.
      * @return This builder for chaining.
@@ -3321,10 +2929,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressLine1_ = "";
     /**
-     * <pre>
-     * Field 7 (pos 6) - Street OR Address Line 1
-     * </pre>
-     *
      * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
      * @return The creditorAddressLine1.
      */
@@ -3341,10 +2945,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 7 (pos 6) - Street OR Address Line 1
-     * </pre>
-     *
      * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
      * @return The bytes for creditorAddressLine1.
      */
@@ -3362,10 +2962,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 7 (pos 6) - Street OR Address Line 1
-     * </pre>
-     *
      * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
      * @param value The creditorAddressLine1 to set.
      * @return This builder for chaining.
@@ -3379,10 +2975,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 7 (pos 6) - Street OR Address Line 1
-     * </pre>
-     *
      * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
      * @return This builder for chaining.
      */
@@ -3393,10 +2985,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 7 (pos 6) - Street OR Address Line 1
-     * </pre>
-     *
      * <code>string creditor_address_line_1 = 7 [json_name = "creditorAddressLine1"];</code>
      * @param value The bytes for creditorAddressLine1 to set.
      * @return This builder for chaining.
@@ -3413,10 +3001,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressLine2_ = "";
     /**
-     * <pre>
-     * Field 8 (pos 7) - Building Number OR Address Line 2
-     * </pre>
-     *
      * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
      * @return The creditorAddressLine2.
      */
@@ -3433,10 +3017,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 8 (pos 7) - Building Number OR Address Line 2
-     * </pre>
-     *
      * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
      * @return The bytes for creditorAddressLine2.
      */
@@ -3454,10 +3034,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 8 (pos 7) - Building Number OR Address Line 2
-     * </pre>
-     *
      * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
      * @param value The creditorAddressLine2 to set.
      * @return This builder for chaining.
@@ -3471,10 +3047,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 8 (pos 7) - Building Number OR Address Line 2
-     * </pre>
-     *
      * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
      * @return This builder for chaining.
      */
@@ -3485,10 +3057,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 8 (pos 7) - Building Number OR Address Line 2
-     * </pre>
-     *
      * <code>string creditor_address_line_2 = 8 [json_name = "creditorAddressLine2"];</code>
      * @param value The bytes for creditorAddressLine2 to set.
      * @return This builder for chaining.
@@ -3505,10 +3073,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressPostalCode_ = "";
     /**
-     * <pre>
-     * Field 9 (pos 8) - Postal Code OR empty
-     * </pre>
-     *
      * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
      * @return The creditorAddressPostalCode.
      */
@@ -3525,10 +3089,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 9 (pos 8) - Postal Code OR empty
-     * </pre>
-     *
      * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
      * @return The bytes for creditorAddressPostalCode.
      */
@@ -3546,10 +3106,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 9 (pos 8) - Postal Code OR empty
-     * </pre>
-     *
      * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
      * @param value The creditorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -3563,10 +3119,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 9 (pos 8) - Postal Code OR empty
-     * </pre>
-     *
      * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
      * @return This builder for chaining.
      */
@@ -3577,10 +3129,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 9 (pos 8) - Postal Code OR empty
-     * </pre>
-     *
      * <code>string creditor_address_postal_code = 9 [json_name = "creditorAddressPostalCode"];</code>
      * @param value The bytes for creditorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -3597,10 +3145,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressCity_ = "";
     /**
-     * <pre>
-     * Field 10 (pos 9) - City OR empty
-     * </pre>
-     *
      * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
      * @return The creditorAddressCity.
      */
@@ -3617,10 +3161,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 10 (pos 9) - City OR empty
-     * </pre>
-     *
      * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
      * @return The bytes for creditorAddressCity.
      */
@@ -3638,10 +3178,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 10 (pos 9) - City OR empty
-     * </pre>
-     *
      * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
      * @param value The creditorAddressCity to set.
      * @return This builder for chaining.
@@ -3655,10 +3191,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 10 (pos 9) - City OR empty
-     * </pre>
-     *
      * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
      * @return This builder for chaining.
      */
@@ -3669,10 +3201,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 10 (pos 9) - City OR empty
-     * </pre>
-     *
      * <code>string creditor_address_city = 10 [json_name = "creditorAddressCity"];</code>
      * @param value The bytes for creditorAddressCity to set.
      * @return This builder for chaining.
@@ -3689,10 +3217,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object creditorAddressCountry_ = "";
     /**
-     * <pre>
-     * Field 11 (pos 10)
-     * </pre>
-     *
      * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
      * @return The creditorAddressCountry.
      */
@@ -3709,10 +3233,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 11 (pos 10)
-     * </pre>
-     *
      * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
      * @return The bytes for creditorAddressCountry.
      */
@@ -3730,10 +3250,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 11 (pos 10)
-     * </pre>
-     *
      * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
      * @param value The creditorAddressCountry to set.
      * @return This builder for chaining.
@@ -3747,10 +3263,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 11 (pos 10)
-     * </pre>
-     *
      * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
      * @return This builder for chaining.
      */
@@ -3761,10 +3273,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 11 (pos 10)
-     * </pre>
-     *
      * <code>string creditor_address_country = 11 [json_name = "creditorAddressCountry"];</code>
      * @param value The bytes for creditorAddressCountry to set.
      * @return This builder for chaining.
@@ -3781,10 +3289,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressType_ = "";
     /**
-     * <pre>
-     * Ultimate Creditor (11-17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
      * @return The ultimateCreditorAddressType.
      */
@@ -3801,10 +3305,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Ultimate Creditor (11-17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
      * @return The bytes for ultimateCreditorAddressType.
      */
@@ -3822,10 +3322,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Ultimate Creditor (11-17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
      * @param value The ultimateCreditorAddressType to set.
      * @return This builder for chaining.
@@ -3839,10 +3335,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Ultimate Creditor (11-17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
      * @return This builder for chaining.
      */
@@ -3853,10 +3345,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Ultimate Creditor (11-17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_type = 12 [json_name = "ultimateCreditorAddressType"];</code>
      * @param value The bytes for ultimateCreditorAddressType to set.
      * @return This builder for chaining.
@@ -3873,10 +3361,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorName_ = "";
     /**
-     * <pre>
-     * Field 13 (pos 12)
-     * </pre>
-     *
      * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
      * @return The ultimateCreditorName.
      */
@@ -3893,10 +3377,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 13 (pos 12)
-     * </pre>
-     *
      * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
      * @return The bytes for ultimateCreditorName.
      */
@@ -3914,10 +3394,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 13 (pos 12)
-     * </pre>
-     *
      * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
      * @param value The ultimateCreditorName to set.
      * @return This builder for chaining.
@@ -3931,10 +3407,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 13 (pos 12)
-     * </pre>
-     *
      * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
      * @return This builder for chaining.
      */
@@ -3945,10 +3417,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 13 (pos 12)
-     * </pre>
-     *
      * <code>string ultimate_creditor_name = 13 [json_name = "ultimateCreditorName"];</code>
      * @param value The bytes for ultimateCreditorName to set.
      * @return This builder for chaining.
@@ -3965,10 +3433,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressLine1_ = "";
     /**
-     * <pre>
-     * Field 14 (pos 13)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
      * @return The ultimateCreditorAddressLine1.
      */
@@ -3985,10 +3449,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 14 (pos 13)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
      * @return The bytes for ultimateCreditorAddressLine1.
      */
@@ -4006,10 +3466,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 14 (pos 13)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
      * @param value The ultimateCreditorAddressLine1 to set.
      * @return This builder for chaining.
@@ -4023,10 +3479,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 14 (pos 13)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
      * @return This builder for chaining.
      */
@@ -4037,10 +3489,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 14 (pos 13)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_1 = 14 [json_name = "ultimateCreditorAddressLine1"];</code>
      * @param value The bytes for ultimateCreditorAddressLine1 to set.
      * @return This builder for chaining.
@@ -4057,10 +3505,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressLine2_ = "";
     /**
-     * <pre>
-     * Field 15 (pos 14)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
      * @return The ultimateCreditorAddressLine2.
      */
@@ -4077,10 +3521,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 15 (pos 14)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
      * @return The bytes for ultimateCreditorAddressLine2.
      */
@@ -4098,10 +3538,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 15 (pos 14)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
      * @param value The ultimateCreditorAddressLine2 to set.
      * @return This builder for chaining.
@@ -4115,10 +3551,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 15 (pos 14)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
      * @return This builder for chaining.
      */
@@ -4129,10 +3561,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 15 (pos 14)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_line_2 = 15 [json_name = "ultimateCreditorAddressLine2"];</code>
      * @param value The bytes for ultimateCreditorAddressLine2 to set.
      * @return This builder for chaining.
@@ -4149,10 +3577,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressPostalCode_ = "";
     /**
-     * <pre>
-     * Field 16 (pos 15)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
      * @return The ultimateCreditorAddressPostalCode.
      */
@@ -4169,10 +3593,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 16 (pos 15)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
      * @return The bytes for ultimateCreditorAddressPostalCode.
      */
@@ -4190,10 +3610,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 16 (pos 15)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
      * @param value The ultimateCreditorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -4207,10 +3623,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 16 (pos 15)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
      * @return This builder for chaining.
      */
@@ -4221,10 +3633,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 16 (pos 15)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_postal_code = 16 [json_name = "ultimateCreditorAddressPostalCode"];</code>
      * @param value The bytes for ultimateCreditorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -4241,10 +3649,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressCity_ = "";
     /**
-     * <pre>
-     * Field 17 (pos 16)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
      * @return The ultimateCreditorAddressCity.
      */
@@ -4261,10 +3665,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 17 (pos 16)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
      * @return The bytes for ultimateCreditorAddressCity.
      */
@@ -4282,10 +3682,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 17 (pos 16)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
      * @param value The ultimateCreditorAddressCity to set.
      * @return This builder for chaining.
@@ -4299,10 +3695,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 17 (pos 16)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
      * @return This builder for chaining.
      */
@@ -4313,10 +3705,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 17 (pos 16)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_city = 17 [json_name = "ultimateCreditorAddressCity"];</code>
      * @param value The bytes for ultimateCreditorAddressCity to set.
      * @return This builder for chaining.
@@ -4333,10 +3721,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateCreditorAddressCountry_ = "";
     /**
-     * <pre>
-     * Field 18 (pos 17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
      * @return The ultimateCreditorAddressCountry.
      */
@@ -4353,10 +3737,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 18 (pos 17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
      * @return The bytes for ultimateCreditorAddressCountry.
      */
@@ -4374,10 +3754,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 18 (pos 17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
      * @param value The ultimateCreditorAddressCountry to set.
      * @return This builder for chaining.
@@ -4391,10 +3767,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 18 (pos 17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
      * @return This builder for chaining.
      */
@@ -4405,10 +3777,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 18 (pos 17)
-     * </pre>
-     *
      * <code>string ultimate_creditor_address_country = 18 [json_name = "ultimateCreditorAddressCountry"];</code>
      * @param value The bytes for ultimateCreditorAddressCountry to set.
      * @return This builder for chaining.
@@ -4425,10 +3793,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object amount_ = "";
     /**
-     * <pre>
-     * Payment Information (18-19)
-     * </pre>
-     *
      * <code>string amount = 19 [json_name = "amount"];</code>
      * @return The amount.
      */
@@ -4445,10 +3809,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Payment Information (18-19)
-     * </pre>
-     *
      * <code>string amount = 19 [json_name = "amount"];</code>
      * @return The bytes for amount.
      */
@@ -4466,10 +3826,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Payment Information (18-19)
-     * </pre>
-     *
      * <code>string amount = 19 [json_name = "amount"];</code>
      * @param value The amount to set.
      * @return This builder for chaining.
@@ -4483,10 +3839,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Payment Information (18-19)
-     * </pre>
-     *
      * <code>string amount = 19 [json_name = "amount"];</code>
      * @return This builder for chaining.
      */
@@ -4497,10 +3849,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Payment Information (18-19)
-     * </pre>
-     *
      * <code>string amount = 19 [json_name = "amount"];</code>
      * @param value The bytes for amount to set.
      * @return This builder for chaining.
@@ -4517,10 +3865,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object currency_ = "";
     /**
-     * <pre>
-     * Field 20 (pos 19)
-     * </pre>
-     *
      * <code>string currency = 20 [json_name = "currency"];</code>
      * @return The currency.
      */
@@ -4537,10 +3881,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 20 (pos 19)
-     * </pre>
-     *
      * <code>string currency = 20 [json_name = "currency"];</code>
      * @return The bytes for currency.
      */
@@ -4558,10 +3898,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 20 (pos 19)
-     * </pre>
-     *
      * <code>string currency = 20 [json_name = "currency"];</code>
      * @param value The currency to set.
      * @return This builder for chaining.
@@ -4575,10 +3911,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 20 (pos 19)
-     * </pre>
-     *
      * <code>string currency = 20 [json_name = "currency"];</code>
      * @return This builder for chaining.
      */
@@ -4589,10 +3921,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 20 (pos 19)
-     * </pre>
-     *
      * <code>string currency = 20 [json_name = "currency"];</code>
      * @param value The bytes for currency to set.
      * @return This builder for chaining.
@@ -4609,10 +3937,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressType_ = "";
     /**
-     * <pre>
-     * Ultimate Debtor (20-26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
      * @return The ultimateDebtorAddressType.
      */
@@ -4629,10 +3953,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Ultimate Debtor (20-26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
      * @return The bytes for ultimateDebtorAddressType.
      */
@@ -4650,10 +3970,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Ultimate Debtor (20-26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
      * @param value The ultimateDebtorAddressType to set.
      * @return This builder for chaining.
@@ -4667,10 +3983,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Ultimate Debtor (20-26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
      * @return This builder for chaining.
      */
@@ -4681,10 +3993,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Ultimate Debtor (20-26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_type = 21 [json_name = "ultimateDebtorAddressType"];</code>
      * @param value The bytes for ultimateDebtorAddressType to set.
      * @return This builder for chaining.
@@ -4701,10 +4009,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorName_ = "";
     /**
-     * <pre>
-     * Field 22 (pos 21)
-     * </pre>
-     *
      * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
      * @return The ultimateDebtorName.
      */
@@ -4721,10 +4025,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 22 (pos 21)
-     * </pre>
-     *
      * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
      * @return The bytes for ultimateDebtorName.
      */
@@ -4742,10 +4042,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 22 (pos 21)
-     * </pre>
-     *
      * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
      * @param value The ultimateDebtorName to set.
      * @return This builder for chaining.
@@ -4759,10 +4055,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 22 (pos 21)
-     * </pre>
-     *
      * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
      * @return This builder for chaining.
      */
@@ -4773,10 +4065,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 22 (pos 21)
-     * </pre>
-     *
      * <code>string ultimate_debtor_name = 22 [json_name = "ultimateDebtorName"];</code>
      * @param value The bytes for ultimateDebtorName to set.
      * @return This builder for chaining.
@@ -4793,10 +4081,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressLine1_ = "";
     /**
-     * <pre>
-     * Field 23 (pos 22)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
      * @return The ultimateDebtorAddressLine1.
      */
@@ -4813,10 +4097,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 23 (pos 22)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
      * @return The bytes for ultimateDebtorAddressLine1.
      */
@@ -4834,10 +4114,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 23 (pos 22)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
      * @param value The ultimateDebtorAddressLine1 to set.
      * @return This builder for chaining.
@@ -4851,10 +4127,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 23 (pos 22)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
      * @return This builder for chaining.
      */
@@ -4865,10 +4137,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 23 (pos 22)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_1 = 23 [json_name = "ultimateDebtorAddressLine1"];</code>
      * @param value The bytes for ultimateDebtorAddressLine1 to set.
      * @return This builder for chaining.
@@ -4885,10 +4153,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressLine2_ = "";
     /**
-     * <pre>
-     * Field 24 (pos 23)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
      * @return The ultimateDebtorAddressLine2.
      */
@@ -4905,10 +4169,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 24 (pos 23)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
      * @return The bytes for ultimateDebtorAddressLine2.
      */
@@ -4926,10 +4186,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 24 (pos 23)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
      * @param value The ultimateDebtorAddressLine2 to set.
      * @return This builder for chaining.
@@ -4943,10 +4199,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 24 (pos 23)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
      * @return This builder for chaining.
      */
@@ -4957,10 +4209,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 24 (pos 23)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_line_2 = 24 [json_name = "ultimateDebtorAddressLine2"];</code>
      * @param value The bytes for ultimateDebtorAddressLine2 to set.
      * @return This builder for chaining.
@@ -4977,10 +4225,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressPostalCode_ = "";
     /**
-     * <pre>
-     * Field 25 (pos 24)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
      * @return The ultimateDebtorAddressPostalCode.
      */
@@ -4997,10 +4241,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 25 (pos 24)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
      * @return The bytes for ultimateDebtorAddressPostalCode.
      */
@@ -5018,10 +4258,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 25 (pos 24)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
      * @param value The ultimateDebtorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -5035,10 +4271,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 25 (pos 24)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
      * @return This builder for chaining.
      */
@@ -5049,10 +4281,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 25 (pos 24)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_postal_code = 25 [json_name = "ultimateDebtorAddressPostalCode"];</code>
      * @param value The bytes for ultimateDebtorAddressPostalCode to set.
      * @return This builder for chaining.
@@ -5069,10 +4297,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressCity_ = "";
     /**
-     * <pre>
-     * Field 26 (pos 25)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
      * @return The ultimateDebtorAddressCity.
      */
@@ -5089,10 +4313,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 26 (pos 25)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
      * @return The bytes for ultimateDebtorAddressCity.
      */
@@ -5110,10 +4330,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 26 (pos 25)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
      * @param value The ultimateDebtorAddressCity to set.
      * @return This builder for chaining.
@@ -5127,10 +4343,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 26 (pos 25)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
      * @return This builder for chaining.
      */
@@ -5141,10 +4353,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 26 (pos 25)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_city = 26 [json_name = "ultimateDebtorAddressCity"];</code>
      * @param value The bytes for ultimateDebtorAddressCity to set.
      * @return This builder for chaining.
@@ -5161,10 +4369,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ultimateDebtorAddressCountry_ = "";
     /**
-     * <pre>
-     * Field 27 (pos 26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
      * @return The ultimateDebtorAddressCountry.
      */
@@ -5181,10 +4385,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 27 (pos 26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
      * @return The bytes for ultimateDebtorAddressCountry.
      */
@@ -5202,10 +4402,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 27 (pos 26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
      * @param value The ultimateDebtorAddressCountry to set.
      * @return This builder for chaining.
@@ -5219,10 +4415,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 27 (pos 26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
      * @return This builder for chaining.
      */
@@ -5233,10 +4425,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 27 (pos 26)
-     * </pre>
-     *
      * <code>string ultimate_debtor_address_country = 27 [json_name = "ultimateDebtorAddressCountry"];</code>
      * @param value The bytes for ultimateDebtorAddressCountry to set.
      * @return This builder for chaining.
@@ -5253,10 +4441,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object paymentReferenceType_ = "";
     /**
-     * <pre>
-     * Reference Information (27-28)
-     * </pre>
-     *
      * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
      * @return The paymentReferenceType.
      */
@@ -5273,10 +4457,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Reference Information (27-28)
-     * </pre>
-     *
      * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
      * @return The bytes for paymentReferenceType.
      */
@@ -5294,10 +4474,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Reference Information (27-28)
-     * </pre>
-     *
      * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
      * @param value The paymentReferenceType to set.
      * @return This builder for chaining.
@@ -5311,10 +4487,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Reference Information (27-28)
-     * </pre>
-     *
      * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
      * @return This builder for chaining.
      */
@@ -5325,10 +4497,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Reference Information (27-28)
-     * </pre>
-     *
      * <code>string payment_reference_type = 28 [json_name = "paymentReferenceType"];</code>
      * @param value The bytes for paymentReferenceType to set.
      * @return This builder for chaining.
@@ -5345,10 +4513,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object paymentReference_ = "";
     /**
-     * <pre>
-     * Field 29 (pos 28)
-     * </pre>
-     *
      * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
      * @return The paymentReference.
      */
@@ -5365,10 +4529,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 29 (pos 28)
-     * </pre>
-     *
      * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
      * @return The bytes for paymentReference.
      */
@@ -5386,10 +4546,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 29 (pos 28)
-     * </pre>
-     *
      * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
      * @param value The paymentReference to set.
      * @return This builder for chaining.
@@ -5403,10 +4559,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 29 (pos 28)
-     * </pre>
-     *
      * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
      * @return This builder for chaining.
      */
@@ -5417,10 +4569,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 29 (pos 28)
-     * </pre>
-     *
      * <code>string payment_reference = 29 [json_name = "paymentReference"];</code>
      * @param value The bytes for paymentReference to set.
      * @return This builder for chaining.
@@ -5437,10 +4585,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object unstructuredMessage_ = "";
     /**
-     * <pre>
-     * Additional Information (29-30)
-     * </pre>
-     *
      * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
      * @return The unstructuredMessage.
      */
@@ -5457,10 +4601,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Additional Information (29-30)
-     * </pre>
-     *
      * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
      * @return The bytes for unstructuredMessage.
      */
@@ -5478,10 +4618,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Additional Information (29-30)
-     * </pre>
-     *
      * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
      * @param value The unstructuredMessage to set.
      * @return This builder for chaining.
@@ -5495,10 +4631,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Additional Information (29-30)
-     * </pre>
-     *
      * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
      * @return This builder for chaining.
      */
@@ -5509,10 +4641,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Additional Information (29-30)
-     * </pre>
-     *
      * <code>string unstructured_message = 30 [json_name = "unstructuredMessage"];</code>
      * @param value The bytes for unstructuredMessage to set.
      * @return This builder for chaining.
@@ -5529,10 +4657,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object trailer_ = "";
     /**
-     * <pre>
-     * Field 31 (pos 30) - "EPD"
-     * </pre>
-     *
      * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return The trailer.
      */
@@ -5549,10 +4673,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 31 (pos 30) - "EPD"
-     * </pre>
-     *
      * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return The bytes for trailer.
      */
@@ -5570,10 +4690,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 31 (pos 30) - "EPD"
-     * </pre>
-     *
      * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @param value The trailer to set.
      * @return This builder for chaining.
@@ -5587,10 +4703,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 31 (pos 30) - "EPD"
-     * </pre>
-     *
      * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @return This builder for chaining.
      */
@@ -5601,10 +4713,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 31 (pos 30) - "EPD"
-     * </pre>
-     *
      * <code>string trailer = 31 [json_name = "trailer"];</code>
      * @param value The bytes for trailer to set.
      * @return This builder for chaining.
@@ -5621,10 +4729,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object billingInformation_ = "";
     /**
-     * <pre>
-     * Additional Information (30-31)
-     * </pre>
-     *
      * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
      * @return The billingInformation.
      */
@@ -5641,10 +4745,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Additional Information (30-31)
-     * </pre>
-     *
      * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
      * @return The bytes for billingInformation.
      */
@@ -5662,10 +4762,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Additional Information (30-31)
-     * </pre>
-     *
      * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
      * @param value The billingInformation to set.
      * @return This builder for chaining.
@@ -5679,10 +4775,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Additional Information (30-31)
-     * </pre>
-     *
      * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
      * @return This builder for chaining.
      */
@@ -5693,10 +4785,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Additional Information (30-31)
-     * </pre>
-     *
      * <code>string billing_information = 32 [json_name = "billingInformation"];</code>
      * @param value The bytes for billingInformation to set.
      * @return This builder for chaining.
@@ -5713,10 +4801,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object av1Parameters_ = "";
     /**
-     * <pre>
-     * Field 33 (pos 31)
-     * </pre>
-     *
      * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
      * @return The av1Parameters.
      */
@@ -5733,10 +4817,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 33 (pos 31)
-     * </pre>
-     *
      * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
      * @return The bytes for av1Parameters.
      */
@@ -5754,10 +4834,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 33 (pos 31)
-     * </pre>
-     *
      * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
      * @param value The av1Parameters to set.
      * @return This builder for chaining.
@@ -5771,10 +4847,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 33 (pos 31)
-     * </pre>
-     *
      * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
      * @return This builder for chaining.
      */
@@ -5785,10 +4857,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 33 (pos 31)
-     * </pre>
-     *
      * <code>string av1_parameters = 33 [json_name = "av1Parameters"];</code>
      * @param value The bytes for av1Parameters to set.
      * @return This builder for chaining.
@@ -5805,10 +4873,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object av2Parameters_ = "";
     /**
-     * <pre>
-     * Field 34 (pos 32)
-     * </pre>
-     *
      * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
      * @return The av2Parameters.
      */
@@ -5825,10 +4889,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 34 (pos 32)
-     * </pre>
-     *
      * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
      * @return The bytes for av2Parameters.
      */
@@ -5846,10 +4906,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Field 34 (pos 32)
-     * </pre>
-     *
      * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
      * @param value The av2Parameters to set.
      * @return This builder for chaining.
@@ -5863,10 +4919,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 34 (pos 32)
-     * </pre>
-     *
      * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
      * @return This builder for chaining.
      */
@@ -5877,10 +4929,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Field 34 (pos 32)
-     * </pre>
-     *
      * <code>string av2_parameters = 34 [json_name = "av2Parameters"];</code>
      * @param value The bytes for av2Parameters to set.
      * @return This builder for chaining.
