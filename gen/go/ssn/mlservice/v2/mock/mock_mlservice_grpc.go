@@ -8,7 +8,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	v2 "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
+	mlservice "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
 )
@@ -37,14 +37,14 @@ func (m *MockMlServiceClient) EXPECT() *MockMlServiceClientMockRecorder {
 }
 
 // FeatureGen mocks base method.
-func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *v2.FeatureGenRequest, opts ...grpc.CallOption) (*v2.FeatureGenResponse, error) {
+func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *mlservice.FeatureGenRequest, opts ...grpc.CallOption) (*mlservice.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "FeatureGen", varargs...)
-	ret0, _ := ret[0].(*v2.FeatureGenResponse)
+	ret0, _ := ret[0].(*mlservice.FeatureGenResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -57,14 +57,14 @@ func (mr *MockMlServiceClientMockRecorder) FeatureGen(ctx, in interface{}, opts 
 }
 
 // FeatureGenPredict mocks base method.
-func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *v2.FeatureGenPredictRequest, opts ...grpc.CallOption) (*v2.PredictResponse, error) {
+func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *mlservice.FeatureGenPredictRequest, opts ...grpc.CallOption) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "FeatureGenPredict", varargs...)
-	ret0, _ := ret[0].(*v2.PredictResponse)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -77,14 +77,14 @@ func (mr *MockMlServiceClientMockRecorder) FeatureGenPredict(ctx, in interface{}
 }
 
 // Predict mocks base method.
-func (m *MockMlServiceClient) Predict(ctx context.Context, in *v2.PredictRequest, opts ...grpc.CallOption) (*v2.PredictResponse, error) {
+func (m *MockMlServiceClient) Predict(ctx context.Context, in *mlservice.PredictRequest, opts ...grpc.CallOption) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Predict", varargs...)
-	ret0, _ := ret[0].(*v2.PredictResponse)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -120,10 +120,10 @@ func (m *MockMlServiceServer) EXPECT() *MockMlServiceServerMockRecorder {
 }
 
 // FeatureGen mocks base method.
-func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *v2.FeatureGenRequest) (*v2.FeatureGenResponse, error) {
+func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *mlservice.FeatureGenRequest) (*mlservice.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGen", arg0, arg1)
-	ret0, _ := ret[0].(*v2.FeatureGenResponse)
+	ret0, _ := ret[0].(*mlservice.FeatureGenResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -135,10 +135,10 @@ func (mr *MockMlServiceServerMockRecorder) FeatureGen(arg0, arg1 interface{}) *g
 }
 
 // FeatureGenPredict mocks base method.
-func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *v2.FeatureGenPredictRequest) (*v2.PredictResponse, error) {
+func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *mlservice.FeatureGenPredictRequest) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGenPredict", arg0, arg1)
-	ret0, _ := ret[0].(*v2.PredictResponse)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -150,10 +150,10 @@ func (mr *MockMlServiceServerMockRecorder) FeatureGenPredict(arg0, arg1 interfac
 }
 
 // Predict mocks base method.
-func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *v2.PredictRequest) (*v2.PredictResponse, error) {
+func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *mlservice.PredictRequest) (*mlservice.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Predict", arg0, arg1)
-	ret0, _ := ret[0].(*v2.PredictResponse)
+	ret0, _ := ret[0].(*mlservice.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
