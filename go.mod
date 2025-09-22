@@ -1,6 +1,6 @@
 module github.com/e-conomic/vmlapis
 
-go 1.20
+go 1.23.0
 
 require (
 	github.com/envoyproxy/protoc-gen-validate v0.10.1
@@ -13,7 +13,7 @@ require (
 
 require (
 	github.com/golang/protobuf v1.5.3 // indirect
-	golang.org/x/net v0.9.0 // indirect
-	golang.org/x/sys v0.7.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/net v0.38.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/text v0.23.0 // indirect
 )
