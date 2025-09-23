@@ -34,6 +34,7 @@ export namespace Confidence {
     MID = 3,
     HIGH = 4,
     VERY_HIGH = 5,
+    VERIFIED = 6,
   }
 }
 
@@ -65,6 +66,11 @@ export class Candidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): Candidate;
 
+  getCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
+  setCorrected(value?: google_protobuf_wrappers_pb.BoolValue): Candidate;
+  hasCorrected(): boolean;
+  clearCorrected(): Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Candidate.AsObject;
   static toObject(includeInstance: boolean, msg: Candidate): Candidate.AsObject;
@@ -82,6 +88,7 @@ export namespace Candidate {
     type: Candidate.Type,
     pageRef: number,
     modelMetadata?: ModelSpec.AsObject,
+    corrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
   }
 
   export enum Type { 

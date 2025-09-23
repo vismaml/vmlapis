@@ -296,7 +296,8 @@
               "LOW",
               "MID",
               "HIGH",
-              "VERY_HIGH"
+              "VERY_HIGH",
+              "VERIFIED"
             ],
             "default": "UNKNOWN"
           },
@@ -428,7 +429,8 @@
               "LOW",
               "MID",
               "HIGH",
-              "VERY_HIGH"
+              "VERY_HIGH",
+              "VERIFIED"
             ],
             "default": "UNKNOWN"
           },
@@ -541,7 +543,8 @@
         "LOW",
         "MID",
         "HIGH",
-        "VERY_HIGH"
+        "VERY_HIGH",
+        "VERIFIED"
       ],
       "default": "UNKNOWN"
     },
@@ -860,6 +863,10 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model spec of the TensorFlow Serving model that predicted this candidate"
+        },
+        "corrected": {
+          "type": "boolean",
+          "title": "Whether the candidate has been corrected by verification heuristics"
         }
       }
     },
