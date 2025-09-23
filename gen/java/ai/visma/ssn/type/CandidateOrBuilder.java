@@ -218,4 +218,31 @@ public interface CandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return Whether the corrected field is set.
+   */
+  boolean hasCorrected();
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return The corrected.
+   */
+  com.google.protobuf.BoolValue getCorrected();
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getCorrectedOrBuilder();
 }

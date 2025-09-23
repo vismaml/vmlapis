@@ -15,6 +15,7 @@ message Confidence {
     MID = 3;
     HIGH = 4;
     VERY_HIGH = 5;
+    VERIFIED = 6;
   }
   // A bucketized representation of confidence, which is intended to give clients
   // highly stable results across model upgrades.
@@ -64,6 +65,8 @@ message Candidate {
   uint32 page_ref = 6;
   // Model spec of the TensorFlow Serving model that predicted this candidate
   ModelSpec model_metadata = 7;
+  // Whether the candidate has been corrected by verification heuristics
+  google.protobuf.BoolValue corrected = 8;
 }
 
 message ModelSpec {

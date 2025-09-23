@@ -81,59 +81,61 @@ public final class CandidateProto {
     java.lang.String[] descriptorData = {
       "\n\030ssn/type/candidate.proto\022\010ssn.type\032\036go" +
       "ogle/protobuf/wrappers.proto\032\027ssn/type/g" +
-      "eometry.proto\"\300\001\n\nConfidence\0220\n\005level\030\001 " +
+      "eometry.proto\"\316\001\n\nConfidence\0220\n\005level\030\001 " +
       "\001(\0162\032.ssn.type.Confidence.LevelR\005level\0221" +
       "\n\005value\030\002 \001(\0132\033.google.protobuf.FloatVal" +
-      "ueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_" +
+      "ueR\005value\"[\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_" +
       "LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVER" +
-      "Y_HIGH\020\005\"\331\002\n\tCandidate\022\024\n\005value\030\001 \001(\tR\005v" +
-      "alue\022\022\n\004text\030\002 \001(\tR\004text\0224\n\nconfidence\030\003" +
-      " \001(\0132\024.ssn.type.ConfidenceR\nconfidence\0229" +
-      "\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Bounding" +
-      "PolyR\013boundingBox\022,\n\004type\030\005 \001(\0162\030.ssn.ty" +
-      "pe.Candidate.TypeR\004type\022\031\n\010page_ref\030\006 \001(" +
-      "\rR\007pageRef\022:\n\016model_metadata\030\007 \001(\0132\023.ssn" +
-      ".type.ModelSpecR\rmodelMetadata\",\n\004Type\022\013" +
-      "\n\007UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"d\n\t" +
-      "ModelSpec\022\035\n\nmodel_name\030\001 \001(\tR\tmodelName" +
-      "\0228\n\tmodel_ver\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64ValueR\010modelVer\"V\n\rLineCandidate\022\022\n\004t" +
-      "ext\030\001 \001(\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022" +
-      "\031\n\010page_ref\030\006 \001(\rR\007pageRef\"\374\004\n\025PurchaseL" +
-      "ineCandidate\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022" +
-      "\022\n\004code\030\002 \001(\tR\004code\022 \n\013description\030\003 \001(\t" +
-      "R\013description\022\032\n\010quantity\030\004 \001(\tR\010quantit" +
-      "y\022\037\n\013item_number\030\005 \001(\tR\nitemNumber\022\022\n\004un" +
-      "it\030\006 \001(\tR\004unit\022%\n\016total_discount\030\007 \001(\tR\r" +
-      "totalDiscount\022/\n\023percentage_discount\030\010 \001" +
-      "(\tR\022percentageDiscount\022$\n\016total_incl_vat" +
-      "\030\t \001(\tR\014totalInclVat\022$\n\016total_excl_vat\030\n" +
-      " \001(\tR\014totalExclVat\022\033\n\ttotal_vat\030\013 \001(\tR\010t" +
-      "otalVat\022%\n\016percentage_vat\030\014 \001(\tR\rpercent" +
-      "ageVat\022-\n\023unit_price_incl_vat\030\r \001(\tR\020uni" +
-      "tPriceInclVat\022-\n\023unit_price_excl_vat\030\016 \001" +
-      "(\tR\020unitPriceExclVat\022\024\n\005total\030\021 \001(\tR\005tot" +
-      "al\022\035\n\nunit_price\030\022 \001(\tR\tunitPrice\022:\n\016mod" +
-      "el_metadata\030\023 \001(\0132\023.ssn.type.ModelSpecR\r" +
-      "modelMetadataJ\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017AnswerCand" +
-      "idate\022\032\n\010question\030\001 \001(\tR\010question\022\026\n\006ans" +
-      "wer\030\002 \001(\tR\006answer\0224\n\nconfidence\030\003 \001(\0132\024." +
-      "ssn.type.ConfidenceR\nconfidence\022:\n\016model" +
-      "_metadata\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmo" +
-      "delMetadata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9" +
-      "\n\010PageText\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n" +
-      "\004text\030\002 \001(\tR\004text\"\337\001\n\030VatDistributionCan" +
-      "didate\022\036\n\npercentage\030\001 \001(\tR\npercentage\022\026" +
-      "\n\006amount\030\002 \001(\tR\006amount\022:\n\016model_metadata" +
-      "\030\003 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetada" +
-      "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_va" +
-      "t\030\005 \001(\tR\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007incl" +
-      "Vat\"1\n\020DocumentMetadata\022\035\n\npage_count\030\001 " +
-      "\001(\rR\tpageCountB\232\001\n\021ai.visma.ssn.typeB\016Ca" +
-      "ndidateProtoP\001Z4github.com/e-conomic/vml" +
-      "apis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn" +
-      ".Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352" +
-      "\002\tSsn::Typeb\006proto3"
+      "Y_HIGH\020\005\022\014\n\010VERIFIED\020\006\"\223\003\n\tCandidate\022\024\n\005" +
+      "value\030\001 \001(\tR\005value\022\022\n\004text\030\002 \001(\tR\004text\0224" +
+      "\n\nconfidence\030\003 \001(\0132\024.ssn.type.Confidence" +
+      "R\nconfidence\0229\n\014bounding_box\030\004 \001(\0132\026.ssn" +
+      ".type.BoundingPolyR\013boundingBox\022,\n\004type\030" +
+      "\005 \001(\0162\030.ssn.type.Candidate.TypeR\004type\022\031\n" +
+      "\010page_ref\030\006 \001(\rR\007pageRef\022:\n\016model_metada" +
+      "ta\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmodelMeta" +
+      "data\0228\n\tcorrected\030\010 \001(\0132\032.google.protobu" +
+      "f.BoolValueR\tcorrected\",\n\004Type\022\013\n\007UNKNOW" +
+      "N\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"d\n\tModelSpe" +
+      "c\022\035\n\nmodel_name\030\001 \001(\tR\tmodelName\0228\n\tmode" +
+      "l_ver\030\002 \001(\0132\033.google.protobuf.Int64Value" +
+      "R\010modelVer\"V\n\rLineCandidate\022\022\n\004text\030\001 \001(" +
+      "\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022\031\n\010page_" +
+      "ref\030\006 \001(\rR\007pageRef\"\374\004\n\025PurchaseLineCandi" +
+      "date\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004code\030" +
+      "\002 \001(\tR\004code\022 \n\013description\030\003 \001(\tR\013descri" +
+      "ption\022\032\n\010quantity\030\004 \001(\tR\010quantity\022\037\n\013ite" +
+      "m_number\030\005 \001(\tR\nitemNumber\022\022\n\004unit\030\006 \001(\t" +
+      "R\004unit\022%\n\016total_discount\030\007 \001(\tR\rtotalDis" +
+      "count\022/\n\023percentage_discount\030\010 \001(\tR\022perc" +
+      "entageDiscount\022$\n\016total_incl_vat\030\t \001(\tR\014" +
+      "totalInclVat\022$\n\016total_excl_vat\030\n \001(\tR\014to" +
+      "talExclVat\022\033\n\ttotal_vat\030\013 \001(\tR\010totalVat\022" +
+      "%\n\016percentage_vat\030\014 \001(\tR\rpercentageVat\022-" +
+      "\n\023unit_price_incl_vat\030\r \001(\tR\020unitPriceIn" +
+      "clVat\022-\n\023unit_price_excl_vat\030\016 \001(\tR\020unit" +
+      "PriceExclVat\022\024\n\005total\030\021 \001(\tR\005total\022\035\n\nun" +
+      "it_price\030\022 \001(\tR\tunitPrice\022:\n\016model_metad" +
+      "ata\030\023 \001(\0132\023.ssn.type.ModelSpecR\rmodelMet" +
+      "adataJ\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017AnswerCandidate\022\032\n" +
+      "\010question\030\001 \001(\tR\010question\022\026\n\006answer\030\002 \001(" +
+      "\tR\006answer\0224\n\nconfidence\030\003 \001(\0132\024.ssn.type" +
+      ".ConfidenceR\nconfidence\022:\n\016model_metadat" +
+      "a\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetad" +
+      "ata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9\n\010PageTe" +
+      "xt\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004text\030\002 " +
+      "\001(\tR\004text\"\337\001\n\030VatDistributionCandidate\022\036" +
+      "\n\npercentage\030\001 \001(\tR\npercentage\022\026\n\006amount" +
+      "\030\002 \001(\tR\006amount\022:\n\016model_metadata\030\003 \001(\0132\023" +
+      ".ssn.type.ModelSpecR\rmodelMetadata\022\031\n\010pa" +
+      "ge_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_vat\030\005 \001(\tR" +
+      "\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007inclVat\"1\n\020D" +
+      "ocumentMetadata\022\035\n\npage_count\030\001 \001(\rR\tpag" +
+      "eCountB\232\001\n\021ai.visma.ssn.typeB\016CandidateP" +
+      "rotoP\001Z4github.com/e-conomic/vmlapis/gen" +
+      "/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010" +
+      "Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::T" +
+      "ypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -152,7 +154,7 @@ public final class CandidateProto {
     internal_static_ssn_type_Candidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_Candidate_descriptor,
-        new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", });
+        new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", "Corrected", });
     internal_static_ssn_type_ModelSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_type_ModelSpec_fieldAccessorTable = new
