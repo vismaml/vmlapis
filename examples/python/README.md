@@ -1,4 +1,18 @@
-## Set up pip
+## Set up uv (recommended)
+
+### Install uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Install vml-proto package
+
+```bash
+uv add --index https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/simple/ vml-proto
+```
+
+## Alternative: Set up pip
 
 ### Insert the following snippet into your [.pypirc](https://packaging.python.org/en/latest/specifications/pypirc/) (~/.pypirc)
 

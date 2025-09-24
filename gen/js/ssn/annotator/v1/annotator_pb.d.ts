@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
+import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb'; // proto import: "ssn/type/tier.proto"
 
@@ -81,6 +82,8 @@ export namespace Feature {
     PAGE_TEXTS = 45,
     VAT_DISTRIBUTION = 46,
     LANGUAGE_CODE = 47,
+    QR_CODES = 48,
+    SWISS_QR_BILLS = 49,
   }
 }
 
@@ -377,6 +380,16 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearLanguageCodeList(): DocumentAnnotatorResponse;
   addLanguageCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getQrCodesList(): Array<ssn_type_qr_pb.QrCodeData>;
+  setQrCodesList(value: Array<ssn_type_qr_pb.QrCodeData>): DocumentAnnotatorResponse;
+  clearQrCodesList(): DocumentAnnotatorResponse;
+  addQrCodes(value?: ssn_type_qr_pb.QrCodeData, index?: number): ssn_type_qr_pb.QrCodeData;
+
+  getSwissQrBillsList(): Array<ssn_type_qr_pb.SwissQrBill>;
+  setSwissQrBillsList(value: Array<ssn_type_qr_pb.SwissQrBill>): DocumentAnnotatorResponse;
+  clearSwissQrBillsList(): DocumentAnnotatorResponse;
+  addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -437,6 +450,8 @@ export namespace DocumentAnnotatorResponse {
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     documentMetadata?: ssn_type_candidate_pb.DocumentMetadata.AsObject,
     languageCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
+    swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
   }
 }
 

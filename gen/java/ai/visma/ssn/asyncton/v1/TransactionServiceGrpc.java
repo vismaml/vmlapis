@@ -174,6 +174,37 @@ public final class TransactionServiceGrpc {
     return getDeleteTagMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest,
+      ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> getUpdateTransactionResultsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateTransactionResults",
+      requestType = ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest.class,
+      responseType = ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest,
+      ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> getUpdateTransactionResultsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest, ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> getUpdateTransactionResultsMethod;
+    if ((getUpdateTransactionResultsMethod = TransactionServiceGrpc.getUpdateTransactionResultsMethod) == null) {
+      synchronized (TransactionServiceGrpc.class) {
+        if ((getUpdateTransactionResultsMethod = TransactionServiceGrpc.getUpdateTransactionResultsMethod) == null) {
+          TransactionServiceGrpc.getUpdateTransactionResultsMethod = getUpdateTransactionResultsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest, ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTransactionResults"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransactionServiceMethodDescriptorSupplier("UpdateTransactionResults"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTransactionResultsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -275,6 +306,22 @@ public final class TransactionServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTagMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * below are more ideas how the API could progress
+     * ---------------------
+     * e.g. add more features for processing
+     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+     * }
+     * essentially a feedback endpoint
+     * </pre>
+     */
+    default void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTransactionResultsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -351,6 +398,23 @@ public final class TransactionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTagMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * below are more ideas how the API could progress
+     * ---------------------
+     * e.g. add more features for processing
+     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+     * }
+     * essentially a feedback endpoint
+     * </pre>
+     */
+    public void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTransactionResultsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -407,6 +471,22 @@ public final class TransactionServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTagMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * below are more ideas how the API could progress
+     * ---------------------
+     * e.g. add more features for processing
+     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+     * }
+     * essentially a feedback endpoint
+     * </pre>
+     */
+    public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTransactionResultsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -462,6 +542,22 @@ public final class TransactionServiceGrpc {
     public com.google.protobuf.Empty deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTagMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * below are more ideas how the API could progress
+     * ---------------------
+     * e.g. add more features for processing
+     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+     * }
+     * essentially a feedback endpoint
+     * </pre>
+     */
+    public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTransactionResultsMethod(), getCallOptions(), request);
     }
   }
 
@@ -524,6 +620,23 @@ public final class TransactionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTagMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * below are more ideas how the API could progress
+     * ---------------------
+     * e.g. add more features for processing
+     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
+     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
+     * }
+     * essentially a feedback endpoint
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> updateTransactionResults(
+        ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTransactionResultsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TRANSACTION = 0;
@@ -531,6 +644,7 @@ public final class TransactionServiceGrpc {
   private static final int METHODID_GET_TRANSACTION_STATUS = 2;
   private static final int METHODID_DELETE_TRANSACTION = 3;
   private static final int METHODID_DELETE_TAG = 4;
+  private static final int METHODID_UPDATE_TRANSACTION_RESULTS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -568,6 +682,10 @@ public final class TransactionServiceGrpc {
         case METHODID_DELETE_TAG:
           serviceImpl.deleteTag((ai.visma.ssn.asyncton.v1.DeleteTagRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_UPDATE_TRANSACTION_RESULTS:
+          serviceImpl.updateTransactionResults((ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -622,6 +740,13 @@ public final class TransactionServiceGrpc {
               ai.visma.ssn.asyncton.v1.DeleteTagRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_TAG)))
+        .addMethod(
+          getUpdateTransactionResultsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest,
+              ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse>(
+                service, METHODID_UPDATE_TRANSACTION_RESULTS)))
         .build();
   }
 
@@ -675,6 +800,7 @@ public final class TransactionServiceGrpc {
               .addMethod(getGetTransactionStatusMethod())
               .addMethod(getDeleteTransactionMethod())
               .addMethod(getDeleteTagMethod())
+              .addMethod(getUpdateTransactionResultsMethod())
               .build();
         }
       }

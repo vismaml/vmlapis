@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package ssn.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
+
+message QrCodeData {
+  string content = 1;
+}
+
+message SwissQrBill {
+  string qr_type = 1;
+  string version = 2;
+  string coding_type = 3;
+
+  string account = 4;
+
+  string creditor_address_type = 5;
+  string creditor_name = 6;
+  string creditor_address_line_1 = 7;
+  string creditor_address_line_2 = 8;
+  string creditor_address_postal_code = 9;
+  string creditor_address_city = 10;
+  string creditor_address_country = 11;
+
+  string ultimate_creditor_address_type = 12;
+  string ultimate_creditor_name = 13;
+  string ultimate_creditor_address_line_1 = 14;
+  string ultimate_creditor_address_line_2 = 15;
+  string ultimate_creditor_address_postal_code = 16;
+  string ultimate_creditor_address_city = 17;
+  string ultimate_creditor_address_country = 18;
+
+  string amount = 19;
+  string currency = 20;
+
+  string ultimate_debtor_address_type = 21;
+  string ultimate_debtor_name = 22;
+  string ultimate_debtor_address_line_1 = 23;
+  string ultimate_debtor_address_line_2 = 24;
+  string ultimate_debtor_address_postal_code = 25;
+  string ultimate_debtor_address_city = 26;
+  string ultimate_debtor_address_country = 27;
+
+  string payment_reference_type = 28;
+  string payment_reference = 29;
+
+  string unstructured_message = 30;
+  string trailer = 31;
+
+  string billing_information = 32;
+  string av1_parameters = 33;
+  string av2_parameters = 34;
+}

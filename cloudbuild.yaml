@@ -1,17 +1,18 @@
 steps:
   - id: deploy-python
-    name: "python:3.7-buster"
+    name: "ghcr.io/astral-sh/uv:trixie-slim"
     entrypoint: "bash"
     args:
       - "-c"
       - |
         if [ "$TAG_NAME" ] ; then
-          python setup.py bdist_wheel
-          pip install twine keyrings.google-artifactregistry-auth
-          twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
+          # Install keyring with Google Artifact Registry auth
+          uv tool install keyring --with keyrings.google-artifactregistry-auth
+          uv version ${TAG_NAME#v} --no-sync   
+          uv build --upgrade 
+          uv publish --index vml-api
         else
-          TAG_NAME="v0.0.0"
-          python setup.py bdist_wheel
+          uv build --upgrade 
         fi
     env:
       - "TAG_NAME=$TAG_NAME"

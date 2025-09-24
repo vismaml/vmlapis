@@ -19,7 +19,7 @@ RUN apt-get update && \
   golang-goprotobuf-dev
 
 ARG BIN=/usr/local/bin
-ARG VERSION=1.8.0 
+ARG VERSION=1.56.0
 RUN curl -sSL \
   https://github.com/bufbuild/buf/releases/download/v${VERSION}/buf-$(uname -s)-$(uname -m) \
   -o ${BIN}/buf && \  
@@ -28,10 +28,9 @@ RUN curl -sSL \
 WORKDIR /app
 
 COPY ["go.mod", "go.sum", "buf.gen.*", "/app/"]
-RUN go get all \
-  && go install \
-  github.com/golang/mock/mockgen \
-  github.com/envoyproxy/protoc-gen-validate
+RUN go mod download \
+  && go get github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate \
+  && go install github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate
 
 COPY Makefile /app/
 COPY deps deps

@@ -360,7 +360,8 @@ proto.ssn.type.Confidence.Level = {
   LOW: 2,
   MID: 3,
   HIGH: 4,
-  VERY_HIGH: 5
+  VERY_HIGH: 5,
+  VERIFIED: 6
 };
 
 /**
@@ -456,7 +457,8 @@ proto.ssn.type.Candidate.toObject = function(includeInstance, msg) {
     boundingBox: (f = msg.getBoundingBox()) && ssn_type_geometry_pb.BoundingPoly.toObject(includeInstance, f),
     type: jspb.Message.getFieldWithDefault(msg, 5, 0),
     pageRef: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    corrected: (f = msg.getCorrected()) && google_protobuf_wrappers_pb.BoolValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -523,6 +525,11 @@ proto.ssn.type.Candidate.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 8:
+      var value = new google_protobuf_wrappers_pb.BoolValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.BoolValue.deserializeBinaryFromReader);
+      msg.setCorrected(value);
       break;
     default:
       reader.skipField();
@@ -603,6 +610,14 @@ proto.ssn.type.Candidate.serializeBinaryToWriter = function(message, writer) {
       7,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCorrected();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      google_protobuf_wrappers_pb.BoolValue.serializeBinaryToWriter
     );
   }
 };
@@ -797,6 +812,43 @@ proto.ssn.type.Candidate.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.Candidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional google.protobuf.BoolValue corrected = 8;
+ * @return {?proto.google.protobuf.BoolValue}
+ */
+proto.ssn.type.Candidate.prototype.getCorrected = function() {
+  return /** @type{?proto.google.protobuf.BoolValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BoolValue, 8));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.BoolValue|undefined} value
+ * @return {!proto.ssn.type.Candidate} returns this
+*/
+proto.ssn.type.Candidate.prototype.setCorrected = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.type.Candidate} returns this
+ */
+proto.ssn.type.Candidate.prototype.clearCorrected = function() {
+  return this.setCorrected(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.type.Candidate.prototype.hasCorrected = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
