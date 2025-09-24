@@ -365,6 +365,51 @@ func local_request_TransactionService_DeleteTag_0(ctx context.Context, marshaler
 	return msg, metadata, err
 }
 
+func request_TransactionService_UpdateTransactionResults_0(ctx context.Context, marshaler runtime.Marshaler, client TransactionServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq UpdateTransactionResultsRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	val, ok := pathParams["id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "id")
+	}
+	protoReq.Id, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "id", err)
+	}
+	msg, err := client.UpdateTransactionResults(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_TransactionService_UpdateTransactionResults_0(ctx context.Context, marshaler runtime.Marshaler, server TransactionServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq UpdateTransactionResultsRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	val, ok := pathParams["id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "id")
+	}
+	protoReq.Id, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "id", err)
+	}
+	msg, err := server.UpdateTransactionResults(ctx, &protoReq)
+	return msg, metadata, err
+}
+
 // RegisterTransactionServiceHandlerServer registers the http handlers for service TransactionService to "mux".
 // UnaryRPC     :call TransactionServiceServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
@@ -530,6 +575,26 @@ func RegisterTransactionServiceHandlerServer(ctx context.Context, mux *runtime.S
 			return
 		}
 		forward_TransactionService_DeleteTag_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPut, pattern_TransactionService_UpdateTransactionResults_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/ssn.asyncton.v1.TransactionService/UpdateTransactionResults", runtime.WithHTTPPathPattern("/v1/transactions/{id}/results"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_TransactionService_UpdateTransactionResults_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransactionService_UpdateTransactionResults_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
 
 	return nil
@@ -707,27 +772,46 @@ func RegisterTransactionServiceHandlerClient(ctx context.Context, mux *runtime.S
 		}
 		forward_TransactionService_DeleteTag_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
+	mux.Handle(http.MethodPut, pattern_TransactionService_UpdateTransactionResults_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/ssn.asyncton.v1.TransactionService/UpdateTransactionResults", runtime.WithHTTPPathPattern("/v1/transactions/{id}/results"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_TransactionService_UpdateTransactionResults_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransactionService_UpdateTransactionResults_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
 	return nil
 }
 
 var (
-	pattern_TransactionService_CreateTransaction_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "transactions"}, ""))
-	pattern_TransactionService_GetTransactionResults_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "transactions", "id", "results"}, ""))
-	pattern_TransactionService_GetTransactionResults_1 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transactions", "results"}, ""))
-	pattern_TransactionService_GetTransactionStatus_0  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "transactions", "id", "status"}, ""))
-	pattern_TransactionService_GetTransactionStatus_1  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transactions", "status"}, ""))
-	pattern_TransactionService_DeleteTransaction_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "transactions", "id"}, ""))
-	pattern_TransactionService_DeleteTransaction_1     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "transactions"}, ""))
-	pattern_TransactionService_DeleteTag_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "tags", "tag_name"}, ""))
+	pattern_TransactionService_CreateTransaction_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "transactions"}, ""))
+	pattern_TransactionService_GetTransactionResults_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "transactions", "id", "results"}, ""))
+	pattern_TransactionService_GetTransactionResults_1    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transactions", "results"}, ""))
+	pattern_TransactionService_GetTransactionStatus_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "transactions", "id", "status"}, ""))
+	pattern_TransactionService_GetTransactionStatus_1     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transactions", "status"}, ""))
+	pattern_TransactionService_DeleteTransaction_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "transactions", "id"}, ""))
+	pattern_TransactionService_DeleteTransaction_1        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "transactions"}, ""))
+	pattern_TransactionService_DeleteTag_0                = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v1", "tags", "tag_name"}, ""))
+	pattern_TransactionService_UpdateTransactionResults_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2, 2, 3}, []string{"v1", "transactions", "id", "results"}, ""))
 )
 
 var (
-	forward_TransactionService_CreateTransaction_0     = runtime.ForwardResponseMessage
-	forward_TransactionService_GetTransactionResults_0 = runtime.ForwardResponseMessage
-	forward_TransactionService_GetTransactionResults_1 = runtime.ForwardResponseMessage
-	forward_TransactionService_GetTransactionStatus_0  = runtime.ForwardResponseMessage
-	forward_TransactionService_GetTransactionStatus_1  = runtime.ForwardResponseMessage
-	forward_TransactionService_DeleteTransaction_0     = runtime.ForwardResponseMessage
-	forward_TransactionService_DeleteTransaction_1     = runtime.ForwardResponseMessage
-	forward_TransactionService_DeleteTag_0             = runtime.ForwardResponseMessage
+	forward_TransactionService_CreateTransaction_0        = runtime.ForwardResponseMessage
+	forward_TransactionService_GetTransactionResults_0    = runtime.ForwardResponseMessage
+	forward_TransactionService_GetTransactionResults_1    = runtime.ForwardResponseMessage
+	forward_TransactionService_GetTransactionStatus_0     = runtime.ForwardResponseMessage
+	forward_TransactionService_GetTransactionStatus_1     = runtime.ForwardResponseMessage
+	forward_TransactionService_DeleteTransaction_0        = runtime.ForwardResponseMessage
+	forward_TransactionService_DeleteTransaction_1        = runtime.ForwardResponseMessage
+	forward_TransactionService_DeleteTag_0                = runtime.ForwardResponseMessage
+	forward_TransactionService_UpdateTransactionResults_0 = runtime.ForwardResponseMessage
 )

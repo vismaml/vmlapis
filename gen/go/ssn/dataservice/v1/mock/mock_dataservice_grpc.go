@@ -8,7 +8,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	dataservice "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1"
+	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -38,14 +38,14 @@ func (m *MockDataServiceClient) EXPECT() *MockDataServiceClientMockRecorder {
 }
 
 // CalculateMetrics mocks base method.
-func (m *MockDataServiceClient) CalculateMetrics(ctx context.Context, in *dataservice.MetricsRequest, opts ...grpc.CallOption) (*dataservice.FeedbackMetrics, error) {
+func (m *MockDataServiceClient) CalculateMetrics(ctx context.Context, in *v1.MetricsRequest, opts ...grpc.CallOption) (*v1.FeedbackMetrics, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "CalculateMetrics", varargs...)
-	ret0, _ := ret[0].(*dataservice.FeedbackMetrics)
+	ret0, _ := ret[0].(*v1.FeedbackMetrics)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -58,14 +58,14 @@ func (mr *MockDataServiceClientMockRecorder) CalculateMetrics(ctx, in interface{
 }
 
 // CallsPerMonthMetric mocks base method.
-func (m *MockDataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "CallsPerMonthMetric", varargs...)
-	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
+	ret0, _ := ret[0].(*v1.CallsPerMonthResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -78,14 +78,14 @@ func (mr *MockDataServiceClientMockRecorder) CallsPerMonthMetric(ctx, in interfa
 }
 
 // CreateDocument mocks base method.
-func (m *MockDataServiceClient) CreateDocument(ctx context.Context, in *dataservice.CreateDocumentRequest, opts ...grpc.CallOption) (*dataservice.CreateDocumentResponse, error) {
+func (m *MockDataServiceClient) CreateDocument(ctx context.Context, in *v1.CreateDocumentRequest, opts ...grpc.CallOption) (*v1.CreateDocumentResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "CreateDocument", varargs...)
-	ret0, _ := ret[0].(*dataservice.CreateDocumentResponse)
+	ret0, _ := ret[0].(*v1.CreateDocumentResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -98,7 +98,7 @@ func (mr *MockDataServiceClientMockRecorder) CreateDocument(ctx, in interface{},
 }
 
 // Delete mocks base method.
-func (m *MockDataServiceClient) Delete(ctx context.Context, in *dataservice.DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (m *MockDataServiceClient) Delete(ctx context.Context, in *v1.DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -118,7 +118,7 @@ func (mr *MockDataServiceClientMockRecorder) Delete(ctx, in interface{}, opts ..
 }
 
 // Feedback mocks base method.
-func (m *MockDataServiceClient) Feedback(ctx context.Context, in *dataservice.FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (m *MockDataServiceClient) Feedback(ctx context.Context, in *v1.FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -138,7 +138,7 @@ func (mr *MockDataServiceClientMockRecorder) Feedback(ctx, in interface{}, opts 
 }
 
 // PrepareFeedback mocks base method.
-func (m *MockDataServiceClient) PrepareFeedback(ctx context.Context, in *dataservice.PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (m *MockDataServiceClient) PrepareFeedback(ctx context.Context, in *v1.PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -158,14 +158,14 @@ func (mr *MockDataServiceClientMockRecorder) PrepareFeedback(ctx, in interface{}
 }
 
 // ReadDocument mocks base method.
-func (m *MockDataServiceClient) ReadDocument(ctx context.Context, in *dataservice.ReadDocumentRequest, opts ...grpc.CallOption) (*dataservice.ReadDocumentResponse, error) {
+func (m *MockDataServiceClient) ReadDocument(ctx context.Context, in *v1.ReadDocumentRequest, opts ...grpc.CallOption) (*v1.ReadDocumentResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "ReadDocument", varargs...)
-	ret0, _ := ret[0].(*dataservice.ReadDocumentResponse)
+	ret0, _ := ret[0].(*v1.ReadDocumentResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -201,10 +201,10 @@ func (m *MockDataServiceServer) EXPECT() *MockDataServiceServerMockRecorder {
 }
 
 // CalculateMetrics mocks base method.
-func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *dataservice.MetricsRequest) (*dataservice.FeedbackMetrics, error) {
+func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *v1.MetricsRequest) (*v1.FeedbackMetrics, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CalculateMetrics", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.FeedbackMetrics)
+	ret0, _ := ret[0].(*v1.FeedbackMetrics)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -216,10 +216,10 @@ func (mr *MockDataServiceServerMockRecorder) CalculateMetrics(arg0, arg1 interfa
 }
 
 // CallsPerMonthMetric mocks base method.
-func (m *MockDataServiceServer) CallsPerMonthMetric(arg0 context.Context, arg1 *emptypb.Empty) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceServer) CallsPerMonthMetric(arg0 context.Context, arg1 *emptypb.Empty) (*v1.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CallsPerMonthMetric", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
+	ret0, _ := ret[0].(*v1.CallsPerMonthResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -231,10 +231,10 @@ func (mr *MockDataServiceServerMockRecorder) CallsPerMonthMetric(arg0, arg1 inte
 }
 
 // CreateDocument mocks base method.
-func (m *MockDataServiceServer) CreateDocument(arg0 context.Context, arg1 *dataservice.CreateDocumentRequest) (*dataservice.CreateDocumentResponse, error) {
+func (m *MockDataServiceServer) CreateDocument(arg0 context.Context, arg1 *v1.CreateDocumentRequest) (*v1.CreateDocumentResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDocument", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.CreateDocumentResponse)
+	ret0, _ := ret[0].(*v1.CreateDocumentResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -246,7 +246,7 @@ func (mr *MockDataServiceServerMockRecorder) CreateDocument(arg0, arg1 interface
 }
 
 // Delete mocks base method.
-func (m *MockDataServiceServer) Delete(arg0 context.Context, arg1 *dataservice.DeleteRequest) (*emptypb.Empty, error) {
+func (m *MockDataServiceServer) Delete(arg0 context.Context, arg1 *v1.DeleteRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Delete", arg0, arg1)
 	ret0, _ := ret[0].(*emptypb.Empty)
@@ -261,7 +261,7 @@ func (mr *MockDataServiceServerMockRecorder) Delete(arg0, arg1 interface{}) *gom
 }
 
 // Feedback mocks base method.
-func (m *MockDataServiceServer) Feedback(arg0 context.Context, arg1 *dataservice.FeedbackRequest) (*emptypb.Empty, error) {
+func (m *MockDataServiceServer) Feedback(arg0 context.Context, arg1 *v1.FeedbackRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Feedback", arg0, arg1)
 	ret0, _ := ret[0].(*emptypb.Empty)
@@ -276,7 +276,7 @@ func (mr *MockDataServiceServerMockRecorder) Feedback(arg0, arg1 interface{}) *g
 }
 
 // PrepareFeedback mocks base method.
-func (m *MockDataServiceServer) PrepareFeedback(arg0 context.Context, arg1 *dataservice.PrepareFeedbackRequest) (*emptypb.Empty, error) {
+func (m *MockDataServiceServer) PrepareFeedback(arg0 context.Context, arg1 *v1.PrepareFeedbackRequest) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PrepareFeedback", arg0, arg1)
 	ret0, _ := ret[0].(*emptypb.Empty)
@@ -291,10 +291,10 @@ func (mr *MockDataServiceServerMockRecorder) PrepareFeedback(arg0, arg1 interfac
 }
 
 // ReadDocument mocks base method.
-func (m *MockDataServiceServer) ReadDocument(arg0 context.Context, arg1 *dataservice.ReadDocumentRequest) (*dataservice.ReadDocumentResponse, error) {
+func (m *MockDataServiceServer) ReadDocument(arg0 context.Context, arg1 *v1.ReadDocumentRequest) (*v1.ReadDocumentResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ReadDocument", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.ReadDocumentResponse)
+	ret0, _ := ret[0].(*v1.ReadDocumentResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
