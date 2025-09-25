@@ -1283,7 +1283,8 @@
       "enum": [
         "DEFAULT",
         "STANDARD",
-        "PREMIUM"
+        "PREMIUM",
+        "ULTRA"
       ],
       "default": "DEFAULT",
       "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
@@ -1440,6 +1441,11 @@
         },
         "customId": {
           "type": "string"
+        },
+        "tier": {
+          "$ref": "#/definitions/typeTier",
+          "description": "default: STANDARD",
+          "title": "Tier determines the type of the SSN model used"
         }
       },
       "title": "--- post: \"/v1/transactions\" ---"

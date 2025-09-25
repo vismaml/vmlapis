@@ -4,6 +4,7 @@ from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from ssn.annotator.v1 import annotator_pb2 as _annotator_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
 from ssn.type import text_annotation_pb2 as _text_annotation_pb2
+from ssn.type import tier_pb2 as _tier_pb2
 from validate import validate_pb2 as _validate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
@@ -13,16 +14,18 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CreateTransactionRequest(_message.Message):
-    __slots__ = ("document", "tags", "features", "custom_id")
+    __slots__ = ("document", "tags", "features", "custom_id", "tier")
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
     CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
+    TIER_FIELD_NUMBER: _ClassVar[int]
     document: _annotator_pb2.Document
     tags: _containers.RepeatedScalarFieldContainer[str]
     features: _containers.RepeatedScalarFieldContainer[str]
     custom_id: str
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ...) -> None: ...
+    tier: _tier_pb2.Tier
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
 
 class CreateTransactionResponse(_message.Message):
     __slots__ = ("id", "custom_id")

@@ -129,4 +129,23 @@ public interface CreateTransactionRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCustomIdBytes();
+
+  /**
+   * <pre>
+   * Tier determines the type of the SSN model used
+   * </pre>
+   *
+   * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  int getTierValue();
+  /**
+   * <pre>
+   * Tier determines the type of the SSN model used
+   * </pre>
+   *
+   * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+   * @return The tier.
+   */
+  ai.visma.ssn.type.Tier getTier();
 }

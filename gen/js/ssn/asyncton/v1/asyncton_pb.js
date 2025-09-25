@@ -33,6 +33,8 @@ var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
+goog.object.extend(proto, ssn_type_tier_pb);
 var validate_validate_pb = require('../../../validate/validate_pb.js');
 goog.object.extend(proto, validate_validate_pb);
 goog.exportSymbol('proto.ssn.asyncton.v1.Annotation', null, global);
@@ -319,7 +321,8 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.toObject = function(includeInstan
     document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    customId: jspb.Message.getFieldWithDefault(msg, 4, "")
+    customId: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    tier: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -372,6 +375,10 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.deserializeBinaryFromReader = fun
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setCustomId(value);
+      break;
+    case 5:
+      var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
       break;
     default:
       reader.skipField();
@@ -428,6 +435,13 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
       f
     );
   }
@@ -560,6 +574,24 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getCustomId = function(
  */
 proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setCustomId = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional ssn.type.Tier tier = 5;
+ * @return {!proto.ssn.type.Tier}
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getTier = function() {
+  return /** @type {!proto.ssn.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.ssn.type.Tier} value
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setTier = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 
