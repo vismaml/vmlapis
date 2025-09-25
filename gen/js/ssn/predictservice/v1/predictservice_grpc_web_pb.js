@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for ssn.linesservice.v1
+ * @fileoverview gRPC-Web generated client stub for ssn.predictservice.v1
  * @enhanceable
  * @public
  */
@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-grpc-web v1.5.0
 // 	protoc              v0.0.0
-// source: ssn/linesservice/v1/linesservice.proto
+// source: ssn/predictservice/v1/predictservice.proto
 
 
 /* eslint-disable */
@@ -19,14 +19,10 @@
 const grpc = {};
 grpc.web = require('grpc-web');
 
-
-var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
-
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 const proto = {};
 proto.ssn = {};
-proto.ssn.linesservice = {};
-proto.ssn.linesservice.v1 = require('./linesservice_pb.js');
+proto.ssn.predictservice = {};
+proto.ssn.predictservice.v1 = require('./predictservice_pb.js');
 
 /**
  * @param {string} hostname
@@ -36,7 +32,7 @@ proto.ssn.linesservice.v1 = require('./linesservice_pb.js');
  * @struct
  * @final
  */
-proto.ssn.linesservice.v1.LinesServiceClient =
+proto.ssn.predictservice.v1.PredictServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options.format = 'text';
@@ -62,7 +58,7 @@ proto.ssn.linesservice.v1.LinesServiceClient =
  * @struct
  * @final
  */
-proto.ssn.linesservice.v1.LinesServicePromiseClient =
+proto.ssn.predictservice.v1.PredictServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options.format = 'text';
@@ -83,63 +79,63 @@ proto.ssn.linesservice.v1.LinesServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.linesservice.v1.LinesRequest,
- *   !proto.ssn.linesservice.v1.LinesResponse>}
+ *   !proto.ssn.predictservice.v1.ModelInferRequest,
+ *   !proto.ssn.predictservice.v1.ModelInferResponse>}
  */
-const methodDescriptor_LinesService_Predict = new grpc.web.MethodDescriptor(
-  '/ssn.linesservice.v1.LinesService/Predict',
+const methodDescriptor_PredictService_Predict = new grpc.web.MethodDescriptor(
+  '/ssn.predictservice.v1.PredictService/Predict',
   grpc.web.MethodType.UNARY,
-  proto.ssn.linesservice.v1.LinesRequest,
-  proto.ssn.linesservice.v1.LinesResponse,
+  proto.ssn.predictservice.v1.ModelInferRequest,
+  proto.ssn.predictservice.v1.ModelInferResponse,
   /**
-   * @param {!proto.ssn.linesservice.v1.LinesRequest} request
+   * @param {!proto.ssn.predictservice.v1.ModelInferRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.linesservice.v1.LinesResponse.deserializeBinary
+  proto.ssn.predictservice.v1.ModelInferResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.ssn.linesservice.v1.LinesRequest} request The
+ * @param {!proto.ssn.predictservice.v1.ModelInferRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.linesservice.v1.LinesResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.predictservice.v1.ModelInferResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.linesservice.v1.LinesResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.predictservice.v1.ModelInferResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.ssn.linesservice.v1.LinesServiceClient.prototype.predict =
+proto.ssn.predictservice.v1.PredictServiceClient.prototype.predict =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/ssn.linesservice.v1.LinesService/Predict',
+      '/ssn.predictservice.v1.PredictService/Predict',
       request,
       metadata || {},
-      methodDescriptor_LinesService_Predict,
+      methodDescriptor_PredictService_Predict,
       callback);
 };
 
 
 /**
- * @param {!proto.ssn.linesservice.v1.LinesRequest} request The
+ * @param {!proto.ssn.predictservice.v1.ModelInferRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.linesservice.v1.LinesResponse>}
+ * @return {!Promise<!proto.ssn.predictservice.v1.ModelInferResponse>}
  *     Promise that resolves to the response
  */
-proto.ssn.linesservice.v1.LinesServicePromiseClient.prototype.predict =
+proto.ssn.predictservice.v1.PredictServicePromiseClient.prototype.predict =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/ssn.linesservice.v1.LinesService/Predict',
+      '/ssn.predictservice.v1.PredictService/Predict',
       request,
       metadata || {},
-      methodDescriptor_LinesService_Predict);
+      methodDescriptor_PredictService_Predict);
 };
 
 
-module.exports = proto.ssn.linesservice.v1;
+module.exports = proto.ssn.predictservice.v1;
 
