@@ -66,6 +66,7 @@ class Feature(_message.Message):
         LANGUAGE_CODE: _ClassVar[Feature.Type]
         QR_CODES: _ClassVar[Feature.Type]
         SWISS_QR_BILLS: _ClassVar[Feature.Type]
+        VERIFIED: _ClassVar[Feature.Type]
     DEFAULT: Feature.Type
     TEXT_ANNOTATION: Feature.Type
     ORDER_DATE: Feature.Type
@@ -116,6 +117,7 @@ class Feature(_message.Message):
     LANGUAGE_CODE: Feature.Type
     QR_CODES: Feature.Type
     SWISS_QR_BILLS: Feature.Type
+    VERIFIED: Feature.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]

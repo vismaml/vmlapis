@@ -377,7 +377,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   VAT_DISTRIBUTION: 46,
   LANGUAGE_CODE: 47,
   QR_CODES: 48,
-  SWISS_QR_BILLS: 49
+  SWISS_QR_BILLS: 49,
+  VERIFIED: 50
 };
 
 /**
