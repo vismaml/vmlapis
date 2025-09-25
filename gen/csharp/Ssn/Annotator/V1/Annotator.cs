@@ -662,7 +662,7 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("SWISS_QR_BILLS")] SwissQrBills = 49,
         /// <summary>
-        /// Performs a series of automated verifications and consistency checks
+        /// Series of automated verifications and consistency checks
         /// on the document.
         /// </summary>
         [pbr::OriginalName("VERIFIED")] Verified = 50,

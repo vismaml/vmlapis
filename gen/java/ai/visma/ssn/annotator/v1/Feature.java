@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
     SWISS_QR_BILLS(49),
     /**
      * <pre>
-     * Performs a series of automated verifications and consistency checks
+     * Series of automated verifications and consistency checks
      * on the document.
      * </pre>
      *
@@ -874,7 +874,7 @@ private static final long serialVersionUID = 0L;
     public static final int SWISS_QR_BILLS_VALUE = 49;
     /**
      * <pre>
-     * Performs a series of automated verifications and consistency checks
+     * Series of automated verifications and consistency checks
      * on the document.
      * </pre>
      *

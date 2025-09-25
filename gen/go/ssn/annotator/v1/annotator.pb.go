@@ -127,7 +127,7 @@ const (
 	Feature_QR_CODES Feature_Type = 48
 	// Swiss QR bill
 	Feature_SWISS_QR_BILLS Feature_Type = 49
-	// Performs a series of automated verifications and consistency checks
+	// Series of automated verifications and consistency checks
 	// on the document.
 	Feature_VERIFIED Feature_Type = 50
 )
