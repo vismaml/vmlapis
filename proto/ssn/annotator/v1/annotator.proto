@@ -139,6 +139,9 @@ message Feature {
     QR_CODES = 48;
     // Swiss QR bill
     SWISS_QR_BILLS = 49;
+    // Series of automated verifications and consistency checks
+    // on the document.
+    VERIFIED = 50;
   }
   // The feature type.
   Type type = 1;

@@ -84,6 +84,7 @@ export namespace Feature {
     LANGUAGE_CODE = 47,
     QR_CODES = 48,
     SWISS_QR_BILLS = 49,
+    VERIFIED = 50,
   }
 }
 
