@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     features_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     customId_ = "";
+    tier_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -235,6 +236,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TIER_FIELD_NUMBER = 5;
+  private int tier_ = 0;
+  /**
+   * <pre>
+   * Tier determines the type of the SSN model used
+   * </pre>
+   *
+   * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  @java.lang.Override public int getTierValue() {
+    return tier_;
+  }
+  /**
+   * <pre>
+   * Tier determines the type of the SSN model used
+   * </pre>
+   *
+   * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+   * @return The tier.
+   */
+  @java.lang.Override public ai.visma.ssn.type.Tier getTier() {
+    ai.visma.ssn.type.Tier result = ai.visma.ssn.type.Tier.forNumber(tier_);
+    return result == null ? ai.visma.ssn.type.Tier.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -260,6 +287,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, customId_);
+    }
+    if (tier_ != ai.visma.ssn.type.Tier.DEFAULT.getNumber()) {
+      output.writeEnum(5, tier_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -293,6 +323,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, customId_);
     }
+    if (tier_ != ai.visma.ssn.type.Tier.DEFAULT.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, tier_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -319,6 +353,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFeaturesList())) return false;
     if (!getCustomId()
         .equals(other.getCustomId())) return false;
+    if (tier_ != other.tier_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -344,6 +379,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CUSTOM_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCustomId().hashCode();
+    hash = (37 * hash) + TIER_FIELD_NUMBER;
+    hash = (53 * hash) + tier_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -495,6 +532,7 @@ private static final long serialVersionUID = 0L;
       features_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       customId_ = "";
+      tier_ = 0;
       return this;
     }
 
@@ -546,6 +584,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.customId_ = customId_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.tier_ = tier_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -588,6 +629,9 @@ private static final long serialVersionUID = 0L;
         customId_ = other.customId_;
         bitField0_ |= 0x00000008;
         onChanged();
+      }
+      if (other.tier_ != 0) {
+        setTierValue(other.getTierValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -639,6 +683,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              tier_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1175,6 +1224,79 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       customId_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private int tier_ = 0;
+    /**
+     * <pre>
+     * Tier determines the type of the SSN model used
+     * </pre>
+     *
+     * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+     * @return The enum numeric value on the wire for tier.
+     */
+    @java.lang.Override public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <pre>
+     * Tier determines the type of the SSN model used
+     * </pre>
+     *
+     * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+     * @param value The enum numeric value on the wire for tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierValue(int value) {
+      tier_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Tier determines the type of the SSN model used
+     * </pre>
+     *
+     * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+     * @return The tier.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.type.Tier getTier() {
+      ai.visma.ssn.type.Tier result = ai.visma.ssn.type.Tier.forNumber(tier_);
+      return result == null ? ai.visma.ssn.type.Tier.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Tier determines the type of the SSN model used
+     * </pre>
+     *
+     * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+     * @param value The tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTier(ai.visma.ssn.type.Tier value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      tier_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Tier determines the type of the SSN model used
+     * </pre>
+     *
+     * <code>.ssn.type.Tier tier = 5 [json_name = "tier"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTier() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      tier_ = 0;
       onChanged();
       return this;
     }

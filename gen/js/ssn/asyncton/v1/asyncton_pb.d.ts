@@ -6,6 +6,7 @@ import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-ge
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
+import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb'; // proto import: "ssn/type/tier.proto"
 import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
@@ -28,6 +29,9 @@ export class CreateTransactionRequest extends jspb.Message {
   getCustomId(): string;
   setCustomId(value: string): CreateTransactionRequest;
 
+  getTier(): ssn_type_tier_pb.Tier;
+  setTier(value: ssn_type_tier_pb.Tier): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -42,6 +46,7 @@ export namespace CreateTransactionRequest {
     tagsList: Array<string>,
     featuresList: Array<string>,
     customId: string,
+    tier: ssn_type_tier_pb.Tier,
   }
 }
 
