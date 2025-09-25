@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vmlapis", "vmlapis.csproj", "{334D597D-F7C7-95D1-FB79-FF2070501DC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{B36A84DF-456D-A817-6EDD-3EC3E7F6E11F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{06E8C8A7-A0E8-98DE-8946-9CF52B15DA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasterizePdfExample", "examples\csharp\SmartscanRasterizePdfExample\RasterizePdfExample.csproj", "{2F5B3586-DE85-F953-F7FF-7F50C9B3188E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDatasetExample", "examples\csharp\AutosuggestCreateDatasetExample\CreateDatasetExample.csproj", "{06CDC426-844A-0309-B901-9F24ED3E0961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotateDocumentExample", "examples\csharp\SmartscanAnnotateDocumentExample\AnnotateDocumentExample.csproj", "{1412458D-95E6-02EC-619F-8F1BCC99849C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334D597D-F7C7-95D1-FB79-FF2070501DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334D597D-F7C7-95D1-FB79-FF2070501DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334D597D-F7C7-95D1-FB79-FF2070501DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334D597D-F7C7-95D1-FB79-FF2070501DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5B3586-DE85-F953-F7FF-7F50C9B3188E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5B3586-DE85-F953-F7FF-7F50C9B3188E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5B3586-DE85-F953-F7FF-7F50C9B3188E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5B3586-DE85-F953-F7FF-7F50C9B3188E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CDC426-844A-0309-B901-9F24ED3E0961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CDC426-844A-0309-B901-9F24ED3E0961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CDC426-844A-0309-B901-9F24ED3E0961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CDC426-844A-0309-B901-9F24ED3E0961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1412458D-95E6-02EC-619F-8F1BCC99849C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1412458D-95E6-02EC-619F-8F1BCC99849C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1412458D-95E6-02EC-619F-8F1BCC99849C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1412458D-95E6-02EC-619F-8F1BCC99849C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06E8C8A7-A0E8-98DE-8946-9CF52B15DA27} = {B36A84DF-456D-A817-6EDD-3EC3E7F6E11F}
+		{2F5B3586-DE85-F953-F7FF-7F50C9B3188E} = {06E8C8A7-A0E8-98DE-8946-9CF52B15DA27}
+		{06CDC426-844A-0309-B901-9F24ED3E0961} = {06E8C8A7-A0E8-98DE-8946-9CF52B15DA27}
+		{1412458D-95E6-02EC-619F-8F1BCC99849C} = {06E8C8A7-A0E8-98DE-8946-9CF52B15DA27}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {936C4EC8-57BB-48CF-ADDF-0D3508DE2775}
+	EndGlobalSection
+EndGlobal

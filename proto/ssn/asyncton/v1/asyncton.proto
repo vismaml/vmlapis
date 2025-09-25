@@ -8,6 +8,7 @@ import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
+import "ssn/type/tier.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/asyncton/v1;transaction";
@@ -81,6 +82,8 @@ message CreateTransactionRequest {
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
   string custom_id = 4;
+  // Tier determines the type of the SSN model used
+  ssn.type.Tier tier = 5;
 }
 
 message CreateTransactionResponse {

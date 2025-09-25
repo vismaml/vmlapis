@@ -3,10 +3,10 @@ syntax = "proto3";
 package ssn.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
-
 enum Tier {
   // Use the default tier. Defaults to the STANDARD option or account default, if set.
   DEFAULT = 0;
   STANDARD = 1;
   PREMIUM = 2;
+  ULTRA = 3;
 }

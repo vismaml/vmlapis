@@ -32,6 +32,8 @@ var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js')
+
 var validate_validate_pb = require('../../../validate/validate_pb.js')
 const proto = {};
 proto.ssn = {};

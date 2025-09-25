@@ -26,6 +26,10 @@ public enum Tier
    * <code>PREMIUM = 2;</code>
    */
   PREMIUM(2),
+  /**
+   * <code>ULTRA = 3;</code>
+   */
+  ULTRA(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -54,6 +58,10 @@ public enum Tier
    * <code>PREMIUM = 2;</code>
    */
   public static final int PREMIUM_VALUE = 2;
+  /**
+   * <code>ULTRA = 3;</code>
+   */
+  public static final int ULTRA_VALUE = 3;
 
 
   public final int getNumber() {
@@ -83,6 +91,7 @@ public enum Tier
       case 0: return DEFAULT;
       case 1: return STANDARD;
       case 2: return PREMIUM;
+      case 3: return ULTRA;
       default: return null;
     }
   }
