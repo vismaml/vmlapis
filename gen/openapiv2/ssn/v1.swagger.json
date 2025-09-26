@@ -666,6 +666,30 @@
             "$ref": "#/definitions/typePageText"
           },
           "title": "page texts"
+        },
+        "vatDistributionCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistributionCandidate"
+          },
+          "title": "vat distribution candidates"
+        },
+        "qrCodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeQrCodeData"
+          },
+          "title": "qr codes detected in document"
+        },
+        "swissQrBills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSwissQrBill"
+          },
+          "title": "swiss qr bills detected in document"
         }
       }
     },
