@@ -231,4 +231,136 @@ public interface AnnotationOrBuilder extends
    */
   ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * vat distribution candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
+      getVatDistributionCandidatesList();
+  /**
+   * <pre>
+   * vat distribution candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
+  /**
+   * <pre>
+   * vat distribution candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  int getVatDistributionCandidatesCount();
+  /**
+   * <pre>
+   * vat distribution candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+      getVatDistributionCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * vat distribution candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.QrCodeData> 
+      getQrCodesList();
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeData getQrCodes(int index);
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  int getQrCodesCount();
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+      getQrCodesOrBuilderList();
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.SwissQrBill> 
+      getSwissQrBillsList();
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index);
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  int getSwissQrBillsCount();
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+      getSwissQrBillsOrBuilderList();
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index);
 }
