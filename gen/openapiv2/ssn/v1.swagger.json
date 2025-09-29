@@ -1470,6 +1470,13 @@
           "$ref": "#/definitions/typeTier",
           "description": "default: STANDARD",
           "title": "Tier determines the type of the SSN model used"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions to ask about the document"
         }
       },
       "title": "--- post: \"/v1/transactions\" ---"

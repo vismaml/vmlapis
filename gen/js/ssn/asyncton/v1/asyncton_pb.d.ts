@@ -33,6 +33,11 @@ export class CreateTransactionRequest extends jspb.Message {
   getTier(): ssn_type_tier_pb.Tier;
   setTier(value: ssn_type_tier_pb.Tier): CreateTransactionRequest;
 
+  getQuestionsList(): Array<string>;
+  setQuestionsList(value: Array<string>): CreateTransactionRequest;
+  clearQuestionsList(): CreateTransactionRequest;
+  addQuestions(value: string, index?: number): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -48,6 +53,7 @@ export namespace CreateTransactionRequest {
     featuresList: Array<string>,
     customId: string,
     tier: ssn_type_tier_pb.Tier,
+    questionsList: Array<string>,
   }
 }
 

@@ -287,7 +287,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.CreateTransactionRequest.repeatedFields_ = [2,3];
+proto.ssn.asyncton.v1.CreateTransactionRequest.repeatedFields_ = [2,3,6];
 
 
 
@@ -324,7 +324,8 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.toObject = function(includeInstan
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
     customId: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    tier: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    tier: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    questionsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -381,6 +382,10 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.deserializeBinaryFromReader = fun
     case 5:
       var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
       msg.setTier(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addQuestions(value);
       break;
     default:
       reader.skipField();
@@ -444,6 +449,13 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.serializeBinaryToWriter = functio
   if (f !== 0.0) {
     writer.writeEnum(
       5,
+      f
+    );
+  }
+  f = message.getQuestionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
       f
     );
   }
@@ -594,6 +606,43 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getTier = function() {
  */
 proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setTier = function(value) {
   return jspb.Message.setProto3EnumField(this, 5, value);
+};
+
+
+/**
+ * repeated string questions = 6;
+ * @return {!Array<string>}
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getQuestionsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setQuestionsList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.addQuestions = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.clearQuestionsList = function() {
+  return this.setQuestionsList([]);
 };
 
 
