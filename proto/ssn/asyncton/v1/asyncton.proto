@@ -85,6 +85,8 @@ message CreateTransactionRequest {
   string custom_id = 4;
   // Tier determines the type of the SSN model used
   ssn.type.Tier tier = 5; // default: STANDARD
+  // Questions to ask about the document
+  repeated string questions = 6;
 }
 
 message CreateTransactionResponse {
