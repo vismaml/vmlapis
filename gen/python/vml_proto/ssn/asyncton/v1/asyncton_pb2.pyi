@@ -3,6 +3,7 @@ from google.protobuf import empty_pb2 as _empty_pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from ssn.annotator.v1 import annotator_pb2 as _annotator_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
+from ssn.type import qr_pb2 as _qr_pb2
 from ssn.type import text_annotation_pb2 as _text_annotation_pb2
 from ssn.type import tier_pb2 as _tier_pb2
 from validate import validate_pb2 as _validate_pb2
@@ -14,18 +15,20 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CreateTransactionRequest(_message.Message):
-    __slots__ = ("document", "tags", "features", "custom_id", "tier")
+    __slots__ = ("document", "tags", "features", "custom_id", "tier", "questions")
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
     CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     TIER_FIELD_NUMBER: _ClassVar[int]
+    QUESTIONS_FIELD_NUMBER: _ClassVar[int]
     document: _annotator_pb2.Document
     tags: _containers.RepeatedScalarFieldContainer[str]
     features: _containers.RepeatedScalarFieldContainer[str]
     custom_id: str
     tier: _tier_pb2.Tier
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
+    questions: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ..., questions: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class CreateTransactionResponse(_message.Message):
     __slots__ = ("id", "custom_id")
@@ -60,20 +63,26 @@ class GetTransactionResultsResponse(_message.Message):
     def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class Annotation(_message.Message):
-    __slots__ = ("feature", "candidates", "purchase_line_candidates", "answer_candidates", "text_annotation", "page_texts")
+    __slots__ = ("feature", "candidates", "purchase_line_candidates", "answer_candidates", "text_annotation", "page_texts", "vat_distribution_candidates", "qr_codes", "swiss_qr_bills")
     FEATURE_FIELD_NUMBER: _ClassVar[int]
     CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     PURCHASE_LINE_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     ANSWER_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     PAGE_TEXTS_FIELD_NUMBER: _ClassVar[int]
+    VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    QR_CODES_FIELD_NUMBER: _ClassVar[int]
+    SWISS_QR_BILLS_FIELD_NUMBER: _ClassVar[int]
     feature: str
     candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.Candidate]
     purchase_line_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
     answer_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     text_annotation: _text_annotation_pb2.TextAnnotation
     page_texts: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PageText]
-    def __init__(self, feature: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., page_texts: _Optional[_Iterable[_Union[_candidate_pb2.PageText, _Mapping]]] = ...) -> None: ...
+    vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
+    qr_codes: _containers.RepeatedCompositeFieldContainer[_qr_pb2.QrCodeData]
+    swiss_qr_bills: _containers.RepeatedCompositeFieldContainer[_qr_pb2.SwissQrBill]
+    def __init__(self, feature: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., page_texts: _Optional[_Iterable[_Union[_candidate_pb2.PageText, _Mapping]]] = ..., vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ..., qr_codes: _Optional[_Iterable[_Union[_qr_pb2.QrCodeData, _Mapping]]] = ..., swiss_qr_bills: _Optional[_Iterable[_Union[_qr_pb2.SwissQrBill, _Mapping]]] = ...) -> None: ...
 
 class GetTransactionStatusRequest(_message.Message):
     __slots__ = ("id", "custom_id")

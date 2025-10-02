@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 import "validate/validate.proto";
@@ -84,6 +85,8 @@ message CreateTransactionRequest {
   string custom_id = 4;
   // Tier determines the type of the SSN model used
   ssn.type.Tier tier = 5; // default: STANDARD
+  // Questions to ask about the document
+  repeated string questions = 6;
 }
 
 message CreateTransactionResponse {
@@ -120,6 +123,9 @@ message Annotation {
   repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
   ssn.type.TextAnnotation text_annotation = 5; // text annotation
   repeated ssn.type.PageText page_texts = 6; // page texts
+  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates
+  repeated ssn.type.QrCodeData qr_codes = 8; // qr codes detected in document
+  repeated ssn.type.SwissQrBill swiss_qr_bills = 9; // swiss qr bills detected in document
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

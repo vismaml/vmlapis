@@ -666,6 +666,30 @@
             "$ref": "#/definitions/typePageText"
           },
           "title": "page texts"
+        },
+        "vatDistributionCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistributionCandidate"
+          },
+          "title": "vat distribution candidates"
+        },
+        "qrCodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeQrCodeData"
+          },
+          "title": "qr codes detected in document"
+        },
+        "swissQrBills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSwissQrBill"
+          },
+          "title": "swiss qr bills detected in document"
         }
       }
     },
@@ -1446,6 +1470,13 @@
           "$ref": "#/definitions/typeTier",
           "description": "default: STANDARD",
           "title": "Tier determines the type of the SSN model used"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Questions to ask about the document"
         }
       },
       "title": "--- post: \"/v1/transactions\" ---"

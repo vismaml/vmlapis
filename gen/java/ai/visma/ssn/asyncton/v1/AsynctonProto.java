@@ -94,79 +94,86 @@ public final class AsynctonProto {
       "\033google/protobuf/empty.proto\032.protoc-gen" +
       "-openapiv2/options/annotations.proto\032 ss" +
       "n/annotator/v1/annotator.proto\032\030ssn/type" +
-      "/candidate.proto\032\036ssn/type/text_annotati" +
-      "on.proto\032\023ssn/type/tier.proto\032\027validate/" +
-      "validate.proto\"\303\001\n\030CreateTransactionRequ" +
-      "est\0226\n\010document\030\001 \001(\0132\032.ssn.annotator.v1" +
-      ".DocumentR\010document\022\022\n\004tags\030\002 \003(\tR\004tags\022" +
-      "\032\n\010features\030\003 \003(\tR\010features\022\033\n\tcustom_id" +
-      "\030\004 \001(\tR\010customId\022\"\n\004tier\030\005 \001(\0162\016.ssn.typ" +
-      "e.TierR\004tier\"H\n\031CreateTransactionRespons" +
-      "e\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010cu" +
-      "stomId\"\257\001\n\034GetTransactionResultsRequest\022" +
-      "\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010cust" +
-      "omId\022A\n\016min_confidence\030\003 \001(\0162\032.ssn.type." +
-      "Confidence.LevelR\rminConfidence\022\037\n\013max_r" +
-      "esults\030\004 \001(\005R\nmaxResults\"\260\001\n\035GetTransact" +
-      "ionResultsResponse\022\016\n\002id\030\001 \001(\tR\002id\022=\n\013an" +
-      "notations\030\002 \003(\0132\033.ssn.asyncton.v1.Annota" +
-      "tionR\013annotations\022#\n\rerror_message\030\003 \001(\t" +
-      "R\014errorMessage\022\033\n\tcustom_id\030\004 \001(\tR\010custo" +
-      "mId\"\364\002\n\nAnnotation\022\030\n\007feature\030\001 \001(\tR\007fea" +
-      "ture\0223\n\ncandidates\030\002 \003(\0132\023.ssn.type.Cand" +
-      "idateR\ncandidates\022Y\n\030purchase_line_candi" +
-      "dates\030\003 \003(\0132\037.ssn.type.PurchaseLineCandi" +
-      "dateR\026purchaseLineCandidates\022F\n\021answer_c" +
-      "andidates\030\004 \003(\0132\031.ssn.type.AnswerCandida" +
-      "teR\020answerCandidates\022A\n\017text_annotation\030" +
-      "\005 \001(\0132\030.ssn.type.TextAnnotationR\016textAnn" +
-      "otation\0221\n\npage_texts\030\006 \003(\0132\022.ssn.type.P" +
-      "ageTextR\tpageTexts\"J\n\033GetTransactionStat" +
-      "usRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002" +
-      " \001(\tR\010customId\"\210\001\n\034GetTransactionStatusR" +
-      "esponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006status\030\002 \001(\tR" +
-      "\006status\022#\n\rerror_message\030\003 \001(\tR\014errorMes" +
-      "sage\022\033\n\tcustom_id\030\004 \001(\tR\010customId\"G\n\030Del" +
-      "eteTransactionRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n" +
-      "\tcustom_id\030\002 \001(\tR\010customId\"W\n\020DeleteTagR" +
-      "equest\022C\n\010tag_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
-      "Za-z0-9.][A-Za-z0-9_.>-]*$R\007tagName\"\215\001\n\037" +
-      "UpdateTransactionResultsRequest\022\016\n\002id\030\001 " +
-      "\001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\022=\n\013" +
-      "annotations\030\003 \003(\0132\033.ssn.asyncton.v1.Anno" +
-      "tationR\013annotations\"O\n UpdateTransaction" +
-      "ResultsResponse\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcusto" +
-      "m_id\030\002 \001(\tR\010customId2\256\007\n\022TransactionServ" +
-      "ice\022\207\001\n\021CreateTransaction\022).ssn.asyncton" +
-      ".v1.CreateTransactionRequest\032*.ssn.async" +
-      "ton.v1.CreateTransactionResponse\"\033\202\323\344\223\002\025" +
-      "\"\020/v1/transactions:\001*\022\271\001\n\025GetTransaction" +
-      "Results\022-.ssn.asyncton.v1.GetTransaction" +
-      "ResultsRequest\032..ssn.asyncton.v1.GetTran" +
-      "sactionResultsResponse\"A\202\323\344\223\002;\022\035/v1/tran" +
-      "sactions/{id}/resultsZ\032\022\030/v1/transaction" +
-      "s/results\022\264\001\n\024GetTransactionStatus\022,.ssn" +
-      ".asyncton.v1.GetTransactionStatusRequest" +
-      "\032-.ssn.asyncton.v1.GetTransactionStatusR" +
-      "esponse\"?\202\323\344\223\0029\022\034/v1/transactions/{id}/s" +
-      "tatusZ\031\022\027/v1/transactions/status\022\211\001\n\021Del" +
-      "eteTransaction\022).ssn.asyncton.v1.DeleteT" +
-      "ransactionRequest\032\026.google.protobuf.Empt" +
-      "y\"1\202\323\344\223\002+*\025/v1/transactions/{id}Z\022*\020/v1/" +
-      "transactions\022c\n\tDeleteTag\022!.ssn.asyncton" +
-      ".v1.DeleteTagRequest\032\026.google.protobuf.E" +
-      "mpty\"\033\202\323\344\223\002\025*\023/v1/tags/{tag_name}\022\251\001\n\030Up" +
-      "dateTransactionResults\0220.ssn.asyncton.v1" +
-      ".UpdateTransactionResultsRequest\0321.ssn.a" +
-      "syncton.v1.UpdateTransactionResultsRespo" +
-      "nse\"(\202\323\344\223\002\"\032\035/v1/transactions/{id}/resul" +
-      "ts:\001*B\203\002\n\030ai.visma.ssn.asyncton.v1B\rAsyn" +
-      "ctonProtoP\001Z?github.com/e-conomic/vmlapi" +
-      "s/gen/go/ssn/asyncton/v1;transaction\242\002\003S" +
-      "AX\252\002\017Ssn.Asyncton.V1\312\002\017Ssn\\Asyncton\\V1\342\002" +
-      "\033Ssn\\Asyncton\\V1\\GPBMetadata\352\002\021Ssn::Asyn" +
-      "cton::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020applica" +
-      "tion/json:\020application/jsonb\006proto3"
+      "/candidate.proto\032\021ssn/type/qr.proto\032\036ssn" +
+      "/type/text_annotation.proto\032\023ssn/type/ti" +
+      "er.proto\032\027validate/validate.proto\"\341\001\n\030Cr" +
+      "eateTransactionRequest\0226\n\010document\030\001 \001(\013" +
+      "2\032.ssn.annotator.v1.DocumentR\010document\022\022" +
+      "\n\004tags\030\002 \003(\tR\004tags\022\032\n\010features\030\003 \003(\tR\010fe" +
+      "atures\022\033\n\tcustom_id\030\004 \001(\tR\010customId\022\"\n\004t" +
+      "ier\030\005 \001(\0162\016.ssn.type.TierR\004tier\022\034\n\tquest" +
+      "ions\030\006 \003(\tR\tquestions\"H\n\031CreateTransacti" +
+      "onResponse\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030" +
+      "\002 \001(\tR\010customId\"\257\001\n\034GetTransactionResult" +
+      "sRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 " +
+      "\001(\tR\010customId\022A\n\016min_confidence\030\003 \001(\0162\032." +
+      "ssn.type.Confidence.LevelR\rminConfidence" +
+      "\022\037\n\013max_results\030\004 \001(\005R\nmaxResults\"\260\001\n\035Ge" +
+      "tTransactionResultsResponse\022\016\n\002id\030\001 \001(\tR" +
+      "\002id\022=\n\013annotations\030\002 \003(\0132\033.ssn.asyncton." +
+      "v1.AnnotationR\013annotations\022#\n\rerror_mess" +
+      "age\030\003 \001(\tR\014errorMessage\022\033\n\tcustom_id\030\004 \001" +
+      "(\tR\010customId\"\306\004\n\nAnnotation\022\030\n\007feature\030\001" +
+      " \001(\tR\007feature\0223\n\ncandidates\030\002 \003(\0132\023.ssn." +
+      "type.CandidateR\ncandidates\022Y\n\030purchase_l" +
+      "ine_candidates\030\003 \003(\0132\037.ssn.type.Purchase" +
+      "LineCandidateR\026purchaseLineCandidates\022F\n" +
+      "\021answer_candidates\030\004 \003(\0132\031.ssn.type.Answ" +
+      "erCandidateR\020answerCandidates\022A\n\017text_an" +
+      "notation\030\005 \001(\0132\030.ssn.type.TextAnnotation" +
+      "R\016textAnnotation\0221\n\npage_texts\030\006 \003(\0132\022.s" +
+      "sn.type.PageTextR\tpageTexts\022b\n\033vat_distr" +
+      "ibution_candidates\030\007 \003(\0132\".ssn.type.VatD" +
+      "istributionCandidateR\031vatDistributionCan" +
+      "didates\022/\n\010qr_codes\030\010 \003(\0132\024.ssn.type.QrC" +
+      "odeDataR\007qrCodes\022;\n\016swiss_qr_bills\030\t \003(\013" +
+      "2\025.ssn.type.SwissQrBillR\014swissQrBills\"J\n" +
+      "\033GetTransactionStatusRequest\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\"\210\001\n\034Ge" +
+      "tTransactionStatusResponse\022\016\n\002id\030\001 \001(\tR\002" +
+      "id\022\026\n\006status\030\002 \001(\tR\006status\022#\n\rerror_mess" +
+      "age\030\003 \001(\tR\014errorMessage\022\033\n\tcustom_id\030\004 \001" +
+      "(\tR\010customId\"G\n\030DeleteTransactionRequest" +
+      "\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010cus" +
+      "tomId\"W\n\020DeleteTagRequest\022C\n\010tag_name\030\001 " +
+      "\001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_." +
+      ">-]*$R\007tagName\"\215\001\n\037UpdateTransactionResu" +
+      "ltsRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030" +
+      "\002 \001(\tR\010customId\022=\n\013annotations\030\003 \003(\0132\033.s" +
+      "sn.asyncton.v1.AnnotationR\013annotations\"O" +
+      "\n UpdateTransactionResultsResponse\022\016\n\002id" +
+      "\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId2" +
+      "\256\007\n\022TransactionService\022\207\001\n\021CreateTransac" +
+      "tion\022).ssn.asyncton.v1.CreateTransaction" +
+      "Request\032*.ssn.asyncton.v1.CreateTransact" +
+      "ionResponse\"\033\202\323\344\223\002\025\"\020/v1/transactions:\001*" +
+      "\022\271\001\n\025GetTransactionResults\022-.ssn.asyncto" +
+      "n.v1.GetTransactionResultsRequest\032..ssn." +
+      "asyncton.v1.GetTransactionResultsRespons" +
+      "e\"A\202\323\344\223\002;\022\035/v1/transactions/{id}/results" +
+      "Z\032\022\030/v1/transactions/results\022\264\001\n\024GetTran" +
+      "sactionStatus\022,.ssn.asyncton.v1.GetTrans" +
+      "actionStatusRequest\032-.ssn.asyncton.v1.Ge" +
+      "tTransactionStatusResponse\"?\202\323\344\223\0029\022\034/v1/" +
+      "transactions/{id}/statusZ\031\022\027/v1/transact" +
+      "ions/status\022\211\001\n\021DeleteTransaction\022).ssn." +
+      "asyncton.v1.DeleteTransactionRequest\032\026.g" +
+      "oogle.protobuf.Empty\"1\202\323\344\223\002+*\025/v1/transa" +
+      "ctions/{id}Z\022*\020/v1/transactions\022c\n\tDelet" +
+      "eTag\022!.ssn.asyncton.v1.DeleteTagRequest\032" +
+      "\026.google.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v1/tag" +
+      "s/{tag_name}\022\251\001\n\030UpdateTransactionResult" +
+      "s\0220.ssn.asyncton.v1.UpdateTransactionRes" +
+      "ultsRequest\0321.ssn.asyncton.v1.UpdateTran" +
+      "sactionResultsResponse\"(\202\323\344\223\002\"\032\035/v1/tran" +
+      "sactions/{id}/results:\001*B\203\002\n\030ai.visma.ss" +
+      "n.asyncton.v1B\rAsynctonProtoP\001Z?github.c" +
+      "om/e-conomic/vmlapis/gen/go/ssn/asyncton" +
+      "/v1;transaction\242\002\003SAX\252\002\017Ssn.Asyncton.V1\312" +
+      "\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\GPBM" +
+      "etadata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n\tAsync " +
+      "API2\002v1*\001\0022\020application/json:\020applicatio" +
+      "n/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -176,6 +183,7 @@ public final class AsynctonProto {
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor(),
           ai.visma.ssn.type.CandidateProto.getDescriptor(),
+          ai.visma.ssn.type.QrProto.getDescriptor(),
           ai.visma.ssn.type.TextAnnotationProto.getDescriptor(),
           ai.visma.ssn.type.TierProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
@@ -185,7 +193,7 @@ public final class AsynctonProto {
     internal_static_ssn_asyncton_v1_CreateTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_asyncton_v1_CreateTransactionRequest_descriptor,
-        new java.lang.String[] { "Document", "Tags", "Features", "CustomId", "Tier", });
+        new java.lang.String[] { "Document", "Tags", "Features", "CustomId", "Tier", "Questions", });
     internal_static_ssn_asyncton_v1_CreateTransactionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_asyncton_v1_CreateTransactionResponse_fieldAccessorTable = new
@@ -209,7 +217,7 @@ public final class AsynctonProto {
     internal_static_ssn_asyncton_v1_Annotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_asyncton_v1_Annotation_descriptor,
-        new java.lang.String[] { "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", "PageTexts", });
+        new java.lang.String[] { "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", "PageTexts", "VatDistributionCandidates", "QrCodes", "SwissQrBills", });
     internal_static_ssn_asyncton_v1_GetTransactionStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_asyncton_v1_GetTransactionStatusRequest_fieldAccessorTable = new
@@ -252,6 +260,7 @@ public final class AsynctonProto {
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
+    ai.visma.ssn.type.QrProto.getDescriptor();
     ai.visma.ssn.type.TextAnnotationProto.getDescriptor();
     ai.visma.ssn.type.TierProto.getDescriptor();
     ai.visma.validate.ValidateProto.getDescriptor();

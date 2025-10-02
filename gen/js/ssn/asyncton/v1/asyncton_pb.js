@@ -31,6 +31,8 @@ var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator
 goog.object.extend(proto, ssn_annotator_v1_annotator_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
+var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js');
+goog.object.extend(proto, ssn_type_qr_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
 var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
@@ -285,7 +287,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.CreateTransactionRequest.repeatedFields_ = [2,3];
+proto.ssn.asyncton.v1.CreateTransactionRequest.repeatedFields_ = [2,3,6];
 
 
 
@@ -322,7 +324,8 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.toObject = function(includeInstan
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
     customId: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    tier: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    tier: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    questionsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -379,6 +382,10 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.deserializeBinaryFromReader = fun
     case 5:
       var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
       msg.setTier(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addQuestions(value);
       break;
     default:
       reader.skipField();
@@ -442,6 +449,13 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.serializeBinaryToWriter = functio
   if (f !== 0.0) {
     writer.writeEnum(
       5,
+      f
+    );
+  }
+  f = message.getQuestionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
       f
     );
   }
@@ -592,6 +606,43 @@ proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getTier = function() {
  */
 proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setTier = function(value) {
   return jspb.Message.setProto3EnumField(this, 5, value);
+};
+
+
+/**
+ * repeated string questions = 6;
+ * @return {!Array<string>}
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.getQuestionsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.setQuestionsList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.addQuestions = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.asyncton.v1.CreateTransactionRequest.prototype.clearQuestionsList = function() {
+  return this.setQuestionsList([]);
 };
 
 
@@ -1231,7 +1282,7 @@ proto.ssn.asyncton.v1.GetTransactionResultsResponse.prototype.setCustomId = func
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6];
+proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9];
 
 
 
@@ -1273,7 +1324,13 @@ proto.ssn.asyncton.v1.Annotation.toObject = function(includeInstance, msg) {
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
-    ssn_type_candidate_pb.PageText.toObject, includeInstance)
+    ssn_type_candidate_pb.PageText.toObject, includeInstance),
+    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    qrCodesList: jspb.Message.toObjectList(msg.getQrCodesList(),
+    ssn_type_qr_pb.QrCodeData.toObject, includeInstance),
+    swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
+    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1338,6 +1395,21 @@ proto.ssn.asyncton.v1.Annotation.deserializeBinaryFromReader = function(msg, rea
       var value = new ssn_type_candidate_pb.PageText;
       reader.readMessage(value,ssn_type_candidate_pb.PageText.deserializeBinaryFromReader);
       msg.addPageTexts(value);
+      break;
+    case 7:
+      var value = new ssn_type_candidate_pb.VatDistributionCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
+      msg.addVatDistributionCandidates(value);
+      break;
+    case 8:
+      var value = new ssn_type_qr_pb.QrCodeData;
+      reader.readMessage(value,ssn_type_qr_pb.QrCodeData.deserializeBinaryFromReader);
+      msg.addQrCodes(value);
+      break;
+    case 9:
+      var value = new ssn_type_qr_pb.SwissQrBill;
+      reader.readMessage(value,ssn_type_qr_pb.SwissQrBill.deserializeBinaryFromReader);
+      msg.addSwissQrBills(value);
       break;
     default:
       reader.skipField();
@@ -1413,6 +1485,30 @@ proto.ssn.asyncton.v1.Annotation.serializeBinaryToWriter = function(message, wri
       6,
       f,
       ssn_type_candidate_pb.PageText.serializeBinaryToWriter
+    );
+  }
+  f = message.getVatDistributionCandidatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      7,
+      f,
+      ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getQrCodesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      ssn_type_qr_pb.QrCodeData.serializeBinaryToWriter
+    );
+  }
+  f = message.getSwissQrBillsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      ssn_type_qr_pb.SwissQrBill.serializeBinaryToWriter
     );
   }
 };
@@ -1622,6 +1718,120 @@ proto.ssn.asyncton.v1.Annotation.prototype.addPageTexts = function(opt_value, op
  */
 proto.ssn.asyncton.v1.Annotation.prototype.clearPageTextsList = function() {
   return this.setPageTextsList([]);
+};
+
+
+/**
+ * repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7;
+ * @return {!Array<!proto.ssn.type.VatDistributionCandidate>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getVatDistributionCandidatesList = function() {
+  return /** @type{!Array<!proto.ssn.type.VatDistributionCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistributionCandidate, 7));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.VatDistributionCandidate>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setVatDistributionCandidatesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 7, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.VatDistributionCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.VatDistributionCandidate}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.ssn.type.VatDistributionCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearVatDistributionCandidatesList = function() {
+  return this.setVatDistributionCandidatesList([]);
+};
+
+
+/**
+ * repeated ssn.type.QrCodeData qr_codes = 8;
+ * @return {!Array<!proto.ssn.type.QrCodeData>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getQrCodesList = function() {
+  return /** @type{!Array<!proto.ssn.type.QrCodeData>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_qr_pb.QrCodeData, 8));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.QrCodeData>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setQrCodesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.QrCodeData=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.QrCodeData}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addQrCodes = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.ssn.type.QrCodeData, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearQrCodesList = function() {
+  return this.setQrCodesList([]);
+};
+
+
+/**
+ * repeated ssn.type.SwissQrBill swiss_qr_bills = 9;
+ * @return {!Array<!proto.ssn.type.SwissQrBill>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getSwissQrBillsList = function() {
+  return /** @type{!Array<!proto.ssn.type.SwissQrBill>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_qr_pb.SwissQrBill, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.SwissQrBill>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setSwissQrBillsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.SwissQrBill=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.SwissQrBill}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addSwissQrBills = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.ssn.type.SwissQrBill, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearSwissQrBillsList = function() {
+  return this.setSwissQrBillsList([]);
 };
 
 
