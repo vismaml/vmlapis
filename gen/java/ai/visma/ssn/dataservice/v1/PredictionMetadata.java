@@ -82,6 +82,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.dataservice.v1.PredictionMetadata.class, ai.visma.ssn.dataservice.v1.PredictionMetadata.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.ModelSpec> totalInclVat_;
@@ -1722,6 +1723,58 @@ private static final long serialVersionUID = 0L;
     return receiverVatNumber_.get(index);
   }
 
+  public static final int CHECK_IN_DATE_FIELD_NUMBER = 41;
+  private com.google.type.Date checkInDate_;
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return Whether the checkInDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasCheckInDate() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The checkInDate.
+   */
+  @java.lang.Override
+  public com.google.type.Date getCheckInDate() {
+    return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+  }
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public com.google.type.DateOrBuilder getCheckInDateOrBuilder() {
+    return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+  }
+
+  public static final int CHECK_OUT_DATE_FIELD_NUMBER = 42;
+  private com.google.type.Date checkOutDate_;
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return Whether the checkOutDate field is set.
+   */
+  @java.lang.Override
+  public boolean hasCheckOutDate() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The checkOutDate.
+   */
+  @java.lang.Override
+  public com.google.type.Date getCheckOutDate() {
+    return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+  }
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public com.google.type.DateOrBuilder getCheckOutDateOrBuilder() {
+    return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1855,6 +1908,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < receiverVatNumber_.size(); i++) {
       output.writeMessage(40, receiverVatNumber_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(41, getCheckInDate());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(42, getCheckOutDate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2025,6 +2084,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(40, receiverVatNumber_.get(i));
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(41, getCheckInDate());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(42, getCheckOutDate());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2120,6 +2187,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverNameList())) return false;
     if (!getReceiverVatNumberList()
         .equals(other.getReceiverVatNumberList())) return false;
+    if (hasCheckInDate() != other.hasCheckInDate()) return false;
+    if (hasCheckInDate()) {
+      if (!getCheckInDate()
+          .equals(other.getCheckInDate())) return false;
+    }
+    if (hasCheckOutDate() != other.hasCheckOutDate()) return false;
+    if (hasCheckOutDate()) {
+      if (!getCheckOutDate()
+          .equals(other.getCheckOutDate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2291,6 +2368,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getReceiverVatNumberList().hashCode();
     }
+    if (hasCheckInDate()) {
+      hash = (37 * hash) + CHECK_IN_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getCheckInDate().hashCode();
+    }
+    if (hasCheckOutDate()) {
+      hash = (37 * hash) + CHECK_OUT_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getCheckOutDate().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2410,13 +2495,60 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.dataservice.v1.PredictionMetadata.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getTotalInclVatFieldBuilder();
+        getTotalVatFieldBuilder();
+        getTotalExclVatFieldBuilder();
+        getOrderDateFieldBuilder();
+        getPaymentDueDateFieldBuilder();
+        getDocumentTypeFieldBuilder();
+        getCurrencyFieldBuilder();
+        getCreditCardLastFourFieldBuilder();
+        getPaymentMethodFieldBuilder();
+        getOcrLineDkTypeFieldBuilder();
+        getOcrLineDkPaymentIdFieldBuilder();
+        getOcrLineDkCreditorIdFieldBuilder();
+        getOcrLineSePaymentIdFieldBuilder();
+        getOcrLineSeBankgiroCreditorIdFieldBuilder();
+        getOcrLineSePlusgiroCreditorIdFieldBuilder();
+        getOcrLineNoPaymentIdFieldBuilder();
+        getOcrLineFiPaymentIdFieldBuilder();
+        getOcrLineNlPaymentIdFieldBuilder();
+        getSupplierCorporateIdFieldBuilder();
+        getSupplierCountryCodeFieldBuilder();
+        getInvoiceNumberFieldBuilder();
+        getIbanFieldBuilder();
+        getOrderReferenceFieldBuilder();
+        getBankAccountNumberFieldBuilder();
+        getBankRegistrationNumberFieldBuilder();
+        getSupplierNameFieldBuilder();
+        getBicFieldBuilder();
+        getDocumentNumberFieldBuilder();
+        getDocumentDateFieldBuilder();
+        getOrderNumberFieldBuilder();
+        getSupplierVatNumberFieldBuilder();
+        getSupplierOrganisationNumberFieldBuilder();
+        getSupplierAddressFieldBuilder();
+        getCustomerNumberFieldBuilder();
+        getReceiverOrderNumberFieldBuilder();
+        getOcrLineBePaymentIdFieldBuilder();
+        getReceiverAddressFieldBuilder();
+        getReceiverCountryCodeFieldBuilder();
+        getReceiverNameFieldBuilder();
+        getReceiverVatNumberFieldBuilder();
+        getCheckInDateFieldBuilder();
+        getCheckOutDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2703,6 +2835,16 @@ private static final long serialVersionUID = 0L;
         receiverVatNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000080);
+      checkInDate_ = null;
+      if (checkInDateBuilder_ != null) {
+        checkInDateBuilder_.dispose();
+        checkInDateBuilder_ = null;
+      }
+      checkOutDate_ = null;
+      if (checkOutDateBuilder_ != null) {
+        checkOutDateBuilder_.dispose();
+        checkOutDateBuilder_ = null;
+      }
       return this;
     }
 
@@ -3105,6 +3247,20 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(ai.visma.ssn.dataservice.v1.PredictionMetadata result) {
       int from_bitField1_ = bitField1_;
+      int to_bitField0_ = 0;
+      if (((from_bitField1_ & 0x00000100) != 0)) {
+        result.checkInDate_ = checkInDateBuilder_ == null
+            ? checkInDate_
+            : checkInDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField1_ & 0x00000200) != 0)) {
+        result.checkOutDate_ = checkOutDateBuilder_ == null
+            ? checkOutDate_
+            : checkOutDateBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4159,6 +4315,12 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasCheckInDate()) {
+        mergeCheckInDate(other.getCheckInDate());
+      }
+      if (other.hasCheckOutDate()) {
+        mergeCheckOutDate(other.getCheckOutDate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4705,6 +4867,20 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 322
+            case 330: {
+              input.readMessage(
+                  getCheckInDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 330
+            case 338: {
+              input.readMessage(
+                  getCheckOutDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 338
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -14321,6 +14497,248 @@ private static final long serialVersionUID = 0L;
         receiverVatNumber_ = null;
       }
       return receiverVatNumberBuilder_;
+    }
+
+    private com.google.type.Date checkInDate_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkInDateBuilder_;
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the checkInDate field is set.
+     */
+    public boolean hasCheckInDate() {
+      return ((bitField1_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The checkInDate.
+     */
+    public com.google.type.Date getCheckInDate() {
+      if (checkInDateBuilder_ == null) {
+        return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+      } else {
+        return checkInDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setCheckInDate(com.google.type.Date value) {
+      if (checkInDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkInDate_ = value;
+      } else {
+        checkInDateBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setCheckInDate(
+        com.google.type.Date.Builder builderForValue) {
+      if (checkInDateBuilder_ == null) {
+        checkInDate_ = builderForValue.build();
+      } else {
+        checkInDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder mergeCheckInDate(com.google.type.Date value) {
+      if (checkInDateBuilder_ == null) {
+        if (((bitField1_ & 0x00000100) != 0) &&
+          checkInDate_ != null &&
+          checkInDate_ != com.google.type.Date.getDefaultInstance()) {
+          getCheckInDateBuilder().mergeFrom(value);
+        } else {
+          checkInDate_ = value;
+        }
+      } else {
+        checkInDateBuilder_.mergeFrom(value);
+      }
+      if (checkInDate_ != null) {
+        bitField1_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder clearCheckInDate() {
+      bitField1_ = (bitField1_ & ~0x00000100);
+      checkInDate_ = null;
+      if (checkInDateBuilder_ != null) {
+        checkInDateBuilder_.dispose();
+        checkInDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.Date.Builder getCheckInDateBuilder() {
+      bitField1_ |= 0x00000100;
+      onChanged();
+      return getCheckInDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.DateOrBuilder getCheckInDateOrBuilder() {
+      if (checkInDateBuilder_ != null) {
+        return checkInDateBuilder_.getMessageOrBuilder();
+      } else {
+        return checkInDate_ == null ?
+            com.google.type.Date.getDefaultInstance() : checkInDate_;
+      }
+    }
+    /**
+     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+        getCheckInDateFieldBuilder() {
+      if (checkInDateBuilder_ == null) {
+        checkInDateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                getCheckInDate(),
+                getParentForChildren(),
+                isClean());
+        checkInDate_ = null;
+      }
+      return checkInDateBuilder_;
+    }
+
+    private com.google.type.Date checkOutDate_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkOutDateBuilder_;
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return Whether the checkOutDate field is set.
+     */
+    public boolean hasCheckOutDate() {
+      return ((bitField1_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The checkOutDate.
+     */
+    public com.google.type.Date getCheckOutDate() {
+      if (checkOutDateBuilder_ == null) {
+        return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+      } else {
+        return checkOutDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setCheckOutDate(com.google.type.Date value) {
+      if (checkOutDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkOutDate_ = value;
+      } else {
+        checkOutDateBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setCheckOutDate(
+        com.google.type.Date.Builder builderForValue) {
+      if (checkOutDateBuilder_ == null) {
+        checkOutDate_ = builderForValue.build();
+      } else {
+        checkOutDateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder mergeCheckOutDate(com.google.type.Date value) {
+      if (checkOutDateBuilder_ == null) {
+        if (((bitField1_ & 0x00000200) != 0) &&
+          checkOutDate_ != null &&
+          checkOutDate_ != com.google.type.Date.getDefaultInstance()) {
+          getCheckOutDateBuilder().mergeFrom(value);
+        } else {
+          checkOutDate_ = value;
+        }
+      } else {
+        checkOutDateBuilder_.mergeFrom(value);
+      }
+      if (checkOutDate_ != null) {
+        bitField1_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder clearCheckOutDate() {
+      bitField1_ = (bitField1_ & ~0x00000200);
+      checkOutDate_ = null;
+      if (checkOutDateBuilder_ != null) {
+        checkOutDateBuilder_.dispose();
+        checkOutDateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.Date.Builder getCheckOutDateBuilder() {
+      bitField1_ |= 0x00000200;
+      onChanged();
+      return getCheckOutDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.DateOrBuilder getCheckOutDateOrBuilder() {
+      if (checkOutDateBuilder_ != null) {
+        return checkOutDateBuilder_.getMessageOrBuilder();
+      } else {
+        return checkOutDate_ == null ?
+            com.google.type.Date.getDefaultInstance() : checkOutDate_;
+      }
+    }
+    /**
+     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+        getCheckOutDateFieldBuilder() {
+      if (checkOutDateBuilder_ == null) {
+        checkOutDateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                getCheckOutDate(),
+                getParentForChildren(),
+                isClean());
+        checkOutDate_ = null;
+      }
+      return checkOutDateBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionMetadata)

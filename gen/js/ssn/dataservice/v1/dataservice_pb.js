@@ -1052,7 +1052,9 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    checkInDate: (f = msg.getCheckInDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1303,6 +1305,16 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistribution(value);
+      break;
+    case 44:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckInDate(value);
+      break;
+    case 45:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -1675,6 +1687,22 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
       43,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDate();
+  if (f != null) {
+    writer.writeMessage(
+      44,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDate();
+  if (f != null) {
+    writer.writeMessage(
+      45,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
     );
   }
 };
@@ -3274,6 +3302,80 @@ proto.ssn.dataservice.v1.TrueValues.prototype.clearVatDistributionList = functio
 };
 
 
+/**
+ * optional google.type.Date check_in_date = 44;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getCheckInDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 44));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setCheckInDate = function(value) {
+  return jspb.Message.setWrapperField(this, 44, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearCheckInDate = function() {
+  return this.setCheckInDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasCheckInDate = function() {
+  return jspb.Message.getField(this, 44) != null;
+};
+
+
+/**
+ * optional google.type.Date check_out_date = 45;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getCheckOutDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 45));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setCheckOutDate = function(value) {
+  return jspb.Message.setWrapperField(this, 45, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearCheckOutDate = function() {
+  return this.setCheckOutDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasCheckOutDate = function() {
+  return jspb.Message.getField(this, 45) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
@@ -3398,7 +3500,9 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    checkInDate: (f = msg.getCheckInDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3649,6 +3753,16 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistribution(value);
+      break;
+    case 44:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckInDate(value);
+      break;
+    case 45:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -4021,6 +4135,22 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
       43,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDate();
+  if (f != null) {
+    writer.writeMessage(
+      44,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDate();
+  if (f != null) {
+    writer.writeMessage(
+      45,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
     );
   }
 };
@@ -5657,6 +5787,80 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.addVatDistribution = functio
  */
 proto.ssn.dataservice.v1.PredictionValues.prototype.clearVatDistributionList = function() {
   return this.setVatDistributionList([]);
+};
+
+
+/**
+ * optional google.type.Date check_in_date = 44;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getCheckInDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 44));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setCheckInDate = function(value) {
+  return jspb.Message.setWrapperField(this, 44, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearCheckInDate = function() {
+  return this.setCheckInDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.hasCheckInDate = function() {
+  return jspb.Message.getField(this, 44) != null;
+};
+
+
+/**
+ * optional google.type.Date check_out_date = 45;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getCheckOutDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 45));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setCheckOutDate = function(value) {
+  return jspb.Message.setWrapperField(this, 45, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearCheckOutDate = function() {
+  return this.setCheckOutDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.hasCheckOutDate = function() {
+  return jspb.Message.getField(this, 45) != null;
 };
 
 
@@ -8005,7 +8209,9 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
-    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    checkInDate: (f = msg.getCheckInDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -8241,6 +8447,16 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckInDate(value);
+      break;
+    case 42:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -8589,6 +8805,22 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
       40,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDate();
+  if (f != null) {
+    writer.writeMessage(
+      41,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDate();
+  if (f != null) {
+    writer.writeMessage(
+      42,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
     );
   }
 };
@@ -10111,6 +10343,80 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverVatNumber = fun
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
+};
+
+
+/**
+ * optional google.type.Date check_in_date = 41;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCheckInDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 41));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCheckInDate = function(value) {
+  return jspb.Message.setWrapperField(this, 41, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCheckInDate = function() {
+  return this.setCheckInDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.hasCheckInDate = function() {
+  return jspb.Message.getField(this, 41) != null;
+};
+
+
+/**
+ * optional google.type.Date check_out_date = 42;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCheckOutDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 42));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCheckOutDate = function(value) {
+  return jspb.Message.setWrapperField(this, 42, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCheckOutDate = function() {
+  return this.setCheckOutDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.hasCheckOutDate = function() {
+  return jspb.Message.getField(this, 42) != null;
 };
 
 

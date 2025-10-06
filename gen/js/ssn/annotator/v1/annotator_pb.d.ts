@@ -85,6 +85,8 @@ export namespace Feature {
     QR_CODES = 48,
     SWISS_QR_BILLS = 49,
     VERIFIED = 50,
+    CHECK_IN_DATE = 51,
+    CHECK_OUT_DATE = 52,
   }
 }
 
@@ -391,6 +393,16 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearSwissQrBillsList(): DocumentAnnotatorResponse;
   addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
 
+  getCheckInDateList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCheckInDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearCheckInDateList(): DocumentAnnotatorResponse;
+  addCheckInDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getCheckOutDateList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCheckOutDateList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearCheckOutDateList(): DocumentAnnotatorResponse;
+  addCheckOutDate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -453,6 +465,8 @@ export namespace DocumentAnnotatorResponse {
     languageCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
+    checkInDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    checkOutDateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

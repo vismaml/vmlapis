@@ -968,4 +968,34 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getReceiverVatNumberOrBuilder(
       int index);
+
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return Whether the checkInDate field is set.
+   */
+  boolean hasCheckInDate();
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The checkInDate.
+   */
+  com.google.type.Date getCheckInDate();
+  /**
+   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.DateOrBuilder getCheckInDateOrBuilder();
+
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return Whether the checkOutDate field is set.
+   */
+  boolean hasCheckOutDate();
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The checkOutDate.
+   */
+  com.google.type.Date getCheckOutDate();
+  /**
+   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.DateOrBuilder getCheckOutDateOrBuilder();
 }

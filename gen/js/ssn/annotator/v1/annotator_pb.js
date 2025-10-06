@@ -378,7 +378,9 @@ proto.ssn.annotator.v1.Feature.Type = {
   LANGUAGE_CODE: 47,
   QR_CODES: 48,
   SWISS_QR_BILLS: 49,
-  VERIFIED: 50
+  VERIFIED: 50,
+  CHECK_IN_DATE: 51,
+  CHECK_OUT_DATE: 52
 };
 
 /**
@@ -829,7 +831,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,53,54];
 
 
 
@@ -960,7 +962,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     qrCodesList: jspb.Message.toObjectList(msg.getQrCodesList(),
     ssn_type_qr_pb.QrCodeData.toObject, includeInstance),
     swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
-    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance)
+    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance),
+    checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1253,6 +1259,16 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_qr_pb.SwissQrBill;
       reader.readMessage(value,ssn_type_qr_pb.SwissQrBill.deserializeBinaryFromReader);
       msg.addSwissQrBills(value);
+      break;
+    case 53:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCheckInDate(value);
+      break;
+    case 54:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -1694,6 +1710,22 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       52,
       f,
       ssn_type_qr_pb.SwissQrBill.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      53,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      54,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -3610,6 +3642,82 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addSwissQrBills = fun
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSwissQrBillsList = function() {
   return this.setSwissQrBillsList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate check_in_date = 53;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getCheckInDateList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 53));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setCheckInDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 53, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addCheckInDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 53, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCheckInDateList = function() {
+  return this.setCheckInDateList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate check_out_date = 54;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getCheckOutDateList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 54));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setCheckOutDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 54, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addCheckOutDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 54, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCheckOutDateList = function() {
+  return this.setCheckOutDateList([]);
 };
 
 

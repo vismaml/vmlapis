@@ -459,6 +459,22 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 50;</code>
      */
     VERIFIED(50),
+    /**
+     * <pre>
+     * Run QA check in date detection
+     * </pre>
+     *
+     * <code>CHECK_IN_DATE = 51;</code>
+     */
+    CHECK_IN_DATE(51),
+    /**
+     * <pre>
+     * Run QA check out date detection
+     * </pre>
+     *
+     * <code>CHECK_OUT_DATE = 52;</code>
+     */
+    CHECK_OUT_DATE(52),
     UNRECOGNIZED(-1),
     ;
 
@@ -881,6 +897,22 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 50;</code>
      */
     public static final int VERIFIED_VALUE = 50;
+    /**
+     * <pre>
+     * Run QA check in date detection
+     * </pre>
+     *
+     * <code>CHECK_IN_DATE = 51;</code>
+     */
+    public static final int CHECK_IN_DATE_VALUE = 51;
+    /**
+     * <pre>
+     * Run QA check out date detection
+     * </pre>
+     *
+     * <code>CHECK_OUT_DATE = 52;</code>
+     */
+    public static final int CHECK_OUT_DATE_VALUE = 52;
 
 
     public final int getNumber() {
@@ -958,6 +990,8 @@ private static final long serialVersionUID = 0L;
         case 48: return QR_CODES;
         case 49: return SWISS_QR_BILLS;
         case 50: return VERIFIED;
+        case 51: return CHECK_IN_DATE;
+        case 52: return CHECK_OUT_DATE;
         default: return null;
       }
     }
