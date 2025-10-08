@@ -402,6 +402,67 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
+ *   !proto.ssn.dataservice.v1.FeedbackMetrics>}
+ */
+const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
+  proto.ssn.dataservice.v1.FeedbackMetrics,
+  /**
+   * @param {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.dataservice.v1.FeedbackMetrics.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.FeedbackMetrics)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.FeedbackMetrics>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessMetrics =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateAnnotationProcessMetrics,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.FeedbackMetrics>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateAnnotationProcessMetrics =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateAnnotationProcessMetrics);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */

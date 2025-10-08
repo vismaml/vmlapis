@@ -1347,6 +1347,46 @@ export namespace MetricsRequest {
   }
 }
 
+export class AnnotationProcessMetricsRequest extends jspb.Message {
+  getStartTime(): number;
+  setStartTime(value: number): AnnotationProcessMetricsRequest;
+
+  getEndTime(): number;
+  setEndTime(value: number): AnnotationProcessMetricsRequest;
+
+  getFieldsList(): Array<string>;
+  setFieldsList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearFieldsList(): AnnotationProcessMetricsRequest;
+  addFields(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  getCountryCodesList(): Array<string>;
+  setCountryCodesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearCountryCodesList(): AnnotationProcessMetricsRequest;
+  addCountryCodes(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  getDocumentTypesList(): Array<string>;
+  setDocumentTypesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearDocumentTypesList(): AnnotationProcessMetricsRequest;
+  addDocumentTypes(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnnotationProcessMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsRequest): AnnotationProcessMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsRequest;
+  static deserializeBinaryFromReader(message: AnnotationProcessMetricsRequest, reader: jspb.BinaryReader): AnnotationProcessMetricsRequest;
+}
+
+export namespace AnnotationProcessMetricsRequest {
+  export type AsObject = {
+    startTime: number,
+    endTime: number,
+    fieldsList: Array<string>,
+    countryCodesList: Array<string>,
+    documentTypesList: Array<string>,
+  }
+}
+
 export class FeedbackMetrics extends jspb.Message {
   getDocumentCount(): number;
   setDocumentCount(value: number): FeedbackMetrics;

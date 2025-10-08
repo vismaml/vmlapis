@@ -86,6 +86,11 @@ public final class DataserviceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_dataservice_v1_MetricsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -470,47 +475,55 @@ public final class DataserviceProto {
       "\010end_time\030\003 \001(\003R\007endTime\022\026\n\006fields\030\004 \003(\t" +
       "R\006fields\022\022\n\004tags\030\005 \003(\tR\004tags\022#\n\rcountry_" +
       "codes\030\006 \003(\tR\014countryCodes\022%\n\016document_ty" +
-      "pes\030\007 \003(\tR\rdocumentTypes\"\377\001\n\017FeedbackMet" +
-      "rics\022%\n\016document_count\030\001 \001(\005R\rdocumentCo" +
-      "unt\022%\n\016feedback_count\030\002 \001(\005R\rfeedbackCou" +
-      "nt\022P\n\023overall_correctness\030\003 \001(\0132\037.ssn.da" +
-      "taservice.v1.CorrectnessR\022overallCorrect" +
-      "ness\022L\n\021field_correctness\030\004 \003(\0132\037.ssn.da" +
-      "taservice.v1.CorrectnessR\020fieldCorrectne" +
-      "ss\"\314\001\n\013Correctness\022\024\n\005field\030\001 \001(\tR\005field" +
-      "\022-\n\022correct_percentage\030\002 \001(\002R\021correctPer" +
-      "centage\0223\n\025incomplete_percentage\030\003 \001(\002R\024" +
-      "incompletePercentage\022)\n\020error_percentage" +
-      "\030\004 \001(\002R\017errorPercentage\022\030\n\007support\030\005 \001(\005" +
-      "R\007support\"#\n\rDeleteRequest\022\022\n\004tags\030\001 \003(\t" +
-      "R\004tags\"D\n\rCallsPerMonth\022\024\n\005calls\030\001 \001(\003R\005" +
-      "calls\022\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025" +
-      "CallsPerMonthResponse\022I\n\017calls_per_month" +
-      "\030\001 \003(\0132!.ssn.dataservice.v1.CallsPerMont" +
-      "hR\rcallsPerMonth2\265\005\n\013DataService\022g\n\016Crea" +
-      "teDocument\022).ssn.dataservice.v1.CreateDo" +
-      "cumentRequest\032*.ssn.dataservice.v1.Creat" +
-      "eDocumentResponse\022a\n\014ReadDocument\022\'.ssn." +
-      "dataservice.v1.ReadDocumentRequest\032(.ssn" +
-      ".dataservice.v1.ReadDocumentResponse\022U\n\017" +
-      "PrepareFeedback\022*.ssn.dataservice.v1.Pre" +
-      "pareFeedbackRequest\032\026.google.protobuf.Em" +
-      "pty\022g\n\010Feedback\022#.ssn.dataservice.v1.Fee" +
-      "dbackRequest\032\026.google.protobuf.Empty\"\036\202\323" +
-      "\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020Calculat" +
-      "eMetrics\022\".ssn.dataservice.v1.MetricsReq" +
-      "uest\032#.ssn.dataservice.v1.FeedbackMetric" +
-      "s\022c\n\006Delete\022!.ssn.dataservice.v1.DeleteR" +
+      "pes\030\007 \003(\tR\rdocumentTypes\"\277\001\n\037AnnotationP" +
+      "rocessMetricsRequest\022\035\n\nstart_time\030\002 \001(\003" +
+      "R\tstartTime\022\031\n\010end_time\030\003 \001(\003R\007endTime\022\026" +
+      "\n\006fields\030\004 \003(\tR\006fields\022#\n\rcountry_codes\030" +
+      "\005 \003(\tR\014countryCodes\022%\n\016document_types\030\006 " +
+      "\003(\tR\rdocumentTypes\"\377\001\n\017FeedbackMetrics\022%" +
+      "\n\016document_count\030\001 \001(\005R\rdocumentCount\022%\n" +
+      "\016feedback_count\030\002 \001(\005R\rfeedbackCount\022P\n\023" +
+      "overall_correctness\030\003 \001(\0132\037.ssn.dataserv" +
+      "ice.v1.CorrectnessR\022overallCorrectness\022L" +
+      "\n\021field_correctness\030\004 \003(\0132\037.ssn.dataserv" +
+      "ice.v1.CorrectnessR\020fieldCorrectness\"\314\001\n" +
+      "\013Correctness\022\024\n\005field\030\001 \001(\tR\005field\022-\n\022co" +
+      "rrect_percentage\030\002 \001(\002R\021correctPercentag" +
+      "e\0223\n\025incomplete_percentage\030\003 \001(\002R\024incomp" +
+      "letePercentage\022)\n\020error_percentage\030\004 \001(\002" +
+      "R\017errorPercentage\022\030\n\007support\030\005 \001(\005R\007supp" +
+      "ort\"#\n\rDeleteRequest\022\022\n\004tags\030\001 \003(\tR\004tags" +
+      "\"D\n\rCallsPerMonth\022\024\n\005calls\030\001 \001(\003R\005calls\022" +
+      "\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025CallsP" +
+      "erMonthResponse\022I\n\017calls_per_month\030\001 \003(\013" +
+      "2!.ssn.dataservice.v1.CallsPerMonthR\rcal" +
+      "lsPerMonth2\264\006\n\013DataService\022g\n\016CreateDocu" +
+      "ment\022).ssn.dataservice.v1.CreateDocument" +
+      "Request\032*.ssn.dataservice.v1.CreateDocum" +
+      "entResponse\022a\n\014ReadDocument\022\'.ssn.datase" +
+      "rvice.v1.ReadDocumentRequest\032(.ssn.datas" +
+      "ervice.v1.ReadDocumentResponse\022U\n\017Prepar" +
+      "eFeedback\022*.ssn.dataservice.v1.PrepareFe" +
+      "edbackRequest\032\026.google.protobuf.Empty\022g\n" +
+      "\010Feedback\022#.ssn.dataservice.v1.FeedbackR" +
       "equest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023" +
-      "/v1/feedback:delete:\001*\022X\n\023CallsPerMonthM" +
-      "etric\022\026.google.protobuf.Empty\032).ssn.data" +
-      "service.v1.CallsPerMonthResponseB\335\001\n\033ai." +
-      "visma.ssn.dataservice.v1B\020DataservicePro" +
-      "toP\001ZBgithub.com/e-conomic/vmlapis/gen/g" +
-      "o/ssn/dataservice/v1;dataservice\242\002\003SDX\252\002" +
-      "\022Ssn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V1" +
-      "\342\002\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn:" +
-      ":Dataservice::V1b\006proto3"
+      "/v1/feedback:create:\001*\022[\n\020CalculateMetri" +
+      "cs\022\".ssn.dataservice.v1.MetricsRequest\032#" +
+      ".ssn.dataservice.v1.FeedbackMetrics\022}\n!C" +
+      "alculateAnnotationProcessMetrics\0223.ssn.d" +
+      "ataservice.v1.AnnotationProcessMetricsRe" +
+      "quest\032#.ssn.dataservice.v1.FeedbackMetri" +
+      "cs\022c\n\006Delete\022!.ssn.dataservice.v1.Delete" +
+      "Request\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"" +
+      "\023/v1/feedback:delete:\001*\022X\n\023CallsPerMonth" +
+      "Metric\022\026.google.protobuf.Empty\032).ssn.dat" +
+      "aservice.v1.CallsPerMonthResponseB\335\001\n\033ai" +
+      ".visma.ssn.dataservice.v1B\020DataservicePr" +
+      "otoP\001ZBgithub.com/e-conomic/vmlapis/gen/" +
+      "go/ssn/dataservice/v1;dataservice\242\002\003SDX\252" +
+      "\002\022Ssn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V" +
+      "1\342\002\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn" +
+      "::Dataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -597,32 +610,38 @@ public final class DataserviceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_MetricsRequest_descriptor,
         new java.lang.String[] { "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes", });
-    internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor =
+    internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_descriptor,
+        new java.lang.String[] { "StartTime", "EndTime", "Fields", "CountryCodes", "DocumentTypes", });
+    internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_ssn_dataservice_v1_FeedbackMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor,
         new java.lang.String[] { "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness", });
     internal_static_ssn_dataservice_v1_Correctness_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_ssn_dataservice_v1_Correctness_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_Correctness_descriptor,
         new java.lang.String[] { "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support", });
     internal_static_ssn_dataservice_v1_DeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_ssn_dataservice_v1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_DeleteRequest_descriptor,
         new java.lang.String[] { "Tags", });
     internal_static_ssn_dataservice_v1_CallsPerMonth_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_ssn_dataservice_v1_CallsPerMonth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_CallsPerMonth_descriptor,
         new java.lang.String[] { "Calls", "MonthName", });
     internal_static_ssn_dataservice_v1_CallsPerMonthResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_ssn_dataservice_v1_CallsPerMonthResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_CallsPerMonthResponse_descriptor,
