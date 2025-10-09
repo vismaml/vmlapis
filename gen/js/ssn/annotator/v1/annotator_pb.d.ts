@@ -85,9 +85,7 @@ export namespace Feature {
     QR_CODES = 48,
     SWISS_QR_BILLS = 49,
     VERIFIED = 50,
-    CHECK_IN_DATE = 51,
-    CHECK_OUT_DATE = 52,
-    HOTEL_DATES = 53,
+    HOTEL_DATES = 51,
   }
 }
 

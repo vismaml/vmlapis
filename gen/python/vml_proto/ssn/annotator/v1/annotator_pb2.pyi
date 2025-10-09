@@ -67,8 +67,6 @@ class Feature(_message.Message):
         QR_CODES: _ClassVar[Feature.Type]
         SWISS_QR_BILLS: _ClassVar[Feature.Type]
         VERIFIED: _ClassVar[Feature.Type]
-        CHECK_IN_DATE: _ClassVar[Feature.Type]
-        CHECK_OUT_DATE: _ClassVar[Feature.Type]
         HOTEL_DATES: _ClassVar[Feature.Type]
     DEFAULT: Feature.Type
     TEXT_ANNOTATION: Feature.Type
@@ -121,8 +119,6 @@ class Feature(_message.Message):
     QR_CODES: Feature.Type
     SWISS_QR_BILLS: Feature.Type
     VERIFIED: Feature.Type
-    CHECK_IN_DATE: Feature.Type
-    CHECK_OUT_DATE: Feature.Type
     HOTEL_DATES: Feature.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
