@@ -87,6 +87,7 @@ export namespace Feature {
     VERIFIED = 50,
     CHECK_IN_DATE = 51,
     CHECK_OUT_DATE = 52,
+    HOTEL_DATES = 53,
   }
 }
 

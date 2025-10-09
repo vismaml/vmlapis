@@ -69,6 +69,7 @@ class Feature(_message.Message):
         VERIFIED: _ClassVar[Feature.Type]
         CHECK_IN_DATE: _ClassVar[Feature.Type]
         CHECK_OUT_DATE: _ClassVar[Feature.Type]
+        HOTEL_DATES: _ClassVar[Feature.Type]
     DEFAULT: Feature.Type
     TEXT_ANNOTATION: Feature.Type
     ORDER_DATE: Feature.Type
@@ -122,6 +123,7 @@ class Feature(_message.Message):
     VERIFIED: Feature.Type
     CHECK_IN_DATE: Feature.Type
     CHECK_OUT_DATE: Feature.Type
+    HOTEL_DATES: Feature.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]

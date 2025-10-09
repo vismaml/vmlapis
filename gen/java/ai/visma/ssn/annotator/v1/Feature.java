@@ -475,6 +475,14 @@ private static final long serialVersionUID = 0L;
      * <code>CHECK_OUT_DATE = 52;</code>
      */
     CHECK_OUT_DATE(52),
+    /**
+     * <pre>
+     * Get check in and check out dates
+     * </pre>
+     *
+     * <code>HOTEL_DATES = 53;</code>
+     */
+    HOTEL_DATES(53),
     UNRECOGNIZED(-1),
     ;
 
@@ -913,6 +921,14 @@ private static final long serialVersionUID = 0L;
      * <code>CHECK_OUT_DATE = 52;</code>
      */
     public static final int CHECK_OUT_DATE_VALUE = 52;
+    /**
+     * <pre>
+     * Get check in and check out dates
+     * </pre>
+     *
+     * <code>HOTEL_DATES = 53;</code>
+     */
+    public static final int HOTEL_DATES_VALUE = 53;
 
 
     public final int getNumber() {
@@ -992,6 +1008,7 @@ private static final long serialVersionUID = 0L;
         case 50: return VERIFIED;
         case 51: return CHECK_IN_DATE;
         case 52: return CHECK_OUT_DATE;
+        case 53: return HOTEL_DATES;
         default: return null;
       }
     }

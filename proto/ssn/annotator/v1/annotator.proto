@@ -146,6 +146,8 @@ message Feature {
     CHECK_IN_DATE = 51;
     // Run QA check out date detection
     CHECK_OUT_DATE = 52;
+    // Get check in and check out dates
+    HOTEL_DATES = 53;
   }
   // The feature type.
   Type type = 1;

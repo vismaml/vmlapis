@@ -380,7 +380,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   SWISS_QR_BILLS: 49,
   VERIFIED: 50,
   CHECK_IN_DATE: 51,
-  CHECK_OUT_DATE: 52
+  CHECK_OUT_DATE: 52,
+  HOTEL_DATES: 53
 };
 
 /**
