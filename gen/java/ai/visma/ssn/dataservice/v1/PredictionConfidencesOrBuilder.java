@@ -968,4 +968,52 @@ public interface PredictionConfidencesOrBuilder extends
    */
   com.google.protobuf.FloatValueOrBuilder getReceiverVatNumberOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getCheckInDateList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  com.google.protobuf.FloatValue getCheckInDate(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  int getCheckInDateCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getCheckInDateOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getCheckInDateOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getCheckOutDateList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  com.google.protobuf.FloatValue getCheckOutDate(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  int getCheckOutDateCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getCheckOutDateOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getCheckOutDateOrBuilder(
+      int index);
 }

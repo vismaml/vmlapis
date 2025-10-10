@@ -2433,6 +2433,20 @@
             "type": "number",
             "format": "float"
           }
+        },
+        "checkInDate": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "checkOutDate": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
         }
       }
     },
@@ -2720,10 +2734,18 @@
           }
         },
         "checkInDate": {
-          "$ref": "#/definitions/typeDate"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
         },
         "checkOutDate": {
-          "$ref": "#/definitions/typeDate"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
         }
       }
     },
@@ -2998,10 +3020,18 @@
           }
         },
         "checkInDate": {
-          "$ref": "#/definitions/typeDate"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeDate"
+          }
         },
         "checkOutDate": {
-          "$ref": "#/definitions/typeDate"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeDate"
+          }
         }
       }
     },

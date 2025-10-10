@@ -67,6 +67,8 @@ private static final long serialVersionUID = 0L;
     receiverCountryCode_ = java.util.Collections.emptyList();
     receiverName_ = java.util.Collections.emptyList();
     receiverVatNumber_ = java.util.Collections.emptyList();
+    checkInDate_ = java.util.Collections.emptyList();
+    checkOutDate_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -82,7 +84,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.dataservice.v1.PredictionMetadata.class, ai.visma.ssn.dataservice.v1.PredictionMetadata.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.ModelSpec> totalInclVat_;
@@ -1724,55 +1725,85 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHECK_IN_DATE_FIELD_NUMBER = 41;
-  private com.google.type.Date checkInDate_;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.ModelSpec> checkInDate_;
   /**
-   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
-   * @return Whether the checkInDate field is set.
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
    */
   @java.lang.Override
-  public boolean hasCheckInDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+  public java.util.List<ai.visma.ssn.type.ModelSpec> getCheckInDateList() {
+    return checkInDate_;
   }
   /**
-   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
-   * @return The checkInDate.
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
    */
   @java.lang.Override
-  public com.google.type.Date getCheckInDate() {
-    return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+  public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCheckInDateOrBuilderList() {
+    return checkInDate_;
   }
   /**
-   * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
    */
   @java.lang.Override
-  public com.google.type.DateOrBuilder getCheckInDateOrBuilder() {
-    return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+  public int getCheckInDateCount() {
+    return checkInDate_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpec getCheckInDate(int index) {
+    return checkInDate_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpecOrBuilder getCheckInDateOrBuilder(
+      int index) {
+    return checkInDate_.get(index);
   }
 
   public static final int CHECK_OUT_DATE_FIELD_NUMBER = 42;
-  private com.google.type.Date checkOutDate_;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.ModelSpec> checkOutDate_;
   /**
-   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
-   * @return Whether the checkOutDate field is set.
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
    */
   @java.lang.Override
-  public boolean hasCheckOutDate() {
-    return ((bitField0_ & 0x00000002) != 0);
+  public java.util.List<ai.visma.ssn.type.ModelSpec> getCheckOutDateList() {
+    return checkOutDate_;
   }
   /**
-   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
-   * @return The checkOutDate.
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
    */
   @java.lang.Override
-  public com.google.type.Date getCheckOutDate() {
-    return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+  public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCheckOutDateOrBuilderList() {
+    return checkOutDate_;
   }
   /**
-   * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
    */
   @java.lang.Override
-  public com.google.type.DateOrBuilder getCheckOutDateOrBuilder() {
-    return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+  public int getCheckOutDateCount() {
+    return checkOutDate_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpec getCheckOutDate(int index) {
+    return checkOutDate_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpecOrBuilder getCheckOutDateOrBuilder(
+      int index) {
+    return checkOutDate_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1909,11 +1940,11 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < receiverVatNumber_.size(); i++) {
       output.writeMessage(40, receiverVatNumber_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(41, getCheckInDate());
+    for (int i = 0; i < checkInDate_.size(); i++) {
+      output.writeMessage(41, checkInDate_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(42, getCheckOutDate());
+    for (int i = 0; i < checkOutDate_.size(); i++) {
+      output.writeMessage(42, checkOutDate_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2084,13 +2115,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(40, receiverVatNumber_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    for (int i = 0; i < checkInDate_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(41, getCheckInDate());
+        .computeMessageSize(41, checkInDate_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    for (int i = 0; i < checkOutDate_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(42, getCheckOutDate());
+        .computeMessageSize(42, checkOutDate_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2187,16 +2218,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverNameList())) return false;
     if (!getReceiverVatNumberList()
         .equals(other.getReceiverVatNumberList())) return false;
-    if (hasCheckInDate() != other.hasCheckInDate()) return false;
-    if (hasCheckInDate()) {
-      if (!getCheckInDate()
-          .equals(other.getCheckInDate())) return false;
-    }
-    if (hasCheckOutDate() != other.hasCheckOutDate()) return false;
-    if (hasCheckOutDate()) {
-      if (!getCheckOutDate()
-          .equals(other.getCheckOutDate())) return false;
-    }
+    if (!getCheckInDateList()
+        .equals(other.getCheckInDateList())) return false;
+    if (!getCheckOutDateList()
+        .equals(other.getCheckOutDateList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2368,13 +2393,13 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getReceiverVatNumberList().hashCode();
     }
-    if (hasCheckInDate()) {
+    if (getCheckInDateCount() > 0) {
       hash = (37 * hash) + CHECK_IN_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCheckInDate().hashCode();
+      hash = (53 * hash) + getCheckInDateList().hashCode();
     }
-    if (hasCheckOutDate()) {
+    if (getCheckOutDateCount() > 0) {
       hash = (37 * hash) + CHECK_OUT_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCheckOutDate().hashCode();
+      hash = (53 * hash) + getCheckOutDateList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2495,60 +2520,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.dataservice.v1.PredictionMetadata.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getTotalInclVatFieldBuilder();
-        getTotalVatFieldBuilder();
-        getTotalExclVatFieldBuilder();
-        getOrderDateFieldBuilder();
-        getPaymentDueDateFieldBuilder();
-        getDocumentTypeFieldBuilder();
-        getCurrencyFieldBuilder();
-        getCreditCardLastFourFieldBuilder();
-        getPaymentMethodFieldBuilder();
-        getOcrLineDkTypeFieldBuilder();
-        getOcrLineDkPaymentIdFieldBuilder();
-        getOcrLineDkCreditorIdFieldBuilder();
-        getOcrLineSePaymentIdFieldBuilder();
-        getOcrLineSeBankgiroCreditorIdFieldBuilder();
-        getOcrLineSePlusgiroCreditorIdFieldBuilder();
-        getOcrLineNoPaymentIdFieldBuilder();
-        getOcrLineFiPaymentIdFieldBuilder();
-        getOcrLineNlPaymentIdFieldBuilder();
-        getSupplierCorporateIdFieldBuilder();
-        getSupplierCountryCodeFieldBuilder();
-        getInvoiceNumberFieldBuilder();
-        getIbanFieldBuilder();
-        getOrderReferenceFieldBuilder();
-        getBankAccountNumberFieldBuilder();
-        getBankRegistrationNumberFieldBuilder();
-        getSupplierNameFieldBuilder();
-        getBicFieldBuilder();
-        getDocumentNumberFieldBuilder();
-        getDocumentDateFieldBuilder();
-        getOrderNumberFieldBuilder();
-        getSupplierVatNumberFieldBuilder();
-        getSupplierOrganisationNumberFieldBuilder();
-        getSupplierAddressFieldBuilder();
-        getCustomerNumberFieldBuilder();
-        getReceiverOrderNumberFieldBuilder();
-        getOcrLineBePaymentIdFieldBuilder();
-        getReceiverAddressFieldBuilder();
-        getReceiverCountryCodeFieldBuilder();
-        getReceiverNameFieldBuilder();
-        getReceiverVatNumberFieldBuilder();
-        getCheckInDateFieldBuilder();
-        getCheckOutDateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2835,16 +2813,20 @@ private static final long serialVersionUID = 0L;
         receiverVatNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000080);
-      checkInDate_ = null;
-      if (checkInDateBuilder_ != null) {
-        checkInDateBuilder_.dispose();
-        checkInDateBuilder_ = null;
+      if (checkInDateBuilder_ == null) {
+        checkInDate_ = java.util.Collections.emptyList();
+      } else {
+        checkInDate_ = null;
+        checkInDateBuilder_.clear();
       }
-      checkOutDate_ = null;
-      if (checkOutDateBuilder_ != null) {
-        checkOutDateBuilder_.dispose();
-        checkOutDateBuilder_ = null;
+      bitField1_ = (bitField1_ & ~0x00000100);
+      if (checkOutDateBuilder_ == null) {
+        checkOutDate_ = java.util.Collections.emptyList();
+      } else {
+        checkOutDate_ = null;
+        checkOutDateBuilder_.clear();
       }
+      bitField1_ = (bitField1_ & ~0x00000200);
       return this;
     }
 
@@ -3239,6 +3221,24 @@ private static final long serialVersionUID = 0L;
       } else {
         result.receiverVatNumber_ = receiverVatNumberBuilder_.build();
       }
+      if (checkInDateBuilder_ == null) {
+        if (((bitField1_ & 0x00000100) != 0)) {
+          checkInDate_ = java.util.Collections.unmodifiableList(checkInDate_);
+          bitField1_ = (bitField1_ & ~0x00000100);
+        }
+        result.checkInDate_ = checkInDate_;
+      } else {
+        result.checkInDate_ = checkInDateBuilder_.build();
+      }
+      if (checkOutDateBuilder_ == null) {
+        if (((bitField1_ & 0x00000200) != 0)) {
+          checkOutDate_ = java.util.Collections.unmodifiableList(checkOutDate_);
+          bitField1_ = (bitField1_ & ~0x00000200);
+        }
+        result.checkOutDate_ = checkOutDate_;
+      } else {
+        result.checkOutDate_ = checkOutDateBuilder_.build();
+      }
     }
 
     private void buildPartial0(ai.visma.ssn.dataservice.v1.PredictionMetadata result) {
@@ -3247,20 +3247,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(ai.visma.ssn.dataservice.v1.PredictionMetadata result) {
       int from_bitField1_ = bitField1_;
-      int to_bitField0_ = 0;
-      if (((from_bitField1_ & 0x00000100) != 0)) {
-        result.checkInDate_ = checkInDateBuilder_ == null
-            ? checkInDate_
-            : checkInDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField1_ & 0x00000200) != 0)) {
-        result.checkOutDate_ = checkOutDateBuilder_ == null
-            ? checkOutDate_
-            : checkOutDateBuilder_.build();
-        to_bitField0_ |= 0x00000002;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4315,11 +4301,57 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.hasCheckInDate()) {
-        mergeCheckInDate(other.getCheckInDate());
+      if (checkInDateBuilder_ == null) {
+        if (!other.checkInDate_.isEmpty()) {
+          if (checkInDate_.isEmpty()) {
+            checkInDate_ = other.checkInDate_;
+            bitField1_ = (bitField1_ & ~0x00000100);
+          } else {
+            ensureCheckInDateIsMutable();
+            checkInDate_.addAll(other.checkInDate_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.checkInDate_.isEmpty()) {
+          if (checkInDateBuilder_.isEmpty()) {
+            checkInDateBuilder_.dispose();
+            checkInDateBuilder_ = null;
+            checkInDate_ = other.checkInDate_;
+            bitField1_ = (bitField1_ & ~0x00000100);
+            checkInDateBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getCheckInDateFieldBuilder() : null;
+          } else {
+            checkInDateBuilder_.addAllMessages(other.checkInDate_);
+          }
+        }
       }
-      if (other.hasCheckOutDate()) {
-        mergeCheckOutDate(other.getCheckOutDate());
+      if (checkOutDateBuilder_ == null) {
+        if (!other.checkOutDate_.isEmpty()) {
+          if (checkOutDate_.isEmpty()) {
+            checkOutDate_ = other.checkOutDate_;
+            bitField1_ = (bitField1_ & ~0x00000200);
+          } else {
+            ensureCheckOutDateIsMutable();
+            checkOutDate_.addAll(other.checkOutDate_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.checkOutDate_.isEmpty()) {
+          if (checkOutDateBuilder_.isEmpty()) {
+            checkOutDateBuilder_.dispose();
+            checkOutDateBuilder_ = null;
+            checkOutDate_ = other.checkOutDate_;
+            bitField1_ = (bitField1_ & ~0x00000200);
+            checkOutDateBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getCheckOutDateFieldBuilder() : null;
+          } else {
+            checkOutDateBuilder_.addAllMessages(other.checkOutDate_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4868,17 +4900,29 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 322
             case 330: {
-              input.readMessage(
-                  getCheckInDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField1_ |= 0x00000100;
+              ai.visma.ssn.type.ModelSpec m =
+                  input.readMessage(
+                      ai.visma.ssn.type.ModelSpec.parser(),
+                      extensionRegistry);
+              if (checkInDateBuilder_ == null) {
+                ensureCheckInDateIsMutable();
+                checkInDate_.add(m);
+              } else {
+                checkInDateBuilder_.addMessage(m);
+              }
               break;
             } // case 330
             case 338: {
-              input.readMessage(
-                  getCheckOutDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField1_ |= 0x00000200;
+              ai.visma.ssn.type.ModelSpec m =
+                  input.readMessage(
+                      ai.visma.ssn.type.ModelSpec.parser(),
+                      extensionRegistry);
+              if (checkOutDateBuilder_ == null) {
+                ensureCheckOutDateIsMutable();
+                checkOutDate_.add(m);
+              } else {
+                checkOutDateBuilder_.addMessage(m);
+              }
               break;
             } // case 338
             default: {
@@ -14499,120 +14543,239 @@ private static final long serialVersionUID = 0L;
       return receiverVatNumberBuilder_;
     }
 
-    private com.google.type.Date checkInDate_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkInDateBuilder_;
-    /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     * @return Whether the checkInDate field is set.
-     */
-    public boolean hasCheckInDate() {
-      return ((bitField1_ & 0x00000100) != 0);
+    private java.util.List<ai.visma.ssn.type.ModelSpec> checkInDate_ =
+      java.util.Collections.emptyList();
+    private void ensureCheckInDateIsMutable() {
+      if (!((bitField1_ & 0x00000100) != 0)) {
+        checkInDate_ = new java.util.ArrayList<ai.visma.ssn.type.ModelSpec>(checkInDate_);
+        bitField1_ |= 0x00000100;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> checkInDateBuilder_;
+
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The checkInDate.
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
-    public com.google.type.Date getCheckInDate() {
+    public java.util.List<ai.visma.ssn.type.ModelSpec> getCheckInDateList() {
       if (checkInDateBuilder_ == null) {
-        return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
+        return java.util.Collections.unmodifiableList(checkInDate_);
       } else {
-        return checkInDateBuilder_.getMessage();
+        return checkInDateBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
-    public Builder setCheckInDate(com.google.type.Date value) {
+    public int getCheckInDateCount() {
+      if (checkInDateBuilder_ == null) {
+        return checkInDate_.size();
+      } else {
+        return checkInDateBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec getCheckInDate(int index) {
+      if (checkInDateBuilder_ == null) {
+        return checkInDate_.get(index);
+      } else {
+        return checkInDateBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder setCheckInDate(
+        int index, ai.visma.ssn.type.ModelSpec value) {
       if (checkInDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        checkInDate_ = value;
+        ensureCheckInDateIsMutable();
+        checkInDate_.set(index, value);
+        onChanged();
       } else {
-        checkInDateBuilder_.setMessage(value);
+        checkInDateBuilder_.setMessage(index, value);
       }
-      bitField1_ |= 0x00000100;
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
     public Builder setCheckInDate(
-        com.google.type.Date.Builder builderForValue) {
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
       if (checkInDateBuilder_ == null) {
-        checkInDate_ = builderForValue.build();
-      } else {
-        checkInDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField1_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     */
-    public Builder mergeCheckInDate(com.google.type.Date value) {
-      if (checkInDateBuilder_ == null) {
-        if (((bitField1_ & 0x00000100) != 0) &&
-          checkInDate_ != null &&
-          checkInDate_ != com.google.type.Date.getDefaultInstance()) {
-          getCheckInDateBuilder().mergeFrom(value);
-        } else {
-          checkInDate_ = value;
-        }
-      } else {
-        checkInDateBuilder_.mergeFrom(value);
-      }
-      if (checkInDate_ != null) {
-        bitField1_ |= 0x00000100;
+        ensureCheckInDateIsMutable();
+        checkInDate_.set(index, builderForValue.build());
         onChanged();
+      } else {
+        checkInDateBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder addCheckInDate(ai.visma.ssn.type.ModelSpec value) {
+      if (checkInDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCheckInDateIsMutable();
+        checkInDate_.add(value);
+        onChanged();
+      } else {
+        checkInDateBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder addCheckInDate(
+        int index, ai.visma.ssn.type.ModelSpec value) {
+      if (checkInDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCheckInDateIsMutable();
+        checkInDate_.add(index, value);
+        onChanged();
+      } else {
+        checkInDateBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder addCheckInDate(
+        ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (checkInDateBuilder_ == null) {
+        ensureCheckInDateIsMutable();
+        checkInDate_.add(builderForValue.build());
+        onChanged();
+      } else {
+        checkInDateBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder addCheckInDate(
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (checkInDateBuilder_ == null) {
+        ensureCheckInDateIsMutable();
+        checkInDate_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        checkInDateBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public Builder addAllCheckInDate(
+        java.lang.Iterable<? extends ai.visma.ssn.type.ModelSpec> values) {
+      if (checkInDateBuilder_ == null) {
+        ensureCheckInDateIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, checkInDate_);
+        onChanged();
+      } else {
+        checkInDateBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
     public Builder clearCheckInDate() {
-      bitField1_ = (bitField1_ & ~0x00000100);
-      checkInDate_ = null;
-      if (checkInDateBuilder_ != null) {
-        checkInDateBuilder_.dispose();
-        checkInDateBuilder_ = null;
+      if (checkInDateBuilder_ == null) {
+        checkInDate_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000100);
+        onChanged();
+      } else {
+        checkInDateBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
-    public com.google.type.Date.Builder getCheckInDateBuilder() {
-      bitField1_ |= 0x00000100;
-      onChanged();
-      return getCheckInDateFieldBuilder().getBuilder();
+    public Builder removeCheckInDate(int index) {
+      if (checkInDateBuilder_ == null) {
+        ensureCheckInDateIsMutable();
+        checkInDate_.remove(index);
+        onChanged();
+      } else {
+        checkInDateBuilder_.remove(index);
+      }
+      return this;
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
-    public com.google.type.DateOrBuilder getCheckInDateOrBuilder() {
-      if (checkInDateBuilder_ != null) {
-        return checkInDateBuilder_.getMessageOrBuilder();
-      } else {
-        return checkInDate_ == null ?
-            com.google.type.Date.getDefaultInstance() : checkInDate_;
+    public ai.visma.ssn.type.ModelSpec.Builder getCheckInDateBuilder(
+        int index) {
+      return getCheckInDateFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpecOrBuilder getCheckInDateOrBuilder(
+        int index) {
+      if (checkInDateBuilder_ == null) {
+        return checkInDate_.get(index);  } else {
+        return checkInDateBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.google.type.Date check_in_date = 41 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+    public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+         getCheckInDateOrBuilderList() {
+      if (checkInDateBuilder_ != null) {
+        return checkInDateBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(checkInDate_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCheckInDateBuilder() {
+      return getCheckInDateFieldBuilder().addBuilder(
+          ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCheckInDateBuilder(
+        int index) {
+      return getCheckInDateFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.ModelSpec.Builder> 
+         getCheckInDateBuilderList() {
+      return getCheckInDateFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 
         getCheckInDateFieldBuilder() {
       if (checkInDateBuilder_ == null) {
-        checkInDateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
-                getCheckInDate(),
+        checkInDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder>(
+                checkInDate_,
+                ((bitField1_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         checkInDate_ = null;
@@ -14620,120 +14783,239 @@ private static final long serialVersionUID = 0L;
       return checkInDateBuilder_;
     }
 
-    private com.google.type.Date checkOutDate_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkOutDateBuilder_;
-    /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     * @return Whether the checkOutDate field is set.
-     */
-    public boolean hasCheckOutDate() {
-      return ((bitField1_ & 0x00000200) != 0);
+    private java.util.List<ai.visma.ssn.type.ModelSpec> checkOutDate_ =
+      java.util.Collections.emptyList();
+    private void ensureCheckOutDateIsMutable() {
+      if (!((bitField1_ & 0x00000200) != 0)) {
+        checkOutDate_ = new java.util.ArrayList<ai.visma.ssn.type.ModelSpec>(checkOutDate_);
+        bitField1_ |= 0x00000200;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> checkOutDateBuilder_;
+
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     * @return The checkOutDate.
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
-    public com.google.type.Date getCheckOutDate() {
+    public java.util.List<ai.visma.ssn.type.ModelSpec> getCheckOutDateList() {
       if (checkOutDateBuilder_ == null) {
-        return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
+        return java.util.Collections.unmodifiableList(checkOutDate_);
       } else {
-        return checkOutDateBuilder_.getMessage();
+        return checkOutDateBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
-    public Builder setCheckOutDate(com.google.type.Date value) {
+    public int getCheckOutDateCount() {
+      if (checkOutDateBuilder_ == null) {
+        return checkOutDate_.size();
+      } else {
+        return checkOutDateBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec getCheckOutDate(int index) {
+      if (checkOutDateBuilder_ == null) {
+        return checkOutDate_.get(index);
+      } else {
+        return checkOutDateBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder setCheckOutDate(
+        int index, ai.visma.ssn.type.ModelSpec value) {
       if (checkOutDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        checkOutDate_ = value;
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.set(index, value);
+        onChanged();
       } else {
-        checkOutDateBuilder_.setMessage(value);
+        checkOutDateBuilder_.setMessage(index, value);
       }
-      bitField1_ |= 0x00000200;
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
     public Builder setCheckOutDate(
-        com.google.type.Date.Builder builderForValue) {
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
       if (checkOutDateBuilder_ == null) {
-        checkOutDate_ = builderForValue.build();
-      } else {
-        checkOutDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField1_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
-     */
-    public Builder mergeCheckOutDate(com.google.type.Date value) {
-      if (checkOutDateBuilder_ == null) {
-        if (((bitField1_ & 0x00000200) != 0) &&
-          checkOutDate_ != null &&
-          checkOutDate_ != com.google.type.Date.getDefaultInstance()) {
-          getCheckOutDateBuilder().mergeFrom(value);
-        } else {
-          checkOutDate_ = value;
-        }
-      } else {
-        checkOutDateBuilder_.mergeFrom(value);
-      }
-      if (checkOutDate_ != null) {
-        bitField1_ |= 0x00000200;
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.set(index, builderForValue.build());
         onChanged();
+      } else {
+        checkOutDateBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder addCheckOutDate(ai.visma.ssn.type.ModelSpec value) {
+      if (checkOutDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.add(value);
+        onChanged();
+      } else {
+        checkOutDateBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder addCheckOutDate(
+        int index, ai.visma.ssn.type.ModelSpec value) {
+      if (checkOutDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.add(index, value);
+        onChanged();
+      } else {
+        checkOutDateBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder addCheckOutDate(
+        ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (checkOutDateBuilder_ == null) {
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.add(builderForValue.build());
+        onChanged();
+      } else {
+        checkOutDateBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder addCheckOutDate(
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (checkOutDateBuilder_ == null) {
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        checkOutDateBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public Builder addAllCheckOutDate(
+        java.lang.Iterable<? extends ai.visma.ssn.type.ModelSpec> values) {
+      if (checkOutDateBuilder_ == null) {
+        ensureCheckOutDateIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, checkOutDate_);
+        onChanged();
+      } else {
+        checkOutDateBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
     public Builder clearCheckOutDate() {
-      bitField1_ = (bitField1_ & ~0x00000200);
-      checkOutDate_ = null;
-      if (checkOutDateBuilder_ != null) {
-        checkOutDateBuilder_.dispose();
-        checkOutDateBuilder_ = null;
+      if (checkOutDateBuilder_ == null) {
+        checkOutDate_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000200);
+        onChanged();
+      } else {
+        checkOutDateBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
-    public com.google.type.Date.Builder getCheckOutDateBuilder() {
-      bitField1_ |= 0x00000200;
-      onChanged();
-      return getCheckOutDateFieldBuilder().getBuilder();
+    public Builder removeCheckOutDate(int index) {
+      if (checkOutDateBuilder_ == null) {
+        ensureCheckOutDateIsMutable();
+        checkOutDate_.remove(index);
+        onChanged();
+      } else {
+        checkOutDateBuilder_.remove(index);
+      }
+      return this;
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
-    public com.google.type.DateOrBuilder getCheckOutDateOrBuilder() {
-      if (checkOutDateBuilder_ != null) {
-        return checkOutDateBuilder_.getMessageOrBuilder();
-      } else {
-        return checkOutDate_ == null ?
-            com.google.type.Date.getDefaultInstance() : checkOutDate_;
+    public ai.visma.ssn.type.ModelSpec.Builder getCheckOutDateBuilder(
+        int index) {
+      return getCheckOutDateFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpecOrBuilder getCheckOutDateOrBuilder(
+        int index) {
+      if (checkOutDateBuilder_ == null) {
+        return checkOutDate_.get(index);  } else {
+        return checkOutDateBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.google.type.Date check_out_date = 42 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+    public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+         getCheckOutDateOrBuilderList() {
+      if (checkOutDateBuilder_ != null) {
+        return checkOutDateBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(checkOutDate_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCheckOutDateBuilder() {
+      return getCheckOutDateFieldBuilder().addBuilder(
+          ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCheckOutDateBuilder(
+        int index) {
+      return getCheckOutDateFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.ModelSpec.Builder> 
+         getCheckOutDateBuilderList() {
+      return getCheckOutDateFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 
         getCheckOutDateFieldBuilder() {
       if (checkOutDateBuilder_ == null) {
-        checkOutDateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
-                getCheckOutDate(),
+        checkOutDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder>(
+                checkOutDate_,
+                ((bitField1_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         checkOutDate_ = null;
