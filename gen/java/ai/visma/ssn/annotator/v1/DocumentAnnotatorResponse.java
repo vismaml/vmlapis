@@ -77,8 +77,6 @@ private static final long serialVersionUID = 0L;
     languageCode_ = java.util.Collections.emptyList();
     qrCodes_ = java.util.Collections.emptyList();
     swissQrBills_ = java.util.Collections.emptyList();
-    checkInDate_ = java.util.Collections.emptyList();
-    checkOutDate_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -3386,146 +3384,51 @@ private static final long serialVersionUID = 0L;
     return swissQrBills_.get(index);
   }
 
-  public static final int CHECK_IN_DATE_FIELD_NUMBER = 53;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> checkInDate_;
+  public static final int HOTEL_DATES_FIELD_NUMBER = 53;
+  private ai.visma.ssn.type.HotelDates hotelDates_;
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return Whether the hotelDates field is set.
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getCheckInDateList() {
-    return checkInDate_;
+  public boolean hasHotelDates() {
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return The hotelDates.
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCheckInDateOrBuilderList() {
-    return checkInDate_;
+  public ai.visma.ssn.type.HotelDates getHotelDates() {
+    return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
   }
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
    */
   @java.lang.Override
-  public int getCheckInDateCount() {
-    return checkInDate_.size();
-  }
-  /**
-   * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.Candidate getCheckInDate(int index) {
-    return checkInDate_.get(index);
-  }
-  /**
-   * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getCheckInDateOrBuilder(
-      int index) {
-    return checkInDate_.get(index);
-  }
-
-  public static final int CHECK_OUT_DATE_FIELD_NUMBER = 54;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> checkOutDate_;
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getCheckOutDateList() {
-    return checkOutDate_;
-  }
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCheckOutDateOrBuilderList() {
-    return checkOutDate_;
-  }
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  @java.lang.Override
-  public int getCheckOutDateCount() {
-    return checkOutDate_.size();
-  }
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.Candidate getCheckOutDate(int index) {
-    return checkOutDate_.get(index);
-  }
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getCheckOutDateOrBuilder(
-      int index) {
-    return checkOutDate_.get(index);
+  public ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder() {
+    return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3698,11 +3601,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < swissQrBills_.size(); i++) {
       output.writeMessage(52, swissQrBills_.get(i));
     }
-    for (int i = 0; i < checkInDate_.size(); i++) {
-      output.writeMessage(53, checkInDate_.get(i));
-    }
-    for (int i = 0; i < checkOutDate_.size(); i++) {
-      output.writeMessage(54, checkOutDate_.get(i));
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(53, getHotelDates());
     }
     getUnknownFields().writeTo(output);
   }
@@ -3918,13 +3818,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(52, swissQrBills_.get(i));
     }
-    for (int i = 0; i < checkInDate_.size(); i++) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(53, checkInDate_.get(i));
-    }
-    for (int i = 0; i < checkOutDate_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(54, checkOutDate_.get(i));
+        .computeMessageSize(53, getHotelDates());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4051,10 +3947,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getQrCodesList())) return false;
     if (!getSwissQrBillsList()
         .equals(other.getSwissQrBillsList())) return false;
-    if (!getCheckInDateList()
-        .equals(other.getCheckInDateList())) return false;
-    if (!getCheckOutDateList()
-        .equals(other.getCheckOutDateList())) return false;
+    if (hasHotelDates() != other.hasHotelDates()) return false;
+    if (hasHotelDates()) {
+      if (!getHotelDates()
+          .equals(other.getHotelDates())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4268,13 +4165,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SWISS_QR_BILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSwissQrBillsList().hashCode();
     }
-    if (getCheckInDateCount() > 0) {
-      hash = (37 * hash) + CHECK_IN_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCheckInDateList().hashCode();
-    }
-    if (getCheckOutDateCount() > 0) {
-      hash = (37 * hash) + CHECK_OUT_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCheckOutDateList().hashCode();
+    if (hasHotelDates()) {
+      hash = (37 * hash) + HOTEL_DATES_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelDates().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4455,8 +4348,7 @@ private static final long serialVersionUID = 0L;
         getLanguageCodeFieldBuilder();
         getQrCodesFieldBuilder();
         getSwissQrBillsFieldBuilder();
-        getCheckInDateFieldBuilder();
-        getCheckOutDateFieldBuilder();
+        getHotelDatesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -4806,20 +4698,11 @@ private static final long serialVersionUID = 0L;
         swissQrBillsBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00080000);
-      if (checkInDateBuilder_ == null) {
-        checkInDate_ = java.util.Collections.emptyList();
-      } else {
-        checkInDate_ = null;
-        checkInDateBuilder_.clear();
+      hotelDates_ = null;
+      if (hotelDatesBuilder_ != null) {
+        hotelDatesBuilder_.dispose();
+        hotelDatesBuilder_ = null;
       }
-      bitField1_ = (bitField1_ & ~0x00100000);
-      if (checkOutDateBuilder_ == null) {
-        checkOutDate_ = java.util.Collections.emptyList();
-      } else {
-        checkOutDate_ = null;
-        checkOutDateBuilder_.clear();
-      }
-      bitField1_ = (bitField1_ & ~0x00200000);
       return this;
     }
 
@@ -5277,24 +5160,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.swissQrBills_ = swissQrBillsBuilder_.build();
       }
-      if (checkInDateBuilder_ == null) {
-        if (((bitField1_ & 0x00100000) != 0)) {
-          checkInDate_ = java.util.Collections.unmodifiableList(checkInDate_);
-          bitField1_ = (bitField1_ & ~0x00100000);
-        }
-        result.checkInDate_ = checkInDate_;
-      } else {
-        result.checkInDate_ = checkInDateBuilder_.build();
-      }
-      if (checkOutDateBuilder_ == null) {
-        if (((bitField1_ & 0x00200000) != 0)) {
-          checkOutDate_ = java.util.Collections.unmodifiableList(checkOutDate_);
-          bitField1_ = (bitField1_ & ~0x00200000);
-        }
-        result.checkOutDate_ = checkOutDate_;
-      } else {
-        result.checkOutDate_ = checkOutDateBuilder_.build();
-      }
     }
 
     private void buildPartial0(ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse result) {
@@ -5326,6 +5191,12 @@ private static final long serialVersionUID = 0L;
             ? documentMetadata_
             : documentMetadataBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField1_ & 0x00100000) != 0)) {
+        result.hotelDates_ = hotelDatesBuilder_ == null
+            ? hotelDates_
+            : hotelDatesBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -6585,57 +6456,8 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (checkInDateBuilder_ == null) {
-        if (!other.checkInDate_.isEmpty()) {
-          if (checkInDate_.isEmpty()) {
-            checkInDate_ = other.checkInDate_;
-            bitField1_ = (bitField1_ & ~0x00100000);
-          } else {
-            ensureCheckInDateIsMutable();
-            checkInDate_.addAll(other.checkInDate_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.checkInDate_.isEmpty()) {
-          if (checkInDateBuilder_.isEmpty()) {
-            checkInDateBuilder_.dispose();
-            checkInDateBuilder_ = null;
-            checkInDate_ = other.checkInDate_;
-            bitField1_ = (bitField1_ & ~0x00100000);
-            checkInDateBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getCheckInDateFieldBuilder() : null;
-          } else {
-            checkInDateBuilder_.addAllMessages(other.checkInDate_);
-          }
-        }
-      }
-      if (checkOutDateBuilder_ == null) {
-        if (!other.checkOutDate_.isEmpty()) {
-          if (checkOutDate_.isEmpty()) {
-            checkOutDate_ = other.checkOutDate_;
-            bitField1_ = (bitField1_ & ~0x00200000);
-          } else {
-            ensureCheckOutDateIsMutable();
-            checkOutDate_.addAll(other.checkOutDate_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.checkOutDate_.isEmpty()) {
-          if (checkOutDateBuilder_.isEmpty()) {
-            checkOutDateBuilder_.dispose();
-            checkOutDateBuilder_ = null;
-            checkOutDate_ = other.checkOutDate_;
-            bitField1_ = (bitField1_ & ~0x00200000);
-            checkOutDateBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getCheckOutDateFieldBuilder() : null;
-          } else {
-            checkOutDateBuilder_.addAllMessages(other.checkOutDate_);
-          }
-        }
+      if (other.hasHotelDates()) {
+        mergeHotelDates(other.getHotelDates());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -7304,31 +7126,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 418
             case 426: {
-              ai.visma.ssn.type.Candidate m =
-                  input.readMessage(
-                      ai.visma.ssn.type.Candidate.parser(),
-                      extensionRegistry);
-              if (checkInDateBuilder_ == null) {
-                ensureCheckInDateIsMutable();
-                checkInDate_.add(m);
-              } else {
-                checkInDateBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getHotelDatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00100000;
               break;
             } // case 426
-            case 434: {
-              ai.visma.ssn.type.Candidate m =
-                  input.readMessage(
-                      ai.visma.ssn.type.Candidate.parser(),
-                      extensionRegistry);
-              if (checkOutDateBuilder_ == null) {
-                ensureCheckOutDateIsMutable();
-                checkOutDate_.add(m);
-              } else {
-                checkOutDateBuilder_.addMessage(m);
-              }
-              break;
-            } // case 434
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -23344,700 +23147,188 @@ private static final long serialVersionUID = 0L;
       return swissQrBillsBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> checkInDate_ =
-      java.util.Collections.emptyList();
-    private void ensureCheckInDateIsMutable() {
-      if (!((bitField1_ & 0x00100000) != 0)) {
-        checkInDate_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(checkInDate_);
+    private ai.visma.ssn.type.HotelDates hotelDates_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> hotelDatesBuilder_;
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     * @return Whether the hotelDates field is set.
+     */
+    public boolean hasHotelDates() {
+      return ((bitField1_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     * @return The hotelDates.
+     */
+    public ai.visma.ssn.type.HotelDates getHotelDates() {
+      if (hotelDatesBuilder_ == null) {
+        return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
+      } else {
+        return hotelDatesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder setHotelDates(ai.visma.ssn.type.HotelDates value) {
+      if (hotelDatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelDates_ = value;
+      } else {
+        hotelDatesBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder setHotelDates(
+        ai.visma.ssn.type.HotelDates.Builder builderForValue) {
+      if (hotelDatesBuilder_ == null) {
+        hotelDates_ = builderForValue.build();
+      } else {
+        hotelDatesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder mergeHotelDates(ai.visma.ssn.type.HotelDates value) {
+      if (hotelDatesBuilder_ == null) {
+        if (((bitField1_ & 0x00100000) != 0) &&
+          hotelDates_ != null &&
+          hotelDates_ != ai.visma.ssn.type.HotelDates.getDefaultInstance()) {
+          getHotelDatesBuilder().mergeFrom(value);
+        } else {
+          hotelDates_ = value;
+        }
+      } else {
+        hotelDatesBuilder_.mergeFrom(value);
+      }
+      if (hotelDates_ != null) {
         bitField1_ |= 0x00100000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> checkInDateBuilder_;
-
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.Candidate> getCheckInDateList() {
-      if (checkInDateBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(checkInDate_);
-      } else {
-        return checkInDateBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public int getCheckInDateCount() {
-      if (checkInDateBuilder_ == null) {
-        return checkInDate_.size();
-      } else {
-        return checkInDateBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate getCheckInDate(int index) {
-      if (checkInDateBuilder_ == null) {
-        return checkInDate_.get(index);
-      } else {
-        return checkInDateBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder setCheckInDate(
-        int index, ai.visma.ssn.type.Candidate value) {
-      if (checkInDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckInDateIsMutable();
-        checkInDate_.set(index, value);
         onChanged();
-      } else {
-        checkInDateBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * checkInDate
+     * hotelDates
+     * Contains check-in and check-out date candidates
      * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
      */
-    public Builder setCheckInDate(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkInDateBuilder_ == null) {
-        ensureCheckInDateIsMutable();
-        checkInDate_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        checkInDateBuilder_.setMessage(index, builderForValue.build());
+    public Builder clearHotelDates() {
+      bitField1_ = (bitField1_ & ~0x00100000);
+      hotelDates_ = null;
+      if (hotelDatesBuilder_ != null) {
+        hotelDatesBuilder_.dispose();
+        hotelDatesBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * checkInDate
+     * hotelDates
+     * Contains check-in and check-out date candidates
      * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
      */
-    public Builder addCheckInDate(ai.visma.ssn.type.Candidate value) {
-      if (checkInDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckInDateIsMutable();
-        checkInDate_.add(value);
-        onChanged();
+    public ai.visma.ssn.type.HotelDates.Builder getHotelDatesBuilder() {
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return getHotelDatesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * hotelDates
+     * Contains check-in and check-out date candidates
+     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+     * Example: "2019-12-31"
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder() {
+      if (hotelDatesBuilder_ != null) {
+        return hotelDatesBuilder_.getMessageOrBuilder();
       } else {
-        checkInDateBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder addCheckInDate(
-        int index, ai.visma.ssn.type.Candidate value) {
-      if (checkInDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckInDateIsMutable();
-        checkInDate_.add(index, value);
-        onChanged();
-      } else {
-        checkInDateBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder addCheckInDate(
-        ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkInDateBuilder_ == null) {
-        ensureCheckInDateIsMutable();
-        checkInDate_.add(builderForValue.build());
-        onChanged();
-      } else {
-        checkInDateBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder addCheckInDate(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkInDateBuilder_ == null) {
-        ensureCheckInDateIsMutable();
-        checkInDate_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        checkInDateBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder addAllCheckInDate(
-        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (checkInDateBuilder_ == null) {
-        ensureCheckInDateIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, checkInDate_);
-        onChanged();
-      } else {
-        checkInDateBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder clearCheckInDate() {
-      if (checkInDateBuilder_ == null) {
-        checkInDate_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00100000);
-        onChanged();
-      } else {
-        checkInDateBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public Builder removeCheckInDate(int index) {
-      if (checkInDateBuilder_ == null) {
-        ensureCheckInDateIsMutable();
-        checkInDate_.remove(index);
-        onChanged();
-      } else {
-        checkInDateBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder getCheckInDateBuilder(
-        int index) {
-      return getCheckInDateFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public ai.visma.ssn.type.CandidateOrBuilder getCheckInDateOrBuilder(
-        int index) {
-      if (checkInDateBuilder_ == null) {
-        return checkInDate_.get(index);  } else {
-        return checkInDateBuilder_.getMessageOrBuilder(index);
+        return hotelDates_ == null ?
+            ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
       }
     }
     /**
      * <pre>
-     * checkInDate
+     * hotelDates
+     * Contains check-in and check-out date candidates
      * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getCheckInDateOrBuilderList() {
-      if (checkInDateBuilder_ != null) {
-        return checkInDateBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(checkInDate_);
-      }
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder addCheckInDateBuilder() {
-      return getCheckInDateFieldBuilder().addBuilder(
-          ai.visma.ssn.type.Candidate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder addCheckInDateBuilder(
-        int index) {
-      return getCheckInDateFieldBuilder().addBuilder(
-          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getCheckInDateBuilderList() {
-      return getCheckInDateFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getCheckInDateFieldBuilder() {
-      if (checkInDateBuilder_ == null) {
-        checkInDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                checkInDate_,
-                ((bitField1_ & 0x00100000) != 0),
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> 
+        getHotelDatesFieldBuilder() {
+      if (hotelDatesBuilder_ == null) {
+        hotelDatesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder>(
+                getHotelDates(),
                 getParentForChildren(),
                 isClean());
-        checkInDate_ = null;
+        hotelDates_ = null;
       }
-      return checkInDateBuilder_;
-    }
-
-    private java.util.List<ai.visma.ssn.type.Candidate> checkOutDate_ =
-      java.util.Collections.emptyList();
-    private void ensureCheckOutDateIsMutable() {
-      if (!((bitField1_ & 0x00200000) != 0)) {
-        checkOutDate_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(checkOutDate_);
-        bitField1_ |= 0x00200000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> checkOutDateBuilder_;
-
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.Candidate> getCheckOutDateList() {
-      if (checkOutDateBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(checkOutDate_);
-      } else {
-        return checkOutDateBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public int getCheckOutDateCount() {
-      if (checkOutDateBuilder_ == null) {
-        return checkOutDate_.size();
-      } else {
-        return checkOutDateBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate getCheckOutDate(int index) {
-      if (checkOutDateBuilder_ == null) {
-        return checkOutDate_.get(index);
-      } else {
-        return checkOutDateBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder setCheckOutDate(
-        int index, ai.visma.ssn.type.Candidate value) {
-      if (checkOutDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.set(index, value);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder setCheckOutDate(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkOutDateBuilder_ == null) {
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        checkOutDateBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder addCheckOutDate(ai.visma.ssn.type.Candidate value) {
-      if (checkOutDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.add(value);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder addCheckOutDate(
-        int index, ai.visma.ssn.type.Candidate value) {
-      if (checkOutDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.add(index, value);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder addCheckOutDate(
-        ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkOutDateBuilder_ == null) {
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.add(builderForValue.build());
-        onChanged();
-      } else {
-        checkOutDateBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder addCheckOutDate(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (checkOutDateBuilder_ == null) {
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        checkOutDateBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder addAllCheckOutDate(
-        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (checkOutDateBuilder_ == null) {
-        ensureCheckOutDateIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, checkOutDate_);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder clearCheckOutDate() {
-      if (checkOutDateBuilder_ == null) {
-        checkOutDate_ = java.util.Collections.emptyList();
-        bitField1_ = (bitField1_ & ~0x00200000);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public Builder removeCheckOutDate(int index) {
-      if (checkOutDateBuilder_ == null) {
-        ensureCheckOutDateIsMutable();
-        checkOutDate_.remove(index);
-        onChanged();
-      } else {
-        checkOutDateBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder getCheckOutDateBuilder(
-        int index) {
-      return getCheckOutDateFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public ai.visma.ssn.type.CandidateOrBuilder getCheckOutDateOrBuilder(
-        int index) {
-      if (checkOutDateBuilder_ == null) {
-        return checkOutDate_.get(index);  } else {
-        return checkOutDateBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getCheckOutDateOrBuilderList() {
-      if (checkOutDateBuilder_ != null) {
-        return checkOutDateBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(checkOutDate_);
-      }
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder addCheckOutDateBuilder() {
-      return getCheckOutDateFieldBuilder().addBuilder(
-          ai.visma.ssn.type.Candidate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public ai.visma.ssn.type.Candidate.Builder addCheckOutDateBuilder(
-        int index) {
-      return getCheckOutDateFieldBuilder().addBuilder(
-          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
-     * </pre>
-     *
-     * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getCheckOutDateBuilderList() {
-      return getCheckOutDateFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getCheckOutDateFieldBuilder() {
-      if (checkOutDateBuilder_ == null) {
-        checkOutDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                checkOutDate_,
-                ((bitField1_ & 0x00200000) != 0),
-                getParentForChildren(),
-                isClean());
-        checkOutDate_ = null;
-      }
-      return checkOutDateBuilder_;
+      return hotelDatesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

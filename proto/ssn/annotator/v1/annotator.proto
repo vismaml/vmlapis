@@ -5,6 +5,7 @@ package ssn.annotator.v1;
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/hotel_dates.proto";
 import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
@@ -142,7 +143,7 @@ message Feature {
     // Series of automated verifications and consistency checks
     // on the document.
     VERIFIED = 50;
-    // Get check in and check out dates
+    // Hotel dates including check-in and check-out dates
     HOTEL_DATES = 51;
   }
   // The feature type.
@@ -311,14 +312,11 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.QrCodeData qr_codes = 51;
   // Swiss QR bills detected in the document
   repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
-  // checkInDate
+  // hotelDates
+  // Contains check-in and check-out date candidates
   // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
   // Example: "2019-12-31"
-  repeated ssn.type.Candidate check_in_date = 53;
-  // checkOutDate
-  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-  // Example: "2019-12-31"
-  repeated ssn.type.Candidate check_out_date = 54;
+  ssn.type.HotelDates hotel_dates = 53;
 }
 
 message Document {

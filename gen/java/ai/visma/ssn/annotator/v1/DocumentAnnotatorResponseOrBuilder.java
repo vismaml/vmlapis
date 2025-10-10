@@ -2400,109 +2400,37 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return Whether the hotelDates field is set.
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
-      getCheckInDateList();
+  boolean hasHotelDates();
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return The hotelDates.
    */
-  ai.visma.ssn.type.Candidate getCheckInDate(int index);
+  ai.visma.ssn.type.HotelDates getHotelDates();
   /**
    * <pre>
-   * checkInDate
+   * hotelDates
+   * Contains check-in and check-out date candidates
    * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
    */
-  int getCheckInDateCount();
-  /**
-   * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCheckInDateOrBuilderList();
-  /**
-   * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_in_date = 53 [json_name = "checkInDate"];</code>
-   */
-  ai.visma.ssn.type.CandidateOrBuilder getCheckInDateOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  java.util.List<ai.visma.ssn.type.Candidate> 
-      getCheckOutDateList();
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  ai.visma.ssn.type.Candidate getCheckOutDate(int index);
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  int getCheckOutDateCount();
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCheckOutDateOrBuilderList();
-  /**
-   * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate check_out_date = 54 [json_name = "checkOutDate"];</code>
-   */
-  ai.visma.ssn.type.CandidateOrBuilder getCheckOutDateOrBuilder(
-      int index);
+  ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder();
 }

@@ -461,7 +461,7 @@ private static final long serialVersionUID = 0L;
     VERIFIED(50),
     /**
      * <pre>
-     * Get check in and check out dates
+     * Hotel dates including check-in and check-out dates
      * </pre>
      *
      * <code>HOTEL_DATES = 51;</code>
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
     public static final int VERIFIED_VALUE = 50;
     /**
      * <pre>
-     * Get check in and check out dates
+     * Hotel dates including check-in and check-out dates
      * </pre>
      *
      * <code>HOTEL_DATES = 51;</code>
