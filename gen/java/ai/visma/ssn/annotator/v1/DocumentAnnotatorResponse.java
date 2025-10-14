@@ -3388,10 +3388,7 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.HotelDates hotelDates_;
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -3403,10 +3400,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -3418,10 +3412,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23152,10 +23143,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> hotelDatesBuilder_;
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23166,10 +23154,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23184,10 +23169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23207,10 +23189,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23228,10 +23207,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23256,10 +23232,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23276,10 +23249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23291,10 +23261,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23309,10 +23276,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * hotelDates
-     * Contains check-in and check-out date candidates
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * The hotelDates cntains check-in and check-out date candidates
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>

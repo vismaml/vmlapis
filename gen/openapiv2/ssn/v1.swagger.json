@@ -1961,7 +1961,7 @@
         },
         "hotelDates": {
           "$ref": "#/definitions/typeHotelDates",
-          "title": "hotelDates\nContains check-in and check-out date candidates\nISO 8601 date, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
+          "title": "The hotelDates cntains check-in and check-out date candidates"
         }
       }
     },

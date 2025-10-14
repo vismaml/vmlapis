@@ -2400,10 +2400,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -2412,10 +2409,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   boolean hasHotelDates();
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -2424,10 +2418,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.HotelDates getHotelDates();
   /**
    * <pre>
-   * hotelDates
-   * Contains check-in and check-out date candidates
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * The hotelDates cntains check-in and check-out date candidates
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>

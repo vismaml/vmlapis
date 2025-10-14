@@ -1903,10 +1903,7 @@ namespace Ssn.Annotator.V1 {
     public const int HotelDatesFieldNumber = 53;
     private global::Ssn.Type.HotelDates hotelDates_;
     /// <summary>
-    /// hotelDates
-    /// Contains check-in and check-out date candidates
-    /// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-    /// Example: "2019-12-31"
+    /// The hotelDates cntains check-in and check-out date candidates
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

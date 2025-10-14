@@ -578,10 +578,7 @@ type DocumentAnnotatorResponse struct {
 	QrCodes []*_type.QrCodeData `protobuf:"bytes,51,rep,name=qr_codes,json=qrCodes,proto3" json:"qr_codes,omitempty"`
 	// Swiss QR bills detected in the document
 	SwissQrBills []*_type.SwissQrBill `protobuf:"bytes,52,rep,name=swiss_qr_bills,json=swissQrBills,proto3" json:"swiss_qr_bills,omitempty"`
-	// hotelDates
-	// Contains check-in and check-out date candidates
-	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-	// Example: "2019-12-31"
+	// The hotelDates cntains check-in and check-out date candidates
 	HotelDates *_type.HotelDates `protobuf:"bytes,53,opt,name=hotel_dates,json=hotelDates,proto3" json:"hotel_dates,omitempty"`
 }
 
