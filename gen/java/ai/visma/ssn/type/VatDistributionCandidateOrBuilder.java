@@ -125,4 +125,31 @@ public interface VatDistributionCandidateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getInclVatBytes();
+
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 7 [json_name = "confidence"];</code>
+   * @return Whether the confidence field is set.
+   */
+  boolean hasConfidence();
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 7 [json_name = "confidence"];</code>
+   * @return The confidence.
+   */
+  ai.visma.ssn.type.Confidence getConfidence();
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 7 [json_name = "confidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
 }

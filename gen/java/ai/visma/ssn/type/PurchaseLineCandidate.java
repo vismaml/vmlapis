@@ -817,6 +817,44 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
 
+  public static final int CONFIDENCE_FIELD_NUMBER = 20;
+  private ai.visma.ssn.type.Confidence confidence_;
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   * @return Whether the confidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfidence() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   * @return The confidence.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Confidence getConfidence() {
+    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  }
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
+    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -882,6 +920,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(19, getModelMetadata());
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(20, getConfidence());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -944,6 +985,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getModelMetadata());
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getConfidence());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -996,6 +1041,11 @@ private static final long serialVersionUID = 0L;
       if (!getModelMetadata()
           .equals(other.getModelMetadata())) return false;
     }
+    if (hasConfidence() != other.hasConfidence()) return false;
+    if (hasConfidence()) {
+      if (!getConfidence()
+          .equals(other.getConfidence())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1042,6 +1092,10 @@ private static final long serialVersionUID = 0L;
     if (hasModelMetadata()) {
       hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getModelMetadata().hashCode();
+    }
+    if (hasConfidence()) {
+      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getConfidence().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1174,6 +1228,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getModelMetadataFieldBuilder();
+        getConfidenceFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1200,6 +1255,11 @@ private static final long serialVersionUID = 0L;
       if (modelMetadataBuilder_ != null) {
         modelMetadataBuilder_.dispose();
         modelMetadataBuilder_ = null;
+      }
+      confidence_ = null;
+      if (confidenceBuilder_ != null) {
+        confidenceBuilder_.dispose();
+        confidenceBuilder_ = null;
       }
       return this;
     }
@@ -1288,6 +1348,12 @@ private static final long serialVersionUID = 0L;
             ? modelMetadata_
             : modelMetadataBuilder_.build();
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.confidence_ = confidenceBuilder_ == null
+            ? confidence_
+            : confidenceBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1384,6 +1450,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasModelMetadata()) {
         mergeModelMetadata(other.getModelMetadata());
+      }
+      if (other.hasConfidence()) {
+        mergeConfidence(other.getConfidence());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1498,6 +1567,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 154
+            case 162: {
+              input.readMessage(
+                  getConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3097,6 +3173,163 @@ private static final long serialVersionUID = 0L;
         modelMetadata_ = null;
       }
       return modelMetadataBuilder_;
+    }
+
+    private ai.visma.ssn.type.Confidence confidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> confidenceBuilder_;
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    public ai.visma.ssn.type.Confidence getConfidence() {
+      if (confidenceBuilder_ == null) {
+        return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+      } else {
+        return confidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public Builder setConfidence(ai.visma.ssn.type.Confidence value) {
+      if (confidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        confidence_ = value;
+      } else {
+        confidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public Builder setConfidence(
+        ai.visma.ssn.type.Confidence.Builder builderForValue) {
+      if (confidenceBuilder_ == null) {
+        confidence_ = builderForValue.build();
+      } else {
+        confidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public Builder mergeConfidence(ai.visma.ssn.type.Confidence value) {
+      if (confidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00020000) != 0) &&
+          confidence_ != null &&
+          confidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
+          getConfidenceBuilder().mergeFrom(value);
+        } else {
+          confidence_ = value;
+        }
+      } else {
+        confidenceBuilder_.mergeFrom(value);
+      }
+      if (confidence_ != null) {
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public Builder clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      confidence_ = null;
+      if (confidenceBuilder_ != null) {
+        confidenceBuilder_.dispose();
+        confidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public ai.visma.ssn.type.Confidence.Builder getConfidenceBuilder() {
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return getConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
+      if (confidenceBuilder_ != null) {
+        return confidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return confidence_ == null ?
+            ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+      }
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
+        getConfidenceFieldBuilder() {
+      if (confidenceBuilder_ == null) {
+        confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
+                getConfidence(),
+                getParentForChildren(),
+                isClean());
+        confidence_ = null;
+      }
+      return confidenceBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.PurchaseLineCandidate)

@@ -125,6 +125,8 @@ message PurchaseLineCandidate {
   string unit_price = 18;
   // Model metadata
   ModelSpec model_metadata = 19;
+  // Confidence
+  Confidence confidence = 20;
 }
 
 message AnswerCandidate {
@@ -160,6 +162,8 @@ message VatDistributionCandidate {
   string excl_vat = 5;
   // The vat distribution candidate incl vat
   string incl_vat = 6;
+  // Confidence
+  Confidence confidence = 7;
 }
 
 message DocumentMetadata {

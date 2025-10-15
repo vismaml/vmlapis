@@ -346,4 +346,31 @@ public interface PurchaseLineCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   * @return Whether the confidence field is set.
+   */
+  boolean hasConfidence();
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   * @return The confidence.
+   */
+  ai.visma.ssn.type.Confidence getConfidence();
+  /**
+   * <pre>
+   * Confidence
+   * </pre>
+   *
+   * <code>.ssn.type.Confidence confidence = 20 [json_name = "confidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
 }

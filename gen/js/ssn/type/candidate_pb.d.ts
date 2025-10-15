@@ -202,6 +202,11 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLineCandidate;
 
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): PurchaseLineCandidate;
+  hasConfidence(): boolean;
+  clearConfidence(): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -229,6 +234,7 @@ export namespace PurchaseLineCandidate {
     total: string,
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
+    confidence?: Confidence.AsObject,
   }
 }
 
@@ -313,6 +319,11 @@ export class VatDistributionCandidate extends jspb.Message {
   getInclVat(): string;
   setInclVat(value: string): VatDistributionCandidate;
 
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): VatDistributionCandidate;
+  hasConfidence(): boolean;
+  clearConfidence(): VatDistributionCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
@@ -329,6 +340,7 @@ export namespace VatDistributionCandidate {
     pageRef: number,
     exclVat: string,
     inclVat: string,
+    confidence?: Confidence.AsObject,
   }
 }
 

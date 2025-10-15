@@ -1271,7 +1271,8 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, ""),
     total: jspb.Message.getFieldWithDefault(msg, 17, ""),
     unitPrice: jspb.Message.getFieldWithDefault(msg, 18, ""),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1376,6 +1377,11 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 20:
+      var value = new proto.ssn.type.Confidence;
+      reader.readMessage(value,proto.ssn.type.Confidence.deserializeBinaryFromReader);
+      msg.setConfidence(value);
       break;
     default:
       reader.skipField();
@@ -1524,6 +1530,14 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
       19,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getConfidence();
+  if (f != null) {
+    writer.writeMessage(
+      20,
+      f,
+      proto.ssn.type.Confidence.serializeBinaryToWriter
     );
   }
 };
@@ -1851,6 +1865,43 @@ proto.ssn.type.PurchaseLineCandidate.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional Confidence confidence = 20;
+ * @return {?proto.ssn.type.Confidence}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getConfidence = function() {
+  return /** @type{?proto.ssn.type.Confidence} */ (
+    jspb.Message.getWrapperField(this, proto.ssn.type.Confidence, 20));
+};
+
+
+/**
+ * @param {?proto.ssn.type.Confidence|undefined} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+*/
+proto.ssn.type.PurchaseLineCandidate.prototype.setConfidence = function(value) {
+  return jspb.Message.setWrapperField(this, 20, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.clearConfidence = function() {
+  return this.setConfidence(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.hasConfidence = function() {
+  return jspb.Message.getField(this, 20) != null;
 };
 
 
@@ -2343,7 +2394,8 @@ proto.ssn.type.VatDistributionCandidate.toObject = function(includeInstance, msg
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
     pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0),
     exclVat: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    inclVat: jspb.Message.getFieldWithDefault(msg, 6, "")
+    inclVat: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2404,6 +2456,11 @@ proto.ssn.type.VatDistributionCandidate.deserializeBinaryFromReader = function(m
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setInclVat(value);
+      break;
+    case 7:
+      var value = new proto.ssn.type.Confidence;
+      reader.readMessage(value,proto.ssn.type.Confidence.deserializeBinaryFromReader);
+      msg.setConfidence(value);
       break;
     default:
       reader.skipField();
@@ -2475,6 +2532,14 @@ proto.ssn.type.VatDistributionCandidate.serializeBinaryToWriter = function(messa
     writer.writeString(
       6,
       f
+    );
+  }
+  f = message.getConfidence();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.ssn.type.Confidence.serializeBinaryToWriter
     );
   }
 };
@@ -2604,6 +2669,43 @@ proto.ssn.type.VatDistributionCandidate.prototype.getInclVat = function() {
  */
 proto.ssn.type.VatDistributionCandidate.prototype.setInclVat = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional Confidence confidence = 7;
+ * @return {?proto.ssn.type.Confidence}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.getConfidence = function() {
+  return /** @type{?proto.ssn.type.Confidence} */ (
+    jspb.Message.getWrapperField(this, proto.ssn.type.Confidence, 7));
+};
+
+
+/**
+ * @param {?proto.ssn.type.Confidence|undefined} value
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+*/
+proto.ssn.type.VatDistributionCandidate.prototype.setConfidence = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.clearConfidence = function() {
+  return this.setConfidence(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.hasConfidence = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

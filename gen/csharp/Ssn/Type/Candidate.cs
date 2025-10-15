@@ -43,8 +43,8 @@ namespace Ssn.Type {
             "YxIdCgptb2RlbF9uYW1lGAEgASgJUgltb2RlbE5hbWUSOAoJbW9kZWxfdmVy",
             "GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVSCG1vZGVsVmVy",
             "IlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgBIAEoCVIEdGV4dBIWCgZhbW91",
-            "bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3JlZhgGIAEoDVIHcGFnZVJlZiL8",
-            "BAoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
+            "bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3JlZhgGIAEoDVIHcGFnZVJlZiKy",
+            "BQoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
             "YWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUSIAoLZGVzY3JpcHRpb24YAyAB",
             "KAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5GAQgASgJUghxdWFudGl0eRIf",
             "CgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51bWJlchISCgR1bml0GAYgASgJ",
@@ -57,24 +57,26 @@ namespace Ssn.Type {
             "bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJpY2VfZXhjbF92YXQYDiABKAlS",
             "EHVuaXRQcmljZUV4Y2xWYXQSFAoFdG90YWwYESABKAlSBXRvdGFsEh0KCnVu",
             "aXRfcHJpY2UYEiABKAlSCXVuaXRQcmljZRI6Cg5tb2RlbF9tZXRhZGF0YRgT",
-            "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YUoECA8Q",
-            "EEoECBAQESLSAQoPQW5zd2VyQ2FuZGlkYXRlEhoKCHF1ZXN0aW9uGAEgASgJ",
-            "UghxdWVzdGlvbhIWCgZhbnN3ZXIYAiABKAlSBmFuc3dlchI0Cgpjb25maWRl",
-            "bmNlGAMgASgLMhQuc3NuLnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZRI6",
-            "Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1IN",
-            "bW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgIIAEoDVIHcGFnZVJlZiI5CghQ",
-            "YWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIHcGFnZVJlZhISCgR0ZXh0GAIg",
-            "ASgJUgR0ZXh0It8BChhWYXREaXN0cmlidXRpb25DYW5kaWRhdGUSHgoKcGVy",
-            "Y2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIWCgZhbW91bnQYAiABKAlSBmFt",
-            "b3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEoCzITLnNzbi50eXBlLk1vZGVs",
-            "U3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgEIAEoDVIHcGFnZVJl",
-            "ZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZhdBIZCghpbmNsX3ZhdBgGIAEo",
-            "CVIHaW5jbFZhdCIxChBEb2N1bWVudE1ldGFkYXRhEh0KCnBhZ2VfY291bnQY",
-            "ASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
-            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
-            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
-            "Mw=="));
+            "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRI0Cgpj",
+            "b25maWRlbmNlGBQgASgLMhQuc3NuLnR5cGUuQ29uZmlkZW5jZVIKY29uZmlk",
+            "ZW5jZUoECA8QEEoECBAQESLSAQoPQW5zd2VyQ2FuZGlkYXRlEhoKCHF1ZXN0",
+            "aW9uGAEgASgJUghxdWVzdGlvbhIWCgZhbnN3ZXIYAiABKAlSBmFuc3dlchI0",
+            "Cgpjb25maWRlbmNlGAMgASgLMhQuc3NuLnR5cGUuQ29uZmlkZW5jZVIKY29u",
+            "ZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50eXBlLk1v",
+            "ZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgIIAEoDVIHcGFn",
+            "ZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIHcGFnZVJlZhIS",
+            "CgR0ZXh0GAIgASgJUgR0ZXh0IpUCChhWYXREaXN0cmlidXRpb25DYW5kaWRh",
+            "dGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIWCgZhbW91bnQY",
+            "AiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgEIAEo",
+            "DVIHcGFnZVJlZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZhdBIZCghpbmNs",
+            "X3ZhdBgGIAEoCVIHaW5jbFZhdBI0Cgpjb25maWRlbmNlGAcgASgLMhQuc3Nu",
+            "LnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZSIxChBEb2N1bWVudE1ldGFk",
+            "YXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlz",
+            "bWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1j",
+            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiq",
+            "AghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHq",
+            "AglTc246OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,10 +84,10 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", "Corrected" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null)
           }));
     }
@@ -1497,6 +1499,7 @@ namespace Ssn.Type {
       total_ = other.total_;
       unitPrice_ = other.unitPrice_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1762,6 +1765,21 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 20;
+    private global::Ssn.Type.Confidence confidence_;
+    /// <summary>
+    /// Confidence
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.Confidence Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1794,6 +1812,7 @@ namespace Ssn.Type {
       if (Total != other.Total) return false;
       if (UnitPrice != other.UnitPrice) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (!object.Equals(Confidence, other.Confidence)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1818,6 +1837,7 @@ namespace Ssn.Type {
       if (Total.Length != 0) hash ^= Total.GetHashCode();
       if (UnitPrice.Length != 0) hash ^= UnitPrice.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (confidence_ != null) hash ^= Confidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1904,6 +1924,10 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (confidence_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(Confidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1982,6 +2006,10 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (confidence_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(Confidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2042,6 +2070,9 @@ namespace Ssn.Type {
       }
       if (modelMetadata_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (confidence_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2108,6 +2139,12 @@ namespace Ssn.Type {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.confidence_ != null) {
+        if (confidence_ == null) {
+          Confidence = new global::Ssn.Type.Confidence();
+        }
+        Confidence.MergeFrom(other.Confidence);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2199,6 +2236,13 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 162: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
         }
       }
     #endif
@@ -2287,6 +2331,13 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 162: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
             break;
           }
         }
@@ -2957,6 +3008,7 @@ namespace Ssn.Type {
       pageRef_ = other.pageRef_;
       exclVat_ = other.exclVat_;
       inclVat_ = other.inclVat_;
+      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3056,6 +3108,21 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 7;
+    private global::Ssn.Type.Confidence confidence_;
+    /// <summary>
+    /// Confidence
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.Confidence Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3077,6 +3144,7 @@ namespace Ssn.Type {
       if (PageRef != other.PageRef) return false;
       if (ExclVat != other.ExclVat) return false;
       if (InclVat != other.InclVat) return false;
+      if (!object.Equals(Confidence, other.Confidence)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3090,6 +3158,7 @@ namespace Ssn.Type {
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
       if (ExclVat.Length != 0) hash ^= ExclVat.GetHashCode();
       if (InclVat.Length != 0) hash ^= InclVat.GetHashCode();
+      if (confidence_ != null) hash ^= Confidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3132,6 +3201,10 @@ namespace Ssn.Type {
         output.WriteRawTag(50);
         output.WriteString(InclVat);
       }
+      if (confidence_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Confidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3166,6 +3239,10 @@ namespace Ssn.Type {
         output.WriteRawTag(50);
         output.WriteString(InclVat);
       }
+      if (confidence_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Confidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3193,6 +3270,9 @@ namespace Ssn.Type {
       }
       if (InclVat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InclVat);
+      }
+      if (confidence_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3226,6 +3306,12 @@ namespace Ssn.Type {
       }
       if (other.InclVat.Length != 0) {
         InclVat = other.InclVat;
+      }
+      if (other.confidence_ != null) {
+        if (confidence_ == null) {
+          Confidence = new global::Ssn.Type.Confidence();
+        }
+        Confidence.MergeFrom(other.Confidence);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3273,6 +3359,13 @@ namespace Ssn.Type {
             InclVat = input.ReadString();
             break;
           }
+          case 58: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
         }
       }
     #endif
@@ -3317,6 +3410,13 @@ namespace Ssn.Type {
           }
           case 50: {
             InclVat = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
             break;
           }
         }
