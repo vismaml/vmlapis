@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ssn.type;
+
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
+
+message HotelDates {
+  // checkInDate
+  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  repeated Candidate check_in_date = 1;
+
+  // checkOutDate
+  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  repeated Candidate check_out_date = 2;
+}

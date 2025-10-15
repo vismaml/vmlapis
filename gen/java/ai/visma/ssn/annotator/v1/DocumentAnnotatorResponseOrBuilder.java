@@ -2397,4 +2397,31 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return Whether the hotelDates field is set.
+   */
+  boolean hasHotelDates();
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return The hotelDates.
+   */
+  ai.visma.ssn.type.HotelDates getHotelDates();
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   */
+  ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder();
 }

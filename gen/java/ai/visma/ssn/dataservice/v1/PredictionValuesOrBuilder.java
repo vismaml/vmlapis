@@ -1040,4 +1040,52 @@ public interface PredictionValuesOrBuilder extends
    */
   ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<com.google.type.Date> 
+      getCheckInDateList();
+  /**
+   * <code>repeated .google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.Date getCheckInDate(int index);
+  /**
+   * <code>repeated .google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getCheckInDateCount();
+  /**
+   * <code>repeated .google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<? extends com.google.type.DateOrBuilder> 
+      getCheckInDateOrBuilderList();
+  /**
+   * <code>repeated .google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.DateOrBuilder getCheckInDateOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<com.google.type.Date> 
+      getCheckOutDateList();
+  /**
+   * <code>repeated .google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.Date getCheckOutDate(int index);
+  /**
+   * <code>repeated .google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getCheckOutDateCount();
+  /**
+   * <code>repeated .google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<? extends com.google.type.DateOrBuilder> 
+      getCheckOutDateOrBuilderList();
+  /**
+   * <code>repeated .google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  com.google.type.DateOrBuilder getCheckOutDateOrBuilder(
+      int index);
 }

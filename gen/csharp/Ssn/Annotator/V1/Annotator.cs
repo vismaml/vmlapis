@@ -27,43 +27,44 @@ namespace Ssn.Annotator.V1 {
             "CiBzc24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90bxIQc3NuLmFubm90",
             "YXRvci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoucHJvdG9j",
             "LWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90bxoYc3Nu",
-            "L3R5cGUvY2FuZGlkYXRlLnByb3RvGhFzc24vdHlwZS9xci5wcm90bxoec3Nu",
-            "L3R5cGUvdGV4dF9hbm5vdGF0aW9uLnByb3RvGhNzc24vdHlwZS90aWVyLnBy",
-            "b3RvIv4JCgdGZWF0dXJlEjIKBHR5cGUYASABKA4yHi5zc24uYW5ub3RhdG9y",
-            "LnYxLkZlYXR1cmUuVHlwZVIEdHlwZRIfCgttYXhfcmVzdWx0cxgCIAEoBVIK",
-            "bWF4UmVzdWx0cxJBCg5taW5fY29uZmlkZW5jZRgDIAEoDjIaLnNzbi50eXBl",
-            "LkNvbmZpZGVuY2UuTGV2ZWxSDW1pbkNvbmZpZGVuY2Ui2ggKBFR5cGUSCwoH",
-            "REVGQVVMVBAAEhMKD1RFWFRfQU5OT1RBVElPThABEg4KCk9SREVSX0RBVEUQ",
-            "AhIUChBQQVlNRU5UX0RVRV9EQVRFEAMSDAoIQ1VSUkVOQ1kQBBINCglUT1RB",
-            "TF9WQVQQBRISCg5UT1RBTF9JTkNMX1ZBVBAGEhIKDlRPVEFMX0VYQ0xfVkFU",
-            "EAcSGQoVU1VQUExJRVJfQ09SUE9SQVRFX0lEEAgSGQoVU1VQUExJRVJfQ09V",
-            "TlRSWV9DT0RFEAkSEQoNRE9DVU1FTlRfVFlQRRAKEhIKDlBBWU1FTlRfTUVU",
-            "SE9EEAsSGQoVQ1JFRElUX0NBUkRfTEFTVF9GT1VSEAwSEgoOSU5WT0lDRV9O",
-            "VU1CRVIQDRIUChBPQ1JfTElORV9ES19UWVBFEA4SGgoWT0NSX0xJTkVfREtf",
-            "UEFZTUVOVF9JRBAPEhsKF09DUl9MSU5FX0RLX0NSRURJVE9SX0lEEBASGgoW",
-            "T0NSX0xJTkVfU0VfUEFZTUVOVF9JRBAREiQKIE9DUl9MSU5FX1NFX0JBTktH",
-            "SVJPX0NSRURJVE9SX0lEEBISJAogT0NSX0xJTkVfU0VfUExVU0dJUk9fQ1JF",
-            "RElUT1JfSUQQExIaChZPQ1JfTElORV9OT19QQVlNRU5UX0lEEBQSGgoWT0NS",
-            "X0xJTkVfRklfUEFZTUVOVF9JRBAVEhoKFk9DUl9MSU5FX05MX1BBWU1FTlRf",
-            "SUQQFhIaChZPQ1JfTElORV9CRV9QQVlNRU5UX0lEECcSCAoEVEVYVBAXEggK",
-            "BElCQU4QGBIJCgVMSU5FUxAZEgsKB1BSRVZJRVcQGhIXChNCQU5LX0FDQ09V",
-            "TlRfTlVNQkVSEBsSHAoYQkFOS19SRUdJU1RSQVRJT05fTlVNQkVSEBwSBwoD",
-            "QklDEB0SEwoPRE9DVU1FTlRfTlVNQkVSEB4SEQoNRE9DVU1FTlRfREFURRAf",
-            "EhAKDE9SREVSX05VTUJFUhAgEhEKDVNVUFBMSUVSX05BTUUQIRIXChNTVVBQ",
-            "TElFUl9WQVRfTlVNQkVSECISIAocU1VQUExJRVJfT1JHQU5JU0FUSU9OX05V",
-            "TUJFUhAjEhQKEFNVUFBMSUVSX0FERFJFU1MQJBITCg9DVVNUT01FUl9OVU1C",
-            "RVIQJRIZChVSRUNFSVZFUl9PUkRFUl9OVU1CRVIQJhIUChBSRUNFSVZFUl9B",
-            "RERSRVNTECgSGQoVUkVDRUlWRVJfQ09VTlRSWV9DT0RFECkSEQoNUkVDRUlW",
-            "RVJfTkFNRRAqEhcKE1JFQ0VJVkVSX1ZBVF9OVU1CRVIQKxISCg5QVVJDSEFT",
-            "RV9MSU5FUxAsEg4KClBBR0VfVEVYVFMQLRIUChBWQVRfRElTVFJJQlVUSU9O",
-            "EC4SEQoNTEFOR1VBR0VfQ09ERRAvEgwKCFFSX0NPREVTEDASEgoOU1dJU1Nf",
-            "UVJfQklMTFMQMRIMCghWRVJJRklFRBAyIvsBChhEb2N1bWVudEFubm90YXRv",
+            "L3R5cGUvY2FuZGlkYXRlLnByb3RvGhpzc24vdHlwZS9ob3RlbF9kYXRlcy5w",
+            "cm90bxoRc3NuL3R5cGUvcXIucHJvdG8aHnNzbi90eXBlL3RleHRfYW5ub3Rh",
+            "dGlvbi5wcm90bxoTc3NuL3R5cGUvdGllci5wcm90byKPCgoHRmVhdHVyZRIy",
+            "CgR0eXBlGAEgASgOMh4uc3NuLmFubm90YXRvci52MS5GZWF0dXJlLlR5cGVS",
+            "BHR5cGUSHwoLbWF4X3Jlc3VsdHMYAiABKAVSCm1heFJlc3VsdHMSQQoObWlu",
+            "X2NvbmZpZGVuY2UYAyABKA4yGi5zc24udHlwZS5Db25maWRlbmNlLkxldmVs",
+            "Ug1taW5Db25maWRlbmNlIusICgRUeXBlEgsKB0RFRkFVTFQQABITCg9URVhU",
+            "X0FOTk9UQVRJT04QARIOCgpPUkRFUl9EQVRFEAISFAoQUEFZTUVOVF9EVUVf",
+            "REFURRADEgwKCENVUlJFTkNZEAQSDQoJVE9UQUxfVkFUEAUSEgoOVE9UQUxf",
+            "SU5DTF9WQVQQBhISCg5UT1RBTF9FWENMX1ZBVBAHEhkKFVNVUFBMSUVSX0NP",
+            "UlBPUkFURV9JRBAIEhkKFVNVUFBMSUVSX0NPVU5UUllfQ09ERRAJEhEKDURP",
+            "Q1VNRU5UX1RZUEUQChISCg5QQVlNRU5UX01FVEhPRBALEhkKFUNSRURJVF9D",
+            "QVJEX0xBU1RfRk9VUhAMEhIKDklOVk9JQ0VfTlVNQkVSEA0SFAoQT0NSX0xJ",
+            "TkVfREtfVFlQRRAOEhoKFk9DUl9MSU5FX0RLX1BBWU1FTlRfSUQQDxIbChdP",
+            "Q1JfTElORV9ES19DUkVESVRPUl9JRBAQEhoKFk9DUl9MSU5FX1NFX1BBWU1F",
+            "TlRfSUQQERIkCiBPQ1JfTElORV9TRV9CQU5LR0lST19DUkVESVRPUl9JRBAS",
+            "EiQKIE9DUl9MSU5FX1NFX1BMVVNHSVJPX0NSRURJVE9SX0lEEBMSGgoWT0NS",
+            "X0xJTkVfTk9fUEFZTUVOVF9JRBAUEhoKFk9DUl9MSU5FX0ZJX1BBWU1FTlRf",
+            "SUQQFRIaChZPQ1JfTElORV9OTF9QQVlNRU5UX0lEEBYSGgoWT0NSX0xJTkVf",
+            "QkVfUEFZTUVOVF9JRBAnEggKBFRFWFQQFxIICgRJQkFOEBgSCQoFTElORVMQ",
+            "GRILCgdQUkVWSUVXEBoSFwoTQkFOS19BQ0NPVU5UX05VTUJFUhAbEhwKGEJB",
+            "TktfUkVHSVNUUkFUSU9OX05VTUJFUhAcEgcKA0JJQxAdEhMKD0RPQ1VNRU5U",
+            "X05VTUJFUhAeEhEKDURPQ1VNRU5UX0RBVEUQHxIQCgxPUkRFUl9OVU1CRVIQ",
+            "IBIRCg1TVVBQTElFUl9OQU1FECESFwoTU1VQUExJRVJfVkFUX05VTUJFUhAi",
+            "EiAKHFNVUFBMSUVSX09SR0FOSVNBVElPTl9OVU1CRVIQIxIUChBTVVBQTElF",
+            "Ul9BRERSRVNTECQSEwoPQ1VTVE9NRVJfTlVNQkVSECUSGQoVUkVDRUlWRVJf",
+            "T1JERVJfTlVNQkVSECYSFAoQUkVDRUlWRVJfQUREUkVTUxAoEhkKFVJFQ0VJ",
+            "VkVSX0NPVU5UUllfQ09ERRApEhEKDVJFQ0VJVkVSX05BTUUQKhIXChNSRUNF",
+            "SVZFUl9WQVRfTlVNQkVSECsSEgoOUFVSQ0hBU0VfTElORVMQLBIOCgpQQUdF",
+            "X1RFWFRTEC0SFAoQVkFUX0RJU1RSSUJVVElPThAuEhEKDUxBTkdVQUdFX0NP",
+            "REUQLxIMCghRUl9DT0RFUxAwEhIKDlNXSVNTX1FSX0JJTExTEDESDAoIVkVS",
+            "SUZJRUQQMhIPCgtIT1RFTF9EQVRFUxAzIvsBChhEb2N1bWVudEFubm90YXRv",
             "clJlcXVlc3QSNgoIZG9jdW1lbnQYASABKAsyGi5zc24uYW5ub3RhdG9yLnYx",
             "LkRvY3VtZW50Ughkb2N1bWVudBI1CghmZWF0dXJlcxgCIAMoCzIZLnNzbi5h",
             "bm5vdGF0b3IudjEuRmVhdHVyZVIIZmVhdHVyZXMSEgoEdGFncxgDIAMoCVIE",
             "dGFncxIiCgR0aWVyGAQgASgOMg4uc3NuLnR5cGUuVGllclIEdGllchIaCghz",
             "ZWdtZW50cxgFIAMoCVIIc2VnbWVudHMSHAoJcXVlc3Rpb25zGAYgAygJUglx",
-            "dWVzdGlvbnMi1BkKGURvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2USMgoKb3Jk",
+            "dWVzdGlvbnMiixoKGURvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2USMgoKb3Jk",
             "ZXJfZGF0ZRgBIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIJb3JkZXJEYXRl",
             "Ej0KEHBheW1lbnRfZHVlX2RhdGUYAiADKAsyEy5zc24udHlwZS5DYW5kaWRh",
             "dGVSDnBheW1lbnREdWVEYXRlEi8KCGN1cnJlbmN5GAMgAygLMhMuc3NuLnR5",
@@ -136,34 +137,35 @@ namespace Ssn.Annotator.V1 {
             "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgxsYW5ndWFnZUNvZGUSLwoIcXJfY29k",
             "ZXMYMyADKAsyFC5zc24udHlwZS5RckNvZGVEYXRhUgdxckNvZGVzEjsKDnN3",
             "aXNzX3FyX2JpbGxzGDQgAygLMhUuc3NuLnR5cGUuU3dpc3NRckJpbGxSDHN3",
-            "aXNzUXJCaWxscyJeCghEb2N1bWVudBIYCgdjb250ZW50GAEgASgMUgdjb250",
-            "ZW50EjgKBnNvdXJjZRgCIAEoCzIgLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
-            "bnRTb3VyY2VSBnNvdXJjZSIrCg5Eb2N1bWVudFNvdXJjZRIZCghodHRwX3Vy",
-            "aRgBIAEoCVIHaHR0cFVyaSJvChdEb2N1bWVudFF1ZXN0aW9uUmVxdWVzdBI2",
-            "Cghkb2N1bWVudBgBIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRS",
-            "CGRvY3VtZW50EhwKCXF1ZXN0aW9ucxgCIAMoCVIJcXVlc3Rpb25zIlUKGERv",
-            "Y3VtZW50UXVlc3Rpb25SZXNwb25zZRIzCgdhbnN3ZXJzGAIgAygLMhkuc3Nu",
-            "LnR5cGUuQW5zd2VyQ2FuZGlkYXRlUgdhbnN3ZXJzSgQIARACMr0CChFEb2N1",
-            "bWVudEFubm90YXRvchKNAQoQQW5ub3RhdGVEb2N1bWVudBIqLnNzbi5hbm5v",
-            "dGF0b3IudjEuRG9jdW1lbnRBbm5vdGF0b3JSZXF1ZXN0Gisuc3NuLmFubm90",
-            "YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlc3BvbnNlIiCC0+STAhoiFS92",
-            "MS9kb2N1bWVudDphbm5vdGF0ZToBKhKXAQoWQW5zd2VyRG9jdW1lbnRRdWVz",
-            "dGlvbhIpLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRRdWVzdGlvblJlcXVl",
-            "c3QaKi5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50UXVlc3Rpb25SZXNwb25z",
-            "ZSImgtPkkwIgIhsvdjEvZG9jdW1lbnQ6YW5zd2VycXVlc3Rpb246ASpCiAIK",
-            "GWFpLnZpc21hLnNzbi5hbm5vdGF0b3IudjFCDkFubm90YXRvclByb3RvUAFa",
-            "PmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9hbm5v",
-            "dGF0b3IvdjE7YW5ub3RhdG9yogIDU0FYqgIQU3NuLkFubm90YXRvci5WMcoC",
-            "EFNzblxBbm5vdGF0b3JcVjHiAhxTc25cQW5ub3RhdG9yXFYxXEdQQk1ldGFk",
-            "YXRh6gISU3NuOjpBbm5vdGF0b3I6OlYxkkE4Eg8KCVNtYXJ0U2NhbjICdjEq",
-            "AQIyEGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3Rv",
-            "Mw=="));
+            "aXNzUXJCaWxscxI1Cgtob3RlbF9kYXRlcxg1IAEoCzIULnNzbi50eXBlLkhv",
+            "dGVsRGF0ZXNSCmhvdGVsRGF0ZXMiXgoIRG9jdW1lbnQSGAoHY29udGVudBgB",
+            "IAEoDFIHY29udGVudBI4CgZzb3VyY2UYAiABKAsyIC5zc24uYW5ub3RhdG9y",
+            "LnYxLkRvY3VtZW50U291cmNlUgZzb3VyY2UiKwoORG9jdW1lbnRTb3VyY2US",
+            "GQoIaHR0cF91cmkYASABKAlSB2h0dHBVcmkibwoXRG9jdW1lbnRRdWVzdGlv",
+            "blJlcXVlc3QSNgoIZG9jdW1lbnQYASABKAsyGi5zc24uYW5ub3RhdG9yLnYx",
+            "LkRvY3VtZW50Ughkb2N1bWVudBIcCglxdWVzdGlvbnMYAiADKAlSCXF1ZXN0",
+            "aW9ucyJVChhEb2N1bWVudFF1ZXN0aW9uUmVzcG9uc2USMwoHYW5zd2VycxgC",
+            "IAMoCzIZLnNzbi50eXBlLkFuc3dlckNhbmRpZGF0ZVIHYW5zd2Vyc0oECAEQ",
+            "AjK9AgoRRG9jdW1lbnRBbm5vdGF0b3ISjQEKEEFubm90YXRlRG9jdW1lbnQS",
+            "Ki5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50QW5ub3RhdG9yUmVxdWVzdBor",
+            "LnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRBbm5vdGF0b3JSZXNwb25zZSIg",
+            "gtPkkwIaIhUvdjEvZG9jdW1lbnQ6YW5ub3RhdGU6ASoSlwEKFkFuc3dlckRv",
+            "Y3VtZW50UXVlc3Rpb24SKS5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50UXVl",
+            "c3Rpb25SZXF1ZXN0Giouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFF1ZXN0",
+            "aW9uUmVzcG9uc2UiJoLT5JMCICIbL3YxL2RvY3VtZW50OmFuc3dlcnF1ZXN0",
+            "aW9uOgEqQogCChlhaS52aXNtYS5zc24uYW5ub3RhdG9yLnYxQg5Bbm5vdGF0",
+            "b3JQcm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
+            "by9zc24vYW5ub3RhdG9yL3YxO2Fubm90YXRvcqICA1NBWKoCEFNzbi5Bbm5v",
+            "dGF0b3IuVjHKAhBTc25cQW5ub3RhdG9yXFYx4gIcU3NuXEFubm90YXRvclxW",
+            "MVxHUEJNZXRhZGF0YeoCElNzbjo6QW5ub3RhdG9yOjpWMZJBOBIPCglTbWFy",
+            "dFNjYW4yAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9q",
+            "c29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.HotelDatesReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier", "Segments", "Questions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentQuestionRequest), global::Ssn.Annotator.V1.DocumentQuestionRequest.Parser, new[]{ "Document", "Questions" }, null, null, null, null),
@@ -666,6 +668,10 @@ namespace Ssn.Annotator.V1 {
         /// on the document.
         /// </summary>
         [pbr::OriginalName("VERIFIED")] Verified = 50,
+        /// <summary>
+        /// Hotel dates including check-in and check-out dates
+        /// </summary>
+        [pbr::OriginalName("HOTEL_DATES")] HotelDates = 51,
       }
 
     }
@@ -1108,6 +1114,7 @@ namespace Ssn.Annotator.V1 {
       languageCode_ = other.languageCode_.Clone();
       qrCodes_ = other.qrCodes_.Clone();
       swissQrBills_ = other.swissQrBills_.Clone();
+      hotelDates_ = other.hotelDates_ != null ? other.hotelDates_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1892,6 +1899,21 @@ namespace Ssn.Annotator.V1 {
       get { return swissQrBills_; }
     }
 
+    /// <summary>Field number for the "hotel_dates" field.</summary>
+    public const int HotelDatesFieldNumber = 53;
+    private global::Ssn.Type.HotelDates hotelDates_;
+    /// <summary>
+    /// The hotelDates cntains check-in and check-out date candidates
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.HotelDates HotelDates {
+      get { return hotelDates_; }
+      set {
+        hotelDates_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1959,6 +1981,7 @@ namespace Ssn.Annotator.V1 {
       if(!languageCode_.Equals(other.languageCode_)) return false;
       if(!qrCodes_.Equals(other.qrCodes_)) return false;
       if(!swissQrBills_.Equals(other.swissQrBills_)) return false;
+      if (!object.Equals(HotelDates, other.HotelDates)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2018,6 +2041,7 @@ namespace Ssn.Annotator.V1 {
       hash ^= languageCode_.GetHashCode();
       hash ^= qrCodes_.GetHashCode();
       hash ^= swissQrBills_.GetHashCode();
+      if (hotelDates_ != null) hash ^= HotelDates.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2103,6 +2127,10 @@ namespace Ssn.Annotator.V1 {
       languageCode_.WriteTo(output, _repeated_languageCode_codec);
       qrCodes_.WriteTo(output, _repeated_qrCodes_codec);
       swissQrBills_.WriteTo(output, _repeated_swissQrBills_codec);
+      if (hotelDates_ != null) {
+        output.WriteRawTag(170, 3);
+        output.WriteMessage(HotelDates);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2180,6 +2208,10 @@ namespace Ssn.Annotator.V1 {
       languageCode_.WriteTo(ref output, _repeated_languageCode_codec);
       qrCodes_.WriteTo(ref output, _repeated_qrCodes_codec);
       swissQrBills_.WriteTo(ref output, _repeated_swissQrBills_codec);
+      if (hotelDates_ != null) {
+        output.WriteRawTag(170, 3);
+        output.WriteMessage(HotelDates);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2252,6 +2284,9 @@ namespace Ssn.Annotator.V1 {
       size += languageCode_.CalculateSize(_repeated_languageCode_codec);
       size += qrCodes_.CalculateSize(_repeated_qrCodes_codec);
       size += swissQrBills_.CalculateSize(_repeated_swissQrBills_codec);
+      if (hotelDates_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HotelDates);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2332,6 +2367,12 @@ namespace Ssn.Annotator.V1 {
       languageCode_.Add(other.languageCode_);
       qrCodes_.Add(other.qrCodes_);
       swissQrBills_.Add(other.swissQrBills_);
+      if (other.hotelDates_ != null) {
+        if (hotelDates_ == null) {
+          HotelDates = new global::Ssn.Type.HotelDates();
+        }
+        HotelDates.MergeFrom(other.HotelDates);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2565,6 +2606,13 @@ namespace Ssn.Annotator.V1 {
             swissQrBills_.AddEntriesFrom(input, _repeated_swissQrBills_codec);
             break;
           }
+          case 426: {
+            if (hotelDates_ == null) {
+              HotelDates = new global::Ssn.Type.HotelDates();
+            }
+            input.ReadMessage(HotelDates);
+            break;
+          }
         }
       }
     #endif
@@ -2796,6 +2844,13 @@ namespace Ssn.Annotator.V1 {
           }
           case 418: {
             swissQrBills_.AddEntriesFrom(ref input, _repeated_swissQrBills_codec);
+            break;
+          }
+          case 426: {
+            if (hotelDates_ == null) {
+              HotelDates = new global::Ssn.Type.HotelDates();
+            }
+            input.ReadMessage(HotelDates);
             break;
           }
         }

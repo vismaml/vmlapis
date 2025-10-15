@@ -27,6 +27,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
+var ssn_type_hotel_dates_pb = require('../../../ssn/type/hotel_dates_pb.js');
+goog.object.extend(proto, ssn_type_hotel_dates_pb);
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js');
 goog.object.extend(proto, ssn_type_qr_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
@@ -378,7 +380,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   LANGUAGE_CODE: 47,
   QR_CODES: 48,
   SWISS_QR_BILLS: 49,
-  VERIFIED: 50
+  VERIFIED: 50,
+  HOTEL_DATES: 51
 };
 
 /**
@@ -960,7 +963,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     qrCodesList: jspb.Message.toObjectList(msg.getQrCodesList(),
     ssn_type_qr_pb.QrCodeData.toObject, includeInstance),
     swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
-    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance)
+    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance),
+    hotelDates: (f = msg.getHotelDates()) && ssn_type_hotel_dates_pb.HotelDates.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1253,6 +1257,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_qr_pb.SwissQrBill;
       reader.readMessage(value,ssn_type_qr_pb.SwissQrBill.deserializeBinaryFromReader);
       msg.addSwissQrBills(value);
+      break;
+    case 53:
+      var value = new ssn_type_hotel_dates_pb.HotelDates;
+      reader.readMessage(value,ssn_type_hotel_dates_pb.HotelDates.deserializeBinaryFromReader);
+      msg.setHotelDates(value);
       break;
     default:
       reader.skipField();
@@ -1694,6 +1703,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       52,
       f,
       ssn_type_qr_pb.SwissQrBill.serializeBinaryToWriter
+    );
+  }
+  f = message.getHotelDates();
+  if (f != null) {
+    writer.writeMessage(
+      53,
+      f,
+      ssn_type_hotel_dates_pb.HotelDates.serializeBinaryToWriter
     );
   }
 };
@@ -3610,6 +3627,43 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addSwissQrBills = fun
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSwissQrBillsList = function() {
   return this.setSwissQrBillsList([]);
+};
+
+
+/**
+ * optional ssn.type.HotelDates hotel_dates = 53;
+ * @return {?proto.ssn.type.HotelDates}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getHotelDates = function() {
+  return /** @type{?proto.ssn.type.HotelDates} */ (
+    jspb.Message.getWrapperField(this, ssn_type_hotel_dates_pb.HotelDates, 53));
+};
+
+
+/**
+ * @param {?proto.ssn.type.HotelDates|undefined} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setHotelDates = function(value) {
+  return jspb.Message.setWrapperField(this, 53, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearHotelDates = function() {
+  return this.setHotelDates(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasHotelDates = function() {
+  return jspb.Message.getField(this, 53) != null;
 };
 
 

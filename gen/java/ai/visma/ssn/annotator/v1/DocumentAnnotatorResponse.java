@@ -3384,6 +3384,44 @@ private static final long serialVersionUID = 0L;
     return swissQrBills_.get(index);
   }
 
+  public static final int HOTEL_DATES_FIELD_NUMBER = 53;
+  private ai.visma.ssn.type.HotelDates hotelDates_;
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return Whether the hotelDates field is set.
+   */
+  @java.lang.Override
+  public boolean hasHotelDates() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return The hotelDates.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.HotelDates getHotelDates() {
+    return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
+  }
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder() {
+    return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3553,6 +3591,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < swissQrBills_.size(); i++) {
       output.writeMessage(52, swissQrBills_.get(i));
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(53, getHotelDates());
     }
     getUnknownFields().writeTo(output);
   }
@@ -3768,6 +3809,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(52, swissQrBills_.get(i));
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(53, getHotelDates());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3893,6 +3938,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getQrCodesList())) return false;
     if (!getSwissQrBillsList()
         .equals(other.getSwissQrBillsList())) return false;
+    if (hasHotelDates() != other.hasHotelDates()) return false;
+    if (hasHotelDates()) {
+      if (!getHotelDates()
+          .equals(other.getHotelDates())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4106,6 +4156,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SWISS_QR_BILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSwissQrBillsList().hashCode();
     }
+    if (hasHotelDates()) {
+      hash = (37 * hash) + HOTEL_DATES_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelDates().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4285,6 +4339,7 @@ private static final long serialVersionUID = 0L;
         getLanguageCodeFieldBuilder();
         getQrCodesFieldBuilder();
         getSwissQrBillsFieldBuilder();
+        getHotelDatesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -4634,6 +4689,11 @@ private static final long serialVersionUID = 0L;
         swissQrBillsBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00080000);
+      hotelDates_ = null;
+      if (hotelDatesBuilder_ != null) {
+        hotelDatesBuilder_.dispose();
+        hotelDatesBuilder_ = null;
+      }
       return this;
     }
 
@@ -5122,6 +5182,12 @@ private static final long serialVersionUID = 0L;
             ? documentMetadata_
             : documentMetadataBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField1_ & 0x00100000) != 0)) {
+        result.hotelDates_ = hotelDatesBuilder_ == null
+            ? hotelDates_
+            : hotelDatesBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -6381,6 +6447,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasHotelDates()) {
+        mergeHotelDates(other.getHotelDates());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -7047,6 +7116,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 418
+            case 426: {
+              input.readMessage(
+                  getHotelDatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00100000;
+              break;
+            } // case 426
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -23060,6 +23136,163 @@ private static final long serialVersionUID = 0L;
         swissQrBills_ = null;
       }
       return swissQrBillsBuilder_;
+    }
+
+    private ai.visma.ssn.type.HotelDates hotelDates_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> hotelDatesBuilder_;
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     * @return Whether the hotelDates field is set.
+     */
+    public boolean hasHotelDates() {
+      return ((bitField1_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     * @return The hotelDates.
+     */
+    public ai.visma.ssn.type.HotelDates getHotelDates() {
+      if (hotelDatesBuilder_ == null) {
+        return hotelDates_ == null ? ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
+      } else {
+        return hotelDatesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder setHotelDates(ai.visma.ssn.type.HotelDates value) {
+      if (hotelDatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelDates_ = value;
+      } else {
+        hotelDatesBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder setHotelDates(
+        ai.visma.ssn.type.HotelDates.Builder builderForValue) {
+      if (hotelDatesBuilder_ == null) {
+        hotelDates_ = builderForValue.build();
+      } else {
+        hotelDatesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder mergeHotelDates(ai.visma.ssn.type.HotelDates value) {
+      if (hotelDatesBuilder_ == null) {
+        if (((bitField1_ & 0x00100000) != 0) &&
+          hotelDates_ != null &&
+          hotelDates_ != ai.visma.ssn.type.HotelDates.getDefaultInstance()) {
+          getHotelDatesBuilder().mergeFrom(value);
+        } else {
+          hotelDates_ = value;
+        }
+      } else {
+        hotelDatesBuilder_.mergeFrom(value);
+      }
+      if (hotelDates_ != null) {
+        bitField1_ |= 0x00100000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public Builder clearHotelDates() {
+      bitField1_ = (bitField1_ & ~0x00100000);
+      hotelDates_ = null;
+      if (hotelDatesBuilder_ != null) {
+        hotelDatesBuilder_.dispose();
+        hotelDatesBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public ai.visma.ssn.type.HotelDates.Builder getHotelDatesBuilder() {
+      bitField1_ |= 0x00100000;
+      onChanged();
+      return getHotelDatesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    public ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder() {
+      if (hotelDatesBuilder_ != null) {
+        return hotelDatesBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelDates_ == null ?
+            ai.visma.ssn.type.HotelDates.getDefaultInstance() : hotelDates_;
+      }
+    }
+    /**
+     * <pre>
+     * The hotelDates cntains check-in and check-out date candidates
+     * </pre>
+     *
+     * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> 
+        getHotelDatesFieldBuilder() {
+      if (hotelDatesBuilder_ == null) {
+        hotelDatesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder>(
+                getHotelDates(),
+                getParentForChildren(),
+                isClean());
+        hotelDates_ = null;
+      }
+      return hotelDatesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

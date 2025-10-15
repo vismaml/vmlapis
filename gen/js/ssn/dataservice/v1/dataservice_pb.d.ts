@@ -295,6 +295,16 @@ export class TrueValues extends jspb.Message {
   clearVatDistributionList(): TrueValues;
   addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
+  getCheckInDate(): google_type_date_pb.Date | undefined;
+  setCheckInDate(value?: google_type_date_pb.Date): TrueValues;
+  hasCheckInDate(): boolean;
+  clearCheckInDate(): TrueValues;
+
+  getCheckOutDate(): google_type_date_pb.Date | undefined;
+  setCheckOutDate(value?: google_type_date_pb.Date): TrueValues;
+  hasCheckOutDate(): boolean;
+  clearCheckOutDate(): TrueValues;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
   static toObject(includeInstance: boolean, msg: TrueValues): TrueValues.AsObject;
@@ -348,6 +358,8 @@ export namespace TrueValues {
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    checkInDate?: google_type_date_pb.Date.AsObject,
+    checkOutDate?: google_type_date_pb.Date.AsObject,
   }
 }
 
@@ -567,6 +579,16 @@ export class PredictionValues extends jspb.Message {
   clearVatDistributionList(): PredictionValues;
   addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
+  getCheckInDateList(): Array<google_type_date_pb.Date>;
+  setCheckInDateList(value: Array<google_type_date_pb.Date>): PredictionValues;
+  clearCheckInDateList(): PredictionValues;
+  addCheckInDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
+
+  getCheckOutDateList(): Array<google_type_date_pb.Date>;
+  setCheckOutDateList(value: Array<google_type_date_pb.Date>): PredictionValues;
+  clearCheckOutDateList(): PredictionValues;
+  addCheckOutDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -620,6 +642,8 @@ export namespace PredictionValues {
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    checkInDateList: Array<google_type_date_pb.Date.AsObject>,
+    checkOutDateList: Array<google_type_date_pb.Date.AsObject>,
   }
 }
 
@@ -824,6 +848,16 @@ export class PredictionConfidences extends jspb.Message {
   clearReceiverVatNumberList(): PredictionConfidences;
   addReceiverVatNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
+  getCheckInDateList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setCheckInDateList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearCheckInDateList(): PredictionConfidences;
+  addCheckInDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getCheckOutDateList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setCheckOutDateList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearCheckOutDateList(): PredictionConfidences;
+  addCheckOutDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionConfidences): PredictionConfidences.AsObject;
@@ -874,6 +908,8 @@ export namespace PredictionConfidences {
     receiverCountryCodeList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     receiverNameList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     receiverVatNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    checkInDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    checkOutDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
   }
 }
 
@@ -1078,6 +1114,16 @@ export class PredictionMetadata extends jspb.Message {
   clearReceiverVatNumberList(): PredictionMetadata;
   addReceiverVatNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
+  getCheckInDateList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setCheckInDateList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearCheckInDateList(): PredictionMetadata;
+  addCheckInDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getCheckOutDateList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setCheckOutDateList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearCheckOutDateList(): PredictionMetadata;
+  addCheckOutDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -1128,6 +1174,8 @@ export namespace PredictionMetadata {
     receiverCountryCodeList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverNameList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    checkInDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    checkOutDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 
