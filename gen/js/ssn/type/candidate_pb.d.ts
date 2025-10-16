@@ -207,6 +207,11 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasConfidence(): boolean;
   clearConfidence(): PurchaseLineCandidate;
 
+  getCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
+  setCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
+  hasCorrected(): boolean;
+  clearCorrected(): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -235,6 +240,7 @@ export namespace PurchaseLineCandidate {
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
     confidence?: Confidence.AsObject,
+    corrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
   }
 }
 
@@ -324,6 +330,11 @@ export class VatDistributionCandidate extends jspb.Message {
   hasConfidence(): boolean;
   clearConfidence(): VatDistributionCandidate;
 
+  getCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
+  setCorrected(value?: google_protobuf_wrappers_pb.BoolValue): VatDistributionCandidate;
+  hasCorrected(): boolean;
+  clearCorrected(): VatDistributionCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
@@ -341,6 +352,7 @@ export namespace VatDistributionCandidate {
     exclVat: string,
     inclVat: string,
     confidence?: Confidence.AsObject,
+    corrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
   }
 }
 

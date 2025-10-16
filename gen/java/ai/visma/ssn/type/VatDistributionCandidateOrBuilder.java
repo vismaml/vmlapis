@@ -152,4 +152,31 @@ public interface VatDistributionCandidateOrBuilder extends
    * <code>.ssn.type.Confidence confidence = 7 [json_name = "confidence"];</code>
    */
   ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return Whether the corrected field is set.
+   */
+  boolean hasCorrected();
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return The corrected.
+   */
+  com.google.protobuf.BoolValue getCorrected();
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getCorrectedOrBuilder();
 }

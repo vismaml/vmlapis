@@ -326,6 +326,44 @@ private static final long serialVersionUID = 0L;
     return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
   }
 
+  public static final int CORRECTED_FIELD_NUMBER = 8;
+  private com.google.protobuf.BoolValue corrected_;
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return Whether the corrected field is set.
+   */
+  @java.lang.Override
+  public boolean hasCorrected() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   * @return The corrected.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValue getCorrected() {
+    return corrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : corrected_;
+  }
+  /**
+   * <pre>
+   * Whether the candidate has been corrected by verification heuristics
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValueOrBuilder getCorrectedOrBuilder() {
+    return corrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : corrected_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -361,6 +399,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(7, getConfidence());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(8, getCorrected());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -393,6 +434,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getConfidence());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getCorrected());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -429,6 +474,11 @@ private static final long serialVersionUID = 0L;
       if (!getConfidence()
           .equals(other.getConfidence())) return false;
     }
+    if (hasCorrected() != other.hasCorrected()) return false;
+    if (hasCorrected()) {
+      if (!getCorrected()
+          .equals(other.getCorrected())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -457,6 +507,10 @@ private static final long serialVersionUID = 0L;
     if (hasConfidence()) {
       hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
       hash = (53 * hash) + getConfidence().hashCode();
+    }
+    if (hasCorrected()) {
+      hash = (37 * hash) + CORRECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getCorrected().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -590,6 +644,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getModelMetadataFieldBuilder();
         getConfidenceFieldBuilder();
+        getCorrectedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -610,6 +665,11 @@ private static final long serialVersionUID = 0L;
       if (confidenceBuilder_ != null) {
         confidenceBuilder_.dispose();
         confidenceBuilder_ = null;
+      }
+      corrected_ = null;
+      if (correctedBuilder_ != null) {
+        correctedBuilder_.dispose();
+        correctedBuilder_ = null;
       }
       return this;
     }
@@ -672,6 +732,12 @@ private static final long serialVersionUID = 0L;
             : confidenceBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.corrected_ = correctedBuilder_ == null
+            ? corrected_
+            : correctedBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -715,6 +781,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasConfidence()) {
         mergeConfidence(other.getConfidence());
+      }
+      if (other.hasCorrected()) {
+        mergeCorrected(other.getCorrected());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -781,6 +850,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getCorrectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1522,6 +1598,163 @@ private static final long serialVersionUID = 0L;
         confidence_ = null;
       }
       return confidenceBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue corrected_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> correctedBuilder_;
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     * @return Whether the corrected field is set.
+     */
+    public boolean hasCorrected() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     * @return The corrected.
+     */
+    public com.google.protobuf.BoolValue getCorrected() {
+      if (correctedBuilder_ == null) {
+        return corrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : corrected_;
+      } else {
+        return correctedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public Builder setCorrected(com.google.protobuf.BoolValue value) {
+      if (correctedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        corrected_ = value;
+      } else {
+        correctedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public Builder setCorrected(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (correctedBuilder_ == null) {
+        corrected_ = builderForValue.build();
+      } else {
+        correctedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public Builder mergeCorrected(com.google.protobuf.BoolValue value) {
+      if (correctedBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          corrected_ != null &&
+          corrected_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+          getCorrectedBuilder().mergeFrom(value);
+        } else {
+          corrected_ = value;
+        }
+      } else {
+        correctedBuilder_.mergeFrom(value);
+      }
+      if (corrected_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public Builder clearCorrected() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      corrected_ = null;
+      if (correctedBuilder_ != null) {
+        correctedBuilder_.dispose();
+        correctedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getCorrectedBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getCorrectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getCorrectedOrBuilder() {
+      if (correctedBuilder_ != null) {
+        return correctedBuilder_.getMessageOrBuilder();
+      } else {
+        return corrected_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : corrected_;
+      }
+    }
+    /**
+     * <pre>
+     * Whether the candidate has been corrected by verification heuristics
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getCorrectedFieldBuilder() {
+      if (correctedBuilder_ == null) {
+        correctedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getCorrected(),
+                getParentForChildren(),
+                isClean());
+        corrected_ = null;
+      }
+      return correctedBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.VatDistributionCandidate)

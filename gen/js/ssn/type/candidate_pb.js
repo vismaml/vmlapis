@@ -1272,7 +1272,8 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     total: jspb.Message.getFieldWithDefault(msg, 17, ""),
     unitPrice: jspb.Message.getFieldWithDefault(msg, 18, ""),
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
-    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f)
+    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f),
+    corrected: (f = msg.getCorrected()) && google_protobuf_wrappers_pb.BoolValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1382,6 +1383,11 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
       var value = new proto.ssn.type.Confidence;
       reader.readMessage(value,proto.ssn.type.Confidence.deserializeBinaryFromReader);
       msg.setConfidence(value);
+      break;
+    case 21:
+      var value = new google_protobuf_wrappers_pb.BoolValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.BoolValue.deserializeBinaryFromReader);
+      msg.setCorrected(value);
       break;
     default:
       reader.skipField();
@@ -1538,6 +1544,14 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
       20,
       f,
       proto.ssn.type.Confidence.serializeBinaryToWriter
+    );
+  }
+  f = message.getCorrected();
+  if (f != null) {
+    writer.writeMessage(
+      21,
+      f,
+      google_protobuf_wrappers_pb.BoolValue.serializeBinaryToWriter
     );
   }
 };
@@ -1902,6 +1916,43 @@ proto.ssn.type.PurchaseLineCandidate.prototype.clearConfidence = function() {
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.hasConfidence = function() {
   return jspb.Message.getField(this, 20) != null;
+};
+
+
+/**
+ * optional google.protobuf.BoolValue corrected = 21;
+ * @return {?proto.google.protobuf.BoolValue}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getCorrected = function() {
+  return /** @type{?proto.google.protobuf.BoolValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BoolValue, 21));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.BoolValue|undefined} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+*/
+proto.ssn.type.PurchaseLineCandidate.prototype.setCorrected = function(value) {
+  return jspb.Message.setWrapperField(this, 21, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.clearCorrected = function() {
+  return this.setCorrected(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.hasCorrected = function() {
+  return jspb.Message.getField(this, 21) != null;
 };
 
 
@@ -2395,7 +2446,8 @@ proto.ssn.type.VatDistributionCandidate.toObject = function(includeInstance, msg
     pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0),
     exclVat: jspb.Message.getFieldWithDefault(msg, 5, ""),
     inclVat: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f)
+    confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f),
+    corrected: (f = msg.getCorrected()) && google_protobuf_wrappers_pb.BoolValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2461,6 +2513,11 @@ proto.ssn.type.VatDistributionCandidate.deserializeBinaryFromReader = function(m
       var value = new proto.ssn.type.Confidence;
       reader.readMessage(value,proto.ssn.type.Confidence.deserializeBinaryFromReader);
       msg.setConfidence(value);
+      break;
+    case 8:
+      var value = new google_protobuf_wrappers_pb.BoolValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.BoolValue.deserializeBinaryFromReader);
+      msg.setCorrected(value);
       break;
     default:
       reader.skipField();
@@ -2540,6 +2597,14 @@ proto.ssn.type.VatDistributionCandidate.serializeBinaryToWriter = function(messa
       7,
       f,
       proto.ssn.type.Confidence.serializeBinaryToWriter
+    );
+  }
+  f = message.getCorrected();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      google_protobuf_wrappers_pb.BoolValue.serializeBinaryToWriter
     );
   }
 };
@@ -2706,6 +2771,43 @@ proto.ssn.type.VatDistributionCandidate.prototype.clearConfidence = function() {
  */
 proto.ssn.type.VatDistributionCandidate.prototype.hasConfidence = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional google.protobuf.BoolValue corrected = 8;
+ * @return {?proto.google.protobuf.BoolValue}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.getCorrected = function() {
+  return /** @type{?proto.google.protobuf.BoolValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BoolValue, 8));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.BoolValue|undefined} value
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+*/
+proto.ssn.type.VatDistributionCandidate.prototype.setCorrected = function(value) {
+  return jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.clearCorrected = function() {
+  return this.setCorrected(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.hasCorrected = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 

@@ -78,7 +78,7 @@ class LineCandidate(_message.Message):
     def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ..., page_ref: _Optional[int] = ...) -> None: ...
 
 class PurchaseLineCandidate(_message.Message):
-    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "confidence")
+    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "confidence", "corrected")
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     CODE_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -97,6 +97,7 @@ class PurchaseLineCandidate(_message.Message):
     UNIT_PRICE_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    CORRECTED_FIELD_NUMBER: _ClassVar[int]
     page_ref: int
     code: str
     description: str
@@ -115,7 +116,8 @@ class PurchaseLineCandidate(_message.Message):
     unit_price: str
     model_metadata: ModelSpec
     confidence: Confidence
-    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ...) -> None: ...
+    corrected: _wrappers_pb2.BoolValue
+    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., corrected: _Optional[_Union[_wrappers_pb2.BoolValue, _Mapping]] = ...) -> None: ...
 
 class AnswerCandidate(_message.Message):
     __slots__ = ("question", "answer", "confidence", "model_metadata", "page_ref")
@@ -140,7 +142,7 @@ class PageText(_message.Message):
     def __init__(self, page_ref: _Optional[int] = ..., text: _Optional[str] = ...) -> None: ...
 
 class VatDistributionCandidate(_message.Message):
-    __slots__ = ("percentage", "amount", "model_metadata", "page_ref", "excl_vat", "incl_vat", "confidence")
+    __slots__ = ("percentage", "amount", "model_metadata", "page_ref", "excl_vat", "incl_vat", "confidence", "corrected")
     PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
     AMOUNT_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
@@ -148,6 +150,7 @@ class VatDistributionCandidate(_message.Message):
     EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
     INCL_VAT_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    CORRECTED_FIELD_NUMBER: _ClassVar[int]
     percentage: str
     amount: str
     model_metadata: ModelSpec
@@ -155,7 +158,8 @@ class VatDistributionCandidate(_message.Message):
     excl_vat: str
     incl_vat: str
     confidence: Confidence
-    def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ..., excl_vat: _Optional[str] = ..., incl_vat: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ...) -> None: ...
+    corrected: _wrappers_pb2.BoolValue
+    def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ..., excl_vat: _Optional[str] = ..., incl_vat: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., corrected: _Optional[_Union[_wrappers_pb2.BoolValue, _Mapping]] = ...) -> None: ...
 
 class DocumentMetadata(_message.Message):
     __slots__ = ("page_count",)

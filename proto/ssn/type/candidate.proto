@@ -127,6 +127,8 @@ message PurchaseLineCandidate {
   ModelSpec model_metadata = 19;
   // Confidence
   Confidence confidence = 20;
+  // Whether the candidate has been corrected by verification heuristics
+  google.protobuf.BoolValue corrected = 21;
 }
 
 message AnswerCandidate {
@@ -164,6 +166,8 @@ message VatDistributionCandidate {
   string incl_vat = 6;
   // Confidence
   Confidence confidence = 7;
+  // Whether the candidate has been corrected by verification heuristics
+  google.protobuf.BoolValue corrected = 8;
 }
 
 message DocumentMetadata {
