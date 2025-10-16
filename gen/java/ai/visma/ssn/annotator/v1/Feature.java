@@ -459,6 +459,14 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 50;</code>
      */
     VERIFIED(50),
+    /**
+     * <pre>
+     * Hotel dates including check-in and check-out dates
+     * </pre>
+     *
+     * <code>HOTEL_DATES = 51;</code>
+     */
+    HOTEL_DATES(51),
     UNRECOGNIZED(-1),
     ;
 
@@ -881,6 +889,14 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 50;</code>
      */
     public static final int VERIFIED_VALUE = 50;
+    /**
+     * <pre>
+     * Hotel dates including check-in and check-out dates
+     * </pre>
+     *
+     * <code>HOTEL_DATES = 51;</code>
+     */
+    public static final int HOTEL_DATES_VALUE = 51;
 
 
     public final int getNumber() {
@@ -958,6 +974,7 @@ private static final long serialVersionUID = 0L;
         case 48: return QR_CODES;
         case 49: return SWISS_QR_BILLS;
         case 50: return VERIFIED;
+        case 51: return HOTEL_DATES;
         default: return null;
       }
     }

@@ -102,6 +102,9 @@ message TrueValues {
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
   repeated ssn.type.AnswerCandidate answers = 42;
   repeated ssn.type.VatDistributionCandidate vat_distribution = 43;
+
+  google.type.Date check_in_date = 44 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  google.type.Date check_out_date = 45 [(gen_bq_schema.bigquery).type_override = "DATE"];
 }
 
 message PredictionValues {
@@ -149,6 +152,9 @@ message PredictionValues {
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
   repeated ssn.type.AnswerCandidate answers = 42;
   repeated ssn.type.VatDistributionCandidate vat_distribution = 43;
+
+  repeated google.type.Date check_in_date = 44 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  repeated google.type.Date check_out_date = 45 [(gen_bq_schema.bigquery).type_override = "DATE"];
 }
 
 message PredictionConfidences {
@@ -192,6 +198,8 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue receiver_country_code = 38;
   repeated google.protobuf.FloatValue receiver_name = 39;
   repeated google.protobuf.FloatValue receiver_vat_number = 40;
+  repeated google.protobuf.FloatValue check_in_date = 41;
+  repeated google.protobuf.FloatValue check_out_date = 42;
 }
 
 message PredictionMetadata {
@@ -235,6 +243,8 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec receiver_country_code = 38;
   repeated ssn.type.ModelSpec receiver_name = 39;
   repeated ssn.type.ModelSpec receiver_vat_number = 40;
+  repeated ssn.type.ModelSpec check_in_date = 41;
+  repeated ssn.type.ModelSpec check_out_date = 42;
 }
 
 message CreateDocumentRequest {

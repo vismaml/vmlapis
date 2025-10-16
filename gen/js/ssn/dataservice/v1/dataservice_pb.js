@@ -1052,7 +1052,9 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    checkInDate: (f = msg.getCheckInDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1303,6 +1305,16 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistribution(value);
+      break;
+    case 44:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckInDate(value);
+      break;
+    case 45:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.setCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -1675,6 +1687,22 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
       43,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDate();
+  if (f != null) {
+    writer.writeMessage(
+      44,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDate();
+  if (f != null) {
+    writer.writeMessage(
+      45,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
     );
   }
 };
@@ -3274,13 +3302,87 @@ proto.ssn.dataservice.v1.TrueValues.prototype.clearVatDistributionList = functio
 };
 
 
+/**
+ * optional google.type.Date check_in_date = 44;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getCheckInDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 44));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setCheckInDate = function(value) {
+  return jspb.Message.setWrapperField(this, 44, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearCheckInDate = function() {
+  return this.setCheckInDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasCheckInDate = function() {
+  return jspb.Message.getField(this, 44) != null;
+};
+
+
+/**
+ * optional google.type.Date check_out_date = 45;
+ * @return {?proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getCheckOutDate = function() {
+  return /** @type{?proto.google.type.Date} */ (
+    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 45));
+};
+
+
+/**
+ * @param {?proto.google.type.Date|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setCheckOutDate = function(value) {
+  return jspb.Message.setWrapperField(this, 45, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearCheckOutDate = function() {
+  return this.setCheckOutDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasCheckOutDate = function() {
+  return jspb.Message.getField(this, 45) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45];
 
 
 
@@ -3398,7 +3500,11 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
+    google_type_date_pb.Date.toObject, includeInstance),
+    checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
+    google_type_date_pb.Date.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3649,6 +3755,16 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistribution(value);
+      break;
+    case 44:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.addCheckInDate(value);
+      break;
+    case 45:
+      var value = new google_type_date_pb.Date;
+      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
+      msg.addCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -4021,6 +4137,22 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
       43,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      44,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      45,
+      f,
+      google_type_date_pb.Date.serializeBinaryToWriter
     );
   }
 };
@@ -5660,13 +5792,89 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearVatDistributionList = f
 };
 
 
+/**
+ * repeated google.type.Date check_in_date = 44;
+ * @return {!Array<!proto.google.type.Date>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getCheckInDateList = function() {
+  return /** @type{!Array<!proto.google.type.Date>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_type_date_pb.Date, 44));
+};
+
+
+/**
+ * @param {!Array<!proto.google.type.Date>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setCheckInDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 44, value);
+};
+
+
+/**
+ * @param {!proto.google.type.Date=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addCheckInDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 44, opt_value, proto.google.type.Date, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearCheckInDateList = function() {
+  return this.setCheckInDateList([]);
+};
+
+
+/**
+ * repeated google.type.Date check_out_date = 45;
+ * @return {!Array<!proto.google.type.Date>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getCheckOutDateList = function() {
+  return /** @type{!Array<!proto.google.type.Date>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_type_date_pb.Date, 45));
+};
+
+
+/**
+ * @param {!Array<!proto.google.type.Date>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setCheckOutDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 45, value);
+};
+
+
+/**
+ * @param {!proto.google.type.Date=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.type.Date}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addCheckOutDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 45, opt_value, proto.google.type.Date, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearCheckOutDateList = function() {
+  return this.setCheckOutDateList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
 
 
 
@@ -5778,6 +5986,10 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -6014,6 +6226,16 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addCheckInDate(value);
+      break;
+    case 42:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -6360,6 +6582,22 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       40,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -7887,13 +8125,89 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverVatNumberL
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue check_in_date = 41;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getCheckInDateList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setCheckInDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addCheckInDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCheckInDateList = function() {
+  return this.setCheckInDateList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue check_out_date = 42;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getCheckOutDateList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setCheckOutDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addCheckOutDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCheckOutDateList = function() {
+  return this.setCheckOutDateList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
 
 
 
@@ -8005,6 +8319,10 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -8241,6 +8559,16 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addCheckInDate(value);
+      break;
+    case 42:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addCheckOutDate(value);
       break;
     default:
       reader.skipField();
@@ -8587,6 +8915,22 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       40,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckInDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCheckOutDateList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -10111,6 +10455,82 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverVatNumber = fun
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec check_in_date = 41;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCheckInDateList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCheckInDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCheckInDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCheckInDateList = function() {
+  return this.setCheckInDateList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec check_out_date = 42;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCheckOutDateList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCheckOutDateList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCheckOutDate = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCheckOutDateList = function() {
+  return this.setCheckOutDateList([]);
 };
 
 

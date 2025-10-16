@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
+import * as ssn_type_hotel_dates_pb from '../../../ssn/type/hotel_dates_pb'; // proto import: "ssn/type/hotel_dates.proto"
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb'; // proto import: "ssn/type/tier.proto"
@@ -85,6 +86,7 @@ export namespace Feature {
     QR_CODES = 48,
     SWISS_QR_BILLS = 49,
     VERIFIED = 50,
+    HOTEL_DATES = 51,
   }
 }
 
@@ -391,6 +393,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearSwissQrBillsList(): DocumentAnnotatorResponse;
   addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
 
+  getHotelDates(): ssn_type_hotel_dates_pb.HotelDates | undefined;
+  setHotelDates(value?: ssn_type_hotel_dates_pb.HotelDates): DocumentAnnotatorResponse;
+  hasHotelDates(): boolean;
+  clearHotelDates(): DocumentAnnotatorResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -453,6 +460,7 @@ export namespace DocumentAnnotatorResponse {
     languageCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
+    hotelDates?: ssn_type_hotel_dates_pb.HotelDates.AsObject,
   }
 }
 
