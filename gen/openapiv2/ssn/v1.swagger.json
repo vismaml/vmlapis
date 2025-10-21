@@ -1165,13 +1165,95 @@
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model metadata"
         },
-        "confidence": {
-          "$ref": "#/definitions/typeConfidence",
-          "title": "Confidence"
+        "codeConfidence": {
+          "$ref": "#/definitions/typeConfidence"
         },
-        "corrected": {
-          "type": "boolean",
-          "title": "Whether the candidate has been corrected by verification heuristics"
+        "codeCorrected": {
+          "type": "boolean"
+        },
+        "descriptionConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "descriptionCorrected": {
+          "type": "boolean"
+        },
+        "quantityConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "quantityCorrected": {
+          "type": "boolean"
+        },
+        "itemNumberConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "itemNumberCorrected": {
+          "type": "boolean"
+        },
+        "unitConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "unitCorrected": {
+          "type": "boolean"
+        },
+        "totalDiscountConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "totalDiscountCorrected": {
+          "type": "boolean"
+        },
+        "percentageDiscountConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "percentageDiscountCorrected": {
+          "type": "boolean"
+        },
+        "totalInclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "totalInclVatCorrected": {
+          "type": "boolean"
+        },
+        "totalExclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "totalExclVatCorrected": {
+          "type": "boolean"
+        },
+        "totalVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "totalVatCorrected": {
+          "type": "boolean"
+        },
+        "percentageVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "percentageVatCorrected": {
+          "type": "boolean"
+        },
+        "unitPriceInclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "unitPriceInclVatCorrected": {
+          "type": "boolean"
+        },
+        "unitPriceExclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "unitPriceExclVatCorrected": {
+          "type": "boolean"
+        },
+        "totalConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "totalCorrected": {
+          "type": "boolean"
+        },
+        "unitPriceConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "unitPriceCorrected": {
+          "type": "boolean"
         }
       }
     },
@@ -1370,13 +1452,29 @@
           "type": "string",
           "title": "The vat distribution candidate incl vat"
         },
-        "confidence": {
-          "$ref": "#/definitions/typeConfidence",
-          "title": "Confidence"
+        "percentageConfidence": {
+          "$ref": "#/definitions/typeConfidence"
         },
-        "corrected": {
-          "type": "boolean",
-          "title": "Whether the candidate has been corrected by verification heuristics"
+        "percentageCorrected": {
+          "type": "boolean"
+        },
+        "amountConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "amountCorrected": {
+          "type": "boolean"
+        },
+        "exclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "exclVatCorrected": {
+          "type": "boolean"
+        },
+        "inclVatConfidence": {
+          "$ref": "#/definitions/typeConfidence"
+        },
+        "inclVatCorrected": {
+          "type": "boolean"
         }
       }
     },
