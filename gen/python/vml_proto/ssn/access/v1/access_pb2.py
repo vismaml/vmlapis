@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"5\n\x0fValetKeyRequest\x12\x10\n\x03sub\x18\x01 \x01(\tR\x03sub\x12\x10\n\x03\x65xp\x18\x02 \x01(\x03R\x03\x65xp\"8\n\x10ValetKeyResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05token\x18\x02 \x01(\tR\x05token2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B:Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;accessb\x06proto3')

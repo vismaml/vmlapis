@@ -40,7 +40,7 @@ type DataServiceClient interface {
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
-	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
+	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessPredictionMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 }
@@ -98,8 +98,8 @@ func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *MetricsReq
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error) {
-	out := new(FeedbackMetrics)
+func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessPredictionMetrics, error) {
+	out := new(AnnotationProcessPredictionMetrics)
 	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -135,7 +135,7 @@ type DataServiceServer interface {
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*emptypb.Empty, error)
 	Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error)
 	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
-	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*FeedbackMetrics, error)
+	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessPredictionMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 }
@@ -159,7 +159,7 @@ func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest
 func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*FeedbackMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessPredictionMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
 }
 func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error) {

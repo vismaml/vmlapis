@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/type/target_value.proto\x12\x0c\x61sgt.v2.type\x1a\x17validate/validate.proto\"a\n\x0bTargetValue\x12<\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x04name\x12\x14\n\x05value\x18\x02 \x01(\tR\x05valueB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')

@@ -2,8 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
-from vml_proto.asgt.v2 import dataset_service_pb2 as asgt_dot_v2_dot_dataset__service__pb2
+from asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from asgt.v2 import dataset_service_pb2 as asgt_dot_v2_dot_dataset__service__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 

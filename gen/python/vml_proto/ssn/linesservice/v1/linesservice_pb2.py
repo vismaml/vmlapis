@@ -22,8 +22,8 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
-from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
+from ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
+from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n&ssn/linesservice/v1/linesservice.proto\x12\x13ssn.linesservice.v1\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\"g\n\x0cLinesRequest\x12\x41\n\x0ftext_annotation\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x14\n\x05image\x18\x02 \x01(\x0cR\x05image\"W\n\rLinesResponse\x12\x46\n\x0epurchase_lines\x18\x01 \x03(\x0b\x32\x1f.ssn.type.PurchaseLineCandidateR\rpurchaseLines2`\n\x0cLinesService\x12P\n\x07Predict\x12!.ssn.linesservice.v1.LinesRequest\x1a\".ssn.linesservice.v1.LinesResponseBYB\x11LinesserviceProtoZDgithub.com/e-conomic/vmlapis/gen/go/ssn/linesservice/v1;linesserviceb\x06proto3')

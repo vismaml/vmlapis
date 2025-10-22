@@ -403,13 +403,13 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
- *   !proto.ssn.dataservice.v1.FeedbackMetrics>}
+ *   !proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics>}
  */
 const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
-  proto.ssn.dataservice.v1.FeedbackMetrics,
+  proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics,
   /**
    * @param {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} request
    * @return {!Uint8Array}
@@ -417,7 +417,7 @@ const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.dataservice.v1.FeedbackMetrics.deserializeBinary
+  proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics.deserializeBinary
 );
 
 
@@ -426,9 +426,9 @@ const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.FeedbackMetrics)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.FeedbackMetrics>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessMetrics =
@@ -447,7 +447,7 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessM
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.dataservice.v1.FeedbackMetrics>}
+ * @return {!Promise<!proto.ssn.dataservice.v1.AnnotationProcessPredictionMetrics>}
  *     Promise that resolves to the response
  */
 proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateAnnotationProcessMetrics =

@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.ssn.pdfservice.v1 import pdfservice_pb2 as ssn_dot_pdfservice_dot_v1_dot_pdfservice__pb2
+from ssn.pdfservice.v1 import pdfservice_pb2 as ssn_dot_pdfservice_dot_v1_dot_pdfservice__pb2
 
 
 class PdfServiceStub(object):

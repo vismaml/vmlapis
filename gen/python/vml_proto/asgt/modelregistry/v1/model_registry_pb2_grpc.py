@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.asgt.modelregistry.v1 import model_registry_pb2 as asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2
+from asgt.modelregistry.v1 import model_registry_pb2 as asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 

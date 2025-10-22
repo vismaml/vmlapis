@@ -1387,6 +1387,40 @@ export namespace AnnotationProcessMetricsRequest {
   }
 }
 
+export class AnnotationProcessPredictionMetrics extends jspb.Message {
+  getDocumentCount(): number;
+  setDocumentCount(value: number): AnnotationProcessPredictionMetrics;
+
+  getPredictionCount(): number;
+  setPredictionCount(value: number): AnnotationProcessPredictionMetrics;
+
+  getOverallCorrectnessList(): Array<Correctness>;
+  setOverallCorrectnessList(value: Array<Correctness>): AnnotationProcessPredictionMetrics;
+  clearOverallCorrectnessList(): AnnotationProcessPredictionMetrics;
+  addOverallCorrectness(value?: Correctness, index?: number): Correctness;
+
+  getFieldCorrectnessList(): Array<Correctness>;
+  setFieldCorrectnessList(value: Array<Correctness>): AnnotationProcessPredictionMetrics;
+  clearFieldCorrectnessList(): AnnotationProcessPredictionMetrics;
+  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnnotationProcessPredictionMetrics.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessPredictionMetrics): AnnotationProcessPredictionMetrics.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessPredictionMetrics, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessPredictionMetrics;
+  static deserializeBinaryFromReader(message: AnnotationProcessPredictionMetrics, reader: jspb.BinaryReader): AnnotationProcessPredictionMetrics;
+}
+
+export namespace AnnotationProcessPredictionMetrics {
+  export type AsObject = {
+    documentCount: number,
+    predictionCount: number,
+    overallCorrectnessList: Array<Correctness.AsObject>,
+    fieldCorrectnessList: Array<Correctness.AsObject>,
+  }
+}
+
 export class FeedbackMetrics extends jspb.Message {
   getDocumentCount(): number;
   setDocumentCount(value: number): FeedbackMetrics;

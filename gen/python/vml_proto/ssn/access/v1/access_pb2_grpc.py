@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.ssn.access.v1 import access_pb2 as ssn_dot_access_dot_v1_dot_access__pb2
+from ssn.access.v1 import access_pb2 as ssn_dot_access_dot_v1_dot_access__pb2
 
 
 class AccessStub(object):
