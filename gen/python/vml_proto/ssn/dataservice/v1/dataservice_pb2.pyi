@@ -474,6 +474,32 @@ class MetricsRequest(_message.Message):
     document_types: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, start_time: _Optional[int] = ..., end_time: _Optional[int] = ..., fields: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
+class AnnotationProcessMetricsRequest(_message.Message):
+    __slots__ = ("start_time", "end_time", "fields", "country_codes", "document_types")
+    START_TIME_FIELD_NUMBER: _ClassVar[int]
+    END_TIME_FIELD_NUMBER: _ClassVar[int]
+    FIELDS_FIELD_NUMBER: _ClassVar[int]
+    COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
+    DOCUMENT_TYPES_FIELD_NUMBER: _ClassVar[int]
+    start_time: int
+    end_time: int
+    fields: _containers.RepeatedScalarFieldContainer[str]
+    country_codes: _containers.RepeatedScalarFieldContainer[str]
+    document_types: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, start_time: _Optional[int] = ..., end_time: _Optional[int] = ..., fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class AnnotationProcessPredictionMetrics(_message.Message):
+    __slots__ = ("document_count", "prediction_count", "overall_correctness", "field_correctness")
+    DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
+    PREDICTION_COUNT_FIELD_NUMBER: _ClassVar[int]
+    OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
+    FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
+    document_count: int
+    prediction_count: int
+    overall_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
+    field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
+    def __init__(self, document_count: _Optional[int] = ..., prediction_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
+
 class FeedbackMetrics(_message.Message):
     __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")
     DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]

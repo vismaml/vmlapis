@@ -22,9 +22,9 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
-from vml_proto.asgt.v2.type import target_value_pb2 as asgt_dot_v2_dot_type_dot_target__value__pb2
-from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
+from asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
+from asgt.v2.type import target_value_pb2 as asgt_dot_v2_dot_type_dot_target__value__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/v2/type/example.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1f\x61sgt/v2/type/target_value.proto\x1a\x17validate/validate.proto\"\x9a\x01\n\x07\x45xample\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x04\x64\x61ta\x12J\n\rtarget_values\x18\x02 \x03(\x0b\x32\x19.asgt.v2.type.TargetValueB\n\xfa\x42\x07\x92\x01\x04\x08\x01(\x00R\x0ctargetValues\x12\x1b\n\x02id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01R\x02idB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')

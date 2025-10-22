@@ -2,9 +2,9 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.asgt.data.v1 import data_service_pb2 as asgt_dot_data_dot_v1_dot_data__service__pb2
+from asgt.data.v1 import data_service_pb2 as asgt_dot_data_dot_v1_dot_data__service__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from vml_proto.ssn.dataservice.v1 import dataservice_pb2 as ssn_dot_dataservice_dot_v1_dot_dataservice__pb2
+from ssn.dataservice.v1 import dataservice_pb2 as ssn_dot_dataservice_dot_v1_dot_dataservice__pb2
 
 
 class DataServiceStub(object):

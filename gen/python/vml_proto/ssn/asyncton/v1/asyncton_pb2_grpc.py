@@ -3,7 +3,7 @@
 import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from vml_proto.ssn.asyncton.v1 import asyncton_pb2 as ssn_dot_asyncton_dot_v1_dot_asyncton__pb2
+from ssn.asyncton.v1 import asyncton_pb2 as ssn_dot_asyncton_dot_v1_dot_asyncton__pb2
 
 
 class TransactionServiceStub(object):

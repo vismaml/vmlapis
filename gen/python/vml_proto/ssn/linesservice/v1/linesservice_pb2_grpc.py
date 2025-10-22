@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.ssn.linesservice.v1 import linesservice_pb2 as ssn_dot_linesservice_dot_v1_dot_linesservice__pb2
+from ssn.linesservice.v1 import linesservice_pb2 as ssn_dot_linesservice_dot_v1_dot_linesservice__pb2
 
 
 class LinesServiceStub(object):

@@ -22,13 +22,13 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
-from vml_proto.asgt.type import model_type_pb2 as asgt_dot_type_dot_model__type__pb2
-from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
-from vml_proto.asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
-from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
-from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
-from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
+from asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from asgt.type import model_type_pb2 as asgt_dot_type_dot_model__type__pb2
+from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
+from asgt.v2.type import data_pb2 as asgt_dot_v2_dot_type_dot_data__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/suggester_service.proto\x12\x07\x61sgt.v2\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/model_type.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xdd\x01\n\x0eSuggestOptions\x12#\n\rsuggest_limit\x18\x01 \x01(\x05R\x0csuggestLimit\x12L\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\rminConfidence\x12=\n\nmodel_type\x18\x03 \x01(\x0e\x32\x14.asgt.type.ModelTypeB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\tmodelType:\x19\x92\x41\x16\x32\x14{\"suggest_limit\": 3}\"\xba\x01\n\x0eSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12(\n\x05input\x18\x02 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x05input\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"p\n\x0fSuggestResponse\x12\x35\n\nprediction\x18\x01 \x01(\x0b\x32\x15.asgt.type.PredictionR\nprediction\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\"\xc1\x01\n\x13\x42\x61tchSuggestRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12*\n\x06inputs\x18\x02 \x03(\x0b\x32\x12.asgt.v2.type.DataR\x06inputs\x12\x31\n\x07options\x18\x03 \x01(\x0b\x32\x17.asgt.v2.SuggestOptionsR\x07options\"w\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\xbb\x03\n\x10SuggesterService\x12l\n\x07Suggest\x12\x17.asgt.v2.SuggestRequest\x1a\x18.asgt.v2.SuggestResponse\".\x82\xd3\xe4\x93\x02(\"#/v2/datasets/{dataset_name}:suggest:\x01*\x12\x80\x01\n\x0c\x42\x61tchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"3\x82\xd3\xe4\x93\x02-\"(/v2/datasets/{dataset_name}:batchSuggest:\x01*\x12\x8b\x01\n\x11ModelBatchSuggest\x12\x1c.asgt.v2.BatchSuggestRequest\x1a\x1d.asgt.v2.BatchSuggestResponse\"9\x82\xd3\xe4\x93\x02\x33\"./v2/datasets/{dataset_name}/model:batchSuggest:\x01*\x1a(\x92\x41%\x12#Make predictions against a dataset.BjZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')

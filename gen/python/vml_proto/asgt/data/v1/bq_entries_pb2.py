@@ -22,12 +22,12 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
-from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
-from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
-from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
-from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
-from vml_proto.gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
+from asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
+from asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
+from asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
+from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
+from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x61sgt/data/v1/bq_entries.proto\x12\x13\x61sgt.dataservice.v1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\"\xe5\x04\n\x05\x45ntry\x12\x42\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback dataR\x02id\x12!\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01R\x08\x63onsumer\x12(\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01R\x0b\x64\x61tasetName\x12(\n\x0c\x64\x61taset_type\x18\x0c \x01(\tB\x05\xea?\x02\x08\x01R\x0b\x64\x61tasetType\x12:\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of datasetR\tdatasetId\x12Z\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is usedR\x04tags\x12#\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x0f.asgt.type.DataR\x04\x64\x61ta\x12;\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValueR\x0ctargetValues\x12&\n\x05model\x18\t \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\x12<\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.TargetR\nprediction\x12/\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMPR\ttimeAdded:\x10\xea?\r\n\x0bsample_dataB7Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3')

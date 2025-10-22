@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
+from ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
 
 
 class OcrServiceStub(object):

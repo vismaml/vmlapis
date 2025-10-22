@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.asgt.v2 import suggester_service_pb2 as asgt_dot_v2_dot_suggester__service__pb2
+from asgt.v2 import suggester_service_pb2 as asgt_dot_v2_dot_suggester__service__pb2
 
 
 class SuggesterServiceStub(object):

@@ -22,8 +22,8 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
-from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
+from asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
+from asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x61sgt/type/example.proto\x12\tasgt.type\x1a\x14\x61sgt/type/data.proto\x1a\x1c\x61sgt/type/target_value.proto\"{\n\x07\x45xample\x12#\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0f.asgt.type.DataR\x04\x64\x61ta\x12;\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValueR\x0ctargetValues\x12\x0e\n\x02id\x18\x03 \x01(\tR\x02idB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')

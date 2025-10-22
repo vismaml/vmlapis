@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.asgt.jester.v1 import jester_pb2 as asgt_dot_jester_dot_v1_dot_jester__pb2
+from asgt.jester.v1 import jester_pb2 as asgt_dot_jester_dot_v1_dot_jester__pb2
 
 
 class JesterStub(object):

@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
+from ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/type/hotel_dates.proto\x12\x08ssn.type\x1a\x18ssn/type/candidate.proto\"\x80\x01\n\nHotelDates\x12\x37\n\rcheck_in_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.CandidateR\x0b\x63heckInDate\x12\x39\n\x0e\x63heck_out_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.CandidateR\x0c\x63heckOutDateB6Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
