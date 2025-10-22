@@ -968,4 +968,52 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getReceiverVatNumberOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.ModelSpec> 
+      getCheckInDateList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  ai.visma.ssn.type.ModelSpec getCheckInDate(int index);
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  int getCheckInDateCount();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCheckInDateOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_in_date = 41 [json_name = "checkInDate"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getCheckInDateOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.ModelSpec> 
+      getCheckOutDateList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  ai.visma.ssn.type.ModelSpec getCheckOutDate(int index);
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  int getCheckOutDateCount();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCheckOutDateOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec check_out_date = 42 [json_name = "checkOutDate"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getCheckOutDateOrBuilder(
+      int index);
 }
