@@ -101,7 +101,7 @@ public final class CandidateProto {
       "l_ver\030\002 \001(\0132\033.google.protobuf.Int64Value" +
       "R\010modelVer\"V\n\rLineCandidate\022\022\n\004text\030\001 \001(" +
       "\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022\031\n\010page_" +
-      "ref\030\006 \001(\rR\007pageRef\"\306\027\n\025PurchaseLineCandi" +
+      "ref\030\006 \001(\rR\007pageRef\"\374\004\n\025PurchaseLineCandi" +
       "date\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004code\030" +
       "\002 \001(\tR\004code\022 \n\013description\030\003 \001(\tR\013descri" +
       "ption\022\032\n\010quantity\030\004 \001(\tR\010quantity\022\037\n\013ite" +
@@ -117,99 +117,25 @@ public final class CandidateProto {
       "PriceExclVat\022\024\n\005total\030\021 \001(\tR\005total\022\035\n\nun" +
       "it_price\030\022 \001(\tR\tunitPrice\022:\n\016model_metad" +
       "ata\030\023 \001(\0132\023.ssn.type.ModelSpecR\rmodelMet" +
-      "adata\022=\n\017code_confidence\030\024 \001(\0132\024.ssn.typ" +
-      "e.ConfidenceR\016codeConfidence\022A\n\016code_cor" +
-      "rected\030\025 \001(\0132\032.google.protobuf.BoolValue" +
-      "R\rcodeCorrected\022K\n\026description_confidenc" +
-      "e\030\026 \001(\0132\024.ssn.type.ConfidenceR\025descripti" +
-      "onConfidence\022O\n\025description_corrected\030\027 " +
-      "\001(\0132\032.google.protobuf.BoolValueR\024descrip" +
-      "tionCorrected\022E\n\023quantity_confidence\030\030 \001" +
-      "(\0132\024.ssn.type.ConfidenceR\022quantityConfid" +
-      "ence\022I\n\022quantity_corrected\030\031 \001(\0132\032.googl" +
-      "e.protobuf.BoolValueR\021quantityCorrected\022" +
-      "J\n\026item_number_confidence\030\032 \001(\0132\024.ssn.ty" +
-      "pe.ConfidenceR\024itemNumberConfidence\022N\n\025i" +
-      "tem_number_corrected\030\033 \001(\0132\032.google.prot" +
-      "obuf.BoolValueR\023itemNumberCorrected\022=\n\017u" +
-      "nit_confidence\030\034 \001(\0132\024.ssn.type.Confiden" +
-      "ceR\016unitConfidence\022A\n\016unit_corrected\030\035 \001" +
-      "(\0132\032.google.protobuf.BoolValueR\runitCorr" +
-      "ected\022P\n\031total_discount_confidence\030\036 \001(\013" +
-      "2\024.ssn.type.ConfidenceR\027totalDiscountCon" +
-      "fidence\022T\n\030total_discount_corrected\030\037 \001(" +
-      "\0132\032.google.protobuf.BoolValueR\026totalDisc" +
-      "ountCorrected\022Z\n\036percentage_discount_con" +
-      "fidence\030  \001(\0132\024.ssn.type.ConfidenceR\034per" +
-      "centageDiscountConfidence\022^\n\035percentage_" +
-      "discount_corrected\030! \001(\0132\032.google.protob" +
-      "uf.BoolValueR\033percentageDiscountCorrecte" +
-      "d\022O\n\031total_incl_vat_confidence\030\" \001(\0132\024.s" +
-      "sn.type.ConfidenceR\026totalInclVatConfiden" +
-      "ce\022S\n\030total_incl_vat_corrected\030# \001(\0132\032.g" +
-      "oogle.protobuf.BoolValueR\025totalInclVatCo" +
-      "rrected\022O\n\031total_excl_vat_confidence\030$ \001" +
-      "(\0132\024.ssn.type.ConfidenceR\026totalExclVatCo" +
-      "nfidence\022S\n\030total_excl_vat_corrected\030% \001" +
-      "(\0132\032.google.protobuf.BoolValueR\025totalExc" +
-      "lVatCorrected\022F\n\024total_vat_confidence\030& " +
-      "\001(\0132\024.ssn.type.ConfidenceR\022totalVatConfi" +
-      "dence\022J\n\023total_vat_corrected\030\' \001(\0132\032.goo" +
-      "gle.protobuf.BoolValueR\021totalVatCorrecte" +
-      "d\022P\n\031percentage_vat_confidence\030( \001(\0132\024.s" +
-      "sn.type.ConfidenceR\027percentageVatConfide" +
-      "nce\022T\n\030percentage_vat_corrected\030) \001(\0132\032." +
-      "google.protobuf.BoolValueR\026percentageVat" +
-      "Corrected\022X\n\036unit_price_incl_vat_confide" +
-      "nce\030* \001(\0132\024.ssn.type.ConfidenceR\032unitPri" +
-      "ceInclVatConfidence\022\\\n\035unit_price_incl_v" +
-      "at_corrected\030+ \001(\0132\032.google.protobuf.Boo" +
-      "lValueR\031unitPriceInclVatCorrected\022X\n\036uni" +
-      "t_price_excl_vat_confidence\030, \001(\0132\024.ssn." +
-      "type.ConfidenceR\032unitPriceExclVatConfide" +
-      "nce\022\\\n\035unit_price_excl_vat_corrected\030- \001" +
-      "(\0132\032.google.protobuf.BoolValueR\031unitPric" +
-      "eExclVatCorrected\022?\n\020total_confidence\030. " +
-      "\001(\0132\024.ssn.type.ConfidenceR\017totalConfiden" +
-      "ce\022C\n\017total_corrected\030/ \001(\0132\032.google.pro" +
-      "tobuf.BoolValueR\016totalCorrected\022H\n\025unit_" +
-      "price_confidence\0300 \001(\0132\024.ssn.type.Confid" +
-      "enceR\023unitPriceConfidence\022L\n\024unit_price_" +
-      "corrected\0301 \001(\0132\032.google.protobuf.BoolVa" +
-      "lueR\022unitPriceCorrectedJ\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017" +
-      "AnswerCandidate\022\032\n\010question\030\001 \001(\tR\010quest" +
-      "ion\022\026\n\006answer\030\002 \001(\tR\006answer\0224\n\nconfidenc" +
-      "e\030\003 \001(\0132\024.ssn.type.ConfidenceR\nconfidenc" +
-      "e\022:\n\016model_metadata\030\007 \001(\0132\023.ssn.type.Mod" +
-      "elSpecR\rmodelMetadata\022\031\n\010page_ref\030\010 \001(\rR" +
-      "\007pageRef\"9\n\010PageText\022\031\n\010page_ref\030\001 \001(\rR\007" +
-      "pageRef\022\022\n\004text\030\002 \001(\tR\004text\"\243\006\n\030VatDistr" +
-      "ibutionCandidate\022\036\n\npercentage\030\001 \001(\tR\npe" +
-      "rcentage\022\026\n\006amount\030\002 \001(\tR\006amount\022:\n\016mode" +
-      "l_metadata\030\003 \001(\0132\023.ssn.type.ModelSpecR\rm" +
-      "odelMetadata\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\022" +
-      "\031\n\010excl_vat\030\005 \001(\tR\007exclVat\022\031\n\010incl_vat\030\006" +
-      " \001(\tR\007inclVat\022I\n\025percentage_confidence\030\007" +
-      " \001(\0132\024.ssn.type.ConfidenceR\024percentageCo" +
-      "nfidence\022M\n\024percentage_corrected\030\010 \001(\0132\032" +
-      ".google.protobuf.BoolValueR\023percentageCo" +
-      "rrected\022A\n\021amount_confidence\030\t \001(\0132\024.ssn" +
-      ".type.ConfidenceR\020amountConfidence\022E\n\020am" +
-      "ount_corrected\030\n \001(\0132\032.google.protobuf.B" +
-      "oolValueR\017amountCorrected\022D\n\023excl_vat_co" +
-      "nfidence\030\013 \001(\0132\024.ssn.type.ConfidenceR\021ex" +
-      "clVatConfidence\022H\n\022excl_vat_corrected\030\014 " +
-      "\001(\0132\032.google.protobuf.BoolValueR\020exclVat" +
-      "Corrected\022D\n\023incl_vat_confidence\030\r \001(\0132\024" +
-      ".ssn.type.ConfidenceR\021inclVatConfidence\022" +
-      "H\n\022incl_vat_corrected\030\016 \001(\0132\032.google.pro" +
-      "tobuf.BoolValueR\020inclVatCorrected\"1\n\020Doc" +
-      "umentMetadata\022\035\n\npage_count\030\001 \001(\rR\tpageC" +
-      "ountB\232\001\n\021ai.visma.ssn.typeB\016CandidatePro" +
-      "toP\001Z4github.com/e-conomic/vmlapis/gen/g" +
-      "o/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ss" +
-      "n\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typ" +
-      "eb\006proto3"
+      "adataJ\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017AnswerCandidate\022\032\n" +
+      "\010question\030\001 \001(\tR\010question\022\026\n\006answer\030\002 \001(" +
+      "\tR\006answer\0224\n\nconfidence\030\003 \001(\0132\024.ssn.type" +
+      ".ConfidenceR\nconfidence\022:\n\016model_metadat" +
+      "a\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetad" +
+      "ata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9\n\010PageTe" +
+      "xt\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004text\030\002 " +
+      "\001(\tR\004text\"\337\001\n\030VatDistributionCandidate\022\036" +
+      "\n\npercentage\030\001 \001(\tR\npercentage\022\026\n\006amount" +
+      "\030\002 \001(\tR\006amount\022:\n\016model_metadata\030\003 \001(\0132\023" +
+      ".ssn.type.ModelSpecR\rmodelMetadata\022\031\n\010pa" +
+      "ge_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_vat\030\005 \001(\tR" +
+      "\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007inclVat\"1\n\020D" +
+      "ocumentMetadata\022\035\n\npage_count\030\001 \001(\rR\tpag" +
+      "eCountB\232\001\n\021ai.visma.ssn.typeB\016CandidateP" +
+      "rotoP\001Z4github.com/e-conomic/vmlapis/gen" +
+      "/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010" +
+      "Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::T" +
+      "ypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -246,7 +172,7 @@ public final class CandidateProto {
     internal_static_ssn_type_PurchaseLineCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLineCandidate_descriptor,
-        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "CodeConfidence", "CodeCorrected", "DescriptionConfidence", "DescriptionCorrected", "QuantityConfidence", "QuantityCorrected", "ItemNumberConfidence", "ItemNumberCorrected", "UnitConfidence", "UnitCorrected", "TotalDiscountConfidence", "TotalDiscountCorrected", "PercentageDiscountConfidence", "PercentageDiscountCorrected", "TotalInclVatConfidence", "TotalInclVatCorrected", "TotalExclVatConfidence", "TotalExclVatCorrected", "TotalVatConfidence", "TotalVatCorrected", "PercentageVatConfidence", "PercentageVatCorrected", "UnitPriceInclVatConfidence", "UnitPriceInclVatCorrected", "UnitPriceExclVatConfidence", "UnitPriceExclVatCorrected", "TotalConfidence", "TotalCorrected", "UnitPriceConfidence", "UnitPriceCorrected", });
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", });
     internal_static_ssn_type_AnswerCandidate_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_type_AnswerCandidate_fieldAccessorTable = new
@@ -264,7 +190,7 @@ public final class CandidateProto {
     internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_VatDistributionCandidate_descriptor,
-        new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat", "PercentageConfidence", "PercentageCorrected", "AmountConfidence", "AmountCorrected", "ExclVatConfidence", "ExclVatCorrected", "InclVatConfidence", "InclVatCorrected", });
+        new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat", });
     internal_static_ssn_type_DocumentMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_ssn_type_DocumentMetadata_fieldAccessorTable = new

@@ -125,37 +125,6 @@ message PurchaseLineCandidate {
   string unit_price = 18;
   // Model metadata
   ModelSpec model_metadata = 19;
-
-  Confidence code_confidence = 20;
-  google.protobuf.BoolValue code_corrected = 21;
-  Confidence description_confidence = 22;
-  google.protobuf.BoolValue description_corrected = 23;
-  Confidence quantity_confidence = 24;
-  google.protobuf.BoolValue quantity_corrected = 25;
-  Confidence item_number_confidence = 26;
-  google.protobuf.BoolValue item_number_corrected = 27;
-  Confidence unit_confidence = 28;
-  google.protobuf.BoolValue unit_corrected = 29;
-  Confidence total_discount_confidence = 30;
-  google.protobuf.BoolValue total_discount_corrected = 31;
-  Confidence percentage_discount_confidence = 32;
-  google.protobuf.BoolValue percentage_discount_corrected = 33;
-  Confidence total_incl_vat_confidence = 34;
-  google.protobuf.BoolValue total_incl_vat_corrected = 35;
-  Confidence total_excl_vat_confidence = 36;
-  google.protobuf.BoolValue total_excl_vat_corrected = 37;
-  Confidence total_vat_confidence = 38;
-  google.protobuf.BoolValue total_vat_corrected = 39;
-  Confidence percentage_vat_confidence = 40;
-  google.protobuf.BoolValue percentage_vat_corrected = 41;
-  Confidence unit_price_incl_vat_confidence = 42;
-  google.protobuf.BoolValue unit_price_incl_vat_corrected = 43;
-  Confidence unit_price_excl_vat_confidence = 44;
-  google.protobuf.BoolValue unit_price_excl_vat_corrected = 45;
-  Confidence total_confidence = 46;
-  google.protobuf.BoolValue total_corrected = 47;
-  Confidence unit_price_confidence = 48;
-  google.protobuf.BoolValue unit_price_corrected = 49;
 }
 
 message AnswerCandidate {
@@ -191,15 +160,6 @@ message VatDistributionCandidate {
   string excl_vat = 5;
   // The vat distribution candidate incl vat
   string incl_vat = 6;
-
-  Confidence percentage_confidence = 7;
-  google.protobuf.BoolValue percentage_corrected = 8;
-  Confidence amount_confidence = 9;
-  google.protobuf.BoolValue amount_corrected = 10;
-  Confidence excl_vat_confidence = 11;
-  google.protobuf.BoolValue excl_vat_corrected = 12;
-  Confidence incl_vat_confidence = 13;
-  google.protobuf.BoolValue incl_vat_corrected = 14;
 }
 
 message DocumentMetadata {

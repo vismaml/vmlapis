@@ -202,156 +202,6 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLineCandidate;
 
-  getCodeConfidence(): Confidence | undefined;
-  setCodeConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasCodeConfidence(): boolean;
-  clearCodeConfidence(): PurchaseLineCandidate;
-
-  getCodeCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setCodeCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasCodeCorrected(): boolean;
-  clearCodeCorrected(): PurchaseLineCandidate;
-
-  getDescriptionConfidence(): Confidence | undefined;
-  setDescriptionConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasDescriptionConfidence(): boolean;
-  clearDescriptionConfidence(): PurchaseLineCandidate;
-
-  getDescriptionCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setDescriptionCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasDescriptionCorrected(): boolean;
-  clearDescriptionCorrected(): PurchaseLineCandidate;
-
-  getQuantityConfidence(): Confidence | undefined;
-  setQuantityConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasQuantityConfidence(): boolean;
-  clearQuantityConfidence(): PurchaseLineCandidate;
-
-  getQuantityCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setQuantityCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasQuantityCorrected(): boolean;
-  clearQuantityCorrected(): PurchaseLineCandidate;
-
-  getItemNumberConfidence(): Confidence | undefined;
-  setItemNumberConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasItemNumberConfidence(): boolean;
-  clearItemNumberConfidence(): PurchaseLineCandidate;
-
-  getItemNumberCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setItemNumberCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasItemNumberCorrected(): boolean;
-  clearItemNumberCorrected(): PurchaseLineCandidate;
-
-  getUnitConfidence(): Confidence | undefined;
-  setUnitConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasUnitConfidence(): boolean;
-  clearUnitConfidence(): PurchaseLineCandidate;
-
-  getUnitCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setUnitCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasUnitCorrected(): boolean;
-  clearUnitCorrected(): PurchaseLineCandidate;
-
-  getTotalDiscountConfidence(): Confidence | undefined;
-  setTotalDiscountConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasTotalDiscountConfidence(): boolean;
-  clearTotalDiscountConfidence(): PurchaseLineCandidate;
-
-  getTotalDiscountCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setTotalDiscountCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasTotalDiscountCorrected(): boolean;
-  clearTotalDiscountCorrected(): PurchaseLineCandidate;
-
-  getPercentageDiscountConfidence(): Confidence | undefined;
-  setPercentageDiscountConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasPercentageDiscountConfidence(): boolean;
-  clearPercentageDiscountConfidence(): PurchaseLineCandidate;
-
-  getPercentageDiscountCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setPercentageDiscountCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasPercentageDiscountCorrected(): boolean;
-  clearPercentageDiscountCorrected(): PurchaseLineCandidate;
-
-  getTotalInclVatConfidence(): Confidence | undefined;
-  setTotalInclVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasTotalInclVatConfidence(): boolean;
-  clearTotalInclVatConfidence(): PurchaseLineCandidate;
-
-  getTotalInclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setTotalInclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasTotalInclVatCorrected(): boolean;
-  clearTotalInclVatCorrected(): PurchaseLineCandidate;
-
-  getTotalExclVatConfidence(): Confidence | undefined;
-  setTotalExclVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasTotalExclVatConfidence(): boolean;
-  clearTotalExclVatConfidence(): PurchaseLineCandidate;
-
-  getTotalExclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setTotalExclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasTotalExclVatCorrected(): boolean;
-  clearTotalExclVatCorrected(): PurchaseLineCandidate;
-
-  getTotalVatConfidence(): Confidence | undefined;
-  setTotalVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasTotalVatConfidence(): boolean;
-  clearTotalVatConfidence(): PurchaseLineCandidate;
-
-  getTotalVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setTotalVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasTotalVatCorrected(): boolean;
-  clearTotalVatCorrected(): PurchaseLineCandidate;
-
-  getPercentageVatConfidence(): Confidence | undefined;
-  setPercentageVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasPercentageVatConfidence(): boolean;
-  clearPercentageVatConfidence(): PurchaseLineCandidate;
-
-  getPercentageVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setPercentageVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasPercentageVatCorrected(): boolean;
-  clearPercentageVatCorrected(): PurchaseLineCandidate;
-
-  getUnitPriceInclVatConfidence(): Confidence | undefined;
-  setUnitPriceInclVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasUnitPriceInclVatConfidence(): boolean;
-  clearUnitPriceInclVatConfidence(): PurchaseLineCandidate;
-
-  getUnitPriceInclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setUnitPriceInclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasUnitPriceInclVatCorrected(): boolean;
-  clearUnitPriceInclVatCorrected(): PurchaseLineCandidate;
-
-  getUnitPriceExclVatConfidence(): Confidence | undefined;
-  setUnitPriceExclVatConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasUnitPriceExclVatConfidence(): boolean;
-  clearUnitPriceExclVatConfidence(): PurchaseLineCandidate;
-
-  getUnitPriceExclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setUnitPriceExclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasUnitPriceExclVatCorrected(): boolean;
-  clearUnitPriceExclVatCorrected(): PurchaseLineCandidate;
-
-  getTotalConfidence(): Confidence | undefined;
-  setTotalConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasTotalConfidence(): boolean;
-  clearTotalConfidence(): PurchaseLineCandidate;
-
-  getTotalCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setTotalCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasTotalCorrected(): boolean;
-  clearTotalCorrected(): PurchaseLineCandidate;
-
-  getUnitPriceConfidence(): Confidence | undefined;
-  setUnitPriceConfidence(value?: Confidence): PurchaseLineCandidate;
-  hasUnitPriceConfidence(): boolean;
-  clearUnitPriceConfidence(): PurchaseLineCandidate;
-
-  getUnitPriceCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setUnitPriceCorrected(value?: google_protobuf_wrappers_pb.BoolValue): PurchaseLineCandidate;
-  hasUnitPriceCorrected(): boolean;
-  clearUnitPriceCorrected(): PurchaseLineCandidate;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -379,36 +229,6 @@ export namespace PurchaseLineCandidate {
     total: string,
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
-    codeConfidence?: Confidence.AsObject,
-    codeCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    descriptionConfidence?: Confidence.AsObject,
-    descriptionCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    quantityConfidence?: Confidence.AsObject,
-    quantityCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    itemNumberConfidence?: Confidence.AsObject,
-    itemNumberCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    unitConfidence?: Confidence.AsObject,
-    unitCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    totalDiscountConfidence?: Confidence.AsObject,
-    totalDiscountCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    percentageDiscountConfidence?: Confidence.AsObject,
-    percentageDiscountCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    totalInclVatConfidence?: Confidence.AsObject,
-    totalInclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    totalExclVatConfidence?: Confidence.AsObject,
-    totalExclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    totalVatConfidence?: Confidence.AsObject,
-    totalVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    percentageVatConfidence?: Confidence.AsObject,
-    percentageVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    unitPriceInclVatConfidence?: Confidence.AsObject,
-    unitPriceInclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    unitPriceExclVatConfidence?: Confidence.AsObject,
-    unitPriceExclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    totalConfidence?: Confidence.AsObject,
-    totalCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    unitPriceConfidence?: Confidence.AsObject,
-    unitPriceCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
   }
 }
 
@@ -493,46 +313,6 @@ export class VatDistributionCandidate extends jspb.Message {
   getInclVat(): string;
   setInclVat(value: string): VatDistributionCandidate;
 
-  getPercentageConfidence(): Confidence | undefined;
-  setPercentageConfidence(value?: Confidence): VatDistributionCandidate;
-  hasPercentageConfidence(): boolean;
-  clearPercentageConfidence(): VatDistributionCandidate;
-
-  getPercentageCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setPercentageCorrected(value?: google_protobuf_wrappers_pb.BoolValue): VatDistributionCandidate;
-  hasPercentageCorrected(): boolean;
-  clearPercentageCorrected(): VatDistributionCandidate;
-
-  getAmountConfidence(): Confidence | undefined;
-  setAmountConfidence(value?: Confidence): VatDistributionCandidate;
-  hasAmountConfidence(): boolean;
-  clearAmountConfidence(): VatDistributionCandidate;
-
-  getAmountCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setAmountCorrected(value?: google_protobuf_wrappers_pb.BoolValue): VatDistributionCandidate;
-  hasAmountCorrected(): boolean;
-  clearAmountCorrected(): VatDistributionCandidate;
-
-  getExclVatConfidence(): Confidence | undefined;
-  setExclVatConfidence(value?: Confidence): VatDistributionCandidate;
-  hasExclVatConfidence(): boolean;
-  clearExclVatConfidence(): VatDistributionCandidate;
-
-  getExclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setExclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): VatDistributionCandidate;
-  hasExclVatCorrected(): boolean;
-  clearExclVatCorrected(): VatDistributionCandidate;
-
-  getInclVatConfidence(): Confidence | undefined;
-  setInclVatConfidence(value?: Confidence): VatDistributionCandidate;
-  hasInclVatConfidence(): boolean;
-  clearInclVatConfidence(): VatDistributionCandidate;
-
-  getInclVatCorrected(): google_protobuf_wrappers_pb.BoolValue | undefined;
-  setInclVatCorrected(value?: google_protobuf_wrappers_pb.BoolValue): VatDistributionCandidate;
-  hasInclVatCorrected(): boolean;
-  clearInclVatCorrected(): VatDistributionCandidate;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
@@ -549,14 +329,6 @@ export namespace VatDistributionCandidate {
     pageRef: number,
     exclVat: string,
     inclVat: string,
-    percentageConfidence?: Confidence.AsObject,
-    percentageCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    amountConfidence?: Confidence.AsObject,
-    amountCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    exclVatConfidence?: Confidence.AsObject,
-    exclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
-    inclVatConfidence?: Confidence.AsObject,
-    inclVatCorrected?: google_protobuf_wrappers_pb.BoolValue.AsObject,
   }
 }
 
