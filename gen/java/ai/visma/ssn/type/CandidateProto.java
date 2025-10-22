@@ -70,6 +70,16 @@ public final class CandidateProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_type_DocumentMetadata_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_PurchaseLine_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_type_PurchaseLine_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_VatDistribution_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_type_VatDistribution_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -131,11 +141,43 @@ public final class CandidateProto {
       "ge_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_vat\030\005 \001(\tR" +
       "\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007inclVat\"1\n\020D" +
       "ocumentMetadata\022\035\n\npage_count\030\001 \001(\rR\tpag" +
-      "eCountB\232\001\n\021ai.visma.ssn.typeB\016CandidateP" +
-      "rotoP\001Z4github.com/e-conomic/vmlapis/gen" +
-      "/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010" +
-      "Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::T" +
-      "ypeb\006proto3"
+      "eCount\"\256\007\n\014PurchaseLine\022\031\n\010page_ref\030\001 \001(" +
+      "\rR\007pageRef\022\'\n\004code\030\002 \003(\0132\023.ssn.type.Cand" +
+      "idateR\004code\0225\n\013description\030\003 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\013description\022/\n\010quantity\030\004" +
+      " \003(\0132\023.ssn.type.CandidateR\010quantity\0224\n\013i" +
+      "tem_number\030\005 \003(\0132\023.ssn.type.CandidateR\ni" +
+      "temNumber\022\'\n\004unit\030\006 \003(\0132\023.ssn.type.Candi" +
+      "dateR\004unit\022:\n\016total_discount\030\007 \003(\0132\023.ssn" +
+      ".type.CandidateR\rtotalDiscount\022D\n\023percen" +
+      "tage_discount\030\010 \003(\0132\023.ssn.type.Candidate" +
+      "R\022percentageDiscount\0229\n\016total_incl_vat\030\t" +
+      " \003(\0132\023.ssn.type.CandidateR\014totalInclVat\022" +
+      "9\n\016total_excl_vat\030\n \003(\0132\023.ssn.type.Candi" +
+      "dateR\014totalExclVat\0220\n\ttotal_vat\030\013 \003(\0132\023." +
+      "ssn.type.CandidateR\010totalVat\022:\n\016percenta" +
+      "ge_vat\030\014 \003(\0132\023.ssn.type.CandidateR\rperce" +
+      "ntageVat\022B\n\023unit_price_incl_vat\030\r \003(\0132\023." +
+      "ssn.type.CandidateR\020unitPriceInclVat\022B\n\023" +
+      "unit_price_excl_vat\030\016 \003(\0132\023.ssn.type.Can" +
+      "didateR\020unitPriceExclVat\022)\n\005total\030\021 \003(\0132" +
+      "\023.ssn.type.CandidateR\005total\0222\n\nunit_pric" +
+      "e\030\022 \003(\0132\023.ssn.type.CandidateR\tunitPrice\022" +
+      ":\n\016model_metadata\030\023 \001(\0132\023.ssn.type.Model" +
+      "SpecR\rmodelMetadataJ\004\010\017\020\020J\004\010\020\020\021\"\305\002\n\017VatD" +
+      "istribution\0223\n\npercentage\030\001 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\npercentage\0220\n\ttotal_vat\030\002 " +
+      "\003(\0132\023.ssn.type.CandidateR\010totalVat\022:\n\016mo" +
+      "del_metadata\030\003 \001(\0132\023.ssn.type.ModelSpecR" +
+      "\rmodelMetadata\022\031\n\010page_ref\030\004 \001(\rR\007pageRe" +
+      "f\0229\n\016total_excl_vat\030\005 \003(\0132\023.ssn.type.Can" +
+      "didateR\014totalExclVat\0229\n\016total_incl_vat\030\006" +
+      " \003(\0132\023.ssn.type.CandidateR\014totalInclVatB" +
+      "\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001Z" +
+      "4github.com/e-conomic/vmlapis/gen/go/ssn" +
+      "/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Typ" +
+      "e\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -197,6 +239,18 @@ public final class CandidateProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_DocumentMetadata_descriptor,
         new java.lang.String[] { "PageCount", });
+    internal_static_ssn_type_PurchaseLine_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_ssn_type_PurchaseLine_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_type_PurchaseLine_descriptor,
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", });
+    internal_static_ssn_type_VatDistribution_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_type_VatDistribution_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_type_VatDistribution_descriptor,
+        new java.lang.String[] { "Percentage", "TotalVat", "ModelMetadata", "PageRef", "TotalExclVat", "TotalInclVat", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();

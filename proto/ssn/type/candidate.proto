@@ -166,3 +166,57 @@ message DocumentMetadata {
   // Number of pages in the document
   uint32 page_count = 1;
 }
+
+message PurchaseLine {
+  // A reference to the page where the line was found.
+  // page_ref start from 1.
+  uint32 page_ref = 1;
+  // Code is an ID that supplier uses to identify the item
+  repeated Candidate code = 2;
+  // Description is a piece of text that describes the item
+  repeated Candidate description = 3;
+  // Quantity is the number of items
+  repeated Candidate quantity = 4;
+  // ItemNumber is the number of the item
+  repeated Candidate item_number = 5;
+  // Unit is the unit of the item
+  repeated Candidate unit = 6;
+  // Total discount is the total discount of the line
+  repeated Candidate total_discount = 7;
+  // Percentage discount is the percentage discount of the line
+  repeated Candidate percentage_discount = 8;
+  // Total incl vat is the total price of the line including vat
+  repeated Candidate total_incl_vat = 9;
+  // Total excl vat is the total price of the line excluding vat
+  repeated Candidate total_excl_vat = 10;
+  // Total vat is the total vat of the line
+  repeated Candidate total_vat = 11;
+  // Percentage vat is the percentage vat of the line
+  repeated Candidate percentage_vat = 12;
+  // Unit price incl vat is the unit price of the line including vat
+  repeated Candidate unit_price_incl_vat = 13;
+  // Unit price excl vat is the unit price of the line excluding vat
+  repeated Candidate unit_price_excl_vat = 14;
+  reserved 15, 16; // to match the PurchaseLineCandidate
+  // Total is the total price of the line (with/without vat)
+  repeated Candidate total = 17;
+  // Unit price is the unit price of the line (with/without vat)
+  repeated Candidate unit_price = 18;
+  // Model metadata
+  ModelSpec model_metadata = 19;
+}
+
+message VatDistribution {
+  // The vat distribution candidate percentage
+  repeated Candidate percentage = 1;
+  // The vat distribution candidate
+  repeated Candidate total_vat = 2;
+  // Model metadata
+  ModelSpec model_metadata = 3;
+  // A reference to the page where the candidate was found.
+  uint32 page_ref = 4;
+  // The vat distribution candidate excl vat
+  repeated Candidate total_excl_vat = 5;
+  // The vat distribution candidate incl vat
+  repeated Candidate total_incl_vat = 6;
+}
