@@ -413,17 +413,26 @@ namespace Asgt.Dataservice.V1 {
       serviceBinder.AddMethod(__Method_CreateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.CreateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CreateDataset));
       serviceBinder.AddMethod(__Method_AppendData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.AppendDataRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.AppendData));
       serviceBinder.AddMethod(__Method_DeleteData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.DeleteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteData));
-      serviceBinder.AddMethod(__Method_GetInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.GetInfoRequest, global::Asgt.Dataservice.V1.GetInfoResponse>(serviceImpl.GetInfo));
-      serviceBinder.AddMethod(__Method_UpdateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.UpdateDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdateDataset));
-      serviceBinder.AddMethod(__Method_RegisterQueryStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.RegisterQueryStatsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RegisterQueryStats));
-      serviceBinder.AddMethod(__Method_CallsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthMetric));
-      serviceBinder.AddMethod(__Method_CalculateMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.CalculateMetricsRequest, global::Asgt.Dataservice.V1.CalculateMetricsResponse>(serviceImpl.CalculateMetrics));
+      serviceBinder.AddMethod(__Method_GetInfo, serviceImpl == null ?all<global::Ssn.Dataservice.V1.CallsPerMonthResponse> CallsPerMonthMetricAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CallsPerMonthMetric, null, options, request);
+      }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected override DataServiceClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new DataServiceClient(configuration);
+      }
     }
 
-  }
-}
-#endregion
-Document, serviceImpl.ReadDocument)
+    /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static grpc::ServerServiceDefinition BindService(DataServiceBase serviceImpl)
+    {
+      return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_CreateDocument, serviceImpl.CreateDocument)
+          .AddMethod(__Method_ReadDocument, serviceImpl.ReadDocument)
           .AddMethod(__Method_PrepareFeedback, serviceImpl.PrepareFeedback)
           .AddMethod(__Method_Feedback, serviceImpl.Feedback)
           .AddMethod(__Method_CalculateMetrics, serviceImpl.CalculateMetrics)
