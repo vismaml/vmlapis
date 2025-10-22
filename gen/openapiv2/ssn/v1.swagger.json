@@ -1407,6 +1407,33 @@
       },
       "description": "A word representation."
     },
+    "v1AnnotationProcessPredictionMetrics": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "predictionCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        }
+      }
+    },
     "v1CallsPerMonth": {
       "type": "object",
       "properties": {

@@ -3,7 +3,7 @@
 import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from ssn.dataservice.v1 import dataservice_pb2 as ssn_dot_dataservice_dot_v1_dot_dataservice__pb2
+from vml_proto.ssn.dataservice.v1 import dataservice_pb2 as ssn_dot_dataservice_dot_v1_dot_dataservice__pb2
 
 
 class DataServiceStub(object):

@@ -423,3 +423,32 @@ namespace Asgt.Dataservice.V1 {
   }
 }
 #endregion
+Document, serviceImpl.ReadDocument)
+          .AddMethod(__Method_PrepareFeedback, serviceImpl.PrepareFeedback)
+          .AddMethod(__Method_Feedback, serviceImpl.Feedback)
+          .AddMethod(__Method_CalculateMetrics, serviceImpl.CalculateMetrics)
+          .AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl.CalculateAnnotationProcessMetrics)
+          .AddMethod(__Method_Delete, serviceImpl.Delete)
+          .AddMethod(__Method_CallsPerMonthMetric, serviceImpl.CallsPerMonthMetric).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, DataServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.CreateDocumentRequest, global::Ssn.Dataservice.V1.CreateDocumentResponse>(serviceImpl.CreateDocument));
+      serviceBinder.AddMethod(__Method_ReadDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.ReadDocumentRequest, global::Ssn.Dataservice.V1.ReadDocumentResponse>(serviceImpl.ReadDocument));
+      serviceBinder.AddMethod(__Method_PrepareFeedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.PrepareFeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PrepareFeedback));
+      serviceBinder.AddMethod(__Method_Feedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.FeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Feedback));
+      serviceBinder.AddMethod(__Method_CalculateMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.MetricsRequest, global::Ssn.Dataservice.V1.FeedbackMetrics>(serviceImpl.CalculateMetrics));
+      serviceBinder.AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest, global::Ssn.Dataservice.V1.AnnotationProcessPredictionMetrics>(serviceImpl.CalculateAnnotationProcessMetrics));
+      serviceBinder.AddMethod(__Method_Delete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.DeleteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Delete));
+      serviceBinder.AddMethod(__Method_CallsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthMetric));
+    }
+
+  }
+}
+#endregion
