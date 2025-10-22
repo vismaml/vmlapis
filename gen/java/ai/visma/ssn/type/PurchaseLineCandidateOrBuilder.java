@@ -346,4 +346,454 @@ public interface PurchaseLineCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence code_confidence = 20 [json_name = "codeConfidence"];</code>
+   * @return Whether the codeConfidence field is set.
+   */
+  boolean hasCodeConfidence();
+  /**
+   * <code>.ssn.type.Confidence code_confidence = 20 [json_name = "codeConfidence"];</code>
+   * @return The codeConfidence.
+   */
+  ai.visma.ssn.type.Confidence getCodeConfidence();
+  /**
+   * <code>.ssn.type.Confidence code_confidence = 20 [json_name = "codeConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getCodeConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue code_corrected = 21 [json_name = "codeCorrected"];</code>
+   * @return Whether the codeCorrected field is set.
+   */
+  boolean hasCodeCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue code_corrected = 21 [json_name = "codeCorrected"];</code>
+   * @return The codeCorrected.
+   */
+  com.google.protobuf.BoolValue getCodeCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue code_corrected = 21 [json_name = "codeCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getCodeCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence description_confidence = 22 [json_name = "descriptionConfidence"];</code>
+   * @return Whether the descriptionConfidence field is set.
+   */
+  boolean hasDescriptionConfidence();
+  /**
+   * <code>.ssn.type.Confidence description_confidence = 22 [json_name = "descriptionConfidence"];</code>
+   * @return The descriptionConfidence.
+   */
+  ai.visma.ssn.type.Confidence getDescriptionConfidence();
+  /**
+   * <code>.ssn.type.Confidence description_confidence = 22 [json_name = "descriptionConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getDescriptionConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue description_corrected = 23 [json_name = "descriptionCorrected"];</code>
+   * @return Whether the descriptionCorrected field is set.
+   */
+  boolean hasDescriptionCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue description_corrected = 23 [json_name = "descriptionCorrected"];</code>
+   * @return The descriptionCorrected.
+   */
+  com.google.protobuf.BoolValue getDescriptionCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue description_corrected = 23 [json_name = "descriptionCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getDescriptionCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence quantity_confidence = 24 [json_name = "quantityConfidence"];</code>
+   * @return Whether the quantityConfidence field is set.
+   */
+  boolean hasQuantityConfidence();
+  /**
+   * <code>.ssn.type.Confidence quantity_confidence = 24 [json_name = "quantityConfidence"];</code>
+   * @return The quantityConfidence.
+   */
+  ai.visma.ssn.type.Confidence getQuantityConfidence();
+  /**
+   * <code>.ssn.type.Confidence quantity_confidence = 24 [json_name = "quantityConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getQuantityConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue quantity_corrected = 25 [json_name = "quantityCorrected"];</code>
+   * @return Whether the quantityCorrected field is set.
+   */
+  boolean hasQuantityCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue quantity_corrected = 25 [json_name = "quantityCorrected"];</code>
+   * @return The quantityCorrected.
+   */
+  com.google.protobuf.BoolValue getQuantityCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue quantity_corrected = 25 [json_name = "quantityCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getQuantityCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence item_number_confidence = 26 [json_name = "itemNumberConfidence"];</code>
+   * @return Whether the itemNumberConfidence field is set.
+   */
+  boolean hasItemNumberConfidence();
+  /**
+   * <code>.ssn.type.Confidence item_number_confidence = 26 [json_name = "itemNumberConfidence"];</code>
+   * @return The itemNumberConfidence.
+   */
+  ai.visma.ssn.type.Confidence getItemNumberConfidence();
+  /**
+   * <code>.ssn.type.Confidence item_number_confidence = 26 [json_name = "itemNumberConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getItemNumberConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue item_number_corrected = 27 [json_name = "itemNumberCorrected"];</code>
+   * @return Whether the itemNumberCorrected field is set.
+   */
+  boolean hasItemNumberCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue item_number_corrected = 27 [json_name = "itemNumberCorrected"];</code>
+   * @return The itemNumberCorrected.
+   */
+  com.google.protobuf.BoolValue getItemNumberCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue item_number_corrected = 27 [json_name = "itemNumberCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getItemNumberCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence unit_confidence = 28 [json_name = "unitConfidence"];</code>
+   * @return Whether the unitConfidence field is set.
+   */
+  boolean hasUnitConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_confidence = 28 [json_name = "unitConfidence"];</code>
+   * @return The unitConfidence.
+   */
+  ai.visma.ssn.type.Confidence getUnitConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_confidence = 28 [json_name = "unitConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getUnitConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue unit_corrected = 29 [json_name = "unitCorrected"];</code>
+   * @return Whether the unitCorrected field is set.
+   */
+  boolean hasUnitCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_corrected = 29 [json_name = "unitCorrected"];</code>
+   * @return The unitCorrected.
+   */
+  com.google.protobuf.BoolValue getUnitCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_corrected = 29 [json_name = "unitCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getUnitCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence total_discount_confidence = 30 [json_name = "totalDiscountConfidence"];</code>
+   * @return Whether the totalDiscountConfidence field is set.
+   */
+  boolean hasTotalDiscountConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_discount_confidence = 30 [json_name = "totalDiscountConfidence"];</code>
+   * @return The totalDiscountConfidence.
+   */
+  ai.visma.ssn.type.Confidence getTotalDiscountConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_discount_confidence = 30 [json_name = "totalDiscountConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getTotalDiscountConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue total_discount_corrected = 31 [json_name = "totalDiscountCorrected"];</code>
+   * @return Whether the totalDiscountCorrected field is set.
+   */
+  boolean hasTotalDiscountCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_discount_corrected = 31 [json_name = "totalDiscountCorrected"];</code>
+   * @return The totalDiscountCorrected.
+   */
+  com.google.protobuf.BoolValue getTotalDiscountCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_discount_corrected = 31 [json_name = "totalDiscountCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTotalDiscountCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence percentage_discount_confidence = 32 [json_name = "percentageDiscountConfidence"];</code>
+   * @return Whether the percentageDiscountConfidence field is set.
+   */
+  boolean hasPercentageDiscountConfidence();
+  /**
+   * <code>.ssn.type.Confidence percentage_discount_confidence = 32 [json_name = "percentageDiscountConfidence"];</code>
+   * @return The percentageDiscountConfidence.
+   */
+  ai.visma.ssn.type.Confidence getPercentageDiscountConfidence();
+  /**
+   * <code>.ssn.type.Confidence percentage_discount_confidence = 32 [json_name = "percentageDiscountConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getPercentageDiscountConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue percentage_discount_corrected = 33 [json_name = "percentageDiscountCorrected"];</code>
+   * @return Whether the percentageDiscountCorrected field is set.
+   */
+  boolean hasPercentageDiscountCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue percentage_discount_corrected = 33 [json_name = "percentageDiscountCorrected"];</code>
+   * @return The percentageDiscountCorrected.
+   */
+  com.google.protobuf.BoolValue getPercentageDiscountCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue percentage_discount_corrected = 33 [json_name = "percentageDiscountCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getPercentageDiscountCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence total_incl_vat_confidence = 34 [json_name = "totalInclVatConfidence"];</code>
+   * @return Whether the totalInclVatConfidence field is set.
+   */
+  boolean hasTotalInclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_incl_vat_confidence = 34 [json_name = "totalInclVatConfidence"];</code>
+   * @return The totalInclVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getTotalInclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_incl_vat_confidence = 34 [json_name = "totalInclVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getTotalInclVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue total_incl_vat_corrected = 35 [json_name = "totalInclVatCorrected"];</code>
+   * @return Whether the totalInclVatCorrected field is set.
+   */
+  boolean hasTotalInclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_incl_vat_corrected = 35 [json_name = "totalInclVatCorrected"];</code>
+   * @return The totalInclVatCorrected.
+   */
+  com.google.protobuf.BoolValue getTotalInclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_incl_vat_corrected = 35 [json_name = "totalInclVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTotalInclVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence total_excl_vat_confidence = 36 [json_name = "totalExclVatConfidence"];</code>
+   * @return Whether the totalExclVatConfidence field is set.
+   */
+  boolean hasTotalExclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_excl_vat_confidence = 36 [json_name = "totalExclVatConfidence"];</code>
+   * @return The totalExclVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getTotalExclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_excl_vat_confidence = 36 [json_name = "totalExclVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getTotalExclVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue total_excl_vat_corrected = 37 [json_name = "totalExclVatCorrected"];</code>
+   * @return Whether the totalExclVatCorrected field is set.
+   */
+  boolean hasTotalExclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_excl_vat_corrected = 37 [json_name = "totalExclVatCorrected"];</code>
+   * @return The totalExclVatCorrected.
+   */
+  com.google.protobuf.BoolValue getTotalExclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_excl_vat_corrected = 37 [json_name = "totalExclVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTotalExclVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence total_vat_confidence = 38 [json_name = "totalVatConfidence"];</code>
+   * @return Whether the totalVatConfidence field is set.
+   */
+  boolean hasTotalVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_vat_confidence = 38 [json_name = "totalVatConfidence"];</code>
+   * @return The totalVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getTotalVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_vat_confidence = 38 [json_name = "totalVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getTotalVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue total_vat_corrected = 39 [json_name = "totalVatCorrected"];</code>
+   * @return Whether the totalVatCorrected field is set.
+   */
+  boolean hasTotalVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_vat_corrected = 39 [json_name = "totalVatCorrected"];</code>
+   * @return The totalVatCorrected.
+   */
+  com.google.protobuf.BoolValue getTotalVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_vat_corrected = 39 [json_name = "totalVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTotalVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence percentage_vat_confidence = 40 [json_name = "percentageVatConfidence"];</code>
+   * @return Whether the percentageVatConfidence field is set.
+   */
+  boolean hasPercentageVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence percentage_vat_confidence = 40 [json_name = "percentageVatConfidence"];</code>
+   * @return The percentageVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getPercentageVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence percentage_vat_confidence = 40 [json_name = "percentageVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getPercentageVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue percentage_vat_corrected = 41 [json_name = "percentageVatCorrected"];</code>
+   * @return Whether the percentageVatCorrected field is set.
+   */
+  boolean hasPercentageVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue percentage_vat_corrected = 41 [json_name = "percentageVatCorrected"];</code>
+   * @return The percentageVatCorrected.
+   */
+  com.google.protobuf.BoolValue getPercentageVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue percentage_vat_corrected = 41 [json_name = "percentageVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getPercentageVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence unit_price_incl_vat_confidence = 42 [json_name = "unitPriceInclVatConfidence"];</code>
+   * @return Whether the unitPriceInclVatConfidence field is set.
+   */
+  boolean hasUnitPriceInclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_incl_vat_confidence = 42 [json_name = "unitPriceInclVatConfidence"];</code>
+   * @return The unitPriceInclVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getUnitPriceInclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_incl_vat_confidence = 42 [json_name = "unitPriceInclVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getUnitPriceInclVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_incl_vat_corrected = 43 [json_name = "unitPriceInclVatCorrected"];</code>
+   * @return Whether the unitPriceInclVatCorrected field is set.
+   */
+  boolean hasUnitPriceInclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_incl_vat_corrected = 43 [json_name = "unitPriceInclVatCorrected"];</code>
+   * @return The unitPriceInclVatCorrected.
+   */
+  com.google.protobuf.BoolValue getUnitPriceInclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_incl_vat_corrected = 43 [json_name = "unitPriceInclVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getUnitPriceInclVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence unit_price_excl_vat_confidence = 44 [json_name = "unitPriceExclVatConfidence"];</code>
+   * @return Whether the unitPriceExclVatConfidence field is set.
+   */
+  boolean hasUnitPriceExclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_excl_vat_confidence = 44 [json_name = "unitPriceExclVatConfidence"];</code>
+   * @return The unitPriceExclVatConfidence.
+   */
+  ai.visma.ssn.type.Confidence getUnitPriceExclVatConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_excl_vat_confidence = 44 [json_name = "unitPriceExclVatConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getUnitPriceExclVatConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_excl_vat_corrected = 45 [json_name = "unitPriceExclVatCorrected"];</code>
+   * @return Whether the unitPriceExclVatCorrected field is set.
+   */
+  boolean hasUnitPriceExclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_excl_vat_corrected = 45 [json_name = "unitPriceExclVatCorrected"];</code>
+   * @return The unitPriceExclVatCorrected.
+   */
+  com.google.protobuf.BoolValue getUnitPriceExclVatCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_excl_vat_corrected = 45 [json_name = "unitPriceExclVatCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getUnitPriceExclVatCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence total_confidence = 46 [json_name = "totalConfidence"];</code>
+   * @return Whether the totalConfidence field is set.
+   */
+  boolean hasTotalConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_confidence = 46 [json_name = "totalConfidence"];</code>
+   * @return The totalConfidence.
+   */
+  ai.visma.ssn.type.Confidence getTotalConfidence();
+  /**
+   * <code>.ssn.type.Confidence total_confidence = 46 [json_name = "totalConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getTotalConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue total_corrected = 47 [json_name = "totalCorrected"];</code>
+   * @return Whether the totalCorrected field is set.
+   */
+  boolean hasTotalCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_corrected = 47 [json_name = "totalCorrected"];</code>
+   * @return The totalCorrected.
+   */
+  com.google.protobuf.BoolValue getTotalCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue total_corrected = 47 [json_name = "totalCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTotalCorrectedOrBuilder();
+
+  /**
+   * <code>.ssn.type.Confidence unit_price_confidence = 48 [json_name = "unitPriceConfidence"];</code>
+   * @return Whether the unitPriceConfidence field is set.
+   */
+  boolean hasUnitPriceConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_confidence = 48 [json_name = "unitPriceConfidence"];</code>
+   * @return The unitPriceConfidence.
+   */
+  ai.visma.ssn.type.Confidence getUnitPriceConfidence();
+  /**
+   * <code>.ssn.type.Confidence unit_price_confidence = 48 [json_name = "unitPriceConfidence"];</code>
+   */
+  ai.visma.ssn.type.ConfidenceOrBuilder getUnitPriceConfidenceOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_corrected = 49 [json_name = "unitPriceCorrected"];</code>
+   * @return Whether the unitPriceCorrected field is set.
+   */
+  boolean hasUnitPriceCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_corrected = 49 [json_name = "unitPriceCorrected"];</code>
+   * @return The unitPriceCorrected.
+   */
+  com.google.protobuf.BoolValue getUnitPriceCorrected();
+  /**
+   * <code>.google.protobuf.BoolValue unit_price_corrected = 49 [json_name = "unitPriceCorrected"];</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getUnitPriceCorrectedOrBuilder();
 }

@@ -288,6 +288,214 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PERCENTAGE_CONFIDENCE_FIELD_NUMBER = 7;
+  private ai.visma.ssn.type.Confidence percentageConfidence_;
+  /**
+   * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+   * @return Whether the percentageConfidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentageConfidence() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+   * @return The percentageConfidence.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Confidence getPercentageConfidence() {
+    return percentageConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : percentageConfidence_;
+  }
+  /**
+   * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ConfidenceOrBuilder getPercentageConfidenceOrBuilder() {
+    return percentageConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : percentageConfidence_;
+  }
+
+  public static final int PERCENTAGE_CORRECTED_FIELD_NUMBER = 8;
+  private com.google.protobuf.BoolValue percentageCorrected_;
+  /**
+   * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+   * @return Whether the percentageCorrected field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentageCorrected() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+   * @return The percentageCorrected.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValue getPercentageCorrected() {
+    return percentageCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : percentageCorrected_;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValueOrBuilder getPercentageCorrectedOrBuilder() {
+    return percentageCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : percentageCorrected_;
+  }
+
+  public static final int AMOUNT_CONFIDENCE_FIELD_NUMBER = 9;
+  private ai.visma.ssn.type.Confidence amountConfidence_;
+  /**
+   * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+   * @return Whether the amountConfidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasAmountConfidence() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+   * @return The amountConfidence.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Confidence getAmountConfidence() {
+    return amountConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : amountConfidence_;
+  }
+  /**
+   * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ConfidenceOrBuilder getAmountConfidenceOrBuilder() {
+    return amountConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : amountConfidence_;
+  }
+
+  public static final int AMOUNT_CORRECTED_FIELD_NUMBER = 10;
+  private com.google.protobuf.BoolValue amountCorrected_;
+  /**
+   * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+   * @return Whether the amountCorrected field is set.
+   */
+  @java.lang.Override
+  public boolean hasAmountCorrected() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+   * @return The amountCorrected.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValue getAmountCorrected() {
+    return amountCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : amountCorrected_;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValueOrBuilder getAmountCorrectedOrBuilder() {
+    return amountCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : amountCorrected_;
+  }
+
+  public static final int EXCL_VAT_CONFIDENCE_FIELD_NUMBER = 11;
+  private ai.visma.ssn.type.Confidence exclVatConfidence_;
+  /**
+   * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+   * @return Whether the exclVatConfidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasExclVatConfidence() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+   * @return The exclVatConfidence.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Confidence getExclVatConfidence() {
+    return exclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : exclVatConfidence_;
+  }
+  /**
+   * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ConfidenceOrBuilder getExclVatConfidenceOrBuilder() {
+    return exclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : exclVatConfidence_;
+  }
+
+  public static final int EXCL_VAT_CORRECTED_FIELD_NUMBER = 12;
+  private com.google.protobuf.BoolValue exclVatCorrected_;
+  /**
+   * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+   * @return Whether the exclVatCorrected field is set.
+   */
+  @java.lang.Override
+  public boolean hasExclVatCorrected() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+   * @return The exclVatCorrected.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValue getExclVatCorrected() {
+    return exclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : exclVatCorrected_;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValueOrBuilder getExclVatCorrectedOrBuilder() {
+    return exclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : exclVatCorrected_;
+  }
+
+  public static final int INCL_VAT_CONFIDENCE_FIELD_NUMBER = 13;
+  private ai.visma.ssn.type.Confidence inclVatConfidence_;
+  /**
+   * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+   * @return Whether the inclVatConfidence field is set.
+   */
+  @java.lang.Override
+  public boolean hasInclVatConfidence() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+   * @return The inclVatConfidence.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Confidence getInclVatConfidence() {
+    return inclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : inclVatConfidence_;
+  }
+  /**
+   * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ConfidenceOrBuilder getInclVatConfidenceOrBuilder() {
+    return inclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : inclVatConfidence_;
+  }
+
+  public static final int INCL_VAT_CORRECTED_FIELD_NUMBER = 14;
+  private com.google.protobuf.BoolValue inclVatCorrected_;
+  /**
+   * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+   * @return Whether the inclVatCorrected field is set.
+   */
+  @java.lang.Override
+  public boolean hasInclVatCorrected() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+   * @return The inclVatCorrected.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValue getInclVatCorrected() {
+    return inclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inclVatCorrected_;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BoolValueOrBuilder getInclVatCorrectedOrBuilder() {
+    return inclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inclVatCorrected_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -320,6 +528,30 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(inclVat_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, inclVat_);
     }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(7, getPercentageConfidence());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(8, getPercentageCorrected());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(9, getAmountConfidence());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(10, getAmountCorrected());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeMessage(11, getExclVatConfidence());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(12, getExclVatCorrected());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeMessage(13, getInclVatConfidence());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(14, getInclVatCorrected());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -348,6 +580,38 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(inclVat_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, inclVat_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getPercentageConfidence());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getPercentageCorrected());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getAmountConfidence());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getAmountCorrected());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getExclVatConfidence());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getExclVatCorrected());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getInclVatConfidence());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getInclVatCorrected());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -379,6 +643,46 @@ private static final long serialVersionUID = 0L;
         .equals(other.getExclVat())) return false;
     if (!getInclVat()
         .equals(other.getInclVat())) return false;
+    if (hasPercentageConfidence() != other.hasPercentageConfidence()) return false;
+    if (hasPercentageConfidence()) {
+      if (!getPercentageConfidence()
+          .equals(other.getPercentageConfidence())) return false;
+    }
+    if (hasPercentageCorrected() != other.hasPercentageCorrected()) return false;
+    if (hasPercentageCorrected()) {
+      if (!getPercentageCorrected()
+          .equals(other.getPercentageCorrected())) return false;
+    }
+    if (hasAmountConfidence() != other.hasAmountConfidence()) return false;
+    if (hasAmountConfidence()) {
+      if (!getAmountConfidence()
+          .equals(other.getAmountConfidence())) return false;
+    }
+    if (hasAmountCorrected() != other.hasAmountCorrected()) return false;
+    if (hasAmountCorrected()) {
+      if (!getAmountCorrected()
+          .equals(other.getAmountCorrected())) return false;
+    }
+    if (hasExclVatConfidence() != other.hasExclVatConfidence()) return false;
+    if (hasExclVatConfidence()) {
+      if (!getExclVatConfidence()
+          .equals(other.getExclVatConfidence())) return false;
+    }
+    if (hasExclVatCorrected() != other.hasExclVatCorrected()) return false;
+    if (hasExclVatCorrected()) {
+      if (!getExclVatCorrected()
+          .equals(other.getExclVatCorrected())) return false;
+    }
+    if (hasInclVatConfidence() != other.hasInclVatConfidence()) return false;
+    if (hasInclVatConfidence()) {
+      if (!getInclVatConfidence()
+          .equals(other.getInclVatConfidence())) return false;
+    }
+    if (hasInclVatCorrected() != other.hasInclVatCorrected()) return false;
+    if (hasInclVatCorrected()) {
+      if (!getInclVatCorrected()
+          .equals(other.getInclVatCorrected())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -404,6 +708,38 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getExclVat().hashCode();
     hash = (37 * hash) + INCL_VAT_FIELD_NUMBER;
     hash = (53 * hash) + getInclVat().hashCode();
+    if (hasPercentageConfidence()) {
+      hash = (37 * hash) + PERCENTAGE_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getPercentageConfidence().hashCode();
+    }
+    if (hasPercentageCorrected()) {
+      hash = (37 * hash) + PERCENTAGE_CORRECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getPercentageCorrected().hashCode();
+    }
+    if (hasAmountConfidence()) {
+      hash = (37 * hash) + AMOUNT_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getAmountConfidence().hashCode();
+    }
+    if (hasAmountCorrected()) {
+      hash = (37 * hash) + AMOUNT_CORRECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getAmountCorrected().hashCode();
+    }
+    if (hasExclVatConfidence()) {
+      hash = (37 * hash) + EXCL_VAT_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getExclVatConfidence().hashCode();
+    }
+    if (hasExclVatCorrected()) {
+      hash = (37 * hash) + EXCL_VAT_CORRECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getExclVatCorrected().hashCode();
+    }
+    if (hasInclVatConfidence()) {
+      hash = (37 * hash) + INCL_VAT_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getInclVatConfidence().hashCode();
+    }
+    if (hasInclVatCorrected()) {
+      hash = (37 * hash) + INCL_VAT_CORRECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getInclVatCorrected().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -535,6 +871,14 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getModelMetadataFieldBuilder();
+        getPercentageConfidenceFieldBuilder();
+        getPercentageCorrectedFieldBuilder();
+        getAmountConfidenceFieldBuilder();
+        getAmountCorrectedFieldBuilder();
+        getExclVatConfidenceFieldBuilder();
+        getExclVatCorrectedFieldBuilder();
+        getInclVatConfidenceFieldBuilder();
+        getInclVatCorrectedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -551,6 +895,46 @@ private static final long serialVersionUID = 0L;
       pageRef_ = 0;
       exclVat_ = "";
       inclVat_ = "";
+      percentageConfidence_ = null;
+      if (percentageConfidenceBuilder_ != null) {
+        percentageConfidenceBuilder_.dispose();
+        percentageConfidenceBuilder_ = null;
+      }
+      percentageCorrected_ = null;
+      if (percentageCorrectedBuilder_ != null) {
+        percentageCorrectedBuilder_.dispose();
+        percentageCorrectedBuilder_ = null;
+      }
+      amountConfidence_ = null;
+      if (amountConfidenceBuilder_ != null) {
+        amountConfidenceBuilder_.dispose();
+        amountConfidenceBuilder_ = null;
+      }
+      amountCorrected_ = null;
+      if (amountCorrectedBuilder_ != null) {
+        amountCorrectedBuilder_.dispose();
+        amountCorrectedBuilder_ = null;
+      }
+      exclVatConfidence_ = null;
+      if (exclVatConfidenceBuilder_ != null) {
+        exclVatConfidenceBuilder_.dispose();
+        exclVatConfidenceBuilder_ = null;
+      }
+      exclVatCorrected_ = null;
+      if (exclVatCorrectedBuilder_ != null) {
+        exclVatCorrectedBuilder_.dispose();
+        exclVatCorrectedBuilder_ = null;
+      }
+      inclVatConfidence_ = null;
+      if (inclVatConfidenceBuilder_ != null) {
+        inclVatConfidenceBuilder_.dispose();
+        inclVatConfidenceBuilder_ = null;
+      }
+      inclVatCorrected_ = null;
+      if (inclVatCorrectedBuilder_ != null) {
+        inclVatCorrectedBuilder_.dispose();
+        inclVatCorrectedBuilder_ = null;
+      }
       return this;
     }
 
@@ -606,6 +990,54 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.inclVat_ = inclVat_;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.percentageConfidence_ = percentageConfidenceBuilder_ == null
+            ? percentageConfidence_
+            : percentageConfidenceBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.percentageCorrected_ = percentageCorrectedBuilder_ == null
+            ? percentageCorrected_
+            : percentageCorrectedBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.amountConfidence_ = amountConfidenceBuilder_ == null
+            ? amountConfidence_
+            : amountConfidenceBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.amountCorrected_ = amountCorrectedBuilder_ == null
+            ? amountCorrected_
+            : amountCorrectedBuilder_.build();
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.exclVatConfidence_ = exclVatConfidenceBuilder_ == null
+            ? exclVatConfidence_
+            : exclVatConfidenceBuilder_.build();
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.exclVatCorrected_ = exclVatCorrectedBuilder_ == null
+            ? exclVatCorrected_
+            : exclVatCorrectedBuilder_.build();
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.inclVatConfidence_ = inclVatConfidenceBuilder_ == null
+            ? inclVatConfidence_
+            : inclVatConfidenceBuilder_.build();
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.inclVatCorrected_ = inclVatCorrectedBuilder_ == null
+            ? inclVatCorrected_
+            : inclVatCorrectedBuilder_.build();
+        to_bitField0_ |= 0x00000100;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -646,6 +1078,30 @@ private static final long serialVersionUID = 0L;
         inclVat_ = other.inclVat_;
         bitField0_ |= 0x00000020;
         onChanged();
+      }
+      if (other.hasPercentageConfidence()) {
+        mergePercentageConfidence(other.getPercentageConfidence());
+      }
+      if (other.hasPercentageCorrected()) {
+        mergePercentageCorrected(other.getPercentageCorrected());
+      }
+      if (other.hasAmountConfidence()) {
+        mergeAmountConfidence(other.getAmountConfidence());
+      }
+      if (other.hasAmountCorrected()) {
+        mergeAmountCorrected(other.getAmountCorrected());
+      }
+      if (other.hasExclVatConfidence()) {
+        mergeExclVatConfidence(other.getExclVatConfidence());
+      }
+      if (other.hasExclVatCorrected()) {
+        mergeExclVatCorrected(other.getExclVatCorrected());
+      }
+      if (other.hasInclVatConfidence()) {
+        mergeInclVatConfidence(other.getInclVatConfidence());
+      }
+      if (other.hasInclVatCorrected()) {
+        mergeInclVatCorrected(other.getInclVatCorrected());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -705,6 +1161,62 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getPercentageConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getPercentageCorrectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getAmountConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getAmountCorrectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getExclVatConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getExclVatCorrectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getInclVatConfidenceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getInclVatCorrectedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1289,6 +1801,974 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
+    }
+
+    private ai.visma.ssn.type.Confidence percentageConfidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> percentageConfidenceBuilder_;
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     * @return Whether the percentageConfidence field is set.
+     */
+    public boolean hasPercentageConfidence() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     * @return The percentageConfidence.
+     */
+    public ai.visma.ssn.type.Confidence getPercentageConfidence() {
+      if (percentageConfidenceBuilder_ == null) {
+        return percentageConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : percentageConfidence_;
+      } else {
+        return percentageConfidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public Builder setPercentageConfidence(ai.visma.ssn.type.Confidence value) {
+      if (percentageConfidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        percentageConfidence_ = value;
+      } else {
+        percentageConfidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public Builder setPercentageConfidence(
+        ai.visma.ssn.type.Confidence.Builder builderForValue) {
+      if (percentageConfidenceBuilder_ == null) {
+        percentageConfidence_ = builderForValue.build();
+      } else {
+        percentageConfidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public Builder mergePercentageConfidence(ai.visma.ssn.type.Confidence value) {
+      if (percentageConfidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          percentageConfidence_ != null &&
+          percentageConfidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
+          getPercentageConfidenceBuilder().mergeFrom(value);
+        } else {
+          percentageConfidence_ = value;
+        }
+      } else {
+        percentageConfidenceBuilder_.mergeFrom(value);
+      }
+      if (percentageConfidence_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public Builder clearPercentageConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      percentageConfidence_ = null;
+      if (percentageConfidenceBuilder_ != null) {
+        percentageConfidenceBuilder_.dispose();
+        percentageConfidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public ai.visma.ssn.type.Confidence.Builder getPercentageConfidenceBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getPercentageConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    public ai.visma.ssn.type.ConfidenceOrBuilder getPercentageConfidenceOrBuilder() {
+      if (percentageConfidenceBuilder_ != null) {
+        return percentageConfidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return percentageConfidence_ == null ?
+            ai.visma.ssn.type.Confidence.getDefaultInstance() : percentageConfidence_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence percentage_confidence = 7 [json_name = "percentageConfidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
+        getPercentageConfidenceFieldBuilder() {
+      if (percentageConfidenceBuilder_ == null) {
+        percentageConfidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
+                getPercentageConfidence(),
+                getParentForChildren(),
+                isClean());
+        percentageConfidence_ = null;
+      }
+      return percentageConfidenceBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue percentageCorrected_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> percentageCorrectedBuilder_;
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     * @return Whether the percentageCorrected field is set.
+     */
+    public boolean hasPercentageCorrected() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     * @return The percentageCorrected.
+     */
+    public com.google.protobuf.BoolValue getPercentageCorrected() {
+      if (percentageCorrectedBuilder_ == null) {
+        return percentageCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : percentageCorrected_;
+      } else {
+        return percentageCorrectedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public Builder setPercentageCorrected(com.google.protobuf.BoolValue value) {
+      if (percentageCorrectedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        percentageCorrected_ = value;
+      } else {
+        percentageCorrectedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public Builder setPercentageCorrected(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (percentageCorrectedBuilder_ == null) {
+        percentageCorrected_ = builderForValue.build();
+      } else {
+        percentageCorrectedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public Builder mergePercentageCorrected(com.google.protobuf.BoolValue value) {
+      if (percentageCorrectedBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          percentageCorrected_ != null &&
+          percentageCorrected_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+          getPercentageCorrectedBuilder().mergeFrom(value);
+        } else {
+          percentageCorrected_ = value;
+        }
+      } else {
+        percentageCorrectedBuilder_.mergeFrom(value);
+      }
+      if (percentageCorrected_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public Builder clearPercentageCorrected() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      percentageCorrected_ = null;
+      if (percentageCorrectedBuilder_ != null) {
+        percentageCorrectedBuilder_.dispose();
+        percentageCorrectedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getPercentageCorrectedBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getPercentageCorrectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPercentageCorrectedOrBuilder() {
+      if (percentageCorrectedBuilder_ != null) {
+        return percentageCorrectedBuilder_.getMessageOrBuilder();
+      } else {
+        return percentageCorrected_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : percentageCorrected_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue percentage_corrected = 8 [json_name = "percentageCorrected"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getPercentageCorrectedFieldBuilder() {
+      if (percentageCorrectedBuilder_ == null) {
+        percentageCorrectedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getPercentageCorrected(),
+                getParentForChildren(),
+                isClean());
+        percentageCorrected_ = null;
+      }
+      return percentageCorrectedBuilder_;
+    }
+
+    private ai.visma.ssn.type.Confidence amountConfidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> amountConfidenceBuilder_;
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     * @return Whether the amountConfidence field is set.
+     */
+    public boolean hasAmountConfidence() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     * @return The amountConfidence.
+     */
+    public ai.visma.ssn.type.Confidence getAmountConfidence() {
+      if (amountConfidenceBuilder_ == null) {
+        return amountConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : amountConfidence_;
+      } else {
+        return amountConfidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public Builder setAmountConfidence(ai.visma.ssn.type.Confidence value) {
+      if (amountConfidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        amountConfidence_ = value;
+      } else {
+        amountConfidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public Builder setAmountConfidence(
+        ai.visma.ssn.type.Confidence.Builder builderForValue) {
+      if (amountConfidenceBuilder_ == null) {
+        amountConfidence_ = builderForValue.build();
+      } else {
+        amountConfidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public Builder mergeAmountConfidence(ai.visma.ssn.type.Confidence value) {
+      if (amountConfidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          amountConfidence_ != null &&
+          amountConfidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
+          getAmountConfidenceBuilder().mergeFrom(value);
+        } else {
+          amountConfidence_ = value;
+        }
+      } else {
+        amountConfidenceBuilder_.mergeFrom(value);
+      }
+      if (amountConfidence_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public Builder clearAmountConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      amountConfidence_ = null;
+      if (amountConfidenceBuilder_ != null) {
+        amountConfidenceBuilder_.dispose();
+        amountConfidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public ai.visma.ssn.type.Confidence.Builder getAmountConfidenceBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getAmountConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    public ai.visma.ssn.type.ConfidenceOrBuilder getAmountConfidenceOrBuilder() {
+      if (amountConfidenceBuilder_ != null) {
+        return amountConfidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return amountConfidence_ == null ?
+            ai.visma.ssn.type.Confidence.getDefaultInstance() : amountConfidence_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence amount_confidence = 9 [json_name = "amountConfidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
+        getAmountConfidenceFieldBuilder() {
+      if (amountConfidenceBuilder_ == null) {
+        amountConfidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
+                getAmountConfidence(),
+                getParentForChildren(),
+                isClean());
+        amountConfidence_ = null;
+      }
+      return amountConfidenceBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue amountCorrected_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> amountCorrectedBuilder_;
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     * @return Whether the amountCorrected field is set.
+     */
+    public boolean hasAmountCorrected() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     * @return The amountCorrected.
+     */
+    public com.google.protobuf.BoolValue getAmountCorrected() {
+      if (amountCorrectedBuilder_ == null) {
+        return amountCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : amountCorrected_;
+      } else {
+        return amountCorrectedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public Builder setAmountCorrected(com.google.protobuf.BoolValue value) {
+      if (amountCorrectedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        amountCorrected_ = value;
+      } else {
+        amountCorrectedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public Builder setAmountCorrected(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (amountCorrectedBuilder_ == null) {
+        amountCorrected_ = builderForValue.build();
+      } else {
+        amountCorrectedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public Builder mergeAmountCorrected(com.google.protobuf.BoolValue value) {
+      if (amountCorrectedBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          amountCorrected_ != null &&
+          amountCorrected_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+          getAmountCorrectedBuilder().mergeFrom(value);
+        } else {
+          amountCorrected_ = value;
+        }
+      } else {
+        amountCorrectedBuilder_.mergeFrom(value);
+      }
+      if (amountCorrected_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public Builder clearAmountCorrected() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      amountCorrected_ = null;
+      if (amountCorrectedBuilder_ != null) {
+        amountCorrectedBuilder_.dispose();
+        amountCorrectedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getAmountCorrectedBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getAmountCorrectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getAmountCorrectedOrBuilder() {
+      if (amountCorrectedBuilder_ != null) {
+        return amountCorrectedBuilder_.getMessageOrBuilder();
+      } else {
+        return amountCorrected_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : amountCorrected_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue amount_corrected = 10 [json_name = "amountCorrected"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getAmountCorrectedFieldBuilder() {
+      if (amountCorrectedBuilder_ == null) {
+        amountCorrectedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getAmountCorrected(),
+                getParentForChildren(),
+                isClean());
+        amountCorrected_ = null;
+      }
+      return amountCorrectedBuilder_;
+    }
+
+    private ai.visma.ssn.type.Confidence exclVatConfidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> exclVatConfidenceBuilder_;
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     * @return Whether the exclVatConfidence field is set.
+     */
+    public boolean hasExclVatConfidence() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     * @return The exclVatConfidence.
+     */
+    public ai.visma.ssn.type.Confidence getExclVatConfidence() {
+      if (exclVatConfidenceBuilder_ == null) {
+        return exclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : exclVatConfidence_;
+      } else {
+        return exclVatConfidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public Builder setExclVatConfidence(ai.visma.ssn.type.Confidence value) {
+      if (exclVatConfidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        exclVatConfidence_ = value;
+      } else {
+        exclVatConfidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public Builder setExclVatConfidence(
+        ai.visma.ssn.type.Confidence.Builder builderForValue) {
+      if (exclVatConfidenceBuilder_ == null) {
+        exclVatConfidence_ = builderForValue.build();
+      } else {
+        exclVatConfidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public Builder mergeExclVatConfidence(ai.visma.ssn.type.Confidence value) {
+      if (exclVatConfidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          exclVatConfidence_ != null &&
+          exclVatConfidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
+          getExclVatConfidenceBuilder().mergeFrom(value);
+        } else {
+          exclVatConfidence_ = value;
+        }
+      } else {
+        exclVatConfidenceBuilder_.mergeFrom(value);
+      }
+      if (exclVatConfidence_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public Builder clearExclVatConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      exclVatConfidence_ = null;
+      if (exclVatConfidenceBuilder_ != null) {
+        exclVatConfidenceBuilder_.dispose();
+        exclVatConfidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public ai.visma.ssn.type.Confidence.Builder getExclVatConfidenceBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getExclVatConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    public ai.visma.ssn.type.ConfidenceOrBuilder getExclVatConfidenceOrBuilder() {
+      if (exclVatConfidenceBuilder_ != null) {
+        return exclVatConfidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return exclVatConfidence_ == null ?
+            ai.visma.ssn.type.Confidence.getDefaultInstance() : exclVatConfidence_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence excl_vat_confidence = 11 [json_name = "exclVatConfidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
+        getExclVatConfidenceFieldBuilder() {
+      if (exclVatConfidenceBuilder_ == null) {
+        exclVatConfidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
+                getExclVatConfidence(),
+                getParentForChildren(),
+                isClean());
+        exclVatConfidence_ = null;
+      }
+      return exclVatConfidenceBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue exclVatCorrected_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> exclVatCorrectedBuilder_;
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     * @return Whether the exclVatCorrected field is set.
+     */
+    public boolean hasExclVatCorrected() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     * @return The exclVatCorrected.
+     */
+    public com.google.protobuf.BoolValue getExclVatCorrected() {
+      if (exclVatCorrectedBuilder_ == null) {
+        return exclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : exclVatCorrected_;
+      } else {
+        return exclVatCorrectedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public Builder setExclVatCorrected(com.google.protobuf.BoolValue value) {
+      if (exclVatCorrectedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        exclVatCorrected_ = value;
+      } else {
+        exclVatCorrectedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public Builder setExclVatCorrected(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (exclVatCorrectedBuilder_ == null) {
+        exclVatCorrected_ = builderForValue.build();
+      } else {
+        exclVatCorrectedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public Builder mergeExclVatCorrected(com.google.protobuf.BoolValue value) {
+      if (exclVatCorrectedBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          exclVatCorrected_ != null &&
+          exclVatCorrected_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+          getExclVatCorrectedBuilder().mergeFrom(value);
+        } else {
+          exclVatCorrected_ = value;
+        }
+      } else {
+        exclVatCorrectedBuilder_.mergeFrom(value);
+      }
+      if (exclVatCorrected_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public Builder clearExclVatCorrected() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      exclVatCorrected_ = null;
+      if (exclVatCorrectedBuilder_ != null) {
+        exclVatCorrectedBuilder_.dispose();
+        exclVatCorrectedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getExclVatCorrectedBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return getExclVatCorrectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getExclVatCorrectedOrBuilder() {
+      if (exclVatCorrectedBuilder_ != null) {
+        return exclVatCorrectedBuilder_.getMessageOrBuilder();
+      } else {
+        return exclVatCorrected_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : exclVatCorrected_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue excl_vat_corrected = 12 [json_name = "exclVatCorrected"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getExclVatCorrectedFieldBuilder() {
+      if (exclVatCorrectedBuilder_ == null) {
+        exclVatCorrectedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getExclVatCorrected(),
+                getParentForChildren(),
+                isClean());
+        exclVatCorrected_ = null;
+      }
+      return exclVatCorrectedBuilder_;
+    }
+
+    private ai.visma.ssn.type.Confidence inclVatConfidence_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> inclVatConfidenceBuilder_;
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     * @return Whether the inclVatConfidence field is set.
+     */
+    public boolean hasInclVatConfidence() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     * @return The inclVatConfidence.
+     */
+    public ai.visma.ssn.type.Confidence getInclVatConfidence() {
+      if (inclVatConfidenceBuilder_ == null) {
+        return inclVatConfidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : inclVatConfidence_;
+      } else {
+        return inclVatConfidenceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public Builder setInclVatConfidence(ai.visma.ssn.type.Confidence value) {
+      if (inclVatConfidenceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        inclVatConfidence_ = value;
+      } else {
+        inclVatConfidenceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public Builder setInclVatConfidence(
+        ai.visma.ssn.type.Confidence.Builder builderForValue) {
+      if (inclVatConfidenceBuilder_ == null) {
+        inclVatConfidence_ = builderForValue.build();
+      } else {
+        inclVatConfidenceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public Builder mergeInclVatConfidence(ai.visma.ssn.type.Confidence value) {
+      if (inclVatConfidenceBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          inclVatConfidence_ != null &&
+          inclVatConfidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
+          getInclVatConfidenceBuilder().mergeFrom(value);
+        } else {
+          inclVatConfidence_ = value;
+        }
+      } else {
+        inclVatConfidenceBuilder_.mergeFrom(value);
+      }
+      if (inclVatConfidence_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public Builder clearInclVatConfidence() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      inclVatConfidence_ = null;
+      if (inclVatConfidenceBuilder_ != null) {
+        inclVatConfidenceBuilder_.dispose();
+        inclVatConfidenceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public ai.visma.ssn.type.Confidence.Builder getInclVatConfidenceBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getInclVatConfidenceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    public ai.visma.ssn.type.ConfidenceOrBuilder getInclVatConfidenceOrBuilder() {
+      if (inclVatConfidenceBuilder_ != null) {
+        return inclVatConfidenceBuilder_.getMessageOrBuilder();
+      } else {
+        return inclVatConfidence_ == null ?
+            ai.visma.ssn.type.Confidence.getDefaultInstance() : inclVatConfidence_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Confidence incl_vat_confidence = 13 [json_name = "inclVatConfidence"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
+        getInclVatConfidenceFieldBuilder() {
+      if (inclVatConfidenceBuilder_ == null) {
+        inclVatConfidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
+                getInclVatConfidence(),
+                getParentForChildren(),
+                isClean());
+        inclVatConfidence_ = null;
+      }
+      return inclVatConfidenceBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue inclVatCorrected_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inclVatCorrectedBuilder_;
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     * @return Whether the inclVatCorrected field is set.
+     */
+    public boolean hasInclVatCorrected() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     * @return The inclVatCorrected.
+     */
+    public com.google.protobuf.BoolValue getInclVatCorrected() {
+      if (inclVatCorrectedBuilder_ == null) {
+        return inclVatCorrected_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inclVatCorrected_;
+      } else {
+        return inclVatCorrectedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public Builder setInclVatCorrected(com.google.protobuf.BoolValue value) {
+      if (inclVatCorrectedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        inclVatCorrected_ = value;
+      } else {
+        inclVatCorrectedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public Builder setInclVatCorrected(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (inclVatCorrectedBuilder_ == null) {
+        inclVatCorrected_ = builderForValue.build();
+      } else {
+        inclVatCorrectedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public Builder mergeInclVatCorrected(com.google.protobuf.BoolValue value) {
+      if (inclVatCorrectedBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          inclVatCorrected_ != null &&
+          inclVatCorrected_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+          getInclVatCorrectedBuilder().mergeFrom(value);
+        } else {
+          inclVatCorrected_ = value;
+        }
+      } else {
+        inclVatCorrectedBuilder_.mergeFrom(value);
+      }
+      if (inclVatCorrected_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public Builder clearInclVatCorrected() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      inclVatCorrected_ = null;
+      if (inclVatCorrectedBuilder_ != null) {
+        inclVatCorrectedBuilder_.dispose();
+        inclVatCorrectedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getInclVatCorrectedBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getInclVatCorrectedFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getInclVatCorrectedOrBuilder() {
+      if (inclVatCorrectedBuilder_ != null) {
+        return inclVatCorrectedBuilder_.getMessageOrBuilder();
+      } else {
+        return inclVatCorrected_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : inclVatCorrected_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue incl_vat_corrected = 14 [json_name = "inclVatCorrected"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getInclVatCorrectedFieldBuilder() {
+      if (inclVatCorrectedBuilder_ == null) {
+        inclVatCorrectedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getInclVatCorrected(),
+                getParentForChildren(),
+                isClean());
+        inclVatCorrected_ = null;
+      }
+      return inclVatCorrectedBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.VatDistributionCandidate)
