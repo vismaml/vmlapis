@@ -44,6 +44,13 @@ export class DataServiceClient {
                response: ssn_dataservice_v1_dataservice_pb.FeedbackMetrics) => void
   ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.FeedbackMetrics>;
 
+  calculateAnnotationProcessMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.AnnotationProcessMetricsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_dataservice_v1_dataservice_pb.AnnotationProcessPredictionMetrics) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.AnnotationProcessPredictionMetrics>;
+
   delete(
     request: ssn_dataservice_v1_dataservice_pb.DeleteRequest,
     metadata: grpcWeb.Metadata | undefined,
@@ -89,6 +96,11 @@ export class DataServicePromiseClient {
     request: ssn_dataservice_v1_dataservice_pb.MetricsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_dataservice_v1_dataservice_pb.FeedbackMetrics>;
+
+  calculateAnnotationProcessMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.AnnotationProcessMetricsRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_dataservice_v1_dataservice_pb.AnnotationProcessPredictionMetrics>;
 
   delete(
     request: ssn_dataservice_v1_dataservice_pb.DeleteRequest,
