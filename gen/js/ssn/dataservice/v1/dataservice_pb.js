@@ -12269,7 +12269,7 @@ proto.ssn.dataservice.v1.MetricsRequest.prototype.clearDocumentTypesList = funct
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.repeatedFields_ = [4,5,6];
+proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.repeatedFields_ = [1,2,3];
 
 
 
@@ -12302,11 +12302,9 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.toObject = fu
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    startTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    endTime: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    fieldsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    countryCodesList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-    documentTypesList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
+    fieldsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+    countryCodesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
+    documentTypesList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -12343,23 +12341,15 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.deserializeBinaryFromRe
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setStartTime(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setEndTime(value);
-      break;
-    case 4:
+    case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.addFields(value);
       break;
-    case 5:
+    case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.addCountryCodes(value);
       break;
-    case 6:
+    case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.addDocumentTypes(value);
       break;
@@ -12392,38 +12382,24 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.serializeBina
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStartTime();
-  if (f !== 0) {
-    writer.writeInt64(
-      2,
-      f
-    );
-  }
-  f = message.getEndTime();
-  if (f !== 0) {
-    writer.writeInt64(
-      3,
-      f
-    );
-  }
   f = message.getFieldsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
-      4,
+      1,
       f
     );
   }
   f = message.getCountryCodesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
-      5,
+      2,
       f
     );
   }
   f = message.getDocumentTypesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
-      6,
+      3,
       f
     );
   }
@@ -12431,47 +12407,11 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.serializeBinaryToWriter
 
 
 /**
- * optional int64 start_time = 2;
- * @return {number}
- */
-proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getStartTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
- */
-proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setStartTime = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional int64 end_time = 3;
- * @return {number}
- */
-proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getEndTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
- */
-proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setEndTime = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * repeated string fields = 4;
+ * repeated string fields = 1;
  * @return {!Array<string>}
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getFieldsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
@@ -12480,7 +12420,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getFieldsList
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setFieldsList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
+  return jspb.Message.setField(this, 1, value || []);
 };
 
 
@@ -12490,7 +12430,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setFieldsList
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.addFields = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
@@ -12504,11 +12444,11 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.clearFieldsLi
 
 
 /**
- * repeated string country_codes = 5;
+ * repeated string country_codes = 2;
  * @return {!Array<string>}
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getCountryCodesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
 
@@ -12517,7 +12457,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getCountryCod
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setCountryCodesList = function(value) {
-  return jspb.Message.setField(this, 5, value || []);
+  return jspb.Message.setField(this, 2, value || []);
 };
 
 
@@ -12527,7 +12467,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setCountryCod
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.addCountryCodes = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
@@ -12541,11 +12481,11 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.clearCountryC
 
 
 /**
- * repeated string document_types = 6;
+ * repeated string document_types = 3;
  * @return {!Array<string>}
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getDocumentTypesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
 
@@ -12554,7 +12494,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getDocumentTy
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setDocumentTypesList = function(value) {
-  return jspb.Message.setField(this, 6, value || []);
+  return jspb.Message.setField(this, 3, value || []);
 };
 
 
@@ -12564,7 +12504,7 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setDocumentTy
  * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.addDocumentTypes = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 

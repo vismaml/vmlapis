@@ -348,56 +348,55 @@ namespace Ssn.Dataservice.V1 {
             "GAMgASgDUgdlbmRUaW1lEhYKBmZpZWxkcxgEIAMoCVIGZmllbGRzEhIKBHRh",
             "Z3MYBSADKAlSBHRhZ3MSIwoNY291bnRyeV9jb2RlcxgGIAMoCVIMY291bnRy",
             "eUNvZGVzEiUKDmRvY3VtZW50X3R5cGVzGAcgAygJUg1kb2N1bWVudFR5cGVz",
-            "Ir8BCh9Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0Eh0KCnN0YXJ0",
-            "X3RpbWUYAiABKANSCXN0YXJ0VGltZRIZCghlbmRfdGltZRgDIAEoA1IHZW5k",
-            "VGltZRIWCgZmaWVsZHMYBCADKAlSBmZpZWxkcxIjCg1jb3VudHJ5X2NvZGVz",
-            "GAUgAygJUgxjb3VudHJ5Q29kZXMSJQoOZG9jdW1lbnRfdHlwZXMYBiADKAlS",
-            "DWRvY3VtZW50VHlwZXMilgIKIkFubm90YXRpb25Qcm9jZXNzUHJlZGljdGlv",
-            "bk1ldHJpY3MSJQoOZG9jdW1lbnRfY291bnQYASABKAVSDWRvY3VtZW50Q291",
-            "bnQSKQoQcHJlZGljdGlvbl9jb3VudBgCIAEoBVIPcHJlZGljdGlvbkNvdW50",
-            "ElAKE292ZXJhbGxfY29ycmVjdG5lc3MYAyADKAsyHy5zc24uZGF0YXNlcnZp",
-            "Y2UudjEuQ29ycmVjdG5lc3NSEm92ZXJhbGxDb3JyZWN0bmVzcxJMChFmaWVs",
-            "ZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3Jy",
-            "ZWN0bmVzc1IQZmllbGRDb3JyZWN0bmVzcyL/AQoPRmVlZGJhY2tNZXRyaWNz",
-            "EiUKDmRvY3VtZW50X2NvdW50GAEgASgFUg1kb2N1bWVudENvdW50EiUKDmZl",
-            "ZWRiYWNrX2NvdW50GAIgASgFUg1mZWVkYmFja0NvdW50ElAKE292ZXJhbGxf",
-            "Y29ycmVjdG5lc3MYAyABKAsyHy5zc24uZGF0YXNlcnZpY2UudjEuQ29ycmVj",
-            "dG5lc3NSEm92ZXJhbGxDb3JyZWN0bmVzcxJMChFmaWVsZF9jb3JyZWN0bmVz",
-            "cxgEIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1IQZmll",
-            "bGRDb3JyZWN0bmVzcyLMAQoLQ29ycmVjdG5lc3MSFAoFZmllbGQYASABKAlS",
-            "BWZpZWxkEi0KEmNvcnJlY3RfcGVyY2VudGFnZRgCIAEoAlIRY29ycmVjdFBl",
-            "cmNlbnRhZ2USMwoVaW5jb21wbGV0ZV9wZXJjZW50YWdlGAMgASgCUhRpbmNv",
-            "bXBsZXRlUGVyY2VudGFnZRIpChBlcnJvcl9wZXJjZW50YWdlGAQgASgCUg9l",
-            "cnJvclBlcmNlbnRhZ2USGAoHc3VwcG9ydBgFIAEoBVIHc3VwcG9ydCIjCg1E",
-            "ZWxldGVSZXF1ZXN0EhIKBHRhZ3MYASADKAlSBHRhZ3MiRAoNQ2FsbHNQZXJN",
-            "b250aBIUCgVjYWxscxgBIAEoA1IFY2FsbHMSHQoKbW9udGhfbmFtZRgCIAEo",
-            "CVIJbW9udGhOYW1lImIKFUNhbGxzUGVyTW9udGhSZXNwb25zZRJJCg9jYWxs",
-            "c19wZXJfbW9udGgYASADKAsyIS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQ",
-            "ZXJNb250aFINY2FsbHNQZXJNb250aDLIBgoLRGF0YVNlcnZpY2USZwoOQ3Jl",
-            "YXRlRG9jdW1lbnQSKS5zc24uZGF0YXNlcnZpY2UudjEuQ3JlYXRlRG9jdW1l",
-            "bnRSZXF1ZXN0Giouc3NuLmRhdGFzZXJ2aWNlLnYxLkNyZWF0ZURvY3VtZW50",
-            "UmVzcG9uc2USYQoMUmVhZERvY3VtZW50Eicuc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "LlJlYWREb2N1bWVudFJlcXVlc3QaKC5zc24uZGF0YXNlcnZpY2UudjEuUmVh",
-            "ZERvY3VtZW50UmVzcG9uc2USVQoPUHJlcGFyZUZlZWRiYWNrEiouc3NuLmRh",
-            "dGFzZXJ2aWNlLnYxLlByZXBhcmVGZWVkYmFja1JlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkSZwoIRmVlZGJhY2sSIy5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih6C",
-            "0+STAhgiEy92MS9mZWVkYmFjazpjcmVhdGU6ASoSWwoQQ2FsY3VsYXRlTWV0",
-            "cmljcxIiLnNzbi5kYXRhc2VydmljZS52MS5NZXRyaWNzUmVxdWVzdBojLnNz",
-            "bi5kYXRhc2VydmljZS52MS5GZWVkYmFja01ldHJpY3MSkAEKIUNhbGN1bGF0",
-            "ZUFubm90YXRpb25Qcm9jZXNzTWV0cmljcxIzLnNzbi5kYXRhc2VydmljZS52",
-            "MS5Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0GjYuc3NuLmRhdGFz",
-            "ZXJ2aWNlLnYxLkFubm90YXRpb25Qcm9jZXNzUHJlZGljdGlvbk1ldHJpY3MS",
-            "YwoGRGVsZXRlEiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkRlbGV0ZVJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNr",
-            "OmRlbGV0ZToBKhJYChNDYWxsc1Blck1vbnRoTWV0cmljEhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9u",
-            "dGhSZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBE",
-            "YXRhc2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFw",
-            "aXMvZ2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NE",
-            "WKoCElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeIC",
-            "HlNzblxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNl",
-            "cnZpY2U6OlYxYgZwcm90bzM="));
+            "IoUBCh9Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0EhYKBmZpZWxk",
+            "cxgBIAMoCVIGZmllbGRzEiMKDWNvdW50cnlfY29kZXMYAiADKAlSDGNvdW50",
+            "cnlDb2RlcxIlCg5kb2N1bWVudF90eXBlcxgDIAMoCVINZG9jdW1lbnRUeXBl",
+            "cyKWAgoiQW5ub3RhdGlvblByb2Nlc3NQcmVkaWN0aW9uTWV0cmljcxIlCg5k",
+            "b2N1bWVudF9jb3VudBgBIAEoBVINZG9jdW1lbnRDb3VudBIpChBwcmVkaWN0",
+            "aW9uX2NvdW50GAIgASgFUg9wcmVkaWN0aW9uQ291bnQSUAoTb3ZlcmFsbF9j",
+            "b3JyZWN0bmVzcxgDIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0",
+            "bmVzc1ISb3ZlcmFsbENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNz",
+            "GAQgAygLMh8uc3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVs",
+            "ZENvcnJlY3RuZXNzIv8BCg9GZWVkYmFja01ldHJpY3MSJQoOZG9jdW1lbnRf",
+            "Y291bnQYASABKAVSDWRvY3VtZW50Q291bnQSJQoOZmVlZGJhY2tfY291bnQY",
+            "AiABKAVSDWZlZWRiYWNrQ291bnQSUAoTb3ZlcmFsbF9jb3JyZWN0bmVzcxgD",
+            "IAEoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1ISb3ZlcmFs",
+            "bENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNzGAQgAygLMh8uc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVsZENvcnJlY3RuZXNz",
+            "IswBCgtDb3JyZWN0bmVzcxIUCgVmaWVsZBgBIAEoCVIFZmllbGQSLQoSY29y",
+            "cmVjdF9wZXJjZW50YWdlGAIgASgCUhFjb3JyZWN0UGVyY2VudGFnZRIzChVp",
+            "bmNvbXBsZXRlX3BlcmNlbnRhZ2UYAyABKAJSFGluY29tcGxldGVQZXJjZW50",
+            "YWdlEikKEGVycm9yX3BlcmNlbnRhZ2UYBCABKAJSD2Vycm9yUGVyY2VudGFn",
+            "ZRIYCgdzdXBwb3J0GAUgASgFUgdzdXBwb3J0IiMKDURlbGV0ZVJlcXVlc3QS",
+            "EgoEdGFncxgBIAMoCVIEdGFncyJECg1DYWxsc1Blck1vbnRoEhQKBWNhbGxz",
+            "GAEgASgDUgVjYWxscxIdCgptb250aF9uYW1lGAIgASgJUgltb250aE5hbWUi",
+            "YgoVQ2FsbHNQZXJNb250aFJlc3BvbnNlEkkKD2NhbGxzX3Blcl9tb250aBgB",
+            "IAMoCzIhLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUg1jYWxs",
+            "c1Blck1vbnRoMsgGCgtEYXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIp",
+            "LnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5z",
+            "c24uZGF0YXNlcnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxS",
+            "ZWFkRG9jdW1lbnQSJy5zc24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50",
+            "UmVxdWVzdBooLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNw",
+            "b25zZRJVCg9QcmVwYXJlRmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEu",
+            "UHJlcGFyZUZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRJnCghGZWVkYmFjaxIjLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1Jl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2Zl",
+            "ZWRiYWNrOmNyZWF0ZToBKhJbChBDYWxjdWxhdGVNZXRyaWNzEiIuc3NuLmRh",
+            "dGFzZXJ2aWNlLnYxLk1ldHJpY3NSZXF1ZXN0GiMuc3NuLmRhdGFzZXJ2aWNl",
+            "LnYxLkZlZWRiYWNrTWV0cmljcxKQAQohQ2FsY3VsYXRlQW5ub3RhdGlvblBy",
+            "b2Nlc3NNZXRyaWNzEjMuc3NuLmRhdGFzZXJ2aWNlLnYxLkFubm90YXRpb25Q",
+            "cm9jZXNzTWV0cmljc1JlcXVlc3QaNi5zc24uZGF0YXNlcnZpY2UudjEuQW5u",
+            "b3RhdGlvblByb2Nlc3NQcmVkaWN0aW9uTWV0cmljcxJjCgZEZWxldGUSIS5z",
+            "c24uZGF0YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6ZGVsZXRlOgEqElgK",
+            "E0NhbGxzUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
+            "KS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlQt0B",
+            "ChthaS52aXNtYS5zc24uZGF0YXNlcnZpY2UudjFCEERhdGFzZXJ2aWNlUHJv",
+            "dG9QAVpCZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3Nu",
+            "L2RhdGFzZXJ2aWNlL3YxO2RhdGFzZXJ2aWNlogIDU0RYqgISU3NuLkRhdGFz",
+            "ZXJ2aWNlLlYxygISU3NuXERhdGFzZXJ2aWNlXFYx4gIeU3NuXERhdGFzZXJ2",
+            "aWNlXFYxXEdQQk1ldGFkYXRh6gIUU3NuOjpEYXRhc2VydmljZTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -413,7 +412,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "CountryCodes", "DocumentTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessPredictionMetrics), global::Ssn.Dataservice.V1.AnnotationProcessPredictionMetrics.Parser, new[]{ "DocumentCount", "PredictionCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support" }, null, null, null, null),
@@ -8924,8 +8923,6 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationProcessMetricsRequest(AnnotationProcessMetricsRequest other) : this() {
-      startTime_ = other.startTime_;
-      endTime_ = other.endTime_;
       fields_ = other.fields_.Clone();
       countryCodes_ = other.countryCodes_.Clone();
       documentTypes_ = other.documentTypes_.Clone();
@@ -8938,34 +8935,10 @@ namespace Ssn.Dataservice.V1 {
       return new AnnotationProcessMetricsRequest(this);
     }
 
-    /// <summary>Field number for the "start_time" field.</summary>
-    public const int StartTimeFieldNumber = 2;
-    private long startTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long StartTime {
-      get { return startTime_; }
-      set {
-        startTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 3;
-    private long endTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EndTime {
-      get { return endTime_; }
-      set {
-        endTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "fields" field.</summary>
-    public const int FieldsFieldNumber = 4;
+    public const int FieldsFieldNumber = 1;
     private static readonly pb::FieldCodec<string> _repeated_fields_codec
-        = pb::FieldCodec.ForString(34);
+        = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> fields_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8974,9 +8947,9 @@ namespace Ssn.Dataservice.V1 {
     }
 
     /// <summary>Field number for the "country_codes" field.</summary>
-    public const int CountryCodesFieldNumber = 5;
+    public const int CountryCodesFieldNumber = 2;
     private static readonly pb::FieldCodec<string> _repeated_countryCodes_codec
-        = pb::FieldCodec.ForString(42);
+        = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> countryCodes_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8985,9 +8958,9 @@ namespace Ssn.Dataservice.V1 {
     }
 
     /// <summary>Field number for the "document_types" field.</summary>
-    public const int DocumentTypesFieldNumber = 6;
+    public const int DocumentTypesFieldNumber = 3;
     private static readonly pb::FieldCodec<string> _repeated_documentTypes_codec
-        = pb::FieldCodec.ForString(50);
+        = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> documentTypes_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9010,8 +8983,6 @@ namespace Ssn.Dataservice.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StartTime != other.StartTime) return false;
-      if (EndTime != other.EndTime) return false;
       if(!fields_.Equals(other.fields_)) return false;
       if(!countryCodes_.Equals(other.countryCodes_)) return false;
       if(!documentTypes_.Equals(other.documentTypes_)) return false;
@@ -9022,8 +8993,6 @@ namespace Ssn.Dataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StartTime != 0L) hash ^= StartTime.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       hash ^= fields_.GetHashCode();
       hash ^= countryCodes_.GetHashCode();
       hash ^= documentTypes_.GetHashCode();
@@ -9045,14 +9014,6 @@ namespace Ssn.Dataservice.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StartTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(StartTime);
-      }
-      if (EndTime != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(EndTime);
-      }
       fields_.WriteTo(output, _repeated_fields_codec);
       countryCodes_.WriteTo(output, _repeated_countryCodes_codec);
       documentTypes_.WriteTo(output, _repeated_documentTypes_codec);
@@ -9066,14 +9027,6 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StartTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(StartTime);
-      }
-      if (EndTime != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(EndTime);
-      }
       fields_.WriteTo(ref output, _repeated_fields_codec);
       countryCodes_.WriteTo(ref output, _repeated_countryCodes_codec);
       documentTypes_.WriteTo(ref output, _repeated_documentTypes_codec);
@@ -9087,12 +9040,6 @@ namespace Ssn.Dataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StartTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
-      }
-      if (EndTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
-      }
       size += fields_.CalculateSize(_repeated_fields_codec);
       size += countryCodes_.CalculateSize(_repeated_countryCodes_codec);
       size += documentTypes_.CalculateSize(_repeated_documentTypes_codec);
@@ -9107,12 +9054,6 @@ namespace Ssn.Dataservice.V1 {
     public void MergeFrom(AnnotationProcessMetricsRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.StartTime != 0L) {
-        StartTime = other.StartTime;
-      }
-      if (other.EndTime != 0L) {
-        EndTime = other.EndTime;
       }
       fields_.Add(other.fields_);
       countryCodes_.Add(other.countryCodes_);
@@ -9136,23 +9077,15 @@ namespace Ssn.Dataservice.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            StartTime = input.ReadInt64();
-            break;
-          }
-          case 24: {
-            EndTime = input.ReadInt64();
-            break;
-          }
-          case 34: {
+          case 10: {
             fields_.AddEntriesFrom(input, _repeated_fields_codec);
             break;
           }
-          case 42: {
+          case 18: {
             countryCodes_.AddEntriesFrom(input, _repeated_countryCodes_codec);
             break;
           }
-          case 50: {
+          case 26: {
             documentTypes_.AddEntriesFrom(input, _repeated_documentTypes_codec);
             break;
           }
@@ -9175,23 +9108,15 @@ namespace Ssn.Dataservice.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            StartTime = input.ReadInt64();
-            break;
-          }
-          case 24: {
-            EndTime = input.ReadInt64();
-            break;
-          }
-          case 34: {
+          case 10: {
             fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
             break;
           }
-          case 42: {
+          case 18: {
             countryCodes_.AddEntriesFrom(ref input, _repeated_countryCodes_codec);
             break;
           }
-          case 50: {
+          case 26: {
             documentTypes_.AddEntriesFrom(ref input, _repeated_documentTypes_codec);
             break;
           }

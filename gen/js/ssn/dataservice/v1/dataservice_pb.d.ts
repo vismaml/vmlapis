@@ -1396,12 +1396,6 @@ export namespace MetricsRequest {
 }
 
 export class AnnotationProcessMetricsRequest extends jspb.Message {
-  getStartTime(): number;
-  setStartTime(value: number): AnnotationProcessMetricsRequest;
-
-  getEndTime(): number;
-  setEndTime(value: number): AnnotationProcessMetricsRequest;
-
   getFieldsList(): Array<string>;
   setFieldsList(value: Array<string>): AnnotationProcessMetricsRequest;
   clearFieldsList(): AnnotationProcessMetricsRequest;
@@ -1427,8 +1421,6 @@ export class AnnotationProcessMetricsRequest extends jspb.Message {
 
 export namespace AnnotationProcessMetricsRequest {
   export type AsObject = {
-    startTime: number,
-    endTime: number,
     fieldsList: Array<string>,
     countryCodesList: Array<string>,
     documentTypesList: Array<string>,

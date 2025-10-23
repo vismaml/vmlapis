@@ -293,11 +293,9 @@ message MetricsRequest {
 }
 
 message AnnotationProcessMetricsRequest {
-  int64 start_time = 2;
-  int64 end_time = 3;
-  repeated string fields = 4;
-  repeated string country_codes = 5;
-  repeated string document_types = 6;
+  repeated string fields = 1;
+  repeated string country_codes = 2;
+  repeated string document_types = 3;
 }
 
 message AnnotationProcessPredictionMetrics {

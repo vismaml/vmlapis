@@ -48,34 +48,12 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest.class, ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest.Builder.class);
   }
 
-  public static final int START_TIME_FIELD_NUMBER = 2;
-  private long startTime_ = 0L;
-  /**
-   * <code>int64 start_time = 2 [json_name = "startTime"];</code>
-   * @return The startTime.
-   */
-  @java.lang.Override
-  public long getStartTime() {
-    return startTime_;
-  }
-
-  public static final int END_TIME_FIELD_NUMBER = 3;
-  private long endTime_ = 0L;
-  /**
-   * <code>int64 end_time = 3 [json_name = "endTime"];</code>
-   * @return The endTime.
-   */
-  @java.lang.Override
-  public long getEndTime() {
-    return endTime_;
-  }
-
-  public static final int FIELDS_FIELD_NUMBER = 4;
+  public static final int FIELDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList fields_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string fields = 4 [json_name = "fields"];</code>
+   * <code>repeated string fields = 1 [json_name = "fields"];</code>
    * @return A list containing the fields.
    */
   public com.google.protobuf.ProtocolStringList
@@ -83,14 +61,14 @@ private static final long serialVersionUID = 0L;
     return fields_;
   }
   /**
-   * <code>repeated string fields = 4 [json_name = "fields"];</code>
+   * <code>repeated string fields = 1 [json_name = "fields"];</code>
    * @return The count of fields.
    */
   public int getFieldsCount() {
     return fields_.size();
   }
   /**
-   * <code>repeated string fields = 4 [json_name = "fields"];</code>
+   * <code>repeated string fields = 1 [json_name = "fields"];</code>
    * @param index The index of the element to return.
    * @return The fields at the given index.
    */
@@ -98,7 +76,7 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
   /**
-   * <code>repeated string fields = 4 [json_name = "fields"];</code>
+   * <code>repeated string fields = 1 [json_name = "fields"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the fields at the given index.
    */
@@ -107,12 +85,12 @@ private static final long serialVersionUID = 0L;
     return fields_.getByteString(index);
   }
 
-  public static final int COUNTRY_CODES_FIELD_NUMBER = 5;
+  public static final int COUNTRY_CODES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList countryCodes_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+   * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
    * @return A list containing the countryCodes.
    */
   public com.google.protobuf.ProtocolStringList
@@ -120,14 +98,14 @@ private static final long serialVersionUID = 0L;
     return countryCodes_;
   }
   /**
-   * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+   * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
    * @return The count of countryCodes.
    */
   public int getCountryCodesCount() {
     return countryCodes_.size();
   }
   /**
-   * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+   * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
    * @param index The index of the element to return.
    * @return The countryCodes at the given index.
    */
@@ -135,7 +113,7 @@ private static final long serialVersionUID = 0L;
     return countryCodes_.get(index);
   }
   /**
-   * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+   * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the countryCodes at the given index.
    */
@@ -144,12 +122,12 @@ private static final long serialVersionUID = 0L;
     return countryCodes_.getByteString(index);
   }
 
-  public static final int DOCUMENT_TYPES_FIELD_NUMBER = 6;
+  public static final int DOCUMENT_TYPES_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList documentTypes_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+   * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
    * @return A list containing the documentTypes.
    */
   public com.google.protobuf.ProtocolStringList
@@ -157,14 +135,14 @@ private static final long serialVersionUID = 0L;
     return documentTypes_;
   }
   /**
-   * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+   * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
    * @return The count of documentTypes.
    */
   public int getDocumentTypesCount() {
     return documentTypes_.size();
   }
   /**
-   * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+   * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
    * @param index The index of the element to return.
    * @return The documentTypes at the given index.
    */
@@ -172,7 +150,7 @@ private static final long serialVersionUID = 0L;
     return documentTypes_.get(index);
   }
   /**
-   * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+   * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the documentTypes at the given index.
    */
@@ -195,20 +173,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (startTime_ != 0L) {
-      output.writeInt64(2, startTime_);
-    }
-    if (endTime_ != 0L) {
-      output.writeInt64(3, endTime_);
-    }
     for (int i = 0; i < fields_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, fields_.getRaw(i));
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, fields_.getRaw(i));
     }
     for (int i = 0; i < countryCodes_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 5, countryCodes_.getRaw(i));
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, countryCodes_.getRaw(i));
     }
     for (int i = 0; i < documentTypes_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 6, documentTypes_.getRaw(i));
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, documentTypes_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -219,14 +191,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (startTime_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, startTime_);
-    }
-    if (endTime_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, endTime_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < fields_.size(); i++) {
@@ -266,10 +230,6 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest other = (ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest) obj;
 
-    if (getStartTime()
-        != other.getStartTime()) return false;
-    if (getEndTime()
-        != other.getEndTime()) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
     if (!getCountryCodesList()
@@ -287,12 +247,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getStartTime());
-    hash = (37 * hash) + END_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getEndTime());
     if (getFieldsCount() > 0) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
@@ -436,8 +390,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      startTime_ = 0L;
-      endTime_ = 0L;
       fields_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       countryCodes_ =
@@ -478,20 +430,14 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.startTime_ = startTime_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.endTime_ = endTime_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         fields_.makeImmutable();
         result.fields_ = fields_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         countryCodes_.makeImmutable();
         result.countryCodes_ = countryCodes_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         documentTypes_.makeImmutable();
         result.documentTypes_ = documentTypes_;
       }
@@ -509,16 +455,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest other) {
       if (other == ai.visma.ssn.dataservice.v1.AnnotationProcessMetricsRequest.getDefaultInstance()) return this;
-      if (other.getStartTime() != 0L) {
-        setStartTime(other.getStartTime());
-      }
-      if (other.getEndTime() != 0L) {
-        setEndTime(other.getEndTime());
-      }
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
         } else {
           ensureFieldsIsMutable();
           fields_.addAll(other.fields_);
@@ -528,7 +468,7 @@ private static final long serialVersionUID = 0L;
       if (!other.countryCodes_.isEmpty()) {
         if (countryCodes_.isEmpty()) {
           countryCodes_ = other.countryCodes_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
         } else {
           ensureCountryCodesIsMutable();
           countryCodes_.addAll(other.countryCodes_);
@@ -538,7 +478,7 @@ private static final long serialVersionUID = 0L;
       if (!other.documentTypes_.isEmpty()) {
         if (documentTypes_.isEmpty()) {
           documentTypes_ = other.documentTypes_;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
         } else {
           ensureDocumentTypesIsMutable();
           documentTypes_.addAll(other.documentTypes_);
@@ -571,34 +511,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 16: {
-              startTime_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 16
-            case 24: {
-              endTime_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 24
-            case 34: {
+            case 10: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureFieldsIsMutable();
               fields_.add(s);
               break;
-            } // case 34
-            case 42: {
+            } // case 10
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureCountryCodesIsMutable();
               countryCodes_.add(s);
               break;
-            } // case 42
-            case 50: {
+            } // case 18
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureDocumentTypesIsMutable();
               documentTypes_.add(s);
               break;
-            } // case 50
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -616,80 +546,16 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long startTime_ ;
-    /**
-     * <code>int64 start_time = 2 [json_name = "startTime"];</code>
-     * @return The startTime.
-     */
-    @java.lang.Override
-    public long getStartTime() {
-      return startTime_;
-    }
-    /**
-     * <code>int64 start_time = 2 [json_name = "startTime"];</code>
-     * @param value The startTime to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStartTime(long value) {
-
-      startTime_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 start_time = 2 [json_name = "startTime"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      startTime_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long endTime_ ;
-    /**
-     * <code>int64 end_time = 3 [json_name = "endTime"];</code>
-     * @return The endTime.
-     */
-    @java.lang.Override
-    public long getEndTime() {
-      return endTime_;
-    }
-    /**
-     * <code>int64 end_time = 3 [json_name = "endTime"];</code>
-     * @param value The endTime to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEndTime(long value) {
-
-      endTime_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 end_time = 3 [json_name = "endTime"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      endTime_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFieldsIsMutable() {
       if (!fields_.isModifiable()) {
         fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @return A list containing the fields.
      */
     public com.google.protobuf.ProtocolStringList
@@ -698,14 +564,14 @@ private static final long serialVersionUID = 0L;
       return fields_;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @return The count of fields.
      */
     public int getFieldsCount() {
       return fields_.size();
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param index The index of the element to return.
      * @return The fields at the given index.
      */
@@ -713,7 +579,7 @@ private static final long serialVersionUID = 0L;
       return fields_.get(index);
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the fields at the given index.
      */
@@ -722,7 +588,7 @@ private static final long serialVersionUID = 0L;
       return fields_.getByteString(index);
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param index The index to set the value at.
      * @param value The fields to set.
      * @return This builder for chaining.
@@ -732,12 +598,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldsIsMutable();
       fields_.set(index, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param value The fields to add.
      * @return This builder for chaining.
      */
@@ -746,12 +612,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param values The fields to add.
      * @return This builder for chaining.
      */
@@ -760,23 +626,23 @@ private static final long serialVersionUID = 0L;
       ensureFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fields_);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFields() {
       fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string fields = 4 [json_name = "fields"];</code>
+     * <code>repeated string fields = 1 [json_name = "fields"];</code>
      * @param value The bytes of the fields to add.
      * @return This builder for chaining.
      */
@@ -786,7 +652,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -797,10 +663,10 @@ private static final long serialVersionUID = 0L;
       if (!countryCodes_.isModifiable()) {
         countryCodes_ = new com.google.protobuf.LazyStringArrayList(countryCodes_);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @return A list containing the countryCodes.
      */
     public com.google.protobuf.ProtocolStringList
@@ -809,14 +675,14 @@ private static final long serialVersionUID = 0L;
       return countryCodes_;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @return The count of countryCodes.
      */
     public int getCountryCodesCount() {
       return countryCodes_.size();
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param index The index of the element to return.
      * @return The countryCodes at the given index.
      */
@@ -824,7 +690,7 @@ private static final long serialVersionUID = 0L;
       return countryCodes_.get(index);
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the countryCodes at the given index.
      */
@@ -833,7 +699,7 @@ private static final long serialVersionUID = 0L;
       return countryCodes_.getByteString(index);
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param index The index to set the value at.
      * @param value The countryCodes to set.
      * @return This builder for chaining.
@@ -843,12 +709,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCountryCodesIsMutable();
       countryCodes_.set(index, value);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param value The countryCodes to add.
      * @return This builder for chaining.
      */
@@ -857,12 +723,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCountryCodesIsMutable();
       countryCodes_.add(value);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param values The countryCodes to add.
      * @return This builder for chaining.
      */
@@ -871,23 +737,23 @@ private static final long serialVersionUID = 0L;
       ensureCountryCodesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, countryCodes_);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCodes() {
       countryCodes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string country_codes = 5 [json_name = "countryCodes"];</code>
+     * <code>repeated string country_codes = 2 [json_name = "countryCodes"];</code>
      * @param value The bytes of the countryCodes to add.
      * @return This builder for chaining.
      */
@@ -897,7 +763,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureCountryCodesIsMutable();
       countryCodes_.add(value);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -908,10 +774,10 @@ private static final long serialVersionUID = 0L;
       if (!documentTypes_.isModifiable()) {
         documentTypes_ = new com.google.protobuf.LazyStringArrayList(documentTypes_);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @return A list containing the documentTypes.
      */
     public com.google.protobuf.ProtocolStringList
@@ -920,14 +786,14 @@ private static final long serialVersionUID = 0L;
       return documentTypes_;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @return The count of documentTypes.
      */
     public int getDocumentTypesCount() {
       return documentTypes_.size();
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param index The index of the element to return.
      * @return The documentTypes at the given index.
      */
@@ -935,7 +801,7 @@ private static final long serialVersionUID = 0L;
       return documentTypes_.get(index);
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the documentTypes at the given index.
      */
@@ -944,7 +810,7 @@ private static final long serialVersionUID = 0L;
       return documentTypes_.getByteString(index);
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param index The index to set the value at.
      * @param value The documentTypes to set.
      * @return This builder for chaining.
@@ -954,12 +820,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureDocumentTypesIsMutable();
       documentTypes_.set(index, value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param value The documentTypes to add.
      * @return This builder for chaining.
      */
@@ -968,12 +834,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureDocumentTypesIsMutable();
       documentTypes_.add(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param values The documentTypes to add.
      * @return This builder for chaining.
      */
@@ -982,23 +848,23 @@ private static final long serialVersionUID = 0L;
       ensureDocumentTypesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, documentTypes_);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDocumentTypes() {
       documentTypes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string document_types = 6 [json_name = "documentTypes"];</code>
+     * <code>repeated string document_types = 3 [json_name = "documentTypes"];</code>
      * @param value The bytes of the documentTypes to add.
      * @return This builder for chaining.
      */
@@ -1008,7 +874,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureDocumentTypesIsMutable();
       documentTypes_.add(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
