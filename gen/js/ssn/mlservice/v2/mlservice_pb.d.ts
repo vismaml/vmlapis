@@ -715,8 +715,10 @@ export class SmartscanUltraResponse extends jspb.Message {
   hasDocumentAnnotatorResponse(): boolean;
   clearDocumentAnnotatorResponse(): SmartscanUltraResponse;
 
-  getTokenCount(): number;
-  setTokenCount(value: number): SmartscanUltraResponse;
+  getUltraMetadata(): UltraMetadata | undefined;
+  setUltraMetadata(value?: UltraMetadata): SmartscanUltraResponse;
+  hasUltraMetadata(): boolean;
+  clearUltraMetadata(): SmartscanUltraResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SmartscanUltraResponse.AsObject;
@@ -729,7 +731,29 @@ export class SmartscanUltraResponse extends jspb.Message {
 export namespace SmartscanUltraResponse {
   export type AsObject = {
     documentAnnotatorResponse?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.AsObject,
-    tokenCount: number,
+    ultraMetadata?: UltraMetadata.AsObject,
+  }
+}
+
+export class UltraMetadata extends jspb.Message {
+  getTotalTokens(): number;
+  setTotalTokens(value: number): UltraMetadata;
+
+  getPromptTokens(): number;
+  setPromptTokens(value: number): UltraMetadata;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UltraMetadata.AsObject;
+  static toObject(includeInstance: boolean, msg: UltraMetadata): UltraMetadata.AsObject;
+  static serializeBinaryToWriter(message: UltraMetadata, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UltraMetadata;
+  static deserializeBinaryFromReader(message: UltraMetadata, reader: jspb.BinaryReader): UltraMetadata;
+}
+
+export namespace UltraMetadata {
+  export type AsObject = {
+    totalTokens: number,
+    promptTokens: number,
   }
 }
 

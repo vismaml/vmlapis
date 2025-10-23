@@ -25,8 +25,17 @@ public interface SmartscanUltraResponseOrBuilder extends
   ai.visma.ssn.annotator.v1.DocumentAnnotatorResponseOrBuilder getDocumentAnnotatorResponseOrBuilder();
 
   /**
-   * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
-   * @return The tokenCount.
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   * @return Whether the ultraMetadata field is set.
    */
-  int getTokenCount();
+  boolean hasUltraMetadata();
+  /**
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   * @return The ultraMetadata.
+   */
+  ai.visma.ssn.mlservice.v2.UltraMetadata getUltraMetadata();
+  /**
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   */
+  ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder getUltraMetadataOrBuilder();
 }

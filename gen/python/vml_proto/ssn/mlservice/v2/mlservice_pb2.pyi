@@ -261,9 +261,17 @@ class SmartscanUltraRequest(_message.Message):
     def __init__(self, document_annotator_response: _Optional[_Union[_annotator_pb2.DocumentAnnotatorResponse, _Mapping]] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class SmartscanUltraResponse(_message.Message):
-    __slots__ = ("document_annotator_response", "token_count")
+    __slots__ = ("document_annotator_response", "ultra_metadata")
     DOCUMENT_ANNOTATOR_RESPONSE_FIELD_NUMBER: _ClassVar[int]
-    TOKEN_COUNT_FIELD_NUMBER: _ClassVar[int]
+    ULTRA_METADATA_FIELD_NUMBER: _ClassVar[int]
     document_annotator_response: _annotator_pb2.DocumentAnnotatorResponse
-    token_count: int
-    def __init__(self, document_annotator_response: _Optional[_Union[_annotator_pb2.DocumentAnnotatorResponse, _Mapping]] = ..., token_count: _Optional[int] = ...) -> None: ...
+    ultra_metadata: UltraMetadata
+    def __init__(self, document_annotator_response: _Optional[_Union[_annotator_pb2.DocumentAnnotatorResponse, _Mapping]] = ..., ultra_metadata: _Optional[_Union[UltraMetadata, _Mapping]] = ...) -> None: ...
+
+class UltraMetadata(_message.Message):
+    __slots__ = ("total_tokens", "prompt_tokens")
+    TOTAL_TOKENS_FIELD_NUMBER: _ClassVar[int]
+    PROMPT_TOKENS_FIELD_NUMBER: _ClassVar[int]
+    total_tokens: int
+    prompt_tokens: int
+    def __init__(self, total_tokens: _Optional[int] = ..., prompt_tokens: _Optional[int] = ...) -> None: ...

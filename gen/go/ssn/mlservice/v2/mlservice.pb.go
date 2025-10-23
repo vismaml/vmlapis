@@ -978,7 +978,7 @@ type SmartscanUltraResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	DocumentAnnotatorResponse *v1.DocumentAnnotatorResponse `protobuf:"bytes,1,opt,name=document_annotator_response,json=documentAnnotatorResponse,proto3" json:"document_annotator_response,omitempty"`
-	TokenCount                int32                         `protobuf:"varint,2,opt,name=token_count,json=tokenCount,proto3" json:"token_count,omitempty"`
+	UltraMetadata             *UltraMetadata                `protobuf:"bytes,2,opt,name=ultra_metadata,json=ultraMetadata,proto3" json:"ultra_metadata,omitempty"`
 }
 
 func (x *SmartscanUltraResponse) Reset() {
@@ -1020,9 +1020,64 @@ func (x *SmartscanUltraResponse) GetDocumentAnnotatorResponse() *v1.DocumentAnno
 	return nil
 }
 
-func (x *SmartscanUltraResponse) GetTokenCount() int32 {
+func (x *SmartscanUltraResponse) GetUltraMetadata() *UltraMetadata {
 	if x != nil {
-		return x.TokenCount
+		return x.UltraMetadata
+	}
+	return nil
+}
+
+type UltraMetadata struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TotalTokens  int32 `protobuf:"varint,1,opt,name=total_tokens,json=totalTokens,proto3" json:"total_tokens,omitempty"`
+	PromptTokens int32 `protobuf:"varint,2,opt,name=prompt_tokens,json=promptTokens,proto3" json:"prompt_tokens,omitempty"`
+}
+
+func (x *UltraMetadata) Reset() {
+	*x = UltraMetadata{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UltraMetadata) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UltraMetadata) ProtoMessage() {}
+
+func (x *UltraMetadata) ProtoReflect() protoreflect.Message {
+	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UltraMetadata.ProtoReflect.Descriptor instead.
+func (*UltraMetadata) Descriptor() ([]byte, []int) {
+	return file_ssn_mlservice_v2_mlservice_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *UltraMetadata) GetTotalTokens() int32 {
+	if x != nil {
+		return x.TotalTokens
+	}
+	return 0
+}
+
+func (x *UltraMetadata) GetPromptTokens() int32 {
+	if x != nil {
+		return x.PromptTokens
 	}
 	return 0
 }
@@ -1078,7 +1133,7 @@ type FeatureGenRequest_TruthLabels struct {
 func (x *FeatureGenRequest_TruthLabels) Reset() {
 	*x = FeatureGenRequest_TruthLabels{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[13]
+		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1091,7 +1146,7 @@ func (x *FeatureGenRequest_TruthLabels) String() string {
 func (*FeatureGenRequest_TruthLabels) ProtoMessage() {}
 
 func (x *FeatureGenRequest_TruthLabels) ProtoReflect() protoreflect.Message {
-	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[13]
+	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1769,7 +1824,7 @@ var file_ssn_mlservice_v2_mlservice_proto_rawDesc = []byte{
 	0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x19, 0x64, 0x6f, 0x63,
 	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x6f, 0x72, 0x52, 0x65,
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x73,
-	0x18, 0x02, 0x20, 0x03, 0x28, 0x0c, 0x52, 0x06, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x73, 0x22, 0xa6,
+	0x18, 0x02, 0x20, 0x03, 0x28, 0x0c, 0x52, 0x06, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x73, 0x22, 0xcd,
 	0x01, 0x0a, 0x16, 0x53, 0x6d, 0x61, 0x72, 0x74, 0x73, 0x63, 0x61, 0x6e, 0x55, 0x6c, 0x74, 0x72,
 	0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x6b, 0x0a, 0x1b, 0x64, 0x6f, 0x63,
 	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x6f, 0x72, 0x5f,
@@ -1778,9 +1833,17 @@ var file_ssn_mlservice_v2_mlservice_proto_rawDesc = []byte{
 	0x31, 0x2e, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61,
 	0x74, 0x6f, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x19, 0x64, 0x6f, 0x63,
 	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x6f, 0x72, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5f,
-	0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0a, 0x74, 0x6f, 0x6b,
-	0x65, 0x6e, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x32, 0x98, 0x02, 0x0a, 0x09, 0x4d, 0x6c, 0x53, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x46, 0x0a, 0x0e, 0x75, 0x6c, 0x74, 0x72, 0x61, 0x5f,
+	0x6d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1f,
+	0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x32, 0x2e, 0x55, 0x6c, 0x74, 0x72, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x52,
+	0x0d, 0x75, 0x6c, 0x74, 0x72, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x22, 0x57,
+	0x0a, 0x0d, 0x55, 0x6c, 0x74, 0x72, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x12,
+	0x21, 0x0a, 0x0c, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x73, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0b, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x73, 0x12, 0x23, 0x0a, 0x0d, 0x70, 0x72, 0x6f, 0x6d, 0x70, 0x74, 0x5f, 0x74, 0x6f, 0x6b,
+	0x65, 0x6e, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x70, 0x72, 0x6f, 0x6d, 0x70,
+	0x74, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x73, 0x32, 0x98, 0x02, 0x0a, 0x09, 0x4d, 0x6c, 0x53, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x57, 0x0a, 0x0a, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65,
 	0x47, 0x65, 0x6e, 0x12, 0x23, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65,
@@ -1826,7 +1889,7 @@ func file_ssn_mlservice_v2_mlservice_proto_rawDescGZIP() []byte {
 	return file_ssn_mlservice_v2_mlservice_proto_rawDescData
 }
 
-var file_ssn_mlservice_v2_mlservice_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
+var file_ssn_mlservice_v2_mlservice_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_ssn_mlservice_v2_mlservice_proto_goTypes = []interface{}{
 	(*FeatureGenRequest)(nil),              // 0: ssn.mlservice.v2.FeatureGenRequest
 	(*FeatureGenResponse)(nil),             // 1: ssn.mlservice.v2.FeatureGenResponse
@@ -1841,84 +1904,86 @@ var file_ssn_mlservice_v2_mlservice_proto_goTypes = []interface{}{
 	(*VatDistributionResponse)(nil),        // 10: ssn.mlservice.v2.VatDistributionResponse
 	(*SmartscanUltraRequest)(nil),          // 11: ssn.mlservice.v2.SmartscanUltraRequest
 	(*SmartscanUltraResponse)(nil),         // 12: ssn.mlservice.v2.SmartscanUltraResponse
-	(*FeatureGenRequest_TruthLabels)(nil),  // 13: ssn.mlservice.v2.FeatureGenRequest.TruthLabels
-	(*_type.TextAnnotation)(nil),           // 14: ssn.type.TextAnnotation
-	(*_type.Candidate)(nil),                // 15: ssn.type.Candidate
-	(*_type.LineCandidate)(nil),            // 16: ssn.type.LineCandidate
-	(*_type.PurchaseLineCandidate)(nil),    // 17: ssn.type.PurchaseLineCandidate
-	(*_type.AnswerCandidate)(nil),          // 18: ssn.type.AnswerCandidate
-	(*_type.VatDistributionCandidate)(nil), // 19: ssn.type.VatDistributionCandidate
-	(*v1.DocumentAnnotatorResponse)(nil),   // 20: ssn.annotator.v1.DocumentAnnotatorResponse
-	(*date.Date)(nil),                      // 21: google.type.Date
+	(*UltraMetadata)(nil),                  // 13: ssn.mlservice.v2.UltraMetadata
+	(*FeatureGenRequest_TruthLabels)(nil),  // 14: ssn.mlservice.v2.FeatureGenRequest.TruthLabels
+	(*_type.TextAnnotation)(nil),           // 15: ssn.type.TextAnnotation
+	(*_type.Candidate)(nil),                // 16: ssn.type.Candidate
+	(*_type.LineCandidate)(nil),            // 17: ssn.type.LineCandidate
+	(*_type.PurchaseLineCandidate)(nil),    // 18: ssn.type.PurchaseLineCandidate
+	(*_type.AnswerCandidate)(nil),          // 19: ssn.type.AnswerCandidate
+	(*_type.VatDistributionCandidate)(nil), // 20: ssn.type.VatDistributionCandidate
+	(*v1.DocumentAnnotatorResponse)(nil),   // 21: ssn.annotator.v1.DocumentAnnotatorResponse
+	(*date.Date)(nil),                      // 22: google.type.Date
 }
 var file_ssn_mlservice_v2_mlservice_proto_depIdxs = []int32{
-	13, // 0: ssn.mlservice.v2.FeatureGenRequest.truth_labels:type_name -> ssn.mlservice.v2.FeatureGenRequest.TruthLabels
-	14, // 1: ssn.mlservice.v2.FeatureGenRequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	15, // 2: ssn.mlservice.v2.PredictResponse.order_date:type_name -> ssn.type.Candidate
-	15, // 3: ssn.mlservice.v2.PredictResponse.payment_due_date:type_name -> ssn.type.Candidate
-	15, // 4: ssn.mlservice.v2.PredictResponse.currency:type_name -> ssn.type.Candidate
-	15, // 5: ssn.mlservice.v2.PredictResponse.total_vat:type_name -> ssn.type.Candidate
-	15, // 6: ssn.mlservice.v2.PredictResponse.total_incl_vat:type_name -> ssn.type.Candidate
-	15, // 7: ssn.mlservice.v2.PredictResponse.total_excl_vat:type_name -> ssn.type.Candidate
-	15, // 8: ssn.mlservice.v2.PredictResponse.supplier_corporate_id:type_name -> ssn.type.Candidate
-	15, // 9: ssn.mlservice.v2.PredictResponse.supplier_country_code:type_name -> ssn.type.Candidate
-	15, // 10: ssn.mlservice.v2.PredictResponse.document_type:type_name -> ssn.type.Candidate
-	15, // 11: ssn.mlservice.v2.PredictResponse.payment_method:type_name -> ssn.type.Candidate
-	15, // 12: ssn.mlservice.v2.PredictResponse.credit_card_number:type_name -> ssn.type.Candidate
-	15, // 13: ssn.mlservice.v2.PredictResponse.invoice_number:type_name -> ssn.type.Candidate
-	15, // 14: ssn.mlservice.v2.PredictResponse.ocr_line_dk_type:type_name -> ssn.type.Candidate
-	15, // 15: ssn.mlservice.v2.PredictResponse.ocr_line_dk_payment_id:type_name -> ssn.type.Candidate
-	15, // 16: ssn.mlservice.v2.PredictResponse.ocr_line_dk_creditor_id:type_name -> ssn.type.Candidate
-	15, // 17: ssn.mlservice.v2.PredictResponse.ocr_line_se_payment_id:type_name -> ssn.type.Candidate
-	15, // 18: ssn.mlservice.v2.PredictResponse.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.Candidate
-	15, // 19: ssn.mlservice.v2.PredictResponse.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.Candidate
-	15, // 20: ssn.mlservice.v2.PredictResponse.ocr_line_no_payment_id:type_name -> ssn.type.Candidate
-	15, // 21: ssn.mlservice.v2.PredictResponse.ocr_line_fi_payment_id:type_name -> ssn.type.Candidate
-	15, // 22: ssn.mlservice.v2.PredictResponse.ocr_line_nl_payment_id:type_name -> ssn.type.Candidate
-	15, // 23: ssn.mlservice.v2.PredictResponse.iban:type_name -> ssn.type.Candidate
-	16, // 24: ssn.mlservice.v2.PredictResponse.lines:type_name -> ssn.type.LineCandidate
-	15, // 25: ssn.mlservice.v2.PredictResponse.bank_account_number:type_name -> ssn.type.Candidate
-	15, // 26: ssn.mlservice.v2.PredictResponse.bank_registration_number:type_name -> ssn.type.Candidate
-	15, // 27: ssn.mlservice.v2.PredictResponse.bic:type_name -> ssn.type.Candidate
-	15, // 28: ssn.mlservice.v2.PredictResponse.document_number:type_name -> ssn.type.Candidate
-	15, // 29: ssn.mlservice.v2.PredictResponse.document_date:type_name -> ssn.type.Candidate
-	15, // 30: ssn.mlservice.v2.PredictResponse.order_number:type_name -> ssn.type.Candidate
-	15, // 31: ssn.mlservice.v2.PredictResponse.supplier_name:type_name -> ssn.type.Candidate
-	15, // 32: ssn.mlservice.v2.PredictResponse.supplier_vat_number:type_name -> ssn.type.Candidate
-	15, // 33: ssn.mlservice.v2.PredictResponse.supplier_organisation_number:type_name -> ssn.type.Candidate
-	15, // 34: ssn.mlservice.v2.PredictResponse.supplier_address:type_name -> ssn.type.Candidate
-	15, // 35: ssn.mlservice.v2.PredictResponse.credit_card_last_four:type_name -> ssn.type.Candidate
-	15, // 36: ssn.mlservice.v2.PredictResponse.customer_number:type_name -> ssn.type.Candidate
-	15, // 37: ssn.mlservice.v2.PredictResponse.receiver_order_number:type_name -> ssn.type.Candidate
-	15, // 38: ssn.mlservice.v2.PredictResponse.ocr_line_be_payment_id:type_name -> ssn.type.Candidate
-	15, // 39: ssn.mlservice.v2.PredictResponse.receiver_address:type_name -> ssn.type.Candidate
-	15, // 40: ssn.mlservice.v2.PredictResponse.receiver_country_code:type_name -> ssn.type.Candidate
-	15, // 41: ssn.mlservice.v2.PredictResponse.receiver_name:type_name -> ssn.type.Candidate
-	15, // 42: ssn.mlservice.v2.PredictResponse.receiver_vat_number:type_name -> ssn.type.Candidate
+	14, // 0: ssn.mlservice.v2.FeatureGenRequest.truth_labels:type_name -> ssn.mlservice.v2.FeatureGenRequest.TruthLabels
+	15, // 1: ssn.mlservice.v2.FeatureGenRequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	16, // 2: ssn.mlservice.v2.PredictResponse.order_date:type_name -> ssn.type.Candidate
+	16, // 3: ssn.mlservice.v2.PredictResponse.payment_due_date:type_name -> ssn.type.Candidate
+	16, // 4: ssn.mlservice.v2.PredictResponse.currency:type_name -> ssn.type.Candidate
+	16, // 5: ssn.mlservice.v2.PredictResponse.total_vat:type_name -> ssn.type.Candidate
+	16, // 6: ssn.mlservice.v2.PredictResponse.total_incl_vat:type_name -> ssn.type.Candidate
+	16, // 7: ssn.mlservice.v2.PredictResponse.total_excl_vat:type_name -> ssn.type.Candidate
+	16, // 8: ssn.mlservice.v2.PredictResponse.supplier_corporate_id:type_name -> ssn.type.Candidate
+	16, // 9: ssn.mlservice.v2.PredictResponse.supplier_country_code:type_name -> ssn.type.Candidate
+	16, // 10: ssn.mlservice.v2.PredictResponse.document_type:type_name -> ssn.type.Candidate
+	16, // 11: ssn.mlservice.v2.PredictResponse.payment_method:type_name -> ssn.type.Candidate
+	16, // 12: ssn.mlservice.v2.PredictResponse.credit_card_number:type_name -> ssn.type.Candidate
+	16, // 13: ssn.mlservice.v2.PredictResponse.invoice_number:type_name -> ssn.type.Candidate
+	16, // 14: ssn.mlservice.v2.PredictResponse.ocr_line_dk_type:type_name -> ssn.type.Candidate
+	16, // 15: ssn.mlservice.v2.PredictResponse.ocr_line_dk_payment_id:type_name -> ssn.type.Candidate
+	16, // 16: ssn.mlservice.v2.PredictResponse.ocr_line_dk_creditor_id:type_name -> ssn.type.Candidate
+	16, // 17: ssn.mlservice.v2.PredictResponse.ocr_line_se_payment_id:type_name -> ssn.type.Candidate
+	16, // 18: ssn.mlservice.v2.PredictResponse.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.Candidate
+	16, // 19: ssn.mlservice.v2.PredictResponse.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.Candidate
+	16, // 20: ssn.mlservice.v2.PredictResponse.ocr_line_no_payment_id:type_name -> ssn.type.Candidate
+	16, // 21: ssn.mlservice.v2.PredictResponse.ocr_line_fi_payment_id:type_name -> ssn.type.Candidate
+	16, // 22: ssn.mlservice.v2.PredictResponse.ocr_line_nl_payment_id:type_name -> ssn.type.Candidate
+	16, // 23: ssn.mlservice.v2.PredictResponse.iban:type_name -> ssn.type.Candidate
+	17, // 24: ssn.mlservice.v2.PredictResponse.lines:type_name -> ssn.type.LineCandidate
+	16, // 25: ssn.mlservice.v2.PredictResponse.bank_account_number:type_name -> ssn.type.Candidate
+	16, // 26: ssn.mlservice.v2.PredictResponse.bank_registration_number:type_name -> ssn.type.Candidate
+	16, // 27: ssn.mlservice.v2.PredictResponse.bic:type_name -> ssn.type.Candidate
+	16, // 28: ssn.mlservice.v2.PredictResponse.document_number:type_name -> ssn.type.Candidate
+	16, // 29: ssn.mlservice.v2.PredictResponse.document_date:type_name -> ssn.type.Candidate
+	16, // 30: ssn.mlservice.v2.PredictResponse.order_number:type_name -> ssn.type.Candidate
+	16, // 31: ssn.mlservice.v2.PredictResponse.supplier_name:type_name -> ssn.type.Candidate
+	16, // 32: ssn.mlservice.v2.PredictResponse.supplier_vat_number:type_name -> ssn.type.Candidate
+	16, // 33: ssn.mlservice.v2.PredictResponse.supplier_organisation_number:type_name -> ssn.type.Candidate
+	16, // 34: ssn.mlservice.v2.PredictResponse.supplier_address:type_name -> ssn.type.Candidate
+	16, // 35: ssn.mlservice.v2.PredictResponse.credit_card_last_four:type_name -> ssn.type.Candidate
+	16, // 36: ssn.mlservice.v2.PredictResponse.customer_number:type_name -> ssn.type.Candidate
+	16, // 37: ssn.mlservice.v2.PredictResponse.receiver_order_number:type_name -> ssn.type.Candidate
+	16, // 38: ssn.mlservice.v2.PredictResponse.ocr_line_be_payment_id:type_name -> ssn.type.Candidate
+	16, // 39: ssn.mlservice.v2.PredictResponse.receiver_address:type_name -> ssn.type.Candidate
+	16, // 40: ssn.mlservice.v2.PredictResponse.receiver_country_code:type_name -> ssn.type.Candidate
+	16, // 41: ssn.mlservice.v2.PredictResponse.receiver_name:type_name -> ssn.type.Candidate
+	16, // 42: ssn.mlservice.v2.PredictResponse.receiver_vat_number:type_name -> ssn.type.Candidate
 	0,  // 43: ssn.mlservice.v2.FeatureGenPredictRequest.feature_gen_request:type_name -> ssn.mlservice.v2.FeatureGenRequest
 	2,  // 44: ssn.mlservice.v2.FeatureGenPredictRequest.predict_request:type_name -> ssn.mlservice.v2.PredictRequest
-	14, // 45: ssn.mlservice.v2.PurchaseLinesRequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	17, // 46: ssn.mlservice.v2.PurchaseLinesResponse.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
-	14, // 47: ssn.mlservice.v2.DocQARequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	18, // 48: ssn.mlservice.v2.DocQAResponse.answers:type_name -> ssn.type.AnswerCandidate
-	14, // 49: ssn.mlservice.v2.VatDistributionRequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	19, // 50: ssn.mlservice.v2.VatDistributionResponse.vat_distribution_candidates:type_name -> ssn.type.VatDistributionCandidate
-	20, // 51: ssn.mlservice.v2.SmartscanUltraRequest.document_annotator_response:type_name -> ssn.annotator.v1.DocumentAnnotatorResponse
-	20, // 52: ssn.mlservice.v2.SmartscanUltraResponse.document_annotator_response:type_name -> ssn.annotator.v1.DocumentAnnotatorResponse
-	21, // 53: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.order_date:type_name -> google.type.Date
-	21, // 54: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_due_date:type_name -> google.type.Date
-	21, // 55: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.document_date:type_name -> google.type.Date
-	0,  // 56: ssn.mlservice.v2.MlService.FeatureGen:input_type -> ssn.mlservice.v2.FeatureGenRequest
-	2,  // 57: ssn.mlservice.v2.MlService.Predict:input_type -> ssn.mlservice.v2.PredictRequest
-	4,  // 58: ssn.mlservice.v2.MlService.FeatureGenPredict:input_type -> ssn.mlservice.v2.FeatureGenPredictRequest
-	1,  // 59: ssn.mlservice.v2.MlService.FeatureGen:output_type -> ssn.mlservice.v2.FeatureGenResponse
-	3,  // 60: ssn.mlservice.v2.MlService.Predict:output_type -> ssn.mlservice.v2.PredictResponse
-	3,  // 61: ssn.mlservice.v2.MlService.FeatureGenPredict:output_type -> ssn.mlservice.v2.PredictResponse
-	59, // [59:62] is the sub-list for method output_type
-	56, // [56:59] is the sub-list for method input_type
-	56, // [56:56] is the sub-list for extension type_name
-	56, // [56:56] is the sub-list for extension extendee
-	0,  // [0:56] is the sub-list for field type_name
+	15, // 45: ssn.mlservice.v2.PurchaseLinesRequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	18, // 46: ssn.mlservice.v2.PurchaseLinesResponse.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
+	15, // 47: ssn.mlservice.v2.DocQARequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	19, // 48: ssn.mlservice.v2.DocQAResponse.answers:type_name -> ssn.type.AnswerCandidate
+	15, // 49: ssn.mlservice.v2.VatDistributionRequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	20, // 50: ssn.mlservice.v2.VatDistributionResponse.vat_distribution_candidates:type_name -> ssn.type.VatDistributionCandidate
+	21, // 51: ssn.mlservice.v2.SmartscanUltraRequest.document_annotator_response:type_name -> ssn.annotator.v1.DocumentAnnotatorResponse
+	21, // 52: ssn.mlservice.v2.SmartscanUltraResponse.document_annotator_response:type_name -> ssn.annotator.v1.DocumentAnnotatorResponse
+	13, // 53: ssn.mlservice.v2.SmartscanUltraResponse.ultra_metadata:type_name -> ssn.mlservice.v2.UltraMetadata
+	22, // 54: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.order_date:type_name -> google.type.Date
+	22, // 55: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_due_date:type_name -> google.type.Date
+	22, // 56: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.document_date:type_name -> google.type.Date
+	0,  // 57: ssn.mlservice.v2.MlService.FeatureGen:input_type -> ssn.mlservice.v2.FeatureGenRequest
+	2,  // 58: ssn.mlservice.v2.MlService.Predict:input_type -> ssn.mlservice.v2.PredictRequest
+	4,  // 59: ssn.mlservice.v2.MlService.FeatureGenPredict:input_type -> ssn.mlservice.v2.FeatureGenPredictRequest
+	1,  // 60: ssn.mlservice.v2.MlService.FeatureGen:output_type -> ssn.mlservice.v2.FeatureGenResponse
+	3,  // 61: ssn.mlservice.v2.MlService.Predict:output_type -> ssn.mlservice.v2.PredictResponse
+	3,  // 62: ssn.mlservice.v2.MlService.FeatureGenPredict:output_type -> ssn.mlservice.v2.PredictResponse
+	60, // [60:63] is the sub-list for method output_type
+	57, // [57:60] is the sub-list for method input_type
+	57, // [57:57] is the sub-list for extension type_name
+	57, // [57:57] is the sub-list for extension extendee
+	0,  // [0:57] is the sub-list for field type_name
 }
 
 func init() { file_ssn_mlservice_v2_mlservice_proto_init() }
@@ -2084,6 +2149,18 @@ func file_ssn_mlservice_v2_mlservice_proto_init() {
 			}
 		}
 		file_ssn_mlservice_v2_mlservice_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UltraMetadata); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_ssn_mlservice_v2_mlservice_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FeatureGenRequest_TruthLabels); i {
 			case 0:
 				return &v.state
@@ -2102,7 +2179,7 @@ func file_ssn_mlservice_v2_mlservice_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_ssn_mlservice_v2_mlservice_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   14,
+			NumMessages:   15,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

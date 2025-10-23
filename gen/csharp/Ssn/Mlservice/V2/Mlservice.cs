@@ -159,21 +159,24 @@ namespace Ssn.Mlservice.V2 {
             "cXVlc3QSawobZG9jdW1lbnRfYW5ub3RhdG9yX3Jlc3BvbnNlGAEgASgLMisu",
             "c3NuLmFubm90YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlc3BvbnNlUhlk",
             "b2N1bWVudEFubm90YXRvclJlc3BvbnNlEhYKBmltYWdlcxgCIAMoDFIGaW1h",
-            "Z2VzIqYBChZTbWFydHNjYW5VbHRyYVJlc3BvbnNlEmsKG2RvY3VtZW50X2Fu",
+            "Z2VzIs0BChZTbWFydHNjYW5VbHRyYVJlc3BvbnNlEmsKG2RvY3VtZW50X2Fu",
             "bm90YXRvcl9yZXNwb25zZRgBIAEoCzIrLnNzbi5hbm5vdGF0b3IudjEuRG9j",
             "dW1lbnRBbm5vdGF0b3JSZXNwb25zZVIZZG9jdW1lbnRBbm5vdGF0b3JSZXNw",
-            "b25zZRIfCgt0b2tlbl9jb3VudBgCIAEoBVIKdG9rZW5Db3VudDKYAgoJTWxT",
-            "ZXJ2aWNlElcKCkZlYXR1cmVHZW4SIy5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1",
-            "cmVHZW5SZXF1ZXN0GiQuc3NuLm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUmVz",
-            "cG9uc2USTgoHUHJlZGljdBIgLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJl",
-            "cXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZRJiChFG",
-            "ZWF0dXJlR2VuUHJlZGljdBIqLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdl",
-            "blByZWRpY3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVz",
-            "cG9uc2VCzQEKGWFpLnZpc21hLnNzbi5tbHNlcnZpY2UudjJCDk1sc2Vydmlj",
-            "ZVByb3RvUAFaPmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dv",
-            "L3Nzbi9tbHNlcnZpY2UvdjI7bWxzZXJ2aWNlogIDU01YqgIQU3NuLk1sc2Vy",
-            "dmljZS5WMsoCEFNzblxNbHNlcnZpY2VcVjLiAhxTc25cTWxzZXJ2aWNlXFYy",
-            "XEdQQk1ldGFkYXRh6gISU3NuOjpNbHNlcnZpY2U6OlYyYgZwcm90bzM="));
+            "b25zZRJGCg51bHRyYV9tZXRhZGF0YRgCIAEoCzIfLnNzbi5tbHNlcnZpY2Uu",
+            "djIuVWx0cmFNZXRhZGF0YVINdWx0cmFNZXRhZGF0YSJXCg1VbHRyYU1ldGFk",
+            "YXRhEiEKDHRvdGFsX3Rva2VucxgBIAEoBVILdG90YWxUb2tlbnMSIwoNcHJv",
+            "bXB0X3Rva2VucxgCIAEoBVIMcHJvbXB0VG9rZW5zMpgCCglNbFNlcnZpY2US",
+            "VwoKRmVhdHVyZUdlbhIjLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJl",
+            "cXVlc3QaJC5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5SZXNwb25zZRJO",
+            "CgdQcmVkaWN0EiAuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVxdWVzdBoh",
+            "LnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3BvbnNlEmIKEUZlYXR1cmVH",
+            "ZW5QcmVkaWN0Eiouc3NuLm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUHJlZGlj",
+            "dFJlcXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZULN",
+            "AQoZYWkudmlzbWEuc3NuLm1sc2VydmljZS52MkIOTWxzZXJ2aWNlUHJvdG9Q",
+            "AVo+Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL21s",
+            "c2VydmljZS92MjttbHNlcnZpY2WiAgNTTViqAhBTc24uTWxzZXJ2aWNlLlYy",
+            "ygIQU3NuXE1sc2VydmljZVxWMuICHFNzblxNbHNlcnZpY2VcVjJcR1BCTWV0",
+            "YWRhdGHqAhJTc246Ok1sc2VydmljZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -189,7 +192,8 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "CountryCode", "Images" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraRequest), global::Ssn.Mlservice.V2.SmartscanUltraRequest.Parser, new[]{ "DocumentAnnotatorResponse", "Images" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraResponse), global::Ssn.Mlservice.V2.SmartscanUltraResponse.Parser, new[]{ "DocumentAnnotatorResponse", "TokenCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraResponse), global::Ssn.Mlservice.V2.SmartscanUltraResponse.Parser, new[]{ "DocumentAnnotatorResponse", "UltraMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.UltraMetadata), global::Ssn.Mlservice.V2.UltraMetadata.Parser, new[]{ "TotalTokens", "PromptTokens" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5624,7 +5628,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartscanUltraResponse(SmartscanUltraResponse other) : this() {
       documentAnnotatorResponse_ = other.documentAnnotatorResponse_ != null ? other.documentAnnotatorResponse_.Clone() : null;
-      tokenCount_ = other.tokenCount_;
+      ultraMetadata_ = other.ultraMetadata_ != null ? other.ultraMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5646,15 +5650,15 @@ namespace Ssn.Mlservice.V2 {
       }
     }
 
-    /// <summary>Field number for the "token_count" field.</summary>
-    public const int TokenCountFieldNumber = 2;
-    private int tokenCount_;
+    /// <summary>Field number for the "ultra_metadata" field.</summary>
+    public const int UltraMetadataFieldNumber = 2;
+    private global::Ssn.Mlservice.V2.UltraMetadata ultraMetadata_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TokenCount {
-      get { return tokenCount_; }
+    public global::Ssn.Mlservice.V2.UltraMetadata UltraMetadata {
+      get { return ultraMetadata_; }
       set {
-        tokenCount_ = value;
+        ultraMetadata_ = value;
       }
     }
 
@@ -5674,7 +5678,7 @@ namespace Ssn.Mlservice.V2 {
         return true;
       }
       if (!object.Equals(DocumentAnnotatorResponse, other.DocumentAnnotatorResponse)) return false;
-      if (TokenCount != other.TokenCount) return false;
+      if (!object.Equals(UltraMetadata, other.UltraMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5683,7 +5687,7 @@ namespace Ssn.Mlservice.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (documentAnnotatorResponse_ != null) hash ^= DocumentAnnotatorResponse.GetHashCode();
-      if (TokenCount != 0) hash ^= TokenCount.GetHashCode();
+      if (ultraMetadata_ != null) hash ^= UltraMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5706,9 +5710,9 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(DocumentAnnotatorResponse);
       }
-      if (TokenCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TokenCount);
+      if (ultraMetadata_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UltraMetadata);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5724,9 +5728,9 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(DocumentAnnotatorResponse);
       }
-      if (TokenCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(TokenCount);
+      if (ultraMetadata_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UltraMetadata);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5741,8 +5745,8 @@ namespace Ssn.Mlservice.V2 {
       if (documentAnnotatorResponse_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentAnnotatorResponse);
       }
-      if (TokenCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TokenCount);
+      if (ultraMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UltraMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5762,8 +5766,11 @@ namespace Ssn.Mlservice.V2 {
         }
         DocumentAnnotatorResponse.MergeFrom(other.DocumentAnnotatorResponse);
       }
-      if (other.TokenCount != 0) {
-        TokenCount = other.TokenCount;
+      if (other.ultraMetadata_ != null) {
+        if (ultraMetadata_ == null) {
+          UltraMetadata = new global::Ssn.Mlservice.V2.UltraMetadata();
+        }
+        UltraMetadata.MergeFrom(other.UltraMetadata);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5791,8 +5798,11 @@ namespace Ssn.Mlservice.V2 {
             input.ReadMessage(DocumentAnnotatorResponse);
             break;
           }
-          case 16: {
-            TokenCount = input.ReadInt32();
+          case 18: {
+            if (ultraMetadata_ == null) {
+              UltraMetadata = new global::Ssn.Mlservice.V2.UltraMetadata();
+            }
+            input.ReadMessage(UltraMetadata);
             break;
           }
         }
@@ -5821,8 +5831,246 @@ namespace Ssn.Mlservice.V2 {
             input.ReadMessage(DocumentAnnotatorResponse);
             break;
           }
+          case 18: {
+            if (ultraMetadata_ == null) {
+              UltraMetadata = new global::Ssn.Mlservice.V2.UltraMetadata();
+            }
+            input.ReadMessage(UltraMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UltraMetadata : pb::IMessage<UltraMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UltraMetadata> _parser = new pb::MessageParser<UltraMetadata>(() => new UltraMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UltraMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Mlservice.V2.MlserviceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UltraMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UltraMetadata(UltraMetadata other) : this() {
+      totalTokens_ = other.totalTokens_;
+      promptTokens_ = other.promptTokens_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UltraMetadata Clone() {
+      return new UltraMetadata(this);
+    }
+
+    /// <summary>Field number for the "total_tokens" field.</summary>
+    public const int TotalTokensFieldNumber = 1;
+    private int totalTokens_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalTokens {
+      get { return totalTokens_; }
+      set {
+        totalTokens_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "prompt_tokens" field.</summary>
+    public const int PromptTokensFieldNumber = 2;
+    private int promptTokens_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PromptTokens {
+      get { return promptTokens_; }
+      set {
+        promptTokens_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UltraMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UltraMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TotalTokens != other.TotalTokens) return false;
+      if (PromptTokens != other.PromptTokens) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TotalTokens != 0) hash ^= TotalTokens.GetHashCode();
+      if (PromptTokens != 0) hash ^= PromptTokens.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TotalTokens != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TotalTokens);
+      }
+      if (PromptTokens != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PromptTokens);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TotalTokens != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TotalTokens);
+      }
+      if (PromptTokens != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PromptTokens);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TotalTokens != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalTokens);
+      }
+      if (PromptTokens != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PromptTokens);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UltraMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TotalTokens != 0) {
+        TotalTokens = other.TotalTokens;
+      }
+      if (other.PromptTokens != 0) {
+        PromptTokens = other.PromptTokens;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TotalTokens = input.ReadInt32();
+            break;
+          }
           case 16: {
-            TokenCount = input.ReadInt32();
+            PromptTokens = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TotalTokens = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PromptTokens = input.ReadInt32();
             break;
           }
         }

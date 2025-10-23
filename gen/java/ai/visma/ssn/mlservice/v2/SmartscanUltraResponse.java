@@ -69,15 +69,30 @@ private static final long serialVersionUID = 0L;
     return documentAnnotatorResponse_ == null ? ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse.getDefaultInstance() : documentAnnotatorResponse_;
   }
 
-  public static final int TOKEN_COUNT_FIELD_NUMBER = 2;
-  private int tokenCount_ = 0;
+  public static final int ULTRA_METADATA_FIELD_NUMBER = 2;
+  private ai.visma.ssn.mlservice.v2.UltraMetadata ultraMetadata_;
   /**
-   * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
-   * @return The tokenCount.
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   * @return Whether the ultraMetadata field is set.
    */
   @java.lang.Override
-  public int getTokenCount() {
-    return tokenCount_;
+  public boolean hasUltraMetadata() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   * @return The ultraMetadata.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.mlservice.v2.UltraMetadata getUltraMetadata() {
+    return ultraMetadata_ == null ? ai.visma.ssn.mlservice.v2.UltraMetadata.getDefaultInstance() : ultraMetadata_;
+  }
+  /**
+   * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder getUltraMetadataOrBuilder() {
+    return ultraMetadata_ == null ? ai.visma.ssn.mlservice.v2.UltraMetadata.getDefaultInstance() : ultraMetadata_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,8 +112,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getDocumentAnnotatorResponse());
     }
-    if (tokenCount_ != 0) {
-      output.writeInt32(2, tokenCount_);
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(2, getUltraMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -113,9 +128,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDocumentAnnotatorResponse());
     }
-    if (tokenCount_ != 0) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, tokenCount_);
+        .computeMessageSize(2, getUltraMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -137,8 +152,11 @@ private static final long serialVersionUID = 0L;
       if (!getDocumentAnnotatorResponse()
           .equals(other.getDocumentAnnotatorResponse())) return false;
     }
-    if (getTokenCount()
-        != other.getTokenCount()) return false;
+    if (hasUltraMetadata() != other.hasUltraMetadata()) return false;
+    if (hasUltraMetadata()) {
+      if (!getUltraMetadata()
+          .equals(other.getUltraMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -154,8 +172,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DOCUMENT_ANNOTATOR_RESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentAnnotatorResponse().hashCode();
     }
-    hash = (37 * hash) + TOKEN_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + getTokenCount();
+    if (hasUltraMetadata()) {
+      hash = (37 * hash) + ULTRA_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getUltraMetadata().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -287,6 +307,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getDocumentAnnotatorResponseFieldBuilder();
+        getUltraMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -298,7 +319,11 @@ private static final long serialVersionUID = 0L;
         documentAnnotatorResponseBuilder_.dispose();
         documentAnnotatorResponseBuilder_ = null;
       }
-      tokenCount_ = 0;
+      ultraMetadata_ = null;
+      if (ultraMetadataBuilder_ != null) {
+        ultraMetadataBuilder_.dispose();
+        ultraMetadataBuilder_ = null;
+      }
       return this;
     }
 
@@ -340,7 +365,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.tokenCount_ = tokenCount_;
+        result.ultraMetadata_ = ultraMetadataBuilder_ == null
+            ? ultraMetadata_
+            : ultraMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -360,8 +388,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasDocumentAnnotatorResponse()) {
         mergeDocumentAnnotatorResponse(other.getDocumentAnnotatorResponse());
       }
-      if (other.getTokenCount() != 0) {
-        setTokenCount(other.getTokenCount());
+      if (other.hasUltraMetadata()) {
+        mergeUltraMetadata(other.getUltraMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -396,11 +424,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              tokenCount_ = input.readInt32();
+            case 18: {
+              input.readMessage(
+                  getUltraMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -539,36 +569,125 @@ private static final long serialVersionUID = 0L;
       return documentAnnotatorResponseBuilder_;
     }
 
-    private int tokenCount_ ;
+    private ai.visma.ssn.mlservice.v2.UltraMetadata ultraMetadata_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.mlservice.v2.UltraMetadata, ai.visma.ssn.mlservice.v2.UltraMetadata.Builder, ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder> ultraMetadataBuilder_;
     /**
-     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
-     * @return The tokenCount.
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     * @return Whether the ultraMetadata field is set.
      */
-    @java.lang.Override
-    public int getTokenCount() {
-      return tokenCount_;
+    public boolean hasUltraMetadata() {
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
-     * @param value The tokenCount to set.
-     * @return This builder for chaining.
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     * @return The ultraMetadata.
      */
-    public Builder setTokenCount(int value) {
-
-      tokenCount_ = value;
+    public ai.visma.ssn.mlservice.v2.UltraMetadata getUltraMetadata() {
+      if (ultraMetadataBuilder_ == null) {
+        return ultraMetadata_ == null ? ai.visma.ssn.mlservice.v2.UltraMetadata.getDefaultInstance() : ultraMetadata_;
+      } else {
+        return ultraMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    public Builder setUltraMetadata(ai.visma.ssn.mlservice.v2.UltraMetadata value) {
+      if (ultraMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ultraMetadata_ = value;
+      } else {
+        ultraMetadataBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
-     * @return This builder for chaining.
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
      */
-    public Builder clearTokenCount() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      tokenCount_ = 0;
+    public Builder setUltraMetadata(
+        ai.visma.ssn.mlservice.v2.UltraMetadata.Builder builderForValue) {
+      if (ultraMetadataBuilder_ == null) {
+        ultraMetadata_ = builderForValue.build();
+      } else {
+        ultraMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    public Builder mergeUltraMetadata(ai.visma.ssn.mlservice.v2.UltraMetadata value) {
+      if (ultraMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          ultraMetadata_ != null &&
+          ultraMetadata_ != ai.visma.ssn.mlservice.v2.UltraMetadata.getDefaultInstance()) {
+          getUltraMetadataBuilder().mergeFrom(value);
+        } else {
+          ultraMetadata_ = value;
+        }
+      } else {
+        ultraMetadataBuilder_.mergeFrom(value);
+      }
+      if (ultraMetadata_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    public Builder clearUltraMetadata() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      ultraMetadata_ = null;
+      if (ultraMetadataBuilder_ != null) {
+        ultraMetadataBuilder_.dispose();
+        ultraMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    public ai.visma.ssn.mlservice.v2.UltraMetadata.Builder getUltraMetadataBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getUltraMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    public ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder getUltraMetadataOrBuilder() {
+      if (ultraMetadataBuilder_ != null) {
+        return ultraMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return ultraMetadata_ == null ?
+            ai.visma.ssn.mlservice.v2.UltraMetadata.getDefaultInstance() : ultraMetadata_;
+      }
+    }
+    /**
+     * <code>.ssn.mlservice.v2.UltraMetadata ultra_metadata = 2 [json_name = "ultraMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.mlservice.v2.UltraMetadata, ai.visma.ssn.mlservice.v2.UltraMetadata.Builder, ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder> 
+        getUltraMetadataFieldBuilder() {
+      if (ultraMetadataBuilder_ == null) {
+        ultraMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.mlservice.v2.UltraMetadata, ai.visma.ssn.mlservice.v2.UltraMetadata.Builder, ai.visma.ssn.mlservice.v2.UltraMetadataOrBuilder>(
+                getUltraMetadata(),
+                getParentForChildren(),
+                isClean());
+        ultraMetadata_ = null;
+      }
+      return ultraMetadataBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.SmartscanUltraResponse)
