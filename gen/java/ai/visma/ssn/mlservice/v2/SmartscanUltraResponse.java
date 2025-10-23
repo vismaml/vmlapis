@@ -69,6 +69,17 @@ private static final long serialVersionUID = 0L;
     return documentAnnotatorResponse_ == null ? ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse.getDefaultInstance() : documentAnnotatorResponse_;
   }
 
+  public static final int TOKEN_COUNT_FIELD_NUMBER = 2;
+  private int tokenCount_ = 0;
+  /**
+   * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
+   * @return The tokenCount.
+   */
+  @java.lang.Override
+  public int getTokenCount() {
+    return tokenCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -86,6 +97,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getDocumentAnnotatorResponse());
     }
+    if (tokenCount_ != 0) {
+      output.writeInt32(2, tokenCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -98,6 +112,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDocumentAnnotatorResponse());
+    }
+    if (tokenCount_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, tokenCount_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -119,6 +137,8 @@ private static final long serialVersionUID = 0L;
       if (!getDocumentAnnotatorResponse()
           .equals(other.getDocumentAnnotatorResponse())) return false;
     }
+    if (getTokenCount()
+        != other.getTokenCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -134,6 +154,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DOCUMENT_ANNOTATOR_RESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentAnnotatorResponse().hashCode();
     }
+    hash = (37 * hash) + TOKEN_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getTokenCount();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -276,6 +298,7 @@ private static final long serialVersionUID = 0L;
         documentAnnotatorResponseBuilder_.dispose();
         documentAnnotatorResponseBuilder_ = null;
       }
+      tokenCount_ = 0;
       return this;
     }
 
@@ -316,6 +339,9 @@ private static final long serialVersionUID = 0L;
             : documentAnnotatorResponseBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.tokenCount_ = tokenCount_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -333,6 +359,9 @@ private static final long serialVersionUID = 0L;
       if (other == ai.visma.ssn.mlservice.v2.SmartscanUltraResponse.getDefaultInstance()) return this;
       if (other.hasDocumentAnnotatorResponse()) {
         mergeDocumentAnnotatorResponse(other.getDocumentAnnotatorResponse());
+      }
+      if (other.getTokenCount() != 0) {
+        setTokenCount(other.getTokenCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -367,6 +396,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              tokenCount_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -503,6 +537,38 @@ private static final long serialVersionUID = 0L;
         documentAnnotatorResponse_ = null;
       }
       return documentAnnotatorResponseBuilder_;
+    }
+
+    private int tokenCount_ ;
+    /**
+     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
+     * @return The tokenCount.
+     */
+    @java.lang.Override
+    public int getTokenCount() {
+      return tokenCount_;
+    }
+    /**
+     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
+     * @param value The tokenCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTokenCount(int value) {
+
+      tokenCount_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTokenCount() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      tokenCount_ = 0;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.SmartscanUltraResponse)

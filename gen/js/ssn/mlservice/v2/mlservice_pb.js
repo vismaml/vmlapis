@@ -6115,7 +6115,8 @@ proto.ssn.mlservice.v2.SmartscanUltraResponse.prototype.toObject = function(opt_
  */
 proto.ssn.mlservice.v2.SmartscanUltraResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    documentAnnotatorResponse: (f = msg.getDocumentAnnotatorResponse()) && ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.toObject(includeInstance, f)
+    documentAnnotatorResponse: (f = msg.getDocumentAnnotatorResponse()) && ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.toObject(includeInstance, f),
+    tokenCount: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
   if (includeInstance) {
@@ -6157,6 +6158,10 @@ proto.ssn.mlservice.v2.SmartscanUltraResponse.deserializeBinaryFromReader = func
       reader.readMessage(value,ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.deserializeBinaryFromReader);
       msg.setDocumentAnnotatorResponse(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTokenCount(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -6192,6 +6197,13 @@ proto.ssn.mlservice.v2.SmartscanUltraResponse.serializeBinaryToWriter = function
       1,
       f,
       ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.serializeBinaryToWriter
+    );
+  }
+  f = message.getTokenCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
     );
   }
 };
@@ -6231,6 +6243,24 @@ proto.ssn.mlservice.v2.SmartscanUltraResponse.prototype.clearDocumentAnnotatorRe
  */
 proto.ssn.mlservice.v2.SmartscanUltraResponse.prototype.hasDocumentAnnotatorResponse = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional int32 token_count = 2;
+ * @return {number}
+ */
+proto.ssn.mlservice.v2.SmartscanUltraResponse.prototype.getTokenCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.mlservice.v2.SmartscanUltraResponse} returns this
+ */
+proto.ssn.mlservice.v2.SmartscanUltraResponse.prototype.setTokenCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 

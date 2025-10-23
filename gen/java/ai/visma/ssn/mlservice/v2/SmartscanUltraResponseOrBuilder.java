@@ -23,4 +23,10 @@ public interface SmartscanUltraResponseOrBuilder extends
    * <code>.ssn.annotator.v1.DocumentAnnotatorResponse document_annotator_response = 1 [json_name = "documentAnnotatorResponse"];</code>
    */
   ai.visma.ssn.annotator.v1.DocumentAnnotatorResponseOrBuilder getDocumentAnnotatorResponseOrBuilder();
+
+  /**
+   * <code>int32 token_count = 2 [json_name = "tokenCount"];</code>
+   * @return The tokenCount.
+   */
+  int getTokenCount();
 }

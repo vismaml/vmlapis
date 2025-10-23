@@ -172,4 +172,5 @@ message SmartscanUltraRequest {
 
 message SmartscanUltraResponse {
   ssn.annotator.v1.DocumentAnnotatorResponse document_annotator_response = 1;
+  int32 token_count = 2;
 }

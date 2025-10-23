@@ -255,23 +255,24 @@ public final class MlserviceProto {
       "\234\001\n\025SmartscanUltraRequest\022k\n\033document_an" +
       "notator_response\030\001 \001(\0132+.ssn.annotator.v" +
       "1.DocumentAnnotatorResponseR\031documentAnn" +
-      "otatorResponse\022\026\n\006images\030\002 \003(\014R\006images\"\205" +
+      "otatorResponse\022\026\n\006images\030\002 \003(\014R\006images\"\246" +
       "\001\n\026SmartscanUltraResponse\022k\n\033document_an" +
       "notator_response\030\001 \001(\0132+.ssn.annotator.v" +
       "1.DocumentAnnotatorResponseR\031documentAnn" +
-      "otatorResponse2\230\002\n\tMlService\022W\n\nFeatureG" +
-      "en\022#.ssn.mlservice.v2.FeatureGenRequest\032" +
-      "$.ssn.mlservice.v2.FeatureGenResponse\022N\n" +
-      "\007Predict\022 .ssn.mlservice.v2.PredictReque" +
-      "st\032!.ssn.mlservice.v2.PredictResponse\022b\n" +
-      "\021FeatureGenPredict\022*.ssn.mlservice.v2.Fe" +
-      "atureGenPredictRequest\032!.ssn.mlservice.v" +
-      "2.PredictResponseB\315\001\n\031ai.visma.ssn.mlser" +
-      "vice.v2B\016MlserviceProtoP\001Z>github.com/e-" +
-      "conomic/vmlapis/gen/go/ssn/mlservice/v2;" +
-      "mlservice\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn" +
-      "\\Mlservice\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMeta" +
-      "data\352\002\022Ssn::Mlservice::V2b\006proto3"
+      "otatorResponse\022\037\n\013token_count\030\002 \001(\005R\ntok" +
+      "enCount2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ss" +
+      "n.mlservice.v2.FeatureGenRequest\032$.ssn.m" +
+      "lservice.v2.FeatureGenResponse\022N\n\007Predic" +
+      "t\022 .ssn.mlservice.v2.PredictRequest\032!.ss" +
+      "n.mlservice.v2.PredictResponse\022b\n\021Featur" +
+      "eGenPredict\022*.ssn.mlservice.v2.FeatureGe" +
+      "nPredictRequest\032!.ssn.mlservice.v2.Predi" +
+      "ctResponseB\315\001\n\031ai.visma.ssn.mlservice.v2" +
+      "B\016MlserviceProtoP\001Z>github.com/e-conomic" +
+      "/vmlapis/gen/go/ssn/mlservice/v2;mlservi" +
+      "ce\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlserv" +
+      "ice\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022" +
+      "Ssn::Mlservice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -364,7 +365,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_SmartscanUltraResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_SmartscanUltraResponse_descriptor,
-        new java.lang.String[] { "DocumentAnnotatorResponse", });
+        new java.lang.String[] { "DocumentAnnotatorResponse", "TokenCount", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.type.DateProto.getDescriptor();
     ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor();

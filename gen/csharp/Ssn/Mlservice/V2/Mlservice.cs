@@ -159,21 +159,21 @@ namespace Ssn.Mlservice.V2 {
             "cXVlc3QSawobZG9jdW1lbnRfYW5ub3RhdG9yX3Jlc3BvbnNlGAEgASgLMisu",
             "c3NuLmFubm90YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlc3BvbnNlUhlk",
             "b2N1bWVudEFubm90YXRvclJlc3BvbnNlEhYKBmltYWdlcxgCIAMoDFIGaW1h",
-            "Z2VzIoUBChZTbWFydHNjYW5VbHRyYVJlc3BvbnNlEmsKG2RvY3VtZW50X2Fu",
+            "Z2VzIqYBChZTbWFydHNjYW5VbHRyYVJlc3BvbnNlEmsKG2RvY3VtZW50X2Fu",
             "bm90YXRvcl9yZXNwb25zZRgBIAEoCzIrLnNzbi5hbm5vdGF0b3IudjEuRG9j",
             "dW1lbnRBbm5vdGF0b3JSZXNwb25zZVIZZG9jdW1lbnRBbm5vdGF0b3JSZXNw",
-            "b25zZTKYAgoJTWxTZXJ2aWNlElcKCkZlYXR1cmVHZW4SIy5zc24ubWxzZXJ2",
-            "aWNlLnYyLkZlYXR1cmVHZW5SZXF1ZXN0GiQuc3NuLm1sc2VydmljZS52Mi5G",
-            "ZWF0dXJlR2VuUmVzcG9uc2USTgoHUHJlZGljdBIgLnNzbi5tbHNlcnZpY2Uu",
-            "djIuUHJlZGljdFJlcXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RS",
-            "ZXNwb25zZRJiChFGZWF0dXJlR2VuUHJlZGljdBIqLnNzbi5tbHNlcnZpY2Uu",
-            "djIuRmVhdHVyZUdlblByZWRpY3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52",
-            "Mi5QcmVkaWN0UmVzcG9uc2VCzQEKGWFpLnZpc21hLnNzbi5tbHNlcnZpY2Uu",
-            "djJCDk1sc2VydmljZVByb3RvUAFaPmdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL3Nzbi9tbHNlcnZpY2UvdjI7bWxzZXJ2aWNlogIDU01Y",
-            "qgIQU3NuLk1sc2VydmljZS5WMsoCEFNzblxNbHNlcnZpY2VcVjLiAhxTc25c",
-            "TWxzZXJ2aWNlXFYyXEdQQk1ldGFkYXRh6gISU3NuOjpNbHNlcnZpY2U6OlYy",
-            "YgZwcm90bzM="));
+            "b25zZRIfCgt0b2tlbl9jb3VudBgCIAEoBVIKdG9rZW5Db3VudDKYAgoJTWxT",
+            "ZXJ2aWNlElcKCkZlYXR1cmVHZW4SIy5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1",
+            "cmVHZW5SZXF1ZXN0GiQuc3NuLm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUmVz",
+            "cG9uc2USTgoHUHJlZGljdBIgLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJl",
+            "cXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZRJiChFG",
+            "ZWF0dXJlR2VuUHJlZGljdBIqLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdl",
+            "blByZWRpY3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVz",
+            "cG9uc2VCzQEKGWFpLnZpc21hLnNzbi5tbHNlcnZpY2UudjJCDk1sc2Vydmlj",
+            "ZVByb3RvUAFaPmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dv",
+            "L3Nzbi9tbHNlcnZpY2UvdjI7bWxzZXJ2aWNlogIDU01YqgIQU3NuLk1sc2Vy",
+            "dmljZS5WMsoCEFNzblxNbHNlcnZpY2VcVjLiAhxTc25cTWxzZXJ2aWNlXFYy",
+            "XEdQQk1ldGFkYXRh6gISU3NuOjpNbHNlcnZpY2U6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -189,7 +189,7 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "CountryCode", "Images" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraRequest), global::Ssn.Mlservice.V2.SmartscanUltraRequest.Parser, new[]{ "DocumentAnnotatorResponse", "Images" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraResponse), global::Ssn.Mlservice.V2.SmartscanUltraResponse.Parser, new[]{ "DocumentAnnotatorResponse" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.SmartscanUltraResponse), global::Ssn.Mlservice.V2.SmartscanUltraResponse.Parser, new[]{ "DocumentAnnotatorResponse", "TokenCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5624,6 +5624,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartscanUltraResponse(SmartscanUltraResponse other) : this() {
       documentAnnotatorResponse_ = other.documentAnnotatorResponse_ != null ? other.documentAnnotatorResponse_.Clone() : null;
+      tokenCount_ = other.tokenCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5645,6 +5646,18 @@ namespace Ssn.Mlservice.V2 {
       }
     }
 
+    /// <summary>Field number for the "token_count" field.</summary>
+    public const int TokenCountFieldNumber = 2;
+    private int tokenCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TokenCount {
+      get { return tokenCount_; }
+      set {
+        tokenCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5661,6 +5674,7 @@ namespace Ssn.Mlservice.V2 {
         return true;
       }
       if (!object.Equals(DocumentAnnotatorResponse, other.DocumentAnnotatorResponse)) return false;
+      if (TokenCount != other.TokenCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5669,6 +5683,7 @@ namespace Ssn.Mlservice.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (documentAnnotatorResponse_ != null) hash ^= DocumentAnnotatorResponse.GetHashCode();
+      if (TokenCount != 0) hash ^= TokenCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5691,6 +5706,10 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(DocumentAnnotatorResponse);
       }
+      if (TokenCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TokenCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5705,6 +5724,10 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(DocumentAnnotatorResponse);
       }
+      if (TokenCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TokenCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5717,6 +5740,9 @@ namespace Ssn.Mlservice.V2 {
       int size = 0;
       if (documentAnnotatorResponse_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentAnnotatorResponse);
+      }
+      if (TokenCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TokenCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5735,6 +5761,9 @@ namespace Ssn.Mlservice.V2 {
           DocumentAnnotatorResponse = new global::Ssn.Annotator.V1.DocumentAnnotatorResponse();
         }
         DocumentAnnotatorResponse.MergeFrom(other.DocumentAnnotatorResponse);
+      }
+      if (other.TokenCount != 0) {
+        TokenCount = other.TokenCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5762,6 +5791,10 @@ namespace Ssn.Mlservice.V2 {
             input.ReadMessage(DocumentAnnotatorResponse);
             break;
           }
+          case 16: {
+            TokenCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -5786,6 +5819,10 @@ namespace Ssn.Mlservice.V2 {
               DocumentAnnotatorResponse = new global::Ssn.Annotator.V1.DocumentAnnotatorResponse();
             }
             input.ReadMessage(DocumentAnnotatorResponse);
+            break;
+          }
+          case 16: {
+            TokenCount = input.ReadInt32();
             break;
           }
         }

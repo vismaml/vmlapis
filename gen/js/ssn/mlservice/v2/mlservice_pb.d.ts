@@ -715,6 +715,9 @@ export class SmartscanUltraResponse extends jspb.Message {
   hasDocumentAnnotatorResponse(): boolean;
   clearDocumentAnnotatorResponse(): SmartscanUltraResponse;
 
+  getTokenCount(): number;
+  setTokenCount(value: number): SmartscanUltraResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SmartscanUltraResponse.AsObject;
   static toObject(includeInstance: boolean, msg: SmartscanUltraResponse): SmartscanUltraResponse.AsObject;
@@ -726,6 +729,7 @@ export class SmartscanUltraResponse extends jspb.Message {
 export namespace SmartscanUltraResponse {
   export type AsObject = {
     documentAnnotatorResponse?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.AsObject,
+    tokenCount: number,
   }
 }
 
