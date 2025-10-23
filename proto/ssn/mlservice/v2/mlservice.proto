@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.mlservice.v2;
 
 import "google/type/date.proto";
+import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 
@@ -137,6 +138,8 @@ message PurchaseLinesResponse {
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 1;
 }
 
+// Document Q&A API
+
 message DocQARequest {
   ssn.type.TextAnnotation text_annotation = 1;
   bytes image = 2;
@@ -147,6 +150,8 @@ message DocQAResponse {
   repeated ssn.type.AnswerCandidate answers = 1;
 }
 
+// VAT Distribution API
+
 message VatDistributionRequest {
   reserved 2;
   ssn.type.TextAnnotation text_annotation = 1;
@@ -156,4 +161,21 @@ message VatDistributionRequest {
 
 message VatDistributionResponse {
   repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 1;
+}
+
+// Smartscan Ultra API
+
+message SmartscanUltraRequest {
+  ssn.annotator.v1.DocumentAnnotatorResponse document_annotator_response = 1;
+  repeated bytes images = 2;
+}
+
+message SmartscanUltraResponse {
+  ssn.annotator.v1.DocumentAnnotatorResponse document_annotator_response = 1;
+  UltraMetadata ultra_metadata = 2;
+}
+
+message UltraMetadata {
+  int32 total_tokens = 1;
+  int32 prompt_tokens = 2;
 }
