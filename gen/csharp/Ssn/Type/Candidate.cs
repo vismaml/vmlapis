@@ -70,11 +70,39 @@ namespace Ssn.Type {
             "U3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgEIAEoDVIHcGFnZVJl",
             "ZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZhdBIZCghpbmNsX3ZhdBgGIAEo",
             "CVIHaW5jbFZhdCIxChBEb2N1bWVudE1ldGFkYXRhEh0KCnBhZ2VfY291bnQY",
-            "ASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
-            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
-            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
-            "Mw=="));
+            "ASABKA1SCXBhZ2VDb3VudCKuBwoMUHVyY2hhc2VMaW5lEhkKCHBhZ2VfcmVm",
+            "GAEgASgNUgdwYWdlUmVmEicKBGNvZGUYAiADKAsyEy5zc24udHlwZS5DYW5k",
+            "aWRhdGVSBGNvZGUSNQoLZGVzY3JpcHRpb24YAyADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSC2Rlc2NyaXB0aW9uEi8KCHF1YW50aXR5GAQgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlUghxdWFudGl0eRI0CgtpdGVtX251bWJlchgFIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIKaXRlbU51bWJlchInCgR1bml0GAYg",
+            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgR1bml0EjoKDnRvdGFsX2Rpc2Nv",
+            "dW50GAcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg10b3RhbERpc2NvdW50",
+            "EkQKE3BlcmNlbnRhZ2VfZGlzY291bnQYCCADKAsyEy5zc24udHlwZS5DYW5k",
+            "aWRhdGVSEnBlcmNlbnRhZ2VEaXNjb3VudBI5Cg50b3RhbF9pbmNsX3ZhdBgJ",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxJbmNsVmF0EjkKDnRv",
+            "dGFsX2V4Y2xfdmF0GAogAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3Rh",
+            "bEV4Y2xWYXQSMAoJdG90YWxfdmF0GAsgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUgh0b3RhbFZhdBI6Cg5wZXJjZW50YWdlX3ZhdBgMIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZVINcGVyY2VudGFnZVZhdBJCChN1bml0X3ByaWNlX2lu",
+            "Y2xfdmF0GA0gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhB1bml0UHJpY2VJ",
+            "bmNsVmF0EkIKE3VuaXRfcHJpY2VfZXhjbF92YXQYDiADKAsyEy5zc24udHlw",
+            "ZS5DYW5kaWRhdGVSEHVuaXRQcmljZUV4Y2xWYXQSKQoFdG90YWwYESADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSBXRvdGFsEjIKCnVuaXRfcHJpY2UYEiAD",
+            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCXVuaXRQcmljZRI6Cg5tb2RlbF9t",
+            "ZXRhZGF0YRgTIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRh",
+            "ZGF0YUoECA8QEEoECBAQESLFAgoPVmF0RGlzdHJpYnV0aW9uEjMKCnBlcmNl",
+            "bnRhZ2UYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCnBlcmNlbnRhZ2US",
+            "MAoJdG90YWxfdmF0GAIgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgh0b3Rh",
+            "bFZhdBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEoCzITLnNzbi50eXBlLk1vZGVs",
+            "U3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgEIAEoDVIHcGFnZVJl",
+            "ZhI5Cg50b3RhbF9leGNsX3ZhdBgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0",
+            "ZVIMdG90YWxFeGNsVmF0EjkKDnRvdGFsX2luY2xfdmF0GAYgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXRCmgEKEWFpLnZpc21hLnNz",
+            "bi50eXBlQg5DYW5kaWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RYqgIIU3Nu",
+            "LlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh6gIJU3Nu",
+            "OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +114,9 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "Percentage", "TotalVat", "ModelMetadata", "PageRef", "TotalExclVat", "TotalInclVat" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3518,6 +3548,1058 @@ namespace Ssn.Type {
             break;
           case 8: {
             PageCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PurchaseLine : pb::IMessage<PurchaseLine>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PurchaseLine> _parser = new pb::MessageParser<PurchaseLine>(() => new PurchaseLine());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PurchaseLine> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLine() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLine(PurchaseLine other) : this() {
+      pageRef_ = other.pageRef_;
+      code_ = other.code_.Clone();
+      description_ = other.description_.Clone();
+      quantity_ = other.quantity_.Clone();
+      itemNumber_ = other.itemNumber_.Clone();
+      unit_ = other.unit_.Clone();
+      totalDiscount_ = other.totalDiscount_.Clone();
+      percentageDiscount_ = other.percentageDiscount_.Clone();
+      totalInclVat_ = other.totalInclVat_.Clone();
+      totalExclVat_ = other.totalExclVat_.Clone();
+      totalVat_ = other.totalVat_.Clone();
+      percentageVat_ = other.percentageVat_.Clone();
+      unitPriceInclVat_ = other.unitPriceInclVat_.Clone();
+      unitPriceExclVat_ = other.unitPriceExclVat_.Clone();
+      total_ = other.total_.Clone();
+      unitPrice_ = other.unitPrice_.Clone();
+      modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLine Clone() {
+      return new PurchaseLine(this);
+    }
+
+    /// <summary>Field number for the "page_ref" field.</summary>
+    public const int PageRefFieldNumber = 1;
+    private uint pageRef_;
+    /// <summary>
+    /// A reference to the page where the line was found.
+    /// page_ref start from 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PageRef {
+      get { return pageRef_; }
+      set {
+        pageRef_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_code_codec
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> code_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Code is an ID that supplier uses to identify the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Code {
+      get { return code_; }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_description_codec
+        = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> description_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Description is a piece of text that describes the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Description {
+      get { return description_; }
+    }
+
+    /// <summary>Field number for the "quantity" field.</summary>
+    public const int QuantityFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_quantity_codec
+        = pb::FieldCodec.ForMessage(34, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> quantity_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Quantity is the number of items
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Quantity {
+      get { return quantity_; }
+    }
+
+    /// <summary>Field number for the "item_number" field.</summary>
+    public const int ItemNumberFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_itemNumber_codec
+        = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> itemNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// ItemNumber is the number of the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ItemNumber {
+      get { return itemNumber_; }
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_unit_codec
+        = pb::FieldCodec.ForMessage(50, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unit_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Unit is the unit of the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Unit {
+      get { return unit_; }
+    }
+
+    /// <summary>Field number for the "total_discount" field.</summary>
+    public const int TotalDiscountFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalDiscount_codec
+        = pb::FieldCodec.ForMessage(58, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Total discount is the total discount of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalDiscount {
+      get { return totalDiscount_; }
+    }
+
+    /// <summary>Field number for the "percentage_discount" field.</summary>
+    public const int PercentageDiscountFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_percentageDiscount_codec
+        = pb::FieldCodec.ForMessage(66, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentageDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Percentage discount is the percentage discount of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> PercentageDiscount {
+      get { return percentageDiscount_; }
+    }
+
+    /// <summary>Field number for the "total_incl_vat" field.</summary>
+    public const int TotalInclVatFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalInclVat_codec
+        = pb::FieldCodec.ForMessage(74, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Total incl vat is the total price of the line including vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalInclVat {
+      get { return totalInclVat_; }
+    }
+
+    /// <summary>Field number for the "total_excl_vat" field.</summary>
+    public const int TotalExclVatFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalExclVat_codec
+        = pb::FieldCodec.ForMessage(82, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Total excl vat is the total price of the line excluding vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalExclVat {
+      get { return totalExclVat_; }
+    }
+
+    /// <summary>Field number for the "total_vat" field.</summary>
+    public const int TotalVatFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalVat_codec
+        = pb::FieldCodec.ForMessage(90, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Total vat is the total vat of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalVat {
+      get { return totalVat_; }
+    }
+
+    /// <summary>Field number for the "percentage_vat" field.</summary>
+    public const int PercentageVatFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_percentageVat_codec
+        = pb::FieldCodec.ForMessage(98, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentageVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Percentage vat is the percentage vat of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> PercentageVat {
+      get { return percentageVat_; }
+    }
+
+    /// <summary>Field number for the "unit_price_incl_vat" field.</summary>
+    public const int UnitPriceInclVatFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_unitPriceInclVat_codec
+        = pb::FieldCodec.ForMessage(106, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPriceInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Unit price incl vat is the unit price of the line including vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> UnitPriceInclVat {
+      get { return unitPriceInclVat_; }
+    }
+
+    /// <summary>Field number for the "unit_price_excl_vat" field.</summary>
+    public const int UnitPriceExclVatFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_unitPriceExclVat_codec
+        = pb::FieldCodec.ForMessage(114, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPriceExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Unit price excl vat is the unit price of the line excluding vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> UnitPriceExclVat {
+      get { return unitPriceExclVat_; }
+    }
+
+    /// <summary>Field number for the "total" field.</summary>
+    public const int TotalFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_total_codec
+        = pb::FieldCodec.ForMessage(138, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> total_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Total is the total price of the line (with/without vat)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Total {
+      get { return total_; }
+    }
+
+    /// <summary>Field number for the "unit_price" field.</summary>
+    public const int UnitPriceFieldNumber = 18;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_unitPrice_codec
+        = pb::FieldCodec.ForMessage(146, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPrice_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Unit price is the unit price of the line (with/without vat)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> UnitPrice {
+      get { return unitPrice_; }
+    }
+
+    /// <summary>Field number for the "model_metadata" field.</summary>
+    public const int ModelMetadataFieldNumber = 19;
+    private global::Ssn.Type.ModelSpec modelMetadata_;
+    /// <summary>
+    /// Model metadata
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.ModelSpec ModelMetadata {
+      get { return modelMetadata_; }
+      set {
+        modelMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PurchaseLine);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PurchaseLine other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PageRef != other.PageRef) return false;
+      if(!code_.Equals(other.code_)) return false;
+      if(!description_.Equals(other.description_)) return false;
+      if(!quantity_.Equals(other.quantity_)) return false;
+      if(!itemNumber_.Equals(other.itemNumber_)) return false;
+      if(!unit_.Equals(other.unit_)) return false;
+      if(!totalDiscount_.Equals(other.totalDiscount_)) return false;
+      if(!percentageDiscount_.Equals(other.percentageDiscount_)) return false;
+      if(!totalInclVat_.Equals(other.totalInclVat_)) return false;
+      if(!totalExclVat_.Equals(other.totalExclVat_)) return false;
+      if(!totalVat_.Equals(other.totalVat_)) return false;
+      if(!percentageVat_.Equals(other.percentageVat_)) return false;
+      if(!unitPriceInclVat_.Equals(other.unitPriceInclVat_)) return false;
+      if(!unitPriceExclVat_.Equals(other.unitPriceExclVat_)) return false;
+      if(!total_.Equals(other.total_)) return false;
+      if(!unitPrice_.Equals(other.unitPrice_)) return false;
+      if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      hash ^= code_.GetHashCode();
+      hash ^= description_.GetHashCode();
+      hash ^= quantity_.GetHashCode();
+      hash ^= itemNumber_.GetHashCode();
+      hash ^= unit_.GetHashCode();
+      hash ^= totalDiscount_.GetHashCode();
+      hash ^= percentageDiscount_.GetHashCode();
+      hash ^= totalInclVat_.GetHashCode();
+      hash ^= totalExclVat_.GetHashCode();
+      hash ^= totalVat_.GetHashCode();
+      hash ^= percentageVat_.GetHashCode();
+      hash ^= unitPriceInclVat_.GetHashCode();
+      hash ^= unitPriceExclVat_.GetHashCode();
+      hash ^= total_.GetHashCode();
+      hash ^= unitPrice_.GetHashCode();
+      if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PageRef != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PageRef);
+      }
+      code_.WriteTo(output, _repeated_code_codec);
+      description_.WriteTo(output, _repeated_description_codec);
+      quantity_.WriteTo(output, _repeated_quantity_codec);
+      itemNumber_.WriteTo(output, _repeated_itemNumber_codec);
+      unit_.WriteTo(output, _repeated_unit_codec);
+      totalDiscount_.WriteTo(output, _repeated_totalDiscount_codec);
+      percentageDiscount_.WriteTo(output, _repeated_percentageDiscount_codec);
+      totalInclVat_.WriteTo(output, _repeated_totalInclVat_codec);
+      totalExclVat_.WriteTo(output, _repeated_totalExclVat_codec);
+      totalVat_.WriteTo(output, _repeated_totalVat_codec);
+      percentageVat_.WriteTo(output, _repeated_percentageVat_codec);
+      unitPriceInclVat_.WriteTo(output, _repeated_unitPriceInclVat_codec);
+      unitPriceExclVat_.WriteTo(output, _repeated_unitPriceExclVat_codec);
+      total_.WriteTo(output, _repeated_total_codec);
+      unitPrice_.WriteTo(output, _repeated_unitPrice_codec);
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PageRef != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PageRef);
+      }
+      code_.WriteTo(ref output, _repeated_code_codec);
+      description_.WriteTo(ref output, _repeated_description_codec);
+      quantity_.WriteTo(ref output, _repeated_quantity_codec);
+      itemNumber_.WriteTo(ref output, _repeated_itemNumber_codec);
+      unit_.WriteTo(ref output, _repeated_unit_codec);
+      totalDiscount_.WriteTo(ref output, _repeated_totalDiscount_codec);
+      percentageDiscount_.WriteTo(ref output, _repeated_percentageDiscount_codec);
+      totalInclVat_.WriteTo(ref output, _repeated_totalInclVat_codec);
+      totalExclVat_.WriteTo(ref output, _repeated_totalExclVat_codec);
+      totalVat_.WriteTo(ref output, _repeated_totalVat_codec);
+      percentageVat_.WriteTo(ref output, _repeated_percentageVat_codec);
+      unitPriceInclVat_.WriteTo(ref output, _repeated_unitPriceInclVat_codec);
+      unitPriceExclVat_.WriteTo(ref output, _repeated_unitPriceExclVat_codec);
+      total_.WriteTo(ref output, _repeated_total_codec);
+      unitPrice_.WriteTo(ref output, _repeated_unitPrice_codec);
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PageRef != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      size += code_.CalculateSize(_repeated_code_codec);
+      size += description_.CalculateSize(_repeated_description_codec);
+      size += quantity_.CalculateSize(_repeated_quantity_codec);
+      size += itemNumber_.CalculateSize(_repeated_itemNumber_codec);
+      size += unit_.CalculateSize(_repeated_unit_codec);
+      size += totalDiscount_.CalculateSize(_repeated_totalDiscount_codec);
+      size += percentageDiscount_.CalculateSize(_repeated_percentageDiscount_codec);
+      size += totalInclVat_.CalculateSize(_repeated_totalInclVat_codec);
+      size += totalExclVat_.CalculateSize(_repeated_totalExclVat_codec);
+      size += totalVat_.CalculateSize(_repeated_totalVat_codec);
+      size += percentageVat_.CalculateSize(_repeated_percentageVat_codec);
+      size += unitPriceInclVat_.CalculateSize(_repeated_unitPriceInclVat_codec);
+      size += unitPriceExclVat_.CalculateSize(_repeated_unitPriceExclVat_codec);
+      size += total_.CalculateSize(_repeated_total_codec);
+      size += unitPrice_.CalculateSize(_repeated_unitPrice_codec);
+      if (modelMetadata_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PurchaseLine other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PageRef != 0) {
+        PageRef = other.PageRef;
+      }
+      code_.Add(other.code_);
+      description_.Add(other.description_);
+      quantity_.Add(other.quantity_);
+      itemNumber_.Add(other.itemNumber_);
+      unit_.Add(other.unit_);
+      totalDiscount_.Add(other.totalDiscount_);
+      percentageDiscount_.Add(other.percentageDiscount_);
+      totalInclVat_.Add(other.totalInclVat_);
+      totalExclVat_.Add(other.totalExclVat_);
+      totalVat_.Add(other.totalVat_);
+      percentageVat_.Add(other.percentageVat_);
+      unitPriceInclVat_.Add(other.unitPriceInclVat_);
+      unitPriceExclVat_.Add(other.unitPriceExclVat_);
+      total_.Add(other.total_);
+      unitPrice_.Add(other.unitPrice_);
+      if (other.modelMetadata_ != null) {
+        if (modelMetadata_ == null) {
+          ModelMetadata = new global::Ssn.Type.ModelSpec();
+        }
+        ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            code_.AddEntriesFrom(input, _repeated_code_codec);
+            break;
+          }
+          case 26: {
+            description_.AddEntriesFrom(input, _repeated_description_codec);
+            break;
+          }
+          case 34: {
+            quantity_.AddEntriesFrom(input, _repeated_quantity_codec);
+            break;
+          }
+          case 42: {
+            itemNumber_.AddEntriesFrom(input, _repeated_itemNumber_codec);
+            break;
+          }
+          case 50: {
+            unit_.AddEntriesFrom(input, _repeated_unit_codec);
+            break;
+          }
+          case 58: {
+            totalDiscount_.AddEntriesFrom(input, _repeated_totalDiscount_codec);
+            break;
+          }
+          case 66: {
+            percentageDiscount_.AddEntriesFrom(input, _repeated_percentageDiscount_codec);
+            break;
+          }
+          case 74: {
+            totalInclVat_.AddEntriesFrom(input, _repeated_totalInclVat_codec);
+            break;
+          }
+          case 82: {
+            totalExclVat_.AddEntriesFrom(input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 90: {
+            totalVat_.AddEntriesFrom(input, _repeated_totalVat_codec);
+            break;
+          }
+          case 98: {
+            percentageVat_.AddEntriesFrom(input, _repeated_percentageVat_codec);
+            break;
+          }
+          case 106: {
+            unitPriceInclVat_.AddEntriesFrom(input, _repeated_unitPriceInclVat_codec);
+            break;
+          }
+          case 114: {
+            unitPriceExclVat_.AddEntriesFrom(input, _repeated_unitPriceExclVat_codec);
+            break;
+          }
+          case 138: {
+            total_.AddEntriesFrom(input, _repeated_total_codec);
+            break;
+          }
+          case 146: {
+            unitPrice_.AddEntriesFrom(input, _repeated_unitPrice_codec);
+            break;
+          }
+          case 154: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            code_.AddEntriesFrom(ref input, _repeated_code_codec);
+            break;
+          }
+          case 26: {
+            description_.AddEntriesFrom(ref input, _repeated_description_codec);
+            break;
+          }
+          case 34: {
+            quantity_.AddEntriesFrom(ref input, _repeated_quantity_codec);
+            break;
+          }
+          case 42: {
+            itemNumber_.AddEntriesFrom(ref input, _repeated_itemNumber_codec);
+            break;
+          }
+          case 50: {
+            unit_.AddEntriesFrom(ref input, _repeated_unit_codec);
+            break;
+          }
+          case 58: {
+            totalDiscount_.AddEntriesFrom(ref input, _repeated_totalDiscount_codec);
+            break;
+          }
+          case 66: {
+            percentageDiscount_.AddEntriesFrom(ref input, _repeated_percentageDiscount_codec);
+            break;
+          }
+          case 74: {
+            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
+            break;
+          }
+          case 82: {
+            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 90: {
+            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
+            break;
+          }
+          case 98: {
+            percentageVat_.AddEntriesFrom(ref input, _repeated_percentageVat_codec);
+            break;
+          }
+          case 106: {
+            unitPriceInclVat_.AddEntriesFrom(ref input, _repeated_unitPriceInclVat_codec);
+            break;
+          }
+          case 114: {
+            unitPriceExclVat_.AddEntriesFrom(ref input, _repeated_unitPriceExclVat_codec);
+            break;
+          }
+          case 138: {
+            total_.AddEntriesFrom(ref input, _repeated_total_codec);
+            break;
+          }
+          case 146: {
+            unitPrice_.AddEntriesFrom(ref input, _repeated_unitPrice_codec);
+            break;
+          }
+          case 154: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VatDistribution : pb::IMessage<VatDistribution>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VatDistribution> _parser = new pb::MessageParser<VatDistribution>(() => new VatDistribution());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VatDistribution> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatDistribution() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatDistribution(VatDistribution other) : this() {
+      percentage_ = other.percentage_.Clone();
+      totalVat_ = other.totalVat_.Clone();
+      modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      pageRef_ = other.pageRef_;
+      totalExclVat_ = other.totalExclVat_.Clone();
+      totalInclVat_ = other.totalInclVat_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatDistribution Clone() {
+      return new VatDistribution(this);
+    }
+
+    /// <summary>Field number for the "percentage" field.</summary>
+    public const int PercentageFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_percentage_codec
+        = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentage_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// The vat distribution candidate percentage
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Percentage {
+      get { return percentage_; }
+    }
+
+    /// <summary>Field number for the "total_vat" field.</summary>
+    public const int TotalVatFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalVat_codec
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// The vat distribution candidate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalVat {
+      get { return totalVat_; }
+    }
+
+    /// <summary>Field number for the "model_metadata" field.</summary>
+    public const int ModelMetadataFieldNumber = 3;
+    private global::Ssn.Type.ModelSpec modelMetadata_;
+    /// <summary>
+    /// Model metadata
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.ModelSpec ModelMetadata {
+      get { return modelMetadata_; }
+      set {
+        modelMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_ref" field.</summary>
+    public const int PageRefFieldNumber = 4;
+    private uint pageRef_;
+    /// <summary>
+    /// A reference to the page where the candidate was found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PageRef {
+      get { return pageRef_; }
+      set {
+        pageRef_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_excl_vat" field.</summary>
+    public const int TotalExclVatFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalExclVat_codec
+        = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// The vat distribution candidate excl vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalExclVat {
+      get { return totalExclVat_; }
+    }
+
+    /// <summary>Field number for the "total_incl_vat" field.</summary>
+    public const int TotalInclVatFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalInclVat_codec
+        = pb::FieldCodec.ForMessage(50, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// The vat distribution candidate incl vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalInclVat {
+      get { return totalInclVat_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VatDistribution);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VatDistribution other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!percentage_.Equals(other.percentage_)) return false;
+      if(!totalVat_.Equals(other.totalVat_)) return false;
+      if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (PageRef != other.PageRef) return false;
+      if(!totalExclVat_.Equals(other.totalExclVat_)) return false;
+      if(!totalInclVat_.Equals(other.totalInclVat_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= percentage_.GetHashCode();
+      hash ^= totalVat_.GetHashCode();
+      if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      hash ^= totalExclVat_.GetHashCode();
+      hash ^= totalInclVat_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      percentage_.WriteTo(output, _repeated_percentage_codec);
+      totalVat_.WriteTo(output, _repeated_totalVat_codec);
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (PageRef != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PageRef);
+      }
+      totalExclVat_.WriteTo(output, _repeated_totalExclVat_codec);
+      totalInclVat_.WriteTo(output, _repeated_totalInclVat_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      percentage_.WriteTo(ref output, _repeated_percentage_codec);
+      totalVat_.WriteTo(ref output, _repeated_totalVat_codec);
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (PageRef != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PageRef);
+      }
+      totalExclVat_.WriteTo(ref output, _repeated_totalExclVat_codec);
+      totalInclVat_.WriteTo(ref output, _repeated_totalInclVat_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += percentage_.CalculateSize(_repeated_percentage_codec);
+      size += totalVat_.CalculateSize(_repeated_totalVat_codec);
+      if (modelMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (PageRef != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      size += totalExclVat_.CalculateSize(_repeated_totalExclVat_codec);
+      size += totalInclVat_.CalculateSize(_repeated_totalInclVat_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VatDistribution other) {
+      if (other == null) {
+        return;
+      }
+      percentage_.Add(other.percentage_);
+      totalVat_.Add(other.totalVat_);
+      if (other.modelMetadata_ != null) {
+        if (modelMetadata_ == null) {
+          ModelMetadata = new global::Ssn.Type.ModelSpec();
+        }
+        ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.PageRef != 0) {
+        PageRef = other.PageRef;
+      }
+      totalExclVat_.Add(other.totalExclVat_);
+      totalInclVat_.Add(other.totalInclVat_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            percentage_.AddEntriesFrom(input, _repeated_percentage_codec);
+            break;
+          }
+          case 18: {
+            totalVat_.AddEntriesFrom(input, _repeated_totalVat_codec);
+            break;
+          }
+          case 26: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 32: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            totalExclVat_.AddEntriesFrom(input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 50: {
+            totalInclVat_.AddEntriesFrom(input, _repeated_totalInclVat_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            percentage_.AddEntriesFrom(ref input, _repeated_percentage_codec);
+            break;
+          }
+          case 18: {
+            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
+            break;
+          }
+          case 26: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 32: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 50: {
+            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
             break;
           }
         }

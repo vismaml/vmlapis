@@ -126,6 +126,8 @@ message Annotation {
   repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates
   repeated ssn.type.QrCodeData qr_codes = 8; // qr codes detected in document
   repeated ssn.type.SwissQrBill swiss_qr_bills = 9; // swiss qr bills detected in document
+  repeated ssn.type.PurchaseLine purchase_lines = 10; // purchase lines
+  repeated ssn.type.VatDistribution vat_distribution = 11; // vat distribution
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

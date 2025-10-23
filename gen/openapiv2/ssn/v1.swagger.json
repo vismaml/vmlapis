@@ -690,6 +690,22 @@
             "$ref": "#/definitions/typeSwissQrBill"
           },
           "title": "swiss qr bills detected in document"
+        },
+        "purchaseLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLine"
+          },
+          "title": "purchase lines"
+        },
+        "vatDistribution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistribution"
+          },
+          "title": "vat distribution"
         }
       }
     },
@@ -1093,6 +1109,140 @@
       },
       "description": "Structural unit of text representing a number of words in certain order."
     },
+    "typePurchaseLine": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+        },
+        "code": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Code is an ID that supplier uses to identify the item"
+        },
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Description is a piece of text that describes the item"
+        },
+        "quantity": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Quantity is the number of items"
+        },
+        "itemNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "ItemNumber is the number of the item"
+        },
+        "unit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit is the unit of the item"
+        },
+        "totalDiscount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total discount is the total discount of the line"
+        },
+        "percentageDiscount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Percentage discount is the percentage discount of the line"
+        },
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total incl vat is the total price of the line including vat"
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total excl vat is the total price of the line excluding vat"
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total vat is the total vat of the line"
+        },
+        "percentageVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Percentage vat is the percentage vat of the line"
+        },
+        "unitPriceInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price incl vat is the unit price of the line including vat"
+        },
+        "unitPriceExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price excl vat is the unit price of the line excluding vat"
+        },
+        "total": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Total is the total price of the line (with/without vat)"
+        },
+        "unitPrice": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Unit price is the unit price of the line (with/without vat)"
+        },
+        "modelMetadata": {
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model metadata"
+        }
+      }
+    },
     "typePurchaseLineCandidate": {
       "type": "object",
       "properties": {
@@ -1333,6 +1483,52 @@
       ],
       "default": "DEFAULT",
       "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
+    },
+    "typeVatDistribution": {
+      "type": "object",
+      "properties": {
+        "percentage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate percentage"
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate"
+        },
+        "modelMetadata": {
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model metadata"
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate excl vat"
+        },
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate incl vat"
+        }
+      }
     },
     "typeVatDistributionCandidate": {
       "type": "object",
@@ -1962,6 +2158,22 @@
         "hotelDates": {
           "$ref": "#/definitions/typeHotelDates",
           "title": "The hotelDates cntains check-in and check-out date candidates"
+        },
+        "purchaseLinesCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLine"
+          },
+          "description": "Purchase lines for the document. This is a list where each field is a candidate."
+        },
+        "vatDistributionCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistribution"
+          },
+          "description": "VAT distribution for the document. This is a list where each field is a candidate."
         }
       }
     },

@@ -398,6 +398,16 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   hasHotelDates(): boolean;
   clearHotelDates(): DocumentAnnotatorResponse;
 
+  getPurchaseLinesCandidatesList(): Array<ssn_type_candidate_pb.PurchaseLine>;
+  setPurchaseLinesCandidatesList(value: Array<ssn_type_candidate_pb.PurchaseLine>): DocumentAnnotatorResponse;
+  clearPurchaseLinesCandidatesList(): DocumentAnnotatorResponse;
+  addPurchaseLinesCandidates(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
+
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistribution>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistribution>): DocumentAnnotatorResponse;
+  clearVatDistributionCandidatesList(): DocumentAnnotatorResponse;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -461,6 +471,8 @@ export namespace DocumentAnnotatorResponse {
     qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
     hotelDates?: ssn_type_hotel_dates_pb.HotelDates.AsObject,
+    purchaseLinesCandidatesList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
   }
 }
 
