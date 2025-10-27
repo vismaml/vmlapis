@@ -214,10 +214,12 @@ class PurchaseLinesRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ...) -> None: ...
 
 class PurchaseLinesResponse(_message.Message):
-    __slots__ = ("purchase_lines",)
+    __slots__ = ("purchase_lines", "purchase_lines_items")
     PURCHASE_LINES_FIELD_NUMBER: _ClassVar[int]
+    PURCHASE_LINES_ITEMS_FIELD_NUMBER: _ClassVar[int]
     purchase_lines: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
-    def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...
+    purchase_lines_items: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLine]
+    def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., purchase_lines_items: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLine, _Mapping]]] = ...) -> None: ...
 
 class DocQARequest(_message.Message):
     __slots__ = ("text_annotation", "image", "questions")
@@ -246,7 +248,9 @@ class VatDistributionRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., country_code: _Optional[str] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class VatDistributionResponse(_message.Message):
-    __slots__ = ("vat_distribution_candidates",)
+    __slots__ = ("vat_distribution_candidates", "vat_distribution_items")
     VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER: _ClassVar[int]
     vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
-    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...
+    vat_distribution_items: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistribution]
+    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ..., vat_distribution_items: _Optional[_Iterable[_Union[_candidate_pb2.VatDistribution, _Mapping]]] = ...) -> None: ...

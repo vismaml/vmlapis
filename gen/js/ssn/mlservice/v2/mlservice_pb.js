@@ -4810,7 +4810,7 @@ proto.ssn.mlservice.v2.PurchaseLinesRequest.prototype.setImage = function(value)
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.PurchaseLinesResponse.repeatedFields_ = [1];
+proto.ssn.mlservice.v2.PurchaseLinesResponse.repeatedFields_ = [1,2];
 
 
 
@@ -4844,7 +4844,9 @@ proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.toObject = function(opt_i
 proto.ssn.mlservice.v2.PurchaseLinesResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     purchaseLinesList: jspb.Message.toObjectList(msg.getPurchaseLinesList(),
-    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
+    purchaseLinesItemsList: jspb.Message.toObjectList(msg.getPurchaseLinesItemsList(),
+    ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -4886,6 +4888,11 @@ proto.ssn.mlservice.v2.PurchaseLinesResponse.deserializeBinaryFromReader = funct
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLineCandidate.deserializeBinaryFromReader);
       msg.addPurchaseLines(value);
       break;
+    case 2:
+      var value = new ssn_type_candidate_pb.PurchaseLine;
+      reader.readMessage(value,ssn_type_candidate_pb.PurchaseLine.deserializeBinaryFromReader);
+      msg.addPurchaseLinesItems(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -4921,6 +4928,14 @@ proto.ssn.mlservice.v2.PurchaseLinesResponse.serializeBinaryToWriter = function(
       1,
       f,
       ssn_type_candidate_pb.PurchaseLineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getPurchaseLinesItemsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      ssn_type_candidate_pb.PurchaseLine.serializeBinaryToWriter
     );
   }
 };
@@ -4961,6 +4976,44 @@ proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.addPurchaseLines = functi
  */
 proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.clearPurchaseLinesList = function() {
   return this.setPurchaseLinesList([]);
+};
+
+
+/**
+ * repeated ssn.type.PurchaseLine purchase_lines_items = 2;
+ * @return {!Array<!proto.ssn.type.PurchaseLine>}
+ */
+proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.getPurchaseLinesItemsList = function() {
+  return /** @type{!Array<!proto.ssn.type.PurchaseLine>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLine, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PurchaseLine>} value
+ * @return {!proto.ssn.mlservice.v2.PurchaseLinesResponse} returns this
+*/
+proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.setPurchaseLinesItemsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PurchaseLine=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PurchaseLine}
+ */
+proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.addPurchaseLinesItems = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.PurchaseLine, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PurchaseLinesResponse} returns this
+ */
+proto.ssn.mlservice.v2.PurchaseLinesResponse.prototype.clearPurchaseLinesItemsList = function() {
+  return this.setPurchaseLinesItemsList([]);
 };
 
 
@@ -5652,7 +5705,7 @@ proto.ssn.mlservice.v2.VatDistributionRequest.prototype.clearImagesList = functi
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.VatDistributionResponse.repeatedFields_ = [1];
+proto.ssn.mlservice.v2.VatDistributionResponse.repeatedFields_ = [1,2];
 
 
 
@@ -5686,7 +5739,9 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.toObject = function(opt
 proto.ssn.mlservice.v2.VatDistributionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    vatDistributionItemsList: jspb.Message.toObjectList(msg.getVatDistributionItemsList(),
+    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -5728,6 +5783,11 @@ proto.ssn.mlservice.v2.VatDistributionResponse.deserializeBinaryFromReader = fun
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
       msg.addVatDistributionCandidates(value);
       break;
+    case 2:
+      var value = new ssn_type_candidate_pb.VatDistribution;
+      reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
+      msg.addVatDistributionItems(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -5763,6 +5823,14 @@ proto.ssn.mlservice.v2.VatDistributionResponse.serializeBinaryToWriter = functio
       1,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getVatDistributionItemsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      2,
+      f,
+      ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
   }
 };
@@ -5803,6 +5871,44 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.addVatDistributionCandi
  */
 proto.ssn.mlservice.v2.VatDistributionResponse.prototype.clearVatDistributionCandidatesList = function() {
   return this.setVatDistributionCandidatesList([]);
+};
+
+
+/**
+ * repeated ssn.type.VatDistribution vat_distribution_items = 2;
+ * @return {!Array<!proto.ssn.type.VatDistribution>}
+ */
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.getVatDistributionItemsList = function() {
+  return /** @type{!Array<!proto.ssn.type.VatDistribution>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 2));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.VatDistribution>} value
+ * @return {!proto.ssn.mlservice.v2.VatDistributionResponse} returns this
+*/
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.setVatDistributionItemsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.VatDistribution=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.VatDistribution}
+ */
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.addVatDistributionItems = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.VatDistribution, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.VatDistributionResponse} returns this
+ */
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.clearVatDistributionItemsList = function() {
+  return this.setVatDistributionItemsList([]);
 };
 
 

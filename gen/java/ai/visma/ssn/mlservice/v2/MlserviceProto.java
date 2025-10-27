@@ -226,34 +226,38 @@ public final class MlserviceProto {
       "RequestR\016predictRequest\"o\n\024PurchaseLines" +
       "Request\022A\n\017text_annotation\030\001 \001(\0132\030.ssn.t" +
       "ype.TextAnnotationR\016textAnnotation\022\024\n\005im" +
-      "age\030\002 \001(\014R\005image\"_\n\025PurchaseLinesRespons" +
-      "e\022F\n\016purchase_lines\030\001 \003(\0132\037.ssn.type.Pur" +
-      "chaseLineCandidateR\rpurchaseLines\"\205\001\n\014Do" +
-      "cQARequest\022A\n\017text_annotation\030\001 \001(\0132\030.ss" +
-      "n.type.TextAnnotationR\016textAnnotation\022\024\n" +
-      "\005image\030\002 \001(\014R\005image\022\034\n\tquestions\030\003 \003(\tR\t" +
-      "questions\"D\n\rDocQAResponse\0223\n\007answers\030\001 " +
-      "\003(\0132\031.ssn.type.AnswerCandidateR\007answers\"" +
-      "\234\001\n\026VatDistributionRequest\022A\n\017text_annot" +
-      "ation\030\001 \001(\0132\030.ssn.type.TextAnnotationR\016t" +
-      "extAnnotation\022!\n\014country_code\030\003 \001(\tR\013cou" +
-      "ntryCode\022\026\n\006images\030\004 \003(\014R\006imagesJ\004\010\002\020\003\"}" +
-      "\n\027VatDistributionResponse\022b\n\033vat_distrib" +
-      "ution_candidates\030\001 \003(\0132\".ssn.type.VatDis" +
-      "tributionCandidateR\031vatDistributionCandi" +
-      "dates2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn." +
-      "mlservice.v2.FeatureGenRequest\032$.ssn.mls" +
-      "ervice.v2.FeatureGenResponse\022N\n\007Predict\022" +
-      " .ssn.mlservice.v2.PredictRequest\032!.ssn." +
-      "mlservice.v2.PredictResponse\022b\n\021FeatureG" +
-      "enPredict\022*.ssn.mlservice.v2.FeatureGenP" +
-      "redictRequest\032!.ssn.mlservice.v2.Predict" +
-      "ResponseB\315\001\n\031ai.visma.ssn.mlservice.v2B\016" +
-      "MlserviceProtoP\001Z>github.com/e-conomic/v" +
-      "mlapis/gen/go/ssn/mlservice/v2;mlservice" +
-      "\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservic" +
-      "e\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ss" +
-      "n::Mlservice::V2b\006proto3"
+      "age\030\002 \001(\014R\005image\"\251\001\n\025PurchaseLinesRespon" +
+      "se\022F\n\016purchase_lines\030\001 \003(\0132\037.ssn.type.Pu" +
+      "rchaseLineCandidateR\rpurchaseLines\022H\n\024pu" +
+      "rchase_lines_items\030\002 \003(\0132\026.ssn.type.Purc" +
+      "haseLineR\022purchaseLinesItems\"\205\001\n\014DocQARe" +
+      "quest\022A\n\017text_annotation\030\001 \001(\0132\030.ssn.typ" +
+      "e.TextAnnotationR\016textAnnotation\022\024\n\005imag" +
+      "e\030\002 \001(\014R\005image\022\034\n\tquestions\030\003 \003(\tR\tquest" +
+      "ions\"D\n\rDocQAResponse\0223\n\007answers\030\001 \003(\0132\031" +
+      ".ssn.type.AnswerCandidateR\007answers\"\234\001\n\026V" +
+      "atDistributionRequest\022A\n\017text_annotation" +
+      "\030\001 \001(\0132\030.ssn.type.TextAnnotationR\016textAn" +
+      "notation\022!\n\014country_code\030\003 \001(\tR\013countryC" +
+      "ode\022\026\n\006images\030\004 \003(\014R\006imagesJ\004\010\002\020\003\"\316\001\n\027Va" +
+      "tDistributionResponse\022b\n\033vat_distributio" +
+      "n_candidates\030\001 \003(\0132\".ssn.type.VatDistrib" +
+      "utionCandidateR\031vatDistributionCandidate" +
+      "s\022O\n\026vat_distribution_items\030\002 \003(\0132\031.ssn." +
+      "type.VatDistributionR\024vatDistributionIte" +
+      "ms2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn.mls" +
+      "ervice.v2.FeatureGenRequest\032$.ssn.mlserv" +
+      "ice.v2.FeatureGenResponse\022N\n\007Predict\022 .s" +
+      "sn.mlservice.v2.PredictRequest\032!.ssn.mls" +
+      "ervice.v2.PredictResponse\022b\n\021FeatureGenP" +
+      "redict\022*.ssn.mlservice.v2.FeatureGenPred" +
+      "ictRequest\032!.ssn.mlservice.v2.PredictRes" +
+      "ponseB\315\001\n\031ai.visma.ssn.mlservice.v2B\016Mls" +
+      "erviceProtoP\001Z>github.com/e-conomic/vmla" +
+      "pis/gen/go/ssn/mlservice/v2;mlservice\242\002\003" +
+      "SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservice\\V" +
+      "2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ssn::" +
+      "Mlservice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -309,7 +313,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_PurchaseLinesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PurchaseLinesResponse_descriptor,
-        new java.lang.String[] { "PurchaseLines", });
+        new java.lang.String[] { "PurchaseLines", "PurchaseLinesItems", });
     internal_static_ssn_mlservice_v2_DocQARequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_ssn_mlservice_v2_DocQARequest_fieldAccessorTable = new
@@ -333,7 +337,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_VatDistributionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_VatDistributionResponse_descriptor,
-        new java.lang.String[] { "VatDistributionCandidates", });
+        new java.lang.String[] { "VatDistributionCandidates", "VatDistributionItems", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.type.DateProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();

@@ -566,6 +566,11 @@ export class PurchaseLinesResponse extends jspb.Message {
   clearPurchaseLinesList(): PurchaseLinesResponse;
   addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
 
+  getPurchaseLinesItemsList(): Array<ssn_type_candidate_pb.PurchaseLine>;
+  setPurchaseLinesItemsList(value: Array<ssn_type_candidate_pb.PurchaseLine>): PurchaseLinesResponse;
+  clearPurchaseLinesItemsList(): PurchaseLinesResponse;
+  addPurchaseLinesItems(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLinesResponse.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLinesResponse): PurchaseLinesResponse.AsObject;
@@ -577,6 +582,7 @@ export class PurchaseLinesResponse extends jspb.Message {
 export namespace PurchaseLinesResponse {
   export type AsObject = {
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    purchaseLinesItemsList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
   }
 }
 
@@ -668,6 +674,11 @@ export class VatDistributionResponse extends jspb.Message {
   clearVatDistributionCandidatesList(): VatDistributionResponse;
   addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
+  getVatDistributionItemsList(): Array<ssn_type_candidate_pb.VatDistribution>;
+  setVatDistributionItemsList(value: Array<ssn_type_candidate_pb.VatDistribution>): VatDistributionResponse;
+  clearVatDistributionItemsList(): VatDistributionResponse;
+  addVatDistributionItems(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionResponse.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistributionResponse): VatDistributionResponse.AsObject;
@@ -679,6 +690,7 @@ export class VatDistributionResponse extends jspb.Message {
 export namespace VatDistributionResponse {
   export type AsObject = {
     vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    vatDistributionItemsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
   }
 }
 

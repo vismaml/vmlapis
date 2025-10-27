@@ -141,31 +141,35 @@ namespace Ssn.Mlservice.V2 {
             "ASgLMiAuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVxdWVzdFIOcHJlZGlj",
             "dFJlcXVlc3QibwoUUHVyY2hhc2VMaW5lc1JlcXVlc3QSQQoPdGV4dF9hbm5v",
             "dGF0aW9uGAEgASgLMhguc3NuLnR5cGUuVGV4dEFubm90YXRpb25SDnRleHRB",
-            "bm5vdGF0aW9uEhQKBWltYWdlGAIgASgMUgVpbWFnZSJfChVQdXJjaGFzZUxp",
-            "bmVzUmVzcG9uc2USRgoOcHVyY2hhc2VfbGluZXMYASADKAsyHy5zc24udHlw",
-            "ZS5QdXJjaGFzZUxpbmVDYW5kaWRhdGVSDXB1cmNoYXNlTGluZXMihQEKDERv",
-            "Y1FBUmVxdWVzdBJBCg90ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlw",
-            "ZS5UZXh0QW5ub3RhdGlvblIOdGV4dEFubm90YXRpb24SFAoFaW1hZ2UYAiAB",
-            "KAxSBWltYWdlEhwKCXF1ZXN0aW9ucxgDIAMoCVIJcXVlc3Rpb25zIkQKDURv",
-            "Y1FBUmVzcG9uc2USMwoHYW5zd2VycxgBIAMoCzIZLnNzbi50eXBlLkFuc3dl",
-            "ckNhbmRpZGF0ZVIHYW5zd2VycyKcAQoWVmF0RGlzdHJpYnV0aW9uUmVxdWVz",
-            "dBJBCg90ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5u",
-            "b3RhdGlvblIOdGV4dEFubm90YXRpb24SIQoMY291bnRyeV9jb2RlGAMgASgJ",
-            "Ugtjb3VudHJ5Q29kZRIWCgZpbWFnZXMYBCADKAxSBmltYWdlc0oECAIQAyJ9",
-            "ChdWYXREaXN0cmlidXRpb25SZXNwb25zZRJiCht2YXRfZGlzdHJpYnV0aW9u",
-            "X2NhbmRpZGF0ZXMYASADKAsyIi5zc24udHlwZS5WYXREaXN0cmlidXRpb25D",
-            "YW5kaWRhdGVSGXZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZXMymAIKCU1sU2Vy",
-            "dmljZRJXCgpGZWF0dXJlR2VuEiMuc3NuLm1sc2VydmljZS52Mi5GZWF0dXJl",
-            "R2VuUmVxdWVzdBokLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlc3Bv",
-            "bnNlEk4KB1ByZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXF1",
-            "ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVh",
-            "dHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5Q",
-            "cmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3Bv",
-            "bnNlQs0BChlhaS52aXNtYS5zc24ubWxzZXJ2aWNlLnYyQg5NbHNlcnZpY2VQ",
-            "cm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9z",
-            "c24vbWxzZXJ2aWNlL3YyO21sc2VydmljZaICA1NNWKoCEFNzbi5NbHNlcnZp",
-            "Y2UuVjLKAhBTc25cTWxzZXJ2aWNlXFYy4gIcU3NuXE1sc2VydmljZVxWMlxH",
-            "UEJNZXRhZGF0YeoCElNzbjo6TWxzZXJ2aWNlOjpWMmIGcHJvdG8z"));
+            "bm5vdGF0aW9uEhQKBWltYWdlGAIgASgMUgVpbWFnZSKpAQoVUHVyY2hhc2VM",
+            "aW5lc1Jlc3BvbnNlEkYKDnB1cmNoYXNlX2xpbmVzGAEgAygLMh8uc3NuLnR5",
+            "cGUuUHVyY2hhc2VMaW5lQ2FuZGlkYXRlUg1wdXJjaGFzZUxpbmVzEkgKFHB1",
+            "cmNoYXNlX2xpbmVzX2l0ZW1zGAIgAygLMhYuc3NuLnR5cGUuUHVyY2hhc2VM",
+            "aW5lUhJwdXJjaGFzZUxpbmVzSXRlbXMihQEKDERvY1FBUmVxdWVzdBJBCg90",
+            "ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlv",
+            "blIOdGV4dEFubm90YXRpb24SFAoFaW1hZ2UYAiABKAxSBWltYWdlEhwKCXF1",
+            "ZXN0aW9ucxgDIAMoCVIJcXVlc3Rpb25zIkQKDURvY1FBUmVzcG9uc2USMwoH",
+            "YW5zd2VycxgBIAMoCzIZLnNzbi50eXBlLkFuc3dlckNhbmRpZGF0ZVIHYW5z",
+            "d2VycyKcAQoWVmF0RGlzdHJpYnV0aW9uUmVxdWVzdBJBCg90ZXh0X2Fubm90",
+            "YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlvblIOdGV4dEFu",
+            "bm90YXRpb24SIQoMY291bnRyeV9jb2RlGAMgASgJUgtjb3VudHJ5Q29kZRIW",
+            "CgZpbWFnZXMYBCADKAxSBmltYWdlc0oECAIQAyLOAQoXVmF0RGlzdHJpYnV0",
+            "aW9uUmVzcG9uc2USYgobdmF0X2Rpc3RyaWJ1dGlvbl9jYW5kaWRhdGVzGAEg",
+            "AygLMiIuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uQ2FuZGlkYXRlUhl2YXRE",
+            "aXN0cmlidXRpb25DYW5kaWRhdGVzEk8KFnZhdF9kaXN0cmlidXRpb25faXRl",
+            "bXMYAiADKAsyGS5zc24udHlwZS5WYXREaXN0cmlidXRpb25SFHZhdERpc3Ry",
+            "aWJ1dGlvbkl0ZW1zMpgCCglNbFNlcnZpY2USVwoKRmVhdHVyZUdlbhIjLnNz",
+            "bi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlcXVlc3QaJC5zc24ubWxzZXJ2",
+            "aWNlLnYyLkZlYXR1cmVHZW5SZXNwb25zZRJOCgdQcmVkaWN0EiAuc3NuLm1s",
+            "c2VydmljZS52Mi5QcmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIu",
+            "UHJlZGljdFJlc3BvbnNlEmIKEUZlYXR1cmVHZW5QcmVkaWN0Eiouc3NuLm1s",
+            "c2VydmljZS52Mi5GZWF0dXJlR2VuUHJlZGljdFJlcXVlc3QaIS5zc24ubWxz",
+            "ZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZULNAQoZYWkudmlzbWEuc3NuLm1s",
+            "c2VydmljZS52MkIOTWxzZXJ2aWNlUHJvdG9QAVo+Z2l0aHViLmNvbS9lLWNv",
+            "bm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL21sc2VydmljZS92MjttbHNlcnZp",
+            "Y2WiAgNTTViqAhBTc24uTWxzZXJ2aWNlLlYyygIQU3NuXE1sc2VydmljZVxW",
+            "MuICHFNzblxNbHNlcnZpY2VcVjJcR1BCTWV0YWRhdGHqAhJTc246Ok1sc2Vy",
+            "dmljZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -175,11 +179,11 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", "ReceiverOrderNumber", "OcrLineBePaymentId", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesRequest), global::Ssn.Mlservice.V2.PurchaseLinesRequest.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesResponse), global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser, new[]{ "PurchaseLines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesResponse), global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser, new[]{ "PurchaseLines", "PurchaseLinesItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQARequest), global::Ssn.Mlservice.V2.DocQARequest.Parser, new[]{ "TextAnnotation", "Image", "Questions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQAResponse), global::Ssn.Mlservice.V2.DocQAResponse.Parser, new[]{ "Answers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "CountryCode", "Images" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates", "VatDistributionItems" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4280,6 +4284,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PurchaseLinesResponse(PurchaseLinesResponse other) : this() {
       purchaseLines_ = other.purchaseLines_.Clone();
+      purchaseLinesItems_ = other.purchaseLinesItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4300,6 +4305,17 @@ namespace Ssn.Mlservice.V2 {
       get { return purchaseLines_; }
     }
 
+    /// <summary>Field number for the "purchase_lines_items" field.</summary>
+    public const int PurchaseLinesItemsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Type.PurchaseLine> _repeated_purchaseLinesItems_codec
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Type.PurchaseLine.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLine> purchaseLinesItems_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLine>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.PurchaseLine> PurchaseLinesItems {
+      get { return purchaseLinesItems_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4316,6 +4332,7 @@ namespace Ssn.Mlservice.V2 {
         return true;
       }
       if(!purchaseLines_.Equals(other.purchaseLines_)) return false;
+      if(!purchaseLinesItems_.Equals(other.purchaseLinesItems_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4324,6 +4341,7 @@ namespace Ssn.Mlservice.V2 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= purchaseLines_.GetHashCode();
+      hash ^= purchaseLinesItems_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4343,6 +4361,7 @@ namespace Ssn.Mlservice.V2 {
       output.WriteRawMessage(this);
     #else
       purchaseLines_.WriteTo(output, _repeated_purchaseLines_codec);
+      purchaseLinesItems_.WriteTo(output, _repeated_purchaseLinesItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4354,6 +4373,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       purchaseLines_.WriteTo(ref output, _repeated_purchaseLines_codec);
+      purchaseLinesItems_.WriteTo(ref output, _repeated_purchaseLinesItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4365,6 +4385,7 @@ namespace Ssn.Mlservice.V2 {
     public int CalculateSize() {
       int size = 0;
       size += purchaseLines_.CalculateSize(_repeated_purchaseLines_codec);
+      size += purchaseLinesItems_.CalculateSize(_repeated_purchaseLinesItems_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4378,6 +4399,7 @@ namespace Ssn.Mlservice.V2 {
         return;
       }
       purchaseLines_.Add(other.purchaseLines_);
+      purchaseLinesItems_.Add(other.purchaseLinesItems_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4401,6 +4423,10 @@ namespace Ssn.Mlservice.V2 {
             purchaseLines_.AddEntriesFrom(input, _repeated_purchaseLines_codec);
             break;
           }
+          case 18: {
+            purchaseLinesItems_.AddEntriesFrom(input, _repeated_purchaseLinesItems_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4422,6 +4448,10 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             purchaseLines_.AddEntriesFrom(ref input, _repeated_purchaseLines_codec);
+            break;
+          }
+          case 18: {
+            purchaseLinesItems_.AddEntriesFrom(ref input, _repeated_purchaseLinesItems_codec);
             break;
           }
         }
@@ -5194,6 +5224,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VatDistributionResponse(VatDistributionResponse other) : this() {
       vatDistributionCandidates_ = other.vatDistributionCandidates_.Clone();
+      vatDistributionItems_ = other.vatDistributionItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5214,6 +5245,17 @@ namespace Ssn.Mlservice.V2 {
       get { return vatDistributionCandidates_; }
     }
 
+    /// <summary>Field number for the "vat_distribution_items" field.</summary>
+    public const int VatDistributionItemsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Type.VatDistribution> _repeated_vatDistributionItems_codec
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Type.VatDistribution.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionItems_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.VatDistribution> VatDistributionItems {
+      get { return vatDistributionItems_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5230,6 +5272,7 @@ namespace Ssn.Mlservice.V2 {
         return true;
       }
       if(!vatDistributionCandidates_.Equals(other.vatDistributionCandidates_)) return false;
+      if(!vatDistributionItems_.Equals(other.vatDistributionItems_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5238,6 +5281,7 @@ namespace Ssn.Mlservice.V2 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vatDistributionCandidates_.GetHashCode();
+      hash ^= vatDistributionItems_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5257,6 +5301,7 @@ namespace Ssn.Mlservice.V2 {
       output.WriteRawMessage(this);
     #else
       vatDistributionCandidates_.WriteTo(output, _repeated_vatDistributionCandidates_codec);
+      vatDistributionItems_.WriteTo(output, _repeated_vatDistributionItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5268,6 +5313,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       vatDistributionCandidates_.WriteTo(ref output, _repeated_vatDistributionCandidates_codec);
+      vatDistributionItems_.WriteTo(ref output, _repeated_vatDistributionItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5279,6 +5325,7 @@ namespace Ssn.Mlservice.V2 {
     public int CalculateSize() {
       int size = 0;
       size += vatDistributionCandidates_.CalculateSize(_repeated_vatDistributionCandidates_codec);
+      size += vatDistributionItems_.CalculateSize(_repeated_vatDistributionItems_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5292,6 +5339,7 @@ namespace Ssn.Mlservice.V2 {
         return;
       }
       vatDistributionCandidates_.Add(other.vatDistributionCandidates_);
+      vatDistributionItems_.Add(other.vatDistributionItems_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5315,6 +5363,10 @@ namespace Ssn.Mlservice.V2 {
             vatDistributionCandidates_.AddEntriesFrom(input, _repeated_vatDistributionCandidates_codec);
             break;
           }
+          case 18: {
+            vatDistributionItems_.AddEntriesFrom(input, _repeated_vatDistributionItems_codec);
+            break;
+          }
         }
       }
     #endif
@@ -5336,6 +5388,10 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             vatDistributionCandidates_.AddEntriesFrom(ref input, _repeated_vatDistributionCandidates_codec);
+            break;
+          }
+          case 18: {
+            vatDistributionItems_.AddEntriesFrom(ref input, _repeated_vatDistributionItems_codec);
             break;
           }
         }
