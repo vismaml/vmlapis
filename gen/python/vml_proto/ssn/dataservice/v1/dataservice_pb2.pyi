@@ -485,16 +485,32 @@ class AnnotationProcessMetricsRequest(_message.Message):
     def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class AnnotationProcessPredictionMetrics(_message.Message):
-    __slots__ = ("document_count", "prediction_count", "overall_correctness", "field_correctness")
+    __slots__ = ("document_count", "prediction_count", "overall_correctness", "field_correctness", "differences")
     DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
     PREDICTION_COUNT_FIELD_NUMBER: _ClassVar[int]
     OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
     FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
+    DIFFERENCES_FIELD_NUMBER: _ClassVar[int]
     document_count: int
     prediction_count: int
     overall_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
     field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
-    def __init__(self, document_count: _Optional[int] = ..., prediction_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
+    differences: _containers.RepeatedCompositeFieldContainer[AnnotationProcessFieldsComparison]
+    def __init__(self, document_count: _Optional[int] = ..., prediction_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., differences: _Optional[_Iterable[_Union[AnnotationProcessFieldsComparison, _Mapping]]] = ...) -> None: ...
+
+class AnnotationProcessFieldsComparison(_message.Message):
+    __slots__ = ("bq_id", "task_id", "field_name", "true_value", "prediction_value")
+    BQ_ID_FIELD_NUMBER: _ClassVar[int]
+    TASK_ID_FIELD_NUMBER: _ClassVar[int]
+    FIELD_NAME_FIELD_NUMBER: _ClassVar[int]
+    TRUE_VALUE_FIELD_NUMBER: _ClassVar[int]
+    PREDICTION_VALUE_FIELD_NUMBER: _ClassVar[int]
+    bq_id: str
+    task_id: str
+    field_name: str
+    true_value: str
+    prediction_value: str
+    def __init__(self, bq_id: _Optional[str] = ..., task_id: _Optional[str] = ..., field_name: _Optional[str] = ..., true_value: _Optional[str] = ..., prediction_value: _Optional[str] = ...) -> None: ...
 
 class FeedbackMetrics(_message.Message):
     __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")

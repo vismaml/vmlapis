@@ -303,6 +303,15 @@ message AnnotationProcessPredictionMetrics {
   int32 prediction_count = 2;
   repeated Correctness overall_correctness = 3;
   repeated Correctness field_correctness = 4;
+  repeated AnnotationProcessFieldsComparison differences = 5;
+}
+
+message AnnotationProcessFieldsComparison {
+  string bq_id = 1;
+  string task_id = 2;
+  string field_name = 3;
+  string true_value = 4;
+  string prediction_value = 5;
 }
 
 message FeedbackMetrics {

@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   private AnnotationProcessPredictionMetrics() {
     overallCorrectness_ = java.util.Collections.emptyList();
     fieldCorrectness_ = java.util.Collections.emptyList();
+    differences_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -148,6 +149,47 @@ private static final long serialVersionUID = 0L;
     return fieldCorrectness_.get(index);
   }
 
+  public static final int DIFFERENCES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> differences_;
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> getDifferencesList() {
+    return differences_;
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder> 
+      getDifferencesOrBuilderList() {
+    return differences_;
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  @java.lang.Override
+  public int getDifferencesCount() {
+    return differences_.size();
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDifferences(int index) {
+    return differences_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder getDifferencesOrBuilder(
+      int index) {
+    return differences_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -174,6 +216,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fieldCorrectness_.size(); i++) {
       output.writeMessage(4, fieldCorrectness_.get(i));
     }
+    for (int i = 0; i < differences_.size(); i++) {
+      output.writeMessage(5, differences_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -199,6 +244,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, fieldCorrectness_.get(i));
     }
+    for (int i = 0; i < differences_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, differences_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -222,6 +271,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOverallCorrectnessList())) return false;
     if (!getFieldCorrectnessList()
         .equals(other.getFieldCorrectnessList())) return false;
+    if (!getDifferencesList()
+        .equals(other.getDifferencesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -244,6 +295,10 @@ private static final long serialVersionUID = 0L;
     if (getFieldCorrectnessCount() > 0) {
       hash = (37 * hash) + FIELD_CORRECTNESS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldCorrectnessList().hashCode();
+    }
+    if (getDifferencesCount() > 0) {
+      hash = (37 * hash) + DIFFERENCES_FIELD_NUMBER;
+      hash = (53 * hash) + getDifferencesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -392,6 +447,13 @@ private static final long serialVersionUID = 0L;
         fieldCorrectnessBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
+      if (differencesBuilder_ == null) {
+        differences_ = java.util.Collections.emptyList();
+      } else {
+        differences_ = null;
+        differencesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -442,6 +504,15 @@ private static final long serialVersionUID = 0L;
         result.fieldCorrectness_ = fieldCorrectness_;
       } else {
         result.fieldCorrectness_ = fieldCorrectnessBuilder_.build();
+      }
+      if (differencesBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          differences_ = java.util.Collections.unmodifiableList(differences_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.differences_ = differences_;
+      } else {
+        result.differences_ = differencesBuilder_.build();
       }
     }
 
@@ -525,6 +596,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (differencesBuilder_ == null) {
+        if (!other.differences_.isEmpty()) {
+          if (differences_.isEmpty()) {
+            differences_ = other.differences_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureDifferencesIsMutable();
+            differences_.addAll(other.differences_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.differences_.isEmpty()) {
+          if (differencesBuilder_.isEmpty()) {
+            differencesBuilder_.dispose();
+            differencesBuilder_ = null;
+            differences_ = other.differences_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            differencesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getDifferencesFieldBuilder() : null;
+          } else {
+            differencesBuilder_.addAllMessages(other.differences_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -587,6 +684,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 34
+            case 42: {
+              ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison m =
+                  input.readMessage(
+                      ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.parser(),
+                      extensionRegistry);
+              if (differencesBuilder_ == null) {
+                ensureDifferencesIsMutable();
+                differences_.add(m);
+              } else {
+                differencesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1146,6 +1256,246 @@ private static final long serialVersionUID = 0L;
         fieldCorrectness_ = null;
       }
       return fieldCorrectnessBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> differences_ =
+      java.util.Collections.emptyList();
+    private void ensureDifferencesIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        differences_ = new java.util.ArrayList<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison>(differences_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder> differencesBuilder_;
+
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> getDifferencesList() {
+      if (differencesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(differences_);
+      } else {
+        return differencesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public int getDifferencesCount() {
+      if (differencesBuilder_ == null) {
+        return differences_.size();
+      } else {
+        return differencesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDifferences(int index) {
+      if (differencesBuilder_ == null) {
+        return differences_.get(index);
+      } else {
+        return differencesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder setDifferences(
+        int index, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison value) {
+      if (differencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDifferencesIsMutable();
+        differences_.set(index, value);
+        onChanged();
+      } else {
+        differencesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder setDifferences(
+        int index, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder builderForValue) {
+      if (differencesBuilder_ == null) {
+        ensureDifferencesIsMutable();
+        differences_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        differencesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder addDifferences(ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison value) {
+      if (differencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDifferencesIsMutable();
+        differences_.add(value);
+        onChanged();
+      } else {
+        differencesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder addDifferences(
+        int index, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison value) {
+      if (differencesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDifferencesIsMutable();
+        differences_.add(index, value);
+        onChanged();
+      } else {
+        differencesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder addDifferences(
+        ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder builderForValue) {
+      if (differencesBuilder_ == null) {
+        ensureDifferencesIsMutable();
+        differences_.add(builderForValue.build());
+        onChanged();
+      } else {
+        differencesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder addDifferences(
+        int index, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder builderForValue) {
+      if (differencesBuilder_ == null) {
+        ensureDifferencesIsMutable();
+        differences_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        differencesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder addAllDifferences(
+        java.lang.Iterable<? extends ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> values) {
+      if (differencesBuilder_ == null) {
+        ensureDifferencesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, differences_);
+        onChanged();
+      } else {
+        differencesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder clearDifferences() {
+      if (differencesBuilder_ == null) {
+        differences_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        differencesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public Builder removeDifferences(int index) {
+      if (differencesBuilder_ == null) {
+        ensureDifferencesIsMutable();
+        differences_.remove(index);
+        onChanged();
+      } else {
+        differencesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder getDifferencesBuilder(
+        int index) {
+      return getDifferencesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder getDifferencesOrBuilder(
+        int index) {
+      if (differencesBuilder_ == null) {
+        return differences_.get(index);  } else {
+        return differencesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder> 
+         getDifferencesOrBuilderList() {
+      if (differencesBuilder_ != null) {
+        return differencesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(differences_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder addDifferencesBuilder() {
+      return getDifferencesFieldBuilder().addBuilder(
+          ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder addDifferencesBuilder(
+        int index) {
+      return getDifferencesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+     */
+    public java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder> 
+         getDifferencesBuilderList() {
+      return getDifferencesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder> 
+        getDifferencesFieldBuilder() {
+      if (differencesBuilder_ == null) {
+        differencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder>(
+                differences_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        differences_ = null;
+      }
+      return differencesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.AnnotationProcessPredictionMetrics)

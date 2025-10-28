@@ -1407,6 +1407,26 @@
       },
       "description": "A word representation."
     },
+    "v1AnnotationProcessFieldsComparison": {
+      "type": "object",
+      "properties": {
+        "bqId": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "fieldName": {
+          "type": "string"
+        },
+        "trueValue": {
+          "type": "string"
+        },
+        "predictionValue": {
+          "type": "string"
+        }
+      }
+    },
     "v1AnnotationProcessPredictionMetrics": {
       "type": "object",
       "properties": {
@@ -1430,6 +1450,13 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1AnnotationProcessFieldsComparison"
           }
         }
       }

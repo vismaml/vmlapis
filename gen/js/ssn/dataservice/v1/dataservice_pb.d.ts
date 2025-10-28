@@ -1444,6 +1444,11 @@ export class AnnotationProcessPredictionMetrics extends jspb.Message {
   clearFieldCorrectnessList(): AnnotationProcessPredictionMetrics;
   addFieldCorrectness(value?: Correctness, index?: number): Correctness;
 
+  getDifferencesList(): Array<AnnotationProcessFieldsComparison>;
+  setDifferencesList(value: Array<AnnotationProcessFieldsComparison>): AnnotationProcessPredictionMetrics;
+  clearDifferencesList(): AnnotationProcessPredictionMetrics;
+  addDifferences(value?: AnnotationProcessFieldsComparison, index?: number): AnnotationProcessFieldsComparison;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AnnotationProcessPredictionMetrics.AsObject;
   static toObject(includeInstance: boolean, msg: AnnotationProcessPredictionMetrics): AnnotationProcessPredictionMetrics.AsObject;
@@ -1458,6 +1463,41 @@ export namespace AnnotationProcessPredictionMetrics {
     predictionCount: number,
     overallCorrectnessList: Array<Correctness.AsObject>,
     fieldCorrectnessList: Array<Correctness.AsObject>,
+    differencesList: Array<AnnotationProcessFieldsComparison.AsObject>,
+  }
+}
+
+export class AnnotationProcessFieldsComparison extends jspb.Message {
+  getBqId(): string;
+  setBqId(value: string): AnnotationProcessFieldsComparison;
+
+  getTaskId(): string;
+  setTaskId(value: string): AnnotationProcessFieldsComparison;
+
+  getFieldName(): string;
+  setFieldName(value: string): AnnotationProcessFieldsComparison;
+
+  getTrueValue(): string;
+  setTrueValue(value: string): AnnotationProcessFieldsComparison;
+
+  getPredictionValue(): string;
+  setPredictionValue(value: string): AnnotationProcessFieldsComparison;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnnotationProcessFieldsComparison.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessFieldsComparison): AnnotationProcessFieldsComparison.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessFieldsComparison, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessFieldsComparison;
+  static deserializeBinaryFromReader(message: AnnotationProcessFieldsComparison, reader: jspb.BinaryReader): AnnotationProcessFieldsComparison;
+}
+
+export namespace AnnotationProcessFieldsComparison {
+  export type AsObject = {
+    bqId: string,
+    taskId: string,
+    fieldName: string,
+    trueValue: string,
+    predictionValue: string,
   }
 }
 

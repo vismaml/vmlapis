@@ -68,4 +68,28 @@ public interface AnnotationProcessPredictionMetricsOrBuilder extends
    */
   ai.visma.ssn.dataservice.v1.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  java.util.List<ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison> 
+      getDifferencesList();
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDifferences(int index);
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  int getDifferencesCount();
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder> 
+      getDifferencesOrBuilderList();
+  /**
+   * <code>repeated .ssn.dataservice.v1.AnnotationProcessFieldsComparison differences = 5 [json_name = "differences"];</code>
+   */
+  ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder getDifferencesOrBuilder(
+      int index);
 }
