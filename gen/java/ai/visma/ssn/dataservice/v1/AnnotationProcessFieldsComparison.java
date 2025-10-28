@@ -242,6 +242,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RESULT_FIELD_NUMBER = 6;
+  private boolean result_ = false;
+  /**
+   * <code>bool result = 6 [json_name = "result"];</code>
+   * @return The result.
+   */
+  @java.lang.Override
+  public boolean getResult() {
+    return result_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -271,6 +282,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predictionValue_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, predictionValue_);
     }
+    if (result_ != false) {
+      output.writeBool(6, result_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -294,6 +308,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predictionValue_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, predictionValue_);
+    }
+    if (result_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, result_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -320,6 +338,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTrueValue())) return false;
     if (!getPredictionValue()
         .equals(other.getPredictionValue())) return false;
+    if (getResult()
+        != other.getResult()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -341,6 +361,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTrueValue().hashCode();
     hash = (37 * hash) + PREDICTION_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getPredictionValue().hashCode();
+    hash = (37 * hash) + RESULT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getResult());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -477,6 +500,7 @@ private static final long serialVersionUID = 0L;
       fieldName_ = "";
       trueValue_ = "";
       predictionValue_ = "";
+      result_ = false;
       return this;
     }
 
@@ -525,6 +549,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.predictionValue_ = predictionValue_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.result_ = result_;
+      }
     }
 
     @java.lang.Override
@@ -563,6 +590,9 @@ private static final long serialVersionUID = 0L;
         predictionValue_ = other.predictionValue_;
         bitField0_ |= 0x00000010;
         onChanged();
+      }
+      if (other.getResult() != false) {
+        setResult(other.getResult());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -615,6 +645,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              result_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -988,6 +1023,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       predictionValue_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private boolean result_ ;
+    /**
+     * <code>bool result = 6 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public boolean getResult() {
+      return result_;
+    }
+    /**
+     * <code>bool result = 6 [json_name = "result"];</code>
+     * @param value The result to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResult(boolean value) {
+
+      result_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool result = 6 [json_name = "result"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResult() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      result_ = false;
       onChanged();
       return this;
     }

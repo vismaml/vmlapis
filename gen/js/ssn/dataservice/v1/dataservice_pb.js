@@ -12901,7 +12901,8 @@ proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.toObject = function(i
     taskId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     fieldName: jspb.Message.getFieldWithDefault(msg, 3, ""),
     trueValue: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    predictionValue: jspb.Message.getFieldWithDefault(msg, 5, "")
+    predictionValue: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    result: jspb.Message.getBooleanFieldWithDefault(msg, 6, false)
   };
 
   if (includeInstance) {
@@ -12957,6 +12958,10 @@ proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.deserializeBinaryFrom
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setPredictionValue(value);
+      break;
+    case 6:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setResult(value);
       break;
     default:
       reader.skipField();
@@ -13019,6 +13024,13 @@ proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.serializeBinaryToWrit
   if (f.length > 0) {
     writer.writeString(
       5,
+      f
+    );
+  }
+  f = message.getResult();
+  if (f) {
+    writer.writeBool(
+      6,
       f
     );
   }
@@ -13112,6 +13124,24 @@ proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.prototype.getPredicti
  */
 proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.prototype.setPredictionValue = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional bool result = 6;
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.prototype.getResult = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison} returns this
+ */
+proto.ssn.dataservice.v1.AnnotationProcessFieldsComparison.prototype.setResult = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 

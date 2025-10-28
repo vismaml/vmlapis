@@ -1483,6 +1483,9 @@ export class AnnotationProcessFieldsComparison extends jspb.Message {
   getPredictionValue(): string;
   setPredictionValue(value: string): AnnotationProcessFieldsComparison;
 
+  getResult(): boolean;
+  setResult(value: boolean): AnnotationProcessFieldsComparison;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AnnotationProcessFieldsComparison.AsObject;
   static toObject(includeInstance: boolean, msg: AnnotationProcessFieldsComparison): AnnotationProcessFieldsComparison.AsObject;
@@ -1498,6 +1501,7 @@ export namespace AnnotationProcessFieldsComparison {
     fieldName: string,
     trueValue: string,
     predictionValue: string,
+    result: boolean,
   }
 }
 

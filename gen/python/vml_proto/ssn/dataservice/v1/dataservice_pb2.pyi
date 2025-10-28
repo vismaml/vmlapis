@@ -499,18 +499,20 @@ class AnnotationProcessPredictionMetrics(_message.Message):
     def __init__(self, document_count: _Optional[int] = ..., prediction_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., differences: _Optional[_Iterable[_Union[AnnotationProcessFieldsComparison, _Mapping]]] = ...) -> None: ...
 
 class AnnotationProcessFieldsComparison(_message.Message):
-    __slots__ = ("bq_id", "task_id", "field_name", "true_value", "prediction_value")
+    __slots__ = ("bq_id", "task_id", "field_name", "true_value", "prediction_value", "result")
     BQ_ID_FIELD_NUMBER: _ClassVar[int]
     TASK_ID_FIELD_NUMBER: _ClassVar[int]
     FIELD_NAME_FIELD_NUMBER: _ClassVar[int]
     TRUE_VALUE_FIELD_NUMBER: _ClassVar[int]
     PREDICTION_VALUE_FIELD_NUMBER: _ClassVar[int]
+    RESULT_FIELD_NUMBER: _ClassVar[int]
     bq_id: str
     task_id: str
     field_name: str
     true_value: str
     prediction_value: str
-    def __init__(self, bq_id: _Optional[str] = ..., task_id: _Optional[str] = ..., field_name: _Optional[str] = ..., true_value: _Optional[str] = ..., prediction_value: _Optional[str] = ...) -> None: ...
+    result: bool
+    def __init__(self, bq_id: _Optional[str] = ..., task_id: _Optional[str] = ..., field_name: _Optional[str] = ..., true_value: _Optional[str] = ..., prediction_value: _Optional[str] = ..., result: bool = ...) -> None: ...
 
 class FeedbackMetrics(_message.Message):
     __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")

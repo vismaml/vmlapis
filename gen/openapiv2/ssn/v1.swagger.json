@@ -1424,6 +1424,9 @@
         },
         "predictionValue": {
           "type": "string"
+        },
+        "result": {
+          "type": "boolean"
         }
       }
     },

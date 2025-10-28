@@ -511,55 +511,56 @@ public final class DataserviceProto {
       "vice.v1.CorrectnessR\020fieldCorrectness\022W\n" +
       "\013differences\030\005 \003(\01325.ssn.dataservice.v1." +
       "AnnotationProcessFieldsComparisonR\013diffe" +
-      "rences\"\272\001\n!AnnotationProcessFieldsCompar" +
+      "rences\"\322\001\n!AnnotationProcessFieldsCompar" +
       "ison\022\023\n\005bq_id\030\001 \001(\tR\004bqId\022\027\n\007task_id\030\002 \001" +
       "(\tR\006taskId\022\035\n\nfield_name\030\003 \001(\tR\tfieldNam" +
       "e\022\035\n\ntrue_value\030\004 \001(\tR\ttrueValue\022)\n\020pred" +
-      "iction_value\030\005 \001(\tR\017predictionValue\"\377\001\n\017" +
-      "FeedbackMetrics\022%\n\016document_count\030\001 \001(\005R" +
-      "\rdocumentCount\022%\n\016feedback_count\030\002 \001(\005R\r" +
-      "feedbackCount\022P\n\023overall_correctness\030\003 \001" +
-      "(\0132\037.ssn.dataservice.v1.CorrectnessR\022ove" +
-      "rallCorrectness\022L\n\021field_correctness\030\004 \003" +
-      "(\0132\037.ssn.dataservice.v1.CorrectnessR\020fie" +
-      "ldCorrectness\"\314\001\n\013Correctness\022\024\n\005field\030\001" +
-      " \001(\tR\005field\022-\n\022correct_percentage\030\002 \001(\002R" +
-      "\021correctPercentage\0223\n\025incomplete_percent" +
-      "age\030\003 \001(\002R\024incompletePercentage\022)\n\020error" +
-      "_percentage\030\004 \001(\002R\017errorPercentage\022\030\n\007su" +
-      "pport\030\005 \001(\005R\007support\"#\n\rDeleteRequest\022\022\n" +
-      "\004tags\030\001 \003(\tR\004tags\"D\n\rCallsPerMonth\022\024\n\005ca" +
-      "lls\030\001 \001(\003R\005calls\022\035\n\nmonth_name\030\002 \001(\tR\tmo" +
-      "nthName\"b\n\025CallsPerMonthResponse\022I\n\017call" +
-      "s_per_month\030\001 \003(\0132!.ssn.dataservice.v1.C" +
-      "allsPerMonthR\rcallsPerMonth2\310\006\n\013DataServ" +
-      "ice\022g\n\016CreateDocument\022).ssn.dataservice.",
-      "v1.CreateDocumentRequest\032*.ssn.dataservi" +
-      "ce.v1.CreateDocumentResponse\022a\n\014ReadDocu" +
-      "ment\022\'.ssn.dataservice.v1.ReadDocumentRe" +
-      "quest\032(.ssn.dataservice.v1.ReadDocumentR" +
-      "esponse\022U\n\017PrepareFeedback\022*.ssn.dataser" +
-      "vice.v1.PrepareFeedbackRequest\032\026.google." +
-      "protobuf.Empty\022g\n\010Feedback\022#.ssn.dataser" +
-      "vice.v1.FeedbackRequest\032\026.google.protobu" +
-      "f.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022" +
-      "[\n\020CalculateMetrics\022\".ssn.dataservice.v1" +
-      ".MetricsRequest\032#.ssn.dataservice.v1.Fee" +
-      "dbackMetrics\022\220\001\n!CalculateAnnotationProc" +
-      "essMetrics\0223.ssn.dataservice.v1.Annotati" +
-      "onProcessMetricsRequest\0326.ssn.dataservic" +
-      "e.v1.AnnotationProcessPredictionMetrics\022" +
-      "c\n\006Delete\022!.ssn.dataservice.v1.DeleteReq" +
-      "uest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v" +
-      "1/feedback:delete:\001*\022X\n\023CallsPerMonthMet" +
-      "ric\022\026.google.protobuf.Empty\032).ssn.datase" +
-      "rvice.v1.CallsPerMonthResponseB\335\001\n\033ai.vi" +
-      "sma.ssn.dataservice.v1B\020DataserviceProto" +
-      "P\001ZBgithub.com/e-conomic/vmlapis/gen/go/" +
-      "ssn/dataservice/v1;dataservice\242\002\003SDX\252\002\022S" +
-      "sn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V1\342\002" +
-      "\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn::D" +
-      "ataservice::V1b\006proto3"
+      "iction_value\030\005 \001(\tR\017predictionValue\022\026\n\006r" +
+      "esult\030\006 \001(\010R\006result\"\377\001\n\017FeedbackMetrics\022" +
+      "%\n\016document_count\030\001 \001(\005R\rdocumentCount\022%" +
+      "\n\016feedback_count\030\002 \001(\005R\rfeedbackCount\022P\n" +
+      "\023overall_correctness\030\003 \001(\0132\037.ssn.dataser" +
+      "vice.v1.CorrectnessR\022overallCorrectness\022" +
+      "L\n\021field_correctness\030\004 \003(\0132\037.ssn.dataser" +
+      "vice.v1.CorrectnessR\020fieldCorrectness\"\314\001" +
+      "\n\013Correctness\022\024\n\005field\030\001 \001(\tR\005field\022-\n\022c" +
+      "orrect_percentage\030\002 \001(\002R\021correctPercenta" +
+      "ge\0223\n\025incomplete_percentage\030\003 \001(\002R\024incom" +
+      "pletePercentage\022)\n\020error_percentage\030\004 \001(" +
+      "\002R\017errorPercentage\022\030\n\007support\030\005 \001(\005R\007sup" +
+      "port\"#\n\rDeleteRequest\022\022\n\004tags\030\001 \003(\tR\004tag" +
+      "s\"D\n\rCallsPerMonth\022\024\n\005calls\030\001 \001(\003R\005calls" +
+      "\022\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025Calls" +
+      "PerMonthResponse\022I\n\017calls_per_month\030\001 \003(" +
+      "\0132!.ssn.dataservice.v1.CallsPerMonthR\rca" +
+      "llsPerMonth2\310\006\n\013DataService\022g\n\016CreateDoc",
+      "ument\022).ssn.dataservice.v1.CreateDocumen" +
+      "tRequest\032*.ssn.dataservice.v1.CreateDocu" +
+      "mentResponse\022a\n\014ReadDocument\022\'.ssn.datas" +
+      "ervice.v1.ReadDocumentRequest\032(.ssn.data" +
+      "service.v1.ReadDocumentResponse\022U\n\017Prepa" +
+      "reFeedback\022*.ssn.dataservice.v1.PrepareF" +
+      "eedbackRequest\032\026.google.protobuf.Empty\022g" +
+      "\n\010Feedback\022#.ssn.dataservice.v1.Feedback" +
+      "Request\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"" +
+      "\023/v1/feedback:create:\001*\022[\n\020CalculateMetr" +
+      "ics\022\".ssn.dataservice.v1.MetricsRequest\032" +
+      "#.ssn.dataservice.v1.FeedbackMetrics\022\220\001\n" +
+      "!CalculateAnnotationProcessMetrics\0223.ssn" +
+      ".dataservice.v1.AnnotationProcessMetrics" +
+      "Request\0326.ssn.dataservice.v1.AnnotationP" +
+      "rocessPredictionMetrics\022c\n\006Delete\022!.ssn." +
+      "dataservice.v1.DeleteRequest\032\026.google.pr" +
+      "otobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:delet" +
+      "e:\001*\022X\n\023CallsPerMonthMetric\022\026.google.pro" +
+      "tobuf.Empty\032).ssn.dataservice.v1.CallsPe" +
+      "rMonthResponseB\335\001\n\033ai.visma.ssn.dataserv" +
+      "ice.v1B\020DataserviceProtoP\001ZBgithub.com/e" +
+      "-conomic/vmlapis/gen/go/ssn/dataservice/" +
+      "v1;dataservice\242\002\003SDX\252\002\022Ssn.Dataservice.V" +
+      "1\312\002\022Ssn\\Dataservice\\V1\342\002\036Ssn\\Dataservice" +
+      "\\V1\\GPBMetadata\352\002\024Ssn::Dataservice::V1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -663,7 +664,7 @@ public final class DataserviceProto {
     internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_descriptor,
-        new java.lang.String[] { "BqId", "TaskId", "FieldName", "TrueValue", "PredictionValue", });
+        new java.lang.String[] { "BqId", "TaskId", "FieldName", "TrueValue", "PredictionValue", "Result", });
     internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_ssn_dataservice_v1_FeedbackMetrics_fieldAccessorTable = new

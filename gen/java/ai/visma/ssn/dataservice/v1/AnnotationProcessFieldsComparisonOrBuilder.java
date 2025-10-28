@@ -68,4 +68,10 @@ public interface AnnotationProcessFieldsComparisonOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPredictionValueBytes();
+
+  /**
+   * <code>bool result = 6 [json_name = "result"];</code>
+   * @return The result.
+   */
+  boolean getResult();
 }

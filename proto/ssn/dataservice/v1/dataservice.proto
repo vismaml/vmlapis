@@ -312,6 +312,7 @@ message AnnotationProcessFieldsComparison {
   string field_name = 3;
   string true_value = 4;
   string prediction_value = 5;
+  bool result = 6;
 }
 
 message FeedbackMetrics {
