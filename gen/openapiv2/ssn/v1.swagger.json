@@ -645,7 +645,7 @@
             "type": "object",
             "$ref": "#/definitions/typePurchaseLineCandidate"
           },
-          "title": "purchase line candidates"
+          "title": "purchase line candidates (old format)"
         },
         "answerCandidates": {
           "type": "array",
@@ -673,7 +673,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
           },
-          "title": "vat distribution candidates"
+          "title": "vat distribution candidates (old format)"
         },
         "qrCodes": {
           "type": "array",
@@ -691,21 +691,21 @@
           },
           "title": "swiss qr bills detected in document"
         },
-        "purchaseLines": {
+        "purchaseLinesCandidates": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typePurchaseLine"
           },
-          "title": "purchase lines"
+          "title": "purchase lines (new format - candidate-driven)"
         },
-        "vatDistribution": {
+        "vatDistributionItems": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeVatDistribution"
           },
-          "title": "vat distribution"
+          "title": "vat distribution (new format - candidate-driven)"
         }
       }
     },

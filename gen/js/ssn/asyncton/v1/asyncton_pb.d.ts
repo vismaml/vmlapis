@@ -185,15 +185,15 @@ export class Annotation extends jspb.Message {
   clearSwissQrBillsList(): Annotation;
   addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
 
-  getPurchaseLinesList(): Array<ssn_type_candidate_pb.PurchaseLine>;
-  setPurchaseLinesList(value: Array<ssn_type_candidate_pb.PurchaseLine>): Annotation;
-  clearPurchaseLinesList(): Annotation;
-  addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
+  getPurchaseLinesCandidatesList(): Array<ssn_type_candidate_pb.PurchaseLine>;
+  setPurchaseLinesCandidatesList(value: Array<ssn_type_candidate_pb.PurchaseLine>): Annotation;
+  clearPurchaseLinesCandidatesList(): Annotation;
+  addPurchaseLinesCandidates(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
 
-  getVatDistributionList(): Array<ssn_type_candidate_pb.VatDistribution>;
-  setVatDistributionList(value: Array<ssn_type_candidate_pb.VatDistribution>): Annotation;
-  clearVatDistributionList(): Annotation;
-  addVatDistribution(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
+  getVatDistributionItemsList(): Array<ssn_type_candidate_pb.VatDistribution>;
+  setVatDistributionItemsList(value: Array<ssn_type_candidate_pb.VatDistribution>): Annotation;
+  clearVatDistributionItemsList(): Annotation;
+  addVatDistributionItems(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
@@ -214,8 +214,8 @@ export namespace Annotation {
     vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
-    purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
-    vatDistributionList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
+    purchaseLinesCandidatesList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
+    vatDistributionItemsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
   }
 }
 
