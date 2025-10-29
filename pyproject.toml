@@ -1,6 +1,6 @@
 [project]
 name = "vml_proto"
-version = "1.7.8.dev1"
+version = "0.0.0"
 description = "A package containing vml protobuf definitions for python"
 readme = "README.md"
 requires-python = ">=3.8"
