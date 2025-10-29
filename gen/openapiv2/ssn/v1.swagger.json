@@ -1407,6 +1407,63 @@
       },
       "description": "A word representation."
     },
+    "v1AnnotationProcessFieldsComparison": {
+      "type": "object",
+      "properties": {
+        "bqId": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "fieldName": {
+          "type": "string"
+        },
+        "trueValue": {
+          "type": "string"
+        },
+        "predictionValue": {
+          "type": "string"
+        },
+        "result": {
+          "type": "boolean"
+        }
+      }
+    },
+    "v1AnnotationProcessPredictionMetrics": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "predictionCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1AnnotationProcessFieldsComparison"
+          }
+        }
+      }
+    },
     "v1CallsPerMonth": {
       "type": "object",
       "properties": {
