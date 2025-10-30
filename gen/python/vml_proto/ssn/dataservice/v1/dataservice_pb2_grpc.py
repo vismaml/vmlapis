@@ -38,7 +38,7 @@ class DataServiceStub(object):
         self.CalculateMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateMetrics',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.SerializeToString,
-                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeprecatedFeedbackMetrics.FromString,
                 _registered_method=True)
         self.CalculateAnnotationProcessMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
@@ -135,7 +135,7 @@ def add_DataServiceServicer_to_server(servicer, server):
             'CalculateMetrics': grpc.unary_unary_rpc_method_handler(
                     servicer.CalculateMetrics,
                     request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.FromString,
-                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.SerializeToString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeprecatedFeedbackMetrics.SerializeToString,
             ),
             'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
                     servicer.CalculateAnnotationProcessMetrics,
@@ -287,7 +287,7 @@ class DataService(object):
             target,
             '/ssn.dataservice.v1.DataService/CalculateMetrics',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.SerializeToString,
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeprecatedFeedbackMetrics.FromString,
             options,
             channel_credentials,
             insecure,

@@ -39,7 +39,7 @@ type DataServiceClient interface {
 	// For feedback
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
+	CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*DeprecatedFeedbackMetrics, error)
 	CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
@@ -89,8 +89,8 @@ func (c *dataServiceClient) Feedback(ctx context.Context, in *FeedbackRequest, o
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error) {
-	out := new(SsnMetrics)
+func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*DeprecatedFeedbackMetrics, error) {
+	out := new(DeprecatedFeedbackMetrics)
 	err := c.cc.Invoke(ctx, DataService_CalculateMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -134,7 +134,7 @@ type DataServiceServer interface {
 	// For feedback
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*emptypb.Empty, error)
 	Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error)
-	CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*SsnMetrics, error)
+	CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*DeprecatedFeedbackMetrics, error)
 	CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
@@ -156,7 +156,7 @@ func (UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareF
 func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*SsnMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*DeprecatedFeedbackMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
 func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error) {

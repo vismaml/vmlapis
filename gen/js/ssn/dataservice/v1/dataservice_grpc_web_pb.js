@@ -342,13 +342,13 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.feedback =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.FeedbackMetricsRequest,
- *   !proto.ssn.dataservice.v1.SsnMetrics>}
+ *   !proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics>}
  */
 const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1.DataService/CalculateMetrics',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1.FeedbackMetricsRequest,
-  proto.ssn.dataservice.v1.SsnMetrics,
+  proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics,
   /**
    * @param {!proto.ssn.dataservice.v1.FeedbackMetricsRequest} request
    * @return {!Uint8Array}
@@ -356,7 +356,7 @@ const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescrip
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.dataservice.v1.SsnMetrics.deserializeBinary
+  proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics.deserializeBinary
 );
 
 
@@ -365,9 +365,9 @@ const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescrip
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.SsnMetrics)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.SsnMetrics>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
@@ -386,7 +386,7 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.dataservice.v1.SsnMetrics>}
+ * @return {!Promise<!proto.ssn.dataservice.v1.DeprecatedFeedbackMetrics>}
  *     Promise that resolves to the response
  */
 proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =

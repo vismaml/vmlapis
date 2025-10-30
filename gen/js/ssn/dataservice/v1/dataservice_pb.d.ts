@@ -1601,3 +1601,37 @@ export namespace CallsPerMonthResponse {
   }
 }
 
+export class DeprecatedFeedbackMetrics extends jspb.Message {
+  getDocumentCount(): number;
+  setDocumentCount(value: number): DeprecatedFeedbackMetrics;
+
+  getFeedbackCount(): number;
+  setFeedbackCount(value: number): DeprecatedFeedbackMetrics;
+
+  getOverallCorrectness(): Correctness | undefined;
+  setOverallCorrectness(value?: Correctness): DeprecatedFeedbackMetrics;
+  hasOverallCorrectness(): boolean;
+  clearOverallCorrectness(): DeprecatedFeedbackMetrics;
+
+  getFieldCorrectnessList(): Array<Correctness>;
+  setFieldCorrectnessList(value: Array<Correctness>): DeprecatedFeedbackMetrics;
+  clearFieldCorrectnessList(): DeprecatedFeedbackMetrics;
+  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeprecatedFeedbackMetrics.AsObject;
+  static toObject(includeInstance: boolean, msg: DeprecatedFeedbackMetrics): DeprecatedFeedbackMetrics.AsObject;
+  static serializeBinaryToWriter(message: DeprecatedFeedbackMetrics, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeprecatedFeedbackMetrics;
+  static deserializeBinaryFromReader(message: DeprecatedFeedbackMetrics, reader: jspb.BinaryReader): DeprecatedFeedbackMetrics;
+}
+
+export namespace DeprecatedFeedbackMetrics {
+  export type AsObject = {
+    documentCount: number,
+    feedbackCount: number,
+    overallCorrectness?: Correctness.AsObject,
+    fieldCorrectnessList: Array<Correctness.AsObject>,
+  }
+}
+

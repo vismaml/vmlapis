@@ -1525,6 +1525,30 @@
         }
       }
     },
+    "v1DeprecatedFeedbackMetrics": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "feedbackCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "$ref": "#/definitions/v1Correctness"
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        }
+      },
+      "title": "Deprecated messages - kept for backward compatibility"
+    },
     "v1DocumentAnnotatorRequest": {
       "type": "object",
       "properties": {

@@ -547,3 +547,15 @@ class CallsPerMonthResponse(_message.Message):
     CALLS_PER_MONTH_FIELD_NUMBER: _ClassVar[int]
     calls_per_month: _containers.RepeatedCompositeFieldContainer[CallsPerMonth]
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
+
+class DeprecatedFeedbackMetrics(_message.Message):
+    __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")
+    DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
+    FEEDBACK_COUNT_FIELD_NUMBER: _ClassVar[int]
+    OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
+    FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
+    document_count: int
+    feedback_count: int
+    overall_correctness: Correctness
+    field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
+    def __init__(self, document_count: _Optional[int] = ..., feedback_count: _Optional[int] = ..., overall_correctness: _Optional[_Union[Correctness, _Mapping]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
