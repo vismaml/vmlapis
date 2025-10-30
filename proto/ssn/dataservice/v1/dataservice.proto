@@ -27,8 +27,8 @@ service DataService {
       body: "*"
     };
   }
-  rpc CalculateMetrics(MetricsRequest) returns (FeedbackMetrics);
-  rpc CalculateAnnotationProcessMetrics(AnnotationProcessMetricsRequest) returns (AnnotationProcessPredictionMetrics);
+  rpc CalculateMetrics(FeedbackMetricsRequest) returns (SsnMetrics);
+  rpc CalculateAnnotationProcessMetrics(PredictionMetricsRequest) returns (SsnMetrics);
 
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
