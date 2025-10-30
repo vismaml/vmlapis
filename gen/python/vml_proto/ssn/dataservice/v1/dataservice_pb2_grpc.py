@@ -37,13 +37,13 @@ class DataServiceStub(object):
                 _registered_method=True)
         self.CalculateMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateMetrics',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
-                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
                 _registered_method=True)
         self.CalculateAnnotationProcessMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
-                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessPredictionMetrics.FromString,
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
                 _registered_method=True)
         self.Delete = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/Delete',
@@ -134,13 +134,13 @@ def add_DataServiceServicer_to_server(servicer, server):
             ),
             'CalculateMetrics': grpc.unary_unary_rpc_method_handler(
                     servicer.CalculateMetrics,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.FromString,
-                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.SerializeToString,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.SerializeToString,
             ),
             'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
                     servicer.CalculateAnnotationProcessMetrics,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.FromString,
-                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessPredictionMetrics.SerializeToString,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.SerializeToString,
             ),
             'Delete': grpc.unary_unary_rpc_method_handler(
                     servicer.Delete,
@@ -286,8 +286,8 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/CalculateMetrics',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
             options,
             channel_credentials,
             insecure,
@@ -313,8 +313,8 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessPredictionMetrics.FromString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
             options,
             channel_credentials,
             insecure,

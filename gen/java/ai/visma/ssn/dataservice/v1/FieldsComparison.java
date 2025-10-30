@@ -6,12 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.AnnotationProcessFieldsComparison}
+ * Protobuf type {@code ssn.dataservice.v1.FieldsComparison}
  */
-public final class AnnotationProcessFieldsComparison extends
+public final class FieldsComparison extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.AnnotationProcessFieldsComparison)
-    AnnotationProcessFieldsComparisonOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FieldsComparison)
+    FieldsComparisonOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,13 +20,13 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      AnnotationProcessFieldsComparison.class.getName());
+      FieldsComparison.class.getName());
   }
-  // Use AnnotationProcessFieldsComparison.newBuilder() to construct.
-  private AnnotationProcessFieldsComparison(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use FieldsComparison.newBuilder() to construct.
+  private FieldsComparison(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private AnnotationProcessFieldsComparison() {
+  private FieldsComparison() {
     bqId_ = "";
     taskId_ = "";
     fieldName_ = "";
@@ -36,15 +36,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FieldsComparison_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FieldsComparison_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.class, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder.class);
+            ai.visma.ssn.dataservice.v1.FieldsComparison.class, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder.class);
   }
 
   public static final int BQ_ID_FIELD_NUMBER = 1;
@@ -323,10 +323,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.FieldsComparison)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison other = (ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison) obj;
+    ai.visma.ssn.dataservice.v1.FieldsComparison other = (ai.visma.ssn.dataservice.v1.FieldsComparison) obj;
 
     if (!getBqId()
         .equals(other.getBqId())) return false;
@@ -369,44 +369,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -414,26 +414,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -446,7 +446,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.FieldsComparison prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -462,26 +462,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.AnnotationProcessFieldsComparison}
+   * Protobuf type {@code ssn.dataservice.v1.FieldsComparison}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.AnnotationProcessFieldsComparison)
-      ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparisonOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.FieldsComparison)
+      ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FieldsComparison_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FieldsComparison_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.class, ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.Builder.class);
+              ai.visma.ssn.dataservice.v1.FieldsComparison.class, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.FieldsComparison.newBuilder()
     private Builder() {
 
     }
@@ -507,17 +507,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_AnnotationProcessFieldsComparison_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FieldsComparison_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.FieldsComparison getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.FieldsComparison.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison build() {
-      ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.FieldsComparison build() {
+      ai.visma.ssn.dataservice.v1.FieldsComparison result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -525,14 +525,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison buildPartial() {
-      ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison result = new ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison(this);
+    public ai.visma.ssn.dataservice.v1.FieldsComparison buildPartial() {
+      ai.visma.ssn.dataservice.v1.FieldsComparison result = new ai.visma.ssn.dataservice.v1.FieldsComparison(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.FieldsComparison result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.bqId_ = bqId_;
@@ -556,16 +556,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.FieldsComparison) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.FieldsComparison)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison other) {
-      if (other == ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.FieldsComparison other) {
+      if (other == ai.visma.ssn.dataservice.v1.FieldsComparison.getDefaultInstance()) return this;
       if (!other.getBqId().isEmpty()) {
         bqId_ = other.bqId_;
         bitField0_ |= 0x00000001;
@@ -1059,23 +1059,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.AnnotationProcessFieldsComparison)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.FieldsComparison)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.AnnotationProcessFieldsComparison)
-  private static final ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.FieldsComparison)
+  private static final ai.visma.ssn.dataservice.v1.FieldsComparison DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.FieldsComparison();
   }
 
-  public static ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.FieldsComparison getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AnnotationProcessFieldsComparison>
-      PARSER = new com.google.protobuf.AbstractParser<AnnotationProcessFieldsComparison>() {
+  private static final com.google.protobuf.Parser<FieldsComparison>
+      PARSER = new com.google.protobuf.AbstractParser<FieldsComparison>() {
     @java.lang.Override
-    public AnnotationProcessFieldsComparison parsePartialFrom(
+    public FieldsComparison parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1094,17 +1094,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AnnotationProcessFieldsComparison> parser() {
+  public static com.google.protobuf.Parser<FieldsComparison> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AnnotationProcessFieldsComparison> getParserForType() {
+  public com.google.protobuf.Parser<FieldsComparison> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.AnnotationProcessFieldsComparison getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.FieldsComparison getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

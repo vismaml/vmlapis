@@ -39,8 +39,8 @@ type DataServiceClient interface {
 	// For feedback
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
-	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessPredictionMetrics, error)
+	CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
+	CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 }
@@ -89,8 +89,8 @@ func (c *dataServiceClient) Feedback(ctx context.Context, in *FeedbackRequest, o
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error) {
-	out := new(FeedbackMetrics)
+func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error) {
+	out := new(SsnMetrics)
 	err := c.cc.Invoke(ctx, DataService_CalculateMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -98,8 +98,8 @@ func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *MetricsReq
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessPredictionMetrics, error) {
-	out := new(AnnotationProcessPredictionMetrics)
+func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error) {
+	out := new(SsnMetrics)
 	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -134,8 +134,8 @@ type DataServiceServer interface {
 	// For feedback
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*emptypb.Empty, error)
 	Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error)
-	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
-	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessPredictionMetrics, error)
+	CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*SsnMetrics, error)
+	CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 }
@@ -156,10 +156,10 @@ func (UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareF
 func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*SsnMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessPredictionMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
 }
 func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error) {
@@ -253,7 +253,7 @@ func _DataService_Feedback_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MetricsRequest)
+	in := new(FeedbackMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -265,13 +265,13 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 		FullMethod: DataService_CalculateMetrics_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*MetricsRequest))
+		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*FeedbackMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AnnotationProcessMetricsRequest)
+	in := new(PredictionMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -283,7 +283,7 @@ func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx
 		FullMethod: DataService_CalculateAnnotationProcessMetrics_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*AnnotationProcessMetricsRequest))
+		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*PredictionMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

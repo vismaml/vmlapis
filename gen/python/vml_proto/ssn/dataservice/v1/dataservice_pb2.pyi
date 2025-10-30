@@ -458,7 +458,7 @@ class FeedbackRequest(_message.Message):
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, id: _Optional[str] = ..., true_values: _Optional[_Union[TrueValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
-class MetricsRequest(_message.Message):
+class FeedbackMetricsRequest(_message.Message):
     __slots__ = ("start_time", "end_time", "fields", "tags", "country_codes", "document_types")
     START_TIME_FIELD_NUMBER: _ClassVar[int]
     END_TIME_FIELD_NUMBER: _ClassVar[int]
@@ -474,7 +474,7 @@ class MetricsRequest(_message.Message):
     document_types: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, start_time: _Optional[int] = ..., end_time: _Optional[int] = ..., fields: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
-class AnnotationProcessMetricsRequest(_message.Message):
+class PredictionMetricsRequest(_message.Message):
     __slots__ = ("fields", "country_codes", "document_types")
     FIELDS_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
@@ -484,21 +484,21 @@ class AnnotationProcessMetricsRequest(_message.Message):
     document_types: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
-class AnnotationProcessPredictionMetrics(_message.Message):
-    __slots__ = ("document_count", "prediction_count", "overall_correctness", "field_correctness", "differences")
+class SsnMetrics(_message.Message):
+    __slots__ = ("document_count", "true_value_count", "overall_correctness", "field_correctness", "differences")
     DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
-    PREDICTION_COUNT_FIELD_NUMBER: _ClassVar[int]
+    TRUE_VALUE_COUNT_FIELD_NUMBER: _ClassVar[int]
     OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
     FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
     DIFFERENCES_FIELD_NUMBER: _ClassVar[int]
     document_count: int
-    prediction_count: int
+    true_value_count: int
     overall_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
     field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
-    differences: _containers.RepeatedCompositeFieldContainer[AnnotationProcessFieldsComparison]
-    def __init__(self, document_count: _Optional[int] = ..., prediction_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., differences: _Optional[_Iterable[_Union[AnnotationProcessFieldsComparison, _Mapping]]] = ...) -> None: ...
+    differences: _containers.RepeatedCompositeFieldContainer[FieldsComparison]
+    def __init__(self, document_count: _Optional[int] = ..., true_value_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., differences: _Optional[_Iterable[_Union[FieldsComparison, _Mapping]]] = ...) -> None: ...
 
-class AnnotationProcessFieldsComparison(_message.Message):
+class FieldsComparison(_message.Message):
     __slots__ = ("bq_id", "task_id", "field_name", "true_value", "prediction_value", "result")
     BQ_ID_FIELD_NUMBER: _ClassVar[int]
     TASK_ID_FIELD_NUMBER: _ClassVar[int]
@@ -513,18 +513,6 @@ class AnnotationProcessFieldsComparison(_message.Message):
     prediction_value: str
     result: bool
     def __init__(self, bq_id: _Optional[str] = ..., task_id: _Optional[str] = ..., field_name: _Optional[str] = ..., true_value: _Optional[str] = ..., prediction_value: _Optional[str] = ..., result: bool = ...) -> None: ...
-
-class FeedbackMetrics(_message.Message):
-    __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")
-    DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
-    FEEDBACK_COUNT_FIELD_NUMBER: _ClassVar[int]
-    OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
-    FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
-    document_count: int
-    feedback_count: int
-    overall_correctness: Correctness
-    field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
-    def __init__(self, document_count: _Optional[int] = ..., feedback_count: _Optional[int] = ..., overall_correctness: _Optional[_Union[Correctness, _Mapping]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
 
 class Correctness(_message.Message):
     __slots__ = ("field", "correct_percentage", "incomplete_percentage", "error_percentage", "support")

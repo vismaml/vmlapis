@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface AnnotationProcessFieldsComparisonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.AnnotationProcessFieldsComparison)
+public interface FieldsComparisonOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.FieldsComparison)
     com.google.protobuf.MessageOrBuilder {
 
   /**

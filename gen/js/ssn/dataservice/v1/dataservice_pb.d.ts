@@ -1349,42 +1349,42 @@ export namespace FeedbackRequest {
   }
 }
 
-export class MetricsRequest extends jspb.Message {
+export class FeedbackMetricsRequest extends jspb.Message {
   getStartTime(): number;
-  setStartTime(value: number): MetricsRequest;
+  setStartTime(value: number): FeedbackMetricsRequest;
 
   getEndTime(): number;
-  setEndTime(value: number): MetricsRequest;
+  setEndTime(value: number): FeedbackMetricsRequest;
 
   getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): MetricsRequest;
-  clearFieldsList(): MetricsRequest;
-  addFields(value: string, index?: number): MetricsRequest;
+  setFieldsList(value: Array<string>): FeedbackMetricsRequest;
+  clearFieldsList(): FeedbackMetricsRequest;
+  addFields(value: string, index?: number): FeedbackMetricsRequest;
 
   getTagsList(): Array<string>;
-  setTagsList(value: Array<string>): MetricsRequest;
-  clearTagsList(): MetricsRequest;
-  addTags(value: string, index?: number): MetricsRequest;
+  setTagsList(value: Array<string>): FeedbackMetricsRequest;
+  clearTagsList(): FeedbackMetricsRequest;
+  addTags(value: string, index?: number): FeedbackMetricsRequest;
 
   getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): MetricsRequest;
-  clearCountryCodesList(): MetricsRequest;
-  addCountryCodes(value: string, index?: number): MetricsRequest;
+  setCountryCodesList(value: Array<string>): FeedbackMetricsRequest;
+  clearCountryCodesList(): FeedbackMetricsRequest;
+  addCountryCodes(value: string, index?: number): FeedbackMetricsRequest;
 
   getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): MetricsRequest;
-  clearDocumentTypesList(): MetricsRequest;
-  addDocumentTypes(value: string, index?: number): MetricsRequest;
+  setDocumentTypesList(value: Array<string>): FeedbackMetricsRequest;
+  clearDocumentTypesList(): FeedbackMetricsRequest;
+  addDocumentTypes(value: string, index?: number): FeedbackMetricsRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): MetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: MetricsRequest): MetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: MetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): MetricsRequest;
-  static deserializeBinaryFromReader(message: MetricsRequest, reader: jspb.BinaryReader): MetricsRequest;
+  toObject(includeInstance?: boolean): FeedbackMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: FeedbackMetricsRequest): FeedbackMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: FeedbackMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FeedbackMetricsRequest;
+  static deserializeBinaryFromReader(message: FeedbackMetricsRequest, reader: jspb.BinaryReader): FeedbackMetricsRequest;
 }
 
-export namespace MetricsRequest {
+export namespace FeedbackMetricsRequest {
   export type AsObject = {
     startTime: number,
     endTime: number,
@@ -1395,31 +1395,31 @@ export namespace MetricsRequest {
   }
 }
 
-export class AnnotationProcessMetricsRequest extends jspb.Message {
+export class PredictionMetricsRequest extends jspb.Message {
   getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): AnnotationProcessMetricsRequest;
-  clearFieldsList(): AnnotationProcessMetricsRequest;
-  addFields(value: string, index?: number): AnnotationProcessMetricsRequest;
+  setFieldsList(value: Array<string>): PredictionMetricsRequest;
+  clearFieldsList(): PredictionMetricsRequest;
+  addFields(value: string, index?: number): PredictionMetricsRequest;
 
   getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): AnnotationProcessMetricsRequest;
-  clearCountryCodesList(): AnnotationProcessMetricsRequest;
-  addCountryCodes(value: string, index?: number): AnnotationProcessMetricsRequest;
+  setCountryCodesList(value: Array<string>): PredictionMetricsRequest;
+  clearCountryCodesList(): PredictionMetricsRequest;
+  addCountryCodes(value: string, index?: number): PredictionMetricsRequest;
 
   getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): AnnotationProcessMetricsRequest;
-  clearDocumentTypesList(): AnnotationProcessMetricsRequest;
-  addDocumentTypes(value: string, index?: number): AnnotationProcessMetricsRequest;
+  setDocumentTypesList(value: Array<string>): PredictionMetricsRequest;
+  clearDocumentTypesList(): PredictionMetricsRequest;
+  addDocumentTypes(value: string, index?: number): PredictionMetricsRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AnnotationProcessMetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsRequest): AnnotationProcessMetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: AnnotationProcessMetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsRequest;
-  static deserializeBinaryFromReader(message: AnnotationProcessMetricsRequest, reader: jspb.BinaryReader): AnnotationProcessMetricsRequest;
+  toObject(includeInstance?: boolean): PredictionMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: PredictionMetricsRequest): PredictionMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: PredictionMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PredictionMetricsRequest;
+  static deserializeBinaryFromReader(message: PredictionMetricsRequest, reader: jspb.BinaryReader): PredictionMetricsRequest;
 }
 
-export namespace AnnotationProcessMetricsRequest {
+export namespace PredictionMetricsRequest {
   export type AsObject = {
     fieldsList: Array<string>,
     countryCodesList: Array<string>,
@@ -1427,74 +1427,74 @@ export namespace AnnotationProcessMetricsRequest {
   }
 }
 
-export class AnnotationProcessPredictionMetrics extends jspb.Message {
+export class SsnMetrics extends jspb.Message {
   getDocumentCount(): number;
-  setDocumentCount(value: number): AnnotationProcessPredictionMetrics;
+  setDocumentCount(value: number): SsnMetrics;
 
-  getPredictionCount(): number;
-  setPredictionCount(value: number): AnnotationProcessPredictionMetrics;
+  getTrueValueCount(): number;
+  setTrueValueCount(value: number): SsnMetrics;
 
   getOverallCorrectnessList(): Array<Correctness>;
-  setOverallCorrectnessList(value: Array<Correctness>): AnnotationProcessPredictionMetrics;
-  clearOverallCorrectnessList(): AnnotationProcessPredictionMetrics;
+  setOverallCorrectnessList(value: Array<Correctness>): SsnMetrics;
+  clearOverallCorrectnessList(): SsnMetrics;
   addOverallCorrectness(value?: Correctness, index?: number): Correctness;
 
   getFieldCorrectnessList(): Array<Correctness>;
-  setFieldCorrectnessList(value: Array<Correctness>): AnnotationProcessPredictionMetrics;
-  clearFieldCorrectnessList(): AnnotationProcessPredictionMetrics;
+  setFieldCorrectnessList(value: Array<Correctness>): SsnMetrics;
+  clearFieldCorrectnessList(): SsnMetrics;
   addFieldCorrectness(value?: Correctness, index?: number): Correctness;
 
-  getDifferencesList(): Array<AnnotationProcessFieldsComparison>;
-  setDifferencesList(value: Array<AnnotationProcessFieldsComparison>): AnnotationProcessPredictionMetrics;
-  clearDifferencesList(): AnnotationProcessPredictionMetrics;
-  addDifferences(value?: AnnotationProcessFieldsComparison, index?: number): AnnotationProcessFieldsComparison;
+  getDifferencesList(): Array<FieldsComparison>;
+  setDifferencesList(value: Array<FieldsComparison>): SsnMetrics;
+  clearDifferencesList(): SsnMetrics;
+  addDifferences(value?: FieldsComparison, index?: number): FieldsComparison;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AnnotationProcessPredictionMetrics.AsObject;
-  static toObject(includeInstance: boolean, msg: AnnotationProcessPredictionMetrics): AnnotationProcessPredictionMetrics.AsObject;
-  static serializeBinaryToWriter(message: AnnotationProcessPredictionMetrics, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AnnotationProcessPredictionMetrics;
-  static deserializeBinaryFromReader(message: AnnotationProcessPredictionMetrics, reader: jspb.BinaryReader): AnnotationProcessPredictionMetrics;
+  toObject(includeInstance?: boolean): SsnMetrics.AsObject;
+  static toObject(includeInstance: boolean, msg: SsnMetrics): SsnMetrics.AsObject;
+  static serializeBinaryToWriter(message: SsnMetrics, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SsnMetrics;
+  static deserializeBinaryFromReader(message: SsnMetrics, reader: jspb.BinaryReader): SsnMetrics;
 }
 
-export namespace AnnotationProcessPredictionMetrics {
+export namespace SsnMetrics {
   export type AsObject = {
     documentCount: number,
-    predictionCount: number,
+    trueValueCount: number,
     overallCorrectnessList: Array<Correctness.AsObject>,
     fieldCorrectnessList: Array<Correctness.AsObject>,
-    differencesList: Array<AnnotationProcessFieldsComparison.AsObject>,
+    differencesList: Array<FieldsComparison.AsObject>,
   }
 }
 
-export class AnnotationProcessFieldsComparison extends jspb.Message {
+export class FieldsComparison extends jspb.Message {
   getBqId(): string;
-  setBqId(value: string): AnnotationProcessFieldsComparison;
+  setBqId(value: string): FieldsComparison;
 
   getTaskId(): string;
-  setTaskId(value: string): AnnotationProcessFieldsComparison;
+  setTaskId(value: string): FieldsComparison;
 
   getFieldName(): string;
-  setFieldName(value: string): AnnotationProcessFieldsComparison;
+  setFieldName(value: string): FieldsComparison;
 
   getTrueValue(): string;
-  setTrueValue(value: string): AnnotationProcessFieldsComparison;
+  setTrueValue(value: string): FieldsComparison;
 
   getPredictionValue(): string;
-  setPredictionValue(value: string): AnnotationProcessFieldsComparison;
+  setPredictionValue(value: string): FieldsComparison;
 
   getResult(): boolean;
-  setResult(value: boolean): AnnotationProcessFieldsComparison;
+  setResult(value: boolean): FieldsComparison;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AnnotationProcessFieldsComparison.AsObject;
-  static toObject(includeInstance: boolean, msg: AnnotationProcessFieldsComparison): AnnotationProcessFieldsComparison.AsObject;
-  static serializeBinaryToWriter(message: AnnotationProcessFieldsComparison, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AnnotationProcessFieldsComparison;
-  static deserializeBinaryFromReader(message: AnnotationProcessFieldsComparison, reader: jspb.BinaryReader): AnnotationProcessFieldsComparison;
+  toObject(includeInstance?: boolean): FieldsComparison.AsObject;
+  static toObject(includeInstance: boolean, msg: FieldsComparison): FieldsComparison.AsObject;
+  static serializeBinaryToWriter(message: FieldsComparison, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FieldsComparison;
+  static deserializeBinaryFromReader(message: FieldsComparison, reader: jspb.BinaryReader): FieldsComparison;
 }
 
-export namespace AnnotationProcessFieldsComparison {
+export namespace FieldsComparison {
   export type AsObject = {
     bqId: string,
     taskId: string,
@@ -1502,40 +1502,6 @@ export namespace AnnotationProcessFieldsComparison {
     trueValue: string,
     predictionValue: string,
     result: boolean,
-  }
-}
-
-export class FeedbackMetrics extends jspb.Message {
-  getDocumentCount(): number;
-  setDocumentCount(value: number): FeedbackMetrics;
-
-  getFeedbackCount(): number;
-  setFeedbackCount(value: number): FeedbackMetrics;
-
-  getOverallCorrectness(): Correctness | undefined;
-  setOverallCorrectness(value?: Correctness): FeedbackMetrics;
-  hasOverallCorrectness(): boolean;
-  clearOverallCorrectness(): FeedbackMetrics;
-
-  getFieldCorrectnessList(): Array<Correctness>;
-  setFieldCorrectnessList(value: Array<Correctness>): FeedbackMetrics;
-  clearFieldCorrectnessList(): FeedbackMetrics;
-  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FeedbackMetrics.AsObject;
-  static toObject(includeInstance: boolean, msg: FeedbackMetrics): FeedbackMetrics.AsObject;
-  static serializeBinaryToWriter(message: FeedbackMetrics, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FeedbackMetrics;
-  static deserializeBinaryFromReader(message: FeedbackMetrics, reader: jspb.BinaryReader): FeedbackMetrics;
-}
-
-export namespace FeedbackMetrics {
-  export type AsObject = {
-    documentCount: number,
-    feedbackCount: number,
-    overallCorrectness?: Correctness.AsObject,
-    fieldCorrectnessList: Array<Correctness.AsObject>,
   }
 }
 

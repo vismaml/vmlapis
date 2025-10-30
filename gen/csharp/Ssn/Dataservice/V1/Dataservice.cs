@@ -343,66 +343,59 @@ namespace Ssn.Dataservice.V1 {
             "dHlwZS5UaWVyUgR0aWVyEhoKCHNlZ21lbnRzGAkgAygJUghzZWdtZW50cyJ2",
             "Cg9GZWVkYmFja1JlcXVlc3QSDgoCaWQYASABKAlSAmlkEj8KC3RydWVfdmFs",
             "dWVzGAIgASgLMh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlRydWVWYWx1ZXNSCnRy",
-            "dWVWYWx1ZXMSEgoEdGFncxgDIAMoCVIEdGFncyLCAQoOTWV0cmljc1JlcXVl",
-            "c3QSHQoKc3RhcnRfdGltZRgCIAEoA1IJc3RhcnRUaW1lEhkKCGVuZF90aW1l",
-            "GAMgASgDUgdlbmRUaW1lEhYKBmZpZWxkcxgEIAMoCVIGZmllbGRzEhIKBHRh",
-            "Z3MYBSADKAlSBHRhZ3MSIwoNY291bnRyeV9jb2RlcxgGIAMoCVIMY291bnRy",
-            "eUNvZGVzEiUKDmRvY3VtZW50X3R5cGVzGAcgAygJUg1kb2N1bWVudFR5cGVz",
-            "IoUBCh9Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0EhYKBmZpZWxk",
+            "dWVWYWx1ZXMSEgoEdGFncxgDIAMoCVIEdGFncyLKAQoWRmVlZGJhY2tNZXRy",
+            "aWNzUmVxdWVzdBIdCgpzdGFydF90aW1lGAIgASgDUglzdGFydFRpbWUSGQoI",
+            "ZW5kX3RpbWUYAyABKANSB2VuZFRpbWUSFgoGZmllbGRzGAQgAygJUgZmaWVs",
+            "ZHMSEgoEdGFncxgFIAMoCVIEdGFncxIjCg1jb3VudHJ5X2NvZGVzGAYgAygJ",
+            "Ugxjb3VudHJ5Q29kZXMSJQoOZG9jdW1lbnRfdHlwZXMYByADKAlSDWRvY3Vt",
+            "ZW50VHlwZXMifgoYUHJlZGljdGlvbk1ldHJpY3NSZXF1ZXN0EhYKBmZpZWxk",
             "cxgBIAMoCVIGZmllbGRzEiMKDWNvdW50cnlfY29kZXMYAiADKAlSDGNvdW50",
             "cnlDb2RlcxIlCg5kb2N1bWVudF90eXBlcxgDIAMoCVINZG9jdW1lbnRUeXBl",
-            "cyLvAgoiQW5ub3RhdGlvblByb2Nlc3NQcmVkaWN0aW9uTWV0cmljcxIlCg5k",
-            "b2N1bWVudF9jb3VudBgBIAEoBVINZG9jdW1lbnRDb3VudBIpChBwcmVkaWN0",
-            "aW9uX2NvdW50GAIgASgFUg9wcmVkaWN0aW9uQ291bnQSUAoTb3ZlcmFsbF9j",
-            "b3JyZWN0bmVzcxgDIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0",
-            "bmVzc1ISb3ZlcmFsbENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNz",
-            "GAQgAygLMh8uc3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVs",
-            "ZENvcnJlY3RuZXNzElcKC2RpZmZlcmVuY2VzGAUgAygLMjUuc3NuLmRhdGFz",
-            "ZXJ2aWNlLnYxLkFubm90YXRpb25Qcm9jZXNzRmllbGRzQ29tcGFyaXNvblIL",
-            "ZGlmZmVyZW5jZXMi0gEKIUFubm90YXRpb25Qcm9jZXNzRmllbGRzQ29tcGFy",
-            "aXNvbhITCgVicV9pZBgBIAEoCVIEYnFJZBIXCgd0YXNrX2lkGAIgASgJUgZ0",
-            "YXNrSWQSHQoKZmllbGRfbmFtZRgDIAEoCVIJZmllbGROYW1lEh0KCnRydWVf",
-            "dmFsdWUYBCABKAlSCXRydWVWYWx1ZRIpChBwcmVkaWN0aW9uX3ZhbHVlGAUg",
-            "ASgJUg9wcmVkaWN0aW9uVmFsdWUSFgoGcmVzdWx0GAYgASgIUgZyZXN1bHQi",
-            "/wEKD0ZlZWRiYWNrTWV0cmljcxIlCg5kb2N1bWVudF9jb3VudBgBIAEoBVIN",
-            "ZG9jdW1lbnRDb3VudBIlCg5mZWVkYmFja19jb3VudBgCIAEoBVINZmVlZGJh",
-            "Y2tDb3VudBJQChNvdmVyYWxsX2NvcnJlY3RuZXNzGAMgASgLMh8uc3NuLmRh",
+            "cyLFAgoKU3NuTWV0cmljcxIlCg5kb2N1bWVudF9jb3VudBgBIAEoBVINZG9j",
+            "dW1lbnRDb3VudBIoChB0cnVlX3ZhbHVlX2NvdW50GAIgASgFUg50cnVlVmFs",
+            "dWVDb3VudBJQChNvdmVyYWxsX2NvcnJlY3RuZXNzGAMgAygLMh8uc3NuLmRh",
             "dGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhJvdmVyYWxsQ29ycmVjdG5lc3MS",
             "TAoRZmllbGRfY29ycmVjdG5lc3MYBCADKAsyHy5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuQ29ycmVjdG5lc3NSEGZpZWxkQ29ycmVjdG5lc3MizAEKC0NvcnJlY3Ru",
-            "ZXNzEhQKBWZpZWxkGAEgASgJUgVmaWVsZBItChJjb3JyZWN0X3BlcmNlbnRh",
-            "Z2UYAiABKAJSEWNvcnJlY3RQZXJjZW50YWdlEjMKFWluY29tcGxldGVfcGVy",
-            "Y2VudGFnZRgDIAEoAlIUaW5jb21wbGV0ZVBlcmNlbnRhZ2USKQoQZXJyb3Jf",
-            "cGVyY2VudGFnZRgEIAEoAlIPZXJyb3JQZXJjZW50YWdlEhgKB3N1cHBvcnQY",
-            "BSABKAVSB3N1cHBvcnQiIwoNRGVsZXRlUmVxdWVzdBISCgR0YWdzGAEgAygJ",
-            "UgR0YWdzIkQKDUNhbGxzUGVyTW9udGgSFAoFY2FsbHMYASABKANSBWNhbGxz",
-            "Eh0KCm1vbnRoX25hbWUYAiABKAlSCW1vbnRoTmFtZSJiChVDYWxsc1Blck1v",
-            "bnRoUmVzcG9uc2USSQoPY2FsbHNfcGVyX21vbnRoGAEgAygLMiEuc3NuLmRh",
-            "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSDWNhbGxzUGVyTW9udGgyyAYK",
-            "C0RhdGFTZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVudBIn",
-            "LnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Giguc3Nu",
-            "LmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1ByZXBh",
-            "cmVGZWVkYmFjaxIqLnNzbi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVlZGJh",
-            "Y2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNr",
-            "EiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRl",
-            "OgEqElsKEENhbGN1bGF0ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2UudjEu",
-            "TWV0cmljc1JlcXVlc3QaIy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tN",
-            "ZXRyaWNzEpABCiFDYWxjdWxhdGVBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MS",
-            "My5zc24uZGF0YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNz",
-            "UmVxdWVzdBo2LnNzbi5kYXRhc2VydmljZS52MS5Bbm5vdGF0aW9uUHJvY2Vz",
-            "c1ByZWRpY3Rpb25NZXRyaWNzEmMKBkRlbGV0ZRIhLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih6C",
-            "0+STAhgiEy92MS9mZWVkYmFjazpkZWxldGU6ASoSWAoTQ2FsbHNQZXJNb250",
-            "aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRhc2Vy",
-            "dmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2VC3QEKG2FpLnZpc21hLnNz",
-            "bi5kYXRhc2VydmljZS52MUIQRGF0YXNlcnZpY2VQcm90b1ABWkJnaXRodWIu",
-            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZpY2Uv",
-            "djE7ZGF0YXNlcnZpY2WiAgNTRFiqAhJTc24uRGF0YXNlcnZpY2UuVjHKAhJT",
-            "c25cRGF0YXNlcnZpY2VcVjHiAh5Tc25cRGF0YXNlcnZpY2VcVjFcR1BCTWV0",
-            "YWRhdGHqAhRTc246OkRhdGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
+            "djEuQ29ycmVjdG5lc3NSEGZpZWxkQ29ycmVjdG5lc3MSRgoLZGlmZmVyZW5j",
+            "ZXMYBSADKAsyJC5zc24uZGF0YXNlcnZpY2UudjEuRmllbGRzQ29tcGFyaXNv",
+            "blILZGlmZmVyZW5jZXMiwQEKEEZpZWxkc0NvbXBhcmlzb24SEwoFYnFfaWQY",
+            "ASABKAlSBGJxSWQSFwoHdGFza19pZBgCIAEoCVIGdGFza0lkEh0KCmZpZWxk",
+            "X25hbWUYAyABKAlSCWZpZWxkTmFtZRIdCgp0cnVlX3ZhbHVlGAQgASgJUgl0",
+            "cnVlVmFsdWUSKQoQcHJlZGljdGlvbl92YWx1ZRgFIAEoCVIPcHJlZGljdGlv",
+            "blZhbHVlEhYKBnJlc3VsdBgGIAEoCFIGcmVzdWx0IswBCgtDb3JyZWN0bmVz",
+            "cxIUCgVmaWVsZBgBIAEoCVIFZmllbGQSLQoSY29ycmVjdF9wZXJjZW50YWdl",
+            "GAIgASgCUhFjb3JyZWN0UGVyY2VudGFnZRIzChVpbmNvbXBsZXRlX3BlcmNl",
+            "bnRhZ2UYAyABKAJSFGluY29tcGxldGVQZXJjZW50YWdlEikKEGVycm9yX3Bl",
+            "cmNlbnRhZ2UYBCABKAJSD2Vycm9yUGVyY2VudGFnZRIYCgdzdXBwb3J0GAUg",
+            "ASgFUgdzdXBwb3J0IiMKDURlbGV0ZVJlcXVlc3QSEgoEdGFncxgBIAMoCVIE",
+            "dGFncyJECg1DYWxsc1Blck1vbnRoEhQKBWNhbGxzGAEgASgDUgVjYWxscxId",
+            "Cgptb250aF9uYW1lGAIgASgJUgltb250aE5hbWUiYgoVQ2FsbHNQZXJNb250",
+            "aFJlc3BvbnNlEkkKD2NhbGxzX3Blcl9tb250aBgBIAMoCzIhLnNzbi5kYXRh",
+            "c2VydmljZS52MS5DYWxsc1Blck1vbnRoUg1jYWxsc1Blck1vbnRoMqsGCgtE",
+            "YXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIpLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5zc24uZGF0YXNlcnZpY2Uu",
+            "djEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxSZWFkRG9jdW1lbnQSJy5z",
+            "c24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVxdWVzdBooLnNzbi5k",
+            "YXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJVCg9QcmVwYXJl",
+            "RmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEuUHJlcGFyZUZlZWRiYWNr",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJnCghGZWVkYmFjaxIj",
+            "LnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1JlcXVlc3QaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmNyZWF0ZToB",
+            "KhJeChBDYWxjdWxhdGVNZXRyaWNzEiouc3NuLmRhdGFzZXJ2aWNlLnYxLkZl",
+            "ZWRiYWNrTWV0cmljc1JlcXVlc3QaHi5zc24uZGF0YXNlcnZpY2UudjEuU3Nu",
+            "TWV0cmljcxJxCiFDYWxjdWxhdGVBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MS",
+            "LC5zc24uZGF0YXNlcnZpY2UudjEuUHJlZGljdGlvbk1ldHJpY3NSZXF1ZXN0",
+            "Gh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlNzbk1ldHJpY3MSYwoGRGVsZXRlEiEu",
+            "c3NuLmRhdGFzZXJ2aWNlLnYxLkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmRlbGV0ZToBKhJY",
+            "ChNDYWxsc1Blck1vbnRoTWV0cmljEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNwb25zZULd",
+            "AQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBEYXRhc2VydmljZVBy",
+            "b3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
+            "bi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NEWKoCElNzbi5EYXRh",
+            "c2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeICHlNzblxEYXRhc2Vy",
+            "dmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNlcnZpY2U6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -417,11 +410,10 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentResponse), global::Ssn.Dataservice.V1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessPredictionMetrics), global::Ssn.Dataservice.V1.AnnotationProcessPredictionMetrics.Parser, new[]{ "DocumentCount", "PredictionCount", "OverallCorrectness", "FieldCorrectness", "Differences" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison), global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison.Parser, new[]{ "BqId", "TaskId", "FieldName", "TrueValue", "PredictionValue", "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetricsRequest), global::Ssn.Dataservice.V1.FeedbackMetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PredictionMetricsRequest), global::Ssn.Dataservice.V1.PredictionMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.SsnMetrics), global::Ssn.Dataservice.V1.SsnMetrics.Parser, new[]{ "DocumentCount", "TrueValueCount", "OverallCorrectness", "FieldCorrectness", "Differences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FieldsComparison), global::Ssn.Dataservice.V1.FieldsComparison.Parser, new[]{ "BqId", "TaskId", "FieldName", "TrueValue", "PredictionValue", "Result" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.DeleteRequest), global::Ssn.Dataservice.V1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonth), global::Ssn.Dataservice.V1.CallsPerMonth.Parser, new[]{ "Calls", "MonthName" }, null, null, null, null),
@@ -8557,16 +8549,16 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class MetricsRequest : pb::IMessage<MetricsRequest>
+  public sealed partial class FeedbackMetricsRequest : pb::IMessage<FeedbackMetricsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MetricsRequest> _parser = new pb::MessageParser<MetricsRequest>(() => new MetricsRequest());
+    private static readonly pb::MessageParser<FeedbackMetricsRequest> _parser = new pb::MessageParser<FeedbackMetricsRequest>(() => new FeedbackMetricsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MetricsRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<FeedbackMetricsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8582,7 +8574,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest() {
+    public FeedbackMetricsRequest() {
       OnConstruction();
     }
 
@@ -8590,7 +8582,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest(MetricsRequest other) : this() {
+    public FeedbackMetricsRequest(FeedbackMetricsRequest other) : this() {
       startTime_ = other.startTime_;
       endTime_ = other.endTime_;
       fields_ = other.fields_.Clone();
@@ -8602,8 +8594,8 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest Clone() {
-      return new MetricsRequest(this);
+    public FeedbackMetricsRequest Clone() {
+      return new FeedbackMetricsRequest(this);
     }
 
     /// <summary>Field number for the "start_time" field.</summary>
@@ -8677,12 +8669,12 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MetricsRequest);
+      return Equals(other as FeedbackMetricsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MetricsRequest other) {
+    public bool Equals(FeedbackMetricsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -8788,7 +8780,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MetricsRequest other) {
+    public void MergeFrom(FeedbackMetricsRequest other) {
       if (other == null) {
         return;
       }
@@ -8896,16 +8888,16 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class AnnotationProcessMetricsRequest : pb::IMessage<AnnotationProcessMetricsRequest>
+  public sealed partial class PredictionMetricsRequest : pb::IMessage<PredictionMetricsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<AnnotationProcessMetricsRequest> _parser = new pb::MessageParser<AnnotationProcessMetricsRequest>(() => new AnnotationProcessMetricsRequest());
+    private static readonly pb::MessageParser<PredictionMetricsRequest> _parser = new pb::MessageParser<PredictionMetricsRequest>(() => new PredictionMetricsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AnnotationProcessMetricsRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<PredictionMetricsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8921,7 +8913,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessMetricsRequest() {
+    public PredictionMetricsRequest() {
       OnConstruction();
     }
 
@@ -8929,7 +8921,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessMetricsRequest(AnnotationProcessMetricsRequest other) : this() {
+    public PredictionMetricsRequest(PredictionMetricsRequest other) : this() {
       fields_ = other.fields_.Clone();
       countryCodes_ = other.countryCodes_.Clone();
       documentTypes_ = other.documentTypes_.Clone();
@@ -8938,8 +8930,8 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessMetricsRequest Clone() {
-      return new AnnotationProcessMetricsRequest(this);
+    public PredictionMetricsRequest Clone() {
+      return new PredictionMetricsRequest(this);
     }
 
     /// <summary>Field number for the "fields" field.</summary>
@@ -8978,12 +8970,12 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as AnnotationProcessMetricsRequest);
+      return Equals(other as PredictionMetricsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AnnotationProcessMetricsRequest other) {
+    public bool Equals(PredictionMetricsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9058,7 +9050,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AnnotationProcessMetricsRequest other) {
+    public void MergeFrom(PredictionMetricsRequest other) {
       if (other == null) {
         return;
       }
@@ -9135,16 +9127,16 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class AnnotationProcessPredictionMetrics : pb::IMessage<AnnotationProcessPredictionMetrics>
+  public sealed partial class SsnMetrics : pb::IMessage<SsnMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<AnnotationProcessPredictionMetrics> _parser = new pb::MessageParser<AnnotationProcessPredictionMetrics>(() => new AnnotationProcessPredictionMetrics());
+    private static readonly pb::MessageParser<SsnMetrics> _parser = new pb::MessageParser<SsnMetrics>(() => new SsnMetrics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AnnotationProcessPredictionMetrics> Parser { get { return _parser; } }
+    public static pb::MessageParser<SsnMetrics> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9160,7 +9152,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessPredictionMetrics() {
+    public SsnMetrics() {
       OnConstruction();
     }
 
@@ -9168,9 +9160,9 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessPredictionMetrics(AnnotationProcessPredictionMetrics other) : this() {
+    public SsnMetrics(SsnMetrics other) : this() {
       documentCount_ = other.documentCount_;
-      predictionCount_ = other.predictionCount_;
+      trueValueCount_ = other.trueValueCount_;
       overallCorrectness_ = other.overallCorrectness_.Clone();
       fieldCorrectness_ = other.fieldCorrectness_.Clone();
       differences_ = other.differences_.Clone();
@@ -9179,8 +9171,8 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessPredictionMetrics Clone() {
-      return new AnnotationProcessPredictionMetrics(this);
+    public SsnMetrics Clone() {
+      return new SsnMetrics(this);
     }
 
     /// <summary>Field number for the "document_count" field.</summary>
@@ -9195,15 +9187,15 @@ namespace Ssn.Dataservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "prediction_count" field.</summary>
-    public const int PredictionCountFieldNumber = 2;
-    private int predictionCount_;
+    /// <summary>Field number for the "true_value_count" field.</summary>
+    public const int TrueValueCountFieldNumber = 2;
+    private int trueValueCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int PredictionCount {
-      get { return predictionCount_; }
+    public int TrueValueCount {
+      get { return trueValueCount_; }
       set {
-        predictionCount_ = value;
+        trueValueCount_ = value;
       }
     }
 
@@ -9231,24 +9223,24 @@ namespace Ssn.Dataservice.V1 {
 
     /// <summary>Field number for the "differences" field.</summary>
     public const int DifferencesFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison> _repeated_differences_codec
-        = pb::FieldCodec.ForMessage(42, global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison> differences_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison>();
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1.FieldsComparison> _repeated_differences_codec
+        = pb::FieldCodec.ForMessage(42, global::Ssn.Dataservice.V1.FieldsComparison.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1.FieldsComparison> differences_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1.FieldsComparison>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Dataservice.V1.AnnotationProcessFieldsComparison> Differences {
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1.FieldsComparison> Differences {
       get { return differences_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as AnnotationProcessPredictionMetrics);
+      return Equals(other as SsnMetrics);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AnnotationProcessPredictionMetrics other) {
+    public bool Equals(SsnMetrics other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9256,7 +9248,7 @@ namespace Ssn.Dataservice.V1 {
         return true;
       }
       if (DocumentCount != other.DocumentCount) return false;
-      if (PredictionCount != other.PredictionCount) return false;
+      if (TrueValueCount != other.TrueValueCount) return false;
       if(!overallCorrectness_.Equals(other.overallCorrectness_)) return false;
       if(!fieldCorrectness_.Equals(other.fieldCorrectness_)) return false;
       if(!differences_.Equals(other.differences_)) return false;
@@ -9268,7 +9260,7 @@ namespace Ssn.Dataservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (DocumentCount != 0) hash ^= DocumentCount.GetHashCode();
-      if (PredictionCount != 0) hash ^= PredictionCount.GetHashCode();
+      if (TrueValueCount != 0) hash ^= TrueValueCount.GetHashCode();
       hash ^= overallCorrectness_.GetHashCode();
       hash ^= fieldCorrectness_.GetHashCode();
       hash ^= differences_.GetHashCode();
@@ -9294,9 +9286,9 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(DocumentCount);
       }
-      if (PredictionCount != 0) {
+      if (TrueValueCount != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(PredictionCount);
+        output.WriteInt32(TrueValueCount);
       }
       overallCorrectness_.WriteTo(output, _repeated_overallCorrectness_codec);
       fieldCorrectness_.WriteTo(output, _repeated_fieldCorrectness_codec);
@@ -9315,9 +9307,9 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(DocumentCount);
       }
-      if (PredictionCount != 0) {
+      if (TrueValueCount != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(PredictionCount);
+        output.WriteInt32(TrueValueCount);
       }
       overallCorrectness_.WriteTo(ref output, _repeated_overallCorrectness_codec);
       fieldCorrectness_.WriteTo(ref output, _repeated_fieldCorrectness_codec);
@@ -9335,8 +9327,8 @@ namespace Ssn.Dataservice.V1 {
       if (DocumentCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DocumentCount);
       }
-      if (PredictionCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PredictionCount);
+      if (TrueValueCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrueValueCount);
       }
       size += overallCorrectness_.CalculateSize(_repeated_overallCorrectness_codec);
       size += fieldCorrectness_.CalculateSize(_repeated_fieldCorrectness_codec);
@@ -9349,15 +9341,15 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AnnotationProcessPredictionMetrics other) {
+    public void MergeFrom(SsnMetrics other) {
       if (other == null) {
         return;
       }
       if (other.DocumentCount != 0) {
         DocumentCount = other.DocumentCount;
       }
-      if (other.PredictionCount != 0) {
-        PredictionCount = other.PredictionCount;
+      if (other.TrueValueCount != 0) {
+        TrueValueCount = other.TrueValueCount;
       }
       overallCorrectness_.Add(other.overallCorrectness_);
       fieldCorrectness_.Add(other.fieldCorrectness_);
@@ -9386,7 +9378,7 @@ namespace Ssn.Dataservice.V1 {
             break;
           }
           case 16: {
-            PredictionCount = input.ReadInt32();
+            TrueValueCount = input.ReadInt32();
             break;
           }
           case 26: {
@@ -9425,7 +9417,7 @@ namespace Ssn.Dataservice.V1 {
             break;
           }
           case 16: {
-            PredictionCount = input.ReadInt32();
+            TrueValueCount = input.ReadInt32();
             break;
           }
           case 26: {
@@ -9448,16 +9440,16 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class AnnotationProcessFieldsComparison : pb::IMessage<AnnotationProcessFieldsComparison>
+  public sealed partial class FieldsComparison : pb::IMessage<FieldsComparison>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<AnnotationProcessFieldsComparison> _parser = new pb::MessageParser<AnnotationProcessFieldsComparison>(() => new AnnotationProcessFieldsComparison());
+    private static readonly pb::MessageParser<FieldsComparison> _parser = new pb::MessageParser<FieldsComparison>(() => new FieldsComparison());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AnnotationProcessFieldsComparison> Parser { get { return _parser; } }
+    public static pb::MessageParser<FieldsComparison> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9473,7 +9465,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessFieldsComparison() {
+    public FieldsComparison() {
       OnConstruction();
     }
 
@@ -9481,7 +9473,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessFieldsComparison(AnnotationProcessFieldsComparison other) : this() {
+    public FieldsComparison(FieldsComparison other) : this() {
       bqId_ = other.bqId_;
       taskId_ = other.taskId_;
       fieldName_ = other.fieldName_;
@@ -9493,8 +9485,8 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnnotationProcessFieldsComparison Clone() {
-      return new AnnotationProcessFieldsComparison(this);
+    public FieldsComparison Clone() {
+      return new FieldsComparison(this);
     }
 
     /// <summary>Field number for the "bq_id" field.</summary>
@@ -9572,12 +9564,12 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as AnnotationProcessFieldsComparison);
+      return Equals(other as FieldsComparison);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AnnotationProcessFieldsComparison other) {
+    public bool Equals(FieldsComparison other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9715,7 +9707,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AnnotationProcessFieldsComparison other) {
+    public void MergeFrom(FieldsComparison other) {
       if (other == null) {
         return;
       }
@@ -9831,313 +9823,6 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class FeedbackMetrics : pb::IMessage<FeedbackMetrics>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<FeedbackMetrics> _parser = new pb::MessageParser<FeedbackMetrics>(() => new FeedbackMetrics());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<FeedbackMetrics> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FeedbackMetrics() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FeedbackMetrics(FeedbackMetrics other) : this() {
-      documentCount_ = other.documentCount_;
-      feedbackCount_ = other.feedbackCount_;
-      overallCorrectness_ = other.overallCorrectness_ != null ? other.overallCorrectness_.Clone() : null;
-      fieldCorrectness_ = other.fieldCorrectness_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FeedbackMetrics Clone() {
-      return new FeedbackMetrics(this);
-    }
-
-    /// <summary>Field number for the "document_count" field.</summary>
-    public const int DocumentCountFieldNumber = 1;
-    private int documentCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int DocumentCount {
-      get { return documentCount_; }
-      set {
-        documentCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "feedback_count" field.</summary>
-    public const int FeedbackCountFieldNumber = 2;
-    private int feedbackCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FeedbackCount {
-      get { return feedbackCount_; }
-      set {
-        feedbackCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "overall_correctness" field.</summary>
-    public const int OverallCorrectnessFieldNumber = 3;
-    private global::Ssn.Dataservice.V1.Correctness overallCorrectness_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Dataservice.V1.Correctness OverallCorrectness {
-      get { return overallCorrectness_; }
-      set {
-        overallCorrectness_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "field_correctness" field.</summary>
-    public const int FieldCorrectnessFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1.Correctness> _repeated_fieldCorrectness_codec
-        = pb::FieldCodec.ForMessage(34, global::Ssn.Dataservice.V1.Correctness.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1.Correctness> fieldCorrectness_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1.Correctness>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Dataservice.V1.Correctness> FieldCorrectness {
-      get { return fieldCorrectness_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as FeedbackMetrics);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(FeedbackMetrics other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (DocumentCount != other.DocumentCount) return false;
-      if (FeedbackCount != other.FeedbackCount) return false;
-      if (!object.Equals(OverallCorrectness, other.OverallCorrectness)) return false;
-      if(!fieldCorrectness_.Equals(other.fieldCorrectness_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (DocumentCount != 0) hash ^= DocumentCount.GetHashCode();
-      if (FeedbackCount != 0) hash ^= FeedbackCount.GetHashCode();
-      if (overallCorrectness_ != null) hash ^= OverallCorrectness.GetHashCode();
-      hash ^= fieldCorrectness_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (DocumentCount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(DocumentCount);
-      }
-      if (FeedbackCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(FeedbackCount);
-      }
-      if (overallCorrectness_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(OverallCorrectness);
-      }
-      fieldCorrectness_.WriteTo(output, _repeated_fieldCorrectness_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DocumentCount != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(DocumentCount);
-      }
-      if (FeedbackCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(FeedbackCount);
-      }
-      if (overallCorrectness_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(OverallCorrectness);
-      }
-      fieldCorrectness_.WriteTo(ref output, _repeated_fieldCorrectness_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (DocumentCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DocumentCount);
-      }
-      if (FeedbackCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FeedbackCount);
-      }
-      if (overallCorrectness_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OverallCorrectness);
-      }
-      size += fieldCorrectness_.CalculateSize(_repeated_fieldCorrectness_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(FeedbackMetrics other) {
-      if (other == null) {
-        return;
-      }
-      if (other.DocumentCount != 0) {
-        DocumentCount = other.DocumentCount;
-      }
-      if (other.FeedbackCount != 0) {
-        FeedbackCount = other.FeedbackCount;
-      }
-      if (other.overallCorrectness_ != null) {
-        if (overallCorrectness_ == null) {
-          OverallCorrectness = new global::Ssn.Dataservice.V1.Correctness();
-        }
-        OverallCorrectness.MergeFrom(other.OverallCorrectness);
-      }
-      fieldCorrectness_.Add(other.fieldCorrectness_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            DocumentCount = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            FeedbackCount = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            if (overallCorrectness_ == null) {
-              OverallCorrectness = new global::Ssn.Dataservice.V1.Correctness();
-            }
-            input.ReadMessage(OverallCorrectness);
-            break;
-          }
-          case 34: {
-            fieldCorrectness_.AddEntriesFrom(input, _repeated_fieldCorrectness_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            DocumentCount = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            FeedbackCount = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            if (overallCorrectness_ == null) {
-              OverallCorrectness = new global::Ssn.Dataservice.V1.Correctness();
-            }
-            input.ReadMessage(OverallCorrectness);
-            break;
-          }
-          case 34: {
-            fieldCorrectness_.AddEntriesFrom(ref input, _repeated_fieldCorrectness_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Correctness : pb::IMessage<Correctness>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10152,7 +9837,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10498,7 +10183,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10685,7 +10370,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10920,7 +10605,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
