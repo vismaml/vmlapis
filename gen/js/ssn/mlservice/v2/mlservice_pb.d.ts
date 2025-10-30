@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_type_date_pb from '../../../google/type/date_pb'; // proto import: "google/type/date.proto"
+import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 
@@ -691,6 +692,80 @@ export namespace VatDistributionResponse {
   export type AsObject = {
     vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     vatDistributionItemsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
+  }
+}
+
+export class SmartscanUltraRequest extends jspb.Message {
+  getDocumentAnnotatorResponse(): ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse | undefined;
+  setDocumentAnnotatorResponse(value?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse): SmartscanUltraRequest;
+  hasDocumentAnnotatorResponse(): boolean;
+  clearDocumentAnnotatorResponse(): SmartscanUltraRequest;
+
+  getImagesList(): Array<Uint8Array | string>;
+  setImagesList(value: Array<Uint8Array | string>): SmartscanUltraRequest;
+  clearImagesList(): SmartscanUltraRequest;
+  addImages(value: Uint8Array | string, index?: number): SmartscanUltraRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SmartscanUltraRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SmartscanUltraRequest): SmartscanUltraRequest.AsObject;
+  static serializeBinaryToWriter(message: SmartscanUltraRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SmartscanUltraRequest;
+  static deserializeBinaryFromReader(message: SmartscanUltraRequest, reader: jspb.BinaryReader): SmartscanUltraRequest;
+}
+
+export namespace SmartscanUltraRequest {
+  export type AsObject = {
+    documentAnnotatorResponse?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.AsObject,
+    imagesList: Array<Uint8Array | string>,
+  }
+}
+
+export class SmartscanUltraResponse extends jspb.Message {
+  getDocumentAnnotatorResponse(): ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse | undefined;
+  setDocumentAnnotatorResponse(value?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse): SmartscanUltraResponse;
+  hasDocumentAnnotatorResponse(): boolean;
+  clearDocumentAnnotatorResponse(): SmartscanUltraResponse;
+
+  getUltraMetadata(): UltraMetadata | undefined;
+  setUltraMetadata(value?: UltraMetadata): SmartscanUltraResponse;
+  hasUltraMetadata(): boolean;
+  clearUltraMetadata(): SmartscanUltraResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SmartscanUltraResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SmartscanUltraResponse): SmartscanUltraResponse.AsObject;
+  static serializeBinaryToWriter(message: SmartscanUltraResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SmartscanUltraResponse;
+  static deserializeBinaryFromReader(message: SmartscanUltraResponse, reader: jspb.BinaryReader): SmartscanUltraResponse;
+}
+
+export namespace SmartscanUltraResponse {
+  export type AsObject = {
+    documentAnnotatorResponse?: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse.AsObject,
+    ultraMetadata?: UltraMetadata.AsObject,
+  }
+}
+
+export class UltraMetadata extends jspb.Message {
+  getTotalTokens(): number;
+  setTotalTokens(value: number): UltraMetadata;
+
+  getPromptTokens(): number;
+  setPromptTokens(value: number): UltraMetadata;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): UltraMetadata.AsObject;
+  static toObject(includeInstance: boolean, msg: UltraMetadata): UltraMetadata.AsObject;
+  static serializeBinaryToWriter(message: UltraMetadata, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UltraMetadata;
+  static deserializeBinaryFromReader(message: UltraMetadata, reader: jspb.BinaryReader): UltraMetadata;
+}
+
+export namespace UltraMetadata {
+  export type AsObject = {
+    totalTokens: number,
+    promptTokens: number,
   }
 }
 
