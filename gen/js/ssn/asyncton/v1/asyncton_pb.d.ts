@@ -185,6 +185,16 @@ export class Annotation extends jspb.Message {
   clearSwissQrBillsList(): Annotation;
   addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
 
+  getPurchaseLinesCandidatesList(): Array<ssn_type_candidate_pb.PurchaseLine>;
+  setPurchaseLinesCandidatesList(value: Array<ssn_type_candidate_pb.PurchaseLine>): Annotation;
+  clearPurchaseLinesCandidatesList(): Annotation;
+  addPurchaseLinesCandidates(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
+
+  getVatDistributionItemsList(): Array<ssn_type_candidate_pb.VatDistribution>;
+  setVatDistributionItemsList(value: Array<ssn_type_candidate_pb.VatDistribution>): Annotation;
+  clearVatDistributionItemsList(): Annotation;
+  addVatDistributionItems(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
   static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
@@ -204,6 +214,8 @@ export namespace Annotation {
     vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
+    purchaseLinesCandidatesList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
+    vatDistributionItemsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
   }
 }
 

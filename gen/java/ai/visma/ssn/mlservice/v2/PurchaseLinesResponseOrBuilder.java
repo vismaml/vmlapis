@@ -32,4 +32,28 @@ public interface PurchaseLinesResponseOrBuilder extends
    */
   ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_items = 2 [json_name = "purchaseLinesItems"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PurchaseLine> 
+      getPurchaseLinesItemsList();
+  /**
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_items = 2 [json_name = "purchaseLinesItems"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLine getPurchaseLinesItems(int index);
+  /**
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_items = 2 [json_name = "purchaseLinesItems"];</code>
+   */
+  int getPurchaseLinesItemsCount();
+  /**
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_items = 2 [json_name = "purchaseLinesItems"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+      getPurchaseLinesItemsOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_items = 2 [json_name = "purchaseLinesItems"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesItemsOrBuilder(
+      int index);
 }

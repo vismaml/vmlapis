@@ -119,13 +119,15 @@ message GetTransactionResultsResponse {
 message Annotation {
   string feature = 1; // feature name e.g. "TOTAL_INCL_VAT"
   repeated ssn.type.Candidate candidates = 2; // ssn candidates
-  repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates
+  repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates (old format)
   repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
   ssn.type.TextAnnotation text_annotation = 5; // text annotation
   repeated ssn.type.PageText page_texts = 6; // page texts
-  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates
+  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates (old format)
   repeated ssn.type.QrCodeData qr_codes = 8; // qr codes detected in document
   repeated ssn.type.SwissQrBill swiss_qr_bills = 9; // swiss qr bills detected in document
+  repeated ssn.type.PurchaseLine purchase_lines_candidates = 10; // purchase lines (new format - candidate-driven)
+  repeated ssn.type.VatDistribution vat_distribution_items = 11; // vat distribution (new format - candidate-driven)
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

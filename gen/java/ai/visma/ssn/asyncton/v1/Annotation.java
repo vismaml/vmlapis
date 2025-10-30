@@ -35,6 +35,8 @@ private static final long serialVersionUID = 0L;
     vatDistributionCandidates_ = java.util.Collections.emptyList();
     qrCodes_ = java.util.Collections.emptyList();
     swissQrBills_ = java.util.Collections.emptyList();
+    purchaseLinesCandidates_ = java.util.Collections.emptyList();
+    vatDistributionItems_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -164,7 +166,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidates_;
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -175,7 +177,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -187,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -198,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -209,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -385,7 +387,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_;
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -396,7 +398,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -408,7 +410,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -419,7 +421,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -430,7 +432,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -563,6 +565,128 @@ private static final long serialVersionUID = 0L;
     return swissQrBills_.get(index);
   }
 
+  public static final int PURCHASE_LINES_CANDIDATES_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesCandidates_;
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.PurchaseLine> getPurchaseLinesCandidatesList() {
+    return purchaseLinesCandidates_;
+  }
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+      getPurchaseLinesCandidatesOrBuilderList() {
+    return purchaseLinesCandidates_;
+  }
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  @java.lang.Override
+  public int getPurchaseLinesCandidatesCount() {
+    return purchaseLinesCandidates_.size();
+  }
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLine getPurchaseLinesCandidates(int index) {
+    return purchaseLinesCandidates_.get(index);
+  }
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesCandidatesOrBuilder(
+      int index) {
+    return purchaseLinesCandidates_.get(index);
+  }
+
+  public static final int VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionItems_;
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionItemsList() {
+    return vatDistributionItems_;
+  }
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionItemsOrBuilderList() {
+    return vatDistributionItems_;
+  }
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public int getVatDistributionItemsCount() {
+    return vatDistributionItems_.size();
+  }
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index) {
+    return vatDistributionItems_.get(index);
+  }
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
+      int index) {
+    return vatDistributionItems_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -603,6 +727,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < swissQrBills_.size(); i++) {
       output.writeMessage(9, swissQrBills_.get(i));
+    }
+    for (int i = 0; i < purchaseLinesCandidates_.size(); i++) {
+      output.writeMessage(10, purchaseLinesCandidates_.get(i));
+    }
+    for (int i = 0; i < vatDistributionItems_.size(); i++) {
+      output.writeMessage(11, vatDistributionItems_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -648,6 +778,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, swissQrBills_.get(i));
     }
+    for (int i = 0; i < purchaseLinesCandidates_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, purchaseLinesCandidates_.get(i));
+    }
+    for (int i = 0; i < vatDistributionItems_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, vatDistributionItems_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -684,6 +822,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getQrCodesList())) return false;
     if (!getSwissQrBillsList()
         .equals(other.getSwissQrBillsList())) return false;
+    if (!getPurchaseLinesCandidatesList()
+        .equals(other.getPurchaseLinesCandidatesList())) return false;
+    if (!getVatDistributionItemsList()
+        .equals(other.getVatDistributionItemsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -728,6 +870,14 @@ private static final long serialVersionUID = 0L;
     if (getSwissQrBillsCount() > 0) {
       hash = (37 * hash) + SWISS_QR_BILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSwissQrBillsList().hashCode();
+    }
+    if (getPurchaseLinesCandidatesCount() > 0) {
+      hash = (37 * hash) + PURCHASE_LINES_CANDIDATES_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaseLinesCandidatesList().hashCode();
+    }
+    if (getVatDistributionItemsCount() > 0) {
+      hash = (37 * hash) + VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + getVatDistributionItemsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -867,6 +1017,8 @@ private static final long serialVersionUID = 0L;
         getVatDistributionCandidatesFieldBuilder();
         getQrCodesFieldBuilder();
         getSwissQrBillsFieldBuilder();
+        getPurchaseLinesCandidatesFieldBuilder();
+        getVatDistributionItemsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -928,6 +1080,20 @@ private static final long serialVersionUID = 0L;
         swissQrBillsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000100);
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        purchaseLinesCandidates_ = java.util.Collections.emptyList();
+      } else {
+        purchaseLinesCandidates_ = null;
+        purchaseLinesCandidatesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItems_ = java.util.Collections.emptyList();
+      } else {
+        vatDistributionItems_ = null;
+        vatDistributionItemsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -1023,6 +1189,24 @@ private static final long serialVersionUID = 0L;
         result.swissQrBills_ = swissQrBills_;
       } else {
         result.swissQrBills_ = swissQrBillsBuilder_.build();
+      }
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          purchaseLinesCandidates_ = java.util.Collections.unmodifiableList(purchaseLinesCandidates_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.purchaseLinesCandidates_ = purchaseLinesCandidates_;
+      } else {
+        result.purchaseLinesCandidates_ = purchaseLinesCandidatesBuilder_.build();
+      }
+      if (vatDistributionItemsBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          vatDistributionItems_ = java.util.Collections.unmodifiableList(vatDistributionItems_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.vatDistributionItems_ = vatDistributionItems_;
+      } else {
+        result.vatDistributionItems_ = vatDistributionItemsBuilder_.build();
       }
     }
 
@@ -1243,6 +1427,58 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        if (!other.purchaseLinesCandidates_.isEmpty()) {
+          if (purchaseLinesCandidates_.isEmpty()) {
+            purchaseLinesCandidates_ = other.purchaseLinesCandidates_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensurePurchaseLinesCandidatesIsMutable();
+            purchaseLinesCandidates_.addAll(other.purchaseLinesCandidates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.purchaseLinesCandidates_.isEmpty()) {
+          if (purchaseLinesCandidatesBuilder_.isEmpty()) {
+            purchaseLinesCandidatesBuilder_.dispose();
+            purchaseLinesCandidatesBuilder_ = null;
+            purchaseLinesCandidates_ = other.purchaseLinesCandidates_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            purchaseLinesCandidatesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getPurchaseLinesCandidatesFieldBuilder() : null;
+          } else {
+            purchaseLinesCandidatesBuilder_.addAllMessages(other.purchaseLinesCandidates_);
+          }
+        }
+      }
+      if (vatDistributionItemsBuilder_ == null) {
+        if (!other.vatDistributionItems_.isEmpty()) {
+          if (vatDistributionItems_.isEmpty()) {
+            vatDistributionItems_ = other.vatDistributionItems_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureVatDistributionItemsIsMutable();
+            vatDistributionItems_.addAll(other.vatDistributionItems_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.vatDistributionItems_.isEmpty()) {
+          if (vatDistributionItemsBuilder_.isEmpty()) {
+            vatDistributionItemsBuilder_.dispose();
+            vatDistributionItemsBuilder_ = null;
+            vatDistributionItems_ = other.vatDistributionItems_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            vatDistributionItemsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getVatDistributionItemsFieldBuilder() : null;
+          } else {
+            vatDistributionItemsBuilder_.addAllMessages(other.vatDistributionItems_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1372,6 +1608,32 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 74
+            case 82: {
+              ai.visma.ssn.type.PurchaseLine m =
+                  input.readMessage(
+                      ai.visma.ssn.type.PurchaseLine.parser(),
+                      extensionRegistry);
+              if (purchaseLinesCandidatesBuilder_ == null) {
+                ensurePurchaseLinesCandidatesIsMutable();
+                purchaseLinesCandidates_.add(m);
+              } else {
+                purchaseLinesCandidatesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
+            case 90: {
+              ai.visma.ssn.type.VatDistribution m =
+                  input.readMessage(
+                      ai.visma.ssn.type.VatDistribution.parser(),
+                      extensionRegistry);
+              if (vatDistributionItemsBuilder_ == null) {
+                ensureVatDistributionItemsIsMutable();
+                vatDistributionItems_.add(m);
+              } else {
+                vatDistributionItemsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1807,7 +2069,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1821,7 +2083,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1835,7 +2097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1849,7 +2111,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1870,7 +2132,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1888,7 +2150,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1908,7 +2170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1929,7 +2191,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1947,7 +2209,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1965,7 +2227,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1984,7 +2246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2001,7 +2263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2018,7 +2280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2029,7 +2291,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2043,7 +2305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2058,7 +2320,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2069,7 +2331,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2081,7 +2343,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2900,7 +3162,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -2914,7 +3176,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -2928,7 +3190,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -2942,7 +3204,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -2963,7 +3225,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -2981,7 +3243,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3001,7 +3263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3022,7 +3284,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3040,7 +3302,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3058,7 +3320,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3077,7 +3339,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3094,7 +3356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3111,7 +3373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3122,7 +3384,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3136,7 +3398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3151,7 +3413,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3162,7 +3424,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3174,7 +3436,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates
+     * vat distribution candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3820,6 +4082,630 @@ private static final long serialVersionUID = 0L;
         swissQrBills_ = null;
       }
       return swissQrBillsBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesCandidates_ =
+      java.util.Collections.emptyList();
+    private void ensurePurchaseLinesCandidatesIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        purchaseLinesCandidates_ = new java.util.ArrayList<ai.visma.ssn.type.PurchaseLine>(purchaseLinesCandidates_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder> purchaseLinesCandidatesBuilder_;
+
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLine> getPurchaseLinesCandidatesList() {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(purchaseLinesCandidates_);
+      } else {
+        return purchaseLinesCandidatesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public int getPurchaseLinesCandidatesCount() {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        return purchaseLinesCandidates_.size();
+      } else {
+        return purchaseLinesCandidatesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine getPurchaseLinesCandidates(int index) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        return purchaseLinesCandidates_.get(index);
+      } else {
+        return purchaseLinesCandidatesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder setPurchaseLinesCandidates(
+        int index, ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.set(index, value);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder setPurchaseLinesCandidates(
+        int index, ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder addPurchaseLinesCandidates(ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.add(value);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder addPurchaseLinesCandidates(
+        int index, ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.add(index, value);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder addPurchaseLinesCandidates(
+        ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.add(builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder addPurchaseLinesCandidates(
+        int index, ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder addAllPurchaseLinesCandidates(
+        java.lang.Iterable<? extends ai.visma.ssn.type.PurchaseLine> values) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        ensurePurchaseLinesCandidatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, purchaseLinesCandidates_);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder clearPurchaseLinesCandidates() {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        purchaseLinesCandidates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public Builder removePurchaseLinesCandidates(int index) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        ensurePurchaseLinesCandidatesIsMutable();
+        purchaseLinesCandidates_.remove(index);
+        onChanged();
+      } else {
+        purchaseLinesCandidatesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder getPurchaseLinesCandidatesBuilder(
+        int index) {
+      return getPurchaseLinesCandidatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesCandidatesOrBuilder(
+        int index) {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        return purchaseLinesCandidates_.get(index);  } else {
+        return purchaseLinesCandidatesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+         getPurchaseLinesCandidatesOrBuilderList() {
+      if (purchaseLinesCandidatesBuilder_ != null) {
+        return purchaseLinesCandidatesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(purchaseLinesCandidates_);
+      }
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder addPurchaseLinesCandidatesBuilder() {
+      return getPurchaseLinesCandidatesFieldBuilder().addBuilder(
+          ai.visma.ssn.type.PurchaseLine.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder addPurchaseLinesCandidatesBuilder(
+        int index) {
+      return getPurchaseLinesCandidatesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.PurchaseLine.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * purchase lines (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLine.Builder> 
+         getPurchaseLinesCandidatesBuilderList() {
+      return getPurchaseLinesCandidatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder> 
+        getPurchaseLinesCandidatesFieldBuilder() {
+      if (purchaseLinesCandidatesBuilder_ == null) {
+        purchaseLinesCandidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder>(
+                purchaseLinesCandidates_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        purchaseLinesCandidates_ = null;
+      }
+      return purchaseLinesCandidatesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionItems_ =
+      java.util.Collections.emptyList();
+    private void ensureVatDistributionItemsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        vatDistributionItems_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistribution>(vatDistributionItems_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> vatDistributionItemsBuilder_;
+
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionItemsList() {
+      if (vatDistributionItemsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatDistributionItems_);
+      } else {
+        return vatDistributionItemsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public int getVatDistributionItemsCount() {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.size();
+      } else {
+        return vatDistributionItemsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.get(index);
+      } else {
+        return vatDistributionItemsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder setVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.set(index, value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder setVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(index, value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addAllVatDistributionItems(
+        java.lang.Iterable<? extends ai.visma.ssn.type.VatDistribution> values) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vatDistributionItems_);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder clearVatDistributionItems() {
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItems_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder removeVatDistributionItems(int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.remove(index);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder getVatDistributionItemsBuilder(
+        int index) {
+      return getVatDistributionItemsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
+        int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.get(index);  } else {
+        return vatDistributionItemsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+         getVatDistributionItemsOrBuilderList() {
+      if (vatDistributionItemsBuilder_ != null) {
+        return vatDistributionItemsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(vatDistributionItems_);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionItemsBuilder() {
+      return getVatDistributionItemsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionItemsBuilder(
+        int index) {
+      return getVatDistributionItemsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * vat distribution (new format - candidate-driven)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution.Builder> 
+         getVatDistributionItemsBuilderList() {
+      return getVatDistributionItemsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> 
+        getVatDistributionItemsFieldBuilder() {
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder>(
+                vatDistributionItems_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        vatDistributionItems_ = null;
+      }
+      return vatDistributionItemsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.asyncton.v1.Annotation)
