@@ -41,8 +41,8 @@ export class DataServiceClient {
     request: ssn_dataservice_v1_dataservice_pb.FeedbackMetricsRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
-               response: ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics) => void
-  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics>;
+               response: ssn_dataservice_v1_dataservice_pb.SsnMetrics) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
 
   calculateAnnotationProcessMetrics(
     request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,
@@ -95,7 +95,7 @@ export class DataServicePromiseClient {
   calculateMetrics(
     request: ssn_dataservice_v1_dataservice_pb.FeedbackMetricsRequest,
     metadata?: grpcWeb.Metadata
-  ): Promise<ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics>;
+  ): Promise<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
 
   calculateAnnotationProcessMetrics(
     request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,

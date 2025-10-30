@@ -64,14 +64,14 @@ func (mr *MockDataServiceClientMockRecorder) CalculateAnnotationProcessMetrics(c
 }
 
 // CalculateMetrics mocks base method.
-func (m *MockDataServiceClient) CalculateMetrics(ctx context.Context, in *v1.FeedbackMetricsRequest, opts ...grpc.CallOption) (*v1.DeprecatedFeedbackMetrics, error) {
+func (m *MockDataServiceClient) CalculateMetrics(ctx context.Context, in *v1.FeedbackMetricsRequest, opts ...grpc.CallOption) (*v1.SsnMetrics, error) {
 	m.ctrl.T.Helper()
 	varargs := []any{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "CalculateMetrics", varargs...)
-	ret0, _ := ret[0].(*v1.DeprecatedFeedbackMetrics)
+	ret0, _ := ret[0].(*v1.SsnMetrics)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -243,10 +243,10 @@ func (mr *MockDataServiceServerMockRecorder) CalculateAnnotationProcessMetrics(a
 }
 
 // CalculateMetrics mocks base method.
-func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *v1.FeedbackMetricsRequest) (*v1.DeprecatedFeedbackMetrics, error) {
+func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *v1.FeedbackMetricsRequest) (*v1.SsnMetrics, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CalculateMetrics", arg0, arg1)
-	ret0, _ := ret[0].(*v1.DeprecatedFeedbackMetrics)
+	ret0, _ := ret[0].(*v1.SsnMetrics)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }

@@ -532,7 +532,7 @@ public final class DataserviceProto {
       "taservice.v1.CorrectnessR\022overallCorrect" +
       "ness\022L\n\021field_correctness\030\004 \003(\0132\037.ssn.da" +
       "taservice.v1.CorrectnessR\020fieldCorrectne" +
-      "ss2\272\006\n\013DataService\022g\n\016CreateDocument\022).s" +
+      "ss2\253\006\n\013DataService\022g\n\016CreateDocument\022).s" +
       "sn.dataservice.v1.CreateDocumentRequest\032",
       "*.ssn.dataservice.v1.CreateDocumentRespo" +
       "nse\022a\n\014ReadDocument\022\'.ssn.dataservice.v1" +
@@ -542,23 +542,23 @@ public final class DataserviceProto {
       "quest\032\026.google.protobuf.Empty\022g\n\010Feedbac" +
       "k\022#.ssn.dataservice.v1.FeedbackRequest\032\026" +
       ".google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feed" +
-      "back:create:\001*\022m\n\020CalculateMetrics\022*.ssn" +
-      ".dataservice.v1.FeedbackMetricsRequest\032-" +
-      ".ssn.dataservice.v1.DeprecatedFeedbackMe" +
-      "trics\022q\n!CalculateAnnotationProcessMetri" +
-      "cs\022,.ssn.dataservice.v1.PredictionMetric" +
-      "sRequest\032\036.ssn.dataservice.v1.SsnMetrics" +
-      "\022c\n\006Delete\022!.ssn.dataservice.v1.DeleteRe" +
-      "quest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/" +
-      "v1/feedback:delete:\001*\022X\n\023CallsPerMonthMe" +
-      "tric\022\026.google.protobuf.Empty\032).ssn.datas" +
-      "ervice.v1.CallsPerMonthResponseB\335\001\n\033ai.v" +
-      "isma.ssn.dataservice.v1B\020DataserviceProt" +
-      "oP\001ZBgithub.com/e-conomic/vmlapis/gen/go" +
-      "/ssn/dataservice/v1;dataservice\242\002\003SDX\252\002\022" +
-      "Ssn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V1\342" +
-      "\002\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn::" +
-      "Dataservice::V1b\006proto3"
+      "back:create:\001*\022^\n\020CalculateMetrics\022*.ssn" +
+      ".dataservice.v1.FeedbackMetricsRequest\032\036" +
+      ".ssn.dataservice.v1.SsnMetrics\022q\n!Calcul" +
+      "ateAnnotationProcessMetrics\022,.ssn.datase" +
+      "rvice.v1.PredictionMetricsRequest\032\036.ssn." +
+      "dataservice.v1.SsnMetrics\022c\n\006Delete\022!.ss" +
+      "n.dataservice.v1.DeleteRequest\032\026.google." +
+      "protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:del" +
+      "ete:\001*\022X\n\023CallsPerMonthMetric\022\026.google.p" +
+      "rotobuf.Empty\032).ssn.dataservice.v1.Calls" +
+      "PerMonthResponseB\335\001\n\033ai.visma.ssn.datase" +
+      "rvice.v1B\020DataserviceProtoP\001ZBgithub.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/dataservic" +
+      "e/v1;dataservice\242\002\003SDX\252\002\022Ssn.Dataservice" +
+      ".V1\312\002\022Ssn\\Dataservice\\V1\342\002\036Ssn\\Dataservi" +
+      "ce\\V1\\GPBMetadata\352\002\024Ssn::Dataservice::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -27,7 +27,7 @@ service DataService {
       body: "*"
     };
   }
-  rpc CalculateMetrics(FeedbackMetricsRequest) returns (DeprecatedFeedbackMetrics);
+  rpc CalculateMetrics(FeedbackMetricsRequest) returns (SsnMetrics);
   rpc CalculateAnnotationProcessMetrics(PredictionMetricsRequest) returns (SsnMetrics);
 
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
