@@ -197,26 +197,25 @@ message PurchaseLine {
   repeated Candidate unit_price_incl_vat = 13;
   // Unit price excl vat is the unit price of the line excluding vat
   repeated Candidate unit_price_excl_vat = 14;
-  reserved 15, 16; // to match the PurchaseLineCandidate
   // Total is the total price of the line (with/without vat)
-  repeated Candidate total = 17;
+  repeated Candidate total = 15;
   // Unit price is the unit price of the line (with/without vat)
-  repeated Candidate unit_price = 18;
+  repeated Candidate unit_price = 16;
   // Model metadata
-  ModelSpec model_metadata = 19;
+  ModelSpec model_metadata = 17;
 }
 
 message VatDistribution {
+  // A reference to the page where the candidate was found.
+  uint32 page_ref = 1;
   // The vat distribution candidate percentage
   repeated Candidate percentage = 1;
+  // The vat distribution candidate incl vat
+  repeated Candidate total_incl_vat = 6;
+  // The vat distribution candidate excl vat
+  repeated Candidate total_excl_vat = 5;
   // The vat distribution candidate
   repeated Candidate total_vat = 2;
   // Model metadata
   ModelSpec model_metadata = 3;
-  // A reference to the page where the candidate was found.
-  uint32 page_ref = 4;
-  // The vat distribution candidate excl vat
-  repeated Candidate total_excl_vat = 5;
-  // The vat distribution candidate incl vat
-  repeated Candidate total_incl_vat = 6;
 }
