@@ -27,7 +27,7 @@ service DataService {
       body: "*"
     };
   }
-  rpc CalculateMetrics(FeedbackMetricsRequest) returns (SsnMetrics);
+  rpc CalculateMetrics(FeedbackMetricsRequest) returns (DeprecatedFeedbackMetrics);
   rpc CalculateAnnotationProcessMetrics(PredictionMetricsRequest) returns (SsnMetrics);
 
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
@@ -334,4 +334,12 @@ message CallsPerMonth {
 
 message CallsPerMonthResponse {
   repeated CallsPerMonth calls_per_month = 1;
+}
+
+// Deprecated messages - kept for backward compatibility
+message DeprecatedFeedbackMetrics {
+  int32 document_count = 1;
+  int32 feedback_count = 2;
+  Correctness overall_correctness = 3;
+  repeated Correctness field_correctness = 4;
 }
