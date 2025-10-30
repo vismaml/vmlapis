@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
     return unitPriceExclVat_.get(index);
   }
 
-  public static final int TOTAL_FIELD_NUMBER = 17;
+  public static final int TOTAL_FIELD_NUMBER = 15;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.Candidate> total_;
   /**
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ssn.type.Candidate> getTotalList() {
@@ -886,7 +886,7 @@ private static final long serialVersionUID = 0L;
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   @java.lang.Override
   public int getTotalCount() {
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.Candidate getTotal(int index) {
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.CandidateOrBuilder getTotalOrBuilder(
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
     return total_.get(index);
   }
 
-  public static final int UNIT_PRICE_FIELD_NUMBER = 18;
+  public static final int UNIT_PRICE_FIELD_NUMBER = 16;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.Candidate> unitPrice_;
   /**
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ssn.type.Candidate> getUnitPriceList() {
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   @java.lang.Override
   public int getUnitPriceCount() {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.Candidate getUnitPrice(int index) {
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.CandidateOrBuilder getUnitPriceOrBuilder(
@@ -989,14 +989,14 @@ private static final long serialVersionUID = 0L;
     return unitPrice_.get(index);
   }
 
-  public static final int MODEL_METADATA_FIELD_NUMBER = 19;
+  public static final int MODEL_METADATA_FIELD_NUMBER = 17;
   private ai.visma.ssn.type.ModelSpec modelMetadata_;
   /**
    * <pre>
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   @java.lang.Override
@@ -1008,7 +1008,7 @@ private static final long serialVersionUID = 0L;
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   @java.lang.Override
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -1084,13 +1084,13 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(14, unitPriceExclVat_.get(i));
     }
     for (int i = 0; i < total_.size(); i++) {
-      output.writeMessage(17, total_.get(i));
+      output.writeMessage(15, total_.get(i));
     }
     for (int i = 0; i < unitPrice_.size(); i++) {
-      output.writeMessage(18, unitPrice_.get(i));
+      output.writeMessage(16, unitPrice_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(19, getModelMetadata());
+      output.writeMessage(17, getModelMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1159,15 +1159,15 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < total_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, total_.get(i));
+        .computeMessageSize(15, total_.get(i));
     }
     for (int i = 0; i < unitPrice_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(18, unitPrice_.get(i));
+        .computeMessageSize(16, unitPrice_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, getModelMetadata());
+        .computeMessageSize(17, getModelMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2354,7 +2354,7 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 114
-            case 138: {
+            case 122: {
               ai.visma.ssn.type.Candidate m =
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
@@ -2366,8 +2366,8 @@ private static final long serialVersionUID = 0L;
                 totalBuilder_.addMessage(m);
               }
               break;
-            } // case 138
-            case 146: {
+            } // case 122
+            case 130: {
               ai.visma.ssn.type.Candidate m =
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
@@ -2379,14 +2379,14 @@ private static final long serialVersionUID = 0L;
                 unitPriceBuilder_.addMessage(m);
               }
               break;
-            } // case 146
-            case 154: {
+            } // case 130
+            case 138: {
               input.readMessage(
                   getModelMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00010000;
               break;
-            } // case 154
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6524,7 +6524,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate> getTotalList() {
       if (totalBuilder_ == null) {
@@ -6538,7 +6538,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public int getTotalCount() {
       if (totalBuilder_ == null) {
@@ -6552,7 +6552,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public ai.visma.ssn.type.Candidate getTotal(int index) {
       if (totalBuilder_ == null) {
@@ -6566,7 +6566,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder setTotal(
         int index, ai.visma.ssn.type.Candidate value) {
@@ -6587,7 +6587,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder setTotal(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6605,7 +6605,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder addTotal(ai.visma.ssn.type.Candidate value) {
       if (totalBuilder_ == null) {
@@ -6625,7 +6625,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder addTotal(
         int index, ai.visma.ssn.type.Candidate value) {
@@ -6646,7 +6646,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder addTotal(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6664,7 +6664,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder addTotal(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6682,7 +6682,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder addAllTotal(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
@@ -6701,7 +6701,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder clearTotal() {
       if (totalBuilder_ == null) {
@@ -6718,7 +6718,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public Builder removeTotal(int index) {
       if (totalBuilder_ == null) {
@@ -6735,7 +6735,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder getTotalBuilder(
         int index) {
@@ -6746,7 +6746,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public ai.visma.ssn.type.CandidateOrBuilder getTotalOrBuilder(
         int index) {
@@ -6760,7 +6760,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
          getTotalOrBuilderList() {
@@ -6775,7 +6775,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addTotalBuilder() {
       return getTotalFieldBuilder().addBuilder(
@@ -6786,7 +6786,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addTotalBuilder(
         int index) {
@@ -6798,7 +6798,7 @@ private static final long serialVersionUID = 0L;
      * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+     * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
          getTotalBuilderList() {
@@ -6836,7 +6836,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate> getUnitPriceList() {
       if (unitPriceBuilder_ == null) {
@@ -6850,7 +6850,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public int getUnitPriceCount() {
       if (unitPriceBuilder_ == null) {
@@ -6864,7 +6864,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public ai.visma.ssn.type.Candidate getUnitPrice(int index) {
       if (unitPriceBuilder_ == null) {
@@ -6878,7 +6878,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder setUnitPrice(
         int index, ai.visma.ssn.type.Candidate value) {
@@ -6899,7 +6899,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder setUnitPrice(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6917,7 +6917,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder addUnitPrice(ai.visma.ssn.type.Candidate value) {
       if (unitPriceBuilder_ == null) {
@@ -6937,7 +6937,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder addUnitPrice(
         int index, ai.visma.ssn.type.Candidate value) {
@@ -6958,7 +6958,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder addUnitPrice(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6976,7 +6976,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder addUnitPrice(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
@@ -6994,7 +6994,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder addAllUnitPrice(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
@@ -7013,7 +7013,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder clearUnitPrice() {
       if (unitPriceBuilder_ == null) {
@@ -7030,7 +7030,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public Builder removeUnitPrice(int index) {
       if (unitPriceBuilder_ == null) {
@@ -7047,7 +7047,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder getUnitPriceBuilder(
         int index) {
@@ -7058,7 +7058,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public ai.visma.ssn.type.CandidateOrBuilder getUnitPriceOrBuilder(
         int index) {
@@ -7072,7 +7072,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
          getUnitPriceOrBuilderList() {
@@ -7087,7 +7087,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addUnitPriceBuilder() {
       return getUnitPriceFieldBuilder().addBuilder(
@@ -7098,7 +7098,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addUnitPriceBuilder(
         int index) {
@@ -7110,7 +7110,7 @@ private static final long serialVersionUID = 0L;
      * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+     * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
          getUnitPriceBuilderList() {
@@ -7139,7 +7139,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
     public boolean hasModelMetadata() {
@@ -7150,7 +7150,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
     public ai.visma.ssn.type.ModelSpec getModelMetadata() {
@@ -7165,7 +7165,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(ai.visma.ssn.type.ModelSpec value) {
       if (modelMetadataBuilder_ == null) {
@@ -7185,7 +7185,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(
         ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
@@ -7203,7 +7203,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public Builder mergeModelMetadata(ai.visma.ssn.type.ModelSpec value) {
       if (modelMetadataBuilder_ == null) {
@@ -7228,7 +7228,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public Builder clearModelMetadata() {
       bitField0_ = (bitField0_ & ~0x00010000);
@@ -7245,7 +7245,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder getModelMetadataBuilder() {
       bitField0_ |= 0x00010000;
@@ -7257,7 +7257,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
       if (modelMetadataBuilder_ != null) {
@@ -7272,7 +7272,7 @@ private static final long serialVersionUID = 0L;
      * Model metadata
      * </pre>
      *
-     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 

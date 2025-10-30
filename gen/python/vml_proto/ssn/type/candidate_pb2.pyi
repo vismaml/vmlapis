@@ -199,17 +199,17 @@ class PurchaseLine(_message.Message):
     def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
 
 class VatDistribution(_message.Message):
-    __slots__ = ("percentage", "total_vat", "model_metadata", "page_ref", "total_excl_vat", "total_incl_vat")
+    __slots__ = ("page_ref", "percentage", "total_incl_vat", "total_excl_vat", "total_vat", "model_metadata")
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
     TOTAL_VAT_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
-    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
-    TOTAL_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
-    TOTAL_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
+    page_ref: int
     percentage: _containers.RepeatedCompositeFieldContainer[Candidate]
+    total_incl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
+    total_excl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
     total_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
     model_metadata: ModelSpec
-    page_ref: int
-    total_excl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
-    total_incl_vat: _containers.RepeatedCompositeFieldContainer[Candidate]
-    def __init__(self, percentage: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ...) -> None: ...
+    def __init__(self, page_ref: _Optional[int] = ..., percentage: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...

@@ -465,10 +465,23 @@ export namespace PurchaseLine {
 }
 
 export class VatDistribution extends jspb.Message {
+  getPageRef(): number;
+  setPageRef(value: number): VatDistribution;
+
   getPercentageList(): Array<Candidate>;
   setPercentageList(value: Array<Candidate>): VatDistribution;
   clearPercentageList(): VatDistribution;
   addPercentage(value?: Candidate, index?: number): Candidate;
+
+  getTotalInclVatList(): Array<Candidate>;
+  setTotalInclVatList(value: Array<Candidate>): VatDistribution;
+  clearTotalInclVatList(): VatDistribution;
+  addTotalInclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalExclVatList(): Array<Candidate>;
+  setTotalExclVatList(value: Array<Candidate>): VatDistribution;
+  clearTotalExclVatList(): VatDistribution;
+  addTotalExclVat(value?: Candidate, index?: number): Candidate;
 
   getTotalVatList(): Array<Candidate>;
   setTotalVatList(value: Array<Candidate>): VatDistribution;
@@ -480,19 +493,6 @@ export class VatDistribution extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): VatDistribution;
 
-  getPageRef(): number;
-  setPageRef(value: number): VatDistribution;
-
-  getTotalExclVatList(): Array<Candidate>;
-  setTotalExclVatList(value: Array<Candidate>): VatDistribution;
-  clearTotalExclVatList(): VatDistribution;
-  addTotalExclVat(value?: Candidate, index?: number): Candidate;
-
-  getTotalInclVatList(): Array<Candidate>;
-  setTotalInclVatList(value: Array<Candidate>): VatDistribution;
-  clearTotalInclVatList(): VatDistribution;
-  addTotalInclVat(value?: Candidate, index?: number): Candidate;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistribution.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistribution): VatDistribution.AsObject;
@@ -503,12 +503,12 @@ export class VatDistribution extends jspb.Message {
 
 export namespace VatDistribution {
   export type AsObject = {
+    pageRef: number,
     percentageList: Array<Candidate.AsObject>,
+    totalInclVatList: Array<Candidate.AsObject>,
+    totalExclVatList: Array<Candidate.AsObject>,
     totalVatList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
-    pageRef: number,
-    totalExclVatList: Array<Candidate.AsObject>,
-    totalInclVatList: Array<Candidate.AsObject>,
   }
 }
 

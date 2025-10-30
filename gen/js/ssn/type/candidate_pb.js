@@ -2787,7 +2787,7 @@ proto.ssn.type.DocumentMetadata.prototype.setPageCount = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,17,18];
+proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
 
 
@@ -2957,17 +2957,17 @@ proto.ssn.type.PurchaseLine.deserializeBinaryFromReader = function(msg, reader) 
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
       msg.addUnitPriceExclVat(value);
       break;
-    case 17:
+    case 15:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
       msg.addTotal(value);
       break;
-    case 18:
+    case 16:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
       msg.addUnitPrice(value);
       break;
-    case 19:
+    case 17:
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
@@ -3115,7 +3115,7 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
   f = message.getTotalList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      17,
+      15,
       f,
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
@@ -3123,7 +3123,7 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
   f = message.getUnitPriceList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      18,
+      16,
       f,
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
@@ -3131,7 +3131,7 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
   f = message.getModelMetadata();
   if (f != null) {
     writer.writeMessage(
-      19,
+      17,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
     );
@@ -3652,12 +3652,12 @@ proto.ssn.type.PurchaseLine.prototype.clearUnitPriceExclVatList = function() {
 
 
 /**
- * repeated Candidate total = 17;
+ * repeated Candidate total = 15;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
 proto.ssn.type.PurchaseLine.prototype.getTotalList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 17));
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 15));
 };
 
 
@@ -3666,7 +3666,7 @@ proto.ssn.type.PurchaseLine.prototype.getTotalList = function() {
  * @return {!proto.ssn.type.PurchaseLine} returns this
 */
 proto.ssn.type.PurchaseLine.prototype.setTotalList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 17, value);
+  return jspb.Message.setRepeatedWrapperField(this, 15, value);
 };
 
 
@@ -3676,7 +3676,7 @@ proto.ssn.type.PurchaseLine.prototype.setTotalList = function(value) {
  * @return {!proto.ssn.type.Candidate}
  */
 proto.ssn.type.PurchaseLine.prototype.addTotal = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 17, opt_value, proto.ssn.type.Candidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
 
@@ -3690,12 +3690,12 @@ proto.ssn.type.PurchaseLine.prototype.clearTotalList = function() {
 
 
 /**
- * repeated Candidate unit_price = 18;
+ * repeated Candidate unit_price = 16;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
 proto.ssn.type.PurchaseLine.prototype.getUnitPriceList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 18));
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 16));
 };
 
 
@@ -3704,7 +3704,7 @@ proto.ssn.type.PurchaseLine.prototype.getUnitPriceList = function() {
  * @return {!proto.ssn.type.PurchaseLine} returns this
 */
 proto.ssn.type.PurchaseLine.prototype.setUnitPriceList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 18, value);
+  return jspb.Message.setRepeatedWrapperField(this, 16, value);
 };
 
 
@@ -3714,7 +3714,7 @@ proto.ssn.type.PurchaseLine.prototype.setUnitPriceList = function(value) {
  * @return {!proto.ssn.type.Candidate}
  */
 proto.ssn.type.PurchaseLine.prototype.addUnitPrice = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.ssn.type.Candidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 16, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
 
@@ -3728,12 +3728,12 @@ proto.ssn.type.PurchaseLine.prototype.clearUnitPriceList = function() {
 
 
 /**
- * optional ModelSpec model_metadata = 19;
+ * optional ModelSpec model_metadata = 17;
  * @return {?proto.ssn.type.ModelSpec}
  */
 proto.ssn.type.PurchaseLine.prototype.getModelMetadata = function() {
   return /** @type{?proto.ssn.type.ModelSpec} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.type.ModelSpec, 19));
+    jspb.Message.getWrapperField(this, proto.ssn.type.ModelSpec, 17));
 };
 
 
@@ -3742,7 +3742,7 @@ proto.ssn.type.PurchaseLine.prototype.getModelMetadata = function() {
  * @return {!proto.ssn.type.PurchaseLine} returns this
 */
 proto.ssn.type.PurchaseLine.prototype.setModelMetadata = function(value) {
-  return jspb.Message.setWrapperField(this, 19, value);
+  return jspb.Message.setWrapperField(this, 17, value);
 };
 
 
@@ -3760,7 +3760,7 @@ proto.ssn.type.PurchaseLine.prototype.clearModelMetadata = function() {
  * @return {boolean}
  */
 proto.ssn.type.PurchaseLine.prototype.hasModelMetadata = function() {
-  return jspb.Message.getField(this, 19) != null;
+  return jspb.Message.getField(this, 17) != null;
 };
 
 
@@ -3770,7 +3770,7 @@ proto.ssn.type.PurchaseLine.prototype.hasModelMetadata = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.type.VatDistribution.repeatedFields_ = [1,2,5,6];
+proto.ssn.type.VatDistribution.repeatedFields_ = [2,3,4,5];
 
 
 
@@ -3803,16 +3803,16 @@ proto.ssn.type.VatDistribution.prototype.toObject = function(opt_includeInstance
  */
 proto.ssn.type.VatDistribution.toObject = function(includeInstance, msg) {
   var f, obj = {
+    pageRef: jspb.Message.getFieldWithDefault(msg, 1, 0),
     percentageList: jspb.Message.toObjectList(msg.getPercentageList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    totalInclVatList: jspb.Message.toObjectList(msg.getTotalInclVatList(),
+    proto.ssn.type.Candidate.toObject, includeInstance),
+    totalExclVatList: jspb.Message.toObjectList(msg.getTotalExclVatList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
     totalVatList: jspb.Message.toObjectList(msg.getTotalVatList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
-    pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    totalExclVatList: jspb.Message.toObjectList(msg.getTotalExclVatList(),
-    proto.ssn.type.Candidate.toObject, includeInstance),
-    totalInclVatList: jspb.Message.toObjectList(msg.getTotalInclVatList(),
-    proto.ssn.type.Candidate.toObject, includeInstance)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3850,33 +3850,33 @@ proto.ssn.type.VatDistribution.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ssn.type.Candidate;
-      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addPercentage(value);
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPageRef(value);
       break;
     case 2:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addTotalVat(value);
+      msg.addPercentage(value);
       break;
     case 3:
-      var value = new proto.ssn.type.ModelSpec;
-      reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
-      msg.setModelMetadata(value);
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addTotalInclVat(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setPageRef(value);
-      break;
-    case 5:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
       msg.addTotalExclVat(value);
       break;
-    case 6:
+    case 5:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addTotalInclVat(value);
+      msg.addTotalVat(value);
+      break;
+    case 6:
+      var value = new proto.ssn.type.ModelSpec;
+      reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
+      msg.setModelMetadata(value);
       break;
     default:
       reader.skipField();
@@ -3907,15 +3907,14 @@ proto.ssn.type.VatDistribution.prototype.serializeBinary = function() {
  */
 proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPercentageList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getPageRef();
+  if (f !== 0) {
+    writer.writeUint32(
       1,
-      f,
-      proto.ssn.type.Candidate.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getTotalVatList();
+  f = message.getPercentageList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       2,
@@ -3923,22 +3922,23 @@ proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, write
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getModelMetadata();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getTotalInclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       3,
       f,
-      proto.ssn.type.ModelSpec.serializeBinaryToWriter
-    );
-  }
-  f = message.getPageRef();
-  if (f !== 0) {
-    writer.writeUint32(
-      4,
-      f
+      proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getTotalExclVatList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      4,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getTotalVatList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       5,
@@ -3946,24 +3946,42 @@ proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, write
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getTotalInclVatList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getModelMetadata();
+  if (f != null) {
+    writer.writeMessage(
       6,
       f,
-      proto.ssn.type.Candidate.serializeBinaryToWriter
+      proto.ssn.type.ModelSpec.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated Candidate percentage = 1;
+ * optional uint32 page_ref = 1;
+ * @return {number}
+ */
+proto.ssn.type.VatDistribution.prototype.getPageRef = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.type.VatDistribution} returns this
+ */
+proto.ssn.type.VatDistribution.prototype.setPageRef = function(value) {
+  return jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * repeated Candidate percentage = 2;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
 proto.ssn.type.VatDistribution.prototype.getPercentageList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 1));
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 2));
 };
 
 
@@ -3972,7 +3990,7 @@ proto.ssn.type.VatDistribution.prototype.getPercentageList = function() {
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
 proto.ssn.type.VatDistribution.prototype.setPercentageList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -3982,7 +4000,7 @@ proto.ssn.type.VatDistribution.prototype.setPercentageList = function(value) {
  * @return {!proto.ssn.type.Candidate}
  */
 proto.ssn.type.VatDistribution.prototype.addPercentage = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ssn.type.Candidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
 
@@ -3996,12 +4014,88 @@ proto.ssn.type.VatDistribution.prototype.clearPercentageList = function() {
 
 
 /**
- * repeated Candidate total_vat = 2;
+ * repeated Candidate total_incl_vat = 3;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.VatDistribution.prototype.getTotalInclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 3));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.VatDistribution} returns this
+*/
+proto.ssn.type.VatDistribution.prototype.setTotalInclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.VatDistribution.prototype.addTotalInclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.VatDistribution} returns this
+ */
+proto.ssn.type.VatDistribution.prototype.clearTotalInclVatList = function() {
+  return this.setTotalInclVatList([]);
+};
+
+
+/**
+ * repeated Candidate total_excl_vat = 4;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.VatDistribution.prototype.getTotalExclVatList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 4));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.VatDistribution} returns this
+*/
+proto.ssn.type.VatDistribution.prototype.setTotalExclVatList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 4, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.VatDistribution.prototype.addTotalExclVat = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.VatDistribution} returns this
+ */
+proto.ssn.type.VatDistribution.prototype.clearTotalExclVatList = function() {
+  return this.setTotalExclVatList([]);
+};
+
+
+/**
+ * repeated Candidate total_vat = 5;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
 proto.ssn.type.VatDistribution.prototype.getTotalVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 2));
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 5));
 };
 
 
@@ -4010,7 +4104,7 @@ proto.ssn.type.VatDistribution.prototype.getTotalVatList = function() {
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
 proto.ssn.type.VatDistribution.prototype.setTotalVatList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
@@ -4020,7 +4114,7 @@ proto.ssn.type.VatDistribution.prototype.setTotalVatList = function(value) {
  * @return {!proto.ssn.type.Candidate}
  */
 proto.ssn.type.VatDistribution.prototype.addTotalVat = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.Candidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
 
@@ -4034,12 +4128,12 @@ proto.ssn.type.VatDistribution.prototype.clearTotalVatList = function() {
 
 
 /**
- * optional ModelSpec model_metadata = 3;
+ * optional ModelSpec model_metadata = 6;
  * @return {?proto.ssn.type.ModelSpec}
  */
 proto.ssn.type.VatDistribution.prototype.getModelMetadata = function() {
   return /** @type{?proto.ssn.type.ModelSpec} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.type.ModelSpec, 3));
+    jspb.Message.getWrapperField(this, proto.ssn.type.ModelSpec, 6));
 };
 
 
@@ -4048,7 +4142,7 @@ proto.ssn.type.VatDistribution.prototype.getModelMetadata = function() {
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
 proto.ssn.type.VatDistribution.prototype.setModelMetadata = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
@@ -4066,101 +4160,7 @@ proto.ssn.type.VatDistribution.prototype.clearModelMetadata = function() {
  * @return {boolean}
  */
 proto.ssn.type.VatDistribution.prototype.hasModelMetadata = function() {
-  return jspb.Message.getField(this, 3) != null;
-};
-
-
-/**
- * optional uint32 page_ref = 4;
- * @return {number}
- */
-proto.ssn.type.VatDistribution.prototype.getPageRef = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ssn.type.VatDistribution} returns this
- */
-proto.ssn.type.VatDistribution.prototype.setPageRef = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * repeated Candidate total_excl_vat = 5;
- * @return {!Array<!proto.ssn.type.Candidate>}
- */
-proto.ssn.type.VatDistribution.prototype.getTotalExclVatList = function() {
-  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 5));
-};
-
-
-/**
- * @param {!Array<!proto.ssn.type.Candidate>} value
- * @return {!proto.ssn.type.VatDistribution} returns this
-*/
-proto.ssn.type.VatDistribution.prototype.setTotalExclVatList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 5, value);
-};
-
-
-/**
- * @param {!proto.ssn.type.Candidate=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ssn.type.Candidate}
- */
-proto.ssn.type.VatDistribution.prototype.addTotalExclVat = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.ssn.type.Candidate, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ssn.type.VatDistribution} returns this
- */
-proto.ssn.type.VatDistribution.prototype.clearTotalExclVatList = function() {
-  return this.setTotalExclVatList([]);
-};
-
-
-/**
- * repeated Candidate total_incl_vat = 6;
- * @return {!Array<!proto.ssn.type.Candidate>}
- */
-proto.ssn.type.VatDistribution.prototype.getTotalInclVatList = function() {
-  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 6));
-};
-
-
-/**
- * @param {!Array<!proto.ssn.type.Candidate>} value
- * @return {!proto.ssn.type.VatDistribution} returns this
-*/
-proto.ssn.type.VatDistribution.prototype.setTotalInclVatList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 6, value);
-};
-
-
-/**
- * @param {!proto.ssn.type.Candidate=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ssn.type.Candidate}
- */
-proto.ssn.type.VatDistribution.prototype.addTotalInclVat = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.ssn.type.Candidate, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ssn.type.VatDistribution} returns this
- */
-proto.ssn.type.VatDistribution.prototype.clearTotalInclVatList = function() {
-  return this.setTotalInclVatList([]);
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

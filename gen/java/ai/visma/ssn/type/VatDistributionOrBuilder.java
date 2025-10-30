@@ -11,10 +11,20 @@ public interface VatDistributionOrBuilder extends
 
   /**
    * <pre>
+   * A reference to the page where the candidate was found.
+   * </pre>
+   *
+   * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
+   * @return The pageRef.
+   */
+  int getPageRef();
+
+  /**
+   * <pre>
    * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate percentage = 1 [json_name = "percentage"];</code>
+   * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
       getPercentageList();
@@ -23,7 +33,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate percentage = 1 [json_name = "percentage"];</code>
+   * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
    */
   ai.visma.ssn.type.Candidate getPercentage(int index);
   /**
@@ -31,7 +41,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate percentage = 1 [json_name = "percentage"];</code>
+   * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
    */
   int getPercentageCount();
   /**
@@ -39,7 +49,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate percentage = 1 [json_name = "percentage"];</code>
+   * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getPercentageOrBuilderList();
@@ -48,9 +58,97 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate percentage = 1 [json_name = "percentage"];</code>
+   * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getPercentageOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getTotalInclVatList();
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   */
+  ai.visma.ssn.type.Candidate getTotalInclVat(int index);
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   */
+  int getTotalInclVatCount();
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getTotalInclVatOrBuilderList();
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getTotalInclVatOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getTotalExclVatList();
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   */
+  ai.visma.ssn.type.Candidate getTotalExclVat(int index);
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   */
+  int getTotalExclVatCount();
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getTotalExclVatOrBuilderList();
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getTotalExclVatOrBuilder(
       int index);
 
   /**
@@ -58,7 +156,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 2 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
       getTotalVatList();
@@ -67,7 +165,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 2 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
    */
   ai.visma.ssn.type.Candidate getTotalVat(int index);
   /**
@@ -75,7 +173,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 2 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
    */
   int getTotalVatCount();
   /**
@@ -83,7 +181,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 2 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getTotalVatOrBuilderList();
@@ -92,7 +190,7 @@ public interface VatDistributionOrBuilder extends
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 2 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getTotalVatOrBuilder(
       int index);
@@ -102,7 +200,7 @@ public interface VatDistributionOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
@@ -111,7 +209,7 @@ public interface VatDistributionOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
@@ -120,105 +218,7 @@ public interface VatDistributionOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
-
-  /**
-   * <pre>
-   * A reference to the page where the candidate was found.
-   * </pre>
-   *
-   * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
-   * @return The pageRef.
-   */
-  int getPageRef();
-
-  /**
-   * <pre>
-   * The vat distribution candidate excl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 5 [json_name = "totalExclVat"];</code>
-   */
-  java.util.List<ai.visma.ssn.type.Candidate> 
-      getTotalExclVatList();
-  /**
-   * <pre>
-   * The vat distribution candidate excl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 5 [json_name = "totalExclVat"];</code>
-   */
-  ai.visma.ssn.type.Candidate getTotalExclVat(int index);
-  /**
-   * <pre>
-   * The vat distribution candidate excl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 5 [json_name = "totalExclVat"];</code>
-   */
-  int getTotalExclVatCount();
-  /**
-   * <pre>
-   * The vat distribution candidate excl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 5 [json_name = "totalExclVat"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getTotalExclVatOrBuilderList();
-  /**
-   * <pre>
-   * The vat distribution candidate excl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 5 [json_name = "totalExclVat"];</code>
-   */
-  ai.visma.ssn.type.CandidateOrBuilder getTotalExclVatOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * The vat distribution candidate incl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 6 [json_name = "totalInclVat"];</code>
-   */
-  java.util.List<ai.visma.ssn.type.Candidate> 
-      getTotalInclVatList();
-  /**
-   * <pre>
-   * The vat distribution candidate incl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 6 [json_name = "totalInclVat"];</code>
-   */
-  ai.visma.ssn.type.Candidate getTotalInclVat(int index);
-  /**
-   * <pre>
-   * The vat distribution candidate incl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 6 [json_name = "totalInclVat"];</code>
-   */
-  int getTotalInclVatCount();
-  /**
-   * <pre>
-   * The vat distribution candidate incl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 6 [json_name = "totalInclVat"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getTotalInclVatOrBuilderList();
-  /**
-   * <pre>
-   * The vat distribution candidate incl vat
-   * </pre>
-   *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 6 [json_name = "totalInclVat"];</code>
-   */
-  ai.visma.ssn.type.CandidateOrBuilder getTotalInclVatOrBuilder(
-      int index);
 }

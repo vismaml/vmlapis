@@ -1487,6 +1487,11 @@
     "typeVatDistribution": {
       "type": "object",
       "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        },
         "percentage": {
           "type": "array",
           "items": {
@@ -1494,6 +1499,22 @@
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "The vat distribution candidate percentage"
+        },
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate incl vat"
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "The vat distribution candidate excl vat"
         },
         "totalVat": {
           "type": "array",
@@ -1506,27 +1527,6 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model metadata"
-        },
-        "pageRef": {
-          "type": "integer",
-          "format": "int64",
-          "description": "A reference to the page where the candidate was found."
-        },
-        "totalExclVat": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeCandidate"
-          },
-          "title": "The vat distribution candidate excl vat"
-        },
-        "totalInclVat": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeCandidate"
-          },
-          "title": "The vat distribution candidate incl vat"
         }
       }
     },

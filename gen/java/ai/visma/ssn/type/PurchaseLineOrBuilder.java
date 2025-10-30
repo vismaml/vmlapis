@@ -597,7 +597,7 @@ public interface PurchaseLineOrBuilder extends
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
       getTotalList();
@@ -606,7 +606,7 @@ public interface PurchaseLineOrBuilder extends
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   ai.visma.ssn.type.Candidate getTotal(int index);
   /**
@@ -614,7 +614,7 @@ public interface PurchaseLineOrBuilder extends
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   int getTotalCount();
   /**
@@ -622,7 +622,7 @@ public interface PurchaseLineOrBuilder extends
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getTotalOrBuilderList();
@@ -631,7 +631,7 @@ public interface PurchaseLineOrBuilder extends
    * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total = 17 [json_name = "total"];</code>
+   * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getTotalOrBuilder(
       int index);
@@ -641,7 +641,7 @@ public interface PurchaseLineOrBuilder extends
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
       getUnitPriceList();
@@ -650,7 +650,7 @@ public interface PurchaseLineOrBuilder extends
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   ai.visma.ssn.type.Candidate getUnitPrice(int index);
   /**
@@ -658,7 +658,7 @@ public interface PurchaseLineOrBuilder extends
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   int getUnitPriceCount();
   /**
@@ -666,7 +666,7 @@ public interface PurchaseLineOrBuilder extends
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getUnitPriceOrBuilderList();
@@ -675,7 +675,7 @@ public interface PurchaseLineOrBuilder extends
    * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate unit_price = 18 [json_name = "unitPrice"];</code>
+   * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getUnitPriceOrBuilder(
       int index);
@@ -685,7 +685,7 @@ public interface PurchaseLineOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
@@ -694,7 +694,7 @@ public interface PurchaseLineOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
@@ -703,7 +703,7 @@ public interface PurchaseLineOrBuilder extends
    * Model metadata
    * </pre>
    *
-   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 }
