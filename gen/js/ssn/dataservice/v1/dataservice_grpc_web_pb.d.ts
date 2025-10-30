@@ -38,11 +38,18 @@ export class DataServiceClient {
   ): grpcWeb.ClientReadableStream<google_protobuf_empty_pb.Empty>;
 
   calculateMetrics(
-    request: ssn_dataservice_v1_dataservice_pb.MetricsRequest,
+    request: ssn_dataservice_v1_dataservice_pb.FeedbackMetricsRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
-               response: ssn_dataservice_v1_dataservice_pb.FeedbackMetrics) => void
-  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.FeedbackMetrics>;
+               response: ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics>;
+
+  calculateAnnotationProcessMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_dataservice_v1_dataservice_pb.SsnMetrics) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
 
   delete(
     request: ssn_dataservice_v1_dataservice_pb.DeleteRequest,
@@ -86,9 +93,14 @@ export class DataServicePromiseClient {
   ): Promise<google_protobuf_empty_pb.Empty>;
 
   calculateMetrics(
-    request: ssn_dataservice_v1_dataservice_pb.MetricsRequest,
+    request: ssn_dataservice_v1_dataservice_pb.FeedbackMetricsRequest,
     metadata?: grpcWeb.Metadata
-  ): Promise<ssn_dataservice_v1_dataservice_pb.FeedbackMetrics>;
+  ): Promise<ssn_dataservice_v1_dataservice_pb.DeprecatedFeedbackMetrics>;
+
+  calculateAnnotationProcessMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
 
   delete(
     request: ssn_dataservice_v1_dataservice_pb.DeleteRequest,

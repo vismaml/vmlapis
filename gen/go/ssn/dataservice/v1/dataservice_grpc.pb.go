@@ -20,13 +20,14 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DataService_CreateDocument_FullMethodName      = "/ssn.dataservice.v1.DataService/CreateDocument"
-	DataService_ReadDocument_FullMethodName        = "/ssn.dataservice.v1.DataService/ReadDocument"
-	DataService_PrepareFeedback_FullMethodName     = "/ssn.dataservice.v1.DataService/PrepareFeedback"
-	DataService_Feedback_FullMethodName            = "/ssn.dataservice.v1.DataService/Feedback"
-	DataService_CalculateMetrics_FullMethodName    = "/ssn.dataservice.v1.DataService/CalculateMetrics"
-	DataService_Delete_FullMethodName              = "/ssn.dataservice.v1.DataService/Delete"
-	DataService_CallsPerMonthMetric_FullMethodName = "/ssn.dataservice.v1.DataService/CallsPerMonthMetric"
+	DataService_CreateDocument_FullMethodName                    = "/ssn.dataservice.v1.DataService/CreateDocument"
+	DataService_ReadDocument_FullMethodName                      = "/ssn.dataservice.v1.DataService/ReadDocument"
+	DataService_PrepareFeedback_FullMethodName                   = "/ssn.dataservice.v1.DataService/PrepareFeedback"
+	DataService_Feedback_FullMethodName                          = "/ssn.dataservice.v1.DataService/Feedback"
+	DataService_CalculateMetrics_FullMethodName                  = "/ssn.dataservice.v1.DataService/CalculateMetrics"
+	DataService_CalculateAnnotationProcessMetrics_FullMethodName = "/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics"
+	DataService_Delete_FullMethodName                            = "/ssn.dataservice.v1.DataService/Delete"
+	DataService_CallsPerMonthMetric_FullMethodName               = "/ssn.dataservice.v1.DataService/CallsPerMonthMetric"
 )
 
 // DataServiceClient is the client API for DataService service.
@@ -38,7 +39,8 @@ type DataServiceClient interface {
 	// For feedback
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
+	CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*DeprecatedFeedbackMetrics, error)
+	CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 }
@@ -87,9 +89,18 @@ func (c *dataServiceClient) Feedback(ctx context.Context, in *FeedbackRequest, o
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error) {
-	out := new(FeedbackMetrics)
+func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *FeedbackMetricsRequest, opts ...grpc.CallOption) (*DeprecatedFeedbackMetrics, error) {
+	out := new(DeprecatedFeedbackMetrics)
 	err := c.cc.Invoke(ctx, DataService_CalculateMetrics_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error) {
+	out := new(SsnMetrics)
+	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -123,7 +134,8 @@ type DataServiceServer interface {
 	// For feedback
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*emptypb.Empty, error)
 	Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error)
-	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
+	CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*DeprecatedFeedbackMetrics, error)
+	CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 }
@@ -144,8 +156,11 @@ func (UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareF
 func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *FeedbackMetricsRequest) (*DeprecatedFeedbackMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
+}
+func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
 }
 func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Delete not implemented")
@@ -238,7 +253,7 @@ func _DataService_Feedback_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MetricsRequest)
+	in := new(FeedbackMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -250,7 +265,25 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 		FullMethod: DataService_CalculateMetrics_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*MetricsRequest))
+		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*FeedbackMetricsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PredictionMetricsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DataService_CalculateAnnotationProcessMetrics_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*PredictionMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -317,6 +350,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CalculateMetrics",
 			Handler:    _DataService_CalculateMetrics_Handler,
+		},
+		{
+			MethodName: "CalculateAnnotationProcessMetrics",
+			Handler:    _DataService_CalculateAnnotationProcessMetrics_Handler,
 		},
 		{
 			MethodName: "Delete",
