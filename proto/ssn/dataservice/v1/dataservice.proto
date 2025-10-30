@@ -283,7 +283,7 @@ message FeedbackRequest {
   repeated string tags = 3;
 }
 
-message MetricsRequest {
+message FeedbackMetricsRequest {
   int64 start_time = 2;
   int64 end_time = 3;
   repeated string fields = 4;
@@ -292,34 +292,27 @@ message MetricsRequest {
   repeated string document_types = 7;
 }
 
-message AnnotationProcessMetricsRequest {
+message PredictionMetricsRequest {
   repeated string fields = 1;
   repeated string country_codes = 2;
   repeated string document_types = 3;
 }
 
-message AnnotationProcessPredictionMetrics {
+message SsnMetrics {
   int32 document_count = 1;
-  int32 prediction_count = 2;
+  int32 true_value_count = 2;
   repeated Correctness overall_correctness = 3;
   repeated Correctness field_correctness = 4;
-  repeated AnnotationProcessFieldsComparison differences = 5;
+  repeated FieldsComparison differences = 5;
 }
 
-message AnnotationProcessFieldsComparison {
+message FieldsComparison {
   string bq_id = 1;
   string task_id = 2;
   string field_name = 3;
   string true_value = 4;
   string prediction_value = 5;
   bool result = 6;
-}
-
-message FeedbackMetrics {
-  int32 document_count = 1;
-  int32 feedback_count = 2;
-  Correctness overall_correctness = 3;
-  repeated Correctness field_correctness = 4;
 }
 
 message Correctness {
