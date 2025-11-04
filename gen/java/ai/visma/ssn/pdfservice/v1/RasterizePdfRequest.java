@@ -314,6 +314,10 @@ private static final long serialVersionUID = 0L;
      * <code>FIRST_FIVE = 4;</code>
      */
     FIRST_FIVE(4),
+    /**
+     * <code>FIRST_FIVE_AND_LAST = 5;</code>
+     */
+    FIRST_FIVE_AND_LAST(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -346,6 +350,10 @@ private static final long serialVersionUID = 0L;
      * <code>FIRST_FIVE = 4;</code>
      */
     public static final int FIRST_FIVE_VALUE = 4;
+    /**
+     * <code>FIRST_FIVE_AND_LAST = 5;</code>
+     */
+    public static final int FIRST_FIVE_AND_LAST_VALUE = 5;
 
 
     public final int getNumber() {
@@ -377,6 +385,7 @@ private static final long serialVersionUID = 0L;
         case 2: return LAST;
         case 3: return ALL;
         case 4: return FIRST_FIVE;
+        case 5: return FIRST_FIVE_AND_LAST;
         default: return null;
       }
     }
