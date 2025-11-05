@@ -6,12 +6,16 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.FeedbackMetrics}
+ * <pre>
+ * Deprecated messages - kept for backward compatibility
+ * </pre>
+ *
+ * Protobuf type {@code ssn.dataservice.v1.DeprecatedFeedbackMetrics}
  */
-public final class FeedbackMetrics extends
+public final class DeprecatedFeedbackMetrics extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FeedbackMetrics)
-    FeedbackMetricsOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.DeprecatedFeedbackMetrics)
+    DeprecatedFeedbackMetricsOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,27 +24,27 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      FeedbackMetrics.class.getName());
+      DeprecatedFeedbackMetrics.class.getName());
   }
-  // Use FeedbackMetrics.newBuilder() to construct.
-  private FeedbackMetrics(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use DeprecatedFeedbackMetrics.newBuilder() to construct.
+  private DeprecatedFeedbackMetrics(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private FeedbackMetrics() {
+  private DeprecatedFeedbackMetrics() {
     fieldCorrectness_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_DeprecatedFeedbackMetrics_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetrics_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_DeprecatedFeedbackMetrics_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.FeedbackMetrics.class, ai.visma.ssn.dataservice.v1.FeedbackMetrics.Builder.class);
+            ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.class, ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.Builder.class);
   }
 
   private int bitField0_;
@@ -194,10 +198,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.FeedbackMetrics)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.FeedbackMetrics other = (ai.visma.ssn.dataservice.v1.FeedbackMetrics) obj;
+    ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics other = (ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics) obj;
 
     if (getDocumentCount()
         != other.getDocumentCount()) return false;
@@ -238,44 +242,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -283,26 +287,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -315,7 +319,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.FeedbackMetrics prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -331,26 +335,30 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.FeedbackMetrics}
+   * <pre>
+   * Deprecated messages - kept for backward compatibility
+   * </pre>
+   *
+   * Protobuf type {@code ssn.dataservice.v1.DeprecatedFeedbackMetrics}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.FeedbackMetrics)
-      ai.visma.ssn.dataservice.v1.FeedbackMetricsOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.DeprecatedFeedbackMetrics)
+      ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetricsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_DeprecatedFeedbackMetrics_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetrics_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_DeprecatedFeedbackMetrics_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.FeedbackMetrics.class, ai.visma.ssn.dataservice.v1.FeedbackMetrics.Builder.class);
+              ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.class, ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.FeedbackMetrics.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -391,17 +399,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetrics_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_DeprecatedFeedbackMetrics_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetrics getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.FeedbackMetrics.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetrics build() {
-      ai.visma.ssn.dataservice.v1.FeedbackMetrics result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics build() {
+      ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -409,15 +417,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetrics buildPartial() {
-      ai.visma.ssn.dataservice.v1.FeedbackMetrics result = new ai.visma.ssn.dataservice.v1.FeedbackMetrics(this);
+    public ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics buildPartial() {
+      ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics result = new ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.ssn.dataservice.v1.FeedbackMetrics result) {
+    private void buildPartialRepeatedFields(ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics result) {
       if (fieldCorrectnessBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
           fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
@@ -429,7 +437,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.FeedbackMetrics result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.documentCount_ = documentCount_;
@@ -449,16 +457,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.FeedbackMetrics) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.FeedbackMetrics)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.FeedbackMetrics other) {
-      if (other == ai.visma.ssn.dataservice.v1.FeedbackMetrics.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics other) {
+      if (other == ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics.getDefaultInstance()) return this;
       if (other.getDocumentCount() != 0) {
         setDocumentCount(other.getDocumentCount());
       }
@@ -992,23 +1000,23 @@ private static final long serialVersionUID = 0L;
       return fieldCorrectnessBuilder_;
     }
 
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.FeedbackMetrics)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.DeprecatedFeedbackMetrics)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.FeedbackMetrics)
-  private static final ai.visma.ssn.dataservice.v1.FeedbackMetrics DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.DeprecatedFeedbackMetrics)
+  private static final ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.FeedbackMetrics();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics();
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetrics getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FeedbackMetrics>
-      PARSER = new com.google.protobuf.AbstractParser<FeedbackMetrics>() {
+  private static final com.google.protobuf.Parser<DeprecatedFeedbackMetrics>
+      PARSER = new com.google.protobuf.AbstractParser<DeprecatedFeedbackMetrics>() {
     @java.lang.Override
-    public FeedbackMetrics parsePartialFrom(
+    public DeprecatedFeedbackMetrics parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1027,17 +1035,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<FeedbackMetrics> parser() {
+  public static com.google.protobuf.Parser<DeprecatedFeedbackMetrics> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<FeedbackMetrics> getParserForType() {
+  public com.google.protobuf.Parser<DeprecatedFeedbackMetrics> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.FeedbackMetrics getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.DeprecatedFeedbackMetrics getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
