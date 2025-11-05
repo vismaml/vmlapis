@@ -42,7 +42,7 @@ type DataServiceClient interface {
 	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
-	CalculateAnnotationProcessMetrics(ctx context.Context, in *QualityControlMetricsRequest, opts ...grpc.CallOption) (*QualityControlMetricsResponse, error)
+	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessMetricsResponse, error)
 }
 
 type dataServiceClient struct {
@@ -116,8 +116,8 @@ func (c *dataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *QualityControlMetricsRequest, opts ...grpc.CallOption) (*QualityControlMetricsResponse, error) {
-	out := new(QualityControlMetricsResponse)
+func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessMetricsResponse, error) {
+	out := new(AnnotationProcessMetricsResponse)
 	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -137,7 +137,7 @@ type DataServiceServer interface {
 	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
-	CalculateAnnotationProcessMetrics(context.Context, *QualityControlMetricsRequest) (*QualityControlMetricsResponse, error)
+	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error)
 }
 
 // UnimplementedDataServiceServer should be embedded to have forward compatible implementations.
@@ -165,7 +165,7 @@ func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*
 func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *QualityControlMetricsRequest) (*QualityControlMetricsResponse, error) {
+func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
 }
 
@@ -307,7 +307,7 @@ func _DataService_CallsPerMonthMetric_Handler(srv interface{}, ctx context.Conte
 }
 
 func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(QualityControlMetricsRequest)
+	in := new(AnnotationProcessMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -319,7 +319,7 @@ func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx
 		FullMethod: DataService_CalculateAnnotationProcessMetrics_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*QualityControlMetricsRequest))
+		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*AnnotationProcessMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

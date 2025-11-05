@@ -35,7 +35,7 @@ service DataService {
     };
   }
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
-  rpc CalculateAnnotationProcessMetrics(QualityControlMetricsRequest) returns (QualityControlMetricsResponse);
+  rpc CalculateAnnotationProcessMetrics(AnnotationProcessMetricsRequest) returns (AnnotationProcessMetricsResponse);
 }
 
 message Document {
@@ -319,13 +319,13 @@ message CallsPerMonthResponse {
   repeated CallsPerMonth calls_per_month = 1;
 }
 
-message QualityControlMetricsRequest {
+message AnnotationProcessMetricsRequest {
   repeated string fields = 1;
   repeated string country_codes = 2;
   repeated string document_types = 3;
 }
 
-message QualityControlMetricsResponse {
+message AnnotationProcessMetricsResponse {
   int32 document_count = 1;
   int32 true_value_count = 2;
   repeated Correctness overall_correctness = 3;

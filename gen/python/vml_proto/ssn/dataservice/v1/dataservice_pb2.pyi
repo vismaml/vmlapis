@@ -520,7 +520,7 @@ class CallsPerMonthResponse(_message.Message):
     calls_per_month: _containers.RepeatedCompositeFieldContainer[CallsPerMonth]
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
 
-class QualityControlMetricsRequest(_message.Message):
+class AnnotationProcessMetricsRequest(_message.Message):
     __slots__ = ("fields", "country_codes", "document_types")
     FIELDS_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
@@ -530,7 +530,7 @@ class QualityControlMetricsRequest(_message.Message):
     document_types: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
-class QualityControlMetricsResponse(_message.Message):
+class AnnotationProcessMetricsResponse(_message.Message):
     __slots__ = ("document_count", "true_value_count", "overall_correctness", "field_correctness")
     DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
     TRUE_VALUE_COUNT_FIELD_NUMBER: _ClassVar[int]

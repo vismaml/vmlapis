@@ -52,8 +52,8 @@ class DataServiceStub(object):
                 _registered_method=True)
         self.CalculateAnnotationProcessMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.SerializeToString,
-                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.FromString,
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.FromString,
                 _registered_method=True)
 
 
@@ -149,8 +149,8 @@ def add_DataServiceServicer_to_server(servicer, server):
             ),
             'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
                     servicer.CalculateAnnotationProcessMetrics,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.FromString,
-                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.SerializeToString,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -367,8 +367,8 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.SerializeToString,
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.FromString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.FromString,
             options,
             channel_credentials,
             insecure,

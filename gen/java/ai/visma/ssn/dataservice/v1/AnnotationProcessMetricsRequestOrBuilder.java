@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface QualityControlMetricsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.QualityControlMetricsRequest)
+public interface AnnotationProcessMetricsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.AnnotationProcessMetricsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

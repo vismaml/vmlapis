@@ -1525,31 +1525,31 @@ export namespace CallsPerMonthResponse {
   }
 }
 
-export class QualityControlMetricsRequest extends jspb.Message {
+export class AnnotationProcessMetricsRequest extends jspb.Message {
   getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): QualityControlMetricsRequest;
-  clearFieldsList(): QualityControlMetricsRequest;
-  addFields(value: string, index?: number): QualityControlMetricsRequest;
+  setFieldsList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearFieldsList(): AnnotationProcessMetricsRequest;
+  addFields(value: string, index?: number): AnnotationProcessMetricsRequest;
 
   getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): QualityControlMetricsRequest;
-  clearCountryCodesList(): QualityControlMetricsRequest;
-  addCountryCodes(value: string, index?: number): QualityControlMetricsRequest;
+  setCountryCodesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearCountryCodesList(): AnnotationProcessMetricsRequest;
+  addCountryCodes(value: string, index?: number): AnnotationProcessMetricsRequest;
 
   getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): QualityControlMetricsRequest;
-  clearDocumentTypesList(): QualityControlMetricsRequest;
-  addDocumentTypes(value: string, index?: number): QualityControlMetricsRequest;
+  setDocumentTypesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearDocumentTypesList(): AnnotationProcessMetricsRequest;
+  addDocumentTypes(value: string, index?: number): AnnotationProcessMetricsRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): QualityControlMetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: QualityControlMetricsRequest): QualityControlMetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: QualityControlMetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): QualityControlMetricsRequest;
-  static deserializeBinaryFromReader(message: QualityControlMetricsRequest, reader: jspb.BinaryReader): QualityControlMetricsRequest;
+  toObject(includeInstance?: boolean): AnnotationProcessMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsRequest): AnnotationProcessMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsRequest;
+  static deserializeBinaryFromReader(message: AnnotationProcessMetricsRequest, reader: jspb.BinaryReader): AnnotationProcessMetricsRequest;
 }
 
-export namespace QualityControlMetricsRequest {
+export namespace AnnotationProcessMetricsRequest {
   export type AsObject = {
     fieldsList: Array<string>,
     countryCodesList: Array<string>,
@@ -1557,32 +1557,32 @@ export namespace QualityControlMetricsRequest {
   }
 }
 
-export class QualityControlMetricsResponse extends jspb.Message {
+export class AnnotationProcessMetricsResponse extends jspb.Message {
   getDocumentCount(): number;
-  setDocumentCount(value: number): QualityControlMetricsResponse;
+  setDocumentCount(value: number): AnnotationProcessMetricsResponse;
 
   getTrueValueCount(): number;
-  setTrueValueCount(value: number): QualityControlMetricsResponse;
+  setTrueValueCount(value: number): AnnotationProcessMetricsResponse;
 
   getOverallCorrectnessList(): Array<Correctness>;
-  setOverallCorrectnessList(value: Array<Correctness>): QualityControlMetricsResponse;
-  clearOverallCorrectnessList(): QualityControlMetricsResponse;
+  setOverallCorrectnessList(value: Array<Correctness>): AnnotationProcessMetricsResponse;
+  clearOverallCorrectnessList(): AnnotationProcessMetricsResponse;
   addOverallCorrectness(value?: Correctness, index?: number): Correctness;
 
   getFieldCorrectnessList(): Array<Correctness>;
-  setFieldCorrectnessList(value: Array<Correctness>): QualityControlMetricsResponse;
-  clearFieldCorrectnessList(): QualityControlMetricsResponse;
+  setFieldCorrectnessList(value: Array<Correctness>): AnnotationProcessMetricsResponse;
+  clearFieldCorrectnessList(): AnnotationProcessMetricsResponse;
   addFieldCorrectness(value?: Correctness, index?: number): Correctness;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): QualityControlMetricsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: QualityControlMetricsResponse): QualityControlMetricsResponse.AsObject;
-  static serializeBinaryToWriter(message: QualityControlMetricsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): QualityControlMetricsResponse;
-  static deserializeBinaryFromReader(message: QualityControlMetricsResponse, reader: jspb.BinaryReader): QualityControlMetricsResponse;
+  toObject(includeInstance?: boolean): AnnotationProcessMetricsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsResponse): AnnotationProcessMetricsResponse.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessMetricsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsResponse;
+  static deserializeBinaryFromReader(message: AnnotationProcessMetricsResponse, reader: jspb.BinaryReader): AnnotationProcessMetricsResponse;
 }
 
-export namespace QualityControlMetricsResponse {
+export namespace AnnotationProcessMetricsResponse {
   export type AsObject = {
     documentCount: number,
     trueValueCount: number,

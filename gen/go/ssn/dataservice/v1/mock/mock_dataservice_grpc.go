@@ -38,14 +38,14 @@ func (m *MockDataServiceClient) EXPECT() *MockDataServiceClientMockRecorder {
 }
 
 // CalculateAnnotationProcessMetrics mocks base method.
-func (m *MockDataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *dataservice.QualityControlMetricsRequest, opts ...grpc.CallOption) (*dataservice.QualityControlMetricsResponse, error) {
+func (m *MockDataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *dataservice.AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*dataservice.AnnotationProcessMetricsResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "CalculateAnnotationProcessMetrics", varargs...)
-	ret0, _ := ret[0].(*dataservice.QualityControlMetricsResponse)
+	ret0, _ := ret[0].(*dataservice.AnnotationProcessMetricsResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -221,10 +221,10 @@ func (m *MockDataServiceServer) EXPECT() *MockDataServiceServerMockRecorder {
 }
 
 // CalculateAnnotationProcessMetrics mocks base method.
-func (m *MockDataServiceServer) CalculateAnnotationProcessMetrics(arg0 context.Context, arg1 *dataservice.QualityControlMetricsRequest) (*dataservice.QualityControlMetricsResponse, error) {
+func (m *MockDataServiceServer) CalculateAnnotationProcessMetrics(arg0 context.Context, arg1 *dataservice.AnnotationProcessMetricsRequest) (*dataservice.AnnotationProcessMetricsResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CalculateAnnotationProcessMetrics", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.QualityControlMetricsResponse)
+	ret0, _ := ret[0].(*dataservice.AnnotationProcessMetricsResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
