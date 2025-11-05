@@ -136,6 +136,7 @@ message PurchaseLinesRequest {
 
 message PurchaseLinesResponse {
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 1;
+  repeated ssn.type.PurchaseLine purchase_lines_items = 2;
 }
 
 // Document Q&A API
@@ -161,6 +162,7 @@ message VatDistributionRequest {
 
 message VatDistributionResponse {
   repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 1;
+  repeated ssn.type.VatDistribution vat_distribution_items = 2;
 }
 
 // Smartscan Ultra API

@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private VatDistributionResponse() {
     vatDistributionCandidates_ = java.util.Collections.emptyList();
+    vatDistributionItems_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -84,6 +85,47 @@ private static final long serialVersionUID = 0L;
     return vatDistributionCandidates_.get(index);
   }
 
+  public static final int VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionItems_;
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionItemsList() {
+    return vatDistributionItems_;
+  }
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionItemsOrBuilderList() {
+    return vatDistributionItems_;
+  }
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public int getVatDistributionItemsCount() {
+    return vatDistributionItems_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index) {
+    return vatDistributionItems_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
+      int index) {
+    return vatDistributionItems_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -101,6 +143,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
       output.writeMessage(1, vatDistributionCandidates_.get(i));
     }
+    for (int i = 0; i < vatDistributionItems_.size(); i++) {
+      output.writeMessage(2, vatDistributionItems_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -113,6 +158,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, vatDistributionCandidates_.get(i));
+    }
+    for (int i = 0; i < vatDistributionItems_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, vatDistributionItems_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -131,6 +180,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getVatDistributionCandidatesList()
         .equals(other.getVatDistributionCandidatesList())) return false;
+    if (!getVatDistributionItemsList()
+        .equals(other.getVatDistributionItemsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +196,10 @@ private static final long serialVersionUID = 0L;
     if (getVatDistributionCandidatesCount() > 0) {
       hash = (37 * hash) + VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER;
       hash = (53 * hash) + getVatDistributionCandidatesList().hashCode();
+    }
+    if (getVatDistributionItemsCount() > 0) {
+      hash = (37 * hash) + VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + getVatDistributionItemsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -284,6 +339,13 @@ private static final long serialVersionUID = 0L;
         vatDistributionCandidatesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItems_ = java.util.Collections.emptyList();
+      } else {
+        vatDistributionItems_ = null;
+        vatDistributionItemsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -325,6 +387,15 @@ private static final long serialVersionUID = 0L;
         result.vatDistributionCandidates_ = vatDistributionCandidates_;
       } else {
         result.vatDistributionCandidates_ = vatDistributionCandidatesBuilder_.build();
+      }
+      if (vatDistributionItemsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          vatDistributionItems_ = java.util.Collections.unmodifiableList(vatDistributionItems_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.vatDistributionItems_ = vatDistributionItems_;
+      } else {
+        result.vatDistributionItems_ = vatDistributionItemsBuilder_.build();
       }
     }
 
@@ -370,6 +441,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (vatDistributionItemsBuilder_ == null) {
+        if (!other.vatDistributionItems_.isEmpty()) {
+          if (vatDistributionItems_.isEmpty()) {
+            vatDistributionItems_ = other.vatDistributionItems_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureVatDistributionItemsIsMutable();
+            vatDistributionItems_.addAll(other.vatDistributionItems_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.vatDistributionItems_.isEmpty()) {
+          if (vatDistributionItemsBuilder_.isEmpty()) {
+            vatDistributionItemsBuilder_.dispose();
+            vatDistributionItemsBuilder_ = null;
+            vatDistributionItems_ = other.vatDistributionItems_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            vatDistributionItemsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getVatDistributionItemsFieldBuilder() : null;
+          } else {
+            vatDistributionItemsBuilder_.addAllMessages(other.vatDistributionItems_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +506,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              ai.visma.ssn.type.VatDistribution m =
+                  input.readMessage(
+                      ai.visma.ssn.type.VatDistribution.parser(),
+                      extensionRegistry);
+              if (vatDistributionItemsBuilder_ == null) {
+                ensureVatDistributionItemsIsMutable();
+                vatDistributionItems_.add(m);
+              } else {
+                vatDistributionItemsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -664,6 +774,246 @@ private static final long serialVersionUID = 0L;
         vatDistributionCandidates_ = null;
       }
       return vatDistributionCandidatesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionItems_ =
+      java.util.Collections.emptyList();
+    private void ensureVatDistributionItemsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        vatDistributionItems_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistribution>(vatDistributionItems_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> vatDistributionItemsBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionItemsList() {
+      if (vatDistributionItemsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatDistributionItems_);
+      } else {
+        return vatDistributionItemsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public int getVatDistributionItemsCount() {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.size();
+      } else {
+        return vatDistributionItemsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.get(index);
+      } else {
+        return vatDistributionItemsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder setVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.set(index, value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder setVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionItemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(index, value);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addVatDistributionItems(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder addAllVatDistributionItems(
+        java.lang.Iterable<? extends ai.visma.ssn.type.VatDistribution> values) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vatDistributionItems_);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder clearVatDistributionItems() {
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItems_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public Builder removeVatDistributionItems(int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        ensureVatDistributionItemsIsMutable();
+        vatDistributionItems_.remove(index);
+        onChanged();
+      } else {
+        vatDistributionItemsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder getVatDistributionItemsBuilder(
+        int index) {
+      return getVatDistributionItemsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
+        int index) {
+      if (vatDistributionItemsBuilder_ == null) {
+        return vatDistributionItems_.get(index);  } else {
+        return vatDistributionItemsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+         getVatDistributionItemsOrBuilderList() {
+      if (vatDistributionItemsBuilder_ != null) {
+        return vatDistributionItemsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(vatDistributionItems_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionItemsBuilder() {
+      return getVatDistributionItemsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionItemsBuilder(
+        int index) {
+      return getVatDistributionItemsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution.Builder> 
+         getVatDistributionItemsBuilderList() {
+      return getVatDistributionItemsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> 
+        getVatDistributionItemsFieldBuilder() {
+      if (vatDistributionItemsBuilder_ == null) {
+        vatDistributionItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder>(
+                vatDistributionItems_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        vatDistributionItems_ = null;
+      }
+      return vatDistributionItemsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.VatDistributionResponse)

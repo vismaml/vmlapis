@@ -75,7 +75,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -84,7 +84,7 @@ public interface AnnotationOrBuilder extends
       getPurchaseLineCandidatesList();
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -92,7 +92,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index);
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -100,7 +100,7 @@ public interface AnnotationOrBuilder extends
   int getPurchaseLineCandidatesCount();
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -109,7 +109,7 @@ public interface AnnotationOrBuilder extends
       getPurchaseLineCandidatesOrBuilderList();
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -234,7 +234,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -243,7 +243,7 @@ public interface AnnotationOrBuilder extends
       getVatDistributionCandidatesList();
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -251,7 +251,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -259,7 +259,7 @@ public interface AnnotationOrBuilder extends
   int getVatDistributionCandidatesCount();
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -268,7 +268,7 @@ public interface AnnotationOrBuilder extends
       getVatDistributionCandidatesOrBuilderList();
   /**
    * <pre>
-   * vat distribution candidates
+   * vat distribution candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -362,5 +362,93 @@ public interface AnnotationOrBuilder extends
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
    */
   ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PurchaseLine> 
+      getPurchaseLinesCandidatesList();
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLine getPurchaseLinesCandidates(int index);
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  int getPurchaseLinesCandidatesCount();
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+      getPurchaseLinesCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * purchase lines (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_candidates = 10 [json_name = "purchaseLinesCandidates"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesCandidatesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistribution> 
+      getVatDistributionItemsList();
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index);
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  int getVatDistributionItemsCount();
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionItemsOrBuilderList();
+  /**
+   * <pre>
+   * vat distribution (new format - candidate-driven)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 11 [json_name = "vatDistributionItems"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
       int index);
 }
