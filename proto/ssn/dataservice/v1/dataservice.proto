@@ -341,4 +341,3 @@ message SsnMetrics {
   repeated Correctness field_correctness = 4;
   repeated FieldsComparison differences = 5;
 }
-

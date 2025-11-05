@@ -2330,6 +2330,29 @@
         }
       }
     },
+    "v1FieldsComparison": {
+      "type": "object",
+      "properties": {
+        "bqId": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "fieldName": {
+          "type": "string"
+        },
+        "trueValue": {
+          "type": "string"
+        },
+        "predictionValue": {
+          "type": "string"
+        },
+        "result": {
+          "type": "boolean"
+        }
+      }
+    },
     "v1GetTransactionResultsResponse": {
       "type": "object",
       "properties": {
@@ -3261,6 +3284,40 @@
       "properties": {
         "document": {
           "$ref": "#/definitions/ssndataservicev1Document"
+        }
+      }
+    },
+    "v1SsnMetrics": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "trueValueCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1FieldsComparison"
+          }
         }
       }
     },

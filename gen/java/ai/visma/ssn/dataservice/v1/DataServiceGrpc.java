@@ -232,6 +232,37 @@ public final class DataServiceGrpc {
     return getCallsPerMonthMetricMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.PredictionMetricsRequest,
+      ai.visma.ssn.dataservice.v1.SsnMetrics> getCalculateAnnotationProcessMetricsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CalculateAnnotationProcessMetrics",
+      requestType = ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.class,
+      responseType = ai.visma.ssn.dataservice.v1.SsnMetrics.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.PredictionMetricsRequest,
+      ai.visma.ssn.dataservice.v1.SsnMetrics> getCalculateAnnotationProcessMetricsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.PredictionMetricsRequest, ai.visma.ssn.dataservice.v1.SsnMetrics> getCalculateAnnotationProcessMetricsMethod;
+    if ((getCalculateAnnotationProcessMetricsMethod = DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCalculateAnnotationProcessMetricsMethod = DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod) == null) {
+          DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod = getCalculateAnnotationProcessMetricsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.dataservice.v1.PredictionMetricsRequest, ai.visma.ssn.dataservice.v1.SsnMetrics>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateAnnotationProcessMetrics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.dataservice.v1.SsnMetrics.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("CalculateAnnotationProcessMetrics"))
+              .build();
+        }
+      }
+    }
+    return getCalculateAnnotationProcessMetricsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -346,6 +377,13 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallsPerMonthMetricMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.SsnMetrics> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateAnnotationProcessMetricsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -433,6 +471,14 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCallsPerMonthMetricMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.SsnMetrics> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCalculateAnnotationProcessMetricsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -502,6 +548,13 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCallsPerMonthMetricMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.SsnMetrics calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCalculateAnnotationProcessMetricsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -570,6 +623,13 @@ public final class DataServiceGrpc {
     public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthMetric(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCallsPerMonthMetricMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.SsnMetrics calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCalculateAnnotationProcessMetricsMethod(), getCallOptions(), request);
     }
   }
 
@@ -647,6 +707,14 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCallsPerMonthMetricMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.dataservice.v1.SsnMetrics> calculateAnnotationProcessMetrics(
+        ai.visma.ssn.dataservice.v1.PredictionMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCalculateAnnotationProcessMetricsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DOCUMENT = 0;
@@ -656,6 +724,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_CALCULATE_METRICS = 4;
   private static final int METHODID_DELETE = 5;
   private static final int METHODID_CALLS_PER_MONTH_METRIC = 6;
+  private static final int METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -701,6 +770,10 @@ public final class DataServiceGrpc {
         case METHODID_CALLS_PER_MONTH_METRIC:
           serviceImpl.callsPerMonthMetric((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>) responseObserver);
+          break;
+        case METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS:
+          serviceImpl.calculateAnnotationProcessMetrics((ai.visma.ssn.dataservice.v1.PredictionMetricsRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.SsnMetrics>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -769,6 +842,13 @@ public final class DataServiceGrpc {
               com.google.protobuf.Empty,
               ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
                 service, METHODID_CALLS_PER_MONTH_METRIC)))
+        .addMethod(
+          getCalculateAnnotationProcessMetricsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.dataservice.v1.PredictionMetricsRequest,
+              ai.visma.ssn.dataservice.v1.SsnMetrics>(
+                service, METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS)))
         .build();
   }
 
@@ -824,6 +904,7 @@ public final class DataServiceGrpc {
               .addMethod(getCalculateMetricsMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getCallsPerMonthMetricMethod())
+              .addMethod(getCalculateAnnotationProcessMetricsMethod())
               .build();
         }
       }
