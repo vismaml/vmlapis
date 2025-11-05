@@ -50,10 +50,10 @@ class DataServiceStub(object):
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
                 _registered_method=True)
-        self.CalculateAnnotationProcessMetrics = channel.unary_unary(
-                '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.SerializeToString,
-                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
+        self.CalculateQualityControlMetrics = channel.unary_unary(
+                '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.FromString,
                 _registered_method=True)
 
 
@@ -103,7 +103,7 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def CalculateAnnotationProcessMetrics(self, request, context):
+    def CalculateQualityControlMetrics(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -147,10 +147,10 @@ def add_DataServiceServicer_to_server(servicer, server):
                     request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
             ),
-            'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
-                    servicer.CalculateAnnotationProcessMetrics,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.FromString,
-                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.SerializeToString,
+            'CalculateQualityControlMetrics': grpc.unary_unary_rpc_method_handler(
+                    servicer.CalculateQualityControlMetrics,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -353,7 +353,7 @@ class DataService(object):
             _registered_method=True)
 
     @staticmethod
-    def CalculateAnnotationProcessMetrics(request,
+    def CalculateQualityControlMetrics(request,
             target,
             options=(),
             channel_credentials=None,
@@ -366,9 +366,9 @@ class DataService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PredictionMetricsRequest.SerializeToString,
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.SsnMetrics.FromString,
+            '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.QualityControlMetricsResponse.FromString,
             options,
             channel_credentials,
             insecure,

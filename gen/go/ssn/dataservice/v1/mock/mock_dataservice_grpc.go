@@ -37,26 +37,6 @@ func (m *MockDataServiceClient) EXPECT() *MockDataServiceClientMockRecorder {
 	return m.recorder
 }
 
-// CalculateAnnotationProcessMetrics mocks base method.
-func (m *MockDataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *dataservice.PredictionMetricsRequest, opts ...grpc.CallOption) (*dataservice.SsnMetrics, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "CalculateAnnotationProcessMetrics", varargs...)
-	ret0, _ := ret[0].(*dataservice.SsnMetrics)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// CalculateAnnotationProcessMetrics indicates an expected call of CalculateAnnotationProcessMetrics.
-func (mr *MockDataServiceClientMockRecorder) CalculateAnnotationProcessMetrics(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateAnnotationProcessMetrics", reflect.TypeOf((*MockDataServiceClient)(nil).CalculateAnnotationProcessMetrics), varargs...)
-}
-
 // CalculateMetrics mocks base method.
 func (m *MockDataServiceClient) CalculateMetrics(ctx context.Context, in *dataservice.MetricsRequest, opts ...grpc.CallOption) (*dataservice.FeedbackMetrics, error) {
 	m.ctrl.T.Helper()
@@ -75,6 +55,26 @@ func (mr *MockDataServiceClientMockRecorder) CalculateMetrics(ctx, in interface{
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetrics", reflect.TypeOf((*MockDataServiceClient)(nil).CalculateMetrics), varargs...)
+}
+
+// CalculateQualityControlMetrics mocks base method.
+func (m *MockDataServiceClient) CalculateQualityControlMetrics(ctx context.Context, in *dataservice.QualityControlMetricsRequest, opts ...grpc.CallOption) (*dataservice.QualityControlMetricsResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CalculateQualityControlMetrics", varargs...)
+	ret0, _ := ret[0].(*dataservice.QualityControlMetricsResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CalculateQualityControlMetrics indicates an expected call of CalculateQualityControlMetrics.
+func (mr *MockDataServiceClientMockRecorder) CalculateQualityControlMetrics(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateQualityControlMetrics", reflect.TypeOf((*MockDataServiceClient)(nil).CalculateQualityControlMetrics), varargs...)
 }
 
 // CallsPerMonthMetric mocks base method.
@@ -220,21 +220,6 @@ func (m *MockDataServiceServer) EXPECT() *MockDataServiceServerMockRecorder {
 	return m.recorder
 }
 
-// CalculateAnnotationProcessMetrics mocks base method.
-func (m *MockDataServiceServer) CalculateAnnotationProcessMetrics(arg0 context.Context, arg1 *dataservice.PredictionMetricsRequest) (*dataservice.SsnMetrics, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CalculateAnnotationProcessMetrics", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.SsnMetrics)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// CalculateAnnotationProcessMetrics indicates an expected call of CalculateAnnotationProcessMetrics.
-func (mr *MockDataServiceServerMockRecorder) CalculateAnnotationProcessMetrics(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateAnnotationProcessMetrics", reflect.TypeOf((*MockDataServiceServer)(nil).CalculateAnnotationProcessMetrics), arg0, arg1)
-}
-
 // CalculateMetrics mocks base method.
 func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *dataservice.MetricsRequest) (*dataservice.FeedbackMetrics, error) {
 	m.ctrl.T.Helper()
@@ -248,6 +233,21 @@ func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *dat
 func (mr *MockDataServiceServerMockRecorder) CalculateMetrics(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetrics", reflect.TypeOf((*MockDataServiceServer)(nil).CalculateMetrics), arg0, arg1)
+}
+
+// CalculateQualityControlMetrics mocks base method.
+func (m *MockDataServiceServer) CalculateQualityControlMetrics(arg0 context.Context, arg1 *dataservice.QualityControlMetricsRequest) (*dataservice.QualityControlMetricsResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CalculateQualityControlMetrics", arg0, arg1)
+	ret0, _ := ret[0].(*dataservice.QualityControlMetricsResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CalculateQualityControlMetrics indicates an expected call of CalculateQualityControlMetrics.
+func (mr *MockDataServiceServerMockRecorder) CalculateQualityControlMetrics(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateQualityControlMetrics", reflect.TypeOf((*MockDataServiceServer)(nil).CalculateQualityControlMetrics), arg0, arg1)
 }
 
 // CallsPerMonthMetric mocks base method.

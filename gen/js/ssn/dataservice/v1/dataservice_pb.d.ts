@@ -1525,69 +1525,31 @@ export namespace CallsPerMonthResponse {
   }
 }
 
-export class FieldsComparison extends jspb.Message {
-  getBqId(): string;
-  setBqId(value: string): FieldsComparison;
-
-  getTaskId(): string;
-  setTaskId(value: string): FieldsComparison;
-
-  getFieldName(): string;
-  setFieldName(value: string): FieldsComparison;
-
-  getTrueValue(): string;
-  setTrueValue(value: string): FieldsComparison;
-
-  getPredictionValue(): string;
-  setPredictionValue(value: string): FieldsComparison;
-
-  getResult(): boolean;
-  setResult(value: boolean): FieldsComparison;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FieldsComparison.AsObject;
-  static toObject(includeInstance: boolean, msg: FieldsComparison): FieldsComparison.AsObject;
-  static serializeBinaryToWriter(message: FieldsComparison, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FieldsComparison;
-  static deserializeBinaryFromReader(message: FieldsComparison, reader: jspb.BinaryReader): FieldsComparison;
-}
-
-export namespace FieldsComparison {
-  export type AsObject = {
-    bqId: string,
-    taskId: string,
-    fieldName: string,
-    trueValue: string,
-    predictionValue: string,
-    result: boolean,
-  }
-}
-
-export class PredictionMetricsRequest extends jspb.Message {
+export class QualityControlMetricsRequest extends jspb.Message {
   getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): PredictionMetricsRequest;
-  clearFieldsList(): PredictionMetricsRequest;
-  addFields(value: string, index?: number): PredictionMetricsRequest;
+  setFieldsList(value: Array<string>): QualityControlMetricsRequest;
+  clearFieldsList(): QualityControlMetricsRequest;
+  addFields(value: string, index?: number): QualityControlMetricsRequest;
 
   getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): PredictionMetricsRequest;
-  clearCountryCodesList(): PredictionMetricsRequest;
-  addCountryCodes(value: string, index?: number): PredictionMetricsRequest;
+  setCountryCodesList(value: Array<string>): QualityControlMetricsRequest;
+  clearCountryCodesList(): QualityControlMetricsRequest;
+  addCountryCodes(value: string, index?: number): QualityControlMetricsRequest;
 
   getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): PredictionMetricsRequest;
-  clearDocumentTypesList(): PredictionMetricsRequest;
-  addDocumentTypes(value: string, index?: number): PredictionMetricsRequest;
+  setDocumentTypesList(value: Array<string>): QualityControlMetricsRequest;
+  clearDocumentTypesList(): QualityControlMetricsRequest;
+  addDocumentTypes(value: string, index?: number): QualityControlMetricsRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PredictionMetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: PredictionMetricsRequest): PredictionMetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: PredictionMetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PredictionMetricsRequest;
-  static deserializeBinaryFromReader(message: PredictionMetricsRequest, reader: jspb.BinaryReader): PredictionMetricsRequest;
+  toObject(includeInstance?: boolean): QualityControlMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: QualityControlMetricsRequest): QualityControlMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: QualityControlMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QualityControlMetricsRequest;
+  static deserializeBinaryFromReader(message: QualityControlMetricsRequest, reader: jspb.BinaryReader): QualityControlMetricsRequest;
 }
 
-export namespace PredictionMetricsRequest {
+export namespace QualityControlMetricsRequest {
   export type AsObject = {
     fieldsList: Array<string>,
     countryCodesList: Array<string>,
@@ -1595,43 +1557,37 @@ export namespace PredictionMetricsRequest {
   }
 }
 
-export class SsnMetrics extends jspb.Message {
+export class QualityControlMetricsResponse extends jspb.Message {
   getDocumentCount(): number;
-  setDocumentCount(value: number): SsnMetrics;
+  setDocumentCount(value: number): QualityControlMetricsResponse;
 
   getTrueValueCount(): number;
-  setTrueValueCount(value: number): SsnMetrics;
+  setTrueValueCount(value: number): QualityControlMetricsResponse;
 
   getOverallCorrectnessList(): Array<Correctness>;
-  setOverallCorrectnessList(value: Array<Correctness>): SsnMetrics;
-  clearOverallCorrectnessList(): SsnMetrics;
+  setOverallCorrectnessList(value: Array<Correctness>): QualityControlMetricsResponse;
+  clearOverallCorrectnessList(): QualityControlMetricsResponse;
   addOverallCorrectness(value?: Correctness, index?: number): Correctness;
 
   getFieldCorrectnessList(): Array<Correctness>;
-  setFieldCorrectnessList(value: Array<Correctness>): SsnMetrics;
-  clearFieldCorrectnessList(): SsnMetrics;
+  setFieldCorrectnessList(value: Array<Correctness>): QualityControlMetricsResponse;
+  clearFieldCorrectnessList(): QualityControlMetricsResponse;
   addFieldCorrectness(value?: Correctness, index?: number): Correctness;
 
-  getDifferencesList(): Array<FieldsComparison>;
-  setDifferencesList(value: Array<FieldsComparison>): SsnMetrics;
-  clearDifferencesList(): SsnMetrics;
-  addDifferences(value?: FieldsComparison, index?: number): FieldsComparison;
-
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): SsnMetrics.AsObject;
-  static toObject(includeInstance: boolean, msg: SsnMetrics): SsnMetrics.AsObject;
-  static serializeBinaryToWriter(message: SsnMetrics, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): SsnMetrics;
-  static deserializeBinaryFromReader(message: SsnMetrics, reader: jspb.BinaryReader): SsnMetrics;
+  toObject(includeInstance?: boolean): QualityControlMetricsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: QualityControlMetricsResponse): QualityControlMetricsResponse.AsObject;
+  static serializeBinaryToWriter(message: QualityControlMetricsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): QualityControlMetricsResponse;
+  static deserializeBinaryFromReader(message: QualityControlMetricsResponse, reader: jspb.BinaryReader): QualityControlMetricsResponse;
 }
 
-export namespace SsnMetrics {
+export namespace QualityControlMetricsResponse {
   export type AsObject = {
     documentCount: number,
     trueValueCount: number,
     overallCorrectnessList: Array<Correctness.AsObject>,
     fieldCorrectnessList: Array<Correctness.AsObject>,
-    differencesList: Array<FieldsComparison.AsObject>,
   }
 }
 

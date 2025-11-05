@@ -58,12 +58,12 @@ export class DataServiceClient {
                response: ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
 
-  calculateAnnotationProcessMetrics(
-    request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,
+  calculateQualityControlMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.QualityControlMetricsRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
-               response: ssn_dataservice_v1_dataservice_pb.SsnMetrics) => void
-  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
+               response: ssn_dataservice_v1_dataservice_pb.QualityControlMetricsResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.QualityControlMetricsResponse>;
 
 }
 
@@ -107,10 +107,10 @@ export class DataServicePromiseClient {
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
 
-  calculateAnnotationProcessMetrics(
-    request: ssn_dataservice_v1_dataservice_pb.PredictionMetricsRequest,
+  calculateQualityControlMetrics(
+    request: ssn_dataservice_v1_dataservice_pb.QualityControlMetricsRequest,
     metadata?: grpcWeb.Metadata
-  ): Promise<ssn_dataservice_v1_dataservice_pb.SsnMetrics>;
+  ): Promise<ssn_dataservice_v1_dataservice_pb.QualityControlMetricsResponse>;
 
 }
 

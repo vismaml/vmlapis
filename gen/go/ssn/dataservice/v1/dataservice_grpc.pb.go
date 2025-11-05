@@ -20,14 +20,14 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DataService_CreateDocument_FullMethodName                    = "/ssn.dataservice.v1.DataService/CreateDocument"
-	DataService_ReadDocument_FullMethodName                      = "/ssn.dataservice.v1.DataService/ReadDocument"
-	DataService_PrepareFeedback_FullMethodName                   = "/ssn.dataservice.v1.DataService/PrepareFeedback"
-	DataService_Feedback_FullMethodName                          = "/ssn.dataservice.v1.DataService/Feedback"
-	DataService_CalculateMetrics_FullMethodName                  = "/ssn.dataservice.v1.DataService/CalculateMetrics"
-	DataService_Delete_FullMethodName                            = "/ssn.dataservice.v1.DataService/Delete"
-	DataService_CallsPerMonthMetric_FullMethodName               = "/ssn.dataservice.v1.DataService/CallsPerMonthMetric"
-	DataService_CalculateAnnotationProcessMetrics_FullMethodName = "/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics"
+	DataService_CreateDocument_FullMethodName                 = "/ssn.dataservice.v1.DataService/CreateDocument"
+	DataService_ReadDocument_FullMethodName                   = "/ssn.dataservice.v1.DataService/ReadDocument"
+	DataService_PrepareFeedback_FullMethodName                = "/ssn.dataservice.v1.DataService/PrepareFeedback"
+	DataService_Feedback_FullMethodName                       = "/ssn.dataservice.v1.DataService/Feedback"
+	DataService_CalculateMetrics_FullMethodName               = "/ssn.dataservice.v1.DataService/CalculateMetrics"
+	DataService_Delete_FullMethodName                         = "/ssn.dataservice.v1.DataService/Delete"
+	DataService_CallsPerMonthMetric_FullMethodName            = "/ssn.dataservice.v1.DataService/CallsPerMonthMetric"
+	DataService_CalculateQualityControlMetrics_FullMethodName = "/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics"
 )
 
 // DataServiceClient is the client API for DataService service.
@@ -42,7 +42,7 @@ type DataServiceClient interface {
 	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
-	CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error)
+	CalculateQualityControlMetrics(ctx context.Context, in *QualityControlMetricsRequest, opts ...grpc.CallOption) (*QualityControlMetricsResponse, error)
 }
 
 type dataServiceClient struct {
@@ -116,9 +116,9 @@ func (c *dataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *PredictionMetricsRequest, opts ...grpc.CallOption) (*SsnMetrics, error) {
-	out := new(SsnMetrics)
-	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
+func (c *dataServiceClient) CalculateQualityControlMetrics(ctx context.Context, in *QualityControlMetricsRequest, opts ...grpc.CallOption) (*QualityControlMetricsResponse, error) {
+	out := new(QualityControlMetricsResponse)
+	err := c.cc.Invoke(ctx, DataService_CalculateQualityControlMetrics_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -137,7 +137,7 @@ type DataServiceServer interface {
 	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
-	CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error)
+	CalculateQualityControlMetrics(context.Context, *QualityControlMetricsRequest) (*QualityControlMetricsResponse, error)
 }
 
 // UnimplementedDataServiceServer should be embedded to have forward compatible implementations.
@@ -165,8 +165,8 @@ func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*
 func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
 }
-func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *PredictionMetricsRequest) (*SsnMetrics, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
+func (UnimplementedDataServiceServer) CalculateQualityControlMetrics(context.Context, *QualityControlMetricsRequest) (*QualityControlMetricsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CalculateQualityControlMetrics not implemented")
 }
 
 // UnsafeDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -306,20 +306,20 @@ func _DataService_CallsPerMonthMetric_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PredictionMetricsRequest)
+func _DataService_CalculateQualityControlMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QualityControlMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, in)
+		return srv.(DataServiceServer).CalculateQualityControlMetrics(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: DataService_CalculateAnnotationProcessMetrics_FullMethodName,
+		FullMethod: DataService_CalculateQualityControlMetrics_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateAnnotationProcessMetrics(ctx, req.(*PredictionMetricsRequest))
+		return srv.(DataServiceServer).CalculateQualityControlMetrics(ctx, req.(*QualityControlMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -360,8 +360,8 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _DataService_CallsPerMonthMetric_Handler,
 		},
 		{
-			MethodName: "CalculateAnnotationProcessMetrics",
-			Handler:    _DataService_CalculateAnnotationProcessMetrics_Handler,
+			MethodName: "CalculateQualityControlMetrics",
+			Handler:    _DataService_CalculateQualityControlMetrics_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

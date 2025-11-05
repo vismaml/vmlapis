@@ -2330,29 +2330,6 @@
         }
       }
     },
-    "v1FieldsComparison": {
-      "type": "object",
-      "properties": {
-        "bqId": {
-          "type": "string"
-        },
-        "taskId": {
-          "type": "string"
-        },
-        "fieldName": {
-          "type": "string"
-        },
-        "trueValue": {
-          "type": "string"
-        },
-        "predictionValue": {
-          "type": "string"
-        },
-        "result": {
-          "type": "boolean"
-        }
-      }
-    },
     "v1GetTransactionResultsResponse": {
       "type": "object",
       "properties": {
@@ -3279,15 +3256,7 @@
         }
       }
     },
-    "v1ReadDocumentResponse": {
-      "type": "object",
-      "properties": {
-        "document": {
-          "$ref": "#/definitions/ssndataservicev1Document"
-        }
-      }
-    },
-    "v1SsnMetrics": {
+    "v1QualityControlMetricsResponse": {
       "type": "object",
       "properties": {
         "documentCount": {
@@ -3311,13 +3280,14 @@
             "type": "object",
             "$ref": "#/definitions/v1Correctness"
           }
-        },
-        "differences": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/v1FieldsComparison"
-          }
+        }
+      }
+    },
+    "v1ReadDocumentResponse": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "$ref": "#/definitions/ssndataservicev1Document"
         }
       }
     },

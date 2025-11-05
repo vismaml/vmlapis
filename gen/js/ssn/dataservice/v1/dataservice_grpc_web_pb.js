@@ -524,61 +524,61 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.dataservice.v1.PredictionMetricsRequest,
- *   !proto.ssn.dataservice.v1.SsnMetrics>}
+ *   !proto.ssn.dataservice.v1.QualityControlMetricsRequest,
+ *   !proto.ssn.dataservice.v1.QualityControlMetricsResponse>}
  */
-const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.web.MethodDescriptor(
-  '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+const methodDescriptor_DataService_CalculateQualityControlMetrics = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
   grpc.web.MethodType.UNARY,
-  proto.ssn.dataservice.v1.PredictionMetricsRequest,
-  proto.ssn.dataservice.v1.SsnMetrics,
+  proto.ssn.dataservice.v1.QualityControlMetricsRequest,
+  proto.ssn.dataservice.v1.QualityControlMetricsResponse,
   /**
-   * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request
+   * @param {!proto.ssn.dataservice.v1.QualityControlMetricsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.dataservice.v1.SsnMetrics.deserializeBinary
+  proto.ssn.dataservice.v1.QualityControlMetricsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.QualityControlMetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.SsnMetrics)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.QualityControlMetricsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.SsnMetrics>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.QualityControlMetricsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessMetrics =
+proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateQualityControlMetrics =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateAnnotationProcessMetrics,
+      methodDescriptor_DataService_CalculateQualityControlMetrics,
       callback);
 };
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.QualityControlMetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.dataservice.v1.SsnMetrics>}
+ * @return {!Promise<!proto.ssn.dataservice.v1.QualityControlMetricsResponse>}
  *     Promise that resolves to the response
  */
-proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateAnnotationProcessMetrics =
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateQualityControlMetrics =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateAnnotationProcessMetrics);
+      methodDescriptor_DataService_CalculateQualityControlMetrics);
 };
 
 

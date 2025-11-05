@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface SsnMetricsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.SsnMetrics)
+public interface QualityControlMetricsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.QualityControlMetricsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -67,29 +67,5 @@ public interface SsnMetricsOrBuilder extends
    * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4 [json_name = "fieldCorrectness"];</code>
    */
   ai.visma.ssn.dataservice.v1.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
-      int index);
-
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison> 
-      getDifferencesList();
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  ai.visma.ssn.dataservice.v1.FieldsComparison getDifferences(int index);
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  int getDifferencesCount();
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder> 
-      getDifferencesOrBuilderList();
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder getDifferencesOrBuilder(
       int index);
 }

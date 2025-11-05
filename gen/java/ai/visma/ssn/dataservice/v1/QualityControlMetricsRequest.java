@@ -6,12 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.PredictionMetricsRequest}
+ * Protobuf type {@code ssn.dataservice.v1.QualityControlMetricsRequest}
  */
-public final class PredictionMetricsRequest extends
+public final class QualityControlMetricsRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.PredictionMetricsRequest)
-    PredictionMetricsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.QualityControlMetricsRequest)
+    QualityControlMetricsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,13 +20,13 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      PredictionMetricsRequest.class.getName());
+      QualityControlMetricsRequest.class.getName());
   }
-  // Use PredictionMetricsRequest.newBuilder() to construct.
-  private PredictionMetricsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use QualityControlMetricsRequest.newBuilder() to construct.
+  private QualityControlMetricsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private PredictionMetricsRequest() {
+  private QualityControlMetricsRequest() {
     fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     countryCodes_ =
@@ -37,15 +37,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_PredictionMetricsRequest_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_QualityControlMetricsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_PredictionMetricsRequest_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_QualityControlMetricsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.class, ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.Builder.class);
+            ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.class, ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.Builder.class);
   }
 
   public static final int FIELDS_FIELD_NUMBER = 1;
@@ -225,10 +225,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.PredictionMetricsRequest)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.PredictionMetricsRequest other = (ai.visma.ssn.dataservice.v1.PredictionMetricsRequest) obj;
+    ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest other = (ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest) obj;
 
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
@@ -264,44 +264,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -309,26 +309,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -341,7 +341,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -357,26 +357,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.PredictionMetricsRequest}
+   * Protobuf type {@code ssn.dataservice.v1.QualityControlMetricsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.PredictionMetricsRequest)
-      ai.visma.ssn.dataservice.v1.PredictionMetricsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.QualityControlMetricsRequest)
+      ai.visma.ssn.dataservice.v1.QualityControlMetricsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_PredictionMetricsRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_QualityControlMetricsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_PredictionMetricsRequest_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_QualityControlMetricsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.class, ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.Builder.class);
+              ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.class, ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.newBuilder()
     private Builder() {
 
     }
@@ -402,17 +402,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_PredictionMetricsRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_QualityControlMetricsRequest_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.PredictionMetricsRequest getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.PredictionMetricsRequest build() {
-      ai.visma.ssn.dataservice.v1.PredictionMetricsRequest result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest build() {
+      ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -420,14 +420,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.PredictionMetricsRequest buildPartial() {
-      ai.visma.ssn.dataservice.v1.PredictionMetricsRequest result = new ai.visma.ssn.dataservice.v1.PredictionMetricsRequest(this);
+    public ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest buildPartial() {
+      ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest result = new ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         fields_.makeImmutable();
@@ -445,16 +445,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.PredictionMetricsRequest) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.PredictionMetricsRequest)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.PredictionMetricsRequest other) {
-      if (other == ai.visma.ssn.dataservice.v1.PredictionMetricsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest other) {
+      if (other == ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.getDefaultInstance()) return this;
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
@@ -879,23 +879,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionMetricsRequest)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.QualityControlMetricsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.PredictionMetricsRequest)
-  private static final ai.visma.ssn.dataservice.v1.PredictionMetricsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.QualityControlMetricsRequest)
+  private static final ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.PredictionMetricsRequest();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest();
   }
 
-  public static ai.visma.ssn.dataservice.v1.PredictionMetricsRequest getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PredictionMetricsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<PredictionMetricsRequest>() {
+  private static final com.google.protobuf.Parser<QualityControlMetricsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<QualityControlMetricsRequest>() {
     @java.lang.Override
-    public PredictionMetricsRequest parsePartialFrom(
+    public QualityControlMetricsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -914,17 +914,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<PredictionMetricsRequest> parser() {
+  public static com.google.protobuf.Parser<QualityControlMetricsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PredictionMetricsRequest> getParserForType() {
+  public com.google.protobuf.Parser<QualityControlMetricsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.PredictionMetricsRequest getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
