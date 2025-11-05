@@ -520,7 +520,7 @@ public final class DataserviceProto {
       "ess\030\003 \003(\0132\037.ssn.dataservice.v1.Correctne" +
       "ssR\022overallCorrectness\022L\n\021field_correctn" +
       "ess\030\004 \003(\0132\037.ssn.dataservice.v1.Correctne" +
-      "ssR\020fieldCorrectness2\275\006\n\013DataService\022g\n\016" +
+      "ssR\020fieldCorrectness2\300\006\n\013DataService\022g\n\016" +
       "CreateDocument\022).ssn.dataservice.v1.Crea" +
       "teDocumentRequest\032*.ssn.dataservice.v1.C" +
       "reateDocumentResponse\022a\n\014ReadDocument\022\'." +
@@ -537,17 +537,17 @@ public final class DataserviceProto {
       "eteRequest\032\026.google.protobuf.Empty\"\036\202\323\344\223" +
       "\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPerMo" +
       "nthMetric\022\026.google.protobuf.Empty\032).ssn." +
-      "dataservice.v1.CallsPerMonthResponse\022\205\001\n" +
-      "\036CalculateQualityControlMetrics\0220.ssn.da" +
-      "taservice.v1.QualityControlMetricsReques" +
-      "t\0321.ssn.dataservice.v1.QualityControlMet" +
-      "ricsResponseB\335\001\n\033ai.visma.ssn.dataservic" +
-      "e.v1B\020DataserviceProtoP\001ZBgithub.com/e-c" +
-      "onomic/vmlapis/gen/go/ssn/dataservice/v1" +
-      ";dataservice\242\002\003SDX\252\002\022Ssn.Dataservice.V1\312" +
-      "\002\022Ssn\\Dataservice\\V1\342\002\036Ssn\\Dataservice\\V" +
-      "1\\GPBMetadata\352\002\024Ssn::Dataservice::V1b\006pr" +
-      "oto3"
+      "dataservice.v1.CallsPerMonthResponse\022\210\001\n" +
+      "!CalculateAnnotationProcessMetrics\0220.ssn" +
+      ".dataservice.v1.QualityControlMetricsReq" +
+      "uest\0321.ssn.dataservice.v1.QualityControl" +
+      "MetricsResponseB\335\001\n\033ai.visma.ssn.dataser" +
+      "vice.v1B\020DataserviceProtoP\001ZBgithub.com/" +
+      "e-conomic/vmlapis/gen/go/ssn/dataservice" +
+      "/v1;dataservice\242\002\003SDX\252\002\022Ssn.Dataservice." +
+      "V1\312\002\022Ssn\\Dataservice\\V1\342\002\036Ssn\\Dataservic" +
+      "e\\V1\\GPBMetadata\352\002\024Ssn::Dataservice::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

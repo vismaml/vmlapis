@@ -233,34 +233,34 @@ public final class DataServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest,
-      ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateQualityControlMetricsMethod;
+      ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateAnnotationProcessMetricsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CalculateQualityControlMetrics",
+      fullMethodName = SERVICE_NAME + '/' + "CalculateAnnotationProcessMetrics",
       requestType = ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.class,
       responseType = ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest,
-      ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateQualityControlMetricsMethod() {
-    io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest, ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateQualityControlMetricsMethod;
-    if ((getCalculateQualityControlMetricsMethod = DataServiceGrpc.getCalculateQualityControlMetricsMethod) == null) {
+      ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateAnnotationProcessMetricsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest, ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> getCalculateAnnotationProcessMetricsMethod;
+    if ((getCalculateAnnotationProcessMetricsMethod = DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod) == null) {
       synchronized (DataServiceGrpc.class) {
-        if ((getCalculateQualityControlMetricsMethod = DataServiceGrpc.getCalculateQualityControlMetricsMethod) == null) {
-          DataServiceGrpc.getCalculateQualityControlMetricsMethod = getCalculateQualityControlMetricsMethod =
+        if ((getCalculateAnnotationProcessMetricsMethod = DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod) == null) {
+          DataServiceGrpc.getCalculateAnnotationProcessMetricsMethod = getCalculateAnnotationProcessMetricsMethod =
               io.grpc.MethodDescriptor.<ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest, ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateQualityControlMetrics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateAnnotationProcessMetrics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("CalculateQualityControlMetrics"))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("CalculateAnnotationProcessMetrics"))
               .build();
         }
       }
     }
-    return getCalculateQualityControlMetricsMethod;
+    return getCalculateAnnotationProcessMetricsMethod;
   }
 
   /**
@@ -380,9 +380,9 @@ public final class DataServiceGrpc {
 
     /**
      */
-    default void calculateQualityControlMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request,
+    default void calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateQualityControlMetricsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateAnnotationProcessMetricsMethod(), responseObserver);
     }
   }
 
@@ -474,10 +474,10 @@ public final class DataServiceGrpc {
 
     /**
      */
-    public void calculateQualityControlMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request,
+    public void calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCalculateQualityControlMetricsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCalculateAnnotationProcessMetricsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -551,9 +551,9 @@ public final class DataServiceGrpc {
 
     /**
      */
-    public ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse calculateQualityControlMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request) {
+    public ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCalculateQualityControlMetricsMethod(), getCallOptions(), request);
+          getChannel(), getCalculateAnnotationProcessMetricsMethod(), getCallOptions(), request);
     }
   }
 
@@ -627,9 +627,9 @@ public final class DataServiceGrpc {
 
     /**
      */
-    public ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse calculateQualityControlMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request) {
+    public ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse calculateAnnotationProcessMetrics(ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCalculateQualityControlMetricsMethod(), getCallOptions(), request);
+          getChannel(), getCalculateAnnotationProcessMetricsMethod(), getCallOptions(), request);
     }
   }
 
@@ -710,10 +710,10 @@ public final class DataServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> calculateQualityControlMetrics(
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse> calculateAnnotationProcessMetrics(
         ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCalculateQualityControlMetricsMethod(), getCallOptions()), request);
+          getChannel().newCall(getCalculateAnnotationProcessMetricsMethod(), getCallOptions()), request);
     }
   }
 
@@ -724,7 +724,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_CALCULATE_METRICS = 4;
   private static final int METHODID_DELETE = 5;
   private static final int METHODID_CALLS_PER_MONTH_METRIC = 6;
-  private static final int METHODID_CALCULATE_QUALITY_CONTROL_METRICS = 7;
+  private static final int METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -771,8 +771,8 @@ public final class DataServiceGrpc {
           serviceImpl.callsPerMonthMetric((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>) responseObserver);
           break;
-        case METHODID_CALCULATE_QUALITY_CONTROL_METRICS:
-          serviceImpl.calculateQualityControlMetrics((ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest) request,
+        case METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS:
+          serviceImpl.calculateAnnotationProcessMetrics((ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse>) responseObserver);
           break;
         default:
@@ -843,12 +843,12 @@ public final class DataServiceGrpc {
               ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
                 service, METHODID_CALLS_PER_MONTH_METRIC)))
         .addMethod(
-          getCalculateQualityControlMetricsMethod(),
+          getCalculateAnnotationProcessMetricsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               ai.visma.ssn.dataservice.v1.QualityControlMetricsRequest,
               ai.visma.ssn.dataservice.v1.QualityControlMetricsResponse>(
-                service, METHODID_CALCULATE_QUALITY_CONTROL_METRICS)))
+                service, METHODID_CALCULATE_ANNOTATION_PROCESS_METRICS)))
         .build();
   }
 
@@ -904,7 +904,7 @@ public final class DataServiceGrpc {
               .addMethod(getCalculateMetricsMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getCallsPerMonthMetricMethod())
-              .addMethod(getCalculateQualityControlMetricsMethod())
+              .addMethod(getCalculateAnnotationProcessMetricsMethod())
               .build();
         }
       }

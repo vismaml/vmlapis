@@ -527,8 +527,8 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric 
  *   !proto.ssn.dataservice.v1.QualityControlMetricsRequest,
  *   !proto.ssn.dataservice.v1.QualityControlMetricsResponse>}
  */
-const methodDescriptor_DataService_CalculateQualityControlMetrics = new grpc.web.MethodDescriptor(
-  '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
+const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1.QualityControlMetricsRequest,
   proto.ssn.dataservice.v1.QualityControlMetricsResponse,
@@ -553,13 +553,13 @@ const methodDescriptor_DataService_CalculateQualityControlMetrics = new grpc.web
  * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.QualityControlMetricsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateQualityControlMetrics =
+proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessMetrics =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateQualityControlMetrics,
+      methodDescriptor_DataService_CalculateAnnotationProcessMetrics,
       callback);
 };
 
@@ -572,13 +572,13 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateQualityControlMetr
  * @return {!Promise<!proto.ssn.dataservice.v1.QualityControlMetricsResponse>}
  *     Promise that resolves to the response
  */
-proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateQualityControlMetrics =
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateAnnotationProcessMetrics =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateQualityControlMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateQualityControlMetrics);
+      methodDescriptor_DataService_CalculateAnnotationProcessMetrics);
 };
 
 

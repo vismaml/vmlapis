@@ -35,7 +35,7 @@ service DataService {
     };
   }
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
-  rpc CalculateQualityControlMetrics(QualityControlMetricsRequest) returns (QualityControlMetricsResponse);
+  rpc CalculateAnnotationProcessMetrics(QualityControlMetricsRequest) returns (QualityControlMetricsResponse);
 }
 
 message Document {
