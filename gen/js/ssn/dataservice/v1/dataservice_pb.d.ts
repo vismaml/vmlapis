@@ -1525,3 +1525,69 @@ export namespace CallsPerMonthResponse {
   }
 }
 
+export class AnnotationProcessMetricsRequest extends jspb.Message {
+  getFieldsList(): Array<string>;
+  setFieldsList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearFieldsList(): AnnotationProcessMetricsRequest;
+  addFields(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  getCountryCodesList(): Array<string>;
+  setCountryCodesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearCountryCodesList(): AnnotationProcessMetricsRequest;
+  addCountryCodes(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  getDocumentTypesList(): Array<string>;
+  setDocumentTypesList(value: Array<string>): AnnotationProcessMetricsRequest;
+  clearDocumentTypesList(): AnnotationProcessMetricsRequest;
+  addDocumentTypes(value: string, index?: number): AnnotationProcessMetricsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnnotationProcessMetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsRequest): AnnotationProcessMetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessMetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsRequest;
+  static deserializeBinaryFromReader(message: AnnotationProcessMetricsRequest, reader: jspb.BinaryReader): AnnotationProcessMetricsRequest;
+}
+
+export namespace AnnotationProcessMetricsRequest {
+  export type AsObject = {
+    fieldsList: Array<string>,
+    countryCodesList: Array<string>,
+    documentTypesList: Array<string>,
+  }
+}
+
+export class AnnotationProcessMetricsResponse extends jspb.Message {
+  getDocumentCount(): number;
+  setDocumentCount(value: number): AnnotationProcessMetricsResponse;
+
+  getTrueValueCount(): number;
+  setTrueValueCount(value: number): AnnotationProcessMetricsResponse;
+
+  getOverallCorrectnessList(): Array<Correctness>;
+  setOverallCorrectnessList(value: Array<Correctness>): AnnotationProcessMetricsResponse;
+  clearOverallCorrectnessList(): AnnotationProcessMetricsResponse;
+  addOverallCorrectness(value?: Correctness, index?: number): Correctness;
+
+  getFieldCorrectnessList(): Array<Correctness>;
+  setFieldCorrectnessList(value: Array<Correctness>): AnnotationProcessMetricsResponse;
+  clearFieldCorrectnessList(): AnnotationProcessMetricsResponse;
+  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnnotationProcessMetricsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsResponse): AnnotationProcessMetricsResponse.AsObject;
+  static serializeBinaryToWriter(message: AnnotationProcessMetricsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnnotationProcessMetricsResponse;
+  static deserializeBinaryFromReader(message: AnnotationProcessMetricsResponse, reader: jspb.BinaryReader): AnnotationProcessMetricsResponse;
+}
+
+export namespace AnnotationProcessMetricsResponse {
+  export type AsObject = {
+    documentCount: number,
+    trueValueCount: number,
+    overallCorrectnessList: Array<Correctness.AsObject>,
+    fieldCorrectnessList: Array<Correctness.AsObject>,
+  }
+}
+
