@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
     return purchaseLinesDetails_.get(index);
   }
 
-  public static final int VAT_DISTRIBUTION_DETAILS_FIELD_NUMBER = 13;
+  public static final int VAT_DISTRIBUTION_DETAILS_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionDetails_;
   /**
@@ -634,7 +634,7 @@ private static final long serialVersionUID = 0L;
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionDetailsList() {
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
    */
   @java.lang.Override
   public int getVatDistributionDetailsCount() {
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index) {
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(12, purchaseLinesDetails_.get(i));
     }
     for (int i = 0; i < vatDistributionDetails_.size(); i++) {
-      output.writeMessage(13, vatDistributionDetails_.get(i));
+      output.writeMessage(14, vatDistributionDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < vatDistributionDetails_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, vatDistributionDetails_.get(i));
+        .computeMessageSize(14, vatDistributionDetails_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 98
-            case 106: {
+            case 114: {
               ai.visma.ssn.type.VatDistribution m =
                   input.readMessage(
                       ai.visma.ssn.type.VatDistribution.parser(),
@@ -1633,7 +1633,7 @@ private static final long serialVersionUID = 0L;
                 vatDistributionDetailsBuilder_.addMessage(m);
               }
               break;
-            } // case 106
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4413,7 +4413,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionDetailsList() {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4427,7 +4427,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public int getVatDistributionDetailsCount() {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4441,7 +4441,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index) {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4455,7 +4455,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder setVatDistributionDetails(
         int index, ai.visma.ssn.type.VatDistribution value) {
@@ -4476,7 +4476,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder setVatDistributionDetails(
         int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
@@ -4494,7 +4494,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder addVatDistributionDetails(ai.visma.ssn.type.VatDistribution value) {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4514,7 +4514,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder addVatDistributionDetails(
         int index, ai.visma.ssn.type.VatDistribution value) {
@@ -4535,7 +4535,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder addVatDistributionDetails(
         ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
@@ -4553,7 +4553,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder addVatDistributionDetails(
         int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
@@ -4571,7 +4571,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder addAllVatDistributionDetails(
         java.lang.Iterable<? extends ai.visma.ssn.type.VatDistribution> values) {
@@ -4590,7 +4590,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder clearVatDistributionDetails() {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4607,7 +4607,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public Builder removeVatDistributionDetails(int index) {
       if (vatDistributionDetailsBuilder_ == null) {
@@ -4624,7 +4624,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public ai.visma.ssn.type.VatDistribution.Builder getVatDistributionDetailsBuilder(
         int index) {
@@ -4635,7 +4635,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
         int index) {
@@ -4649,7 +4649,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
          getVatDistributionDetailsOrBuilderList() {
@@ -4664,7 +4664,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionDetailsBuilder() {
       return getVatDistributionDetailsFieldBuilder().addBuilder(
@@ -4675,7 +4675,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionDetailsBuilder(
         int index) {
@@ -4687,7 +4687,7 @@ private static final long serialVersionUID = 0L;
      * VAT distribution for the document. This is a list where each field is a candidate.
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 14 [json_name = "vatDistributionDetails"];</code>
      */
     public java.util.List<ai.visma.ssn.type.VatDistribution.Builder> 
          getVatDistributionDetailsBuilderList() {

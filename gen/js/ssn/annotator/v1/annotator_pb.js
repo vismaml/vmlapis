@@ -832,7 +832,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,58];
 
 
 
@@ -1272,7 +1272,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLine.deserializeBinaryFromReader);
       msg.addPurchaseLinesDetails(value);
       break;
-    case 57:
+    case 58:
       var value = new ssn_type_candidate_pb.VatDistribution;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
       msg.addVatDistributionDetails(value);
@@ -1738,7 +1738,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
   f = message.getVatDistributionDetailsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      57,
+      58,
       f,
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
@@ -3736,12 +3736,12 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPurchaseLinesDet
 
 
 /**
- * repeated ssn.type.VatDistribution vat_distribution_details = 57;
+ * repeated ssn.type.VatDistribution vat_distribution_details = 58;
  * @return {!Array<!proto.ssn.type.VatDistribution>}
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionDetailsList = function() {
   return /** @type{!Array<!proto.ssn.type.VatDistribution>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 57));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 58));
 };
 
 
@@ -3750,7 +3750,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionDet
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionDetailsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 57, value);
+  return jspb.Message.setRepeatedWrapperField(this, 58, value);
 };
 
 
@@ -3760,7 +3760,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionDet
  * @return {!proto.ssn.type.VatDistribution}
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionDetails = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 57, opt_value, proto.ssn.type.VatDistribution, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 58, opt_value, proto.ssn.type.VatDistribution, opt_index);
 };
 
 

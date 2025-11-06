@@ -2474,7 +2474,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 58 [json_name = "vatDistributionDetails"];</code>
    */
   java.util.List<ai.visma.ssn.type.VatDistribution> 
       getVatDistributionDetailsList();
@@ -2483,7 +2483,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 58 [json_name = "vatDistributionDetails"];</code>
    */
   ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index);
   /**
@@ -2491,7 +2491,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 58 [json_name = "vatDistributionDetails"];</code>
    */
   int getVatDistributionDetailsCount();
   /**
@@ -2499,7 +2499,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 58 [json_name = "vatDistributionDetails"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
       getVatDistributionDetailsOrBuilderList();
@@ -2508,7 +2508,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * VAT distribution for the document. This is a list where each field is a candidate.
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 58 [json_name = "vatDistributionDetails"];</code>
    */
   ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
       int index);

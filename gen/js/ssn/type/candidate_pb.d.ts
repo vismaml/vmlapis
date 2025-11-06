@@ -473,20 +473,20 @@ export class VatDistribution extends jspb.Message {
   clearPercentageList(): VatDistribution;
   addPercentage(value?: Candidate, index?: number): Candidate;
 
-  getTotalInclVatList(): Array<Candidate>;
-  setTotalInclVatList(value: Array<Candidate>): VatDistribution;
-  clearTotalInclVatList(): VatDistribution;
-  addTotalInclVat(value?: Candidate, index?: number): Candidate;
+  getInclVatList(): Array<Candidate>;
+  setInclVatList(value: Array<Candidate>): VatDistribution;
+  clearInclVatList(): VatDistribution;
+  addInclVat(value?: Candidate, index?: number): Candidate;
 
-  getTotalExclVatList(): Array<Candidate>;
-  setTotalExclVatList(value: Array<Candidate>): VatDistribution;
-  clearTotalExclVatList(): VatDistribution;
-  addTotalExclVat(value?: Candidate, index?: number): Candidate;
+  getExclVatList(): Array<Candidate>;
+  setExclVatList(value: Array<Candidate>): VatDistribution;
+  clearExclVatList(): VatDistribution;
+  addExclVat(value?: Candidate, index?: number): Candidate;
 
-  getTotalVatList(): Array<Candidate>;
-  setTotalVatList(value: Array<Candidate>): VatDistribution;
-  clearTotalVatList(): VatDistribution;
-  addTotalVat(value?: Candidate, index?: number): Candidate;
+  getAmountList(): Array<Candidate>;
+  setAmountList(value: Array<Candidate>): VatDistribution;
+  clearAmountList(): VatDistribution;
+  addAmount(value?: Candidate, index?: number): Candidate;
 
   getModelMetadata(): ModelSpec | undefined;
   setModelMetadata(value?: ModelSpec): VatDistribution;
@@ -505,9 +505,9 @@ export namespace VatDistribution {
   export type AsObject = {
     pageRef: number,
     percentageList: Array<Candidate.AsObject>,
-    totalInclVatList: Array<Candidate.AsObject>,
-    totalExclVatList: Array<Candidate.AsObject>,
-    totalVatList: Array<Candidate.AsObject>,
+    inclVatList: Array<Candidate.AsObject>,
+    exclVatList: Array<Candidate.AsObject>,
+    amountList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
   }
 }

@@ -28,9 +28,9 @@ private static final long serialVersionUID = 0L;
   }
   private VatDistribution() {
     percentage_ = java.util.Collections.emptyList();
-    totalInclVat_ = java.util.Collections.emptyList();
-    totalExclVat_ = java.util.Collections.emptyList();
-    totalVat_ = java.util.Collections.emptyList();
+    inclVat_ = java.util.Collections.emptyList();
+    exclVat_ = java.util.Collections.emptyList();
+    amount_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -123,187 +123,187 @@ private static final long serialVersionUID = 0L;
     return percentage_.get(index);
   }
 
-  public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 3;
+  public static final int INCL_VAT_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> totalInclVat_;
+  private java.util.List<ai.visma.ssn.type.Candidate> inclVat_;
   /**
    * <pre>
    * The vat distribution candidate incl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getTotalInclVatList() {
-    return totalInclVat_;
+  public java.util.List<ai.visma.ssn.type.Candidate> getInclVatList() {
+    return inclVat_;
   }
   /**
    * <pre>
    * The vat distribution candidate incl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getTotalInclVatOrBuilderList() {
-    return totalInclVat_;
+      getInclVatOrBuilderList() {
+    return inclVat_;
   }
   /**
    * <pre>
    * The vat distribution candidate incl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
    */
   @java.lang.Override
-  public int getTotalInclVatCount() {
-    return totalInclVat_.size();
+  public int getInclVatCount() {
+    return inclVat_.size();
   }
   /**
    * <pre>
    * The vat distribution candidate incl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getTotalInclVat(int index) {
-    return totalInclVat_.get(index);
+  public ai.visma.ssn.type.Candidate getInclVat(int index) {
+    return inclVat_.get(index);
   }
   /**
    * <pre>
    * The vat distribution candidate incl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+   * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getTotalInclVatOrBuilder(
+  public ai.visma.ssn.type.CandidateOrBuilder getInclVatOrBuilder(
       int index) {
-    return totalInclVat_.get(index);
+    return inclVat_.get(index);
   }
 
-  public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 4;
+  public static final int EXCL_VAT_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> totalExclVat_;
+  private java.util.List<ai.visma.ssn.type.Candidate> exclVat_;
   /**
    * <pre>
    * The vat distribution candidate excl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getTotalExclVatList() {
-    return totalExclVat_;
+  public java.util.List<ai.visma.ssn.type.Candidate> getExclVatList() {
+    return exclVat_;
   }
   /**
    * <pre>
    * The vat distribution candidate excl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getTotalExclVatOrBuilderList() {
-    return totalExclVat_;
+      getExclVatOrBuilderList() {
+    return exclVat_;
   }
   /**
    * <pre>
    * The vat distribution candidate excl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
    */
   @java.lang.Override
-  public int getTotalExclVatCount() {
-    return totalExclVat_.size();
+  public int getExclVatCount() {
+    return exclVat_.size();
   }
   /**
    * <pre>
    * The vat distribution candidate excl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getTotalExclVat(int index) {
-    return totalExclVat_.get(index);
+  public ai.visma.ssn.type.Candidate getExclVat(int index) {
+    return exclVat_.get(index);
   }
   /**
    * <pre>
    * The vat distribution candidate excl vat
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+   * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getTotalExclVatOrBuilder(
+  public ai.visma.ssn.type.CandidateOrBuilder getExclVatOrBuilder(
       int index) {
-    return totalExclVat_.get(index);
+    return exclVat_.get(index);
   }
 
-  public static final int TOTAL_VAT_FIELD_NUMBER = 5;
+  public static final int AMOUNT_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> totalVat_;
+  private java.util.List<ai.visma.ssn.type.Candidate> amount_;
   /**
    * <pre>
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getTotalVatList() {
-    return totalVat_;
+  public java.util.List<ai.visma.ssn.type.Candidate> getAmountList() {
+    return amount_;
   }
   /**
    * <pre>
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getTotalVatOrBuilderList() {
-    return totalVat_;
+      getAmountOrBuilderList() {
+    return amount_;
   }
   /**
    * <pre>
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
    */
   @java.lang.Override
-  public int getTotalVatCount() {
-    return totalVat_.size();
+  public int getAmountCount() {
+    return amount_.size();
   }
   /**
    * <pre>
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getTotalVat(int index) {
-    return totalVat_.get(index);
+  public ai.visma.ssn.type.Candidate getAmount(int index) {
+    return amount_.get(index);
   }
   /**
    * <pre>
    * The vat distribution candidate
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+   * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getTotalVatOrBuilder(
+  public ai.visma.ssn.type.CandidateOrBuilder getAmountOrBuilder(
       int index) {
-    return totalVat_.get(index);
+    return amount_.get(index);
   }
 
   public static final int MODEL_METADATA_FIELD_NUMBER = 6;
@@ -364,14 +364,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < percentage_.size(); i++) {
       output.writeMessage(2, percentage_.get(i));
     }
-    for (int i = 0; i < totalInclVat_.size(); i++) {
-      output.writeMessage(3, totalInclVat_.get(i));
+    for (int i = 0; i < inclVat_.size(); i++) {
+      output.writeMessage(3, inclVat_.get(i));
     }
-    for (int i = 0; i < totalExclVat_.size(); i++) {
-      output.writeMessage(4, totalExclVat_.get(i));
+    for (int i = 0; i < exclVat_.size(); i++) {
+      output.writeMessage(4, exclVat_.get(i));
     }
-    for (int i = 0; i < totalVat_.size(); i++) {
-      output.writeMessage(5, totalVat_.get(i));
+    for (int i = 0; i < amount_.size(); i++) {
+      output.writeMessage(5, amount_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getModelMetadata());
@@ -393,17 +393,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, percentage_.get(i));
     }
-    for (int i = 0; i < totalInclVat_.size(); i++) {
+    for (int i = 0; i < inclVat_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, totalInclVat_.get(i));
+        .computeMessageSize(3, inclVat_.get(i));
     }
-    for (int i = 0; i < totalExclVat_.size(); i++) {
+    for (int i = 0; i < exclVat_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, totalExclVat_.get(i));
+        .computeMessageSize(4, exclVat_.get(i));
     }
-    for (int i = 0; i < totalVat_.size(); i++) {
+    for (int i = 0; i < amount_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, totalVat_.get(i));
+        .computeMessageSize(5, amount_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -428,12 +428,12 @@ private static final long serialVersionUID = 0L;
         != other.getPageRef()) return false;
     if (!getPercentageList()
         .equals(other.getPercentageList())) return false;
-    if (!getTotalInclVatList()
-        .equals(other.getTotalInclVatList())) return false;
-    if (!getTotalExclVatList()
-        .equals(other.getTotalExclVatList())) return false;
-    if (!getTotalVatList()
-        .equals(other.getTotalVatList())) return false;
+    if (!getInclVatList()
+        .equals(other.getInclVatList())) return false;
+    if (!getExclVatList()
+        .equals(other.getExclVatList())) return false;
+    if (!getAmountList()
+        .equals(other.getAmountList())) return false;
     if (hasModelMetadata() != other.hasModelMetadata()) return false;
     if (hasModelMetadata()) {
       if (!getModelMetadata()
@@ -456,17 +456,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PERCENTAGE_FIELD_NUMBER;
       hash = (53 * hash) + getPercentageList().hashCode();
     }
-    if (getTotalInclVatCount() > 0) {
-      hash = (37 * hash) + TOTAL_INCL_VAT_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalInclVatList().hashCode();
+    if (getInclVatCount() > 0) {
+      hash = (37 * hash) + INCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getInclVatList().hashCode();
     }
-    if (getTotalExclVatCount() > 0) {
-      hash = (37 * hash) + TOTAL_EXCL_VAT_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalExclVatList().hashCode();
+    if (getExclVatCount() > 0) {
+      hash = (37 * hash) + EXCL_VAT_FIELD_NUMBER;
+      hash = (53 * hash) + getExclVatList().hashCode();
     }
-    if (getTotalVatCount() > 0) {
-      hash = (37 * hash) + TOTAL_VAT_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalVatList().hashCode();
+    if (getAmountCount() > 0) {
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmountList().hashCode();
     }
     if (hasModelMetadata()) {
       hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
@@ -603,9 +603,9 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getPercentageFieldBuilder();
-        getTotalInclVatFieldBuilder();
-        getTotalExclVatFieldBuilder();
-        getTotalVatFieldBuilder();
+        getInclVatFieldBuilder();
+        getExclVatFieldBuilder();
+        getAmountFieldBuilder();
         getModelMetadataFieldBuilder();
       }
     }
@@ -621,25 +621,25 @@ private static final long serialVersionUID = 0L;
         percentageBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      if (totalInclVatBuilder_ == null) {
-        totalInclVat_ = java.util.Collections.emptyList();
+      if (inclVatBuilder_ == null) {
+        inclVat_ = java.util.Collections.emptyList();
       } else {
-        totalInclVat_ = null;
-        totalInclVatBuilder_.clear();
+        inclVat_ = null;
+        inclVatBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      if (totalExclVatBuilder_ == null) {
-        totalExclVat_ = java.util.Collections.emptyList();
+      if (exclVatBuilder_ == null) {
+        exclVat_ = java.util.Collections.emptyList();
       } else {
-        totalExclVat_ = null;
-        totalExclVatBuilder_.clear();
+        exclVat_ = null;
+        exclVatBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
-      if (totalVatBuilder_ == null) {
-        totalVat_ = java.util.Collections.emptyList();
+      if (amountBuilder_ == null) {
+        amount_ = java.util.Collections.emptyList();
       } else {
-        totalVat_ = null;
-        totalVatBuilder_.clear();
+        amount_ = null;
+        amountBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
       modelMetadata_ = null;
@@ -689,32 +689,32 @@ private static final long serialVersionUID = 0L;
       } else {
         result.percentage_ = percentageBuilder_.build();
       }
-      if (totalInclVatBuilder_ == null) {
+      if (inclVatBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
-          totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
+          inclVat_ = java.util.Collections.unmodifiableList(inclVat_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.totalInclVat_ = totalInclVat_;
+        result.inclVat_ = inclVat_;
       } else {
-        result.totalInclVat_ = totalInclVatBuilder_.build();
+        result.inclVat_ = inclVatBuilder_.build();
       }
-      if (totalExclVatBuilder_ == null) {
+      if (exclVatBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
+          exclVat_ = java.util.Collections.unmodifiableList(exclVat_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.totalExclVat_ = totalExclVat_;
+        result.exclVat_ = exclVat_;
       } else {
-        result.totalExclVat_ = totalExclVatBuilder_.build();
+        result.exclVat_ = exclVatBuilder_.build();
       }
-      if (totalVatBuilder_ == null) {
+      if (amountBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0)) {
-          totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
+          amount_ = java.util.Collections.unmodifiableList(amount_);
           bitField0_ = (bitField0_ & ~0x00000010);
         }
-        result.totalVat_ = totalVat_;
+        result.amount_ = amount_;
       } else {
-        result.totalVat_ = totalVatBuilder_.build();
+        result.amount_ = amountBuilder_.build();
       }
     }
 
@@ -774,81 +774,81 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (totalInclVatBuilder_ == null) {
-        if (!other.totalInclVat_.isEmpty()) {
-          if (totalInclVat_.isEmpty()) {
-            totalInclVat_ = other.totalInclVat_;
+      if (inclVatBuilder_ == null) {
+        if (!other.inclVat_.isEmpty()) {
+          if (inclVat_.isEmpty()) {
+            inclVat_ = other.inclVat_;
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureTotalInclVatIsMutable();
-            totalInclVat_.addAll(other.totalInclVat_);
+            ensureInclVatIsMutable();
+            inclVat_.addAll(other.inclVat_);
           }
           onChanged();
         }
       } else {
-        if (!other.totalInclVat_.isEmpty()) {
-          if (totalInclVatBuilder_.isEmpty()) {
-            totalInclVatBuilder_.dispose();
-            totalInclVatBuilder_ = null;
-            totalInclVat_ = other.totalInclVat_;
+        if (!other.inclVat_.isEmpty()) {
+          if (inclVatBuilder_.isEmpty()) {
+            inclVatBuilder_.dispose();
+            inclVatBuilder_ = null;
+            inclVat_ = other.inclVat_;
             bitField0_ = (bitField0_ & ~0x00000004);
-            totalInclVatBuilder_ = 
+            inclVatBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getTotalInclVatFieldBuilder() : null;
+                 getInclVatFieldBuilder() : null;
           } else {
-            totalInclVatBuilder_.addAllMessages(other.totalInclVat_);
+            inclVatBuilder_.addAllMessages(other.inclVat_);
           }
         }
       }
-      if (totalExclVatBuilder_ == null) {
-        if (!other.totalExclVat_.isEmpty()) {
-          if (totalExclVat_.isEmpty()) {
-            totalExclVat_ = other.totalExclVat_;
+      if (exclVatBuilder_ == null) {
+        if (!other.exclVat_.isEmpty()) {
+          if (exclVat_.isEmpty()) {
+            exclVat_ = other.exclVat_;
             bitField0_ = (bitField0_ & ~0x00000008);
           } else {
-            ensureTotalExclVatIsMutable();
-            totalExclVat_.addAll(other.totalExclVat_);
+            ensureExclVatIsMutable();
+            exclVat_.addAll(other.exclVat_);
           }
           onChanged();
         }
       } else {
-        if (!other.totalExclVat_.isEmpty()) {
-          if (totalExclVatBuilder_.isEmpty()) {
-            totalExclVatBuilder_.dispose();
-            totalExclVatBuilder_ = null;
-            totalExclVat_ = other.totalExclVat_;
+        if (!other.exclVat_.isEmpty()) {
+          if (exclVatBuilder_.isEmpty()) {
+            exclVatBuilder_.dispose();
+            exclVatBuilder_ = null;
+            exclVat_ = other.exclVat_;
             bitField0_ = (bitField0_ & ~0x00000008);
-            totalExclVatBuilder_ = 
+            exclVatBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getTotalExclVatFieldBuilder() : null;
+                 getExclVatFieldBuilder() : null;
           } else {
-            totalExclVatBuilder_.addAllMessages(other.totalExclVat_);
+            exclVatBuilder_.addAllMessages(other.exclVat_);
           }
         }
       }
-      if (totalVatBuilder_ == null) {
-        if (!other.totalVat_.isEmpty()) {
-          if (totalVat_.isEmpty()) {
-            totalVat_ = other.totalVat_;
+      if (amountBuilder_ == null) {
+        if (!other.amount_.isEmpty()) {
+          if (amount_.isEmpty()) {
+            amount_ = other.amount_;
             bitField0_ = (bitField0_ & ~0x00000010);
           } else {
-            ensureTotalVatIsMutable();
-            totalVat_.addAll(other.totalVat_);
+            ensureAmountIsMutable();
+            amount_.addAll(other.amount_);
           }
           onChanged();
         }
       } else {
-        if (!other.totalVat_.isEmpty()) {
-          if (totalVatBuilder_.isEmpty()) {
-            totalVatBuilder_.dispose();
-            totalVatBuilder_ = null;
-            totalVat_ = other.totalVat_;
+        if (!other.amount_.isEmpty()) {
+          if (amountBuilder_.isEmpty()) {
+            amountBuilder_.dispose();
+            amountBuilder_ = null;
+            amount_ = other.amount_;
             bitField0_ = (bitField0_ & ~0x00000010);
-            totalVatBuilder_ = 
+            amountBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getTotalVatFieldBuilder() : null;
+                 getAmountFieldBuilder() : null;
           } else {
-            totalVatBuilder_.addAllMessages(other.totalVat_);
+            amountBuilder_.addAllMessages(other.amount_);
           }
         }
       }
@@ -904,11 +904,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
                       extensionRegistry);
-              if (totalInclVatBuilder_ == null) {
-                ensureTotalInclVatIsMutable();
-                totalInclVat_.add(m);
+              if (inclVatBuilder_ == null) {
+                ensureInclVatIsMutable();
+                inclVat_.add(m);
               } else {
-                totalInclVatBuilder_.addMessage(m);
+                inclVatBuilder_.addMessage(m);
               }
               break;
             } // case 26
@@ -917,11 +917,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
                       extensionRegistry);
-              if (totalExclVatBuilder_ == null) {
-                ensureTotalExclVatIsMutable();
-                totalExclVat_.add(m);
+              if (exclVatBuilder_ == null) {
+                ensureExclVatIsMutable();
+                exclVat_.add(m);
               } else {
-                totalExclVatBuilder_.addMessage(m);
+                exclVatBuilder_.addMessage(m);
               }
               break;
             } // case 34
@@ -930,11 +930,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
                       extensionRegistry);
-              if (totalVatBuilder_ == null) {
-                ensureTotalVatIsMutable();
-                totalVat_.add(m);
+              if (amountBuilder_ == null) {
+                ensureAmountIsMutable();
+                amount_.add(m);
               } else {
-                totalVatBuilder_.addMessage(m);
+                amountBuilder_.addMessage(m);
               }
               break;
             } // case 42
@@ -1318,30 +1318,30 @@ private static final long serialVersionUID = 0L;
       return percentageBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> totalInclVat_ =
+    private java.util.List<ai.visma.ssn.type.Candidate> inclVat_ =
       java.util.Collections.emptyList();
-    private void ensureTotalInclVatIsMutable() {
+    private void ensureInclVatIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        totalInclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(totalInclVat_);
+        inclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(inclVat_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> totalInclVatBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> inclVatBuilder_;
 
     /**
      * <pre>
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getTotalInclVatList() {
-      if (totalInclVatBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(totalInclVat_);
+    public java.util.List<ai.visma.ssn.type.Candidate> getInclVatList() {
+      if (inclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(inclVat_);
       } else {
-        return totalInclVatBuilder_.getMessageList();
+        return inclVatBuilder_.getMessageList();
       }
     }
     /**
@@ -1349,13 +1349,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public int getTotalInclVatCount() {
-      if (totalInclVatBuilder_ == null) {
-        return totalInclVat_.size();
+    public int getInclVatCount() {
+      if (inclVatBuilder_ == null) {
+        return inclVat_.size();
       } else {
-        return totalInclVatBuilder_.getCount();
+        return inclVatBuilder_.getCount();
       }
     }
     /**
@@ -1363,13 +1363,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate getTotalInclVat(int index) {
-      if (totalInclVatBuilder_ == null) {
-        return totalInclVat_.get(index);
+    public ai.visma.ssn.type.Candidate getInclVat(int index) {
+      if (inclVatBuilder_ == null) {
+        return inclVat_.get(index);
       } else {
-        return totalInclVatBuilder_.getMessage(index);
+        return inclVatBuilder_.getMessage(index);
       }
     }
     /**
@@ -1377,19 +1377,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder setTotalInclVat(
+    public Builder setInclVat(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalInclVatBuilder_ == null) {
+      if (inclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.set(index, value);
+        ensureInclVatIsMutable();
+        inclVat_.set(index, value);
         onChanged();
       } else {
-        totalInclVatBuilder_.setMessage(index, value);
+        inclVatBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1398,16 +1398,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder setTotalInclVat(
+    public Builder setInclVat(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalInclVatBuilder_ == null) {
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.set(index, builderForValue.build());
+      if (inclVatBuilder_ == null) {
+        ensureInclVatIsMutable();
+        inclVat_.set(index, builderForValue.build());
         onChanged();
       } else {
-        totalInclVatBuilder_.setMessage(index, builderForValue.build());
+        inclVatBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1416,18 +1416,18 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder addTotalInclVat(ai.visma.ssn.type.Candidate value) {
-      if (totalInclVatBuilder_ == null) {
+    public Builder addInclVat(ai.visma.ssn.type.Candidate value) {
+      if (inclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.add(value);
+        ensureInclVatIsMutable();
+        inclVat_.add(value);
         onChanged();
       } else {
-        totalInclVatBuilder_.addMessage(value);
+        inclVatBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1436,19 +1436,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder addTotalInclVat(
+    public Builder addInclVat(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalInclVatBuilder_ == null) {
+      if (inclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.add(index, value);
+        ensureInclVatIsMutable();
+        inclVat_.add(index, value);
         onChanged();
       } else {
-        totalInclVatBuilder_.addMessage(index, value);
+        inclVatBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1457,16 +1457,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder addTotalInclVat(
+    public Builder addInclVat(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalInclVatBuilder_ == null) {
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.add(builderForValue.build());
+      if (inclVatBuilder_ == null) {
+        ensureInclVatIsMutable();
+        inclVat_.add(builderForValue.build());
         onChanged();
       } else {
-        totalInclVatBuilder_.addMessage(builderForValue.build());
+        inclVatBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1475,16 +1475,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder addTotalInclVat(
+    public Builder addInclVat(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalInclVatBuilder_ == null) {
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.add(index, builderForValue.build());
+      if (inclVatBuilder_ == null) {
+        ensureInclVatIsMutable();
+        inclVat_.add(index, builderForValue.build());
         onChanged();
       } else {
-        totalInclVatBuilder_.addMessage(index, builderForValue.build());
+        inclVatBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1493,17 +1493,17 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder addAllTotalInclVat(
+    public Builder addAllInclVat(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (totalInclVatBuilder_ == null) {
-        ensureTotalInclVatIsMutable();
+      if (inclVatBuilder_ == null) {
+        ensureInclVatIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, totalInclVat_);
+            values, inclVat_);
         onChanged();
       } else {
-        totalInclVatBuilder_.addAllMessages(values);
+        inclVatBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1512,15 +1512,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder clearTotalInclVat() {
-      if (totalInclVatBuilder_ == null) {
-        totalInclVat_ = java.util.Collections.emptyList();
+    public Builder clearInclVat() {
+      if (inclVatBuilder_ == null) {
+        inclVat_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
-        totalInclVatBuilder_.clear();
+        inclVatBuilder_.clear();
       }
       return this;
     }
@@ -1529,15 +1529,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public Builder removeTotalInclVat(int index) {
-      if (totalInclVatBuilder_ == null) {
-        ensureTotalInclVatIsMutable();
-        totalInclVat_.remove(index);
+    public Builder removeInclVat(int index) {
+      if (inclVatBuilder_ == null) {
+        ensureInclVatIsMutable();
+        inclVat_.remove(index);
         onChanged();
       } else {
-        totalInclVatBuilder_.remove(index);
+        inclVatBuilder_.remove(index);
       }
       return this;
     }
@@ -1546,24 +1546,24 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getTotalInclVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder getInclVatBuilder(
         int index) {
-      return getTotalInclVatFieldBuilder().getBuilder(index);
+      return getInclVatFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getTotalInclVatOrBuilder(
+    public ai.visma.ssn.type.CandidateOrBuilder getInclVatOrBuilder(
         int index) {
-      if (totalInclVatBuilder_ == null) {
-        return totalInclVat_.get(index);  } else {
-        return totalInclVatBuilder_.getMessageOrBuilder(index);
+      if (inclVatBuilder_ == null) {
+        return inclVat_.get(index);  } else {
+        return inclVatBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1571,14 +1571,14 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getTotalInclVatOrBuilderList() {
-      if (totalInclVatBuilder_ != null) {
-        return totalInclVatBuilder_.getMessageOrBuilderList();
+         getInclVatOrBuilderList() {
+      if (inclVatBuilder_ != null) {
+        return inclVatBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(totalInclVat_);
+        return java.util.Collections.unmodifiableList(inclVat_);
       }
     }
     /**
@@ -1586,10 +1586,10 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalInclVatBuilder() {
-      return getTotalInclVatFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addInclVatBuilder() {
+      return getInclVatFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1597,11 +1597,11 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalInclVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addInclVatBuilder(
         int index) {
-      return getTotalInclVatFieldBuilder().addBuilder(
+      return getInclVatFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1609,51 +1609,51 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate incl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
+     * <code>repeated .ssn.type.Candidate incl_vat = 3 [json_name = "inclVat"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getTotalInclVatBuilderList() {
-      return getTotalInclVatFieldBuilder().getBuilderList();
+         getInclVatBuilderList() {
+      return getInclVatFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getTotalInclVatFieldBuilder() {
-      if (totalInclVatBuilder_ == null) {
-        totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getInclVatFieldBuilder() {
+      if (inclVatBuilder_ == null) {
+        inclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                totalInclVat_,
+                inclVat_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
-        totalInclVat_ = null;
+        inclVat_ = null;
       }
-      return totalInclVatBuilder_;
+      return inclVatBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> totalExclVat_ =
+    private java.util.List<ai.visma.ssn.type.Candidate> exclVat_ =
       java.util.Collections.emptyList();
-    private void ensureTotalExclVatIsMutable() {
+    private void ensureExclVatIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        totalExclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(totalExclVat_);
+        exclVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(exclVat_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> totalExclVatBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> exclVatBuilder_;
 
     /**
      * <pre>
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getTotalExclVatList() {
-      if (totalExclVatBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(totalExclVat_);
+    public java.util.List<ai.visma.ssn.type.Candidate> getExclVatList() {
+      if (exclVatBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(exclVat_);
       } else {
-        return totalExclVatBuilder_.getMessageList();
+        return exclVatBuilder_.getMessageList();
       }
     }
     /**
@@ -1661,13 +1661,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public int getTotalExclVatCount() {
-      if (totalExclVatBuilder_ == null) {
-        return totalExclVat_.size();
+    public int getExclVatCount() {
+      if (exclVatBuilder_ == null) {
+        return exclVat_.size();
       } else {
-        return totalExclVatBuilder_.getCount();
+        return exclVatBuilder_.getCount();
       }
     }
     /**
@@ -1675,13 +1675,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate getTotalExclVat(int index) {
-      if (totalExclVatBuilder_ == null) {
-        return totalExclVat_.get(index);
+    public ai.visma.ssn.type.Candidate getExclVat(int index) {
+      if (exclVatBuilder_ == null) {
+        return exclVat_.get(index);
       } else {
-        return totalExclVatBuilder_.getMessage(index);
+        return exclVatBuilder_.getMessage(index);
       }
     }
     /**
@@ -1689,19 +1689,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder setTotalExclVat(
+    public Builder setExclVat(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalExclVatBuilder_ == null) {
+      if (exclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.set(index, value);
+        ensureExclVatIsMutable();
+        exclVat_.set(index, value);
         onChanged();
       } else {
-        totalExclVatBuilder_.setMessage(index, value);
+        exclVatBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1710,16 +1710,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder setTotalExclVat(
+    public Builder setExclVat(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalExclVatBuilder_ == null) {
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.set(index, builderForValue.build());
+      if (exclVatBuilder_ == null) {
+        ensureExclVatIsMutable();
+        exclVat_.set(index, builderForValue.build());
         onChanged();
       } else {
-        totalExclVatBuilder_.setMessage(index, builderForValue.build());
+        exclVatBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1728,18 +1728,18 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder addTotalExclVat(ai.visma.ssn.type.Candidate value) {
-      if (totalExclVatBuilder_ == null) {
+    public Builder addExclVat(ai.visma.ssn.type.Candidate value) {
+      if (exclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.add(value);
+        ensureExclVatIsMutable();
+        exclVat_.add(value);
         onChanged();
       } else {
-        totalExclVatBuilder_.addMessage(value);
+        exclVatBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1748,19 +1748,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder addTotalExclVat(
+    public Builder addExclVat(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalExclVatBuilder_ == null) {
+      if (exclVatBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.add(index, value);
+        ensureExclVatIsMutable();
+        exclVat_.add(index, value);
         onChanged();
       } else {
-        totalExclVatBuilder_.addMessage(index, value);
+        exclVatBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1769,16 +1769,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder addTotalExclVat(
+    public Builder addExclVat(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalExclVatBuilder_ == null) {
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.add(builderForValue.build());
+      if (exclVatBuilder_ == null) {
+        ensureExclVatIsMutable();
+        exclVat_.add(builderForValue.build());
         onChanged();
       } else {
-        totalExclVatBuilder_.addMessage(builderForValue.build());
+        exclVatBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1787,16 +1787,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder addTotalExclVat(
+    public Builder addExclVat(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalExclVatBuilder_ == null) {
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.add(index, builderForValue.build());
+      if (exclVatBuilder_ == null) {
+        ensureExclVatIsMutable();
+        exclVat_.add(index, builderForValue.build());
         onChanged();
       } else {
-        totalExclVatBuilder_.addMessage(index, builderForValue.build());
+        exclVatBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1805,17 +1805,17 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder addAllTotalExclVat(
+    public Builder addAllExclVat(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (totalExclVatBuilder_ == null) {
-        ensureTotalExclVatIsMutable();
+      if (exclVatBuilder_ == null) {
+        ensureExclVatIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, totalExclVat_);
+            values, exclVat_);
         onChanged();
       } else {
-        totalExclVatBuilder_.addAllMessages(values);
+        exclVatBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1824,15 +1824,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder clearTotalExclVat() {
-      if (totalExclVatBuilder_ == null) {
-        totalExclVat_ = java.util.Collections.emptyList();
+    public Builder clearExclVat() {
+      if (exclVatBuilder_ == null) {
+        exclVat_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
-        totalExclVatBuilder_.clear();
+        exclVatBuilder_.clear();
       }
       return this;
     }
@@ -1841,15 +1841,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public Builder removeTotalExclVat(int index) {
-      if (totalExclVatBuilder_ == null) {
-        ensureTotalExclVatIsMutable();
-        totalExclVat_.remove(index);
+    public Builder removeExclVat(int index) {
+      if (exclVatBuilder_ == null) {
+        ensureExclVatIsMutable();
+        exclVat_.remove(index);
         onChanged();
       } else {
-        totalExclVatBuilder_.remove(index);
+        exclVatBuilder_.remove(index);
       }
       return this;
     }
@@ -1858,24 +1858,24 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getTotalExclVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder getExclVatBuilder(
         int index) {
-      return getTotalExclVatFieldBuilder().getBuilder(index);
+      return getExclVatFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getTotalExclVatOrBuilder(
+    public ai.visma.ssn.type.CandidateOrBuilder getExclVatOrBuilder(
         int index) {
-      if (totalExclVatBuilder_ == null) {
-        return totalExclVat_.get(index);  } else {
-        return totalExclVatBuilder_.getMessageOrBuilder(index);
+      if (exclVatBuilder_ == null) {
+        return exclVat_.get(index);  } else {
+        return exclVatBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1883,14 +1883,14 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getTotalExclVatOrBuilderList() {
-      if (totalExclVatBuilder_ != null) {
-        return totalExclVatBuilder_.getMessageOrBuilderList();
+         getExclVatOrBuilderList() {
+      if (exclVatBuilder_ != null) {
+        return exclVatBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(totalExclVat_);
+        return java.util.Collections.unmodifiableList(exclVat_);
       }
     }
     /**
@@ -1898,10 +1898,10 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalExclVatBuilder() {
-      return getTotalExclVatFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addExclVatBuilder() {
+      return getExclVatFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1909,11 +1909,11 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalExclVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addExclVatBuilder(
         int index) {
-      return getTotalExclVatFieldBuilder().addBuilder(
+      return getExclVatFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1921,51 +1921,51 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate excl vat
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
+     * <code>repeated .ssn.type.Candidate excl_vat = 4 [json_name = "exclVat"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getTotalExclVatBuilderList() {
-      return getTotalExclVatFieldBuilder().getBuilderList();
+         getExclVatBuilderList() {
+      return getExclVatFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getTotalExclVatFieldBuilder() {
-      if (totalExclVatBuilder_ == null) {
-        totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getExclVatFieldBuilder() {
+      if (exclVatBuilder_ == null) {
+        exclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                totalExclVat_,
+                exclVat_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
-        totalExclVat_ = null;
+        exclVat_ = null;
       }
-      return totalExclVatBuilder_;
+      return exclVatBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> totalVat_ =
+    private java.util.List<ai.visma.ssn.type.Candidate> amount_ =
       java.util.Collections.emptyList();
-    private void ensureTotalVatIsMutable() {
+    private void ensureAmountIsMutable() {
       if (!((bitField0_ & 0x00000010) != 0)) {
-        totalVat_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(totalVat_);
+        amount_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(amount_);
         bitField0_ |= 0x00000010;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> totalVatBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> amountBuilder_;
 
     /**
      * <pre>
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getTotalVatList() {
-      if (totalVatBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(totalVat_);
+    public java.util.List<ai.visma.ssn.type.Candidate> getAmountList() {
+      if (amountBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(amount_);
       } else {
-        return totalVatBuilder_.getMessageList();
+        return amountBuilder_.getMessageList();
       }
     }
     /**
@@ -1973,13 +1973,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public int getTotalVatCount() {
-      if (totalVatBuilder_ == null) {
-        return totalVat_.size();
+    public int getAmountCount() {
+      if (amountBuilder_ == null) {
+        return amount_.size();
       } else {
-        return totalVatBuilder_.getCount();
+        return amountBuilder_.getCount();
       }
     }
     /**
@@ -1987,13 +1987,13 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public ai.visma.ssn.type.Candidate getTotalVat(int index) {
-      if (totalVatBuilder_ == null) {
-        return totalVat_.get(index);
+    public ai.visma.ssn.type.Candidate getAmount(int index) {
+      if (amountBuilder_ == null) {
+        return amount_.get(index);
       } else {
-        return totalVatBuilder_.getMessage(index);
+        return amountBuilder_.getMessage(index);
       }
     }
     /**
@@ -2001,19 +2001,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder setTotalVat(
+    public Builder setAmount(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalVatBuilder_ == null) {
+      if (amountBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalVatIsMutable();
-        totalVat_.set(index, value);
+        ensureAmountIsMutable();
+        amount_.set(index, value);
         onChanged();
       } else {
-        totalVatBuilder_.setMessage(index, value);
+        amountBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -2022,16 +2022,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder setTotalVat(
+    public Builder setAmount(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalVatBuilder_ == null) {
-        ensureTotalVatIsMutable();
-        totalVat_.set(index, builderForValue.build());
+      if (amountBuilder_ == null) {
+        ensureAmountIsMutable();
+        amount_.set(index, builderForValue.build());
         onChanged();
       } else {
-        totalVatBuilder_.setMessage(index, builderForValue.build());
+        amountBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -2040,18 +2040,18 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder addTotalVat(ai.visma.ssn.type.Candidate value) {
-      if (totalVatBuilder_ == null) {
+    public Builder addAmount(ai.visma.ssn.type.Candidate value) {
+      if (amountBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalVatIsMutable();
-        totalVat_.add(value);
+        ensureAmountIsMutable();
+        amount_.add(value);
         onChanged();
       } else {
-        totalVatBuilder_.addMessage(value);
+        amountBuilder_.addMessage(value);
       }
       return this;
     }
@@ -2060,19 +2060,19 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder addTotalVat(
+    public Builder addAmount(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (totalVatBuilder_ == null) {
+      if (amountBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTotalVatIsMutable();
-        totalVat_.add(index, value);
+        ensureAmountIsMutable();
+        amount_.add(index, value);
         onChanged();
       } else {
-        totalVatBuilder_.addMessage(index, value);
+        amountBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -2081,16 +2081,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder addTotalVat(
+    public Builder addAmount(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalVatBuilder_ == null) {
-        ensureTotalVatIsMutable();
-        totalVat_.add(builderForValue.build());
+      if (amountBuilder_ == null) {
+        ensureAmountIsMutable();
+        amount_.add(builderForValue.build());
         onChanged();
       } else {
-        totalVatBuilder_.addMessage(builderForValue.build());
+        amountBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -2099,16 +2099,16 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder addTotalVat(
+    public Builder addAmount(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (totalVatBuilder_ == null) {
-        ensureTotalVatIsMutable();
-        totalVat_.add(index, builderForValue.build());
+      if (amountBuilder_ == null) {
+        ensureAmountIsMutable();
+        amount_.add(index, builderForValue.build());
         onChanged();
       } else {
-        totalVatBuilder_.addMessage(index, builderForValue.build());
+        amountBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -2117,17 +2117,17 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder addAllTotalVat(
+    public Builder addAllAmount(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (totalVatBuilder_ == null) {
-        ensureTotalVatIsMutable();
+      if (amountBuilder_ == null) {
+        ensureAmountIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, totalVat_);
+            values, amount_);
         onChanged();
       } else {
-        totalVatBuilder_.addAllMessages(values);
+        amountBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -2136,15 +2136,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder clearTotalVat() {
-      if (totalVatBuilder_ == null) {
-        totalVat_ = java.util.Collections.emptyList();
+    public Builder clearAmount() {
+      if (amountBuilder_ == null) {
+        amount_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
-        totalVatBuilder_.clear();
+        amountBuilder_.clear();
       }
       return this;
     }
@@ -2153,15 +2153,15 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public Builder removeTotalVat(int index) {
-      if (totalVatBuilder_ == null) {
-        ensureTotalVatIsMutable();
-        totalVat_.remove(index);
+    public Builder removeAmount(int index) {
+      if (amountBuilder_ == null) {
+        ensureAmountIsMutable();
+        amount_.remove(index);
         onChanged();
       } else {
-        totalVatBuilder_.remove(index);
+        amountBuilder_.remove(index);
       }
       return this;
     }
@@ -2170,24 +2170,24 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getTotalVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder getAmountBuilder(
         int index) {
-      return getTotalVatFieldBuilder().getBuilder(index);
+      return getAmountFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getTotalVatOrBuilder(
+    public ai.visma.ssn.type.CandidateOrBuilder getAmountOrBuilder(
         int index) {
-      if (totalVatBuilder_ == null) {
-        return totalVat_.get(index);  } else {
-        return totalVatBuilder_.getMessageOrBuilder(index);
+      if (amountBuilder_ == null) {
+        return amount_.get(index);  } else {
+        return amountBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -2195,14 +2195,14 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getTotalVatOrBuilderList() {
-      if (totalVatBuilder_ != null) {
-        return totalVatBuilder_.getMessageOrBuilderList();
+         getAmountOrBuilderList() {
+      if (amountBuilder_ != null) {
+        return amountBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(totalVat_);
+        return java.util.Collections.unmodifiableList(amount_);
       }
     }
     /**
@@ -2210,10 +2210,10 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalVatBuilder() {
-      return getTotalVatFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addAmountBuilder() {
+      return getAmountFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -2221,11 +2221,11 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addTotalVatBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addAmountBuilder(
         int index) {
-      return getTotalVatFieldBuilder().addBuilder(
+      return getAmountFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -2233,25 +2233,25 @@ private static final long serialVersionUID = 0L;
      * The vat distribution candidate
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
+     * <code>repeated .ssn.type.Candidate amount = 5 [json_name = "amount"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getTotalVatBuilderList() {
-      return getTotalVatFieldBuilder().getBuilderList();
+         getAmountBuilderList() {
+      return getAmountFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getTotalVatFieldBuilder() {
-      if (totalVatBuilder_ == null) {
-        totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getAmountFieldBuilder() {
+      if (amountBuilder_ == null) {
+        amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                totalVat_,
+                amount_,
                 ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
-        totalVat_ = null;
+        amount_ = null;
       }
-      return totalVatBuilder_;
+      return amountBuilder_;
     }
 
     private ai.visma.ssn.type.ModelSpec modelMetadata_;

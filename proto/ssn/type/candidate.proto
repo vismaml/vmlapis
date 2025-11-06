@@ -211,11 +211,11 @@ message VatDistribution {
   // The vat distribution candidate percentage
   repeated Candidate percentage = 2;
   // The vat distribution candidate incl vat
-  repeated Candidate total_incl_vat = 3;
+  repeated Candidate incl_vat = 3;
   // The vat distribution candidate excl vat
-  repeated Candidate total_excl_vat = 4;
+  repeated Candidate excl_vat = 4;
   // The vat distribution candidate
-  repeated Candidate total_vat = 5;
+  repeated Candidate amount = 5;
   // Model metadata
   ModelSpec model_metadata = 6;
 }

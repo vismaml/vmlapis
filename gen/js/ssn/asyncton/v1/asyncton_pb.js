@@ -1282,7 +1282,7 @@ proto.ssn.asyncton.v1.GetTransactionResultsResponse.prototype.setCustomId = func
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,13];
+proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,14];
 
 
 
@@ -1420,7 +1420,7 @@ proto.ssn.asyncton.v1.Annotation.deserializeBinaryFromReader = function(msg, rea
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLine.deserializeBinaryFromReader);
       msg.addPurchaseLinesDetails(value);
       break;
-    case 13:
+    case 14:
       var value = new ssn_type_candidate_pb.VatDistribution;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
       msg.addVatDistributionDetails(value);
@@ -1536,7 +1536,7 @@ proto.ssn.asyncton.v1.Annotation.serializeBinaryToWriter = function(message, wri
   f = message.getVatDistributionDetailsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      13,
+      14,
       f,
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
@@ -1904,12 +1904,12 @@ proto.ssn.asyncton.v1.Annotation.prototype.clearPurchaseLinesDetailsList = funct
 
 
 /**
- * repeated ssn.type.VatDistribution vat_distribution_details = 13;
+ * repeated ssn.type.VatDistribution vat_distribution_details = 14;
  * @return {!Array<!proto.ssn.type.VatDistribution>}
  */
 proto.ssn.asyncton.v1.Annotation.prototype.getVatDistributionDetailsList = function() {
   return /** @type{!Array<!proto.ssn.type.VatDistribution>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 13));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 14));
 };
 
 
@@ -1918,7 +1918,7 @@ proto.ssn.asyncton.v1.Annotation.prototype.getVatDistributionDetailsList = funct
  * @return {!proto.ssn.asyncton.v1.Annotation} returns this
 */
 proto.ssn.asyncton.v1.Annotation.prototype.setVatDistributionDetailsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 13, value);
+  return jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
 
@@ -1928,7 +1928,7 @@ proto.ssn.asyncton.v1.Annotation.prototype.setVatDistributionDetailsList = funct
  * @return {!proto.ssn.type.VatDistribution}
  */
 proto.ssn.asyncton.v1.Annotation.prototype.addVatDistributionDetails = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.ssn.type.VatDistribution, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.ssn.type.VatDistribution, opt_index);
 };
 
 

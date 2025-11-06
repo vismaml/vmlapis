@@ -91,18 +91,17 @@ namespace Ssn.Type {
             "Ey5zc24udHlwZS5DYW5kaWRhdGVSBXRvdGFsEjIKCnVuaXRfcHJpY2UYECAD",
             "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCXVuaXRQcmljZRI6Cg5tb2RlbF9t",
             "ZXRhZGF0YRgRIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRh",
-            "ZGF0YSLFAgoPVmF0RGlzdHJpYnV0aW9uEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
+            "ZGF0YSKqAgoPVmF0RGlzdHJpYnV0aW9uEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
             "YWdlUmVmEjMKCnBlcmNlbnRhZ2UYAiADKAsyEy5zc24udHlwZS5DYW5kaWRh",
-            "dGVSCnBlcmNlbnRhZ2USOQoOdG90YWxfaW5jbF92YXQYAyADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSDHRvdGFsSW5jbFZhdBI5Cg50b3RhbF9leGNsX3Zh",
-            "dBgEIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxFeGNsVmF0EjAK",
-            "CXRvdGFsX3ZhdBgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIIdG90YWxW",
-            "YXQSOgoObW9kZWxfbWV0YWRhdGEYBiABKAsyEy5zc24udHlwZS5Nb2RlbFNw",
-            "ZWNSDW1vZGVsTWV0YWRhdGFCmgEKEWFpLnZpc21hLnNzbi50eXBlQg5DYW5k",
-            "aWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
-            "bi9nby9zc24vdHlwZTtzc250eXBlogIDU1RYqgIIU3NuLlR5cGXKAghTc25c",
-            "VHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh6gIJU3NuOjpUeXBlYgZwcm90",
-            "bzM="));
+            "dGVSCnBlcmNlbnRhZ2USLgoIaW5jbF92YXQYAyADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSB2luY2xWYXQSLgoIZXhjbF92YXQYBCADKAsyEy5zc24udHlw",
+            "ZS5DYW5kaWRhdGVSB2V4Y2xWYXQSKwoGYW1vdW50GAUgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlUgZhbW91bnQSOgoObW9kZWxfbWV0YWRhdGEYBiABKAsy",
+            "Ey5zc24udHlwZS5Nb2RlbFNwZWNSDW1vZGVsTWV0YWRhdGFCmgEKEWFpLnZp",
+            "c21hLnNzbi50eXBlQg5DYW5kaWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2Ut",
+            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RY",
+            "qgIIU3NuLlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh",
+            "6gIJU3NuOjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,7 +115,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "PageRef", "Percentage", "TotalInclVat", "TotalExclVat", "TotalVat", "ModelMetadata" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "PageRef", "Percentage", "InclVat", "ExclVat", "Amount", "ModelMetadata" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4280,9 +4279,9 @@ namespace Ssn.Type {
     public VatDistribution(VatDistribution other) : this() {
       pageRef_ = other.pageRef_;
       percentage_ = other.percentage_.Clone();
-      totalInclVat_ = other.totalInclVat_.Clone();
-      totalExclVat_ = other.totalExclVat_.Clone();
-      totalVat_ = other.totalVat_.Clone();
+      inclVat_ = other.inclVat_.Clone();
+      exclVat_ = other.exclVat_.Clone();
+      amount_ = other.amount_.Clone();
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4322,46 +4321,46 @@ namespace Ssn.Type {
       get { return percentage_; }
     }
 
-    /// <summary>Field number for the "total_incl_vat" field.</summary>
-    public const int TotalInclVatFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalInclVat_codec
+    /// <summary>Field number for the "incl_vat" field.</summary>
+    public const int InclVatFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_inclVat_codec
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> inclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
     /// The vat distribution candidate incl vat
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalInclVat {
-      get { return totalInclVat_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> InclVat {
+      get { return inclVat_; }
     }
 
-    /// <summary>Field number for the "total_excl_vat" field.</summary>
-    public const int TotalExclVatFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalExclVat_codec
+    /// <summary>Field number for the "excl_vat" field.</summary>
+    public const int ExclVatFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_exclVat_codec
         = pb::FieldCodec.ForMessage(34, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> exclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
     /// The vat distribution candidate excl vat
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalExclVat {
-      get { return totalExclVat_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ExclVat {
+      get { return exclVat_; }
     }
 
-    /// <summary>Field number for the "total_vat" field.</summary>
-    public const int TotalVatFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_totalVat_codec
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_amount_codec
         = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> amount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
     /// The vat distribution candidate
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> TotalVat {
-      get { return totalVat_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Amount {
+      get { return amount_; }
     }
 
     /// <summary>Field number for the "model_metadata" field.</summary>
@@ -4396,9 +4395,9 @@ namespace Ssn.Type {
       }
       if (PageRef != other.PageRef) return false;
       if(!percentage_.Equals(other.percentage_)) return false;
-      if(!totalInclVat_.Equals(other.totalInclVat_)) return false;
-      if(!totalExclVat_.Equals(other.totalExclVat_)) return false;
-      if(!totalVat_.Equals(other.totalVat_)) return false;
+      if(!inclVat_.Equals(other.inclVat_)) return false;
+      if(!exclVat_.Equals(other.exclVat_)) return false;
+      if(!amount_.Equals(other.amount_)) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4409,9 +4408,9 @@ namespace Ssn.Type {
       int hash = 1;
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
       hash ^= percentage_.GetHashCode();
-      hash ^= totalInclVat_.GetHashCode();
-      hash ^= totalExclVat_.GetHashCode();
-      hash ^= totalVat_.GetHashCode();
+      hash ^= inclVat_.GetHashCode();
+      hash ^= exclVat_.GetHashCode();
+      hash ^= amount_.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4436,9 +4435,9 @@ namespace Ssn.Type {
         output.WriteUInt32(PageRef);
       }
       percentage_.WriteTo(output, _repeated_percentage_codec);
-      totalInclVat_.WriteTo(output, _repeated_totalInclVat_codec);
-      totalExclVat_.WriteTo(output, _repeated_totalExclVat_codec);
-      totalVat_.WriteTo(output, _repeated_totalVat_codec);
+      inclVat_.WriteTo(output, _repeated_inclVat_codec);
+      exclVat_.WriteTo(output, _repeated_exclVat_codec);
+      amount_.WriteTo(output, _repeated_amount_codec);
       if (modelMetadata_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(ModelMetadata);
@@ -4458,9 +4457,9 @@ namespace Ssn.Type {
         output.WriteUInt32(PageRef);
       }
       percentage_.WriteTo(ref output, _repeated_percentage_codec);
-      totalInclVat_.WriteTo(ref output, _repeated_totalInclVat_codec);
-      totalExclVat_.WriteTo(ref output, _repeated_totalExclVat_codec);
-      totalVat_.WriteTo(ref output, _repeated_totalVat_codec);
+      inclVat_.WriteTo(ref output, _repeated_inclVat_codec);
+      exclVat_.WriteTo(ref output, _repeated_exclVat_codec);
+      amount_.WriteTo(ref output, _repeated_amount_codec);
       if (modelMetadata_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(ModelMetadata);
@@ -4479,9 +4478,9 @@ namespace Ssn.Type {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
       }
       size += percentage_.CalculateSize(_repeated_percentage_codec);
-      size += totalInclVat_.CalculateSize(_repeated_totalInclVat_codec);
-      size += totalExclVat_.CalculateSize(_repeated_totalExclVat_codec);
-      size += totalVat_.CalculateSize(_repeated_totalVat_codec);
+      size += inclVat_.CalculateSize(_repeated_inclVat_codec);
+      size += exclVat_.CalculateSize(_repeated_exclVat_codec);
+      size += amount_.CalculateSize(_repeated_amount_codec);
       if (modelMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
       }
@@ -4501,9 +4500,9 @@ namespace Ssn.Type {
         PageRef = other.PageRef;
       }
       percentage_.Add(other.percentage_);
-      totalInclVat_.Add(other.totalInclVat_);
-      totalExclVat_.Add(other.totalExclVat_);
-      totalVat_.Add(other.totalVat_);
+      inclVat_.Add(other.inclVat_);
+      exclVat_.Add(other.exclVat_);
+      amount_.Add(other.amount_);
       if (other.modelMetadata_ != null) {
         if (modelMetadata_ == null) {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
@@ -4538,15 +4537,15 @@ namespace Ssn.Type {
             break;
           }
           case 26: {
-            totalInclVat_.AddEntriesFrom(input, _repeated_totalInclVat_codec);
+            inclVat_.AddEntriesFrom(input, _repeated_inclVat_codec);
             break;
           }
           case 34: {
-            totalExclVat_.AddEntriesFrom(input, _repeated_totalExclVat_codec);
+            exclVat_.AddEntriesFrom(input, _repeated_exclVat_codec);
             break;
           }
           case 42: {
-            totalVat_.AddEntriesFrom(input, _repeated_totalVat_codec);
+            amount_.AddEntriesFrom(input, _repeated_amount_codec);
             break;
           }
           case 50: {
@@ -4584,15 +4583,15 @@ namespace Ssn.Type {
             break;
           }
           case 26: {
-            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
+            inclVat_.AddEntriesFrom(ref input, _repeated_inclVat_codec);
             break;
           }
           case 34: {
-            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
+            exclVat_.AddEntriesFrom(ref input, _repeated_exclVat_codec);
             break;
           }
           case 42: {
-            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
+            amount_.AddEntriesFrom(ref input, _repeated_amount_codec);
             break;
           }
           case 50: {

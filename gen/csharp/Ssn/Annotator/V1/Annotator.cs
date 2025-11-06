@@ -64,7 +64,7 @@ namespace Ssn.Annotator.V1 {
             "bm5vdGF0b3IudjEuRmVhdHVyZVIIZmVhdHVyZXMSEgoEdGFncxgDIAMoCVIE",
             "dGFncxIiCgR0aWVyGAQgASgOMg4uc3NuLnR5cGUuVGllclIEdGllchIaCghz",
             "ZWdtZW50cxgFIAMoCVIIc2VnbWVudHMSHAoJcXVlc3Rpb25zGAYgAygJUglx",
-            "dWVzdGlvbnMiuhsKGURvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2USMgoKb3Jk",
+            "dWVzdGlvbnMiwBsKGURvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2USMgoKb3Jk",
             "ZXJfZGF0ZRgBIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIJb3JkZXJEYXRl",
             "Ej0KEHBheW1lbnRfZHVlX2RhdGUYAiADKAsyEy5zc24udHlwZS5DYW5kaWRh",
             "dGVSDnBheW1lbnREdWVEYXRlEi8KCGN1cnJlbmN5GAMgAygLMhMuc3NuLnR5",
@@ -140,30 +140,30 @@ namespace Ssn.Annotator.V1 {
             "aXNzUXJCaWxscxI1Cgtob3RlbF9kYXRlcxg1IAEoCzIULnNzbi50eXBlLkhv",
             "dGVsRGF0ZXNSCmhvdGVsRGF0ZXMSTAoWcHVyY2hhc2VfbGluZXNfZGV0YWls",
             "cxg4IAMoCzIWLnNzbi50eXBlLlB1cmNoYXNlTGluZVIUcHVyY2hhc2VMaW5l",
-            "c0RldGFpbHMSUwoYdmF0X2Rpc3RyaWJ1dGlvbl9kZXRhaWxzGDkgAygLMhku",
+            "c0RldGFpbHMSUwoYdmF0X2Rpc3RyaWJ1dGlvbl9kZXRhaWxzGDogAygLMhku",
             "c3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uUhZ2YXREaXN0cmlidXRpb25EZXRh",
-            "aWxzSgQINhA3SgQINxA4Il4KCERvY3VtZW50EhgKB2NvbnRlbnQYASABKAxS",
-            "B2NvbnRlbnQSOAoGc291cmNlGAIgASgLMiAuc3NuLmFubm90YXRvci52MS5E",
-            "b2N1bWVudFNvdXJjZVIGc291cmNlIisKDkRvY3VtZW50U291cmNlEhkKCGh0",
-            "dHBfdXJpGAEgASgJUgdodHRwVXJpIm8KF0RvY3VtZW50UXVlc3Rpb25SZXF1",
-            "ZXN0EjYKCGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5Eb2N1",
-            "bWVudFIIZG9jdW1lbnQSHAoJcXVlc3Rpb25zGAIgAygJUglxdWVzdGlvbnMi",
-            "VQoYRG9jdW1lbnRRdWVzdGlvblJlc3BvbnNlEjMKB2Fuc3dlcnMYAiADKAsy",
-            "GS5zc24udHlwZS5BbnN3ZXJDYW5kaWRhdGVSB2Fuc3dlcnNKBAgBEAIyvQIK",
-            "EURvY3VtZW50QW5ub3RhdG9yEo0BChBBbm5vdGF0ZURvY3VtZW50Eiouc3Nu",
-            "LmFubm90YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlcXVlc3QaKy5zc24u",
-            "YW5ub3RhdG9yLnYxLkRvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2UiIILT5JMC",
-            "GiIVL3YxL2RvY3VtZW50OmFubm90YXRlOgEqEpcBChZBbnN3ZXJEb2N1bWVu",
-            "dFF1ZXN0aW9uEikuc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFF1ZXN0aW9u",
-            "UmVxdWVzdBoqLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRRdWVzdGlvblJl",
-            "c3BvbnNlIiaC0+STAiAiGy92MS9kb2N1bWVudDphbnN3ZXJxdWVzdGlvbjoB",
-            "KkKIAgoZYWkudmlzbWEuc3NuLmFubm90YXRvci52MUIOQW5ub3RhdG9yUHJv",
-            "dG9QAVo+Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3Nu",
-            "L2Fubm90YXRvci92MTthbm5vdGF0b3KiAgNTQViqAhBTc24uQW5ub3RhdG9y",
-            "LlYxygIQU3NuXEFubm90YXRvclxWMeICHFNzblxBbm5vdGF0b3JcVjFcR1BC",
-            "TWV0YWRhdGHqAhJTc246OkFubm90YXRvcjo6VjGSQTgSDwoJU21hcnRTY2Fu",
-            "MgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIG",
-            "cHJvdG8z"));
+            "aWxzSgQINhA3SgQINxA4SgQIORA6Il4KCERvY3VtZW50EhgKB2NvbnRlbnQY",
+            "ASABKAxSB2NvbnRlbnQSOAoGc291cmNlGAIgASgLMiAuc3NuLmFubm90YXRv",
+            "ci52MS5Eb2N1bWVudFNvdXJjZVIGc291cmNlIisKDkRvY3VtZW50U291cmNl",
+            "EhkKCGh0dHBfdXJpGAEgASgJUgdodHRwVXJpIm8KF0RvY3VtZW50UXVlc3Rp",
+            "b25SZXF1ZXN0EjYKCGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRvci52",
+            "MS5Eb2N1bWVudFIIZG9jdW1lbnQSHAoJcXVlc3Rpb25zGAIgAygJUglxdWVz",
+            "dGlvbnMiVQoYRG9jdW1lbnRRdWVzdGlvblJlc3BvbnNlEjMKB2Fuc3dlcnMY",
+            "AiADKAsyGS5zc24udHlwZS5BbnN3ZXJDYW5kaWRhdGVSB2Fuc3dlcnNKBAgB",
+            "EAIyvQIKEURvY3VtZW50QW5ub3RhdG9yEo0BChBBbm5vdGF0ZURvY3VtZW50",
+            "Eiouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlcXVlc3Qa",
+            "Ky5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2Ui",
+            "IILT5JMCGiIVL3YxL2RvY3VtZW50OmFubm90YXRlOgEqEpcBChZBbnN3ZXJE",
+            "b2N1bWVudFF1ZXN0aW9uEikuc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFF1",
+            "ZXN0aW9uUmVxdWVzdBoqLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRRdWVz",
+            "dGlvblJlc3BvbnNlIiaC0+STAiAiGy92MS9kb2N1bWVudDphbnN3ZXJxdWVz",
+            "dGlvbjoBKkKIAgoZYWkudmlzbWEuc3NuLmFubm90YXRvci52MUIOQW5ub3Rh",
+            "dG9yUHJvdG9QAVo+Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
+            "Z28vc3NuL2Fubm90YXRvci92MTthbm5vdGF0b3KiAgNTQViqAhBTc24uQW5u",
+            "b3RhdG9yLlYxygIQU3NuXEFubm90YXRvclxWMeICHFNzblxBbm5vdGF0b3Jc",
+            "VjFcR1BCTWV0YWRhdGHqAhJTc246OkFubm90YXRvcjo6VjGSQTgSDwoJU21h",
+            "cnRTY2FuMgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24v",
+            "anNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.HotelDatesReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1935,9 +1935,9 @@ namespace Ssn.Annotator.V1 {
     }
 
     /// <summary>Field number for the "vat_distribution_details" field.</summary>
-    public const int VatDistributionDetailsFieldNumber = 57;
+    public const int VatDistributionDetailsFieldNumber = 58;
     private static readonly pb::FieldCodec<global::Ssn.Type.VatDistribution> _repeated_vatDistributionDetails_codec
-        = pb::FieldCodec.ForMessage(458, global::Ssn.Type.VatDistribution.Parser);
+        = pb::FieldCodec.ForMessage(466, global::Ssn.Type.VatDistribution.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionDetails_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
     /// <summary>
     /// VAT distribution for the document. This is a list where each field is a candidate.
@@ -2663,7 +2663,7 @@ namespace Ssn.Annotator.V1 {
             purchaseLinesDetails_.AddEntriesFrom(input, _repeated_purchaseLinesDetails_codec);
             break;
           }
-          case 458: {
+          case 466: {
             vatDistributionDetails_.AddEntriesFrom(input, _repeated_vatDistributionDetails_codec);
             break;
           }
@@ -2911,7 +2911,7 @@ namespace Ssn.Annotator.V1 {
             purchaseLinesDetails_.AddEntriesFrom(ref input, _repeated_purchaseLinesDetails_codec);
             break;
           }
-          case 458: {
+          case 466: {
             vatDistributionDetails_.AddEntriesFrom(ref input, _repeated_vatDistributionDetails_codec);
             break;
           }

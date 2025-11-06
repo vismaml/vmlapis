@@ -3806,11 +3806,11 @@ proto.ssn.type.VatDistribution.toObject = function(includeInstance, msg) {
     pageRef: jspb.Message.getFieldWithDefault(msg, 1, 0),
     percentageList: jspb.Message.toObjectList(msg.getPercentageList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
-    totalInclVatList: jspb.Message.toObjectList(msg.getTotalInclVatList(),
+    inclVatList: jspb.Message.toObjectList(msg.getInclVatList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
-    totalExclVatList: jspb.Message.toObjectList(msg.getTotalExclVatList(),
+    exclVatList: jspb.Message.toObjectList(msg.getExclVatList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
-    totalVatList: jspb.Message.toObjectList(msg.getTotalVatList(),
+    amountList: jspb.Message.toObjectList(msg.getAmountList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
   };
@@ -3861,17 +3861,17 @@ proto.ssn.type.VatDistribution.deserializeBinaryFromReader = function(msg, reade
     case 3:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addTotalInclVat(value);
+      msg.addInclVat(value);
       break;
     case 4:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addTotalExclVat(value);
+      msg.addExclVat(value);
       break;
     case 5:
       var value = new proto.ssn.type.Candidate;
       reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
-      msg.addTotalVat(value);
+      msg.addAmount(value);
       break;
     case 6:
       var value = new proto.ssn.type.ModelSpec;
@@ -3922,7 +3922,7 @@ proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, write
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getTotalInclVatList();
+  f = message.getInclVatList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
@@ -3930,7 +3930,7 @@ proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, write
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getTotalExclVatList();
+  f = message.getExclVatList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       4,
@@ -3938,7 +3938,7 @@ proto.ssn.type.VatDistribution.serializeBinaryToWriter = function(message, write
       proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getTotalVatList();
+  f = message.getAmountList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       5,
@@ -4014,10 +4014,10 @@ proto.ssn.type.VatDistribution.prototype.clearPercentageList = function() {
 
 
 /**
- * repeated Candidate total_incl_vat = 3;
+ * repeated Candidate incl_vat = 3;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.ssn.type.VatDistribution.prototype.getTotalInclVatList = function() {
+proto.ssn.type.VatDistribution.prototype.getInclVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 3));
 };
@@ -4027,7 +4027,7 @@ proto.ssn.type.VatDistribution.prototype.getTotalInclVatList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
-proto.ssn.type.VatDistribution.prototype.setTotalInclVatList = function(value) {
+proto.ssn.type.VatDistribution.prototype.setInclVatList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
@@ -4037,7 +4037,7 @@ proto.ssn.type.VatDistribution.prototype.setTotalInclVatList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.ssn.type.VatDistribution.prototype.addTotalInclVat = function(opt_value, opt_index) {
+proto.ssn.type.VatDistribution.prototype.addInclVat = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -4046,16 +4046,16 @@ proto.ssn.type.VatDistribution.prototype.addTotalInclVat = function(opt_value, o
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.type.VatDistribution} returns this
  */
-proto.ssn.type.VatDistribution.prototype.clearTotalInclVatList = function() {
-  return this.setTotalInclVatList([]);
+proto.ssn.type.VatDistribution.prototype.clearInclVatList = function() {
+  return this.setInclVatList([]);
 };
 
 
 /**
- * repeated Candidate total_excl_vat = 4;
+ * repeated Candidate excl_vat = 4;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.ssn.type.VatDistribution.prototype.getTotalExclVatList = function() {
+proto.ssn.type.VatDistribution.prototype.getExclVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 4));
 };
@@ -4065,7 +4065,7 @@ proto.ssn.type.VatDistribution.prototype.getTotalExclVatList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
-proto.ssn.type.VatDistribution.prototype.setTotalExclVatList = function(value) {
+proto.ssn.type.VatDistribution.prototype.setExclVatList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
@@ -4075,7 +4075,7 @@ proto.ssn.type.VatDistribution.prototype.setTotalExclVatList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.ssn.type.VatDistribution.prototype.addTotalExclVat = function(opt_value, opt_index) {
+proto.ssn.type.VatDistribution.prototype.addExclVat = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -4084,16 +4084,16 @@ proto.ssn.type.VatDistribution.prototype.addTotalExclVat = function(opt_value, o
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.type.VatDistribution} returns this
  */
-proto.ssn.type.VatDistribution.prototype.clearTotalExclVatList = function() {
-  return this.setTotalExclVatList([]);
+proto.ssn.type.VatDistribution.prototype.clearExclVatList = function() {
+  return this.setExclVatList([]);
 };
 
 
 /**
- * repeated Candidate total_vat = 5;
+ * repeated Candidate amount = 5;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.ssn.type.VatDistribution.prototype.getTotalVatList = function() {
+proto.ssn.type.VatDistribution.prototype.getAmountList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 5));
 };
@@ -4103,7 +4103,7 @@ proto.ssn.type.VatDistribution.prototype.getTotalVatList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.ssn.type.VatDistribution} returns this
 */
-proto.ssn.type.VatDistribution.prototype.setTotalVatList = function(value) {
+proto.ssn.type.VatDistribution.prototype.setAmountList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
@@ -4113,7 +4113,7 @@ proto.ssn.type.VatDistribution.prototype.setTotalVatList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.ssn.type.VatDistribution.prototype.addTotalVat = function(opt_value, opt_index) {
+proto.ssn.type.VatDistribution.prototype.addAmount = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -4122,8 +4122,8 @@ proto.ssn.type.VatDistribution.prototype.addTotalVat = function(opt_value, opt_i
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.type.VatDistribution} returns this
  */
-proto.ssn.type.VatDistribution.prototype.clearTotalVatList = function() {
-  return this.setTotalVatList([]);
+proto.ssn.type.VatDistribution.prototype.clearAmountList = function() {
+  return this.setAmountList([]);
 };
 
 

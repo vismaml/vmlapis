@@ -130,8 +130,9 @@ message Annotation {
   reserved 11;
   // Purchase lines for the document. This is a list where each field is a candidate.
   repeated ssn.type.PurchaseLine purchase_lines_details = 12;
+  reserved 13;
   // VAT distribution for the document. This is a list where each field is a candidate.
-  repeated ssn.type.VatDistribution vat_distribution_details = 13;
+  repeated ssn.type.VatDistribution vat_distribution_details = 14;
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

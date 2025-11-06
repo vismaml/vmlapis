@@ -318,8 +318,9 @@ message DocumentAnnotatorResponse {
   reserved 55;
   // Purchase lines for the document. This is a list where each field is a candidate.
   repeated ssn.type.PurchaseLine purchase_lines_details = 56;
+  reserved 57;
   // VAT distribution for the document. This is a list where each field is a candidate.
-  repeated ssn.type.VatDistribution vat_distribution_details = 57;
+  repeated ssn.type.VatDistribution vat_distribution_details = 58;
 }
 
 message Document {

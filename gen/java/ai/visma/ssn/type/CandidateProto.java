@@ -164,19 +164,19 @@ public final class CandidateProto {
       "\023.ssn.type.CandidateR\005total\0222\n\nunit_pric" +
       "e\030\020 \003(\0132\023.ssn.type.CandidateR\tunitPrice\022" +
       ":\n\016model_metadata\030\021 \001(\0132\023.ssn.type.Model" +
-      "SpecR\rmodelMetadata\"\305\002\n\017VatDistribution\022" +
+      "SpecR\rmodelMetadata\"\252\002\n\017VatDistribution\022" +
       "\031\n\010page_ref\030\001 \001(\rR\007pageRef\0223\n\npercentage" +
       "\030\002 \003(\0132\023.ssn.type.CandidateR\npercentage\022" +
-      "9\n\016total_incl_vat\030\003 \003(\0132\023.ssn.type.Candi" +
-      "dateR\014totalInclVat\0229\n\016total_excl_vat\030\004 \003" +
-      "(\0132\023.ssn.type.CandidateR\014totalExclVat\0220\n" +
-      "\ttotal_vat\030\005 \003(\0132\023.ssn.type.CandidateR\010t" +
-      "otalVat\022:\n\016model_metadata\030\006 \001(\0132\023.ssn.ty" +
-      "pe.ModelSpecR\rmodelMetadataB\232\001\n\021ai.visma" +
-      ".ssn.typeB\016CandidateProtoP\001Z4github.com/" +
-      "e-conomic/vmlapis/gen/go/ssn/type;ssntyp" +
-      "e\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type" +
-      "\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
+      ".\n\010incl_vat\030\003 \003(\0132\023.ssn.type.CandidateR\007" +
+      "inclVat\022.\n\010excl_vat\030\004 \003(\0132\023.ssn.type.Can" +
+      "didateR\007exclVat\022+\n\006amount\030\005 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\006amount\022:\n\016model_metadata\030\006" +
+      " \001(\0132\023.ssn.type.ModelSpecR\rmodelMetadata" +
+      "B\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001" +
+      "Z4github.com/e-conomic/vmlapis/gen/go/ss" +
+      "n/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Ty" +
+      "pe\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -249,7 +249,7 @@ public final class CandidateProto {
     internal_static_ssn_type_VatDistribution_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_VatDistribution_descriptor,
-        new java.lang.String[] { "PageRef", "Percentage", "TotalInclVat", "TotalExclVat", "TotalVat", "ModelMetadata", });
+        new java.lang.String[] { "PageRef", "Percentage", "InclVat", "ExclVat", "Amount", "ModelMetadata", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
