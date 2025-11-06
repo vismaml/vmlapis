@@ -832,7 +832,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,54,55];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57];
 
 
 
@@ -965,9 +965,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
     ssn_type_qr_pb.SwissQrBill.toObject, includeInstance),
     hotelDates: (f = msg.getHotelDates()) && ssn_type_hotel_dates_pb.HotelDates.toObject(includeInstance, f),
-    purchaseLinesCandidatesList: jspb.Message.toObjectList(msg.getPurchaseLinesCandidatesList(),
+    purchaseLinesDetailsList: jspb.Message.toObjectList(msg.getPurchaseLinesDetailsList(),
     ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance),
-    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
+    vatDistributionDetailsList: jspb.Message.toObjectList(msg.getVatDistributionDetailsList(),
     ssn_type_candidate_pb.VatDistribution.toObject, includeInstance)
   };
 
@@ -1267,15 +1267,15 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       reader.readMessage(value,ssn_type_hotel_dates_pb.HotelDates.deserializeBinaryFromReader);
       msg.setHotelDates(value);
       break;
-    case 54:
+    case 56:
       var value = new ssn_type_candidate_pb.PurchaseLine;
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLine.deserializeBinaryFromReader);
-      msg.addPurchaseLinesCandidates(value);
+      msg.addPurchaseLinesDetails(value);
       break;
-    case 55:
+    case 57:
       var value = new ssn_type_candidate_pb.VatDistribution;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
-      msg.addVatDistributionCandidates(value);
+      msg.addVatDistributionDetails(value);
       break;
     default:
       reader.skipField();
@@ -1727,18 +1727,18 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_hotel_dates_pb.HotelDates.serializeBinaryToWriter
     );
   }
-  f = message.getPurchaseLinesCandidatesList();
+  f = message.getPurchaseLinesDetailsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      54,
+      56,
       f,
       ssn_type_candidate_pb.PurchaseLine.serializeBinaryToWriter
     );
   }
-  f = message.getVatDistributionCandidatesList();
+  f = message.getVatDistributionDetailsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      55,
+      57,
       f,
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
@@ -3698,12 +3698,12 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasHotelDates = funct
 
 
 /**
- * repeated ssn.type.PurchaseLine purchase_lines_candidates = 54;
+ * repeated ssn.type.PurchaseLine purchase_lines_details = 56;
  * @return {!Array<!proto.ssn.type.PurchaseLine>}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPurchaseLinesCandidatesList = function() {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPurchaseLinesDetailsList = function() {
   return /** @type{!Array<!proto.ssn.type.PurchaseLine>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLine, 54));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLine, 56));
 };
 
 
@@ -3711,8 +3711,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPurchaseLinesCandi
  * @param {!Array<!proto.ssn.type.PurchaseLine>} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPurchaseLinesCandidatesList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 54, value);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPurchaseLinesDetailsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 56, value);
 };
 
 
@@ -3721,8 +3721,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPurchaseLinesCandi
  * @param {number=} opt_index
  * @return {!proto.ssn.type.PurchaseLine}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPurchaseLinesCandidates = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 54, opt_value, proto.ssn.type.PurchaseLine, opt_index);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPurchaseLinesDetails = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 56, opt_value, proto.ssn.type.PurchaseLine, opt_index);
 };
 
 
@@ -3730,18 +3730,18 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPurchaseLinesCandi
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPurchaseLinesCandidatesList = function() {
-  return this.setPurchaseLinesCandidatesList([]);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPurchaseLinesDetailsList = function() {
+  return this.setPurchaseLinesDetailsList([]);
 };
 
 
 /**
- * repeated ssn.type.VatDistribution vat_distribution_candidates = 55;
+ * repeated ssn.type.VatDistribution vat_distribution_details = 57;
  * @return {!Array<!proto.ssn.type.VatDistribution>}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCandidatesList = function() {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionDetailsList = function() {
   return /** @type{!Array<!proto.ssn.type.VatDistribution>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 55));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 57));
 };
 
 
@@ -3749,8 +3749,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCan
  * @param {!Array<!proto.ssn.type.VatDistribution>} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCandidatesList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 55, value);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionDetailsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 57, value);
 };
 
 
@@ -3759,8 +3759,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCan
  * @param {number=} opt_index
  * @return {!proto.ssn.type.VatDistribution}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 55, opt_value, proto.ssn.type.VatDistribution, opt_index);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionDetails = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 57, opt_value, proto.ssn.type.VatDistribution, opt_index);
 };
 
 
@@ -3768,8 +3768,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCan
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionCandidatesList = function() {
-  return this.setVatDistributionCandidatesList([]);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionDetailsList = function() {
+  return this.setVatDistributionDetailsList([]);
 };
 
 

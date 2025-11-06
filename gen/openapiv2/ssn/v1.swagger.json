@@ -2186,7 +2186,7 @@
           "$ref": "#/definitions/typeHotelDates",
           "title": "The hotelDates cntains check-in and check-out date candidates"
         },
-        "purchaseLinesCandidates": {
+        "purchaseLinesDetails": {
           "type": "array",
           "items": {
             "type": "object",
@@ -2194,7 +2194,7 @@
           },
           "description": "Purchase lines for the document. This is a list where each field is a candidate."
         },
-        "vatDistributionCandidates": {
+        "vatDistributionDetails": {
           "type": "array",
           "items": {
             "type": "object",
