@@ -13301,7 +13301,8 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.toObject = function(inc
   var f, obj = {
     fieldsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
     countryCodesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
-    documentTypesList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    documentTypesList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    mostRecentCount: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -13350,6 +13351,10 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.deserializeBinaryFromRe
       var value = /** @type {string} */ (reader.readString());
       msg.addDocumentTypes(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setMostRecentCount(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -13397,6 +13402,13 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.serializeBinaryToWriter
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
+      f
+    );
+  }
+  f = message.getMostRecentCount();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
       f
     );
   }
@@ -13511,6 +13523,24 @@ proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.addDocumentTy
  */
 proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.clearDocumentTypesList = function() {
   return this.setDocumentTypesList([]);
+};
+
+
+/**
+ * optional int32 most_recent_count = 4;
+ * @return {number}
+ */
+proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.getMostRecentCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest.prototype.setMostRecentCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
