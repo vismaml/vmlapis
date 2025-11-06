@@ -341,33 +341,33 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.feedback =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.dataservice.v1.FeedbackMetricsRequest,
- *   !proto.ssn.dataservice.v1.SsnMetrics>}
+ *   !proto.ssn.dataservice.v1.MetricsRequest,
+ *   !proto.ssn.dataservice.v1.FeedbackMetrics>}
  */
 const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1.DataService/CalculateMetrics',
   grpc.web.MethodType.UNARY,
-  proto.ssn.dataservice.v1.FeedbackMetricsRequest,
-  proto.ssn.dataservice.v1.SsnMetrics,
+  proto.ssn.dataservice.v1.MetricsRequest,
+  proto.ssn.dataservice.v1.FeedbackMetrics,
   /**
-   * @param {!proto.ssn.dataservice.v1.FeedbackMetricsRequest} request
+   * @param {!proto.ssn.dataservice.v1.MetricsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.dataservice.v1.SsnMetrics.deserializeBinary
+  proto.ssn.dataservice.v1.FeedbackMetrics.deserializeBinary
 );
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.FeedbackMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.SsnMetrics)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.FeedbackMetrics)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.SsnMetrics>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.FeedbackMetrics>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
@@ -382,11 +382,11 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.FeedbackMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.dataservice.v1.SsnMetrics>}
+ * @return {!Promise<!proto.ssn.dataservice.v1.FeedbackMetrics>}
  *     Promise that resolves to the response
  */
 proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
@@ -402,61 +402,61 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.dataservice.v1.PredictionMetricsRequest,
- *   !proto.ssn.dataservice.v1.SsnMetrics>}
+ *   !proto.ssn.dataservice.v1.MetricsRequest,
+ *   !proto.ssn.dataservice.v1.FeedbackMetricsV2Response>}
  */
-const methodDescriptor_DataService_CalculateAnnotationProcessMetrics = new grpc.web.MethodDescriptor(
-  '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+const methodDescriptor_DataService_CalculateMetricsV2 = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
   grpc.web.MethodType.UNARY,
-  proto.ssn.dataservice.v1.PredictionMetricsRequest,
-  proto.ssn.dataservice.v1.SsnMetrics,
+  proto.ssn.dataservice.v1.MetricsRequest,
+  proto.ssn.dataservice.v1.FeedbackMetricsV2Response,
   /**
-   * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request
+   * @param {!proto.ssn.dataservice.v1.MetricsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.ssn.dataservice.v1.SsnMetrics.deserializeBinary
+  proto.ssn.dataservice.v1.FeedbackMetricsV2Response.deserializeBinary
 );
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.SsnMetrics)}
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.FeedbackMetricsV2Response)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.SsnMetrics>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.FeedbackMetricsV2Response>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateAnnotationProcessMetrics =
+proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetricsV2 =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateAnnotationProcessMetrics,
+      methodDescriptor_DataService_CalculateMetricsV2,
       callback);
 };
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.PredictionMetricsRequest} request The
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.ssn.dataservice.v1.SsnMetrics>}
+ * @return {!Promise<!proto.ssn.dataservice.v1.FeedbackMetricsV2Response>}
  *     Promise that resolves to the response
  */
-proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateAnnotationProcessMetrics =
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetricsV2 =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+      '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
       request,
       metadata || {},
-      methodDescriptor_DataService_CalculateAnnotationProcessMetrics);
+      methodDescriptor_DataService_CalculateMetricsV2);
 };
 
 

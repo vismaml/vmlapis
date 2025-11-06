@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface DeprecatedFeedbackMetricsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.DeprecatedFeedbackMetrics)
+public interface FeedbackMetricsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.FeedbackMetrics)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface FeedbackMetricsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.FeedbackMetricsRequest)
+public interface MetricsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.MetricsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

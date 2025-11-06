@@ -1349,42 +1349,42 @@ export namespace FeedbackRequest {
   }
 }
 
-export class FeedbackMetricsRequest extends jspb.Message {
+export class MetricsRequest extends jspb.Message {
   getStartTime(): number;
-  setStartTime(value: number): FeedbackMetricsRequest;
+  setStartTime(value: number): MetricsRequest;
 
   getEndTime(): number;
-  setEndTime(value: number): FeedbackMetricsRequest;
+  setEndTime(value: number): MetricsRequest;
 
   getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): FeedbackMetricsRequest;
-  clearFieldsList(): FeedbackMetricsRequest;
-  addFields(value: string, index?: number): FeedbackMetricsRequest;
+  setFieldsList(value: Array<string>): MetricsRequest;
+  clearFieldsList(): MetricsRequest;
+  addFields(value: string, index?: number): MetricsRequest;
 
   getTagsList(): Array<string>;
-  setTagsList(value: Array<string>): FeedbackMetricsRequest;
-  clearTagsList(): FeedbackMetricsRequest;
-  addTags(value: string, index?: number): FeedbackMetricsRequest;
+  setTagsList(value: Array<string>): MetricsRequest;
+  clearTagsList(): MetricsRequest;
+  addTags(value: string, index?: number): MetricsRequest;
 
   getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): FeedbackMetricsRequest;
-  clearCountryCodesList(): FeedbackMetricsRequest;
-  addCountryCodes(value: string, index?: number): FeedbackMetricsRequest;
+  setCountryCodesList(value: Array<string>): MetricsRequest;
+  clearCountryCodesList(): MetricsRequest;
+  addCountryCodes(value: string, index?: number): MetricsRequest;
 
   getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): FeedbackMetricsRequest;
-  clearDocumentTypesList(): FeedbackMetricsRequest;
-  addDocumentTypes(value: string, index?: number): FeedbackMetricsRequest;
+  setDocumentTypesList(value: Array<string>): MetricsRequest;
+  clearDocumentTypesList(): MetricsRequest;
+  addDocumentTypes(value: string, index?: number): MetricsRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FeedbackMetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: FeedbackMetricsRequest): FeedbackMetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: FeedbackMetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FeedbackMetricsRequest;
-  static deserializeBinaryFromReader(message: FeedbackMetricsRequest, reader: jspb.BinaryReader): FeedbackMetricsRequest;
+  toObject(includeInstance?: boolean): MetricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: MetricsRequest): MetricsRequest.AsObject;
+  static serializeBinaryToWriter(message: MetricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): MetricsRequest;
+  static deserializeBinaryFromReader(message: MetricsRequest, reader: jspb.BinaryReader): MetricsRequest;
 }
 
-export namespace FeedbackMetricsRequest {
+export namespace MetricsRequest {
   export type AsObject = {
     startTime: number,
     endTime: number,
@@ -1395,113 +1395,37 @@ export namespace FeedbackMetricsRequest {
   }
 }
 
-export class PredictionMetricsRequest extends jspb.Message {
-  getFieldsList(): Array<string>;
-  setFieldsList(value: Array<string>): PredictionMetricsRequest;
-  clearFieldsList(): PredictionMetricsRequest;
-  addFields(value: string, index?: number): PredictionMetricsRequest;
-
-  getCountryCodesList(): Array<string>;
-  setCountryCodesList(value: Array<string>): PredictionMetricsRequest;
-  clearCountryCodesList(): PredictionMetricsRequest;
-  addCountryCodes(value: string, index?: number): PredictionMetricsRequest;
-
-  getDocumentTypesList(): Array<string>;
-  setDocumentTypesList(value: Array<string>): PredictionMetricsRequest;
-  clearDocumentTypesList(): PredictionMetricsRequest;
-  addDocumentTypes(value: string, index?: number): PredictionMetricsRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PredictionMetricsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: PredictionMetricsRequest): PredictionMetricsRequest.AsObject;
-  static serializeBinaryToWriter(message: PredictionMetricsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PredictionMetricsRequest;
-  static deserializeBinaryFromReader(message: PredictionMetricsRequest, reader: jspb.BinaryReader): PredictionMetricsRequest;
-}
-
-export namespace PredictionMetricsRequest {
-  export type AsObject = {
-    fieldsList: Array<string>,
-    countryCodesList: Array<string>,
-    documentTypesList: Array<string>,
-  }
-}
-
-export class SsnMetrics extends jspb.Message {
+export class FeedbackMetrics extends jspb.Message {
   getDocumentCount(): number;
-  setDocumentCount(value: number): SsnMetrics;
+  setDocumentCount(value: number): FeedbackMetrics;
 
-  getTrueValueCount(): number;
-  setTrueValueCount(value: number): SsnMetrics;
+  getFeedbackCount(): number;
+  setFeedbackCount(value: number): FeedbackMetrics;
 
-  getOverallCorrectnessList(): Array<Correctness>;
-  setOverallCorrectnessList(value: Array<Correctness>): SsnMetrics;
-  clearOverallCorrectnessList(): SsnMetrics;
-  addOverallCorrectness(value?: Correctness, index?: number): Correctness;
+  getOverallCorrectness(): Correctness | undefined;
+  setOverallCorrectness(value?: Correctness): FeedbackMetrics;
+  hasOverallCorrectness(): boolean;
+  clearOverallCorrectness(): FeedbackMetrics;
 
   getFieldCorrectnessList(): Array<Correctness>;
-  setFieldCorrectnessList(value: Array<Correctness>): SsnMetrics;
-  clearFieldCorrectnessList(): SsnMetrics;
+  setFieldCorrectnessList(value: Array<Correctness>): FeedbackMetrics;
+  clearFieldCorrectnessList(): FeedbackMetrics;
   addFieldCorrectness(value?: Correctness, index?: number): Correctness;
 
-  getDifferencesList(): Array<FieldsComparison>;
-  setDifferencesList(value: Array<FieldsComparison>): SsnMetrics;
-  clearDifferencesList(): SsnMetrics;
-  addDifferences(value?: FieldsComparison, index?: number): FieldsComparison;
-
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): SsnMetrics.AsObject;
-  static toObject(includeInstance: boolean, msg: SsnMetrics): SsnMetrics.AsObject;
-  static serializeBinaryToWriter(message: SsnMetrics, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): SsnMetrics;
-  static deserializeBinaryFromReader(message: SsnMetrics, reader: jspb.BinaryReader): SsnMetrics;
+  toObject(includeInstance?: boolean): FeedbackMetrics.AsObject;
+  static toObject(includeInstance: boolean, msg: FeedbackMetrics): FeedbackMetrics.AsObject;
+  static serializeBinaryToWriter(message: FeedbackMetrics, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FeedbackMetrics;
+  static deserializeBinaryFromReader(message: FeedbackMetrics, reader: jspb.BinaryReader): FeedbackMetrics;
 }
 
-export namespace SsnMetrics {
+export namespace FeedbackMetrics {
   export type AsObject = {
     documentCount: number,
-    trueValueCount: number,
-    overallCorrectnessList: Array<Correctness.AsObject>,
+    feedbackCount: number,
+    overallCorrectness?: Correctness.AsObject,
     fieldCorrectnessList: Array<Correctness.AsObject>,
-    differencesList: Array<FieldsComparison.AsObject>,
-  }
-}
-
-export class FieldsComparison extends jspb.Message {
-  getBqId(): string;
-  setBqId(value: string): FieldsComparison;
-
-  getTaskId(): string;
-  setTaskId(value: string): FieldsComparison;
-
-  getFieldName(): string;
-  setFieldName(value: string): FieldsComparison;
-
-  getTrueValue(): string;
-  setTrueValue(value: string): FieldsComparison;
-
-  getPredictionValue(): string;
-  setPredictionValue(value: string): FieldsComparison;
-
-  getResult(): boolean;
-  setResult(value: boolean): FieldsComparison;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FieldsComparison.AsObject;
-  static toObject(includeInstance: boolean, msg: FieldsComparison): FieldsComparison.AsObject;
-  static serializeBinaryToWriter(message: FieldsComparison, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FieldsComparison;
-  static deserializeBinaryFromReader(message: FieldsComparison, reader: jspb.BinaryReader): FieldsComparison;
-}
-
-export namespace FieldsComparison {
-  export type AsObject = {
-    bqId: string,
-    taskId: string,
-    fieldName: string,
-    trueValue: string,
-    predictionValue: string,
-    result: boolean,
   }
 }
 
@@ -1662,6 +1586,40 @@ export namespace AnnotationProcessMetricsResponse {
   export type AsObject = {
     documentCount: number,
     trueValueCount: number,
+    overallCorrectnessList: Array<Correctness.AsObject>,
+    fieldCorrectnessList: Array<Correctness.AsObject>,
+  }
+}
+
+export class FeedbackMetricsV2Response extends jspb.Message {
+  getDocumentCount(): number;
+  setDocumentCount(value: number): FeedbackMetricsV2Response;
+
+  getFeedbackCount(): number;
+  setFeedbackCount(value: number): FeedbackMetricsV2Response;
+
+  getOverallCorrectnessList(): Array<Correctness>;
+  setOverallCorrectnessList(value: Array<Correctness>): FeedbackMetricsV2Response;
+  clearOverallCorrectnessList(): FeedbackMetricsV2Response;
+  addOverallCorrectness(value?: Correctness, index?: number): Correctness;
+
+  getFieldCorrectnessList(): Array<Correctness>;
+  setFieldCorrectnessList(value: Array<Correctness>): FeedbackMetricsV2Response;
+  clearFieldCorrectnessList(): FeedbackMetricsV2Response;
+  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FeedbackMetricsV2Response.AsObject;
+  static toObject(includeInstance: boolean, msg: FeedbackMetricsV2Response): FeedbackMetricsV2Response.AsObject;
+  static serializeBinaryToWriter(message: FeedbackMetricsV2Response, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FeedbackMetricsV2Response;
+  static deserializeBinaryFromReader(message: FeedbackMetricsV2Response, reader: jspb.BinaryReader): FeedbackMetricsV2Response;
+}
+
+export namespace FeedbackMetricsV2Response {
+  export type AsObject = {
+    documentCount: number,
+    feedbackCount: number,
     overallCorrectnessList: Array<Correctness.AsObject>,
     fieldCorrectnessList: Array<Correctness.AsObject>,
   }

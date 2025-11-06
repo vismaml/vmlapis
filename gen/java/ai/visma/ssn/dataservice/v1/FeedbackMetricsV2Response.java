@@ -6,12 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.SsnMetrics}
+ * Protobuf type {@code ssn.dataservice.v1.FeedbackMetricsV2Response}
  */
-public final class SsnMetrics extends
+public final class FeedbackMetricsV2Response extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.SsnMetrics)
-    SsnMetricsOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FeedbackMetricsV2Response)
+    FeedbackMetricsV2ResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,29 +20,28 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      SsnMetrics.class.getName());
+      FeedbackMetricsV2Response.class.getName());
   }
-  // Use SsnMetrics.newBuilder() to construct.
-  private SsnMetrics(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use FeedbackMetricsV2Response.newBuilder() to construct.
+  private FeedbackMetricsV2Response(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private SsnMetrics() {
+  private FeedbackMetricsV2Response() {
     overallCorrectness_ = java.util.Collections.emptyList();
     fieldCorrectness_ = java.util.Collections.emptyList();
-    differences_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_SsnMetrics_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsV2Response_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_SsnMetrics_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsV2Response_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.SsnMetrics.class, ai.visma.ssn.dataservice.v1.SsnMetrics.Builder.class);
+            ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.class, ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.Builder.class);
   }
 
   public static final int DOCUMENT_COUNT_FIELD_NUMBER = 1;
@@ -56,15 +55,15 @@ private static final long serialVersionUID = 0L;
     return documentCount_;
   }
 
-  public static final int TRUE_VALUE_COUNT_FIELD_NUMBER = 2;
-  private int trueValueCount_ = 0;
+  public static final int FEEDBACK_COUNT_FIELD_NUMBER = 2;
+  private int feedbackCount_ = 0;
   /**
-   * <code>int32 true_value_count = 2 [json_name = "trueValueCount"];</code>
-   * @return The trueValueCount.
+   * <code>int32 feedback_count = 2 [json_name = "feedbackCount"];</code>
+   * @return The feedbackCount.
    */
   @java.lang.Override
-  public int getTrueValueCount() {
-    return trueValueCount_;
+  public int getFeedbackCount() {
+    return feedbackCount_;
   }
 
   public static final int OVERALL_CORRECTNESS_FIELD_NUMBER = 3;
@@ -149,47 +148,6 @@ private static final long serialVersionUID = 0L;
     return fieldCorrectness_.get(index);
   }
 
-  public static final int DIFFERENCES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison> differences_;
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison> getDifferencesList() {
-    return differences_;
-  }
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder> 
-      getDifferencesOrBuilderList() {
-    return differences_;
-  }
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  @java.lang.Override
-  public int getDifferencesCount() {
-    return differences_.size();
-  }
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.FieldsComparison getDifferences(int index) {
-    return differences_.get(index);
-  }
-  /**
-   * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder getDifferencesOrBuilder(
-      int index) {
-    return differences_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -207,17 +165,14 @@ private static final long serialVersionUID = 0L;
     if (documentCount_ != 0) {
       output.writeInt32(1, documentCount_);
     }
-    if (trueValueCount_ != 0) {
-      output.writeInt32(2, trueValueCount_);
+    if (feedbackCount_ != 0) {
+      output.writeInt32(2, feedbackCount_);
     }
     for (int i = 0; i < overallCorrectness_.size(); i++) {
       output.writeMessage(3, overallCorrectness_.get(i));
     }
     for (int i = 0; i < fieldCorrectness_.size(); i++) {
       output.writeMessage(4, fieldCorrectness_.get(i));
-    }
-    for (int i = 0; i < differences_.size(); i++) {
-      output.writeMessage(5, differences_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -232,9 +187,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, documentCount_);
     }
-    if (trueValueCount_ != 0) {
+    if (feedbackCount_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, trueValueCount_);
+        .computeInt32Size(2, feedbackCount_);
     }
     for (int i = 0; i < overallCorrectness_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -243,10 +198,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fieldCorrectness_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, fieldCorrectness_.get(i));
-    }
-    for (int i = 0; i < differences_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, differences_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -258,21 +209,19 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.SsnMetrics)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.SsnMetrics other = (ai.visma.ssn.dataservice.v1.SsnMetrics) obj;
+    ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response other = (ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response) obj;
 
     if (getDocumentCount()
         != other.getDocumentCount()) return false;
-    if (getTrueValueCount()
-        != other.getTrueValueCount()) return false;
+    if (getFeedbackCount()
+        != other.getFeedbackCount()) return false;
     if (!getOverallCorrectnessList()
         .equals(other.getOverallCorrectnessList())) return false;
     if (!getFieldCorrectnessList()
         .equals(other.getFieldCorrectnessList())) return false;
-    if (!getDifferencesList()
-        .equals(other.getDifferencesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -286,8 +235,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + DOCUMENT_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + getDocumentCount();
-    hash = (37 * hash) + TRUE_VALUE_COUNT_FIELD_NUMBER;
-    hash = (53 * hash) + getTrueValueCount();
+    hash = (37 * hash) + FEEDBACK_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getFeedbackCount();
     if (getOverallCorrectnessCount() > 0) {
       hash = (37 * hash) + OVERALL_CORRECTNESS_FIELD_NUMBER;
       hash = (53 * hash) + getOverallCorrectnessList().hashCode();
@@ -296,53 +245,49 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELD_CORRECTNESS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldCorrectnessList().hashCode();
     }
-    if (getDifferencesCount() > 0) {
-      hash = (37 * hash) + DIFFERENCES_FIELD_NUMBER;
-      hash = (53 * hash) + getDifferencesList().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -350,26 +295,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics parseFrom(
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -382,7 +327,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.SsnMetrics prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -398,26 +343,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.SsnMetrics}
+   * Protobuf type {@code ssn.dataservice.v1.FeedbackMetricsV2Response}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.SsnMetrics)
-      ai.visma.ssn.dataservice.v1.SsnMetricsOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.FeedbackMetricsV2Response)
+      ai.visma.ssn.dataservice.v1.FeedbackMetricsV2ResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_SsnMetrics_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsV2Response_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_SsnMetrics_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsV2Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.SsnMetrics.class, ai.visma.ssn.dataservice.v1.SsnMetrics.Builder.class);
+              ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.class, ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.SsnMetrics.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.newBuilder()
     private Builder() {
 
     }
@@ -432,7 +377,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       documentCount_ = 0;
-      trueValueCount_ = 0;
+      feedbackCount_ = 0;
       if (overallCorrectnessBuilder_ == null) {
         overallCorrectness_ = java.util.Collections.emptyList();
       } else {
@@ -447,30 +392,23 @@ private static final long serialVersionUID = 0L;
         fieldCorrectnessBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
-      if (differencesBuilder_ == null) {
-        differences_ = java.util.Collections.emptyList();
-      } else {
-        differences_ = null;
-        differencesBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_SsnMetrics_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsV2Response_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.SsnMetrics getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.SsnMetrics.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.SsnMetrics build() {
-      ai.visma.ssn.dataservice.v1.SsnMetrics result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response build() {
+      ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -478,15 +416,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.SsnMetrics buildPartial() {
-      ai.visma.ssn.dataservice.v1.SsnMetrics result = new ai.visma.ssn.dataservice.v1.SsnMetrics(this);
+    public ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response buildPartial() {
+      ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response result = new ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.ssn.dataservice.v1.SsnMetrics result) {
+    private void buildPartialRepeatedFields(ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response result) {
       if (overallCorrectnessBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
           overallCorrectness_ = java.util.Collections.unmodifiableList(overallCorrectness_);
@@ -505,44 +443,35 @@ private static final long serialVersionUID = 0L;
       } else {
         result.fieldCorrectness_ = fieldCorrectnessBuilder_.build();
       }
-      if (differencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
-          differences_ = java.util.Collections.unmodifiableList(differences_);
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.differences_ = differences_;
-      } else {
-        result.differences_ = differencesBuilder_.build();
-      }
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.SsnMetrics result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.documentCount_ = documentCount_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.trueValueCount_ = trueValueCount_;
+        result.feedbackCount_ = feedbackCount_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.SsnMetrics) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.SsnMetrics)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.SsnMetrics other) {
-      if (other == ai.visma.ssn.dataservice.v1.SsnMetrics.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response other) {
+      if (other == ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response.getDefaultInstance()) return this;
       if (other.getDocumentCount() != 0) {
         setDocumentCount(other.getDocumentCount());
       }
-      if (other.getTrueValueCount() != 0) {
-        setTrueValueCount(other.getTrueValueCount());
+      if (other.getFeedbackCount() != 0) {
+        setFeedbackCount(other.getFeedbackCount());
       }
       if (overallCorrectnessBuilder_ == null) {
         if (!other.overallCorrectness_.isEmpty()) {
@@ -596,32 +525,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (differencesBuilder_ == null) {
-        if (!other.differences_.isEmpty()) {
-          if (differences_.isEmpty()) {
-            differences_ = other.differences_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureDifferencesIsMutable();
-            differences_.addAll(other.differences_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.differences_.isEmpty()) {
-          if (differencesBuilder_.isEmpty()) {
-            differencesBuilder_.dispose();
-            differencesBuilder_ = null;
-            differences_ = other.differences_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-            differencesBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getDifferencesFieldBuilder() : null;
-          } else {
-            differencesBuilder_.addAllMessages(other.differences_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -654,7 +557,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              trueValueCount_ = input.readInt32();
+              feedbackCount_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -684,19 +587,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 34
-            case 42: {
-              ai.visma.ssn.dataservice.v1.FieldsComparison m =
-                  input.readMessage(
-                      ai.visma.ssn.dataservice.v1.FieldsComparison.parser(),
-                      extensionRegistry);
-              if (differencesBuilder_ == null) {
-                ensureDifferencesIsMutable();
-                differences_.add(m);
-              } else {
-                differencesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -746,34 +636,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int trueValueCount_ ;
+    private int feedbackCount_ ;
     /**
-     * <code>int32 true_value_count = 2 [json_name = "trueValueCount"];</code>
-     * @return The trueValueCount.
+     * <code>int32 feedback_count = 2 [json_name = "feedbackCount"];</code>
+     * @return The feedbackCount.
      */
     @java.lang.Override
-    public int getTrueValueCount() {
-      return trueValueCount_;
+    public int getFeedbackCount() {
+      return feedbackCount_;
     }
     /**
-     * <code>int32 true_value_count = 2 [json_name = "trueValueCount"];</code>
-     * @param value The trueValueCount to set.
+     * <code>int32 feedback_count = 2 [json_name = "feedbackCount"];</code>
+     * @param value The feedbackCount to set.
      * @return This builder for chaining.
      */
-    public Builder setTrueValueCount(int value) {
+    public Builder setFeedbackCount(int value) {
 
-      trueValueCount_ = value;
+      feedbackCount_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 true_value_count = 2 [json_name = "trueValueCount"];</code>
+     * <code>int32 feedback_count = 2 [json_name = "feedbackCount"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTrueValueCount() {
+    public Builder clearFeedbackCount() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      trueValueCount_ = 0;
+      feedbackCount_ = 0;
       onChanged();
       return this;
     }
@@ -1258,263 +1148,23 @@ private static final long serialVersionUID = 0L;
       return fieldCorrectnessBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison> differences_ =
-      java.util.Collections.emptyList();
-    private void ensureDifferencesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        differences_ = new java.util.ArrayList<ai.visma.ssn.dataservice.v1.FieldsComparison>(differences_);
-        bitField0_ |= 0x00000010;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.dataservice.v1.FieldsComparison, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder, ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder> differencesBuilder_;
-
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison> getDifferencesList() {
-      if (differencesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(differences_);
-      } else {
-        return differencesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public int getDifferencesCount() {
-      if (differencesBuilder_ == null) {
-        return differences_.size();
-      } else {
-        return differencesBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public ai.visma.ssn.dataservice.v1.FieldsComparison getDifferences(int index) {
-      if (differencesBuilder_ == null) {
-        return differences_.get(index);
-      } else {
-        return differencesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder setDifferences(
-        int index, ai.visma.ssn.dataservice.v1.FieldsComparison value) {
-      if (differencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDifferencesIsMutable();
-        differences_.set(index, value);
-        onChanged();
-      } else {
-        differencesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder setDifferences(
-        int index, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder builderForValue) {
-      if (differencesBuilder_ == null) {
-        ensureDifferencesIsMutable();
-        differences_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        differencesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder addDifferences(ai.visma.ssn.dataservice.v1.FieldsComparison value) {
-      if (differencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDifferencesIsMutable();
-        differences_.add(value);
-        onChanged();
-      } else {
-        differencesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder addDifferences(
-        int index, ai.visma.ssn.dataservice.v1.FieldsComparison value) {
-      if (differencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureDifferencesIsMutable();
-        differences_.add(index, value);
-        onChanged();
-      } else {
-        differencesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder addDifferences(
-        ai.visma.ssn.dataservice.v1.FieldsComparison.Builder builderForValue) {
-      if (differencesBuilder_ == null) {
-        ensureDifferencesIsMutable();
-        differences_.add(builderForValue.build());
-        onChanged();
-      } else {
-        differencesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder addDifferences(
-        int index, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder builderForValue) {
-      if (differencesBuilder_ == null) {
-        ensureDifferencesIsMutable();
-        differences_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        differencesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder addAllDifferences(
-        java.lang.Iterable<? extends ai.visma.ssn.dataservice.v1.FieldsComparison> values) {
-      if (differencesBuilder_ == null) {
-        ensureDifferencesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, differences_);
-        onChanged();
-      } else {
-        differencesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder clearDifferences() {
-      if (differencesBuilder_ == null) {
-        differences_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-      } else {
-        differencesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public Builder removeDifferences(int index) {
-      if (differencesBuilder_ == null) {
-        ensureDifferencesIsMutable();
-        differences_.remove(index);
-        onChanged();
-      } else {
-        differencesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public ai.visma.ssn.dataservice.v1.FieldsComparison.Builder getDifferencesBuilder(
-        int index) {
-      return getDifferencesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder getDifferencesOrBuilder(
-        int index) {
-      if (differencesBuilder_ == null) {
-        return differences_.get(index);  } else {
-        return differencesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public java.util.List<? extends ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder> 
-         getDifferencesOrBuilderList() {
-      if (differencesBuilder_ != null) {
-        return differencesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(differences_);
-      }
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public ai.visma.ssn.dataservice.v1.FieldsComparison.Builder addDifferencesBuilder() {
-      return getDifferencesFieldBuilder().addBuilder(
-          ai.visma.ssn.dataservice.v1.FieldsComparison.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public ai.visma.ssn.dataservice.v1.FieldsComparison.Builder addDifferencesBuilder(
-        int index) {
-      return getDifferencesFieldBuilder().addBuilder(
-          index, ai.visma.ssn.dataservice.v1.FieldsComparison.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.dataservice.v1.FieldsComparison differences = 5 [json_name = "differences"];</code>
-     */
-    public java.util.List<ai.visma.ssn.dataservice.v1.FieldsComparison.Builder> 
-         getDifferencesBuilderList() {
-      return getDifferencesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.dataservice.v1.FieldsComparison, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder, ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder> 
-        getDifferencesFieldBuilder() {
-      if (differencesBuilder_ == null) {
-        differencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.dataservice.v1.FieldsComparison, ai.visma.ssn.dataservice.v1.FieldsComparison.Builder, ai.visma.ssn.dataservice.v1.FieldsComparisonOrBuilder>(
-                differences_,
-                ((bitField0_ & 0x00000010) != 0),
-                getParentForChildren(),
-                isClean());
-        differences_ = null;
-      }
-      return differencesBuilder_;
-    }
-
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.SsnMetrics)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.FeedbackMetricsV2Response)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.SsnMetrics)
-  private static final ai.visma.ssn.dataservice.v1.SsnMetrics DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.FeedbackMetricsV2Response)
+  private static final ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.SsnMetrics();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response();
   }
 
-  public static ai.visma.ssn.dataservice.v1.SsnMetrics getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SsnMetrics>
-      PARSER = new com.google.protobuf.AbstractParser<SsnMetrics>() {
+  private static final com.google.protobuf.Parser<FeedbackMetricsV2Response>
+      PARSER = new com.google.protobuf.AbstractParser<FeedbackMetricsV2Response>() {
     @java.lang.Override
-    public SsnMetrics parsePartialFrom(
+    public FeedbackMetricsV2Response parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1533,17 +1183,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SsnMetrics> parser() {
+  public static com.google.protobuf.Parser<FeedbackMetricsV2Response> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SsnMetrics> getParserForType() {
+  public com.google.protobuf.Parser<FeedbackMetricsV2Response> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.SsnMetrics getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.FeedbackMetricsV2Response getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

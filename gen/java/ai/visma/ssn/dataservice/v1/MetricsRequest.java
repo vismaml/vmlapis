@@ -6,12 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.FeedbackMetricsRequest}
+ * Protobuf type {@code ssn.dataservice.v1.MetricsRequest}
  */
-public final class FeedbackMetricsRequest extends
+public final class MetricsRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.FeedbackMetricsRequest)
-    FeedbackMetricsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.MetricsRequest)
+    MetricsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,13 +20,13 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      FeedbackMetricsRequest.class.getName());
+      MetricsRequest.class.getName());
   }
-  // Use FeedbackMetricsRequest.newBuilder() to construct.
-  private FeedbackMetricsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use MetricsRequest.newBuilder() to construct.
+  private MetricsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private FeedbackMetricsRequest() {
+  private MetricsRequest() {
     fields_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     tags_ =
@@ -39,15 +39,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsRequest_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_MetricsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsRequest_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_MetricsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.class, ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.Builder.class);
+            ai.visma.ssn.dataservice.v1.MetricsRequest.class, ai.visma.ssn.dataservice.v1.MetricsRequest.Builder.class);
   }
 
   public static final int START_TIME_FIELD_NUMBER = 2;
@@ -311,10 +311,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.MetricsRequest)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest other = (ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest) obj;
+    ai.visma.ssn.dataservice.v1.MetricsRequest other = (ai.visma.ssn.dataservice.v1.MetricsRequest) obj;
 
     if (getStartTime()
         != other.getStartTime()) return false;
@@ -366,44 +366,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -411,26 +411,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.MetricsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -459,26 +459,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.FeedbackMetricsRequest}
+   * Protobuf type {@code ssn.dataservice.v1.MetricsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.FeedbackMetricsRequest)
-      ai.visma.ssn.dataservice.v1.FeedbackMetricsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.MetricsRequest)
+      ai.visma.ssn.dataservice.v1.MetricsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_MetricsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsRequest_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_MetricsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.class, ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.Builder.class);
+              ai.visma.ssn.dataservice.v1.MetricsRequest.class, ai.visma.ssn.dataservice.v1.MetricsRequest.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.MetricsRequest.newBuilder()
     private Builder() {
 
     }
@@ -508,17 +508,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_FeedbackMetricsRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_MetricsRequest_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.MetricsRequest getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.MetricsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest build() {
-      ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.MetricsRequest build() {
+      ai.visma.ssn.dataservice.v1.MetricsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -526,14 +526,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest buildPartial() {
-      ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest result = new ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest(this);
+    public ai.visma.ssn.dataservice.v1.MetricsRequest buildPartial() {
+      ai.visma.ssn.dataservice.v1.MetricsRequest result = new ai.visma.ssn.dataservice.v1.MetricsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.MetricsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.startTime_ = startTime_;
@@ -561,16 +561,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.MetricsRequest) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.MetricsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest other) {
-      if (other == ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.MetricsRequest other) {
+      if (other == ai.visma.ssn.dataservice.v1.MetricsRequest.getDefaultInstance()) return this;
       if (other.getStartTime() != 0L) {
         setStartTime(other.getStartTime());
       }
@@ -1202,23 +1202,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.FeedbackMetricsRequest)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.MetricsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.FeedbackMetricsRequest)
-  private static final ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.MetricsRequest)
+  private static final ai.visma.ssn.dataservice.v1.MetricsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.MetricsRequest();
   }
 
-  public static ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.MetricsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FeedbackMetricsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<FeedbackMetricsRequest>() {
+  private static final com.google.protobuf.Parser<MetricsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<MetricsRequest>() {
     @java.lang.Override
-    public FeedbackMetricsRequest parsePartialFrom(
+    public MetricsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1237,17 +1237,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<FeedbackMetricsRequest> parser() {
+  public static com.google.protobuf.Parser<MetricsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<FeedbackMetricsRequest> getParserForType() {
+  public com.google.protobuf.Parser<MetricsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.FeedbackMetricsRequest getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.MetricsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
