@@ -691,21 +691,21 @@
           },
           "title": "swiss qr bills detected in document"
         },
-        "purchaseLinesCandidates": {
+        "purchaseLinesDetails": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typePurchaseLine"
           },
-          "title": "purchase lines (new format - candidate-driven)"
+          "description": "Purchase lines for the document. This is a list where each field is a candidate."
         },
-        "vatDistributionItems": {
+        "vatDistributionDetails": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeVatDistribution"
           },
-          "title": "vat distribution (new format - candidate-driven)"
+          "description": "VAT distribution for the document. This is a list where each field is a candidate."
         }
       }
     },
@@ -2186,7 +2186,7 @@
           "$ref": "#/definitions/typeHotelDates",
           "title": "The hotelDates cntains check-in and check-out date candidates"
         },
-        "purchaseLinesCandidates": {
+        "purchaseLinesDetails": {
           "type": "array",
           "items": {
             "type": "object",
@@ -2194,7 +2194,7 @@
           },
           "description": "Purchase lines for the document. This is a list where each field is a candidate."
         },
-        "vatDistributionCandidates": {
+        "vatDistributionDetails": {
           "type": "array",
           "items": {
             "type": "object",

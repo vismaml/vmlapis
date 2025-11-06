@@ -138,11 +138,11 @@ namespace Ssn.Annotator.V1 {
             "ZXMYMyADKAsyFC5zc24udHlwZS5RckNvZGVEYXRhUgdxckNvZGVzEjsKDnN3",
             "aXNzX3FyX2JpbGxzGDQgAygLMhUuc3NuLnR5cGUuU3dpc3NRckJpbGxSDHN3",
             "aXNzUXJCaWxscxI1Cgtob3RlbF9kYXRlcxg1IAEoCzIULnNzbi50eXBlLkhv",
-            "dGVsRGF0ZXNSCmhvdGVsRGF0ZXMSUgoZcHVyY2hhc2VfbGluZXNfY2FuZGlk",
-            "YXRlcxg2IAMoCzIWLnNzbi50eXBlLlB1cmNoYXNlTGluZVIXcHVyY2hhc2VM",
-            "aW5lc0NhbmRpZGF0ZXMSWQobdmF0X2Rpc3RyaWJ1dGlvbl9jYW5kaWRhdGVz",
-            "GDcgAygLMhkuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uUhl2YXREaXN0cmli",
-            "dXRpb25DYW5kaWRhdGVzIl4KCERvY3VtZW50EhgKB2NvbnRlbnQYASABKAxS",
+            "dGVsRGF0ZXNSCmhvdGVsRGF0ZXMSTAoWcHVyY2hhc2VfbGluZXNfZGV0YWls",
+            "cxg4IAMoCzIWLnNzbi50eXBlLlB1cmNoYXNlTGluZVIUcHVyY2hhc2VMaW5l",
+            "c0RldGFpbHMSUwoYdmF0X2Rpc3RyaWJ1dGlvbl9kZXRhaWxzGDkgAygLMhku",
+            "c3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uUhZ2YXREaXN0cmlidXRpb25EZXRh",
+            "aWxzSgQINhA3SgQINxA4Il4KCERvY3VtZW50EhgKB2NvbnRlbnQYASABKAxS",
             "B2NvbnRlbnQSOAoGc291cmNlGAIgASgLMiAuc3NuLmFubm90YXRvci52MS5E",
             "b2N1bWVudFNvdXJjZVIGc291cmNlIisKDkRvY3VtZW50U291cmNlEhkKCGh0",
             "dHBfdXJpGAEgASgJUgdodHRwVXJpIm8KF0RvY3VtZW50UXVlc3Rpb25SZXF1",
@@ -169,7 +169,7 @@ namespace Ssn.Annotator.V1 {
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier", "Segments", "Questions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", "PurchaseLinesCandidates", "VatDistributionCandidates" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", "PurchaseLinesDetails", "VatDistributionDetails" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentQuestionRequest), global::Ssn.Annotator.V1.DocumentQuestionRequest.Parser, new[]{ "Document", "Questions" }, null, null, null, null),
@@ -1119,8 +1119,8 @@ namespace Ssn.Annotator.V1 {
       qrCodes_ = other.qrCodes_.Clone();
       swissQrBills_ = other.swissQrBills_.Clone();
       hotelDates_ = other.hotelDates_ != null ? other.hotelDates_.Clone() : null;
-      purchaseLinesCandidates_ = other.purchaseLinesCandidates_.Clone();
-      vatDistributionCandidates_ = other.vatDistributionCandidates_.Clone();
+      purchaseLinesDetails_ = other.purchaseLinesDetails_.Clone();
+      vatDistributionDetails_ = other.vatDistributionDetails_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1920,32 +1920,32 @@ namespace Ssn.Annotator.V1 {
       }
     }
 
-    /// <summary>Field number for the "purchase_lines_candidates" field.</summary>
-    public const int PurchaseLinesCandidatesFieldNumber = 54;
-    private static readonly pb::FieldCodec<global::Ssn.Type.PurchaseLine> _repeated_purchaseLinesCandidates_codec
-        = pb::FieldCodec.ForMessage(434, global::Ssn.Type.PurchaseLine.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLine> purchaseLinesCandidates_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLine>();
+    /// <summary>Field number for the "purchase_lines_details" field.</summary>
+    public const int PurchaseLinesDetailsFieldNumber = 56;
+    private static readonly pb::FieldCodec<global::Ssn.Type.PurchaseLine> _repeated_purchaseLinesDetails_codec
+        = pb::FieldCodec.ForMessage(450, global::Ssn.Type.PurchaseLine.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLine> purchaseLinesDetails_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLine>();
     /// <summary>
     /// Purchase lines for the document. This is a list where each field is a candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.PurchaseLine> PurchaseLinesCandidates {
-      get { return purchaseLinesCandidates_; }
+    public pbc::RepeatedField<global::Ssn.Type.PurchaseLine> PurchaseLinesDetails {
+      get { return purchaseLinesDetails_; }
     }
 
-    /// <summary>Field number for the "vat_distribution_candidates" field.</summary>
-    public const int VatDistributionCandidatesFieldNumber = 55;
-    private static readonly pb::FieldCodec<global::Ssn.Type.VatDistribution> _repeated_vatDistributionCandidates_codec
-        = pb::FieldCodec.ForMessage(442, global::Ssn.Type.VatDistribution.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionCandidates_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
+    /// <summary>Field number for the "vat_distribution_details" field.</summary>
+    public const int VatDistributionDetailsFieldNumber = 57;
+    private static readonly pb::FieldCodec<global::Ssn.Type.VatDistribution> _repeated_vatDistributionDetails_codec
+        = pb::FieldCodec.ForMessage(458, global::Ssn.Type.VatDistribution.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionDetails_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
     /// <summary>
     /// VAT distribution for the document. This is a list where each field is a candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.VatDistribution> VatDistributionCandidates {
-      get { return vatDistributionCandidates_; }
+    public pbc::RepeatedField<global::Ssn.Type.VatDistribution> VatDistributionDetails {
+      get { return vatDistributionDetails_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2016,8 +2016,8 @@ namespace Ssn.Annotator.V1 {
       if(!qrCodes_.Equals(other.qrCodes_)) return false;
       if(!swissQrBills_.Equals(other.swissQrBills_)) return false;
       if (!object.Equals(HotelDates, other.HotelDates)) return false;
-      if(!purchaseLinesCandidates_.Equals(other.purchaseLinesCandidates_)) return false;
-      if(!vatDistributionCandidates_.Equals(other.vatDistributionCandidates_)) return false;
+      if(!purchaseLinesDetails_.Equals(other.purchaseLinesDetails_)) return false;
+      if(!vatDistributionDetails_.Equals(other.vatDistributionDetails_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2078,8 +2078,8 @@ namespace Ssn.Annotator.V1 {
       hash ^= qrCodes_.GetHashCode();
       hash ^= swissQrBills_.GetHashCode();
       if (hotelDates_ != null) hash ^= HotelDates.GetHashCode();
-      hash ^= purchaseLinesCandidates_.GetHashCode();
-      hash ^= vatDistributionCandidates_.GetHashCode();
+      hash ^= purchaseLinesDetails_.GetHashCode();
+      hash ^= vatDistributionDetails_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2169,8 +2169,8 @@ namespace Ssn.Annotator.V1 {
         output.WriteRawTag(170, 3);
         output.WriteMessage(HotelDates);
       }
-      purchaseLinesCandidates_.WriteTo(output, _repeated_purchaseLinesCandidates_codec);
-      vatDistributionCandidates_.WriteTo(output, _repeated_vatDistributionCandidates_codec);
+      purchaseLinesDetails_.WriteTo(output, _repeated_purchaseLinesDetails_codec);
+      vatDistributionDetails_.WriteTo(output, _repeated_vatDistributionDetails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2252,8 +2252,8 @@ namespace Ssn.Annotator.V1 {
         output.WriteRawTag(170, 3);
         output.WriteMessage(HotelDates);
       }
-      purchaseLinesCandidates_.WriteTo(ref output, _repeated_purchaseLinesCandidates_codec);
-      vatDistributionCandidates_.WriteTo(ref output, _repeated_vatDistributionCandidates_codec);
+      purchaseLinesDetails_.WriteTo(ref output, _repeated_purchaseLinesDetails_codec);
+      vatDistributionDetails_.WriteTo(ref output, _repeated_vatDistributionDetails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2329,8 +2329,8 @@ namespace Ssn.Annotator.V1 {
       if (hotelDates_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HotelDates);
       }
-      size += purchaseLinesCandidates_.CalculateSize(_repeated_purchaseLinesCandidates_codec);
-      size += vatDistributionCandidates_.CalculateSize(_repeated_vatDistributionCandidates_codec);
+      size += purchaseLinesDetails_.CalculateSize(_repeated_purchaseLinesDetails_codec);
+      size += vatDistributionDetails_.CalculateSize(_repeated_vatDistributionDetails_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2417,8 +2417,8 @@ namespace Ssn.Annotator.V1 {
         }
         HotelDates.MergeFrom(other.HotelDates);
       }
-      purchaseLinesCandidates_.Add(other.purchaseLinesCandidates_);
-      vatDistributionCandidates_.Add(other.vatDistributionCandidates_);
+      purchaseLinesDetails_.Add(other.purchaseLinesDetails_);
+      vatDistributionDetails_.Add(other.vatDistributionDetails_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2659,12 +2659,12 @@ namespace Ssn.Annotator.V1 {
             input.ReadMessage(HotelDates);
             break;
           }
-          case 434: {
-            purchaseLinesCandidates_.AddEntriesFrom(input, _repeated_purchaseLinesCandidates_codec);
+          case 450: {
+            purchaseLinesDetails_.AddEntriesFrom(input, _repeated_purchaseLinesDetails_codec);
             break;
           }
-          case 442: {
-            vatDistributionCandidates_.AddEntriesFrom(input, _repeated_vatDistributionCandidates_codec);
+          case 458: {
+            vatDistributionDetails_.AddEntriesFrom(input, _repeated_vatDistributionDetails_codec);
             break;
           }
         }
@@ -2907,12 +2907,12 @@ namespace Ssn.Annotator.V1 {
             input.ReadMessage(HotelDates);
             break;
           }
-          case 434: {
-            purchaseLinesCandidates_.AddEntriesFrom(ref input, _repeated_purchaseLinesCandidates_codec);
+          case 450: {
+            purchaseLinesDetails_.AddEntriesFrom(ref input, _repeated_purchaseLinesDetails_codec);
             break;
           }
-          case 442: {
-            vatDistributionCandidates_.AddEntriesFrom(ref input, _repeated_vatDistributionCandidates_codec);
+          case 458: {
+            vatDistributionDetails_.AddEntriesFrom(ref input, _repeated_vatDistributionDetails_codec);
             break;
           }
         }

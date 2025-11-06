@@ -314,10 +314,12 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
   // The hotelDates cntains check-in and check-out date candidates
   ssn.type.HotelDates hotel_dates = 53;
+  reserved 54;
+  reserved 55;
   // Purchase lines for the document. This is a list where each field is a candidate.
-  repeated ssn.type.PurchaseLine purchase_lines_candidates = 54;
+  repeated ssn.type.PurchaseLine purchase_lines_details = 56;
   // VAT distribution for the document. This is a list where each field is a candidate.
-  repeated ssn.type.VatDistribution vat_distribution_candidates = 55;
+  repeated ssn.type.VatDistribution vat_distribution_details = 57;
 }
 
 message Document {
