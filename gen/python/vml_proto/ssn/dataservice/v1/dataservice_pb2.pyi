@@ -521,14 +521,16 @@ class CallsPerMonthResponse(_message.Message):
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
 
 class AnnotationProcessMetricsRequest(_message.Message):
-    __slots__ = ("fields", "country_codes", "document_types")
+    __slots__ = ("fields", "country_codes", "document_types", "most_recent_count")
     FIELDS_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
     DOCUMENT_TYPES_FIELD_NUMBER: _ClassVar[int]
+    MOST_RECENT_COUNT_FIELD_NUMBER: _ClassVar[int]
     fields: _containers.RepeatedScalarFieldContainer[str]
     country_codes: _containers.RepeatedScalarFieldContainer[str]
     document_types: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
+    most_recent_count: int
+    def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ..., most_recent_count: _Optional[int] = ...) -> None: ...
 
 class AnnotationProcessMetricsResponse(_message.Message):
     __slots__ = ("document_count", "true_value_count", "overall_correctness", "field_correctness")

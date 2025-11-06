@@ -159,6 +159,17 @@ private static final long serialVersionUID = 0L;
     return documentTypes_.getByteString(index);
   }
 
+  public static final int MOST_RECENT_COUNT_FIELD_NUMBER = 4;
+  private int mostRecentCount_ = 0;
+  /**
+   * <code>int32 most_recent_count = 4 [json_name = "mostRecentCount"];</code>
+   * @return The mostRecentCount.
+   */
+  @java.lang.Override
+  public int getMostRecentCount() {
+    return mostRecentCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -181,6 +192,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < documentTypes_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, documentTypes_.getRaw(i));
+    }
+    if (mostRecentCount_ != 0) {
+      output.writeInt32(4, mostRecentCount_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -215,6 +229,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getDocumentTypesList().size();
     }
+    if (mostRecentCount_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, mostRecentCount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -236,6 +254,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCountryCodesList())) return false;
     if (!getDocumentTypesList()
         .equals(other.getDocumentTypesList())) return false;
+    if (getMostRecentCount()
+        != other.getMostRecentCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -259,6 +279,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DOCUMENT_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentTypesList().hashCode();
     }
+    hash = (37 * hash) + MOST_RECENT_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getMostRecentCount();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -396,6 +418,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       documentTypes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      mostRecentCount_ = 0;
       return this;
     }
 
@@ -441,6 +464,9 @@ private static final long serialVersionUID = 0L;
         documentTypes_.makeImmutable();
         result.documentTypes_ = documentTypes_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.mostRecentCount_ = mostRecentCount_;
+      }
     }
 
     @java.lang.Override
@@ -484,6 +510,9 @@ private static final long serialVersionUID = 0L;
           documentTypes_.addAll(other.documentTypes_);
         }
         onChanged();
+      }
+      if (other.getMostRecentCount() != 0) {
+        setMostRecentCount(other.getMostRecentCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -529,6 +558,11 @@ private static final long serialVersionUID = 0L;
               documentTypes_.add(s);
               break;
             } // case 26
+            case 32: {
+              mostRecentCount_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -875,6 +909,38 @@ private static final long serialVersionUID = 0L;
       ensureDocumentTypesIsMutable();
       documentTypes_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int mostRecentCount_ ;
+    /**
+     * <code>int32 most_recent_count = 4 [json_name = "mostRecentCount"];</code>
+     * @return The mostRecentCount.
+     */
+    @java.lang.Override
+    public int getMostRecentCount() {
+      return mostRecentCount_;
+    }
+    /**
+     * <code>int32 most_recent_count = 4 [json_name = "mostRecentCount"];</code>
+     * @param value The mostRecentCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMostRecentCount(int value) {
+
+      mostRecentCount_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 most_recent_count = 4 [json_name = "mostRecentCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMostRecentCount() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      mostRecentCount_ = 0;
       onChanged();
       return this;
     }
