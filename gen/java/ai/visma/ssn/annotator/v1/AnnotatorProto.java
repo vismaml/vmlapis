@@ -114,7 +114,7 @@ public final class AnnotatorProto {
       "tureR\010features\022\022\n\004tags\030\003 \003(\tR\004tags\022\"\n\004ti" +
       "er\030\004 \001(\0162\016.ssn.type.TierR\004tier\022\032\n\010segmen" +
       "ts\030\005 \003(\tR\010segments\022\034\n\tquestions\030\006 \003(\tR\tq" +
-      "uestions\"\213\032\n\031DocumentAnnotatorResponse\0222" +
+      "uestions\"\272\033\n\031DocumentAnnotatorResponse\0222" +
       "\n\norder_date\030\001 \003(\0132\023.ssn.type.CandidateR" +
       "\torderDate\022=\n\020payment_due_date\030\002 \003(\0132\023.s" +
       "sn.type.CandidateR\016paymentDueDate\022/\n\010cur" +
@@ -197,31 +197,35 @@ public final class AnnotatorProto {
       "\003(\0132\024.ssn.type.QrCodeDataR\007qrCodes\022;\n\016sw" +
       "iss_qr_bills\0304 \003(\0132\025.ssn.type.SwissQrBil" +
       "lR\014swissQrBills\0225\n\013hotel_dates\0305 \001(\0132\024.s" +
-      "sn.type.HotelDatesR\nhotelDates\"^\n\010Docume" +
-      "nt\022\030\n\007content\030\001 \001(\014R\007content\0228\n\006source\030\002" +
-      " \001(\0132 .ssn.annotator.v1.DocumentSourceR\006" +
-      "source\"+\n\016DocumentSource\022\031\n\010http_uri\030\001 \001" +
-      "(\tR\007httpUri\"o\n\027DocumentQuestionRequest\0226" +
-      "\n\010document\030\001 \001(\0132\032.ssn.annotator.v1.Docu" +
-      "mentR\010document\022\034\n\tquestions\030\002 \003(\tR\tquest" +
-      "ions\"U\n\030DocumentQuestionResponse\0223\n\007answ" +
-      "ers\030\002 \003(\0132\031.ssn.type.AnswerCandidateR\007an" +
-      "swersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022\215\001\n\020An" +
-      "notateDocument\022*.ssn.annotator.v1.Docume" +
-      "ntAnnotatorRequest\032+.ssn.annotator.v1.Do" +
-      "cumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/doc" +
-      "ument:annotate:\001*\022\227\001\n\026AnswerDocumentQues" +
-      "tion\022).ssn.annotator.v1.DocumentQuestion" +
-      "Request\032*.ssn.annotator.v1.DocumentQuest" +
-      "ionResponse\"&\202\323\344\223\002 \"\033/v1/document:answer" +
-      "question:\001*B\210\002\n\031ai.visma.ssn.annotator.v" +
-      "1B\016AnnotatorProtoP\001Z>github.com/e-conomi" +
-      "c/vmlapis/gen/go/ssn/annotator/v1;annota" +
-      "tor\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\Annot" +
-      "ator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadata\352\002" +
-      "\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002v1*" +
-      "\001\0022\020application/json:\020application/jsonb\006" +
-      "proto3"
+      "sn.type.HotelDatesR\nhotelDates\022R\n\031purcha" +
+      "se_lines_candidates\0306 \003(\0132\026.ssn.type.Pur" +
+      "chaseLineR\027purchaseLinesCandidates\022Y\n\033va" +
+      "t_distribution_candidates\0307 \003(\0132\031.ssn.ty" +
+      "pe.VatDistributionR\031vatDistributionCandi" +
+      "dates\"^\n\010Document\022\030\n\007content\030\001 \001(\014R\007cont" +
+      "ent\0228\n\006source\030\002 \001(\0132 .ssn.annotator.v1.D" +
+      "ocumentSourceR\006source\"+\n\016DocumentSource\022" +
+      "\031\n\010http_uri\030\001 \001(\tR\007httpUri\"o\n\027DocumentQu" +
+      "estionRequest\0226\n\010document\030\001 \001(\0132\032.ssn.an" +
+      "notator.v1.DocumentR\010document\022\034\n\tquestio" +
+      "ns\030\002 \003(\tR\tquestions\"U\n\030DocumentQuestionR" +
+      "esponse\0223\n\007answers\030\002 \003(\0132\031.ssn.type.Answ" +
+      "erCandidateR\007answersJ\004\010\001\020\0022\275\002\n\021DocumentA" +
+      "nnotator\022\215\001\n\020AnnotateDocument\022*.ssn.anno" +
+      "tator.v1.DocumentAnnotatorRequest\032+.ssn." +
+      "annotator.v1.DocumentAnnotatorResponse\" " +
+      "\202\323\344\223\002\032\"\025/v1/document:annotate:\001*\022\227\001\n\026Ans" +
+      "werDocumentQuestion\022).ssn.annotator.v1.D" +
+      "ocumentQuestionRequest\032*.ssn.annotator.v" +
+      "1.DocumentQuestionResponse\"&\202\323\344\223\002 \"\033/v1/" +
+      "document:answerquestion:\001*B\210\002\n\031ai.visma." +
+      "ssn.annotator.v1B\016AnnotatorProtoP\001Z>gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/ssn/anno" +
+      "tator/v1;annotator\242\002\003SAX\252\002\020Ssn.Annotator" +
+      ".V1\312\002\020Ssn\\Annotator\\V1\342\002\034Ssn\\Annotator\\V" +
+      "1\\GPBMetadata\352\002\022Ssn::Annotator::V1\222A8\022\017\n" +
+      "\tSmartScan2\002v1*\001\0022\020application/json:\020app" +
+      "lication/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -251,7 +255,7 @@ public final class AnnotatorProto {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", "PurchaseLinesCandidates", "VatDistributionCandidates", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new

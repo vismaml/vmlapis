@@ -63,7 +63,7 @@ class GetTransactionResultsResponse(_message.Message):
     def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class Annotation(_message.Message):
-    __slots__ = ("feature", "candidates", "purchase_line_candidates", "answer_candidates", "text_annotation", "page_texts", "vat_distribution_candidates", "qr_codes", "swiss_qr_bills")
+    __slots__ = ("feature", "candidates", "purchase_line_candidates", "answer_candidates", "text_annotation", "page_texts", "vat_distribution_candidates", "qr_codes", "swiss_qr_bills", "purchase_lines_candidates", "vat_distribution_items")
     FEATURE_FIELD_NUMBER: _ClassVar[int]
     CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     PURCHASE_LINE_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
@@ -73,6 +73,8 @@ class Annotation(_message.Message):
     VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     QR_CODES_FIELD_NUMBER: _ClassVar[int]
     SWISS_QR_BILLS_FIELD_NUMBER: _ClassVar[int]
+    PURCHASE_LINES_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER: _ClassVar[int]
     feature: str
     candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.Candidate]
     purchase_line_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
@@ -82,7 +84,9 @@ class Annotation(_message.Message):
     vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
     qr_codes: _containers.RepeatedCompositeFieldContainer[_qr_pb2.QrCodeData]
     swiss_qr_bills: _containers.RepeatedCompositeFieldContainer[_qr_pb2.SwissQrBill]
-    def __init__(self, feature: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., page_texts: _Optional[_Iterable[_Union[_candidate_pb2.PageText, _Mapping]]] = ..., vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ..., qr_codes: _Optional[_Iterable[_Union[_qr_pb2.QrCodeData, _Mapping]]] = ..., swiss_qr_bills: _Optional[_Iterable[_Union[_qr_pb2.SwissQrBill, _Mapping]]] = ...) -> None: ...
+    purchase_lines_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLine]
+    vat_distribution_items: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistribution]
+    def __init__(self, feature: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., page_texts: _Optional[_Iterable[_Union[_candidate_pb2.PageText, _Mapping]]] = ..., vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ..., qr_codes: _Optional[_Iterable[_Union[_qr_pb2.QrCodeData, _Mapping]]] = ..., swiss_qr_bills: _Optional[_Iterable[_Union[_qr_pb2.SwissQrBill, _Mapping]]] = ..., purchase_lines_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLine, _Mapping]]] = ..., vat_distribution_items: _Optional[_Iterable[_Union[_candidate_pb2.VatDistribution, _Mapping]]] = ...) -> None: ...
 
 class GetTransactionStatusRequest(_message.Message):
     __slots__ = ("id", "custom_id")

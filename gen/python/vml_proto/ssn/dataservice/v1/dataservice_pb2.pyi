@@ -548,14 +548,24 @@ class CallsPerMonthResponse(_message.Message):
     calls_per_month: _containers.RepeatedCompositeFieldContainer[CallsPerMonth]
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
 
-class DeprecatedFeedbackMetrics(_message.Message):
-    __slots__ = ("document_count", "feedback_count", "overall_correctness", "field_correctness")
+class AnnotationProcessMetricsRequest(_message.Message):
+    __slots__ = ("fields", "country_codes", "document_types")
+    FIELDS_FIELD_NUMBER: _ClassVar[int]
+    COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
+    DOCUMENT_TYPES_FIELD_NUMBER: _ClassVar[int]
+    fields: _containers.RepeatedScalarFieldContainer[str]
+    country_codes: _containers.RepeatedScalarFieldContainer[str]
+    document_types: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, fields: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class AnnotationProcessMetricsResponse(_message.Message):
+    __slots__ = ("document_count", "true_value_count", "overall_correctness", "field_correctness")
     DOCUMENT_COUNT_FIELD_NUMBER: _ClassVar[int]
-    FEEDBACK_COUNT_FIELD_NUMBER: _ClassVar[int]
+    TRUE_VALUE_COUNT_FIELD_NUMBER: _ClassVar[int]
     OVERALL_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
     FIELD_CORRECTNESS_FIELD_NUMBER: _ClassVar[int]
     document_count: int
-    feedback_count: int
-    overall_correctness: Correctness
+    true_value_count: int
+    overall_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
     field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
-    def __init__(self, document_count: _Optional[int] = ..., feedback_count: _Optional[int] = ..., overall_correctness: _Optional[_Union[Correctness, _Mapping]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
+    def __init__(self, document_count: _Optional[int] = ..., true_value_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...

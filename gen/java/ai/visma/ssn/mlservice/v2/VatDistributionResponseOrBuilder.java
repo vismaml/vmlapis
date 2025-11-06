@@ -32,4 +32,28 @@ public interface VatDistributionResponseOrBuilder extends
    */
   ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistribution> 
+      getVatDistributionItemsList();
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  ai.visma.ssn.type.VatDistribution getVatDistributionItems(int index);
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  int getVatDistributionItemsCount();
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionItemsOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_items = 2 [json_name = "vatDistributionItems"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionItemsOrBuilder(
+      int index);
 }
