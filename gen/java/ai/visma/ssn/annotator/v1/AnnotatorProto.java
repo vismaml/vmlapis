@@ -197,12 +197,12 @@ public final class AnnotatorProto {
       "\003(\0132\024.ssn.type.QrCodeDataR\007qrCodes\022;\n\016sw" +
       "iss_qr_bills\0304 \003(\0132\025.ssn.type.SwissQrBil" +
       "lR\014swissQrBills\0225\n\013hotel_dates\0305 \001(\0132\024.s" +
-      "sn.type.HotelDatesR\nhotelDates\022R\n\031purcha" +
-      "se_lines_candidates\0306 \003(\0132\026.ssn.type.Pur" +
-      "chaseLineR\027purchaseLinesCandidates\022Y\n\033va" +
-      "t_distribution_candidates\0307 \003(\0132\031.ssn.ty" +
-      "pe.VatDistributionR\031vatDistributionCandi" +
-      "dates\"^\n\010Document\022\030\n\007content\030\001 \001(\014R\007cont" +
+      "sn.type.HotelDatesR\nhotelDates\022L\n\026purcha" +
+      "se_lines_details\0308 \003(\0132\026.ssn.type.Purcha" +
+      "seLineR\024purchaseLinesDetails\022S\n\030vat_dist" +
+      "ribution_details\0309 \003(\0132\031.ssn.type.VatDis" +
+      "tributionR\026vatDistributionDetailsJ\004\0106\0207J" +
+      "\004\0107\0208\"^\n\010Document\022\030\n\007content\030\001 \001(\014R\007cont" +
       "ent\0228\n\006source\030\002 \001(\0132 .ssn.annotator.v1.D" +
       "ocumentSourceR\006source\"+\n\016DocumentSource\022" +
       "\031\n\010http_uri\030\001 \001(\tR\007httpUri\"o\n\027DocumentQu" +
@@ -255,7 +255,7 @@ public final class AnnotatorProto {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", "PurchaseLinesCandidates", "VatDistributionCandidates", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", "LanguageCode", "QrCodes", "SwissQrBills", "HotelDates", "PurchaseLinesDetails", "VatDistributionDetails", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new

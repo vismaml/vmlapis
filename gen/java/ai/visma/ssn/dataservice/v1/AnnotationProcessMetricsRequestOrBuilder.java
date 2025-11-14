@@ -83,4 +83,10 @@ public interface AnnotationProcessMetricsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDocumentTypesBytes(int index);
+
+  /**
+   * <code>int32 most_recent_count = 4 [json_name = "mostRecentCount"];</code>
+   * @return The mostRecentCount.
+   */
+  int getMostRecentCount();
 }

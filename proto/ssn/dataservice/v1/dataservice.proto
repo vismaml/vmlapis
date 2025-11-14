@@ -324,6 +324,7 @@ message AnnotationProcessMetricsRequest {
   repeated string fields = 1;
   repeated string country_codes = 2;
   repeated string document_types = 3;
+  int32 most_recent_count = 4;
 }
 
 message AnnotationProcessMetricsResponse {

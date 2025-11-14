@@ -126,8 +126,12 @@ message Annotation {
   repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates (old format)
   repeated ssn.type.QrCodeData qr_codes = 8; // qr codes detected in document
   repeated ssn.type.SwissQrBill swiss_qr_bills = 9; // swiss qr bills detected in document
-  repeated ssn.type.PurchaseLine purchase_lines_candidates = 10; // purchase lines (new format - candidate-driven)
-  repeated ssn.type.VatDistribution vat_distribution_items = 11; // vat distribution (new format - candidate-driven)
+  reserved 10;
+  reserved 11;
+  // Purchase lines for the document. This is a list where each field is a candidate.
+  repeated ssn.type.PurchaseLine purchase_lines_details = 12;
+  // VAT distribution for the document. This is a list where each field is a candidate.
+  repeated ssn.type.VatDistribution vat_distribution_details = 13;
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

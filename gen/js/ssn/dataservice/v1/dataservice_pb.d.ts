@@ -1541,6 +1541,9 @@ export class AnnotationProcessMetricsRequest extends jspb.Message {
   clearDocumentTypesList(): AnnotationProcessMetricsRequest;
   addDocumentTypes(value: string, index?: number): AnnotationProcessMetricsRequest;
 
+  getMostRecentCount(): number;
+  setMostRecentCount(value: number): AnnotationProcessMetricsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AnnotationProcessMetricsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AnnotationProcessMetricsRequest): AnnotationProcessMetricsRequest.AsObject;
@@ -1554,6 +1557,7 @@ export namespace AnnotationProcessMetricsRequest {
     fieldsList: Array<string>,
     countryCodesList: Array<string>,
     documentTypesList: Array<string>,
+    mostRecentCount: number,
   }
 }
 

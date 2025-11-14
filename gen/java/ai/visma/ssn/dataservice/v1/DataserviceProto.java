@@ -515,53 +515,45 @@ public final class DataserviceProto {
       "s\022\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025Call" +
       "sPerMonthResponse\022I\n\017calls_per_month\030\001 \003" +
       "(\0132!.ssn.dataservice.v1.CallsPerMonthR\rc" +
-      "allsPerMonth\"\205\001\n\037AnnotationProcessMetric" +
+      "allsPerMonth\"\261\001\n\037AnnotationProcessMetric" +
       "sRequest\022\026\n\006fields\030\001 \003(\tR\006fields\022#\n\rcoun" +
       "try_codes\030\002 \003(\tR\014countryCodes\022%\n\016documen" +
-      "t_types\030\003 \003(\tR\rdocumentTypes\"\223\002\n Annotat" +
-      "ionProcessMetricsResponse\022%\n\016document_co" +
-      "unt\030\001 \001(\005R\rdocumentCount\022(\n\020true_value_c" +
-      "ount\030\002 \001(\005R\016trueValueCount\022P\n\023overall_co" +
-      "rrectness\030\003 \003(\0132\037.ssn.dataservice.v1.Cor" +
-      "rectnessR\022overallCorrectness\022L\n\021field_co" +
-      "rrectness\030\004 \003(\0132\037.ssn.dataservice.v1.Cor" +
-      "rectnessR\020fieldCorrectness\"\211\002\n\031FeedbackM" +
-      "etricsV2Response\022%\n\016document_count\030\001 \001(\005" +
-      "R\rdocumentCount\022%\n\016feedback_count\030\002 \001(\005R" +
-      "\rfeedbackCount\022P\n\023overall_correctness\030\003 " +
-      "\003(\0132\037.ssn.dataservice.v1.CorrectnessR\022ov" +
-      "erallCorrectness\022L\n\021field_correctness\030\004 " +
-      "\003(\0132\037.ssn.dataservice.v1.CorrectnessR\020fi" +
-      "eldCorrectness2\257\007\n\013DataService\022g\n\016Create" +
-      "Document\022).ssn.dataservice.v1.CreateDocu",
-      "mentRequest\032*.ssn.dataservice.v1.CreateD" +
-      "ocumentResponse\022a\n\014ReadDocument\022\'.ssn.da" +
-      "taservice.v1.ReadDocumentRequest\032(.ssn.d" +
-      "ataservice.v1.ReadDocumentResponse\022U\n\017Pr" +
-      "epareFeedback\022*.ssn.dataservice.v1.Prepa" +
-      "reFeedbackRequest\032\026.google.protobuf.Empt" +
-      "y\022g\n\010Feedback\022#.ssn.dataservice.v1.Feedb" +
-      "ackRequest\032\026.google.protobuf.Empty\"\036\202\323\344\223" +
-      "\002\030\"\023/v1/feedback:create:\001*\022[\n\020CalculateM" +
-      "etrics\022\".ssn.dataservice.v1.MetricsReque" +
-      "st\032#.ssn.dataservice.v1.FeedbackMetrics\022" +
-      "g\n\022CalculateMetricsV2\022\".ssn.dataservice." +
-      "v1.MetricsRequest\032-.ssn.dataservice.v1.F" +
-      "eedbackMetricsV2Response\022c\n\006Delete\022!.ssn" +
-      ".dataservice.v1.DeleteRequest\032\026.google.p" +
-      "rotobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:dele" +
-      "te:\001*\022X\n\023CallsPerMonthMetric\022\026.google.pr" +
-      "otobuf.Empty\032).ssn.dataservice.v1.CallsP" +
-      "erMonthResponse\022\216\001\n!CalculateAnnotationP" +
-      "rocessMetrics\0223.ssn.dataservice.v1.Annot" +
-      "ationProcessMetricsRequest\0324.ssn.dataser" +
-      "vice.v1.AnnotationProcessMetricsResponse" +
-      "B\335\001\n\033ai.visma.ssn.dataservice.v1B\020Datase" +
-      "rviceProtoP\001ZBgithub.com/e-conomic/vmlap" +
-      "is/gen/go/ssn/dataservice/v1;dataservice" +
-      "\242\002\003SDX\252\002\022Ssn.Dataservice.V1\312\002\022Ssn\\Datase" +
-      "rvice\\V1\342\002\036Ssn\\Dataservice\\V1\\GPBMetadat" +
-      "a\352\002\024Ssn::Dataservice::V1b\006proto3"
+      "t_types\030\003 \003(\tR\rdocumentTypes\022*\n\021most_rec" +
+      "ent_count\030\004 \001(\005R\017mostRecentCount\"\223\002\n Ann" +
+      "otationProcessMetricsResponse\022%\n\016documen" +
+      "t_count\030\001 \001(\005R\rdocumentCount\022(\n\020true_val" +
+      "ue_count\030\002 \001(\005R\016trueValueCount\022P\n\023overal" +
+      "l_correctness\030\003 \003(\0132\037.ssn.dataservice.v1" +
+      ".CorrectnessR\022overallCorrectness\022L\n\021fiel" +
+      "d_correctness\030\004 \003(\0132\037.ssn.dataservice.v1" +
+      ".CorrectnessR\020fieldCorrectness2\306\006\n\013DataS" +
+      "ervice\022g\n\016CreateDocument\022).ssn.dataservi" +
+      "ce.v1.CreateDocumentRequest\032*.ssn.datase" +
+      "rvice.v1.CreateDocumentResponse\022a\n\014ReadD" +
+      "ocument\022\'.ssn.dataservice.v1.ReadDocumen" +
+      "tRequest\032(.ssn.dataservice.v1.ReadDocume" +
+      "ntResponse\022U\n\017PrepareFeedback\022*.ssn.data" +
+      "service.v1.PrepareFeedbackRequest\032\026.goog",
+      "le.protobuf.Empty\022g\n\010Feedback\022#.ssn.data" +
+      "service.v1.FeedbackRequest\032\026.google.prot" +
+      "obuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:" +
+      "\001*\022[\n\020CalculateMetrics\022\".ssn.dataservice" +
+      ".v1.MetricsRequest\032#.ssn.dataservice.v1." +
+      "FeedbackMetrics\022c\n\006Delete\022!.ssn.dataserv" +
+      "ice.v1.DeleteRequest\032\026.google.protobuf.E" +
+      "mpty\"\036\202\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023" +
+      "CallsPerMonthMetric\022\026.google.protobuf.Em" +
+      "pty\032).ssn.dataservice.v1.CallsPerMonthRe" +
+      "sponse\022\216\001\n!CalculateAnnotationProcessMet" +
+      "rics\0223.ssn.dataservice.v1.AnnotationProc" +
+      "essMetricsRequest\0324.ssn.dataservice.v1.A" +
+      "nnotationProcessMetricsResponseB\335\001\n\033ai.v" +
+      "isma.ssn.dataservice.v1B\020DataserviceProt" +
+      "oP\001ZBgithub.com/e-conomic/vmlapis/gen/go" +
+      "/ssn/dataservice/v1;dataservice\242\002\003SDX\252\002\022" +
+      "Ssn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V1\342" +
+      "\002\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn::" +
+      "Dataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -683,7 +675,7 @@ public final class DataserviceProto {
     internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_AnnotationProcessMetricsRequest_descriptor,
-        new java.lang.String[] { "Fields", "CountryCodes", "DocumentTypes", });
+        new java.lang.String[] { "Fields", "CountryCodes", "DocumentTypes", "MostRecentCount", });
     internal_static_ssn_dataservice_v1_AnnotationProcessMetricsResponse_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_ssn_dataservice_v1_AnnotationProcessMetricsResponse_fieldAccessorTable = new
