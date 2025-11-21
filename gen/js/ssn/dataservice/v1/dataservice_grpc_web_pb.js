@@ -402,6 +402,67 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.MetricsRequest,
+ *   !proto.ssn.dataservice.v1.FeedbackMetricsV2Response>}
+ */
+const methodDescriptor_DataService_CalculateMetricsV2 = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.MetricsRequest,
+  proto.ssn.dataservice.v1.FeedbackMetricsV2Response,
+  /**
+   * @param {!proto.ssn.dataservice.v1.MetricsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.dataservice.v1.FeedbackMetricsV2Response.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.FeedbackMetricsV2Response)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.FeedbackMetricsV2Response>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.calculateMetricsV2 =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetricsV2,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.MetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.FeedbackMetricsV2Response>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.calculateMetricsV2 =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetricsV2);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */

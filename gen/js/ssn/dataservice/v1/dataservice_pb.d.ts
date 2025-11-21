@@ -1595,3 +1595,37 @@ export namespace AnnotationProcessMetricsResponse {
   }
 }
 
+export class FeedbackMetricsV2Response extends jspb.Message {
+  getDocumentCount(): number;
+  setDocumentCount(value: number): FeedbackMetricsV2Response;
+
+  getFeedbackCount(): number;
+  setFeedbackCount(value: number): FeedbackMetricsV2Response;
+
+  getOverallCorrectnessList(): Array<Correctness>;
+  setOverallCorrectnessList(value: Array<Correctness>): FeedbackMetricsV2Response;
+  clearOverallCorrectnessList(): FeedbackMetricsV2Response;
+  addOverallCorrectness(value?: Correctness, index?: number): Correctness;
+
+  getFieldCorrectnessList(): Array<Correctness>;
+  setFieldCorrectnessList(value: Array<Correctness>): FeedbackMetricsV2Response;
+  clearFieldCorrectnessList(): FeedbackMetricsV2Response;
+  addFieldCorrectness(value?: Correctness, index?: number): Correctness;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FeedbackMetricsV2Response.AsObject;
+  static toObject(includeInstance: boolean, msg: FeedbackMetricsV2Response): FeedbackMetricsV2Response.AsObject;
+  static serializeBinaryToWriter(message: FeedbackMetricsV2Response, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FeedbackMetricsV2Response;
+  static deserializeBinaryFromReader(message: FeedbackMetricsV2Response, reader: jspb.BinaryReader): FeedbackMetricsV2Response;
+}
+
+export namespace FeedbackMetricsV2Response {
+  export type AsObject = {
+    documentCount: number,
+    feedbackCount: number,
+    overallCorrectnessList: Array<Correctness.AsObject>,
+    fieldCorrectnessList: Array<Correctness.AsObject>,
+  }
+}
+

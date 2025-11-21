@@ -64,6 +64,8 @@ namespace Ssn.Dataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Dataservice.V1.FeedbackMetrics> __Marshaller_ssn_dataservice_v1_FeedbackMetrics = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Dataservice.V1.FeedbackMetrics.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Dataservice.V1.FeedbackMetricsV2Response> __Marshaller_ssn_dataservice_v1_FeedbackMetricsV2Response = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Dataservice.V1.FeedbackMetricsV2Response.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Dataservice.V1.DeleteRequest> __Marshaller_ssn_dataservice_v1_DeleteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Dataservice.V1.DeleteRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Dataservice.V1.CallsPerMonthResponse> __Marshaller_ssn_dataservice_v1_CallsPerMonthResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Dataservice.V1.CallsPerMonthResponse.Parser));
@@ -111,6 +113,14 @@ namespace Ssn.Dataservice.V1 {
         "CalculateMetrics",
         __Marshaller_ssn_dataservice_v1_MetricsRequest,
         __Marshaller_ssn_dataservice_v1_FeedbackMetrics);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Dataservice.V1.MetricsRequest, global::Ssn.Dataservice.V1.FeedbackMetricsV2Response> __Method_CalculateMetricsV2 = new grpc::Method<global::Ssn.Dataservice.V1.MetricsRequest, global::Ssn.Dataservice.V1.FeedbackMetricsV2Response>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CalculateMetricsV2",
+        __Marshaller_ssn_dataservice_v1_MetricsRequest,
+        __Marshaller_ssn_dataservice_v1_FeedbackMetricsV2Response);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Dataservice.V1.DeleteRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Delete = new grpc::Method<global::Ssn.Dataservice.V1.DeleteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -178,6 +188,12 @@ namespace Ssn.Dataservice.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Dataservice.V1.FeedbackMetrics> CalculateMetrics(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Dataservice.V1.FeedbackMetricsV2Response> CalculateMetricsV2(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -358,6 +374,26 @@ namespace Ssn.Dataservice.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateMetrics, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Dataservice.V1.FeedbackMetricsV2Response CalculateMetricsV2(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CalculateMetricsV2(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Dataservice.V1.FeedbackMetricsV2Response CalculateMetricsV2(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CalculateMetricsV2, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Dataservice.V1.FeedbackMetricsV2Response> CalculateMetricsV2Async(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CalculateMetricsV2Async(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Dataservice.V1.FeedbackMetricsV2Response> CalculateMetricsV2Async(global::Ssn.Dataservice.V1.MetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CalculateMetricsV2, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Delete(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Delete(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -436,6 +472,7 @@ namespace Ssn.Dataservice.V1 {
           .AddMethod(__Method_PrepareFeedback, serviceImpl.PrepareFeedback)
           .AddMethod(__Method_Feedback, serviceImpl.Feedback)
           .AddMethod(__Method_CalculateMetrics, serviceImpl.CalculateMetrics)
+          .AddMethod(__Method_CalculateMetricsV2, serviceImpl.CalculateMetricsV2)
           .AddMethod(__Method_Delete, serviceImpl.Delete)
           .AddMethod(__Method_CallsPerMonthMetric, serviceImpl.CallsPerMonthMetric)
           .AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl.CalculateAnnotationProcessMetrics).Build();
@@ -453,6 +490,7 @@ namespace Ssn.Dataservice.V1 {
       serviceBinder.AddMethod(__Method_PrepareFeedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.PrepareFeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PrepareFeedback));
       serviceBinder.AddMethod(__Method_Feedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.FeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Feedback));
       serviceBinder.AddMethod(__Method_CalculateMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.MetricsRequest, global::Ssn.Dataservice.V1.FeedbackMetrics>(serviceImpl.CalculateMetrics));
+      serviceBinder.AddMethod(__Method_CalculateMetricsV2, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.MetricsRequest, global::Ssn.Dataservice.V1.FeedbackMetricsV2Response>(serviceImpl.CalculateMetricsV2));
       serviceBinder.AddMethod(__Method_Delete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.DeleteRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Delete));
       serviceBinder.AddMethod(__Method_CallsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthMetric));
       serviceBinder.AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest, global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse>(serviceImpl.CalculateAnnotationProcessMetrics));

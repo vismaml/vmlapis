@@ -77,6 +77,26 @@ func (mr *MockDataServiceClientMockRecorder) CalculateMetrics(ctx, in interface{
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetrics", reflect.TypeOf((*MockDataServiceClient)(nil).CalculateMetrics), varargs...)
 }
 
+// CalculateMetricsV2 mocks base method.
+func (m *MockDataServiceClient) CalculateMetricsV2(ctx context.Context, in *dataservice.MetricsRequest, opts ...grpc.CallOption) (*dataservice.FeedbackMetricsV2Response, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CalculateMetricsV2", varargs...)
+	ret0, _ := ret[0].(*dataservice.FeedbackMetricsV2Response)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CalculateMetricsV2 indicates an expected call of CalculateMetricsV2.
+func (mr *MockDataServiceClientMockRecorder) CalculateMetricsV2(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetricsV2", reflect.TypeOf((*MockDataServiceClient)(nil).CalculateMetricsV2), varargs...)
+}
+
 // CallsPerMonthMetric mocks base method.
 func (m *MockDataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
@@ -248,6 +268,21 @@ func (m *MockDataServiceServer) CalculateMetrics(arg0 context.Context, arg1 *dat
 func (mr *MockDataServiceServerMockRecorder) CalculateMetrics(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetrics", reflect.TypeOf((*MockDataServiceServer)(nil).CalculateMetrics), arg0, arg1)
+}
+
+// CalculateMetricsV2 mocks base method.
+func (m *MockDataServiceServer) CalculateMetricsV2(arg0 context.Context, arg1 *dataservice.MetricsRequest) (*dataservice.FeedbackMetricsV2Response, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CalculateMetricsV2", arg0, arg1)
+	ret0, _ := ret[0].(*dataservice.FeedbackMetricsV2Response)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CalculateMetricsV2 indicates an expected call of CalculateMetricsV2.
+func (mr *MockDataServiceServerMockRecorder) CalculateMetricsV2(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CalculateMetricsV2", reflect.TypeOf((*MockDataServiceServer)(nil).CalculateMetricsV2), arg0, arg1)
 }
 
 // CallsPerMonthMetric mocks base method.

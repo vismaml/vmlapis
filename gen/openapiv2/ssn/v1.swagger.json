@@ -2340,6 +2340,33 @@
         }
       }
     },
+    "v1FeedbackMetricsV2Response": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "feedbackCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Correctness"
+          }
+        }
+      }
+    },
     "v1FeedbackRequest": {
       "type": "object",
       "properties": {

@@ -28,6 +28,7 @@ service DataService {
     };
   }
   rpc CalculateMetrics(MetricsRequest) returns (FeedbackMetrics);
+  rpc CalculateMetricsV2(MetricsRequest) returns (FeedbackMetricsV2Response);
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/feedback:delete"
@@ -329,6 +330,13 @@ message AnnotationProcessMetricsRequest {
 message AnnotationProcessMetricsResponse {
   int32 document_count = 1;
   int32 true_value_count = 2;
+  repeated Correctness overall_correctness = 3;
+  repeated Correctness field_correctness = 4;
+}
+
+message FeedbackMetricsV2Response {
+  int32 document_count = 1;
+  int32 feedback_count = 2;
   repeated Correctness overall_correctness = 3;
   repeated Correctness field_correctness = 4;
 }
