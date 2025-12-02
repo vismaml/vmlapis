@@ -5,6 +5,7 @@ package ssn.annotator.v1;
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/hotel_dates.proto";
 import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
@@ -139,6 +140,11 @@ message Feature {
     QR_CODES = 48;
     // Swiss QR bill
     SWISS_QR_BILLS = 49;
+    // Series of automated verifications and consistency checks
+    // on the document.
+    VERIFIED = 50;
+    // Hotel dates including check-in and check-out dates
+    HOTEL_DATES = 51;
   }
   // The feature type.
   Type type = 1;
@@ -306,6 +312,14 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.QrCodeData qr_codes = 51;
   // Swiss QR bills detected in the document
   repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
+  // The hotelDates cntains check-in and check-out date candidates
+  ssn.type.HotelDates hotel_dates = 53;
+  reserved 54;
+  reserved 55;
+  // Purchase lines for the document. This is a list where each field is a candidate.
+  repeated ssn.type.PurchaseLine purchase_lines_details = 56;
+  // VAT distribution for the document. This is a list where each field is a candidate.
+  repeated ssn.type.VatDistribution vat_distribution_details = 57;
 }
 
 message Document {

@@ -350,3 +350,165 @@ export namespace DocumentMetadata {
   }
 }
 
+export class PurchaseLine extends jspb.Message {
+  getPageRef(): number;
+  setPageRef(value: number): PurchaseLine;
+
+  getCodeList(): Array<Candidate>;
+  setCodeList(value: Array<Candidate>): PurchaseLine;
+  clearCodeList(): PurchaseLine;
+  addCode(value?: Candidate, index?: number): Candidate;
+
+  getDescriptionList(): Array<Candidate>;
+  setDescriptionList(value: Array<Candidate>): PurchaseLine;
+  clearDescriptionList(): PurchaseLine;
+  addDescription(value?: Candidate, index?: number): Candidate;
+
+  getQuantityList(): Array<Candidate>;
+  setQuantityList(value: Array<Candidate>): PurchaseLine;
+  clearQuantityList(): PurchaseLine;
+  addQuantity(value?: Candidate, index?: number): Candidate;
+
+  getItemNumberList(): Array<Candidate>;
+  setItemNumberList(value: Array<Candidate>): PurchaseLine;
+  clearItemNumberList(): PurchaseLine;
+  addItemNumber(value?: Candidate, index?: number): Candidate;
+
+  getUnitList(): Array<Candidate>;
+  setUnitList(value: Array<Candidate>): PurchaseLine;
+  clearUnitList(): PurchaseLine;
+  addUnit(value?: Candidate, index?: number): Candidate;
+
+  getTotalDiscountList(): Array<Candidate>;
+  setTotalDiscountList(value: Array<Candidate>): PurchaseLine;
+  clearTotalDiscountList(): PurchaseLine;
+  addTotalDiscount(value?: Candidate, index?: number): Candidate;
+
+  getPercentageDiscountList(): Array<Candidate>;
+  setPercentageDiscountList(value: Array<Candidate>): PurchaseLine;
+  clearPercentageDiscountList(): PurchaseLine;
+  addPercentageDiscount(value?: Candidate, index?: number): Candidate;
+
+  getTotalInclVatList(): Array<Candidate>;
+  setTotalInclVatList(value: Array<Candidate>): PurchaseLine;
+  clearTotalInclVatList(): PurchaseLine;
+  addTotalInclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalExclVatList(): Array<Candidate>;
+  setTotalExclVatList(value: Array<Candidate>): PurchaseLine;
+  clearTotalExclVatList(): PurchaseLine;
+  addTotalExclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalVatList(): Array<Candidate>;
+  setTotalVatList(value: Array<Candidate>): PurchaseLine;
+  clearTotalVatList(): PurchaseLine;
+  addTotalVat(value?: Candidate, index?: number): Candidate;
+
+  getPercentageVatList(): Array<Candidate>;
+  setPercentageVatList(value: Array<Candidate>): PurchaseLine;
+  clearPercentageVatList(): PurchaseLine;
+  addPercentageVat(value?: Candidate, index?: number): Candidate;
+
+  getUnitPriceInclVatList(): Array<Candidate>;
+  setUnitPriceInclVatList(value: Array<Candidate>): PurchaseLine;
+  clearUnitPriceInclVatList(): PurchaseLine;
+  addUnitPriceInclVat(value?: Candidate, index?: number): Candidate;
+
+  getUnitPriceExclVatList(): Array<Candidate>;
+  setUnitPriceExclVatList(value: Array<Candidate>): PurchaseLine;
+  clearUnitPriceExclVatList(): PurchaseLine;
+  addUnitPriceExclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalList(): Array<Candidate>;
+  setTotalList(value: Array<Candidate>): PurchaseLine;
+  clearTotalList(): PurchaseLine;
+  addTotal(value?: Candidate, index?: number): Candidate;
+
+  getUnitPriceList(): Array<Candidate>;
+  setUnitPriceList(value: Array<Candidate>): PurchaseLine;
+  clearUnitPriceList(): PurchaseLine;
+  addUnitPrice(value?: Candidate, index?: number): Candidate;
+
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): PurchaseLine;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): PurchaseLine;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PurchaseLine.AsObject;
+  static toObject(includeInstance: boolean, msg: PurchaseLine): PurchaseLine.AsObject;
+  static serializeBinaryToWriter(message: PurchaseLine, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PurchaseLine;
+  static deserializeBinaryFromReader(message: PurchaseLine, reader: jspb.BinaryReader): PurchaseLine;
+}
+
+export namespace PurchaseLine {
+  export type AsObject = {
+    pageRef: number,
+    codeList: Array<Candidate.AsObject>,
+    descriptionList: Array<Candidate.AsObject>,
+    quantityList: Array<Candidate.AsObject>,
+    itemNumberList: Array<Candidate.AsObject>,
+    unitList: Array<Candidate.AsObject>,
+    totalDiscountList: Array<Candidate.AsObject>,
+    percentageDiscountList: Array<Candidate.AsObject>,
+    totalInclVatList: Array<Candidate.AsObject>,
+    totalExclVatList: Array<Candidate.AsObject>,
+    totalVatList: Array<Candidate.AsObject>,
+    percentageVatList: Array<Candidate.AsObject>,
+    unitPriceInclVatList: Array<Candidate.AsObject>,
+    unitPriceExclVatList: Array<Candidate.AsObject>,
+    totalList: Array<Candidate.AsObject>,
+    unitPriceList: Array<Candidate.AsObject>,
+    modelMetadata?: ModelSpec.AsObject,
+  }
+}
+
+export class VatDistribution extends jspb.Message {
+  getPageRef(): number;
+  setPageRef(value: number): VatDistribution;
+
+  getPercentageList(): Array<Candidate>;
+  setPercentageList(value: Array<Candidate>): VatDistribution;
+  clearPercentageList(): VatDistribution;
+  addPercentage(value?: Candidate, index?: number): Candidate;
+
+  getTotalInclVatList(): Array<Candidate>;
+  setTotalInclVatList(value: Array<Candidate>): VatDistribution;
+  clearTotalInclVatList(): VatDistribution;
+  addTotalInclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalExclVatList(): Array<Candidate>;
+  setTotalExclVatList(value: Array<Candidate>): VatDistribution;
+  clearTotalExclVatList(): VatDistribution;
+  addTotalExclVat(value?: Candidate, index?: number): Candidate;
+
+  getTotalVatList(): Array<Candidate>;
+  setTotalVatList(value: Array<Candidate>): VatDistribution;
+  clearTotalVatList(): VatDistribution;
+  addTotalVat(value?: Candidate, index?: number): Candidate;
+
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): VatDistribution;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): VatDistribution;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatDistribution.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistribution): VatDistribution.AsObject;
+  static serializeBinaryToWriter(message: VatDistribution, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistribution;
+  static deserializeBinaryFromReader(message: VatDistribution, reader: jspb.BinaryReader): VatDistribution;
+}
+
+export namespace VatDistribution {
+  export type AsObject = {
+    pageRef: number,
+    percentageList: Array<Candidate.AsObject>,
+    totalInclVatList: Array<Candidate.AsObject>,
+    totalExclVatList: Array<Candidate.AsObject>,
+    totalVatList: Array<Candidate.AsObject>,
+    modelMetadata?: ModelSpec.AsObject,
+  }
+}
+

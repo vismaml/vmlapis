@@ -26,6 +26,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
+var ssn_type_hotel_dates_pb = require('../../../ssn/type/hotel_dates_pb.js')
+
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')

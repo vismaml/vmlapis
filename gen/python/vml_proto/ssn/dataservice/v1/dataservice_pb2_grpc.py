@@ -40,6 +40,11 @@ class DataServiceStub(object):
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
                 _registered_method=True)
+        self.CalculateMetricsV2 = channel.unary_unary(
+                '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsV2Response.FromString,
+                _registered_method=True)
         self.Delete = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/Delete',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
@@ -49,6 +54,11 @@ class DataServiceStub(object):
                 '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
+                _registered_method=True)
+        self.CalculateAnnotationProcessMetrics = channel.unary_unary(
+                '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.FromString,
                 _registered_method=True)
 
 
@@ -86,6 +96,12 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CalculateMetricsV2(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Delete(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -93,6 +109,12 @@ class DataServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CallsPerMonthMetric(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CalculateAnnotationProcessMetrics(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -126,6 +148,11 @@ def add_DataServiceServicer_to_server(servicer, server):
                     request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.SerializeToString,
             ),
+            'CalculateMetricsV2': grpc.unary_unary_rpc_method_handler(
+                    servicer.CalculateMetricsV2,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsV2Response.SerializeToString,
+            ),
             'Delete': grpc.unary_unary_rpc_method_handler(
                     servicer.Delete,
                     request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeleteRequest.FromString,
@@ -135,6 +162,11 @@ def add_DataServiceServicer_to_server(servicer, server):
                     servicer.CallsPerMonthMetric,
                     request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
+            ),
+            'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
+                    servicer.CalculateAnnotationProcessMetrics,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -283,6 +315,33 @@ class DataService(object):
             _registered_method=True)
 
     @staticmethod
+    def CalculateMetricsV2(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/CalculateMetricsV2',
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetricsV2Response.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
     def Delete(request,
             target,
             options=(),
@@ -326,6 +385,33 @@ class DataService(object):
             '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CalculateAnnotationProcessMetrics(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsResponse.FromString,
             options,
             channel_credentials,
             insecure,

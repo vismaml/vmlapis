@@ -1,4 +1,5 @@
 from google.type import date_pb2 as _date_pb2
+from ssn.annotator.v1 import annotator_pb2 as _annotator_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
 from ssn.type import text_annotation_pb2 as _text_annotation_pb2
 from google.protobuf.internal import containers as _containers
@@ -214,10 +215,12 @@ class PurchaseLinesRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ...) -> None: ...
 
 class PurchaseLinesResponse(_message.Message):
-    __slots__ = ("purchase_lines",)
+    __slots__ = ("purchase_lines", "purchase_lines_items")
     PURCHASE_LINES_FIELD_NUMBER: _ClassVar[int]
+    PURCHASE_LINES_ITEMS_FIELD_NUMBER: _ClassVar[int]
     purchase_lines: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
-    def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...
+    purchase_lines_items: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLine]
+    def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., purchase_lines_items: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLine, _Mapping]]] = ...) -> None: ...
 
 class DocQARequest(_message.Message):
     __slots__ = ("text_annotation", "image", "questions")
@@ -246,7 +249,33 @@ class VatDistributionRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., country_code: _Optional[str] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class VatDistributionResponse(_message.Message):
-    __slots__ = ("vat_distribution_candidates",)
+    __slots__ = ("vat_distribution_candidates", "vat_distribution_items")
     VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    VAT_DISTRIBUTION_ITEMS_FIELD_NUMBER: _ClassVar[int]
     vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
-    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...
+    vat_distribution_items: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistribution]
+    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ..., vat_distribution_items: _Optional[_Iterable[_Union[_candidate_pb2.VatDistribution, _Mapping]]] = ...) -> None: ...
+
+class SmartscanUltraRequest(_message.Message):
+    __slots__ = ("document_annotator_response", "images")
+    DOCUMENT_ANNOTATOR_RESPONSE_FIELD_NUMBER: _ClassVar[int]
+    IMAGES_FIELD_NUMBER: _ClassVar[int]
+    document_annotator_response: _annotator_pb2.DocumentAnnotatorResponse
+    images: _containers.RepeatedScalarFieldContainer[bytes]
+    def __init__(self, document_annotator_response: _Optional[_Union[_annotator_pb2.DocumentAnnotatorResponse, _Mapping]] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
+
+class SmartscanUltraResponse(_message.Message):
+    __slots__ = ("document_annotator_response", "ultra_metadata")
+    DOCUMENT_ANNOTATOR_RESPONSE_FIELD_NUMBER: _ClassVar[int]
+    ULTRA_METADATA_FIELD_NUMBER: _ClassVar[int]
+    document_annotator_response: _annotator_pb2.DocumentAnnotatorResponse
+    ultra_metadata: UltraMetadata
+    def __init__(self, document_annotator_response: _Optional[_Union[_annotator_pb2.DocumentAnnotatorResponse, _Mapping]] = ..., ultra_metadata: _Optional[_Union[UltraMetadata, _Mapping]] = ...) -> None: ...
+
+class UltraMetadata(_message.Message):
+    __slots__ = ("total_tokens", "prompt_tokens")
+    TOTAL_TOKENS_FIELD_NUMBER: _ClassVar[int]
+    PROMPT_TOKENS_FIELD_NUMBER: _ClassVar[int]
+    total_tokens: int
+    prompt_tokens: int
+    def __init__(self, total_tokens: _Optional[int] = ..., prompt_tokens: _Optional[int] = ...) -> None: ...

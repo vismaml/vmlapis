@@ -27,6 +27,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
+var ssn_type_hotel_dates_pb = require('../../../ssn/type/hotel_dates_pb.js');
+goog.object.extend(proto, ssn_type_hotel_dates_pb);
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js');
 goog.object.extend(proto, ssn_type_qr_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
@@ -377,7 +379,9 @@ proto.ssn.annotator.v1.Feature.Type = {
   VAT_DISTRIBUTION: 46,
   LANGUAGE_CODE: 47,
   QR_CODES: 48,
-  SWISS_QR_BILLS: 49
+  SWISS_QR_BILLS: 49,
+  VERIFIED: 50,
+  HOTEL_DATES: 51
 };
 
 /**
@@ -828,7 +832,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57];
 
 
 
@@ -959,7 +963,12 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     qrCodesList: jspb.Message.toObjectList(msg.getQrCodesList(),
     ssn_type_qr_pb.QrCodeData.toObject, includeInstance),
     swissQrBillsList: jspb.Message.toObjectList(msg.getSwissQrBillsList(),
-    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance)
+    ssn_type_qr_pb.SwissQrBill.toObject, includeInstance),
+    hotelDates: (f = msg.getHotelDates()) && ssn_type_hotel_dates_pb.HotelDates.toObject(includeInstance, f),
+    purchaseLinesDetailsList: jspb.Message.toObjectList(msg.getPurchaseLinesDetailsList(),
+    ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance),
+    vatDistributionDetailsList: jspb.Message.toObjectList(msg.getVatDistributionDetailsList(),
+    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1252,6 +1261,21 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_qr_pb.SwissQrBill;
       reader.readMessage(value,ssn_type_qr_pb.SwissQrBill.deserializeBinaryFromReader);
       msg.addSwissQrBills(value);
+      break;
+    case 53:
+      var value = new ssn_type_hotel_dates_pb.HotelDates;
+      reader.readMessage(value,ssn_type_hotel_dates_pb.HotelDates.deserializeBinaryFromReader);
+      msg.setHotelDates(value);
+      break;
+    case 56:
+      var value = new ssn_type_candidate_pb.PurchaseLine;
+      reader.readMessage(value,ssn_type_candidate_pb.PurchaseLine.deserializeBinaryFromReader);
+      msg.addPurchaseLinesDetails(value);
+      break;
+    case 57:
+      var value = new ssn_type_candidate_pb.VatDistribution;
+      reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
+      msg.addVatDistributionDetails(value);
       break;
     default:
       reader.skipField();
@@ -1693,6 +1717,30 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       52,
       f,
       ssn_type_qr_pb.SwissQrBill.serializeBinaryToWriter
+    );
+  }
+  f = message.getHotelDates();
+  if (f != null) {
+    writer.writeMessage(
+      53,
+      f,
+      ssn_type_hotel_dates_pb.HotelDates.serializeBinaryToWriter
+    );
+  }
+  f = message.getPurchaseLinesDetailsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      56,
+      f,
+      ssn_type_candidate_pb.PurchaseLine.serializeBinaryToWriter
+    );
+  }
+  f = message.getVatDistributionDetailsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      57,
+      f,
+      ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
   }
 };
@@ -3609,6 +3657,119 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addSwissQrBills = fun
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSwissQrBillsList = function() {
   return this.setSwissQrBillsList([]);
+};
+
+
+/**
+ * optional ssn.type.HotelDates hotel_dates = 53;
+ * @return {?proto.ssn.type.HotelDates}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getHotelDates = function() {
+  return /** @type{?proto.ssn.type.HotelDates} */ (
+    jspb.Message.getWrapperField(this, ssn_type_hotel_dates_pb.HotelDates, 53));
+};
+
+
+/**
+ * @param {?proto.ssn.type.HotelDates|undefined} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setHotelDates = function(value) {
+  return jspb.Message.setWrapperField(this, 53, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearHotelDates = function() {
+  return this.setHotelDates(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasHotelDates = function() {
+  return jspb.Message.getField(this, 53) != null;
+};
+
+
+/**
+ * repeated ssn.type.PurchaseLine purchase_lines_details = 56;
+ * @return {!Array<!proto.ssn.type.PurchaseLine>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPurchaseLinesDetailsList = function() {
+  return /** @type{!Array<!proto.ssn.type.PurchaseLine>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLine, 56));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PurchaseLine>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPurchaseLinesDetailsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 56, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PurchaseLine=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PurchaseLine}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPurchaseLinesDetails = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 56, opt_value, proto.ssn.type.PurchaseLine, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPurchaseLinesDetailsList = function() {
+  return this.setPurchaseLinesDetailsList([]);
+};
+
+
+/**
+ * repeated ssn.type.VatDistribution vat_distribution_details = 57;
+ * @return {!Array<!proto.ssn.type.VatDistribution>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionDetailsList = function() {
+  return /** @type{!Array<!proto.ssn.type.VatDistribution>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistribution, 57));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.VatDistribution>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionDetailsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 57, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.VatDistribution=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.VatDistribution}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionDetails = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 57, opt_value, proto.ssn.type.VatDistribution, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionDetailsList = function() {
+  return this.setVatDistributionDetailsList([]);
 };
 
 

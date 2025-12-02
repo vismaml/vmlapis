@@ -5,7 +5,9 @@ import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
+import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
+import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb'; // proto import: "ssn/type/tier.proto"
 import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
@@ -28,6 +30,14 @@ export class CreateTransactionRequest extends jspb.Message {
   getCustomId(): string;
   setCustomId(value: string): CreateTransactionRequest;
 
+  getTier(): ssn_type_tier_pb.Tier;
+  setTier(value: ssn_type_tier_pb.Tier): CreateTransactionRequest;
+
+  getQuestionsList(): Array<string>;
+  setQuestionsList(value: Array<string>): CreateTransactionRequest;
+  clearQuestionsList(): CreateTransactionRequest;
+  addQuestions(value: string, index?: number): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -42,6 +52,8 @@ export namespace CreateTransactionRequest {
     tagsList: Array<string>,
     featuresList: Array<string>,
     customId: string,
+    tier: ssn_type_tier_pb.Tier,
+    questionsList: Array<string>,
   }
 }
 
@@ -158,6 +170,31 @@ export class Annotation extends jspb.Message {
   clearPageTextsList(): Annotation;
   addPageTexts(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
 
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): Annotation;
+  clearVatDistributionCandidatesList(): Annotation;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
+
+  getQrCodesList(): Array<ssn_type_qr_pb.QrCodeData>;
+  setQrCodesList(value: Array<ssn_type_qr_pb.QrCodeData>): Annotation;
+  clearQrCodesList(): Annotation;
+  addQrCodes(value?: ssn_type_qr_pb.QrCodeData, index?: number): ssn_type_qr_pb.QrCodeData;
+
+  getSwissQrBillsList(): Array<ssn_type_qr_pb.SwissQrBill>;
+  setSwissQrBillsList(value: Array<ssn_type_qr_pb.SwissQrBill>): Annotation;
+  clearSwissQrBillsList(): Annotation;
+  addSwissQrBills(value?: ssn_type_qr_pb.SwissQrBill, index?: number): ssn_type_qr_pb.SwissQrBill;
+
+  getPurchaseLinesDetailsList(): Array<ssn_type_candidate_pb.PurchaseLine>;
+  setPurchaseLinesDetailsList(value: Array<ssn_type_candidate_pb.PurchaseLine>): Annotation;
+  clearPurchaseLinesDetailsList(): Annotation;
+  addPurchaseLinesDetails(value?: ssn_type_candidate_pb.PurchaseLine, index?: number): ssn_type_candidate_pb.PurchaseLine;
+
+  getVatDistributionDetailsList(): Array<ssn_type_candidate_pb.VatDistribution>;
+  setVatDistributionDetailsList(value: Array<ssn_type_candidate_pb.VatDistribution>): Annotation;
+  clearVatDistributionDetailsList(): Annotation;
+  addVatDistributionDetails(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
   static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
@@ -174,6 +211,11 @@ export namespace Annotation {
     answerCandidatesList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    qrCodesList: Array<ssn_type_qr_pb.QrCodeData.AsObject>,
+    swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
+    purchaseLinesDetailsList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
+    vatDistributionDetailsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
   }
 }
 

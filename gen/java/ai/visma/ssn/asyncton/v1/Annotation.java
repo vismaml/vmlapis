@@ -32,6 +32,11 @@ private static final long serialVersionUID = 0L;
     purchaseLineCandidates_ = java.util.Collections.emptyList();
     answerCandidates_ = java.util.Collections.emptyList();
     pageTexts_ = java.util.Collections.emptyList();
+    vatDistributionCandidates_ = java.util.Collections.emptyList();
+    qrCodes_ = java.util.Collections.emptyList();
+    swissQrBills_ = java.util.Collections.emptyList();
+    purchaseLinesDetails_ = java.util.Collections.emptyList();
+    vatDistributionDetails_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -161,7 +166,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidates_;
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -172,7 +177,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -184,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -195,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -206,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates
+   * purchase line candidates (old format)
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -377,6 +382,311 @@ private static final long serialVersionUID = 0L;
     return pageTexts_.get(index);
   }
 
+  public static final int VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_;
+  /**
+   * <pre>
+   * vat distribution candidates (old format)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionCandidatesList() {
+    return vatDistributionCandidates_;
+  }
+  /**
+   * <pre>
+   * vat distribution candidates (old format)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+      getVatDistributionCandidatesOrBuilderList() {
+    return vatDistributionCandidates_;
+  }
+  /**
+   * <pre>
+   * vat distribution candidates (old format)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  @java.lang.Override
+  public int getVatDistributionCandidatesCount() {
+    return vatDistributionCandidates_.size();
+  }
+  /**
+   * <pre>
+   * vat distribution candidates (old format)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index) {
+    return vatDistributionCandidates_.get(index);
+  }
+  /**
+   * <pre>
+   * vat distribution candidates (old format)
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+      int index) {
+    return vatDistributionCandidates_.get(index);
+  }
+
+  public static final int QR_CODES_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_;
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.QrCodeData> getQrCodesList() {
+    return qrCodes_;
+  }
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+      getQrCodesOrBuilderList() {
+    return qrCodes_;
+  }
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public int getQrCodesCount() {
+    return qrCodes_.size();
+  }
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.QrCodeData getQrCodes(int index) {
+    return qrCodes_.get(index);
+  }
+  /**
+   * <pre>
+   * qr codes detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+      int index) {
+    return qrCodes_.get(index);
+  }
+
+  public static final int SWISS_QR_BILLS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_;
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.SwissQrBill> getSwissQrBillsList() {
+    return swissQrBills_;
+  }
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+      getSwissQrBillsOrBuilderList() {
+    return swissQrBills_;
+  }
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public int getSwissQrBillsCount() {
+    return swissQrBills_.size();
+  }
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index) {
+    return swissQrBills_.get(index);
+  }
+  /**
+   * <pre>
+   * swiss qr bills detected in document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+      int index) {
+    return swissQrBills_.get(index);
+  }
+
+  public static final int PURCHASE_LINES_DETAILS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesDetails_;
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.PurchaseLine> getPurchaseLinesDetailsList() {
+    return purchaseLinesDetails_;
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+      getPurchaseLinesDetailsOrBuilderList() {
+    return purchaseLinesDetails_;
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+   */
+  @java.lang.Override
+  public int getPurchaseLinesDetailsCount() {
+    return purchaseLinesDetails_.size();
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLine getPurchaseLinesDetails(int index) {
+    return purchaseLinesDetails_.get(index);
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesDetailsOrBuilder(
+      int index) {
+    return purchaseLinesDetails_.get(index);
+  }
+
+  public static final int VAT_DISTRIBUTION_DETAILS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionDetails_;
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionDetailsList() {
+    return vatDistributionDetails_;
+  }
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionDetailsOrBuilderList() {
+    return vatDistributionDetails_;
+  }
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   */
+  @java.lang.Override
+  public int getVatDistributionDetailsCount() {
+    return vatDistributionDetails_.size();
+  }
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index) {
+    return vatDistributionDetails_.get(index);
+  }
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
+      int index) {
+    return vatDistributionDetails_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -408,6 +718,21 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < pageTexts_.size(); i++) {
       output.writeMessage(6, pageTexts_.get(i));
+    }
+    for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
+      output.writeMessage(7, vatDistributionCandidates_.get(i));
+    }
+    for (int i = 0; i < qrCodes_.size(); i++) {
+      output.writeMessage(8, qrCodes_.get(i));
+    }
+    for (int i = 0; i < swissQrBills_.size(); i++) {
+      output.writeMessage(9, swissQrBills_.get(i));
+    }
+    for (int i = 0; i < purchaseLinesDetails_.size(); i++) {
+      output.writeMessage(12, purchaseLinesDetails_.get(i));
+    }
+    for (int i = 0; i < vatDistributionDetails_.size(); i++) {
+      output.writeMessage(13, vatDistributionDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -441,6 +766,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, pageTexts_.get(i));
     }
+    for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, vatDistributionCandidates_.get(i));
+    }
+    for (int i = 0; i < qrCodes_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, qrCodes_.get(i));
+    }
+    for (int i = 0; i < swissQrBills_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, swissQrBills_.get(i));
+    }
+    for (int i = 0; i < purchaseLinesDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, purchaseLinesDetails_.get(i));
+    }
+    for (int i = 0; i < vatDistributionDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, vatDistributionDetails_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -471,6 +816,16 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPageTextsList()
         .equals(other.getPageTextsList())) return false;
+    if (!getVatDistributionCandidatesList()
+        .equals(other.getVatDistributionCandidatesList())) return false;
+    if (!getQrCodesList()
+        .equals(other.getQrCodesList())) return false;
+    if (!getSwissQrBillsList()
+        .equals(other.getSwissQrBillsList())) return false;
+    if (!getPurchaseLinesDetailsList()
+        .equals(other.getPurchaseLinesDetailsList())) return false;
+    if (!getVatDistributionDetailsList()
+        .equals(other.getVatDistributionDetailsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -503,6 +858,26 @@ private static final long serialVersionUID = 0L;
     if (getPageTextsCount() > 0) {
       hash = (37 * hash) + PAGE_TEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getPageTextsList().hashCode();
+    }
+    if (getVatDistributionCandidatesCount() > 0) {
+      hash = (37 * hash) + VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER;
+      hash = (53 * hash) + getVatDistributionCandidatesList().hashCode();
+    }
+    if (getQrCodesCount() > 0) {
+      hash = (37 * hash) + QR_CODES_FIELD_NUMBER;
+      hash = (53 * hash) + getQrCodesList().hashCode();
+    }
+    if (getSwissQrBillsCount() > 0) {
+      hash = (37 * hash) + SWISS_QR_BILLS_FIELD_NUMBER;
+      hash = (53 * hash) + getSwissQrBillsList().hashCode();
+    }
+    if (getPurchaseLinesDetailsCount() > 0) {
+      hash = (37 * hash) + PURCHASE_LINES_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaseLinesDetailsList().hashCode();
+    }
+    if (getVatDistributionDetailsCount() > 0) {
+      hash = (37 * hash) + VAT_DISTRIBUTION_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getVatDistributionDetailsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -639,6 +1014,11 @@ private static final long serialVersionUID = 0L;
         getAnswerCandidatesFieldBuilder();
         getTextAnnotationFieldBuilder();
         getPageTextsFieldBuilder();
+        getVatDistributionCandidatesFieldBuilder();
+        getQrCodesFieldBuilder();
+        getSwissQrBillsFieldBuilder();
+        getPurchaseLinesDetailsFieldBuilder();
+        getVatDistributionDetailsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -679,6 +1059,41 @@ private static final long serialVersionUID = 0L;
         pageTextsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      if (vatDistributionCandidatesBuilder_ == null) {
+        vatDistributionCandidates_ = java.util.Collections.emptyList();
+      } else {
+        vatDistributionCandidates_ = null;
+        vatDistributionCandidatesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
+      if (qrCodesBuilder_ == null) {
+        qrCodes_ = java.util.Collections.emptyList();
+      } else {
+        qrCodes_ = null;
+        qrCodesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBills_ = java.util.Collections.emptyList();
+      } else {
+        swissQrBills_ = null;
+        swissQrBillsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      if (purchaseLinesDetailsBuilder_ == null) {
+        purchaseLinesDetails_ = java.util.Collections.emptyList();
+      } else {
+        purchaseLinesDetails_ = null;
+        purchaseLinesDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
+      if (vatDistributionDetailsBuilder_ == null) {
+        vatDistributionDetails_ = java.util.Collections.emptyList();
+      } else {
+        vatDistributionDetails_ = null;
+        vatDistributionDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -747,6 +1162,51 @@ private static final long serialVersionUID = 0L;
         result.pageTexts_ = pageTexts_;
       } else {
         result.pageTexts_ = pageTextsBuilder_.build();
+      }
+      if (vatDistributionCandidatesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          vatDistributionCandidates_ = java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.vatDistributionCandidates_ = vatDistributionCandidates_;
+      } else {
+        result.vatDistributionCandidates_ = vatDistributionCandidatesBuilder_.build();
+      }
+      if (qrCodesBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          qrCodes_ = java.util.Collections.unmodifiableList(qrCodes_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.qrCodes_ = qrCodes_;
+      } else {
+        result.qrCodes_ = qrCodesBuilder_.build();
+      }
+      if (swissQrBillsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          swissQrBills_ = java.util.Collections.unmodifiableList(swissQrBills_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.swissQrBills_ = swissQrBills_;
+      } else {
+        result.swissQrBills_ = swissQrBillsBuilder_.build();
+      }
+      if (purchaseLinesDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          purchaseLinesDetails_ = java.util.Collections.unmodifiableList(purchaseLinesDetails_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.purchaseLinesDetails_ = purchaseLinesDetails_;
+      } else {
+        result.purchaseLinesDetails_ = purchaseLinesDetailsBuilder_.build();
+      }
+      if (vatDistributionDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          vatDistributionDetails_ = java.util.Collections.unmodifiableList(vatDistributionDetails_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.vatDistributionDetails_ = vatDistributionDetails_;
+      } else {
+        result.vatDistributionDetails_ = vatDistributionDetailsBuilder_.build();
       }
     }
 
@@ -889,6 +1349,136 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (vatDistributionCandidatesBuilder_ == null) {
+        if (!other.vatDistributionCandidates_.isEmpty()) {
+          if (vatDistributionCandidates_.isEmpty()) {
+            vatDistributionCandidates_ = other.vatDistributionCandidates_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureVatDistributionCandidatesIsMutable();
+            vatDistributionCandidates_.addAll(other.vatDistributionCandidates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.vatDistributionCandidates_.isEmpty()) {
+          if (vatDistributionCandidatesBuilder_.isEmpty()) {
+            vatDistributionCandidatesBuilder_.dispose();
+            vatDistributionCandidatesBuilder_ = null;
+            vatDistributionCandidates_ = other.vatDistributionCandidates_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            vatDistributionCandidatesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getVatDistributionCandidatesFieldBuilder() : null;
+          } else {
+            vatDistributionCandidatesBuilder_.addAllMessages(other.vatDistributionCandidates_);
+          }
+        }
+      }
+      if (qrCodesBuilder_ == null) {
+        if (!other.qrCodes_.isEmpty()) {
+          if (qrCodes_.isEmpty()) {
+            qrCodes_ = other.qrCodes_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureQrCodesIsMutable();
+            qrCodes_.addAll(other.qrCodes_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.qrCodes_.isEmpty()) {
+          if (qrCodesBuilder_.isEmpty()) {
+            qrCodesBuilder_.dispose();
+            qrCodesBuilder_ = null;
+            qrCodes_ = other.qrCodes_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            qrCodesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getQrCodesFieldBuilder() : null;
+          } else {
+            qrCodesBuilder_.addAllMessages(other.qrCodes_);
+          }
+        }
+      }
+      if (swissQrBillsBuilder_ == null) {
+        if (!other.swissQrBills_.isEmpty()) {
+          if (swissQrBills_.isEmpty()) {
+            swissQrBills_ = other.swissQrBills_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureSwissQrBillsIsMutable();
+            swissQrBills_.addAll(other.swissQrBills_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.swissQrBills_.isEmpty()) {
+          if (swissQrBillsBuilder_.isEmpty()) {
+            swissQrBillsBuilder_.dispose();
+            swissQrBillsBuilder_ = null;
+            swissQrBills_ = other.swissQrBills_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            swissQrBillsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getSwissQrBillsFieldBuilder() : null;
+          } else {
+            swissQrBillsBuilder_.addAllMessages(other.swissQrBills_);
+          }
+        }
+      }
+      if (purchaseLinesDetailsBuilder_ == null) {
+        if (!other.purchaseLinesDetails_.isEmpty()) {
+          if (purchaseLinesDetails_.isEmpty()) {
+            purchaseLinesDetails_ = other.purchaseLinesDetails_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensurePurchaseLinesDetailsIsMutable();
+            purchaseLinesDetails_.addAll(other.purchaseLinesDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.purchaseLinesDetails_.isEmpty()) {
+          if (purchaseLinesDetailsBuilder_.isEmpty()) {
+            purchaseLinesDetailsBuilder_.dispose();
+            purchaseLinesDetailsBuilder_ = null;
+            purchaseLinesDetails_ = other.purchaseLinesDetails_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            purchaseLinesDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getPurchaseLinesDetailsFieldBuilder() : null;
+          } else {
+            purchaseLinesDetailsBuilder_.addAllMessages(other.purchaseLinesDetails_);
+          }
+        }
+      }
+      if (vatDistributionDetailsBuilder_ == null) {
+        if (!other.vatDistributionDetails_.isEmpty()) {
+          if (vatDistributionDetails_.isEmpty()) {
+            vatDistributionDetails_ = other.vatDistributionDetails_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureVatDistributionDetailsIsMutable();
+            vatDistributionDetails_.addAll(other.vatDistributionDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.vatDistributionDetails_.isEmpty()) {
+          if (vatDistributionDetailsBuilder_.isEmpty()) {
+            vatDistributionDetailsBuilder_.dispose();
+            vatDistributionDetailsBuilder_ = null;
+            vatDistributionDetails_ = other.vatDistributionDetails_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            vatDistributionDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getVatDistributionDetailsFieldBuilder() : null;
+          } else {
+            vatDistributionDetailsBuilder_.addAllMessages(other.vatDistributionDetails_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -979,6 +1569,71 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              ai.visma.ssn.type.VatDistributionCandidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.VatDistributionCandidate.parser(),
+                      extensionRegistry);
+              if (vatDistributionCandidatesBuilder_ == null) {
+                ensureVatDistributionCandidatesIsMutable();
+                vatDistributionCandidates_.add(m);
+              } else {
+                vatDistributionCandidatesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              ai.visma.ssn.type.QrCodeData m =
+                  input.readMessage(
+                      ai.visma.ssn.type.QrCodeData.parser(),
+                      extensionRegistry);
+              if (qrCodesBuilder_ == null) {
+                ensureQrCodesIsMutable();
+                qrCodes_.add(m);
+              } else {
+                qrCodesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 74: {
+              ai.visma.ssn.type.SwissQrBill m =
+                  input.readMessage(
+                      ai.visma.ssn.type.SwissQrBill.parser(),
+                      extensionRegistry);
+              if (swissQrBillsBuilder_ == null) {
+                ensureSwissQrBillsIsMutable();
+                swissQrBills_.add(m);
+              } else {
+                swissQrBillsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 74
+            case 98: {
+              ai.visma.ssn.type.PurchaseLine m =
+                  input.readMessage(
+                      ai.visma.ssn.type.PurchaseLine.parser(),
+                      extensionRegistry);
+              if (purchaseLinesDetailsBuilder_ == null) {
+                ensurePurchaseLinesDetailsIsMutable();
+                purchaseLinesDetails_.add(m);
+              } else {
+                purchaseLinesDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
+            case 106: {
+              ai.visma.ssn.type.VatDistribution m =
+                  input.readMessage(
+                      ai.visma.ssn.type.VatDistribution.parser(),
+                      extensionRegistry);
+              if (vatDistributionDetailsBuilder_ == null) {
+                ensureVatDistributionDetailsIsMutable();
+                vatDistributionDetails_.add(m);
+              } else {
+                vatDistributionDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1414,7 +2069,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1428,7 +2083,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1442,7 +2097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1456,7 +2111,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1477,7 +2132,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1495,7 +2150,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1515,7 +2170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1536,7 +2191,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1554,7 +2209,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1572,7 +2227,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1591,7 +2246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1608,7 +2263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1625,7 +2280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1636,7 +2291,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1650,7 +2305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1665,7 +2320,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1676,7 +2331,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -1688,7 +2343,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates
+     * purchase line candidates (old format)
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2491,6 +3146,1566 @@ private static final long serialVersionUID = 0L;
         pageTexts_ = null;
       }
       return pageTextsBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_ =
+      java.util.Collections.emptyList();
+    private void ensureVatDistributionCandidatesIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        vatDistributionCandidates_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistributionCandidate>(vatDistributionCandidates_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> vatDistributionCandidatesBuilder_;
+
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionCandidatesList() {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+      } else {
+        return vatDistributionCandidatesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public int getVatDistributionCandidatesCount() {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        return vatDistributionCandidates_.size();
+      } else {
+        return vatDistributionCandidatesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        return vatDistributionCandidates_.get(index);
+      } else {
+        return vatDistributionCandidatesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder setVatDistributionCandidates(
+        int index, ai.visma.ssn.type.VatDistributionCandidate value) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.set(index, value);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder setVatDistributionCandidates(
+        int index, ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder addVatDistributionCandidates(ai.visma.ssn.type.VatDistributionCandidate value) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.add(value);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder addVatDistributionCandidates(
+        int index, ai.visma.ssn.type.VatDistributionCandidate value) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.add(index, value);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder addVatDistributionCandidates(
+        ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.add(builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder addVatDistributionCandidates(
+        int index, ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder addAllVatDistributionCandidates(
+        java.lang.Iterable<? extends ai.visma.ssn.type.VatDistributionCandidate> values) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        ensureVatDistributionCandidatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vatDistributionCandidates_);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder clearVatDistributionCandidates() {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        vatDistributionCandidates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public Builder removeVatDistributionCandidates(int index) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        ensureVatDistributionCandidatesIsMutable();
+        vatDistributionCandidates_.remove(index);
+        onChanged();
+      } else {
+        vatDistributionCandidatesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder getVatDistributionCandidatesBuilder(
+        int index) {
+      return getVatDistributionCandidatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+        int index) {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        return vatDistributionCandidates_.get(index);  } else {
+        return vatDistributionCandidatesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+         getVatDistributionCandidatesOrBuilderList() {
+      if (vatDistributionCandidatesBuilder_ != null) {
+        return vatDistributionCandidatesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+      }
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionCandidatesBuilder() {
+      return getVatDistributionCandidatesFieldBuilder().addBuilder(
+          ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionCandidatesBuilder(
+        int index) {
+      return getVatDistributionCandidatesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * vat distribution candidates (old format)
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistributionCandidate.Builder> 
+         getVatDistributionCandidatesBuilderList() {
+      return getVatDistributionCandidatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+        getVatDistributionCandidatesFieldBuilder() {
+      if (vatDistributionCandidatesBuilder_ == null) {
+        vatDistributionCandidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder>(
+                vatDistributionCandidates_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        vatDistributionCandidates_ = null;
+      }
+      return vatDistributionCandidatesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_ =
+      java.util.Collections.emptyList();
+    private void ensureQrCodesIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        qrCodes_ = new java.util.ArrayList<ai.visma.ssn.type.QrCodeData>(qrCodes_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder> qrCodesBuilder_;
+
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.QrCodeData> getQrCodesList() {
+      if (qrCodesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(qrCodes_);
+      } else {
+        return qrCodesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public int getQrCodesCount() {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.size();
+      } else {
+        return qrCodesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData getQrCodes(int index) {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.get(index);
+      } else {
+        return qrCodesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder setQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.set(index, value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder setQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.add(value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData value) {
+      if (qrCodesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureQrCodesIsMutable();
+        qrCodes_.add(index, value);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.add(builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder addQrCodes(
+        int index, ai.visma.ssn.type.QrCodeData.Builder builderForValue) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        qrCodesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder addAllQrCodes(
+        java.lang.Iterable<? extends ai.visma.ssn.type.QrCodeData> values) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, qrCodes_);
+        onChanged();
+      } else {
+        qrCodesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder clearQrCodes() {
+      if (qrCodesBuilder_ == null) {
+        qrCodes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        qrCodesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public Builder removeQrCodes(int index) {
+      if (qrCodesBuilder_ == null) {
+        ensureQrCodesIsMutable();
+        qrCodes_.remove(index);
+        onChanged();
+      } else {
+        qrCodesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder getQrCodesBuilder(
+        int index) {
+      return getQrCodesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeDataOrBuilder getQrCodesOrBuilder(
+        int index) {
+      if (qrCodesBuilder_ == null) {
+        return qrCodes_.get(index);  } else {
+        return qrCodesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.QrCodeDataOrBuilder> 
+         getQrCodesOrBuilderList() {
+      if (qrCodesBuilder_ != null) {
+        return qrCodesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(qrCodes_);
+      }
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder addQrCodesBuilder() {
+      return getQrCodesFieldBuilder().addBuilder(
+          ai.visma.ssn.type.QrCodeData.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public ai.visma.ssn.type.QrCodeData.Builder addQrCodesBuilder(
+        int index) {
+      return getQrCodesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.QrCodeData.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * qr codes detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.QrCodeData.Builder> 
+         getQrCodesBuilderList() {
+      return getQrCodesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder> 
+        getQrCodesFieldBuilder() {
+      if (qrCodesBuilder_ == null) {
+        qrCodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.QrCodeData, ai.visma.ssn.type.QrCodeData.Builder, ai.visma.ssn.type.QrCodeDataOrBuilder>(
+                qrCodes_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        qrCodes_ = null;
+      }
+      return qrCodesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_ =
+      java.util.Collections.emptyList();
+    private void ensureSwissQrBillsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        swissQrBills_ = new java.util.ArrayList<ai.visma.ssn.type.SwissQrBill>(swissQrBills_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder> swissQrBillsBuilder_;
+
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.SwissQrBill> getSwissQrBillsList() {
+      if (swissQrBillsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(swissQrBills_);
+      } else {
+        return swissQrBillsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public int getSwissQrBillsCount() {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.size();
+      } else {
+        return swissQrBillsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index) {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.get(index);
+      } else {
+        return swissQrBillsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder setSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.set(index, value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder setSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill value) {
+      if (swissQrBillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(index, value);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addSwissQrBills(
+        int index, ai.visma.ssn.type.SwissQrBill.Builder builderForValue) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder addAllSwissQrBills(
+        java.lang.Iterable<? extends ai.visma.ssn.type.SwissQrBill> values) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, swissQrBills_);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder clearSwissQrBills() {
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBills_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public Builder removeSwissQrBills(int index) {
+      if (swissQrBillsBuilder_ == null) {
+        ensureSwissQrBillsIsMutable();
+        swissQrBills_.remove(index);
+        onChanged();
+      } else {
+        swissQrBillsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder getSwissQrBillsBuilder(
+        int index) {
+      return getSwissQrBillsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
+        int index) {
+      if (swissQrBillsBuilder_ == null) {
+        return swissQrBills_.get(index);  } else {
+        return swissQrBillsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.SwissQrBillOrBuilder> 
+         getSwissQrBillsOrBuilderList() {
+      if (swissQrBillsBuilder_ != null) {
+        return swissQrBillsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(swissQrBills_);
+      }
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder addSwissQrBillsBuilder() {
+      return getSwissQrBillsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.SwissQrBill.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public ai.visma.ssn.type.SwissQrBill.Builder addSwissQrBillsBuilder(
+        int index) {
+      return getSwissQrBillsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.SwissQrBill.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * swiss qr bills detected in document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.SwissQrBill.Builder> 
+         getSwissQrBillsBuilderList() {
+      return getSwissQrBillsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder> 
+        getSwissQrBillsFieldBuilder() {
+      if (swissQrBillsBuilder_ == null) {
+        swissQrBillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.SwissQrBill, ai.visma.ssn.type.SwissQrBill.Builder, ai.visma.ssn.type.SwissQrBillOrBuilder>(
+                swissQrBills_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        swissQrBills_ = null;
+      }
+      return swissQrBillsBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesDetails_ =
+      java.util.Collections.emptyList();
+    private void ensurePurchaseLinesDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        purchaseLinesDetails_ = new java.util.ArrayList<ai.visma.ssn.type.PurchaseLine>(purchaseLinesDetails_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder> purchaseLinesDetailsBuilder_;
+
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLine> getPurchaseLinesDetailsList() {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(purchaseLinesDetails_);
+      } else {
+        return purchaseLinesDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public int getPurchaseLinesDetailsCount() {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        return purchaseLinesDetails_.size();
+      } else {
+        return purchaseLinesDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine getPurchaseLinesDetails(int index) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        return purchaseLinesDetails_.get(index);
+      } else {
+        return purchaseLinesDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder setPurchaseLinesDetails(
+        int index, ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.set(index, value);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder setPurchaseLinesDetails(
+        int index, ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder addPurchaseLinesDetails(ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.add(value);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder addPurchaseLinesDetails(
+        int index, ai.visma.ssn.type.PurchaseLine value) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.add(index, value);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder addPurchaseLinesDetails(
+        ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder addPurchaseLinesDetails(
+        int index, ai.visma.ssn.type.PurchaseLine.Builder builderForValue) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder addAllPurchaseLinesDetails(
+        java.lang.Iterable<? extends ai.visma.ssn.type.PurchaseLine> values) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        ensurePurchaseLinesDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, purchaseLinesDetails_);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder clearPurchaseLinesDetails() {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        purchaseLinesDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public Builder removePurchaseLinesDetails(int index) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        ensurePurchaseLinesDetailsIsMutable();
+        purchaseLinesDetails_.remove(index);
+        onChanged();
+      } else {
+        purchaseLinesDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder getPurchaseLinesDetailsBuilder(
+        int index) {
+      return getPurchaseLinesDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesDetailsOrBuilder(
+        int index) {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        return purchaseLinesDetails_.get(index);  } else {
+        return purchaseLinesDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+         getPurchaseLinesDetailsOrBuilderList() {
+      if (purchaseLinesDetailsBuilder_ != null) {
+        return purchaseLinesDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(purchaseLinesDetails_);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder addPurchaseLinesDetailsBuilder() {
+      return getPurchaseLinesDetailsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.PurchaseLine.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLine.Builder addPurchaseLinesDetailsBuilder(
+        int index) {
+      return getPurchaseLinesDetailsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.PurchaseLine.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLine.Builder> 
+         getPurchaseLinesDetailsBuilderList() {
+      return getPurchaseLinesDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder> 
+        getPurchaseLinesDetailsFieldBuilder() {
+      if (purchaseLinesDetailsBuilder_ == null) {
+        purchaseLinesDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.PurchaseLine, ai.visma.ssn.type.PurchaseLine.Builder, ai.visma.ssn.type.PurchaseLineOrBuilder>(
+                purchaseLinesDetails_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        purchaseLinesDetails_ = null;
+      }
+      return purchaseLinesDetailsBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionDetails_ =
+      java.util.Collections.emptyList();
+    private void ensureVatDistributionDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        vatDistributionDetails_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistribution>(vatDistributionDetails_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> vatDistributionDetailsBuilder_;
+
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution> getVatDistributionDetailsList() {
+      if (vatDistributionDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatDistributionDetails_);
+      } else {
+        return vatDistributionDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public int getVatDistributionDetailsCount() {
+      if (vatDistributionDetailsBuilder_ == null) {
+        return vatDistributionDetails_.size();
+      } else {
+        return vatDistributionDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        return vatDistributionDetails_.get(index);
+      } else {
+        return vatDistributionDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder setVatDistributionDetails(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.set(index, value);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder setVatDistributionDetails(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder addVatDistributionDetails(ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.add(value);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder addVatDistributionDetails(
+        int index, ai.visma.ssn.type.VatDistribution value) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.add(index, value);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder addVatDistributionDetails(
+        ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder addVatDistributionDetails(
+        int index, ai.visma.ssn.type.VatDistribution.Builder builderForValue) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder addAllVatDistributionDetails(
+        java.lang.Iterable<? extends ai.visma.ssn.type.VatDistribution> values) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        ensureVatDistributionDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vatDistributionDetails_);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder clearVatDistributionDetails() {
+      if (vatDistributionDetailsBuilder_ == null) {
+        vatDistributionDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public Builder removeVatDistributionDetails(int index) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        ensureVatDistributionDetailsIsMutable();
+        vatDistributionDetails_.remove(index);
+        onChanged();
+      } else {
+        vatDistributionDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder getVatDistributionDetailsBuilder(
+        int index) {
+      return getVatDistributionDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
+        int index) {
+      if (vatDistributionDetailsBuilder_ == null) {
+        return vatDistributionDetails_.get(index);  } else {
+        return vatDistributionDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+         getVatDistributionDetailsOrBuilderList() {
+      if (vatDistributionDetailsBuilder_ != null) {
+        return vatDistributionDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(vatDistributionDetails_);
+      }
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionDetailsBuilder() {
+      return getVatDistributionDetailsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public ai.visma.ssn.type.VatDistribution.Builder addVatDistributionDetailsBuilder(
+        int index) {
+      return getVatDistributionDetailsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.VatDistribution.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * VAT distribution for the document. This is a list where each field is a candidate.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatDistribution.Builder> 
+         getVatDistributionDetailsBuilderList() {
+      return getVatDistributionDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder> 
+        getVatDistributionDetailsFieldBuilder() {
+      if (vatDistributionDetailsBuilder_ == null) {
+        vatDistributionDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.VatDistribution, ai.visma.ssn.type.VatDistribution.Builder, ai.visma.ssn.type.VatDistributionOrBuilder>(
+                vatDistributionDetails_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        vatDistributionDetails_ = null;
+      }
+      return vatDistributionDetailsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.asyncton.v1.Annotation)

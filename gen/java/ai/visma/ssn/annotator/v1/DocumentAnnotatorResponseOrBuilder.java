@@ -2397,4 +2397,119 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.SwissQrBillOrBuilder getSwissQrBillsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return Whether the hotelDates field is set.
+   */
+  boolean hasHotelDates();
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   * @return The hotelDates.
+   */
+  ai.visma.ssn.type.HotelDates getHotelDates();
+  /**
+   * <pre>
+   * The hotelDates cntains check-in and check-out date candidates
+   * </pre>
+   *
+   * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
+   */
+  ai.visma.ssn.type.HotelDatesOrBuilder getHotelDatesOrBuilder();
+
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PurchaseLine> 
+      getPurchaseLinesDetailsList();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLine getPurchaseLinesDetails(int index);
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
+   */
+  int getPurchaseLinesDetailsCount();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineOrBuilder> 
+      getPurchaseLinesDetailsOrBuilderList();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineOrBuilder getPurchaseLinesDetailsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistribution> 
+      getVatDistributionDetailsList();
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   */
+  ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index);
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   */
+  int getVatDistributionDetailsCount();
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionOrBuilder> 
+      getVatDistributionDetailsOrBuilderList();
+  /**
+   * <pre>
+   * VAT distribution for the document. This is a list where each field is a candidate.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
+      int index);
 }

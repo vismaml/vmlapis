@@ -7,7 +7,9 @@ import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
+import "ssn/type/tier.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/asyncton/v1;transaction";
@@ -81,6 +83,10 @@ message CreateTransactionRequest {
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
   string custom_id = 4;
+  // Tier determines the type of the SSN model used
+  ssn.type.Tier tier = 5; // default: STANDARD
+  // Questions to ask about the document
+  repeated string questions = 6;
 }
 
 message CreateTransactionResponse {
@@ -113,10 +119,19 @@ message GetTransactionResultsResponse {
 message Annotation {
   string feature = 1; // feature name e.g. "TOTAL_INCL_VAT"
   repeated ssn.type.Candidate candidates = 2; // ssn candidates
-  repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates
+  repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates (old format)
   repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
   ssn.type.TextAnnotation text_annotation = 5; // text annotation
   repeated ssn.type.PageText page_texts = 6; // page texts
+  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 7; // vat distribution candidates (old format)
+  repeated ssn.type.QrCodeData qr_codes = 8; // qr codes detected in document
+  repeated ssn.type.SwissQrBill swiss_qr_bills = 9; // swiss qr bills detected in document
+  reserved 10;
+  reserved 11;
+  // Purchase lines for the document. This is a list where each field is a candidate.
+  repeated ssn.type.PurchaseLine purchase_lines_details = 12;
+  // VAT distribution for the document. This is a list where each field is a candidate.
+  repeated ssn.type.VatDistribution vat_distribution_details = 13;
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

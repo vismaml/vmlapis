@@ -34,12 +34,13 @@ public final class TierProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023ssn/type/tier.proto\022\010ssn.type*.\n\004Tier\022" +
-      "\013\n\007DEFAULT\020\000\022\014\n\010STANDARD\020\001\022\013\n\007PREMIUM\020\002B" +
-      "\225\001\n\021ai.visma.ssn.typeB\tTierProtoP\001Z4gith" +
-      "ub.com/e-conomic/vmlapis/gen/go/ssn/type" +
-      ";ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024S" +
-      "sn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
+      "\n\023ssn/type/tier.proto\022\010ssn.type*9\n\004Tier\022" +
+      "\013\n\007DEFAULT\020\000\022\014\n\010STANDARD\020\001\022\013\n\007PREMIUM\020\002\022" +
+      "\t\n\005ULTRA\020\003B\225\001\n\021ai.visma.ssn.typeB\tTierPr" +
+      "otoP\001Z4github.com/e-conomic/vmlapis/gen/" +
+      "go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010S" +
+      "sn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Ty" +
+      "peb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
