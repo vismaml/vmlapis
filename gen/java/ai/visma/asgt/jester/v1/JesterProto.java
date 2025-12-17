@@ -40,6 +40,16 @@ public final class JesterProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_asgt_jester_v1_SuggestionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_jester_v1_InternalSuggestSamplesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_jester_v1_InternalSuggestSamplesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_jester_v1_InternalSuggestSamplesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_jester_v1_InternalSuggestSamplesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -52,36 +62,44 @@ public final class JesterProto {
       "\n\033asgt/jester/v1/jester.proto\022\016asgt.jest" +
       "er.v1\032\024asgt/type/data.proto\032\025asgt/type/m" +
       "odel.proto\032\032asgt/type/model_type.proto\032\032" +
-      "asgt/type/prediction.proto\032\034asgt/type/ta" +
-      "rget_value.proto\032\034google/api/annotations" +
-      ".proto\032.protoc-gen-openapiv2/options/ann" +
-      "otations.proto\"u\n\022SuggestionResponse\0227\n\013" +
-      "predictions\030\001 \003(\0132\025.asgt.type.Prediction" +
-      "R\013predictions\022&\n\005model\030\002 \001(\0132\020.asgt.type" +
-      ".ModelR\005model\"\267\001\n\021SuggestionOptions\022)\n\020s" +
-      "uggestion_limit\030\001 \001(\005R\017suggestionLimit\022B" +
-      "\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Confi" +
-      "dence.LevelR\rminConfidence\0223\n\nmodel_type" +
-      "\030\003 \001(\0162\024.asgt.type.ModelTypeR\tmodelType\"" +
-      "\362\001\n\021SuggestionRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006inputs\030\003 \003(\0132\017." +
-      "asgt.type.DataR\006inputs\022;\n\007options\030\004 \001(\0132" +
-      "!.asgt.jester.v1.SuggestionOptionsR\007opti" +
-      "ons\022\022\n\004tags\030\005 \003(\tR\004tags\022;\n\rtarget_values" +
-      "\030\006 \003(\0132\026.asgt.type.TargetValueR\014targetVa" +
-      "lues2\332\001\n\006Jester\022v\n\007Suggest\022!.asgt.jester" +
-      ".v1.SuggestionRequest\032\".asgt.jester.v1.S" +
-      "uggestionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{n" +
-      "ame}:suggest:\001*\022X\n\017InternalSuggest\022!.asg" +
-      "t.jester.v1.SuggestionRequest\032\".asgt.jes" +
-      "ter.v1.SuggestionResponseB\370\001\n\027ai.visma.a" +
-      "sgt.jester.v1B\013JesterProtoP\001Z9github.com" +
-      "/e-conomic/vmlapis/gen/go/asgt/jester/v1" +
-      ";jester\242\002\003AJX\252\002\016Asgt.Jester.V1\312\002\016Asgt\\Je" +
-      "ster\\V1\342\002\032Asgt\\Jester\\V1\\GPBMetadata\352\002\020A" +
-      "sgt::Jester::V1\222A:\022\021\n\013AutoSuggest2\002v1*\001\002" +
-      "2\020application/json:\020application/jsonb\006pr" +
-      "oto3"
+      "asgt/type/prediction.proto\032\026asgt/type/sa" +
+      "mple.proto\032\034google/api/annotations.proto" +
+      "\032.protoc-gen-openapiv2/options/annotatio" +
+      "ns.proto\"u\n\022SuggestionResponse\0227\n\013predic" +
+      "tions\030\001 \003(\0132\025.asgt.type.PredictionR\013pred" +
+      "ictions\022&\n\005model\030\002 \001(\0132\020.asgt.type.Model" +
+      "R\005model\"\267\001\n\021SuggestionOptions\022)\n\020suggest" +
+      "ion_limit\030\001 \001(\005R\017suggestionLimit\022B\n\016min_" +
+      "confidence\030\002 \001(\0162\033.asgt.type.Confidence." +
+      "LevelR\rminConfidence\0223\n\nmodel_type\030\003 \001(\016" +
+      "2\024.asgt.type.ModelTypeR\tmodelType\"\265\001\n\021Su" +
+      "ggestionRequest\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004t" +
+      "ype\030\002 \001(\tR\004type\022\'\n\006inputs\030\003 \003(\0132\017.asgt.t" +
+      "ype.DataR\006inputs\022;\n\007options\030\004 \001(\0132!.asgt" +
+      ".jester.v1.SuggestionOptionsR\007options\022\022\n" +
+      "\004tags\030\005 \003(\tR\004tags\"\236\001\n\035InternalSuggestSam" +
+      "plesRequest\022P\n\022suggestion_request\030\001 \001(\0132" +
+      "!.asgt.jester.v1.SuggestionRequestR\021sugg" +
+      "estionRequest\022+\n\007samples\030\002 \003(\0132\021.asgt.ty" +
+      "pe.SampleR\007samples\"u\n\036InternalSuggestSam" +
+      "plesResponse\022S\n\023suggestion_response\030\001 \001(" +
+      "\0132\".asgt.jester.v1.SuggestionResponseR\022s" +
+      "uggestionResponse2\330\002\n\006Jester\022v\n\007Suggest\022" +
+      "!.asgt.jester.v1.SuggestionRequest\032\".asg" +
+      "t.jester.v1.SuggestionResponse\"$\202\323\344\223\002\036\"\031" +
+      "/v1/{type}/{name}:suggest:\001*\022]\n\017Internal" +
+      "Suggest\022!.asgt.jester.v1.SuggestionReque" +
+      "st\032\".asgt.jester.v1.SuggestionResponse\"\003" +
+      "\210\002\001\022w\n\026InternalSuggestSamples\022-.asgt.jes" +
+      "ter.v1.InternalSuggestSamplesRequest\032..a" +
+      "sgt.jester.v1.InternalSuggestSamplesResp" +
+      "onseB\370\001\n\027ai.visma.asgt.jester.v1B\013Jester" +
+      "ProtoP\001Z9github.com/e-conomic/vmlapis/ge" +
+      "n/go/asgt/jester/v1;jester\242\002\003AJX\252\002\016Asgt." +
+      "Jester.V1\312\002\016Asgt\\Jester\\V1\342\002\032Asgt\\Jester" +
+      "\\V1\\GPBMetadata\352\002\020Asgt::Jester::V1\222A:\022\021\n" +
+      "\013AutoSuggest2\002v1*\001\0022\020application/json:\020a" +
+      "pplication/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -90,7 +108,7 @@ public final class JesterProto {
           ai.visma.asgt.type.ModelProto.getDescriptor(),
           ai.visma.asgt.type.ModelTypeProto.getDescriptor(),
           ai.visma.asgt.type.PredictionProto.getDescriptor(),
-          ai.visma.asgt.type.TargetValueProto.getDescriptor(),
+          ai.visma.asgt.type.SampleProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
         });
@@ -111,13 +129,25 @@ public final class JesterProto {
     internal_static_asgt_jester_v1_SuggestionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_jester_v1_SuggestionRequest_descriptor,
-        new java.lang.String[] { "Name", "Type", "Inputs", "Options", "Tags", "TargetValues", });
+        new java.lang.String[] { "Name", "Type", "Inputs", "Options", "Tags", });
+    internal_static_asgt_jester_v1_InternalSuggestSamplesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_jester_v1_InternalSuggestSamplesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_jester_v1_InternalSuggestSamplesRequest_descriptor,
+        new java.lang.String[] { "SuggestionRequest", "Samples", });
+    internal_static_asgt_jester_v1_InternalSuggestSamplesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_asgt_jester_v1_InternalSuggestSamplesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_jester_v1_InternalSuggestSamplesResponse_descriptor,
+        new java.lang.String[] { "SuggestionResponse", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DataProto.getDescriptor();
     ai.visma.asgt.type.ModelProto.getDescriptor();
     ai.visma.asgt.type.ModelTypeProto.getDescriptor();
     ai.visma.asgt.type.PredictionProto.getDescriptor();
-    ai.visma.asgt.type.TargetValueProto.getDescriptor();
+    ai.visma.asgt.type.SampleProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =

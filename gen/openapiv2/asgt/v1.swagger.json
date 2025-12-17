@@ -374,13 +374,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "targetValues": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeTargetValue"
-          }
         }
       }
     },
@@ -862,6 +855,14 @@
         }
       }
     },
+    "v1InternalSuggestSamplesResponse": {
+      "type": "object",
+      "properties": {
+        "suggestionResponse": {
+          "$ref": "#/definitions/v1SuggestionResponse"
+        }
+      }
+    },
     "v1SuggestionOptions": {
       "type": "object",
       "properties": {
@@ -874,6 +875,33 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        }
+      }
+    },
+    "v1SuggestionRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          }
+        },
+        "options": {
+          "$ref": "#/definitions/v1SuggestionOptions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

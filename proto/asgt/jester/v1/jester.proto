@@ -6,7 +6,7 @@ import "asgt/type/data.proto";
 import "asgt/type/model.proto";
 import "asgt/type/model_type.proto";
 import "asgt/type/prediction.proto";
-import "asgt/type/target_value.proto";
+import "asgt/type/sample.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 
@@ -29,7 +29,10 @@ service Jester {
       body: "*"
     };
   }
-  rpc InternalSuggest(SuggestionRequest) returns (SuggestionResponse);
+  rpc InternalSuggest(SuggestionRequest) returns (SuggestionResponse) {
+    option deprecated = true;
+  }
+  rpc InternalSuggestSamples(InternalSuggestSamplesRequest) returns (InternalSuggestSamplesResponse);
 }
 
 // AutoSuggest
@@ -50,5 +53,13 @@ message SuggestionRequest {
   repeated asgt.type.Data inputs = 3;
   SuggestionOptions options = 4;
   repeated string tags = 5;
-  repeated asgt.type.TargetValue target_values = 6;
+}
+
+message InternalSuggestSamplesRequest {
+  SuggestionRequest suggestion_request = 1;
+  repeated asgt.type.Sample samples = 2;
+}
+
+message InternalSuggestSamplesResponse {
+  SuggestionResponse suggestion_response = 1;
 }

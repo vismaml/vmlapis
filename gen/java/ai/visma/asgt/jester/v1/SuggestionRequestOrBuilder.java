@@ -96,28 +96,4 @@ public interface SuggestionRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
-
-  /**
-   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
-   */
-  java.util.List<ai.visma.asgt.type.TargetValue> 
-      getTargetValuesList();
-  /**
-   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
-   */
-  ai.visma.asgt.type.TargetValue getTargetValues(int index);
-  /**
-   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
-   */
-  int getTargetValuesCount();
-  /**
-   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
-   */
-  java.util.List<? extends ai.visma.asgt.type.TargetValueOrBuilder> 
-      getTargetValuesOrBuilderList();
-  /**
-   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
-   */
-  ai.visma.asgt.type.TargetValueOrBuilder getTargetValuesOrBuilder(
-      int index);
 }
