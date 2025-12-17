@@ -6,6 +6,7 @@ import "asgt/type/data.proto";
 import "asgt/type/model.proto";
 import "asgt/type/model_type.proto";
 import "asgt/type/prediction.proto";
+import "asgt/type/target_value.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 
@@ -49,4 +50,5 @@ message SuggestionRequest {
   repeated asgt.type.Data inputs = 3;
   SuggestionOptions options = 4;
   repeated string tags = 5;
+  repeated asgt.type.TargetValue target_values = 6;
 }

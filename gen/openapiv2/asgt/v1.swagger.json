@@ -374,6 +374,13 @@
           "items": {
             "type": "string"
           }
+        },
+        "targetValues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeTargetValue"
+          }
         }
       }
     },

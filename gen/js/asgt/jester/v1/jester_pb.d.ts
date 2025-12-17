@@ -4,6 +4,7 @@ import * as asgt_type_data_pb from '../../../asgt/type/data_pb'; // proto import
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
 import * as asgt_type_model_type_pb from '../../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_type_target_value_pb from '../../../asgt/type/target_value_pb'; // proto import: "asgt/type/target_value.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 
@@ -82,6 +83,11 @@ export class SuggestionRequest extends jspb.Message {
   clearTagsList(): SuggestionRequest;
   addTags(value: string, index?: number): SuggestionRequest;
 
+  getTargetValuesList(): Array<asgt_type_target_value_pb.TargetValue>;
+  setTargetValuesList(value: Array<asgt_type_target_value_pb.TargetValue>): SuggestionRequest;
+  clearTargetValuesList(): SuggestionRequest;
+  addTargetValues(value?: asgt_type_target_value_pb.TargetValue, index?: number): asgt_type_target_value_pb.TargetValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestionRequest): SuggestionRequest.AsObject;
@@ -97,6 +103,7 @@ export namespace SuggestionRequest {
     inputsList: Array<asgt_type_data_pb.Data.AsObject>,
     options?: SuggestionOptions.AsObject,
     tagsList: Array<string>,
+    targetValuesList: Array<asgt_type_target_value_pb.TargetValue.AsObject>,
   }
 }
 

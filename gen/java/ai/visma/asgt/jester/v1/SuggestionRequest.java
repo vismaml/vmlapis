@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
     inputs_ = java.util.Collections.emptyList();
     tags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    targetValues_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -230,6 +231,47 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int TARGET_VALUES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.asgt.type.TargetValue> targetValues_;
+  /**
+   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.asgt.type.TargetValue> getTargetValuesList() {
+    return targetValues_;
+  }
+  /**
+   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.asgt.type.TargetValueOrBuilder> 
+      getTargetValuesOrBuilderList() {
+    return targetValues_;
+  }
+  /**
+   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+   */
+  @java.lang.Override
+  public int getTargetValuesCount() {
+    return targetValues_.size();
+  }
+  /**
+   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.TargetValue getTargetValues(int index) {
+    return targetValues_.get(index);
+  }
+  /**
+   * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.TargetValueOrBuilder getTargetValuesOrBuilder(
+      int index) {
+    return targetValues_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -258,6 +300,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, tags_.getRaw(i));
+    }
+    for (int i = 0; i < targetValues_.size(); i++) {
+      output.writeMessage(6, targetValues_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -290,6 +335,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    for (int i = 0; i < targetValues_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, targetValues_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -318,6 +367,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (!getTargetValuesList()
+        .equals(other.getTargetValuesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -344,6 +395,10 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
+    }
+    if (getTargetValuesCount() > 0) {
+      hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetValuesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -477,6 +532,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getInputsFieldBuilder();
         getOptionsFieldBuilder();
+        getTargetValuesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -499,6 +555,13 @@ private static final long serialVersionUID = 0L;
       }
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      if (targetValuesBuilder_ == null) {
+        targetValues_ = java.util.Collections.emptyList();
+      } else {
+        targetValues_ = null;
+        targetValuesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -540,6 +603,15 @@ private static final long serialVersionUID = 0L;
         result.inputs_ = inputs_;
       } else {
         result.inputs_ = inputsBuilder_.build();
+      }
+      if (targetValuesBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.targetValues_ = targetValues_;
+      } else {
+        result.targetValues_ = targetValuesBuilder_.build();
       }
     }
 
@@ -626,6 +698,32 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (targetValuesBuilder_ == null) {
+        if (!other.targetValues_.isEmpty()) {
+          if (targetValues_.isEmpty()) {
+            targetValues_ = other.targetValues_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureTargetValuesIsMutable();
+            targetValues_.addAll(other.targetValues_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.targetValues_.isEmpty()) {
+          if (targetValuesBuilder_.isEmpty()) {
+            targetValuesBuilder_.dispose();
+            targetValuesBuilder_ = null;
+            targetValues_ = other.targetValues_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            targetValuesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getTargetValuesFieldBuilder() : null;
+          } else {
+            targetValuesBuilder_.addAllMessages(other.targetValues_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -688,6 +786,19 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 42
+            case 50: {
+              ai.visma.asgt.type.TargetValue m =
+                  input.readMessage(
+                      ai.visma.asgt.type.TargetValue.parser(),
+                      extensionRegistry);
+              if (targetValuesBuilder_ == null) {
+                ensureTargetValuesIsMutable();
+                targetValues_.add(m);
+              } else {
+                targetValuesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1319,6 +1430,246 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private java.util.List<ai.visma.asgt.type.TargetValue> targetValues_ =
+      java.util.Collections.emptyList();
+    private void ensureTargetValuesIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        targetValues_ = new java.util.ArrayList<ai.visma.asgt.type.TargetValue>(targetValues_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.asgt.type.TargetValue, ai.visma.asgt.type.TargetValue.Builder, ai.visma.asgt.type.TargetValueOrBuilder> targetValuesBuilder_;
+
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public java.util.List<ai.visma.asgt.type.TargetValue> getTargetValuesList() {
+      if (targetValuesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(targetValues_);
+      } else {
+        return targetValuesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public int getTargetValuesCount() {
+      if (targetValuesBuilder_ == null) {
+        return targetValues_.size();
+      } else {
+        return targetValuesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public ai.visma.asgt.type.TargetValue getTargetValues(int index) {
+      if (targetValuesBuilder_ == null) {
+        return targetValues_.get(index);
+      } else {
+        return targetValuesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder setTargetValues(
+        int index, ai.visma.asgt.type.TargetValue value) {
+      if (targetValuesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetValuesIsMutable();
+        targetValues_.set(index, value);
+        onChanged();
+      } else {
+        targetValuesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder setTargetValues(
+        int index, ai.visma.asgt.type.TargetValue.Builder builderForValue) {
+      if (targetValuesBuilder_ == null) {
+        ensureTargetValuesIsMutable();
+        targetValues_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        targetValuesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder addTargetValues(ai.visma.asgt.type.TargetValue value) {
+      if (targetValuesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetValuesIsMutable();
+        targetValues_.add(value);
+        onChanged();
+      } else {
+        targetValuesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder addTargetValues(
+        int index, ai.visma.asgt.type.TargetValue value) {
+      if (targetValuesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetValuesIsMutable();
+        targetValues_.add(index, value);
+        onChanged();
+      } else {
+        targetValuesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder addTargetValues(
+        ai.visma.asgt.type.TargetValue.Builder builderForValue) {
+      if (targetValuesBuilder_ == null) {
+        ensureTargetValuesIsMutable();
+        targetValues_.add(builderForValue.build());
+        onChanged();
+      } else {
+        targetValuesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder addTargetValues(
+        int index, ai.visma.asgt.type.TargetValue.Builder builderForValue) {
+      if (targetValuesBuilder_ == null) {
+        ensureTargetValuesIsMutable();
+        targetValues_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        targetValuesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder addAllTargetValues(
+        java.lang.Iterable<? extends ai.visma.asgt.type.TargetValue> values) {
+      if (targetValuesBuilder_ == null) {
+        ensureTargetValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targetValues_);
+        onChanged();
+      } else {
+        targetValuesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder clearTargetValues() {
+      if (targetValuesBuilder_ == null) {
+        targetValues_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        targetValuesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public Builder removeTargetValues(int index) {
+      if (targetValuesBuilder_ == null) {
+        ensureTargetValuesIsMutable();
+        targetValues_.remove(index);
+        onChanged();
+      } else {
+        targetValuesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public ai.visma.asgt.type.TargetValue.Builder getTargetValuesBuilder(
+        int index) {
+      return getTargetValuesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public ai.visma.asgt.type.TargetValueOrBuilder getTargetValuesOrBuilder(
+        int index) {
+      if (targetValuesBuilder_ == null) {
+        return targetValues_.get(index);  } else {
+        return targetValuesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public java.util.List<? extends ai.visma.asgt.type.TargetValueOrBuilder> 
+         getTargetValuesOrBuilderList() {
+      if (targetValuesBuilder_ != null) {
+        return targetValuesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(targetValues_);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public ai.visma.asgt.type.TargetValue.Builder addTargetValuesBuilder() {
+      return getTargetValuesFieldBuilder().addBuilder(
+          ai.visma.asgt.type.TargetValue.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public ai.visma.asgt.type.TargetValue.Builder addTargetValuesBuilder(
+        int index) {
+      return getTargetValuesFieldBuilder().addBuilder(
+          index, ai.visma.asgt.type.TargetValue.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .asgt.type.TargetValue target_values = 6 [json_name = "targetValues"];</code>
+     */
+    public java.util.List<ai.visma.asgt.type.TargetValue.Builder> 
+         getTargetValuesBuilderList() {
+      return getTargetValuesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.asgt.type.TargetValue, ai.visma.asgt.type.TargetValue.Builder, ai.visma.asgt.type.TargetValueOrBuilder> 
+        getTargetValuesFieldBuilder() {
+      if (targetValuesBuilder_ == null) {
+        targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.asgt.type.TargetValue, ai.visma.asgt.type.TargetValue.Builder, ai.visma.asgt.type.TargetValueOrBuilder>(
+                targetValues_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        targetValues_ = null;
+      }
+      return targetValuesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:asgt.jester.v1.SuggestionRequest)

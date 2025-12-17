@@ -28,6 +28,8 @@ var asgt_type_model_type_pb = require('../../../asgt/type/model_type_pb.js')
 
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 
+var asgt_type_target_value_pb = require('../../../asgt/type/target_value_pb.js')
+
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')

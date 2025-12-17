@@ -27,36 +27,38 @@ namespace Asgt.Jester.V1 {
             "Chthc2d0L2plc3Rlci92MS9qZXN0ZXIucHJvdG8SDmFzZ3QuamVzdGVyLnYx",
             "GhRhc2d0L3R5cGUvZGF0YS5wcm90bxoVYXNndC90eXBlL21vZGVsLnByb3Rv",
             "Ghphc2d0L3R5cGUvbW9kZWxfdHlwZS5wcm90bxoaYXNndC90eXBlL3ByZWRp",
-            "Y3Rpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aLnBy",
-            "b3RvYy1nZW4tb3BlbmFwaXYyL29wdGlvbnMvYW5ub3RhdGlvbnMucHJvdG8i",
-            "dQoSU3VnZ2VzdGlvblJlc3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygLMhUu",
-            "YXNndC50eXBlLlByZWRpY3Rpb25SC3ByZWRpY3Rpb25zEiYKBW1vZGVsGAIg",
-            "ASgLMhAuYXNndC50eXBlLk1vZGVsUgVtb2RlbCK3AQoRU3VnZ2VzdGlvbk9w",
-            "dGlvbnMSKQoQc3VnZ2VzdGlvbl9saW1pdBgBIAEoBVIPc3VnZ2VzdGlvbkxp",
-            "bWl0EkIKDm1pbl9jb25maWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNvbmZp",
-            "ZGVuY2UuTGV2ZWxSDW1pbkNvbmZpZGVuY2USMwoKbW9kZWxfdHlwZRgDIAEo",
-            "DjIULmFzZ3QudHlwZS5Nb2RlbFR5cGVSCW1vZGVsVHlwZSK1AQoRU3VnZ2Vz",
-            "dGlvblJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIgASgJ",
-            "UgR0eXBlEicKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5EYXRhUgZpbnB1",
-            "dHMSOwoHb3B0aW9ucxgEIAEoCzIhLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rp",
-            "b25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRhZ3My2gEKBkpl",
-            "c3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJl",
-            "cXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVzcG9uc2UiJILT",
-            "5JMCHiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKhJYCg9JbnRlcm5h",
-            "bFN1Z2dlc3QSIS5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVxdWVzdBoi",
-            "LmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25SZXNwb25zZUL4AQoXYWkudmlz",
-            "bWEuYXNndC5qZXN0ZXIudjFCC0plc3RlclByb3RvUAFaOWdpdGh1Yi5jb20v",
-            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVyL3YxO2plc3Rl",
-            "cqICA0FKWKoCDkFzZ3QuSmVzdGVyLlYxygIOQXNndFxKZXN0ZXJcVjHiAhpB",
-            "c2d0XEplc3RlclxWMVxHUEJNZXRhZGF0YeoCEEFzZ3Q6Okplc3Rlcjo6VjGS",
-            "QToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBh",
-            "cHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "Y3Rpb24ucHJvdG8aHGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdv",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aLnByb3RvYy1nZW4tb3BlbmFw",
+            "aXYyL29wdGlvbnMvYW5ub3RhdGlvbnMucHJvdG8idQoSU3VnZ2VzdGlvblJl",
+            "c3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygLMhUuYXNndC50eXBlLlByZWRp",
+            "Y3Rpb25SC3ByZWRpY3Rpb25zEiYKBW1vZGVsGAIgASgLMhAuYXNndC50eXBl",
+            "Lk1vZGVsUgVtb2RlbCK3AQoRU3VnZ2VzdGlvbk9wdGlvbnMSKQoQc3VnZ2Vz",
+            "dGlvbl9saW1pdBgBIAEoBVIPc3VnZ2VzdGlvbkxpbWl0EkIKDm1pbl9jb25m",
+            "aWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWxSDW1p",
+            "bkNvbmZpZGVuY2USMwoKbW9kZWxfdHlwZRgDIAEoDjIULmFzZ3QudHlwZS5N",
+            "b2RlbFR5cGVSCW1vZGVsVHlwZSLyAQoRU3VnZ2VzdGlvblJlcXVlc3QSEgoE",
+            "bmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIgASgJUgR0eXBlEicKBmlucHV0",
+            "cxgDIAMoCzIPLmFzZ3QudHlwZS5EYXRhUgZpbnB1dHMSOwoHb3B0aW9ucxgE",
+            "IAEoCzIhLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25PcHRpb25zUgdvcHRp",
+            "b25zEhIKBHRhZ3MYBSADKAlSBHRhZ3MSOwoNdGFyZ2V0X3ZhbHVlcxgGIAMo",
+            "CzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZVIMdGFyZ2V0VmFsdWVzMtoBCgZK",
+            "ZXN0ZXISdgoHU3VnZ2VzdBIhLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25S",
+            "ZXF1ZXN0GiIuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJlc3BvbnNlIiSC",
+            "0+STAh4iGS92MS97dHlwZX0ve25hbWV9OnN1Z2dlc3Q6ASoSWAoPSW50ZXJu",
+            "YWxTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJlcXVlc3Qa",
+            "Ii5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVzcG9uc2VC+AEKF2FpLnZp",
+            "c21hLmFzZ3QuamVzdGVyLnYxQgtKZXN0ZXJQcm90b1ABWjlnaXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2plc3Rlci92MTtqZXN0",
+            "ZXKiAgNBSliqAg5Bc2d0Lkplc3Rlci5WMcoCDkFzZ3RcSmVzdGVyXFYx4gIa",
+            "QXNndFxKZXN0ZXJcVjFcR1BCTWV0YWRhdGHqAhBBc2d0OjpKZXN0ZXI6OlYx",
+            "kkE6EhEKC0F1dG9TdWdnZXN0MgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQ",
+            "YXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence", "ModelType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags", "TargetValues" }, null, null, null, null)
           }));
     }
     #endregion
@@ -611,6 +613,7 @@ namespace Asgt.Jester.V1 {
       inputs_ = other.inputs_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
       tags_ = other.tags_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -678,6 +681,17 @@ namespace Asgt.Jester.V1 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
+        = pb::FieldCodec.ForMessage(50, global::Asgt.Type.TargetValue.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -698,6 +712,7 @@ namespace Asgt.Jester.V1 {
       if(!inputs_.Equals(other.inputs_)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -710,6 +725,7 @@ namespace Asgt.Jester.V1 {
       hash ^= inputs_.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       hash ^= tags_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -742,6 +758,7 @@ namespace Asgt.Jester.V1 {
         output.WriteMessage(Options);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -766,6 +783,7 @@ namespace Asgt.Jester.V1 {
         output.WriteMessage(Options);
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
+      targetValues_.WriteTo(ref output, _repeated_targetValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -787,6 +805,7 @@ namespace Asgt.Jester.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -813,6 +832,7 @@ namespace Asgt.Jester.V1 {
         Options.MergeFrom(other.Options);
       }
       tags_.Add(other.tags_);
+      targetValues_.Add(other.targetValues_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -855,6 +875,10 @@ namespace Asgt.Jester.V1 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
+          case 50: {
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
+            break;
+          }
         }
       }
     #endif
@@ -895,6 +919,10 @@ namespace Asgt.Jester.V1 {
           }
           case 42: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 50: {
+            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
             break;
           }
         }

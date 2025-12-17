@@ -29,6 +29,8 @@ var asgt_type_model_type_pb = require('../../../asgt/type/model_type_pb.js');
 goog.object.extend(proto, asgt_type_model_type_pb);
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
+var asgt_type_target_value_pb = require('../../../asgt/type/target_value_pb.js');
+goog.object.extend(proto, asgt_type_target_value_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
@@ -506,7 +508,7 @@ proto.asgt.jester.v1.SuggestionOptions.prototype.setModelType = function(value) 
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1.SuggestionRequest.repeatedFields_ = [3,5];
+proto.asgt.jester.v1.SuggestionRequest.repeatedFields_ = [3,5,6];
 
 
 
@@ -544,7 +546,9 @@ proto.asgt.jester.v1.SuggestionRequest.toObject = function(includeInstance, msg)
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     asgt_type_data_pb.Data.toObject, includeInstance),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1.SuggestionOptions.toObject(includeInstance, f),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
+    targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
+    asgt_type_target_value_pb.TargetValue.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -602,6 +606,11 @@ proto.asgt.jester.v1.SuggestionRequest.deserializeBinaryFromReader = function(ms
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 6:
+      var value = new asgt_type_target_value_pb.TargetValue;
+      reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
+      msg.addTargetValues(value);
       break;
     default:
       reader.skipField();
@@ -667,6 +676,14 @@ proto.asgt.jester.v1.SuggestionRequest.serializeBinaryToWriter = function(messag
     writer.writeRepeatedString(
       5,
       f
+    );
+  }
+  f = message.getTargetValuesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      asgt_type_target_value_pb.TargetValue.serializeBinaryToWriter
     );
   }
 };
@@ -817,6 +834,44 @@ proto.asgt.jester.v1.SuggestionRequest.prototype.addTags = function(value, opt_i
  */
 proto.asgt.jester.v1.SuggestionRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * repeated asgt.type.TargetValue target_values = 6;
+ * @return {!Array<!proto.asgt.type.TargetValue>}
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.getTargetValuesList = function() {
+  return /** @type{!Array<!proto.asgt.type.TargetValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_value_pb.TargetValue, 6));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.type.TargetValue>} value
+ * @return {!proto.asgt.jester.v1.SuggestionRequest} returns this
+*/
+proto.asgt.jester.v1.SuggestionRequest.prototype.setTargetValuesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.TargetValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetValue}
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.addTargetValues = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.asgt.type.TargetValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.jester.v1.SuggestionRequest} returns this
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.clearTargetValuesList = function() {
+  return this.setTargetValuesList([]);
 };
 
 
