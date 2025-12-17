@@ -25,7 +25,7 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJhc2d0L3R5cGUvZGF0YXNldF9zdGF0aXN0aWNzLnByb3RvEglhc2d0LnR5",
-            "cGUizAQKEURhdGFzZXRTdGF0aXN0aWNzEkYKIGxleGljYWxfZGl2ZXJzaXR5",
+            "cGUixwkKEURhdGFzZXRTdGF0aXN0aWNzEkYKIGxleGljYWxfZGl2ZXJzaXR5",
             "X3NwbGl0X29uX3NwYWNlGAIgASgCUhxsZXhpY2FsRGl2ZXJzaXR5U3BsaXRP",
             "blNwYWNlEkoKImxleGljYWxfZGl2ZXJzaXR5X3NwbGl0X29uX3NwZWNpYWwY",
             "AyABKAJSHmxleGljYWxEaXZlcnNpdHlTcGxpdE9uU3BlY2lhbBIyChVwZXJj",
@@ -38,15 +38,29 @@ namespace Asgt.Type {
             "dF9kaWdpdHMYCCABKAJSDXBlcmNlbnREaWdpdHMSJwoPcGVyY2VudF9sZXR0",
             "ZXJzGAkgASgCUg5wZXJjZW50TGV0dGVycxJBCh1wZXJjZW50X2R1cGxpY2F0",
             "ZXNfaW5fZGF0YXNldBgKIAEoAlIacGVyY2VudER1cGxpY2F0ZXNJbkRhdGFz",
-            "ZXRKBAgBEAJCqQEKEmFpLnZpc21hLmFzZ3QudHlwZUIWRGF0YXNldFN0YXRp",
-            "c3RpY3NQcm90b1ABWjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
-            "bi9nby9hc2d0L3R5cGU7YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglB",
-            "c2d0XFR5cGXiAhVBc2d0XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBl",
-            "YgZwcm90bzM="));
+            "ZXQSGAoHZW50cm9weRgLIAEoAlIHZW50cm9weRIqChFudW1iZXJfb2ZfY2xh",
+            "c3NlcxgMIAEoBVIPbnVtYmVyT2ZDbGFzc2VzEi8KFGF2Z19zYW1wbGVfcGVy",
+            "X2NsYXNzGA0gASgCUhFhdmdTYW1wbGVQZXJDbGFzcxI4ChhpbmNvbnNpc3Rl",
+            "bnRfbGFiZWxfcmF0aW8YDiABKAJSFmluY29uc2lzdGVudExhYmVsUmF0aW8S",
+            "SgoiYXZnX2xhYmVsc19wZXJfaW5jb25zaXN0ZW50X3NhbXBsZRgPIAEoAlIe",
+            "YXZnTGFiZWxzUGVySW5jb25zaXN0ZW50U2FtcGxlEiwKEm1pc3NpbmdfZGF0",
+            "YV9yYXRpbxgQIAEoAlIQbWlzc2luZ0RhdGFSYXRpbxJFCiB0ZXN0X3NldF9h",
+            "dmdfdW5rbm93bl90b2tlbl9yYXRpbxgRIAEoAlIbdGVzdFNldEF2Z1Vua25v",
+            "d25Ub2tlblJhdGlvEh0KCnZvY2FiX3NpemUYEiABKAVSCXZvY2FiU2l6ZRJL",
+            "CiNwZXJjZW50X3NhbXBsZXNfbm90X2luX3RhcmdldF92b2NhYhgTIAEoAlIe",
+            "cGVyY2VudFNhbXBsZXNOb3RJblRhcmdldFZvY2FiEjUKF2F2Z191bmtub3du",
+            "X3Rva2VuX3JhdGlvGBQgASgCUhRhdmdVbmtub3duVG9rZW5SYXRpbxIyChVq",
+            "c19kaXZlcmdlbmNlX2NsYXNzZXMYFSABKAJSE2pzRGl2ZXJnZW5jZUNsYXNz",
+            "ZXMSMAoUanNfZGl2ZXJnZW5jZV90b2tlbnMYFiABKAJSEmpzRGl2ZXJnZW5j",
+            "ZVRva2Vuc0oECAEQAkKpAQoSYWkudmlzbWEuYXNndC50eXBlQhZEYXRhc2V0",
+            "U3RhdGlzdGljc1Byb3RvUAFaNmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFw",
+            "aXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZaICA0FUWKoCCUFzZ3QuVHlw",
+            "ZcoCCUFzZ3RcVHlwZeICFUFzZ3RcVHlwZVxHUEJNZXRhZGF0YeoCCkFzZ3Q6",
+            "OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.DatasetStatistics), global::Asgt.Type.DatasetStatistics.Parser, new[]{ "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.DatasetStatistics), global::Asgt.Type.DatasetStatistics.Parser, new[]{ "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "PercentSamplesNotInTargetVocab", "AvgUnknownTokenRatio", "JsDivergenceClasses", "JsDivergenceTokens" }, null, null, null, null)
           }));
     }
     #endregion
@@ -97,6 +111,18 @@ namespace Asgt.Type {
       percentDigits_ = other.percentDigits_;
       percentLetters_ = other.percentLetters_;
       percentDuplicatesInDataset_ = other.percentDuplicatesInDataset_;
+      entropy_ = other.entropy_;
+      numberOfClasses_ = other.numberOfClasses_;
+      avgSamplePerClass_ = other.avgSamplePerClass_;
+      inconsistentLabelRatio_ = other.inconsistentLabelRatio_;
+      avgLabelsPerInconsistentSample_ = other.avgLabelsPerInconsistentSample_;
+      missingDataRatio_ = other.missingDataRatio_;
+      testSetAvgUnknownTokenRatio_ = other.testSetAvgUnknownTokenRatio_;
+      vocabSize_ = other.vocabSize_;
+      percentSamplesNotInTargetVocab_ = other.percentSamplesNotInTargetVocab_;
+      avgUnknownTokenRatio_ = other.avgUnknownTokenRatio_;
+      jsDivergenceClasses_ = other.jsDivergenceClasses_;
+      jsDivergenceTokens_ = other.jsDivergenceTokens_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -241,6 +267,186 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "entropy" field.</summary>
+    public const int EntropyFieldNumber = 11;
+    private float entropy_;
+    /// <summary>
+    /// entropy of the dataset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Entropy {
+      get { return entropy_; }
+      set {
+        entropy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "number_of_classes" field.</summary>
+    public const int NumberOfClassesFieldNumber = 12;
+    private int numberOfClasses_;
+    /// <summary>
+    /// number of classes in the dataset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NumberOfClasses {
+      get { return numberOfClasses_; }
+      set {
+        numberOfClasses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avg_sample_per_class" field.</summary>
+    public const int AvgSamplePerClassFieldNumber = 13;
+    private float avgSamplePerClass_;
+    /// <summary>
+    /// average samples per class
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AvgSamplePerClass {
+      get { return avgSamplePerClass_; }
+      set {
+        avgSamplePerClass_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inconsistent_label_ratio" field.</summary>
+    public const int InconsistentLabelRatioFieldNumber = 14;
+    private float inconsistentLabelRatio_;
+    /// <summary>
+    /// ratio of inconsistent labels
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float InconsistentLabelRatio {
+      get { return inconsistentLabelRatio_; }
+      set {
+        inconsistentLabelRatio_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avg_labels_per_inconsistent_sample" field.</summary>
+    public const int AvgLabelsPerInconsistentSampleFieldNumber = 15;
+    private float avgLabelsPerInconsistentSample_;
+    /// <summary>
+    /// average labels per inconsistent sample
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AvgLabelsPerInconsistentSample {
+      get { return avgLabelsPerInconsistentSample_; }
+      set {
+        avgLabelsPerInconsistentSample_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "missing_data_ratio" field.</summary>
+    public const int MissingDataRatioFieldNumber = 16;
+    private float missingDataRatio_;
+    /// <summary>
+    /// ratio of missing data
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MissingDataRatio {
+      get { return missingDataRatio_; }
+      set {
+        missingDataRatio_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "test_set_avg_unknown_token_ratio" field.</summary>
+    public const int TestSetAvgUnknownTokenRatioFieldNumber = 17;
+    private float testSetAvgUnknownTokenRatio_;
+    /// <summary>
+    /// average unknown token ratio in test set
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float TestSetAvgUnknownTokenRatio {
+      get { return testSetAvgUnknownTokenRatio_; }
+      set {
+        testSetAvgUnknownTokenRatio_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vocab_size" field.</summary>
+    public const int VocabSizeFieldNumber = 18;
+    private int vocabSize_;
+    /// <summary>
+    /// vocabulary size
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VocabSize {
+      get { return vocabSize_; }
+      set {
+        vocabSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "percent_samples_not_in_target_vocab" field.</summary>
+    public const int PercentSamplesNotInTargetVocabFieldNumber = 19;
+    private float percentSamplesNotInTargetVocab_;
+    /// <summary>
+    /// percentage of samples not in target vocabulary
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PercentSamplesNotInTargetVocab {
+      get { return percentSamplesNotInTargetVocab_; }
+      set {
+        percentSamplesNotInTargetVocab_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avg_unknown_token_ratio" field.</summary>
+    public const int AvgUnknownTokenRatioFieldNumber = 20;
+    private float avgUnknownTokenRatio_;
+    /// <summary>
+    /// average unknown token ratio
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AvgUnknownTokenRatio {
+      get { return avgUnknownTokenRatio_; }
+      set {
+        avgUnknownTokenRatio_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "js_divergence_classes" field.</summary>
+    public const int JsDivergenceClassesFieldNumber = 21;
+    private float jsDivergenceClasses_;
+    /// <summary>
+    /// Jensen-Shannon divergence for classes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float JsDivergenceClasses {
+      get { return jsDivergenceClasses_; }
+      set {
+        jsDivergenceClasses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "js_divergence_tokens" field.</summary>
+    public const int JsDivergenceTokensFieldNumber = 22;
+    private float jsDivergenceTokens_;
+    /// <summary>
+    /// Jensen-Shannon divergence for tokens
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float JsDivergenceTokens {
+      get { return jsDivergenceTokens_; }
+      set {
+        jsDivergenceTokens_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -265,6 +471,18 @@ namespace Asgt.Type {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentDigits, other.PercentDigits)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentLetters, other.PercentLetters)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentDuplicatesInDataset, other.PercentDuplicatesInDataset)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Entropy, other.Entropy)) return false;
+      if (NumberOfClasses != other.NumberOfClasses) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgSamplePerClass, other.AvgSamplePerClass)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InconsistentLabelRatio, other.InconsistentLabelRatio)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgLabelsPerInconsistentSample, other.AvgLabelsPerInconsistentSample)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MissingDataRatio, other.MissingDataRatio)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TestSetAvgUnknownTokenRatio, other.TestSetAvgUnknownTokenRatio)) return false;
+      if (VocabSize != other.VocabSize) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentSamplesNotInTargetVocab, other.PercentSamplesNotInTargetVocab)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgUnknownTokenRatio, other.AvgUnknownTokenRatio)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(JsDivergenceClasses, other.JsDivergenceClasses)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(JsDivergenceTokens, other.JsDivergenceTokens)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -281,6 +499,18 @@ namespace Asgt.Type {
       if (PercentDigits != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDigits);
       if (PercentLetters != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentLetters);
       if (PercentDuplicatesInDataset != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDuplicatesInDataset);
+      if (Entropy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Entropy);
+      if (NumberOfClasses != 0) hash ^= NumberOfClasses.GetHashCode();
+      if (AvgSamplePerClass != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgSamplePerClass);
+      if (InconsistentLabelRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InconsistentLabelRatio);
+      if (AvgLabelsPerInconsistentSample != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgLabelsPerInconsistentSample);
+      if (MissingDataRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MissingDataRatio);
+      if (TestSetAvgUnknownTokenRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TestSetAvgUnknownTokenRatio);
+      if (VocabSize != 0) hash ^= VocabSize.GetHashCode();
+      if (PercentSamplesNotInTargetVocab != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSamplesNotInTargetVocab);
+      if (AvgUnknownTokenRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgUnknownTokenRatio);
+      if (JsDivergenceClasses != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceClasses);
+      if (JsDivergenceTokens != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceTokens);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -335,6 +565,54 @@ namespace Asgt.Type {
         output.WriteRawTag(85);
         output.WriteFloat(PercentDuplicatesInDataset);
       }
+      if (Entropy != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(Entropy);
+      }
+      if (NumberOfClasses != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        output.WriteRawTag(109);
+        output.WriteFloat(AvgSamplePerClass);
+      }
+      if (InconsistentLabelRatio != 0F) {
+        output.WriteRawTag(117);
+        output.WriteFloat(InconsistentLabelRatio);
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        output.WriteRawTag(125);
+        output.WriteFloat(AvgLabelsPerInconsistentSample);
+      }
+      if (MissingDataRatio != 0F) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(MissingDataRatio);
+      }
+      if (TestSetAvgUnknownTokenRatio != 0F) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(TestSetAvgUnknownTokenRatio);
+      }
+      if (VocabSize != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(VocabSize);
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        output.WriteRawTag(157, 1);
+        output.WriteFloat(PercentSamplesNotInTargetVocab);
+      }
+      if (AvgUnknownTokenRatio != 0F) {
+        output.WriteRawTag(165, 1);
+        output.WriteFloat(AvgUnknownTokenRatio);
+      }
+      if (JsDivergenceClasses != 0F) {
+        output.WriteRawTag(173, 1);
+        output.WriteFloat(JsDivergenceClasses);
+      }
+      if (JsDivergenceTokens != 0F) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(JsDivergenceTokens);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -381,6 +659,54 @@ namespace Asgt.Type {
         output.WriteRawTag(85);
         output.WriteFloat(PercentDuplicatesInDataset);
       }
+      if (Entropy != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(Entropy);
+      }
+      if (NumberOfClasses != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        output.WriteRawTag(109);
+        output.WriteFloat(AvgSamplePerClass);
+      }
+      if (InconsistentLabelRatio != 0F) {
+        output.WriteRawTag(117);
+        output.WriteFloat(InconsistentLabelRatio);
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        output.WriteRawTag(125);
+        output.WriteFloat(AvgLabelsPerInconsistentSample);
+      }
+      if (MissingDataRatio != 0F) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(MissingDataRatio);
+      }
+      if (TestSetAvgUnknownTokenRatio != 0F) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(TestSetAvgUnknownTokenRatio);
+      }
+      if (VocabSize != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(VocabSize);
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        output.WriteRawTag(157, 1);
+        output.WriteFloat(PercentSamplesNotInTargetVocab);
+      }
+      if (AvgUnknownTokenRatio != 0F) {
+        output.WriteRawTag(165, 1);
+        output.WriteFloat(AvgUnknownTokenRatio);
+      }
+      if (JsDivergenceClasses != 0F) {
+        output.WriteRawTag(173, 1);
+        output.WriteFloat(JsDivergenceClasses);
+      }
+      if (JsDivergenceTokens != 0F) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(JsDivergenceTokens);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -417,6 +743,42 @@ namespace Asgt.Type {
       }
       if (PercentDuplicatesInDataset != 0F) {
         size += 1 + 4;
+      }
+      if (Entropy != 0F) {
+        size += 1 + 4;
+      }
+      if (NumberOfClasses != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        size += 1 + 4;
+      }
+      if (InconsistentLabelRatio != 0F) {
+        size += 1 + 4;
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        size += 1 + 4;
+      }
+      if (MissingDataRatio != 0F) {
+        size += 2 + 4;
+      }
+      if (TestSetAvgUnknownTokenRatio != 0F) {
+        size += 2 + 4;
+      }
+      if (VocabSize != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(VocabSize);
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        size += 2 + 4;
+      }
+      if (AvgUnknownTokenRatio != 0F) {
+        size += 2 + 4;
+      }
+      if (JsDivergenceClasses != 0F) {
+        size += 2 + 4;
+      }
+      if (JsDivergenceTokens != 0F) {
+        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -456,6 +818,42 @@ namespace Asgt.Type {
       }
       if (other.PercentDuplicatesInDataset != 0F) {
         PercentDuplicatesInDataset = other.PercentDuplicatesInDataset;
+      }
+      if (other.Entropy != 0F) {
+        Entropy = other.Entropy;
+      }
+      if (other.NumberOfClasses != 0) {
+        NumberOfClasses = other.NumberOfClasses;
+      }
+      if (other.AvgSamplePerClass != 0F) {
+        AvgSamplePerClass = other.AvgSamplePerClass;
+      }
+      if (other.InconsistentLabelRatio != 0F) {
+        InconsistentLabelRatio = other.InconsistentLabelRatio;
+      }
+      if (other.AvgLabelsPerInconsistentSample != 0F) {
+        AvgLabelsPerInconsistentSample = other.AvgLabelsPerInconsistentSample;
+      }
+      if (other.MissingDataRatio != 0F) {
+        MissingDataRatio = other.MissingDataRatio;
+      }
+      if (other.TestSetAvgUnknownTokenRatio != 0F) {
+        TestSetAvgUnknownTokenRatio = other.TestSetAvgUnknownTokenRatio;
+      }
+      if (other.VocabSize != 0) {
+        VocabSize = other.VocabSize;
+      }
+      if (other.PercentSamplesNotInTargetVocab != 0F) {
+        PercentSamplesNotInTargetVocab = other.PercentSamplesNotInTargetVocab;
+      }
+      if (other.AvgUnknownTokenRatio != 0F) {
+        AvgUnknownTokenRatio = other.AvgUnknownTokenRatio;
+      }
+      if (other.JsDivergenceClasses != 0F) {
+        JsDivergenceClasses = other.JsDivergenceClasses;
+      }
+      if (other.JsDivergenceTokens != 0F) {
+        JsDivergenceTokens = other.JsDivergenceTokens;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -512,6 +910,54 @@ namespace Asgt.Type {
             PercentDuplicatesInDataset = input.ReadFloat();
             break;
           }
+          case 93: {
+            Entropy = input.ReadFloat();
+            break;
+          }
+          case 96: {
+            NumberOfClasses = input.ReadInt32();
+            break;
+          }
+          case 109: {
+            AvgSamplePerClass = input.ReadFloat();
+            break;
+          }
+          case 117: {
+            InconsistentLabelRatio = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            AvgLabelsPerInconsistentSample = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            MissingDataRatio = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            TestSetAvgUnknownTokenRatio = input.ReadFloat();
+            break;
+          }
+          case 144: {
+            VocabSize = input.ReadInt32();
+            break;
+          }
+          case 157: {
+            PercentSamplesNotInTargetVocab = input.ReadFloat();
+            break;
+          }
+          case 165: {
+            AvgUnknownTokenRatio = input.ReadFloat();
+            break;
+          }
+          case 173: {
+            JsDivergenceClasses = input.ReadFloat();
+            break;
+          }
+          case 181: {
+            JsDivergenceTokens = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -565,6 +1011,54 @@ namespace Asgt.Type {
           }
           case 85: {
             PercentDuplicatesInDataset = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            Entropy = input.ReadFloat();
+            break;
+          }
+          case 96: {
+            NumberOfClasses = input.ReadInt32();
+            break;
+          }
+          case 109: {
+            AvgSamplePerClass = input.ReadFloat();
+            break;
+          }
+          case 117: {
+            InconsistentLabelRatio = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            AvgLabelsPerInconsistentSample = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            MissingDataRatio = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            TestSetAvgUnknownTokenRatio = input.ReadFloat();
+            break;
+          }
+          case 144: {
+            VocabSize = input.ReadInt32();
+            break;
+          }
+          case 157: {
+            PercentSamplesNotInTargetVocab = input.ReadFloat();
+            break;
+          }
+          case 165: {
+            AvgUnknownTokenRatio = input.ReadFloat();
+            break;
+          }
+          case 173: {
+            JsDivergenceClasses = input.ReadFloat();
+            break;
+          }
+          case 181: {
+            JsDivergenceTokens = input.ReadFloat();
             break;
           }
         }

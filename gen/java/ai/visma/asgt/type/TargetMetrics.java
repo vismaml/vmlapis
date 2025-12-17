@@ -111,6 +111,35 @@ private static final long serialVersionUID = 0L;
      * @return The balancedAccuracy.
      */
     float getBalancedAccuracy();
+
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @return A list containing the precisionBoundEpsilon.
+     */
+    java.util.List<java.lang.Float> getPrecisionBoundEpsilonList();
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @return The count of precisionBoundEpsilon.
+     */
+    int getPrecisionBoundEpsilonCount();
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @param index The index of the element to return.
+     * @return The precisionBoundEpsilon at the given index.
+     */
+    float getPrecisionBoundEpsilon(int index);
   }
   /**
    * Protobuf type {@code asgt.type.TargetMetrics.Metric}
@@ -134,6 +163,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Metric() {
+      precisionBoundEpsilon_ = emptyFloatList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -263,6 +293,48 @@ private static final long serialVersionUID = 0L;
       return balancedAccuracy_;
     }
 
+    public static final int PRECISION_BOUND_EPSILON_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.FloatList precisionBoundEpsilon_ =
+        emptyFloatList();
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @return A list containing the precisionBoundEpsilon.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Float>
+        getPrecisionBoundEpsilonList() {
+      return precisionBoundEpsilon_;
+    }
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @return The count of precisionBoundEpsilon.
+     */
+    public int getPrecisionBoundEpsilonCount() {
+      return precisionBoundEpsilon_.size();
+    }
+    /**
+     * <pre>
+     * precision bound epsilon values
+     * </pre>
+     *
+     * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+     * @param index The index of the element to return.
+     * @return The precisionBoundEpsilon at the given index.
+     */
+    public float getPrecisionBoundEpsilon(int index) {
+      return precisionBoundEpsilon_.getFloat(index);
+    }
+    private int precisionBoundEpsilonMemoizedSerializedSize = -1;
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -277,6 +349,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (java.lang.Float.floatToRawIntBits(precision_) != 0) {
         output.writeFloat(1, precision_);
       }
@@ -306,6 +379,13 @@ private static final long serialVersionUID = 0L;
       }
       if (java.lang.Float.floatToRawIntBits(balancedAccuracy_) != 0) {
         output.writeFloat(10, balancedAccuracy_);
+      }
+      if (getPrecisionBoundEpsilonList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(precisionBoundEpsilonMemoizedSerializedSize);
+      }
+      for (int i = 0; i < precisionBoundEpsilon_.size(); i++) {
+        output.writeFloatNoTag(precisionBoundEpsilon_.getFloat(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -356,6 +436,17 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(10, balancedAccuracy_);
       }
+      {
+        int dataSize = 0;
+        dataSize = 4 * getPrecisionBoundEpsilonList().size();
+        size += dataSize;
+        if (!getPrecisionBoundEpsilonList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        precisionBoundEpsilonMemoizedSerializedSize = dataSize;
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -397,6 +488,8 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Float.floatToIntBits(getBalancedAccuracy())
           != java.lang.Float.floatToIntBits(
               other.getBalancedAccuracy())) return false;
+      if (!getPrecisionBoundEpsilonList()
+          .equals(other.getPrecisionBoundEpsilonList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -434,6 +527,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BALANCED_ACCURACY_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getBalancedAccuracy());
+      if (getPrecisionBoundEpsilonCount() > 0) {
+        hash = (37 * hash) + PRECISION_BOUND_EPSILON_FIELD_NUMBER;
+        hash = (53 * hash) + getPrecisionBoundEpsilonList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -575,6 +672,7 @@ private static final long serialVersionUID = 0L;
         mcc_ = 0F;
         accuracy_ = 0F;
         balancedAccuracy_ = 0F;
+        precisionBoundEpsilon_ = emptyFloatList();
         return this;
       }
 
@@ -638,6 +736,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.balancedAccuracy_ = balancedAccuracy_;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          precisionBoundEpsilon_.makeImmutable();
+          result.precisionBoundEpsilon_ = precisionBoundEpsilon_;
+        }
       }
 
       @java.lang.Override
@@ -681,6 +783,17 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getBalancedAccuracy() != 0F) {
           setBalancedAccuracy(other.getBalancedAccuracy());
+        }
+        if (!other.precisionBoundEpsilon_.isEmpty()) {
+          if (precisionBoundEpsilon_.isEmpty()) {
+            precisionBoundEpsilon_ = other.precisionBoundEpsilon_;
+            precisionBoundEpsilon_.makeImmutable();
+            bitField0_ |= 0x00000400;
+          } else {
+            ensurePrecisionBoundEpsilonIsMutable();
+            precisionBoundEpsilon_.addAll(other.precisionBoundEpsilon_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -758,6 +871,23 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000200;
                 break;
               } // case 85
+              case 93: {
+                float v = input.readFloat();
+                ensurePrecisionBoundEpsilonIsMutable();
+                precisionBoundEpsilon_.addFloat(v);
+                break;
+              } // case 93
+              case 90: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                int alloc = length > 4096 ? 4096 : length;
+                ensurePrecisionBoundEpsilonIsMutable(alloc / 4);
+                while (input.getBytesUntilLimit() > 0) {
+                  precisionBoundEpsilon_.addFloat(input.readFloat());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1103,6 +1233,124 @@ private static final long serialVersionUID = 0L;
       public Builder clearBalancedAccuracy() {
         bitField0_ = (bitField0_ & ~0x00000200);
         balancedAccuracy_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.FloatList precisionBoundEpsilon_ = emptyFloatList();
+      private void ensurePrecisionBoundEpsilonIsMutable() {
+        if (!precisionBoundEpsilon_.isModifiable()) {
+          precisionBoundEpsilon_ = makeMutableCopy(precisionBoundEpsilon_);
+        }
+        bitField0_ |= 0x00000400;
+      }
+      private void ensurePrecisionBoundEpsilonIsMutable(int capacity) {
+        if (!precisionBoundEpsilon_.isModifiable()) {
+          precisionBoundEpsilon_ = makeMutableCopy(precisionBoundEpsilon_, capacity);
+        }
+        bitField0_ |= 0x00000400;
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @return A list containing the precisionBoundEpsilon.
+       */
+      public java.util.List<java.lang.Float>
+          getPrecisionBoundEpsilonList() {
+        precisionBoundEpsilon_.makeImmutable();
+        return precisionBoundEpsilon_;
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @return The count of precisionBoundEpsilon.
+       */
+      public int getPrecisionBoundEpsilonCount() {
+        return precisionBoundEpsilon_.size();
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @param index The index of the element to return.
+       * @return The precisionBoundEpsilon at the given index.
+       */
+      public float getPrecisionBoundEpsilon(int index) {
+        return precisionBoundEpsilon_.getFloat(index);
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @param index The index to set the value at.
+       * @param value The precisionBoundEpsilon to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrecisionBoundEpsilon(
+          int index, float value) {
+
+        ensurePrecisionBoundEpsilonIsMutable();
+        precisionBoundEpsilon_.setFloat(index, value);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @param value The precisionBoundEpsilon to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrecisionBoundEpsilon(float value) {
+
+        ensurePrecisionBoundEpsilonIsMutable();
+        precisionBoundEpsilon_.addFloat(value);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @param values The precisionBoundEpsilon to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrecisionBoundEpsilon(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensurePrecisionBoundEpsilonIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, precisionBoundEpsilon_);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * precision bound epsilon values
+       * </pre>
+       *
+       * <code>repeated float precision_bound_epsilon = 11 [json_name = "precisionBoundEpsilon"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrecisionBoundEpsilon() {
+        precisionBoundEpsilon_ = emptyFloatList();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }

@@ -55,7 +55,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.type.TargetMetrics.Metric = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.type.TargetMetrics.Metric.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.type.TargetMetrics.Metric, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -200,6 +200,13 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.type.TargetMetrics.Metric.repeatedFields_ = [11];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -240,7 +247,8 @@ proto.asgt.type.TargetMetrics.Metric.toObject = function(includeInstance, msg) {
     falseNegative: jspb.Message.getFieldWithDefault(msg, 7, 0),
     mcc: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
     accuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
-    balancedAccuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0)
+    balancedAccuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
+    precisionBoundEpsilonList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -316,6 +324,12 @@ proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader = function(msg,
     case 10:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setBalancedAccuracy(value);
+      break;
+    case 11:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addPrecisionBoundEpsilon(values[i]);
+      }
       break;
     default:
       reader.skipField();
@@ -413,6 +427,13 @@ proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter = function(message,
   if (f !== 0.0) {
     writer.writeFloat(
       10,
+      f
+    );
+  }
+  f = message.getPrecisionBoundEpsilonList();
+  if (f.length > 0) {
+    writer.writePackedFloat(
+      11,
       f
     );
   }
@@ -596,6 +617,43 @@ proto.asgt.type.TargetMetrics.Metric.prototype.getBalancedAccuracy = function() 
  */
 proto.asgt.type.TargetMetrics.Metric.prototype.setBalancedAccuracy = function(value) {
   return jspb.Message.setProto3FloatField(this, 10, value);
+};
+
+
+/**
+ * repeated float precision_bound_epsilon = 11;
+ * @return {!Array<number>}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getPrecisionBoundEpsilonList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 11));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setPrecisionBoundEpsilonList = function(value) {
+  return jspb.Message.setField(this, 11, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.addPrecisionBoundEpsilon = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 11, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.clearPrecisionBoundEpsilonList = function() {
+  return this.setPrecisionBoundEpsilonList([]);
 };
 
 

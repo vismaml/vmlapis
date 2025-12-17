@@ -32,4 +32,10 @@ public interface PredictionOrBuilder extends
    */
   ai.visma.asgt.type.Prediction.TargetOrBuilder getTargetsOrBuilder(
       int index);
+
+  /**
+   * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
+   * @return The unknownTokenPercentage.
+   */
+  float getUnknownTokenPercentage();
 }

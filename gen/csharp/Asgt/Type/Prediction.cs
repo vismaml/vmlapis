@@ -30,22 +30,24 @@ namespace Asgt.Type {
             "c2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbFIFbGV2ZWwSMQoFdmFsdWUYAiAB",
             "KAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZVIFdmFsdWUiTQoFTGV2",
             "ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoDTUlE",
-            "EAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFIowCCgpQcmVkaWN0aW9uEjYK",
+            "EAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFIvgCCgpQcmVkaWN0aW9uEjYK",
             "B3RhcmdldHMYASADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXRS",
-            "B3RhcmdldHMaxQEKBlRhcmdldBISCgRuYW1lGAEgASgJUgRuYW1lEkYKCmNh",
-            "bmRpZGF0ZXMYAiADKAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQu",
-            "Q2FuZGlkYXRlUgpjYW5kaWRhdGVzGl8KCUNhbmRpZGF0ZRIbCgV2YWx1ZRgB",
-            "IAEoCUIF6j8CCAFSBXZhbHVlEjUKCmNvbmZpZGVuY2UYAiABKAsyFS5hc2d0",
-            "LnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZUKiAQoSYWkudmlzbWEuYXNn",
-            "dC50eXBlQg9QcmVkaWN0aW9uUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9t",
-            "aWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJ",
-            "QXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh",
-            "6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
+            "B3RhcmdldHMSOAoYdW5rbm93bl90b2tlbl9wZXJjZW50YWdlGAIgASgCUhZ1",
+            "bmtub3duVG9rZW5QZXJjZW50YWdlGvcBCgZUYXJnZXQSEgoEbmFtZRgBIAEo",
+            "CVIEbmFtZRJGCgpjYW5kaWRhdGVzGAIgAygLMiYuYXNndC50eXBlLlByZWRp",
+            "Y3Rpb24uVGFyZ2V0LkNhbmRpZGF0ZVIKY2FuZGlkYXRlcxIwChR1bmtub3du",
+            "X3RhcmdldF9jbGFzcxgDIAEoCFISdW5rbm93blRhcmdldENsYXNzGl8KCUNh",
+            "bmRpZGF0ZRIbCgV2YWx1ZRgBIAEoCUIF6j8CCAFSBXZhbHVlEjUKCmNvbmZp",
+            "ZGVuY2UYAiABKAsyFS5hc2d0LnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5j",
+            "ZUKiAQoSYWkudmlzbWEuYXNndC50eXBlQg9QcmVkaWN0aW9uUHJvdG9QAVo2",
+            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBl",
+            "O2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNn",
+            "dFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets", "UnknownTokenPercentage" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates", "UnknownTargetClass" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -358,6 +360,7 @@ namespace Asgt.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Prediction(Prediction other) : this() {
       targets_ = other.targets_.Clone();
+      unknownTokenPercentage_ = other.unknownTokenPercentage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -378,6 +381,18 @@ namespace Asgt.Type {
       get { return targets_; }
     }
 
+    /// <summary>Field number for the "unknown_token_percentage" field.</summary>
+    public const int UnknownTokenPercentageFieldNumber = 2;
+    private float unknownTokenPercentage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float UnknownTokenPercentage {
+      get { return unknownTokenPercentage_; }
+      set {
+        unknownTokenPercentage_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -394,6 +409,7 @@ namespace Asgt.Type {
         return true;
       }
       if(!targets_.Equals(other.targets_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(UnknownTokenPercentage, other.UnknownTokenPercentage)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -402,6 +418,7 @@ namespace Asgt.Type {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= targets_.GetHashCode();
+      if (UnknownTokenPercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(UnknownTokenPercentage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -421,6 +438,10 @@ namespace Asgt.Type {
       output.WriteRawMessage(this);
     #else
       targets_.WriteTo(output, _repeated_targets_codec);
+      if (UnknownTokenPercentage != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(UnknownTokenPercentage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -432,6 +453,10 @@ namespace Asgt.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       targets_.WriteTo(ref output, _repeated_targets_codec);
+      if (UnknownTokenPercentage != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(UnknownTokenPercentage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -443,6 +468,9 @@ namespace Asgt.Type {
     public int CalculateSize() {
       int size = 0;
       size += targets_.CalculateSize(_repeated_targets_codec);
+      if (UnknownTokenPercentage != 0F) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -456,6 +484,9 @@ namespace Asgt.Type {
         return;
       }
       targets_.Add(other.targets_);
+      if (other.UnknownTokenPercentage != 0F) {
+        UnknownTokenPercentage = other.UnknownTokenPercentage;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -479,6 +510,10 @@ namespace Asgt.Type {
             targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
+          case 21: {
+            UnknownTokenPercentage = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -500,6 +535,10 @@ namespace Asgt.Type {
             break;
           case 10: {
             targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
+            break;
+          }
+          case 21: {
+            UnknownTokenPercentage = input.ReadFloat();
             break;
           }
         }
@@ -549,6 +588,7 @@ namespace Asgt.Type {
         public Target(Target other) : this() {
           name_ = other.name_;
           candidates_ = other.candidates_.Clone();
+          unknownTargetClass_ = other.unknownTargetClass_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -581,6 +621,18 @@ namespace Asgt.Type {
           get { return candidates_; }
         }
 
+        /// <summary>Field number for the "unknown_target_class" field.</summary>
+        public const int UnknownTargetClassFieldNumber = 3;
+        private bool unknownTargetClass_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool UnknownTargetClass {
+          get { return unknownTargetClass_; }
+          set {
+            unknownTargetClass_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -598,6 +650,7 @@ namespace Asgt.Type {
           }
           if (Name != other.Name) return false;
           if(!candidates_.Equals(other.candidates_)) return false;
+          if (UnknownTargetClass != other.UnknownTargetClass) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -607,6 +660,7 @@ namespace Asgt.Type {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           hash ^= candidates_.GetHashCode();
+          if (UnknownTargetClass != false) hash ^= UnknownTargetClass.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -630,6 +684,10 @@ namespace Asgt.Type {
             output.WriteString(Name);
           }
           candidates_.WriteTo(output, _repeated_candidates_codec);
+          if (UnknownTargetClass != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(UnknownTargetClass);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -645,6 +703,10 @@ namespace Asgt.Type {
             output.WriteString(Name);
           }
           candidates_.WriteTo(ref output, _repeated_candidates_codec);
+          if (UnknownTargetClass != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(UnknownTargetClass);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -659,6 +721,9 @@ namespace Asgt.Type {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
           size += candidates_.CalculateSize(_repeated_candidates_codec);
+          if (UnknownTargetClass != false) {
+            size += 1 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -675,6 +740,9 @@ namespace Asgt.Type {
             Name = other.Name;
           }
           candidates_.Add(other.candidates_);
+          if (other.UnknownTargetClass != false) {
+            UnknownTargetClass = other.UnknownTargetClass;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -702,6 +770,10 @@ namespace Asgt.Type {
                 candidates_.AddEntriesFrom(input, _repeated_candidates_codec);
                 break;
               }
+              case 24: {
+                UnknownTargetClass = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -727,6 +799,10 @@ namespace Asgt.Type {
               }
               case 18: {
                 candidates_.AddEntriesFrom(ref input, _repeated_candidates_codec);
+                break;
+              }
+              case 24: {
+                UnknownTargetClass = input.ReadBool();
                 break;
               }
             }

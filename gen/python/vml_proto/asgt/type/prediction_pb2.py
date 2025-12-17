@@ -26,7 +26,7 @@ from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__fiel
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xc1\x01\n\nConfidence\x12\x31\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelR\x05level\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValueR\x05value\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\x8c\x02\n\nPrediction\x12\x36\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.TargetR\x07targets\x1a\xc5\x01\n\x06Target\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x46\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.CandidateR\ncandidates\x1a_\n\tCandidate\x12\x1b\n\x05value\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01R\x05value\x12\x35\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceR\nconfidenceB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xc1\x01\n\nConfidence\x12\x31\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelR\x05level\x12\x31\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValueR\x05value\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xf8\x02\n\nPrediction\x12\x36\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.TargetR\x07targets\x12\x38\n\x18unknown_token_percentage\x18\x02 \x01(\x02R\x16unknownTokenPercentage\x1a\xf7\x01\n\x06Target\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x46\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.CandidateR\ncandidates\x12\x30\n\x14unknown_target_class\x18\x03 \x01(\x08R\x12unknownTargetClass\x1a_\n\tCandidate\x12\x1b\n\x05value\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01R\x05value\x12\x35\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceR\nconfidenceB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -41,9 +41,9 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_CONFIDENCE_LEVEL']._serialized_start=220
   _globals['_CONFIDENCE_LEVEL']._serialized_end=297
   _globals['_PREDICTION']._serialized_start=300
-  _globals['_PREDICTION']._serialized_end=568
-  _globals['_PREDICTION_TARGET']._serialized_start=371
-  _globals['_PREDICTION_TARGET']._serialized_end=568
-  _globals['_PREDICTION_TARGET_CANDIDATE']._serialized_start=473
-  _globals['_PREDICTION_TARGET_CANDIDATE']._serialized_end=568
+  _globals['_PREDICTION']._serialized_end=676
+  _globals['_PREDICTION_TARGET']._serialized_start=429
+  _globals['_PREDICTION_TARGET']._serialized_end=676
+  _globals['_PREDICTION_TARGET_CANDIDATE']._serialized_start=581
+  _globals['_PREDICTION_TARGET_CANDIDATE']._serialized_end=676
 # @@protoc_insertion_point(module_scope)

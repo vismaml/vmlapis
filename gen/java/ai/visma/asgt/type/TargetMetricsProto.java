@@ -45,9 +45,9 @@ public final class TargetMetricsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036asgt/type/target_metrics.proto\022\tasgt.t" +
-      "ype\"\321\003\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
+      "ype\"\211\004\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
       "arget\0229\n\007metrics\030\002 \003(\0132\037.asgt.type.Targe" +
-      "tMetrics.MetricR\007metrics\032\332\002\n\006Metric\022\034\n\tp" +
+      "tMetrics.MetricR\007metrics\032\222\003\n\006Metric\022\034\n\tp" +
       "recision\030\001 \001(\002R\tprecision\022\036\n\nconfidence\030" +
       "\002 \001(\002R\nconfidence\022\037\n\013answer_rate\030\003 \001(\002R\n" +
       "answerRate\022#\n\rtrue_positive\030\004 \001(\005R\014trueP" +
@@ -56,12 +56,13 @@ public final class TargetMetricsProto {
       "ive\022%\n\016false_negative\030\007 \001(\005R\rfalseNegati" +
       "ve\022\020\n\003mcc\030\010 \001(\002R\003mcc\022\032\n\010accuracy\030\t \001(\002R\010" +
       "accuracy\022+\n\021balanced_accuracy\030\n \001(\002R\020bal" +
-      "ancedAccuracyJ\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006B\245\001\n\022ai.v" +
-      "isma.asgt.typeB\022TargetMetricsProtoP\001Z6gi" +
-      "thub.com/e-conomic/vmlapis/gen/go/asgt/t" +
-      "ype;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Ty" +
-      "pe\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Typeb" +
-      "\006proto3"
+      "ancedAccuracy\0226\n\027precision_bound_epsilon" +
+      "\030\013 \003(\002R\025precisionBoundEpsilonJ\004\010\003\020\004J\004\010\004\020" +
+      "\005J\004\010\005\020\006B\245\001\n\022ai.visma.asgt.typeB\022TargetMe" +
+      "tricsProtoP\001Z6github.com/e-conomic/vmlap" +
+      "is/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsg" +
+      "t.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetada" +
+      "ta\352\002\nAsgt::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,7 +79,7 @@ public final class TargetMetricsProto {
     internal_static_asgt_type_TargetMetrics_Metric_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_type_TargetMetrics_Metric_descriptor,
-        new java.lang.String[] { "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", });
+        new java.lang.String[] { "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", "PrecisionBoundEpsilon", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

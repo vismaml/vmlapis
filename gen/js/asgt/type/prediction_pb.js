@@ -347,7 +347,8 @@ proto.asgt.type.Prediction.prototype.toObject = function(opt_includeInstance) {
 proto.asgt.type.Prediction.toObject = function(includeInstance, msg) {
   var f, obj = {
     targetsList: jspb.Message.toObjectList(msg.getTargetsList(),
-    proto.asgt.type.Prediction.Target.toObject, includeInstance)
+    proto.asgt.type.Prediction.Target.toObject, includeInstance),
+    unknownTokenPercentage: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0)
   };
 
   if (includeInstance) {
@@ -389,6 +390,10 @@ proto.asgt.type.Prediction.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,proto.asgt.type.Prediction.Target.deserializeBinaryFromReader);
       msg.addTargets(value);
       break;
+    case 2:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setUnknownTokenPercentage(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -424,6 +429,13 @@ proto.asgt.type.Prediction.serializeBinaryToWriter = function(message, writer) {
       1,
       f,
       proto.asgt.type.Prediction.Target.serializeBinaryToWriter
+    );
+  }
+  f = message.getUnknownTokenPercentage();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      2,
+      f
     );
   }
 };
@@ -470,7 +482,8 @@ proto.asgt.type.Prediction.Target.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     candidatesList: jspb.Message.toObjectList(msg.getCandidatesList(),
-    proto.asgt.type.Prediction.Target.Candidate.toObject, includeInstance)
+    proto.asgt.type.Prediction.Target.Candidate.toObject, includeInstance),
+    unknownTargetClass: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -516,6 +529,10 @@ proto.asgt.type.Prediction.Target.deserializeBinaryFromReader = function(msg, re
       reader.readMessage(value,proto.asgt.type.Prediction.Target.Candidate.deserializeBinaryFromReader);
       msg.addCandidates(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setUnknownTargetClass(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -558,6 +575,13 @@ proto.asgt.type.Prediction.Target.serializeBinaryToWriter = function(message, wr
       2,
       f,
       proto.asgt.type.Prediction.Target.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getUnknownTargetClass();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
     );
   }
 };
@@ -801,6 +825,24 @@ proto.asgt.type.Prediction.Target.prototype.clearCandidatesList = function() {
 
 
 /**
+ * optional bool unknown_target_class = 3;
+ * @return {boolean}
+ */
+proto.asgt.type.Prediction.Target.prototype.getUnknownTargetClass = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.asgt.type.Prediction.Target} returns this
+ */
+proto.asgt.type.Prediction.Target.prototype.setUnknownTargetClass = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
  * repeated Target targets = 1;
  * @return {!Array<!proto.asgt.type.Prediction.Target>}
  */
@@ -835,6 +877,24 @@ proto.asgt.type.Prediction.prototype.addTargets = function(opt_value, opt_index)
  */
 proto.asgt.type.Prediction.prototype.clearTargetsList = function() {
   return this.setTargetsList([]);
+};
+
+
+/**
+ * optional float unknown_token_percentage = 2;
+ * @return {number}
+ */
+proto.asgt.type.Prediction.prototype.getUnknownTokenPercentage = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.Prediction} returns this
+ */
+proto.asgt.type.Prediction.prototype.setUnknownTokenPercentage = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
