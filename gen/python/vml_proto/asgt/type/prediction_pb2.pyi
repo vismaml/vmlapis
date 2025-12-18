@@ -31,9 +31,9 @@ class Confidence(_message.Message):
     def __init__(self, level: _Optional[_Union[Confidence.Level, str]] = ..., value: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ...) -> None: ...
 
 class Prediction(_message.Message):
-    __slots__ = ("targets",)
+    __slots__ = ("targets", "unknown_token_percentage")
     class Target(_message.Message):
-        __slots__ = ("name", "candidates")
+        __slots__ = ("name", "candidates", "unknown_target_class")
         class Candidate(_message.Message):
             __slots__ = ("value", "confidence")
             VALUE_FIELD_NUMBER: _ClassVar[int]
@@ -43,9 +43,13 @@ class Prediction(_message.Message):
             def __init__(self, value: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ...) -> None: ...
         NAME_FIELD_NUMBER: _ClassVar[int]
         CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+        UNKNOWN_TARGET_CLASS_FIELD_NUMBER: _ClassVar[int]
         name: str
         candidates: _containers.RepeatedCompositeFieldContainer[Prediction.Target.Candidate]
-        def __init__(self, name: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[Prediction.Target.Candidate, _Mapping]]] = ...) -> None: ...
+        unknown_target_class: bool
+        def __init__(self, name: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[Prediction.Target.Candidate, _Mapping]]] = ..., unknown_target_class: bool = ...) -> None: ...
     TARGETS_FIELD_NUMBER: _ClassVar[int]
+    UNKNOWN_TOKEN_PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
     targets: _containers.RepeatedCompositeFieldContainer[Prediction.Target]
-    def __init__(self, targets: _Optional[_Iterable[_Union[Prediction.Target, _Mapping]]] = ...) -> None: ...
+    unknown_token_percentage: float
+    def __init__(self, targets: _Optional[_Iterable[_Union[Prediction.Target, _Mapping]]] = ..., unknown_token_percentage: _Optional[float] = ...) -> None: ...

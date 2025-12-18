@@ -397,6 +397,9 @@
             "type": "object",
             "$ref": "#/definitions/PredictionTargetCandidate"
           }
+        },
+        "unknownTargetClass": {
+          "type": "boolean"
         }
       }
     },
@@ -454,6 +457,14 @@
         "balancedAccuracy": {
           "type": "number",
           "format": "float"
+        },
+        "precisionBoundEpsilon": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          },
+          "title": "precision bound epsilon values"
         }
       }
     },
@@ -707,6 +718,10 @@
             "type": "object",
             "$ref": "#/definitions/PredictionTarget"
           }
+        },
+        "unknownTokenPercentage": {
+          "type": "number",
+          "format": "float"
         }
       }
     },
@@ -840,6 +855,14 @@
         }
       }
     },
+    "v1InternalSuggestSamplesResponse": {
+      "type": "object",
+      "properties": {
+        "suggestionResponse": {
+          "$ref": "#/definitions/v1SuggestionResponse"
+        }
+      }
+    },
     "v1SuggestionOptions": {
       "type": "object",
       "properties": {
@@ -852,6 +875,33 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        }
+      }
+    },
+    "v1SuggestionRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          }
+        },
+        "options": {
+          "$ref": "#/definitions/v1SuggestionOptions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

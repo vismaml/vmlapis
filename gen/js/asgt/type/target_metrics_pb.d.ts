@@ -56,6 +56,11 @@ export namespace TargetMetrics {
     getBalancedAccuracy(): number;
     setBalancedAccuracy(value: number): Metric;
 
+    getPrecisionBoundEpsilonList(): Array<number>;
+    setPrecisionBoundEpsilonList(value: Array<number>): Metric;
+    clearPrecisionBoundEpsilonList(): Metric;
+    addPrecisionBoundEpsilon(value: number, index?: number): Metric;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Metric.AsObject;
     static toObject(includeInstance: boolean, msg: Metric): Metric.AsObject;
@@ -76,6 +81,7 @@ export namespace TargetMetrics {
       mcc: number,
       accuracy: number,
       balancedAccuracy: number,
+      precisionBoundEpsilonList: Array<number>,
     }
   }
 

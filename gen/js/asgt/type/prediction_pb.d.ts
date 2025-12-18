@@ -43,6 +43,9 @@ export class Prediction extends jspb.Message {
   clearTargetsList(): Prediction;
   addTargets(value?: Prediction.Target, index?: number): Prediction.Target;
 
+  getUnknownTokenPercentage(): number;
+  setUnknownTokenPercentage(value: number): Prediction;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Prediction.AsObject;
   static toObject(includeInstance: boolean, msg: Prediction): Prediction.AsObject;
@@ -54,6 +57,7 @@ export class Prediction extends jspb.Message {
 export namespace Prediction {
   export type AsObject = {
     targetsList: Array<Prediction.Target.AsObject>,
+    unknownTokenPercentage: number,
   }
 
   export class Target extends jspb.Message {
@@ -64,6 +68,9 @@ export namespace Prediction {
     setCandidatesList(value: Array<Prediction.Target.Candidate>): Target;
     clearCandidatesList(): Target;
     addCandidates(value?: Prediction.Target.Candidate, index?: number): Prediction.Target.Candidate;
+
+    getUnknownTargetClass(): boolean;
+    setUnknownTargetClass(value: boolean): Target;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Target.AsObject;
@@ -77,6 +84,7 @@ export namespace Prediction {
     export type AsObject = {
       name: string,
       candidatesList: Array<Prediction.Target.Candidate.AsObject>,
+      unknownTargetClass: boolean,
     }
 
     export class Candidate extends jspb.Message {

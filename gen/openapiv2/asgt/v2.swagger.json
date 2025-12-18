@@ -653,6 +653,9 @@
             "type": "object",
             "$ref": "#/definitions/TargetCandidate"
           }
+        },
+        "unknownTargetClass": {
+          "type": "boolean"
         }
       }
     },
@@ -754,6 +757,14 @@
         "balancedAccuracy": {
           "type": "number",
           "format": "float"
+        },
+        "precisionBoundEpsilon": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          },
+          "title": "precision bound epsilon values"
         }
       }
     },
@@ -1035,6 +1046,10 @@
             "type": "object",
             "$ref": "#/definitions/PredictionTarget"
           }
+        },
+        "unknownTokenPercentage": {
+          "type": "number",
+          "format": "float"
         }
       }
     },

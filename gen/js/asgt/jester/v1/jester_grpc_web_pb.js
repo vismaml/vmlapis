@@ -28,6 +28,8 @@ var asgt_type_model_type_pb = require('../../../asgt/type/model_type_pb.js')
 
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 
+var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js')
+
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')
@@ -207,6 +209,67 @@ proto.asgt.jester.v1.JesterPromiseClient.prototype.internalSuggest =
       request,
       metadata || {},
       methodDescriptor_Jester_InternalSuggest);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.jester.v1.InternalSuggestSamplesRequest,
+ *   !proto.asgt.jester.v1.InternalSuggestSamplesResponse>}
+ */
+const methodDescriptor_Jester_InternalSuggestSamples = new grpc.web.MethodDescriptor(
+  '/asgt.jester.v1.Jester/InternalSuggestSamples',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.jester.v1.InternalSuggestSamplesRequest,
+  proto.asgt.jester.v1.InternalSuggestSamplesResponse,
+  /**
+   * @param {!proto.asgt.jester.v1.InternalSuggestSamplesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.jester.v1.InternalSuggestSamplesResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.jester.v1.InternalSuggestSamplesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.jester.v1.InternalSuggestSamplesResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1.InternalSuggestSamplesResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.jester.v1.JesterClient.prototype.internalSuggestSamples =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.jester.v1.Jester/InternalSuggestSamples',
+      request,
+      metadata || {},
+      methodDescriptor_Jester_InternalSuggestSamples,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.jester.v1.InternalSuggestSamplesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.jester.v1.InternalSuggestSamplesResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.jester.v1.JesterPromiseClient.prototype.internalSuggestSamples =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.jester.v1.Jester/InternalSuggestSamples',
+      request,
+      metadata || {},
+      methodDescriptor_Jester_InternalSuggestSamples);
 };
 
 
