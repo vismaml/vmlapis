@@ -29,8 +29,10 @@ WORKDIR /app
 
 COPY ["go.mod", "go.sum", "buf.gen.*", "/app/"]
 RUN go mod download \
-  && go get github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate \
-  && go install github.com/golang/mock/mockgen github.com/envoyproxy/protoc-gen-validate
+  && go get github.com/golang/mock/mockgen \
+  && go get github.com/envoyproxy/protoc-gen-validate \
+  && go install github.com/golang/mock/mockgen \
+  && go install github.com/envoyproxy/protoc-gen-validate
 
 COPY Makefile /app/
 COPY deps deps

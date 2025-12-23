@@ -20,3 +20,7 @@ plugins:
   - plugin: buf.build/protocolbuffers/csharp:v29.3
     out: gen/csharp
     opt: base_namespace=
+  - plugin: buf.build/grpc-ecosystem/gateway:v2.27.1
+    out: gen/go
+    opt:
+      - paths=source_relative
