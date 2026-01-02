@@ -519,3 +519,17 @@ class CallsPerMonthResponse(_message.Message):
     CALLS_PER_MONTH_FIELD_NUMBER: _ClassVar[int]
     calls_per_month: _containers.RepeatedCompositeFieldContainer[CallsPerMonth]
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
+
+class SuggestionsPerMonthResponse(_message.Message):
+    __slots__ = ("suggestions_per_month",)
+    SUGGESTIONS_PER_MONTH_FIELD_NUMBER: _ClassVar[int]
+    suggestions_per_month: _containers.RepeatedCompositeFieldContainer[SuggestionsPerMonth]
+    def __init__(self, suggestions_per_month: _Optional[_Iterable[_Union[SuggestionsPerMonth, _Mapping]]] = ...) -> None: ...
+
+class SuggestionsPerMonth(_message.Message):
+    __slots__ = ("calls", "month_name")
+    CALLS_FIELD_NUMBER: _ClassVar[int]
+    MONTH_NAME_FIELD_NUMBER: _ClassVar[int]
+    calls: int
+    month_name: str
+    def __init__(self, calls: _Optional[int] = ..., month_name: _Optional[str] = ...) -> None: ...

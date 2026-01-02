@@ -1525,3 +1525,45 @@ export namespace CallsPerMonthResponse {
   }
 }
 
+export class SuggestionsPerMonthResponse extends jspb.Message {
+  getSuggestionsPerMonthList(): Array<SuggestionsPerMonth>;
+  setSuggestionsPerMonthList(value: Array<SuggestionsPerMonth>): SuggestionsPerMonthResponse;
+  clearSuggestionsPerMonthList(): SuggestionsPerMonthResponse;
+  addSuggestionsPerMonth(value?: SuggestionsPerMonth, index?: number): SuggestionsPerMonth;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SuggestionsPerMonthResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SuggestionsPerMonthResponse): SuggestionsPerMonthResponse.AsObject;
+  static serializeBinaryToWriter(message: SuggestionsPerMonthResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SuggestionsPerMonthResponse;
+  static deserializeBinaryFromReader(message: SuggestionsPerMonthResponse, reader: jspb.BinaryReader): SuggestionsPerMonthResponse;
+}
+
+export namespace SuggestionsPerMonthResponse {
+  export type AsObject = {
+    suggestionsPerMonthList: Array<SuggestionsPerMonth.AsObject>,
+  }
+}
+
+export class SuggestionsPerMonth extends jspb.Message {
+  getCalls(): number;
+  setCalls(value: number): SuggestionsPerMonth;
+
+  getMonthName(): string;
+  setMonthName(value: string): SuggestionsPerMonth;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SuggestionsPerMonth.AsObject;
+  static toObject(includeInstance: boolean, msg: SuggestionsPerMonth): SuggestionsPerMonth.AsObject;
+  static serializeBinaryToWriter(message: SuggestionsPerMonth, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SuggestionsPerMonth;
+  static deserializeBinaryFromReader(message: SuggestionsPerMonth, reader: jspb.BinaryReader): SuggestionsPerMonth;
+}
+
+export namespace SuggestionsPerMonth {
+  export type AsObject = {
+    calls: number,
+    monthName: string,
+  }
+}
+

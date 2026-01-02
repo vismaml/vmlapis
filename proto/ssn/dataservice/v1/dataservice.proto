@@ -35,6 +35,7 @@ service DataService {
     };
   }
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
+  rpc SuggestionsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
 }
 
 message Document {
@@ -316,4 +317,13 @@ message CallsPerMonth {
 
 message CallsPerMonthResponse {
   repeated CallsPerMonth calls_per_month = 1;
+}
+
+message SuggestionsPerMonthResponse {
+  repeated SuggestionsPerMonth suggestions_per_month = 1;
+}
+
+message SuggestionsPerMonth {
+  int64 calls = 1;
+  string month_name = 2;
 }

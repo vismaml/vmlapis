@@ -110,6 +110,16 @@ public final class DataserviceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_dataservice_v1_CallsPerMonthResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonthResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_dataservice_v1_SuggestionsPerMonthResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonth_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_dataservice_v1_SuggestionsPerMonth_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -500,7 +510,12 @@ public final class DataserviceProto {
       "s\022\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025Call" +
       "sPerMonthResponse\022I\n\017calls_per_month\030\001 \003" +
       "(\0132!.ssn.dataservice.v1.CallsPerMonthR\rc" +
-      "allsPerMonth2\265\005\n\013DataService\022g\n\016CreateDo" +
+      "allsPerMonth\"z\n\033SuggestionsPerMonthRespo" +
+      "nse\022[\n\025suggestions_per_month\030\001 \003(\0132\'.ssn" +
+      ".dataservice.v1.SuggestionsPerMonthR\023sug" +
+      "gestionsPerMonth\"J\n\023SuggestionsPerMonth\022" +
+      "\024\n\005calls\030\001 \001(\003R\005calls\022\035\n\nmonth_name\030\002 \001(" +
+      "\tR\tmonthName2\225\006\n\013DataService\022g\n\016CreateDo" +
       "cument\022).ssn.dataservice.v1.CreateDocume" +
       "ntRequest\032*.ssn.dataservice.v1.CreateDoc" +
       "umentResponse\022a\n\014ReadDocument\022\'.ssn.data" +
@@ -513,17 +528,19 @@ public final class DataserviceProto {
       "\"\023/v1/feedback:create:\001*\022[\n\020CalculateMet" +
       "rics\022\".ssn.dataservice.v1.MetricsRequest" +
       "\032#.ssn.dataservice.v1.FeedbackMetrics\022c\n" +
-      "\006Delete\022!.ssn.dataservice.v1.DeleteReque" +
+      "\006Delete\022!.ssn.dataservice.v1.DeleteReque",
       "st\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/" +
       "feedback:delete:\001*\022X\n\023CallsPerMonthMetri" +
       "c\022\026.google.protobuf.Empty\032).ssn.dataserv" +
-      "ice.v1.CallsPerMonthResponseB\335\001\n\033ai.vism" +
-      "a.ssn.dataservice.v1B\020DataserviceProtoP\001",
-      "ZBgithub.com/e-conomic/vmlapis/gen/go/ss" +
-      "n/dataservice/v1;dataservice\242\002\003SDX\252\002\022Ssn" +
-      ".Dataservice.V1\312\002\022Ssn\\Dataservice\\V1\342\002\036S" +
-      "sn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn::Dat" +
-      "aservice::V1b\006proto3"
+      "ice.v1.CallsPerMonthResponse\022^\n\031Suggesti" +
+      "onsPerMonthMetric\022\026.google.protobuf.Empt" +
+      "y\032).ssn.dataservice.v1.CallsPerMonthResp" +
+      "onseB\335\001\n\033ai.visma.ssn.dataservice.v1B\020Da" +
+      "taserviceProtoP\001ZBgithub.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/dataservice/v1;dataser" +
+      "vice\242\002\003SDX\252\002\022Ssn.Dataservice.V1\312\002\022Ssn\\Da" +
+      "taservice\\V1\342\002\036Ssn\\Dataservice\\V1\\GPBMet" +
+      "adata\352\002\024Ssn::Dataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -640,6 +657,18 @@ public final class DataserviceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_CallsPerMonthResponse_descriptor,
         new java.lang.String[] { "CallsPerMonth", });
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonthResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonthResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1_SuggestionsPerMonthResponse_descriptor,
+        new java.lang.String[] { "SuggestionsPerMonth", });
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonth_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_ssn_dataservice_v1_SuggestionsPerMonth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1_SuggestionsPerMonth_descriptor,
+        new java.lang.String[] { "Calls", "MonthName", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.gen_bq_schema.BqFieldProto.getDescriptor();
     ai.visma.gen_bq_schema.BqTableProto.getDescriptor();
