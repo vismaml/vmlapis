@@ -55,6 +55,11 @@ class DataServiceStub(object):
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
                 _registered_method=True)
+        self.SuggestionsPerMonthMetric = channel.unary_unary(
+                '/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
+                _registered_method=True)
         self.CalculateAnnotationProcessMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.AnnotationProcessMetricsRequest.SerializeToString,
@@ -114,6 +119,12 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def SuggestionsPerMonthMetric(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def CalculateAnnotationProcessMetrics(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -160,6 +171,11 @@ def add_DataServiceServicer_to_server(servicer, server):
             ),
             'CallsPerMonthMetric': grpc.unary_unary_rpc_method_handler(
                     servicer.CallsPerMonthMetric,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
+            ),
+            'SuggestionsPerMonthMetric': grpc.unary_unary_rpc_method_handler(
+                    servicer.SuggestionsPerMonthMetric,
                     request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
             ),
@@ -383,6 +399,33 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def SuggestionsPerMonthMetric(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric',
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
             options,

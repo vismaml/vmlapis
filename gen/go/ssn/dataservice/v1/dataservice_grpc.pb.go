@@ -28,6 +28,7 @@ const (
 	DataService_CalculateMetricsV2_FullMethodName                = "/ssn.dataservice.v1.DataService/CalculateMetricsV2"
 	DataService_Delete_FullMethodName                            = "/ssn.dataservice.v1.DataService/Delete"
 	DataService_CallsPerMonthMetric_FullMethodName               = "/ssn.dataservice.v1.DataService/CallsPerMonthMetric"
+	DataService_SuggestionsPerMonthMetric_FullMethodName         = "/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric"
 	DataService_CalculateAnnotationProcessMetrics_FullMethodName = "/ssn.dataservice.v1.DataService/CalculateAnnotationProcessMetrics"
 )
 
@@ -44,6 +45,7 @@ type DataServiceClient interface {
 	CalculateMetricsV2(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetricsV2Response, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
+	SuggestionsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessMetricsResponse, error)
 }
 
@@ -127,6 +129,15 @@ func (c *dataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb
 	return out, nil
 }
 
+func (c *dataServiceClient) SuggestionsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error) {
+	out := new(CallsPerMonthResponse)
+	err := c.cc.Invoke(ctx, DataService_SuggestionsPerMonthMetric_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *dataServiceClient) CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessMetricsResponse, error) {
 	out := new(AnnotationProcessMetricsResponse)
 	err := c.cc.Invoke(ctx, DataService_CalculateAnnotationProcessMetrics_FullMethodName, in, out, opts...)
@@ -149,6 +160,7 @@ type DataServiceServer interface {
 	CalculateMetricsV2(context.Context, *MetricsRequest) (*FeedbackMetricsV2Response, error)
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
+	SuggestionsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error)
 }
 
@@ -179,6 +191,9 @@ func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*
 }
 func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
+}
+func (UnimplementedDataServiceServer) SuggestionsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SuggestionsPerMonthMetric not implemented")
 }
 func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateAnnotationProcessMetrics not implemented")
@@ -339,6 +354,24 @@ func _DataService_CallsPerMonthMetric_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DataService_SuggestionsPerMonthMetric_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(emptypb.Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).SuggestionsPerMonthMetric(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DataService_SuggestionsPerMonthMetric_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).SuggestionsPerMonthMetric(ctx, req.(*emptypb.Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DataService_CalculateAnnotationProcessMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AnnotationProcessMetricsRequest)
 	if err := dec(in); err != nil {
@@ -395,6 +428,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CallsPerMonthMetric",
 			Handler:    _DataService_CallsPerMonthMetric_Handler,
+		},
+		{
+			MethodName: "SuggestionsPerMonthMetric",
+			Handler:    _DataService_SuggestionsPerMonthMetric_Handler,
 		},
 		{
 			MethodName: "CalculateAnnotationProcessMetrics",
