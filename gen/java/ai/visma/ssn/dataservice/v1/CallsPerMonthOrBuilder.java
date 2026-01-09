@@ -26,4 +26,10 @@ public interface CallsPerMonthOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMonthNameBytes();
+
+  /**
+   * <code>int64 total_batch_size = 3 [json_name = "totalBatchSize"];</code>
+   * @return The totalBatchSize.
+   */
+  long getTotalBatchSize();
 }

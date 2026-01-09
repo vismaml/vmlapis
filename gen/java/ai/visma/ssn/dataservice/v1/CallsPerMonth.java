@@ -93,6 +93,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TOTAL_BATCH_SIZE_FIELD_NUMBER = 3;
+  private long totalBatchSize_ = 0L;
+  /**
+   * <code>int64 total_batch_size = 3 [json_name = "totalBatchSize"];</code>
+   * @return The totalBatchSize.
+   */
+  @java.lang.Override
+  public long getTotalBatchSize() {
+    return totalBatchSize_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +124,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(monthName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, monthName_);
     }
+    if (totalBatchSize_ != 0L) {
+      output.writeInt64(3, totalBatchSize_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -128,6 +142,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(monthName_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, monthName_);
+    }
+    if (totalBatchSize_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, totalBatchSize_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -148,6 +166,8 @@ private static final long serialVersionUID = 0L;
         != other.getCalls()) return false;
     if (!getMonthName()
         .equals(other.getMonthName())) return false;
+    if (getTotalBatchSize()
+        != other.getTotalBatchSize()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -164,6 +184,9 @@ private static final long serialVersionUID = 0L;
         getCalls());
     hash = (37 * hash) + MONTH_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getMonthName().hashCode();
+    hash = (37 * hash) + TOTAL_BATCH_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTotalBatchSize());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -297,6 +320,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       calls_ = 0L;
       monthName_ = "";
+      totalBatchSize_ = 0L;
       return this;
     }
 
@@ -336,6 +360,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.monthName_ = monthName_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalBatchSize_ = totalBatchSize_;
+      }
     }
 
     @java.lang.Override
@@ -357,6 +384,9 @@ private static final long serialVersionUID = 0L;
         monthName_ = other.monthName_;
         bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (other.getTotalBatchSize() != 0L) {
+        setTotalBatchSize(other.getTotalBatchSize());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -394,6 +424,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              totalBatchSize_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -511,6 +546,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       monthName_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private long totalBatchSize_ ;
+    /**
+     * <code>int64 total_batch_size = 3 [json_name = "totalBatchSize"];</code>
+     * @return The totalBatchSize.
+     */
+    @java.lang.Override
+    public long getTotalBatchSize() {
+      return totalBatchSize_;
+    }
+    /**
+     * <code>int64 total_batch_size = 3 [json_name = "totalBatchSize"];</code>
+     * @param value The totalBatchSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalBatchSize(long value) {
+
+      totalBatchSize_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 total_batch_size = 3 [json_name = "totalBatchSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalBatchSize() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      totalBatchSize_ = 0L;
       onChanged();
       return this;
     }

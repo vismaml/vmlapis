@@ -1490,6 +1490,9 @@ export class CallsPerMonth extends jspb.Message {
   getMonthName(): string;
   setMonthName(value: string): CallsPerMonth;
 
+  getTotalBatchSize(): number;
+  setTotalBatchSize(value: number): CallsPerMonth;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CallsPerMonth.AsObject;
   static toObject(includeInstance: boolean, msg: CallsPerMonth): CallsPerMonth.AsObject;
@@ -1502,6 +1505,7 @@ export namespace CallsPerMonth {
   export type AsObject = {
     calls: number,
     monthName: string,
+    totalBatchSize: number,
   }
 }
 
