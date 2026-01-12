@@ -6,6 +6,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 message TargetMetrics {
   message Metric {
+    reserved 11;
     float precision = 1;
     float confidence = 2;
     float answer_rate = 3;
@@ -17,7 +18,7 @@ message TargetMetrics {
     float mcc = 8;
     float accuracy = 9;
     float balanced_accuracy = 10;
-    repeated float precision_bound_epsilon = 11;
+    float precision_bound_epsilon = 12;
     // precision bound epsilon values
   }
 

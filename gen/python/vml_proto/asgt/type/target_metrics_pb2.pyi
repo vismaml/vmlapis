@@ -30,8 +30,8 @@ class TargetMetrics(_message.Message):
         mcc: float
         accuracy: float
         balanced_accuracy: float
-        precision_bound_epsilon: _containers.RepeatedScalarFieldContainer[float]
-        def __init__(self, precision: _Optional[float] = ..., confidence: _Optional[float] = ..., answer_rate: _Optional[float] = ..., true_positive: _Optional[int] = ..., true_negative: _Optional[int] = ..., false_positive: _Optional[int] = ..., false_negative: _Optional[int] = ..., mcc: _Optional[float] = ..., accuracy: _Optional[float] = ..., balanced_accuracy: _Optional[float] = ..., precision_bound_epsilon: _Optional[_Iterable[float]] = ...) -> None: ...
+        precision_bound_epsilon: float
+        def __init__(self, precision: _Optional[float] = ..., confidence: _Optional[float] = ..., answer_rate: _Optional[float] = ..., true_positive: _Optional[int] = ..., true_negative: _Optional[int] = ..., false_positive: _Optional[int] = ..., false_negative: _Optional[int] = ..., mcc: _Optional[float] = ..., accuracy: _Optional[float] = ..., balanced_accuracy: _Optional[float] = ..., precision_bound_epsilon: _Optional[float] = ...) -> None: ...
     TARGET_FIELD_NUMBER: _ClassVar[int]
     METRICS_FIELD_NUMBER: _ClassVar[int]
     target: str
