@@ -24,10 +24,10 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSKJ",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSKP",
             "BAoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
-            "UgdtZXRyaWNzGpIDCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
+            "UgdtZXRyaWNzGpgDCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
             "aXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3",
             "ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQg",
             "ASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1",
@@ -35,12 +35,12 @@ namespace Asgt.Type {
             "aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlEhAK",
             "A21jYxgIIAEoAlIDbWNjEhoKCGFjY3VyYWN5GAkgASgCUghhY2N1cmFjeRIr",
             "ChFiYWxhbmNlZF9hY2N1cmFjeRgKIAEoAlIQYmFsYW5jZWRBY2N1cmFjeRI2",
-            "ChdwcmVjaXNpb25fYm91bmRfZXBzaWxvbhgLIAMoAlIVcHJlY2lzaW9uQm91",
-            "bmRFcHNpbG9uSgQIAxAESgQIBBAFSgQIBRAGQqUBChJhaS52aXNtYS5hc2d0",
-            "LnR5cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZnaXRodWIuY29tL2UtY29u",
-            "b21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGWiAgNBVFiq",
-            "AglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0XFR5cGVcR1BCTWV0YWRh",
-            "dGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
+            "ChdwcmVjaXNpb25fYm91bmRfZXBzaWxvbhgMIAEoAlIVcHJlY2lzaW9uQm91",
+            "bmRFcHNpbG9uSgQICxAMSgQIAxAESgQIBBAFSgQIBRAGQqUBChJhaS52aXNt",
+            "YS5hc2d0LnR5cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZnaXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGWi",
+            "AgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0XFR5cGVcR1BC",
+            "TWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -323,7 +323,7 @@ namespace Asgt.Type {
           mcc_ = other.mcc_;
           accuracy_ = other.accuracy_;
           balancedAccuracy_ = other.balancedAccuracy_;
-          precisionBoundEpsilon_ = other.precisionBoundEpsilon_.Clone();
+          precisionBoundEpsilon_ = other.precisionBoundEpsilon_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -457,17 +457,18 @@ namespace Asgt.Type {
         }
 
         /// <summary>Field number for the "precision_bound_epsilon" field.</summary>
-        public const int PrecisionBoundEpsilonFieldNumber = 11;
-        private static readonly pb::FieldCodec<float> _repeated_precisionBoundEpsilon_codec
-            = pb::FieldCodec.ForFloat(90);
-        private readonly pbc::RepeatedField<float> precisionBoundEpsilon_ = new pbc::RepeatedField<float>();
+        public const int PrecisionBoundEpsilonFieldNumber = 12;
+        private float precisionBoundEpsilon_;
         /// <summary>
         /// precision bound epsilon values
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<float> PrecisionBoundEpsilon {
+        public float PrecisionBoundEpsilon {
           get { return precisionBoundEpsilon_; }
+          set {
+            precisionBoundEpsilon_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -495,7 +496,7 @@ namespace Asgt.Type {
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Mcc, other.Mcc)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Accuracy, other.Accuracy)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(BalancedAccuracy, other.BalancedAccuracy)) return false;
-          if(!precisionBoundEpsilon_.Equals(other.precisionBoundEpsilon_)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PrecisionBoundEpsilon, other.PrecisionBoundEpsilon)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -513,7 +514,7 @@ namespace Asgt.Type {
           if (Mcc != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Mcc);
           if (Accuracy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Accuracy);
           if (BalancedAccuracy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BalancedAccuracy);
-          hash ^= precisionBoundEpsilon_.GetHashCode();
+          if (PrecisionBoundEpsilon != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PrecisionBoundEpsilon);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -572,7 +573,10 @@ namespace Asgt.Type {
             output.WriteRawTag(85);
             output.WriteFloat(BalancedAccuracy);
           }
-          precisionBoundEpsilon_.WriteTo(output, _repeated_precisionBoundEpsilon_codec);
+          if (PrecisionBoundEpsilon != 0F) {
+            output.WriteRawTag(101);
+            output.WriteFloat(PrecisionBoundEpsilon);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -623,7 +627,10 @@ namespace Asgt.Type {
             output.WriteRawTag(85);
             output.WriteFloat(BalancedAccuracy);
           }
-          precisionBoundEpsilon_.WriteTo(ref output, _repeated_precisionBoundEpsilon_codec);
+          if (PrecisionBoundEpsilon != 0F) {
+            output.WriteRawTag(101);
+            output.WriteFloat(PrecisionBoundEpsilon);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -664,7 +671,9 @@ namespace Asgt.Type {
           if (BalancedAccuracy != 0F) {
             size += 1 + 4;
           }
-          size += precisionBoundEpsilon_.CalculateSize(_repeated_precisionBoundEpsilon_codec);
+          if (PrecisionBoundEpsilon != 0F) {
+            size += 1 + 4;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -707,7 +716,9 @@ namespace Asgt.Type {
           if (other.BalancedAccuracy != 0F) {
             BalancedAccuracy = other.BalancedAccuracy;
           }
-          precisionBoundEpsilon_.Add(other.precisionBoundEpsilon_);
+          if (other.PrecisionBoundEpsilon != 0F) {
+            PrecisionBoundEpsilon = other.PrecisionBoundEpsilon;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -767,9 +778,8 @@ namespace Asgt.Type {
                 BalancedAccuracy = input.ReadFloat();
                 break;
               }
-              case 90:
-              case 93: {
-                precisionBoundEpsilon_.AddEntriesFrom(input, _repeated_precisionBoundEpsilon_codec);
+              case 101: {
+                PrecisionBoundEpsilon = input.ReadFloat();
                 break;
               }
             }
@@ -831,9 +841,8 @@ namespace Asgt.Type {
                 BalancedAccuracy = input.ReadFloat();
                 break;
               }
-              case 90:
-              case 93: {
-                precisionBoundEpsilon_.AddEntriesFrom(ref input, _repeated_precisionBoundEpsilon_codec);
+              case 101: {
+                PrecisionBoundEpsilon = input.ReadFloat();
                 break;
               }
             }

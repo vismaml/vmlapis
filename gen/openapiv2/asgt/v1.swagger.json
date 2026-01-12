@@ -459,11 +459,8 @@
           "format": "float"
         },
         "precisionBoundEpsilon": {
-          "type": "array",
-          "items": {
-            "type": "number",
-            "format": "float"
-          },
+          "type": "number",
+          "format": "float",
           "title": "precision bound epsilon values"
         }
       }
