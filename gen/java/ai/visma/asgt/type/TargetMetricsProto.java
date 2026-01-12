@@ -45,24 +45,34 @@ public final class TargetMetricsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036asgt/type/target_metrics.proto\022\tasgt.t" +
-      "ype\"\217\004\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
+      "ype\"\215\007\n\rTargetMetrics\022\026\n\006target\030\001 \001(\tR\006t" +
       "arget\0229\n\007metrics\030\002 \003(\0132\037.asgt.type.Targe" +
-      "tMetrics.MetricR\007metrics\032\230\003\n\006Metric\022\034\n\tp" +
-      "recision\030\001 \001(\002R\tprecision\022\036\n\nconfidence\030" +
-      "\002 \001(\002R\nconfidence\022\037\n\013answer_rate\030\003 \001(\002R\n" +
-      "answerRate\022#\n\rtrue_positive\030\004 \001(\005R\014trueP" +
-      "ositive\022#\n\rtrue_negative\030\005 \001(\005R\014trueNega" +
-      "tive\022%\n\016false_positive\030\006 \001(\005R\rfalsePosit" +
-      "ive\022%\n\016false_negative\030\007 \001(\005R\rfalseNegati" +
-      "ve\022\020\n\003mcc\030\010 \001(\002R\003mcc\022\032\n\010accuracy\030\t \001(\002R\010" +
-      "accuracy\022+\n\021balanced_accuracy\030\n \001(\002R\020bal" +
-      "ancedAccuracy\0226\n\027precision_bound_epsilon" +
-      "\030\014 \001(\002R\025precisionBoundEpsilonJ\004\010\013\020\014J\004\010\003\020" +
-      "\004J\004\010\004\020\005J\004\010\005\020\006B\245\001\n\022ai.visma.asgt.typeB\022Ta" +
-      "rgetMetricsProtoP\001Z6github.com/e-conomic" +
-      "/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX" +
-      "\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPB" +
-      "Metadata\352\002\nAsgt::Typeb\006proto3"
+      "tMetrics.MetricR\007metrics\022\030\n\007entropy\030\006 \001(" +
+      "\002R\007entropy\022*\n\021number_of_classes\030\007 \001(\005R\017n" +
+      "umberOfClasses\022/\n\024avg_sample_per_class\030\010" +
+      " \001(\002R\021avgSamplePerClass\0228\n\030inconsistent_" +
+      "label_ratio\030\t \001(\002R\026inconsistentLabelRati" +
+      "o\022J\n\"avg_labels_per_inconsistent_sample\030" +
+      "\n \001(\002R\036avgLabelsPerInconsistentSample\022K\n" +
+      "#percent_samples_not_in_target_vocab\030\013 \001" +
+      "(\002R\036percentSamplesNotInTargetVocab\0222\n\025js" +
+      "_divergence_classes\030\014 \001(\002R\023jsDivergenceC" +
+      "lasses\032\230\003\n\006Metric\022\034\n\tprecision\030\001 \001(\002R\tpr" +
+      "ecision\022\036\n\nconfidence\030\002 \001(\002R\nconfidence\022" +
+      "\037\n\013answer_rate\030\003 \001(\002R\nanswerRate\022#\n\rtrue" +
+      "_positive\030\004 \001(\005R\014truePositive\022#\n\rtrue_ne" +
+      "gative\030\005 \001(\005R\014trueNegative\022%\n\016false_posi" +
+      "tive\030\006 \001(\005R\rfalsePositive\022%\n\016false_negat" +
+      "ive\030\007 \001(\005R\rfalseNegative\022\020\n\003mcc\030\010 \001(\002R\003m" +
+      "cc\022\032\n\010accuracy\030\t \001(\002R\010accuracy\022+\n\021balanc" +
+      "ed_accuracy\030\n \001(\002R\020balancedAccuracy\0226\n\027p" +
+      "recision_bound_epsilon\030\014 \001(\002R\025precisionB" +
+      "oundEpsilonJ\004\010\013\020\014J\004\010\003\020\004J\004\010\004\020\005J\004\010\005\020\006B\245\001\n\022" +
+      "ai.visma.asgt.typeB\022TargetMetricsProtoP\001" +
+      "Z6github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsg" +
+      "t\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::T" +
+      "ypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,7 +83,7 @@ public final class TargetMetricsProto {
     internal_static_asgt_type_TargetMetrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_type_TargetMetrics_descriptor,
-        new java.lang.String[] { "Target", "Metrics", });
+        new java.lang.String[] { "Target", "Metrics", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses", });
     internal_static_asgt_type_TargetMetrics_Metric_descriptor =
       internal_static_asgt_type_TargetMetrics_descriptor.getNestedTypes().get(0);
     internal_static_asgt_type_TargetMetrics_Metric_fieldAccessorTable = new

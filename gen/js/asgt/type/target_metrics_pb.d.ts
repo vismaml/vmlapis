@@ -11,6 +11,27 @@ export class TargetMetrics extends jspb.Message {
   clearMetricsList(): TargetMetrics;
   addMetrics(value?: TargetMetrics.Metric, index?: number): TargetMetrics.Metric;
 
+  getEntropy(): number;
+  setEntropy(value: number): TargetMetrics;
+
+  getNumberOfClasses(): number;
+  setNumberOfClasses(value: number): TargetMetrics;
+
+  getAvgSamplePerClass(): number;
+  setAvgSamplePerClass(value: number): TargetMetrics;
+
+  getInconsistentLabelRatio(): number;
+  setInconsistentLabelRatio(value: number): TargetMetrics;
+
+  getAvgLabelsPerInconsistentSample(): number;
+  setAvgLabelsPerInconsistentSample(value: number): TargetMetrics;
+
+  getPercentSamplesNotInTargetVocab(): number;
+  setPercentSamplesNotInTargetVocab(value: number): TargetMetrics;
+
+  getJsDivergenceClasses(): number;
+  setJsDivergenceClasses(value: number): TargetMetrics;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TargetMetrics.AsObject;
   static toObject(includeInstance: boolean, msg: TargetMetrics): TargetMetrics.AsObject;
@@ -23,6 +44,13 @@ export namespace TargetMetrics {
   export type AsObject = {
     target: string,
     metricsList: Array<TargetMetrics.Metric.AsObject>,
+    entropy: number,
+    numberOfClasses: number,
+    avgSamplePerClass: number,
+    inconsistentLabelRatio: number,
+    avgLabelsPerInconsistentSample: number,
+    percentSamplesNotInTargetVocab: number,
+    jsDivergenceClasses: number,
   }
 
   export class Metric extends jspb.Message {

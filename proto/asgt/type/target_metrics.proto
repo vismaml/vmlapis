@@ -25,4 +25,25 @@ message TargetMetrics {
   string target = 1;
   repeated Metric metrics = 2;
   reserved 3, 4, 5;
+
+  float entropy = 6;
+  // entropy of the dataset
+
+  int32 number_of_classes = 7;
+  // number of classes in the dataset
+
+  float avg_sample_per_class = 8;
+  // average samples per class
+
+  float inconsistent_label_ratio = 9;
+  // ratio of inconsistent labels
+
+  float avg_labels_per_inconsistent_sample = 10;
+  // average labels per inconsistent sample
+
+  float percent_samples_not_in_target_vocab = 11;
+  // percentage of samples not in target vocabulary
+
+  float js_divergence_classes = 12;
+  // Jensen-Shannon divergence for classes
 }

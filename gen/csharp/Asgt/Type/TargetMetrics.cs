@@ -24,27 +24,36 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSKP",
-            "BAoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSKN",
+            "BwoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
-            "UgdtZXRyaWNzGpgDCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
-            "aXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3",
-            "ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQg",
-            "ASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1",
-            "ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgFUg1mYWxzZVBvc2l0",
-            "aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlEhAK",
-            "A21jYxgIIAEoAlIDbWNjEhoKCGFjY3VyYWN5GAkgASgCUghhY2N1cmFjeRIr",
-            "ChFiYWxhbmNlZF9hY2N1cmFjeRgKIAEoAlIQYmFsYW5jZWRBY2N1cmFjeRI2",
-            "ChdwcmVjaXNpb25fYm91bmRfZXBzaWxvbhgMIAEoAlIVcHJlY2lzaW9uQm91",
-            "bmRFcHNpbG9uSgQICxAMSgQIAxAESgQIBBAFSgQIBRAGQqUBChJhaS52aXNt",
-            "YS5hc2d0LnR5cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZnaXRodWIuY29t",
-            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGWi",
-            "AgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0XFR5cGVcR1BC",
-            "TWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
+            "UgdtZXRyaWNzEhgKB2VudHJvcHkYBiABKAJSB2VudHJvcHkSKgoRbnVtYmVy",
+            "X29mX2NsYXNzZXMYByABKAVSD251bWJlck9mQ2xhc3NlcxIvChRhdmdfc2Ft",
+            "cGxlX3Blcl9jbGFzcxgIIAEoAlIRYXZnU2FtcGxlUGVyQ2xhc3MSOAoYaW5j",
+            "b25zaXN0ZW50X2xhYmVsX3JhdGlvGAkgASgCUhZpbmNvbnNpc3RlbnRMYWJl",
+            "bFJhdGlvEkoKImF2Z19sYWJlbHNfcGVyX2luY29uc2lzdGVudF9zYW1wbGUY",
+            "CiABKAJSHmF2Z0xhYmVsc1BlckluY29uc2lzdGVudFNhbXBsZRJLCiNwZXJj",
+            "ZW50X3NhbXBsZXNfbm90X2luX3RhcmdldF92b2NhYhgLIAEoAlIecGVyY2Vu",
+            "dFNhbXBsZXNOb3RJblRhcmdldFZvY2FiEjIKFWpzX2RpdmVyZ2VuY2VfY2xh",
+            "c3NlcxgMIAEoAlITanNEaXZlcmdlbmNlQ2xhc3NlcxqYAwoGTWV0cmljEhwK",
+            "CXByZWNpc2lvbhgBIAEoAlIJcHJlY2lzaW9uEh4KCmNvbmZpZGVuY2UYAiAB",
+            "KAJSCmNvbmZpZGVuY2USHwoLYW5zd2VyX3JhdGUYAyABKAJSCmFuc3dlclJh",
+            "dGUSIwoNdHJ1ZV9wb3NpdGl2ZRgEIAEoBVIMdHJ1ZVBvc2l0aXZlEiMKDXRy",
+            "dWVfbmVnYXRpdmUYBSABKAVSDHRydWVOZWdhdGl2ZRIlCg5mYWxzZV9wb3Np",
+            "dGl2ZRgGIAEoBVINZmFsc2VQb3NpdGl2ZRIlCg5mYWxzZV9uZWdhdGl2ZRgH",
+            "IAEoBVINZmFsc2VOZWdhdGl2ZRIQCgNtY2MYCCABKAJSA21jYxIaCghhY2N1",
+            "cmFjeRgJIAEoAlIIYWNjdXJhY3kSKwoRYmFsYW5jZWRfYWNjdXJhY3kYCiAB",
+            "KAJSEGJhbGFuY2VkQWNjdXJhY3kSNgoXcHJlY2lzaW9uX2JvdW5kX2Vwc2ls",
+            "b24YDCABKAJSFXByZWNpc2lvbkJvdW5kRXBzaWxvbkoECAsQDEoECAMQBEoE",
+            "CAQQBUoECAUQBkKlAQoSYWkudmlzbWEuYXNndC50eXBlQhJUYXJnZXRNZXRy",
+            "aWNzUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
+            "Z28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNn",
+            "dFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", "PrecisionBoundEpsilon" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", "PrecisionBoundEpsilon" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -88,6 +97,13 @@ namespace Asgt.Type {
     public TargetMetrics(TargetMetrics other) : this() {
       target_ = other.target_;
       metrics_ = other.metrics_.Clone();
+      entropy_ = other.entropy_;
+      numberOfClasses_ = other.numberOfClasses_;
+      avgSamplePerClass_ = other.avgSamplePerClass_;
+      inconsistentLabelRatio_ = other.inconsistentLabelRatio_;
+      avgLabelsPerInconsistentSample_ = other.avgLabelsPerInconsistentSample_;
+      percentSamplesNotInTargetVocab_ = other.percentSamplesNotInTargetVocab_;
+      jsDivergenceClasses_ = other.jsDivergenceClasses_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -120,6 +136,111 @@ namespace Asgt.Type {
       get { return metrics_; }
     }
 
+    /// <summary>Field number for the "entropy" field.</summary>
+    public const int EntropyFieldNumber = 6;
+    private float entropy_;
+    /// <summary>
+    /// entropy of the dataset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Entropy {
+      get { return entropy_; }
+      set {
+        entropy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "number_of_classes" field.</summary>
+    public const int NumberOfClassesFieldNumber = 7;
+    private int numberOfClasses_;
+    /// <summary>
+    /// number of classes in the dataset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NumberOfClasses {
+      get { return numberOfClasses_; }
+      set {
+        numberOfClasses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avg_sample_per_class" field.</summary>
+    public const int AvgSamplePerClassFieldNumber = 8;
+    private float avgSamplePerClass_;
+    /// <summary>
+    /// average samples per class
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AvgSamplePerClass {
+      get { return avgSamplePerClass_; }
+      set {
+        avgSamplePerClass_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inconsistent_label_ratio" field.</summary>
+    public const int InconsistentLabelRatioFieldNumber = 9;
+    private float inconsistentLabelRatio_;
+    /// <summary>
+    /// ratio of inconsistent labels
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float InconsistentLabelRatio {
+      get { return inconsistentLabelRatio_; }
+      set {
+        inconsistentLabelRatio_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avg_labels_per_inconsistent_sample" field.</summary>
+    public const int AvgLabelsPerInconsistentSampleFieldNumber = 10;
+    private float avgLabelsPerInconsistentSample_;
+    /// <summary>
+    /// average labels per inconsistent sample
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AvgLabelsPerInconsistentSample {
+      get { return avgLabelsPerInconsistentSample_; }
+      set {
+        avgLabelsPerInconsistentSample_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "percent_samples_not_in_target_vocab" field.</summary>
+    public const int PercentSamplesNotInTargetVocabFieldNumber = 11;
+    private float percentSamplesNotInTargetVocab_;
+    /// <summary>
+    /// percentage of samples not in target vocabulary
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PercentSamplesNotInTargetVocab {
+      get { return percentSamplesNotInTargetVocab_; }
+      set {
+        percentSamplesNotInTargetVocab_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "js_divergence_classes" field.</summary>
+    public const int JsDivergenceClassesFieldNumber = 12;
+    private float jsDivergenceClasses_;
+    /// <summary>
+    /// Jensen-Shannon divergence for classes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float JsDivergenceClasses {
+      get { return jsDivergenceClasses_; }
+      set {
+        jsDivergenceClasses_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -137,6 +258,13 @@ namespace Asgt.Type {
       }
       if (Target != other.Target) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Entropy, other.Entropy)) return false;
+      if (NumberOfClasses != other.NumberOfClasses) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgSamplePerClass, other.AvgSamplePerClass)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(InconsistentLabelRatio, other.InconsistentLabelRatio)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgLabelsPerInconsistentSample, other.AvgLabelsPerInconsistentSample)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentSamplesNotInTargetVocab, other.PercentSamplesNotInTargetVocab)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(JsDivergenceClasses, other.JsDivergenceClasses)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,6 +274,13 @@ namespace Asgt.Type {
       int hash = 1;
       if (Target.Length != 0) hash ^= Target.GetHashCode();
       hash ^= metrics_.GetHashCode();
+      if (Entropy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Entropy);
+      if (NumberOfClasses != 0) hash ^= NumberOfClasses.GetHashCode();
+      if (AvgSamplePerClass != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgSamplePerClass);
+      if (InconsistentLabelRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(InconsistentLabelRatio);
+      if (AvgLabelsPerInconsistentSample != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgLabelsPerInconsistentSample);
+      if (PercentSamplesNotInTargetVocab != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSamplesNotInTargetVocab);
+      if (JsDivergenceClasses != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceClasses);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,6 +304,34 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (Entropy != 0F) {
+        output.WriteRawTag(53);
+        output.WriteFloat(Entropy);
+      }
+      if (NumberOfClasses != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(AvgSamplePerClass);
+      }
+      if (InconsistentLabelRatio != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(InconsistentLabelRatio);
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(AvgLabelsPerInconsistentSample);
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(PercentSamplesNotInTargetVocab);
+      }
+      if (JsDivergenceClasses != 0F) {
+        output.WriteRawTag(101);
+        output.WriteFloat(JsDivergenceClasses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -184,6 +347,34 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (Entropy != 0F) {
+        output.WriteRawTag(53);
+        output.WriteFloat(Entropy);
+      }
+      if (NumberOfClasses != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(AvgSamplePerClass);
+      }
+      if (InconsistentLabelRatio != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(InconsistentLabelRatio);
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(AvgLabelsPerInconsistentSample);
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(PercentSamplesNotInTargetVocab);
+      }
+      if (JsDivergenceClasses != 0F) {
+        output.WriteRawTag(101);
+        output.WriteFloat(JsDivergenceClasses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -198,6 +389,27 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (Entropy != 0F) {
+        size += 1 + 4;
+      }
+      if (NumberOfClasses != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumberOfClasses);
+      }
+      if (AvgSamplePerClass != 0F) {
+        size += 1 + 4;
+      }
+      if (InconsistentLabelRatio != 0F) {
+        size += 1 + 4;
+      }
+      if (AvgLabelsPerInconsistentSample != 0F) {
+        size += 1 + 4;
+      }
+      if (PercentSamplesNotInTargetVocab != 0F) {
+        size += 1 + 4;
+      }
+      if (JsDivergenceClasses != 0F) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -214,6 +426,27 @@ namespace Asgt.Type {
         Target = other.Target;
       }
       metrics_.Add(other.metrics_);
+      if (other.Entropy != 0F) {
+        Entropy = other.Entropy;
+      }
+      if (other.NumberOfClasses != 0) {
+        NumberOfClasses = other.NumberOfClasses;
+      }
+      if (other.AvgSamplePerClass != 0F) {
+        AvgSamplePerClass = other.AvgSamplePerClass;
+      }
+      if (other.InconsistentLabelRatio != 0F) {
+        InconsistentLabelRatio = other.InconsistentLabelRatio;
+      }
+      if (other.AvgLabelsPerInconsistentSample != 0F) {
+        AvgLabelsPerInconsistentSample = other.AvgLabelsPerInconsistentSample;
+      }
+      if (other.PercentSamplesNotInTargetVocab != 0F) {
+        PercentSamplesNotInTargetVocab = other.PercentSamplesNotInTargetVocab;
+      }
+      if (other.JsDivergenceClasses != 0F) {
+        JsDivergenceClasses = other.JsDivergenceClasses;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -241,6 +474,34 @@ namespace Asgt.Type {
             metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
             break;
           }
+          case 53: {
+            Entropy = input.ReadFloat();
+            break;
+          }
+          case 56: {
+            NumberOfClasses = input.ReadInt32();
+            break;
+          }
+          case 69: {
+            AvgSamplePerClass = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            InconsistentLabelRatio = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            AvgLabelsPerInconsistentSample = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            PercentSamplesNotInTargetVocab = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            JsDivergenceClasses = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -266,6 +527,34 @@ namespace Asgt.Type {
           }
           case 18: {
             metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+            break;
+          }
+          case 53: {
+            Entropy = input.ReadFloat();
+            break;
+          }
+          case 56: {
+            NumberOfClasses = input.ReadInt32();
+            break;
+          }
+          case 69: {
+            AvgSamplePerClass = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            InconsistentLabelRatio = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            AvgLabelsPerInconsistentSample = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            PercentSamplesNotInTargetVocab = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            JsDivergenceClasses = input.ReadFloat();
             break;
           }
         }

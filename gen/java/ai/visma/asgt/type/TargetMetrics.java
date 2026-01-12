@@ -1332,6 +1332,111 @@ private static final long serialVersionUID = 0L;
     return metrics_.get(index);
   }
 
+  public static final int ENTROPY_FIELD_NUMBER = 6;
+  private float entropy_ = 0F;
+  /**
+   * <pre>
+   * entropy of the dataset
+   * </pre>
+   *
+   * <code>float entropy = 6 [json_name = "entropy"];</code>
+   * @return The entropy.
+   */
+  @java.lang.Override
+  public float getEntropy() {
+    return entropy_;
+  }
+
+  public static final int NUMBER_OF_CLASSES_FIELD_NUMBER = 7;
+  private int numberOfClasses_ = 0;
+  /**
+   * <pre>
+   * number of classes in the dataset
+   * </pre>
+   *
+   * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+   * @return The numberOfClasses.
+   */
+  @java.lang.Override
+  public int getNumberOfClasses() {
+    return numberOfClasses_;
+  }
+
+  public static final int AVG_SAMPLE_PER_CLASS_FIELD_NUMBER = 8;
+  private float avgSamplePerClass_ = 0F;
+  /**
+   * <pre>
+   * average samples per class
+   * </pre>
+   *
+   * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+   * @return The avgSamplePerClass.
+   */
+  @java.lang.Override
+  public float getAvgSamplePerClass() {
+    return avgSamplePerClass_;
+  }
+
+  public static final int INCONSISTENT_LABEL_RATIO_FIELD_NUMBER = 9;
+  private float inconsistentLabelRatio_ = 0F;
+  /**
+   * <pre>
+   * ratio of inconsistent labels
+   * </pre>
+   *
+   * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+   * @return The inconsistentLabelRatio.
+   */
+  @java.lang.Override
+  public float getInconsistentLabelRatio() {
+    return inconsistentLabelRatio_;
+  }
+
+  public static final int AVG_LABELS_PER_INCONSISTENT_SAMPLE_FIELD_NUMBER = 10;
+  private float avgLabelsPerInconsistentSample_ = 0F;
+  /**
+   * <pre>
+   * average labels per inconsistent sample
+   * </pre>
+   *
+   * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+   * @return The avgLabelsPerInconsistentSample.
+   */
+  @java.lang.Override
+  public float getAvgLabelsPerInconsistentSample() {
+    return avgLabelsPerInconsistentSample_;
+  }
+
+  public static final int PERCENT_SAMPLES_NOT_IN_TARGET_VOCAB_FIELD_NUMBER = 11;
+  private float percentSamplesNotInTargetVocab_ = 0F;
+  /**
+   * <pre>
+   * percentage of samples not in target vocabulary
+   * </pre>
+   *
+   * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+   * @return The percentSamplesNotInTargetVocab.
+   */
+  @java.lang.Override
+  public float getPercentSamplesNotInTargetVocab() {
+    return percentSamplesNotInTargetVocab_;
+  }
+
+  public static final int JS_DIVERGENCE_CLASSES_FIELD_NUMBER = 12;
+  private float jsDivergenceClasses_ = 0F;
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for classes
+   * </pre>
+   *
+   * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+   * @return The jsDivergenceClasses.
+   */
+  @java.lang.Override
+  public float getJsDivergenceClasses() {
+    return jsDivergenceClasses_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1352,6 +1457,27 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metrics_.size(); i++) {
       output.writeMessage(2, metrics_.get(i));
     }
+    if (java.lang.Float.floatToRawIntBits(entropy_) != 0) {
+      output.writeFloat(6, entropy_);
+    }
+    if (numberOfClasses_ != 0) {
+      output.writeInt32(7, numberOfClasses_);
+    }
+    if (java.lang.Float.floatToRawIntBits(avgSamplePerClass_) != 0) {
+      output.writeFloat(8, avgSamplePerClass_);
+    }
+    if (java.lang.Float.floatToRawIntBits(inconsistentLabelRatio_) != 0) {
+      output.writeFloat(9, inconsistentLabelRatio_);
+    }
+    if (java.lang.Float.floatToRawIntBits(avgLabelsPerInconsistentSample_) != 0) {
+      output.writeFloat(10, avgLabelsPerInconsistentSample_);
+    }
+    if (java.lang.Float.floatToRawIntBits(percentSamplesNotInTargetVocab_) != 0) {
+      output.writeFloat(11, percentSamplesNotInTargetVocab_);
+    }
+    if (java.lang.Float.floatToRawIntBits(jsDivergenceClasses_) != 0) {
+      output.writeFloat(12, jsDivergenceClasses_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1367,6 +1493,34 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metrics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, metrics_.get(i));
+    }
+    if (java.lang.Float.floatToRawIntBits(entropy_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(6, entropy_);
+    }
+    if (numberOfClasses_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, numberOfClasses_);
+    }
+    if (java.lang.Float.floatToRawIntBits(avgSamplePerClass_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(8, avgSamplePerClass_);
+    }
+    if (java.lang.Float.floatToRawIntBits(inconsistentLabelRatio_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(9, inconsistentLabelRatio_);
+    }
+    if (java.lang.Float.floatToRawIntBits(avgLabelsPerInconsistentSample_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(10, avgLabelsPerInconsistentSample_);
+    }
+    if (java.lang.Float.floatToRawIntBits(percentSamplesNotInTargetVocab_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(11, percentSamplesNotInTargetVocab_);
+    }
+    if (java.lang.Float.floatToRawIntBits(jsDivergenceClasses_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(12, jsDivergenceClasses_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1387,6 +1541,26 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTarget())) return false;
     if (!getMetricsList()
         .equals(other.getMetricsList())) return false;
+    if (java.lang.Float.floatToIntBits(getEntropy())
+        != java.lang.Float.floatToIntBits(
+            other.getEntropy())) return false;
+    if (getNumberOfClasses()
+        != other.getNumberOfClasses()) return false;
+    if (java.lang.Float.floatToIntBits(getAvgSamplePerClass())
+        != java.lang.Float.floatToIntBits(
+            other.getAvgSamplePerClass())) return false;
+    if (java.lang.Float.floatToIntBits(getInconsistentLabelRatio())
+        != java.lang.Float.floatToIntBits(
+            other.getInconsistentLabelRatio())) return false;
+    if (java.lang.Float.floatToIntBits(getAvgLabelsPerInconsistentSample())
+        != java.lang.Float.floatToIntBits(
+            other.getAvgLabelsPerInconsistentSample())) return false;
+    if (java.lang.Float.floatToIntBits(getPercentSamplesNotInTargetVocab())
+        != java.lang.Float.floatToIntBits(
+            other.getPercentSamplesNotInTargetVocab())) return false;
+    if (java.lang.Float.floatToIntBits(getJsDivergenceClasses())
+        != java.lang.Float.floatToIntBits(
+            other.getJsDivergenceClasses())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1404,6 +1578,26 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getMetricsList().hashCode();
     }
+    hash = (37 * hash) + ENTROPY_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getEntropy());
+    hash = (37 * hash) + NUMBER_OF_CLASSES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumberOfClasses();
+    hash = (37 * hash) + AVG_SAMPLE_PER_CLASS_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getAvgSamplePerClass());
+    hash = (37 * hash) + INCONSISTENT_LABEL_RATIO_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getInconsistentLabelRatio());
+    hash = (37 * hash) + AVG_LABELS_PER_INCONSISTENT_SAMPLE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getAvgLabelsPerInconsistentSample());
+    hash = (37 * hash) + PERCENT_SAMPLES_NOT_IN_TARGET_VOCAB_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getPercentSamplesNotInTargetVocab());
+    hash = (37 * hash) + JS_DIVERGENCE_CLASSES_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getJsDivergenceClasses());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1543,6 +1737,13 @@ private static final long serialVersionUID = 0L;
         metricsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      entropy_ = 0F;
+      numberOfClasses_ = 0;
+      avgSamplePerClass_ = 0F;
+      inconsistentLabelRatio_ = 0F;
+      avgLabelsPerInconsistentSample_ = 0F;
+      percentSamplesNotInTargetVocab_ = 0F;
+      jsDivergenceClasses_ = 0F;
       return this;
     }
 
@@ -1592,6 +1793,27 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.target_ = target_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.entropy_ = entropy_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.numberOfClasses_ = numberOfClasses_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.avgSamplePerClass_ = avgSamplePerClass_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.inconsistentLabelRatio_ = inconsistentLabelRatio_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.avgLabelsPerInconsistentSample_ = avgLabelsPerInconsistentSample_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.percentSamplesNotInTargetVocab_ = percentSamplesNotInTargetVocab_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.jsDivergenceClasses_ = jsDivergenceClasses_;
+      }
     }
 
     @java.lang.Override
@@ -1637,6 +1859,27 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getEntropy() != 0F) {
+        setEntropy(other.getEntropy());
+      }
+      if (other.getNumberOfClasses() != 0) {
+        setNumberOfClasses(other.getNumberOfClasses());
+      }
+      if (other.getAvgSamplePerClass() != 0F) {
+        setAvgSamplePerClass(other.getAvgSamplePerClass());
+      }
+      if (other.getInconsistentLabelRatio() != 0F) {
+        setInconsistentLabelRatio(other.getInconsistentLabelRatio());
+      }
+      if (other.getAvgLabelsPerInconsistentSample() != 0F) {
+        setAvgLabelsPerInconsistentSample(other.getAvgLabelsPerInconsistentSample());
+      }
+      if (other.getPercentSamplesNotInTargetVocab() != 0F) {
+        setPercentSamplesNotInTargetVocab(other.getPercentSamplesNotInTargetVocab());
+      }
+      if (other.getJsDivergenceClasses() != 0F) {
+        setJsDivergenceClasses(other.getJsDivergenceClasses());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1681,6 +1924,41 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 53: {
+              entropy_ = input.readFloat();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 53
+            case 56: {
+              numberOfClasses_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 56
+            case 69: {
+              avgSamplePerClass_ = input.readFloat();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 69
+            case 77: {
+              inconsistentLabelRatio_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 77
+            case 85: {
+              avgLabelsPerInconsistentSample_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 85
+            case 93: {
+              percentSamplesNotInTargetVocab_ = input.readFloat();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 93
+            case 101: {
+              jsDivergenceClasses_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 101
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2008,6 +2286,314 @@ private static final long serialVersionUID = 0L;
         metrics_ = null;
       }
       return metricsBuilder_;
+    }
+
+    private float entropy_ ;
+    /**
+     * <pre>
+     * entropy of the dataset
+     * </pre>
+     *
+     * <code>float entropy = 6 [json_name = "entropy"];</code>
+     * @return The entropy.
+     */
+    @java.lang.Override
+    public float getEntropy() {
+      return entropy_;
+    }
+    /**
+     * <pre>
+     * entropy of the dataset
+     * </pre>
+     *
+     * <code>float entropy = 6 [json_name = "entropy"];</code>
+     * @param value The entropy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntropy(float value) {
+
+      entropy_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * entropy of the dataset
+     * </pre>
+     *
+     * <code>float entropy = 6 [json_name = "entropy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEntropy() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      entropy_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int numberOfClasses_ ;
+    /**
+     * <pre>
+     * number of classes in the dataset
+     * </pre>
+     *
+     * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+     * @return The numberOfClasses.
+     */
+    @java.lang.Override
+    public int getNumberOfClasses() {
+      return numberOfClasses_;
+    }
+    /**
+     * <pre>
+     * number of classes in the dataset
+     * </pre>
+     *
+     * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+     * @param value The numberOfClasses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfClasses(int value) {
+
+      numberOfClasses_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * number of classes in the dataset
+     * </pre>
+     *
+     * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfClasses() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      numberOfClasses_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private float avgSamplePerClass_ ;
+    /**
+     * <pre>
+     * average samples per class
+     * </pre>
+     *
+     * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+     * @return The avgSamplePerClass.
+     */
+    @java.lang.Override
+    public float getAvgSamplePerClass() {
+      return avgSamplePerClass_;
+    }
+    /**
+     * <pre>
+     * average samples per class
+     * </pre>
+     *
+     * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+     * @param value The avgSamplePerClass to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAvgSamplePerClass(float value) {
+
+      avgSamplePerClass_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average samples per class
+     * </pre>
+     *
+     * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAvgSamplePerClass() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      avgSamplePerClass_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float inconsistentLabelRatio_ ;
+    /**
+     * <pre>
+     * ratio of inconsistent labels
+     * </pre>
+     *
+     * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+     * @return The inconsistentLabelRatio.
+     */
+    @java.lang.Override
+    public float getInconsistentLabelRatio() {
+      return inconsistentLabelRatio_;
+    }
+    /**
+     * <pre>
+     * ratio of inconsistent labels
+     * </pre>
+     *
+     * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+     * @param value The inconsistentLabelRatio to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInconsistentLabelRatio(float value) {
+
+      inconsistentLabelRatio_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ratio of inconsistent labels
+     * </pre>
+     *
+     * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInconsistentLabelRatio() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      inconsistentLabelRatio_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float avgLabelsPerInconsistentSample_ ;
+    /**
+     * <pre>
+     * average labels per inconsistent sample
+     * </pre>
+     *
+     * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+     * @return The avgLabelsPerInconsistentSample.
+     */
+    @java.lang.Override
+    public float getAvgLabelsPerInconsistentSample() {
+      return avgLabelsPerInconsistentSample_;
+    }
+    /**
+     * <pre>
+     * average labels per inconsistent sample
+     * </pre>
+     *
+     * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+     * @param value The avgLabelsPerInconsistentSample to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAvgLabelsPerInconsistentSample(float value) {
+
+      avgLabelsPerInconsistentSample_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average labels per inconsistent sample
+     * </pre>
+     *
+     * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAvgLabelsPerInconsistentSample() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      avgLabelsPerInconsistentSample_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float percentSamplesNotInTargetVocab_ ;
+    /**
+     * <pre>
+     * percentage of samples not in target vocabulary
+     * </pre>
+     *
+     * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+     * @return The percentSamplesNotInTargetVocab.
+     */
+    @java.lang.Override
+    public float getPercentSamplesNotInTargetVocab() {
+      return percentSamplesNotInTargetVocab_;
+    }
+    /**
+     * <pre>
+     * percentage of samples not in target vocabulary
+     * </pre>
+     *
+     * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+     * @param value The percentSamplesNotInTargetVocab to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPercentSamplesNotInTargetVocab(float value) {
+
+      percentSamplesNotInTargetVocab_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * percentage of samples not in target vocabulary
+     * </pre>
+     *
+     * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPercentSamplesNotInTargetVocab() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      percentSamplesNotInTargetVocab_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float jsDivergenceClasses_ ;
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for classes
+     * </pre>
+     *
+     * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+     * @return The jsDivergenceClasses.
+     */
+    @java.lang.Override
+    public float getJsDivergenceClasses() {
+      return jsDivergenceClasses_;
+    }
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for classes
+     * </pre>
+     *
+     * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+     * @param value The jsDivergenceClasses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJsDivergenceClasses(float value) {
+
+      jsDivergenceClasses_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for classes
+     * </pre>
+     *
+     * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJsDivergenceClasses() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      jsDivergenceClasses_ = 0F;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:asgt.type.TargetMetrics)

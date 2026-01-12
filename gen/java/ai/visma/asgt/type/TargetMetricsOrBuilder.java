@@ -44,4 +44,74 @@ public interface TargetMetricsOrBuilder extends
    */
   ai.visma.asgt.type.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * entropy of the dataset
+   * </pre>
+   *
+   * <code>float entropy = 6 [json_name = "entropy"];</code>
+   * @return The entropy.
+   */
+  float getEntropy();
+
+  /**
+   * <pre>
+   * number of classes in the dataset
+   * </pre>
+   *
+   * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+   * @return The numberOfClasses.
+   */
+  int getNumberOfClasses();
+
+  /**
+   * <pre>
+   * average samples per class
+   * </pre>
+   *
+   * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+   * @return The avgSamplePerClass.
+   */
+  float getAvgSamplePerClass();
+
+  /**
+   * <pre>
+   * ratio of inconsistent labels
+   * </pre>
+   *
+   * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+   * @return The inconsistentLabelRatio.
+   */
+  float getInconsistentLabelRatio();
+
+  /**
+   * <pre>
+   * average labels per inconsistent sample
+   * </pre>
+   *
+   * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+   * @return The avgLabelsPerInconsistentSample.
+   */
+  float getAvgLabelsPerInconsistentSample();
+
+  /**
+   * <pre>
+   * percentage of samples not in target vocabulary
+   * </pre>
+   *
+   * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+   * @return The percentSamplesNotInTargetVocab.
+   */
+  float getPercentSamplesNotInTargetVocab();
+
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for classes
+   * </pre>
+   *
+   * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+   * @return The jsDivergenceClasses.
+   */
+  float getJsDivergenceClasses();
 }
