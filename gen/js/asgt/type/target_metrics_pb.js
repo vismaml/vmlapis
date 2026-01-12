@@ -106,7 +106,14 @@ proto.asgt.type.TargetMetrics.toObject = function(includeInstance, msg) {
   var f, obj = {
     target: jspb.Message.getFieldWithDefault(msg, 1, ""),
     metricsList: jspb.Message.toObjectList(msg.getMetricsList(),
-    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance)
+    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance),
+    entropy: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
+    numberOfClasses: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    avgSamplePerClass: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    inconsistentLabelRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
+    avgLabelsPerInconsistentSample: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
+    percentSamplesNotInTargetVocab: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 0.0),
+    jsDivergenceClasses: jspb.Message.getFloatingPointFieldWithDefault(msg, 12, 0.0)
   };
 
   if (includeInstance) {
@@ -152,6 +159,34 @@ proto.asgt.type.TargetMetrics.deserializeBinaryFromReader = function(msg, reader
       reader.readMessage(value,proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader);
       msg.addMetrics(value);
       break;
+    case 6:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setEntropy(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setNumberOfClasses(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setAvgSamplePerClass(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setInconsistentLabelRatio(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setAvgLabelsPerInconsistentSample(value);
+      break;
+    case 11:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPercentSamplesNotInTargetVocab(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setJsDivergenceClasses(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -194,6 +229,55 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
       2,
       f,
       proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter
+    );
+  }
+  f = message.getEntropy();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      6,
+      f
+    );
+  }
+  f = message.getNumberOfClasses();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+  f = message.getAvgSamplePerClass();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      8,
+      f
+    );
+  }
+  f = message.getInconsistentLabelRatio();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      9,
+      f
+    );
+  }
+  f = message.getAvgLabelsPerInconsistentSample();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      10,
+      f
+    );
+  }
+  f = message.getPercentSamplesNotInTargetVocab();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      11,
+      f
+    );
+  }
+  f = message.getJsDivergenceClasses();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      12,
+      f
     );
   }
 };
@@ -682,6 +766,132 @@ proto.asgt.type.TargetMetrics.prototype.addMetrics = function(opt_value, opt_ind
  */
 proto.asgt.type.TargetMetrics.prototype.clearMetricsList = function() {
   return this.setMetricsList([]);
+};
+
+
+/**
+ * optional float entropy = 6;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getEntropy = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setEntropy = function(value) {
+  return jspb.Message.setProto3FloatField(this, 6, value);
+};
+
+
+/**
+ * optional int32 number_of_classes = 7;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getNumberOfClasses = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setNumberOfClasses = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional float avg_sample_per_class = 8;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getAvgSamplePerClass = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setAvgSamplePerClass = function(value) {
+  return jspb.Message.setProto3FloatField(this, 8, value);
+};
+
+
+/**
+ * optional float inconsistent_label_ratio = 9;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getInconsistentLabelRatio = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 9, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setInconsistentLabelRatio = function(value) {
+  return jspb.Message.setProto3FloatField(this, 9, value);
+};
+
+
+/**
+ * optional float avg_labels_per_inconsistent_sample = 10;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getAvgLabelsPerInconsistentSample = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setAvgLabelsPerInconsistentSample = function(value) {
+  return jspb.Message.setProto3FloatField(this, 10, value);
+};
+
+
+/**
+ * optional float percent_samples_not_in_target_vocab = 11;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getPercentSamplesNotInTargetVocab = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setPercentSamplesNotInTargetVocab = function(value) {
+  return jspb.Message.setProto3FloatField(this, 11, value);
+};
+
+
+/**
+ * optional float js_divergence_classes = 12;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getJsDivergenceClasses = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 12, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setJsDivergenceClasses = function(value) {
+  return jspb.Message.setProto3FloatField(this, 12, value);
 };
 
 

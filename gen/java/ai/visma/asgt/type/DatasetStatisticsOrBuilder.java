@@ -101,56 +101,6 @@ public interface DatasetStatisticsOrBuilder extends
 
   /**
    * <pre>
-   * entropy of the dataset
-   * </pre>
-   *
-   * <code>float entropy = 11 [json_name = "entropy"];</code>
-   * @return The entropy.
-   */
-  float getEntropy();
-
-  /**
-   * <pre>
-   * number of classes in the dataset
-   * </pre>
-   *
-   * <code>int32 number_of_classes = 12 [json_name = "numberOfClasses"];</code>
-   * @return The numberOfClasses.
-   */
-  int getNumberOfClasses();
-
-  /**
-   * <pre>
-   * average samples per class
-   * </pre>
-   *
-   * <code>float avg_sample_per_class = 13 [json_name = "avgSamplePerClass"];</code>
-   * @return The avgSamplePerClass.
-   */
-  float getAvgSamplePerClass();
-
-  /**
-   * <pre>
-   * ratio of inconsistent labels
-   * </pre>
-   *
-   * <code>float inconsistent_label_ratio = 14 [json_name = "inconsistentLabelRatio"];</code>
-   * @return The inconsistentLabelRatio.
-   */
-  float getInconsistentLabelRatio();
-
-  /**
-   * <pre>
-   * average labels per inconsistent sample
-   * </pre>
-   *
-   * <code>float avg_labels_per_inconsistent_sample = 15 [json_name = "avgLabelsPerInconsistentSample"];</code>
-   * @return The avgLabelsPerInconsistentSample.
-   */
-  float getAvgLabelsPerInconsistentSample();
-
-  /**
-   * <pre>
    * ratio of missing data
    * </pre>
    *
@@ -181,16 +131,6 @@ public interface DatasetStatisticsOrBuilder extends
 
   /**
    * <pre>
-   * percentage of samples not in target vocabulary
-   * </pre>
-   *
-   * <code>float percent_samples_not_in_target_vocab = 19 [json_name = "percentSamplesNotInTargetVocab"];</code>
-   * @return The percentSamplesNotInTargetVocab.
-   */
-  float getPercentSamplesNotInTargetVocab();
-
-  /**
-   * <pre>
    * average unknown token ratio
    * </pre>
    *
@@ -198,16 +138,6 @@ public interface DatasetStatisticsOrBuilder extends
    * @return The avgUnknownTokenRatio.
    */
   float getAvgUnknownTokenRatio();
-
-  /**
-   * <pre>
-   * Jensen-Shannon divergence for classes
-   * </pre>
-   *
-   * <code>float js_divergence_classes = 21 [json_name = "jsDivergenceClasses"];</code>
-   * @return The jsDivergenceClasses.
-   */
-  float getJsDivergenceClasses();
 
   /**
    * <pre>

@@ -40,7 +40,7 @@ public final class DatasetStatisticsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"asgt/type/dataset_statistics.proto\022\tas" +
-      "gt.type\"\307\t\n\021DatasetStatistics\022F\n lexical" +
+      "gt.type\"\363\006\n\021DatasetStatistics\022F\n lexical" +
       "_diversity_split_on_space\030\002 \001(\002R\034lexical" +
       "DiversitySplitOnSpace\022J\n\"lexical_diversi" +
       "ty_split_on_special\030\003 \001(\002R\036lexicalDivers" +
@@ -54,28 +54,19 @@ public final class DatasetStatisticsProto {
       "cters\022%\n\016percent_digits\030\010 \001(\002R\rpercentDi" +
       "gits\022\'\n\017percent_letters\030\t \001(\002R\016percentLe" +
       "tters\022A\n\035percent_duplicates_in_dataset\030\n" +
-      " \001(\002R\032percentDuplicatesInDataset\022\030\n\007entr" +
-      "opy\030\013 \001(\002R\007entropy\022*\n\021number_of_classes\030" +
-      "\014 \001(\005R\017numberOfClasses\022/\n\024avg_sample_per" +
-      "_class\030\r \001(\002R\021avgSamplePerClass\0228\n\030incon" +
-      "sistent_label_ratio\030\016 \001(\002R\026inconsistentL" +
-      "abelRatio\022J\n\"avg_labels_per_inconsistent" +
-      "_sample\030\017 \001(\002R\036avgLabelsPerInconsistentS" +
-      "ample\022,\n\022missing_data_ratio\030\020 \001(\002R\020missi" +
-      "ngDataRatio\022E\n test_set_avg_unknown_toke" +
-      "n_ratio\030\021 \001(\002R\033testSetAvgUnknownTokenRat" +
-      "io\022\035\n\nvocab_size\030\022 \001(\005R\tvocabSize\022K\n#per" +
-      "cent_samples_not_in_target_vocab\030\023 \001(\002R\036" +
-      "percentSamplesNotInTargetVocab\0225\n\027avg_un" +
-      "known_token_ratio\030\024 \001(\002R\024avgUnknownToken" +
-      "Ratio\0222\n\025js_divergence_classes\030\025 \001(\002R\023js" +
-      "DivergenceClasses\0220\n\024js_divergence_token" +
-      "s\030\026 \001(\002R\022jsDivergenceTokensJ\004\010\001\020\002B\251\001\n\022ai" +
-      ".visma.asgt.typeB\026DatasetStatisticsProto" +
-      "P\001Z6github.com/e-conomic/vmlapis/gen/go/" +
-      "asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tA" +
-      "sgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt:" +
-      ":Typeb\006proto3"
+      " \001(\002R\032percentDuplicatesInDataset\022,\n\022miss" +
+      "ing_data_ratio\030\020 \001(\002R\020missingDataRatio\022E" +
+      "\n test_set_avg_unknown_token_ratio\030\021 \001(\002" +
+      "R\033testSetAvgUnknownTokenRatio\022\035\n\nvocab_s" +
+      "ize\030\022 \001(\005R\tvocabSize\0225\n\027avg_unknown_toke" +
+      "n_ratio\030\024 \001(\002R\024avgUnknownTokenRatio\0220\n\024j" +
+      "s_divergence_tokens\030\026 \001(\002R\022jsDivergenceT" +
+      "okensJ\004\010\001\020\002J\004\010\013\020\014J\004\010\014\020\rJ\004\010\r\020\016J\004\010\016\020\017J\004\010\017\020" +
+      "\020J\004\010\023\020\024J\004\010\025\020\026B\251\001\n\022ai.visma.asgt.typeB\026Da" +
+      "tasetStatisticsProtoP\001Z6github.com/e-con" +
+      "omic/vmlapis/gen/go/asgt/type;asgttype\242\002" +
+      "\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type" +
+      "\\GPBMetadata\352\002\nAsgt::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -86,7 +77,7 @@ public final class DatasetStatisticsProto {
     internal_static_asgt_type_DatasetStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_type_DatasetStatistics_descriptor,
-        new java.lang.String[] { "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "PercentSamplesNotInTargetVocab", "AvgUnknownTokenRatio", "JsDivergenceClasses", "JsDivergenceTokens", });
+        new java.lang.String[] { "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "AvgUnknownTokenRatio", "JsDivergenceTokens", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

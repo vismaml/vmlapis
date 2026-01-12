@@ -30,21 +30,6 @@ export class DatasetStatistics extends jspb.Message {
   getPercentDuplicatesInDataset(): number;
   setPercentDuplicatesInDataset(value: number): DatasetStatistics;
 
-  getEntropy(): number;
-  setEntropy(value: number): DatasetStatistics;
-
-  getNumberOfClasses(): number;
-  setNumberOfClasses(value: number): DatasetStatistics;
-
-  getAvgSamplePerClass(): number;
-  setAvgSamplePerClass(value: number): DatasetStatistics;
-
-  getInconsistentLabelRatio(): number;
-  setInconsistentLabelRatio(value: number): DatasetStatistics;
-
-  getAvgLabelsPerInconsistentSample(): number;
-  setAvgLabelsPerInconsistentSample(value: number): DatasetStatistics;
-
   getMissingDataRatio(): number;
   setMissingDataRatio(value: number): DatasetStatistics;
 
@@ -54,14 +39,8 @@ export class DatasetStatistics extends jspb.Message {
   getVocabSize(): number;
   setVocabSize(value: number): DatasetStatistics;
 
-  getPercentSamplesNotInTargetVocab(): number;
-  setPercentSamplesNotInTargetVocab(value: number): DatasetStatistics;
-
   getAvgUnknownTokenRatio(): number;
   setAvgUnknownTokenRatio(value: number): DatasetStatistics;
-
-  getJsDivergenceClasses(): number;
-  setJsDivergenceClasses(value: number): DatasetStatistics;
 
   getJsDivergenceTokens(): number;
   setJsDivergenceTokens(value: number): DatasetStatistics;
@@ -85,17 +64,10 @@ export namespace DatasetStatistics {
     percentDigits: number,
     percentLetters: number,
     percentDuplicatesInDataset: number,
-    entropy: number,
-    numberOfClasses: number,
-    avgSamplePerClass: number,
-    inconsistentLabelRatio: number,
-    avgLabelsPerInconsistentSample: number,
     missingDataRatio: number,
     testSetAvgUnknownTokenRatio: number,
     vocabSize: number,
-    percentSamplesNotInTargetVocab: number,
     avgUnknownTokenRatio: number,
-    jsDivergenceClasses: number,
     jsDivergenceTokens: number,
   }
 }

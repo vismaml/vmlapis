@@ -84,17 +84,10 @@ proto.asgt.type.DatasetStatistics.toObject = function(includeInstance, msg) {
     percentDigits: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
     percentLetters: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
     percentDuplicatesInDataset: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
-    entropy: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 0.0),
-    numberOfClasses: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    avgSamplePerClass: jspb.Message.getFloatingPointFieldWithDefault(msg, 13, 0.0),
-    inconsistentLabelRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 14, 0.0),
-    avgLabelsPerInconsistentSample: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 0.0),
     missingDataRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 16, 0.0),
     testSetAvgUnknownTokenRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 17, 0.0),
     vocabSize: jspb.Message.getFieldWithDefault(msg, 18, 0),
-    percentSamplesNotInTargetVocab: jspb.Message.getFloatingPointFieldWithDefault(msg, 19, 0.0),
     avgUnknownTokenRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 20, 0.0),
-    jsDivergenceClasses: jspb.Message.getFloatingPointFieldWithDefault(msg, 21, 0.0),
     jsDivergenceTokens: jspb.Message.getFloatingPointFieldWithDefault(msg, 22, 0.0)
   };
 
@@ -168,26 +161,6 @@ proto.asgt.type.DatasetStatistics.deserializeBinaryFromReader = function(msg, re
       var value = /** @type {number} */ (reader.readFloat());
       msg.setPercentDuplicatesInDataset(value);
       break;
-    case 11:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setEntropy(value);
-      break;
-    case 12:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setNumberOfClasses(value);
-      break;
-    case 13:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setAvgSamplePerClass(value);
-      break;
-    case 14:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setInconsistentLabelRatio(value);
-      break;
-    case 15:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setAvgLabelsPerInconsistentSample(value);
-      break;
     case 16:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setMissingDataRatio(value);
@@ -200,17 +173,9 @@ proto.asgt.type.DatasetStatistics.deserializeBinaryFromReader = function(msg, re
       var value = /** @type {number} */ (reader.readInt32());
       msg.setVocabSize(value);
       break;
-    case 19:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setPercentSamplesNotInTargetVocab(value);
-      break;
     case 20:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setAvgUnknownTokenRatio(value);
-      break;
-    case 21:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setJsDivergenceClasses(value);
       break;
     case 22:
       var value = /** @type {number} */ (reader.readFloat());
@@ -308,41 +273,6 @@ proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-  f = message.getEntropy();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      11,
-      f
-    );
-  }
-  f = message.getNumberOfClasses();
-  if (f !== 0) {
-    writer.writeInt32(
-      12,
-      f
-    );
-  }
-  f = message.getAvgSamplePerClass();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      13,
-      f
-    );
-  }
-  f = message.getInconsistentLabelRatio();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      14,
-      f
-    );
-  }
-  f = message.getAvgLabelsPerInconsistentSample();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      15,
-      f
-    );
-  }
   f = message.getMissingDataRatio();
   if (f !== 0.0) {
     writer.writeFloat(
@@ -364,24 +294,10 @@ proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, wr
       f
     );
   }
-  f = message.getPercentSamplesNotInTargetVocab();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      19,
-      f
-    );
-  }
   f = message.getAvgUnknownTokenRatio();
   if (f !== 0.0) {
     writer.writeFloat(
       20,
-      f
-    );
-  }
-  f = message.getJsDivergenceClasses();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      21,
       f
     );
   }
@@ -558,96 +474,6 @@ proto.asgt.type.DatasetStatistics.prototype.setPercentDuplicatesInDataset = func
 
 
 /**
- * optional float entropy = 11;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getEntropy = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setEntropy = function(value) {
-  return jspb.Message.setProto3FloatField(this, 11, value);
-};
-
-
-/**
- * optional int32 number_of_classes = 12;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getNumberOfClasses = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setNumberOfClasses = function(value) {
-  return jspb.Message.setProto3IntField(this, 12, value);
-};
-
-
-/**
- * optional float avg_sample_per_class = 13;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getAvgSamplePerClass = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 13, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setAvgSamplePerClass = function(value) {
-  return jspb.Message.setProto3FloatField(this, 13, value);
-};
-
-
-/**
- * optional float inconsistent_label_ratio = 14;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getInconsistentLabelRatio = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 14, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setInconsistentLabelRatio = function(value) {
-  return jspb.Message.setProto3FloatField(this, 14, value);
-};
-
-
-/**
- * optional float avg_labels_per_inconsistent_sample = 15;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getAvgLabelsPerInconsistentSample = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 15, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setAvgLabelsPerInconsistentSample = function(value) {
-  return jspb.Message.setProto3FloatField(this, 15, value);
-};
-
-
-/**
  * optional float missing_data_ratio = 16;
  * @return {number}
  */
@@ -702,24 +528,6 @@ proto.asgt.type.DatasetStatistics.prototype.setVocabSize = function(value) {
 
 
 /**
- * optional float percent_samples_not_in_target_vocab = 19;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getPercentSamplesNotInTargetVocab = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 19, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setPercentSamplesNotInTargetVocab = function(value) {
-  return jspb.Message.setProto3FloatField(this, 19, value);
-};
-
-
-/**
  * optional float avg_unknown_token_ratio = 20;
  * @return {number}
  */
@@ -734,24 +542,6 @@ proto.asgt.type.DatasetStatistics.prototype.getAvgUnknownTokenRatio = function()
  */
 proto.asgt.type.DatasetStatistics.prototype.setAvgUnknownTokenRatio = function(value) {
   return jspb.Message.setProto3FloatField(this, 20, value);
-};
-
-
-/**
- * optional float js_divergence_classes = 21;
- * @return {number}
- */
-proto.asgt.type.DatasetStatistics.prototype.getJsDivergenceClasses = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 21, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.asgt.type.DatasetStatistics} returns this
- */
-proto.asgt.type.DatasetStatistics.prototype.setJsDivergenceClasses = function(value) {
-  return jspb.Message.setProto3FloatField(this, 21, value);
 };
 
 
