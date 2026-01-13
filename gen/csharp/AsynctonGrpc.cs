@@ -160,18 +160,6 @@ namespace Ssn.Asyncton.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// below are more ideas how the API could progress
-      /// ---------------------
-      /// e.g. add more features for processing
-      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-      /// }
-      /// essentially a feedback endpoint
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::ServerCallContext context)
       {
@@ -307,73 +295,21 @@ namespace Ssn.Asyncton.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
       }
-      /// <summary>
-      /// below are more ideas how the API could progress
-      /// ---------------------
-      /// e.g. add more features for processing
-      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-      /// }
-      /// essentially a feedback endpoint
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransactionResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// below are more ideas how the API could progress
-      /// ---------------------
-      /// e.g. add more features for processing
-      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-      /// }
-      /// essentially a feedback endpoint
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTransactionResults, null, options, request);
       }
-      /// <summary>
-      /// below are more ideas how the API could progress
-      /// ---------------------
-      /// e.g. add more features for processing
-      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-      /// }
-      /// essentially a feedback endpoint
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransactionResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// below are more ideas how the API could progress
-      /// ---------------------
-      /// e.g. add more features for processing
-      /// rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-      ///   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-      /// }
-      /// essentially a feedback endpoint
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
       {

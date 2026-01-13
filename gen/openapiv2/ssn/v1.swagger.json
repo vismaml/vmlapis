@@ -312,6 +312,40 @@
         "tags": [
           "TransactionService"
         ]
+      },
+      "put": {
+        "operationId": "TransactionService_UpdateTransactionResults2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1UpdateTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
       }
     },
     "/v1/transactions/status": {
@@ -447,7 +481,6 @@
         ]
       },
       "put": {
-        "summary": "below are more ideas how the API could progress\n---------------------\ne.g. add more features for processing\nrpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {\n  option (google.api.http) = {put: \"/v1/transactions/{id}/features\"};\n}\nessentially a feedback endpoint",
         "operationId": "TransactionService_UpdateTransactionResults",
         "responses": {
           "200": {
