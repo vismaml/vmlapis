@@ -85,14 +85,7 @@ class TransactionServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def UpdateTransactionResults(self, request, context):
-        """below are more ideas how the API could progress
-        ---------------------
-        e.g. add more features for processing
-        rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-        option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-        }
-        essentially a feedback endpoint
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
