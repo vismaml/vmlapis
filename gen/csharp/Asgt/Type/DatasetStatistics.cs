@@ -25,34 +25,45 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJhc2d0L3R5cGUvZGF0YXNldF9zdGF0aXN0aWNzLnByb3RvEglhc2d0LnR5",
-            "cGUi8wYKEURhdGFzZXRTdGF0aXN0aWNzEkYKIGxleGljYWxfZGl2ZXJzaXR5",
-            "X3NwbGl0X29uX3NwYWNlGAIgASgCUhxsZXhpY2FsRGl2ZXJzaXR5U3BsaXRP",
-            "blNwYWNlEkoKImxleGljYWxfZGl2ZXJzaXR5X3NwbGl0X29uX3NwZWNpYWwY",
-            "AyABKAJSHmxleGljYWxEaXZlcnNpdHlTcGxpdE9uU3BlY2lhbBIyChVwZXJj",
-            "ZW50X2VtcHR5X3N0cmluZ3MYBCABKAJSE3BlcmNlbnRFbXB0eVN0cmluZ3MS",
-            "SgoicGVyY2VudF9wdXJlX251bWJlcnNfcmVtb3ZlX3NwYWNlcxgFIAEoAlIe",
-            "cGVyY2VudFB1cmVOdW1iZXJzUmVtb3ZlU3BhY2VzEkwKI3BlcmNlbnRfcHVy",
-            "ZV9udW1iZXJzX3JlbW92ZV9zcGVjaWFsGAYgASgCUh9wZXJjZW50UHVyZU51",
-            "bWJlcnNSZW1vdmVTcGVjaWFsEjwKGnBlcmNlbnRfc3BlY2lhbF9jaGFyYWN0",
-            "ZXJzGAcgASgCUhhwZXJjZW50U3BlY2lhbENoYXJhY3RlcnMSJQoOcGVyY2Vu",
-            "dF9kaWdpdHMYCCABKAJSDXBlcmNlbnREaWdpdHMSJwoPcGVyY2VudF9sZXR0",
-            "ZXJzGAkgASgCUg5wZXJjZW50TGV0dGVycxJBCh1wZXJjZW50X2R1cGxpY2F0",
-            "ZXNfaW5fZGF0YXNldBgKIAEoAlIacGVyY2VudER1cGxpY2F0ZXNJbkRhdGFz",
-            "ZXQSLAoSbWlzc2luZ19kYXRhX3JhdGlvGBAgASgCUhBtaXNzaW5nRGF0YVJh",
-            "dGlvEkUKIHRlc3Rfc2V0X2F2Z191bmtub3duX3Rva2VuX3JhdGlvGBEgASgC",
-            "Uht0ZXN0U2V0QXZnVW5rbm93blRva2VuUmF0aW8SHQoKdm9jYWJfc2l6ZRgS",
-            "IAEoBVIJdm9jYWJTaXplEjUKF2F2Z191bmtub3duX3Rva2VuX3JhdGlvGBQg",
-            "ASgCUhRhdmdVbmtub3duVG9rZW5SYXRpbxIwChRqc19kaXZlcmdlbmNlX3Rv",
-            "a2VucxgWIAEoAlISanNEaXZlcmdlbmNlVG9rZW5zSgQIARACSgQICxAMSgQI",
-            "DBANSgQIDRAOSgQIDhAPSgQIDxAQSgQIExAUSgQIFRAWQqkBChJhaS52aXNt",
-            "YS5hc2d0LnR5cGVCFkRhdGFzZXRTdGF0aXN0aWNzUHJvdG9QAVo2Z2l0aHVi",
-            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0",
-            "eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBl",
-            "XEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
+            "cGUi1goKEURhdGFzZXRTdGF0aXN0aWNzEksKIGxleGljYWxfZGl2ZXJzaXR5",
+            "X3NwbGl0X29uX3NwYWNlGAIgASgCSABSHGxleGljYWxEaXZlcnNpdHlTcGxp",
+            "dE9uU3BhY2WIAQESTwoibGV4aWNhbF9kaXZlcnNpdHlfc3BsaXRfb25fc3Bl",
+            "Y2lhbBgDIAEoAkgBUh5sZXhpY2FsRGl2ZXJzaXR5U3BsaXRPblNwZWNpYWyI",
+            "AQESNwoVcGVyY2VudF9lbXB0eV9zdHJpbmdzGAQgASgCSAJSE3BlcmNlbnRF",
+            "bXB0eVN0cmluZ3OIAQESTwoicGVyY2VudF9wdXJlX251bWJlcnNfcmVtb3Zl",
+            "X3NwYWNlcxgFIAEoAkgDUh5wZXJjZW50UHVyZU51bWJlcnNSZW1vdmVTcGFj",
+            "ZXOIAQESUQojcGVyY2VudF9wdXJlX251bWJlcnNfcmVtb3ZlX3NwZWNpYWwY",
+            "BiABKAJIBFIfcGVyY2VudFB1cmVOdW1iZXJzUmVtb3ZlU3BlY2lhbIgBARJB",
+            "ChpwZXJjZW50X3NwZWNpYWxfY2hhcmFjdGVycxgHIAEoAkgFUhhwZXJjZW50",
+            "U3BlY2lhbENoYXJhY3RlcnOIAQESKgoOcGVyY2VudF9kaWdpdHMYCCABKAJI",
+            "BlINcGVyY2VudERpZ2l0c4gBARIsCg9wZXJjZW50X2xldHRlcnMYCSABKAJI",
+            "B1IOcGVyY2VudExldHRlcnOIAQESRgodcGVyY2VudF9kdXBsaWNhdGVzX2lu",
+            "X2RhdGFzZXQYCiABKAJICFIacGVyY2VudER1cGxpY2F0ZXNJbkRhdGFzZXSI",
+            "AQESMQoSbWlzc2luZ19kYXRhX3JhdGlvGBAgASgCSAlSEG1pc3NpbmdEYXRh",
+            "UmF0aW+IAQESSgogdGVzdF9zZXRfYXZnX3Vua25vd25fdG9rZW5fcmF0aW8Y",
+            "ESABKAJIClIbdGVzdFNldEF2Z1Vua25vd25Ub2tlblJhdGlviAEBEiIKCnZv",
+            "Y2FiX3NpemUYEiABKAVIC1IJdm9jYWJTaXpliAEBEjoKF2F2Z191bmtub3du",
+            "X3Rva2VuX3JhdGlvGBQgASgCSAxSFGF2Z1Vua25vd25Ub2tlblJhdGlviAEB",
+            "EjUKFGpzX2RpdmVyZ2VuY2VfdG9rZW5zGBYgASgCSA1SEmpzRGl2ZXJnZW5j",
+            "ZVRva2Vuc4gBAUIjCiFfbGV4aWNhbF9kaXZlcnNpdHlfc3BsaXRfb25fc3Bh",
+            "Y2VCJQojX2xleGljYWxfZGl2ZXJzaXR5X3NwbGl0X29uX3NwZWNpYWxCGAoW",
+            "X3BlcmNlbnRfZW1wdHlfc3RyaW5nc0IlCiNfcGVyY2VudF9wdXJlX251bWJl",
+            "cnNfcmVtb3ZlX3NwYWNlc0ImCiRfcGVyY2VudF9wdXJlX251bWJlcnNfcmVt",
+            "b3ZlX3NwZWNpYWxCHQobX3BlcmNlbnRfc3BlY2lhbF9jaGFyYWN0ZXJzQhEK",
+            "D19wZXJjZW50X2RpZ2l0c0ISChBfcGVyY2VudF9sZXR0ZXJzQiAKHl9wZXJj",
+            "ZW50X2R1cGxpY2F0ZXNfaW5fZGF0YXNldEIVChNfbWlzc2luZ19kYXRhX3Jh",
+            "dGlvQiMKIV90ZXN0X3NldF9hdmdfdW5rbm93bl90b2tlbl9yYXRpb0INCgtf",
+            "dm9jYWJfc2l6ZUIaChhfYXZnX3Vua25vd25fdG9rZW5fcmF0aW9CFwoVX2pz",
+            "X2RpdmVyZ2VuY2VfdG9rZW5zSgQIARACSgQICxAMSgQIDBANSgQIDRAOSgQI",
+            "DhAPSgQIDxAQSgQIExAUSgQIFRAWQqkBChJhaS52aXNtYS5hc2d0LnR5cGVC",
+            "FkRhdGFzZXRTdGF0aXN0aWNzUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9t",
+            "aWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJ",
+            "QXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh",
+            "6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.DatasetStatistics), global::Asgt.Type.DatasetStatistics.Parser, new[]{ "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "AvgUnknownTokenRatio", "JsDivergenceTokens" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.DatasetStatistics), global::Asgt.Type.DatasetStatistics.Parser, new[]{ "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "AvgUnknownTokenRatio", "JsDivergenceTokens" }, new[]{ "LexicalDiversitySplitOnSpace", "LexicalDiversitySplitOnSpecial", "PercentEmptyStrings", "PercentPureNumbersRemoveSpaces", "PercentPureNumbersRemoveSpecial", "PercentSpecialCharacters", "PercentDigits", "PercentLetters", "PercentDuplicatesInDataset", "MissingDataRatio", "TestSetAvgUnknownTokenRatio", "VocabSize", "AvgUnknownTokenRatio", "JsDivergenceTokens" }, null, null, null)
           }));
     }
     #endregion
@@ -67,6 +78,7 @@ namespace Asgt.Type {
   {
     private static readonly pb::MessageParser<DatasetStatistics> _parser = new pb::MessageParser<DatasetStatistics>(() => new DatasetStatistics());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DatasetStatistics> Parser { get { return _parser; } }
@@ -94,6 +106,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatasetStatistics(DatasetStatistics other) : this() {
+      _hasBits0 = other._hasBits0;
       lexicalDiversitySplitOnSpace_ = other.lexicalDiversitySplitOnSpace_;
       lexicalDiversitySplitOnSpecial_ = other.lexicalDiversitySplitOnSpecial_;
       percentEmptyStrings_ = other.percentEmptyStrings_;
@@ -119,6 +132,8 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "lexical_diversity_split_on_space" field.</summary>
     public const int LexicalDiversitySplitOnSpaceFieldNumber = 2;
+    private readonly static float LexicalDiversitySplitOnSpaceDefaultValue = 0F;
+
     private float lexicalDiversitySplitOnSpace_;
     /// <summary>
     /// lexical diversity of the dataset split on space
@@ -126,14 +141,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float LexicalDiversitySplitOnSpace {
-      get { return lexicalDiversitySplitOnSpace_; }
+      get { if ((_hasBits0 & 1) != 0) { return lexicalDiversitySplitOnSpace_; } else { return LexicalDiversitySplitOnSpaceDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         lexicalDiversitySplitOnSpace_ = value;
       }
+    }
+    /// <summary>Gets whether the "lexical_diversity_split_on_space" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLexicalDiversitySplitOnSpace {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "lexical_diversity_split_on_space" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLexicalDiversitySplitOnSpace() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "lexical_diversity_split_on_special" field.</summary>
     public const int LexicalDiversitySplitOnSpecialFieldNumber = 3;
+    private readonly static float LexicalDiversitySplitOnSpecialDefaultValue = 0F;
+
     private float lexicalDiversitySplitOnSpecial_;
     /// <summary>
     /// lexical diversity of the dataset split on special characters
@@ -141,14 +171,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float LexicalDiversitySplitOnSpecial {
-      get { return lexicalDiversitySplitOnSpecial_; }
+      get { if ((_hasBits0 & 2) != 0) { return lexicalDiversitySplitOnSpecial_; } else { return LexicalDiversitySplitOnSpecialDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         lexicalDiversitySplitOnSpecial_ = value;
       }
+    }
+    /// <summary>Gets whether the "lexical_diversity_split_on_special" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLexicalDiversitySplitOnSpecial {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "lexical_diversity_split_on_special" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLexicalDiversitySplitOnSpecial() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "percent_empty_strings" field.</summary>
     public const int PercentEmptyStringsFieldNumber = 4;
+    private readonly static float PercentEmptyStringsDefaultValue = 0F;
+
     private float percentEmptyStrings_;
     /// <summary>
     /// percentage of empty strings in the dataset
@@ -156,14 +201,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentEmptyStrings {
-      get { return percentEmptyStrings_; }
+      get { if ((_hasBits0 & 4) != 0) { return percentEmptyStrings_; } else { return PercentEmptyStringsDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         percentEmptyStrings_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_empty_strings" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentEmptyStrings {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_empty_strings" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentEmptyStrings() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "percent_pure_numbers_remove_spaces" field.</summary>
     public const int PercentPureNumbersRemoveSpacesFieldNumber = 5;
+    private readonly static float PercentPureNumbersRemoveSpacesDefaultValue = 0F;
+
     private float percentPureNumbersRemoveSpaces_;
     /// <summary>
     /// percentage of pure numbers in the dataset after removing spaces
@@ -171,14 +231,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentPureNumbersRemoveSpaces {
-      get { return percentPureNumbersRemoveSpaces_; }
+      get { if ((_hasBits0 & 8) != 0) { return percentPureNumbersRemoveSpaces_; } else { return PercentPureNumbersRemoveSpacesDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         percentPureNumbersRemoveSpaces_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_pure_numbers_remove_spaces" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentPureNumbersRemoveSpaces {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_pure_numbers_remove_spaces" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentPureNumbersRemoveSpaces() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "percent_pure_numbers_remove_special" field.</summary>
     public const int PercentPureNumbersRemoveSpecialFieldNumber = 6;
+    private readonly static float PercentPureNumbersRemoveSpecialDefaultValue = 0F;
+
     private float percentPureNumbersRemoveSpecial_;
     /// <summary>
     /// percentage of pure numbers in the dataset after removing spaces and special characters
@@ -186,14 +261,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentPureNumbersRemoveSpecial {
-      get { return percentPureNumbersRemoveSpecial_; }
+      get { if ((_hasBits0 & 16) != 0) { return percentPureNumbersRemoveSpecial_; } else { return PercentPureNumbersRemoveSpecialDefaultValue; } }
       set {
+        _hasBits0 |= 16;
         percentPureNumbersRemoveSpecial_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_pure_numbers_remove_special" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentPureNumbersRemoveSpecial {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_pure_numbers_remove_special" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentPureNumbersRemoveSpecial() {
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "percent_special_characters" field.</summary>
     public const int PercentSpecialCharactersFieldNumber = 7;
+    private readonly static float PercentSpecialCharactersDefaultValue = 0F;
+
     private float percentSpecialCharacters_;
     /// <summary>
     /// percentage of special characters in the dataset
@@ -201,14 +291,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentSpecialCharacters {
-      get { return percentSpecialCharacters_; }
+      get { if ((_hasBits0 & 32) != 0) { return percentSpecialCharacters_; } else { return PercentSpecialCharactersDefaultValue; } }
       set {
+        _hasBits0 |= 32;
         percentSpecialCharacters_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_special_characters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentSpecialCharacters {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_special_characters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentSpecialCharacters() {
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "percent_digits" field.</summary>
     public const int PercentDigitsFieldNumber = 8;
+    private readonly static float PercentDigitsDefaultValue = 0F;
+
     private float percentDigits_;
     /// <summary>
     /// percentage of digits in the dataset
@@ -216,14 +321,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentDigits {
-      get { return percentDigits_; }
+      get { if ((_hasBits0 & 64) != 0) { return percentDigits_; } else { return PercentDigitsDefaultValue; } }
       set {
+        _hasBits0 |= 64;
         percentDigits_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_digits" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentDigits {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_digits" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentDigits() {
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "percent_letters" field.</summary>
     public const int PercentLettersFieldNumber = 9;
+    private readonly static float PercentLettersDefaultValue = 0F;
+
     private float percentLetters_;
     /// <summary>
     /// percentage of letters in the dataset
@@ -231,14 +351,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentLetters {
-      get { return percentLetters_; }
+      get { if ((_hasBits0 & 128) != 0) { return percentLetters_; } else { return PercentLettersDefaultValue; } }
       set {
+        _hasBits0 |= 128;
         percentLetters_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_letters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentLetters {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_letters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentLetters() {
+      _hasBits0 &= ~128;
     }
 
     /// <summary>Field number for the "percent_duplicates_in_dataset" field.</summary>
     public const int PercentDuplicatesInDatasetFieldNumber = 10;
+    private readonly static float PercentDuplicatesInDatasetDefaultValue = 0F;
+
     private float percentDuplicatesInDataset_;
     /// <summary>
     /// percentage of duplicates in the dataset
@@ -246,14 +381,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float PercentDuplicatesInDataset {
-      get { return percentDuplicatesInDataset_; }
+      get { if ((_hasBits0 & 256) != 0) { return percentDuplicatesInDataset_; } else { return PercentDuplicatesInDatasetDefaultValue; } }
       set {
+        _hasBits0 |= 256;
         percentDuplicatesInDataset_ = value;
       }
+    }
+    /// <summary>Gets whether the "percent_duplicates_in_dataset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentDuplicatesInDataset {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "percent_duplicates_in_dataset" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentDuplicatesInDataset() {
+      _hasBits0 &= ~256;
     }
 
     /// <summary>Field number for the "missing_data_ratio" field.</summary>
     public const int MissingDataRatioFieldNumber = 16;
+    private readonly static float MissingDataRatioDefaultValue = 0F;
+
     private float missingDataRatio_;
     /// <summary>
     /// ratio of missing data
@@ -261,14 +411,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float MissingDataRatio {
-      get { return missingDataRatio_; }
+      get { if ((_hasBits0 & 512) != 0) { return missingDataRatio_; } else { return MissingDataRatioDefaultValue; } }
       set {
+        _hasBits0 |= 512;
         missingDataRatio_ = value;
       }
+    }
+    /// <summary>Gets whether the "missing_data_ratio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMissingDataRatio {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "missing_data_ratio" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMissingDataRatio() {
+      _hasBits0 &= ~512;
     }
 
     /// <summary>Field number for the "test_set_avg_unknown_token_ratio" field.</summary>
     public const int TestSetAvgUnknownTokenRatioFieldNumber = 17;
+    private readonly static float TestSetAvgUnknownTokenRatioDefaultValue = 0F;
+
     private float testSetAvgUnknownTokenRatio_;
     /// <summary>
     /// average unknown token ratio in test set
@@ -276,14 +441,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float TestSetAvgUnknownTokenRatio {
-      get { return testSetAvgUnknownTokenRatio_; }
+      get { if ((_hasBits0 & 1024) != 0) { return testSetAvgUnknownTokenRatio_; } else { return TestSetAvgUnknownTokenRatioDefaultValue; } }
       set {
+        _hasBits0 |= 1024;
         testSetAvgUnknownTokenRatio_ = value;
       }
+    }
+    /// <summary>Gets whether the "test_set_avg_unknown_token_ratio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTestSetAvgUnknownTokenRatio {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "test_set_avg_unknown_token_ratio" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTestSetAvgUnknownTokenRatio() {
+      _hasBits0 &= ~1024;
     }
 
     /// <summary>Field number for the "vocab_size" field.</summary>
     public const int VocabSizeFieldNumber = 18;
+    private readonly static int VocabSizeDefaultValue = 0;
+
     private int vocabSize_;
     /// <summary>
     /// vocabulary size
@@ -291,14 +471,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VocabSize {
-      get { return vocabSize_; }
+      get { if ((_hasBits0 & 2048) != 0) { return vocabSize_; } else { return VocabSizeDefaultValue; } }
       set {
+        _hasBits0 |= 2048;
         vocabSize_ = value;
       }
+    }
+    /// <summary>Gets whether the "vocab_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVocabSize {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "vocab_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVocabSize() {
+      _hasBits0 &= ~2048;
     }
 
     /// <summary>Field number for the "avg_unknown_token_ratio" field.</summary>
     public const int AvgUnknownTokenRatioFieldNumber = 20;
+    private readonly static float AvgUnknownTokenRatioDefaultValue = 0F;
+
     private float avgUnknownTokenRatio_;
     /// <summary>
     /// average unknown token ratio
@@ -306,14 +501,29 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float AvgUnknownTokenRatio {
-      get { return avgUnknownTokenRatio_; }
+      get { if ((_hasBits0 & 4096) != 0) { return avgUnknownTokenRatio_; } else { return AvgUnknownTokenRatioDefaultValue; } }
       set {
+        _hasBits0 |= 4096;
         avgUnknownTokenRatio_ = value;
       }
+    }
+    /// <summary>Gets whether the "avg_unknown_token_ratio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAvgUnknownTokenRatio {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "avg_unknown_token_ratio" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAvgUnknownTokenRatio() {
+      _hasBits0 &= ~4096;
     }
 
     /// <summary>Field number for the "js_divergence_tokens" field.</summary>
     public const int JsDivergenceTokensFieldNumber = 22;
+    private readonly static float JsDivergenceTokensDefaultValue = 0F;
+
     private float jsDivergenceTokens_;
     /// <summary>
     /// Jensen-Shannon divergence for tokens
@@ -321,10 +531,23 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float JsDivergenceTokens {
-      get { return jsDivergenceTokens_; }
+      get { if ((_hasBits0 & 8192) != 0) { return jsDivergenceTokens_; } else { return JsDivergenceTokensDefaultValue; } }
       set {
+        _hasBits0 |= 8192;
         jsDivergenceTokens_ = value;
       }
+    }
+    /// <summary>Gets whether the "js_divergence_tokens" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJsDivergenceTokens {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "js_divergence_tokens" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJsDivergenceTokens() {
+      _hasBits0 &= ~8192;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -363,20 +586,20 @@ namespace Asgt.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LexicalDiversitySplitOnSpace != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpace);
-      if (LexicalDiversitySplitOnSpecial != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpecial);
-      if (PercentEmptyStrings != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentEmptyStrings);
-      if (PercentPureNumbersRemoveSpaces != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpaces);
-      if (PercentPureNumbersRemoveSpecial != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpecial);
-      if (PercentSpecialCharacters != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSpecialCharacters);
-      if (PercentDigits != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDigits);
-      if (PercentLetters != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentLetters);
-      if (PercentDuplicatesInDataset != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDuplicatesInDataset);
-      if (MissingDataRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MissingDataRatio);
-      if (TestSetAvgUnknownTokenRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TestSetAvgUnknownTokenRatio);
-      if (VocabSize != 0) hash ^= VocabSize.GetHashCode();
-      if (AvgUnknownTokenRatio != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgUnknownTokenRatio);
-      if (JsDivergenceTokens != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceTokens);
+      if (HasLexicalDiversitySplitOnSpace) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpace);
+      if (HasLexicalDiversitySplitOnSpecial) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LexicalDiversitySplitOnSpecial);
+      if (HasPercentEmptyStrings) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentEmptyStrings);
+      if (HasPercentPureNumbersRemoveSpaces) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpaces);
+      if (HasPercentPureNumbersRemoveSpecial) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPureNumbersRemoveSpecial);
+      if (HasPercentSpecialCharacters) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSpecialCharacters);
+      if (HasPercentDigits) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDigits);
+      if (HasPercentLetters) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentLetters);
+      if (HasPercentDuplicatesInDataset) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentDuplicatesInDataset);
+      if (HasMissingDataRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MissingDataRatio);
+      if (HasTestSetAvgUnknownTokenRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TestSetAvgUnknownTokenRatio);
+      if (HasVocabSize) hash ^= VocabSize.GetHashCode();
+      if (HasAvgUnknownTokenRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgUnknownTokenRatio);
+      if (HasJsDivergenceTokens) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceTokens);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -395,59 +618,59 @@ namespace Asgt.Type {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LexicalDiversitySplitOnSpace != 0F) {
+      if (HasLexicalDiversitySplitOnSpace) {
         output.WriteRawTag(21);
         output.WriteFloat(LexicalDiversitySplitOnSpace);
       }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
+      if (HasLexicalDiversitySplitOnSpecial) {
         output.WriteRawTag(29);
         output.WriteFloat(LexicalDiversitySplitOnSpecial);
       }
-      if (PercentEmptyStrings != 0F) {
+      if (HasPercentEmptyStrings) {
         output.WriteRawTag(37);
         output.WriteFloat(PercentEmptyStrings);
       }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
+      if (HasPercentPureNumbersRemoveSpaces) {
         output.WriteRawTag(45);
         output.WriteFloat(PercentPureNumbersRemoveSpaces);
       }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
+      if (HasPercentPureNumbersRemoveSpecial) {
         output.WriteRawTag(53);
         output.WriteFloat(PercentPureNumbersRemoveSpecial);
       }
-      if (PercentSpecialCharacters != 0F) {
+      if (HasPercentSpecialCharacters) {
         output.WriteRawTag(61);
         output.WriteFloat(PercentSpecialCharacters);
       }
-      if (PercentDigits != 0F) {
+      if (HasPercentDigits) {
         output.WriteRawTag(69);
         output.WriteFloat(PercentDigits);
       }
-      if (PercentLetters != 0F) {
+      if (HasPercentLetters) {
         output.WriteRawTag(77);
         output.WriteFloat(PercentLetters);
       }
-      if (PercentDuplicatesInDataset != 0F) {
+      if (HasPercentDuplicatesInDataset) {
         output.WriteRawTag(85);
         output.WriteFloat(PercentDuplicatesInDataset);
       }
-      if (MissingDataRatio != 0F) {
+      if (HasMissingDataRatio) {
         output.WriteRawTag(133, 1);
         output.WriteFloat(MissingDataRatio);
       }
-      if (TestSetAvgUnknownTokenRatio != 0F) {
+      if (HasTestSetAvgUnknownTokenRatio) {
         output.WriteRawTag(141, 1);
         output.WriteFloat(TestSetAvgUnknownTokenRatio);
       }
-      if (VocabSize != 0) {
+      if (HasVocabSize) {
         output.WriteRawTag(144, 1);
         output.WriteInt32(VocabSize);
       }
-      if (AvgUnknownTokenRatio != 0F) {
+      if (HasAvgUnknownTokenRatio) {
         output.WriteRawTag(165, 1);
         output.WriteFloat(AvgUnknownTokenRatio);
       }
-      if (JsDivergenceTokens != 0F) {
+      if (HasJsDivergenceTokens) {
         output.WriteRawTag(181, 1);
         output.WriteFloat(JsDivergenceTokens);
       }
@@ -461,59 +684,59 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LexicalDiversitySplitOnSpace != 0F) {
+      if (HasLexicalDiversitySplitOnSpace) {
         output.WriteRawTag(21);
         output.WriteFloat(LexicalDiversitySplitOnSpace);
       }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
+      if (HasLexicalDiversitySplitOnSpecial) {
         output.WriteRawTag(29);
         output.WriteFloat(LexicalDiversitySplitOnSpecial);
       }
-      if (PercentEmptyStrings != 0F) {
+      if (HasPercentEmptyStrings) {
         output.WriteRawTag(37);
         output.WriteFloat(PercentEmptyStrings);
       }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
+      if (HasPercentPureNumbersRemoveSpaces) {
         output.WriteRawTag(45);
         output.WriteFloat(PercentPureNumbersRemoveSpaces);
       }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
+      if (HasPercentPureNumbersRemoveSpecial) {
         output.WriteRawTag(53);
         output.WriteFloat(PercentPureNumbersRemoveSpecial);
       }
-      if (PercentSpecialCharacters != 0F) {
+      if (HasPercentSpecialCharacters) {
         output.WriteRawTag(61);
         output.WriteFloat(PercentSpecialCharacters);
       }
-      if (PercentDigits != 0F) {
+      if (HasPercentDigits) {
         output.WriteRawTag(69);
         output.WriteFloat(PercentDigits);
       }
-      if (PercentLetters != 0F) {
+      if (HasPercentLetters) {
         output.WriteRawTag(77);
         output.WriteFloat(PercentLetters);
       }
-      if (PercentDuplicatesInDataset != 0F) {
+      if (HasPercentDuplicatesInDataset) {
         output.WriteRawTag(85);
         output.WriteFloat(PercentDuplicatesInDataset);
       }
-      if (MissingDataRatio != 0F) {
+      if (HasMissingDataRatio) {
         output.WriteRawTag(133, 1);
         output.WriteFloat(MissingDataRatio);
       }
-      if (TestSetAvgUnknownTokenRatio != 0F) {
+      if (HasTestSetAvgUnknownTokenRatio) {
         output.WriteRawTag(141, 1);
         output.WriteFloat(TestSetAvgUnknownTokenRatio);
       }
-      if (VocabSize != 0) {
+      if (HasVocabSize) {
         output.WriteRawTag(144, 1);
         output.WriteInt32(VocabSize);
       }
-      if (AvgUnknownTokenRatio != 0F) {
+      if (HasAvgUnknownTokenRatio) {
         output.WriteRawTag(165, 1);
         output.WriteFloat(AvgUnknownTokenRatio);
       }
-      if (JsDivergenceTokens != 0F) {
+      if (HasJsDivergenceTokens) {
         output.WriteRawTag(181, 1);
         output.WriteFloat(JsDivergenceTokens);
       }
@@ -527,46 +750,46 @@ namespace Asgt.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LexicalDiversitySplitOnSpace != 0F) {
+      if (HasLexicalDiversitySplitOnSpace) {
         size += 1 + 4;
       }
-      if (LexicalDiversitySplitOnSpecial != 0F) {
+      if (HasLexicalDiversitySplitOnSpecial) {
         size += 1 + 4;
       }
-      if (PercentEmptyStrings != 0F) {
+      if (HasPercentEmptyStrings) {
         size += 1 + 4;
       }
-      if (PercentPureNumbersRemoveSpaces != 0F) {
+      if (HasPercentPureNumbersRemoveSpaces) {
         size += 1 + 4;
       }
-      if (PercentPureNumbersRemoveSpecial != 0F) {
+      if (HasPercentPureNumbersRemoveSpecial) {
         size += 1 + 4;
       }
-      if (PercentSpecialCharacters != 0F) {
+      if (HasPercentSpecialCharacters) {
         size += 1 + 4;
       }
-      if (PercentDigits != 0F) {
+      if (HasPercentDigits) {
         size += 1 + 4;
       }
-      if (PercentLetters != 0F) {
+      if (HasPercentLetters) {
         size += 1 + 4;
       }
-      if (PercentDuplicatesInDataset != 0F) {
+      if (HasPercentDuplicatesInDataset) {
         size += 1 + 4;
       }
-      if (MissingDataRatio != 0F) {
+      if (HasMissingDataRatio) {
         size += 2 + 4;
       }
-      if (TestSetAvgUnknownTokenRatio != 0F) {
+      if (HasTestSetAvgUnknownTokenRatio) {
         size += 2 + 4;
       }
-      if (VocabSize != 0) {
+      if (HasVocabSize) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(VocabSize);
       }
-      if (AvgUnknownTokenRatio != 0F) {
+      if (HasAvgUnknownTokenRatio) {
         size += 2 + 4;
       }
-      if (JsDivergenceTokens != 0F) {
+      if (HasJsDivergenceTokens) {
         size += 2 + 4;
       }
       if (_unknownFields != null) {
@@ -581,46 +804,46 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.LexicalDiversitySplitOnSpace != 0F) {
+      if (other.HasLexicalDiversitySplitOnSpace) {
         LexicalDiversitySplitOnSpace = other.LexicalDiversitySplitOnSpace;
       }
-      if (other.LexicalDiversitySplitOnSpecial != 0F) {
+      if (other.HasLexicalDiversitySplitOnSpecial) {
         LexicalDiversitySplitOnSpecial = other.LexicalDiversitySplitOnSpecial;
       }
-      if (other.PercentEmptyStrings != 0F) {
+      if (other.HasPercentEmptyStrings) {
         PercentEmptyStrings = other.PercentEmptyStrings;
       }
-      if (other.PercentPureNumbersRemoveSpaces != 0F) {
+      if (other.HasPercentPureNumbersRemoveSpaces) {
         PercentPureNumbersRemoveSpaces = other.PercentPureNumbersRemoveSpaces;
       }
-      if (other.PercentPureNumbersRemoveSpecial != 0F) {
+      if (other.HasPercentPureNumbersRemoveSpecial) {
         PercentPureNumbersRemoveSpecial = other.PercentPureNumbersRemoveSpecial;
       }
-      if (other.PercentSpecialCharacters != 0F) {
+      if (other.HasPercentSpecialCharacters) {
         PercentSpecialCharacters = other.PercentSpecialCharacters;
       }
-      if (other.PercentDigits != 0F) {
+      if (other.HasPercentDigits) {
         PercentDigits = other.PercentDigits;
       }
-      if (other.PercentLetters != 0F) {
+      if (other.HasPercentLetters) {
         PercentLetters = other.PercentLetters;
       }
-      if (other.PercentDuplicatesInDataset != 0F) {
+      if (other.HasPercentDuplicatesInDataset) {
         PercentDuplicatesInDataset = other.PercentDuplicatesInDataset;
       }
-      if (other.MissingDataRatio != 0F) {
+      if (other.HasMissingDataRatio) {
         MissingDataRatio = other.MissingDataRatio;
       }
-      if (other.TestSetAvgUnknownTokenRatio != 0F) {
+      if (other.HasTestSetAvgUnknownTokenRatio) {
         TestSetAvgUnknownTokenRatio = other.TestSetAvgUnknownTokenRatio;
       }
-      if (other.VocabSize != 0) {
+      if (other.HasVocabSize) {
         VocabSize = other.VocabSize;
       }
-      if (other.AvgUnknownTokenRatio != 0F) {
+      if (other.HasAvgUnknownTokenRatio) {
         AvgUnknownTokenRatio = other.AvgUnknownTokenRatio;
       }
-      if (other.JsDivergenceTokens != 0F) {
+      if (other.HasJsDivergenceTokens) {
         JsDivergenceTokens = other.JsDivergenceTokens;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
