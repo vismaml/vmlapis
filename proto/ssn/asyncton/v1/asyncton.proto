@@ -55,23 +55,13 @@ service TransactionService {
     option (google.api.http) = {delete: "/v1/tags/{tag_name}"};
   }
 
-  // below are more ideas how the API could progress
-  // ---------------------
-  // e.g. add more features for processing
-  // rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-  //   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-  // }
-  // essentially a feedback endpoint
   rpc UpdateTransactionResults(UpdateTransactionResultsRequest) returns (UpdateTransactionResultsResponse) {
     option (google.api.http) = {
       put: "/v1/transactions/{id}/results"
       body: "*"
+      additional_bindings: {put: "/v1/transactions/results"}
     };
   }
-  // streaming status back
-  // rpc WatchTransactionStatus(WatchTransactionStatusRequest) returns (stream WatchTransactionStatusResponse) {
-  //   option (google.api.http) = {get: "/v1/transactions/{id}/status:watch"};
-  // }
 }
 
 // --- post: "/v1/transactions" ---

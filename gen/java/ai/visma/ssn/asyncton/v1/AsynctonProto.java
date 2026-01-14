@@ -147,7 +147,7 @@ public final class AsynctonProto {
       "tions\030\003 \003(\0132\033.ssn.asyncton.v1.Annotation" +
       "R\013annotations\"O\n UpdateTransactionResult" +
       "sResponse\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002" +
-      " \001(\tR\010customId2\256\007\n\022TransactionService\022\207\001" +
+      " \001(\tR\010customId2\312\007\n\022TransactionService\022\207\001" +
       "\n\021CreateTransaction\022).ssn.asyncton.v1.Cr" +
       "eateTransactionRequest\032*.ssn.asyncton.v1" +
       ".CreateTransactionResponse\"\033\202\323\344\223\002\025\"\020/v1/" +
@@ -166,18 +166,19 @@ public final class AsynctonProto {
       "\223\002+*\025/v1/transactions/{id}Z\022*\020/v1/transa" +
       "ctions\022c\n\tDeleteTag\022!.ssn.asyncton.v1.De" +
       "leteTagRequest\032\026.google.protobuf.Empty\"\033" +
-      "\202\323\344\223\002\025*\023/v1/tags/{tag_name}\022\251\001\n\030UpdateTr" +
+      "\202\323\344\223\002\025*\023/v1/tags/{tag_name}\022\305\001\n\030UpdateTr" +
       "ansactionResults\0220.ssn.asyncton.v1.Updat" +
       "eTransactionResultsRequest\0321.ssn.asyncto" +
-      "n.v1.UpdateTransactionResultsResponse\"(\202" +
-      "\323\344\223\002\"\032\035/v1/transactions/{id}/results:\001*B" +
-      "\203\002\n\030ai.visma.ssn.asyncton.v1B\rAsynctonPr" +
-      "otoP\001Z?github.com/e-conomic/vmlapis/gen/" +
-      "go/ssn/asyncton/v1;transaction\242\002\003SAX\252\002\017S" +
-      "sn.Asyncton.V1\312\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\A" +
-      "syncton\\V1\\GPBMetadata\352\002\021Ssn::Asyncton::" +
-      "V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020application/j" +
-      "son:\020application/jsonb\006proto3"
+      "n.v1.UpdateTransactionResultsResponse\"D\202" +
+      "\323\344\223\002>\032\035/v1/transactions/{id}/results:\001*Z" +
+      "\032\032\030/v1/transactions/resultsB\203\002\n\030ai.visma" +
+      ".ssn.asyncton.v1B\rAsynctonProtoP\001Z?githu" +
+      "b.com/e-conomic/vmlapis/gen/go/ssn/async" +
+      "ton/v1;transaction\242\002\003SAX\252\002\017Ssn.Asyncton." +
+      "V1\312\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\G" +
+      "PBMetadata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n\tAsy" +
+      "nc API2\002v1*\001\0022\020application/json:\020applica" +
+      "tion/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
