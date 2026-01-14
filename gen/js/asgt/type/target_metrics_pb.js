@@ -231,50 +231,50 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
       proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter
     );
   }
-  f = message.getEntropy();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
     writer.writeFloat(
       6,
       f
     );
   }
-  f = message.getNumberOfClasses();
-  if (f !== 0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
     writer.writeInt32(
       7,
       f
     );
   }
-  f = message.getAvgSamplePerClass();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
     writer.writeFloat(
       8,
       f
     );
   }
-  f = message.getInconsistentLabelRatio();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
     writer.writeFloat(
       9,
       f
     );
   }
-  f = message.getAvgLabelsPerInconsistentSample();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
     writer.writeFloat(
       10,
       f
     );
   }
-  f = message.getPercentSamplesNotInTargetVocab();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 11));
+  if (f != null) {
     writer.writeFloat(
       11,
       f
     );
   }
-  f = message.getJsDivergenceClasses();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 12));
+  if (f != null) {
     writer.writeFloat(
       12,
       f
@@ -783,7 +783,25 @@ proto.asgt.type.TargetMetrics.prototype.getEntropy = function() {
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setEntropy = function(value) {
-  return jspb.Message.setProto3FloatField(this, 6, value);
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearEntropy = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasEntropy = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -801,7 +819,25 @@ proto.asgt.type.TargetMetrics.prototype.getNumberOfClasses = function() {
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setNumberOfClasses = function(value) {
-  return jspb.Message.setProto3IntField(this, 7, value);
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearNumberOfClasses = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasNumberOfClasses = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
@@ -819,7 +855,25 @@ proto.asgt.type.TargetMetrics.prototype.getAvgSamplePerClass = function() {
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setAvgSamplePerClass = function(value) {
-  return jspb.Message.setProto3FloatField(this, 8, value);
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearAvgSamplePerClass = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasAvgSamplePerClass = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
@@ -837,7 +891,25 @@ proto.asgt.type.TargetMetrics.prototype.getInconsistentLabelRatio = function() {
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setInconsistentLabelRatio = function(value) {
-  return jspb.Message.setProto3FloatField(this, 9, value);
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearInconsistentLabelRatio = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasInconsistentLabelRatio = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
@@ -855,7 +927,25 @@ proto.asgt.type.TargetMetrics.prototype.getAvgLabelsPerInconsistentSample = func
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setAvgLabelsPerInconsistentSample = function(value) {
-  return jspb.Message.setProto3FloatField(this, 10, value);
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearAvgLabelsPerInconsistentSample = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasAvgLabelsPerInconsistentSample = function() {
+  return jspb.Message.getField(this, 10) != null;
 };
 
 
@@ -873,7 +963,25 @@ proto.asgt.type.TargetMetrics.prototype.getPercentSamplesNotInTargetVocab = func
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setPercentSamplesNotInTargetVocab = function(value) {
-  return jspb.Message.setProto3FloatField(this, 11, value);
+  return jspb.Message.setField(this, 11, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearPercentSamplesNotInTargetVocab = function() {
+  return jspb.Message.setField(this, 11, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasPercentSamplesNotInTargetVocab = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
@@ -891,7 +999,25 @@ proto.asgt.type.TargetMetrics.prototype.getJsDivergenceClasses = function() {
  * @return {!proto.asgt.type.TargetMetrics} returns this
  */
 proto.asgt.type.TargetMetrics.prototype.setJsDivergenceClasses = function(value) {
-  return jspb.Message.setProto3FloatField(this, 12, value);
+  return jspb.Message.setField(this, 12, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearJsDivergenceClasses = function() {
+  return jspb.Message.setField(this, 12, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasJsDivergenceClasses = function() {
+  return jspb.Message.getField(this, 12) != null;
 };
 
 
