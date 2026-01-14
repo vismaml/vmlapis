@@ -210,99 +210,99 @@ proto.asgt.type.DatasetStatistics.prototype.serializeBinary = function() {
  */
 proto.asgt.type.DatasetStatistics.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getLexicalDiversitySplitOnSpace();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
     writer.writeFloat(
       2,
       f
     );
   }
-  f = message.getLexicalDiversitySplitOnSpecial();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
     writer.writeFloat(
       3,
       f
     );
   }
-  f = message.getPercentEmptyStrings();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 4));
+  if (f != null) {
     writer.writeFloat(
       4,
       f
     );
   }
-  f = message.getPercentPureNumbersRemoveSpaces();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
     writer.writeFloat(
       5,
       f
     );
   }
-  f = message.getPercentPureNumbersRemoveSpecial();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
     writer.writeFloat(
       6,
       f
     );
   }
-  f = message.getPercentSpecialCharacters();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
     writer.writeFloat(
       7,
       f
     );
   }
-  f = message.getPercentDigits();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 8));
+  if (f != null) {
     writer.writeFloat(
       8,
       f
     );
   }
-  f = message.getPercentLetters();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 9));
+  if (f != null) {
     writer.writeFloat(
       9,
       f
     );
   }
-  f = message.getPercentDuplicatesInDataset();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 10));
+  if (f != null) {
     writer.writeFloat(
       10,
       f
     );
   }
-  f = message.getMissingDataRatio();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 16));
+  if (f != null) {
     writer.writeFloat(
       16,
       f
     );
   }
-  f = message.getTestSetAvgUnknownTokenRatio();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 17));
+  if (f != null) {
     writer.writeFloat(
       17,
       f
     );
   }
-  f = message.getVocabSize();
-  if (f !== 0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 18));
+  if (f != null) {
     writer.writeInt32(
       18,
       f
     );
   }
-  f = message.getAvgUnknownTokenRatio();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 20));
+  if (f != null) {
     writer.writeFloat(
       20,
       f
     );
   }
-  f = message.getJsDivergenceTokens();
-  if (f !== 0.0) {
+  f = /** @type {number} */ (jspb.Message.getField(message, 22));
+  if (f != null) {
     writer.writeFloat(
       22,
       f
@@ -325,7 +325,25 @@ proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpace = fu
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpace = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return jspb.Message.setField(this, 2, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearLexicalDiversitySplitOnSpace = function() {
+  return jspb.Message.setField(this, 2, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasLexicalDiversitySplitOnSpace = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -343,7 +361,25 @@ proto.asgt.type.DatasetStatistics.prototype.getLexicalDiversitySplitOnSpecial = 
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setLexicalDiversitySplitOnSpecial = function(value) {
-  return jspb.Message.setProto3FloatField(this, 3, value);
+  return jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearLexicalDiversitySplitOnSpecial = function() {
+  return jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasLexicalDiversitySplitOnSpecial = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -361,7 +397,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentEmptyStrings = function() 
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentEmptyStrings = function(value) {
-  return jspb.Message.setProto3FloatField(this, 4, value);
+  return jspb.Message.setField(this, 4, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentEmptyStrings = function() {
+  return jspb.Message.setField(this, 4, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentEmptyStrings = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
@@ -379,7 +433,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpaces = 
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpaces = function(value) {
-  return jspb.Message.setProto3FloatField(this, 5, value);
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentPureNumbersRemoveSpaces = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentPureNumbersRemoveSpaces = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
@@ -397,7 +469,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentPureNumbersRemoveSpecial =
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentPureNumbersRemoveSpecial = function(value) {
-  return jspb.Message.setProto3FloatField(this, 6, value);
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentPureNumbersRemoveSpecial = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentPureNumbersRemoveSpecial = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -415,7 +505,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentSpecialCharacters = functi
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentSpecialCharacters = function(value) {
-  return jspb.Message.setProto3FloatField(this, 7, value);
+  return jspb.Message.setField(this, 7, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentSpecialCharacters = function() {
+  return jspb.Message.setField(this, 7, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentSpecialCharacters = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
@@ -433,7 +541,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentDigits = function() {
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentDigits = function(value) {
-  return jspb.Message.setProto3FloatField(this, 8, value);
+  return jspb.Message.setField(this, 8, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentDigits = function() {
+  return jspb.Message.setField(this, 8, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentDigits = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
@@ -451,7 +577,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentLetters = function() {
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentLetters = function(value) {
-  return jspb.Message.setProto3FloatField(this, 9, value);
+  return jspb.Message.setField(this, 9, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentLetters = function() {
+  return jspb.Message.setField(this, 9, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentLetters = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
@@ -469,7 +613,25 @@ proto.asgt.type.DatasetStatistics.prototype.getPercentDuplicatesInDataset = func
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setPercentDuplicatesInDataset = function(value) {
-  return jspb.Message.setProto3FloatField(this, 10, value);
+  return jspb.Message.setField(this, 10, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearPercentDuplicatesInDataset = function() {
+  return jspb.Message.setField(this, 10, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasPercentDuplicatesInDataset = function() {
+  return jspb.Message.getField(this, 10) != null;
 };
 
 
@@ -487,7 +649,25 @@ proto.asgt.type.DatasetStatistics.prototype.getMissingDataRatio = function() {
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setMissingDataRatio = function(value) {
-  return jspb.Message.setProto3FloatField(this, 16, value);
+  return jspb.Message.setField(this, 16, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearMissingDataRatio = function() {
+  return jspb.Message.setField(this, 16, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasMissingDataRatio = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 
@@ -505,7 +685,25 @@ proto.asgt.type.DatasetStatistics.prototype.getTestSetAvgUnknownTokenRatio = fun
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setTestSetAvgUnknownTokenRatio = function(value) {
-  return jspb.Message.setProto3FloatField(this, 17, value);
+  return jspb.Message.setField(this, 17, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearTestSetAvgUnknownTokenRatio = function() {
+  return jspb.Message.setField(this, 17, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasTestSetAvgUnknownTokenRatio = function() {
+  return jspb.Message.getField(this, 17) != null;
 };
 
 
@@ -523,7 +721,25 @@ proto.asgt.type.DatasetStatistics.prototype.getVocabSize = function() {
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setVocabSize = function(value) {
-  return jspb.Message.setProto3IntField(this, 18, value);
+  return jspb.Message.setField(this, 18, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearVocabSize = function() {
+  return jspb.Message.setField(this, 18, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasVocabSize = function() {
+  return jspb.Message.getField(this, 18) != null;
 };
 
 
@@ -541,7 +757,25 @@ proto.asgt.type.DatasetStatistics.prototype.getAvgUnknownTokenRatio = function()
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setAvgUnknownTokenRatio = function(value) {
-  return jspb.Message.setProto3FloatField(this, 20, value);
+  return jspb.Message.setField(this, 20, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearAvgUnknownTokenRatio = function() {
+  return jspb.Message.setField(this, 20, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasAvgUnknownTokenRatio = function() {
+  return jspb.Message.getField(this, 20) != null;
 };
 
 
@@ -559,7 +793,25 @@ proto.asgt.type.DatasetStatistics.prototype.getJsDivergenceTokens = function() {
  * @return {!proto.asgt.type.DatasetStatistics} returns this
  */
 proto.asgt.type.DatasetStatistics.prototype.setJsDivergenceTokens = function(value) {
-  return jspb.Message.setProto3FloatField(this, 22, value);
+  return jspb.Message.setField(this, 22, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.DatasetStatistics} returns this
+ */
+proto.asgt.type.DatasetStatistics.prototype.clearJsDivergenceTokens = function() {
+  return jspb.Message.setField(this, 22, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.DatasetStatistics.prototype.hasJsDivergenceTokens = function() {
+  return jspb.Message.getField(this, 22) != null;
 };
 
 

@@ -50,7 +50,16 @@ public interface TargetMetricsOrBuilder extends
    * entropy of the dataset
    * </pre>
    *
-   * <code>float entropy = 6 [json_name = "entropy"];</code>
+   * <code>optional float entropy = 6 [json_name = "entropy"];</code>
+   * @return Whether the entropy field is set.
+   */
+  boolean hasEntropy();
+  /**
+   * <pre>
+   * entropy of the dataset
+   * </pre>
+   *
+   * <code>optional float entropy = 6 [json_name = "entropy"];</code>
    * @return The entropy.
    */
   float getEntropy();
@@ -60,7 +69,16 @@ public interface TargetMetricsOrBuilder extends
    * number of classes in the dataset
    * </pre>
    *
-   * <code>int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+   * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
+   * @return Whether the numberOfClasses field is set.
+   */
+  boolean hasNumberOfClasses();
+  /**
+   * <pre>
+   * number of classes in the dataset
+   * </pre>
+   *
+   * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
    * @return The numberOfClasses.
    */
   int getNumberOfClasses();
@@ -70,7 +88,16 @@ public interface TargetMetricsOrBuilder extends
    * average samples per class
    * </pre>
    *
-   * <code>float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+   * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
+   * @return Whether the avgSamplePerClass field is set.
+   */
+  boolean hasAvgSamplePerClass();
+  /**
+   * <pre>
+   * average samples per class
+   * </pre>
+   *
+   * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
    * @return The avgSamplePerClass.
    */
   float getAvgSamplePerClass();
@@ -80,7 +107,16 @@ public interface TargetMetricsOrBuilder extends
    * ratio of inconsistent labels
    * </pre>
    *
-   * <code>float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+   * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
+   * @return Whether the inconsistentLabelRatio field is set.
+   */
+  boolean hasInconsistentLabelRatio();
+  /**
+   * <pre>
+   * ratio of inconsistent labels
+   * </pre>
+   *
+   * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
    * @return The inconsistentLabelRatio.
    */
   float getInconsistentLabelRatio();
@@ -90,7 +126,16 @@ public interface TargetMetricsOrBuilder extends
    * average labels per inconsistent sample
    * </pre>
    *
-   * <code>float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+   * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
+   * @return Whether the avgLabelsPerInconsistentSample field is set.
+   */
+  boolean hasAvgLabelsPerInconsistentSample();
+  /**
+   * <pre>
+   * average labels per inconsistent sample
+   * </pre>
+   *
+   * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
    * @return The avgLabelsPerInconsistentSample.
    */
   float getAvgLabelsPerInconsistentSample();
@@ -100,7 +145,16 @@ public interface TargetMetricsOrBuilder extends
    * percentage of samples not in target vocabulary
    * </pre>
    *
-   * <code>float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+   * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
+   * @return Whether the percentSamplesNotInTargetVocab field is set.
+   */
+  boolean hasPercentSamplesNotInTargetVocab();
+  /**
+   * <pre>
+   * percentage of samples not in target vocabulary
+   * </pre>
+   *
+   * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
    * @return The percentSamplesNotInTargetVocab.
    */
   float getPercentSamplesNotInTargetVocab();
@@ -110,7 +164,16 @@ public interface TargetMetricsOrBuilder extends
    * Jensen-Shannon divergence for classes
    * </pre>
    *
-   * <code>float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+   * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
+   * @return Whether the jsDivergenceClasses field is set.
+   */
+  boolean hasJsDivergenceClasses();
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for classes
+   * </pre>
+   *
+   * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
    * @return The jsDivergenceClasses.
    */
   float getJsDivergenceClasses();
