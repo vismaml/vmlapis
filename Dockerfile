@@ -1,6 +1,6 @@
 FROM buildpack-deps:bullseye-scm
 
-COPY --from=golang:1.20-bullseye /usr/local/go/ /usr/local/go/
+COPY --from=golang:1.24-bookworm /usr/local/go/ /usr/local/go/
 
 ENV PATH=/usr/local/go/bin:${PATH}
 ENV GOPATH=/go
