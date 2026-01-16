@@ -28,6 +28,26 @@ class GetTextAnnotationResponse(_message.Message):
     last_image: _wrappers_pb2.BytesValue
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ..., last_image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
+class ProcessImageRequest(_message.Message):
+    __slots__ = ("data", "extension")
+    DATA_FIELD_NUMBER: _ClassVar[int]
+    EXTENSION_FIELD_NUMBER: _ClassVar[int]
+    data: bytes
+    extension: str
+    def __init__(self, data: _Optional[bytes] = ..., extension: _Optional[str] = ...) -> None: ...
+
+class ProcessImageResponse(_message.Message):
+    __slots__ = ("image", "width", "height", "scale_factor")
+    IMAGE_FIELD_NUMBER: _ClassVar[int]
+    WIDTH_FIELD_NUMBER: _ClassVar[int]
+    HEIGHT_FIELD_NUMBER: _ClassVar[int]
+    SCALE_FACTOR_FIELD_NUMBER: _ClassVar[int]
+    image: bytes
+    width: int
+    height: int
+    scale_factor: float
+    def __init__(self, image: _Optional[bytes] = ..., width: _Optional[int] = ..., height: _Optional[int] = ..., scale_factor: _Optional[float] = ...) -> None: ...
+
 class AsyncCreateOperationRequest(_message.Message):
     __slots__ = ("input_paths", "output_path")
     INPUT_PATHS_FIELD_NUMBER: _ClassVar[int]

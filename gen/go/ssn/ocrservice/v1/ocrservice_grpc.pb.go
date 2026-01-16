@@ -22,6 +22,7 @@ const (
 	OcrService_OcrScanImage_FullMethodName            = "/ssn.ocrservice.v1.OcrService/OcrScanImage"
 	OcrService_GetTextAnnotation_FullMethodName       = "/ssn.ocrservice.v1.OcrService/GetTextAnnotation"
 	OcrService_GetTextAnnotations_FullMethodName      = "/ssn.ocrservice.v1.OcrService/GetTextAnnotations"
+	OcrService_ProcessImage_FullMethodName            = "/ssn.ocrservice.v1.OcrService/ProcessImage"
 	OcrService_AsyncCreateOperation_FullMethodName    = "/ssn.ocrservice.v1.OcrService/AsyncCreateOperation"
 	OcrService_AsyncGetOperationStatus_FullMethodName = "/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus"
 )
@@ -33,6 +34,7 @@ type OcrServiceClient interface {
 	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
 	GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error)
 	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
+	ProcessImage(ctx context.Context, in *ProcessImageRequest, opts ...grpc.CallOption) (*ProcessImageResponse, error)
 	AsyncCreateOperation(ctx context.Context, in *AsyncCreateOperationRequest, opts ...grpc.CallOption) (*AsyncCreateOperationResponse, error)
 	AsyncGetOperationStatus(ctx context.Context, in *AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (OcrService_AsyncGetOperationStatusClient, error)
 }
@@ -95,6 +97,15 @@ func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationResponse,
 	return m, nil
 }
 
+func (c *ocrServiceClient) ProcessImage(ctx context.Context, in *ProcessImageRequest, opts ...grpc.CallOption) (*ProcessImageResponse, error) {
+	out := new(ProcessImageResponse)
+	err := c.cc.Invoke(ctx, OcrService_ProcessImage_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *ocrServiceClient) AsyncCreateOperation(ctx context.Context, in *AsyncCreateOperationRequest, opts ...grpc.CallOption) (*AsyncCreateOperationResponse, error) {
 	out := new(AsyncCreateOperationResponse)
 	err := c.cc.Invoke(ctx, OcrService_AsyncCreateOperation_FullMethodName, in, out, opts...)
@@ -143,6 +154,7 @@ type OcrServiceServer interface {
 	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
 	GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error)
 	GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error
+	ProcessImage(context.Context, *ProcessImageRequest) (*ProcessImageResponse, error)
 	AsyncCreateOperation(context.Context, *AsyncCreateOperationRequest) (*AsyncCreateOperationResponse, error)
 	AsyncGetOperationStatus(*AsyncGetOperationStatusRequest, OcrService_AsyncGetOperationStatusServer) error
 }
@@ -159,6 +171,9 @@ func (UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetText
 }
 func (UnimplementedOcrServiceServer) GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error {
 	return status.Errorf(codes.Unimplemented, "method GetTextAnnotations not implemented")
+}
+func (UnimplementedOcrServiceServer) ProcessImage(context.Context, *ProcessImageRequest) (*ProcessImageResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProcessImage not implemented")
 }
 func (UnimplementedOcrServiceServer) AsyncCreateOperation(context.Context, *AsyncCreateOperationRequest) (*AsyncCreateOperationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AsyncCreateOperation not implemented")
@@ -235,6 +250,24 @@ func (x *ocrServiceGetTextAnnotationsServer) Send(m *GetTextAnnotationResponse) 
 	return x.ServerStream.SendMsg(m)
 }
 
+func _OcrService_ProcessImage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProcessImageRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OcrServiceServer).ProcessImage(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: OcrService_ProcessImage_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OcrServiceServer).ProcessImage(ctx, req.(*ProcessImageRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _OcrService_AsyncCreateOperation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AsyncCreateOperationRequest)
 	if err := dec(in); err != nil {
@@ -288,6 +321,10 @@ var OcrService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTextAnnotation",
 			Handler:    _OcrService_GetTextAnnotation_Handler,
+		},
+		{
+			MethodName: "ProcessImage",
+			Handler:    _OcrService_ProcessImage_Handler,
 		},
 		{
 			MethodName: "AsyncCreateOperation",

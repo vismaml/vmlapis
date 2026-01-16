@@ -36,6 +36,16 @@ public final class OcrserviceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_ProcessImageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_ProcessImageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_ProcessImageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_ProcessImageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -86,7 +96,12 @@ public final class OcrserviceProto {
       ".type.TextAnnotationR\016textAnnotation\0221\n\005" +
       "image\030\003 \001(\0132\033.google.protobuf.BytesValue" +
       "R\005image\022:\n\nlast_image\030\004 \001(\0132\033.google.pro" +
-      "tobuf.BytesValueR\tlastImage\"_\n\033AsyncCrea" +
+      "tobuf.BytesValueR\tlastImage\"G\n\023ProcessIm" +
+      "ageRequest\022\022\n\004data\030\001 \001(\014R\004data\022\034\n\textens" +
+      "ion\030\002 \001(\tR\textension\"}\n\024ProcessImageResp" +
+      "onse\022\024\n\005image\030\001 \001(\014R\005image\022\024\n\005width\030\002 \001(" +
+      "\005R\005width\022\026\n\006height\030\003 \001(\005R\006height\022!\n\014scal" +
+      "e_factor\030\004 \001(\001R\013scaleFactor\"_\n\033AsyncCrea" +
       "teOperationRequest\022\037\n\013input_paths\030\001 \003(\tR" +
       "\ninputPaths\022\037\n\013output_path\030\002 \001(\tR\noutput" +
       "Path\"E\n\034AsyncCreateOperationResponse\022%\n\016" +
@@ -99,7 +114,7 @@ public final class OcrserviceProto {
       "error_message\030\004 \001(\tR\014errorMessage\")\n\023Ocr" +
       "ScanImageRequest\022\022\n\004data\030\001 \001(\014R\004data\"3\n\024" +
       "OcrScanImageResponse\022\033\n\ttess_hocr\030\001 \001(\tR" +
-      "\010tessHocr2\316\004\n\nOcrService\022_\n\014OcrScanImage" +
+      "\010tessHocr2\257\005\n\nOcrService\022_\n\014OcrScanImage" +
       "\022&.ssn.ocrservice.v1.OcrScanImageRequest" +
       "\032\'.ssn.ocrservice.v1.OcrScanImageRespons" +
       "e\022n\n\021GetTextAnnotation\022+.ssn.ocrservice." +
@@ -107,19 +122,22 @@ public final class OcrserviceProto {
       "vice.v1.GetTextAnnotationResponse\022q\n\022Get" +
       "TextAnnotations\022+.ssn.ocrservice.v1.GetT" +
       "extAnnotationRequest\032,.ssn.ocrservice.v1" +
-      ".GetTextAnnotationResponse0\001\022w\n\024AsyncCre" +
-      "ateOperation\022..ssn.ocrservice.v1.AsyncCr" +
-      "eateOperationRequest\032/.ssn.ocrservice.v1" +
-      ".AsyncCreateOperationResponse\022\202\001\n\027AsyncG" +
-      "etOperationStatus\0221.ssn.ocrservice.v1.As" +
-      "yncGetOperationStatusRequest\0322.ssn.ocrse" +
-      "rvice.v1.AsyncGetOperationStatusResponse" +
-      "0\001B\325\001\n\032ai.visma.ssn.ocrservice.v1B\017Ocrse" +
-      "rviceProtoP\001Z@github.com/e-conomic/vmlap" +
-      "is/gen/go/ssn/ocrservice/v1;ocrservice\242\002" +
-      "\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrservic" +
-      "e\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata\352\002\023S" +
-      "sn::Ocrservice::V1b\006proto3"
+      ".GetTextAnnotationResponse0\001\022_\n\014ProcessI" +
+      "mage\022&.ssn.ocrservice.v1.ProcessImageReq" +
+      "uest\032\'.ssn.ocrservice.v1.ProcessImageRes" +
+      "ponse\022w\n\024AsyncCreateOperation\022..ssn.ocrs" +
+      "ervice.v1.AsyncCreateOperationRequest\032/." +
+      "ssn.ocrservice.v1.AsyncCreateOperationRe" +
+      "sponse\022\202\001\n\027AsyncGetOperationStatus\0221.ssn" +
+      ".ocrservice.v1.AsyncGetOperationStatusRe" +
+      "quest\0322.ssn.ocrservice.v1.AsyncGetOperat" +
+      "ionStatusResponse0\001B\325\001\n\032ai.visma.ssn.ocr" +
+      "service.v1B\017OcrserviceProtoP\001Z@github.co" +
+      "m/e-conomic/vmlapis/gen/go/ssn/ocrservic" +
+      "e/v1;ocrservice\242\002\003SOX\252\002\021Ssn.Ocrservice.V" +
+      "1\312\002\021Ssn\\Ocrservice\\V1\342\002\035Ssn\\Ocrservice\\V" +
+      "1\\GPBMetadata\352\002\023Ssn::Ocrservice::V1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -140,38 +158,50 @@ public final class OcrserviceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor,
         new java.lang.String[] { "TextAnnotation", "Image", "LastImage", });
-    internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_descriptor =
+    internal_static_ssn_ocrservice_v1_ProcessImageRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_ocrservice_v1_ProcessImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_ProcessImageRequest_descriptor,
+        new java.lang.String[] { "Data", "Extension", });
+    internal_static_ssn_ocrservice_v1_ProcessImageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ssn_ocrservice_v1_ProcessImageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_ProcessImageResponse_descriptor,
+        new java.lang.String[] { "Image", "Width", "Height", "ScaleFactor", });
+    internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_descriptor,
         new java.lang.String[] { "InputPaths", "OutputPath", });
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_AsyncCreateOperationResponse_descriptor,
         new java.lang.String[] { "OperationName", });
     internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusRequest_descriptor,
         new java.lang.String[] { "OperationName", });
     internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_AsyncGetOperationStatusResponse_descriptor,
         new java.lang.String[] { "OperationName", "Done", "StatusCode", "ErrorMessage", });
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,

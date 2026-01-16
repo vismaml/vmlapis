@@ -30,6 +30,11 @@ class OcrServiceStub(object):
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
                 _registered_method=True)
+        self.ProcessImage = channel.unary_unary(
+                '/ssn.ocrservice.v1.OcrService/ProcessImage',
+                request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageRequest.SerializeToString,
+                response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageResponse.FromString,
+                _registered_method=True)
         self.AsyncCreateOperation = channel.unary_unary(
                 '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncCreateOperationRequest.SerializeToString,
@@ -64,6 +69,12 @@ class OcrServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ProcessImage(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def AsyncCreateOperation(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -93,6 +104,11 @@ def add_OcrServiceServicer_to_server(servicer, server):
                     servicer.GetTextAnnotations,
                     request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.FromString,
                     response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.SerializeToString,
+            ),
+            'ProcessImage': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessImage,
+                    request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageRequest.FromString,
+                    response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageResponse.SerializeToString,
             ),
             'AsyncCreateOperation': grpc.unary_unary_rpc_method_handler(
                     servicer.AsyncCreateOperation,
@@ -187,6 +203,33 @@ class OcrService(object):
             '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ProcessImage(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/ProcessImage',
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageRequest.SerializeToString,
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.ProcessImageResponse.FromString,
             options,
             channel_credentials,
             insecure,

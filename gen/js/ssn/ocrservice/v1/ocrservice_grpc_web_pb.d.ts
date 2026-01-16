@@ -27,6 +27,13 @@ export class OcrServiceClient {
     metadata?: grpcWeb.Metadata
   ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
 
+  processImage(
+    request: ssn_ocrservice_v1_ocrservice_pb.ProcessImageRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_ocrservice_v1_ocrservice_pb.ProcessImageResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.ProcessImageResponse>;
+
   asyncCreateOperation(
     request: ssn_ocrservice_v1_ocrservice_pb.AsyncCreateOperationRequest,
     metadata: grpcWeb.Metadata | undefined,
@@ -60,6 +67,11 @@ export class OcrServicePromiseClient {
     request: ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationRequest,
     metadata?: grpcWeb.Metadata
   ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
+
+  processImage(
+    request: ssn_ocrservice_v1_ocrservice_pb.ProcessImageRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_ocrservice_v1_ocrservice_pb.ProcessImageResponse>;
 
   asyncCreateOperation(
     request: ssn_ocrservice_v1_ocrservice_pb.AsyncCreateOperationRequest,
