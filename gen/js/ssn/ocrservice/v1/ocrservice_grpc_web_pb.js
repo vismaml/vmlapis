@@ -263,6 +263,67 @@ proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getTextAnnotations =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.ocrservice.v1.ProcessImageRequest,
+ *   !proto.ssn.ocrservice.v1.ProcessImageResponse>}
+ */
+const methodDescriptor_OcrService_ProcessImage = new grpc.web.MethodDescriptor(
+  '/ssn.ocrservice.v1.OcrService/ProcessImage',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.ocrservice.v1.ProcessImageRequest,
+  proto.ssn.ocrservice.v1.ProcessImageResponse,
+  /**
+   * @param {!proto.ssn.ocrservice.v1.ProcessImageRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.ocrservice.v1.ProcessImageResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.ProcessImageRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.ocrservice.v1.ProcessImageResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.ProcessImageResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServiceClient.prototype.processImage =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/ProcessImage',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_ProcessImage,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.ProcessImageRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.ocrservice.v1.ProcessImageResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.processImage =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/ProcessImage',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_ProcessImage);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.ocrservice.v1.AsyncCreateOperationRequest,
  *   !proto.ssn.ocrservice.v1.AsyncCreateOperationResponse>}
  */

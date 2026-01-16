@@ -159,7 +159,7 @@ func (mr *MockPdfService_InternalRasterizePdfClientMockRecorder) Recv() *gomock.
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockPdfService_InternalRasterizePdfClient) RecvMsg(m interface{}) error {
+func (m_2 *MockPdfService_InternalRasterizePdfClient) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -173,7 +173,7 @@ func (mr *MockPdfService_InternalRasterizePdfClientMockRecorder) RecvMsg(m inter
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockPdfService_InternalRasterizePdfClient) SendMsg(m interface{}) error {
+func (m_2 *MockPdfService_InternalRasterizePdfClient) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -282,7 +282,7 @@ func (mr *MockPdfService_RasterizePdfClientMockRecorder) Recv() *gomock.Call {
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockPdfService_RasterizePdfClient) RecvMsg(m interface{}) error {
+func (m_2 *MockPdfService_RasterizePdfClient) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -296,7 +296,7 @@ func (mr *MockPdfService_RasterizePdfClientMockRecorder) RecvMsg(m interface{}) 
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockPdfService_RasterizePdfClient) SendMsg(m interface{}) error {
+func (m_2 *MockPdfService_RasterizePdfClient) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -447,7 +447,7 @@ func (mr *MockPdfService_InternalRasterizePdfServerMockRecorder) Context() *gomo
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockPdfService_InternalRasterizePdfServer) RecvMsg(m interface{}) error {
+func (m_2 *MockPdfService_InternalRasterizePdfServer) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -489,7 +489,7 @@ func (mr *MockPdfService_InternalRasterizePdfServerMockRecorder) SendHeader(arg0
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockPdfService_InternalRasterizePdfServer) SendMsg(m interface{}) error {
+func (m_2 *MockPdfService_InternalRasterizePdfServer) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -566,7 +566,7 @@ func (mr *MockPdfService_RasterizePdfServerMockRecorder) Context() *gomock.Call 
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockPdfService_RasterizePdfServer) RecvMsg(m interface{}) error {
+func (m_2 *MockPdfService_RasterizePdfServer) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -608,7 +608,7 @@ func (mr *MockPdfService_RasterizePdfServerMockRecorder) SendHeader(arg0 interfa
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockPdfService_RasterizePdfServer) SendMsg(m interface{}) error {
+func (m_2 *MockPdfService_RasterizePdfServer) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
