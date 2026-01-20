@@ -359,55 +359,56 @@ namespace Ssn.Dataservice.V1 {
             "cmNlbnRhZ2UYAyABKAJSFGluY29tcGxldGVQZXJjZW50YWdlEikKEGVycm9y",
             "X3BlcmNlbnRhZ2UYBCABKAJSD2Vycm9yUGVyY2VudGFnZRIYCgdzdXBwb3J0",
             "GAUgASgFUgdzdXBwb3J0IiMKDURlbGV0ZVJlcXVlc3QSEgoEdGFncxgBIAMo",
-            "CVIEdGFncyJECg1DYWxsc1Blck1vbnRoEhQKBWNhbGxzGAEgASgDUgVjYWxs",
-            "cxIdCgptb250aF9uYW1lGAIgASgJUgltb250aE5hbWUiYgoVQ2FsbHNQZXJN",
-            "b250aFJlc3BvbnNlEkkKD2NhbGxzX3Blcl9tb250aBgBIAMoCzIhLnNzbi5k",
-            "YXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUg1jYWxsc1Blck1vbnRoIrEB",
-            "Ch9Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0EhYKBmZpZWxkcxgB",
-            "IAMoCVIGZmllbGRzEiMKDWNvdW50cnlfY29kZXMYAiADKAlSDGNvdW50cnlD",
-            "b2RlcxIlCg5kb2N1bWVudF90eXBlcxgDIAMoCVINZG9jdW1lbnRUeXBlcxIq",
-            "ChFtb3N0X3JlY2VudF9jb3VudBgEIAEoBVIPbW9zdFJlY2VudENvdW50IpMC",
-            "CiBBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXNwb25zZRIlCg5kb2N1bWVu",
-            "dF9jb3VudBgBIAEoBVINZG9jdW1lbnRDb3VudBIoChB0cnVlX3ZhbHVlX2Nv",
-            "dW50GAIgASgFUg50cnVlVmFsdWVDb3VudBJQChNvdmVyYWxsX2NvcnJlY3Ru",
-            "ZXNzGAMgAygLMh8uc3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhJv",
-            "dmVyYWxsQ29ycmVjdG5lc3MSTAoRZmllbGRfY29ycmVjdG5lc3MYBCADKAsy",
-            "Hy5zc24uZGF0YXNlcnZpY2UudjEuQ29ycmVjdG5lc3NSEGZpZWxkQ29ycmVj",
-            "dG5lc3MiiQIKGUZlZWRiYWNrTWV0cmljc1YyUmVzcG9uc2USJQoOZG9jdW1l",
-            "bnRfY291bnQYASABKAVSDWRvY3VtZW50Q291bnQSJQoOZmVlZGJhY2tfY291",
-            "bnQYAiABKAVSDWZlZWRiYWNrQ291bnQSUAoTb3ZlcmFsbF9jb3JyZWN0bmVz",
-            "cxgDIAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1ISb3Zl",
-            "cmFsbENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNzGAQgAygLMh8u",
-            "c3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVsZENvcnJlY3Ru",
-            "ZXNzMo8ICgtEYXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIpLnNzbi5k",
-            "YXRhc2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5zc24uZGF0",
-            "YXNlcnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxSZWFkRG9j",
-            "dW1lbnQSJy5zc24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVxdWVz",
-            "dBooLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJV",
-            "Cg9QcmVwYXJlRmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEuUHJlcGFy",
-            "ZUZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJnCghG",
-            "ZWVkYmFjaxIjLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1JlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNr",
-            "OmNyZWF0ZToBKhJbChBDYWxjdWxhdGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxLk1ldHJpY3NSZXF1ZXN0GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZl",
-            "ZWRiYWNrTWV0cmljcxJnChJDYWxjdWxhdGVNZXRyaWNzVjISIi5zc24uZGF0",
-            "YXNlcnZpY2UudjEuTWV0cmljc1JlcXVlc3QaLS5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuRmVlZGJhY2tNZXRyaWNzVjJSZXNwb25zZRJjCgZEZWxldGUSIS5zc24u",
-            "ZGF0YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0Nh",
-            "bGxzUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5z",
-            "c24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEl4KGVN1",
-            "Z2dlc3Rpb25zUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkaKS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNl",
-            "Eo4BCiFDYWxjdWxhdGVBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MSMy5zc24u",
-            "ZGF0YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzUmVxdWVz",
-            "dBo0LnNzbi5kYXRhc2VydmljZS52MS5Bbm5vdGF0aW9uUHJvY2Vzc01ldHJp",
-            "Y3NSZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBE",
-            "YXRhc2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFw",
-            "aXMvZ2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NE",
-            "WKoCElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeIC",
-            "HlNzblxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNl",
-            "cnZpY2U6OlYxYgZwcm90bzM="));
+            "CVIEdGFncyJuCg1DYWxsc1Blck1vbnRoEhQKBWNhbGxzGAEgASgDUgVjYWxs",
+            "cxIdCgptb250aF9uYW1lGAIgASgJUgltb250aE5hbWUSKAoQdG90YWxfYmF0",
+            "Y2hfc2l6ZRgDIAEoA1IOdG90YWxCYXRjaFNpemUiYgoVQ2FsbHNQZXJNb250",
+            "aFJlc3BvbnNlEkkKD2NhbGxzX3Blcl9tb250aBgBIAMoCzIhLnNzbi5kYXRh",
+            "c2VydmljZS52MS5DYWxsc1Blck1vbnRoUg1jYWxsc1Blck1vbnRoIrEBCh9B",
+            "bm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXF1ZXN0EhYKBmZpZWxkcxgBIAMo",
+            "CVIGZmllbGRzEiMKDWNvdW50cnlfY29kZXMYAiADKAlSDGNvdW50cnlDb2Rl",
+            "cxIlCg5kb2N1bWVudF90eXBlcxgDIAMoCVINZG9jdW1lbnRUeXBlcxIqChFt",
+            "b3N0X3JlY2VudF9jb3VudBgEIAEoBVIPbW9zdFJlY2VudENvdW50IpMCCiBB",
+            "bm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXNwb25zZRIlCg5kb2N1bWVudF9j",
+            "b3VudBgBIAEoBVINZG9jdW1lbnRDb3VudBIoChB0cnVlX3ZhbHVlX2NvdW50",
+            "GAIgASgFUg50cnVlVmFsdWVDb3VudBJQChNvdmVyYWxsX2NvcnJlY3RuZXNz",
+            "GAMgAygLMh8uc3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhJvdmVy",
+            "YWxsQ29ycmVjdG5lc3MSTAoRZmllbGRfY29ycmVjdG5lc3MYBCADKAsyHy5z",
+            "c24uZGF0YXNlcnZpY2UudjEuQ29ycmVjdG5lc3NSEGZpZWxkQ29ycmVjdG5l",
+            "c3MiiQIKGUZlZWRiYWNrTWV0cmljc1YyUmVzcG9uc2USJQoOZG9jdW1lbnRf",
+            "Y291bnQYASABKAVSDWRvY3VtZW50Q291bnQSJQoOZmVlZGJhY2tfY291bnQY",
+            "AiABKAVSDWZlZWRiYWNrQ291bnQSUAoTb3ZlcmFsbF9jb3JyZWN0bmVzcxgD",
+            "IAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1ISb3ZlcmFs",
+            "bENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNzGAQgAygLMh8uc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVsZENvcnJlY3RuZXNz",
+            "Mo8ICgtEYXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIpLnNzbi5kYXRh",
+            "c2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5zc24uZGF0YXNl",
+            "cnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxSZWFkRG9jdW1l",
+            "bnQSJy5zc24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVxdWVzdBoo",
+            "LnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJVCg9Q",
+            "cmVwYXJlRmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEuUHJlcGFyZUZl",
+            "ZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJnCghGZWVk",
+            "YmFjaxIjLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1JlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmNy",
+            "ZWF0ZToBKhJbChBDYWxjdWxhdGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2aWNl",
+            "LnYxLk1ldHJpY3NSZXF1ZXN0GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRi",
+            "YWNrTWV0cmljcxJnChJDYWxjdWxhdGVNZXRyaWNzVjISIi5zc24uZGF0YXNl",
+            "cnZpY2UudjEuTWV0cmljc1JlcXVlc3QaLS5zc24uZGF0YXNlcnZpY2UudjEu",
+            "RmVlZGJhY2tNZXRyaWNzVjJSZXNwb25zZRJjCgZEZWxldGUSIS5zc24uZGF0",
+            "YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0NhbGxz",
+            "UGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24u",
+            "ZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEl4KGVN1Z2dl",
+            "c3Rpb25zUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
+            "KS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEo4B",
+            "CiFDYWxjdWxhdGVBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MSMy5zc24uZGF0",
+            "YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzUmVxdWVzdBo0",
+            "LnNzbi5kYXRhc2VydmljZS52MS5Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NS",
+            "ZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBEYXRh",
+            "c2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
+            "Z2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NEWKoC",
+            "ElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeICHlNz",
+            "blxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNlcnZp",
+            "Y2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -426,7 +427,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.DeleteRequest), global::Ssn.Dataservice.V1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonth), global::Ssn.Dataservice.V1.CallsPerMonth.Parser, new[]{ "Calls", "MonthName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonth), global::Ssn.Dataservice.V1.CallsPerMonth.Parser, new[]{ "Calls", "MonthName", "TotalBatchSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthResponse), global::Ssn.Dataservice.V1.CallsPerMonthResponse.Parser, new[]{ "CallsPerMonth" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes", "MostRecentCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse), global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse.Parser, new[]{ "DocumentCount", "TrueValueCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
@@ -9777,6 +9778,7 @@ namespace Ssn.Dataservice.V1 {
     public CallsPerMonth(CallsPerMonth other) : this() {
       calls_ = other.calls_;
       monthName_ = other.monthName_;
+      totalBatchSize_ = other.totalBatchSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9810,6 +9812,18 @@ namespace Ssn.Dataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "total_batch_size" field.</summary>
+    public const int TotalBatchSizeFieldNumber = 3;
+    private long totalBatchSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalBatchSize {
+      get { return totalBatchSize_; }
+      set {
+        totalBatchSize_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9827,6 +9841,7 @@ namespace Ssn.Dataservice.V1 {
       }
       if (Calls != other.Calls) return false;
       if (MonthName != other.MonthName) return false;
+      if (TotalBatchSize != other.TotalBatchSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9836,6 +9851,7 @@ namespace Ssn.Dataservice.V1 {
       int hash = 1;
       if (Calls != 0L) hash ^= Calls.GetHashCode();
       if (MonthName.Length != 0) hash ^= MonthName.GetHashCode();
+      if (TotalBatchSize != 0L) hash ^= TotalBatchSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9862,6 +9878,10 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(18);
         output.WriteString(MonthName);
       }
+      if (TotalBatchSize != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TotalBatchSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9880,6 +9900,10 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(18);
         output.WriteString(MonthName);
       }
+      if (TotalBatchSize != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TotalBatchSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9895,6 +9919,9 @@ namespace Ssn.Dataservice.V1 {
       }
       if (MonthName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MonthName);
+      }
+      if (TotalBatchSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBatchSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9913,6 +9940,9 @@ namespace Ssn.Dataservice.V1 {
       }
       if (other.MonthName.Length != 0) {
         MonthName = other.MonthName;
+      }
+      if (other.TotalBatchSize != 0L) {
+        TotalBatchSize = other.TotalBatchSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9941,6 +9971,10 @@ namespace Ssn.Dataservice.V1 {
             MonthName = input.ReadString();
             break;
           }
+          case 24: {
+            TotalBatchSize = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -9966,6 +10000,10 @@ namespace Ssn.Dataservice.V1 {
           }
           case 18: {
             MonthName = input.ReadString();
+            break;
+          }
+          case 24: {
+            TotalBatchSize = input.ReadInt64();
             break;
           }
         }

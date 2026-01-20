@@ -1672,6 +1672,10 @@
         },
         "monthName": {
           "type": "string"
+        },
+        "totalBatchSize": {
+          "type": "string",
+          "format": "int64"
         }
       }
     },
