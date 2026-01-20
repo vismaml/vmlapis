@@ -36,6 +36,7 @@ service DataService {
     };
   }
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
+  rpc SuggestionsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
   rpc CalculateAnnotationProcessMetrics(AnnotationProcessMetricsRequest) returns (AnnotationProcessMetricsResponse);
 }
 
@@ -314,6 +315,7 @@ message DeleteRequest {
 message CallsPerMonth {
   int64 calls = 1;
   string month_name = 2;
+  int64 total_batch_size = 3;
 }
 
 message CallsPerMonthResponse {

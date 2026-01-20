@@ -4,6 +4,7 @@ import * as asgt_type_data_pb from '../../../asgt/type/data_pb'; // proto import
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
 import * as asgt_type_model_type_pb from '../../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb'; // proto import: "asgt/type/sample.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 
@@ -97,6 +98,52 @@ export namespace SuggestionRequest {
     inputsList: Array<asgt_type_data_pb.Data.AsObject>,
     options?: SuggestionOptions.AsObject,
     tagsList: Array<string>,
+  }
+}
+
+export class InternalSuggestSamplesRequest extends jspb.Message {
+  getSuggestionRequest(): SuggestionRequest | undefined;
+  setSuggestionRequest(value?: SuggestionRequest): InternalSuggestSamplesRequest;
+  hasSuggestionRequest(): boolean;
+  clearSuggestionRequest(): InternalSuggestSamplesRequest;
+
+  getSamplesList(): Array<asgt_type_sample_pb.Sample>;
+  setSamplesList(value: Array<asgt_type_sample_pb.Sample>): InternalSuggestSamplesRequest;
+  clearSamplesList(): InternalSuggestSamplesRequest;
+  addSamples(value?: asgt_type_sample_pb.Sample, index?: number): asgt_type_sample_pb.Sample;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): InternalSuggestSamplesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: InternalSuggestSamplesRequest): InternalSuggestSamplesRequest.AsObject;
+  static serializeBinaryToWriter(message: InternalSuggestSamplesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InternalSuggestSamplesRequest;
+  static deserializeBinaryFromReader(message: InternalSuggestSamplesRequest, reader: jspb.BinaryReader): InternalSuggestSamplesRequest;
+}
+
+export namespace InternalSuggestSamplesRequest {
+  export type AsObject = {
+    suggestionRequest?: SuggestionRequest.AsObject,
+    samplesList: Array<asgt_type_sample_pb.Sample.AsObject>,
+  }
+}
+
+export class InternalSuggestSamplesResponse extends jspb.Message {
+  getSuggestionResponse(): SuggestionResponse | undefined;
+  setSuggestionResponse(value?: SuggestionResponse): InternalSuggestSamplesResponse;
+  hasSuggestionResponse(): boolean;
+  clearSuggestionResponse(): InternalSuggestSamplesResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): InternalSuggestSamplesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: InternalSuggestSamplesResponse): InternalSuggestSamplesResponse.AsObject;
+  static serializeBinaryToWriter(message: InternalSuggestSamplesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InternalSuggestSamplesResponse;
+  static deserializeBinaryFromReader(message: InternalSuggestSamplesResponse, reader: jspb.BinaryReader): InternalSuggestSamplesResponse;
+}
+
+export namespace InternalSuggestSamplesResponse {
+  export type AsObject = {
+    suggestionResponse?: SuggestionResponse.AsObject,
   }
 }
 

@@ -2,6 +2,7 @@ from asgt.type import data_pb2 as _data_pb2
 from asgt.type import model_pb2 as _model_pb2
 from asgt.type import model_type_pb2 as _model_type_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
+from asgt.type import sample_pb2 as _sample_pb2
 from google.api import annotations_pb2 as _annotations_pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from google.protobuf.internal import containers as _containers
@@ -42,3 +43,17 @@ class SuggestionRequest(_message.Message):
     options: SuggestionOptions
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., options: _Optional[_Union[SuggestionOptions, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class InternalSuggestSamplesRequest(_message.Message):
+    __slots__ = ("suggestion_request", "samples")
+    SUGGESTION_REQUEST_FIELD_NUMBER: _ClassVar[int]
+    SAMPLES_FIELD_NUMBER: _ClassVar[int]
+    suggestion_request: SuggestionRequest
+    samples: _containers.RepeatedCompositeFieldContainer[_sample_pb2.Sample]
+    def __init__(self, suggestion_request: _Optional[_Union[SuggestionRequest, _Mapping]] = ..., samples: _Optional[_Iterable[_Union[_sample_pb2.Sample, _Mapping]]] = ...) -> None: ...
+
+class InternalSuggestSamplesResponse(_message.Message):
+    __slots__ = ("suggestion_response",)
+    SUGGESTION_RESPONSE_FIELD_NUMBER: _ClassVar[int]
+    suggestion_response: SuggestionResponse
+    def __init__(self, suggestion_response: _Optional[_Union[SuggestionResponse, _Mapping]] = ...) -> None: ...

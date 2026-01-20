@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.type.DatasetStatistics.class, ai.visma.asgt.type.DatasetStatistics.Builder.class);
   }
 
+  private int bitField0_;
   public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 2;
   private float lexicalDiversitySplitOnSpace_ = 0F;
   /**
@@ -49,7 +50,19 @@ private static final long serialVersionUID = 0L;
    * lexical diversity of the dataset split on space
    * </pre>
    *
-   * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+   * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+   * @return Whether the lexicalDiversitySplitOnSpace field is set.
+   */
+  @java.lang.Override
+  public boolean hasLexicalDiversitySplitOnSpace() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * lexical diversity of the dataset split on space
+   * </pre>
+   *
+   * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
    * @return The lexicalDiversitySplitOnSpace.
    */
   @java.lang.Override
@@ -64,7 +77,19 @@ private static final long serialVersionUID = 0L;
    * lexical diversity of the dataset split on special characters
    * </pre>
    *
-   * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+   * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+   * @return Whether the lexicalDiversitySplitOnSpecial field is set.
+   */
+  @java.lang.Override
+  public boolean hasLexicalDiversitySplitOnSpecial() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * lexical diversity of the dataset split on special characters
+   * </pre>
+   *
+   * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
    * @return The lexicalDiversitySplitOnSpecial.
    */
   @java.lang.Override
@@ -79,7 +104,19 @@ private static final long serialVersionUID = 0L;
    * percentage of empty strings in the dataset
    * </pre>
    *
-   * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+   * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+   * @return Whether the percentEmptyStrings field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentEmptyStrings() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of empty strings in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
    * @return The percentEmptyStrings.
    */
   @java.lang.Override
@@ -94,7 +131,19 @@ private static final long serialVersionUID = 0L;
    * percentage of pure numbers in the dataset after removing spaces
    * </pre>
    *
-   * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+   * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+   * @return Whether the percentPureNumbersRemoveSpaces field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentPureNumbersRemoveSpaces() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of pure numbers in the dataset after removing spaces
+   * </pre>
+   *
+   * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
    * @return The percentPureNumbersRemoveSpaces.
    */
   @java.lang.Override
@@ -109,7 +158,19 @@ private static final long serialVersionUID = 0L;
    * percentage of pure numbers in the dataset after removing spaces and special characters
    * </pre>
    *
-   * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+   * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+   * @return Whether the percentPureNumbersRemoveSpecial field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentPureNumbersRemoveSpecial() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of pure numbers in the dataset after removing spaces and special characters
+   * </pre>
+   *
+   * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
    * @return The percentPureNumbersRemoveSpecial.
    */
   @java.lang.Override
@@ -124,7 +185,19 @@ private static final long serialVersionUID = 0L;
    * percentage of special characters in the dataset
    * </pre>
    *
-   * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+   * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+   * @return Whether the percentSpecialCharacters field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentSpecialCharacters() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of special characters in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
    * @return The percentSpecialCharacters.
    */
   @java.lang.Override
@@ -139,7 +212,19 @@ private static final long serialVersionUID = 0L;
    * percentage of digits in the dataset
    * </pre>
    *
-   * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+   * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
+   * @return Whether the percentDigits field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentDigits() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of digits in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
    * @return The percentDigits.
    */
   @java.lang.Override
@@ -154,7 +239,19 @@ private static final long serialVersionUID = 0L;
    * percentage of letters in the dataset
    * </pre>
    *
-   * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+   * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
+   * @return Whether the percentLetters field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentLetters() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of letters in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
    * @return The percentLetters.
    */
   @java.lang.Override
@@ -169,12 +266,159 @@ private static final long serialVersionUID = 0L;
    * percentage of duplicates in the dataset
    * </pre>
    *
-   * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+   * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+   * @return Whether the percentDuplicatesInDataset field is set.
+   */
+  @java.lang.Override
+  public boolean hasPercentDuplicatesInDataset() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * percentage of duplicates in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
    * @return The percentDuplicatesInDataset.
    */
   @java.lang.Override
   public float getPercentDuplicatesInDataset() {
     return percentDuplicatesInDataset_;
+  }
+
+  public static final int MISSING_DATA_RATIO_FIELD_NUMBER = 16;
+  private float missingDataRatio_ = 0F;
+  /**
+   * <pre>
+   * ratio of missing data
+   * </pre>
+   *
+   * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+   * @return Whether the missingDataRatio field is set.
+   */
+  @java.lang.Override
+  public boolean hasMissingDataRatio() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * ratio of missing data
+   * </pre>
+   *
+   * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+   * @return The missingDataRatio.
+   */
+  @java.lang.Override
+  public float getMissingDataRatio() {
+    return missingDataRatio_;
+  }
+
+  public static final int TEST_SET_AVG_UNKNOWN_TOKEN_RATIO_FIELD_NUMBER = 17;
+  private float testSetAvgUnknownTokenRatio_ = 0F;
+  /**
+   * <pre>
+   * average unknown token ratio in test set
+   * </pre>
+   *
+   * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+   * @return Whether the testSetAvgUnknownTokenRatio field is set.
+   */
+  @java.lang.Override
+  public boolean hasTestSetAvgUnknownTokenRatio() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <pre>
+   * average unknown token ratio in test set
+   * </pre>
+   *
+   * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+   * @return The testSetAvgUnknownTokenRatio.
+   */
+  @java.lang.Override
+  public float getTestSetAvgUnknownTokenRatio() {
+    return testSetAvgUnknownTokenRatio_;
+  }
+
+  public static final int VOCAB_SIZE_FIELD_NUMBER = 18;
+  private int vocabSize_ = 0;
+  /**
+   * <pre>
+   * vocabulary size
+   * </pre>
+   *
+   * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+   * @return Whether the vocabSize field is set.
+   */
+  @java.lang.Override
+  public boolean hasVocabSize() {
+    return ((bitField0_ & 0x00000800) != 0);
+  }
+  /**
+   * <pre>
+   * vocabulary size
+   * </pre>
+   *
+   * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+   * @return The vocabSize.
+   */
+  @java.lang.Override
+  public int getVocabSize() {
+    return vocabSize_;
+  }
+
+  public static final int AVG_UNKNOWN_TOKEN_RATIO_FIELD_NUMBER = 20;
+  private float avgUnknownTokenRatio_ = 0F;
+  /**
+   * <pre>
+   * average unknown token ratio
+   * </pre>
+   *
+   * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+   * @return Whether the avgUnknownTokenRatio field is set.
+   */
+  @java.lang.Override
+  public boolean hasAvgUnknownTokenRatio() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * average unknown token ratio
+   * </pre>
+   *
+   * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+   * @return The avgUnknownTokenRatio.
+   */
+  @java.lang.Override
+  public float getAvgUnknownTokenRatio() {
+    return avgUnknownTokenRatio_;
+  }
+
+  public static final int JS_DIVERGENCE_TOKENS_FIELD_NUMBER = 22;
+  private float jsDivergenceTokens_ = 0F;
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for tokens
+   * </pre>
+   *
+   * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+   * @return Whether the jsDivergenceTokens field is set.
+   */
+  @java.lang.Override
+  public boolean hasJsDivergenceTokens() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for tokens
+   * </pre>
+   *
+   * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+   * @return The jsDivergenceTokens.
+   */
+  @java.lang.Override
+  public float getJsDivergenceTokens() {
+    return jsDivergenceTokens_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -191,32 +435,47 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeFloat(2, lexicalDiversitySplitOnSpace_);
     }
-    if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeFloat(3, lexicalDiversitySplitOnSpecial_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeFloat(4, percentEmptyStrings_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeFloat(5, percentPureNumbersRemoveSpaces_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeFloat(6, percentPureNumbersRemoveSpecial_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeFloat(7, percentSpecialCharacters_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeFloat(8, percentDigits_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeFloat(9, percentLetters_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeFloat(10, percentDuplicatesInDataset_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeFloat(16, missingDataRatio_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeFloat(17, testSetAvgUnknownTokenRatio_);
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      output.writeInt32(18, vocabSize_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeFloat(20, avgUnknownTokenRatio_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeFloat(22, jsDivergenceTokens_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,41 +486,61 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpace_) != 0) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, lexicalDiversitySplitOnSpace_);
     }
-    if (java.lang.Float.floatToRawIntBits(lexicalDiversitySplitOnSpecial_) != 0) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, lexicalDiversitySplitOnSpecial_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentEmptyStrings_) != 0) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, percentEmptyStrings_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpaces_) != 0) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, percentPureNumbersRemoveSpaces_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentPureNumbersRemoveSpecial_) != 0) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, percentPureNumbersRemoveSpecial_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentSpecialCharacters_) != 0) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, percentSpecialCharacters_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentDigits_) != 0) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(8, percentDigits_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentLetters_) != 0) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(9, percentLetters_);
     }
-    if (java.lang.Float.floatToRawIntBits(percentDuplicatesInDataset_) != 0) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(10, percentDuplicatesInDataset_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(16, missingDataRatio_);
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(17, testSetAvgUnknownTokenRatio_);
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(18, vocabSize_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(20, avgUnknownTokenRatio_);
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(22, jsDivergenceTokens_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -278,33 +557,89 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.asgt.type.DatasetStatistics other = (ai.visma.asgt.type.DatasetStatistics) obj;
 
-    if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpace())
-        != java.lang.Float.floatToIntBits(
-            other.getLexicalDiversitySplitOnSpace())) return false;
-    if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpecial())
-        != java.lang.Float.floatToIntBits(
-            other.getLexicalDiversitySplitOnSpecial())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentEmptyStrings())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentEmptyStrings())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpaces())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentPureNumbersRemoveSpaces())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpecial())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentPureNumbersRemoveSpecial())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentSpecialCharacters())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentSpecialCharacters())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentDigits())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentDigits())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentLetters())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentLetters())) return false;
-    if (java.lang.Float.floatToIntBits(getPercentDuplicatesInDataset())
-        != java.lang.Float.floatToIntBits(
-            other.getPercentDuplicatesInDataset())) return false;
+    if (hasLexicalDiversitySplitOnSpace() != other.hasLexicalDiversitySplitOnSpace()) return false;
+    if (hasLexicalDiversitySplitOnSpace()) {
+      if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpace())
+          != java.lang.Float.floatToIntBits(
+              other.getLexicalDiversitySplitOnSpace())) return false;
+    }
+    if (hasLexicalDiversitySplitOnSpecial() != other.hasLexicalDiversitySplitOnSpecial()) return false;
+    if (hasLexicalDiversitySplitOnSpecial()) {
+      if (java.lang.Float.floatToIntBits(getLexicalDiversitySplitOnSpecial())
+          != java.lang.Float.floatToIntBits(
+              other.getLexicalDiversitySplitOnSpecial())) return false;
+    }
+    if (hasPercentEmptyStrings() != other.hasPercentEmptyStrings()) return false;
+    if (hasPercentEmptyStrings()) {
+      if (java.lang.Float.floatToIntBits(getPercentEmptyStrings())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentEmptyStrings())) return false;
+    }
+    if (hasPercentPureNumbersRemoveSpaces() != other.hasPercentPureNumbersRemoveSpaces()) return false;
+    if (hasPercentPureNumbersRemoveSpaces()) {
+      if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpaces())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentPureNumbersRemoveSpaces())) return false;
+    }
+    if (hasPercentPureNumbersRemoveSpecial() != other.hasPercentPureNumbersRemoveSpecial()) return false;
+    if (hasPercentPureNumbersRemoveSpecial()) {
+      if (java.lang.Float.floatToIntBits(getPercentPureNumbersRemoveSpecial())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentPureNumbersRemoveSpecial())) return false;
+    }
+    if (hasPercentSpecialCharacters() != other.hasPercentSpecialCharacters()) return false;
+    if (hasPercentSpecialCharacters()) {
+      if (java.lang.Float.floatToIntBits(getPercentSpecialCharacters())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentSpecialCharacters())) return false;
+    }
+    if (hasPercentDigits() != other.hasPercentDigits()) return false;
+    if (hasPercentDigits()) {
+      if (java.lang.Float.floatToIntBits(getPercentDigits())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentDigits())) return false;
+    }
+    if (hasPercentLetters() != other.hasPercentLetters()) return false;
+    if (hasPercentLetters()) {
+      if (java.lang.Float.floatToIntBits(getPercentLetters())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentLetters())) return false;
+    }
+    if (hasPercentDuplicatesInDataset() != other.hasPercentDuplicatesInDataset()) return false;
+    if (hasPercentDuplicatesInDataset()) {
+      if (java.lang.Float.floatToIntBits(getPercentDuplicatesInDataset())
+          != java.lang.Float.floatToIntBits(
+              other.getPercentDuplicatesInDataset())) return false;
+    }
+    if (hasMissingDataRatio() != other.hasMissingDataRatio()) return false;
+    if (hasMissingDataRatio()) {
+      if (java.lang.Float.floatToIntBits(getMissingDataRatio())
+          != java.lang.Float.floatToIntBits(
+              other.getMissingDataRatio())) return false;
+    }
+    if (hasTestSetAvgUnknownTokenRatio() != other.hasTestSetAvgUnknownTokenRatio()) return false;
+    if (hasTestSetAvgUnknownTokenRatio()) {
+      if (java.lang.Float.floatToIntBits(getTestSetAvgUnknownTokenRatio())
+          != java.lang.Float.floatToIntBits(
+              other.getTestSetAvgUnknownTokenRatio())) return false;
+    }
+    if (hasVocabSize() != other.hasVocabSize()) return false;
+    if (hasVocabSize()) {
+      if (getVocabSize()
+          != other.getVocabSize()) return false;
+    }
+    if (hasAvgUnknownTokenRatio() != other.hasAvgUnknownTokenRatio()) return false;
+    if (hasAvgUnknownTokenRatio()) {
+      if (java.lang.Float.floatToIntBits(getAvgUnknownTokenRatio())
+          != java.lang.Float.floatToIntBits(
+              other.getAvgUnknownTokenRatio())) return false;
+    }
+    if (hasJsDivergenceTokens() != other.hasJsDivergenceTokens()) return false;
+    if (hasJsDivergenceTokens()) {
+      if (java.lang.Float.floatToIntBits(getJsDivergenceTokens())
+          != java.lang.Float.floatToIntBits(
+              other.getJsDivergenceTokens())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -316,33 +651,75 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getLexicalDiversitySplitOnSpace());
-    hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getLexicalDiversitySplitOnSpecial());
-    hash = (37 * hash) + PERCENT_EMPTY_STRINGS_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentEmptyStrings());
-    hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentPureNumbersRemoveSpaces());
-    hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentPureNumbersRemoveSpecial());
-    hash = (37 * hash) + PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentSpecialCharacters());
-    hash = (37 * hash) + PERCENT_DIGITS_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentDigits());
-    hash = (37 * hash) + PERCENT_LETTERS_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentLetters());
-    hash = (37 * hash) + PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getPercentDuplicatesInDataset());
+    if (hasLexicalDiversitySplitOnSpace()) {
+      hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getLexicalDiversitySplitOnSpace());
+    }
+    if (hasLexicalDiversitySplitOnSpecial()) {
+      hash = (37 * hash) + LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getLexicalDiversitySplitOnSpecial());
+    }
+    if (hasPercentEmptyStrings()) {
+      hash = (37 * hash) + PERCENT_EMPTY_STRINGS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentEmptyStrings());
+    }
+    if (hasPercentPureNumbersRemoveSpaces()) {
+      hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentPureNumbersRemoveSpaces());
+    }
+    if (hasPercentPureNumbersRemoveSpecial()) {
+      hash = (37 * hash) + PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentPureNumbersRemoveSpecial());
+    }
+    if (hasPercentSpecialCharacters()) {
+      hash = (37 * hash) + PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentSpecialCharacters());
+    }
+    if (hasPercentDigits()) {
+      hash = (37 * hash) + PERCENT_DIGITS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentDigits());
+    }
+    if (hasPercentLetters()) {
+      hash = (37 * hash) + PERCENT_LETTERS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentLetters());
+    }
+    if (hasPercentDuplicatesInDataset()) {
+      hash = (37 * hash) + PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPercentDuplicatesInDataset());
+    }
+    if (hasMissingDataRatio()) {
+      hash = (37 * hash) + MISSING_DATA_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMissingDataRatio());
+    }
+    if (hasTestSetAvgUnknownTokenRatio()) {
+      hash = (37 * hash) + TEST_SET_AVG_UNKNOWN_TOKEN_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getTestSetAvgUnknownTokenRatio());
+    }
+    if (hasVocabSize()) {
+      hash = (37 * hash) + VOCAB_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getVocabSize();
+    }
+    if (hasAvgUnknownTokenRatio()) {
+      hash = (37 * hash) + AVG_UNKNOWN_TOKEN_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAvgUnknownTokenRatio());
+    }
+    if (hasJsDivergenceTokens()) {
+      hash = (37 * hash) + JS_DIVERGENCE_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getJsDivergenceTokens());
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -483,6 +860,11 @@ private static final long serialVersionUID = 0L;
       percentDigits_ = 0F;
       percentLetters_ = 0F;
       percentDuplicatesInDataset_ = 0F;
+      missingDataRatio_ = 0F;
+      testSetAvgUnknownTokenRatio_ = 0F;
+      vocabSize_ = 0;
+      avgUnknownTokenRatio_ = 0F;
+      jsDivergenceTokens_ = 0F;
       return this;
     }
 
@@ -516,33 +898,64 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.asgt.type.DatasetStatistics result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.percentEmptyStrings_ = percentEmptyStrings_;
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.percentPureNumbersRemoveSpaces_ = percentPureNumbersRemoveSpaces_;
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.percentPureNumbersRemoveSpecial_ = percentPureNumbersRemoveSpecial_;
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.percentSpecialCharacters_ = percentSpecialCharacters_;
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.percentDigits_ = percentDigits_;
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.percentLetters_ = percentLetters_;
+        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.percentDuplicatesInDataset_ = percentDuplicatesInDataset_;
+        to_bitField0_ |= 0x00000100;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.missingDataRatio_ = missingDataRatio_;
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.testSetAvgUnknownTokenRatio_ = testSetAvgUnknownTokenRatio_;
+        to_bitField0_ |= 0x00000400;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.vocabSize_ = vocabSize_;
+        to_bitField0_ |= 0x00000800;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.avgUnknownTokenRatio_ = avgUnknownTokenRatio_;
+        to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.jsDivergenceTokens_ = jsDivergenceTokens_;
+        to_bitField0_ |= 0x00002000;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -557,32 +970,47 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.asgt.type.DatasetStatistics other) {
       if (other == ai.visma.asgt.type.DatasetStatistics.getDefaultInstance()) return this;
-      if (other.getLexicalDiversitySplitOnSpace() != 0F) {
+      if (other.hasLexicalDiversitySplitOnSpace()) {
         setLexicalDiversitySplitOnSpace(other.getLexicalDiversitySplitOnSpace());
       }
-      if (other.getLexicalDiversitySplitOnSpecial() != 0F) {
+      if (other.hasLexicalDiversitySplitOnSpecial()) {
         setLexicalDiversitySplitOnSpecial(other.getLexicalDiversitySplitOnSpecial());
       }
-      if (other.getPercentEmptyStrings() != 0F) {
+      if (other.hasPercentEmptyStrings()) {
         setPercentEmptyStrings(other.getPercentEmptyStrings());
       }
-      if (other.getPercentPureNumbersRemoveSpaces() != 0F) {
+      if (other.hasPercentPureNumbersRemoveSpaces()) {
         setPercentPureNumbersRemoveSpaces(other.getPercentPureNumbersRemoveSpaces());
       }
-      if (other.getPercentPureNumbersRemoveSpecial() != 0F) {
+      if (other.hasPercentPureNumbersRemoveSpecial()) {
         setPercentPureNumbersRemoveSpecial(other.getPercentPureNumbersRemoveSpecial());
       }
-      if (other.getPercentSpecialCharacters() != 0F) {
+      if (other.hasPercentSpecialCharacters()) {
         setPercentSpecialCharacters(other.getPercentSpecialCharacters());
       }
-      if (other.getPercentDigits() != 0F) {
+      if (other.hasPercentDigits()) {
         setPercentDigits(other.getPercentDigits());
       }
-      if (other.getPercentLetters() != 0F) {
+      if (other.hasPercentLetters()) {
         setPercentLetters(other.getPercentLetters());
       }
-      if (other.getPercentDuplicatesInDataset() != 0F) {
+      if (other.hasPercentDuplicatesInDataset()) {
         setPercentDuplicatesInDataset(other.getPercentDuplicatesInDataset());
+      }
+      if (other.hasMissingDataRatio()) {
+        setMissingDataRatio(other.getMissingDataRatio());
+      }
+      if (other.hasTestSetAvgUnknownTokenRatio()) {
+        setTestSetAvgUnknownTokenRatio(other.getTestSetAvgUnknownTokenRatio());
+      }
+      if (other.hasVocabSize()) {
+        setVocabSize(other.getVocabSize());
+      }
+      if (other.hasAvgUnknownTokenRatio()) {
+        setAvgUnknownTokenRatio(other.getAvgUnknownTokenRatio());
+      }
+      if (other.hasJsDivergenceTokens()) {
+        setJsDivergenceTokens(other.getJsDivergenceTokens());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -655,6 +1083,31 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 85
+            case 133: {
+              missingDataRatio_ = input.readFloat();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 133
+            case 141: {
+              testSetAvgUnknownTokenRatio_ = input.readFloat();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 141
+            case 144: {
+              vocabSize_ = input.readInt32();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 144
+            case 165: {
+              avgUnknownTokenRatio_ = input.readFloat();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 165
+            case 181: {
+              jsDivergenceTokens_ = input.readFloat();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 181
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -678,7 +1131,19 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on space
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * @return Whether the lexicalDiversitySplitOnSpace field is set.
+     */
+    @java.lang.Override
+    public boolean hasLexicalDiversitySplitOnSpace() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * lexical diversity of the dataset split on space
+     * </pre>
+     *
+     * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
      * @return The lexicalDiversitySplitOnSpace.
      */
     @java.lang.Override
@@ -690,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on space
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
      * @param value The lexicalDiversitySplitOnSpace to set.
      * @return This builder for chaining.
      */
@@ -706,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on space
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+     * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLexicalDiversitySplitOnSpace() {
@@ -722,7 +1187,19 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on special characters
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * @return Whether the lexicalDiversitySplitOnSpecial field is set.
+     */
+    @java.lang.Override
+    public boolean hasLexicalDiversitySplitOnSpecial() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * lexical diversity of the dataset split on special characters
+     * </pre>
+     *
+     * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
      * @return The lexicalDiversitySplitOnSpecial.
      */
     @java.lang.Override
@@ -734,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on special characters
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
      * @param value The lexicalDiversitySplitOnSpecial to set.
      * @return This builder for chaining.
      */
@@ -750,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * lexical diversity of the dataset split on special characters
      * </pre>
      *
-     * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+     * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLexicalDiversitySplitOnSpecial() {
@@ -766,7 +1243,19 @@ private static final long serialVersionUID = 0L;
      * percentage of empty strings in the dataset
      * </pre>
      *
-     * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * @return Whether the percentEmptyStrings field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentEmptyStrings() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of empty strings in the dataset
+     * </pre>
+     *
+     * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
      * @return The percentEmptyStrings.
      */
     @java.lang.Override
@@ -778,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * percentage of empty strings in the dataset
      * </pre>
      *
-     * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
      * @param value The percentEmptyStrings to set.
      * @return This builder for chaining.
      */
@@ -794,7 +1283,7 @@ private static final long serialVersionUID = 0L;
      * percentage of empty strings in the dataset
      * </pre>
      *
-     * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+     * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentEmptyStrings() {
@@ -810,7 +1299,19 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * @return Whether the percentPureNumbersRemoveSpaces field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentPureNumbersRemoveSpaces() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of pure numbers in the dataset after removing spaces
+     * </pre>
+     *
+     * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
      * @return The percentPureNumbersRemoveSpaces.
      */
     @java.lang.Override
@@ -822,7 +1323,7 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
      * @param value The percentPureNumbersRemoveSpaces to set.
      * @return This builder for chaining.
      */
@@ -838,7 +1339,7 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+     * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentPureNumbersRemoveSpaces() {
@@ -854,7 +1355,19 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces and special characters
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * @return Whether the percentPureNumbersRemoveSpecial field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentPureNumbersRemoveSpecial() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of pure numbers in the dataset after removing spaces and special characters
+     * </pre>
+     *
+     * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
      * @return The percentPureNumbersRemoveSpecial.
      */
     @java.lang.Override
@@ -866,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces and special characters
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
      * @param value The percentPureNumbersRemoveSpecial to set.
      * @return This builder for chaining.
      */
@@ -882,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * percentage of pure numbers in the dataset after removing spaces and special characters
      * </pre>
      *
-     * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+     * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentPureNumbersRemoveSpecial() {
@@ -898,7 +1411,19 @@ private static final long serialVersionUID = 0L;
      * percentage of special characters in the dataset
      * </pre>
      *
-     * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * @return Whether the percentSpecialCharacters field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentSpecialCharacters() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of special characters in the dataset
+     * </pre>
+     *
+     * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
      * @return The percentSpecialCharacters.
      */
     @java.lang.Override
@@ -910,7 +1435,7 @@ private static final long serialVersionUID = 0L;
      * percentage of special characters in the dataset
      * </pre>
      *
-     * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
      * @param value The percentSpecialCharacters to set.
      * @return This builder for chaining.
      */
@@ -926,7 +1451,7 @@ private static final long serialVersionUID = 0L;
      * percentage of special characters in the dataset
      * </pre>
      *
-     * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+     * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentSpecialCharacters() {
@@ -942,7 +1467,19 @@ private static final long serialVersionUID = 0L;
      * percentage of digits in the dataset
      * </pre>
      *
-     * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * @return Whether the percentDigits field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentDigits() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of digits in the dataset
+     * </pre>
+     *
+     * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
      * @return The percentDigits.
      */
     @java.lang.Override
@@ -954,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * percentage of digits in the dataset
      * </pre>
      *
-     * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
      * @param value The percentDigits to set.
      * @return This builder for chaining.
      */
@@ -970,7 +1507,7 @@ private static final long serialVersionUID = 0L;
      * percentage of digits in the dataset
      * </pre>
      *
-     * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+     * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentDigits() {
@@ -986,7 +1523,19 @@ private static final long serialVersionUID = 0L;
      * percentage of letters in the dataset
      * </pre>
      *
-     * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * @return Whether the percentLetters field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentLetters() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of letters in the dataset
+     * </pre>
+     *
+     * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
      * @return The percentLetters.
      */
     @java.lang.Override
@@ -998,7 +1547,7 @@ private static final long serialVersionUID = 0L;
      * percentage of letters in the dataset
      * </pre>
      *
-     * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
      * @param value The percentLetters to set.
      * @return This builder for chaining.
      */
@@ -1014,7 +1563,7 @@ private static final long serialVersionUID = 0L;
      * percentage of letters in the dataset
      * </pre>
      *
-     * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+     * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentLetters() {
@@ -1030,7 +1579,19 @@ private static final long serialVersionUID = 0L;
      * percentage of duplicates in the dataset
      * </pre>
      *
-     * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * @return Whether the percentDuplicatesInDataset field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentDuplicatesInDataset() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * percentage of duplicates in the dataset
+     * </pre>
+     *
+     * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
      * @return The percentDuplicatesInDataset.
      */
     @java.lang.Override
@@ -1042,7 +1603,7 @@ private static final long serialVersionUID = 0L;
      * percentage of duplicates in the dataset
      * </pre>
      *
-     * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
      * @param value The percentDuplicatesInDataset to set.
      * @return This builder for chaining.
      */
@@ -1058,12 +1619,292 @@ private static final long serialVersionUID = 0L;
      * percentage of duplicates in the dataset
      * </pre>
      *
-     * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+     * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentDuplicatesInDataset() {
       bitField0_ = (bitField0_ & ~0x00000100);
       percentDuplicatesInDataset_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float missingDataRatio_ ;
+    /**
+     * <pre>
+     * ratio of missing data
+     * </pre>
+     *
+     * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+     * @return Whether the missingDataRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasMissingDataRatio() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * ratio of missing data
+     * </pre>
+     *
+     * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+     * @return The missingDataRatio.
+     */
+    @java.lang.Override
+    public float getMissingDataRatio() {
+      return missingDataRatio_;
+    }
+    /**
+     * <pre>
+     * ratio of missing data
+     * </pre>
+     *
+     * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+     * @param value The missingDataRatio to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMissingDataRatio(float value) {
+
+      missingDataRatio_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ratio of missing data
+     * </pre>
+     *
+     * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMissingDataRatio() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      missingDataRatio_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float testSetAvgUnknownTokenRatio_ ;
+    /**
+     * <pre>
+     * average unknown token ratio in test set
+     * </pre>
+     *
+     * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+     * @return Whether the testSetAvgUnknownTokenRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasTestSetAvgUnknownTokenRatio() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * average unknown token ratio in test set
+     * </pre>
+     *
+     * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+     * @return The testSetAvgUnknownTokenRatio.
+     */
+    @java.lang.Override
+    public float getTestSetAvgUnknownTokenRatio() {
+      return testSetAvgUnknownTokenRatio_;
+    }
+    /**
+     * <pre>
+     * average unknown token ratio in test set
+     * </pre>
+     *
+     * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+     * @param value The testSetAvgUnknownTokenRatio to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTestSetAvgUnknownTokenRatio(float value) {
+
+      testSetAvgUnknownTokenRatio_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average unknown token ratio in test set
+     * </pre>
+     *
+     * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTestSetAvgUnknownTokenRatio() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      testSetAvgUnknownTokenRatio_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int vocabSize_ ;
+    /**
+     * <pre>
+     * vocabulary size
+     * </pre>
+     *
+     * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+     * @return Whether the vocabSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasVocabSize() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * vocabulary size
+     * </pre>
+     *
+     * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+     * @return The vocabSize.
+     */
+    @java.lang.Override
+    public int getVocabSize() {
+      return vocabSize_;
+    }
+    /**
+     * <pre>
+     * vocabulary size
+     * </pre>
+     *
+     * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+     * @param value The vocabSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVocabSize(int value) {
+
+      vocabSize_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * vocabulary size
+     * </pre>
+     *
+     * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVocabSize() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      vocabSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private float avgUnknownTokenRatio_ ;
+    /**
+     * <pre>
+     * average unknown token ratio
+     * </pre>
+     *
+     * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+     * @return Whether the avgUnknownTokenRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasAvgUnknownTokenRatio() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * average unknown token ratio
+     * </pre>
+     *
+     * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+     * @return The avgUnknownTokenRatio.
+     */
+    @java.lang.Override
+    public float getAvgUnknownTokenRatio() {
+      return avgUnknownTokenRatio_;
+    }
+    /**
+     * <pre>
+     * average unknown token ratio
+     * </pre>
+     *
+     * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+     * @param value The avgUnknownTokenRatio to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAvgUnknownTokenRatio(float value) {
+
+      avgUnknownTokenRatio_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * average unknown token ratio
+     * </pre>
+     *
+     * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAvgUnknownTokenRatio() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      avgUnknownTokenRatio_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float jsDivergenceTokens_ ;
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for tokens
+     * </pre>
+     *
+     * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+     * @return Whether the jsDivergenceTokens field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsDivergenceTokens() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for tokens
+     * </pre>
+     *
+     * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+     * @return The jsDivergenceTokens.
+     */
+    @java.lang.Override
+    public float getJsDivergenceTokens() {
+      return jsDivergenceTokens_;
+    }
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for tokens
+     * </pre>
+     *
+     * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+     * @param value The jsDivergenceTokens to set.
+     * @return This builder for chaining.
+     */
+    public Builder setJsDivergenceTokens(float value) {
+
+      jsDivergenceTokens_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Jensen-Shannon divergence for tokens
+     * </pre>
+     *
+     * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearJsDivergenceTokens() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      jsDivergenceTokens_ = 0F;
       onChanged();
       return this;
     }

@@ -585,6 +585,67 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodDescriptor_DataService_SuggestionsPerMonthMetric = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric',
+  grpc.web.MethodType.UNARY,
+  google_protobuf_empty_pb.Empty,
+  proto.ssn.dataservice.v1.CallsPerMonthResponse,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.dataservice.v1.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.CallsPerMonthResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.CallsPerMonthResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.suggestionsPerMonthMetric =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_SuggestionsPerMonthMetric,
+      callback);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.suggestionsPerMonthMetric =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/SuggestionsPerMonthMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_SuggestionsPerMonthMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
  *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsResponse>}
  */

@@ -13,7 +13,8 @@
     <None Remove="Grpc.Core" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.23" />
+    <PackageReference Include="Google.Protobuf" Version="3.29.3" />
     <PackageReference Include="Grpc.Core" Version="2.46.5" />
+    <PackageReference Include="Grpc.Net.Common" Version="2.67.0" />
   </ItemGroup>
 </Project>

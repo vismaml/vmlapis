@@ -6,6 +6,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 message TargetMetrics {
   message Metric {
+    reserved 11;
     float precision = 1;
     float confidence = 2;
     float answer_rate = 3;
@@ -17,9 +18,32 @@ message TargetMetrics {
     float mcc = 8;
     float accuracy = 9;
     float balanced_accuracy = 10;
+    float precision_bound_epsilon = 12;
+    // precision bound epsilon values
   }
 
   string target = 1;
   repeated Metric metrics = 2;
   reserved 3, 4, 5;
+
+  optional float entropy = 6;
+  // entropy of the dataset
+
+  optional int32 number_of_classes = 7;
+  // number of classes in the dataset
+
+  optional float avg_sample_per_class = 8;
+  // average samples per class
+
+  optional float inconsistent_label_ratio = 9;
+  // ratio of inconsistent labels
+
+  optional float avg_labels_per_inconsistent_sample = 10;
+  // average labels per inconsistent sample
+
+  optional float percent_samples_not_in_target_vocab = 11;
+  // percentage of samples not in target vocabulary
+
+  optional float js_divergence_classes = 12;
+  // Jensen-Shannon divergence for classes
 }

@@ -32,6 +32,8 @@ message Prediction {
     }
     string name = 1;
     repeated Candidate candidates = 2;
+    bool unknown_target_class = 3;
   }
   repeated Target targets = 1;
+  float unknown_token_percentage = 2;
 }

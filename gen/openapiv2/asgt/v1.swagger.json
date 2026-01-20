@@ -397,6 +397,9 @@
             "type": "object",
             "$ref": "#/definitions/PredictionTargetCandidate"
           }
+        },
+        "unknownTargetClass": {
+          "type": "boolean"
         }
       }
     },
@@ -454,6 +457,11 @@
         "balancedAccuracy": {
           "type": "number",
           "format": "float"
+        },
+        "precisionBoundEpsilon": {
+          "type": "number",
+          "format": "float",
+          "title": "precision bound epsilon values"
         }
       }
     },
@@ -707,6 +715,10 @@
             "type": "object",
             "$ref": "#/definitions/PredictionTarget"
           }
+        },
+        "unknownTokenPercentage": {
+          "type": "number",
+          "format": "float"
         }
       }
     },
@@ -763,6 +775,41 @@
             "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
           }
+        },
+        "entropy": {
+          "type": "number",
+          "format": "float",
+          "title": "entropy of the dataset"
+        },
+        "numberOfClasses": {
+          "type": "integer",
+          "format": "int32",
+          "title": "number of classes in the dataset"
+        },
+        "avgSamplePerClass": {
+          "type": "number",
+          "format": "float",
+          "title": "average samples per class"
+        },
+        "inconsistentLabelRatio": {
+          "type": "number",
+          "format": "float",
+          "title": "ratio of inconsistent labels"
+        },
+        "avgLabelsPerInconsistentSample": {
+          "type": "number",
+          "format": "float",
+          "title": "average labels per inconsistent sample"
+        },
+        "percentSamplesNotInTargetVocab": {
+          "type": "number",
+          "format": "float",
+          "title": "percentage of samples not in target vocabulary"
+        },
+        "jsDivergenceClasses": {
+          "type": "number",
+          "format": "float",
+          "title": "Jensen-Shannon divergence for classes"
         }
       }
     },
@@ -813,6 +860,10 @@
         },
         "monthName": {
           "type": "string"
+        },
+        "totalBatchSize": {
+          "type": "string",
+          "format": "int64"
         }
       }
     },
@@ -840,6 +891,14 @@
         }
       }
     },
+    "v1InternalSuggestSamplesResponse": {
+      "type": "object",
+      "properties": {
+        "suggestionResponse": {
+          "$ref": "#/definitions/v1SuggestionResponse"
+        }
+      }
+    },
     "v1SuggestionOptions": {
       "type": "object",
       "properties": {
@@ -852,6 +911,33 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        }
+      }
+    },
+    "v1SuggestionRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          }
+        },
+        "options": {
+          "$ref": "#/definitions/v1SuggestionOptions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

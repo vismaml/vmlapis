@@ -82,6 +82,12 @@ private static final long serialVersionUID = 0L;
      */
     ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
         int index);
+
+    /**
+     * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
+     * @return The unknownTargetClass.
+     */
+    boolean getUnknownTargetClass();
   }
   /**
    * Protobuf type {@code asgt.type.Prediction.Target}
@@ -920,6 +926,17 @@ private static final long serialVersionUID = 0L;
       return candidates_.get(index);
     }
 
+    public static final int UNKNOWN_TARGET_CLASS_FIELD_NUMBER = 3;
+    private boolean unknownTargetClass_ = false;
+    /**
+     * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
+     * @return The unknownTargetClass.
+     */
+    @java.lang.Override
+    public boolean getUnknownTargetClass() {
+      return unknownTargetClass_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -940,6 +957,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < candidates_.size(); i++) {
         output.writeMessage(2, candidates_.get(i));
       }
+      if (unknownTargetClass_ != false) {
+        output.writeBool(3, unknownTargetClass_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -955,6 +975,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < candidates_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, candidates_.get(i));
+      }
+      if (unknownTargetClass_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, unknownTargetClass_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -975,6 +999,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getName())) return false;
       if (!getCandidatesList()
           .equals(other.getCandidatesList())) return false;
+      if (getUnknownTargetClass()
+          != other.getUnknownTargetClass()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -992,6 +1018,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
         hash = (53 * hash) + getCandidatesList().hashCode();
       }
+      hash = (37 * hash) + UNKNOWN_TARGET_CLASS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnknownTargetClass());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1131,6 +1160,7 @@ private static final long serialVersionUID = 0L;
           candidatesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        unknownTargetClass_ = false;
         return this;
       }
 
@@ -1180,6 +1210,9 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unknownTargetClass_ = unknownTargetClass_;
+        }
       }
 
       @java.lang.Override
@@ -1225,6 +1258,9 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (other.getUnknownTargetClass() != false) {
+          setUnknownTargetClass(other.getUnknownTargetClass());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1269,6 +1305,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 18
+              case 24: {
+                unknownTargetClass_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1598,6 +1639,38 @@ private static final long serialVersionUID = 0L;
         return candidatesBuilder_;
       }
 
+      private boolean unknownTargetClass_ ;
+      /**
+       * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
+       * @return The unknownTargetClass.
+       */
+      @java.lang.Override
+      public boolean getUnknownTargetClass() {
+        return unknownTargetClass_;
+      }
+      /**
+       * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
+       * @param value The unknownTargetClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnknownTargetClass(boolean value) {
+
+        unknownTargetClass_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnknownTargetClass() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        unknownTargetClass_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:asgt.type.Prediction.Target)
     }
 
@@ -1690,6 +1763,17 @@ private static final long serialVersionUID = 0L;
     return targets_.get(index);
   }
 
+  public static final int UNKNOWN_TOKEN_PERCENTAGE_FIELD_NUMBER = 2;
+  private float unknownTokenPercentage_ = 0F;
+  /**
+   * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
+   * @return The unknownTokenPercentage.
+   */
+  @java.lang.Override
+  public float getUnknownTokenPercentage() {
+    return unknownTokenPercentage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1707,6 +1791,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < targets_.size(); i++) {
       output.writeMessage(1, targets_.get(i));
     }
+    if (java.lang.Float.floatToRawIntBits(unknownTokenPercentage_) != 0) {
+      output.writeFloat(2, unknownTokenPercentage_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1719,6 +1806,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < targets_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, targets_.get(i));
+    }
+    if (java.lang.Float.floatToRawIntBits(unknownTokenPercentage_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(2, unknownTokenPercentage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1737,6 +1828,9 @@ private static final long serialVersionUID = 0L;
 
     if (!getTargetsList()
         .equals(other.getTargetsList())) return false;
+    if (java.lang.Float.floatToIntBits(getUnknownTokenPercentage())
+        != java.lang.Float.floatToIntBits(
+            other.getUnknownTokenPercentage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1752,6 +1846,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TARGETS_FIELD_NUMBER;
       hash = (53 * hash) + getTargetsList().hashCode();
     }
+    hash = (37 * hash) + UNKNOWN_TOKEN_PERCENTAGE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getUnknownTokenPercentage());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1890,6 +1987,7 @@ private static final long serialVersionUID = 0L;
         targetsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      unknownTokenPercentage_ = 0F;
       return this;
     }
 
@@ -1936,6 +2034,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.asgt.type.Prediction result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.unknownTokenPercentage_ = unknownTokenPercentage_;
+      }
     }
 
     @java.lang.Override
@@ -1976,6 +2077,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getUnknownTokenPercentage() != 0F) {
+        setUnknownTokenPercentage(other.getUnknownTokenPercentage());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2015,6 +2119,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 21: {
+              unknownTokenPercentage_ = input.readFloat();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 21
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2270,6 +2379,38 @@ private static final long serialVersionUID = 0L;
         targets_ = null;
       }
       return targetsBuilder_;
+    }
+
+    private float unknownTokenPercentage_ ;
+    /**
+     * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
+     * @return The unknownTokenPercentage.
+     */
+    @java.lang.Override
+    public float getUnknownTokenPercentage() {
+      return unknownTokenPercentage_;
+    }
+    /**
+     * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
+     * @param value The unknownTokenPercentage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnknownTokenPercentage(float value) {
+
+      unknownTokenPercentage_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnknownTokenPercentage() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      unknownTokenPercentage_ = 0F;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:asgt.type.Prediction)

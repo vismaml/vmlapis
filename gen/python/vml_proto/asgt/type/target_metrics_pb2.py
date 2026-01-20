@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\xd1\x03\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x1a\xda\x02\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRate\x12#\n\rtrue_positive\x18\x04 \x01(\x05R\x0ctruePositive\x12#\n\rtrue_negative\x18\x05 \x01(\x05R\x0ctrueNegative\x12%\n\x0e\x66\x61lse_positive\x18\x06 \x01(\x05R\rfalsePositive\x12%\n\x0e\x66\x61lse_negative\x18\x07 \x01(\x05R\rfalseNegative\x12\x10\n\x03mcc\x18\x08 \x01(\x02R\x03mcc\x12\x1a\n\x08\x61\x63\x63uracy\x18\t \x01(\x02R\x08\x61\x63\x63uracy\x12+\n\x11\x62\x61lanced_accuracy\x18\n \x01(\x02R\x10\x62\x61lancedAccuracyJ\x04\x08\x03\x10\x04J\x04\x08\x04\x10\x05J\x04\x08\x05\x10\x06\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\xf1\x08\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x12\x1d\n\x07\x65ntropy\x18\x06 \x01(\x02H\x00R\x07\x65ntropy\x88\x01\x01\x12/\n\x11number_of_classes\x18\x07 \x01(\x05H\x01R\x0fnumberOfClasses\x88\x01\x01\x12\x34\n\x14\x61vg_sample_per_class\x18\x08 \x01(\x02H\x02R\x11\x61vgSamplePerClass\x88\x01\x01\x12=\n\x18inconsistent_label_ratio\x18\t \x01(\x02H\x03R\x16inconsistentLabelRatio\x88\x01\x01\x12O\n\"avg_labels_per_inconsistent_sample\x18\n \x01(\x02H\x04R\x1e\x61vgLabelsPerInconsistentSample\x88\x01\x01\x12P\n#percent_samples_not_in_target_vocab\x18\x0b \x01(\x02H\x05R\x1epercentSamplesNotInTargetVocab\x88\x01\x01\x12\x37\n\x15js_divergence_classes\x18\x0c \x01(\x02H\x06R\x13jsDivergenceClasses\x88\x01\x01\x1a\x98\x03\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRate\x12#\n\rtrue_positive\x18\x04 \x01(\x05R\x0ctruePositive\x12#\n\rtrue_negative\x18\x05 \x01(\x05R\x0ctrueNegative\x12%\n\x0e\x66\x61lse_positive\x18\x06 \x01(\x05R\rfalsePositive\x12%\n\x0e\x66\x61lse_negative\x18\x07 \x01(\x05R\rfalseNegative\x12\x10\n\x03mcc\x18\x08 \x01(\x02R\x03mcc\x12\x1a\n\x08\x61\x63\x63uracy\x18\t \x01(\x02R\x08\x61\x63\x63uracy\x12+\n\x11\x62\x61lanced_accuracy\x18\n \x01(\x02R\x10\x62\x61lancedAccuracy\x12\x36\n\x17precision_bound_epsilon\x18\x0c \x01(\x02R\x15precisionBoundEpsilonJ\x04\x08\x0b\x10\x0c\x42\n\n\x08_entropyB\x14\n\x12_number_of_classesB\x17\n\x15_avg_sample_per_classB\x1b\n\x19_inconsistent_label_ratioB%\n#_avg_labels_per_inconsistent_sampleB&\n$_percent_samples_not_in_target_vocabB\x18\n\x16_js_divergence_classesJ\x04\x08\x03\x10\x04J\x04\x08\x04\x10\x05J\x04\x08\x05\x10\x06\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,7 +33,7 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _globals['_TARGETMETRICS']._serialized_start=46
-  _globals['_TARGETMETRICS']._serialized_end=511
-  _globals['_TARGETMETRICS_METRIC']._serialized_start=147
-  _globals['_TARGETMETRICS_METRIC']._serialized_end=493
+  _globals['_TARGETMETRICS']._serialized_end=1183
+  _globals['_TARGETMETRICS_METRIC']._serialized_start=564
+  _globals['_TARGETMETRICS_METRIC']._serialized_end=972
 # @@protoc_insertion_point(module_scope)

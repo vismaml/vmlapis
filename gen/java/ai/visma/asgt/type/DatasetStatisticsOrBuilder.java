@@ -14,7 +14,16 @@ public interface DatasetStatisticsOrBuilder extends
    * lexical diversity of the dataset split on space
    * </pre>
    *
-   * <code>float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+   * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
+   * @return Whether the lexicalDiversitySplitOnSpace field is set.
+   */
+  boolean hasLexicalDiversitySplitOnSpace();
+  /**
+   * <pre>
+   * lexical diversity of the dataset split on space
+   * </pre>
+   *
+   * <code>optional float lexical_diversity_split_on_space = 2 [json_name = "lexicalDiversitySplitOnSpace"];</code>
    * @return The lexicalDiversitySplitOnSpace.
    */
   float getLexicalDiversitySplitOnSpace();
@@ -24,7 +33,16 @@ public interface DatasetStatisticsOrBuilder extends
    * lexical diversity of the dataset split on special characters
    * </pre>
    *
-   * <code>float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+   * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
+   * @return Whether the lexicalDiversitySplitOnSpecial field is set.
+   */
+  boolean hasLexicalDiversitySplitOnSpecial();
+  /**
+   * <pre>
+   * lexical diversity of the dataset split on special characters
+   * </pre>
+   *
+   * <code>optional float lexical_diversity_split_on_special = 3 [json_name = "lexicalDiversitySplitOnSpecial"];</code>
    * @return The lexicalDiversitySplitOnSpecial.
    */
   float getLexicalDiversitySplitOnSpecial();
@@ -34,7 +52,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of empty strings in the dataset
    * </pre>
    *
-   * <code>float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+   * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
+   * @return Whether the percentEmptyStrings field is set.
+   */
+  boolean hasPercentEmptyStrings();
+  /**
+   * <pre>
+   * percentage of empty strings in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_empty_strings = 4 [json_name = "percentEmptyStrings"];</code>
    * @return The percentEmptyStrings.
    */
   float getPercentEmptyStrings();
@@ -44,7 +71,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of pure numbers in the dataset after removing spaces
    * </pre>
    *
-   * <code>float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+   * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
+   * @return Whether the percentPureNumbersRemoveSpaces field is set.
+   */
+  boolean hasPercentPureNumbersRemoveSpaces();
+  /**
+   * <pre>
+   * percentage of pure numbers in the dataset after removing spaces
+   * </pre>
+   *
+   * <code>optional float percent_pure_numbers_remove_spaces = 5 [json_name = "percentPureNumbersRemoveSpaces"];</code>
    * @return The percentPureNumbersRemoveSpaces.
    */
   float getPercentPureNumbersRemoveSpaces();
@@ -54,7 +90,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of pure numbers in the dataset after removing spaces and special characters
    * </pre>
    *
-   * <code>float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+   * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
+   * @return Whether the percentPureNumbersRemoveSpecial field is set.
+   */
+  boolean hasPercentPureNumbersRemoveSpecial();
+  /**
+   * <pre>
+   * percentage of pure numbers in the dataset after removing spaces and special characters
+   * </pre>
+   *
+   * <code>optional float percent_pure_numbers_remove_special = 6 [json_name = "percentPureNumbersRemoveSpecial"];</code>
    * @return The percentPureNumbersRemoveSpecial.
    */
   float getPercentPureNumbersRemoveSpecial();
@@ -64,7 +109,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of special characters in the dataset
    * </pre>
    *
-   * <code>float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+   * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
+   * @return Whether the percentSpecialCharacters field is set.
+   */
+  boolean hasPercentSpecialCharacters();
+  /**
+   * <pre>
+   * percentage of special characters in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_special_characters = 7 [json_name = "percentSpecialCharacters"];</code>
    * @return The percentSpecialCharacters.
    */
   float getPercentSpecialCharacters();
@@ -74,7 +128,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of digits in the dataset
    * </pre>
    *
-   * <code>float percent_digits = 8 [json_name = "percentDigits"];</code>
+   * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
+   * @return Whether the percentDigits field is set.
+   */
+  boolean hasPercentDigits();
+  /**
+   * <pre>
+   * percentage of digits in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_digits = 8 [json_name = "percentDigits"];</code>
    * @return The percentDigits.
    */
   float getPercentDigits();
@@ -84,7 +147,16 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of letters in the dataset
    * </pre>
    *
-   * <code>float percent_letters = 9 [json_name = "percentLetters"];</code>
+   * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
+   * @return Whether the percentLetters field is set.
+   */
+  boolean hasPercentLetters();
+  /**
+   * <pre>
+   * percentage of letters in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_letters = 9 [json_name = "percentLetters"];</code>
    * @return The percentLetters.
    */
   float getPercentLetters();
@@ -94,8 +166,112 @@ public interface DatasetStatisticsOrBuilder extends
    * percentage of duplicates in the dataset
    * </pre>
    *
-   * <code>float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+   * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
+   * @return Whether the percentDuplicatesInDataset field is set.
+   */
+  boolean hasPercentDuplicatesInDataset();
+  /**
+   * <pre>
+   * percentage of duplicates in the dataset
+   * </pre>
+   *
+   * <code>optional float percent_duplicates_in_dataset = 10 [json_name = "percentDuplicatesInDataset"];</code>
    * @return The percentDuplicatesInDataset.
    */
   float getPercentDuplicatesInDataset();
+
+  /**
+   * <pre>
+   * ratio of missing data
+   * </pre>
+   *
+   * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+   * @return Whether the missingDataRatio field is set.
+   */
+  boolean hasMissingDataRatio();
+  /**
+   * <pre>
+   * ratio of missing data
+   * </pre>
+   *
+   * <code>optional float missing_data_ratio = 16 [json_name = "missingDataRatio"];</code>
+   * @return The missingDataRatio.
+   */
+  float getMissingDataRatio();
+
+  /**
+   * <pre>
+   * average unknown token ratio in test set
+   * </pre>
+   *
+   * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+   * @return Whether the testSetAvgUnknownTokenRatio field is set.
+   */
+  boolean hasTestSetAvgUnknownTokenRatio();
+  /**
+   * <pre>
+   * average unknown token ratio in test set
+   * </pre>
+   *
+   * <code>optional float test_set_avg_unknown_token_ratio = 17 [json_name = "testSetAvgUnknownTokenRatio"];</code>
+   * @return The testSetAvgUnknownTokenRatio.
+   */
+  float getTestSetAvgUnknownTokenRatio();
+
+  /**
+   * <pre>
+   * vocabulary size
+   * </pre>
+   *
+   * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+   * @return Whether the vocabSize field is set.
+   */
+  boolean hasVocabSize();
+  /**
+   * <pre>
+   * vocabulary size
+   * </pre>
+   *
+   * <code>optional int32 vocab_size = 18 [json_name = "vocabSize"];</code>
+   * @return The vocabSize.
+   */
+  int getVocabSize();
+
+  /**
+   * <pre>
+   * average unknown token ratio
+   * </pre>
+   *
+   * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+   * @return Whether the avgUnknownTokenRatio field is set.
+   */
+  boolean hasAvgUnknownTokenRatio();
+  /**
+   * <pre>
+   * average unknown token ratio
+   * </pre>
+   *
+   * <code>optional float avg_unknown_token_ratio = 20 [json_name = "avgUnknownTokenRatio"];</code>
+   * @return The avgUnknownTokenRatio.
+   */
+  float getAvgUnknownTokenRatio();
+
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for tokens
+   * </pre>
+   *
+   * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+   * @return Whether the jsDivergenceTokens field is set.
+   */
+  boolean hasJsDivergenceTokens();
+  /**
+   * <pre>
+   * Jensen-Shannon divergence for tokens
+   * </pre>
+   *
+   * <code>optional float js_divergence_tokens = 22 [json_name = "jsDivergenceTokens"];</code>
+   * @return The jsDivergenceTokens.
+   */
+  float getJsDivergenceTokens();
 }
