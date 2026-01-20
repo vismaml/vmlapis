@@ -214,6 +214,7 @@ def sync_javascript(plugins: Plugins, progress, javascript_path: Path):
 
 
 class Language(StrEnum):
+    ALL = "all"
     PYTHON = "python"
     GO = "go"
     CSHARP = "csharp"
@@ -224,17 +225,20 @@ class Language(StrEnum):
 @app.command(name="sync-packages")
 def sync_command(
     language: Annotated[
-        list[Language], typer.Argument(help="Language to sync (python, go, csharp, java, javascript, all)")
-    ],
-    python_path: Annotated[Path, typer.Option("--python-path", "-p")] = Path("./"),
-    go_path: Annotated[Path, typer.Option("--go-path", "-g")] = Path("./"),
-    java_path: Annotated[Path, typer.Option("--java-path", "-j")] = Path("./java-package"),
-    csharp_path: Annotated[Path, typer.Option("--csharp-path", "-c")] = Path("./"),
-    javascript_path: Annotated[Path, typer.Option("--javascript-path", "-js")] = Path("./"),
+        list[Language], typer.Argument(help="Language to sync all or (python, go, csharp, java, javascript)") 
+    ] = ["all"],
+    python_path: Annotated[Path, typer.Option("--python-path", "-p", help="Path to Python package directory")] = Path("./"),
+    go_path: Annotated[Path, typer.Option("--go-path", "-g", help="Path to Go package directory")] = Path("./"),
+    java_path: Annotated[Path, typer.Option("--java-path", "-j", help="Path to Java package directory")] = Path("./java-package"),
+    csharp_path: Annotated[Path, typer.Option("--csharp-path", "-c", help="Path to C# package directory")] = Path("./"),
+    javascript_path: Annotated[Path, typer.Option("--javascript-path", "-js", help="Path to JavaScript package directory")] = Path("./"),
 ) -> None:
     """Sync dependencies for a specific language from buf-versions-3.toml."""
     ending_messages = []
     plugins = load_plugins()
+    if "all" in language:
+        language = list(Language)
+
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),

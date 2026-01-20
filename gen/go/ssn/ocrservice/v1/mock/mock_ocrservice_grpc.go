@@ -137,6 +137,26 @@ func (mr *MockOcrServiceClientMockRecorder) OcrScanImage(ctx, in interface{}, op
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceClient)(nil).OcrScanImage), varargs...)
 }
 
+// ProcessImage mocks base method.
+func (m *MockOcrServiceClient) ProcessImage(ctx context.Context, in *ocrservice.ProcessImageRequest, opts ...grpc.CallOption) (*ocrservice.ProcessImageResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ProcessImage", varargs...)
+	ret0, _ := ret[0].(*ocrservice.ProcessImageResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ProcessImage indicates an expected call of ProcessImage.
+func (mr *MockOcrServiceClientMockRecorder) ProcessImage(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProcessImage", reflect.TypeOf((*MockOcrServiceClient)(nil).ProcessImage), varargs...)
+}
+
 // MockOcrService_GetTextAnnotationsClient is a mock of OcrService_GetTextAnnotationsClient interface.
 type MockOcrService_GetTextAnnotationsClient struct {
 	ctrl     *gomock.Controller
@@ -477,6 +497,21 @@ func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *ocrservi
 func (mr *MockOcrServiceServerMockRecorder) OcrScanImage(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceServer)(nil).OcrScanImage), arg0, arg1)
+}
+
+// ProcessImage mocks base method.
+func (m *MockOcrServiceServer) ProcessImage(arg0 context.Context, arg1 *ocrservice.ProcessImageRequest) (*ocrservice.ProcessImageResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ProcessImage", arg0, arg1)
+	ret0, _ := ret[0].(*ocrservice.ProcessImageResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ProcessImage indicates an expected call of ProcessImage.
+func (mr *MockOcrServiceServerMockRecorder) ProcessImage(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProcessImage", reflect.TypeOf((*MockOcrServiceServer)(nil).ProcessImage), arg0, arg1)
 }
 
 // MockUnsafeOcrServiceServer is a mock of UnsafeOcrServiceServer interface.
