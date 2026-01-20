@@ -308,15 +308,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     * below are more ideas how the API could progress
-     * ---------------------
-     * e.g. add more features for processing
-     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-     * }
-     * essentially a feedback endpoint
-     * </pre>
      */
     default void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
@@ -400,15 +391,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     * below are more ideas how the API could progress
-     * ---------------------
-     * e.g. add more features for processing
-     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-     * }
-     * essentially a feedback endpoint
-     * </pre>
      */
     public void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
@@ -473,15 +455,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     * below are more ideas how the API could progress
-     * ---------------------
-     * e.g. add more features for processing
-     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-     * }
-     * essentially a feedback endpoint
-     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -545,15 +518,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     * below are more ideas how the API could progress
-     * ---------------------
-     * e.g. add more features for processing
-     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-     * }
-     * essentially a feedback endpoint
-     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -622,15 +586,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     * below are more ideas how the API could progress
-     * ---------------------
-     * e.g. add more features for processing
-     * rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-     *   option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-     * }
-     * essentially a feedback endpoint
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> updateTransactionResults(
         ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {

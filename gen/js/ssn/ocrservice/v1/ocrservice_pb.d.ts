@@ -65,6 +65,62 @@ export namespace GetTextAnnotationResponse {
   }
 }
 
+export class ProcessImageRequest extends jspb.Message {
+  getData(): Uint8Array | string;
+  getData_asU8(): Uint8Array;
+  getData_asB64(): string;
+  setData(value: Uint8Array | string): ProcessImageRequest;
+
+  getExtension(): string;
+  setExtension(value: string): ProcessImageRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProcessImageRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ProcessImageRequest): ProcessImageRequest.AsObject;
+  static serializeBinaryToWriter(message: ProcessImageRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProcessImageRequest;
+  static deserializeBinaryFromReader(message: ProcessImageRequest, reader: jspb.BinaryReader): ProcessImageRequest;
+}
+
+export namespace ProcessImageRequest {
+  export type AsObject = {
+    data: Uint8Array | string,
+    extension: string,
+  }
+}
+
+export class ProcessImageResponse extends jspb.Message {
+  getImage(): Uint8Array | string;
+  getImage_asU8(): Uint8Array;
+  getImage_asB64(): string;
+  setImage(value: Uint8Array | string): ProcessImageResponse;
+
+  getWidth(): number;
+  setWidth(value: number): ProcessImageResponse;
+
+  getHeight(): number;
+  setHeight(value: number): ProcessImageResponse;
+
+  getScaleFactor(): number;
+  setScaleFactor(value: number): ProcessImageResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProcessImageResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ProcessImageResponse): ProcessImageResponse.AsObject;
+  static serializeBinaryToWriter(message: ProcessImageResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProcessImageResponse;
+  static deserializeBinaryFromReader(message: ProcessImageResponse, reader: jspb.BinaryReader): ProcessImageResponse;
+}
+
+export namespace ProcessImageResponse {
+  export type AsObject = {
+    image: Uint8Array | string,
+    width: number,
+    height: number,
+    scaleFactor: number,
+  }
+}
+
 export class AsyncCreateOperationRequest extends jspb.Message {
   getInputPathsList(): Array<string>;
   setInputPathsList(value: Array<string>): AsyncCreateOperationRequest;

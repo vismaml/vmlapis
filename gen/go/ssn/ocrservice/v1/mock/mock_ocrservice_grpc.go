@@ -137,6 +137,26 @@ func (mr *MockOcrServiceClientMockRecorder) OcrScanImage(ctx, in interface{}, op
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceClient)(nil).OcrScanImage), varargs...)
 }
 
+// ProcessImage mocks base method.
+func (m *MockOcrServiceClient) ProcessImage(ctx context.Context, in *ocrservice.ProcessImageRequest, opts ...grpc.CallOption) (*ocrservice.ProcessImageResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ProcessImage", varargs...)
+	ret0, _ := ret[0].(*ocrservice.ProcessImageResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ProcessImage indicates an expected call of ProcessImage.
+func (mr *MockOcrServiceClientMockRecorder) ProcessImage(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProcessImage", reflect.TypeOf((*MockOcrServiceClient)(nil).ProcessImage), varargs...)
+}
+
 // MockOcrService_GetTextAnnotationsClient is a mock of OcrService_GetTextAnnotationsClient interface.
 type MockOcrService_GetTextAnnotationsClient struct {
 	ctrl     *gomock.Controller
@@ -219,7 +239,7 @@ func (mr *MockOcrService_GetTextAnnotationsClientMockRecorder) Recv() *gomock.Ca
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockOcrService_GetTextAnnotationsClient) RecvMsg(m interface{}) error {
+func (m_2 *MockOcrService_GetTextAnnotationsClient) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -233,7 +253,7 @@ func (mr *MockOcrService_GetTextAnnotationsClientMockRecorder) RecvMsg(m interfa
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockOcrService_GetTextAnnotationsClient) SendMsg(m interface{}) error {
+func (m_2 *MockOcrService_GetTextAnnotationsClient) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -342,7 +362,7 @@ func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) Recv() *gomo
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockOcrService_AsyncGetOperationStatusClient) RecvMsg(m interface{}) error {
+func (m_2 *MockOcrService_AsyncGetOperationStatusClient) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -356,7 +376,7 @@ func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) RecvMsg(m in
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockOcrService_AsyncGetOperationStatusClient) SendMsg(m interface{}) error {
+func (m_2 *MockOcrService_AsyncGetOperationStatusClient) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -479,6 +499,21 @@ func (mr *MockOcrServiceServerMockRecorder) OcrScanImage(arg0, arg1 interface{})
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceServer)(nil).OcrScanImage), arg0, arg1)
 }
 
+// ProcessImage mocks base method.
+func (m *MockOcrServiceServer) ProcessImage(arg0 context.Context, arg1 *ocrservice.ProcessImageRequest) (*ocrservice.ProcessImageResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ProcessImage", arg0, arg1)
+	ret0, _ := ret[0].(*ocrservice.ProcessImageResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ProcessImage indicates an expected call of ProcessImage.
+func (mr *MockOcrServiceServerMockRecorder) ProcessImage(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProcessImage", reflect.TypeOf((*MockOcrServiceServer)(nil).ProcessImage), arg0, arg1)
+}
+
 // MockUnsafeOcrServiceServer is a mock of UnsafeOcrServiceServer interface.
 type MockUnsafeOcrServiceServer struct {
 	ctrl     *gomock.Controller
@@ -552,7 +587,7 @@ func (mr *MockOcrService_GetTextAnnotationsServerMockRecorder) Context() *gomock
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockOcrService_GetTextAnnotationsServer) RecvMsg(m interface{}) error {
+func (m_2 *MockOcrService_GetTextAnnotationsServer) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -594,7 +629,7 @@ func (mr *MockOcrService_GetTextAnnotationsServerMockRecorder) SendHeader(arg0 i
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockOcrService_GetTextAnnotationsServer) SendMsg(m interface{}) error {
+func (m_2 *MockOcrService_GetTextAnnotationsServer) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)
@@ -671,7 +706,7 @@ func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) Context() *g
 }
 
 // RecvMsg mocks base method.
-func (m_2 *MockOcrService_AsyncGetOperationStatusServer) RecvMsg(m interface{}) error {
+func (m_2 *MockOcrService_AsyncGetOperationStatusServer) RecvMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
 	ret0, _ := ret[0].(error)
@@ -713,7 +748,7 @@ func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) SendHeader(a
 }
 
 // SendMsg mocks base method.
-func (m_2 *MockOcrService_AsyncGetOperationStatusServer) SendMsg(m interface{}) error {
+func (m_2 *MockOcrService_AsyncGetOperationStatusServer) SendMsg(m any) error {
 	m_2.ctrl.T.Helper()
 	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
 	ret0, _ := ret[0].(error)

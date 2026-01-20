@@ -37,15 +37,6 @@ type TransactionServiceClient interface {
 	GetTransactionStatus(ctx context.Context, in *GetTransactionStatusRequest, opts ...grpc.CallOption) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(ctx context.Context, in *DeleteTransactionRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// below are more ideas how the API could progress
-	// ---------------------
-	// e.g. add more features for processing
-	//
-	//	rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-	//	  option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-	//	}
-	//
-	// essentially a feedback endpoint
 	UpdateTransactionResults(ctx context.Context, in *UpdateTransactionResultsRequest, opts ...grpc.CallOption) (*UpdateTransactionResultsResponse, error)
 }
 
@@ -120,15 +111,6 @@ type TransactionServiceServer interface {
 	GetTransactionStatus(context.Context, *GetTransactionStatusRequest) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(context.Context, *DeleteTransactionRequest) (*emptypb.Empty, error)
 	DeleteTag(context.Context, *DeleteTagRequest) (*emptypb.Empty, error)
-	// below are more ideas how the API could progress
-	// ---------------------
-	// e.g. add more features for processing
-	//
-	//	rpc UpdateFeatures(UpdateFeaturesRequest) returns (UpdateFeaturesResponse) {
-	//	  option (google.api.http) = {put: "/v1/transactions/{id}/features"};
-	//	}
-	//
-	// essentially a feedback endpoint
 	UpdateTransactionResults(context.Context, *UpdateTransactionResultsRequest) (*UpdateTransactionResultsResponse, error)
 }
 
