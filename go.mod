@@ -1,12 +1,15 @@
 module github.com/e-conomic/vmlapis
 
-go 1.20
+go 1.24.0
+
+toolchain go1.24.1
 
 require (
 	github.com/envoyproxy/protoc-gen-validate v1.0.2
 	github.com/golang/mock v1.6.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.11.3
 	google.golang.org/genproto v0.0.0-20231106174013-bbf56f31fb17
+	google.golang.org/genproto/googleapis/api v0.0.0-20231106174013-bbf56f31fb17
 	google.golang.org/grpc v1.61.2
 	google.golang.org/protobuf v1.33.0
 )
