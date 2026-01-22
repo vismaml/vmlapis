@@ -1633,22 +1633,22 @@ export namespace FeedbackMetricsV2Response {
   }
 }
 
-export class CallsPerMonthMetricRequest extends jspb.Message {
+export class CallsPerMonthFilteredMetricRequest extends jspb.Message {
   getMonth(): number;
-  setMonth(value: number): CallsPerMonthMetricRequest;
+  setMonth(value: number): CallsPerMonthFilteredMetricRequest;
 
   getYear(): number;
-  setYear(value: number): CallsPerMonthMetricRequest;
+  setYear(value: number): CallsPerMonthFilteredMetricRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CallsPerMonthMetricRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: CallsPerMonthMetricRequest): CallsPerMonthMetricRequest.AsObject;
-  static serializeBinaryToWriter(message: CallsPerMonthMetricRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CallsPerMonthMetricRequest;
-  static deserializeBinaryFromReader(message: CallsPerMonthMetricRequest, reader: jspb.BinaryReader): CallsPerMonthMetricRequest;
+  toObject(includeInstance?: boolean): CallsPerMonthFilteredMetricRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CallsPerMonthFilteredMetricRequest): CallsPerMonthFilteredMetricRequest.AsObject;
+  static serializeBinaryToWriter(message: CallsPerMonthFilteredMetricRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CallsPerMonthFilteredMetricRequest;
+  static deserializeBinaryFromReader(message: CallsPerMonthFilteredMetricRequest, reader: jspb.BinaryReader): CallsPerMonthFilteredMetricRequest;
 }
 
-export namespace CallsPerMonthMetricRequest {
+export namespace CallsPerMonthFilteredMetricRequest {
   export type AsObject = {
     month: number,
     year: number,

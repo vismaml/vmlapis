@@ -48,8 +48,8 @@ type DataServiceClient interface {
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 	SuggestionsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
-	CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
-	SuggestionsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
+	CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
+	SuggestionsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 	CalculateAnnotationProcessMetrics(ctx context.Context, in *AnnotationProcessMetricsRequest, opts ...grpc.CallOption) (*AnnotationProcessMetricsResponse, error)
 }
 
@@ -142,7 +142,7 @@ func (c *dataServiceClient) SuggestionsPerMonthMetric(ctx context.Context, in *e
 	return out, nil
 }
 
-func (c *dataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error) {
+func (c *dataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error) {
 	out := new(CallsPerMonthResponse)
 	err := c.cc.Invoke(ctx, DataService_CallsPerMonthFilteredMetric_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -151,7 +151,7 @@ func (c *dataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in 
 	return out, nil
 }
 
-func (c *dataServiceClient) SuggestionsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error) {
+func (c *dataServiceClient) SuggestionsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*CallsPerMonthResponse, error) {
 	out := new(CallsPerMonthResponse)
 	err := c.cc.Invoke(ctx, DataService_SuggestionsPerMonthFilteredMetric_FullMethodName, in, out, opts...)
 	if err != nil {
@@ -183,8 +183,8 @@ type DataServiceServer interface {
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 	SuggestionsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
-	CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthMetricRequest) (*CallsPerMonthResponse, error)
-	SuggestionsPerMonthFilteredMetric(context.Context, *CallsPerMonthMetricRequest) (*CallsPerMonthResponse, error)
+	CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*CallsPerMonthResponse, error)
+	SuggestionsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*CallsPerMonthResponse, error)
 	CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error)
 }
 
@@ -219,10 +219,10 @@ func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empt
 func (UnimplementedDataServiceServer) SuggestionsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SuggestionsPerMonthMetric not implemented")
 }
-func (UnimplementedDataServiceServer) CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthMetricRequest) (*CallsPerMonthResponse, error) {
+func (UnimplementedDataServiceServer) CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthFilteredMetric not implemented")
 }
-func (UnimplementedDataServiceServer) SuggestionsPerMonthFilteredMetric(context.Context, *CallsPerMonthMetricRequest) (*CallsPerMonthResponse, error) {
+func (UnimplementedDataServiceServer) SuggestionsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SuggestionsPerMonthFilteredMetric not implemented")
 }
 func (UnimplementedDataServiceServer) CalculateAnnotationProcessMetrics(context.Context, *AnnotationProcessMetricsRequest) (*AnnotationProcessMetricsResponse, error) {
@@ -403,7 +403,7 @@ func _DataService_SuggestionsPerMonthMetric_Handler(srv interface{}, ctx context
 }
 
 func _DataService_CallsPerMonthFilteredMetric_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CallsPerMonthMetricRequest)
+	in := new(CallsPerMonthFilteredMetricRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -415,13 +415,13 @@ func _DataService_CallsPerMonthFilteredMetric_Handler(srv interface{}, ctx conte
 		FullMethod: DataService_CallsPerMonthFilteredMetric_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CallsPerMonthFilteredMetric(ctx, req.(*CallsPerMonthMetricRequest))
+		return srv.(DataServiceServer).CallsPerMonthFilteredMetric(ctx, req.(*CallsPerMonthFilteredMetricRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _DataService_SuggestionsPerMonthFilteredMetric_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CallsPerMonthMetricRequest)
+	in := new(CallsPerMonthFilteredMetricRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -433,7 +433,7 @@ func _DataService_SuggestionsPerMonthFilteredMetric_Handler(srv interface{}, ctx
 		FullMethod: DataService_SuggestionsPerMonthFilteredMetric_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).SuggestionsPerMonthFilteredMetric(ctx, req.(*CallsPerMonthMetricRequest))
+		return srv.(DataServiceServer).SuggestionsPerMonthFilteredMetric(ctx, req.(*CallsPerMonthFilteredMetricRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

@@ -98,7 +98,7 @@ func (mr *MockDataServiceClientMockRecorder) CalculateMetricsV2(ctx, in interfac
 }
 
 // CallsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in *dataservice.CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in *dataservice.CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -238,7 +238,7 @@ func (mr *MockDataServiceClientMockRecorder) ReadDocument(ctx, in interface{}, o
 }
 
 // SuggestionsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceClient) SuggestionsPerMonthFilteredMetric(ctx context.Context, in *dataservice.CallsPerMonthMetricRequest, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceClient) SuggestionsPerMonthFilteredMetric(ctx context.Context, in *dataservice.CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -346,7 +346,7 @@ func (mr *MockDataServiceServerMockRecorder) CalculateMetricsV2(arg0, arg1 inter
 }
 
 // CallsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceServer) CallsPerMonthFilteredMetric(arg0 context.Context, arg1 *dataservice.CallsPerMonthMetricRequest) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceServer) CallsPerMonthFilteredMetric(arg0 context.Context, arg1 *dataservice.CallsPerMonthFilteredMetricRequest) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CallsPerMonthFilteredMetric", arg0, arg1)
 	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
@@ -451,7 +451,7 @@ func (mr *MockDataServiceServerMockRecorder) ReadDocument(arg0, arg1 interface{}
 }
 
 // SuggestionsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceServer) SuggestionsPerMonthFilteredMetric(arg0 context.Context, arg1 *dataservice.CallsPerMonthMetricRequest) (*dataservice.CallsPerMonthResponse, error) {
+func (m *MockDataServiceServer) SuggestionsPerMonthFilteredMetric(arg0 context.Context, arg1 *dataservice.CallsPerMonthFilteredMetricRequest) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SuggestionsPerMonthFilteredMetric", arg0, arg1)
 	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)

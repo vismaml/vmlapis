@@ -646,16 +646,16 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.suggestionsPerMonthM
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest,
  *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
  */
 const methodDescriptor_DataService_CallsPerMonthFilteredMetric = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
   grpc.web.MethodType.UNARY,
-  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+  proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest,
   proto.ssn.dataservice.v1.CallsPerMonthResponse,
   /**
-   * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request
+   * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -666,7 +666,7 @@ const methodDescriptor_DataService_CallsPerMonthFilteredMetric = new grpc.web.Me
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -687,7 +687,7 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.callsPerMonthFilteredMetric
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
@@ -707,16 +707,16 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthFiltere
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest,
  *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
  */
 const methodDescriptor_DataService_SuggestionsPerMonthFilteredMetric = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
   grpc.web.MethodType.UNARY,
-  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+  proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest,
   proto.ssn.dataservice.v1.CallsPerMonthResponse,
   /**
-   * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request
+   * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -727,7 +727,7 @@ const methodDescriptor_DataService_SuggestionsPerMonthFilteredMetric = new grpc.
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -748,7 +748,7 @@ proto.ssn.dataservice.v1.DataServiceClient.prototype.suggestionsPerMonthFiltered
 
 
 /**
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata

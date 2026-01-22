@@ -6,12 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
- * Protobuf type {@code ssn.dataservice.v1.CallsPerMonthMetricRequest}
+ * Protobuf type {@code ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest}
  */
-public final class CallsPerMonthMetricRequest extends
+public final class CallsPerMonthFilteredMetricRequest extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CallsPerMonthMetricRequest)
-    CallsPerMonthMetricRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)
+    CallsPerMonthFilteredMetricRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,26 +20,26 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      CallsPerMonthMetricRequest.class.getName());
+      CallsPerMonthFilteredMetricRequest.class.getName());
   }
-  // Use CallsPerMonthMetricRequest.newBuilder() to construct.
-  private CallsPerMonthMetricRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use CallsPerMonthFilteredMetricRequest.newBuilder() to construct.
+  private CallsPerMonthFilteredMetricRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private CallsPerMonthMetricRequest() {
+  private CallsPerMonthFilteredMetricRequest() {
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthMetricRequest_descriptor;
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthMetricRequest_fieldAccessorTable
+    return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.class, ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.Builder.class);
+            ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.class, ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.Builder.class);
   }
 
   public static final int MONTH_FIELD_NUMBER = 1;
@@ -111,10 +111,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest)) {
+    if (!(obj instanceof ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest other = (ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest) obj;
+    ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest other = (ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest) obj;
 
     if (getMonth()
         != other.getMonth()) return false;
@@ -140,44 +140,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(byte[] data)
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseDelimitedFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest parseFrom(
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest prototype) {
+  public static Builder newBuilder(ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -233,26 +233,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1.CallsPerMonthMetricRequest}
+   * Protobuf type {@code ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.CallsPerMonthMetricRequest)
-      ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)
+      ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthMetricRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthMetricRequest_fieldAccessorTable
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.class, ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.Builder.class);
+              ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.class, ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.newBuilder()
+    // Construct using ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.newBuilder()
     private Builder() {
 
     }
@@ -274,17 +274,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthMetricRequest_descriptor;
+      return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest getDefaultInstanceForType() {
-      return ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.getDefaultInstance();
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest getDefaultInstanceForType() {
+      return ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest build() {
-      ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest result = buildPartial();
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest build() {
+      ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -292,14 +292,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest buildPartial() {
-      ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest result = new ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest(this);
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest buildPartial() {
+      ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest result = new ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest result) {
+    private void buildPartial0(ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.month_ = month_;
@@ -311,16 +311,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest) {
-        return mergeFrom((ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest)other);
+      if (other instanceof ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest) {
+        return mergeFrom((ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest other) {
-      if (other == ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest other) {
+      if (other == ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.getDefaultInstance()) return this;
       if (other.getMonth() != 0) {
         setMonth(other.getMonth());
       }
@@ -444,23 +444,23 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.CallsPerMonthMetricRequest)
+    // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.CallsPerMonthMetricRequest)
-  private static final ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)
+  private static final ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest();
+    DEFAULT_INSTANCE = new ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest();
   }
 
-  public static ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest getDefaultInstance() {
+  public static ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CallsPerMonthMetricRequest>
-      PARSER = new com.google.protobuf.AbstractParser<CallsPerMonthMetricRequest>() {
+  private static final com.google.protobuf.Parser<CallsPerMonthFilteredMetricRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CallsPerMonthFilteredMetricRequest>() {
     @java.lang.Override
-    public CallsPerMonthMetricRequest parsePartialFrom(
+    public CallsPerMonthFilteredMetricRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -479,17 +479,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CallsPerMonthMetricRequest> parser() {
+  public static com.google.protobuf.Parser<CallsPerMonthFilteredMetricRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CallsPerMonthMetricRequest> getParserForType() {
+  public com.google.protobuf.Parser<CallsPerMonthFilteredMetricRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.dataservice.v1.CallsPerMonthMetricRequest getDefaultInstanceForType() {
+  public ai.visma.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

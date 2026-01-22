@@ -5,8 +5,8 @@
 
 package ai.visma.ssn.dataservice.v1;
 
-public interface CallsPerMonthMetricRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.CallsPerMonthMetricRequest)
+public interface CallsPerMonthFilteredMetricRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

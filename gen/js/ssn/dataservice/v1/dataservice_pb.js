@@ -42,7 +42,7 @@ goog.object.extend(proto, ssn_type_tier_pb);
 goog.exportSymbol('proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.AnnotationProcessMetricsResponse', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonth', null, global);
-goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonthMetricRequest', null, global);
+goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonthResponse', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.Correctness', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.CreateDocumentRequest', null, global);
@@ -490,16 +490,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest = function(opt_data) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ssn.dataservice.v1.CallsPerMonthMetricRequest, jspb.Message);
+goog.inherits(proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.displayName = 'proto.ssn.dataservice.v1.CallsPerMonthMetricRequest';
+  proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.displayName = 'proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest';
 }
 
 /**
@@ -14180,8 +14180,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.toObject(opt_includeInstance, this);
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -14190,11 +14190,11 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} msg The msg instance to transform.
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.toObject = function(includeInstance, msg) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     month: jspb.Message.getFieldWithDefault(msg, 1, 0),
     year: jspb.Message.getFieldWithDefault(msg, 2, 0)
@@ -14211,23 +14211,23 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest}
+ * @return {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.deserializeBinary = function(bytes) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ssn.dataservice.v1.CallsPerMonthMetricRequest;
-  return proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest;
+  return proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} msg The message object to deserialize into.
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest}
+ * @return {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -14255,9 +14255,9 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.serializeBinary = function() {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.serializeBinaryToWriter(this, writer);
+  proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -14265,11 +14265,11 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} message
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMonth();
   if (f !== 0) {
@@ -14292,16 +14292,16 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.serializeBinaryToWriter = fu
  * optional int32 month = 1;
  * @return {number}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.getMonth = function() {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.getMonth = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} returns this
+ * @return {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} returns this
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.setMonth = function(value) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.setMonth = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -14310,16 +14310,16 @@ proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.setMonth = functio
  * optional int32 year = 2;
  * @return {number}
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.getYear = function() {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.getYear = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} returns this
+ * @return {!proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest} returns this
  */
-proto.ssn.dataservice.v1.CallsPerMonthMetricRequest.prototype.setYear = function(value) {
+proto.ssn.dataservice.v1.CallsPerMonthFilteredMetricRequest.prototype.setYear = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 

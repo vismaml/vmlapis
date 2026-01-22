@@ -380,42 +380,43 @@ namespace Ssn.Dataservice.V1 {
             "IAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1ISb3ZlcmFs",
             "bENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNzGAQgAygLMh8uc3Nu",
             "LmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVsZENvcnJlY3RuZXNz",
-            "IkYKGkNhbGxzUGVyTW9udGhNZXRyaWNSZXF1ZXN0EhQKBW1vbnRoGAEgASgF",
-            "UgVtb250aBISCgR5ZWFyGAIgASgFUgR5ZWFyMokKCgtEYXRhU2VydmljZRJn",
-            "Cg5DcmVhdGVEb2N1bWVudBIpLnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVE",
-            "b2N1bWVudFJlcXVlc3QaKi5zc24uZGF0YXNlcnZpY2UudjEuQ3JlYXRlRG9j",
-            "dW1lbnRSZXNwb25zZRJhCgxSZWFkRG9jdW1lbnQSJy5zc24uZGF0YXNlcnZp",
-            "Y2UudjEuUmVhZERvY3VtZW50UmVxdWVzdBooLnNzbi5kYXRhc2VydmljZS52",
-            "MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJVCg9QcmVwYXJlRmVlZGJhY2sSKi5z",
-            "c24uZGF0YXNlcnZpY2UudjEuUHJlcGFyZUZlZWRiYWNrUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRJnCghGZWVkYmFjaxIjLnNzbi5kYXRhc2Vy",
-            "dmljZS52MS5GZWVkYmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmNyZWF0ZToBKhJbChBDYWxjdWxh",
-            "dGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2aWNlLnYxLk1ldHJpY3NSZXF1ZXN0",
-            "GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrTWV0cmljcxJnChJDYWxj",
-            "dWxhdGVNZXRyaWNzVjISIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmljc1Jl",
-            "cXVlc3QaLS5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNzVjJS",
-            "ZXNwb25zZRJjCgZEZWxldGUSIS5zc24uZGF0YXNlcnZpY2UudjEuRGVsZXRl",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEv",
-            "ZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0NhbGxzUGVyTW9udGhNZXRyaWMSFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZpY2UudjEuQ2Fs",
-            "bHNQZXJNb250aFJlc3BvbnNlEl4KGVN1Z2dlc3Rpb25zUGVyTW9udGhNZXRy",
-            "aWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEngKG0NhbGxzUGVyTW9udGhGaWx0",
-            "ZXJlZE1ldHJpYxIuLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRo",
-            "TWV0cmljUmVxdWVzdBopLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1v",
-            "bnRoUmVzcG9uc2USfgohU3VnZ2VzdGlvbnNQZXJNb250aEZpbHRlcmVkTWV0",
-            "cmljEi4uc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhNZXRyaWNS",
-            "ZXF1ZXN0Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNw",
-            "b25zZRKOAQohQ2FsY3VsYXRlQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzEjMu",
-            "c3NuLmRhdGFzZXJ2aWNlLnYxLkFubm90YXRpb25Qcm9jZXNzTWV0cmljc1Jl",
-            "cXVlc3QaNC5zc24uZGF0YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NN",
-            "ZXRyaWNzUmVzcG9uc2VC3QEKG2FpLnZpc21hLnNzbi5kYXRhc2VydmljZS52",
-            "MUIQRGF0YXNlcnZpY2VQcm90b1ABWkJnaXRodWIuY29tL2UtY29ub21pYy92",
-            "bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZpY2UvdjE7ZGF0YXNlcnZpY2Wi",
-            "AgNTRFiqAhJTc24uRGF0YXNlcnZpY2UuVjHKAhJTc25cRGF0YXNlcnZpY2Vc",
-            "VjHiAh5Tc25cRGF0YXNlcnZpY2VcVjFcR1BCTWV0YWRhdGHqAhRTc246OkRh",
-            "dGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
+            "Ik4KIkNhbGxzUGVyTW9udGhGaWx0ZXJlZE1ldHJpY1JlcXVlc3QSFAoFbW9u",
+            "dGgYASABKAVSBW1vbnRoEhIKBHllYXIYAiABKAVSBHllYXIymwoKC0RhdGFT",
+            "ZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFzZXJ2aWNlLnYx",
+            "LkNyZWF0ZURvY3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2VydmljZS52MS5D",
+            "cmVhdGVEb2N1bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVudBInLnNzbi5k",
+            "YXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Giguc3NuLmRhdGFz",
+            "ZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1ByZXBhcmVGZWVk",
+            "YmFjaxIqLnNzbi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVlZGJhY2tSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNrEiMuc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRlOgEqElsK",
+            "EENhbGN1bGF0ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmlj",
+            "c1JlcXVlc3QaIy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNz",
+            "EmcKEkNhbGN1bGF0ZU1ldHJpY3NWMhIiLnNzbi5kYXRhc2VydmljZS52MS5N",
+            "ZXRyaWNzUmVxdWVzdBotLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja01l",
+            "dHJpY3NWMlJlc3BvbnNlEmMKBkRlbGV0ZRIhLnNzbi5kYXRhc2VydmljZS52",
+            "MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih6C0+ST",
+            "AhgiEy92MS9mZWVkYmFjazpkZWxldGU6ASoSWAoTQ2FsbHNQZXJNb250aE1l",
+            "dHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2USXgoZU3VnZ2VzdGlvbnNQZXJN",
+            "b250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRh",
+            "c2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2USgAEKG0NhbGxzUGVy",
+            "TW9udGhGaWx0ZXJlZE1ldHJpYxI2LnNzbi5kYXRhc2VydmljZS52MS5DYWxs",
+            "c1Blck1vbnRoRmlsdGVyZWRNZXRyaWNSZXF1ZXN0Gikuc3NuLmRhdGFzZXJ2",
+            "aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNwb25zZRKGAQohU3VnZ2VzdGlvbnNQ",
+            "ZXJNb250aEZpbHRlcmVkTWV0cmljEjYuc3NuLmRhdGFzZXJ2aWNlLnYxLkNh",
+            "bGxzUGVyTW9udGhGaWx0ZXJlZE1ldHJpY1JlcXVlc3QaKS5zc24uZGF0YXNl",
+            "cnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEo4BCiFDYWxjdWxhdGVB",
+            "bm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MSMy5zc24uZGF0YXNlcnZpY2UudjEu",
+            "QW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzUmVxdWVzdBo0LnNzbi5kYXRhc2Vy",
+            "dmljZS52MS5Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NSZXNwb25zZULdAQob",
+            "YWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBEYXRhc2VydmljZVByb3Rv",
+            "UAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9k",
+            "YXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NEWKoCElNzbi5EYXRhc2Vy",
+            "dmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeICHlNzblxEYXRhc2Vydmlj",
+            "ZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNlcnZpY2U6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -439,7 +440,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes", "MostRecentCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse), global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse.Parser, new[]{ "DocumentCount", "TrueValueCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetricsV2Response), global::Ssn.Dataservice.V1.FeedbackMetricsV2Response.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthMetricRequest), global::Ssn.Dataservice.V1.CallsPerMonthMetricRequest.Parser, new[]{ "Month", "Year" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest), global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest.Parser, new[]{ "Month", "Year" }, null, null, null, null)
           }));
     }
     #endregion
@@ -11059,16 +11060,16 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class CallsPerMonthMetricRequest : pb::IMessage<CallsPerMonthMetricRequest>
+  public sealed partial class CallsPerMonthFilteredMetricRequest : pb::IMessage<CallsPerMonthFilteredMetricRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CallsPerMonthMetricRequest> _parser = new pb::MessageParser<CallsPerMonthMetricRequest>(() => new CallsPerMonthMetricRequest());
+    private static readonly pb::MessageParser<CallsPerMonthFilteredMetricRequest> _parser = new pb::MessageParser<CallsPerMonthFilteredMetricRequest>(() => new CallsPerMonthFilteredMetricRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CallsPerMonthMetricRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<CallsPerMonthFilteredMetricRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11084,7 +11085,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CallsPerMonthMetricRequest() {
+    public CallsPerMonthFilteredMetricRequest() {
       OnConstruction();
     }
 
@@ -11092,7 +11093,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CallsPerMonthMetricRequest(CallsPerMonthMetricRequest other) : this() {
+    public CallsPerMonthFilteredMetricRequest(CallsPerMonthFilteredMetricRequest other) : this() {
       month_ = other.month_;
       year_ = other.year_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -11100,8 +11101,8 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CallsPerMonthMetricRequest Clone() {
-      return new CallsPerMonthMetricRequest(this);
+    public CallsPerMonthFilteredMetricRequest Clone() {
+      return new CallsPerMonthFilteredMetricRequest(this);
     }
 
     /// <summary>Field number for the "month" field.</summary>
@@ -11131,12 +11132,12 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CallsPerMonthMetricRequest);
+      return Equals(other as CallsPerMonthFilteredMetricRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CallsPerMonthMetricRequest other) {
+    public bool Equals(CallsPerMonthFilteredMetricRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -11222,7 +11223,7 @@ namespace Ssn.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CallsPerMonthMetricRequest other) {
+    public void MergeFrom(CallsPerMonthFilteredMetricRequest other) {
       if (other == null) {
         return;
       }

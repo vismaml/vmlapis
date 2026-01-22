@@ -62,12 +62,12 @@ class DataServiceStub(object):
                 _registered_method=True)
         self.CallsPerMonthFilteredMetric = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.SerializeToString,
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
                 _registered_method=True)
         self.SuggestionsPerMonthFilteredMetric = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
-                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.SerializeToString,
+                request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
                 _registered_method=True)
         self.CalculateAnnotationProcessMetrics = channel.unary_unary(
@@ -203,12 +203,12 @@ def add_DataServiceServicer_to_server(servicer, server):
             ),
             'CallsPerMonthFilteredMetric': grpc.unary_unary_rpc_method_handler(
                     servicer.CallsPerMonthFilteredMetric,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.FromString,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
             ),
             'SuggestionsPerMonthFilteredMetric': grpc.unary_unary_rpc_method_handler(
                     servicer.SuggestionsPerMonthFilteredMetric,
-                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.FromString,
+                    request_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.FromString,
                     response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
             ),
             'CalculateAnnotationProcessMetrics': grpc.unary_unary_rpc_method_handler(
@@ -485,7 +485,7 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
             options,
             channel_credentials,
@@ -512,7 +512,7 @@ class DataService(object):
             request,
             target,
             '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
-            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthMetricRequest.SerializeToString,
+            ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthFilteredMetricRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
             options,
             channel_credentials,
