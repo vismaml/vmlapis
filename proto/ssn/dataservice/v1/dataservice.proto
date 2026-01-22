@@ -35,8 +35,12 @@ service DataService {
       body: "*"
     };
   }
+
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
   rpc SuggestionsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
+  rpc CallsPerMonthFilteredMetric(CallsPerMonthMetricRequest) returns (CallsPerMonthResponse);
+  rpc SuggestionsPerMonthFilteredMetric(CallsPerMonthMetricRequest) returns (CallsPerMonthResponse);
+
   rpc CalculateAnnotationProcessMetrics(AnnotationProcessMetricsRequest) returns (AnnotationProcessMetricsResponse);
 }
 
@@ -341,4 +345,9 @@ message FeedbackMetricsV2Response {
   int32 feedback_count = 2;
   repeated Correctness overall_correctness = 3;
   repeated Correctness field_correctness = 4;
+}
+
+message CallsPerMonthMetricRequest {
+  int32 month = 1;
+  int32 year = 2;
 }

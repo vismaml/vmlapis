@@ -2662,6 +2662,61 @@ func (x *FeedbackMetricsV2Response) GetFieldCorrectness() []*Correctness {
 	return nil
 }
 
+type CallsPerMonthMetricRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Month int32 `protobuf:"varint,1,opt,name=month,proto3" json:"month,omitempty"`
+	Year  int32 `protobuf:"varint,2,opt,name=year,proto3" json:"year,omitempty"`
+}
+
+func (x *CallsPerMonthMetricRequest) Reset() {
+	*x = CallsPerMonthMetricRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_ssn_dataservice_v1_dataservice_proto_msgTypes[20]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CallsPerMonthMetricRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CallsPerMonthMetricRequest) ProtoMessage() {}
+
+func (x *CallsPerMonthMetricRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_ssn_dataservice_v1_dataservice_proto_msgTypes[20]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CallsPerMonthMetricRequest.ProtoReflect.Descriptor instead.
+func (*CallsPerMonthMetricRequest) Descriptor() ([]byte, []int) {
+	return file_ssn_dataservice_v1_dataservice_proto_rawDescGZIP(), []int{20}
+}
+
+func (x *CallsPerMonthMetricRequest) GetMonth() int32 {
+	if x != nil {
+		return x.Month
+	}
+	return 0
+}
+
+func (x *CallsPerMonthMetricRequest) GetYear() int32 {
+	if x != nil {
+		return x.Year
+	}
+	return 0
+}
+
 var File_ssn_dataservice_v1_dataservice_proto protoreflect.FileDescriptor
 
 var file_ssn_dataservice_v1_dataservice_proto_rawDesc = []byte{
@@ -3666,86 +3721,106 @@ var file_ssn_dataservice_v1_dataservice_proto_rawDesc = []byte{
 	0x0b, 0x32, 0x1f, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74, 0x6e, 0x65,
 	0x73, 0x73, 0x52, 0x10, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x43, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74,
-	0x6e, 0x65, 0x73, 0x73, 0x32, 0x8f, 0x08, 0x0a, 0x0b, 0x44, 0x61, 0x74, 0x61, 0x53, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x12, 0x67, 0x0a, 0x0e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f,
-	0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x29, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74,
-	0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x72, 0x65, 0x61,
-	0x74, 0x65, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x2a, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f, 0x63,
-	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x61, 0x0a,
-	0x0c, 0x52, 0x65, 0x61, 0x64, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x27, 0x2e,
-	0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
-	0x76, 0x31, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74,
-	0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x65, 0x61, 0x64,
-	0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x55, 0x0a, 0x0f, 0x50, 0x72, 0x65, 0x70, 0x61, 0x72, 0x65, 0x46, 0x65, 0x65, 0x64, 0x62,
-	0x61, 0x63, 0x6b, 0x12, 0x2a, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65,
-	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x72, 0x65, 0x70, 0x61, 0x72, 0x65,
-	0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
-	0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x12, 0x67, 0x0a, 0x08, 0x46, 0x65, 0x65, 0x64, 0x62,
-	0x61, 0x63, 0x6b, 0x12, 0x23, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65,
-	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63,
-	0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
-	0x22, 0x1e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x18, 0x3a, 0x01, 0x2a, 0x22, 0x13, 0x2f, 0x76, 0x31,
-	0x2f, 0x66, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x3a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65,
-	0x12, 0x5b, 0x0a, 0x10, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x74,
-	0x72, 0x69, 0x63, 0x73, 0x12, 0x22, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63,
-	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x23, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64,
-	0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x46, 0x65,
-	0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x12, 0x67, 0x0a,
-	0x12, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63,
-	0x73, 0x56, 0x32, 0x12, 0x22, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65,
-	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61,
-	0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x46, 0x65, 0x65,
-	0x64, 0x62, 0x61, 0x63, 0x6b, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x56, 0x32, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x63, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65,
-	0x12, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x1e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x18, 0x3a, 0x01, 0x2a, 0x22, 0x13, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x65, 0x65, 0x64,
-	0x62, 0x61, 0x63, 0x6b, 0x3a, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x12, 0x58, 0x0a, 0x13, 0x43,
-	0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x4d, 0x65, 0x74, 0x72,
-	0x69, 0x63, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x29, 0x2e, 0x73, 0x73, 0x6e,
-	0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e,
-	0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x5e, 0x0a, 0x19, 0x53, 0x75, 0x67, 0x67, 0x65, 0x73, 0x74,
-	0x69, 0x6f, 0x6e, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x4d, 0x65, 0x74, 0x72,
-	0x69, 0x63, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x29, 0x2e, 0x73, 0x73, 0x6e,
-	0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e,
-	0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x8e, 0x01, 0x0a, 0x21, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c,
-	0x61, 0x74, 0x65, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f,
-	0x63, 0x65, 0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x12, 0x33, 0x2e, 0x73, 0x73,
+	0x6e, 0x65, 0x73, 0x73, 0x22, 0x46, 0x0a, 0x1a, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72,
+	0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x05, 0x52, 0x05, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x12, 0x12, 0x0a, 0x04, 0x79, 0x65, 0x61, 0x72,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x79, 0x65, 0x61, 0x72, 0x32, 0x89, 0x0a, 0x0a,
+	0x0b, 0x44, 0x61, 0x74, 0x61, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x67, 0x0a, 0x0e,
+	0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x29,
+	0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x2e, 0x76, 0x31, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65,
+	0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x73, 0x73, 0x6e, 0x2e,
+	0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x61, 0x0a, 0x0c, 0x52, 0x65, 0x61, 0x64, 0x44, 0x6f, 0x63,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x27, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61,
+	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x44,
+	0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28,
+	0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x2e, 0x76, 0x31, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x55, 0x0a, 0x0f, 0x50, 0x72, 0x65, 0x70,
+	0x61, 0x72, 0x65, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x12, 0x2a, 0x2e, 0x73, 0x73,
 	0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31,
-	0x2e, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x63, 0x65,
-	0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x34, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0xdd, 0x01, 0x0a, 0x1b, 0x61, 0x69, 0x2e, 0x76, 0x69,
-	0x73, 0x6d, 0x61, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x42, 0x10, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x42, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x2d, 0x63, 0x6f, 0x6e, 0x6f, 0x6d, 0x69, 0x63,
-	0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f,
-	0x73, 0x73, 0x6e, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f,
-	0x76, 0x31, 0x3b, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0xa2, 0x02,
-	0x03, 0x53, 0x44, 0x58, 0xaa, 0x02, 0x12, 0x53, 0x73, 0x6e, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x73,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x56, 0x31, 0xca, 0x02, 0x12, 0x53, 0x73, 0x6e, 0x5c,
-	0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x5c, 0x56, 0x31, 0xe2, 0x02,
-	0x1e, 0x53, 0x73, 0x6e, 0x5c, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
-	0x5c, 0x56, 0x31, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea,
-	0x02, 0x14, 0x53, 0x73, 0x6e, 0x3a, 0x3a, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x3a, 0x3a, 0x56, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x2e, 0x50, 0x72, 0x65, 0x70, 0x61, 0x72, 0x65, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x12,
+	0x67, 0x0a, 0x08, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x12, 0x23, 0x2e, 0x73, 0x73,
+	0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31,
+	0x2e, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x1e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x18,
+	0x3a, 0x01, 0x2a, 0x22, 0x13, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63,
+	0x6b, 0x3a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x12, 0x5b, 0x0a, 0x10, 0x43, 0x61, 0x6c, 0x63,
+	0x75, 0x6c, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x12, 0x22, 0x2e, 0x73,
+	0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x31, 0x2e, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x23, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x4d, 0x65,
+	0x74, 0x72, 0x69, 0x63, 0x73, 0x12, 0x67, 0x0a, 0x12, 0x43, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61,
+	0x74, 0x65, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x56, 0x32, 0x12, 0x22, 0x2e, 0x73, 0x73,
+	0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31,
+	0x2e, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x2d, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x2e, 0x76, 0x31, 0x2e, 0x46, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x4d, 0x65, 0x74,
+	0x72, 0x69, 0x63, 0x73, 0x56, 0x32, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x63,
+	0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x12, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64,
+	0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x44, 0x65,
+	0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f,
+	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d,
+	0x70, 0x74, 0x79, 0x22, 0x1e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x18, 0x3a, 0x01, 0x2a, 0x22, 0x13,
+	0x2f, 0x76, 0x31, 0x2f, 0x66, 0x65, 0x65, 0x64, 0x62, 0x61, 0x63, 0x6b, 0x3a, 0x64, 0x65, 0x6c,
+	0x65, 0x74, 0x65, 0x12, 0x58, 0x0a, 0x13, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d,
+	0x6f, 0x6e, 0x74, 0x68, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f,
+	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70,
+	0x74, 0x79, 0x1a, 0x29, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72,
+	0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x5e, 0x0a,
+	0x19, 0x53, 0x75, 0x67, 0x67, 0x65, 0x73, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x50, 0x65, 0x72, 0x4d,
+	0x6f, 0x6e, 0x74, 0x68, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f,
+	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70,
+	0x74, 0x79, 0x1a, 0x29, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72,
+	0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x78, 0x0a,
+	0x1b, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x46, 0x69,
+	0x6c, 0x74, 0x65, 0x72, 0x65, 0x64, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x12, 0x2e, 0x2e, 0x73,
+	0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x4d,
+	0x65, 0x74, 0x72, 0x69, 0x63, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x73,
+	0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x7e, 0x0a, 0x21, 0x53, 0x75, 0x67, 0x67, 0x65,
+	0x73, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x46, 0x69,
+	0x6c, 0x74, 0x65, 0x72, 0x65, 0x64, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x12, 0x2e, 0x2e, 0x73,
+	0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x4d,
+	0x65, 0x74, 0x72, 0x69, 0x63, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x73,
+	0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76,
+	0x31, 0x2e, 0x43, 0x61, 0x6c, 0x6c, 0x73, 0x50, 0x65, 0x72, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x8e, 0x01, 0x0a, 0x21, 0x43, 0x61, 0x6c, 0x63,
+	0x75, 0x6c, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50,
+	0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x12, 0x33, 0x2e,
+	0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
+	0x76, 0x31, 0x2e, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f,
+	0x63, 0x65, 0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x34, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e, 0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0xdd, 0x01, 0x0a, 0x1b, 0x61, 0x69, 0x2e,
+	0x76, 0x69, 0x73, 0x6d, 0x61, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x42, 0x10, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x42, 0x67, 0x69,
+	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x2d, 0x63, 0x6f, 0x6e, 0x6f, 0x6d,
+	0x69, 0x63, 0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67,
+	0x6f, 0x2f, 0x73, 0x73, 0x6e, 0x2f, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x2f, 0x76, 0x31, 0x3b, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0xa2, 0x02, 0x03, 0x53, 0x44, 0x58, 0xaa, 0x02, 0x12, 0x53, 0x73, 0x6e, 0x2e, 0x44, 0x61, 0x74,
+	0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x56, 0x31, 0xca, 0x02, 0x12, 0x53, 0x73,
+	0x6e, 0x5c, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x5c, 0x56, 0x31,
+	0xe2, 0x02, 0x1e, 0x53, 0x73, 0x6e, 0x5c, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x5c, 0x56, 0x31, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74,
+	0x61, 0xea, 0x02, 0x14, 0x53, 0x73, 0x6e, 0x3a, 0x3a, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x3a, 0x3a, 0x56, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3760,7 +3835,7 @@ func file_ssn_dataservice_v1_dataservice_proto_rawDescGZIP() []byte {
 	return file_ssn_dataservice_v1_dataservice_proto_rawDescData
 }
 
-var file_ssn_dataservice_v1_dataservice_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
+var file_ssn_dataservice_v1_dataservice_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
 var file_ssn_dataservice_v1_dataservice_proto_goTypes = []interface{}{
 	(*Document)(nil),                         // 0: ssn.dataservice.v1.Document
 	(*TrueValues)(nil),                       // 1: ssn.dataservice.v1.TrueValues
@@ -3782,205 +3857,206 @@ var file_ssn_dataservice_v1_dataservice_proto_goTypes = []interface{}{
 	(*AnnotationProcessMetricsRequest)(nil),  // 17: ssn.dataservice.v1.AnnotationProcessMetricsRequest
 	(*AnnotationProcessMetricsResponse)(nil), // 18: ssn.dataservice.v1.AnnotationProcessMetricsResponse
 	(*FeedbackMetricsV2Response)(nil),        // 19: ssn.dataservice.v1.FeedbackMetricsV2Response
-	(*_type.TextAnnotation)(nil),             // 20: ssn.type.TextAnnotation
-	(*wrapperspb.DoubleValue)(nil),           // 21: google.protobuf.DoubleValue
-	(*date.Date)(nil),                        // 22: google.type.Date
-	(*wrapperspb.StringValue)(nil),           // 23: google.protobuf.StringValue
-	(*_type.PurchaseLineCandidate)(nil),      // 24: ssn.type.PurchaseLineCandidate
-	(*_type.AnswerCandidate)(nil),            // 25: ssn.type.AnswerCandidate
-	(*_type.VatDistributionCandidate)(nil),   // 26: ssn.type.VatDistributionCandidate
-	(*wrapperspb.FloatValue)(nil),            // 27: google.protobuf.FloatValue
-	(*_type.ModelSpec)(nil),                  // 28: ssn.type.ModelSpec
-	(_type.Tier)(0),                          // 29: ssn.type.Tier
-	(*emptypb.Empty)(nil),                    // 30: google.protobuf.Empty
+	(*CallsPerMonthMetricRequest)(nil),       // 20: ssn.dataservice.v1.CallsPerMonthMetricRequest
+	(*_type.TextAnnotation)(nil),             // 21: ssn.type.TextAnnotation
+	(*wrapperspb.DoubleValue)(nil),           // 22: google.protobuf.DoubleValue
+	(*date.Date)(nil),                        // 23: google.type.Date
+	(*wrapperspb.StringValue)(nil),           // 24: google.protobuf.StringValue
+	(*_type.PurchaseLineCandidate)(nil),      // 25: ssn.type.PurchaseLineCandidate
+	(*_type.AnswerCandidate)(nil),            // 26: ssn.type.AnswerCandidate
+	(*_type.VatDistributionCandidate)(nil),   // 27: ssn.type.VatDistributionCandidate
+	(*wrapperspb.FloatValue)(nil),            // 28: google.protobuf.FloatValue
+	(*_type.ModelSpec)(nil),                  // 29: ssn.type.ModelSpec
+	(_type.Tier)(0),                          // 30: ssn.type.Tier
+	(*emptypb.Empty)(nil),                    // 31: google.protobuf.Empty
 }
 var file_ssn_dataservice_v1_dataservice_proto_depIdxs = []int32{
-	20,  // 0: ssn.dataservice.v1.Document.ta:type_name -> ssn.type.TextAnnotation
+	21,  // 0: ssn.dataservice.v1.Document.ta:type_name -> ssn.type.TextAnnotation
 	1,   // 1: ssn.dataservice.v1.Document.true_values:type_name -> ssn.dataservice.v1.TrueValues
 	2,   // 2: ssn.dataservice.v1.Document.prediction_values:type_name -> ssn.dataservice.v1.PredictionValues
 	3,   // 3: ssn.dataservice.v1.Document.prediction_confidences:type_name -> ssn.dataservice.v1.PredictionConfidences
 	4,   // 4: ssn.dataservice.v1.Document.prediction_metadata:type_name -> ssn.dataservice.v1.PredictionMetadata
-	21,  // 5: ssn.dataservice.v1.TrueValues.total_incl_vat:type_name -> google.protobuf.DoubleValue
-	21,  // 6: ssn.dataservice.v1.TrueValues.total_vat:type_name -> google.protobuf.DoubleValue
-	21,  // 7: ssn.dataservice.v1.TrueValues.total_excl_vat:type_name -> google.protobuf.DoubleValue
-	22,  // 8: ssn.dataservice.v1.TrueValues.order_date:type_name -> google.type.Date
-	22,  // 9: ssn.dataservice.v1.TrueValues.payment_due_date:type_name -> google.type.Date
-	23,  // 10: ssn.dataservice.v1.TrueValues.document_type:type_name -> google.protobuf.StringValue
-	23,  // 11: ssn.dataservice.v1.TrueValues.currency:type_name -> google.protobuf.StringValue
-	23,  // 12: ssn.dataservice.v1.TrueValues.credit_card_last_four:type_name -> google.protobuf.StringValue
-	23,  // 13: ssn.dataservice.v1.TrueValues.payment_method:type_name -> google.protobuf.StringValue
-	23,  // 14: ssn.dataservice.v1.TrueValues.ocr_line_dk_type:type_name -> google.protobuf.StringValue
-	23,  // 15: ssn.dataservice.v1.TrueValues.ocr_line_dk_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 16: ssn.dataservice.v1.TrueValues.ocr_line_dk_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 17: ssn.dataservice.v1.TrueValues.ocr_line_se_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 18: ssn.dataservice.v1.TrueValues.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 19: ssn.dataservice.v1.TrueValues.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 20: ssn.dataservice.v1.TrueValues.ocr_line_no_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 21: ssn.dataservice.v1.TrueValues.ocr_line_fi_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 22: ssn.dataservice.v1.TrueValues.ocr_line_nl_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 23: ssn.dataservice.v1.TrueValues.supplier_corporate_id:type_name -> google.protobuf.StringValue
-	23,  // 24: ssn.dataservice.v1.TrueValues.supplier_country_code:type_name -> google.protobuf.StringValue
-	23,  // 25: ssn.dataservice.v1.TrueValues.invoice_number:type_name -> google.protobuf.StringValue
-	23,  // 26: ssn.dataservice.v1.TrueValues.iban:type_name -> google.protobuf.StringValue
-	23,  // 27: ssn.dataservice.v1.TrueValues.order_reference:type_name -> google.protobuf.StringValue
-	23,  // 28: ssn.dataservice.v1.TrueValues.bank_account_number:type_name -> google.protobuf.StringValue
-	23,  // 29: ssn.dataservice.v1.TrueValues.bank_registration_number:type_name -> google.protobuf.StringValue
-	23,  // 30: ssn.dataservice.v1.TrueValues.supplier_name:type_name -> google.protobuf.StringValue
-	23,  // 31: ssn.dataservice.v1.TrueValues.bic:type_name -> google.protobuf.StringValue
-	23,  // 32: ssn.dataservice.v1.TrueValues.document_number:type_name -> google.protobuf.StringValue
-	22,  // 33: ssn.dataservice.v1.TrueValues.document_date:type_name -> google.type.Date
-	23,  // 34: ssn.dataservice.v1.TrueValues.order_number:type_name -> google.protobuf.StringValue
-	23,  // 35: ssn.dataservice.v1.TrueValues.supplier_vat_number:type_name -> google.protobuf.StringValue
-	23,  // 36: ssn.dataservice.v1.TrueValues.supplier_organisation_number:type_name -> google.protobuf.StringValue
-	23,  // 37: ssn.dataservice.v1.TrueValues.supplier_address:type_name -> google.protobuf.StringValue
-	23,  // 38: ssn.dataservice.v1.TrueValues.customer_number:type_name -> google.protobuf.StringValue
-	23,  // 39: ssn.dataservice.v1.TrueValues.receiver_order_number:type_name -> google.protobuf.StringValue
-	23,  // 40: ssn.dataservice.v1.TrueValues.ocr_line_be_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 41: ssn.dataservice.v1.TrueValues.receiver_address:type_name -> google.protobuf.StringValue
-	23,  // 42: ssn.dataservice.v1.TrueValues.receiver_country_code:type_name -> google.protobuf.StringValue
-	23,  // 43: ssn.dataservice.v1.TrueValues.receiver_name:type_name -> google.protobuf.StringValue
-	23,  // 44: ssn.dataservice.v1.TrueValues.receiver_vat_number:type_name -> google.protobuf.StringValue
-	24,  // 45: ssn.dataservice.v1.TrueValues.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
-	25,  // 46: ssn.dataservice.v1.TrueValues.answers:type_name -> ssn.type.AnswerCandidate
-	26,  // 47: ssn.dataservice.v1.TrueValues.vat_distribution:type_name -> ssn.type.VatDistributionCandidate
-	22,  // 48: ssn.dataservice.v1.TrueValues.check_in_date:type_name -> google.type.Date
-	22,  // 49: ssn.dataservice.v1.TrueValues.check_out_date:type_name -> google.type.Date
-	21,  // 50: ssn.dataservice.v1.PredictionValues.total_incl_vat:type_name -> google.protobuf.DoubleValue
-	21,  // 51: ssn.dataservice.v1.PredictionValues.total_vat:type_name -> google.protobuf.DoubleValue
-	21,  // 52: ssn.dataservice.v1.PredictionValues.total_excl_vat:type_name -> google.protobuf.DoubleValue
-	22,  // 53: ssn.dataservice.v1.PredictionValues.order_date:type_name -> google.type.Date
-	22,  // 54: ssn.dataservice.v1.PredictionValues.payment_due_date:type_name -> google.type.Date
-	23,  // 55: ssn.dataservice.v1.PredictionValues.document_type:type_name -> google.protobuf.StringValue
-	23,  // 56: ssn.dataservice.v1.PredictionValues.currency:type_name -> google.protobuf.StringValue
-	23,  // 57: ssn.dataservice.v1.PredictionValues.credit_card_last_four:type_name -> google.protobuf.StringValue
-	23,  // 58: ssn.dataservice.v1.PredictionValues.payment_method:type_name -> google.protobuf.StringValue
-	23,  // 59: ssn.dataservice.v1.PredictionValues.ocr_line_dk_type:type_name -> google.protobuf.StringValue
-	23,  // 60: ssn.dataservice.v1.PredictionValues.ocr_line_dk_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 61: ssn.dataservice.v1.PredictionValues.ocr_line_dk_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 62: ssn.dataservice.v1.PredictionValues.ocr_line_se_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 63: ssn.dataservice.v1.PredictionValues.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 64: ssn.dataservice.v1.PredictionValues.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.StringValue
-	23,  // 65: ssn.dataservice.v1.PredictionValues.ocr_line_no_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 66: ssn.dataservice.v1.PredictionValues.ocr_line_fi_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 67: ssn.dataservice.v1.PredictionValues.ocr_line_nl_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 68: ssn.dataservice.v1.PredictionValues.supplier_corporate_id:type_name -> google.protobuf.StringValue
-	23,  // 69: ssn.dataservice.v1.PredictionValues.supplier_country_code:type_name -> google.protobuf.StringValue
-	23,  // 70: ssn.dataservice.v1.PredictionValues.invoice_number:type_name -> google.protobuf.StringValue
-	23,  // 71: ssn.dataservice.v1.PredictionValues.iban:type_name -> google.protobuf.StringValue
-	23,  // 72: ssn.dataservice.v1.PredictionValues.order_reference:type_name -> google.protobuf.StringValue
-	23,  // 73: ssn.dataservice.v1.PredictionValues.bank_account_number:type_name -> google.protobuf.StringValue
-	23,  // 74: ssn.dataservice.v1.PredictionValues.bank_registration_number:type_name -> google.protobuf.StringValue
-	23,  // 75: ssn.dataservice.v1.PredictionValues.supplier_name:type_name -> google.protobuf.StringValue
-	23,  // 76: ssn.dataservice.v1.PredictionValues.bic:type_name -> google.protobuf.StringValue
-	23,  // 77: ssn.dataservice.v1.PredictionValues.document_number:type_name -> google.protobuf.StringValue
-	22,  // 78: ssn.dataservice.v1.PredictionValues.document_date:type_name -> google.type.Date
-	23,  // 79: ssn.dataservice.v1.PredictionValues.order_number:type_name -> google.protobuf.StringValue
-	23,  // 80: ssn.dataservice.v1.PredictionValues.supplier_vat_number:type_name -> google.protobuf.StringValue
-	23,  // 81: ssn.dataservice.v1.PredictionValues.supplier_organisation_number:type_name -> google.protobuf.StringValue
-	23,  // 82: ssn.dataservice.v1.PredictionValues.supplier_address:type_name -> google.protobuf.StringValue
-	23,  // 83: ssn.dataservice.v1.PredictionValues.customer_number:type_name -> google.protobuf.StringValue
-	23,  // 84: ssn.dataservice.v1.PredictionValues.receiver_order_number:type_name -> google.protobuf.StringValue
-	23,  // 85: ssn.dataservice.v1.PredictionValues.ocr_line_be_payment_id:type_name -> google.protobuf.StringValue
-	23,  // 86: ssn.dataservice.v1.PredictionValues.receiver_address:type_name -> google.protobuf.StringValue
-	23,  // 87: ssn.dataservice.v1.PredictionValues.receiver_country_code:type_name -> google.protobuf.StringValue
-	23,  // 88: ssn.dataservice.v1.PredictionValues.receiver_name:type_name -> google.protobuf.StringValue
-	23,  // 89: ssn.dataservice.v1.PredictionValues.receiver_vat_number:type_name -> google.protobuf.StringValue
-	24,  // 90: ssn.dataservice.v1.PredictionValues.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
-	25,  // 91: ssn.dataservice.v1.PredictionValues.answers:type_name -> ssn.type.AnswerCandidate
-	26,  // 92: ssn.dataservice.v1.PredictionValues.vat_distribution:type_name -> ssn.type.VatDistributionCandidate
-	22,  // 93: ssn.dataservice.v1.PredictionValues.check_in_date:type_name -> google.type.Date
-	22,  // 94: ssn.dataservice.v1.PredictionValues.check_out_date:type_name -> google.type.Date
-	27,  // 95: ssn.dataservice.v1.PredictionConfidences.total_incl_vat:type_name -> google.protobuf.FloatValue
-	27,  // 96: ssn.dataservice.v1.PredictionConfidences.total_vat:type_name -> google.protobuf.FloatValue
-	27,  // 97: ssn.dataservice.v1.PredictionConfidences.total_excl_vat:type_name -> google.protobuf.FloatValue
-	27,  // 98: ssn.dataservice.v1.PredictionConfidences.order_date:type_name -> google.protobuf.FloatValue
-	27,  // 99: ssn.dataservice.v1.PredictionConfidences.payment_due_date:type_name -> google.protobuf.FloatValue
-	27,  // 100: ssn.dataservice.v1.PredictionConfidences.document_type:type_name -> google.protobuf.FloatValue
-	27,  // 101: ssn.dataservice.v1.PredictionConfidences.currency:type_name -> google.protobuf.FloatValue
-	27,  // 102: ssn.dataservice.v1.PredictionConfidences.credit_card_last_four:type_name -> google.protobuf.FloatValue
-	27,  // 103: ssn.dataservice.v1.PredictionConfidences.payment_method:type_name -> google.protobuf.FloatValue
-	27,  // 104: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_type:type_name -> google.protobuf.FloatValue
-	27,  // 105: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 106: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_creditor_id:type_name -> google.protobuf.FloatValue
-	27,  // 107: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 108: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.FloatValue
-	27,  // 109: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.FloatValue
-	27,  // 110: ssn.dataservice.v1.PredictionConfidences.ocr_line_no_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 111: ssn.dataservice.v1.PredictionConfidences.ocr_line_fi_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 112: ssn.dataservice.v1.PredictionConfidences.ocr_line_nl_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 113: ssn.dataservice.v1.PredictionConfidences.supplier_corporate_id:type_name -> google.protobuf.FloatValue
-	27,  // 114: ssn.dataservice.v1.PredictionConfidences.supplier_country_code:type_name -> google.protobuf.FloatValue
-	27,  // 115: ssn.dataservice.v1.PredictionConfidences.invoice_number:type_name -> google.protobuf.FloatValue
-	27,  // 116: ssn.dataservice.v1.PredictionConfidences.iban:type_name -> google.protobuf.FloatValue
-	27,  // 117: ssn.dataservice.v1.PredictionConfidences.order_reference:type_name -> google.protobuf.FloatValue
-	27,  // 118: ssn.dataservice.v1.PredictionConfidences.bank_account_number:type_name -> google.protobuf.FloatValue
-	27,  // 119: ssn.dataservice.v1.PredictionConfidences.bank_registration_number:type_name -> google.protobuf.FloatValue
-	27,  // 120: ssn.dataservice.v1.PredictionConfidences.supplier_name:type_name -> google.protobuf.FloatValue
-	27,  // 121: ssn.dataservice.v1.PredictionConfidences.bic:type_name -> google.protobuf.FloatValue
-	27,  // 122: ssn.dataservice.v1.PredictionConfidences.document_number:type_name -> google.protobuf.FloatValue
-	27,  // 123: ssn.dataservice.v1.PredictionConfidences.document_date:type_name -> google.protobuf.FloatValue
-	27,  // 124: ssn.dataservice.v1.PredictionConfidences.order_number:type_name -> google.protobuf.FloatValue
-	27,  // 125: ssn.dataservice.v1.PredictionConfidences.supplier_vat_number:type_name -> google.protobuf.FloatValue
-	27,  // 126: ssn.dataservice.v1.PredictionConfidences.supplier_organisation_number:type_name -> google.protobuf.FloatValue
-	27,  // 127: ssn.dataservice.v1.PredictionConfidences.supplier_address:type_name -> google.protobuf.FloatValue
-	27,  // 128: ssn.dataservice.v1.PredictionConfidences.customer_number:type_name -> google.protobuf.FloatValue
-	27,  // 129: ssn.dataservice.v1.PredictionConfidences.receiver_order_number:type_name -> google.protobuf.FloatValue
-	27,  // 130: ssn.dataservice.v1.PredictionConfidences.ocr_line_be_payment_id:type_name -> google.protobuf.FloatValue
-	27,  // 131: ssn.dataservice.v1.PredictionConfidences.receiver_address:type_name -> google.protobuf.FloatValue
-	27,  // 132: ssn.dataservice.v1.PredictionConfidences.receiver_country_code:type_name -> google.protobuf.FloatValue
-	27,  // 133: ssn.dataservice.v1.PredictionConfidences.receiver_name:type_name -> google.protobuf.FloatValue
-	27,  // 134: ssn.dataservice.v1.PredictionConfidences.receiver_vat_number:type_name -> google.protobuf.FloatValue
-	27,  // 135: ssn.dataservice.v1.PredictionConfidences.check_in_date:type_name -> google.protobuf.FloatValue
-	27,  // 136: ssn.dataservice.v1.PredictionConfidences.check_out_date:type_name -> google.protobuf.FloatValue
-	28,  // 137: ssn.dataservice.v1.PredictionMetadata.total_incl_vat:type_name -> ssn.type.ModelSpec
-	28,  // 138: ssn.dataservice.v1.PredictionMetadata.total_vat:type_name -> ssn.type.ModelSpec
-	28,  // 139: ssn.dataservice.v1.PredictionMetadata.total_excl_vat:type_name -> ssn.type.ModelSpec
-	28,  // 140: ssn.dataservice.v1.PredictionMetadata.order_date:type_name -> ssn.type.ModelSpec
-	28,  // 141: ssn.dataservice.v1.PredictionMetadata.payment_due_date:type_name -> ssn.type.ModelSpec
-	28,  // 142: ssn.dataservice.v1.PredictionMetadata.document_type:type_name -> ssn.type.ModelSpec
-	28,  // 143: ssn.dataservice.v1.PredictionMetadata.currency:type_name -> ssn.type.ModelSpec
-	28,  // 144: ssn.dataservice.v1.PredictionMetadata.credit_card_last_four:type_name -> ssn.type.ModelSpec
-	28,  // 145: ssn.dataservice.v1.PredictionMetadata.payment_method:type_name -> ssn.type.ModelSpec
-	28,  // 146: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_type:type_name -> ssn.type.ModelSpec
-	28,  // 147: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 148: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_creditor_id:type_name -> ssn.type.ModelSpec
-	28,  // 149: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 150: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.ModelSpec
-	28,  // 151: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.ModelSpec
-	28,  // 152: ssn.dataservice.v1.PredictionMetadata.ocr_line_no_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 153: ssn.dataservice.v1.PredictionMetadata.ocr_line_fi_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 154: ssn.dataservice.v1.PredictionMetadata.ocr_line_nl_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 155: ssn.dataservice.v1.PredictionMetadata.supplier_corporate_id:type_name -> ssn.type.ModelSpec
-	28,  // 156: ssn.dataservice.v1.PredictionMetadata.supplier_country_code:type_name -> ssn.type.ModelSpec
-	28,  // 157: ssn.dataservice.v1.PredictionMetadata.invoice_number:type_name -> ssn.type.ModelSpec
-	28,  // 158: ssn.dataservice.v1.PredictionMetadata.iban:type_name -> ssn.type.ModelSpec
-	28,  // 159: ssn.dataservice.v1.PredictionMetadata.order_reference:type_name -> ssn.type.ModelSpec
-	28,  // 160: ssn.dataservice.v1.PredictionMetadata.bank_account_number:type_name -> ssn.type.ModelSpec
-	28,  // 161: ssn.dataservice.v1.PredictionMetadata.bank_registration_number:type_name -> ssn.type.ModelSpec
-	28,  // 162: ssn.dataservice.v1.PredictionMetadata.supplier_name:type_name -> ssn.type.ModelSpec
-	28,  // 163: ssn.dataservice.v1.PredictionMetadata.bic:type_name -> ssn.type.ModelSpec
-	28,  // 164: ssn.dataservice.v1.PredictionMetadata.document_number:type_name -> ssn.type.ModelSpec
-	28,  // 165: ssn.dataservice.v1.PredictionMetadata.document_date:type_name -> ssn.type.ModelSpec
-	28,  // 166: ssn.dataservice.v1.PredictionMetadata.order_number:type_name -> ssn.type.ModelSpec
-	28,  // 167: ssn.dataservice.v1.PredictionMetadata.supplier_vat_number:type_name -> ssn.type.ModelSpec
-	28,  // 168: ssn.dataservice.v1.PredictionMetadata.supplier_organisation_number:type_name -> ssn.type.ModelSpec
-	28,  // 169: ssn.dataservice.v1.PredictionMetadata.supplier_address:type_name -> ssn.type.ModelSpec
-	28,  // 170: ssn.dataservice.v1.PredictionMetadata.customer_number:type_name -> ssn.type.ModelSpec
-	28,  // 171: ssn.dataservice.v1.PredictionMetadata.receiver_order_number:type_name -> ssn.type.ModelSpec
-	28,  // 172: ssn.dataservice.v1.PredictionMetadata.ocr_line_be_payment_id:type_name -> ssn.type.ModelSpec
-	28,  // 173: ssn.dataservice.v1.PredictionMetadata.receiver_address:type_name -> ssn.type.ModelSpec
-	28,  // 174: ssn.dataservice.v1.PredictionMetadata.receiver_country_code:type_name -> ssn.type.ModelSpec
-	28,  // 175: ssn.dataservice.v1.PredictionMetadata.receiver_name:type_name -> ssn.type.ModelSpec
-	28,  // 176: ssn.dataservice.v1.PredictionMetadata.receiver_vat_number:type_name -> ssn.type.ModelSpec
-	28,  // 177: ssn.dataservice.v1.PredictionMetadata.check_in_date:type_name -> ssn.type.ModelSpec
-	28,  // 178: ssn.dataservice.v1.PredictionMetadata.check_out_date:type_name -> ssn.type.ModelSpec
+	22,  // 5: ssn.dataservice.v1.TrueValues.total_incl_vat:type_name -> google.protobuf.DoubleValue
+	22,  // 6: ssn.dataservice.v1.TrueValues.total_vat:type_name -> google.protobuf.DoubleValue
+	22,  // 7: ssn.dataservice.v1.TrueValues.total_excl_vat:type_name -> google.protobuf.DoubleValue
+	23,  // 8: ssn.dataservice.v1.TrueValues.order_date:type_name -> google.type.Date
+	23,  // 9: ssn.dataservice.v1.TrueValues.payment_due_date:type_name -> google.type.Date
+	24,  // 10: ssn.dataservice.v1.TrueValues.document_type:type_name -> google.protobuf.StringValue
+	24,  // 11: ssn.dataservice.v1.TrueValues.currency:type_name -> google.protobuf.StringValue
+	24,  // 12: ssn.dataservice.v1.TrueValues.credit_card_last_four:type_name -> google.protobuf.StringValue
+	24,  // 13: ssn.dataservice.v1.TrueValues.payment_method:type_name -> google.protobuf.StringValue
+	24,  // 14: ssn.dataservice.v1.TrueValues.ocr_line_dk_type:type_name -> google.protobuf.StringValue
+	24,  // 15: ssn.dataservice.v1.TrueValues.ocr_line_dk_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 16: ssn.dataservice.v1.TrueValues.ocr_line_dk_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 17: ssn.dataservice.v1.TrueValues.ocr_line_se_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 18: ssn.dataservice.v1.TrueValues.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 19: ssn.dataservice.v1.TrueValues.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 20: ssn.dataservice.v1.TrueValues.ocr_line_no_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 21: ssn.dataservice.v1.TrueValues.ocr_line_fi_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 22: ssn.dataservice.v1.TrueValues.ocr_line_nl_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 23: ssn.dataservice.v1.TrueValues.supplier_corporate_id:type_name -> google.protobuf.StringValue
+	24,  // 24: ssn.dataservice.v1.TrueValues.supplier_country_code:type_name -> google.protobuf.StringValue
+	24,  // 25: ssn.dataservice.v1.TrueValues.invoice_number:type_name -> google.protobuf.StringValue
+	24,  // 26: ssn.dataservice.v1.TrueValues.iban:type_name -> google.protobuf.StringValue
+	24,  // 27: ssn.dataservice.v1.TrueValues.order_reference:type_name -> google.protobuf.StringValue
+	24,  // 28: ssn.dataservice.v1.TrueValues.bank_account_number:type_name -> google.protobuf.StringValue
+	24,  // 29: ssn.dataservice.v1.TrueValues.bank_registration_number:type_name -> google.protobuf.StringValue
+	24,  // 30: ssn.dataservice.v1.TrueValues.supplier_name:type_name -> google.protobuf.StringValue
+	24,  // 31: ssn.dataservice.v1.TrueValues.bic:type_name -> google.protobuf.StringValue
+	24,  // 32: ssn.dataservice.v1.TrueValues.document_number:type_name -> google.protobuf.StringValue
+	23,  // 33: ssn.dataservice.v1.TrueValues.document_date:type_name -> google.type.Date
+	24,  // 34: ssn.dataservice.v1.TrueValues.order_number:type_name -> google.protobuf.StringValue
+	24,  // 35: ssn.dataservice.v1.TrueValues.supplier_vat_number:type_name -> google.protobuf.StringValue
+	24,  // 36: ssn.dataservice.v1.TrueValues.supplier_organisation_number:type_name -> google.protobuf.StringValue
+	24,  // 37: ssn.dataservice.v1.TrueValues.supplier_address:type_name -> google.protobuf.StringValue
+	24,  // 38: ssn.dataservice.v1.TrueValues.customer_number:type_name -> google.protobuf.StringValue
+	24,  // 39: ssn.dataservice.v1.TrueValues.receiver_order_number:type_name -> google.protobuf.StringValue
+	24,  // 40: ssn.dataservice.v1.TrueValues.ocr_line_be_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 41: ssn.dataservice.v1.TrueValues.receiver_address:type_name -> google.protobuf.StringValue
+	24,  // 42: ssn.dataservice.v1.TrueValues.receiver_country_code:type_name -> google.protobuf.StringValue
+	24,  // 43: ssn.dataservice.v1.TrueValues.receiver_name:type_name -> google.protobuf.StringValue
+	24,  // 44: ssn.dataservice.v1.TrueValues.receiver_vat_number:type_name -> google.protobuf.StringValue
+	25,  // 45: ssn.dataservice.v1.TrueValues.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
+	26,  // 46: ssn.dataservice.v1.TrueValues.answers:type_name -> ssn.type.AnswerCandidate
+	27,  // 47: ssn.dataservice.v1.TrueValues.vat_distribution:type_name -> ssn.type.VatDistributionCandidate
+	23,  // 48: ssn.dataservice.v1.TrueValues.check_in_date:type_name -> google.type.Date
+	23,  // 49: ssn.dataservice.v1.TrueValues.check_out_date:type_name -> google.type.Date
+	22,  // 50: ssn.dataservice.v1.PredictionValues.total_incl_vat:type_name -> google.protobuf.DoubleValue
+	22,  // 51: ssn.dataservice.v1.PredictionValues.total_vat:type_name -> google.protobuf.DoubleValue
+	22,  // 52: ssn.dataservice.v1.PredictionValues.total_excl_vat:type_name -> google.protobuf.DoubleValue
+	23,  // 53: ssn.dataservice.v1.PredictionValues.order_date:type_name -> google.type.Date
+	23,  // 54: ssn.dataservice.v1.PredictionValues.payment_due_date:type_name -> google.type.Date
+	24,  // 55: ssn.dataservice.v1.PredictionValues.document_type:type_name -> google.protobuf.StringValue
+	24,  // 56: ssn.dataservice.v1.PredictionValues.currency:type_name -> google.protobuf.StringValue
+	24,  // 57: ssn.dataservice.v1.PredictionValues.credit_card_last_four:type_name -> google.protobuf.StringValue
+	24,  // 58: ssn.dataservice.v1.PredictionValues.payment_method:type_name -> google.protobuf.StringValue
+	24,  // 59: ssn.dataservice.v1.PredictionValues.ocr_line_dk_type:type_name -> google.protobuf.StringValue
+	24,  // 60: ssn.dataservice.v1.PredictionValues.ocr_line_dk_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 61: ssn.dataservice.v1.PredictionValues.ocr_line_dk_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 62: ssn.dataservice.v1.PredictionValues.ocr_line_se_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 63: ssn.dataservice.v1.PredictionValues.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 64: ssn.dataservice.v1.PredictionValues.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.StringValue
+	24,  // 65: ssn.dataservice.v1.PredictionValues.ocr_line_no_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 66: ssn.dataservice.v1.PredictionValues.ocr_line_fi_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 67: ssn.dataservice.v1.PredictionValues.ocr_line_nl_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 68: ssn.dataservice.v1.PredictionValues.supplier_corporate_id:type_name -> google.protobuf.StringValue
+	24,  // 69: ssn.dataservice.v1.PredictionValues.supplier_country_code:type_name -> google.protobuf.StringValue
+	24,  // 70: ssn.dataservice.v1.PredictionValues.invoice_number:type_name -> google.protobuf.StringValue
+	24,  // 71: ssn.dataservice.v1.PredictionValues.iban:type_name -> google.protobuf.StringValue
+	24,  // 72: ssn.dataservice.v1.PredictionValues.order_reference:type_name -> google.protobuf.StringValue
+	24,  // 73: ssn.dataservice.v1.PredictionValues.bank_account_number:type_name -> google.protobuf.StringValue
+	24,  // 74: ssn.dataservice.v1.PredictionValues.bank_registration_number:type_name -> google.protobuf.StringValue
+	24,  // 75: ssn.dataservice.v1.PredictionValues.supplier_name:type_name -> google.protobuf.StringValue
+	24,  // 76: ssn.dataservice.v1.PredictionValues.bic:type_name -> google.protobuf.StringValue
+	24,  // 77: ssn.dataservice.v1.PredictionValues.document_number:type_name -> google.protobuf.StringValue
+	23,  // 78: ssn.dataservice.v1.PredictionValues.document_date:type_name -> google.type.Date
+	24,  // 79: ssn.dataservice.v1.PredictionValues.order_number:type_name -> google.protobuf.StringValue
+	24,  // 80: ssn.dataservice.v1.PredictionValues.supplier_vat_number:type_name -> google.protobuf.StringValue
+	24,  // 81: ssn.dataservice.v1.PredictionValues.supplier_organisation_number:type_name -> google.protobuf.StringValue
+	24,  // 82: ssn.dataservice.v1.PredictionValues.supplier_address:type_name -> google.protobuf.StringValue
+	24,  // 83: ssn.dataservice.v1.PredictionValues.customer_number:type_name -> google.protobuf.StringValue
+	24,  // 84: ssn.dataservice.v1.PredictionValues.receiver_order_number:type_name -> google.protobuf.StringValue
+	24,  // 85: ssn.dataservice.v1.PredictionValues.ocr_line_be_payment_id:type_name -> google.protobuf.StringValue
+	24,  // 86: ssn.dataservice.v1.PredictionValues.receiver_address:type_name -> google.protobuf.StringValue
+	24,  // 87: ssn.dataservice.v1.PredictionValues.receiver_country_code:type_name -> google.protobuf.StringValue
+	24,  // 88: ssn.dataservice.v1.PredictionValues.receiver_name:type_name -> google.protobuf.StringValue
+	24,  // 89: ssn.dataservice.v1.PredictionValues.receiver_vat_number:type_name -> google.protobuf.StringValue
+	25,  // 90: ssn.dataservice.v1.PredictionValues.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
+	26,  // 91: ssn.dataservice.v1.PredictionValues.answers:type_name -> ssn.type.AnswerCandidate
+	27,  // 92: ssn.dataservice.v1.PredictionValues.vat_distribution:type_name -> ssn.type.VatDistributionCandidate
+	23,  // 93: ssn.dataservice.v1.PredictionValues.check_in_date:type_name -> google.type.Date
+	23,  // 94: ssn.dataservice.v1.PredictionValues.check_out_date:type_name -> google.type.Date
+	28,  // 95: ssn.dataservice.v1.PredictionConfidences.total_incl_vat:type_name -> google.protobuf.FloatValue
+	28,  // 96: ssn.dataservice.v1.PredictionConfidences.total_vat:type_name -> google.protobuf.FloatValue
+	28,  // 97: ssn.dataservice.v1.PredictionConfidences.total_excl_vat:type_name -> google.protobuf.FloatValue
+	28,  // 98: ssn.dataservice.v1.PredictionConfidences.order_date:type_name -> google.protobuf.FloatValue
+	28,  // 99: ssn.dataservice.v1.PredictionConfidences.payment_due_date:type_name -> google.protobuf.FloatValue
+	28,  // 100: ssn.dataservice.v1.PredictionConfidences.document_type:type_name -> google.protobuf.FloatValue
+	28,  // 101: ssn.dataservice.v1.PredictionConfidences.currency:type_name -> google.protobuf.FloatValue
+	28,  // 102: ssn.dataservice.v1.PredictionConfidences.credit_card_last_four:type_name -> google.protobuf.FloatValue
+	28,  // 103: ssn.dataservice.v1.PredictionConfidences.payment_method:type_name -> google.protobuf.FloatValue
+	28,  // 104: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_type:type_name -> google.protobuf.FloatValue
+	28,  // 105: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 106: ssn.dataservice.v1.PredictionConfidences.ocr_line_dk_creditor_id:type_name -> google.protobuf.FloatValue
+	28,  // 107: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 108: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_bankgiro_creditor_id:type_name -> google.protobuf.FloatValue
+	28,  // 109: ssn.dataservice.v1.PredictionConfidences.ocr_line_se_plusgiro_creditor_id:type_name -> google.protobuf.FloatValue
+	28,  // 110: ssn.dataservice.v1.PredictionConfidences.ocr_line_no_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 111: ssn.dataservice.v1.PredictionConfidences.ocr_line_fi_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 112: ssn.dataservice.v1.PredictionConfidences.ocr_line_nl_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 113: ssn.dataservice.v1.PredictionConfidences.supplier_corporate_id:type_name -> google.protobuf.FloatValue
+	28,  // 114: ssn.dataservice.v1.PredictionConfidences.supplier_country_code:type_name -> google.protobuf.FloatValue
+	28,  // 115: ssn.dataservice.v1.PredictionConfidences.invoice_number:type_name -> google.protobuf.FloatValue
+	28,  // 116: ssn.dataservice.v1.PredictionConfidences.iban:type_name -> google.protobuf.FloatValue
+	28,  // 117: ssn.dataservice.v1.PredictionConfidences.order_reference:type_name -> google.protobuf.FloatValue
+	28,  // 118: ssn.dataservice.v1.PredictionConfidences.bank_account_number:type_name -> google.protobuf.FloatValue
+	28,  // 119: ssn.dataservice.v1.PredictionConfidences.bank_registration_number:type_name -> google.protobuf.FloatValue
+	28,  // 120: ssn.dataservice.v1.PredictionConfidences.supplier_name:type_name -> google.protobuf.FloatValue
+	28,  // 121: ssn.dataservice.v1.PredictionConfidences.bic:type_name -> google.protobuf.FloatValue
+	28,  // 122: ssn.dataservice.v1.PredictionConfidences.document_number:type_name -> google.protobuf.FloatValue
+	28,  // 123: ssn.dataservice.v1.PredictionConfidences.document_date:type_name -> google.protobuf.FloatValue
+	28,  // 124: ssn.dataservice.v1.PredictionConfidences.order_number:type_name -> google.protobuf.FloatValue
+	28,  // 125: ssn.dataservice.v1.PredictionConfidences.supplier_vat_number:type_name -> google.protobuf.FloatValue
+	28,  // 126: ssn.dataservice.v1.PredictionConfidences.supplier_organisation_number:type_name -> google.protobuf.FloatValue
+	28,  // 127: ssn.dataservice.v1.PredictionConfidences.supplier_address:type_name -> google.protobuf.FloatValue
+	28,  // 128: ssn.dataservice.v1.PredictionConfidences.customer_number:type_name -> google.protobuf.FloatValue
+	28,  // 129: ssn.dataservice.v1.PredictionConfidences.receiver_order_number:type_name -> google.protobuf.FloatValue
+	28,  // 130: ssn.dataservice.v1.PredictionConfidences.ocr_line_be_payment_id:type_name -> google.protobuf.FloatValue
+	28,  // 131: ssn.dataservice.v1.PredictionConfidences.receiver_address:type_name -> google.protobuf.FloatValue
+	28,  // 132: ssn.dataservice.v1.PredictionConfidences.receiver_country_code:type_name -> google.protobuf.FloatValue
+	28,  // 133: ssn.dataservice.v1.PredictionConfidences.receiver_name:type_name -> google.protobuf.FloatValue
+	28,  // 134: ssn.dataservice.v1.PredictionConfidences.receiver_vat_number:type_name -> google.protobuf.FloatValue
+	28,  // 135: ssn.dataservice.v1.PredictionConfidences.check_in_date:type_name -> google.protobuf.FloatValue
+	28,  // 136: ssn.dataservice.v1.PredictionConfidences.check_out_date:type_name -> google.protobuf.FloatValue
+	29,  // 137: ssn.dataservice.v1.PredictionMetadata.total_incl_vat:type_name -> ssn.type.ModelSpec
+	29,  // 138: ssn.dataservice.v1.PredictionMetadata.total_vat:type_name -> ssn.type.ModelSpec
+	29,  // 139: ssn.dataservice.v1.PredictionMetadata.total_excl_vat:type_name -> ssn.type.ModelSpec
+	29,  // 140: ssn.dataservice.v1.PredictionMetadata.order_date:type_name -> ssn.type.ModelSpec
+	29,  // 141: ssn.dataservice.v1.PredictionMetadata.payment_due_date:type_name -> ssn.type.ModelSpec
+	29,  // 142: ssn.dataservice.v1.PredictionMetadata.document_type:type_name -> ssn.type.ModelSpec
+	29,  // 143: ssn.dataservice.v1.PredictionMetadata.currency:type_name -> ssn.type.ModelSpec
+	29,  // 144: ssn.dataservice.v1.PredictionMetadata.credit_card_last_four:type_name -> ssn.type.ModelSpec
+	29,  // 145: ssn.dataservice.v1.PredictionMetadata.payment_method:type_name -> ssn.type.ModelSpec
+	29,  // 146: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_type:type_name -> ssn.type.ModelSpec
+	29,  // 147: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 148: ssn.dataservice.v1.PredictionMetadata.ocr_line_dk_creditor_id:type_name -> ssn.type.ModelSpec
+	29,  // 149: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 150: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.ModelSpec
+	29,  // 151: ssn.dataservice.v1.PredictionMetadata.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.ModelSpec
+	29,  // 152: ssn.dataservice.v1.PredictionMetadata.ocr_line_no_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 153: ssn.dataservice.v1.PredictionMetadata.ocr_line_fi_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 154: ssn.dataservice.v1.PredictionMetadata.ocr_line_nl_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 155: ssn.dataservice.v1.PredictionMetadata.supplier_corporate_id:type_name -> ssn.type.ModelSpec
+	29,  // 156: ssn.dataservice.v1.PredictionMetadata.supplier_country_code:type_name -> ssn.type.ModelSpec
+	29,  // 157: ssn.dataservice.v1.PredictionMetadata.invoice_number:type_name -> ssn.type.ModelSpec
+	29,  // 158: ssn.dataservice.v1.PredictionMetadata.iban:type_name -> ssn.type.ModelSpec
+	29,  // 159: ssn.dataservice.v1.PredictionMetadata.order_reference:type_name -> ssn.type.ModelSpec
+	29,  // 160: ssn.dataservice.v1.PredictionMetadata.bank_account_number:type_name -> ssn.type.ModelSpec
+	29,  // 161: ssn.dataservice.v1.PredictionMetadata.bank_registration_number:type_name -> ssn.type.ModelSpec
+	29,  // 162: ssn.dataservice.v1.PredictionMetadata.supplier_name:type_name -> ssn.type.ModelSpec
+	29,  // 163: ssn.dataservice.v1.PredictionMetadata.bic:type_name -> ssn.type.ModelSpec
+	29,  // 164: ssn.dataservice.v1.PredictionMetadata.document_number:type_name -> ssn.type.ModelSpec
+	29,  // 165: ssn.dataservice.v1.PredictionMetadata.document_date:type_name -> ssn.type.ModelSpec
+	29,  // 166: ssn.dataservice.v1.PredictionMetadata.order_number:type_name -> ssn.type.ModelSpec
+	29,  // 167: ssn.dataservice.v1.PredictionMetadata.supplier_vat_number:type_name -> ssn.type.ModelSpec
+	29,  // 168: ssn.dataservice.v1.PredictionMetadata.supplier_organisation_number:type_name -> ssn.type.ModelSpec
+	29,  // 169: ssn.dataservice.v1.PredictionMetadata.supplier_address:type_name -> ssn.type.ModelSpec
+	29,  // 170: ssn.dataservice.v1.PredictionMetadata.customer_number:type_name -> ssn.type.ModelSpec
+	29,  // 171: ssn.dataservice.v1.PredictionMetadata.receiver_order_number:type_name -> ssn.type.ModelSpec
+	29,  // 172: ssn.dataservice.v1.PredictionMetadata.ocr_line_be_payment_id:type_name -> ssn.type.ModelSpec
+	29,  // 173: ssn.dataservice.v1.PredictionMetadata.receiver_address:type_name -> ssn.type.ModelSpec
+	29,  // 174: ssn.dataservice.v1.PredictionMetadata.receiver_country_code:type_name -> ssn.type.ModelSpec
+	29,  // 175: ssn.dataservice.v1.PredictionMetadata.receiver_name:type_name -> ssn.type.ModelSpec
+	29,  // 176: ssn.dataservice.v1.PredictionMetadata.receiver_vat_number:type_name -> ssn.type.ModelSpec
+	29,  // 177: ssn.dataservice.v1.PredictionMetadata.check_in_date:type_name -> ssn.type.ModelSpec
+	29,  // 178: ssn.dataservice.v1.PredictionMetadata.check_out_date:type_name -> ssn.type.ModelSpec
 	0,   // 179: ssn.dataservice.v1.CreateDocumentRequest.document:type_name -> ssn.dataservice.v1.Document
 	0,   // 180: ssn.dataservice.v1.ReadDocumentResponse.document:type_name -> ssn.dataservice.v1.Document
-	20,  // 181: ssn.dataservice.v1.PrepareFeedbackRequest.ta:type_name -> ssn.type.TextAnnotation
+	21,  // 181: ssn.dataservice.v1.PrepareFeedbackRequest.ta:type_name -> ssn.type.TextAnnotation
 	2,   // 182: ssn.dataservice.v1.PrepareFeedbackRequest.predictions:type_name -> ssn.dataservice.v1.PredictionValues
 	3,   // 183: ssn.dataservice.v1.PrepareFeedbackRequest.confidences:type_name -> ssn.dataservice.v1.PredictionConfidences
 	4,   // 184: ssn.dataservice.v1.PrepareFeedbackRequest.prediction_metadata:type_name -> ssn.dataservice.v1.PredictionMetadata
-	29,  // 185: ssn.dataservice.v1.PrepareFeedbackRequest.tier:type_name -> ssn.type.Tier
+	30,  // 185: ssn.dataservice.v1.PrepareFeedbackRequest.tier:type_name -> ssn.type.Tier
 	1,   // 186: ssn.dataservice.v1.FeedbackRequest.true_values:type_name -> ssn.dataservice.v1.TrueValues
 	13,  // 187: ssn.dataservice.v1.FeedbackMetrics.overall_correctness:type_name -> ssn.dataservice.v1.Correctness
 	13,  // 188: ssn.dataservice.v1.FeedbackMetrics.field_correctness:type_name -> ssn.dataservice.v1.Correctness
@@ -3996,21 +4072,25 @@ var file_ssn_dataservice_v1_dataservice_proto_depIdxs = []int32{
 	11,  // 198: ssn.dataservice.v1.DataService.CalculateMetrics:input_type -> ssn.dataservice.v1.MetricsRequest
 	11,  // 199: ssn.dataservice.v1.DataService.CalculateMetricsV2:input_type -> ssn.dataservice.v1.MetricsRequest
 	14,  // 200: ssn.dataservice.v1.DataService.Delete:input_type -> ssn.dataservice.v1.DeleteRequest
-	30,  // 201: ssn.dataservice.v1.DataService.CallsPerMonthMetric:input_type -> google.protobuf.Empty
-	30,  // 202: ssn.dataservice.v1.DataService.SuggestionsPerMonthMetric:input_type -> google.protobuf.Empty
-	17,  // 203: ssn.dataservice.v1.DataService.CalculateAnnotationProcessMetrics:input_type -> ssn.dataservice.v1.AnnotationProcessMetricsRequest
-	6,   // 204: ssn.dataservice.v1.DataService.CreateDocument:output_type -> ssn.dataservice.v1.CreateDocumentResponse
-	8,   // 205: ssn.dataservice.v1.DataService.ReadDocument:output_type -> ssn.dataservice.v1.ReadDocumentResponse
-	30,  // 206: ssn.dataservice.v1.DataService.PrepareFeedback:output_type -> google.protobuf.Empty
-	30,  // 207: ssn.dataservice.v1.DataService.Feedback:output_type -> google.protobuf.Empty
-	12,  // 208: ssn.dataservice.v1.DataService.CalculateMetrics:output_type -> ssn.dataservice.v1.FeedbackMetrics
-	19,  // 209: ssn.dataservice.v1.DataService.CalculateMetricsV2:output_type -> ssn.dataservice.v1.FeedbackMetricsV2Response
-	30,  // 210: ssn.dataservice.v1.DataService.Delete:output_type -> google.protobuf.Empty
-	16,  // 211: ssn.dataservice.v1.DataService.CallsPerMonthMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
-	16,  // 212: ssn.dataservice.v1.DataService.SuggestionsPerMonthMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
-	18,  // 213: ssn.dataservice.v1.DataService.CalculateAnnotationProcessMetrics:output_type -> ssn.dataservice.v1.AnnotationProcessMetricsResponse
-	204, // [204:214] is the sub-list for method output_type
-	194, // [194:204] is the sub-list for method input_type
+	31,  // 201: ssn.dataservice.v1.DataService.CallsPerMonthMetric:input_type -> google.protobuf.Empty
+	31,  // 202: ssn.dataservice.v1.DataService.SuggestionsPerMonthMetric:input_type -> google.protobuf.Empty
+	20,  // 203: ssn.dataservice.v1.DataService.CallsPerMonthFilteredMetric:input_type -> ssn.dataservice.v1.CallsPerMonthMetricRequest
+	20,  // 204: ssn.dataservice.v1.DataService.SuggestionsPerMonthFilteredMetric:input_type -> ssn.dataservice.v1.CallsPerMonthMetricRequest
+	17,  // 205: ssn.dataservice.v1.DataService.CalculateAnnotationProcessMetrics:input_type -> ssn.dataservice.v1.AnnotationProcessMetricsRequest
+	6,   // 206: ssn.dataservice.v1.DataService.CreateDocument:output_type -> ssn.dataservice.v1.CreateDocumentResponse
+	8,   // 207: ssn.dataservice.v1.DataService.ReadDocument:output_type -> ssn.dataservice.v1.ReadDocumentResponse
+	31,  // 208: ssn.dataservice.v1.DataService.PrepareFeedback:output_type -> google.protobuf.Empty
+	31,  // 209: ssn.dataservice.v1.DataService.Feedback:output_type -> google.protobuf.Empty
+	12,  // 210: ssn.dataservice.v1.DataService.CalculateMetrics:output_type -> ssn.dataservice.v1.FeedbackMetrics
+	19,  // 211: ssn.dataservice.v1.DataService.CalculateMetricsV2:output_type -> ssn.dataservice.v1.FeedbackMetricsV2Response
+	31,  // 212: ssn.dataservice.v1.DataService.Delete:output_type -> google.protobuf.Empty
+	16,  // 213: ssn.dataservice.v1.DataService.CallsPerMonthMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
+	16,  // 214: ssn.dataservice.v1.DataService.SuggestionsPerMonthMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
+	16,  // 215: ssn.dataservice.v1.DataService.CallsPerMonthFilteredMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
+	16,  // 216: ssn.dataservice.v1.DataService.SuggestionsPerMonthFilteredMetric:output_type -> ssn.dataservice.v1.CallsPerMonthResponse
+	18,  // 217: ssn.dataservice.v1.DataService.CalculateAnnotationProcessMetrics:output_type -> ssn.dataservice.v1.AnnotationProcessMetricsResponse
+	206, // [206:218] is the sub-list for method output_type
+	194, // [194:206] is the sub-list for method input_type
 	194, // [194:194] is the sub-list for extension type_name
 	194, // [194:194] is the sub-list for extension extendee
 	0,   // [0:194] is the sub-list for field type_name
@@ -4262,6 +4342,18 @@ func file_ssn_dataservice_v1_dataservice_proto_init() {
 				return nil
 			}
 		}
+		file_ssn_dataservice_v1_dataservice_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CallsPerMonthMetricRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -4269,7 +4361,7 @@ func file_ssn_dataservice_v1_dataservice_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_ssn_dataservice_v1_dataservice_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   20,
+			NumMessages:   21,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

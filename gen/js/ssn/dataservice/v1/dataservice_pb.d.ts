@@ -1633,3 +1633,25 @@ export namespace FeedbackMetricsV2Response {
   }
 }
 
+export class CallsPerMonthMetricRequest extends jspb.Message {
+  getMonth(): number;
+  setMonth(value: number): CallsPerMonthMetricRequest;
+
+  getYear(): number;
+  setYear(value: number): CallsPerMonthMetricRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CallsPerMonthMetricRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CallsPerMonthMetricRequest): CallsPerMonthMetricRequest.AsObject;
+  static serializeBinaryToWriter(message: CallsPerMonthMetricRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CallsPerMonthMetricRequest;
+  static deserializeBinaryFromReader(message: CallsPerMonthMetricRequest, reader: jspb.BinaryReader): CallsPerMonthMetricRequest;
+}
+
+export namespace CallsPerMonthMetricRequest {
+  export type AsObject = {
+    month: number,
+    year: number,
+  }
+}
+

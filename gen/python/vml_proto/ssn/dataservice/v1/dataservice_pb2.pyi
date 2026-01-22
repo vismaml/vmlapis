@@ -557,3 +557,11 @@ class FeedbackMetricsV2Response(_message.Message):
     overall_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
     field_correctness: _containers.RepeatedCompositeFieldContainer[Correctness]
     def __init__(self, document_count: _Optional[int] = ..., feedback_count: _Optional[int] = ..., overall_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ..., field_correctness: _Optional[_Iterable[_Union[Correctness, _Mapping]]] = ...) -> None: ...
+
+class CallsPerMonthMetricRequest(_message.Message):
+    __slots__ = ("month", "year")
+    MONTH_FIELD_NUMBER: _ClassVar[int]
+    YEAR_FIELD_NUMBER: _ClassVar[int]
+    month: int
+    year: int
+    def __init__(self, month: _Optional[int] = ..., year: _Optional[int] = ...) -> None: ...

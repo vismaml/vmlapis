@@ -646,6 +646,128 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.suggestionsPerMonthM
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodDescriptor_DataService_CallsPerMonthFilteredMetric = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+  proto.ssn.dataservice.v1.CallsPerMonthResponse,
+  /**
+   * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.dataservice.v1.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.CallsPerMonthResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.CallsPerMonthResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.callsPerMonthFilteredMetric =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthFilteredMetric,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthFilteredMetric =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthFilteredMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodDescriptor_DataService_SuggestionsPerMonthFilteredMetric = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.CallsPerMonthMetricRequest,
+  proto.ssn.dataservice.v1.CallsPerMonthResponse,
+  /**
+   * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.dataservice.v1.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.CallsPerMonthResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.CallsPerMonthResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.suggestionsPerMonthFilteredMetric =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_SuggestionsPerMonthFilteredMetric,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.CallsPerMonthMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.suggestionsPerMonthFilteredMetric =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/SuggestionsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_SuggestionsPerMonthFilteredMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsRequest,
  *   !proto.ssn.dataservice.v1.AnnotationProcessMetricsResponse>}
  */

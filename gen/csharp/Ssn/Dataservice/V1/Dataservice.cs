@@ -380,35 +380,42 @@ namespace Ssn.Dataservice.V1 {
             "IAMoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzc1ISb3ZlcmFs",
             "bENvcnJlY3RuZXNzEkwKEWZpZWxkX2NvcnJlY3RuZXNzGAQgAygLMh8uc3Nu",
             "LmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhBmaWVsZENvcnJlY3RuZXNz",
-            "Mo8ICgtEYXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIpLnNzbi5kYXRh",
-            "c2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5zc24uZGF0YXNl",
-            "cnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxSZWFkRG9jdW1l",
-            "bnQSJy5zc24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVxdWVzdBoo",
-            "LnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJVCg9Q",
-            "cmVwYXJlRmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEuUHJlcGFyZUZl",
-            "ZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJnCghGZWVk",
-            "YmFjaxIjLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1JlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmNy",
-            "ZWF0ZToBKhJbChBDYWxjdWxhdGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2aWNl",
-            "LnYxLk1ldHJpY3NSZXF1ZXN0GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRi",
-            "YWNrTWV0cmljcxJnChJDYWxjdWxhdGVNZXRyaWNzVjISIi5zc24uZGF0YXNl",
-            "cnZpY2UudjEuTWV0cmljc1JlcXVlc3QaLS5zc24uZGF0YXNlcnZpY2UudjEu",
-            "RmVlZGJhY2tNZXRyaWNzVjJSZXNwb25zZRJjCgZEZWxldGUSIS5zc24uZGF0",
-            "YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0NhbGxz",
-            "UGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24u",
-            "ZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEl4KGVN1Z2dl",
-            "c3Rpb25zUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
-            "KS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEo4B",
-            "CiFDYWxjdWxhdGVBbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3MSMy5zc24uZGF0",
-            "YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzUmVxdWVzdBo0",
-            "LnNzbi5kYXRhc2VydmljZS52MS5Bbm5vdGF0aW9uUHJvY2Vzc01ldHJpY3NS",
-            "ZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBEYXRh",
-            "c2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
-            "Z2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NEWKoC",
-            "ElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeICHlNz",
-            "blxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNlcnZp",
-            "Y2U6OlYxYgZwcm90bzM="));
+            "IkYKGkNhbGxzUGVyTW9udGhNZXRyaWNSZXF1ZXN0EhQKBW1vbnRoGAEgASgF",
+            "UgVtb250aBISCgR5ZWFyGAIgASgFUgR5ZWFyMokKCgtEYXRhU2VydmljZRJn",
+            "Cg5DcmVhdGVEb2N1bWVudBIpLnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVE",
+            "b2N1bWVudFJlcXVlc3QaKi5zc24uZGF0YXNlcnZpY2UudjEuQ3JlYXRlRG9j",
+            "dW1lbnRSZXNwb25zZRJhCgxSZWFkRG9jdW1lbnQSJy5zc24uZGF0YXNlcnZp",
+            "Y2UudjEuUmVhZERvY3VtZW50UmVxdWVzdBooLnNzbi5kYXRhc2VydmljZS52",
+            "MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJVCg9QcmVwYXJlRmVlZGJhY2sSKi5z",
+            "c24uZGF0YXNlcnZpY2UudjEuUHJlcGFyZUZlZWRiYWNrUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRJnCghGZWVkYmFjaxIjLnNzbi5kYXRhc2Vy",
+            "dmljZS52MS5GZWVkYmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNrOmNyZWF0ZToBKhJbChBDYWxjdWxh",
+            "dGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2aWNlLnYxLk1ldHJpY3NSZXF1ZXN0",
+            "GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrTWV0cmljcxJnChJDYWxj",
+            "dWxhdGVNZXRyaWNzVjISIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmljc1Jl",
+            "cXVlc3QaLS5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNzVjJS",
+            "ZXNwb25zZRJjCgZEZWxldGUSIS5zc24uZGF0YXNlcnZpY2UudjEuRGVsZXRl",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEv",
+            "ZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0NhbGxzUGVyTW9udGhNZXRyaWMSFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZpY2UudjEuQ2Fs",
+            "bHNQZXJNb250aFJlc3BvbnNlEl4KGVN1Z2dlc3Rpb25zUGVyTW9udGhNZXRy",
+            "aWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZpY2Uu",
+            "djEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEngKG0NhbGxzUGVyTW9udGhGaWx0",
+            "ZXJlZE1ldHJpYxIuLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRo",
+            "TWV0cmljUmVxdWVzdBopLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1v",
+            "bnRoUmVzcG9uc2USfgohU3VnZ2VzdGlvbnNQZXJNb250aEZpbHRlcmVkTWV0",
+            "cmljEi4uc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhNZXRyaWNS",
+            "ZXF1ZXN0Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNw",
+            "b25zZRKOAQohQ2FsY3VsYXRlQW5ub3RhdGlvblByb2Nlc3NNZXRyaWNzEjMu",
+            "c3NuLmRhdGFzZXJ2aWNlLnYxLkFubm90YXRpb25Qcm9jZXNzTWV0cmljc1Jl",
+            "cXVlc3QaNC5zc24uZGF0YXNlcnZpY2UudjEuQW5ub3RhdGlvblByb2Nlc3NN",
+            "ZXRyaWNzUmVzcG9uc2VC3QEKG2FpLnZpc21hLnNzbi5kYXRhc2VydmljZS52",
+            "MUIQRGF0YXNlcnZpY2VQcm90b1ABWkJnaXRodWIuY29tL2UtY29ub21pYy92",
+            "bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZpY2UvdjE7ZGF0YXNlcnZpY2Wi",
+            "AgNTRFiqAhJTc24uRGF0YXNlcnZpY2UuVjHKAhJTc25cRGF0YXNlcnZpY2Vc",
+            "VjHiAh5Tc25cRGF0YXNlcnZpY2VcVjFcR1BCTWV0YWRhdGHqAhRTc246OkRh",
+            "dGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -431,7 +438,8 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthResponse), global::Ssn.Dataservice.V1.CallsPerMonthResponse.Parser, new[]{ "CallsPerMonth" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest), global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest.Parser, new[]{ "Fields", "CountryCodes", "DocumentTypes", "MostRecentCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse), global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse.Parser, new[]{ "DocumentCount", "TrueValueCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetricsV2Response), global::Ssn.Dataservice.V1.FeedbackMetricsV2Response.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetricsV2Response), global::Ssn.Dataservice.V1.FeedbackMetricsV2Response.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthMetricRequest), global::Ssn.Dataservice.V1.CallsPerMonthMetricRequest.Parser, new[]{ "Month", "Year" }, null, null, null, null)
           }));
     }
     #endregion
@@ -11041,6 +11049,241 @@ namespace Ssn.Dataservice.V1 {
           }
           case 34: {
             fieldCorrectness_.AddEntriesFrom(ref input, _repeated_fieldCorrectness_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallsPerMonthMetricRequest : pb::IMessage<CallsPerMonthMetricRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallsPerMonthMetricRequest> _parser = new pb::MessageParser<CallsPerMonthMetricRequest>(() => new CallsPerMonthMetricRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallsPerMonthMetricRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthMetricRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthMetricRequest(CallsPerMonthMetricRequest other) : this() {
+      month_ = other.month_;
+      year_ = other.year_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthMetricRequest Clone() {
+      return new CallsPerMonthMetricRequest(this);
+    }
+
+    /// <summary>Field number for the "month" field.</summary>
+    public const int MonthFieldNumber = 1;
+    private int month_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Month {
+      get { return month_; }
+      set {
+        month_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "year" field.</summary>
+    public const int YearFieldNumber = 2;
+    private int year_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Year {
+      get { return year_; }
+      set {
+        year_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallsPerMonthMetricRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallsPerMonthMetricRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Month != other.Month) return false;
+      if (Year != other.Year) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Month != 0) hash ^= Month.GetHashCode();
+      if (Year != 0) hash ^= Year.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Month != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Month);
+      }
+      if (Year != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Year);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Month != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Month);
+      }
+      if (Year != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Year);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Month != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Month);
+      }
+      if (Year != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Year);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallsPerMonthMetricRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Month != 0) {
+        Month = other.Month;
+      }
+      if (other.Year != 0) {
+        Year = other.Year;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Month = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Year = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Month = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Year = input.ReadInt32();
             break;
           }
         }
