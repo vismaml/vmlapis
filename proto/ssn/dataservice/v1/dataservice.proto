@@ -316,6 +316,7 @@ message CallsPerMonth {
   int64 calls = 1;
   string month_name = 2;
   int64 total_batch_size = 3;
+  int32 year = 4;
 }
 
 message CallsPerMonthResponse {
