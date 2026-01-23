@@ -507,14 +507,16 @@ class DeleteRequest(_message.Message):
     def __init__(self, tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class CallsPerMonth(_message.Message):
-    __slots__ = ("calls", "month_name", "total_batch_size")
+    __slots__ = ("calls", "month_name", "total_batch_size", "year")
     CALLS_FIELD_NUMBER: _ClassVar[int]
     MONTH_NAME_FIELD_NUMBER: _ClassVar[int]
     TOTAL_BATCH_SIZE_FIELD_NUMBER: _ClassVar[int]
+    YEAR_FIELD_NUMBER: _ClassVar[int]
     calls: int
     month_name: str
     total_batch_size: int
-    def __init__(self, calls: _Optional[int] = ..., month_name: _Optional[str] = ..., total_batch_size: _Optional[int] = ...) -> None: ...
+    year: int
+    def __init__(self, calls: _Optional[int] = ..., month_name: _Optional[str] = ..., total_batch_size: _Optional[int] = ..., year: _Optional[int] = ...) -> None: ...
 
 class CallsPerMonthResponse(_message.Message):
     __slots__ = ("calls_per_month",)

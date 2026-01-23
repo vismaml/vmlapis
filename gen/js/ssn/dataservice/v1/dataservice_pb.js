@@ -12996,7 +12996,8 @@ proto.ssn.dataservice.v1.CallsPerMonth.toObject = function(includeInstance, msg)
   var f, obj = {
     calls: jspb.Message.getFieldWithDefault(msg, 1, 0),
     monthName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    totalBatchSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    totalBatchSize: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    year: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -13045,6 +13046,10 @@ proto.ssn.dataservice.v1.CallsPerMonth.deserializeBinaryFromReader = function(ms
       var value = /** @type {number} */ (reader.readInt64());
       msg.setTotalBatchSize(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setYear(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -13092,6 +13097,13 @@ proto.ssn.dataservice.v1.CallsPerMonth.serializeBinaryToWriter = function(messag
   if (f !== 0) {
     writer.writeInt64(
       3,
+      f
+    );
+  }
+  f = message.getYear();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
       f
     );
   }
@@ -13149,6 +13161,24 @@ proto.ssn.dataservice.v1.CallsPerMonth.prototype.getTotalBatchSize = function() 
  */
 proto.ssn.dataservice.v1.CallsPerMonth.prototype.setTotalBatchSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int32 year = 4;
+ * @return {number}
+ */
+proto.ssn.dataservice.v1.CallsPerMonth.prototype.getYear = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.dataservice.v1.CallsPerMonth} returns this
+ */
+proto.ssn.dataservice.v1.CallsPerMonth.prototype.setYear = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
