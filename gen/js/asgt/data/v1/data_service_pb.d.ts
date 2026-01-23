@@ -323,3 +323,25 @@ export namespace RegisterQueryStatsRequest {
   }
 }
 
+export class CallsPerMonthFilteredMetricRequest extends jspb.Message {
+  getMonth(): number;
+  setMonth(value: number): CallsPerMonthFilteredMetricRequest;
+
+  getYear(): number;
+  setYear(value: number): CallsPerMonthFilteredMetricRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CallsPerMonthFilteredMetricRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CallsPerMonthFilteredMetricRequest): CallsPerMonthFilteredMetricRequest.AsObject;
+  static serializeBinaryToWriter(message: CallsPerMonthFilteredMetricRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CallsPerMonthFilteredMetricRequest;
+  static deserializeBinaryFromReader(message: CallsPerMonthFilteredMetricRequest, reader: jspb.BinaryReader): CallsPerMonthFilteredMetricRequest;
+}
+
+export namespace CallsPerMonthFilteredMetricRequest {
+  export type AsObject = {
+    month: number,
+    year: number,
+  }
+}
+

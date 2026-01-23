@@ -75,6 +75,11 @@ public final class DataServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_dataservice_v1_CallsPerMonthFilteredMetricRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -127,7 +132,9 @@ public final class DataServiceProto {
       "StatsRequest\022\030\n\007dataset\030\001 \001(\tR\007dataset\022\035" +
       "\n\nmodel_type\030\002 \001(\tR\tmodelType\022\035\n\nbatch_s" +
       "ize\030\003 \001(\005R\tbatchSize\022\022\n\004tags\030\004 \003(\tR\004tags" +
-      "2\353\006\n\013DataService\022i\n\rCreateDataset\022\".asgt" +
+      "\"N\n\"CallsPerMonthFilteredMetricRequest\022\024" +
+      "\n\005month\030\001 \001(\005R\005month\022\022\n\004year\030\002 \001(\005R\004year" +
+      "2\357\007\n\013DataService\022i\n\rCreateDataset\022\".asgt" +
       ".dataservice.v1.CreateRequest\032\026.google.p" +
       "rotobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:create" +
       ":\001*\022q\n\nAppendData\022&.asgt.dataservice.v1." +
@@ -146,15 +153,18 @@ public final class DataServiceProto {
       "tatsRequest\032\026.google.protobuf.Empty\022X\n\023C" +
       "allsPerMonthMetric\022\026.google.protobuf.Emp" +
       "ty\032).ssn.dataservice.v1.CallsPerMonthRes" +
-      "ponse\022o\n\020CalculateMetrics\022,.asgt.dataser" +
-      "vice.v1.CalculateMetricsRequest\032-.asgt.d" +
-      "ataservice.v1.CalculateMetricsResponseB\325" +
-      "\001\n\034ai.visma.asgt.dataservice.v1B\020DataSer" +
-      "viceProtoP\001Z5github.com/e-conomic/vmlapi" +
-      "s/gen/go/asgt/data/v1;data\242\002\003ADX\252\002\023Asgt." +
-      "Dataservice.V1\312\002\023Asgt\\Dataservice\\V1\342\002\037A" +
-      "sgt\\Dataservice\\V1\\GPBMetadata\352\002\025Asgt::D" +
-      "ataservice::V1b\006proto3"
+      "ponse\022\201\001\n\033CallsPerMonthFilteredMetric\0227." +
+      "asgt.dataservice.v1.CallsPerMonthFiltere" +
+      "dMetricRequest\032).ssn.dataservice.v1.Call" +
+      "sPerMonthResponse\022o\n\020CalculateMetrics\022,." +
+      "asgt.dataservice.v1.CalculateMetricsRequ" +
+      "est\032-.asgt.dataservice.v1.CalculateMetri" +
+      "csResponseB\325\001\n\034ai.visma.asgt.dataservice" +
+      ".v1B\020DataServiceProtoP\001Z5github.com/e-co" +
+      "nomic/vmlapis/gen/go/asgt/data/v1;data\242\002" +
+      "\003ADX\252\002\023Asgt.Dataservice.V1\312\002\023Asgt\\Datase" +
+      "rvice\\V1\342\002\037Asgt\\Dataservice\\V1\\GPBMetada" +
+      "ta\352\002\025Asgt::Dataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -230,6 +240,12 @@ public final class DataServiceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor,
         new java.lang.String[] { "Dataset", "ModelType", "BatchSize", "Tags", });
+    internal_static_asgt_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_asgt_dataservice_v1_CallsPerMonthFilteredMetricRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1_CallsPerMonthFilteredMetricRequest_descriptor,
+        new java.lang.String[] { "Month", "Year", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DatasetProto.getDescriptor();
     ai.visma.asgt.type.ModelProto.getDescriptor();

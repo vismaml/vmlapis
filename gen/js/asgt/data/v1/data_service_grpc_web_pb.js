@@ -526,6 +526,67 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodDescriptor_DataService_CallsPerMonthFilteredMetric = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest,
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.dataservice.v1.CallsPerMonthResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.CallsPerMonthResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.callsPerMonthFilteredMetric =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthFilteredMetric,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthFilteredMetric =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CallsPerMonthFilteredMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthFilteredMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.asgt.dataservice.v1.CalculateMetricsRequest,
  *   !proto.asgt.dataservice.v1.CalculateMetricsResponse>}
  */

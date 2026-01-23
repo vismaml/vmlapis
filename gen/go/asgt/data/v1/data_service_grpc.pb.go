@@ -21,14 +21,15 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DataService_CreateDataset_FullMethodName       = "/asgt.dataservice.v1.DataService/CreateDataset"
-	DataService_AppendData_FullMethodName          = "/asgt.dataservice.v1.DataService/AppendData"
-	DataService_DeleteData_FullMethodName          = "/asgt.dataservice.v1.DataService/DeleteData"
-	DataService_GetInfo_FullMethodName             = "/asgt.dataservice.v1.DataService/GetInfo"
-	DataService_UpdateDataset_FullMethodName       = "/asgt.dataservice.v1.DataService/UpdateDataset"
-	DataService_RegisterQueryStats_FullMethodName  = "/asgt.dataservice.v1.DataService/RegisterQueryStats"
-	DataService_CallsPerMonthMetric_FullMethodName = "/asgt.dataservice.v1.DataService/CallsPerMonthMetric"
-	DataService_CalculateMetrics_FullMethodName    = "/asgt.dataservice.v1.DataService/CalculateMetrics"
+	DataService_CreateDataset_FullMethodName               = "/asgt.dataservice.v1.DataService/CreateDataset"
+	DataService_AppendData_FullMethodName                  = "/asgt.dataservice.v1.DataService/AppendData"
+	DataService_DeleteData_FullMethodName                  = "/asgt.dataservice.v1.DataService/DeleteData"
+	DataService_GetInfo_FullMethodName                     = "/asgt.dataservice.v1.DataService/GetInfo"
+	DataService_UpdateDataset_FullMethodName               = "/asgt.dataservice.v1.DataService/UpdateDataset"
+	DataService_RegisterQueryStats_FullMethodName          = "/asgt.dataservice.v1.DataService/RegisterQueryStats"
+	DataService_CallsPerMonthMetric_FullMethodName         = "/asgt.dataservice.v1.DataService/CallsPerMonthMetric"
+	DataService_CallsPerMonthFilteredMetric_FullMethodName = "/asgt.dataservice.v1.DataService/CallsPerMonthFilteredMetric"
+	DataService_CalculateMetrics_FullMethodName            = "/asgt.dataservice.v1.DataService/CalculateMetrics"
 )
 
 // DataServiceClient is the client API for DataService service.
@@ -42,6 +43,7 @@ type DataServiceClient interface {
 	UpdateDataset(ctx context.Context, in *UpdateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
+	CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
 }
 
@@ -116,6 +118,15 @@ func (c *dataServiceClient) CallsPerMonthMetric(ctx context.Context, in *emptypb
 	return out, nil
 }
 
+func (c *dataServiceClient) CallsPerMonthFilteredMetric(ctx context.Context, in *CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error) {
+	out := new(v1.CallsPerMonthResponse)
+	err := c.cc.Invoke(ctx, DataService_CallsPerMonthFilteredMetric_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error) {
 	out := new(CalculateMetricsResponse)
 	err := c.cc.Invoke(ctx, DataService_CalculateMetrics_FullMethodName, in, out, opts...)
@@ -136,6 +147,7 @@ type DataServiceServer interface {
 	UpdateDataset(context.Context, *UpdateDatasetRequest) (*emptypb.Empty, error)
 	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*v1.CallsPerMonthResponse, error)
+	CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error)
 }
 
@@ -163,6 +175,9 @@ func (UnimplementedDataServiceServer) RegisterQueryStats(context.Context, *Regis
 }
 func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *emptypb.Empty) (*v1.CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
+}
+func (UnimplementedDataServiceServer) CallsPerMonthFilteredMetric(context.Context, *CallsPerMonthFilteredMetricRequest) (*v1.CallsPerMonthResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthFilteredMetric not implemented")
 }
 func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
@@ -305,6 +320,24 @@ func _DataService_CallsPerMonthMetric_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DataService_CallsPerMonthFilteredMetric_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CallsPerMonthFilteredMetricRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).CallsPerMonthFilteredMetric(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DataService_CallsPerMonthFilteredMetric_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).CallsPerMonthFilteredMetric(ctx, req.(*CallsPerMonthFilteredMetricRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CalculateMetricsRequest)
 	if err := dec(in); err != nil {
@@ -357,6 +390,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CallsPerMonthMetric",
 			Handler:    _DataService_CallsPerMonthMetric_Handler,
+		},
+		{
+			MethodName: "CallsPerMonthFilteredMetric",
+			Handler:    _DataService_CallsPerMonthFilteredMetric_Handler,
 		},
 		{
 			MethodName: "CalculateMetrics",

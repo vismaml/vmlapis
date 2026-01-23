@@ -62,31 +62,36 @@ namespace Asgt.Dataservice.V1 {
             "UgVtb2RlbCKHAQoZUmVnaXN0ZXJRdWVyeVN0YXRzUmVxdWVzdBIYCgdkYXRh",
             "c2V0GAEgASgJUgdkYXRhc2V0Eh0KCm1vZGVsX3R5cGUYAiABKAlSCW1vZGVs",
             "VHlwZRIdCgpiYXRjaF9zaXplGAMgASgFUgliYXRjaFNpemUSEgoEdGFncxgE",
-            "IAMoCVIEdGFnczLrBgoLRGF0YVNlcnZpY2USaQoNQ3JlYXRlRGF0YXNldBIi",
-            "LmFzZ3QuZGF0YXNlcnZpY2UudjEuQ3JlYXRlUmVxdWVzdBoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eSIcgtPkkwIWIhEvdjEve3R5cGV9OmNyZWF0ZToBKhJx",
-            "CgpBcHBlbmREYXRhEiYuYXNndC5kYXRhc2VydmljZS52MS5BcHBlbmREYXRh",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdIhgvdjEv",
-            "e3R5cGV9L3tuYW1lfTphcHBlbmQ6ASoSZgoKRGVsZXRlRGF0YRIiLmFzZ3Qu",
-            "ZGF0YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIcgtPkkwIWIhEvdjEve3R5cGV9OmRlbGV0ZToBKhJ0CgdHZXRJ",
-            "bmZvEiMuYXNndC5kYXRhc2VydmljZS52MS5HZXRJbmZvUmVxdWVzdBokLmFz",
-            "Z3QuZGF0YXNlcnZpY2UudjEuR2V0SW5mb1Jlc3BvbnNlIh6C0+STAhgSFi92",
-            "MS97dHlwZX0ve25hbWV9OmluZm8SdwoNVXBkYXRlRGF0YXNldBIpLmFzZ3Qu",
-            "ZGF0YXNlcnZpY2UudjEuVXBkYXRlRGF0YXNldFJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiI4LT5JMCHRoYL3YxL3t0eXBlfS97bmFtZX06dXBk",
-            "YXRlOgEqElwKElJlZ2lzdGVyUXVlcnlTdGF0cxIuLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjEuUmVnaXN0ZXJRdWVyeVN0YXRzUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eRJYChNDYWxsc1Blck1vbnRoTWV0cmljEhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9u",
-            "dGhSZXNwb25zZRJvChBDYWxjdWxhdGVNZXRyaWNzEiwuYXNndC5kYXRhc2Vy",
-            "dmljZS52MS5DYWxjdWxhdGVNZXRyaWNzUmVxdWVzdBotLmFzZ3QuZGF0YXNl",
-            "cnZpY2UudjEuQ2FsY3VsYXRlTWV0cmljc1Jlc3BvbnNlQtUBChxhaS52aXNt",
-            "YS5hc2d0LmRhdGFzZXJ2aWNlLnYxQhBEYXRhU2VydmljZVByb3RvUAFaNWdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92",
-            "MTtkYXRhogIDQURYqgITQXNndC5EYXRhc2VydmljZS5WMcoCE0FzZ3RcRGF0",
-            "YXNlcnZpY2VcVjHiAh9Bc2d0XERhdGFzZXJ2aWNlXFYxXEdQQk1ldGFkYXRh",
-            "6gIVQXNndDo6RGF0YXNlcnZpY2U6OlYxYgZwcm90bzM="));
+            "IAMoCVIEdGFncyJOCiJDYWxsc1Blck1vbnRoRmlsdGVyZWRNZXRyaWNSZXF1",
+            "ZXN0EhQKBW1vbnRoGAEgASgFUgVtb250aBISCgR5ZWFyGAIgASgFUgR5ZWFy",
+            "Mu8HCgtEYXRhU2VydmljZRJpCg1DcmVhdGVEYXRhc2V0EiIuYXNndC5kYXRh",
+            "c2VydmljZS52MS5DcmVhdGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IhyC0+STAhYiES92MS97dHlwZX06Y3JlYXRlOgEqEnEKCkFwcGVuZERh",
+            "dGESJi5hc2d0LmRhdGFzZXJ2aWNlLnYxLkFwcGVuZERhdGFSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IiOC0+STAh0iGC92MS97dHlwZX0ve25h",
+            "bWV9OmFwcGVuZDoBKhJmCgpEZWxldGVEYXRhEiIuYXNndC5kYXRhc2Vydmlj",
+            "ZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC",
+            "0+STAhYiES92MS97dHlwZX06ZGVsZXRlOgEqEnQKB0dldEluZm8SIy5hc2d0",
+            "LmRhdGFzZXJ2aWNlLnYxLkdldEluZm9SZXF1ZXN0GiQuYXNndC5kYXRhc2Vy",
+            "dmljZS52MS5HZXRJbmZvUmVzcG9uc2UiHoLT5JMCGBIWL3YxL3t0eXBlfS97",
+            "bmFtZX06aW5mbxJ3Cg1VcGRhdGVEYXRhc2V0EikuYXNndC5kYXRhc2Vydmlj",
+            "ZS52MS5VcGRhdGVEYXRhc2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIjgtPkkwIdGhgvdjEve3R5cGV9L3tuYW1lfTp1cGRhdGU6ASoSXAoS",
+            "UmVnaXN0ZXJRdWVyeVN0YXRzEi4uYXNndC5kYXRhc2VydmljZS52MS5SZWdp",
+            "c3RlclF1ZXJ5U3RhdHNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "ElgKE0NhbGxzUGVyTW9udGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkaKS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNl",
+            "EoEBChtDYWxsc1Blck1vbnRoRmlsdGVyZWRNZXRyaWMSNy5hc2d0LmRhdGFz",
+            "ZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhGaWx0ZXJlZE1ldHJpY1JlcXVlc3Qa",
+            "KS5zc24uZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEm8K",
+            "EENhbGN1bGF0ZU1ldHJpY3MSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1",
+            "bGF0ZU1ldHJpY3NSZXF1ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MS5DYWxj",
+            "dWxhdGVNZXRyaWNzUmVzcG9uc2VC1QEKHGFpLnZpc21hLmFzZ3QuZGF0YXNl",
+            "cnZpY2UudjFCEERhdGFTZXJ2aWNlUHJvdG9QAVo1Z2l0aHViLmNvbS9lLWNv",
+            "bm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC9kYXRhL3YxO2RhdGGiAgNBRFiq",
+            "AhNBc2d0LkRhdGFzZXJ2aWNlLlYxygITQXNndFxEYXRhc2VydmljZVxWMeIC",
+            "H0FzZ3RcRGF0YXNlcnZpY2VcVjFcR1BCTWV0YWRhdGHqAhVBc2d0OjpEYXRh",
+            "c2VydmljZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +103,8 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CallsPerMonthFilteredMetricRequest), global::Asgt.Dataservice.V1.CallsPerMonthFilteredMetricRequest.Parser, new[]{ "Month", "Year" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2993,6 +2999,241 @@ namespace Asgt.Dataservice.V1 {
           }
           case 34: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallsPerMonthFilteredMetricRequest : pb::IMessage<CallsPerMonthFilteredMetricRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallsPerMonthFilteredMetricRequest> _parser = new pb::MessageParser<CallsPerMonthFilteredMetricRequest>(() => new CallsPerMonthFilteredMetricRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallsPerMonthFilteredMetricRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Dataservice.V1.DataServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthFilteredMetricRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthFilteredMetricRequest(CallsPerMonthFilteredMetricRequest other) : this() {
+      month_ = other.month_;
+      year_ = other.year_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallsPerMonthFilteredMetricRequest Clone() {
+      return new CallsPerMonthFilteredMetricRequest(this);
+    }
+
+    /// <summary>Field number for the "month" field.</summary>
+    public const int MonthFieldNumber = 1;
+    private int month_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Month {
+      get { return month_; }
+      set {
+        month_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "year" field.</summary>
+    public const int YearFieldNumber = 2;
+    private int year_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Year {
+      get { return year_; }
+      set {
+        year_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallsPerMonthFilteredMetricRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallsPerMonthFilteredMetricRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Month != other.Month) return false;
+      if (Year != other.Year) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Month != 0) hash ^= Month.GetHashCode();
+      if (Year != 0) hash ^= Year.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Month != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Month);
+      }
+      if (Year != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Year);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Month != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Month);
+      }
+      if (Year != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Year);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Month != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Month);
+      }
+      if (Year != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Year);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallsPerMonthFilteredMetricRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Month != 0) {
+        Month = other.Month;
+      }
+      if (other.Year != 0) {
+        Year = other.Year;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Month = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Year = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Month = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Year = input.ReadInt32();
             break;
           }
         }

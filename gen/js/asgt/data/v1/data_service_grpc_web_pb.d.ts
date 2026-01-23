@@ -59,6 +59,13 @@ export class DataServiceClient {
                response: ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
 
+  callsPerMonthFilteredMetric(
+    request: asgt_data_v1_data_service_pb.CallsPerMonthFilteredMetricRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
+
   calculateMetrics(
     request: asgt_data_v1_data_service_pb.CalculateMetricsRequest,
     metadata: grpcWeb.Metadata | undefined,
@@ -105,6 +112,11 @@ export class DataServicePromiseClient {
 
   callsPerMonthMetric(
     request: google_protobuf_empty_pb.Empty,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
+
+  callsPerMonthFilteredMetric(
+    request: asgt_data_v1_data_service_pb.CallsPerMonthFilteredMetricRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse>;
 

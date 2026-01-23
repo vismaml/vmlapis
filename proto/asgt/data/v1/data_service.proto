@@ -53,6 +53,7 @@ service DataService {
   rpc RegisterQueryStats(RegisterQueryStatsRequest) returns (google.protobuf.Empty);
 
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
+  rpc CallsPerMonthFilteredMetric(CallsPerMonthFilteredMetricRequest) returns (ssn.dataservice.v1.CallsPerMonthResponse);
 
   rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
 }
@@ -121,4 +122,9 @@ message RegisterQueryStatsRequest {
   string model_type = 2;
   int32 batch_size = 3;
   repeated string tags = 4;
+}
+
+message CallsPerMonthFilteredMetricRequest {
+  int32 month = 1;
+  int32 year = 2;
 }

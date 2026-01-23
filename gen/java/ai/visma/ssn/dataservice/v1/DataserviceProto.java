@@ -541,7 +541,7 @@ public final class DataserviceProto {
       "ess\030\004 \003(\0132\037.ssn.dataservice.v1.Correctne",
       "ssR\020fieldCorrectness\"N\n\"CallsPerMonthFil" +
       "teredMetricRequest\022\024\n\005month\030\001 \001(\005R\005month" +
-      "\022\022\n\004year\030\002 \001(\005R\004year2\233\n\n\013DataService\022g\n\016" +
+      "\022\022\n\004year\030\002 \001(\005R\004year2\222\t\n\013DataService\022g\n\016" +
       "CreateDocument\022).ssn.dataservice.v1.Crea" +
       "teDocumentRequest\032*.ssn.dataservice.v1.C" +
       "reateDocumentResponse\022a\n\014ReadDocument\022\'." +
@@ -567,20 +567,16 @@ public final class DataserviceProto {
       "\n\033CallsPerMonthFilteredMetric\0226.ssn.data" +
       "service.v1.CallsPerMonthFilteredMetricRe" +
       "quest\032).ssn.dataservice.v1.CallsPerMonth" +
-      "Response\022\206\001\n!SuggestionsPerMonthFiltered" +
-      "Metric\0226.ssn.dataservice.v1.CallsPerMont" +
-      "hFilteredMetricRequest\032).ssn.dataservice" +
-      ".v1.CallsPerMonthResponse\022\216\001\n!CalculateA" +
-      "nnotationProcessMetrics\0223.ssn.dataservic" +
-      "e.v1.AnnotationProcessMetricsRequest\0324.s" +
-      "sn.dataservice.v1.AnnotationProcessMetri" +
-      "csResponseB\335\001\n\033ai.visma.ssn.dataservice." +
-      "v1B\020DataserviceProtoP\001ZBgithub.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/dataservice/v1;d" +
-      "ataservice\242\002\003SDX\252\002\022Ssn.Dataservice.V1\312\002\022" +
-      "Ssn\\Dataservice\\V1\342\002\036Ssn\\Dataservice\\V1\\" +
-      "GPBMetadata\352\002\024Ssn::Dataservice::V1b\006prot" +
-      "o3"
+      "Response\022\216\001\n!CalculateAnnotationProcessM" +
+      "etrics\0223.ssn.dataservice.v1.AnnotationPr" +
+      "ocessMetricsRequest\0324.ssn.dataservice.v1" +
+      ".AnnotationProcessMetricsResponseB\335\001\n\033ai" +
+      ".visma.ssn.dataservice.v1B\020DataservicePr" +
+      "otoP\001ZBgithub.com/e-conomic/vmlapis/gen/" +
+      "go/ssn/dataservice/v1;dataservice\242\002\003SDX\252" +
+      "\002\022Ssn.Dataservice.V1\312\002\022Ssn\\Dataservice\\V" +
+      "1\342\002\036Ssn\\Dataservice\\V1\\GPBMetadata\352\002\024Ssn" +
+      "::Dataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

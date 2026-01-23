@@ -157,14 +157,6 @@ namespace Ssn.Dataservice.V1 {
         __Marshaller_ssn_dataservice_v1_CallsPerMonthResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest, global::Ssn.Dataservice.V1.CallsPerMonthResponse> __Method_SuggestionsPerMonthFilteredMetric = new grpc::Method<global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "SuggestionsPerMonthFilteredMetric",
-        __Marshaller_ssn_dataservice_v1_CallsPerMonthFilteredMetricRequest,
-        __Marshaller_ssn_dataservice_v1_CallsPerMonthResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest, global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse> __Method_CalculateAnnotationProcessMetrics = new grpc::Method<global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest, global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -244,12 +236,6 @@ namespace Ssn.Dataservice.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Dataservice.V1.CallsPerMonthResponse> CallsPerMonthFilteredMetric(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Ssn.Dataservice.V1.CallsPerMonthResponse> SuggestionsPerMonthFilteredMetric(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -518,26 +504,6 @@ namespace Ssn.Dataservice.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CallsPerMonthFilteredMetric, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Dataservice.V1.CallsPerMonthResponse SuggestionsPerMonthFilteredMetric(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return SuggestionsPerMonthFilteredMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Dataservice.V1.CallsPerMonthResponse SuggestionsPerMonthFilteredMetric(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_SuggestionsPerMonthFilteredMetric, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Dataservice.V1.CallsPerMonthResponse> SuggestionsPerMonthFilteredMetricAsync(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return SuggestionsPerMonthFilteredMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Dataservice.V1.CallsPerMonthResponse> SuggestionsPerMonthFilteredMetricAsync(global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_SuggestionsPerMonthFilteredMetric, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse CalculateAnnotationProcessMetrics(global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateAnnotationProcessMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -581,7 +547,6 @@ namespace Ssn.Dataservice.V1 {
           .AddMethod(__Method_CallsPerMonthMetric, serviceImpl.CallsPerMonthMetric)
           .AddMethod(__Method_SuggestionsPerMonthMetric, serviceImpl.SuggestionsPerMonthMetric)
           .AddMethod(__Method_CallsPerMonthFilteredMetric, serviceImpl.CallsPerMonthFilteredMetric)
-          .AddMethod(__Method_SuggestionsPerMonthFilteredMetric, serviceImpl.SuggestionsPerMonthFilteredMetric)
           .AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl.CalculateAnnotationProcessMetrics).Build();
     }
 
@@ -602,7 +567,6 @@ namespace Ssn.Dataservice.V1 {
       serviceBinder.AddMethod(__Method_CallsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthMetric));
       serviceBinder.AddMethod(__Method_SuggestionsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.SuggestionsPerMonthMetric));
       serviceBinder.AddMethod(__Method_CallsPerMonthFilteredMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthFilteredMetric));
-      serviceBinder.AddMethod(__Method_SuggestionsPerMonthFilteredMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.CallsPerMonthFilteredMetricRequest, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.SuggestionsPerMonthFilteredMetric));
       serviceBinder.AddMethod(__Method_CalculateAnnotationProcessMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Dataservice.V1.AnnotationProcessMetricsRequest, global::Ssn.Dataservice.V1.AnnotationProcessMetricsResponse>(serviceImpl.CalculateAnnotationProcessMetrics));
     }
 

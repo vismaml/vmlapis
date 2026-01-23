@@ -119,3 +119,11 @@ class RegisterQueryStatsRequest(_message.Message):
     batch_size: int
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class CallsPerMonthFilteredMetricRequest(_message.Message):
+    __slots__ = ("month", "year")
+    MONTH_FIELD_NUMBER: _ClassVar[int]
+    YEAR_FIELD_NUMBER: _ClassVar[int]
+    month: int
+    year: int
+    def __init__(self, month: _Optional[int] = ..., year: _Optional[int] = ...) -> None: ...

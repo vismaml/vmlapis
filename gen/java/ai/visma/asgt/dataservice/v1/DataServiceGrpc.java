@@ -232,6 +232,37 @@ public final class DataServiceGrpc {
     return getCallsPerMonthMetricMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest,
+      ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> getCallsPerMonthFilteredMetricMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CallsPerMonthFilteredMetric",
+      requestType = ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest.class,
+      responseType = ai.visma.ssn.dataservice.v1.CallsPerMonthResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest,
+      ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> getCallsPerMonthFilteredMetricMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest, ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> getCallsPerMonthFilteredMetricMethod;
+    if ((getCallsPerMonthFilteredMetricMethod = DataServiceGrpc.getCallsPerMonthFilteredMetricMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCallsPerMonthFilteredMetricMethod = DataServiceGrpc.getCallsPerMonthFilteredMetricMethod) == null) {
+          DataServiceGrpc.getCallsPerMonthFilteredMetricMethod = getCallsPerMonthFilteredMetricMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest, ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CallsPerMonthFilteredMetric"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.dataservice.v1.CallsPerMonthResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("CallsPerMonthFilteredMetric"))
+              .build();
+        }
+      }
+    }
+    return getCallsPerMonthFilteredMetricMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.CalculateMetricsRequest,
       ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> getCalculateMetricsMethod;
 
@@ -377,6 +408,13 @@ public final class DataServiceGrpc {
 
     /**
      */
+    default void callsPerMonthFilteredMetric(ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallsPerMonthFilteredMetricMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateMetricsMethod(), responseObserver);
@@ -468,6 +506,14 @@ public final class DataServiceGrpc {
 
     /**
      */
+    public void callsPerMonthFilteredMetric(ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCallsPerMonthFilteredMetricMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -542,6 +588,13 @@ public final class DataServiceGrpc {
 
     /**
      */
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthFilteredMetric(ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCallsPerMonthFilteredMetricMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public ai.visma.asgt.dataservice.v1.CalculateMetricsResponse calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCalculateMetricsMethod(), getCallOptions(), request);
@@ -611,6 +664,13 @@ public final class DataServiceGrpc {
     public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthMetric(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCallsPerMonthMetricMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthFilteredMetric(ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCallsPerMonthFilteredMetricMethod(), getCallOptions(), request);
     }
 
     /**
@@ -695,6 +755,14 @@ public final class DataServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> callsPerMonthFilteredMetric(
+        ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCallsPerMonthFilteredMetricMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> calculateMetrics(
         ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -709,7 +777,8 @@ public final class DataServiceGrpc {
   private static final int METHODID_UPDATE_DATASET = 4;
   private static final int METHODID_REGISTER_QUERY_STATS = 5;
   private static final int METHODID_CALLS_PER_MONTH_METRIC = 6;
-  private static final int METHODID_CALCULATE_METRICS = 7;
+  private static final int METHODID_CALLS_PER_MONTH_FILTERED_METRIC = 7;
+  private static final int METHODID_CALCULATE_METRICS = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -754,6 +823,10 @@ public final class DataServiceGrpc {
           break;
         case METHODID_CALLS_PER_MONTH_METRIC:
           serviceImpl.callsPerMonthMetric((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>) responseObserver);
+          break;
+        case METHODID_CALLS_PER_MONTH_FILTERED_METRIC:
+          serviceImpl.callsPerMonthFilteredMetric((ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>) responseObserver);
           break;
         case METHODID_CALCULATE_METRICS:
@@ -828,6 +901,13 @@ public final class DataServiceGrpc {
               ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
                 service, METHODID_CALLS_PER_MONTH_METRIC)))
         .addMethod(
+          getCallsPerMonthFilteredMetricMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.CallsPerMonthFilteredMetricRequest,
+              ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
+                service, METHODID_CALLS_PER_MONTH_FILTERED_METRIC)))
+        .addMethod(
           getCalculateMetricsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -889,6 +969,7 @@ public final class DataServiceGrpc {
               .addMethod(getUpdateDatasetMethod())
               .addMethod(getRegisterQueryStatsMethod())
               .addMethod(getCallsPerMonthMetricMethod())
+              .addMethod(getCallsPerMonthFilteredMetricMethod())
               .addMethod(getCalculateMetricsMethod())
               .build();
         }

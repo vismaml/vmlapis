@@ -237,26 +237,6 @@ func (mr *MockDataServiceClientMockRecorder) ReadDocument(ctx, in interface{}, o
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReadDocument", reflect.TypeOf((*MockDataServiceClient)(nil).ReadDocument), varargs...)
 }
 
-// SuggestionsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceClient) SuggestionsPerMonthFilteredMetric(ctx context.Context, in *dataservice.CallsPerMonthFilteredMetricRequest, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "SuggestionsPerMonthFilteredMetric", varargs...)
-	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// SuggestionsPerMonthFilteredMetric indicates an expected call of SuggestionsPerMonthFilteredMetric.
-func (mr *MockDataServiceClientMockRecorder) SuggestionsPerMonthFilteredMetric(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SuggestionsPerMonthFilteredMetric", reflect.TypeOf((*MockDataServiceClient)(nil).SuggestionsPerMonthFilteredMetric), varargs...)
-}
-
 // SuggestionsPerMonthMetric mocks base method.
 func (m *MockDataServiceClient) SuggestionsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*dataservice.CallsPerMonthResponse, error) {
 	m.ctrl.T.Helper()
@@ -448,21 +428,6 @@ func (m *MockDataServiceServer) ReadDocument(arg0 context.Context, arg1 *dataser
 func (mr *MockDataServiceServerMockRecorder) ReadDocument(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReadDocument", reflect.TypeOf((*MockDataServiceServer)(nil).ReadDocument), arg0, arg1)
-}
-
-// SuggestionsPerMonthFilteredMetric mocks base method.
-func (m *MockDataServiceServer) SuggestionsPerMonthFilteredMetric(arg0 context.Context, arg1 *dataservice.CallsPerMonthFilteredMetricRequest) (*dataservice.CallsPerMonthResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SuggestionsPerMonthFilteredMetric", arg0, arg1)
-	ret0, _ := ret[0].(*dataservice.CallsPerMonthResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// SuggestionsPerMonthFilteredMetric indicates an expected call of SuggestionsPerMonthFilteredMetric.
-func (mr *MockDataServiceServerMockRecorder) SuggestionsPerMonthFilteredMetric(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SuggestionsPerMonthFilteredMetric", reflect.TypeOf((*MockDataServiceServer)(nil).SuggestionsPerMonthFilteredMetric), arg0, arg1)
 }
 
 // SuggestionsPerMonthMetric mocks base method.
