@@ -32,4 +32,10 @@ public interface CallsPerMonthOrBuilder extends
    * @return The totalBatchSize.
    */
   long getTotalBatchSize();
+
+  /**
+   * <code>int32 year = 4 [json_name = "year"];</code>
+   * @return The year.
+   */
+  int getYear();
 }

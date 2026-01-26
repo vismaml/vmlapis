@@ -104,6 +104,17 @@ private static final long serialVersionUID = 0L;
     return totalBatchSize_;
   }
 
+  public static final int YEAR_FIELD_NUMBER = 4;
+  private int year_ = 0;
+  /**
+   * <code>int32 year = 4 [json_name = "year"];</code>
+   * @return The year.
+   */
+  @java.lang.Override
+  public int getYear() {
+    return year_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -127,6 +138,9 @@ private static final long serialVersionUID = 0L;
     if (totalBatchSize_ != 0L) {
       output.writeInt64(3, totalBatchSize_);
     }
+    if (year_ != 0) {
+      output.writeInt32(4, year_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -146,6 +160,10 @@ private static final long serialVersionUID = 0L;
     if (totalBatchSize_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, totalBatchSize_);
+    }
+    if (year_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, year_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -168,6 +186,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMonthName())) return false;
     if (getTotalBatchSize()
         != other.getTotalBatchSize()) return false;
+    if (getYear()
+        != other.getYear()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,6 +207,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOTAL_BATCH_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTotalBatchSize());
+    hash = (37 * hash) + YEAR_FIELD_NUMBER;
+    hash = (53 * hash) + getYear();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -321,6 +343,7 @@ private static final long serialVersionUID = 0L;
       calls_ = 0L;
       monthName_ = "";
       totalBatchSize_ = 0L;
+      year_ = 0;
       return this;
     }
 
@@ -363,6 +386,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.totalBatchSize_ = totalBatchSize_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.year_ = year_;
+      }
     }
 
     @java.lang.Override
@@ -387,6 +413,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getTotalBatchSize() != 0L) {
         setTotalBatchSize(other.getTotalBatchSize());
+      }
+      if (other.getYear() != 0) {
+        setYear(other.getYear());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -429,6 +458,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              year_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -578,6 +612,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotalBatchSize() {
       bitField0_ = (bitField0_ & ~0x00000004);
       totalBatchSize_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int year_ ;
+    /**
+     * <code>int32 year = 4 [json_name = "year"];</code>
+     * @return The year.
+     */
+    @java.lang.Override
+    public int getYear() {
+      return year_;
+    }
+    /**
+     * <code>int32 year = 4 [json_name = "year"];</code>
+     * @param value The year to set.
+     * @return This builder for chaining.
+     */
+    public Builder setYear(int value) {
+
+      year_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 year = 4 [json_name = "year"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearYear() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      year_ = 0;
       onChanged();
       return this;
     }
