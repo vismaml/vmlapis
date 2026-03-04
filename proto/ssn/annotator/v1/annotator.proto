@@ -145,6 +145,14 @@ message Feature {
     VERIFIED = 50;
     // Hotel dates including check-in and check-out dates
     HOTEL_DATES = 51;
+    // Run fees detection
+    FEES = 52;
+    // Run freight detection
+    FREIGHT = 53;
+    // Run rounding detection
+    ROUNDING = 54;
+    // Run tip detection
+    TIP = 55;
   }
   // The feature type.
   Type type = 1;
@@ -320,6 +328,14 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.PurchaseLine purchase_lines_details = 56;
   // VAT distribution for the document. This is a list where each field is a candidate.
   repeated ssn.type.VatDistribution vat_distribution_details = 57;
+  // Fees amount
+  repeated ssn.type.Candidate fees = 58;
+  // Freight amount
+  repeated ssn.type.Candidate freight = 59;
+  // Rounding amount
+  repeated ssn.type.Candidate rounding = 60;
+  // Tip amount
+  repeated ssn.type.Candidate tip = 61;
 }
 
 message Document {
