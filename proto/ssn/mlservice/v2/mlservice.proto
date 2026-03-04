@@ -61,6 +61,10 @@ message FeatureGenRequest {
     string receiver_country_code = 38;
     string receiver_name = 39;
     string receiver_vat_number = 40;
+    double fees = 41;
+    double freight = 42;
+    double rounding = 43;
+    double tip = 44;
   }
   TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
@@ -120,6 +124,10 @@ message PredictResponse {
   repeated ssn.type.Candidate receiver_country_code = 39;
   repeated ssn.type.Candidate receiver_name = 40;
   repeated ssn.type.Candidate receiver_vat_number = 41;
+  repeated ssn.type.Candidate fees = 42;
+  repeated ssn.type.Candidate freight = 43;
+  repeated ssn.type.Candidate rounding = 44;
+  repeated ssn.type.Candidate tip = 45;
 }
 
 message FeatureGenPredictRequest {

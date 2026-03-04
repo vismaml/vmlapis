@@ -108,6 +108,11 @@ message TrueValues {
 
   google.type.Date check_in_date = 44 [(gen_bq_schema.bigquery).type_override = "DATE"];
   google.type.Date check_out_date = 45 [(gen_bq_schema.bigquery).type_override = "DATE"];
+
+  google.protobuf.DoubleValue fees = 46;
+  google.protobuf.DoubleValue freight = 47;
+  google.protobuf.DoubleValue rounding = 48;
+  google.protobuf.DoubleValue tip = 49;
 }
 
 message PredictionValues {
@@ -158,6 +163,11 @@ message PredictionValues {
 
   repeated google.type.Date check_in_date = 44 [(gen_bq_schema.bigquery).type_override = "DATE"];
   repeated google.type.Date check_out_date = 45 [(gen_bq_schema.bigquery).type_override = "DATE"];
+
+  repeated google.protobuf.DoubleValue fees = 46;
+  repeated google.protobuf.DoubleValue freight = 47;
+  repeated google.protobuf.DoubleValue rounding = 48;
+  repeated google.protobuf.DoubleValue tip = 49;
 }
 
 message PredictionConfidences {
@@ -203,6 +213,11 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue receiver_vat_number = 40;
   repeated google.protobuf.FloatValue check_in_date = 41;
   repeated google.protobuf.FloatValue check_out_date = 42;
+
+  repeated google.protobuf.FloatValue fees = 43;
+  repeated google.protobuf.FloatValue freight = 44;
+  repeated google.protobuf.FloatValue rounding = 45;
+  repeated google.protobuf.FloatValue tip = 46;
 }
 
 message PredictionMetadata {
@@ -248,6 +263,11 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec receiver_vat_number = 40;
   repeated ssn.type.ModelSpec check_in_date = 41;
   repeated ssn.type.ModelSpec check_out_date = 42;
+
+  repeated ssn.type.ModelSpec fees = 43;
+  repeated ssn.type.ModelSpec freight = 44;
+  repeated ssn.type.ModelSpec rounding = 45;
+  repeated ssn.type.ModelSpec tip = 46;
 }
 
 message CreateDocumentRequest {
