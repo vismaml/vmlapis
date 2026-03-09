@@ -1,17 +1,21 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "AutoSuggest",
+    "title": "Product Types",
     "version": "v2"
   },
   "tags": [
     {
-      "name": "SuggesterService",
-      "description": "Make predictions against a dataset."
+      "name": "ProductTypeService",
+      "description": "Suggest product types from text descriptions."
     },
     {
       "name": "DatasetService",
       "description": "Manage datasets and examples used for training AutoSuggest models."
+    },
+    {
+      "name": "SuggesterService",
+      "description": "Make predictions against a dataset."
     }
   ],
   "schemes": [
@@ -463,7 +467,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/SuggesterServiceBatchSuggestBody"
+              "$ref": "#/definitions/v2SuggesterServiceBatchSuggestBody"
             }
           }
         ],
@@ -509,6 +513,39 @@
         ],
         "tags": [
           "SuggesterService"
+        ]
+      }
+    },
+    "/v2/models/product-types:batchSuggest": {
+      "post": {
+        "summary": "Suggest product types for a batch of text inputs.",
+        "operationId": "ProductTypeService_BatchSuggest",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeBatchSuggestRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ProductTypeService"
         ]
       }
     },
@@ -656,22 +693,6 @@
         },
         "unknownTargetClass": {
           "type": "boolean"
-        }
-      }
-    },
-    "SuggesterServiceBatchSuggestBody": {
-      "type": "object",
-      "properties": {
-        "inputs": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeData"
-          },
-          "title": "Input data to use for prediction"
-        },
-        "options": {
-          "$ref": "#/definitions/v2SuggestOptions"
         }
       }
     },
@@ -1203,6 +1224,18 @@
         }
       }
     },
+    "v2ConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH"
+      ],
+      "default": "UNKNOWN"
+    },
     "v2CreateDatasetRequest": {
       "type": "object",
       "properties": {
@@ -1244,6 +1277,62 @@
         }
       }
     },
+    "v2ProductTypeBatchSuggestRequest": {
+      "type": "object",
+      "properties": {
+        "texts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Text descriptions to classify into product types."
+        }
+      }
+    },
+    "v2ProductTypeBatchSuggestResponse": {
+      "type": "object",
+      "properties": {
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeSuggestion"
+          },
+          "description": "Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores."
+        }
+      }
+    },
+    "v2ProductTypeCandidate": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Suggested product type label."
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float",
+          "description": "Confidence score between 0 and 1."
+        },
+        "confidenceLevel": {
+          "$ref": "#/definitions/v2ConfidenceLevel",
+          "description": "Bucketized confidence level."
+        }
+      }
+    },
+    "v2ProductTypeSuggestion": {
+      "type": "object",
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeCandidate"
+          },
+          "description": "Ranked candidates for this suggestion."
+        }
+      }
+    },
     "v2SuggestOptions": {
       "type": "object",
       "example": {
@@ -1273,6 +1362,22 @@
         },
         "model": {
           "$ref": "#/definitions/asgttypeModel"
+        }
+      }
+    },
+    "v2SuggesterServiceBatchSuggestBody": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          },
+          "title": "Input data to use for prediction"
+        },
+        "options": {
+          "$ref": "#/definitions/v2SuggestOptions"
         }
       }
     },
