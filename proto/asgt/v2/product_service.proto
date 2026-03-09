@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package asgt.v2;
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "validate/validate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "Product Types"
+    version: "v2"
+    description: ""
+  }
+  schemes: HTTPS
+  consumes: "application/json"
+  produces: "application/json"
+};
+
+service ProductTypeService {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Suggest product types from text descriptions."};
+
+  // Suggest product types for a batch of text inputs.
+  rpc BatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {
+    option (google.api.http) = {
+      post: "/v2/models/product-types:batchSuggest"
+      body: "*"
+    };
+  }
+}
+
+message ProductTypeBatchSuggestRequest {
+  // Text descriptions to classify into product types.
+  repeated string texts = 1 [(validate.rules).repeated = {
+    min_items: 1
+    max_items: 1024
+    items: {
+      string: {min_len: 1}
+    }
+  }];
+}
+
+message ProductTypeBatchSuggestResponse {
+  // Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
+  repeated ProductTypeSuggestion suggestions = 1;
+}
+
+message ProductTypeSuggestion {
+  // Ranked candidates for this suggestion.
+  repeated ProductTypeCandidate candidates = 1;
+}
+
+message ProductTypeCandidate {
+  // Suggested product type label.
+  string label = 1;
+  // Confidence score between 0 and 1.
+  float confidence = 2;
+  // Bucketized confidence level.
+  ConfidenceLevel confidence_level = 3;
+}
+
+enum ConfidenceLevel {
+  UNKNOWN = 0;
+  VERY_LOW = 1;
+  LOW = 2;
+  MID = 3;
+  HIGH = 4;
+  VERY_HIGH = 5;
+}
