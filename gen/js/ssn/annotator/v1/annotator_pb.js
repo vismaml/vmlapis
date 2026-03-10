@@ -381,7 +381,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   QR_CODES: 48,
   SWISS_QR_BILLS: 49,
   VERIFIED: 50,
-  HOTEL_DATES: 51
+  HOTEL_DATES: 51,
+  PRODUCT_TYPES: 52
 };
 
 /**

@@ -111,7 +111,7 @@ public final class CandidateProto {
       "l_ver\030\002 \001(\0132\033.google.protobuf.Int64Value" +
       "R\010modelVer\"V\n\rLineCandidate\022\022\n\004text\030\001 \001(" +
       "\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022\031\n\010page_" +
-      "ref\030\006 \001(\rR\007pageRef\"\374\004\n\025PurchaseLineCandi" +
+      "ref\030\006 \001(\rR\007pageRef\"\237\005\n\025PurchaseLineCandi" +
       "date\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004code\030" +
       "\002 \001(\tR\004code\022 \n\013description\030\003 \001(\tR\013descri" +
       "ption\022\032\n\010quantity\030\004 \001(\tR\010quantity\022\037\n\013ite" +
@@ -127,56 +127,59 @@ public final class CandidateProto {
       "PriceExclVat\022\024\n\005total\030\021 \001(\tR\005total\022\035\n\nun" +
       "it_price\030\022 \001(\tR\tunitPrice\022:\n\016model_metad" +
       "ata\030\023 \001(\0132\023.ssn.type.ModelSpecR\rmodelMet" +
-      "adataJ\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017AnswerCandidate\022\032\n" +
-      "\010question\030\001 \001(\tR\010question\022\026\n\006answer\030\002 \001(" +
-      "\tR\006answer\0224\n\nconfidence\030\003 \001(\0132\024.ssn.type" +
-      ".ConfidenceR\nconfidence\022:\n\016model_metadat" +
-      "a\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetad" +
-      "ata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9\n\010PageTe" +
-      "xt\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004text\030\002 " +
-      "\001(\tR\004text\"\337\001\n\030VatDistributionCandidate\022\036" +
-      "\n\npercentage\030\001 \001(\tR\npercentage\022\026\n\006amount" +
-      "\030\002 \001(\tR\006amount\022:\n\016model_metadata\030\003 \001(\0132\023" +
-      ".ssn.type.ModelSpecR\rmodelMetadata\022\031\n\010pa" +
-      "ge_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_vat\030\005 \001(\tR" +
-      "\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007inclVat\"1\n\020D" +
-      "ocumentMetadata\022\035\n\npage_count\030\001 \001(\rR\tpag" +
-      "eCount\"\242\007\n\014PurchaseLine\022\031\n\010page_ref\030\001 \001(" +
-      "\rR\007pageRef\022\'\n\004code\030\002 \003(\0132\023.ssn.type.Cand" +
-      "idateR\004code\0225\n\013description\030\003 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\013description\022/\n\010quantity\030\004" +
-      " \003(\0132\023.ssn.type.CandidateR\010quantity\0224\n\013i" +
-      "tem_number\030\005 \003(\0132\023.ssn.type.CandidateR\ni" +
-      "temNumber\022\'\n\004unit\030\006 \003(\0132\023.ssn.type.Candi" +
-      "dateR\004unit\022:\n\016total_discount\030\007 \003(\0132\023.ssn" +
-      ".type.CandidateR\rtotalDiscount\022D\n\023percen" +
-      "tage_discount\030\010 \003(\0132\023.ssn.type.Candidate" +
-      "R\022percentageDiscount\0229\n\016total_incl_vat\030\t" +
-      " \003(\0132\023.ssn.type.CandidateR\014totalInclVat\022" +
-      "9\n\016total_excl_vat\030\n \003(\0132\023.ssn.type.Candi" +
-      "dateR\014totalExclVat\0220\n\ttotal_vat\030\013 \003(\0132\023." +
-      "ssn.type.CandidateR\010totalVat\022:\n\016percenta" +
-      "ge_vat\030\014 \003(\0132\023.ssn.type.CandidateR\rperce" +
-      "ntageVat\022B\n\023unit_price_incl_vat\030\r \003(\0132\023." +
-      "ssn.type.CandidateR\020unitPriceInclVat\022B\n\023" +
-      "unit_price_excl_vat\030\016 \003(\0132\023.ssn.type.Can" +
-      "didateR\020unitPriceExclVat\022)\n\005total\030\017 \003(\0132" +
-      "\023.ssn.type.CandidateR\005total\0222\n\nunit_pric" +
-      "e\030\020 \003(\0132\023.ssn.type.CandidateR\tunitPrice\022" +
-      ":\n\016model_metadata\030\021 \001(\0132\023.ssn.type.Model" +
-      "SpecR\rmodelMetadata\"\305\002\n\017VatDistribution\022" +
-      "\031\n\010page_ref\030\001 \001(\rR\007pageRef\0223\n\npercentage" +
-      "\030\002 \003(\0132\023.ssn.type.CandidateR\npercentage\022" +
-      "9\n\016total_incl_vat\030\003 \003(\0132\023.ssn.type.Candi" +
-      "dateR\014totalInclVat\0229\n\016total_excl_vat\030\004 \003" +
-      "(\0132\023.ssn.type.CandidateR\014totalExclVat\0220\n" +
-      "\ttotal_vat\030\005 \003(\0132\023.ssn.type.CandidateR\010t" +
-      "otalVat\022:\n\016model_metadata\030\006 \001(\0132\023.ssn.ty" +
-      "pe.ModelSpecR\rmodelMetadataB\232\001\n\021ai.visma" +
-      ".ssn.typeB\016CandidateProtoP\001Z4github.com/" +
-      "e-conomic/vmlapis/gen/go/ssn/type;ssntyp" +
-      "e\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type" +
-      "\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
+      "adata\022!\n\014product_type\030\024 \001(\tR\013productType" +
+      "J\004\010\017\020\020J\004\010\020\020\021\"\322\001\n\017AnswerCandidate\022\032\n\010ques" +
+      "tion\030\001 \001(\tR\010question\022\026\n\006answer\030\002 \001(\tR\006an" +
+      "swer\0224\n\nconfidence\030\003 \001(\0132\024.ssn.type.Conf" +
+      "idenceR\nconfidence\022:\n\016model_metadata\030\007 \001" +
+      "(\0132\023.ssn.type.ModelSpecR\rmodelMetadata\022\031" +
+      "\n\010page_ref\030\010 \001(\rR\007pageRef\"9\n\010PageText\022\031\n" +
+      "\010page_ref\030\001 \001(\rR\007pageRef\022\022\n\004text\030\002 \001(\tR\004" +
+      "text\"\337\001\n\030VatDistributionCandidate\022\036\n\nper" +
+      "centage\030\001 \001(\tR\npercentage\022\026\n\006amount\030\002 \001(" +
+      "\tR\006amount\022:\n\016model_metadata\030\003 \001(\0132\023.ssn." +
+      "type.ModelSpecR\rmodelMetadata\022\031\n\010page_re" +
+      "f\030\004 \001(\rR\007pageRef\022\031\n\010excl_vat\030\005 \001(\tR\007excl" +
+      "Vat\022\031\n\010incl_vat\030\006 \001(\tR\007inclVat\"1\n\020Docume" +
+      "ntMetadata\022\035\n\npage_count\030\001 \001(\rR\tpageCoun" +
+      "t\"\332\007\n\014PurchaseLine\022\031\n\010page_ref\030\001 \001(\rR\007pa" +
+      "geRef\022\'\n\004code\030\002 \003(\0132\023.ssn.type.Candidate" +
+      "R\004code\0225\n\013description\030\003 \003(\0132\023.ssn.type.C" +
+      "andidateR\013description\022/\n\010quantity\030\004 \003(\0132" +
+      "\023.ssn.type.CandidateR\010quantity\0224\n\013item_n" +
+      "umber\030\005 \003(\0132\023.ssn.type.CandidateR\nitemNu" +
+      "mber\022\'\n\004unit\030\006 \003(\0132\023.ssn.type.CandidateR" +
+      "\004unit\022:\n\016total_discount\030\007 \003(\0132\023.ssn.type" +
+      ".CandidateR\rtotalDiscount\022D\n\023percentage_" +
+      "discount\030\010 \003(\0132\023.ssn.type.CandidateR\022per" +
+      "centageDiscount\0229\n\016total_incl_vat\030\t \003(\0132" +
+      "\023.ssn.type.CandidateR\014totalInclVat\0229\n\016to" +
+      "tal_excl_vat\030\n \003(\0132\023.ssn.type.CandidateR" +
+      "\014totalExclVat\0220\n\ttotal_vat\030\013 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\010totalVat\022:\n\016percentage_va" +
+      "t\030\014 \003(\0132\023.ssn.type.CandidateR\rpercentage" +
+      "Vat\022B\n\023unit_price_incl_vat\030\r \003(\0132\023.ssn.t" +
+      "ype.CandidateR\020unitPriceInclVat\022B\n\023unit_" +
+      "price_excl_vat\030\016 \003(\0132\023.ssn.type.Candidat" +
+      "eR\020unitPriceExclVat\022)\n\005total\030\017 \003(\0132\023.ssn" +
+      ".type.CandidateR\005total\0222\n\nunit_price\030\020 \003" +
+      "(\0132\023.ssn.type.CandidateR\tunitPrice\022:\n\016mo" +
+      "del_metadata\030\021 \001(\0132\023.ssn.type.ModelSpecR" +
+      "\rmodelMetadata\0226\n\014product_type\030\022 \003(\0132\023.s" +
+      "sn.type.CandidateR\013productType\"\305\002\n\017VatDi" +
+      "stribution\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\0223\n" +
+      "\npercentage\030\002 \003(\0132\023.ssn.type.CandidateR\n" +
+      "percentage\0229\n\016total_incl_vat\030\003 \003(\0132\023.ssn" +
+      ".type.CandidateR\014totalInclVat\0229\n\016total_e" +
+      "xcl_vat\030\004 \003(\0132\023.ssn.type.CandidateR\014tota" +
+      "lExclVat\0220\n\ttotal_vat\030\005 \003(\0132\023.ssn.type.C" +
+      "andidateR\010totalVat\022:\n\016model_metadata\030\006 \001" +
+      "(\0132\023.ssn.type.ModelSpecR\rmodelMetadataB\232" +
+      "\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001Z4" +
+      "github.com/e-conomic/vmlapis/gen/go/ssn/" +
+      "type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type" +
+      "\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -213,7 +216,7 @@ public final class CandidateProto {
     internal_static_ssn_type_PurchaseLineCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLineCandidate_descriptor,
-        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", });
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", });
     internal_static_ssn_type_AnswerCandidate_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_type_AnswerCandidate_fieldAccessorTable = new
@@ -243,7 +246,7 @@ public final class CandidateProto {
     internal_static_ssn_type_PurchaseLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLine_descriptor,
-        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", });
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", });
     internal_static_ssn_type_VatDistribution_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_type_VatDistribution_fieldAccessorTable = new

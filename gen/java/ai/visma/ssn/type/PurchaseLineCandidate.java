@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
     unitPriceExclVat_ = "";
     total_ = "";
     unitPrice_ = "";
+    productType_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -817,6 +818,53 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
 
+  public static final int PRODUCT_TYPE_FIELD_NUMBER = 20;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object productType_ = "";
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>string product_type = 20 [json_name = "productType"];</code>
+   * @return The productType.
+   */
+  @java.lang.Override
+  public java.lang.String getProductType() {
+    java.lang.Object ref = productType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      productType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>string product_type = 20 [json_name = "productType"];</code>
+   * @return The bytes for productType.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getProductTypeBytes() {
+    java.lang.Object ref = productType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      productType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -882,6 +930,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(19, getModelMetadata());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(productType_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 20, productType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -944,6 +995,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getModelMetadata());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(productType_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(20, productType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -996,6 +1050,8 @@ private static final long serialVersionUID = 0L;
       if (!getModelMetadata()
           .equals(other.getModelMetadata())) return false;
     }
+    if (!getProductType()
+        .equals(other.getProductType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1043,6 +1099,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getModelMetadata().hashCode();
     }
+    hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getProductType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1201,6 +1259,7 @@ private static final long serialVersionUID = 0L;
         modelMetadataBuilder_.dispose();
         modelMetadataBuilder_ = null;
       }
+      productType_ = "";
       return this;
     }
 
@@ -1288,6 +1347,9 @@ private static final long serialVersionUID = 0L;
             ? modelMetadata_
             : modelMetadataBuilder_.build();
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.productType_ = productType_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1384,6 +1446,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasModelMetadata()) {
         mergeModelMetadata(other.getModelMetadata());
+      }
+      if (!other.getProductType().isEmpty()) {
+        productType_ = other.productType_;
+        bitField0_ |= 0x00020000;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1498,6 +1565,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 154
+            case 162: {
+              productType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3097,6 +3169,98 @@ private static final long serialVersionUID = 0L;
         modelMetadata_ = null;
       }
       return modelMetadataBuilder_;
+    }
+
+    private java.lang.Object productType_ = "";
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>string product_type = 20 [json_name = "productType"];</code>
+     * @return The productType.
+     */
+    public java.lang.String getProductType() {
+      java.lang.Object ref = productType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        productType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>string product_type = 20 [json_name = "productType"];</code>
+     * @return The bytes for productType.
+     */
+    public com.google.protobuf.ByteString
+        getProductTypeBytes() {
+      java.lang.Object ref = productType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>string product_type = 20 [json_name = "productType"];</code>
+     * @param value The productType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      productType_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>string product_type = 20 [json_name = "productType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductType() {
+      productType_ = getDefaultInstance().getProductType();
+      bitField0_ = (bitField0_ & ~0x00020000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>string product_type = 20 [json_name = "productType"];</code>
+     * @param value The bytes for productType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      productType_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.PurchaseLineCandidate)

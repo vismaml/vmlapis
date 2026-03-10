@@ -43,8 +43,8 @@ namespace Ssn.Type {
             "YxIdCgptb2RlbF9uYW1lGAEgASgJUgltb2RlbE5hbWUSOAoJbW9kZWxfdmVy",
             "GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVSCG1vZGVsVmVy",
             "IlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgBIAEoCVIEdGV4dBIWCgZhbW91",
-            "bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3JlZhgGIAEoDVIHcGFnZVJlZiL8",
-            "BAoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
+            "bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3JlZhgGIAEoDVIHcGFnZVJlZiKf",
+            "BQoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
             "YWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUSIAoLZGVzY3JpcHRpb24YAyAB",
             "KAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5GAQgASgJUghxdWFudGl0eRIf",
             "CgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51bWJlchISCgR1bml0GAYgASgJ",
@@ -57,52 +57,54 @@ namespace Ssn.Type {
             "bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJpY2VfZXhjbF92YXQYDiABKAlS",
             "EHVuaXRQcmljZUV4Y2xWYXQSFAoFdG90YWwYESABKAlSBXRvdGFsEh0KCnVu",
             "aXRfcHJpY2UYEiABKAlSCXVuaXRQcmljZRI6Cg5tb2RlbF9tZXRhZGF0YRgT",
-            "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YUoECA8Q",
-            "EEoECBAQESLSAQoPQW5zd2VyQ2FuZGlkYXRlEhoKCHF1ZXN0aW9uGAEgASgJ",
-            "UghxdWVzdGlvbhIWCgZhbnN3ZXIYAiABKAlSBmFuc3dlchI0Cgpjb25maWRl",
-            "bmNlGAMgASgLMhQuc3NuLnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZRI6",
-            "Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1IN",
-            "bW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgIIAEoDVIHcGFnZVJlZiI5CghQ",
-            "YWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIHcGFnZVJlZhISCgR0ZXh0GAIg",
-            "ASgJUgR0ZXh0It8BChhWYXREaXN0cmlidXRpb25DYW5kaWRhdGUSHgoKcGVy",
-            "Y2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIWCgZhbW91bnQYAiABKAlSBmFt",
-            "b3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEoCzITLnNzbi50eXBlLk1vZGVs",
-            "U3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgEIAEoDVIHcGFnZVJl",
-            "ZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZhdBIZCghpbmNsX3ZhdBgGIAEo",
-            "CVIHaW5jbFZhdCIxChBEb2N1bWVudE1ldGFkYXRhEh0KCnBhZ2VfY291bnQY",
-            "ASABKA1SCXBhZ2VDb3VudCKiBwoMUHVyY2hhc2VMaW5lEhkKCHBhZ2VfcmVm",
-            "GAEgASgNUgdwYWdlUmVmEicKBGNvZGUYAiADKAsyEy5zc24udHlwZS5DYW5k",
-            "aWRhdGVSBGNvZGUSNQoLZGVzY3JpcHRpb24YAyADKAsyEy5zc24udHlwZS5D",
-            "YW5kaWRhdGVSC2Rlc2NyaXB0aW9uEi8KCHF1YW50aXR5GAQgAygLMhMuc3Nu",
-            "LnR5cGUuQ2FuZGlkYXRlUghxdWFudGl0eRI0CgtpdGVtX251bWJlchgFIAMo",
-            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIKaXRlbU51bWJlchInCgR1bml0GAYg",
-            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgR1bml0EjoKDnRvdGFsX2Rpc2Nv",
-            "dW50GAcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg10b3RhbERpc2NvdW50",
-            "EkQKE3BlcmNlbnRhZ2VfZGlzY291bnQYCCADKAsyEy5zc24udHlwZS5DYW5k",
-            "aWRhdGVSEnBlcmNlbnRhZ2VEaXNjb3VudBI5Cg50b3RhbF9pbmNsX3ZhdBgJ",
-            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxJbmNsVmF0EjkKDnRv",
-            "dGFsX2V4Y2xfdmF0GAogAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3Rh",
-            "bEV4Y2xWYXQSMAoJdG90YWxfdmF0GAsgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
-            "YXRlUgh0b3RhbFZhdBI6Cg5wZXJjZW50YWdlX3ZhdBgMIAMoCzITLnNzbi50",
-            "eXBlLkNhbmRpZGF0ZVINcGVyY2VudGFnZVZhdBJCChN1bml0X3ByaWNlX2lu",
-            "Y2xfdmF0GA0gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhB1bml0UHJpY2VJ",
-            "bmNsVmF0EkIKE3VuaXRfcHJpY2VfZXhjbF92YXQYDiADKAsyEy5zc24udHlw",
-            "ZS5DYW5kaWRhdGVSEHVuaXRQcmljZUV4Y2xWYXQSKQoFdG90YWwYDyADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGVSBXRvdGFsEjIKCnVuaXRfcHJpY2UYECAD",
-            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCXVuaXRQcmljZRI6Cg5tb2RlbF9t",
-            "ZXRhZGF0YRgRIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRh",
-            "ZGF0YSLFAgoPVmF0RGlzdHJpYnV0aW9uEhkKCHBhZ2VfcmVmGAEgASgNUgdw",
-            "YWdlUmVmEjMKCnBlcmNlbnRhZ2UYAiADKAsyEy5zc24udHlwZS5DYW5kaWRh",
-            "dGVSCnBlcmNlbnRhZ2USOQoOdG90YWxfaW5jbF92YXQYAyADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSDHRvdGFsSW5jbFZhdBI5Cg50b3RhbF9leGNsX3Zh",
-            "dBgEIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxFeGNsVmF0EjAK",
-            "CXRvdGFsX3ZhdBgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIIdG90YWxW",
-            "YXQSOgoObW9kZWxfbWV0YWRhdGEYBiABKAsyEy5zc24udHlwZS5Nb2RlbFNw",
-            "ZWNSDW1vZGVsTWV0YWRhdGFCmgEKEWFpLnZpc21hLnNzbi50eXBlQg5DYW5k",
-            "aWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
-            "bi9nby9zc24vdHlwZTtzc250eXBlogIDU1RYqgIIU3NuLlR5cGXKAghTc25c",
-            "VHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh6gIJU3NuOjpUeXBlYgZwcm90",
-            "bzM="));
+            "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIhCgxw",
+            "cm9kdWN0X3R5cGUYFCABKAlSC3Byb2R1Y3RUeXBlSgQIDxAQSgQIEBARItIB",
+            "Cg9BbnN3ZXJDYW5kaWRhdGUSGgoIcXVlc3Rpb24YASABKAlSCHF1ZXN0aW9u",
+            "EhYKBmFuc3dlchgCIAEoCVIGYW5zd2VyEjQKCmNvbmZpZGVuY2UYAyABKAsy",
+            "FC5zc24udHlwZS5Db25maWRlbmNlUgpjb25maWRlbmNlEjoKDm1vZGVsX21l",
+            "dGFkYXRhGAcgASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2RlbE1ldGFk",
+            "YXRhEhkKCHBhZ2VfcmVmGAggASgNUgdwYWdlUmVmIjkKCFBhZ2VUZXh0EhkK",
+            "CHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBHRleHQYAiABKAlSBHRleHQi",
+            "3wEKGFZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZRIeCgpwZXJjZW50YWdlGAEg",
+            "ASgJUgpwZXJjZW50YWdlEhYKBmFtb3VudBgCIAEoCVIGYW1vdW50EjoKDm1v",
+            "ZGVsX21ldGFkYXRhGAMgASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2Rl",
+            "bE1ldGFkYXRhEhkKCHBhZ2VfcmVmGAQgASgNUgdwYWdlUmVmEhkKCGV4Y2xf",
+            "dmF0GAUgASgJUgdleGNsVmF0EhkKCGluY2xfdmF0GAYgASgJUgdpbmNsVmF0",
+            "IjEKEERvY3VtZW50TWV0YWRhdGESHQoKcGFnZV9jb3VudBgBIAEoDVIJcGFn",
+            "ZUNvdW50ItoHCgxQdXJjaGFzZUxpbmUSGQoIcGFnZV9yZWYYASABKA1SB3Bh",
+            "Z2VSZWYSJwoEY29kZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIEY29k",
+            "ZRI1CgtkZXNjcmlwdGlvbhgDIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIL",
+            "ZGVzY3JpcHRpb24SLwoIcXVhbnRpdHkYBCADKAsyEy5zc24udHlwZS5DYW5k",
+            "aWRhdGVSCHF1YW50aXR5EjQKC2l0ZW1fbnVtYmVyGAUgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlUgppdGVtTnVtYmVyEicKBHVuaXQYBiADKAsyEy5zc24u",
+            "dHlwZS5DYW5kaWRhdGVSBHVuaXQSOgoOdG90YWxfZGlzY291bnQYByADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSDXRvdGFsRGlzY291bnQSRAoTcGVyY2Vu",
+            "dGFnZV9kaXNjb3VudBgIIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIScGVy",
+            "Y2VudGFnZURpc2NvdW50EjkKDnRvdGFsX2luY2xfdmF0GAkgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXQSOQoOdG90YWxfZXhjbF92",
+            "YXQYCiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHRvdGFsRXhjbFZhdBIw",
+            "Cgl0b3RhbF92YXQYCyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCHRvdGFs",
+            "VmF0EjoKDnBlcmNlbnRhZ2VfdmF0GAwgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUg1wZXJjZW50YWdlVmF0EkIKE3VuaXRfcHJpY2VfaW5jbF92YXQYDSAD",
+            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEHVuaXRQcmljZUluY2xWYXQSQgoT",
+            "dW5pdF9wcmljZV9leGNsX3ZhdBgOIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0",
+            "ZVIQdW5pdFByaWNlRXhjbFZhdBIpCgV0b3RhbBgPIAMoCzITLnNzbi50eXBl",
+            "LkNhbmRpZGF0ZVIFdG90YWwSMgoKdW5pdF9wcmljZRgQIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZVIJdW5pdFByaWNlEjoKDm1vZGVsX21ldGFkYXRhGBEg",
+            "ASgLMhMuc3NuLnR5cGUuTW9kZWxTcGVjUg1tb2RlbE1ldGFkYXRhEjYKDHBy",
+            "b2R1Y3RfdHlwZRgSIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVILcHJvZHVj",
+            "dFR5cGUixQIKD1ZhdERpc3RyaWJ1dGlvbhIZCghwYWdlX3JlZhgBIAEoDVIH",
+            "cGFnZVJlZhIzCgpwZXJjZW50YWdlGAIgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUgpwZXJjZW50YWdlEjkKDnRvdGFsX2luY2xfdmF0GAMgAygLMhMuc3Nu",
+            "LnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXQSOQoOdG90YWxfZXhjbF92",
+            "YXQYBCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHRvdGFsRXhjbFZhdBIw",
+            "Cgl0b3RhbF92YXQYBSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCHRvdGFs",
+            "VmF0EjoKDm1vZGVsX21ldGFkYXRhGAYgASgLMhMuc3NuLnR5cGUuTW9kZWxT",
+            "cGVjUg1tb2RlbE1ldGFkYXRhQpoBChFhaS52aXNtYS5zc24udHlwZUIOQ2Fu",
+            "ZGlkYXRlUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
+            "ZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygIIU3Nu",
+            "XFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,12 +112,12 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", "Corrected" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "PageRef", "Percentage", "TotalInclVat", "TotalExclVat", "TotalVat", "ModelMetadata" }, null, null, null, null)
           }));
     }
@@ -1527,6 +1529,7 @@ namespace Ssn.Type {
       total_ = other.total_;
       unitPrice_ = other.unitPrice_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      productType_ = other.productType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1792,6 +1795,21 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "product_type" field.</summary>
+    public const int ProductTypeFieldNumber = 20;
+    private string productType_ = "";
+    /// <summary>
+    /// Product type classification for the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProductType {
+      get { return productType_; }
+      set {
+        productType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1824,6 +1842,7 @@ namespace Ssn.Type {
       if (Total != other.Total) return false;
       if (UnitPrice != other.UnitPrice) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (ProductType != other.ProductType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1848,6 +1867,7 @@ namespace Ssn.Type {
       if (Total.Length != 0) hash ^= Total.GetHashCode();
       if (UnitPrice.Length != 0) hash ^= UnitPrice.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (ProductType.Length != 0) hash ^= ProductType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1934,6 +1954,10 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (ProductType.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ProductType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2012,6 +2036,10 @@ namespace Ssn.Type {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ModelMetadata);
       }
+      if (ProductType.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ProductType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2072,6 +2100,9 @@ namespace Ssn.Type {
       }
       if (modelMetadata_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (ProductType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ProductType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2138,6 +2169,9 @@ namespace Ssn.Type {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.ProductType.Length != 0) {
+        ProductType = other.ProductType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2229,6 +2263,10 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 162: {
+            ProductType = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2317,6 +2355,10 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 162: {
+            ProductType = input.ReadString();
             break;
           }
         }
@@ -3609,6 +3651,7 @@ namespace Ssn.Type {
       total_ = other.total_.Clone();
       unitPrice_ = other.unitPrice_.Clone();
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      productType_ = other.productType_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3859,6 +3902,20 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "product_type" field.</summary>
+    public const int ProductTypeFieldNumber = 18;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_productType_codec
+        = pb::FieldCodec.ForMessage(146, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> productType_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Product type classification for the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ProductType {
+      get { return productType_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3891,6 +3948,7 @@ namespace Ssn.Type {
       if(!total_.Equals(other.total_)) return false;
       if(!unitPrice_.Equals(other.unitPrice_)) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if(!productType_.Equals(other.productType_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3915,6 +3973,7 @@ namespace Ssn.Type {
       hash ^= total_.GetHashCode();
       hash ^= unitPrice_.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      hash ^= productType_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3956,6 +4015,7 @@ namespace Ssn.Type {
         output.WriteRawTag(138, 1);
         output.WriteMessage(ModelMetadata);
       }
+      productType_.WriteTo(output, _repeated_productType_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3989,6 +4049,7 @@ namespace Ssn.Type {
         output.WriteRawTag(138, 1);
         output.WriteMessage(ModelMetadata);
       }
+      productType_.WriteTo(ref output, _repeated_productType_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4020,6 +4081,7 @@ namespace Ssn.Type {
       if (modelMetadata_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
       }
+      size += productType_.CalculateSize(_repeated_productType_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4056,6 +4118,7 @@ namespace Ssn.Type {
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
       }
+      productType_.Add(other.productType_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4146,6 +4209,10 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 146: {
+            productType_.AddEntriesFrom(input, _repeated_productType_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4234,6 +4301,10 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 146: {
+            productType_.AddEntriesFrom(ref input, _repeated_productType_codec);
             break;
           }
         }

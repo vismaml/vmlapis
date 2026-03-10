@@ -202,6 +202,9 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLineCandidate;
 
+  getProductType(): string;
+  setProductType(value: string): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -229,6 +232,7 @@ export namespace PurchaseLineCandidate {
     total: string,
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
+    productType: string,
   }
 }
 
@@ -434,6 +438,11 @@ export class PurchaseLine extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLine;
 
+  getProductTypeList(): Array<Candidate>;
+  setProductTypeList(value: Array<Candidate>): PurchaseLine;
+  clearProductTypeList(): PurchaseLine;
+  addProductType(value?: Candidate, index?: number): Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLine.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLine): PurchaseLine.AsObject;
@@ -461,6 +470,7 @@ export namespace PurchaseLine {
     totalList: Array<Candidate.AsObject>,
     unitPriceList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
+    productTypeList: Array<Candidate.AsObject>,
   }
 }
 
