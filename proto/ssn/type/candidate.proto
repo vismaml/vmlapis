@@ -125,6 +125,8 @@ message PurchaseLineCandidate {
   string unit_price = 18;
   // Model metadata
   ModelSpec model_metadata = 19;
+  // Product type classification for the line
+  string product_type = 20;
 }
 
 message AnswerCandidate {
@@ -203,6 +205,8 @@ message PurchaseLine {
   repeated Candidate unit_price = 16;
   // Model metadata
   ModelSpec model_metadata = 17;
+  // Product type classification for the line
+  repeated Candidate product_type = 18;
 }
 
 message VatDistribution {
