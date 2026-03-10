@@ -30,6 +30,11 @@ service ProductTypeService {
   }
 }
 
+message ProductTypeSuggestOptions {
+  // Minimum confidence level for returned candidates. Only candidates at or above this level are returned.
+  ConfidenceLevel min_confidence = 1 [(validate.rules).enum.defined_only = true];
+}
+
 message ProductTypeBatchSuggestRequest {
   // Text descriptions to classify into product types.
   repeated string texts = 1 [(validate.rules).repeated = {
@@ -39,6 +44,7 @@ message ProductTypeBatchSuggestRequest {
       string: {min_len: 1}
     }
   }];
+  ProductTypeSuggestOptions options = 2;
 }
 
 message ProductTypeBatchSuggestResponse {
