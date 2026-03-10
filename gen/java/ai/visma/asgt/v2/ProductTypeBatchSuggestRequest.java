@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.class, ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TEXTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList texts_ =
@@ -97,6 +98,32 @@ private static final long serialVersionUID = 0L;
     return texts_.getByteString(index);
   }
 
+  public static final int OPTIONS_FIELD_NUMBER = 2;
+  private ai.visma.asgt.v2.ProductTypeSuggestOptions options_;
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+   * @return Whether the options field is set.
+   */
+  @java.lang.Override
+  public boolean hasOptions() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+   * @return The options.
+   */
+  @java.lang.Override
+  public ai.visma.asgt.v2.ProductTypeSuggestOptions getOptions() {
+    return options_ == null ? ai.visma.asgt.v2.ProductTypeSuggestOptions.getDefaultInstance() : options_;
+  }
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder getOptionsOrBuilder() {
+    return options_ == null ? ai.visma.asgt.v2.ProductTypeSuggestOptions.getDefaultInstance() : options_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +140,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < texts_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, texts_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getOptions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -131,6 +161,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTextsList().size();
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getOptions());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -148,6 +182,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getTextsList()
         .equals(other.getTextsList())) return false;
+    if (hasOptions() != other.hasOptions()) return false;
+    if (hasOptions()) {
+      if (!getOptions()
+          .equals(other.getOptions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -162,6 +201,10 @@ private static final long serialVersionUID = 0L;
     if (getTextsCount() > 0) {
       hash = (37 * hash) + TEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getTextsList().hashCode();
+    }
+    if (hasOptions()) {
+      hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOptions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -282,13 +325,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        getOptionsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -296,6 +345,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       texts_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      options_ = null;
+      if (optionsBuilder_ != null) {
+        optionsBuilder_.dispose();
+        optionsBuilder_ = null;
+      }
       return this;
     }
 
@@ -333,6 +387,14 @@ private static final long serialVersionUID = 0L;
         texts_.makeImmutable();
         result.texts_ = texts_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.options_ = optionsBuilder_ == null
+            ? options_
+            : optionsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -356,6 +418,9 @@ private static final long serialVersionUID = 0L;
           texts_.addAll(other.texts_);
         }
         onChanged();
+      }
+      if (other.hasOptions()) {
+        mergeOptions(other.getOptions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -389,6 +454,13 @@ private static final long serialVersionUID = 0L;
               texts_.add(s);
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -551,6 +623,127 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private ai.visma.asgt.v2.ProductTypeSuggestOptions options_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.asgt.v2.ProductTypeSuggestOptions, ai.visma.asgt.v2.ProductTypeSuggestOptions.Builder, ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder> optionsBuilder_;
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     * @return Whether the options field is set.
+     */
+    public boolean hasOptions() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     * @return The options.
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestOptions getOptions() {
+      if (optionsBuilder_ == null) {
+        return options_ == null ? ai.visma.asgt.v2.ProductTypeSuggestOptions.getDefaultInstance() : options_;
+      } else {
+        return optionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public Builder setOptions(ai.visma.asgt.v2.ProductTypeSuggestOptions value) {
+      if (optionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        options_ = value;
+      } else {
+        optionsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public Builder setOptions(
+        ai.visma.asgt.v2.ProductTypeSuggestOptions.Builder builderForValue) {
+      if (optionsBuilder_ == null) {
+        options_ = builderForValue.build();
+      } else {
+        optionsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public Builder mergeOptions(ai.visma.asgt.v2.ProductTypeSuggestOptions value) {
+      if (optionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          options_ != null &&
+          options_ != ai.visma.asgt.v2.ProductTypeSuggestOptions.getDefaultInstance()) {
+          getOptionsBuilder().mergeFrom(value);
+        } else {
+          options_ = value;
+        }
+      } else {
+        optionsBuilder_.mergeFrom(value);
+      }
+      if (options_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public Builder clearOptions() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      options_ = null;
+      if (optionsBuilder_ != null) {
+        optionsBuilder_.dispose();
+        optionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestOptions.Builder getOptionsBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getOptionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder getOptionsOrBuilder() {
+      if (optionsBuilder_ != null) {
+        return optionsBuilder_.getMessageOrBuilder();
+      } else {
+        return options_ == null ?
+            ai.visma.asgt.v2.ProductTypeSuggestOptions.getDefaultInstance() : options_;
+      }
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.asgt.v2.ProductTypeSuggestOptions, ai.visma.asgt.v2.ProductTypeSuggestOptions.Builder, ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder> 
+        getOptionsFieldBuilder() {
+      if (optionsBuilder_ == null) {
+        optionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.asgt.v2.ProductTypeSuggestOptions, ai.visma.asgt.v2.ProductTypeSuggestOptions.Builder, ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder>(
+                getOptions(),
+                getParentForChildren(),
+                isClean());
+        options_ = null;
+      }
+      return optionsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:asgt.v2.ProductTypeBatchSuggestRequest)

@@ -5,11 +5,34 @@ import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-o
 import * as validate_validate_pb from '../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
+export class ProductTypeSuggestOptions extends jspb.Message {
+  getMinConfidence(): ConfidenceLevel;
+  setMinConfidence(value: ConfidenceLevel): ProductTypeSuggestOptions;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProductTypeSuggestOptions.AsObject;
+  static toObject(includeInstance: boolean, msg: ProductTypeSuggestOptions): ProductTypeSuggestOptions.AsObject;
+  static serializeBinaryToWriter(message: ProductTypeSuggestOptions, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProductTypeSuggestOptions;
+  static deserializeBinaryFromReader(message: ProductTypeSuggestOptions, reader: jspb.BinaryReader): ProductTypeSuggestOptions;
+}
+
+export namespace ProductTypeSuggestOptions {
+  export type AsObject = {
+    minConfidence: ConfidenceLevel,
+  }
+}
+
 export class ProductTypeBatchSuggestRequest extends jspb.Message {
   getTextsList(): Array<string>;
   setTextsList(value: Array<string>): ProductTypeBatchSuggestRequest;
   clearTextsList(): ProductTypeBatchSuggestRequest;
   addTexts(value: string, index?: number): ProductTypeBatchSuggestRequest;
+
+  getOptions(): ProductTypeSuggestOptions | undefined;
+  setOptions(value?: ProductTypeSuggestOptions): ProductTypeBatchSuggestRequest;
+  hasOptions(): boolean;
+  clearOptions(): ProductTypeBatchSuggestRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProductTypeBatchSuggestRequest.AsObject;
@@ -22,6 +45,7 @@ export class ProductTypeBatchSuggestRequest extends jspb.Message {
 export namespace ProductTypeBatchSuggestRequest {
   export type AsObject = {
     textsList: Array<string>,
+    options?: ProductTypeSuggestOptions.AsObject,
   }
 }
 

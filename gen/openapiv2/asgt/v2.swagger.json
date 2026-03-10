@@ -1286,6 +1286,9 @@
             "type": "string"
           },
           "description": "Text descriptions to classify into product types."
+        },
+        "options": {
+          "$ref": "#/definitions/v2ProductTypeSuggestOptions"
         }
       }
     },
@@ -1317,6 +1320,15 @@
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel",
           "description": "Bucketized confidence level."
+        }
+      }
+    },
+    "v2ProductTypeSuggestOptions": {
+      "type": "object",
+      "properties": {
+        "minConfidence": {
+          "$ref": "#/definitions/v2ConfidenceLevel",
+          "description": "Minimum confidence level for returned candidates. Only candidates at or above this level are returned."
         }
       }
     },

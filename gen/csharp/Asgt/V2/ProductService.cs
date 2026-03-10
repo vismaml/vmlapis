@@ -27,32 +27,36 @@ namespace Asgt.V2 {
             "Ch1hc2d0L3YyL3Byb2R1Y3Rfc2VydmljZS5wcm90bxIHYXNndC52MhocZ29v",
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVuYXBp",
             "djIvb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90bxoXdmFsaWRhdGUvdmFsaWRh",
-            "dGUucHJvdG8iSQoeUHJvZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0EicK",
-            "BXRleHRzGAEgAygJQhH6Qg6SAQsIARCACCIEcgIQAVIFdGV4dHMiYwofUHJv",
-            "ZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXNwb25zZRJACgtzdWdnZXN0aW9ucxgB",
-            "IAMoCzIeLmFzZ3QudjIuUHJvZHVjdFR5cGVTdWdnZXN0aW9uUgtzdWdnZXN0",
-            "aW9ucyJWChVQcm9kdWN0VHlwZVN1Z2dlc3Rpb24SPQoKY2FuZGlkYXRlcxgB",
-            "IAMoCzIdLmFzZ3QudjIuUHJvZHVjdFR5cGVDYW5kaWRhdGVSCmNhbmRpZGF0",
-            "ZXMikQEKFFByb2R1Y3RUeXBlQ2FuZGlkYXRlEhQKBWxhYmVsGAEgASgJUgVs",
-            "YWJlbBIeCgpjb25maWRlbmNlGAIgASgCUgpjb25maWRlbmNlEkMKEGNvbmZp",
-            "ZGVuY2VfbGV2ZWwYAyABKA4yGC5hc2d0LnYyLkNvbmZpZGVuY2VMZXZlbFIP",
-            "Y29uZmlkZW5jZUxldmVsKlcKD0NvbmZpZGVuY2VMZXZlbBILCgdVTktOT1dO",
-            "EAASDAoIVkVSWV9MT1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRISUdIEAQS",
-            "DQoJVkVSWV9ISUdIEAUy3gEKElByb2R1Y3RUeXBlU2VydmljZRKTAQoMQmF0",
-            "Y2hTdWdnZXN0EicuYXNndC52Mi5Qcm9kdWN0VHlwZUJhdGNoU3VnZ2VzdFJl",
-            "cXVlc3QaKC5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVzcG9u",
-            "c2UiMILT5JMCKiIlL3YyL21vZGVscy9wcm9kdWN0LXR5cGVzOmJhdGNoU3Vn",
-            "Z2VzdDoBKhoykkEvEi1TdWdnZXN0IHByb2R1Y3QgdHlwZXMgZnJvbSB0ZXh0",
-            "IGRlc2NyaXB0aW9ucy5C0AEKEGFpLnZpc21hLmFzZ3QudjJCE1Byb2R1Y3RT",
-            "ZXJ2aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vYXNndC92MqICA0FYWKoCB0FzZ3QuVjLKAgdBc2d0XFYy4gITQXNn",
-            "dFxWMlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYykkE8EhMKDVByb2R1Y3QgVHlw",
-            "ZXMyAnYyKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29u",
-            "YgZwcm90bzM="));
+            "dGUucHJvdG8iZgoZUHJvZHVjdFR5cGVTdWdnZXN0T3B0aW9ucxJJCg5taW5f",
+            "Y29uZmlkZW5jZRgBIAEoDjIYLmFzZ3QudjIuQ29uZmlkZW5jZUxldmVsQgj6",
+            "QgWCAQIQAVINbWluQ29uZmlkZW5jZSKHAQoeUHJvZHVjdFR5cGVCYXRjaFN1",
+            "Z2dlc3RSZXF1ZXN0EicKBXRleHRzGAEgAygJQhH6Qg6SAQsIARCACCIEcgIQ",
+            "AVIFdGV4dHMSPAoHb3B0aW9ucxgCIAEoCzIiLmFzZ3QudjIuUHJvZHVjdFR5",
+            "cGVTdWdnZXN0T3B0aW9uc1IHb3B0aW9ucyJjCh9Qcm9kdWN0VHlwZUJhdGNo",
+            "U3VnZ2VzdFJlc3BvbnNlEkAKC3N1Z2dlc3Rpb25zGAEgAygLMh4uYXNndC52",
+            "Mi5Qcm9kdWN0VHlwZVN1Z2dlc3Rpb25SC3N1Z2dlc3Rpb25zIlYKFVByb2R1",
+            "Y3RUeXBlU3VnZ2VzdGlvbhI9CgpjYW5kaWRhdGVzGAEgAygLMh0uYXNndC52",
+            "Mi5Qcm9kdWN0VHlwZUNhbmRpZGF0ZVIKY2FuZGlkYXRlcyKRAQoUUHJvZHVj",
+            "dFR5cGVDYW5kaWRhdGUSFAoFbGFiZWwYASABKAlSBWxhYmVsEh4KCmNvbmZp",
+            "ZGVuY2UYAiABKAJSCmNvbmZpZGVuY2USQwoQY29uZmlkZW5jZV9sZXZlbBgD",
+            "IAEoDjIYLmFzZ3QudjIuQ29uZmlkZW5jZUxldmVsUg9jb25maWRlbmNlTGV2",
+            "ZWwqVwoPQ29uZmlkZW5jZUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xP",
+            "VxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQ",
+            "BTLeAQoSUHJvZHVjdFR5cGVTZXJ2aWNlEpMBCgxCYXRjaFN1Z2dlc3QSJy5h",
+            "c2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVxdWVzdBooLmFzZ3Qu",
+            "djIuUHJvZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXNwb25zZSIwgtPkkwIqIiUv",
+            "djIvbW9kZWxzL3Byb2R1Y3QtdHlwZXM6YmF0Y2hTdWdnZXN0OgEqGjKSQS8S",
+            "LVN1Z2dlc3QgcHJvZHVjdCB0eXBlcyBmcm9tIHRleHQgZGVzY3JpcHRpb25z",
+            "LkLQAQoQYWkudmlzbWEuYXNndC52MkITUHJvZHVjdFNlcnZpY2VQcm90b1AB",
+            "WitnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3Yy",
+            "ogIDQVhYqgIHQXNndC5WMsoCB0FzZ3RcVjLiAhNBc2d0XFYyXEdQQk1ldGFk",
+            "YXRh6gIIQXNndDo6VjKSQTwSEwoNUHJvZHVjdCBUeXBlczICdjIqAQIyEGFw",
+            "cGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.V2.ConfidenceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestRequest), global::Asgt.V2.ProductTypeBatchSuggestRequest.Parser, new[]{ "Texts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeSuggestOptions), global::Asgt.V2.ProductTypeSuggestOptions.Parser, new[]{ "MinConfidence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestRequest), global::Asgt.V2.ProductTypeBatchSuggestRequest.Parser, new[]{ "Texts", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestResponse), global::Asgt.V2.ProductTypeBatchSuggestResponse.Parser, new[]{ "Suggestions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeSuggestion), global::Asgt.V2.ProductTypeSuggestion.Parser, new[]{ "Candidates" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeCandidate), global::Asgt.V2.ProductTypeCandidate.Parser, new[]{ "Label", "Confidence", "ConfidenceLevel" }, null, null, null, null)
@@ -75,6 +79,207 @@ namespace Asgt.V2 {
 
   #region Messages
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProductTypeSuggestOptions : pb::IMessage<ProductTypeSuggestOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductTypeSuggestOptions> _parser = new pb::MessageParser<ProductTypeSuggestOptions>(() => new ProductTypeSuggestOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductTypeSuggestOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeSuggestOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeSuggestOptions(ProductTypeSuggestOptions other) : this() {
+      minConfidence_ = other.minConfidence_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeSuggestOptions Clone() {
+      return new ProductTypeSuggestOptions(this);
+    }
+
+    /// <summary>Field number for the "min_confidence" field.</summary>
+    public const int MinConfidenceFieldNumber = 1;
+    private global::Asgt.V2.ConfidenceLevel minConfidence_ = global::Asgt.V2.ConfidenceLevel.Unknown;
+    /// <summary>
+    /// Minimum confidence level for returned candidates. Only candidates at or above this level are returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.V2.ConfidenceLevel MinConfidence {
+      get { return minConfidence_; }
+      set {
+        minConfidence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductTypeSuggestOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductTypeSuggestOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MinConfidence != other.MinConfidence) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MinConfidence != global::Asgt.V2.ConfidenceLevel.Unknown) hash ^= MinConfidence.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MinConfidence != global::Asgt.V2.ConfidenceLevel.Unknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) MinConfidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MinConfidence != global::Asgt.V2.ConfidenceLevel.Unknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) MinConfidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MinConfidence != global::Asgt.V2.ConfidenceLevel.Unknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductTypeSuggestOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MinConfidence != global::Asgt.V2.ConfidenceLevel.Unknown) {
+        MinConfidence = other.MinConfidence;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MinConfidence = (global::Asgt.V2.ConfidenceLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MinConfidence = (global::Asgt.V2.ConfidenceLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeBatchSuggestRequest : pb::IMessage<ProductTypeBatchSuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -89,7 +294,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,6 +315,7 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProductTypeBatchSuggestRequest(ProductTypeBatchSuggestRequest other) : this() {
       texts_ = other.texts_.Clone();
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -133,6 +339,18 @@ namespace Asgt.V2 {
       get { return texts_; }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 2;
+    private global::Asgt.V2.ProductTypeSuggestOptions options_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.V2.ProductTypeSuggestOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -149,6 +367,7 @@ namespace Asgt.V2 {
         return true;
       }
       if(!texts_.Equals(other.texts_)) return false;
+      if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -157,6 +376,7 @@ namespace Asgt.V2 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= texts_.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,6 +396,10 @@ namespace Asgt.V2 {
       output.WriteRawMessage(this);
     #else
       texts_.WriteTo(output, _repeated_texts_codec);
+      if (options_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,6 +411,10 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       texts_.WriteTo(ref output, _repeated_texts_codec);
+      if (options_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -198,6 +426,9 @@ namespace Asgt.V2 {
     public int CalculateSize() {
       int size = 0;
       size += texts_.CalculateSize(_repeated_texts_codec);
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -211,6 +442,12 @@ namespace Asgt.V2 {
         return;
       }
       texts_.Add(other.texts_);
+      if (other.options_ != null) {
+        if (options_ == null) {
+          Options = new global::Asgt.V2.ProductTypeSuggestOptions();
+        }
+        Options.MergeFrom(other.Options);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -232,6 +469,13 @@ namespace Asgt.V2 {
             break;
           case 10: {
             texts_.AddEntriesFrom(input, _repeated_texts_codec);
+            break;
+          }
+          case 18: {
+            if (options_ == null) {
+              Options = new global::Asgt.V2.ProductTypeSuggestOptions();
+            }
+            input.ReadMessage(Options);
             break;
           }
         }
@@ -257,6 +501,13 @@ namespace Asgt.V2 {
             texts_.AddEntriesFrom(ref input, _repeated_texts_codec);
             break;
           }
+          case 18: {
+            if (options_ == null) {
+              Options = new global::Asgt.V2.ProductTypeSuggestOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
         }
       }
     }
@@ -279,7 +530,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -469,7 +720,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -659,7 +910,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
