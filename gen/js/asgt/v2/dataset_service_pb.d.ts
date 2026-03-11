@@ -293,6 +293,11 @@ export class GetTrainingsRequest extends jspb.Message {
   hasOptions(): boolean;
   clearOptions(): GetTrainingsRequest;
 
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): GetTrainingsRequest;
+  clearTagsList(): GetTrainingsRequest;
+  addTags(value: string, index?: number): GetTrainingsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTrainingsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetTrainingsRequest): GetTrainingsRequest.AsObject;
@@ -304,6 +309,7 @@ export class GetTrainingsRequest extends jspb.Message {
 export namespace GetTrainingsRequest {
   export type AsObject = {
     options?: TrainingRequestOptions.AsObject,
+    tagsList: Array<string>,
   }
 }
 

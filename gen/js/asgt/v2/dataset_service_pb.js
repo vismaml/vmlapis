@@ -339,7 +339,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.v2.GetTrainingsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.v2.GetTrainingsRequest.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.v2.GetTrainingsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -2453,6 +2453,13 @@ proto.asgt.v2.GetDatasetModelsRequest.prototype.hasOptions = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.v2.GetTrainingsRequest.repeatedFields_ = [2];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2484,7 +2491,8 @@ proto.asgt.v2.GetTrainingsRequest.prototype.toObject = function(opt_includeInsta
  */
 proto.asgt.v2.GetTrainingsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    options: (f = msg.getOptions()) && proto.asgt.v2.TrainingRequestOptions.toObject(includeInstance, f)
+    options: (f = msg.getOptions()) && proto.asgt.v2.TrainingRequestOptions.toObject(includeInstance, f),
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2526,6 +2534,10 @@ proto.asgt.v2.GetTrainingsRequest.deserializeBinaryFromReader = function(msg, re
       reader.readMessage(value,proto.asgt.v2.TrainingRequestOptions.deserializeBinaryFromReader);
       msg.setOptions(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -2561,6 +2573,13 @@ proto.asgt.v2.GetTrainingsRequest.serializeBinaryToWriter = function(message, wr
       1,
       f,
       proto.asgt.v2.TrainingRequestOptions.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      2,
+      f
     );
   }
 };
@@ -2600,6 +2619,43 @@ proto.asgt.v2.GetTrainingsRequest.prototype.clearOptions = function() {
  */
 proto.asgt.v2.GetTrainingsRequest.prototype.hasOptions = function() {
   return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated string tags = 2;
+ * @return {!Array<string>}
+ */
+proto.asgt.v2.GetTrainingsRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.asgt.v2.GetTrainingsRequest} returns this
+ */
+proto.asgt.v2.GetTrainingsRequest.prototype.setTagsList = function(value) {
+  return jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.v2.GetTrainingsRequest} returns this
+ */
+proto.asgt.v2.GetTrainingsRequest.prototype.addTags = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.v2.GetTrainingsRequest} returns this
+ */
+proto.asgt.v2.GetTrainingsRequest.prototype.clearTagsList = function() {
+  return this.setTagsList([]);
 };
 
 

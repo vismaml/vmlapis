@@ -162,54 +162,55 @@ public final class DatasetServiceProto {
       "GetDatasetModelsRequest\022K\n\014dataset_name\030" +
       "\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9" +
       "_.>-]*$R\013datasetName\0226\n\007options\030\002 \001(\0132\034." +
-      "asgt.v2.ModelRequestOptionsR\007options\"P\n\023" +
+      "asgt.v2.ModelRequestOptionsR\007options\"d\n\023" +
       "GetTrainingsRequest\0229\n\007options\030\001 \001(\0132\037.a" +
-      "sgt.v2.TrainingRequestOptionsR\007options\"I" +
-      "\n\021TrainingsResponse\0224\n\ttrainings\030\001 \003(\0132\026" +
-      ".asgt.v2.type.TrainingR\ttrainings\"=\n\016Mod" +
-      "elsResponse\022+\n\006models\030\001 \003(\0132\023.asgt.v2.ty" +
-      "pe.ModelR\006models2\336\013\n\016DatasetService\022a\n\nG" +
-      "etDataset\022\032.asgt.v2.GetDatasetRequest\032\022." +
-      "asgt.type.Dataset\"#\202\323\344\223\002\035\022\033/v2/datasets/" +
-      "{dataset_name}\022_\n\rCreateDataset\022\035.asgt.v" +
-      "2.CreateDatasetRequest\032\026.google.protobuf" +
-      ".Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022{\n\025Creat" +
-      "eOrUpdateDataset\022%.asgt.v2.CreateOrUpdat" +
-      "eDatasetRequest\032\026.google.protobuf.Empty\"" +
-      "#\202\323\344\223\002\035\032\033/v2/datasets/{dataset_name}\022g\n\r" +
-      "DeleteDataset\022\035.asgt.v2.DeleteDatasetReq" +
-      "uest\032\022.asgt.type.Dataset\"#\202\323\344\223\002\035*\033/v2/da" +
-      "tasets/{dataset_name}\022[\n\tDeleteTag\022\031.asg" +
-      "t.v2.DeleteTagRequest\032\026.google.protobuf." +
-      "Empty\"\033\202\323\344\223\002\025*\023/v2/tags/{tag_name}\022w\n\rCr" +
-      "eateExample\022\035.asgt.v2.CreateExampleReque" +
-      "st\032\026.google.protobuf.Empty\"/\202\323\344\223\002)\"$/v2/" +
-      "datasets/{dataset_name}/examples:\001*\022\224\001\n\025" +
-      "CreateOrUpdateExample\022%.asgt.v2.CreateOr" +
-      "UpdateExampleRequest\032\026.google.protobuf.E" +
-      "mpty\"<\202\323\344\223\0026\0321/v2/datasets/{dataset_name" +
-      "}/examples/{example.id}:\001*\022\215\001\n\022BatchCrea" +
-      "teExample\022\".asgt.v2.BatchCreateExampleRe" +
-      "quest\032\026.google.protobuf.Empty\";\202\323\344\223\0025\"0/" +
-      "v2/datasets/{dataset_name}/examples:batc" +
-      "hCreate:\001*\022x\n\017TruncateDataset\022\037.asgt.v2." +
-      "TruncateDatasetRequest\032\026.google.protobuf" +
-      ".Empty\",\202\323\344\223\002&*$/v2/datasets/{dataset_na" +
-      "me}/examples\022\205\001\n\023GetDatasetTrainings\022#.a" +
-      "sgt.v2.GetDatasetTrainingsRequest\032\032.asgt" +
-      ".v2.TrainingsResponse\"-\202\323\344\223\002\'\022%/v2/datas" +
-      "ets/{dataset_name}/trainings\022y\n\020GetDatas" +
-      "etModels\022 .asgt.v2.GetDatasetModelsReque" +
-      "st\032\027.asgt.v2.ModelsResponse\"*\202\323\344\223\002$\022\"/v2" +
-      "/datasets/{dataset_name}/models\022_\n\014GetTr" +
-      "ainings\022\034.asgt.v2.GetTrainingsRequest\032\032." +
-      "asgt.v2.TrainingsResponse\"\025\202\323\344\223\002\017\022\r/v2/t" +
-      "rainings\032G\222AD\022BManage datasets and examp" +
-      "les used for training AutoSuggest models" +
-      ".B\221\001\n\020ai.visma.asgt.v2B\023DatasetServicePr" +
-      "otoP\001Z+github.com/e-conomic/vmlapis/gen/" +
-      "go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023A" +
-      "sgt\\V2\\GPBMetadata\352\002\010Asgt::V2b\006proto3"
+      "sgt.v2.TrainingRequestOptionsR\007options\022\022" +
+      "\n\004tags\030\002 \003(\tR\004tags\"I\n\021TrainingsResponse\022" +
+      "4\n\ttrainings\030\001 \003(\0132\026.asgt.v2.type.Traini" +
+      "ngR\ttrainings\"=\n\016ModelsResponse\022+\n\006model" +
+      "s\030\001 \003(\0132\023.asgt.v2.type.ModelR\006models2\336\013\n" +
+      "\016DatasetService\022a\n\nGetDataset\022\032.asgt.v2." +
+      "GetDatasetRequest\032\022.asgt.type.Dataset\"#\202" +
+      "\323\344\223\002\035\022\033/v2/datasets/{dataset_name}\022_\n\rCr" +
+      "eateDataset\022\035.asgt.v2.CreateDatasetReque" +
+      "st\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/" +
+      "datasets:\001*\022{\n\025CreateOrUpdateDataset\022%.a" +
+      "sgt.v2.CreateOrUpdateDatasetRequest\032\026.go" +
+      "ogle.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v2/dataset" +
+      "s/{dataset_name}\022g\n\rDeleteDataset\022\035.asgt" +
+      ".v2.DeleteDatasetRequest\032\022.asgt.type.Dat" +
+      "aset\"#\202\323\344\223\002\035*\033/v2/datasets/{dataset_name" +
+      "}\022[\n\tDeleteTag\022\031.asgt.v2.DeleteTagReques" +
+      "t\032\026.google.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v2/t" +
+      "ags/{tag_name}\022w\n\rCreateExample\022\035.asgt.v" +
+      "2.CreateExampleRequest\032\026.google.protobuf" +
+      ".Empty\"/\202\323\344\223\002)\"$/v2/datasets/{dataset_na" +
+      "me}/examples:\001*\022\224\001\n\025CreateOrUpdateExampl" +
+      "e\022%.asgt.v2.CreateOrUpdateExampleRequest" +
+      "\032\026.google.protobuf.Empty\"<\202\323\344\223\0026\0321/v2/da" +
+      "tasets/{dataset_name}/examples/{example." +
+      "id}:\001*\022\215\001\n\022BatchCreateExample\022\".asgt.v2." +
+      "BatchCreateExampleRequest\032\026.google.proto" +
+      "buf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{dataset" +
+      "_name}/examples:batchCreate:\001*\022x\n\017Trunca" +
+      "teDataset\022\037.asgt.v2.TruncateDatasetReque" +
+      "st\032\026.google.protobuf.Empty\",\202\323\344\223\002&*$/v2/" +
+      "datasets/{dataset_name}/examples\022\205\001\n\023Get" +
+      "DatasetTrainings\022#.asgt.v2.GetDatasetTra" +
+      "iningsRequest\032\032.asgt.v2.TrainingsRespons" +
+      "e\"-\202\323\344\223\002\'\022%/v2/datasets/{dataset_name}/t" +
+      "rainings\022y\n\020GetDatasetModels\022 .asgt.v2.G" +
+      "etDatasetModelsRequest\032\027.asgt.v2.ModelsR" +
+      "esponse\"*\202\323\344\223\002$\022\"/v2/datasets/{dataset_n" +
+      "ame}/models\022_\n\014GetTrainings\022\034.asgt.v2.Ge" +
+      "tTrainingsRequest\032\032.asgt.v2.TrainingsRes" +
+      "ponse\"\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022BManag" +
+      "e datasets and examples used for trainin" +
+      "g AutoSuggest models.B\221\001\n\020ai.visma.asgt." +
+      "v2B\023DatasetServiceProtoP\001Z+github.com/e-" +
+      "conomic/vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007A" +
+      "sgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002" +
+      "\010Asgt::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -307,7 +308,7 @@ public final class DatasetServiceProto {
     internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_GetTrainingsRequest_descriptor,
-        new java.lang.String[] { "Options", });
+        new java.lang.String[] { "Options", "Tags", });
     internal_static_asgt_v2_TrainingsResponse_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable = new

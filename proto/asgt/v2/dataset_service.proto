@@ -209,6 +209,7 @@ message GetDatasetModelsRequest {
 
 message GetTrainingsRequest {
   TrainingRequestOptions options = 1;
+  repeated string tags = 2;
 }
 
 message TrainingsResponse {

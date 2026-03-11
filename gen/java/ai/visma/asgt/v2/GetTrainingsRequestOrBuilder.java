@@ -23,4 +23,29 @@ public interface GetTrainingsRequestOrBuilder extends
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    */
   ai.visma.asgt.v2.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();
+
+  /**
+   * <code>repeated string tags = 2 [json_name = "tags"];</code>
+   * @return A list containing the tags.
+   */
+  java.util.List<java.lang.String>
+      getTagsList();
+  /**
+   * <code>repeated string tags = 2 [json_name = "tags"];</code>
+   * @return The count of tags.
+   */
+  int getTagsCount();
+  /**
+   * <code>repeated string tags = 2 [json_name = "tags"];</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
+   */
+  java.lang.String getTags(int index);
+  /**
+   * <code>repeated string tags = 2 [json_name = "tags"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTagsBytes(int index);
 }

@@ -107,10 +107,12 @@ class GetDatasetModelsRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[ModelRequestOptions, _Mapping]] = ...) -> None: ...
 
 class GetTrainingsRequest(_message.Message):
-    __slots__ = ("options",)
+    __slots__ = ("options", "tags")
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
+    TAGS_FIELD_NUMBER: _ClassVar[int]
     options: TrainingRequestOptions
-    def __init__(self, options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ...) -> None: ...
+    tags: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class TrainingsResponse(_message.Message):
     __slots__ = ("trainings",)
