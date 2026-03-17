@@ -70,18 +70,20 @@ public final class ProductServiceProto {
       "v2.ConfidenceLevelR\017confidenceLevel*W\n\017C" +
       "onfidenceLevel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020" +
       "\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HI" +
-      "GH\020\0052\336\001\n\022ProductTypeService\022\223\001\n\014BatchSug" +
+      "GH\020\0052\313\002\n\022ProductTypeService\022\223\001\n\014BatchSug" +
       "gest\022\'.asgt.v2.ProductTypeBatchSuggestRe" +
       "quest\032(.asgt.v2.ProductTypeBatchSuggestR" +
       "esponse\"0\202\323\344\223\002*\"%/v2/models/product-type" +
-      "s:batchSuggest:\001*\0322\222A/\022-Suggest product " +
-      "types from text descriptions.B\320\001\n\020ai.vis" +
-      "ma.asgt.v2B\023ProductServiceProtoP\001Z+githu" +
-      "b.com/e-conomic/vmlapis/gen/go/asgt/v2\242\002" +
-      "\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMe" +
-      "tadata\352\002\010Asgt::V2\222A<\022\023\n\rProduct Types2\002v" +
-      "2*\001\0022\020application/json:\020application/json" +
-      "b\006proto3"
+      "s:batchSuggest:\001*\022k\n\024InternalBatchSugges" +
+      "t\022\'.asgt.v2.ProductTypeBatchSuggestReque" +
+      "st\032(.asgt.v2.ProductTypeBatchSuggestResp" +
+      "onse\"\000\0322\222A/\022-Suggest product types from " +
+      "text descriptions.B\320\001\n\020ai.visma.asgt.v2B" +
+      "\023ProductServiceProtoP\001Z+github.com/e-con" +
+      "omic/vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt" +
+      ".V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010As" +
+      "gt::V2\222A<\022\023\n\rProduct Types2\002v2*\001\0022\020appli" +
+      "cation/json:\020application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

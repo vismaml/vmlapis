@@ -142,5 +142,66 @@ proto.asgt.v2.ProductTypeServicePromiseClient.prototype.batchSuggest =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.ProductTypeBatchSuggestRequest,
+ *   !proto.asgt.v2.ProductTypeBatchSuggestResponse>}
+ */
+const methodDescriptor_ProductTypeService_InternalBatchSuggest = new grpc.web.MethodDescriptor(
+  '/asgt.v2.ProductTypeService/InternalBatchSuggest',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.ProductTypeBatchSuggestRequest,
+  proto.asgt.v2.ProductTypeBatchSuggestResponse,
+  /**
+   * @param {!proto.asgt.v2.ProductTypeBatchSuggestRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.v2.ProductTypeBatchSuggestResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeBatchSuggestRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.v2.ProductTypeBatchSuggestResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2.ProductTypeBatchSuggestResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.ProductTypeServiceClient.prototype.internalBatchSuggest =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.ProductTypeService/InternalBatchSuggest',
+      request,
+      metadata || {},
+      methodDescriptor_ProductTypeService_InternalBatchSuggest,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeBatchSuggestRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.v2.ProductTypeBatchSuggestResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.v2.ProductTypeServicePromiseClient.prototype.internalBatchSuggest =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.ProductTypeService/InternalBatchSuggest',
+      request,
+      metadata || {},
+      methodDescriptor_ProductTypeService_InternalBatchSuggest);
+};
+
+
 module.exports = proto.asgt.v2;
 

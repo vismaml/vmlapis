@@ -19,6 +19,11 @@ class ProductTypeServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
                 _registered_method=True)
+        self.InternalBatchSuggest = channel.unary_unary(
+                '/asgt.v2.ProductTypeService/InternalBatchSuggest',
+                request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
+                _registered_method=True)
 
 
 class ProductTypeServiceServicer(object):
@@ -31,11 +36,23 @@ class ProductTypeServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def InternalBatchSuggest(self, request, context):
+        """Internal cluster-only batch suggest for product types.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ProductTypeServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'BatchSuggest': grpc.unary_unary_rpc_method_handler(
                     servicer.BatchSuggest,
+                    request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.FromString,
+                    response_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.SerializeToString,
+            ),
+            'InternalBatchSuggest': grpc.unary_unary_rpc_method_handler(
+                    servicer.InternalBatchSuggest,
                     request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.SerializeToString,
             ),
@@ -65,6 +82,33 @@ class ProductTypeService(object):
             request,
             target,
             '/asgt.v2.ProductTypeService/BatchSuggest',
+            asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
+            asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def InternalBatchSuggest(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.ProductTypeService/InternalBatchSuggest',
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
             options,

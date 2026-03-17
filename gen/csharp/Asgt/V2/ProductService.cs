@@ -38,17 +38,19 @@ namespace Asgt.V2 {
             "ZGVuY2VfbGV2ZWwYAyABKA4yGC5hc2d0LnYyLkNvbmZpZGVuY2VMZXZlbFIP",
             "Y29uZmlkZW5jZUxldmVsKlcKD0NvbmZpZGVuY2VMZXZlbBILCgdVTktOT1dO",
             "EAASDAoIVkVSWV9MT1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRISUdIEAQS",
-            "DQoJVkVSWV9ISUdIEAUy3gEKElByb2R1Y3RUeXBlU2VydmljZRKTAQoMQmF0",
+            "DQoJVkVSWV9ISUdIEAUyywIKElByb2R1Y3RUeXBlU2VydmljZRKTAQoMQmF0",
             "Y2hTdWdnZXN0EicuYXNndC52Mi5Qcm9kdWN0VHlwZUJhdGNoU3VnZ2VzdFJl",
             "cXVlc3QaKC5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVzcG9u",
             "c2UiMILT5JMCKiIlL3YyL21vZGVscy9wcm9kdWN0LXR5cGVzOmJhdGNoU3Vn",
-            "Z2VzdDoBKhoykkEvEi1TdWdnZXN0IHByb2R1Y3QgdHlwZXMgZnJvbSB0ZXh0",
-            "IGRlc2NyaXB0aW9ucy5C0AEKEGFpLnZpc21hLmFzZ3QudjJCE1Byb2R1Y3RT",
-            "ZXJ2aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vYXNndC92MqICA0FYWKoCB0FzZ3QuVjLKAgdBc2d0XFYy4gITQXNn",
-            "dFxWMlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYykkE8EhMKDVByb2R1Y3QgVHlw",
-            "ZXMyAnYyKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29u",
-            "YgZwcm90bzM="));
+            "Z2VzdDoBKhJrChRJbnRlcm5hbEJhdGNoU3VnZ2VzdBInLmFzZ3QudjIuUHJv",
+            "ZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0GiguYXNndC52Mi5Qcm9kdWN0",
+            "VHlwZUJhdGNoU3VnZ2VzdFJlc3BvbnNlIgAaMpJBLxItU3VnZ2VzdCBwcm9k",
+            "dWN0IHR5cGVzIGZyb20gdGV4dCBkZXNjcmlwdGlvbnMuQtABChBhaS52aXNt",
+            "YS5hc2d0LnYyQhNQcm9kdWN0U2VydmljZVByb3RvUAFaK2dpdGh1Yi5jb20v",
+            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjKiAgNBWFiqAgdBc2d0",
+            "LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BCTWV0YWRhdGHqAghBc2d0OjpW",
+            "MpJBPBITCg1Qcm9kdWN0IFR5cGVzMgJ2MioBAjIQYXBwbGljYXRpb24vanNv",
+            "bjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.V2.ConfidenceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -314,9 +316,6 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeSuggestion> _repeated_suggestions_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.ProductTypeSuggestion.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> suggestions_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion>();
-    /// <summary>
-    /// Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> Suggestions {
@@ -504,9 +503,6 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeCandidate> _repeated_candidates_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.ProductTypeCandidate.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate> candidates_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate>();
-    /// <summary>
-    /// Ranked candidates for this suggestion.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate> Candidates {
@@ -694,9 +690,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 1;
     private string label_ = "";
-    /// <summary>
-    /// Suggested product type label.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
@@ -709,9 +702,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "confidence" field.</summary>
     public const int ConfidenceFieldNumber = 2;
     private float confidence_;
-    /// <summary>
-    /// Confidence score between 0 and 1.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
@@ -724,9 +714,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "confidence_level" field.</summary>
     public const int ConfidenceLevelFieldNumber = 3;
     private global::Asgt.V2.ConfidenceLevel confidenceLevel_ = global::Asgt.V2.ConfidenceLevel.Unknown;
-    /// <summary>
-    /// Bucketized confidence level.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.ConfidenceLevel ConfidenceLevel {

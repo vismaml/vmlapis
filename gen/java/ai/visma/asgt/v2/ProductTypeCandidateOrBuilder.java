@@ -10,19 +10,11 @@ public interface ProductTypeCandidateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Suggested product type label.
-   * </pre>
-   *
    * <code>string label = 1 [json_name = "label"];</code>
    * @return The label.
    */
   java.lang.String getLabel();
   /**
-   * <pre>
-   * Suggested product type label.
-   * </pre>
-   *
    * <code>string label = 1 [json_name = "label"];</code>
    * @return The bytes for label.
    */
@@ -30,29 +22,17 @@ public interface ProductTypeCandidateOrBuilder extends
       getLabelBytes();
 
   /**
-   * <pre>
-   * Confidence score between 0 and 1.
-   * </pre>
-   *
    * <code>float confidence = 2 [json_name = "confidence"];</code>
    * @return The confidence.
    */
   float getConfidence();
 
   /**
-   * <pre>
-   * Bucketized confidence level.
-   * </pre>
-   *
    * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
    * @return The enum numeric value on the wire for confidenceLevel.
    */
   int getConfidenceLevelValue();
   /**
-   * <pre>
-   * Bucketized confidence level.
-   * </pre>
-   *
    * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
    * @return The confidenceLevel.
    */

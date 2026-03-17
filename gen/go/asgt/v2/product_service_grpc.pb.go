@@ -19,7 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	ProductTypeService_BatchSuggest_FullMethodName = "/asgt.v2.ProductTypeService/BatchSuggest"
+	ProductTypeService_BatchSuggest_FullMethodName         = "/asgt.v2.ProductTypeService/BatchSuggest"
+	ProductTypeService_InternalBatchSuggest_FullMethodName = "/asgt.v2.ProductTypeService/InternalBatchSuggest"
 )
 
 // ProductTypeServiceClient is the client API for ProductTypeService service.
@@ -28,6 +29,8 @@ const (
 type ProductTypeServiceClient interface {
 	// Suggest product types for a batch of text inputs.
 	BatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
+	// Internal cluster-only batch suggest for product types.
+	InternalBatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
 }
 
 type productTypeServiceClient struct {
@@ -47,12 +50,23 @@ func (c *productTypeServiceClient) BatchSuggest(ctx context.Context, in *Product
 	return out, nil
 }
 
+func (c *productTypeServiceClient) InternalBatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error) {
+	out := new(ProductTypeBatchSuggestResponse)
+	err := c.cc.Invoke(ctx, ProductTypeService_InternalBatchSuggest_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProductTypeServiceServer is the server API for ProductTypeService service.
 // All implementations should embed UnimplementedProductTypeServiceServer
 // for forward compatibility
 type ProductTypeServiceServer interface {
 	// Suggest product types for a batch of text inputs.
 	BatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
+	// Internal cluster-only batch suggest for product types.
+	InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
 }
 
 // UnimplementedProductTypeServiceServer should be embedded to have forward compatible implementations.
@@ -61,6 +75,9 @@ type UnimplementedProductTypeServiceServer struct {
 
 func (UnimplementedProductTypeServiceServer) BatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchSuggest not implemented")
+}
+func (UnimplementedProductTypeServiceServer) InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method InternalBatchSuggest not implemented")
 }
 
 // UnsafeProductTypeServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -92,6 +109,24 @@ func _ProductTypeService_BatchSuggest_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProductTypeService_InternalBatchSuggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProductTypeBatchSuggestRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductTypeServiceServer).InternalBatchSuggest(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductTypeService_InternalBatchSuggest_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductTypeServiceServer).InternalBatchSuggest(ctx, req.(*ProductTypeBatchSuggestRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ProductTypeService_ServiceDesc is the grpc.ServiceDesc for ProductTypeService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -102,6 +137,10 @@ var ProductTypeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BatchSuggest",
 			Handler:    _ProductTypeService_BatchSuggest_Handler,
+		},
+		{
+			MethodName: "InternalBatchSuggest",
+			Handler:    _ProductTypeService_InternalBatchSuggest_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

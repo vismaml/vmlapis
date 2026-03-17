@@ -28,6 +28,9 @@ service ProductTypeService {
       body: "*"
     };
   }
+
+  // Internal cluster-only batch suggest for product types.
+  rpc InternalBatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {}
 }
 
 message ProductTypeBatchSuggestRequest {
@@ -42,21 +45,16 @@ message ProductTypeBatchSuggestRequest {
 }
 
 message ProductTypeBatchSuggestResponse {
-  // Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
   repeated ProductTypeSuggestion suggestions = 1;
 }
 
 message ProductTypeSuggestion {
-  // Ranked candidates for this suggestion.
   repeated ProductTypeCandidate candidates = 1;
 }
 
 message ProductTypeCandidate {
-  // Suggested product type label.
   string label = 1;
-  // Confidence score between 0 and 1.
   float confidence = 2;
-  // Bucketized confidence level.
   ConfidenceLevel confidence_level = 3;
 }
 

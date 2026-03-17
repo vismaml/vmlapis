@@ -10,44 +10,24 @@ public interface ProductTypeBatchSuggestResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> 
       getSuggestionsList();
   /**
-   * <pre>
-   * Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestion getSuggestions(int index);
   /**
-   * <pre>
-   * Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   int getSuggestionsCount();
   /**
-   * <pre>
-   * Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
       getSuggestionsOrBuilderList();
   /**
-   * <pre>
-   * Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getSuggestionsOrBuilder(

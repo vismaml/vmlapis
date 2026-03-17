@@ -46,6 +46,37 @@ public final class ProductTypeServiceGrpc {
     return getBatchSuggestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+      ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> getInternalBatchSuggestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InternalBatchSuggest",
+      requestType = ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.class,
+      responseType = ai.visma.asgt.v2.ProductTypeBatchSuggestResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+      ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> getInternalBatchSuggestMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest, ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> getInternalBatchSuggestMethod;
+    if ((getInternalBatchSuggestMethod = ProductTypeServiceGrpc.getInternalBatchSuggestMethod) == null) {
+      synchronized (ProductTypeServiceGrpc.class) {
+        if ((getInternalBatchSuggestMethod = ProductTypeServiceGrpc.getInternalBatchSuggestMethod) == null) {
+          ProductTypeServiceGrpc.getInternalBatchSuggestMethod = getInternalBatchSuggestMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest, ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InternalBatchSuggest"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.ProductTypeBatchSuggestResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductTypeServiceMethodDescriptorSupplier("InternalBatchSuggest"))
+              .build();
+        }
+      }
+    }
+    return getInternalBatchSuggestMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -118,6 +149,16 @@ public final class ProductTypeServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchSuggestMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest for product types.
+     * </pre>
+     */
+    default void internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInternalBatchSuggestMethod(), responseObserver);
+    }
   }
 
   /**
@@ -157,6 +198,17 @@ public final class ProductTypeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBatchSuggestMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest for product types.
+     * </pre>
+     */
+    public void internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInternalBatchSuggestMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -184,6 +236,16 @@ public final class ProductTypeServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBatchSuggestMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest for product types.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalBatchSuggestMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -210,6 +272,16 @@ public final class ProductTypeServiceGrpc {
     public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse batchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBatchSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest for product types.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalBatchSuggestMethod(), getCallOptions(), request);
     }
   }
 
@@ -239,9 +311,21 @@ public final class ProductTypeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBatchSuggestMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest for product types.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> internalBatchSuggest(
+        ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInternalBatchSuggestMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_BATCH_SUGGEST = 0;
+  private static final int METHODID_INTERNAL_BATCH_SUGGEST = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -262,6 +346,10 @@ public final class ProductTypeServiceGrpc {
       switch (methodId) {
         case METHODID_BATCH_SUGGEST:
           serviceImpl.batchSuggest((ai.visma.asgt.v2.ProductTypeBatchSuggestRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>) responseObserver);
+          break;
+        case METHODID_INTERNAL_BATCH_SUGGEST:
+          serviceImpl.internalBatchSuggest((ai.visma.asgt.v2.ProductTypeBatchSuggestRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>) responseObserver);
           break;
         default:
@@ -289,6 +377,13 @@ public final class ProductTypeServiceGrpc {
               ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
               ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>(
                 service, METHODID_BATCH_SUGGEST)))
+        .addMethod(
+          getInternalBatchSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+              ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>(
+                service, METHODID_INTERNAL_BATCH_SUGGEST)))
         .build();
   }
 
@@ -338,6 +433,7 @@ public final class ProductTypeServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductTypeServiceFileDescriptorSupplier())
               .addMethod(getBatchSuggestMethod())
+              .addMethod(getInternalBatchSuggestMethod())
               .build();
         }
       }

@@ -10,44 +10,24 @@ public interface ProductTypeSuggestionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Ranked candidates for this suggestion.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> 
       getCandidatesList();
   /**
-   * <pre>
-   * Ranked candidates for this suggestion.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
    */
   ai.visma.asgt.v2.ProductTypeCandidate getCandidates(int index);
   /**
-   * <pre>
-   * Ranked candidates for this suggestion.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
    */
   int getCandidatesCount();
   /**
-   * <pre>
-   * Ranked candidates for this suggestion.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
       getCandidatesOrBuilderList();
   /**
-   * <pre>
-   * Ranked candidates for this suggestion.
-   * </pre>
-   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
    */
   ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getCandidatesOrBuilder(

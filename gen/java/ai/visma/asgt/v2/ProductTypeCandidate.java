@@ -48,10 +48,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object label_ = "";
   /**
-   * <pre>
-   * Suggested product type label.
-   * </pre>
-   *
    * <code>string label = 1 [json_name = "label"];</code>
    * @return The label.
    */
@@ -69,10 +65,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Suggested product type label.
-   * </pre>
-   *
    * <code>string label = 1 [json_name = "label"];</code>
    * @return The bytes for label.
    */
@@ -94,10 +86,6 @@ private static final long serialVersionUID = 0L;
   public static final int CONFIDENCE_FIELD_NUMBER = 2;
   private float confidence_ = 0F;
   /**
-   * <pre>
-   * Confidence score between 0 and 1.
-   * </pre>
-   *
    * <code>float confidence = 2 [json_name = "confidence"];</code>
    * @return The confidence.
    */
@@ -109,10 +97,6 @@ private static final long serialVersionUID = 0L;
   public static final int CONFIDENCE_LEVEL_FIELD_NUMBER = 3;
   private int confidenceLevel_ = 0;
   /**
-   * <pre>
-   * Bucketized confidence level.
-   * </pre>
-   *
    * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
    * @return The enum numeric value on the wire for confidenceLevel.
    */
@@ -120,10 +104,6 @@ private static final long serialVersionUID = 0L;
     return confidenceLevel_;
   }
   /**
-   * <pre>
-   * Bucketized confidence level.
-   * </pre>
-   *
    * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
    * @return The confidenceLevel.
    */
@@ -475,10 +455,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object label_ = "";
     /**
-     * <pre>
-     * Suggested product type label.
-     * </pre>
-     *
      * <code>string label = 1 [json_name = "label"];</code>
      * @return The label.
      */
@@ -495,10 +471,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Suggested product type label.
-     * </pre>
-     *
      * <code>string label = 1 [json_name = "label"];</code>
      * @return The bytes for label.
      */
@@ -516,10 +488,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Suggested product type label.
-     * </pre>
-     *
      * <code>string label = 1 [json_name = "label"];</code>
      * @param value The label to set.
      * @return This builder for chaining.
@@ -533,10 +501,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Suggested product type label.
-     * </pre>
-     *
      * <code>string label = 1 [json_name = "label"];</code>
      * @return This builder for chaining.
      */
@@ -547,10 +511,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Suggested product type label.
-     * </pre>
-     *
      * <code>string label = 1 [json_name = "label"];</code>
      * @param value The bytes for label to set.
      * @return This builder for chaining.
@@ -567,10 +527,6 @@ private static final long serialVersionUID = 0L;
 
     private float confidence_ ;
     /**
-     * <pre>
-     * Confidence score between 0 and 1.
-     * </pre>
-     *
      * <code>float confidence = 2 [json_name = "confidence"];</code>
      * @return The confidence.
      */
@@ -579,10 +535,6 @@ private static final long serialVersionUID = 0L;
       return confidence_;
     }
     /**
-     * <pre>
-     * Confidence score between 0 and 1.
-     * </pre>
-     *
      * <code>float confidence = 2 [json_name = "confidence"];</code>
      * @param value The confidence to set.
      * @return This builder for chaining.
@@ -595,10 +547,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Confidence score between 0 and 1.
-     * </pre>
-     *
      * <code>float confidence = 2 [json_name = "confidence"];</code>
      * @return This builder for chaining.
      */
@@ -611,10 +559,6 @@ private static final long serialVersionUID = 0L;
 
     private int confidenceLevel_ = 0;
     /**
-     * <pre>
-     * Bucketized confidence level.
-     * </pre>
-     *
      * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
      * @return The enum numeric value on the wire for confidenceLevel.
      */
@@ -622,10 +566,6 @@ private static final long serialVersionUID = 0L;
       return confidenceLevel_;
     }
     /**
-     * <pre>
-     * Bucketized confidence level.
-     * </pre>
-     *
      * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
      * @param value The enum numeric value on the wire for confidenceLevel to set.
      * @return This builder for chaining.
@@ -637,10 +577,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Bucketized confidence level.
-     * </pre>
-     *
      * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
      * @return The confidenceLevel.
      */
@@ -650,10 +586,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.v2.ConfidenceLevel.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * Bucketized confidence level.
-     * </pre>
-     *
      * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
      * @param value The confidenceLevel to set.
      * @return This builder for chaining.
@@ -668,10 +600,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Bucketized confidence level.
-     * </pre>
-     *
      * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
      * @return This builder for chaining.
      */

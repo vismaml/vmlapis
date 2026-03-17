@@ -1297,8 +1297,7 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeSuggestion"
-          },
-          "description": "Suggestions for each input text. Each suggestion contains ranked candidates with confidence scores."
+          }
         }
       }
     },
@@ -1306,17 +1305,14 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
-          "description": "Suggested product type label."
+          "type": "string"
         },
         "confidence": {
           "type": "number",
-          "format": "float",
-          "description": "Confidence score between 0 and 1."
+          "format": "float"
         },
         "confidenceLevel": {
-          "$ref": "#/definitions/v2ConfidenceLevel",
-          "description": "Bucketized confidence level."
+          "$ref": "#/definitions/v2ConfidenceLevel"
         }
       }
     },
@@ -1328,8 +1324,7 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeCandidate"
-          },
-          "description": "Ranked candidates for this suggestion."
+          }
         }
       }
     },
