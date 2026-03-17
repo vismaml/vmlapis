@@ -49,19 +49,4 @@ public interface ProductTypeBatchSuggestRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTextsBytes(int index);
-
-  /**
-   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
-   * @return Whether the options field is set.
-   */
-  boolean hasOptions();
-  /**
-   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
-   * @return The options.
-   */
-  ai.visma.asgt.v2.ProductTypeSuggestOptions getOptions();
-  /**
-   * <code>.asgt.v2.ProductTypeSuggestOptions options = 2 [json_name = "options"];</code>
-   */
-  ai.visma.asgt.v2.ProductTypeSuggestOptionsOrBuilder getOptionsOrBuilder();
 }

@@ -24,19 +24,11 @@ MID: ConfidenceLevel
 HIGH: ConfidenceLevel
 VERY_HIGH: ConfidenceLevel
 
-class ProductTypeSuggestOptions(_message.Message):
-    __slots__ = ("min_confidence",)
-    MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    min_confidence: ConfidenceLevel
-    def __init__(self, min_confidence: _Optional[_Union[ConfidenceLevel, str]] = ...) -> None: ...
-
 class ProductTypeBatchSuggestRequest(_message.Message):
-    __slots__ = ("texts", "options")
+    __slots__ = ("texts",)
     TEXTS_FIELD_NUMBER: _ClassVar[int]
-    OPTIONS_FIELD_NUMBER: _ClassVar[int]
     texts: _containers.RepeatedScalarFieldContainer[str]
-    options: ProductTypeSuggestOptions
-    def __init__(self, texts: _Optional[_Iterable[str]] = ..., options: _Optional[_Union[ProductTypeSuggestOptions, _Mapping]] = ...) -> None: ...
+    def __init__(self, texts: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class ProductTypeBatchSuggestResponse(_message.Message):
     __slots__ = ("suggestions",)

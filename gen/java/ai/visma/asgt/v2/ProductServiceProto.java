@@ -26,11 +26,6 @@ public final class ProductServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_v2_ProductTypeSuggestOptions_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_asgt_v2_ProductTypeSuggestOptions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2_ProductTypeBatchSuggestRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -62,35 +57,31 @@ public final class ProductServiceProto {
       "\n\035asgt/v2/product_service.proto\022\007asgt.v2" +
       "\032\034google/api/annotations.proto\032.protoc-g" +
       "en-openapiv2/options/annotations.proto\032\027" +
-      "validate/validate.proto\"f\n\031ProductTypeSu" +
-      "ggestOptions\022I\n\016min_confidence\030\001 \001(\0162\030.a" +
-      "sgt.v2.ConfidenceLevelB\010\372B\005\202\001\002\020\001R\rminCon" +
-      "fidence\"\207\001\n\036ProductTypeBatchSuggestReque" +
-      "st\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013\010\001\020\200\010\"\004r\002\020\001R\005te" +
-      "xts\022<\n\007options\030\002 \001(\0132\".asgt.v2.ProductTy" +
-      "peSuggestOptionsR\007options\"c\n\037ProductType" +
-      "BatchSuggestResponse\022@\n\013suggestions\030\001 \003(" +
-      "\0132\036.asgt.v2.ProductTypeSuggestionR\013sugge" +
-      "stions\"V\n\025ProductTypeSuggestion\022=\n\ncandi" +
-      "dates\030\001 \003(\0132\035.asgt.v2.ProductTypeCandida" +
-      "teR\ncandidates\"\221\001\n\024ProductTypeCandidate\022" +
-      "\024\n\005label\030\001 \001(\tR\005label\022\036\n\nconfidence\030\002 \001(" +
-      "\002R\nconfidence\022C\n\020confidence_level\030\003 \001(\0162" +
-      "\030.asgt.v2.ConfidenceLevelR\017confidenceLev" +
-      "el*W\n\017ConfidenceLevel\022\013\n\007UNKNOWN\020\000\022\014\n\010VE" +
-      "RY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\t" +
-      "VERY_HIGH\020\0052\336\001\n\022ProductTypeService\022\223\001\n\014B" +
-      "atchSuggest\022\'.asgt.v2.ProductTypeBatchSu" +
-      "ggestRequest\032(.asgt.v2.ProductTypeBatchS" +
-      "uggestResponse\"0\202\323\344\223\002*\"%/v2/models/produ" +
-      "ct-types:batchSuggest:\001*\0322\222A/\022-Suggest p" +
-      "roduct types from text descriptions.B\320\001\n" +
-      "\020ai.visma.asgt.v2B\023ProductServiceProtoP\001" +
-      "Z+github.com/e-conomic/vmlapis/gen/go/as" +
-      "gt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V" +
-      "2\\GPBMetadata\352\002\010Asgt::V2\222A<\022\023\n\rProduct T" +
-      "ypes2\002v2*\001\0022\020application/json:\020applicati" +
-      "on/jsonb\006proto3"
+      "validate/validate.proto\"I\n\036ProductTypeBa" +
+      "tchSuggestRequest\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013" +
+      "\010\001\020\200\010\"\004r\002\020\001R\005texts\"c\n\037ProductTypeBatchSu" +
+      "ggestResponse\022@\n\013suggestions\030\001 \003(\0132\036.asg" +
+      "t.v2.ProductTypeSuggestionR\013suggestions\"" +
+      "V\n\025ProductTypeSuggestion\022=\n\ncandidates\030\001" +
+      " \003(\0132\035.asgt.v2.ProductTypeCandidateR\ncan" +
+      "didates\"\221\001\n\024ProductTypeCandidate\022\024\n\005labe" +
+      "l\030\001 \001(\tR\005label\022\036\n\nconfidence\030\002 \001(\002R\nconf" +
+      "idence\022C\n\020confidence_level\030\003 \001(\0162\030.asgt." +
+      "v2.ConfidenceLevelR\017confidenceLevel*W\n\017C" +
+      "onfidenceLevel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020" +
+      "\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HI" +
+      "GH\020\0052\336\001\n\022ProductTypeService\022\223\001\n\014BatchSug" +
+      "gest\022\'.asgt.v2.ProductTypeBatchSuggestRe" +
+      "quest\032(.asgt.v2.ProductTypeBatchSuggestR" +
+      "esponse\"0\202\323\344\223\002*\"%/v2/models/product-type" +
+      "s:batchSuggest:\001*\0322\222A/\022-Suggest product " +
+      "types from text descriptions.B\320\001\n\020ai.vis" +
+      "ma.asgt.v2B\023ProductServiceProtoP\001Z+githu" +
+      "b.com/e-conomic/vmlapis/gen/go/asgt/v2\242\002" +
+      "\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMe" +
+      "tadata\352\002\010Asgt::V2\222A<\022\023\n\rProduct Types2\002v" +
+      "2*\001\0022\020application/json:\020application/json" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -99,32 +90,26 @@ public final class ProductServiceProto {
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
         });
-    internal_static_asgt_v2_ProductTypeSuggestOptions_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_asgt_v2_ProductTypeSuggestOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_asgt_v2_ProductTypeSuggestOptions_descriptor,
-        new java.lang.String[] { "MinConfidence", });
     internal_static_asgt_v2_ProductTypeBatchSuggestRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2_ProductTypeBatchSuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_ProductTypeBatchSuggestRequest_descriptor,
-        new java.lang.String[] { "Texts", "Options", });
+        new java.lang.String[] { "Texts", });
     internal_static_asgt_v2_ProductTypeBatchSuggestResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_v2_ProductTypeBatchSuggestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_ProductTypeBatchSuggestResponse_descriptor,
         new java.lang.String[] { "Suggestions", });
     internal_static_asgt_v2_ProductTypeSuggestion_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_v2_ProductTypeSuggestion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_ProductTypeSuggestion_descriptor,
         new java.lang.String[] { "Candidates", });
     internal_static_asgt_v2_ProductTypeCandidate_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2_ProductTypeCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_ProductTypeCandidate_descriptor,

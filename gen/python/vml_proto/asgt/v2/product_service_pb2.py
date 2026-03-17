@@ -27,7 +27,7 @@ from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__ge
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x61sgt/v2/product_service.proto\x12\x07\x61sgt.v2\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"f\n\x19ProductTypeSuggestOptions\x12I\n\x0emin_confidence\x18\x01 \x01(\x0e\x32\x18.asgt.v2.ConfidenceLevelB\x08\xfa\x42\x05\x82\x01\x02\x10\x01R\rminConfidence\"\x87\x01\n\x1eProductTypeBatchSuggestRequest\x12\'\n\x05texts\x18\x01 \x03(\tB\x11\xfa\x42\x0e\x92\x01\x0b\x08\x01\x10\x80\x08\"\x04r\x02\x10\x01R\x05texts\x12<\n\x07options\x18\x02 \x01(\x0b\x32\".asgt.v2.ProductTypeSuggestOptionsR\x07options\"c\n\x1fProductTypeBatchSuggestResponse\x12@\n\x0bsuggestions\x18\x01 \x03(\x0b\x32\x1e.asgt.v2.ProductTypeSuggestionR\x0bsuggestions\"V\n\x15ProductTypeSuggestion\x12=\n\ncandidates\x18\x01 \x03(\x0b\x32\x1d.asgt.v2.ProductTypeCandidateR\ncandidates\"\x91\x01\n\x14ProductTypeCandidate\x12\x14\n\x05label\x18\x01 \x01(\tR\x05label\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x43\n\x10\x63onfidence_level\x18\x03 \x01(\x0e\x32\x18.asgt.v2.ConfidenceLevelR\x0f\x63onfidenceLevel*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xde\x01\n\x12ProductTypeService\x12\x93\x01\n\x0c\x42\x61tchSuggest\x12\'.asgt.v2.ProductTypeBatchSuggestRequest\x1a(.asgt.v2.ProductTypeBatchSuggestResponse\"0\x82\xd3\xe4\x93\x02*\"%/v2/models/product-types:batchSuggest:\x01*\x1a\x32\x92\x41/\x12-Suggest product types from text descriptions.BlZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41<\x12\x13\n\rProduct Types2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x61sgt/v2/product_service.proto\x12\x07\x61sgt.v2\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"I\n\x1eProductTypeBatchSuggestRequest\x12\'\n\x05texts\x18\x01 \x03(\tB\x11\xfa\x42\x0e\x92\x01\x0b\x08\x01\x10\x80\x08\"\x04r\x02\x10\x01R\x05texts\"c\n\x1fProductTypeBatchSuggestResponse\x12@\n\x0bsuggestions\x18\x01 \x03(\x0b\x32\x1e.asgt.v2.ProductTypeSuggestionR\x0bsuggestions\"V\n\x15ProductTypeSuggestion\x12=\n\ncandidates\x18\x01 \x03(\x0b\x32\x1d.asgt.v2.ProductTypeCandidateR\ncandidates\"\x91\x01\n\x14ProductTypeCandidate\x12\x14\n\x05label\x18\x01 \x01(\tR\x05label\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x43\n\x10\x63onfidence_level\x18\x03 \x01(\x0e\x32\x18.asgt.v2.ConfidenceLevelR\x0f\x63onfidenceLevel*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xde\x01\n\x12ProductTypeService\x12\x93\x01\n\x0c\x42\x61tchSuggest\x12\'.asgt.v2.ProductTypeBatchSuggestRequest\x1a(.asgt.v2.ProductTypeBatchSuggestResponse\"0\x82\xd3\xe4\x93\x02*\"%/v2/models/product-types:batchSuggest:\x01*\x1a\x32\x92\x41/\x12-Suggest product types from text descriptions.BlZ+github.com/e-conomic/vmlapis/gen/go/asgt/v2\x92\x41<\x12\x13\n\rProduct Types2\x02v2*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,26 +35,22 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.v2.product_service_pb2
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2\222A<\022\023\n\rProduct Types2\002v2*\001\0022\020application/json:\020application/json'
-  _globals['_PRODUCTTYPESUGGESTOPTIONS'].fields_by_name['min_confidence']._loaded_options = None
-  _globals['_PRODUCTTYPESUGGESTOPTIONS'].fields_by_name['min_confidence']._serialized_options = b'\372B\005\202\001\002\020\001'
   _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST'].fields_by_name['texts']._loaded_options = None
   _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST'].fields_by_name['texts']._serialized_options = b'\372B\016\222\001\013\010\001\020\200\010\"\004r\002\020\001'
   _globals['_PRODUCTTYPESERVICE']._loaded_options = None
   _globals['_PRODUCTTYPESERVICE']._serialized_options = b'\222A/\022-Suggest product types from text descriptions.'
   _globals['_PRODUCTTYPESERVICE'].methods_by_name['BatchSuggest']._loaded_options = None
   _globals['_PRODUCTTYPESERVICE'].methods_by_name['BatchSuggest']._serialized_options = b'\202\323\344\223\002*\"%/v2/models/product-types:batchSuggest:\001*'
-  _globals['_CONFIDENCELEVEL']._serialized_start=724
-  _globals['_CONFIDENCELEVEL']._serialized_end=811
-  _globals['_PRODUCTTYPESUGGESTOPTIONS']._serialized_start=145
-  _globals['_PRODUCTTYPESUGGESTOPTIONS']._serialized_end=247
-  _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST']._serialized_start=250
-  _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST']._serialized_end=385
-  _globals['_PRODUCTTYPEBATCHSUGGESTRESPONSE']._serialized_start=387
-  _globals['_PRODUCTTYPEBATCHSUGGESTRESPONSE']._serialized_end=486
-  _globals['_PRODUCTTYPESUGGESTION']._serialized_start=488
-  _globals['_PRODUCTTYPESUGGESTION']._serialized_end=574
-  _globals['_PRODUCTTYPECANDIDATE']._serialized_start=577
-  _globals['_PRODUCTTYPECANDIDATE']._serialized_end=722
-  _globals['_PRODUCTTYPESERVICE']._serialized_start=814
-  _globals['_PRODUCTTYPESERVICE']._serialized_end=1036
+  _globals['_CONFIDENCELEVEL']._serialized_start=557
+  _globals['_CONFIDENCELEVEL']._serialized_end=644
+  _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST']._serialized_start=145
+  _globals['_PRODUCTTYPEBATCHSUGGESTREQUEST']._serialized_end=218
+  _globals['_PRODUCTTYPEBATCHSUGGESTRESPONSE']._serialized_start=220
+  _globals['_PRODUCTTYPEBATCHSUGGESTRESPONSE']._serialized_end=319
+  _globals['_PRODUCTTYPESUGGESTION']._serialized_start=321
+  _globals['_PRODUCTTYPESUGGESTION']._serialized_end=407
+  _globals['_PRODUCTTYPECANDIDATE']._serialized_start=410
+  _globals['_PRODUCTTYPECANDIDATE']._serialized_end=555
+  _globals['_PRODUCTTYPESERVICE']._serialized_start=647
+  _globals['_PRODUCTTYPESERVICE']._serialized_end=869
 # @@protoc_insertion_point(module_scope)
