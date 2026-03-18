@@ -3,6 +3,7 @@ syntax = "proto3";
 package asgt.v2;
 
 import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
@@ -31,6 +32,14 @@ service ProductTypeService {
 
   // Internal cluster-only batch suggest for product types.
   rpc InternalBatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {}
+
+  // Submit feedback for product type predictions.
+  rpc Feedback(ProductTypeFeedbackRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v2/models/product-types:feedback"
+      body: "*"
+    };
+  }
 }
 
 message ProductTypeBatchSuggestRequest {
@@ -135,6 +144,11 @@ enum ProductType {
   VEHICLES = 72;
   WATER_WASTE = 73;
   WEBSITE = 74;
+}
+
+message ProductTypeFeedbackRequest {
+  string feedback_id = 1 [(validate.rules).string.min_len = 1];
+  string feedback_category = 2 [(validate.rules).string.min_len = 1];
 }
 
 enum ConfidenceLevel {
