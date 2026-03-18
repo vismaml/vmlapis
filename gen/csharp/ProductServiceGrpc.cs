@@ -49,6 +49,10 @@ namespace Asgt.V2 {
     static readonly grpc::Marshaller<global::Asgt.V2.ProductTypeBatchSuggestRequest> __Marshaller_asgt_v2_ProductTypeBatchSuggestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.ProductTypeBatchSuggestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.V2.ProductTypeBatchSuggestResponse> __Marshaller_asgt_v2_ProductTypeBatchSuggestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.ProductTypeBatchSuggestResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.V2.ProductTypeFeedbackRequest> __Marshaller_asgt_v2_ProductTypeFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.ProductTypeFeedbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Asgt.V2.ProductTypeBatchSuggestRequest, global::Asgt.V2.ProductTypeBatchSuggestResponse> __Method_BatchSuggest = new grpc::Method<global::Asgt.V2.ProductTypeBatchSuggestRequest, global::Asgt.V2.ProductTypeBatchSuggestResponse>(
@@ -65,6 +69,14 @@ namespace Asgt.V2 {
         "InternalBatchSuggest",
         __Marshaller_asgt_v2_ProductTypeBatchSuggestRequest,
         __Marshaller_asgt_v2_ProductTypeBatchSuggestResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.V2.ProductTypeFeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Feedback = new grpc::Method<global::Asgt.V2.ProductTypeFeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Feedback",
+        __Marshaller_asgt_v2_ProductTypeFeedbackRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -96,6 +108,18 @@ namespace Asgt.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.V2.ProductTypeBatchSuggestResponse> InternalBatchSuggest(global::Asgt.V2.ProductTypeBatchSuggestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submit feedback for product type predictions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Feedback(global::Asgt.V2.ProductTypeFeedbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -225,6 +249,54 @@ namespace Asgt.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_InternalBatchSuggest, null, options, request);
       }
+      /// <summary>
+      /// Submit feedback for product type predictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty Feedback(global::Asgt.V2.ProductTypeFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Feedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submit feedback for product type predictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty Feedback(global::Asgt.V2.ProductTypeFeedbackRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Feedback, null, options, request);
+      }
+      /// <summary>
+      /// Submit feedback for product type predictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FeedbackAsync(global::Asgt.V2.ProductTypeFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submit feedback for product type predictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FeedbackAsync(global::Asgt.V2.ProductTypeFeedbackRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Feedback, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ProductTypeServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -240,7 +312,8 @@ namespace Asgt.V2 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_BatchSuggest, serviceImpl.BatchSuggest)
-          .AddMethod(__Method_InternalBatchSuggest, serviceImpl.InternalBatchSuggest).Build();
+          .AddMethod(__Method_InternalBatchSuggest, serviceImpl.InternalBatchSuggest)
+          .AddMethod(__Method_Feedback, serviceImpl.Feedback).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -252,6 +325,7 @@ namespace Asgt.V2 {
     {
       serviceBinder.AddMethod(__Method_BatchSuggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.ProductTypeBatchSuggestRequest, global::Asgt.V2.ProductTypeBatchSuggestResponse>(serviceImpl.BatchSuggest));
       serviceBinder.AddMethod(__Method_InternalBatchSuggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.ProductTypeBatchSuggestRequest, global::Asgt.V2.ProductTypeBatchSuggestResponse>(serviceImpl.InternalBatchSuggest));
+      serviceBinder.AddMethod(__Method_Feedback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.ProductTypeFeedbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Feedback));
     }
 
   }

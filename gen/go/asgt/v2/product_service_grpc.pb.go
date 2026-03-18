@@ -11,6 +11,7 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -21,6 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 const (
 	ProductTypeService_BatchSuggest_FullMethodName         = "/asgt.v2.ProductTypeService/BatchSuggest"
 	ProductTypeService_InternalBatchSuggest_FullMethodName = "/asgt.v2.ProductTypeService/InternalBatchSuggest"
+	ProductTypeService_Feedback_FullMethodName             = "/asgt.v2.ProductTypeService/Feedback"
 )
 
 // ProductTypeServiceClient is the client API for ProductTypeService service.
@@ -31,6 +33,8 @@ type ProductTypeServiceClient interface {
 	BatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
+	// Submit feedback for product type predictions.
+	Feedback(ctx context.Context, in *ProductTypeFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type productTypeServiceClient struct {
@@ -59,6 +63,15 @@ func (c *productTypeServiceClient) InternalBatchSuggest(ctx context.Context, in 
 	return out, nil
 }
 
+func (c *productTypeServiceClient) Feedback(ctx context.Context, in *ProductTypeFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, ProductTypeService_Feedback_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProductTypeServiceServer is the server API for ProductTypeService service.
 // All implementations should embed UnimplementedProductTypeServiceServer
 // for forward compatibility
@@ -67,6 +80,8 @@ type ProductTypeServiceServer interface {
 	BatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
+	// Submit feedback for product type predictions.
+	Feedback(context.Context, *ProductTypeFeedbackRequest) (*emptypb.Empty, error)
 }
 
 // UnimplementedProductTypeServiceServer should be embedded to have forward compatible implementations.
@@ -78,6 +93,9 @@ func (UnimplementedProductTypeServiceServer) BatchSuggest(context.Context, *Prod
 }
 func (UnimplementedProductTypeServiceServer) InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InternalBatchSuggest not implemented")
+}
+func (UnimplementedProductTypeServiceServer) Feedback(context.Context, *ProductTypeFeedbackRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
 }
 
 // UnsafeProductTypeServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -127,6 +145,24 @@ func _ProductTypeService_InternalBatchSuggest_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProductTypeService_Feedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProductTypeFeedbackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductTypeServiceServer).Feedback(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductTypeService_Feedback_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductTypeServiceServer).Feedback(ctx, req.(*ProductTypeFeedbackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ProductTypeService_ServiceDesc is the grpc.ServiceDesc for ProductTypeService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -141,6 +177,10 @@ var ProductTypeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "InternalBatchSuggest",
 			Handler:    _ProductTypeService_InternalBatchSuggest_Handler,
+		},
+		{
+			MethodName: "Feedback",
+			Handler:    _ProductTypeService_Feedback_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

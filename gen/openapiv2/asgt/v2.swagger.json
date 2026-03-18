@@ -549,6 +549,40 @@
         ]
       }
     },
+    "/v2/models/product-types:feedback": {
+      "post": {
+        "summary": "Submit feedback for product type predictions.",
+        "operationId": "ProductTypeService_Feedback",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v2ProductTypeFeedbackRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ProductTypeService"
+        ]
+      }
+    },
     "/v2/tags/{tagName}": {
       "delete": {
         "summary": "Delete all datasets (and their examples) containing the specified tag.\nThe datasets' names are not considered in this request - only the tag names is.",
@@ -1277,6 +1311,87 @@
         }
       }
     },
+    "v2ProductType": {
+      "type": "string",
+      "enum": [
+        "UNDEFINED",
+        "ACCOUNTING_AUDIT",
+        "ACCOUNTING_SOFTWARE",
+        "ADVERTISING",
+        "ALCOHOL_TOBACCO",
+        "MEDICAL_LAB_EQUIPMENT",
+        "BANKING_INVESTMENT",
+        "BOOKS",
+        "BUSINESS_CONSULTING",
+        "CHEMICALS",
+        "CLEANING_SERVICES",
+        "CLEANING_SUPPLIES",
+        "CLOTHING",
+        "ELECTRONICS",
+        "CONSTRUCTION_MATERIALS",
+        "DECORATIONS_ART",
+        "DEFENSE_SECURITY",
+        "DEPOSITS",
+        "DOMESTIC_APPLIANCES",
+        "EDUCATION_TRAINING",
+        "ENERGY",
+        "FACILITY_MAINTENANCE",
+        "AGRICULTURE",
+        "FEES",
+        "FINES",
+        "FOOD_BEVERAGES",
+        "FUEL_LUBRICANTS",
+        "FURNITURE",
+        "GIFTS",
+        "GLASS_CERAMICS",
+        "GOVERNMENT_SERVICES",
+        "GRAPHIC_DESIGN",
+        "FITNESS_CLUBS",
+        "HEALTHCARE",
+        "HOTELS",
+        "INDUSTRIAL_MACHINERY",
+        "MANUFACTURING",
+        "INSURANCE",
+        "INTERNET_MEDIA",
+        "PROPERTY_RENTAL",
+        "LEGAL",
+        "PLANTS_ANIMALS",
+        "MACHINERY_LEASING",
+        "MARKETING",
+        "MEETINGS",
+        "MUSIC",
+        "OFFICE_SUPPLIES",
+        "PACKAGING",
+        "PARKING",
+        "PASSENGER_TRANSPORT",
+        "PAYMENTS",
+        "PAYROLL",
+        "PERSONAL_SERVICES",
+        "PERSONAL_CARE",
+        "PHARMACEUTICALS",
+        "MEDIA_SERVICES",
+        "RECREATIONAL_SERVICES",
+        "RESEARCH_TECH_CONSULTING",
+        "RESTAURANTS",
+        "RETIREMENT",
+        "LOGISTICS",
+        "SOFTWARE",
+        "SPORTS_EQUIPMENT",
+        "STORAGE",
+        "TAXATION",
+        "TELEPHONY",
+        "TEXTILES",
+        "JEWELRY",
+        "TOLLS",
+        "TOYS",
+        "TRADE_REPAIR",
+        "VEHICLE_RENTALS",
+        "VEHICLES",
+        "WATER_WASTE",
+        "WEBSITE"
+      ],
+      "default": "UNDEFINED"
+    },
     "v2ProductTypeBatchSuggestRequest": {
       "type": "object",
       "properties": {
@@ -1304,6 +1419,9 @@
     "v2ProductTypeCandidate": {
       "type": "object",
       "properties": {
+        "type": {
+          "$ref": "#/definitions/v2ProductType"
+        },
         "label": {
           "type": "string"
         },
@@ -1313,6 +1431,17 @@
         },
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel"
+        }
+      }
+    },
+    "v2ProductTypeFeedbackRequest": {
+      "type": "object",
+      "properties": {
+        "feedbackId": {
+          "type": "string"
+        },
+        "feedbackCategory": {
+          "type": "string"
         }
       }
     },

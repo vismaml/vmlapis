@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as validate_validate_pb from '../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
@@ -66,6 +67,9 @@ export namespace ProductTypeSuggestion {
 }
 
 export class ProductTypeCandidate extends jspb.Message {
+  getType(): ProductType;
+  setType(value: ProductType): ProductTypeCandidate;
+
   getLabel(): string;
   setLabel(value: string): ProductTypeCandidate;
 
@@ -85,12 +89,112 @@ export class ProductTypeCandidate extends jspb.Message {
 
 export namespace ProductTypeCandidate {
   export type AsObject = {
+    type: ProductType,
     label: string,
     confidence: number,
     confidenceLevel: ConfidenceLevel,
   }
 }
 
+export class ProductTypeFeedbackRequest extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): ProductTypeFeedbackRequest;
+
+  getFeedbackCategory(): string;
+  setFeedbackCategory(value: string): ProductTypeFeedbackRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProductTypeFeedbackRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ProductTypeFeedbackRequest): ProductTypeFeedbackRequest.AsObject;
+  static serializeBinaryToWriter(message: ProductTypeFeedbackRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProductTypeFeedbackRequest;
+  static deserializeBinaryFromReader(message: ProductTypeFeedbackRequest, reader: jspb.BinaryReader): ProductTypeFeedbackRequest;
+}
+
+export namespace ProductTypeFeedbackRequest {
+  export type AsObject = {
+    feedbackId: string,
+    feedbackCategory: string,
+  }
+}
+
+export enum ProductType { 
+  UNDEFINED = 0,
+  ACCOUNTING_AUDIT = 1,
+  ACCOUNTING_SOFTWARE = 2,
+  ADVERTISING = 3,
+  ALCOHOL_TOBACCO = 4,
+  MEDICAL_LAB_EQUIPMENT = 5,
+  BANKING_INVESTMENT = 6,
+  BOOKS = 7,
+  BUSINESS_CONSULTING = 8,
+  CHEMICALS = 9,
+  CLEANING_SERVICES = 10,
+  CLEANING_SUPPLIES = 11,
+  CLOTHING = 12,
+  ELECTRONICS = 13,
+  CONSTRUCTION_MATERIALS = 14,
+  DECORATIONS_ART = 15,
+  DEFENSE_SECURITY = 16,
+  DEPOSITS = 17,
+  DOMESTIC_APPLIANCES = 18,
+  EDUCATION_TRAINING = 19,
+  ENERGY = 20,
+  FACILITY_MAINTENANCE = 21,
+  AGRICULTURE = 22,
+  FEES = 23,
+  FINES = 24,
+  FOOD_BEVERAGES = 25,
+  FUEL_LUBRICANTS = 26,
+  FURNITURE = 27,
+  GIFTS = 28,
+  GLASS_CERAMICS = 29,
+  GOVERNMENT_SERVICES = 30,
+  GRAPHIC_DESIGN = 31,
+  FITNESS_CLUBS = 32,
+  HEALTHCARE = 33,
+  HOTELS = 34,
+  INDUSTRIAL_MACHINERY = 35,
+  MANUFACTURING = 36,
+  INSURANCE = 37,
+  INTERNET_MEDIA = 38,
+  PROPERTY_RENTAL = 39,
+  LEGAL = 40,
+  PLANTS_ANIMALS = 41,
+  MACHINERY_LEASING = 42,
+  MARKETING = 43,
+  MEETINGS = 44,
+  MUSIC = 45,
+  OFFICE_SUPPLIES = 46,
+  PACKAGING = 47,
+  PARKING = 48,
+  PASSENGER_TRANSPORT = 49,
+  PAYMENTS = 50,
+  PAYROLL = 51,
+  PERSONAL_SERVICES = 52,
+  PERSONAL_CARE = 53,
+  PHARMACEUTICALS = 54,
+  MEDIA_SERVICES = 55,
+  RECREATIONAL_SERVICES = 56,
+  RESEARCH_TECH_CONSULTING = 57,
+  RESTAURANTS = 58,
+  RETIREMENT = 59,
+  LOGISTICS = 60,
+  SOFTWARE = 61,
+  SPORTS_EQUIPMENT = 62,
+  STORAGE = 63,
+  TAXATION = 64,
+  TELEPHONY = 65,
+  TEXTILES = 66,
+  JEWELRY = 67,
+  TOLLS = 68,
+  TOYS = 69,
+  TRADE_REPAIR = 70,
+  VEHICLE_RENTALS = 71,
+  VEHICLES = 72,
+  WATER_WASTE = 73,
+  WEBSITE = 74,
+}
 export enum ConfidenceLevel { 
   UNKNOWN = 0,
   VERY_LOW = 1,

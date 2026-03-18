@@ -77,6 +77,37 @@ public final class ProductTypeServiceGrpc {
     return getInternalBatchSuggestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeFeedbackRequest,
+      com.google.protobuf.Empty> getFeedbackMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Feedback",
+      requestType = ai.visma.asgt.v2.ProductTypeFeedbackRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeFeedbackRequest,
+      com.google.protobuf.Empty> getFeedbackMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeFeedbackRequest, com.google.protobuf.Empty> getFeedbackMethod;
+    if ((getFeedbackMethod = ProductTypeServiceGrpc.getFeedbackMethod) == null) {
+      synchronized (ProductTypeServiceGrpc.class) {
+        if ((getFeedbackMethod = ProductTypeServiceGrpc.getFeedbackMethod) == null) {
+          ProductTypeServiceGrpc.getFeedbackMethod = getFeedbackMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.v2.ProductTypeFeedbackRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Feedback"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.ProductTypeFeedbackRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductTypeServiceMethodDescriptorSupplier("Feedback"))
+              .build();
+        }
+      }
+    }
+    return getFeedbackMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -159,6 +190,16 @@ public final class ProductTypeServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInternalBatchSuggestMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Submit feedback for product type predictions.
+     * </pre>
+     */
+    default void feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFeedbackMethod(), responseObserver);
+    }
   }
 
   /**
@@ -209,6 +250,17 @@ public final class ProductTypeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInternalBatchSuggestMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Submit feedback for product type predictions.
+     * </pre>
+     */
+    public void feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFeedbackMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -246,6 +298,16 @@ public final class ProductTypeServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInternalBatchSuggestMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Submit feedback for product type predictions.
+     * </pre>
+     */
+    public com.google.protobuf.Empty feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFeedbackMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -282,6 +344,16 @@ public final class ProductTypeServiceGrpc {
     public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInternalBatchSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Submit feedback for product type predictions.
+     * </pre>
+     */
+    public com.google.protobuf.Empty feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFeedbackMethod(), getCallOptions(), request);
     }
   }
 
@@ -322,10 +394,22 @@ public final class ProductTypeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInternalBatchSuggestMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Submit feedback for product type predictions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> feedback(
+        ai.visma.asgt.v2.ProductTypeFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFeedbackMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_BATCH_SUGGEST = 0;
   private static final int METHODID_INTERNAL_BATCH_SUGGEST = 1;
+  private static final int METHODID_FEEDBACK = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -351,6 +435,10 @@ public final class ProductTypeServiceGrpc {
         case METHODID_INTERNAL_BATCH_SUGGEST:
           serviceImpl.internalBatchSuggest((ai.visma.asgt.v2.ProductTypeBatchSuggestRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>) responseObserver);
+          break;
+        case METHODID_FEEDBACK:
+          serviceImpl.feedback((ai.visma.asgt.v2.ProductTypeFeedbackRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -384,6 +472,13 @@ public final class ProductTypeServiceGrpc {
               ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
               ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>(
                 service, METHODID_INTERNAL_BATCH_SUGGEST)))
+        .addMethod(
+          getFeedbackMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.ProductTypeFeedbackRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_FEEDBACK)))
         .build();
   }
 
@@ -434,6 +529,7 @@ public final class ProductTypeServiceGrpc {
               .setSchemaDescriptor(new ProductTypeServiceFileDescriptorSupplier())
               .addMethod(getBatchSuggestMethod())
               .addMethod(getInternalBatchSuggestMethod())
+              .addMethod(getFeedbackMethod())
               .build();
         }
       }

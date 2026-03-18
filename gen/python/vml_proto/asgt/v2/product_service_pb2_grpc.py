@@ -3,6 +3,7 @@
 import grpc
 
 from vml_proto.asgt.v2 import product_service_pb2 as asgt_dot_v2_dot_product__service__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class ProductTypeServiceStub(object):
@@ -24,6 +25,11 @@ class ProductTypeServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
                 _registered_method=True)
+        self.Feedback = channel.unary_unary(
+                '/asgt.v2.ProductTypeService/Feedback',
+                request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeFeedbackRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                _registered_method=True)
 
 
 class ProductTypeServiceServicer(object):
@@ -43,6 +49,13 @@ class ProductTypeServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def Feedback(self, request, context):
+        """Submit feedback for product type predictions.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ProductTypeServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -55,6 +68,11 @@ def add_ProductTypeServiceServicer_to_server(servicer, server):
                     servicer.InternalBatchSuggest,
                     request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.SerializeToString,
+            ),
+            'Feedback': grpc.unary_unary_rpc_method_handler(
+                    servicer.Feedback,
+                    request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeFeedbackRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -111,6 +129,33 @@ class ProductTypeService(object):
             '/asgt.v2.ProductTypeService/InternalBatchSuggest',
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def Feedback(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.ProductTypeService/Feedback',
+            asgt_dot_v2_dot_product__service__pb2.ProductTypeFeedbackRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options,
             channel_credentials,
             insecure,

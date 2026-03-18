@@ -132,7 +132,7 @@ public enum ConfidenceLevel
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return ai.visma.asgt.v2.ProductServiceProto.getDescriptor().getEnumTypes().get(0);
+    return ai.visma.asgt.v2.ProductServiceProto.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final ConfidenceLevel[] VALUES = values();

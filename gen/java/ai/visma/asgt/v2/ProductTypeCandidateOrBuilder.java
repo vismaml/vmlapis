@@ -10,30 +10,41 @@ public interface ProductTypeCandidateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string label = 1 [json_name = "label"];</code>
+   * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  int getTypeValue();
+  /**
+   * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+   * @return The type.
+   */
+  ai.visma.asgt.v2.ProductType getType();
+
+  /**
+   * <code>string label = 2 [json_name = "label"];</code>
    * @return The label.
    */
   java.lang.String getLabel();
   /**
-   * <code>string label = 1 [json_name = "label"];</code>
+   * <code>string label = 2 [json_name = "label"];</code>
    * @return The bytes for label.
    */
   com.google.protobuf.ByteString
       getLabelBytes();
 
   /**
-   * <code>float confidence = 2 [json_name = "confidence"];</code>
+   * <code>float confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */
   float getConfidence();
 
   /**
-   * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+   * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
    * @return The enum numeric value on the wire for confidenceLevel.
    */
   int getConfidenceLevelValue();
   /**
-   * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+   * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
    * @return The confidenceLevel.
    */
   ai.visma.asgt.v2.ConfidenceLevel getConfidenceLevel();

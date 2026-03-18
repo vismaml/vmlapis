@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
+
 var protoc$gen$openapiv2_options_annotations_pb = require('../../protoc-gen-openapiv2/options/annotations_pb.js')
 
 var validate_validate_pb = require('../../validate/validate_pb.js')
@@ -200,6 +202,67 @@ proto.asgt.v2.ProductTypeServicePromiseClient.prototype.internalBatchSuggest =
       request,
       metadata || {},
       methodDescriptor_ProductTypeService_InternalBatchSuggest);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.ProductTypeFeedbackRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_ProductTypeService_Feedback = new grpc.web.MethodDescriptor(
+  '/asgt.v2.ProductTypeService/Feedback',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.ProductTypeFeedbackRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.v2.ProductTypeFeedbackRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.ProductTypeServiceClient.prototype.feedback =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.ProductTypeService/Feedback',
+      request,
+      metadata || {},
+      methodDescriptor_ProductTypeService_Feedback,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.v2.ProductTypeServicePromiseClient.prototype.feedback =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.ProductTypeService/Feedback',
+      request,
+      metadata || {},
+      methodDescriptor_ProductTypeService_Feedback);
 };
 
 

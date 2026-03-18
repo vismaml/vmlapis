@@ -25,45 +25,162 @@ namespace Asgt.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1hc2d0L3YyL3Byb2R1Y3Rfc2VydmljZS5wcm90bxIHYXNndC52MhocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVuYXBp",
-            "djIvb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90bxoXdmFsaWRhdGUvdmFsaWRh",
-            "dGUucHJvdG8iSQoeUHJvZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0EicK",
-            "BXRleHRzGAEgAygJQhH6Qg6SAQsIARCACCIEcgIQAVIFdGV4dHMiYwofUHJv",
-            "ZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXNwb25zZRJACgtzdWdnZXN0aW9ucxgB",
-            "IAMoCzIeLmFzZ3QudjIuUHJvZHVjdFR5cGVTdWdnZXN0aW9uUgtzdWdnZXN0",
-            "aW9ucyJWChVQcm9kdWN0VHlwZVN1Z2dlc3Rpb24SPQoKY2FuZGlkYXRlcxgB",
-            "IAMoCzIdLmFzZ3QudjIuUHJvZHVjdFR5cGVDYW5kaWRhdGVSCmNhbmRpZGF0",
-            "ZXMikQEKFFByb2R1Y3RUeXBlQ2FuZGlkYXRlEhQKBWxhYmVsGAEgASgJUgVs",
-            "YWJlbBIeCgpjb25maWRlbmNlGAIgASgCUgpjb25maWRlbmNlEkMKEGNvbmZp",
-            "ZGVuY2VfbGV2ZWwYAyABKA4yGC5hc2d0LnYyLkNvbmZpZGVuY2VMZXZlbFIP",
-            "Y29uZmlkZW5jZUxldmVsKlcKD0NvbmZpZGVuY2VMZXZlbBILCgdVTktOT1dO",
-            "EAASDAoIVkVSWV9MT1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRISUdIEAQS",
-            "DQoJVkVSWV9ISUdIEAUyywIKElByb2R1Y3RUeXBlU2VydmljZRKTAQoMQmF0",
-            "Y2hTdWdnZXN0EicuYXNndC52Mi5Qcm9kdWN0VHlwZUJhdGNoU3VnZ2VzdFJl",
-            "cXVlc3QaKC5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVzcG9u",
-            "c2UiMILT5JMCKiIlL3YyL21vZGVscy9wcm9kdWN0LXR5cGVzOmJhdGNoU3Vn",
-            "Z2VzdDoBKhJrChRJbnRlcm5hbEJhdGNoU3VnZ2VzdBInLmFzZ3QudjIuUHJv",
-            "ZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0GiguYXNndC52Mi5Qcm9kdWN0",
-            "VHlwZUJhdGNoU3VnZ2VzdFJlc3BvbnNlIgAaMpJBLxItU3VnZ2VzdCBwcm9k",
-            "dWN0IHR5cGVzIGZyb20gdGV4dCBkZXNjcmlwdGlvbnMuQtABChBhaS52aXNt",
-            "YS5hc2d0LnYyQhNQcm9kdWN0U2VydmljZVByb3RvUAFaK2dpdGh1Yi5jb20v",
-            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjKiAgNBWFiqAgdBc2d0",
-            "LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BCTWV0YWRhdGHqAghBc2d0OjpW",
-            "MpJBPBITCg1Qcm9kdWN0IFR5cGVzMgJ2MioBAjIQYXBwbGljYXRpb24vanNv",
-            "bjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
+            "cHR5LnByb3RvGi5wcm90b2MtZ2VuLW9wZW5hcGl2Mi9vcHRpb25zL2Fubm90",
+            "YXRpb25zLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0ZS5wcm90byJJCh5Qcm9k",
+            "dWN0VHlwZUJhdGNoU3VnZ2VzdFJlcXVlc3QSJwoFdGV4dHMYASADKAlCEfpC",
+            "DpIBCwgBEIAIIgRyAhABUgV0ZXh0cyJjCh9Qcm9kdWN0VHlwZUJhdGNoU3Vn",
+            "Z2VzdFJlc3BvbnNlEkAKC3N1Z2dlc3Rpb25zGAEgAygLMh4uYXNndC52Mi5Q",
+            "cm9kdWN0VHlwZVN1Z2dlc3Rpb25SC3N1Z2dlc3Rpb25zIlYKFVByb2R1Y3RU",
+            "eXBlU3VnZ2VzdGlvbhI9CgpjYW5kaWRhdGVzGAEgAygLMh0uYXNndC52Mi5Q",
+            "cm9kdWN0VHlwZUNhbmRpZGF0ZVIKY2FuZGlkYXRlcyK7AQoUUHJvZHVjdFR5",
+            "cGVDYW5kaWRhdGUSKAoEdHlwZRgBIAEoDjIULmFzZ3QudjIuUHJvZHVjdFR5",
+            "cGVSBHR5cGUSFAoFbGFiZWwYAiABKAlSBWxhYmVsEh4KCmNvbmZpZGVuY2UY",
+            "AyABKAJSCmNvbmZpZGVuY2USQwoQY29uZmlkZW5jZV9sZXZlbBgEIAEoDjIY",
+            "LmFzZ3QudjIuQ29uZmlkZW5jZUxldmVsUg9jb25maWRlbmNlTGV2ZWwifAoa",
+            "UHJvZHVjdFR5cGVGZWVkYmFja1JlcXVlc3QSKAoLZmVlZGJhY2tfaWQYASAB",
+            "KAlCB/pCBHICEAFSCmZlZWRiYWNrSWQSNAoRZmVlZGJhY2tfY2F0ZWdvcnkY",
+            "AiABKAlCB/pCBHICEAFSEGZlZWRiYWNrQ2F0ZWdvcnkq3goKC1Byb2R1Y3RU",
+            "eXBlEg0KCVVOREVGSU5FRBAAEhQKEEFDQ09VTlRJTkdfQVVESVQQARIXChNB",
+            "Q0NPVU5USU5HX1NPRlRXQVJFEAISDwoLQURWRVJUSVNJTkcQAxITCg9BTENP",
+            "SE9MX1RPQkFDQ08QBBIZChVNRURJQ0FMX0xBQl9FUVVJUE1FTlQQBRIWChJC",
+            "QU5LSU5HX0lOVkVTVE1FTlQQBhIJCgVCT09LUxAHEhcKE0JVU0lORVNTX0NP",
+            "TlNVTFRJTkcQCBINCglDSEVNSUNBTFMQCRIVChFDTEVBTklOR19TRVJWSUNF",
+            "UxAKEhUKEUNMRUFOSU5HX1NVUFBMSUVTEAsSDAoIQ0xPVEhJTkcQDBIPCgtF",
+            "TEVDVFJPTklDUxANEhoKFkNPTlNUUlVDVElPTl9NQVRFUklBTFMQDhITCg9E",
+            "RUNPUkFUSU9OU19BUlQQDxIUChBERUZFTlNFX1NFQ1VSSVRZEBASDAoIREVQ",
+            "T1NJVFMQERIXChNET01FU1RJQ19BUFBMSUFOQ0VTEBISFgoSRURVQ0FUSU9O",
+            "X1RSQUlOSU5HEBMSCgoGRU5FUkdZEBQSGAoURkFDSUxJVFlfTUFJTlRFTkFO",
+            "Q0UQFRIPCgtBR1JJQ1VMVFVSRRAWEggKBEZFRVMQFxIJCgVGSU5FUxAYEhIK",
+            "DkZPT0RfQkVWRVJBR0VTEBkSEwoPRlVFTF9MVUJSSUNBTlRTEBoSDQoJRlVS",
+            "TklUVVJFEBsSCQoFR0lGVFMQHBISCg5HTEFTU19DRVJBTUlDUxAdEhcKE0dP",
+            "VkVSTk1FTlRfU0VSVklDRVMQHhISCg5HUkFQSElDX0RFU0lHThAfEhEKDUZJ",
+            "VE5FU1NfQ0xVQlMQIBIOCgpIRUFMVEhDQVJFECESCgoGSE9URUxTECISGAoU",
+            "SU5EVVNUUklBTF9NQUNISU5FUlkQIxIRCg1NQU5VRkFDVFVSSU5HECQSDQoJ",
+            "SU5TVVJBTkNFECUSEgoOSU5URVJORVRfTUVESUEQJhITCg9QUk9QRVJUWV9S",
+            "RU5UQUwQJxIJCgVMRUdBTBAoEhIKDlBMQU5UU19BTklNQUxTECkSFQoRTUFD",
+            "SElORVJZX0xFQVNJTkcQKhINCglNQVJLRVRJTkcQKxIMCghNRUVUSU5HUxAs",
+            "EgkKBU1VU0lDEC0SEwoPT0ZGSUNFX1NVUFBMSUVTEC4SDQoJUEFDS0FHSU5H",
+            "EC8SCwoHUEFSS0lORxAwEhcKE1BBU1NFTkdFUl9UUkFOU1BPUlQQMRIMCghQ",
+            "QVlNRU5UUxAyEgsKB1BBWVJPTEwQMxIVChFQRVJTT05BTF9TRVJWSUNFUxA0",
+            "EhEKDVBFUlNPTkFMX0NBUkUQNRITCg9QSEFSTUFDRVVUSUNBTFMQNhISCg5N",
+            "RURJQV9TRVJWSUNFUxA3EhkKFVJFQ1JFQVRJT05BTF9TRVJWSUNFUxA4EhwK",
+            "GFJFU0VBUkNIX1RFQ0hfQ09OU1VMVElORxA5Eg8KC1JFU1RBVVJBTlRTEDoS",
+            "DgoKUkVUSVJFTUVOVBA7Eg0KCUxPR0lTVElDUxA8EgwKCFNPRlRXQVJFED0S",
+            "FAoQU1BPUlRTX0VRVUlQTUVOVBA+EgsKB1NUT1JBR0UQPxIMCghUQVhBVElP",
+            "ThBAEg0KCVRFTEVQSE9OWRBBEgwKCFRFWFRJTEVTEEISCwoHSkVXRUxSWRBD",
+            "EgkKBVRPTExTEEQSCAoEVE9ZUxBFEhAKDFRSQURFX1JFUEFJUhBGEhMKD1ZF",
+            "SElDTEVfUkVOVEFMUxBHEgwKCFZFSElDTEVTEEgSDwoLV0FURVJfV0FTVEUQ",
+            "SRILCgdXRUJTSVRFEEoqVwoPQ29uZmlkZW5jZUxldmVsEgsKB1VOS05PV04Q",
+            "ABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBIN",
+            "CglWRVJZX0hJR0gQBTLCAwoSUHJvZHVjdFR5cGVTZXJ2aWNlEpMBCgxCYXRj",
+            "aFN1Z2dlc3QSJy5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVx",
+            "dWVzdBooLmFzZ3QudjIuUHJvZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXNwb25z",
+            "ZSIwgtPkkwIqIiUvdjIvbW9kZWxzL3Byb2R1Y3QtdHlwZXM6YmF0Y2hTdWdn",
+            "ZXN0OgEqEmsKFEludGVybmFsQmF0Y2hTdWdnZXN0EicuYXNndC52Mi5Qcm9k",
+            "dWN0VHlwZUJhdGNoU3VnZ2VzdFJlcXVlc3QaKC5hc2d0LnYyLlByb2R1Y3RU",
+            "eXBlQmF0Y2hTdWdnZXN0UmVzcG9uc2UiABJ1CghGZWVkYmFjaxIjLmFzZ3Qu",
+            "djIuUHJvZHVjdFR5cGVGZWVkYmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkiLILT5JMCJiIhL3YyL21vZGVscy9wcm9kdWN0LXR5cGVzOmZl",
+            "ZWRiYWNrOgEqGjKSQS8SLVN1Z2dlc3QgcHJvZHVjdCB0eXBlcyBmcm9tIHRl",
+            "eHQgZGVzY3JpcHRpb25zLkLQAQoQYWkudmlzbWEuYXNndC52MkITUHJvZHVj",
+            "dFNlcnZpY2VQcm90b1ABWitnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
+            "L2dlbi9nby9hc2d0L3YyogIDQVhYqgIHQXNndC5WMsoCB0FzZ3RcVjLiAhNB",
+            "c2d0XFYyXEdQQk1ldGFkYXRh6gIIQXNndDo6VjKSQTwSEwoNUHJvZHVjdCBU",
+            "eXBlczICdjIqAQIyEGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pz",
+            "b25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.V2.ConfidenceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.V2.ProductType), typeof(global::Asgt.V2.ConfidenceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestRequest), global::Asgt.V2.ProductTypeBatchSuggestRequest.Parser, new[]{ "Texts" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestResponse), global::Asgt.V2.ProductTypeBatchSuggestResponse.Parser, new[]{ "Suggestions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeSuggestion), global::Asgt.V2.ProductTypeSuggestion.Parser, new[]{ "Candidates" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeCandidate), global::Asgt.V2.ProductTypeCandidate.Parser, new[]{ "Label", "Confidence", "ConfidenceLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeCandidate), global::Asgt.V2.ProductTypeCandidate.Parser, new[]{ "Type", "Label", "Confidence", "ConfidenceLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeFeedbackRequest), global::Asgt.V2.ProductTypeFeedbackRequest.Parser, new[]{ "FeedbackId", "FeedbackCategory" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
+  public enum ProductType {
+    [pbr::OriginalName("UNDEFINED")] Undefined = 0,
+    [pbr::OriginalName("ACCOUNTING_AUDIT")] AccountingAudit = 1,
+    [pbr::OriginalName("ACCOUNTING_SOFTWARE")] AccountingSoftware = 2,
+    [pbr::OriginalName("ADVERTISING")] Advertising = 3,
+    [pbr::OriginalName("ALCOHOL_TOBACCO")] AlcoholTobacco = 4,
+    [pbr::OriginalName("MEDICAL_LAB_EQUIPMENT")] MedicalLabEquipment = 5,
+    [pbr::OriginalName("BANKING_INVESTMENT")] BankingInvestment = 6,
+    [pbr::OriginalName("BOOKS")] Books = 7,
+    [pbr::OriginalName("BUSINESS_CONSULTING")] BusinessConsulting = 8,
+    [pbr::OriginalName("CHEMICALS")] Chemicals = 9,
+    [pbr::OriginalName("CLEANING_SERVICES")] CleaningServices = 10,
+    [pbr::OriginalName("CLEANING_SUPPLIES")] CleaningSupplies = 11,
+    [pbr::OriginalName("CLOTHING")] Clothing = 12,
+    [pbr::OriginalName("ELECTRONICS")] Electronics = 13,
+    [pbr::OriginalName("CONSTRUCTION_MATERIALS")] ConstructionMaterials = 14,
+    [pbr::OriginalName("DECORATIONS_ART")] DecorationsArt = 15,
+    [pbr::OriginalName("DEFENSE_SECURITY")] DefenseSecurity = 16,
+    [pbr::OriginalName("DEPOSITS")] Deposits = 17,
+    [pbr::OriginalName("DOMESTIC_APPLIANCES")] DomesticAppliances = 18,
+    [pbr::OriginalName("EDUCATION_TRAINING")] EducationTraining = 19,
+    [pbr::OriginalName("ENERGY")] Energy = 20,
+    [pbr::OriginalName("FACILITY_MAINTENANCE")] FacilityMaintenance = 21,
+    [pbr::OriginalName("AGRICULTURE")] Agriculture = 22,
+    [pbr::OriginalName("FEES")] Fees = 23,
+    [pbr::OriginalName("FINES")] Fines = 24,
+    [pbr::OriginalName("FOOD_BEVERAGES")] FoodBeverages = 25,
+    [pbr::OriginalName("FUEL_LUBRICANTS")] FuelLubricants = 26,
+    [pbr::OriginalName("FURNITURE")] Furniture = 27,
+    [pbr::OriginalName("GIFTS")] Gifts = 28,
+    [pbr::OriginalName("GLASS_CERAMICS")] GlassCeramics = 29,
+    [pbr::OriginalName("GOVERNMENT_SERVICES")] GovernmentServices = 30,
+    [pbr::OriginalName("GRAPHIC_DESIGN")] GraphicDesign = 31,
+    [pbr::OriginalName("FITNESS_CLUBS")] FitnessClubs = 32,
+    [pbr::OriginalName("HEALTHCARE")] Healthcare = 33,
+    [pbr::OriginalName("HOTELS")] Hotels = 34,
+    [pbr::OriginalName("INDUSTRIAL_MACHINERY")] IndustrialMachinery = 35,
+    [pbr::OriginalName("MANUFACTURING")] Manufacturing = 36,
+    [pbr::OriginalName("INSURANCE")] Insurance = 37,
+    [pbr::OriginalName("INTERNET_MEDIA")] InternetMedia = 38,
+    [pbr::OriginalName("PROPERTY_RENTAL")] PropertyRental = 39,
+    [pbr::OriginalName("LEGAL")] Legal = 40,
+    [pbr::OriginalName("PLANTS_ANIMALS")] PlantsAnimals = 41,
+    [pbr::OriginalName("MACHINERY_LEASING")] MachineryLeasing = 42,
+    [pbr::OriginalName("MARKETING")] Marketing = 43,
+    [pbr::OriginalName("MEETINGS")] Meetings = 44,
+    [pbr::OriginalName("MUSIC")] Music = 45,
+    [pbr::OriginalName("OFFICE_SUPPLIES")] OfficeSupplies = 46,
+    [pbr::OriginalName("PACKAGING")] Packaging = 47,
+    [pbr::OriginalName("PARKING")] Parking = 48,
+    [pbr::OriginalName("PASSENGER_TRANSPORT")] PassengerTransport = 49,
+    [pbr::OriginalName("PAYMENTS")] Payments = 50,
+    [pbr::OriginalName("PAYROLL")] Payroll = 51,
+    [pbr::OriginalName("PERSONAL_SERVICES")] PersonalServices = 52,
+    [pbr::OriginalName("PERSONAL_CARE")] PersonalCare = 53,
+    [pbr::OriginalName("PHARMACEUTICALS")] Pharmaceuticals = 54,
+    [pbr::OriginalName("MEDIA_SERVICES")] MediaServices = 55,
+    [pbr::OriginalName("RECREATIONAL_SERVICES")] RecreationalServices = 56,
+    [pbr::OriginalName("RESEARCH_TECH_CONSULTING")] ResearchTechConsulting = 57,
+    [pbr::OriginalName("RESTAURANTS")] Restaurants = 58,
+    [pbr::OriginalName("RETIREMENT")] Retirement = 59,
+    [pbr::OriginalName("LOGISTICS")] Logistics = 60,
+    [pbr::OriginalName("SOFTWARE")] Software = 61,
+    [pbr::OriginalName("SPORTS_EQUIPMENT")] SportsEquipment = 62,
+    [pbr::OriginalName("STORAGE")] Storage = 63,
+    [pbr::OriginalName("TAXATION")] Taxation = 64,
+    [pbr::OriginalName("TELEPHONY")] Telephony = 65,
+    [pbr::OriginalName("TEXTILES")] Textiles = 66,
+    [pbr::OriginalName("JEWELRY")] Jewelry = 67,
+    [pbr::OriginalName("TOLLS")] Tolls = 68,
+    [pbr::OriginalName("TOYS")] Toys = 69,
+    [pbr::OriginalName("TRADE_REPAIR")] TradeRepair = 70,
+    [pbr::OriginalName("VEHICLE_RENTALS")] VehicleRentals = 71,
+    [pbr::OriginalName("VEHICLES")] Vehicles = 72,
+    [pbr::OriginalName("WATER_WASTE")] WaterWaste = 73,
+    [pbr::OriginalName("WEBSITE")] Website = 74,
+  }
+
   public enum ConfidenceLevel {
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
     [pbr::OriginalName("VERY_LOW")] VeryLow = 1,
@@ -675,6 +792,7 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProductTypeCandidate(ProductTypeCandidate other) : this() {
+      type_ = other.type_;
       label_ = other.label_;
       confidence_ = other.confidence_;
       confidenceLevel_ = other.confidenceLevel_;
@@ -687,8 +805,20 @@ namespace Asgt.V2 {
       return new ProductTypeCandidate(this);
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Asgt.V2.ProductType type_ = global::Asgt.V2.ProductType.Undefined;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.V2.ProductType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
     /// <summary>Field number for the "label" field.</summary>
-    public const int LabelFieldNumber = 1;
+    public const int LabelFieldNumber = 2;
     private string label_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -700,7 +830,7 @@ namespace Asgt.V2 {
     }
 
     /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 2;
+    public const int ConfidenceFieldNumber = 3;
     private float confidence_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -712,7 +842,7 @@ namespace Asgt.V2 {
     }
 
     /// <summary>Field number for the "confidence_level" field.</summary>
-    public const int ConfidenceLevelFieldNumber = 3;
+    public const int ConfidenceLevelFieldNumber = 4;
     private global::Asgt.V2.ConfidenceLevel confidenceLevel_ = global::Asgt.V2.ConfidenceLevel.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -738,6 +868,7 @@ namespace Asgt.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Type != other.Type) return false;
       if (Label != other.Label) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
       if (ConfidenceLevel != other.ConfidenceLevel) return false;
@@ -748,6 +879,7 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Type != global::Asgt.V2.ProductType.Undefined) hash ^= Type.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       if (ConfidenceLevel != global::Asgt.V2.ConfidenceLevel.Unknown) hash ^= ConfidenceLevel.GetHashCode();
@@ -769,16 +901,20 @@ namespace Asgt.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Type != global::Asgt.V2.ProductType.Undefined) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
       if (Label.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Label);
       }
       if (Confidence != 0F) {
-        output.WriteRawTag(21);
+        output.WriteRawTag(29);
         output.WriteFloat(Confidence);
       }
       if (ConfidenceLevel != global::Asgt.V2.ConfidenceLevel.Unknown) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteEnum((int) ConfidenceLevel);
       }
       if (_unknownFields != null) {
@@ -791,16 +927,20 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Asgt.V2.ProductType.Undefined) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
       if (Label.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Label);
       }
       if (Confidence != 0F) {
-        output.WriteRawTag(21);
+        output.WriteRawTag(29);
         output.WriteFloat(Confidence);
       }
       if (ConfidenceLevel != global::Asgt.V2.ConfidenceLevel.Unknown) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteEnum((int) ConfidenceLevel);
       }
       if (_unknownFields != null) {
@@ -813,6 +953,9 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Type != global::Asgt.V2.ProductType.Undefined) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
       if (Label.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
       }
@@ -833,6 +976,9 @@ namespace Asgt.V2 {
     public void MergeFrom(ProductTypeCandidate other) {
       if (other == null) {
         return;
+      }
+      if (other.Type != global::Asgt.V2.ProductType.Undefined) {
+        Type = other.Type;
       }
       if (other.Label.Length != 0) {
         Label = other.Label;
@@ -862,15 +1008,19 @@ namespace Asgt.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            Type = (global::Asgt.V2.ProductType) input.ReadEnum();
+            break;
+          }
+          case 18: {
             Label = input.ReadString();
             break;
           }
-          case 21: {
+          case 29: {
             Confidence = input.ReadFloat();
             break;
           }
-          case 24: {
+          case 32: {
             ConfidenceLevel = (global::Asgt.V2.ConfidenceLevel) input.ReadEnum();
             break;
           }
@@ -893,16 +1043,255 @@ namespace Asgt.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            Type = (global::Asgt.V2.ProductType) input.ReadEnum();
+            break;
+          }
+          case 18: {
             Label = input.ReadString();
             break;
           }
-          case 21: {
+          case 29: {
             Confidence = input.ReadFloat();
             break;
           }
-          case 24: {
+          case 32: {
             ConfidenceLevel = (global::Asgt.V2.ConfidenceLevel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProductTypeFeedbackRequest : pb::IMessage<ProductTypeFeedbackRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductTypeFeedbackRequest> _parser = new pb::MessageParser<ProductTypeFeedbackRequest>(() => new ProductTypeFeedbackRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductTypeFeedbackRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.V2.ProductServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeFeedbackRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeFeedbackRequest(ProductTypeFeedbackRequest other) : this() {
+      feedbackId_ = other.feedbackId_;
+      feedbackCategory_ = other.feedbackCategory_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductTypeFeedbackRequest Clone() {
+      return new ProductTypeFeedbackRequest(this);
+    }
+
+    /// <summary>Field number for the "feedback_id" field.</summary>
+    public const int FeedbackIdFieldNumber = 1;
+    private string feedbackId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeedbackId {
+      get { return feedbackId_; }
+      set {
+        feedbackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "feedback_category" field.</summary>
+    public const int FeedbackCategoryFieldNumber = 2;
+    private string feedbackCategory_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeedbackCategory {
+      get { return feedbackCategory_; }
+      set {
+        feedbackCategory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductTypeFeedbackRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductTypeFeedbackRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FeedbackId != other.FeedbackId) return false;
+      if (FeedbackCategory != other.FeedbackCategory) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
+      if (FeedbackCategory.Length != 0) hash ^= FeedbackCategory.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FeedbackId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeedbackId);
+      }
+      if (FeedbackCategory.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FeedbackCategory);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FeedbackId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeedbackId);
+      }
+      if (FeedbackCategory.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FeedbackCategory);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FeedbackId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
+      }
+      if (FeedbackCategory.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackCategory);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductTypeFeedbackRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FeedbackId.Length != 0) {
+        FeedbackId = other.FeedbackId;
+      }
+      if (other.FeedbackCategory.Length != 0) {
+        FeedbackCategory = other.FeedbackCategory;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 18: {
+            FeedbackCategory = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 18: {
+            FeedbackCategory = input.ReadString();
             break;
           }
         }

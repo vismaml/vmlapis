@@ -460,6 +460,8 @@ func (m *ProductTypeCandidate) validate(all bool) error {
 
 	var errors []error
 
+	// no validation rules for Type
+
 	// no validation rules for Label
 
 	// no validation rules for Confidence
@@ -545,3 +547,127 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = ProductTypeCandidateValidationError{}
+
+// Validate checks the field values on ProductTypeFeedbackRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *ProductTypeFeedbackRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ProductTypeFeedbackRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// ProductTypeFeedbackRequestMultiError, or nil if none found.
+func (m *ProductTypeFeedbackRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ProductTypeFeedbackRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if utf8.RuneCountInString(m.GetFeedbackId()) < 1 {
+		err := ProductTypeFeedbackRequestValidationError{
+			field:  "FeedbackId",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if utf8.RuneCountInString(m.GetFeedbackCategory()) < 1 {
+		err := ProductTypeFeedbackRequestValidationError{
+			field:  "FeedbackCategory",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return ProductTypeFeedbackRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// ProductTypeFeedbackRequestMultiError is an error wrapping multiple
+// validation errors returned by ProductTypeFeedbackRequest.ValidateAll() if
+// the designated constraints aren't met.
+type ProductTypeFeedbackRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ProductTypeFeedbackRequestMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ProductTypeFeedbackRequestMultiError) AllErrors() []error { return m }
+
+// ProductTypeFeedbackRequestValidationError is the validation error returned
+// by ProductTypeFeedbackRequest.Validate if the designated constraints aren't met.
+type ProductTypeFeedbackRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ProductTypeFeedbackRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ProductTypeFeedbackRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ProductTypeFeedbackRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ProductTypeFeedbackRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ProductTypeFeedbackRequestValidationError) ErrorName() string {
+	return "ProductTypeFeedbackRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ProductTypeFeedbackRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sProductTypeFeedbackRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ProductTypeFeedbackRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ProductTypeFeedbackRequestValidationError{}

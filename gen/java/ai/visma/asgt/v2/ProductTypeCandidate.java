@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductTypeCandidate() {
+    type_ = 0;
     label_ = "";
     confidenceLevel_ = 0;
   }
@@ -44,11 +45,29 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.v2.ProductTypeCandidate.class, ai.visma.asgt.v2.ProductTypeCandidate.Builder.class);
   }
 
-  public static final int LABEL_FIELD_NUMBER = 1;
+  public static final int TYPE_FIELD_NUMBER = 1;
+  private int type_ = 0;
+  /**
+   * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+   * @return The type.
+   */
+  @java.lang.Override public ai.visma.asgt.v2.ProductType getType() {
+    ai.visma.asgt.v2.ProductType result = ai.visma.asgt.v2.ProductType.forNumber(type_);
+    return result == null ? ai.visma.asgt.v2.ProductType.UNRECOGNIZED : result;
+  }
+
+  public static final int LABEL_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object label_ = "";
   /**
-   * <code>string label = 1 [json_name = "label"];</code>
+   * <code>string label = 2 [json_name = "label"];</code>
    * @return The label.
    */
   @java.lang.Override
@@ -65,7 +84,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string label = 1 [json_name = "label"];</code>
+   * <code>string label = 2 [json_name = "label"];</code>
    * @return The bytes for label.
    */
   @java.lang.Override
@@ -83,10 +102,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONFIDENCE_FIELD_NUMBER = 2;
+  public static final int CONFIDENCE_FIELD_NUMBER = 3;
   private float confidence_ = 0F;
   /**
-   * <code>float confidence = 2 [json_name = "confidence"];</code>
+   * <code>float confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */
   @java.lang.Override
@@ -94,17 +113,17 @@ private static final long serialVersionUID = 0L;
     return confidence_;
   }
 
-  public static final int CONFIDENCE_LEVEL_FIELD_NUMBER = 3;
+  public static final int CONFIDENCE_LEVEL_FIELD_NUMBER = 4;
   private int confidenceLevel_ = 0;
   /**
-   * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+   * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
    * @return The enum numeric value on the wire for confidenceLevel.
    */
   @java.lang.Override public int getConfidenceLevelValue() {
     return confidenceLevel_;
   }
   /**
-   * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+   * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
    * @return The confidenceLevel.
    */
   @java.lang.Override public ai.visma.asgt.v2.ConfidenceLevel getConfidenceLevel() {
@@ -126,14 +145,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (type_ != ai.visma.asgt.v2.ProductType.UNDEFINED.getNumber()) {
+      output.writeEnum(1, type_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(label_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, label_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, label_);
     }
     if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
-      output.writeFloat(2, confidence_);
+      output.writeFloat(3, confidence_);
     }
     if (confidenceLevel_ != ai.visma.asgt.v2.ConfidenceLevel.UNKNOWN.getNumber()) {
-      output.writeEnum(3, confidenceLevel_);
+      output.writeEnum(4, confidenceLevel_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -144,16 +166,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (type_ != ai.visma.asgt.v2.ProductType.UNDEFINED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, type_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(label_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, label_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, label_);
     }
     if (java.lang.Float.floatToRawIntBits(confidence_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(2, confidence_);
+        .computeFloatSize(3, confidence_);
     }
     if (confidenceLevel_ != ai.visma.asgt.v2.ConfidenceLevel.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, confidenceLevel_);
+        .computeEnumSize(4, confidenceLevel_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -170,6 +196,7 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.asgt.v2.ProductTypeCandidate other = (ai.visma.asgt.v2.ProductTypeCandidate) obj;
 
+    if (type_ != other.type_) return false;
     if (!getLabel()
         .equals(other.getLabel())) return false;
     if (java.lang.Float.floatToIntBits(getConfidence())
@@ -187,6 +214,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (37 * hash) + LABEL_FIELD_NUMBER;
     hash = (53 * hash) + getLabel().hashCode();
     hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
@@ -325,6 +354,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      type_ = 0;
       label_ = "";
       confidence_ = 0F;
       confidenceLevel_ = 0;
@@ -362,12 +392,15 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.asgt.v2.ProductTypeCandidate result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.label_ = label_;
+        result.type_ = type_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.confidence_ = confidence_;
+        result.label_ = label_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.confidence_ = confidence_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.confidenceLevel_ = confidenceLevel_;
       }
     }
@@ -384,9 +417,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.asgt.v2.ProductTypeCandidate other) {
       if (other == ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance()) return this;
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
+      }
       if (!other.getLabel().isEmpty()) {
         label_ = other.label_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getConfidence() != 0F) {
@@ -421,21 +457,26 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              label_ = input.readStringRequireUtf8();
+            case 8: {
+              type_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 21: {
-              confidence_ = input.readFloat();
+            } // case 8
+            case 18: {
+              label_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 21
-            case 24: {
-              confidenceLevel_ = input.readEnum();
+            } // case 18
+            case 29: {
+              confidence_ = input.readFloat();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
+            } // case 29
+            case 32: {
+              confidenceLevel_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -453,9 +494,62 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private int type_ = 0;
+    /**
+     * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public ai.visma.asgt.v2.ProductType getType() {
+      ai.visma.asgt.v2.ProductType result = ai.visma.asgt.v2.ProductType.forNumber(type_);
+      return result == null ? ai.visma.asgt.v2.ProductType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(ai.visma.asgt.v2.ProductType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000001;
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      type_ = 0;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object label_ = "";
     /**
-     * <code>string label = 1 [json_name = "label"];</code>
+     * <code>string label = 2 [json_name = "label"];</code>
      * @return The label.
      */
     public java.lang.String getLabel() {
@@ -471,7 +565,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string label = 1 [json_name = "label"];</code>
+     * <code>string label = 2 [json_name = "label"];</code>
      * @return The bytes for label.
      */
     public com.google.protobuf.ByteString
@@ -488,7 +582,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string label = 1 [json_name = "label"];</code>
+     * <code>string label = 2 [json_name = "label"];</code>
      * @param value The label to set.
      * @return This builder for chaining.
      */
@@ -496,22 +590,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       label_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string label = 1 [json_name = "label"];</code>
+     * <code>string label = 2 [json_name = "label"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLabel() {
       label_ = getDefaultInstance().getLabel();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string label = 1 [json_name = "label"];</code>
+     * <code>string label = 2 [json_name = "label"];</code>
      * @param value The bytes for label to set.
      * @return This builder for chaining.
      */
@@ -520,14 +614,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       label_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
     private float confidence_ ;
     /**
-     * <code>float confidence = 2 [json_name = "confidence"];</code>
+     * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     @java.lang.Override
@@ -535,23 +629,23 @@ private static final long serialVersionUID = 0L;
       return confidence_;
     }
     /**
-     * <code>float confidence = 2 [json_name = "confidence"];</code>
+     * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @param value The confidence to set.
      * @return This builder for chaining.
      */
     public Builder setConfidence(float value) {
 
       confidence_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>float confidence = 2 [json_name = "confidence"];</code>
+     * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @return This builder for chaining.
      */
     public Builder clearConfidence() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       confidence_ = 0F;
       onChanged();
       return this;
@@ -559,25 +653,25 @@ private static final long serialVersionUID = 0L;
 
     private int confidenceLevel_ = 0;
     /**
-     * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+     * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
      * @return The enum numeric value on the wire for confidenceLevel.
      */
     @java.lang.Override public int getConfidenceLevelValue() {
       return confidenceLevel_;
     }
     /**
-     * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+     * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
      * @param value The enum numeric value on the wire for confidenceLevel to set.
      * @return This builder for chaining.
      */
     public Builder setConfidenceLevelValue(int value) {
       confidenceLevel_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+     * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
      * @return The confidenceLevel.
      */
     @java.lang.Override
@@ -586,7 +680,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.v2.ConfidenceLevel.UNRECOGNIZED : result;
     }
     /**
-     * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+     * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
      * @param value The confidenceLevel to set.
      * @return This builder for chaining.
      */
@@ -594,17 +688,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       confidenceLevel_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.asgt.v2.ConfidenceLevel confidence_level = 3 [json_name = "confidenceLevel"];</code>
+     * <code>.asgt.v2.ConfidenceLevel confidence_level = 4 [json_name = "confidenceLevel"];</code>
      * @return This builder for chaining.
      */
     public Builder clearConfidenceLevel() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       confidenceLevel_ = 0;
       onChanged();
       return this;
