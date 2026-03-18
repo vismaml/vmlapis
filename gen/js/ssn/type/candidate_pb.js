@@ -21,6 +21,8 @@ var global =
     (function () { return this; }).call(null) ||
     Function('return this')();
 
+var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js');
+goog.object.extend(proto, asgt_v2_product_service_pb);
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.object.extend(proto, google_protobuf_wrappers_pb);
 var ssn_type_geometry_pb = require('../../ssn/type/geometry_pb.js');
@@ -2883,7 +2885,7 @@ proto.ssn.type.PurchaseLine.toObject = function(includeInstance, msg) {
     proto.ssn.type.Candidate.toObject, includeInstance),
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
     productTypeList: jspb.Message.toObjectList(msg.getProductTypeList(),
-    proto.ssn.type.Candidate.toObject, includeInstance)
+    asgt_v2_product_service_pb.ProductTypeCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3005,8 +3007,8 @@ proto.ssn.type.PurchaseLine.deserializeBinaryFromReader = function(msg, reader) 
       msg.setModelMetadata(value);
       break;
     case 18:
-      var value = new proto.ssn.type.Candidate;
-      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      var value = new asgt_v2_product_service_pb.ProductTypeCandidate;
+      reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeCandidate.deserializeBinaryFromReader);
       msg.addProductType(value);
       break;
     default:
@@ -3178,7 +3180,7 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
     writer.writeRepeatedMessage(
       18,
       f,
-      proto.ssn.type.Candidate.serializeBinaryToWriter
+      asgt_v2_product_service_pb.ProductTypeCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3810,17 +3812,17 @@ proto.ssn.type.PurchaseLine.prototype.hasModelMetadata = function() {
 
 
 /**
- * repeated Candidate product_type = 18;
- * @return {!Array<!proto.ssn.type.Candidate>}
+ * repeated asgt.v2.ProductTypeCandidate product_type = 18;
+ * @return {!Array<!proto.asgt.v2.ProductTypeCandidate>}
  */
 proto.ssn.type.PurchaseLine.prototype.getProductTypeList = function() {
-  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 18));
+  return /** @type{!Array<!proto.asgt.v2.ProductTypeCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2_product_service_pb.ProductTypeCandidate, 18));
 };
 
 
 /**
- * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @param {!Array<!proto.asgt.v2.ProductTypeCandidate>} value
  * @return {!proto.ssn.type.PurchaseLine} returns this
 */
 proto.ssn.type.PurchaseLine.prototype.setProductTypeList = function(value) {
@@ -3829,12 +3831,12 @@ proto.ssn.type.PurchaseLine.prototype.setProductTypeList = function(value) {
 
 
 /**
- * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {!proto.asgt.v2.ProductTypeCandidate=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ssn.type.Candidate}
+ * @return {!proto.asgt.v2.ProductTypeCandidate}
  */
 proto.ssn.type.PurchaseLine.prototype.addProductType = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.ssn.type.Candidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.asgt.v2.ProductTypeCandidate, opt_index);
 };
 
 

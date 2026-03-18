@@ -1,5 +1,6 @@
 import * as jspb from 'google-protobuf'
 
+import * as asgt_v2_product_service_pb from '../../asgt/v2/product_service_pb'; // proto import: "asgt/v2/product_service.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb'; // proto import: "ssn/type/geometry.proto"
 
@@ -438,10 +439,10 @@ export class PurchaseLine extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLine;
 
-  getProductTypeList(): Array<Candidate>;
-  setProductTypeList(value: Array<Candidate>): PurchaseLine;
+  getProductTypeList(): Array<asgt_v2_product_service_pb.ProductTypeCandidate>;
+  setProductTypeList(value: Array<asgt_v2_product_service_pb.ProductTypeCandidate>): PurchaseLine;
   clearProductTypeList(): PurchaseLine;
-  addProductType(value?: Candidate, index?: number): Candidate;
+  addProductType(value?: asgt_v2_product_service_pb.ProductTypeCandidate, index?: number): asgt_v2_product_service_pb.ProductTypeCandidate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLine.AsObject;
@@ -470,7 +471,7 @@ export namespace PurchaseLine {
     totalList: Array<Candidate.AsObject>,
     unitPriceList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
-    productTypeList: Array<Candidate.AsObject>,
+    productTypeList: Array<asgt_v2_product_service_pb.ProductTypeCandidate.AsObject>,
   }
 }
 

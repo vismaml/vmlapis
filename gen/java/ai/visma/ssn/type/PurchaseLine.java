@@ -1030,16 +1030,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int PRODUCT_TYPE_FIELD_NUMBER = 18;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> productType_;
+  private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> productType_;
   /**
    * <pre>
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getProductTypeList() {
+  public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getProductTypeList() {
     return productType_;
   }
   /**
@@ -1047,10 +1047,10 @@ private static final long serialVersionUID = 0L;
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
       getProductTypeOrBuilderList() {
     return productType_;
   }
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   @java.lang.Override
   public int getProductTypeCount() {
@@ -1070,10 +1070,10 @@ private static final long serialVersionUID = 0L;
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getProductType(int index) {
+  public ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index) {
     return productType_.get(index);
   }
   /**
@@ -1081,10 +1081,10 @@ private static final long serialVersionUID = 0L;
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getProductTypeOrBuilder(
+  public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
       int index) {
     return productType_.get(index);
   }
@@ -2506,9 +2506,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 138
             case 146: {
-              ai.visma.ssn.type.Candidate m =
+              ai.visma.asgt.v2.ProductTypeCandidate m =
                   input.readMessage(
-                      ai.visma.ssn.type.Candidate.parser(),
+                      ai.visma.asgt.v2.ProductTypeCandidate.parser(),
                       extensionRegistry);
               if (productTypeBuilder_ == null) {
                 ensureProductTypeIsMutable();
@@ -7419,26 +7419,26 @@ private static final long serialVersionUID = 0L;
       return modelMetadataBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> productType_ =
+    private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> productType_ =
       java.util.Collections.emptyList();
     private void ensureProductTypeIsMutable() {
       if (!((bitField0_ & 0x00020000) != 0)) {
-        productType_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(productType_);
+        productType_ = new java.util.ArrayList<ai.visma.asgt.v2.ProductTypeCandidate>(productType_);
         bitField0_ |= 0x00020000;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> productTypeBuilder_;
+        ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> productTypeBuilder_;
 
     /**
      * <pre>
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getProductTypeList() {
+    public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getProductTypeList() {
       if (productTypeBuilder_ == null) {
         return java.util.Collections.unmodifiableList(productType_);
       } else {
@@ -7450,7 +7450,7 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public int getProductTypeCount() {
       if (productTypeBuilder_ == null) {
@@ -7464,9 +7464,9 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public ai.visma.ssn.type.Candidate getProductType(int index) {
+    public ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index) {
       if (productTypeBuilder_ == null) {
         return productType_.get(index);
       } else {
@@ -7478,10 +7478,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder setProductType(
-        int index, ai.visma.ssn.type.Candidate value) {
+        int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
       if (productTypeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7499,10 +7499,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder setProductType(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+        int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
       if (productTypeBuilder_ == null) {
         ensureProductTypeIsMutable();
         productType_.set(index, builderForValue.build());
@@ -7517,9 +7517,9 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public Builder addProductType(ai.visma.ssn.type.Candidate value) {
+    public Builder addProductType(ai.visma.asgt.v2.ProductTypeCandidate value) {
       if (productTypeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7537,10 +7537,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder addProductType(
-        int index, ai.visma.ssn.type.Candidate value) {
+        int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
       if (productTypeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7558,10 +7558,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder addProductType(
-        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+        ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
       if (productTypeBuilder_ == null) {
         ensureProductTypeIsMutable();
         productType_.add(builderForValue.build());
@@ -7576,10 +7576,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder addProductType(
-        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+        int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
       if (productTypeBuilder_ == null) {
         ensureProductTypeIsMutable();
         productType_.add(index, builderForValue.build());
@@ -7594,10 +7594,10 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder addAllProductType(
-        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+        java.lang.Iterable<? extends ai.visma.asgt.v2.ProductTypeCandidate> values) {
       if (productTypeBuilder_ == null) {
         ensureProductTypeIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -7613,7 +7613,7 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder clearProductType() {
       if (productTypeBuilder_ == null) {
@@ -7630,7 +7630,7 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
     public Builder removeProductType(int index) {
       if (productTypeBuilder_ == null) {
@@ -7647,9 +7647,9 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getProductTypeBuilder(
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder getProductTypeBuilder(
         int index) {
       return getProductTypeFieldBuilder().getBuilder(index);
     }
@@ -7658,9 +7658,9 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getProductTypeOrBuilder(
+    public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
         int index) {
       if (productTypeBuilder_ == null) {
         return productType_.get(index);  } else {
@@ -7672,9 +7672,9 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+    public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
          getProductTypeOrBuilderList() {
       if (productTypeBuilder_ != null) {
         return productTypeBuilder_.getMessageOrBuilderList();
@@ -7687,41 +7687,41 @@ private static final long serialVersionUID = 0L;
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addProductTypeBuilder() {
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder addProductTypeBuilder() {
       return getProductTypeFieldBuilder().addBuilder(
-          ai.visma.ssn.type.Candidate.getDefaultInstance());
+          ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
      * <pre>
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addProductTypeBuilder(
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder addProductTypeBuilder(
         int index) {
       return getProductTypeFieldBuilder().addBuilder(
-          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+          index, ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
      * <pre>
      * Product type classification for the line
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+    public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate.Builder> 
          getProductTypeBuilderList() {
       return getProductTypeFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
         getProductTypeFieldBuilder() {
       if (productTypeBuilder_ == null) {
         productTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+            ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder>(
                 productType_,
                 ((bitField0_ & 0x00020000) != 0),
                 getParentForChildren(),

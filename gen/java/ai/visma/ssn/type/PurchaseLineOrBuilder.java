@@ -712,24 +712,24 @@ public interface PurchaseLineOrBuilder extends
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
+  java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> 
       getProductTypeList();
   /**
    * <pre>
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
-  ai.visma.ssn.type.Candidate getProductType(int index);
+  ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index);
   /**
    * <pre>
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
   int getProductTypeCount();
   /**
@@ -737,17 +737,17 @@ public interface PurchaseLineOrBuilder extends
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
       getProductTypeOrBuilderList();
   /**
    * <pre>
    * Product type classification for the line
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate product_type = 18 [json_name = "productType"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getProductTypeOrBuilder(
+  ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
       int index);
 }
