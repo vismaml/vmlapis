@@ -1448,6 +1448,10 @@
     "v2ProductTypeSuggestion": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for this suggestion, used to reference it in feedback."
+        },
         "candidates": {
           "type": "array",
           "items": {

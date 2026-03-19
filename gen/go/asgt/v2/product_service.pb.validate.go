@@ -324,6 +324,8 @@ func (m *ProductTypeSuggestion) validate(all bool) error {
 
 	var errors []error
 
+	// no validation rules for Id
+
 	for idx, item := range m.GetCandidates() {
 		_, _ = idx, item
 

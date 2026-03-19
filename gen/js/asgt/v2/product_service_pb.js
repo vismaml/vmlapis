@@ -463,7 +463,7 @@ proto.asgt.v2.ProductTypeBatchSuggestResponse.prototype.clearSuggestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.v2.ProductTypeSuggestion.repeatedFields_ = [1];
+proto.asgt.v2.ProductTypeSuggestion.repeatedFields_ = [2];
 
 
 
@@ -496,6 +496,7 @@ proto.asgt.v2.ProductTypeSuggestion.prototype.toObject = function(opt_includeIns
  */
 proto.asgt.v2.ProductTypeSuggestion.toObject = function(includeInstance, msg) {
   var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     candidatesList: jspb.Message.toObjectList(msg.getCandidatesList(),
     proto.asgt.v2.ProductTypeCandidate.toObject, includeInstance)
   };
@@ -535,6 +536,10 @@ proto.asgt.v2.ProductTypeSuggestion.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
       var value = new proto.asgt.v2.ProductTypeCandidate;
       reader.readMessage(value,proto.asgt.v2.ProductTypeCandidate.deserializeBinaryFromReader);
       msg.addCandidates(value);
@@ -568,10 +573,17 @@ proto.asgt.v2.ProductTypeSuggestion.prototype.serializeBinary = function() {
  */
 proto.asgt.v2.ProductTypeSuggestion.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
   f = message.getCandidatesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
+      2,
       f,
       proto.asgt.v2.ProductTypeCandidate.serializeBinaryToWriter
     );
@@ -580,12 +592,30 @@ proto.asgt.v2.ProductTypeSuggestion.serializeBinaryToWriter = function(message, 
 
 
 /**
- * repeated ProductTypeCandidate candidates = 1;
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.asgt.v2.ProductTypeSuggestion.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.v2.ProductTypeSuggestion} returns this
+ */
+proto.asgt.v2.ProductTypeSuggestion.prototype.setId = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * repeated ProductTypeCandidate candidates = 2;
  * @return {!Array<!proto.asgt.v2.ProductTypeCandidate>}
  */
 proto.asgt.v2.ProductTypeSuggestion.prototype.getCandidatesList = function() {
   return /** @type{!Array<!proto.asgt.v2.ProductTypeCandidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.asgt.v2.ProductTypeCandidate, 1));
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.v2.ProductTypeCandidate, 2));
 };
 
 
@@ -594,7 +624,7 @@ proto.asgt.v2.ProductTypeSuggestion.prototype.getCandidatesList = function() {
  * @return {!proto.asgt.v2.ProductTypeSuggestion} returns this
 */
 proto.asgt.v2.ProductTypeSuggestion.prototype.setCandidatesList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -604,7 +634,7 @@ proto.asgt.v2.ProductTypeSuggestion.prototype.setCandidatesList = function(value
  * @return {!proto.asgt.v2.ProductTypeCandidate}
  */
 proto.asgt.v2.ProductTypeSuggestion.prototype.addCandidates = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.v2.ProductTypeCandidate, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.v2.ProductTypeCandidate, opt_index);
 };
 
 

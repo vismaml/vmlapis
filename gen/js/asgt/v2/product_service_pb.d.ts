@@ -47,6 +47,9 @@ export namespace ProductTypeBatchSuggestResponse {
 }
 
 export class ProductTypeSuggestion extends jspb.Message {
+  getId(): string;
+  setId(value: string): ProductTypeSuggestion;
+
   getCandidatesList(): Array<ProductTypeCandidate>;
   setCandidatesList(value: Array<ProductTypeCandidate>): ProductTypeSuggestion;
   clearCandidatesList(): ProductTypeSuggestion;
@@ -62,6 +65,7 @@ export class ProductTypeSuggestion extends jspb.Message {
 
 export namespace ProductTypeSuggestion {
   export type AsObject = {
+    id: string,
     candidatesList: Array<ProductTypeCandidate.AsObject>,
   }
 }

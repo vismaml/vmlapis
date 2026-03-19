@@ -191,10 +191,12 @@ class ProductTypeBatchSuggestResponse(_message.Message):
     def __init__(self, suggestions: _Optional[_Iterable[_Union[ProductTypeSuggestion, _Mapping]]] = ...) -> None: ...
 
 class ProductTypeSuggestion(_message.Message):
-    __slots__ = ("candidates",)
+    __slots__ = ("id", "candidates")
+    ID_FIELD_NUMBER: _ClassVar[int]
     CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    id: str
     candidates: _containers.RepeatedCompositeFieldContainer[ProductTypeCandidate]
-    def __init__(self, candidates: _Optional[_Iterable[_Union[ProductTypeCandidate, _Mapping]]] = ...) -> None: ...
+    def __init__(self, id: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[ProductTypeCandidate, _Mapping]]] = ...) -> None: ...
 
 class ProductTypeCandidate(_message.Message):
     __slots__ = ("type", "label", "confidence", "confidence_level")

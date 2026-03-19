@@ -58,7 +58,9 @@ message ProductTypeBatchSuggestResponse {
 }
 
 message ProductTypeSuggestion {
-  repeated ProductTypeCandidate candidates = 1;
+  // Unique identifier for this suggestion, used to reference it in feedback.
+  string id = 1;
+  repeated ProductTypeCandidate candidates = 2;
 }
 
 message ProductTypeCandidate {

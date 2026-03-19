@@ -10,25 +10,45 @@ public interface ProductTypeSuggestionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <pre>
+   * Unique identifier for this suggestion, used to reference it in feedback.
+   * </pre>
+   *
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The id.
+   */
+  java.lang.String getId();
+  /**
+   * <pre>
+   * Unique identifier for this suggestion, used to reference it in feedback.
+   * </pre>
+   *
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The bytes for id.
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
+
+  /**
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> 
       getCandidatesList();
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   ai.visma.asgt.v2.ProductTypeCandidate getCandidates(int index);
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   int getCandidatesCount();
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
       getCandidatesOrBuilderList();
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getCandidatesOrBuilder(
       int index);

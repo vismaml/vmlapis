@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductTypeSuggestion() {
+    id_ = "";
     candidates_ = java.util.Collections.emptyList();
   }
 
@@ -43,18 +44,65 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.v2.ProductTypeSuggestion.class, ai.visma.asgt.v2.ProductTypeSuggestion.Builder.class);
   }
 
-  public static final int CANDIDATES_FIELD_NUMBER = 1;
+  public static final int ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
+  /**
+   * <pre>
+   * Unique identifier for this suggestion, used to reference it in feedback.
+   * </pre>
+   *
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The id.
+   */
+  @java.lang.Override
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      id_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Unique identifier for this suggestion, used to reference it in feedback.
+   * </pre>
+   *
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The bytes for id.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getIdBytes() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      id_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CANDIDATES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> candidates_;
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getCandidatesList() {
     return candidates_;
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
@@ -62,21 +110,21 @@ private static final long serialVersionUID = 0L;
     return candidates_;
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public int getCandidatesCount() {
     return candidates_.size();
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public ai.visma.asgt.v2.ProductTypeCandidate getCandidates(int index) {
     return candidates_.get(index);
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+   * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getCandidatesOrBuilder(
@@ -98,8 +146,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+    }
     for (int i = 0; i < candidates_.size(); i++) {
-      output.writeMessage(1, candidates_.get(i));
+      output.writeMessage(2, candidates_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -110,9 +161,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+    }
     for (int i = 0; i < candidates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, candidates_.get(i));
+        .computeMessageSize(2, candidates_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,6 +183,8 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.asgt.v2.ProductTypeSuggestion other = (ai.visma.asgt.v2.ProductTypeSuggestion) obj;
 
+    if (!getId()
+        .equals(other.getId())) return false;
     if (!getCandidatesList()
         .equals(other.getCandidatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -142,6 +198,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId().hashCode();
     if (getCandidatesCount() > 0) {
       hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
       hash = (53 * hash) + getCandidatesList().hashCode();
@@ -277,13 +335,14 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      id_ = "";
       if (candidatesBuilder_ == null) {
         candidates_ = java.util.Collections.emptyList();
       } else {
         candidates_ = null;
         candidatesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -318,9 +377,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(ai.visma.asgt.v2.ProductTypeSuggestion result) {
       if (candidatesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           candidates_ = java.util.Collections.unmodifiableList(candidates_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.candidates_ = candidates_;
       } else {
@@ -330,6 +389,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.asgt.v2.ProductTypeSuggestion result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
+      }
     }
 
     @java.lang.Override
@@ -344,11 +406,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.asgt.v2.ProductTypeSuggestion other) {
       if (other == ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance()) return this;
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (candidatesBuilder_ == null) {
         if (!other.candidates_.isEmpty()) {
           if (candidates_.isEmpty()) {
             candidates_ = other.candidates_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCandidatesIsMutable();
             candidates_.addAll(other.candidates_);
@@ -361,7 +428,7 @@ private static final long serialVersionUID = 0L;
             candidatesBuilder_.dispose();
             candidatesBuilder_ = null;
             candidates_ = other.candidates_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             candidatesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getCandidatesFieldBuilder() : null;
@@ -397,6 +464,11 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
+              id_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
               ai.visma.asgt.v2.ProductTypeCandidate m =
                   input.readMessage(
                       ai.visma.asgt.v2.ProductTypeCandidate.parser(),
@@ -408,7 +480,7 @@ private static final long serialVersionUID = 0L;
                 candidatesBuilder_.addMessage(m);
               }
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -426,12 +498,104 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * Unique identifier for this suggestion, used to reference it in feedback.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier for this suggestion, used to reference it in feedback.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier for this suggestion, used to reference it in feedback.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     * @return This builder for chaining.
+     */
+    public Builder setId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      id_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique identifier for this suggestion, used to reference it in feedback.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearId() {
+      id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique identifier for this suggestion, used to reference it in feedback.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      id_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> candidates_ =
       java.util.Collections.emptyList();
     private void ensureCandidatesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         candidates_ = new java.util.ArrayList<ai.visma.asgt.v2.ProductTypeCandidate>(candidates_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -439,7 +603,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> candidatesBuilder_;
 
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getCandidatesList() {
       if (candidatesBuilder_ == null) {
@@ -449,7 +613,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public int getCandidatesCount() {
       if (candidatesBuilder_ == null) {
@@ -459,7 +623,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate getCandidates(int index) {
       if (candidatesBuilder_ == null) {
@@ -469,7 +633,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder setCandidates(
         int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
@@ -486,7 +650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder setCandidates(
         int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
@@ -500,7 +664,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(ai.visma.asgt.v2.ProductTypeCandidate value) {
       if (candidatesBuilder_ == null) {
@@ -516,7 +680,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
         int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
@@ -533,7 +697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
         ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
@@ -547,7 +711,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
         int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
@@ -561,7 +725,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addAllCandidates(
         java.lang.Iterable<? extends ai.visma.asgt.v2.ProductTypeCandidate> values) {
@@ -576,12 +740,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder clearCandidates() {
       if (candidatesBuilder_ == null) {
         candidates_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         candidatesBuilder_.clear();
@@ -589,7 +753,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder removeCandidates(int index) {
       if (candidatesBuilder_ == null) {
@@ -602,14 +766,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder getCandidatesBuilder(
         int index) {
       return getCandidatesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getCandidatesOrBuilder(
         int index) {
@@ -619,7 +783,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
          getCandidatesOrBuilderList() {
@@ -630,14 +794,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder addCandidatesBuilder() {
       return getCandidatesFieldBuilder().addBuilder(
           ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder addCandidatesBuilder(
         int index) {
@@ -645,7 +809,7 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 1 [json_name = "candidates"];</code>
+     * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate.Builder> 
          getCandidatesBuilderList() {
@@ -658,7 +822,7 @@ private static final long serialVersionUID = 0L;
         candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder>(
                 candidates_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         candidates_ = null;
