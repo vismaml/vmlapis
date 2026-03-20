@@ -10,26 +10,26 @@ public interface ProductTypeFeedbackRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-   * @return The feedbackId.
+   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+   * @return The text.
    */
-  java.lang.String getFeedbackId();
+  java.lang.String getText();
   /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-   * @return The bytes for feedbackId.
+   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+   * @return The bytes for text.
    */
   com.google.protobuf.ByteString
-      getFeedbackIdBytes();
+      getTextBytes();
 
   /**
-   * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-   * @return The feedbackCategory.
+   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+   * @return The trueCategory.
    */
-  java.lang.String getFeedbackCategory();
+  java.lang.String getTrueCategory();
   /**
-   * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-   * @return The bytes for feedbackCategory.
+   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+   * @return The bytes for trueCategory.
    */
   com.google.protobuf.ByteString
-      getFeedbackCategoryBytes();
+      getTrueCategoryBytes();
 }

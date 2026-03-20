@@ -1437,10 +1437,10 @@
     "v2ProductTypeFeedbackRequest": {
       "type": "object",
       "properties": {
-        "feedbackId": {
+        "text": {
           "type": "string"
         },
-        "feedbackCategory": {
+        "trueCategory": {
           "type": "string"
         }
       }

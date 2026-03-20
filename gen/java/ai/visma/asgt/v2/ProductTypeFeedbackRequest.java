@@ -27,8 +27,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductTypeFeedbackRequest() {
-    feedbackId_ = "";
-    feedbackCategory_ = "";
+    text_ = "";
+    trueCategory_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -44,78 +44,78 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.v2.ProductTypeFeedbackRequest.class, ai.visma.asgt.v2.ProductTypeFeedbackRequest.Builder.class);
   }
 
-  public static final int FEEDBACK_ID_FIELD_NUMBER = 1;
+  public static final int TEXT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object feedbackId_ = "";
+  private volatile java.lang.Object text_ = "";
   /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-   * @return The feedbackId.
+   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+   * @return The text.
    */
   @java.lang.Override
-  public java.lang.String getFeedbackId() {
-    java.lang.Object ref = feedbackId_;
+  public java.lang.String getText() {
+    java.lang.Object ref = text_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      feedbackId_ = s;
+      text_ = s;
       return s;
     }
   }
   /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-   * @return The bytes for feedbackId.
+   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+   * @return The bytes for text.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFeedbackIdBytes() {
-    java.lang.Object ref = feedbackId_;
+      getTextBytes() {
+    java.lang.Object ref = text_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      feedbackId_ = b;
+      text_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int FEEDBACK_CATEGORY_FIELD_NUMBER = 2;
+  public static final int TRUE_CATEGORY_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object feedbackCategory_ = "";
+  private volatile java.lang.Object trueCategory_ = "";
   /**
-   * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-   * @return The feedbackCategory.
+   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+   * @return The trueCategory.
    */
   @java.lang.Override
-  public java.lang.String getFeedbackCategory() {
-    java.lang.Object ref = feedbackCategory_;
+  public java.lang.String getTrueCategory() {
+    java.lang.Object ref = trueCategory_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      feedbackCategory_ = s;
+      trueCategory_ = s;
       return s;
     }
   }
   /**
-   * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-   * @return The bytes for feedbackCategory.
+   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+   * @return The bytes for trueCategory.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFeedbackCategoryBytes() {
-    java.lang.Object ref = feedbackCategory_;
+      getTrueCategoryBytes() {
+    java.lang.Object ref = trueCategory_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      feedbackCategory_ = b;
+      trueCategory_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -136,11 +136,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, feedbackId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(text_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, text_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackCategory_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, feedbackCategory_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trueCategory_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, trueCategory_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -151,11 +151,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, feedbackId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(text_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, text_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackCategory_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, feedbackCategory_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trueCategory_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, trueCategory_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -172,10 +172,10 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.asgt.v2.ProductTypeFeedbackRequest other = (ai.visma.asgt.v2.ProductTypeFeedbackRequest) obj;
 
-    if (!getFeedbackId()
-        .equals(other.getFeedbackId())) return false;
-    if (!getFeedbackCategory()
-        .equals(other.getFeedbackCategory())) return false;
+    if (!getText()
+        .equals(other.getText())) return false;
+    if (!getTrueCategory()
+        .equals(other.getTrueCategory())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,10 +187,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getFeedbackId().hashCode();
-    hash = (37 * hash) + FEEDBACK_CATEGORY_FIELD_NUMBER;
-    hash = (53 * hash) + getFeedbackCategory().hashCode();
+    hash = (37 * hash) + TEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getText().hashCode();
+    hash = (37 * hash) + TRUE_CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + getTrueCategory().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -322,8 +322,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      feedbackId_ = "";
-      feedbackCategory_ = "";
+      text_ = "";
+      trueCategory_ = "";
       return this;
     }
 
@@ -358,10 +358,10 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.asgt.v2.ProductTypeFeedbackRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.feedbackId_ = feedbackId_;
+        result.text_ = text_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.feedbackCategory_ = feedbackCategory_;
+        result.trueCategory_ = trueCategory_;
       }
     }
 
@@ -377,13 +377,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.asgt.v2.ProductTypeFeedbackRequest other) {
       if (other == ai.visma.asgt.v2.ProductTypeFeedbackRequest.getDefaultInstance()) return this;
-      if (!other.getFeedbackId().isEmpty()) {
-        feedbackId_ = other.feedbackId_;
+      if (!other.getText().isEmpty()) {
+        text_ = other.text_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getFeedbackCategory().isEmpty()) {
-        feedbackCategory_ = other.feedbackCategory_;
+      if (!other.getTrueCategory().isEmpty()) {
+        trueCategory_ = other.trueCategory_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -414,12 +414,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              feedbackId_ = input.readStringRequireUtf8();
+              text_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              feedbackCategory_ = input.readStringRequireUtf8();
+              trueCategory_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -440,145 +440,145 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object feedbackId_ = "";
+    private java.lang.Object text_ = "";
     /**
-     * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-     * @return The feedbackId.
+     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+     * @return The text.
      */
-    public java.lang.String getFeedbackId() {
-      java.lang.Object ref = feedbackId_;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        feedbackId_ = s;
+        text_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-     * @return The bytes for feedbackId.
+     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+     * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
-        getFeedbackIdBytes() {
-      java.lang.Object ref = feedbackId_;
+        getTextBytes() {
+      java.lang.Object ref = text_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        feedbackId_ = b;
+        text_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-     * @param value The feedbackId to set.
+     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+     * @param value The text to set.
      * @return This builder for chaining.
      */
-    public Builder setFeedbackId(
+    public Builder setText(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      feedbackId_ = value;
+      text_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
+     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
-    public Builder clearFeedbackId() {
-      feedbackId_ = getDefaultInstance().getFeedbackId();
+    public Builder clearText() {
+      text_ = getDefaultInstance().getText();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string feedback_id = 1 [json_name = "feedbackId", (.validate.rules) = { ... }</code>
-     * @param value The bytes for feedbackId to set.
+     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+     * @param value The bytes for text to set.
      * @return This builder for chaining.
      */
-    public Builder setFeedbackIdBytes(
+    public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      feedbackId_ = value;
+      text_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object feedbackCategory_ = "";
+    private java.lang.Object trueCategory_ = "";
     /**
-     * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-     * @return The feedbackCategory.
+     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+     * @return The trueCategory.
      */
-    public java.lang.String getFeedbackCategory() {
-      java.lang.Object ref = feedbackCategory_;
+    public java.lang.String getTrueCategory() {
+      java.lang.Object ref = trueCategory_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        feedbackCategory_ = s;
+        trueCategory_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-     * @return The bytes for feedbackCategory.
+     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+     * @return The bytes for trueCategory.
      */
     public com.google.protobuf.ByteString
-        getFeedbackCategoryBytes() {
-      java.lang.Object ref = feedbackCategory_;
+        getTrueCategoryBytes() {
+      java.lang.Object ref = trueCategory_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        feedbackCategory_ = b;
+        trueCategory_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-     * @param value The feedbackCategory to set.
+     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+     * @param value The trueCategory to set.
      * @return This builder for chaining.
      */
-    public Builder setFeedbackCategory(
+    public Builder setTrueCategory(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      feedbackCategory_ = value;
+      trueCategory_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
+     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
-    public Builder clearFeedbackCategory() {
-      feedbackCategory_ = getDefaultInstance().getFeedbackCategory();
+    public Builder clearTrueCategory() {
+      trueCategory_ = getDefaultInstance().getTrueCategory();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string feedback_category = 2 [json_name = "feedbackCategory", (.validate.rules) = { ... }</code>
-     * @param value The bytes for feedbackCategory to set.
+     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+     * @param value The bytes for trueCategory to set.
      * @return This builder for chaining.
      */
-    public Builder setFeedbackCategoryBytes(
+    public Builder setTrueCategoryBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      feedbackCategory_ = value;
+      trueCategory_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

@@ -572,9 +572,9 @@ func (m *ProductTypeFeedbackRequest) validate(all bool) error {
 
 	var errors []error
 
-	if utf8.RuneCountInString(m.GetFeedbackId()) < 1 {
+	if utf8.RuneCountInString(m.GetText()) < 1 {
 		err := ProductTypeFeedbackRequestValidationError{
-			field:  "FeedbackId",
+			field:  "Text",
 			reason: "value length must be at least 1 runes",
 		}
 		if !all {
@@ -583,9 +583,9 @@ func (m *ProductTypeFeedbackRequest) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
-	if utf8.RuneCountInString(m.GetFeedbackCategory()) < 1 {
+	if utf8.RuneCountInString(m.GetTrueCategory()) < 1 {
 		err := ProductTypeFeedbackRequestValidationError{
-			field:  "FeedbackCategory",
+			field:  "TrueCategory",
 			reason: "value length must be at least 1 runes",
 		}
 		if !all {

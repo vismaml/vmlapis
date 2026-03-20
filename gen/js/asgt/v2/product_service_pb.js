@@ -899,8 +899,8 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.toObject = function(opt_inclu
  */
 proto.asgt.v2.ProductTypeFeedbackRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    feedbackCategory: jspb.Message.getFieldWithDefault(msg, 2, "")
+    text: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    trueCategory: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -939,11 +939,11 @@ proto.asgt.v2.ProductTypeFeedbackRequest.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFeedbackId(value);
+      msg.setText(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFeedbackCategory(value);
+      msg.setTrueCategory(value);
       break;
     default:
       reader.skipField();
@@ -974,14 +974,14 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.serializeBinary = function() 
  */
 proto.asgt.v2.ProductTypeFeedbackRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFeedbackId();
+  f = message.getText();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getFeedbackCategory();
+  f = message.getTrueCategory();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -992,10 +992,10 @@ proto.asgt.v2.ProductTypeFeedbackRequest.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string feedback_id = 1;
+ * optional string text = 1;
  * @return {string}
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getFeedbackId = function() {
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getText = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1004,16 +1004,16 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getFeedbackId = function() {
  * @param {string} value
  * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setFeedbackId = function(value) {
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setText = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string feedback_category = 2;
+ * optional string true_category = 2;
  * @return {string}
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getFeedbackCategory = function() {
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getTrueCategory = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -1022,7 +1022,7 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getFeedbackCategory = functio
  * @param {string} value
  * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setFeedbackCategory = function(value) {
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setTrueCategory = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 

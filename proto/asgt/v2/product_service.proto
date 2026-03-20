@@ -149,8 +149,8 @@ enum ProductType {
 }
 
 message ProductTypeFeedbackRequest {
-  string feedback_id = 1 [(validate.rules).string.min_len = 1];
-  string feedback_category = 2 [(validate.rules).string.min_len = 1];
+  string text = 1 [(validate.rules).string.min_len = 1];
+  string true_category = 2 [(validate.rules).string.min_len = 1];
 }
 
 enum ConfidenceLevel {

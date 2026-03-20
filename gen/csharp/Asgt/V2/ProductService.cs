@@ -38,57 +38,57 @@ namespace Asgt.V2 {
             "c2d0LnYyLlByb2R1Y3RUeXBlUgR0eXBlEhQKBWxhYmVsGAIgASgJUgVsYWJl",
             "bBIeCgpjb25maWRlbmNlGAMgASgCUgpjb25maWRlbmNlEkMKEGNvbmZpZGVu",
             "Y2VfbGV2ZWwYBCABKA4yGC5hc2d0LnYyLkNvbmZpZGVuY2VMZXZlbFIPY29u",
-            "ZmlkZW5jZUxldmVsInwKGlByb2R1Y3RUeXBlRmVlZGJhY2tSZXF1ZXN0EigK",
-            "C2ZlZWRiYWNrX2lkGAEgASgJQgf6QgRyAhABUgpmZWVkYmFja0lkEjQKEWZl",
-            "ZWRiYWNrX2NhdGVnb3J5GAIgASgJQgf6QgRyAhABUhBmZWVkYmFja0NhdGVn",
-            "b3J5Kt4KCgtQcm9kdWN0VHlwZRINCglVTkRFRklORUQQABIUChBBQ0NPVU5U",
-            "SU5HX0FVRElUEAESFwoTQUNDT1VOVElOR19TT0ZUV0FSRRACEg8KC0FEVkVS",
-            "VElTSU5HEAMSEwoPQUxDT0hPTF9UT0JBQ0NPEAQSGQoVTUVESUNBTF9MQUJf",
-            "RVFVSVBNRU5UEAUSFgoSQkFOS0lOR19JTlZFU1RNRU5UEAYSCQoFQk9PS1MQ",
-            "BxIXChNCVVNJTkVTU19DT05TVUxUSU5HEAgSDQoJQ0hFTUlDQUxTEAkSFQoR",
-            "Q0xFQU5JTkdfU0VSVklDRVMQChIVChFDTEVBTklOR19TVVBQTElFUxALEgwK",
-            "CENMT1RISU5HEAwSDwoLRUxFQ1RST05JQ1MQDRIaChZDT05TVFJVQ1RJT05f",
-            "TUFURVJJQUxTEA4SEwoPREVDT1JBVElPTlNfQVJUEA8SFAoQREVGRU5TRV9T",
-            "RUNVUklUWRAQEgwKCERFUE9TSVRTEBESFwoTRE9NRVNUSUNfQVBQTElBTkNF",
-            "UxASEhYKEkVEVUNBVElPTl9UUkFJTklORxATEgoKBkVORVJHWRAUEhgKFEZB",
-            "Q0lMSVRZX01BSU5URU5BTkNFEBUSDwoLQUdSSUNVTFRVUkUQFhIICgRGRUVT",
-            "EBcSCQoFRklORVMQGBISCg5GT09EX0JFVkVSQUdFUxAZEhMKD0ZVRUxfTFVC",
-            "UklDQU5UUxAaEg0KCUZVUk5JVFVSRRAbEgkKBUdJRlRTEBwSEgoOR0xBU1Nf",
-            "Q0VSQU1JQ1MQHRIXChNHT1ZFUk5NRU5UX1NFUlZJQ0VTEB4SEgoOR1JBUEhJ",
-            "Q19ERVNJR04QHxIRCg1GSVRORVNTX0NMVUJTECASDgoKSEVBTFRIQ0FSRRAh",
-            "EgoKBkhPVEVMUxAiEhgKFElORFVTVFJJQUxfTUFDSElORVJZECMSEQoNTUFO",
-            "VUZBQ1RVUklORxAkEg0KCUlOU1VSQU5DRRAlEhIKDklOVEVSTkVUX01FRElB",
-            "ECYSEwoPUFJPUEVSVFlfUkVOVEFMECcSCQoFTEVHQUwQKBISCg5QTEFOVFNf",
-            "QU5JTUFMUxApEhUKEU1BQ0hJTkVSWV9MRUFTSU5HECoSDQoJTUFSS0VUSU5H",
-            "ECsSDAoITUVFVElOR1MQLBIJCgVNVVNJQxAtEhMKD09GRklDRV9TVVBQTElF",
-            "UxAuEg0KCVBBQ0tBR0lORxAvEgsKB1BBUktJTkcQMBIXChNQQVNTRU5HRVJf",
-            "VFJBTlNQT1JUEDESDAoIUEFZTUVOVFMQMhILCgdQQVlST0xMEDMSFQoRUEVS",
-            "U09OQUxfU0VSVklDRVMQNBIRCg1QRVJTT05BTF9DQVJFEDUSEwoPUEhBUk1B",
-            "Q0VVVElDQUxTEDYSEgoOTUVESUFfU0VSVklDRVMQNxIZChVSRUNSRUFUSU9O",
-            "QUxfU0VSVklDRVMQOBIcChhSRVNFQVJDSF9URUNIX0NPTlNVTFRJTkcQORIP",
-            "CgtSRVNUQVVSQU5UUxA6Eg4KClJFVElSRU1FTlQQOxINCglMT0dJU1RJQ1MQ",
-            "PBIMCghTT0ZUV0FSRRA9EhQKEFNQT1JUU19FUVVJUE1FTlQQPhILCgdTVE9S",
-            "QUdFED8SDAoIVEFYQVRJT04QQBINCglURUxFUEhPTlkQQRIMCghURVhUSUxF",
-            "UxBCEgsKB0pFV0VMUlkQQxIJCgVUT0xMUxBEEggKBFRPWVMQRRIQCgxUUkFE",
-            "RV9SRVBBSVIQRhITCg9WRUhJQ0xFX1JFTlRBTFMQRxIMCghWRUhJQ0xFUxBI",
-            "Eg8KC1dBVEVSX1dBU1RFEEkSCwoHV0VCU0lURRBKKlcKD0NvbmZpZGVuY2VM",
-            "ZXZlbBILCgdVTktOT1dOEAASDAoIVkVSWV9MT1cQARIHCgNMT1cQAhIHCgNN",
-            "SUQQAxIICgRISUdIEAQSDQoJVkVSWV9ISUdIEAUywgMKElByb2R1Y3RUeXBl",
-            "U2VydmljZRKTAQoMQmF0Y2hTdWdnZXN0EicuYXNndC52Mi5Qcm9kdWN0VHlw",
-            "ZUJhdGNoU3VnZ2VzdFJlcXVlc3QaKC5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0",
-            "Y2hTdWdnZXN0UmVzcG9uc2UiMILT5JMCKiIlL3YyL21vZGVscy9wcm9kdWN0",
-            "LXR5cGVzOmJhdGNoU3VnZ2VzdDoBKhJrChRJbnRlcm5hbEJhdGNoU3VnZ2Vz",
-            "dBInLmFzZ3QudjIuUHJvZHVjdFR5cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0Gigu",
-            "YXNndC52Mi5Qcm9kdWN0VHlwZUJhdGNoU3VnZ2VzdFJlc3BvbnNlIgASdQoI",
-            "RmVlZGJhY2sSIy5hc2d0LnYyLlByb2R1Y3RUeXBlRmVlZGJhY2tSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiyC0+STAiYiIS92Mi9tb2RlbHMv",
-            "cHJvZHVjdC10eXBlczpmZWVkYmFjazoBKhoykkEvEi1TdWdnZXN0IHByb2R1",
-            "Y3QgdHlwZXMgZnJvbSB0ZXh0IGRlc2NyaXB0aW9ucy5C0AEKEGFpLnZpc21h",
-            "LmFzZ3QudjJCE1Byb2R1Y3RTZXJ2aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9l",
-            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC92MqICA0FYWKoCB0FzZ3Qu",
-            "VjLKAgdBc2d0XFYy4gITQXNndFxWMlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYy",
-            "kkE8EhMKDVByb2R1Y3QgVHlwZXMyAnYyKgECMhBhcHBsaWNhdGlvbi9qc29u",
-            "OhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "ZmlkZW5jZUxldmVsImcKGlByb2R1Y3RUeXBlRmVlZGJhY2tSZXF1ZXN0EhsK",
+            "BHRleHQYASABKAlCB/pCBHICEAFSBHRleHQSLAoNdHJ1ZV9jYXRlZ29yeRgC",
+            "IAEoCUIH+kIEcgIQAVIMdHJ1ZUNhdGVnb3J5Kt4KCgtQcm9kdWN0VHlwZRIN",
+            "CglVTkRFRklORUQQABIUChBBQ0NPVU5USU5HX0FVRElUEAESFwoTQUNDT1VO",
+            "VElOR19TT0ZUV0FSRRACEg8KC0FEVkVSVElTSU5HEAMSEwoPQUxDT0hPTF9U",
+            "T0JBQ0NPEAQSGQoVTUVESUNBTF9MQUJfRVFVSVBNRU5UEAUSFgoSQkFOS0lO",
+            "R19JTlZFU1RNRU5UEAYSCQoFQk9PS1MQBxIXChNCVVNJTkVTU19DT05TVUxU",
+            "SU5HEAgSDQoJQ0hFTUlDQUxTEAkSFQoRQ0xFQU5JTkdfU0VSVklDRVMQChIV",
+            "ChFDTEVBTklOR19TVVBQTElFUxALEgwKCENMT1RISU5HEAwSDwoLRUxFQ1RS",
+            "T05JQ1MQDRIaChZDT05TVFJVQ1RJT05fTUFURVJJQUxTEA4SEwoPREVDT1JB",
+            "VElPTlNfQVJUEA8SFAoQREVGRU5TRV9TRUNVUklUWRAQEgwKCERFUE9TSVRT",
+            "EBESFwoTRE9NRVNUSUNfQVBQTElBTkNFUxASEhYKEkVEVUNBVElPTl9UUkFJ",
+            "TklORxATEgoKBkVORVJHWRAUEhgKFEZBQ0lMSVRZX01BSU5URU5BTkNFEBUS",
+            "DwoLQUdSSUNVTFRVUkUQFhIICgRGRUVTEBcSCQoFRklORVMQGBISCg5GT09E",
+            "X0JFVkVSQUdFUxAZEhMKD0ZVRUxfTFVCUklDQU5UUxAaEg0KCUZVUk5JVFVS",
+            "RRAbEgkKBUdJRlRTEBwSEgoOR0xBU1NfQ0VSQU1JQ1MQHRIXChNHT1ZFUk5N",
+            "RU5UX1NFUlZJQ0VTEB4SEgoOR1JBUEhJQ19ERVNJR04QHxIRCg1GSVRORVNT",
+            "X0NMVUJTECASDgoKSEVBTFRIQ0FSRRAhEgoKBkhPVEVMUxAiEhgKFElORFVT",
+            "VFJJQUxfTUFDSElORVJZECMSEQoNTUFOVUZBQ1RVUklORxAkEg0KCUlOU1VS",
+            "QU5DRRAlEhIKDklOVEVSTkVUX01FRElBECYSEwoPUFJPUEVSVFlfUkVOVEFM",
+            "ECcSCQoFTEVHQUwQKBISCg5QTEFOVFNfQU5JTUFMUxApEhUKEU1BQ0hJTkVS",
+            "WV9MRUFTSU5HECoSDQoJTUFSS0VUSU5HECsSDAoITUVFVElOR1MQLBIJCgVN",
+            "VVNJQxAtEhMKD09GRklDRV9TVVBQTElFUxAuEg0KCVBBQ0tBR0lORxAvEgsK",
+            "B1BBUktJTkcQMBIXChNQQVNTRU5HRVJfVFJBTlNQT1JUEDESDAoIUEFZTUVO",
+            "VFMQMhILCgdQQVlST0xMEDMSFQoRUEVSU09OQUxfU0VSVklDRVMQNBIRCg1Q",
+            "RVJTT05BTF9DQVJFEDUSEwoPUEhBUk1BQ0VVVElDQUxTEDYSEgoOTUVESUFf",
+            "U0VSVklDRVMQNxIZChVSRUNSRUFUSU9OQUxfU0VSVklDRVMQOBIcChhSRVNF",
+            "QVJDSF9URUNIX0NPTlNVTFRJTkcQORIPCgtSRVNUQVVSQU5UUxA6Eg4KClJF",
+            "VElSRU1FTlQQOxINCglMT0dJU1RJQ1MQPBIMCghTT0ZUV0FSRRA9EhQKEFNQ",
+            "T1JUU19FUVVJUE1FTlQQPhILCgdTVE9SQUdFED8SDAoIVEFYQVRJT04QQBIN",
+            "CglURUxFUEhPTlkQQRIMCghURVhUSUxFUxBCEgsKB0pFV0VMUlkQQxIJCgVU",
+            "T0xMUxBEEggKBFRPWVMQRRIQCgxUUkFERV9SRVBBSVIQRhITCg9WRUhJQ0xF",
+            "X1JFTlRBTFMQRxIMCghWRUhJQ0xFUxBIEg8KC1dBVEVSX1dBU1RFEEkSCwoH",
+            "V0VCU0lURRBKKlcKD0NvbmZpZGVuY2VMZXZlbBILCgdVTktOT1dOEAASDAoI",
+            "VkVSWV9MT1cQARIHCgNMT1cQAhIHCgNNSUQQAxIICgRISUdIEAQSDQoJVkVS",
+            "WV9ISUdIEAUywgMKElByb2R1Y3RUeXBlU2VydmljZRKTAQoMQmF0Y2hTdWdn",
+            "ZXN0EicuYXNndC52Mi5Qcm9kdWN0VHlwZUJhdGNoU3VnZ2VzdFJlcXVlc3Qa",
+            "KC5hc2d0LnYyLlByb2R1Y3RUeXBlQmF0Y2hTdWdnZXN0UmVzcG9uc2UiMILT",
+            "5JMCKiIlL3YyL21vZGVscy9wcm9kdWN0LXR5cGVzOmJhdGNoU3VnZ2VzdDoB",
+            "KhJrChRJbnRlcm5hbEJhdGNoU3VnZ2VzdBInLmFzZ3QudjIuUHJvZHVjdFR5",
+            "cGVCYXRjaFN1Z2dlc3RSZXF1ZXN0GiguYXNndC52Mi5Qcm9kdWN0VHlwZUJh",
+            "dGNoU3VnZ2VzdFJlc3BvbnNlIgASdQoIRmVlZGJhY2sSIy5hc2d0LnYyLlBy",
+            "b2R1Y3RUeXBlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IiyC0+STAiYiIS92Mi9tb2RlbHMvcHJvZHVjdC10eXBlczpmZWVkYmFj",
+            "azoBKhoykkEvEi1TdWdnZXN0IHByb2R1Y3QgdHlwZXMgZnJvbSB0ZXh0IGRl",
+            "c2NyaXB0aW9ucy5C0AEKEGFpLnZpc21hLmFzZ3QudjJCE1Byb2R1Y3RTZXJ2",
+            "aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
+            "Z28vYXNndC92MqICA0FYWKoCB0FzZ3QuVjLKAgdBc2d0XFYy4gITQXNndFxW",
+            "MlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYykkE8EhMKDVByb2R1Y3QgVHlwZXMy",
+            "AnYyKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.V2.ProductType), typeof(global::Asgt.V2.ConfidenceLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +96,7 @@ namespace Asgt.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeBatchSuggestResponse), global::Asgt.V2.ProductTypeBatchSuggestResponse.Parser, new[]{ "Suggestions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeSuggestion), global::Asgt.V2.ProductTypeSuggestion.Parser, new[]{ "Id", "Candidates" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeCandidate), global::Asgt.V2.ProductTypeCandidate.Parser, new[]{ "Type", "Label", "Confidence", "ConfidenceLevel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeFeedbackRequest), global::Asgt.V2.ProductTypeFeedbackRequest.Parser, new[]{ "FeedbackId", "FeedbackCategory" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.ProductTypeFeedbackRequest), global::Asgt.V2.ProductTypeFeedbackRequest.Parser, new[]{ "Text", "TrueCategory" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1141,8 +1141,8 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProductTypeFeedbackRequest(ProductTypeFeedbackRequest other) : this() {
-      feedbackId_ = other.feedbackId_;
-      feedbackCategory_ = other.feedbackCategory_;
+      text_ = other.text_;
+      trueCategory_ = other.trueCategory_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1152,27 +1152,27 @@ namespace Asgt.V2 {
       return new ProductTypeFeedbackRequest(this);
     }
 
-    /// <summary>Field number for the "feedback_id" field.</summary>
-    public const int FeedbackIdFieldNumber = 1;
-    private string feedbackId_ = "";
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 1;
+    private string text_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FeedbackId {
-      get { return feedbackId_; }
+    public string Text {
+      get { return text_; }
       set {
-        feedbackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "feedback_category" field.</summary>
-    public const int FeedbackCategoryFieldNumber = 2;
-    private string feedbackCategory_ = "";
+    /// <summary>Field number for the "true_category" field.</summary>
+    public const int TrueCategoryFieldNumber = 2;
+    private string trueCategory_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FeedbackCategory {
-      get { return feedbackCategory_; }
+    public string TrueCategory {
+      get { return trueCategory_; }
       set {
-        feedbackCategory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        trueCategory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1191,8 +1191,8 @@ namespace Asgt.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FeedbackId != other.FeedbackId) return false;
-      if (FeedbackCategory != other.FeedbackCategory) return false;
+      if (Text != other.Text) return false;
+      if (TrueCategory != other.TrueCategory) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1200,8 +1200,8 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
-      if (FeedbackCategory.Length != 0) hash ^= FeedbackCategory.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (TrueCategory.Length != 0) hash ^= TrueCategory.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1220,13 +1220,13 @@ namespace Asgt.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FeedbackId.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FeedbackId);
+        output.WriteString(Text);
       }
-      if (FeedbackCategory.Length != 0) {
+      if (TrueCategory.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(FeedbackCategory);
+        output.WriteString(TrueCategory);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1238,13 +1238,13 @@ namespace Asgt.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FeedbackId.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(FeedbackId);
+        output.WriteString(Text);
       }
-      if (FeedbackCategory.Length != 0) {
+      if (TrueCategory.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(FeedbackCategory);
+        output.WriteString(TrueCategory);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1256,11 +1256,11 @@ namespace Asgt.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FeedbackId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (FeedbackCategory.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackCategory);
+      if (TrueCategory.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TrueCategory);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1274,11 +1274,11 @@ namespace Asgt.V2 {
       if (other == null) {
         return;
       }
-      if (other.FeedbackId.Length != 0) {
-        FeedbackId = other.FeedbackId;
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
-      if (other.FeedbackCategory.Length != 0) {
-        FeedbackCategory = other.FeedbackCategory;
+      if (other.TrueCategory.Length != 0) {
+        TrueCategory = other.TrueCategory;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1300,11 +1300,11 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FeedbackId = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 18: {
-            FeedbackCategory = input.ReadString();
+            TrueCategory = input.ReadString();
             break;
           }
         }
@@ -1327,11 +1327,11 @@ namespace Asgt.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FeedbackId = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 18: {
-            FeedbackCategory = input.ReadString();
+            TrueCategory = input.ReadString();
             break;
           }
         }

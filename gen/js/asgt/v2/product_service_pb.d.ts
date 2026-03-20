@@ -101,11 +101,11 @@ export namespace ProductTypeCandidate {
 }
 
 export class ProductTypeFeedbackRequest extends jspb.Message {
-  getFeedbackId(): string;
-  setFeedbackId(value: string): ProductTypeFeedbackRequest;
+  getText(): string;
+  setText(value: string): ProductTypeFeedbackRequest;
 
-  getFeedbackCategory(): string;
-  setFeedbackCategory(value: string): ProductTypeFeedbackRequest;
+  getTrueCategory(): string;
+  setTrueCategory(value: string): ProductTypeFeedbackRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProductTypeFeedbackRequest.AsObject;
@@ -117,8 +117,8 @@ export class ProductTypeFeedbackRequest extends jspb.Message {
 
 export namespace ProductTypeFeedbackRequest {
   export type AsObject = {
-    feedbackId: string,
-    feedbackCategory: string,
+    text: string,
+    trueCategory: string,
   }
 }
 
