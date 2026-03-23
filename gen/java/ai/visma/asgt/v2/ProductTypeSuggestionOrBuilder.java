@@ -10,26 +10,6 @@ public interface ProductTypeSuggestionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Unique identifier for this suggestion, used to reference it in feedback.
-   * </pre>
-   *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The id.
-   */
-  java.lang.String getId();
-  /**
-   * <pre>
-   * Unique identifier for this suggestion, used to reference it in feedback.
-   * </pre>
-   *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
-   */
-  com.google.protobuf.ByteString
-      getIdBytes();
-
-  /**
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> 

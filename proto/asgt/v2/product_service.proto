@@ -46,7 +46,7 @@ message ProductTypeBatchSuggestRequest {
   // Text descriptions to classify into product types.
   repeated string texts = 1 [(validate.rules).repeated = {
     min_items: 1
-    max_items: 1024
+    max_items: 128
     items: {
       string: {min_len: 1}
     }
@@ -58,8 +58,7 @@ message ProductTypeBatchSuggestResponse {
 }
 
 message ProductTypeSuggestion {
-  // Unique identifier for this suggestion, used to reference it in feedback.
-  string id = 1;
+  reserved 1; // reserved for potential ID for reference
   repeated ProductTypeCandidate candidates = 2;
 }
 

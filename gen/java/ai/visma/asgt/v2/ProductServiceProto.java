@@ -64,74 +64,74 @@ public final class ProductServiceProto {
       "rotobuf/empty.proto\032.protoc-gen-openapiv" +
       "2/options/annotations.proto\032\027validate/va" +
       "lidate.proto\"I\n\036ProductTypeBatchSuggestR" +
-      "equest\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013\010\001\020\200\010\"\004r\002\020\001" +
+      "equest\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013\010\001\020\200\001\"\004r\002\020\001" +
       "R\005texts\"c\n\037ProductTypeBatchSuggestRespon" +
       "se\022@\n\013suggestions\030\001 \003(\0132\036.asgt.v2.Produc" +
-      "tTypeSuggestionR\013suggestions\"f\n\025ProductT" +
-      "ypeSuggestion\022\016\n\002id\030\001 \001(\tR\002id\022=\n\ncandida" +
-      "tes\030\002 \003(\0132\035.asgt.v2.ProductTypeCandidate" +
-      "R\ncandidates\"\273\001\n\024ProductTypeCandidate\022(\n" +
-      "\004type\030\001 \001(\0162\024.asgt.v2.ProductTypeR\004type\022" +
-      "\024\n\005label\030\002 \001(\tR\005label\022\036\n\nconfidence\030\003 \001(" +
-      "\002R\nconfidence\022C\n\020confidence_level\030\004 \001(\0162" +
-      "\030.asgt.v2.ConfidenceLevelR\017confidenceLev" +
-      "el\"{\n\032ProductTypeFeedbackRequest\022$\n\005text" +
-      "s\030\001 \003(\tB\016\372B\013\222\001\010\010\001\"\004r\002\020\001R\005texts\0227\n\017true_c" +
-      "ategories\030\002 \003(\tB\016\372B\013\222\001\010\010\001\"\004r\002\020\001R\016trueCat" +
-      "egories*\336\n\n\013ProductType\022\r\n\tUNDEFINED\020\000\022\024" +
-      "\n\020ACCOUNTING_AUDIT\020\001\022\027\n\023ACCOUNTING_SOFTW" +
-      "ARE\020\002\022\017\n\013ADVERTISING\020\003\022\023\n\017ALCOHOL_TOBACC" +
-      "O\020\004\022\031\n\025MEDICAL_LAB_EQUIPMENT\020\005\022\026\n\022BANKIN" +
-      "G_INVESTMENT\020\006\022\t\n\005BOOKS\020\007\022\027\n\023BUSINESS_CO" +
-      "NSULTING\020\010\022\r\n\tCHEMICALS\020\t\022\025\n\021CLEANING_SE" +
-      "RVICES\020\n\022\025\n\021CLEANING_SUPPLIES\020\013\022\014\n\010CLOTH" +
-      "ING\020\014\022\017\n\013ELECTRONICS\020\r\022\032\n\026CONSTRUCTION_M" +
-      "ATERIALS\020\016\022\023\n\017DECORATIONS_ART\020\017\022\024\n\020DEFEN" +
-      "SE_SECURITY\020\020\022\014\n\010DEPOSITS\020\021\022\027\n\023DOMESTIC_" +
-      "APPLIANCES\020\022\022\026\n\022EDUCATION_TRAINING\020\023\022\n\n\006" +
-      "ENERGY\020\024\022\030\n\024FACILITY_MAINTENANCE\020\025\022\017\n\013AG" +
-      "RICULTURE\020\026\022\010\n\004FEES\020\027\022\t\n\005FINES\020\030\022\022\n\016FOOD" +
-      "_BEVERAGES\020\031\022\023\n\017FUEL_LUBRICANTS\020\032\022\r\n\tFUR" +
-      "NITURE\020\033\022\t\n\005GIFTS\020\034\022\022\n\016GLASS_CERAMICS\020\035\022" +
-      "\027\n\023GOVERNMENT_SERVICES\020\036\022\022\n\016GRAPHIC_DESI" +
-      "GN\020\037\022\021\n\rFITNESS_CLUBS\020 \022\016\n\nHEALTHCARE\020!\022" +
-      "\n\n\006HOTELS\020\"\022\030\n\024INDUSTRIAL_MACHINERY\020#\022\021\n" +
-      "\rMANUFACTURING\020$\022\r\n\tINSURANCE\020%\022\022\n\016INTER" +
-      "NET_MEDIA\020&\022\023\n\017PROPERTY_RENTAL\020\'\022\t\n\005LEGA" +
-      "L\020(\022\022\n\016PLANTS_ANIMALS\020)\022\025\n\021MACHINERY_LEA" +
-      "SING\020*\022\r\n\tMARKETING\020+\022\014\n\010MEETINGS\020,\022\t\n\005M" +
-      "USIC\020-\022\023\n\017OFFICE_SUPPLIES\020.\022\r\n\tPACKAGING" +
-      "\020/\022\013\n\007PARKING\0200\022\027\n\023PASSENGER_TRANSPORT\0201" +
-      "\022\014\n\010PAYMENTS\0202\022\013\n\007PAYROLL\0203\022\025\n\021PERSONAL_" +
-      "SERVICES\0204\022\021\n\rPERSONAL_CARE\0205\022\023\n\017PHARMAC" +
-      "EUTICALS\0206\022\022\n\016MEDIA_SERVICES\0207\022\031\n\025RECREA" +
-      "TIONAL_SERVICES\0208\022\034\n\030RESEARCH_TECH_CONSU" +
-      "LTING\0209\022\017\n\013RESTAURANTS\020:\022\016\n\nRETIREMENT\020;" +
-      "\022\r\n\tLOGISTICS\020<\022\014\n\010SOFTWARE\020=\022\024\n\020SPORTS_" +
-      "EQUIPMENT\020>\022\013\n\007STORAGE\020?\022\014\n\010TAXATION\020@\022\r" +
-      "\n\tTELEPHONY\020A\022\014\n\010TEXTILES\020B\022\013\n\007JEWELRY\020C" +
-      "\022\t\n\005TOLLS\020D\022\010\n\004TOYS\020E\022\020\n\014TRADE_REPAIR\020F\022" +
-      "\023\n\017VEHICLE_RENTALS\020G\022\014\n\010VEHICLES\020H\022\017\n\013WA" +
-      "TER_WASTE\020I\022\013\n\007WEBSITE\020J*W\n\017ConfidenceLe" +
-      "vel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022" +
-      "\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\0052\302\003\n\022Pr" +
-      "oductTypeService\022\223\001\n\014BatchSuggest\022\'.asgt" +
-      ".v2.ProductTypeBatchSuggestRequest\032(.asg" +
-      "t.v2.ProductTypeBatchSuggestResponse\"0\202\323" +
-      "\344\223\002*\"%/v2/models/product-types:batchSugg" +
-      "est:\001*\022k\n\024InternalBatchSuggest\022\'.asgt.v2" +
-      ".ProductTypeBatchSuggestRequest\032(.asgt.v" +
-      "2.ProductTypeBatchSuggestResponse\"\000\022u\n\010F" +
-      "eedback\022#.asgt.v2.ProductTypeFeedbackReq" +
-      "uest\032\026.google.protobuf.Empty\",\202\323\344\223\002&\"!/v" +
-      "2/models/product-types:feedback:\001*\0322\222A/\022" +
-      "-Suggest product types from text descrip" +
-      "tions.B\320\001\n\020ai.visma.asgt.v2B\023ProductServ" +
-      "iceProtoP\001Z+github.com/e-conomic/vmlapis" +
-      "/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V" +
-      "2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V2\222A<\022\023\n" +
-      "\rProduct Types2\002v2*\001\0022\020application/json:" +
-      "\020application/jsonb\006proto3"
+      "tTypeSuggestionR\013suggestions\"\\\n\025ProductT" +
+      "ypeSuggestion\022=\n\ncandidates\030\002 \003(\0132\035.asgt" +
+      ".v2.ProductTypeCandidateR\ncandidatesJ\004\010\001" +
+      "\020\002\"\273\001\n\024ProductTypeCandidate\022(\n\004type\030\001 \001(" +
+      "\0162\024.asgt.v2.ProductTypeR\004type\022\024\n\005label\030\002" +
+      " \001(\tR\005label\022\036\n\nconfidence\030\003 \001(\002R\nconfide" +
+      "nce\022C\n\020confidence_level\030\004 \001(\0162\030.asgt.v2." +
+      "ConfidenceLevelR\017confidenceLevel\"{\n\032Prod" +
+      "uctTypeFeedbackRequest\022$\n\005texts\030\001 \003(\tB\016\372" +
+      "B\013\222\001\010\010\001\"\004r\002\020\001R\005texts\0227\n\017true_categories\030" +
+      "\002 \003(\tB\016\372B\013\222\001\010\010\001\"\004r\002\020\001R\016trueCategories*\336\n" +
+      "\n\013ProductType\022\r\n\tUNDEFINED\020\000\022\024\n\020ACCOUNTI" +
+      "NG_AUDIT\020\001\022\027\n\023ACCOUNTING_SOFTWARE\020\002\022\017\n\013A" +
+      "DVERTISING\020\003\022\023\n\017ALCOHOL_TOBACCO\020\004\022\031\n\025MED" +
+      "ICAL_LAB_EQUIPMENT\020\005\022\026\n\022BANKING_INVESTME" +
+      "NT\020\006\022\t\n\005BOOKS\020\007\022\027\n\023BUSINESS_CONSULTING\020\010" +
+      "\022\r\n\tCHEMICALS\020\t\022\025\n\021CLEANING_SERVICES\020\n\022\025" +
+      "\n\021CLEANING_SUPPLIES\020\013\022\014\n\010CLOTHING\020\014\022\017\n\013E" +
+      "LECTRONICS\020\r\022\032\n\026CONSTRUCTION_MATERIALS\020\016" +
+      "\022\023\n\017DECORATIONS_ART\020\017\022\024\n\020DEFENSE_SECURIT" +
+      "Y\020\020\022\014\n\010DEPOSITS\020\021\022\027\n\023DOMESTIC_APPLIANCES" +
+      "\020\022\022\026\n\022EDUCATION_TRAINING\020\023\022\n\n\006ENERGY\020\024\022\030" +
+      "\n\024FACILITY_MAINTENANCE\020\025\022\017\n\013AGRICULTURE\020" +
+      "\026\022\010\n\004FEES\020\027\022\t\n\005FINES\020\030\022\022\n\016FOOD_BEVERAGES" +
+      "\020\031\022\023\n\017FUEL_LUBRICANTS\020\032\022\r\n\tFURNITURE\020\033\022\t" +
+      "\n\005GIFTS\020\034\022\022\n\016GLASS_CERAMICS\020\035\022\027\n\023GOVERNM" +
+      "ENT_SERVICES\020\036\022\022\n\016GRAPHIC_DESIGN\020\037\022\021\n\rFI" +
+      "TNESS_CLUBS\020 \022\016\n\nHEALTHCARE\020!\022\n\n\006HOTELS\020" +
+      "\"\022\030\n\024INDUSTRIAL_MACHINERY\020#\022\021\n\rMANUFACTU" +
+      "RING\020$\022\r\n\tINSURANCE\020%\022\022\n\016INTERNET_MEDIA\020" +
+      "&\022\023\n\017PROPERTY_RENTAL\020\'\022\t\n\005LEGAL\020(\022\022\n\016PLA" +
+      "NTS_ANIMALS\020)\022\025\n\021MACHINERY_LEASING\020*\022\r\n\t" +
+      "MARKETING\020+\022\014\n\010MEETINGS\020,\022\t\n\005MUSIC\020-\022\023\n\017" +
+      "OFFICE_SUPPLIES\020.\022\r\n\tPACKAGING\020/\022\013\n\007PARK" +
+      "ING\0200\022\027\n\023PASSENGER_TRANSPORT\0201\022\014\n\010PAYMEN" +
+      "TS\0202\022\013\n\007PAYROLL\0203\022\025\n\021PERSONAL_SERVICES\0204" +
+      "\022\021\n\rPERSONAL_CARE\0205\022\023\n\017PHARMACEUTICALS\0206" +
+      "\022\022\n\016MEDIA_SERVICES\0207\022\031\n\025RECREATIONAL_SER" +
+      "VICES\0208\022\034\n\030RESEARCH_TECH_CONSULTING\0209\022\017\n" +
+      "\013RESTAURANTS\020:\022\016\n\nRETIREMENT\020;\022\r\n\tLOGIST" +
+      "ICS\020<\022\014\n\010SOFTWARE\020=\022\024\n\020SPORTS_EQUIPMENT\020" +
+      ">\022\013\n\007STORAGE\020?\022\014\n\010TAXATION\020@\022\r\n\tTELEPHON" +
+      "Y\020A\022\014\n\010TEXTILES\020B\022\013\n\007JEWELRY\020C\022\t\n\005TOLLS\020" +
+      "D\022\010\n\004TOYS\020E\022\020\n\014TRADE_REPAIR\020F\022\023\n\017VEHICLE" +
+      "_RENTALS\020G\022\014\n\010VEHICLES\020H\022\017\n\013WATER_WASTE\020" +
+      "I\022\013\n\007WEBSITE\020J*W\n\017ConfidenceLevel\022\013\n\007UNK" +
+      "NOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010" +
+      "\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\0052\302\003\n\022ProductTypeS" +
+      "ervice\022\223\001\n\014BatchSuggest\022\'.asgt.v2.Produc" +
+      "tTypeBatchSuggestRequest\032(.asgt.v2.Produ" +
+      "ctTypeBatchSuggestResponse\"0\202\323\344\223\002*\"%/v2/" +
+      "models/product-types:batchSuggest:\001*\022k\n\024" +
+      "InternalBatchSuggest\022\'.asgt.v2.ProductTy" +
+      "peBatchSuggestRequest\032(.asgt.v2.ProductT" +
+      "ypeBatchSuggestResponse\"\000\022u\n\010Feedback\022#." +
+      "asgt.v2.ProductTypeFeedbackRequest\032\026.goo" +
+      "gle.protobuf.Empty\",\202\323\344\223\002&\"!/v2/models/p" +
+      "roduct-types:feedback:\001*\0322\222A/\022-Suggest p" +
+      "roduct types from text descriptions.B\320\001\n" +
+      "\020ai.visma.asgt.v2B\023ProductServiceProtoP\001" +
+      "Z+github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V" +
+      "2\\GPBMetadata\352\002\010Asgt::V2\222A<\022\023\n\rProduct T" +
+      "ypes2\002v2*\001\0022\020application/json:\020applicati" +
+      "on/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -158,7 +158,7 @@ public final class ProductServiceProto {
     internal_static_asgt_v2_ProductTypeSuggestion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_ProductTypeSuggestion_descriptor,
-        new java.lang.String[] { "Id", "Candidates", });
+        new java.lang.String[] { "Candidates", });
     internal_static_asgt_v2_ProductTypeCandidate_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2_ProductTypeCandidate_fieldAccessorTable = new
