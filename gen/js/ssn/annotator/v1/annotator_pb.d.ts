@@ -87,6 +87,7 @@ export namespace Feature {
     SWISS_QR_BILLS = 49,
     VERIFIED = 50,
     HOTEL_DATES = 51,
+    PRODUCT_TYPES = 52,
   }
 }
 

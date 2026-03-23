@@ -1,5 +1,6 @@
 import * as jspb from 'google-protobuf'
 
+import * as asgt_v2_product_service_pb from '../../asgt/v2/product_service_pb'; // proto import: "asgt/v2/product_service.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb'; // proto import: "ssn/type/geometry.proto"
 
@@ -202,6 +203,9 @@ export class PurchaseLineCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLineCandidate;
 
+  getProductType(): string;
+  setProductType(value: string): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -229,6 +233,7 @@ export namespace PurchaseLineCandidate {
     total: string,
     unitPrice: string,
     modelMetadata?: ModelSpec.AsObject,
+    productType: string,
   }
 }
 
@@ -434,6 +439,11 @@ export class PurchaseLine extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): PurchaseLine;
 
+  getProductTypeList(): Array<asgt_v2_product_service_pb.ProductTypeCandidate>;
+  setProductTypeList(value: Array<asgt_v2_product_service_pb.ProductTypeCandidate>): PurchaseLine;
+  clearProductTypeList(): PurchaseLine;
+  addProductType(value?: asgt_v2_product_service_pb.ProductTypeCandidate, index?: number): asgt_v2_product_service_pb.ProductTypeCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLine.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLine): PurchaseLine.AsObject;
@@ -461,6 +471,7 @@ export namespace PurchaseLine {
     totalList: Array<Candidate.AsObject>,
     unitPriceList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
+    productTypeList: Array<asgt_v2_product_service_pb.ProductTypeCandidate.AsObject>,
   }
 }
 

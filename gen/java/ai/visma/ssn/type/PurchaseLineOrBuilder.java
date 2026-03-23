@@ -706,4 +706,48 @@ public interface PurchaseLineOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> 
+      getProductTypeList();
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index);
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  int getProductTypeCount();
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
+      getProductTypeOrBuilderList();
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
+      int index);
 }

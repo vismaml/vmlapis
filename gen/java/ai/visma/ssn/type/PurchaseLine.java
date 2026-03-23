@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
     unitPriceExclVat_ = java.util.Collections.emptyList();
     total_ = java.util.Collections.emptyList();
     unitPrice_ = java.util.Collections.emptyList();
+    productType_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1027,6 +1028,67 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
 
+  public static final int PRODUCT_TYPE_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> productType_;
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getProductTypeList() {
+    return productType_;
+  }
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
+      getProductTypeOrBuilderList() {
+    return productType_;
+  }
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  @java.lang.Override
+  public int getProductTypeCount() {
+    return productType_.size();
+  }
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index) {
+    return productType_.get(index);
+  }
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
+      int index) {
+    return productType_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1091,6 +1153,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(17, getModelMetadata());
+    }
+    for (int i = 0; i < productType_.size(); i++) {
+      output.writeMessage(18, productType_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1169,6 +1234,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getModelMetadata());
     }
+    for (int i = 0; i < productType_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, productType_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1221,6 +1290,8 @@ private static final long serialVersionUID = 0L;
       if (!getModelMetadata()
           .equals(other.getModelMetadata())) return false;
     }
+    if (!getProductTypeList()
+        .equals(other.getProductTypeList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1297,6 +1368,10 @@ private static final long serialVersionUID = 0L;
     if (hasModelMetadata()) {
       hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getModelMetadata().hashCode();
+    }
+    if (getProductTypeCount() > 0) {
+      hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProductTypeList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1444,6 +1519,7 @@ private static final long serialVersionUID = 0L;
         getTotalFieldBuilder();
         getUnitPriceFieldBuilder();
         getModelMetadataFieldBuilder();
+        getProductTypeFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1561,6 +1637,13 @@ private static final long serialVersionUID = 0L;
         modelMetadataBuilder_.dispose();
         modelMetadataBuilder_ = null;
       }
+      if (productTypeBuilder_ == null) {
+        productType_ = java.util.Collections.emptyList();
+      } else {
+        productType_ = null;
+        productTypeBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00020000);
       return this;
     }
 
@@ -1728,6 +1811,15 @@ private static final long serialVersionUID = 0L;
         result.unitPrice_ = unitPrice_;
       } else {
         result.unitPrice_ = unitPriceBuilder_.build();
+      }
+      if (productTypeBuilder_ == null) {
+        if (((bitField0_ & 0x00020000) != 0)) {
+          productType_ = java.util.Collections.unmodifiableList(productType_);
+          bitField0_ = (bitField0_ & ~0x00020000);
+        }
+        result.productType_ = productType_;
+      } else {
+        result.productType_ = productTypeBuilder_.build();
       }
     }
 
@@ -2154,6 +2246,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasModelMetadata()) {
         mergeModelMetadata(other.getModelMetadata());
       }
+      if (productTypeBuilder_ == null) {
+        if (!other.productType_.isEmpty()) {
+          if (productType_.isEmpty()) {
+            productType_ = other.productType_;
+            bitField0_ = (bitField0_ & ~0x00020000);
+          } else {
+            ensureProductTypeIsMutable();
+            productType_.addAll(other.productType_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.productType_.isEmpty()) {
+          if (productTypeBuilder_.isEmpty()) {
+            productTypeBuilder_.dispose();
+            productTypeBuilder_ = null;
+            productType_ = other.productType_;
+            bitField0_ = (bitField0_ & ~0x00020000);
+            productTypeBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getProductTypeFieldBuilder() : null;
+          } else {
+            productTypeBuilder_.addAllMessages(other.productType_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2387,6 +2505,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 138
+            case 146: {
+              ai.visma.asgt.v2.ProductTypeCandidate m =
+                  input.readMessage(
+                      ai.visma.asgt.v2.ProductTypeCandidate.parser(),
+                      extensionRegistry);
+              if (productTypeBuilder_ == null) {
+                ensureProductTypeIsMutable();
+                productType_.add(m);
+              } else {
+                productTypeBuilder_.addMessage(m);
+              }
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7286,6 +7417,318 @@ private static final long serialVersionUID = 0L;
         modelMetadata_ = null;
       }
       return modelMetadataBuilder_;
+    }
+
+    private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> productType_ =
+      java.util.Collections.emptyList();
+    private void ensureProductTypeIsMutable() {
+      if (!((bitField0_ & 0x00020000) != 0)) {
+        productType_ = new java.util.ArrayList<ai.visma.asgt.v2.ProductTypeCandidate>(productType_);
+        bitField0_ |= 0x00020000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> productTypeBuilder_;
+
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getProductTypeList() {
+      if (productTypeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(productType_);
+      } else {
+        return productTypeBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public int getProductTypeCount() {
+      if (productTypeBuilder_ == null) {
+        return productType_.size();
+      } else {
+        return productTypeBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index) {
+      if (productTypeBuilder_ == null) {
+        return productType_.get(index);
+      } else {
+        return productTypeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder setProductType(
+        int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
+      if (productTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureProductTypeIsMutable();
+        productType_.set(index, value);
+        onChanged();
+      } else {
+        productTypeBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder setProductType(
+        int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
+      if (productTypeBuilder_ == null) {
+        ensureProductTypeIsMutable();
+        productType_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        productTypeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder addProductType(ai.visma.asgt.v2.ProductTypeCandidate value) {
+      if (productTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureProductTypeIsMutable();
+        productType_.add(value);
+        onChanged();
+      } else {
+        productTypeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder addProductType(
+        int index, ai.visma.asgt.v2.ProductTypeCandidate value) {
+      if (productTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureProductTypeIsMutable();
+        productType_.add(index, value);
+        onChanged();
+      } else {
+        productTypeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder addProductType(
+        ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
+      if (productTypeBuilder_ == null) {
+        ensureProductTypeIsMutable();
+        productType_.add(builderForValue.build());
+        onChanged();
+      } else {
+        productTypeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder addProductType(
+        int index, ai.visma.asgt.v2.ProductTypeCandidate.Builder builderForValue) {
+      if (productTypeBuilder_ == null) {
+        ensureProductTypeIsMutable();
+        productType_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        productTypeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder addAllProductType(
+        java.lang.Iterable<? extends ai.visma.asgt.v2.ProductTypeCandidate> values) {
+      if (productTypeBuilder_ == null) {
+        ensureProductTypeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, productType_);
+        onChanged();
+      } else {
+        productTypeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder clearProductType() {
+      if (productTypeBuilder_ == null) {
+        productType_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00020000);
+        onChanged();
+      } else {
+        productTypeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public Builder removeProductType(int index) {
+      if (productTypeBuilder_ == null) {
+        ensureProductTypeIsMutable();
+        productType_.remove(index);
+        onChanged();
+      } else {
+        productTypeBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder getProductTypeBuilder(
+        int index) {
+      return getProductTypeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
+        int index) {
+      if (productTypeBuilder_ == null) {
+        return productType_.get(index);  } else {
+        return productTypeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
+         getProductTypeOrBuilderList() {
+      if (productTypeBuilder_ != null) {
+        return productTypeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(productType_);
+      }
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder addProductTypeBuilder() {
+      return getProductTypeFieldBuilder().addBuilder(
+          ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeCandidate.Builder addProductTypeBuilder(
+        int index) {
+      return getProductTypeFieldBuilder().addBuilder(
+          index, ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Product type classification for the line
+     * </pre>
+     *
+     * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
+     */
+    public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate.Builder> 
+         getProductTypeBuilderList() {
+      return getProductTypeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
+        getProductTypeFieldBuilder() {
+      if (productTypeBuilder_ == null) {
+        productTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder>(
+                productType_,
+                ((bitField0_ & 0x00020000) != 0),
+                getParentForChildren(),
+                isClean());
+        productType_ = null;
+      }
+      return productTypeBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.PurchaseLine)

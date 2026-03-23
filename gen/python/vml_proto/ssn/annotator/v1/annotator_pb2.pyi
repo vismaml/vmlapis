@@ -69,6 +69,7 @@ class Feature(_message.Message):
         SWISS_QR_BILLS: _ClassVar[Feature.Type]
         VERIFIED: _ClassVar[Feature.Type]
         HOTEL_DATES: _ClassVar[Feature.Type]
+        PRODUCT_TYPES: _ClassVar[Feature.Type]
     DEFAULT: Feature.Type
     TEXT_ANNOTATION: Feature.Type
     ORDER_DATE: Feature.Type
@@ -121,6 +122,7 @@ class Feature(_message.Message):
     SWISS_QR_BILLS: Feature.Type
     VERIFIED: Feature.Type
     HOTEL_DATES: Feature.Type
+    PRODUCT_TYPES: Feature.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]

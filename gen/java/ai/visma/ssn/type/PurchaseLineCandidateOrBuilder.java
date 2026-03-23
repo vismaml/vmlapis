@@ -346,4 +346,24 @@ public interface PurchaseLineCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>string product_type = 20 [json_name = "productType"];</code>
+   * @return The productType.
+   */
+  java.lang.String getProductType();
+  /**
+   * <pre>
+   * Product type classification for the line
+   * </pre>
+   *
+   * <code>string product_type = 20 [json_name = "productType"];</code>
+   * @return The bytes for productType.
+   */
+  com.google.protobuf.ByteString
+      getProductTypeBytes();
 }
