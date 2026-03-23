@@ -27,8 +27,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductTypeFeedbackRequest() {
-    text_ = "";
-    trueCategory_ = "";
+    texts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    trueCategories_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -44,82 +46,78 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.v2.ProductTypeFeedbackRequest.class, ai.visma.asgt.v2.ProductTypeFeedbackRequest.Builder.class);
   }
 
-  public static final int TEXT_FIELD_NUMBER = 1;
+  public static final int TEXTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object text_ = "";
+  private com.google.protobuf.LazyStringArrayList texts_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-   * @return The text.
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @return A list containing the texts.
    */
-  @java.lang.Override
-  public java.lang.String getText() {
-    java.lang.Object ref = text_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      text_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getTextsList() {
+    return texts_;
   }
   /**
-   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-   * @return The bytes for text.
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @return The count of texts.
    */
-  @java.lang.Override
+  public int getTextsCount() {
+    return texts_.size();
+  }
+  /**
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @param index The index of the element to return.
+   * @return The texts at the given index.
+   */
+  public java.lang.String getTexts(int index) {
+    return texts_.get(index);
+  }
+  /**
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the texts at the given index.
+   */
   public com.google.protobuf.ByteString
-      getTextBytes() {
-    java.lang.Object ref = text_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      text_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getTextsBytes(int index) {
+    return texts_.getByteString(index);
   }
 
-  public static final int TRUE_CATEGORY_FIELD_NUMBER = 2;
+  public static final int TRUE_CATEGORIES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object trueCategory_ = "";
+  private com.google.protobuf.LazyStringArrayList trueCategories_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-   * @return The trueCategory.
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @return A list containing the trueCategories.
    */
-  @java.lang.Override
-  public java.lang.String getTrueCategory() {
-    java.lang.Object ref = trueCategory_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      trueCategory_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getTrueCategoriesList() {
+    return trueCategories_;
   }
   /**
-   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-   * @return The bytes for trueCategory.
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @return The count of trueCategories.
    */
-  @java.lang.Override
+  public int getTrueCategoriesCount() {
+    return trueCategories_.size();
+  }
+  /**
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @param index The index of the element to return.
+   * @return The trueCategories at the given index.
+   */
+  public java.lang.String getTrueCategories(int index) {
+    return trueCategories_.get(index);
+  }
+  /**
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the trueCategories at the given index.
+   */
   public com.google.protobuf.ByteString
-      getTrueCategoryBytes() {
-    java.lang.Object ref = trueCategory_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      trueCategory_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getTrueCategoriesBytes(int index) {
+    return trueCategories_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -136,11 +134,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(text_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, text_);
+    for (int i = 0; i < texts_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, texts_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trueCategory_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, trueCategory_);
+    for (int i = 0; i < trueCategories_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, trueCategories_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -151,11 +149,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(text_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, text_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < texts_.size(); i++) {
+        dataSize += computeStringSizeNoTag(texts_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTextsList().size();
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trueCategory_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, trueCategory_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < trueCategories_.size(); i++) {
+        dataSize += computeStringSizeNoTag(trueCategories_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTrueCategoriesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -172,10 +180,10 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.asgt.v2.ProductTypeFeedbackRequest other = (ai.visma.asgt.v2.ProductTypeFeedbackRequest) obj;
 
-    if (!getText()
-        .equals(other.getText())) return false;
-    if (!getTrueCategory()
-        .equals(other.getTrueCategory())) return false;
+    if (!getTextsList()
+        .equals(other.getTextsList())) return false;
+    if (!getTrueCategoriesList()
+        .equals(other.getTrueCategoriesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,10 +195,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEXT_FIELD_NUMBER;
-    hash = (53 * hash) + getText().hashCode();
-    hash = (37 * hash) + TRUE_CATEGORY_FIELD_NUMBER;
-    hash = (53 * hash) + getTrueCategory().hashCode();
+    if (getTextsCount() > 0) {
+      hash = (37 * hash) + TEXTS_FIELD_NUMBER;
+      hash = (53 * hash) + getTextsList().hashCode();
+    }
+    if (getTrueCategoriesCount() > 0) {
+      hash = (37 * hash) + TRUE_CATEGORIES_FIELD_NUMBER;
+      hash = (53 * hash) + getTrueCategoriesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -322,8 +334,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      text_ = "";
-      trueCategory_ = "";
+      texts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      trueCategories_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -358,10 +372,12 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.asgt.v2.ProductTypeFeedbackRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.text_ = text_;
+        texts_.makeImmutable();
+        result.texts_ = texts_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.trueCategory_ = trueCategory_;
+        trueCategories_.makeImmutable();
+        result.trueCategories_ = trueCategories_;
       }
     }
 
@@ -377,14 +393,24 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.asgt.v2.ProductTypeFeedbackRequest other) {
       if (other == ai.visma.asgt.v2.ProductTypeFeedbackRequest.getDefaultInstance()) return this;
-      if (!other.getText().isEmpty()) {
-        text_ = other.text_;
-        bitField0_ |= 0x00000001;
+      if (!other.texts_.isEmpty()) {
+        if (texts_.isEmpty()) {
+          texts_ = other.texts_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureTextsIsMutable();
+          texts_.addAll(other.texts_);
+        }
         onChanged();
       }
-      if (!other.getTrueCategory().isEmpty()) {
-        trueCategory_ = other.trueCategory_;
-        bitField0_ |= 0x00000002;
+      if (!other.trueCategories_.isEmpty()) {
+        if (trueCategories_.isEmpty()) {
+          trueCategories_ = other.trueCategories_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureTrueCategoriesIsMutable();
+          trueCategories_.addAll(other.trueCategories_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -414,13 +440,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              text_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTextsIsMutable();
+              texts_.add(s);
               break;
             } // case 10
             case 18: {
-              trueCategory_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTrueCategoriesIsMutable();
+              trueCategories_.add(s);
               break;
             } // case 18
             default: {
@@ -440,145 +468,223 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object text_ = "";
-    /**
-     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-     * @return The text.
-     */
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        text_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList texts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTextsIsMutable() {
+      if (!texts_.isModifiable()) {
+        texts_ = new com.google.protobuf.LazyStringArrayList(texts_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-     * @return The bytes for text.
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @return A list containing the texts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTextsList() {
+      texts_.makeImmutable();
+      return texts_;
+    }
+    /**
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @return The count of texts.
+     */
+    public int getTextsCount() {
+      return texts_.size();
+    }
+    /**
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The texts at the given index.
+     */
+    public java.lang.String getTexts(int index) {
+      return texts_.get(index);
+    }
+    /**
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the texts at the given index.
      */
     public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getTextsBytes(int index) {
+      return texts_.getByteString(index);
     }
     /**
-     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-     * @param value The text to set.
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param index The index to set the value at.
+     * @param value The texts to set.
      * @return This builder for chaining.
      */
-    public Builder setText(
-        java.lang.String value) {
+    public Builder setTexts(
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      text_ = value;
+      ensureTextsIsMutable();
+      texts_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param value The texts to add.
      * @return This builder for chaining.
      */
-    public Builder clearText() {
-      text_ = getDefaultInstance().getText();
-      bitField0_ = (bitField0_ & ~0x00000001);
+    public Builder addTexts(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTextsIsMutable();
+      texts_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-     * @param value The bytes for text to set.
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param values The texts to add.
      * @return This builder for chaining.
      */
-    public Builder setTextBytes(
+    public Builder addAllTexts(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTextsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, texts_);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTexts() {
+      texts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+     * @param value The bytes of the texts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTextsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      text_ = value;
+      ensureTextsIsMutable();
+      texts_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object trueCategory_ = "";
-    /**
-     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-     * @return The trueCategory.
-     */
-    public java.lang.String getTrueCategory() {
-      java.lang.Object ref = trueCategory_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        trueCategory_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList trueCategories_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTrueCategoriesIsMutable() {
+      if (!trueCategories_.isModifiable()) {
+        trueCategories_ = new com.google.protobuf.LazyStringArrayList(trueCategories_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-     * @return The bytes for trueCategory.
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @return A list containing the trueCategories.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrueCategoriesList() {
+      trueCategories_.makeImmutable();
+      return trueCategories_;
+    }
+    /**
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @return The count of trueCategories.
+     */
+    public int getTrueCategoriesCount() {
+      return trueCategories_.size();
+    }
+    /**
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The trueCategories at the given index.
+     */
+    public java.lang.String getTrueCategories(int index) {
+      return trueCategories_.get(index);
+    }
+    /**
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trueCategories at the given index.
      */
     public com.google.protobuf.ByteString
-        getTrueCategoryBytes() {
-      java.lang.Object ref = trueCategory_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        trueCategory_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getTrueCategoriesBytes(int index) {
+      return trueCategories_.getByteString(index);
     }
     /**
-     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-     * @param value The trueCategory to set.
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param index The index to set the value at.
+     * @param value The trueCategories to set.
      * @return This builder for chaining.
      */
-    public Builder setTrueCategory(
-        java.lang.String value) {
+    public Builder setTrueCategories(
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      trueCategory_ = value;
+      ensureTrueCategoriesIsMutable();
+      trueCategories_.set(index, value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param value The trueCategories to add.
      * @return This builder for chaining.
      */
-    public Builder clearTrueCategory() {
-      trueCategory_ = getDefaultInstance().getTrueCategory();
-      bitField0_ = (bitField0_ & ~0x00000002);
+    public Builder addTrueCategories(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTrueCategoriesIsMutable();
+      trueCategories_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-     * @param value The bytes for trueCategory to set.
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param values The trueCategories to add.
      * @return This builder for chaining.
      */
-    public Builder setTrueCategoryBytes(
+    public Builder addAllTrueCategories(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTrueCategoriesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, trueCategories_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTrueCategories() {
+      trueCategories_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+     * @param value The bytes of the trueCategories to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTrueCategoriesBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      trueCategory_ = value;
+      ensureTrueCategoriesIsMutable();
+      trueCategories_.add(value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

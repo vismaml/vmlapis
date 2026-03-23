@@ -101,11 +101,15 @@ export namespace ProductTypeCandidate {
 }
 
 export class ProductTypeFeedbackRequest extends jspb.Message {
-  getText(): string;
-  setText(value: string): ProductTypeFeedbackRequest;
+  getTextsList(): Array<string>;
+  setTextsList(value: Array<string>): ProductTypeFeedbackRequest;
+  clearTextsList(): ProductTypeFeedbackRequest;
+  addTexts(value: string, index?: number): ProductTypeFeedbackRequest;
 
-  getTrueCategory(): string;
-  setTrueCategory(value: string): ProductTypeFeedbackRequest;
+  getTrueCategoriesList(): Array<string>;
+  setTrueCategoriesList(value: Array<string>): ProductTypeFeedbackRequest;
+  clearTrueCategoriesList(): ProductTypeFeedbackRequest;
+  addTrueCategories(value: string, index?: number): ProductTypeFeedbackRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProductTypeFeedbackRequest.AsObject;
@@ -117,8 +121,8 @@ export class ProductTypeFeedbackRequest extends jspb.Message {
 
 export namespace ProductTypeFeedbackRequest {
   export type AsObject = {
-    text: string,
-    trueCategory: string,
+    textsList: Array<string>,
+    trueCategoriesList: Array<string>,
   }
 }
 

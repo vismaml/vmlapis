@@ -211,9 +211,9 @@ class ProductTypeCandidate(_message.Message):
     def __init__(self, type: _Optional[_Union[ProductType, str]] = ..., label: _Optional[str] = ..., confidence: _Optional[float] = ..., confidence_level: _Optional[_Union[ConfidenceLevel, str]] = ...) -> None: ...
 
 class ProductTypeFeedbackRequest(_message.Message):
-    __slots__ = ("text", "true_category")
-    TEXT_FIELD_NUMBER: _ClassVar[int]
-    TRUE_CATEGORY_FIELD_NUMBER: _ClassVar[int]
-    text: str
-    true_category: str
-    def __init__(self, text: _Optional[str] = ..., true_category: _Optional[str] = ...) -> None: ...
+    __slots__ = ("texts", "true_categories")
+    TEXTS_FIELD_NUMBER: _ClassVar[int]
+    TRUE_CATEGORIES_FIELD_NUMBER: _ClassVar[int]
+    texts: _containers.RepeatedScalarFieldContainer[str]
+    true_categories: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, texts: _Optional[_Iterable[str]] = ..., true_categories: _Optional[_Iterable[str]] = ...) -> None: ...

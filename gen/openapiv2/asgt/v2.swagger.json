@@ -1437,11 +1437,17 @@
     "v2ProductTypeFeedbackRequest": {
       "type": "object",
       "properties": {
-        "text": {
-          "type": "string"
+        "texts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
-        "trueCategory": {
-          "type": "string"
+        "trueCategories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

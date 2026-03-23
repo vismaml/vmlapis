@@ -572,10 +572,10 @@ func (m *ProductTypeFeedbackRequest) validate(all bool) error {
 
 	var errors []error
 
-	if utf8.RuneCountInString(m.GetText()) < 1 {
+	if len(m.GetTexts()) < 1 {
 		err := ProductTypeFeedbackRequestValidationError{
-			field:  "Text",
-			reason: "value length must be at least 1 runes",
+			field:  "Texts",
+			reason: "value must contain at least 1 item(s)",
 		}
 		if !all {
 			return err
@@ -583,15 +583,47 @@ func (m *ProductTypeFeedbackRequest) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
-	if utf8.RuneCountInString(m.GetTrueCategory()) < 1 {
+	for idx, item := range m.GetTexts() {
+		_, _ = idx, item
+
+		if utf8.RuneCountInString(item) < 1 {
+			err := ProductTypeFeedbackRequestValidationError{
+				field:  fmt.Sprintf("Texts[%v]", idx),
+				reason: "value length must be at least 1 runes",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
+
+	}
+
+	if len(m.GetTrueCategories()) < 1 {
 		err := ProductTypeFeedbackRequestValidationError{
-			field:  "TrueCategory",
-			reason: "value length must be at least 1 runes",
+			field:  "TrueCategories",
+			reason: "value must contain at least 1 item(s)",
 		}
 		if !all {
 			return err
 		}
 		errors = append(errors, err)
+	}
+
+	for idx, item := range m.GetTrueCategories() {
+		_, _ = idx, item
+
+		if utf8.RuneCountInString(item) < 1 {
+			err := ProductTypeFeedbackRequestValidationError{
+				field:  fmt.Sprintf("TrueCategories[%v]", idx),
+				reason: "value length must be at least 1 runes",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
+
 	}
 
 	if len(errors) > 0 {

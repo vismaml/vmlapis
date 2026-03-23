@@ -10,26 +10,52 @@ public interface ProductTypeFeedbackRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-   * @return The text.
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @return A list containing the texts.
    */
-  java.lang.String getText();
+  java.util.List<java.lang.String>
+      getTextsList();
   /**
-   * <code>string text = 1 [json_name = "text", (.validate.rules) = { ... }</code>
-   * @return The bytes for text.
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @return The count of texts.
+   */
+  int getTextsCount();
+  /**
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @param index The index of the element to return.
+   * @return The texts at the given index.
+   */
+  java.lang.String getTexts(int index);
+  /**
+   * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the texts at the given index.
    */
   com.google.protobuf.ByteString
-      getTextBytes();
+      getTextsBytes(int index);
 
   /**
-   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-   * @return The trueCategory.
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @return A list containing the trueCategories.
    */
-  java.lang.String getTrueCategory();
+  java.util.List<java.lang.String>
+      getTrueCategoriesList();
   /**
-   * <code>string true_category = 2 [json_name = "trueCategory", (.validate.rules) = { ... }</code>
-   * @return The bytes for trueCategory.
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @return The count of trueCategories.
+   */
+  int getTrueCategoriesCount();
+  /**
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @param index The index of the element to return.
+   * @return The trueCategories at the given index.
+   */
+  java.lang.String getTrueCategories(int index);
+  /**
+   * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the trueCategories at the given index.
    */
   com.google.protobuf.ByteString
-      getTrueCategoryBytes();
+      getTrueCategoriesBytes(int index);
 }

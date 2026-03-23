@@ -149,8 +149,18 @@ enum ProductType {
 }
 
 message ProductTypeFeedbackRequest {
-  string text = 1 [(validate.rules).string.min_len = 1];
-  string true_category = 2 [(validate.rules).string.min_len = 1];
+  repeated string texts = 1 [(validate.rules).repeated = {
+    min_items: 1
+    items: {
+      string: {min_len: 1}
+    }
+  }];
+  repeated string true_categories = 2 [(validate.rules).repeated = {
+    min_items: 1
+    items: {
+      string: {min_len: 1}
+    }
+  }];
 }
 
 enum ConfidenceLevel {

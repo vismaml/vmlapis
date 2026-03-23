@@ -131,7 +131,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.v2.ProductTypeFeedbackRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.v2.ProductTypeFeedbackRequest.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.v2.ProductTypeFeedbackRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -868,6 +868,13 @@ proto.asgt.v2.ProductTypeCandidate.prototype.setConfidenceLevel = function(value
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.v2.ProductTypeFeedbackRequest.repeatedFields_ = [1,2];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -899,8 +906,8 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.toObject = function(opt_inclu
  */
 proto.asgt.v2.ProductTypeFeedbackRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    text: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    trueCategory: jspb.Message.getFieldWithDefault(msg, 2, "")
+    textsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+    trueCategoriesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -939,11 +946,11 @@ proto.asgt.v2.ProductTypeFeedbackRequest.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setText(value);
+      msg.addTexts(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTrueCategory(value);
+      msg.addTrueCategories(value);
       break;
     default:
       reader.skipField();
@@ -974,16 +981,16 @@ proto.asgt.v2.ProductTypeFeedbackRequest.prototype.serializeBinary = function() 
  */
 proto.asgt.v2.ProductTypeFeedbackRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getText();
+  f = message.getTextsList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedString(
       1,
       f
     );
   }
-  f = message.getTrueCategory();
+  f = message.getTrueCategoriesList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedString(
       2,
       f
     );
@@ -992,38 +999,76 @@ proto.asgt.v2.ProductTypeFeedbackRequest.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string text = 1;
- * @return {string}
+ * repeated string texts = 1;
+ * @return {!Array<string>}
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getText = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getTextsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
+ */
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setTextsList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
  * @param {string} value
+ * @param {number=} opt_index
  * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setText = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.addTexts = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
- * optional string true_category = 2;
- * @return {string}
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getTrueCategory = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.clearTextsList = function() {
+  return this.setTextsList([]);
+};
+
+
+/**
+ * repeated string true_categories = 2;
+ * @return {!Array<string>}
+ */
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.getTrueCategoriesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
+ */
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setTrueCategoriesList = function(value) {
+  return jspb.Message.setField(this, 2, value || []);
 };
 
 
 /**
  * @param {string} value
+ * @param {number=} opt_index
  * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
  */
-proto.asgt.v2.ProductTypeFeedbackRequest.prototype.setTrueCategory = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.addTrueCategories = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.v2.ProductTypeFeedbackRequest} returns this
+ */
+proto.asgt.v2.ProductTypeFeedbackRequest.prototype.clearTrueCategoriesList = function() {
+  return this.setTrueCategoriesList([]);
 };
 
 
