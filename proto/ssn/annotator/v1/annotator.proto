@@ -47,7 +47,7 @@ message Feature {
     // Return text annotation
     TEXT_ANNOTATION = 1;
     // [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
-    ORDER_DATE = 2;
+    ORDER_DATE = 2 [deprecated = true];
     // Run due date detection
     PAYMENT_DUE_DATE = 3;
     // Run currency detection
@@ -60,7 +60,7 @@ message Feature {
     TOTAL_EXCL_VAT = 7;
     // [DEPRECATED] Run supplier corporate id detection.
     // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-    SUPPLIER_CORPORATE_ID = 8;
+    SUPPLIER_CORPORATE_ID = 8 [deprecated = true];
     // Run country code detection
     SUPPLIER_COUNTRY_CODE = 9;
     // Run document type detection
@@ -70,7 +70,7 @@ message Feature {
     // Run credit card number detection
     CREDIT_CARD_LAST_FOUR = 12;
     // [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
-    INVOICE_NUMBER = 13;
+    INVOICE_NUMBER = 13 [deprecated = true];
     // Run danish ocr line detection, for the type
     OCR_LINE_DK_TYPE = 14;
     // Run danish ocr line detection, for the payment id
