@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package ssn.type;
 
+import "asgt/v2/product_service.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/type/geometry.proto";
 
@@ -125,6 +126,8 @@ message PurchaseLineCandidate {
   string unit_price = 18;
   // Model metadata
   ModelSpec model_metadata = 19;
+  // Product type classification for the line
+  string product_type = 20;
 }
 
 message AnswerCandidate {
@@ -203,6 +206,8 @@ message PurchaseLine {
   repeated Candidate unit_price = 16;
   // Model metadata
   ModelSpec model_metadata = 17;
+  // Product type classification for the line
+  repeated asgt.v2.ProductTypeCandidate product_type = 18;
 }
 
 message VatDistribution {

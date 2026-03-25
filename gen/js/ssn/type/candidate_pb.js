@@ -21,6 +21,8 @@ var global =
     (function () { return this; }).call(null) ||
     Function('return this')();
 
+var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js');
+goog.object.extend(proto, asgt_v2_product_service_pb);
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.object.extend(proto, google_protobuf_wrappers_pb);
 var ssn_type_geometry_pb = require('../../ssn/type/geometry_pb.js');
@@ -1315,7 +1317,8 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, ""),
     total: jspb.Message.getFieldWithDefault(msg, 17, ""),
     unitPrice: jspb.Message.getFieldWithDefault(msg, 18, ""),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    productType: jspb.Message.getFieldWithDefault(msg, 20, "")
   };
 
   if (includeInstance) {
@@ -1420,6 +1423,10 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 20:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setProductType(value);
       break;
     default:
       reader.skipField();
@@ -1568,6 +1575,13 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
       19,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getProductType();
+  if (f.length > 0) {
+    writer.writeString(
+      20,
+      f
     );
   }
 };
@@ -1895,6 +1909,24 @@ proto.ssn.type.PurchaseLineCandidate.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 19) != null;
+};
+
+
+/**
+ * optional string product_type = 20;
+ * @return {string}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getProductType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 20, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.setProductType = function(value) {
+  return jspb.Message.setProto3StringField(this, 20, value);
 };
 
 
@@ -2787,7 +2819,7 @@ proto.ssn.type.DocumentMetadata.prototype.setPageCount = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18];
 
 
 
@@ -2851,7 +2883,9 @@ proto.ssn.type.PurchaseLine.toObject = function(includeInstance, msg) {
     proto.ssn.type.Candidate.toObject, includeInstance),
     unitPriceList: jspb.Message.toObjectList(msg.getUnitPriceList(),
     proto.ssn.type.Candidate.toObject, includeInstance),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    productTypeList: jspb.Message.toObjectList(msg.getProductTypeList(),
+    asgt_v2_product_service_pb.ProductTypeCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -2971,6 +3005,11 @@ proto.ssn.type.PurchaseLine.deserializeBinaryFromReader = function(msg, reader) 
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 18:
+      var value = new asgt_v2_product_service_pb.ProductTypeCandidate;
+      reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeCandidate.deserializeBinaryFromReader);
+      msg.addProductType(value);
       break;
     default:
       reader.skipField();
@@ -3134,6 +3173,14 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
       17,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getProductTypeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      18,
+      f,
+      asgt_v2_product_service_pb.ProductTypeCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3761,6 +3808,44 @@ proto.ssn.type.PurchaseLine.prototype.clearModelMetadata = function() {
  */
 proto.ssn.type.PurchaseLine.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 17) != null;
+};
+
+
+/**
+ * repeated asgt.v2.ProductTypeCandidate product_type = 18;
+ * @return {!Array<!proto.asgt.v2.ProductTypeCandidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getProductTypeList = function() {
+  return /** @type{!Array<!proto.asgt.v2.ProductTypeCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2_product_service_pb.ProductTypeCandidate, 18));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.v2.ProductTypeCandidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setProductTypeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 18, value);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.v2.ProductTypeCandidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addProductType = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 18, opt_value, proto.asgt.v2.ProductTypeCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearProductTypeList = function() {
+  return this.setProductTypeList([]);
 };
 
 

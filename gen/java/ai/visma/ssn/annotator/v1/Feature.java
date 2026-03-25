@@ -470,6 +470,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_DATES = 51;</code>
      */
     HOTEL_DATES(51),
+    /**
+     * <pre>
+     * Product type classification for purchase lines
+     * </pre>
+     *
+     * <code>PRODUCT_TYPES = 52;</code>
+     */
+    PRODUCT_TYPES(52),
     UNRECOGNIZED(-1),
     ;
 
@@ -903,6 +911,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_DATES = 51;</code>
      */
     public static final int HOTEL_DATES_VALUE = 51;
+    /**
+     * <pre>
+     * Product type classification for purchase lines
+     * </pre>
+     *
+     * <code>PRODUCT_TYPES = 52;</code>
+     */
+    public static final int PRODUCT_TYPES_VALUE = 52;
 
 
     public final int getNumber() {
@@ -981,6 +997,7 @@ private static final long serialVersionUID = 0L;
         case 49: return SWISS_QR_BILLS;
         case 50: return VERIFIED;
         case 51: return HOTEL_DATES;
+        case 52: return PRODUCT_TYPES;
         default: return null;
       }
     }
