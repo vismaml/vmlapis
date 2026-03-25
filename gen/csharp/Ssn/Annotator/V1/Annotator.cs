@@ -467,7 +467,10 @@ namespace Ssn.Annotator.V1 {
     public static partial class Types {
       public enum Type {
         /// <summary>
-        /// Run default feature set
+        /// Run default feature set:
+        /// PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+        /// SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
+        /// DOCUMENT_NUMBER, DOCUMENT_DATE
         /// </summary>
         [pbr::OriginalName("DEFAULT")] Default = 0,
         /// <summary>
@@ -475,7 +478,7 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("TEXT_ANNOTATION")] TextAnnotation = 1,
         /// <summary>
-        /// Run order date detection
+        /// [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
         /// </summary>
         [pbr::OriginalName("ORDER_DATE")] OrderDate = 2,
         /// <summary>
@@ -520,7 +523,7 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("CREDIT_CARD_LAST_FOUR")] CreditCardLastFour = 12,
         /// <summary>
-        /// [DEPRECATED] Run invoice number detection
+        /// [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
         /// </summary>
         [pbr::OriginalName("INVOICE_NUMBER")] InvoiceNumber = 13,
         /// <summary>
@@ -1140,6 +1143,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> orderDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
+    /// [DEPRECATED] Use document_date instead.
     /// orderDate
     /// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
     /// Example: "2019-12-31"
@@ -1320,10 +1324,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(98, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> invoiceNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [DEPRECATED]
-    /// use document number instead
+    /// [DEPRECATED] Use document_number instead.
     /// invoiceNumber
-    /// The supplier defined identifier af the invoice
+    /// The supplier defined identifier of the invoice
     /// Example: "12345-A99"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

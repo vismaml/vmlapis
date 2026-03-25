@@ -26,11 +26,14 @@ const (
 type Feature_Type int32
 
 const (
-	// Run default feature set
+	// Run default feature set:
+	// PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+	// SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
+	// DOCUMENT_NUMBER, DOCUMENT_DATE
 	Feature_DEFAULT Feature_Type = 0
 	// Return text annotation
 	Feature_TEXT_ANNOTATION Feature_Type = 1
-	// Run order date detection
+	// [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
 	Feature_ORDER_DATE Feature_Type = 2
 	// Run due date detection
 	Feature_PAYMENT_DUE_DATE Feature_Type = 3
@@ -53,7 +56,7 @@ const (
 	Feature_PAYMENT_METHOD Feature_Type = 11
 	// Run credit card number detection
 	Feature_CREDIT_CARD_LAST_FOUR Feature_Type = 12
-	// [DEPRECATED] Run invoice number detection
+	// [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
 	Feature_INVOICE_NUMBER Feature_Type = 13
 	// Run danish ocr line detection, for the type
 	Feature_OCR_LINE_DK_TYPE Feature_Type = 14
@@ -436,6 +439,7 @@ type DocumentAnnotatorResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// [DEPRECATED] Use document_date instead.
 	// orderDate
 	// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
 	// Example: "2019-12-31"
@@ -484,10 +488,9 @@ type DocumentAnnotatorResponse struct {
 	// Four digits
 	// Example: "0012"
 	CreditCardLastFour []*_type.Candidate `protobuf:"bytes,11,rep,name=credit_card_last_four,json=creditCardLastFour,proto3" json:"credit_card_last_four,omitempty"`
-	// [DEPRECATED]
-	// use document number instead
+	// [DEPRECATED] Use document_number instead.
 	// invoiceNumber
-	// The supplier defined identifier af the invoice
+	// The supplier defined identifier of the invoice
 	// Example: "12345-A99"
 	InvoiceNumber []*_type.Candidate `protobuf:"bytes,12,rep,name=invoice_number,json=invoiceNumber,proto3" json:"invoice_number,omitempty"`
 	// Return text annotation

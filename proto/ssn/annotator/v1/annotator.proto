@@ -39,11 +39,14 @@ service DocumentAnnotator {
 
 message Feature {
   enum Type {
-    // Run default feature set
+    // Run default feature set:
+    // PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+    // SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
+    // DOCUMENT_NUMBER, DOCUMENT_DATE
     DEFAULT = 0;
     // Return text annotation
     TEXT_ANNOTATION = 1;
-    // Run order date detection
+    // [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
     ORDER_DATE = 2;
     // Run due date detection
     PAYMENT_DUE_DATE = 3;
@@ -66,7 +69,7 @@ message Feature {
     PAYMENT_METHOD = 11;
     // Run credit card number detection
     CREDIT_CARD_LAST_FOUR = 12;
-    // [DEPRECATED] Run invoice number detection
+    // [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
     INVOICE_NUMBER = 13;
     // Run danish ocr line detection, for the type
     OCR_LINE_DK_TYPE = 14;
@@ -167,6 +170,7 @@ message DocumentAnnotatorRequest {
 }
 
 message DocumentAnnotatorResponse {
+  // [DEPRECATED] Use document_date instead.
   // orderDate
   // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
   // Example: "2019-12-31"
@@ -215,10 +219,9 @@ message DocumentAnnotatorResponse {
   // Four digits
   // Example: "0012"
   repeated ssn.type.Candidate credit_card_last_four = 11;
-  // [DEPRECATED]
-  // use document number instead
+  // [DEPRECATED] Use document_number instead.
   // invoiceNumber
-  // The supplier defined identifier af the invoice
+  // The supplier defined identifier of the invoice
   // Example: "12345-A99"
   repeated ssn.type.Candidate invoice_number = 12;
   // Return text annotation
