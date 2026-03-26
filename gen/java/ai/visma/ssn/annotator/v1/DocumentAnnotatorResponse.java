@@ -100,6 +100,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> orderDate_;
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -113,6 +114,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -127,6 +129,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -140,6 +143,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -153,6 +157,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -901,10 +906,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> invoiceNumber_;
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -916,10 +920,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -932,10 +935,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -947,10 +949,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -962,10 +963,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -7417,6 +7417,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7433,6 +7434,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7449,6 +7451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7465,6 +7468,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7488,6 +7492,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7508,6 +7513,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7530,6 +7536,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7553,6 +7560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7573,6 +7581,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7593,6 +7602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7614,6 +7624,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7633,6 +7644,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7652,6 +7664,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7665,6 +7678,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7681,6 +7695,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7698,6 +7713,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7711,6 +7727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -7725,6 +7742,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * [DEPRECATED] Use document_date instead.
      * orderDate
      * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
      * Example: "2019-12-31"
@@ -11317,10 +11335,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11335,10 +11352,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11353,10 +11369,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11371,10 +11386,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11396,10 +11410,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11418,10 +11431,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11442,10 +11454,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11467,10 +11478,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11489,10 +11499,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11511,10 +11520,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11534,10 +11542,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11555,10 +11562,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11576,10 +11582,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11591,10 +11596,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11609,10 +11613,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11628,10 +11631,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11643,10 +11645,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *
@@ -11659,10 +11660,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * use document number instead
+     * [DEPRECATED] Use document_number instead.
      * invoiceNumber
-     * The supplier defined identifier af the invoice
+     * The supplier defined identifier of the invoice
      * Example: "12345-A99"
      * </pre>
      *

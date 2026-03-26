@@ -11,6 +11,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -22,6 +23,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOrderDateList();
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -32,6 +34,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOrderDate(int index);
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -42,6 +45,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOrderDateCount();
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -53,6 +57,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOrderDateOrBuilderList();
   /**
    * <pre>
+   * [DEPRECATED] Use document_date instead.
    * orderDate
    * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
    * Example: "2019-12-31"
@@ -625,10 +630,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -638,10 +642,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getInvoiceNumberList();
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -650,10 +653,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getInvoiceNumber(int index);
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -662,10 +664,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getInvoiceNumberCount();
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *
@@ -675,10 +676,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getInvoiceNumberOrBuilderList();
   /**
    * <pre>
-   * [DEPRECATED]
-   * use document number instead
+   * [DEPRECATED] Use document_number instead.
    * invoiceNumber
-   * The supplier defined identifier af the invoice
+   * The supplier defined identifier of the invoice
    * Example: "12345-A99"
    * </pre>
    *

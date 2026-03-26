@@ -51,7 +51,10 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * Run default feature set
+     * Run default feature set:
+     * PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+     * SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
+     * DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
      * </pre>
      *
      * <code>DEFAULT = 0;</code>
@@ -67,11 +70,12 @@ private static final long serialVersionUID = 0L;
     TEXT_ANNOTATION(1),
     /**
      * <pre>
-     * Run order date detection
+     * [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
      * </pre>
      *
-     * <code>ORDER_DATE = 2;</code>
+     * <code>ORDER_DATE = 2 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     ORDER_DATE(2),
     /**
      * <pre>
@@ -119,8 +123,9 @@ private static final long serialVersionUID = 0L;
      * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * </pre>
      *
-     * <code>SUPPLIER_CORPORATE_ID = 8;</code>
+     * <code>SUPPLIER_CORPORATE_ID = 8 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SUPPLIER_CORPORATE_ID(8),
     /**
      * <pre>
@@ -156,11 +161,12 @@ private static final long serialVersionUID = 0L;
     CREDIT_CARD_LAST_FOUR(12),
     /**
      * <pre>
-     * [DEPRECATED] Run invoice number detection
+     * [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
      * </pre>
      *
-     * <code>INVOICE_NUMBER = 13;</code>
+     * <code>INVOICE_NUMBER = 13 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     INVOICE_NUMBER(13),
     /**
      * <pre>
@@ -489,7 +495,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Run default feature set
+     * Run default feature set:
+     * PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+     * SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
+     * DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
      * </pre>
      *
      * <code>DEFAULT = 0;</code>
@@ -505,12 +514,12 @@ private static final long serialVersionUID = 0L;
     public static final int TEXT_ANNOTATION_VALUE = 1;
     /**
      * <pre>
-     * Run order date detection
+     * [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
      * </pre>
      *
-     * <code>ORDER_DATE = 2;</code>
+     * <code>ORDER_DATE = 2 [deprecated = true];</code>
      */
-    public static final int ORDER_DATE_VALUE = 2;
+    @java.lang.Deprecated public static final int ORDER_DATE_VALUE = 2;
     /**
      * <pre>
      * Run due date detection
@@ -557,9 +566,9 @@ private static final long serialVersionUID = 0L;
      * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
      * </pre>
      *
-     * <code>SUPPLIER_CORPORATE_ID = 8;</code>
+     * <code>SUPPLIER_CORPORATE_ID = 8 [deprecated = true];</code>
      */
-    public static final int SUPPLIER_CORPORATE_ID_VALUE = 8;
+    @java.lang.Deprecated public static final int SUPPLIER_CORPORATE_ID_VALUE = 8;
     /**
      * <pre>
      * Run country code detection
@@ -594,12 +603,12 @@ private static final long serialVersionUID = 0L;
     public static final int CREDIT_CARD_LAST_FOUR_VALUE = 12;
     /**
      * <pre>
-     * [DEPRECATED] Run invoice number detection
+     * [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
      * </pre>
      *
-     * <code>INVOICE_NUMBER = 13;</code>
+     * <code>INVOICE_NUMBER = 13 [deprecated = true];</code>
      */
-    public static final int INVOICE_NUMBER_VALUE = 13;
+    @java.lang.Deprecated public static final int INVOICE_NUMBER_VALUE = 13;
     /**
      * <pre>
      * Run danish ocr line detection, for the type
