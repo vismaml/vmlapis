@@ -27,6 +27,8 @@ var asgt_type_model_type_pb = require('../../asgt/type/model_type_pb.js');
 goog.object.extend(proto, asgt_type_model_type_pb);
 var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
+var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js');
+goog.object.extend(proto, asgt_v2_product_service_pb);
 var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js');
 goog.object.extend(proto, asgt_v2_type_data_pb);
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
@@ -93,7 +95,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.v2.SuggestResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.v2.SuggestResponse.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.v2.SuggestResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -179,7 +181,8 @@ proto.asgt.v2.SuggestOptions.toObject = function(includeInstance, msg) {
   var f, obj = {
     suggestLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
     minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    includeProductTypes: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -228,6 +231,10 @@ proto.asgt.v2.SuggestOptions.deserializeBinaryFromReader = function(msg, reader)
       var value = /** @type {!proto.asgt.type.ModelType} */ (reader.readEnum());
       msg.setModelType(value);
       break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIncludeProductTypes(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -275,6 +282,13 @@ proto.asgt.v2.SuggestOptions.serializeBinaryToWriter = function(message, writer)
   if (f !== 0.0) {
     writer.writeEnum(
       3,
+      f
+    );
+  }
+  f = message.getIncludeProductTypes();
+  if (f) {
+    writer.writeBool(
+      4,
       f
     );
   }
@@ -332,6 +346,24 @@ proto.asgt.v2.SuggestOptions.prototype.getModelType = function() {
  */
 proto.asgt.v2.SuggestOptions.prototype.setModelType = function(value) {
   return jspb.Message.setProto3EnumField(this, 3, value);
+};
+
+
+/**
+ * optional bool include_product_types = 4;
+ * @return {boolean}
+ */
+proto.asgt.v2.SuggestOptions.prototype.getIncludeProductTypes = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.asgt.v2.SuggestOptions} returns this
+ */
+proto.asgt.v2.SuggestOptions.prototype.setIncludeProductTypes = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
@@ -568,6 +600,13 @@ proto.asgt.v2.SuggestRequest.prototype.hasOptions = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.v2.SuggestResponse.repeatedFields_ = [3];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -600,7 +639,9 @@ proto.asgt.v2.SuggestResponse.prototype.toObject = function(opt_includeInstance)
 proto.asgt.v2.SuggestResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     prediction: (f = msg.getPrediction()) && asgt_type_prediction_pb.Prediction.toObject(includeInstance, f),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
+    productTypeSuggestionsList: jspb.Message.toObjectList(msg.getProductTypeSuggestionsList(),
+    asgt_v2_product_service_pb.ProductTypeSuggestion.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -647,6 +688,11 @@ proto.asgt.v2.SuggestResponse.deserializeBinaryFromReader = function(msg, reader
       reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
+    case 3:
+      var value = new asgt_v2_product_service_pb.ProductTypeSuggestion;
+      reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeSuggestion.deserializeBinaryFromReader);
+      msg.addProductTypeSuggestions(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -690,6 +736,14 @@ proto.asgt.v2.SuggestResponse.serializeBinaryToWriter = function(message, writer
       2,
       f,
       asgt_type_model_pb.Model.serializeBinaryToWriter
+    );
+  }
+  f = message.getProductTypeSuggestionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      asgt_v2_product_service_pb.ProductTypeSuggestion.serializeBinaryToWriter
     );
   }
 };
@@ -766,6 +820,44 @@ proto.asgt.v2.SuggestResponse.prototype.clearModel = function() {
  */
 proto.asgt.v2.SuggestResponse.prototype.hasModel = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated ProductTypeSuggestion product_type_suggestions = 3;
+ * @return {!Array<!proto.asgt.v2.ProductTypeSuggestion>}
+ */
+proto.asgt.v2.SuggestResponse.prototype.getProductTypeSuggestionsList = function() {
+  return /** @type{!Array<!proto.asgt.v2.ProductTypeSuggestion>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2_product_service_pb.ProductTypeSuggestion, 3));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.v2.ProductTypeSuggestion>} value
+ * @return {!proto.asgt.v2.SuggestResponse} returns this
+*/
+proto.asgt.v2.SuggestResponse.prototype.setProductTypeSuggestionsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeSuggestion=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.v2.ProductTypeSuggestion}
+ */
+proto.asgt.v2.SuggestResponse.prototype.addProductTypeSuggestions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.asgt.v2.ProductTypeSuggestion, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.v2.SuggestResponse} returns this
+ */
+proto.asgt.v2.SuggestResponse.prototype.clearProductTypeSuggestionsList = function() {
+  return this.setProductTypeSuggestionsList([]);
 };
 
 
@@ -1016,7 +1108,7 @@ proto.asgt.v2.BatchSuggestRequest.prototype.hasOptions = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.v2.BatchSuggestResponse.repeatedFields_ = [1];
+proto.asgt.v2.BatchSuggestResponse.repeatedFields_ = [1,3];
 
 
 
@@ -1051,7 +1143,9 @@ proto.asgt.v2.BatchSuggestResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
     asgt_type_prediction_pb.Prediction.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
+    productTypeSuggestionsList: jspb.Message.toObjectList(msg.getProductTypeSuggestionsList(),
+    asgt_v2_product_service_pb.ProductTypeSuggestion.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1098,6 +1192,11 @@ proto.asgt.v2.BatchSuggestResponse.deserializeBinaryFromReader = function(msg, r
       reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
+    case 3:
+      var value = new asgt_v2_product_service_pb.ProductTypeSuggestion;
+      reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeSuggestion.deserializeBinaryFromReader);
+      msg.addProductTypeSuggestions(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1141,6 +1240,14 @@ proto.asgt.v2.BatchSuggestResponse.serializeBinaryToWriter = function(message, w
       2,
       f,
       asgt_type_model_pb.Model.serializeBinaryToWriter
+    );
+  }
+  f = message.getProductTypeSuggestionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      3,
+      f,
+      asgt_v2_product_service_pb.ProductTypeSuggestion.serializeBinaryToWriter
     );
   }
 };
@@ -1218,6 +1325,44 @@ proto.asgt.v2.BatchSuggestResponse.prototype.clearModel = function() {
  */
 proto.asgt.v2.BatchSuggestResponse.prototype.hasModel = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * repeated ProductTypeSuggestion product_type_suggestions = 3;
+ * @return {!Array<!proto.asgt.v2.ProductTypeSuggestion>}
+ */
+proto.asgt.v2.BatchSuggestResponse.prototype.getProductTypeSuggestionsList = function() {
+  return /** @type{!Array<!proto.asgt.v2.ProductTypeSuggestion>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2_product_service_pb.ProductTypeSuggestion, 3));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.v2.ProductTypeSuggestion>} value
+ * @return {!proto.asgt.v2.BatchSuggestResponse} returns this
+*/
+proto.asgt.v2.BatchSuggestResponse.prototype.setProductTypeSuggestionsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.ProductTypeSuggestion=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.v2.ProductTypeSuggestion}
+ */
+proto.asgt.v2.BatchSuggestResponse.prototype.addProductTypeSuggestions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.asgt.v2.ProductTypeSuggestion, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.v2.BatchSuggestResponse} returns this
+ */
+proto.asgt.v2.BatchSuggestResponse.prototype.clearProductTypeSuggestionsList = function() {
+  return this.setProductTypeSuggestionsList([]);
 };
 
 

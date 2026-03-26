@@ -56,4 +56,14 @@ public interface SuggestOptionsOrBuilder extends
    * @return The modelType.
    */
   ai.visma.asgt.type.ModelType getModelType();
+
+  /**
+   * <pre>
+   * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+   * </pre>
+   *
+   * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
+   * @return The includeProductTypes.
+   */
+  boolean getIncludeProductTypes();
 }

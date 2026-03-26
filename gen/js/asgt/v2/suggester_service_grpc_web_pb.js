@@ -26,6 +26,8 @@ var asgt_type_model_type_pb = require('../../asgt/type/model_type_pb.js')
 
 var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js')
 
+var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js')
+
 var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js')
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')

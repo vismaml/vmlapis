@@ -111,6 +111,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.asgt.type.ModelType.UNRECOGNIZED : result;
   }
 
+  public static final int INCLUDE_PRODUCT_TYPES_FIELD_NUMBER = 4;
+  private boolean includeProductTypes_ = false;
+  /**
+   * <pre>
+   * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+   * </pre>
+   *
+   * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
+   * @return The includeProductTypes.
+   */
+  @java.lang.Override
+  public boolean getIncludeProductTypes() {
+    return includeProductTypes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -134,6 +149,9 @@ private static final long serialVersionUID = 0L;
     if (modelType_ != ai.visma.asgt.type.ModelType.DEFAULT.getNumber()) {
       output.writeEnum(3, modelType_);
     }
+    if (includeProductTypes_ != false) {
+      output.writeBool(4, includeProductTypes_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -155,6 +173,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, modelType_);
     }
+    if (includeProductTypes_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, includeProductTypes_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -174,6 +196,8 @@ private static final long serialVersionUID = 0L;
         != other.getSuggestLimit()) return false;
     if (minConfidence_ != other.minConfidence_) return false;
     if (modelType_ != other.modelType_) return false;
+    if (getIncludeProductTypes()
+        != other.getIncludeProductTypes()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -191,6 +215,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + minConfidence_;
     hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + modelType_;
+    hash = (37 * hash) + INCLUDE_PRODUCT_TYPES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeProductTypes());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -325,6 +352,7 @@ private static final long serialVersionUID = 0L;
       suggestLimit_ = 0;
       minConfidence_ = 0;
       modelType_ = 0;
+      includeProductTypes_ = false;
       return this;
     }
 
@@ -367,6 +395,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.modelType_ = modelType_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeProductTypes_ = includeProductTypes_;
+      }
     }
 
     @java.lang.Override
@@ -389,6 +420,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.modelType_ != 0) {
         setModelTypeValue(other.getModelTypeValue());
+      }
+      if (other.getIncludeProductTypes() != false) {
+        setIncludeProductTypes(other.getIncludeProductTypes());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -431,6 +465,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              includeProductTypes_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -634,6 +673,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearModelType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       modelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeProductTypes_ ;
+    /**
+     * <pre>
+     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * </pre>
+     *
+     * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
+     * @return The includeProductTypes.
+     */
+    @java.lang.Override
+    public boolean getIncludeProductTypes() {
+      return includeProductTypes_;
+    }
+    /**
+     * <pre>
+     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * </pre>
+     *
+     * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
+     * @param value The includeProductTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeProductTypes(boolean value) {
+
+      includeProductTypes_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * </pre>
+     *
+     * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeProductTypes() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      includeProductTypes_ = false;
       onChanged();
       return this;
     }
