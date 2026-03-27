@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as asgt_type_model_pb from '../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
 import * as asgt_type_model_type_pb from '../../asgt/type/model_type_pb'; // proto import: "asgt/type/model_type.proto"
 import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_v2_product_service_pb from '../../asgt/v2/product_service_pb'; // proto import: "asgt/v2/product_service.proto"
 import * as asgt_v2_type_data_pb from '../../asgt/v2/type/data_pb'; // proto import: "asgt/v2/type/data.proto"
 import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
@@ -19,6 +20,9 @@ export class SuggestOptions extends jspb.Message {
   getModelType(): asgt_type_model_type_pb.ModelType;
   setModelType(value: asgt_type_model_type_pb.ModelType): SuggestOptions;
 
+  getIncludeProductTypes(): boolean;
+  setIncludeProductTypes(value: boolean): SuggestOptions;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestOptions.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestOptions): SuggestOptions.AsObject;
@@ -32,6 +36,7 @@ export namespace SuggestOptions {
     suggestLimit: number,
     minConfidence: asgt_type_prediction_pb.Confidence.Level,
     modelType: asgt_type_model_type_pb.ModelType,
+    includeProductTypes: boolean,
   }
 }
 
@@ -76,6 +81,11 @@ export class SuggestResponse extends jspb.Message {
   hasModel(): boolean;
   clearModel(): SuggestResponse;
 
+  getProductTypeSuggestions(): asgt_v2_product_service_pb.ProductTypeSuggestion | undefined;
+  setProductTypeSuggestions(value?: asgt_v2_product_service_pb.ProductTypeSuggestion): SuggestResponse;
+  hasProductTypeSuggestions(): boolean;
+  clearProductTypeSuggestions(): SuggestResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestResponse.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestResponse): SuggestResponse.AsObject;
@@ -88,6 +98,7 @@ export namespace SuggestResponse {
   export type AsObject = {
     prediction?: asgt_type_prediction_pb.Prediction.AsObject,
     model?: asgt_type_model_pb.Model.AsObject,
+    productTypeSuggestions?: asgt_v2_product_service_pb.ProductTypeSuggestion.AsObject,
   }
 }
 
@@ -132,6 +143,11 @@ export class BatchSuggestResponse extends jspb.Message {
   hasModel(): boolean;
   clearModel(): BatchSuggestResponse;
 
+  getProductTypeSuggestionsList(): Array<asgt_v2_product_service_pb.ProductTypeSuggestion>;
+  setProductTypeSuggestionsList(value: Array<asgt_v2_product_service_pb.ProductTypeSuggestion>): BatchSuggestResponse;
+  clearProductTypeSuggestionsList(): BatchSuggestResponse;
+  addProductTypeSuggestions(value?: asgt_v2_product_service_pb.ProductTypeSuggestion, index?: number): asgt_v2_product_service_pb.ProductTypeSuggestion;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BatchSuggestResponse.AsObject;
   static toObject(includeInstance: boolean, msg: BatchSuggestResponse): BatchSuggestResponse.AsObject;
@@ -144,6 +160,7 @@ export namespace BatchSuggestResponse {
   export type AsObject = {
     predictionsList: Array<asgt_type_prediction_pb.Prediction.AsObject>,
     model?: asgt_type_model_pb.Model.AsObject,
+    productTypeSuggestionsList: Array<asgt_v2_product_service_pb.ProductTypeSuggestion.AsObject>,
   }
 }
 

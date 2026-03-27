@@ -47,4 +47,28 @@ public interface BatchSuggestResponseOrBuilder extends
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    */
   ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder();
+
+  /**
+   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> 
+      getProductTypeSuggestionsList();
+  /**
+   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index);
+  /**
+   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  int getProductTypeSuggestionsCount();
+  /**
+   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
+      getProductTypeSuggestionsOrBuilderList();
+  /**
+   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(
+      int index);
 }

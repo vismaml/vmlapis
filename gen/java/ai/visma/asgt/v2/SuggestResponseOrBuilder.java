@@ -38,4 +38,19 @@ public interface SuggestResponseOrBuilder extends
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    */
   ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder();
+
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return Whether the productTypeSuggestions field is set.
+   */
+  boolean hasProductTypeSuggestions();
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return The productTypeSuggestions.
+   */
+  ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions();
+  /**
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   */
+  ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder();
 }

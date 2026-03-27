@@ -1255,6 +1255,13 @@
         },
         "model": {
           "$ref": "#/definitions/asgttypeModel"
+        },
+        "productTypeSuggestions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeSuggestion"
+          }
         }
       }
     },
@@ -1481,6 +1488,10 @@
         "modelType": {
           "$ref": "#/definitions/typeModelType",
           "title": "Model type requested"
+        },
+        "includeProductTypes": {
+          "type": "boolean",
+          "title": "When true, the service will also call the ProductTypeService and include product type suggestions in the response"
         }
       }
     },
@@ -1492,6 +1503,9 @@
         },
         "model": {
           "$ref": "#/definitions/asgttypeModel"
+        },
+        "productTypeSuggestions": {
+          "$ref": "#/definitions/v2ProductTypeSuggestion"
         }
       }
     },

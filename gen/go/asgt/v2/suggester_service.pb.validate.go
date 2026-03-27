@@ -85,6 +85,8 @@ func (m *SuggestOptions) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
+	// no validation rules for IncludeProductTypes
+
 	if len(errors) > 0 {
 		return SuggestOptionsMultiError(errors)
 	}
@@ -419,6 +421,35 @@ func (m *SuggestResponse) validate(all bool) error {
 		if err := v.Validate(); err != nil {
 			return SuggestResponseValidationError{
 				field:  "Model",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetProductTypeSuggestions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "ProductTypeSuggestions",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, SuggestResponseValidationError{
+					field:  "ProductTypeSuggestions",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetProductTypeSuggestions()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return SuggestResponseValidationError{
+				field:  "ProductTypeSuggestions",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
@@ -775,6 +806,40 @@ func (m *BatchSuggestResponse) validate(all bool) error {
 				cause:  err,
 			}
 		}
+	}
+
+	for idx, item := range m.GetProductTypeSuggestions() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, BatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("ProductTypeSuggestions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, BatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("ProductTypeSuggestions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return BatchSuggestResponseValidationError{
+					field:  fmt.Sprintf("ProductTypeSuggestions[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
 	}
 
 	if len(errors) > 0 {

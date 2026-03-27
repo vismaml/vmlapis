@@ -26,52 +26,57 @@ namespace Asgt.V2 {
           string.Concat(
             "Ch9hc2d0L3YyL3N1Z2dlc3Rlcl9zZXJ2aWNlLnByb3RvEgdhc2d0LnYyGhVh",
             "c2d0L3R5cGUvbW9kZWwucHJvdG8aGmFzZ3QvdHlwZS9tb2RlbF90eXBlLnBy",
-            "b3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxoXYXNndC92Mi90eXBl",
-            "L2RhdGEucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aLnBy",
-            "b3RvYy1nZW4tb3BlbmFwaXYyL29wdGlvbnMvYW5ub3RhdGlvbnMucHJvdG8a",
-            "F3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvIt0BCg5TdWdnZXN0T3B0aW9ucxIj",
-            "Cg1zdWdnZXN0X2xpbWl0GAEgASgFUgxzdWdnZXN0TGltaXQSTAoObWluX2Nv",
-            "bmZpZGVuY2UYAiABKA4yGy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbEII",
-            "+kIFggECEAFSDW1pbkNvbmZpZGVuY2USPQoKbW9kZWxfdHlwZRgDIAEoDjIU",
-            "LmFzZ3QudHlwZS5Nb2RlbFR5cGVCCPpCBYIBAhABUgltb2RlbFR5cGU6GZJB",
-            "FjIUeyJzdWdnZXN0X2xpbWl0IjogM30iugEKDlN1Z2dlc3RSZXF1ZXN0EksK",
-            "DGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1b",
-            "QS1aYS16MC05Xy4+LV0qJFILZGF0YXNldE5hbWUSKAoFaW5wdXQYAiABKAsy",
-            "Ei5hc2d0LnYyLnR5cGUuRGF0YVIFaW5wdXQSMQoHb3B0aW9ucxgDIAEoCzIX",
-            "LmFzZ3QudjIuU3VnZ2VzdE9wdGlvbnNSB29wdGlvbnMicAoPU3VnZ2VzdFJl",
-            "c3BvbnNlEjUKCnByZWRpY3Rpb24YASABKAsyFS5hc2d0LnR5cGUuUHJlZGlj",
-            "dGlvblIKcHJlZGljdGlvbhImCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5N",
-            "b2RlbFIFbW9kZWwiwQEKE0JhdGNoU3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNl",
+            "b3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxodYXNndC92Mi9wcm9k",
+            "dWN0X3NlcnZpY2UucHJvdG8aF2FzZ3QvdjIvdHlwZS9kYXRhLnByb3RvGhxn",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGi5wcm90b2MtZ2VuLW9wZW5h",
+            "cGl2Mi9vcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhd2YWxpZGF0ZS92YWxp",
+            "ZGF0ZS5wcm90byKRAgoOU3VnZ2VzdE9wdGlvbnMSIwoNc3VnZ2VzdF9saW1p",
+            "dBgBIAEoBVIMc3VnZ2VzdExpbWl0EkwKDm1pbl9jb25maWRlbmNlGAIgASgO",
+            "MhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWxCCPpCBYIBAhABUg1taW5D",
+            "b25maWRlbmNlEj0KCm1vZGVsX3R5cGUYAyABKA4yFC5hc2d0LnR5cGUuTW9k",
+            "ZWxUeXBlQgj6QgWCAQIQAVIJbW9kZWxUeXBlEjIKFWluY2x1ZGVfcHJvZHVj",
+            "dF90eXBlcxgEIAEoCFITaW5jbHVkZVByb2R1Y3RUeXBlczoZkkEWMhR7InN1",
+            "Z2dlc3RfbGltaXQiOiAzfSK6AQoOU3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNl",
             "dF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXow",
-            "LTlfLj4tXSokUgtkYXRhc2V0TmFtZRIqCgZpbnB1dHMYAiADKAsyEi5hc2d0",
-            "LnYyLnR5cGUuRGF0YVIGaW5wdXRzEjEKB29wdGlvbnMYAyABKAsyFy5hc2d0",
-            "LnYyLlN1Z2dlc3RPcHRpb25zUgdvcHRpb25zIncKFEJhdGNoU3VnZ2VzdFJl",
-            "c3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygLMhUuYXNndC50eXBlLlByZWRp",
-            "Y3Rpb25SC3ByZWRpY3Rpb25zEiYKBW1vZGVsGAIgASgLMhAuYXNndC50eXBl",
-            "Lk1vZGVsUgVtb2RlbDK7AwoQU3VnZ2VzdGVyU2VydmljZRJsCgdTdWdnZXN0",
-            "EhcuYXNndC52Mi5TdWdnZXN0UmVxdWVzdBoYLmFzZ3QudjIuU3VnZ2VzdFJl",
-            "c3BvbnNlIi6C0+STAigiIy92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfTpz",
-            "dWdnZXN0OgEqEoABCgxCYXRjaFN1Z2dlc3QSHC5hc2d0LnYyLkJhdGNoU3Vn",
-            "Z2VzdFJlcXVlc3QaHS5hc2d0LnYyLkJhdGNoU3VnZ2VzdFJlc3BvbnNlIjOC",
-            "0+STAi0iKC92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfTpiYXRjaFN1Z2dl",
-            "c3Q6ASoSiwEKEU1vZGVsQmF0Y2hTdWdnZXN0EhwuYXNndC52Mi5CYXRjaFN1",
-            "Z2dlc3RSZXF1ZXN0Gh0uYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXNwb25zZSI5",
-            "gtPkkwIzIi4vdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vbW9kZWw6YmF0",
-            "Y2hTdWdnZXN0OgEqGiiSQSUSI01ha2UgcHJlZGljdGlvbnMgYWdhaW5zdCBh",
-            "IGRhdGFzZXQuQtABChBhaS52aXNtYS5hc2d0LnYyQhVTdWdnZXN0ZXJTZXJ2",
-            "aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
-            "Z28vYXNndC92MqICA0FYWKoCB0FzZ3QuVjLKAgdBc2d0XFYy4gITQXNndFxW",
-            "MlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYykkE6EhEKC0F1dG9TdWdnZXN0MgJ2",
-            "MioBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJv",
-            "dG8z"));
+            "LTlfLj4tXSokUgtkYXRhc2V0TmFtZRIoCgVpbnB1dBgCIAEoCzISLmFzZ3Qu",
+            "djIudHlwZS5EYXRhUgVpbnB1dBIxCgdvcHRpb25zGAMgASgLMhcuYXNndC52",
+            "Mi5TdWdnZXN0T3B0aW9uc1IHb3B0aW9ucyLKAQoPU3VnZ2VzdFJlc3BvbnNl",
+            "EjUKCnByZWRpY3Rpb24YASABKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblIK",
+            "cHJlZGljdGlvbhImCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbFIF",
+            "bW9kZWwSWAoYcHJvZHVjdF90eXBlX3N1Z2dlc3Rpb25zGAMgASgLMh4uYXNn",
+            "dC52Mi5Qcm9kdWN0VHlwZVN1Z2dlc3Rpb25SFnByb2R1Y3RUeXBlU3VnZ2Vz",
+            "dGlvbnMiwQEKE0JhdGNoU3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNldF9uYW1l",
+            "GAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4t",
+            "XSokUgtkYXRhc2V0TmFtZRIqCgZpbnB1dHMYAiADKAsyEi5hc2d0LnYyLnR5",
+            "cGUuRGF0YVIGaW5wdXRzEjEKB29wdGlvbnMYAyABKAsyFy5hc2d0LnYyLlN1",
+            "Z2dlc3RPcHRpb25zUgdvcHRpb25zItEBChRCYXRjaFN1Z2dlc3RSZXNwb25z",
+            "ZRI3CgtwcmVkaWN0aW9ucxgBIAMoCzIVLmFzZ3QudHlwZS5QcmVkaWN0aW9u",
+            "UgtwcmVkaWN0aW9ucxImCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2Rl",
+            "bFIFbW9kZWwSWAoYcHJvZHVjdF90eXBlX3N1Z2dlc3Rpb25zGAMgAygLMh4u",
+            "YXNndC52Mi5Qcm9kdWN0VHlwZVN1Z2dlc3Rpb25SFnByb2R1Y3RUeXBlU3Vn",
+            "Z2VzdGlvbnMyuwMKEFN1Z2dlc3RlclNlcnZpY2USbAoHU3VnZ2VzdBIXLmFz",
+            "Z3QudjIuU3VnZ2VzdFJlcXVlc3QaGC5hc2d0LnYyLlN1Z2dlc3RSZXNwb25z",
+            "ZSIugtPkkwIoIiMvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06c3VnZ2Vz",
+            "dDoBKhKAAQoMQmF0Y2hTdWdnZXN0EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RS",
+            "ZXF1ZXN0Gh0uYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXNwb25zZSIzgtPkkwIt",
+            "IigvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06YmF0Y2hTdWdnZXN0OgEq",
+            "EosBChFNb2RlbEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0",
+            "UmVxdWVzdBodLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVzcG9uc2UiOYLT5JMC",
+            "MyIuL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L21vZGVsOmJhdGNoU3Vn",
+            "Z2VzdDoBKhookkElEiNNYWtlIHByZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRh",
+            "c2V0LkLQAQoQYWkudmlzbWEuYXNndC52MkIVU3VnZ2VzdGVyU2VydmljZVBy",
+            "b3RvUAFaK2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2Fz",
+            "Z3QvdjKiAgNBWFiqAgdBc2d0LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BC",
+            "TWV0YWRhdGHqAghBc2d0OjpWMpJBOhIRCgtBdXRvU3VnZ2VzdDICdjIqAQIy",
+            "EGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.ProductServiceReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence", "ModelType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence", "ModelType", "IncludeProductTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model", "ProductTypeSuggestions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "DatasetName", "Inputs", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestResponse), global::Asgt.V2.BatchSuggestResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestResponse), global::Asgt.V2.BatchSuggestResponse.Parser, new[]{ "Predictions", "Model", "ProductTypeSuggestions" }, null, null, null, null)
           }));
     }
     #endregion
@@ -116,6 +121,7 @@ namespace Asgt.V2 {
       suggestLimit_ = other.suggestLimit_;
       minConfidence_ = other.minConfidence_;
       modelType_ = other.modelType_;
+      includeProductTypes_ = other.includeProductTypes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -170,6 +176,21 @@ namespace Asgt.V2 {
       }
     }
 
+    /// <summary>Field number for the "include_product_types" field.</summary>
+    public const int IncludeProductTypesFieldNumber = 4;
+    private bool includeProductTypes_;
+    /// <summary>
+    /// When true, the service will also call the ProductTypeService and include product type suggestions in the response
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeProductTypes {
+      get { return includeProductTypes_; }
+      set {
+        includeProductTypes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -188,6 +209,7 @@ namespace Asgt.V2 {
       if (SuggestLimit != other.SuggestLimit) return false;
       if (MinConfidence != other.MinConfidence) return false;
       if (ModelType != other.ModelType) return false;
+      if (IncludeProductTypes != other.IncludeProductTypes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -198,6 +220,7 @@ namespace Asgt.V2 {
       if (SuggestLimit != 0) hash ^= SuggestLimit.GetHashCode();
       if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
       if (ModelType != global::Asgt.Type.ModelType.Default) hash ^= ModelType.GetHashCode();
+      if (IncludeProductTypes != false) hash ^= IncludeProductTypes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -228,6 +251,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(24);
         output.WriteEnum((int) ModelType);
       }
+      if (IncludeProductTypes != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeProductTypes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -250,6 +277,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(24);
         output.WriteEnum((int) ModelType);
       }
+      if (IncludeProductTypes != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeProductTypes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -268,6 +299,9 @@ namespace Asgt.V2 {
       }
       if (ModelType != global::Asgt.Type.ModelType.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelType);
+      }
+      if (IncludeProductTypes != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -289,6 +323,9 @@ namespace Asgt.V2 {
       }
       if (other.ModelType != global::Asgt.Type.ModelType.Default) {
         ModelType = other.ModelType;
+      }
+      if (other.IncludeProductTypes != false) {
+        IncludeProductTypes = other.IncludeProductTypes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -321,6 +358,10 @@ namespace Asgt.V2 {
             ModelType = (global::Asgt.Type.ModelType) input.ReadEnum();
             break;
           }
+          case 32: {
+            IncludeProductTypes = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -350,6 +391,10 @@ namespace Asgt.V2 {
           }
           case 24: {
             ModelType = (global::Asgt.Type.ModelType) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            IncludeProductTypes = input.ReadBool();
             break;
           }
         }
@@ -692,6 +737,7 @@ namespace Asgt.V2 {
     public SuggestResponse(SuggestResponse other) : this() {
       prediction_ = other.prediction_ != null ? other.prediction_.Clone() : null;
       model_ = other.model_ != null ? other.model_.Clone() : null;
+      productTypeSuggestions_ = other.productTypeSuggestions_ != null ? other.productTypeSuggestions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -725,6 +771,18 @@ namespace Asgt.V2 {
       }
     }
 
+    /// <summary>Field number for the "product_type_suggestions" field.</summary>
+    public const int ProductTypeSuggestionsFieldNumber = 3;
+    private global::Asgt.V2.ProductTypeSuggestion productTypeSuggestions_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.V2.ProductTypeSuggestion ProductTypeSuggestions {
+      get { return productTypeSuggestions_; }
+      set {
+        productTypeSuggestions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -742,6 +800,7 @@ namespace Asgt.V2 {
       }
       if (!object.Equals(Prediction, other.Prediction)) return false;
       if (!object.Equals(Model, other.Model)) return false;
+      if (!object.Equals(ProductTypeSuggestions, other.ProductTypeSuggestions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -751,6 +810,7 @@ namespace Asgt.V2 {
       int hash = 1;
       if (prediction_ != null) hash ^= Prediction.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
+      if (productTypeSuggestions_ != null) hash ^= ProductTypeSuggestions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -777,6 +837,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Model);
       }
+      if (productTypeSuggestions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ProductTypeSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -795,6 +859,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Model);
       }
+      if (productTypeSuggestions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ProductTypeSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -810,6 +878,9 @@ namespace Asgt.V2 {
       }
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
+      }
+      if (productTypeSuggestions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProductTypeSuggestions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -834,6 +905,12 @@ namespace Asgt.V2 {
           Model = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
+      }
+      if (other.productTypeSuggestions_ != null) {
+        if (productTypeSuggestions_ == null) {
+          ProductTypeSuggestions = new global::Asgt.V2.ProductTypeSuggestion();
+        }
+        ProductTypeSuggestions.MergeFrom(other.ProductTypeSuggestions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -868,6 +945,13 @@ namespace Asgt.V2 {
             input.ReadMessage(Model);
             break;
           }
+          case 26: {
+            if (productTypeSuggestions_ == null) {
+              ProductTypeSuggestions = new global::Asgt.V2.ProductTypeSuggestion();
+            }
+            input.ReadMessage(ProductTypeSuggestions);
+            break;
+          }
         }
       }
     #endif
@@ -899,6 +983,13 @@ namespace Asgt.V2 {
               Model = new global::Asgt.Type.Model();
             }
             input.ReadMessage(Model);
+            break;
+          }
+          case 26: {
+            if (productTypeSuggestions_ == null) {
+              ProductTypeSuggestions = new global::Asgt.V2.ProductTypeSuggestion();
+            }
+            input.ReadMessage(ProductTypeSuggestions);
             break;
           }
         }
@@ -1221,6 +1312,7 @@ namespace Asgt.V2 {
     public BatchSuggestResponse(BatchSuggestResponse other) : this() {
       predictions_ = other.predictions_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
+      productTypeSuggestions_ = other.productTypeSuggestions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1253,6 +1345,17 @@ namespace Asgt.V2 {
       }
     }
 
+    /// <summary>Field number for the "product_type_suggestions" field.</summary>
+    public const int ProductTypeSuggestionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeSuggestion> _repeated_productTypeSuggestions_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.V2.ProductTypeSuggestion.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> productTypeSuggestions_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> ProductTypeSuggestions {
+      get { return productTypeSuggestions_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1270,6 +1373,7 @@ namespace Asgt.V2 {
       }
       if(!predictions_.Equals(other.predictions_)) return false;
       if (!object.Equals(Model, other.Model)) return false;
+      if(!productTypeSuggestions_.Equals(other.productTypeSuggestions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1279,6 +1383,7 @@ namespace Asgt.V2 {
       int hash = 1;
       hash ^= predictions_.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
+      hash ^= productTypeSuggestions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1302,6 +1407,7 @@ namespace Asgt.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Model);
       }
+      productTypeSuggestions_.WriteTo(output, _repeated_productTypeSuggestions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1317,6 +1423,7 @@ namespace Asgt.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Model);
       }
+      productTypeSuggestions_.WriteTo(ref output, _repeated_productTypeSuggestions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1331,6 +1438,7 @@ namespace Asgt.V2 {
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
       }
+      size += productTypeSuggestions_.CalculateSize(_repeated_productTypeSuggestions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1350,6 +1458,7 @@ namespace Asgt.V2 {
         }
         Model.MergeFrom(other.Model);
       }
+      productTypeSuggestions_.Add(other.productTypeSuggestions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1380,6 +1489,10 @@ namespace Asgt.V2 {
             input.ReadMessage(Model);
             break;
           }
+          case 26: {
+            productTypeSuggestions_.AddEntriesFrom(input, _repeated_productTypeSuggestions_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1408,6 +1521,10 @@ namespace Asgt.V2 {
               Model = new global::Asgt.Type.Model();
             }
             input.ReadMessage(Model);
+            break;
+          }
+          case 26: {
+            productTypeSuggestions_.AddEntriesFrom(ref input, _repeated_productTypeSuggestions_codec);
             break;
           }
         }

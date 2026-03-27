@@ -5,6 +5,7 @@ package asgt.v2;
 import "asgt/type/model.proto";
 import "asgt/type/model_type.proto";
 import "asgt/type/prediction.proto";
+import "asgt/v2/product_service.proto";
 import "asgt/v2/type/data.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
@@ -60,6 +61,8 @@ message SuggestOptions {
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
   // Model type requested
   asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
+  // When true, the service will also call the ProductTypeService and include product type suggestions in the response
+  bool include_product_types = 4;
 }
 
 message SuggestRequest {
@@ -76,6 +79,7 @@ message SuggestRequest {
 message SuggestResponse {
   asgt.type.Prediction prediction = 1;
   asgt.type.Model model = 2;
+  ProductTypeSuggestion product_type_suggestions = 3;
 }
 
 message BatchSuggestRequest {
@@ -92,4 +96,5 @@ message BatchSuggestRequest {
 message BatchSuggestResponse {
   repeated asgt.type.Prediction predictions = 1;
   asgt.type.Model model = 2;
+  repeated ProductTypeSuggestion product_type_suggestions = 3;
 }
