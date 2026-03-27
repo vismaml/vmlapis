@@ -96,5 +96,5 @@ message BatchSuggestRequest {
 message BatchSuggestResponse {
   repeated asgt.type.Prediction predictions = 1;
   asgt.type.Model model = 2;
-  ProductTypeSuggestion product_type_suggestions = 3;
+  repeated ProductTypeSuggestion product_type_suggestions = 3;
 }
