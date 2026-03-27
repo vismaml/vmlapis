@@ -40,26 +40,17 @@ public interface SuggestResponseOrBuilder extends
   ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder();
 
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return Whether the productTypeSuggestions field is set.
    */
-  java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> 
-      getProductTypeSuggestionsList();
+  boolean hasProductTypeSuggestions();
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return The productTypeSuggestions.
    */
-  ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index);
+  ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions();
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
-  int getProductTypeSuggestionsCount();
-  /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-   */
-  java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
-      getProductTypeSuggestionsOrBuilderList();
-  /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-   */
-  ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(
-      int index);
+  ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder();
 }

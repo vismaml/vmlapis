@@ -95,7 +95,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.asgt.v2.SuggestResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.v2.SuggestResponse.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.asgt.v2.SuggestResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -600,13 +600,6 @@ proto.asgt.v2.SuggestRequest.prototype.hasOptions = function() {
 
 
 
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.asgt.v2.SuggestResponse.repeatedFields_ = [3];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -640,8 +633,7 @@ proto.asgt.v2.SuggestResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     prediction: (f = msg.getPrediction()) && asgt_type_prediction_pb.Prediction.toObject(includeInstance, f),
     model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
-    productTypeSuggestionsList: jspb.Message.toObjectList(msg.getProductTypeSuggestionsList(),
-    asgt_v2_product_service_pb.ProductTypeSuggestion.toObject, includeInstance)
+    productTypeSuggestions: (f = msg.getProductTypeSuggestions()) && asgt_v2_product_service_pb.ProductTypeSuggestion.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -691,7 +683,7 @@ proto.asgt.v2.SuggestResponse.deserializeBinaryFromReader = function(msg, reader
     case 3:
       var value = new asgt_v2_product_service_pb.ProductTypeSuggestion;
       reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeSuggestion.deserializeBinaryFromReader);
-      msg.addProductTypeSuggestions(value);
+      msg.setProductTypeSuggestions(value);
       break;
     default:
       reader.skipField();
@@ -738,9 +730,9 @@ proto.asgt.v2.SuggestResponse.serializeBinaryToWriter = function(message, writer
       asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
-  f = message.getProductTypeSuggestionsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getProductTypeSuggestions();
+  if (f != null) {
+    writer.writeMessage(
       3,
       f,
       asgt_v2_product_service_pb.ProductTypeSuggestion.serializeBinaryToWriter
@@ -824,40 +816,39 @@ proto.asgt.v2.SuggestResponse.prototype.hasModel = function() {
 
 
 /**
- * repeated ProductTypeSuggestion product_type_suggestions = 3;
- * @return {!Array<!proto.asgt.v2.ProductTypeSuggestion>}
+ * optional ProductTypeSuggestion product_type_suggestions = 3;
+ * @return {?proto.asgt.v2.ProductTypeSuggestion}
  */
-proto.asgt.v2.SuggestResponse.prototype.getProductTypeSuggestionsList = function() {
-  return /** @type{!Array<!proto.asgt.v2.ProductTypeSuggestion>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_v2_product_service_pb.ProductTypeSuggestion, 3));
+proto.asgt.v2.SuggestResponse.prototype.getProductTypeSuggestions = function() {
+  return /** @type{?proto.asgt.v2.ProductTypeSuggestion} */ (
+    jspb.Message.getWrapperField(this, asgt_v2_product_service_pb.ProductTypeSuggestion, 3));
 };
 
 
 /**
- * @param {!Array<!proto.asgt.v2.ProductTypeSuggestion>} value
+ * @param {?proto.asgt.v2.ProductTypeSuggestion|undefined} value
  * @return {!proto.asgt.v2.SuggestResponse} returns this
 */
-proto.asgt.v2.SuggestResponse.prototype.setProductTypeSuggestionsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+proto.asgt.v2.SuggestResponse.prototype.setProductTypeSuggestions = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
- * @param {!proto.asgt.v2.ProductTypeSuggestion=} opt_value
- * @param {number=} opt_index
- * @return {!proto.asgt.v2.ProductTypeSuggestion}
- */
-proto.asgt.v2.SuggestResponse.prototype.addProductTypeSuggestions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.asgt.v2.ProductTypeSuggestion, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  * @return {!proto.asgt.v2.SuggestResponse} returns this
  */
-proto.asgt.v2.SuggestResponse.prototype.clearProductTypeSuggestionsList = function() {
-  return this.setProductTypeSuggestionsList([]);
+proto.asgt.v2.SuggestResponse.prototype.clearProductTypeSuggestions = function() {
+  return this.setProductTypeSuggestions(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.v2.SuggestResponse.prototype.hasProductTypeSuggestions = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

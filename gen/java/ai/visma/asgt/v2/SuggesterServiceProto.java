@@ -81,7 +81,7 @@ public final class SuggesterServiceProto {
       "ponse\0225\n\nprediction\030\001 \001(\0132\025.asgt.type.Pr" +
       "edictionR\nprediction\022&\n\005model\030\002 \001(\0132\020.as" +
       "gt.type.ModelR\005model\022X\n\030product_type_sug" +
-      "gestions\030\003 \003(\0132\036.asgt.v2.ProductTypeSugg" +
+      "gestions\030\003 \001(\0132\036.asgt.v2.ProductTypeSugg" +
       "estionR\026productTypeSuggestions\"\301\001\n\023Batch" +
       "SuggestRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B" +
       "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013" +

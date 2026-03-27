@@ -42,8 +42,8 @@ class SuggestResponse(_message.Message):
     PRODUCT_TYPE_SUGGESTIONS_FIELD_NUMBER: _ClassVar[int]
     prediction: _prediction_pb2.Prediction
     model: _model_pb2.Model
-    product_type_suggestions: _containers.RepeatedCompositeFieldContainer[_product_service_pb2.ProductTypeSuggestion]
-    def __init__(self, prediction: _Optional[_Union[_prediction_pb2.Prediction, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ..., product_type_suggestions: _Optional[_Iterable[_Union[_product_service_pb2.ProductTypeSuggestion, _Mapping]]] = ...) -> None: ...
+    product_type_suggestions: _product_service_pb2.ProductTypeSuggestion
+    def __init__(self, prediction: _Optional[_Union[_prediction_pb2.Prediction, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ..., product_type_suggestions: _Optional[_Union[_product_service_pb2.ProductTypeSuggestion, _Mapping]] = ...) -> None: ...
 
 class BatchSuggestRequest(_message.Message):
     __slots__ = ("dataset_name", "inputs", "options")

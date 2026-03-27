@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SuggestResponse() {
-    productTypeSuggestions_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -97,44 +96,29 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRODUCT_TYPE_SUGGESTIONS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> productTypeSuggestions_;
+  private ai.visma.asgt.v2.ProductTypeSuggestion productTypeSuggestions_;
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return Whether the productTypeSuggestions field is set.
    */
   @java.lang.Override
-  public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> getProductTypeSuggestionsList() {
-    return productTypeSuggestions_;
+  public boolean hasProductTypeSuggestions() {
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * @return The productTypeSuggestions.
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
-      getProductTypeSuggestionsOrBuilderList() {
-    return productTypeSuggestions_;
+  public ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions() {
+    return productTypeSuggestions_ == null ? ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance() : productTypeSuggestions_;
   }
   /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+   * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
-  public int getProductTypeSuggestionsCount() {
-    return productTypeSuggestions_.size();
-  }
-  /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index) {
-    return productTypeSuggestions_.get(index);
-  }
-  /**
-   * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(
-      int index) {
-    return productTypeSuggestions_.get(index);
+  public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder() {
+    return productTypeSuggestions_ == null ? ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance() : productTypeSuggestions_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -157,8 +141,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getModel());
     }
-    for (int i = 0; i < productTypeSuggestions_.size(); i++) {
-      output.writeMessage(3, productTypeSuggestions_.get(i));
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getProductTypeSuggestions());
     }
     getUnknownFields().writeTo(output);
   }
@@ -177,9 +161,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getModel());
     }
-    for (int i = 0; i < productTypeSuggestions_.size(); i++) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, productTypeSuggestions_.get(i));
+        .computeMessageSize(3, getProductTypeSuggestions());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -206,8 +190,11 @@ private static final long serialVersionUID = 0L;
       if (!getModel()
           .equals(other.getModel())) return false;
     }
-    if (!getProductTypeSuggestionsList()
-        .equals(other.getProductTypeSuggestionsList())) return false;
+    if (hasProductTypeSuggestions() != other.hasProductTypeSuggestions()) return false;
+    if (hasProductTypeSuggestions()) {
+      if (!getProductTypeSuggestions()
+          .equals(other.getProductTypeSuggestions())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -227,9 +214,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MODEL_FIELD_NUMBER;
       hash = (53 * hash) + getModel().hashCode();
     }
-    if (getProductTypeSuggestionsCount() > 0) {
+    if (hasProductTypeSuggestions()) {
       hash = (37 * hash) + PRODUCT_TYPE_SUGGESTIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getProductTypeSuggestionsList().hashCode();
+      hash = (53 * hash) + getProductTypeSuggestions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -380,13 +367,11 @@ private static final long serialVersionUID = 0L;
         modelBuilder_.dispose();
         modelBuilder_ = null;
       }
-      if (productTypeSuggestionsBuilder_ == null) {
-        productTypeSuggestions_ = java.util.Collections.emptyList();
-      } else {
-        productTypeSuggestions_ = null;
-        productTypeSuggestionsBuilder_.clear();
+      productTypeSuggestions_ = null;
+      if (productTypeSuggestionsBuilder_ != null) {
+        productTypeSuggestionsBuilder_.dispose();
+        productTypeSuggestionsBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -413,22 +398,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.asgt.v2.SuggestResponse buildPartial() {
       ai.visma.asgt.v2.SuggestResponse result = new ai.visma.asgt.v2.SuggestResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(ai.visma.asgt.v2.SuggestResponse result) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          productTypeSuggestions_ = java.util.Collections.unmodifiableList(productTypeSuggestions_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.productTypeSuggestions_ = productTypeSuggestions_;
-      } else {
-        result.productTypeSuggestions_ = productTypeSuggestionsBuilder_.build();
-      }
     }
 
     private void buildPartial0(ai.visma.asgt.v2.SuggestResponse result) {
@@ -445,6 +417,12 @@ private static final long serialVersionUID = 0L;
             ? model_
             : modelBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.productTypeSuggestions_ = productTypeSuggestionsBuilder_ == null
+            ? productTypeSuggestions_
+            : productTypeSuggestionsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -467,31 +445,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasModel()) {
         mergeModel(other.getModel());
       }
-      if (productTypeSuggestionsBuilder_ == null) {
-        if (!other.productTypeSuggestions_.isEmpty()) {
-          if (productTypeSuggestions_.isEmpty()) {
-            productTypeSuggestions_ = other.productTypeSuggestions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureProductTypeSuggestionsIsMutable();
-            productTypeSuggestions_.addAll(other.productTypeSuggestions_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.productTypeSuggestions_.isEmpty()) {
-          if (productTypeSuggestionsBuilder_.isEmpty()) {
-            productTypeSuggestionsBuilder_.dispose();
-            productTypeSuggestionsBuilder_ = null;
-            productTypeSuggestions_ = other.productTypeSuggestions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            productTypeSuggestionsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getProductTypeSuggestionsFieldBuilder() : null;
-          } else {
-            productTypeSuggestionsBuilder_.addAllMessages(other.productTypeSuggestions_);
-          }
-        }
+      if (other.hasProductTypeSuggestions()) {
+        mergeProductTypeSuggestions(other.getProductTypeSuggestions());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -534,16 +489,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 26: {
-              ai.visma.asgt.v2.ProductTypeSuggestion m =
-                  input.readMessage(
-                      ai.visma.asgt.v2.ProductTypeSuggestion.parser(),
-                      extensionRegistry);
-              if (productTypeSuggestionsBuilder_ == null) {
-                ensureProductTypeSuggestionsIsMutable();
-                productTypeSuggestions_.add(m);
-              } else {
-                productTypeSuggestionsBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getProductTypeSuggestionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -805,239 +754,120 @@ private static final long serialVersionUID = 0L;
       return modelBuilder_;
     }
 
-    private java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> productTypeSuggestions_ =
-      java.util.Collections.emptyList();
-    private void ensureProductTypeSuggestionsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        productTypeSuggestions_ = new java.util.ArrayList<ai.visma.asgt.v2.ProductTypeSuggestion>(productTypeSuggestions_);
-        bitField0_ |= 0x00000004;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
+    private ai.visma.asgt.v2.ProductTypeSuggestion productTypeSuggestions_;
+    private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> productTypeSuggestionsBuilder_;
-
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * @return Whether the productTypeSuggestions field is set.
      */
-    public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> getProductTypeSuggestionsList() {
+    public boolean hasProductTypeSuggestions() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * @return The productTypeSuggestions.
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions() {
       if (productTypeSuggestionsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(productTypeSuggestions_);
+        return productTypeSuggestions_ == null ? ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance() : productTypeSuggestions_;
       } else {
-        return productTypeSuggestionsBuilder_.getMessageList();
+        return productTypeSuggestionsBuilder_.getMessage();
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
-    public int getProductTypeSuggestionsCount() {
+    public Builder setProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
       if (productTypeSuggestionsBuilder_ == null) {
-        return productTypeSuggestions_.size();
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        productTypeSuggestions_ = value;
       } else {
-        return productTypeSuggestionsBuilder_.getCount();
+        productTypeSuggestionsBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        return productTypeSuggestions_.get(index);
-      } else {
-        return productTypeSuggestionsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder setProductTypeSuggestions(
-        int index, ai.visma.asgt.v2.ProductTypeSuggestion value) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.set(index, value);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder setProductTypeSuggestions(
-        int index, ai.visma.asgt.v2.ProductTypeSuggestion.Builder builderForValue) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder addProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.add(value);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder addProductTypeSuggestions(
-        int index, ai.visma.asgt.v2.ProductTypeSuggestion value) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.add(index, value);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder addProductTypeSuggestions(
         ai.visma.asgt.v2.ProductTypeSuggestion.Builder builderForValue) {
       if (productTypeSuggestionsBuilder_ == null) {
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.add(builderForValue.build());
-        onChanged();
+        productTypeSuggestions_ = builderForValue.build();
       } else {
-        productTypeSuggestionsBuilder_.addMessage(builderForValue.build());
+        productTypeSuggestionsBuilder_.setMessage(builderForValue.build());
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
-    public Builder addProductTypeSuggestions(
-        int index, ai.visma.asgt.v2.ProductTypeSuggestion.Builder builderForValue) {
+    public Builder mergeProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
       if (productTypeSuggestionsBuilder_ == null) {
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.add(index, builderForValue.build());
-        onChanged();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          productTypeSuggestions_ != null &&
+          productTypeSuggestions_ != ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance()) {
+          getProductTypeSuggestionsBuilder().mergeFrom(value);
+        } else {
+          productTypeSuggestions_ = value;
+        }
       } else {
-        productTypeSuggestionsBuilder_.addMessage(index, builderForValue.build());
+        productTypeSuggestionsBuilder_.mergeFrom(value);
+      }
+      if (productTypeSuggestions_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
       }
       return this;
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder addAllProductTypeSuggestions(
-        java.lang.Iterable<? extends ai.visma.asgt.v2.ProductTypeSuggestion> values) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        ensureProductTypeSuggestionsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, productTypeSuggestions_);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder clearProductTypeSuggestions() {
-      if (productTypeSuggestionsBuilder_ == null) {
-        productTypeSuggestions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public Builder removeProductTypeSuggestions(int index) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        ensureProductTypeSuggestionsIsMutable();
-        productTypeSuggestions_.remove(index);
-        onChanged();
-      } else {
-        productTypeSuggestionsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public ai.visma.asgt.v2.ProductTypeSuggestion.Builder getProductTypeSuggestionsBuilder(
-        int index) {
-      return getProductTypeSuggestionsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(
-        int index) {
-      if (productTypeSuggestionsBuilder_ == null) {
-        return productTypeSuggestions_.get(index);  } else {
-        return productTypeSuggestionsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
-         getProductTypeSuggestionsOrBuilderList() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      productTypeSuggestions_ = null;
       if (productTypeSuggestionsBuilder_ != null) {
-        return productTypeSuggestionsBuilder_.getMessageOrBuilderList();
+        productTypeSuggestionsBuilder_.dispose();
+        productTypeSuggestionsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestion.Builder getProductTypeSuggestionsBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getProductTypeSuggestionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     */
+    public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder() {
+      if (productTypeSuggestionsBuilder_ != null) {
+        return productTypeSuggestionsBuilder_.getMessageOrBuilder();
       } else {
-        return java.util.Collections.unmodifiableList(productTypeSuggestions_);
+        return productTypeSuggestions_ == null ?
+            ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance() : productTypeSuggestions_;
       }
     }
     /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
+     * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
-    public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addProductTypeSuggestionsBuilder() {
-      return getProductTypeSuggestionsFieldBuilder().addBuilder(
-          ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addProductTypeSuggestionsBuilder(
-        int index) {
-      return getProductTypeSuggestionsFieldBuilder().addBuilder(
-          index, ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
-     */
-    public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion.Builder> 
-         getProductTypeSuggestionsBuilderList() {
-      return getProductTypeSuggestionsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
+    private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
         getProductTypeSuggestionsFieldBuilder() {
       if (productTypeSuggestionsBuilder_ == null) {
-        productTypeSuggestionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        productTypeSuggestionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
             ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder>(
-                productTypeSuggestions_,
-                ((bitField0_ & 0x00000004) != 0),
+                getProductTypeSuggestions(),
                 getParentForChildren(),
                 isClean());
         productTypeSuggestions_ = null;

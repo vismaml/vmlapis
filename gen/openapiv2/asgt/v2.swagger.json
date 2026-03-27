@@ -1505,11 +1505,7 @@
           "$ref": "#/definitions/asgttypeModel"
         },
         "productTypeSuggestions": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/v2ProductTypeSuggestion"
-          }
+          "$ref": "#/definitions/v2ProductTypeSuggestion"
         }
       }
     },

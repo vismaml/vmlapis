@@ -81,10 +81,10 @@ export class SuggestResponse extends jspb.Message {
   hasModel(): boolean;
   clearModel(): SuggestResponse;
 
-  getProductTypeSuggestionsList(): Array<asgt_v2_product_service_pb.ProductTypeSuggestion>;
-  setProductTypeSuggestionsList(value: Array<asgt_v2_product_service_pb.ProductTypeSuggestion>): SuggestResponse;
-  clearProductTypeSuggestionsList(): SuggestResponse;
-  addProductTypeSuggestions(value?: asgt_v2_product_service_pb.ProductTypeSuggestion, index?: number): asgt_v2_product_service_pb.ProductTypeSuggestion;
+  getProductTypeSuggestions(): asgt_v2_product_service_pb.ProductTypeSuggestion | undefined;
+  setProductTypeSuggestions(value?: asgt_v2_product_service_pb.ProductTypeSuggestion): SuggestResponse;
+  hasProductTypeSuggestions(): boolean;
+  clearProductTypeSuggestions(): SuggestResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestResponse.AsObject;
@@ -98,7 +98,7 @@ export namespace SuggestResponse {
   export type AsObject = {
     prediction?: asgt_type_prediction_pb.Prediction.AsObject,
     model?: asgt_type_model_pb.Model.AsObject,
-    productTypeSuggestionsList: Array<asgt_v2_product_service_pb.ProductTypeSuggestion.AsObject>,
+    productTypeSuggestions?: asgt_v2_product_service_pb.ProductTypeSuggestion.AsObject,
   }
 }
 
