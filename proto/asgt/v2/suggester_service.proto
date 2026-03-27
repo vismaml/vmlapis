@@ -52,6 +52,11 @@ service SuggesterService {
   }
 }
 
+enum Extra {
+  EXTRA_UNSPECIFIED = 0;
+  EXTRA_PRODUCT_TYPES = 1;
+}
+
 message SuggestOptions {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{\"suggest_limit\": 3}"};
 
@@ -61,8 +66,8 @@ message SuggestOptions {
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
   // Model type requested
   asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
-  // When true, the service will also call the ProductTypeService and include product type suggestions in the response
-  bool include_product_types = 4;
+  // List of extra products to include in the response
+  repeated Extra extra = 4;
 }
 
 message SuggestRequest {
