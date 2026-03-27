@@ -84,7 +84,7 @@ message SuggestRequest {
 message SuggestResponse {
   asgt.type.Prediction prediction = 1;
   asgt.type.Model model = 2;
-  repeated ProductTypeSuggestion product_type_suggestions = 3;
+  ProductTypeSuggestion product_type_suggestions = 3;
 }
 
 message BatchSuggestRequest {
@@ -101,5 +101,5 @@ message BatchSuggestRequest {
 message BatchSuggestResponse {
   repeated asgt.type.Prediction predictions = 1;
   asgt.type.Model model = 2;
-  repeated ProductTypeSuggestion product_type_suggestions = 3;
+  ProductTypeSuggestion product_type_suggestions = 3;
 }
