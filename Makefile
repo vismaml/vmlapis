@@ -68,7 +68,8 @@ all:
 		--path proto/ssn/mlservice/v2/mlservice.proto \
 		--path proto/ssn/type/candidate.proto \
 		--path proto/ssn/type/text_annotation.proto \
-		--path proto/ssn/type/qr.proto
+		--path proto/ssn/type/qr.proto \
+		--path proto/asgt/v2/product_service.proto
 
 #	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
 	buf generate deps --template buf.gen.deps.yaml
