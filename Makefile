@@ -62,6 +62,14 @@ all:
 		--path proto/cv/scanner/v1/scanner.proto \
 
 
+#	descriptor for Spanner proto bundle (used by vml-spanner for native PROTO columns)
+	buf build proto -o gen/spanner_descriptor.bin \
+		--path proto/ssn/asyncton/v1/asyncton.proto \
+		--path proto/ssn/mlservice/v2/mlservice.proto \
+		--path proto/ssn/type/candidate.proto \
+		--path proto/ssn/type/text_annotation.proto \
+		--path proto/ssn/type/qr.proto
+
 #	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
 	buf generate deps --template buf.gen.deps.yaml
 
