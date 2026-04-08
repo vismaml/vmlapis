@@ -63,7 +63,8 @@ all:
 
 
 #	descriptor for Spanner proto bundle (used by vml-spanner for native PROTO columns)
-	buf build proto -o gen/spanner_descriptor.bin \
+#	--as-file-descriptor-set ensures plain FileDescriptorSet format (not Buf Image)
+	buf build proto --as-file-descriptor-set -o gen/spanner_descriptor.bin \
 		--path proto/ssn/asyncton/v1/asyncton.proto \
 		--path proto/ssn/mlservice/v2/mlservice.proto \
 		--path proto/ssn/type/candidate.proto \
