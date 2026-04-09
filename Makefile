@@ -62,6 +62,16 @@ all:
 		--path proto/cv/scanner/v1/scanner.proto \
 
 
+#	descriptor for Spanner proto bundle (used by vml-spanner for native PROTO columns)
+#	--as-file-descriptor-set ensures plain FileDescriptorSet format (not Buf Image)
+	buf build proto --as-file-descriptor-set -o gen/spanner_descriptor.bin \
+		--path proto/ssn/asyncton/v1/asyncton.proto \
+		--path proto/ssn/mlservice/v2/mlservice.proto \
+		--path proto/ssn/type/candidate.proto \
+		--path proto/ssn/type/text_annotation.proto \
+		--path proto/ssn/type/qr.proto \
+		--path proto/asgt/v2/product_service.proto
+
 #	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
 	buf generate deps --template buf.gen.deps.yaml
 
