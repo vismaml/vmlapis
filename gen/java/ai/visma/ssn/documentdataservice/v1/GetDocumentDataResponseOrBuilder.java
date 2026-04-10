@@ -10,115 +10,79 @@ public interface GetDocumentDataResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId"];</code>
-   * @return The feedbackId.
-   */
-  java.lang.String getFeedbackId();
-  /**
-   * <code>string feedback_id = 1 [json_name = "feedbackId"];</code>
-   * @return The bytes for feedbackId.
-   */
-  com.google.protobuf.ByteString
-      getFeedbackIdBytes();
-
-  /**
-   * <pre>
-   * Raw image or PDF bytes of the document. May be empty if not stored.
-   * </pre>
-   *
-   * <code>bytes document_bytes = 2 [json_name = "documentBytes"];</code>
+   * <code>bytes document_bytes = 1 [json_name = "documentBytes"];</code>
    * @return The documentBytes.
    */
   com.google.protobuf.ByteString getDocumentBytes();
 
   /**
-   * <pre>
-   * Full prediction output from SmartScan.
-   * </pre>
-   *
-   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 3 [json_name = "predictions"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 2 [json_name = "predictions"];</code>
    */
   java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
       getPredictionsList();
   /**
-   * <pre>
-   * Full prediction output from SmartScan.
-   * </pre>
-   *
-   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 3 [json_name = "predictions"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 2 [json_name = "predictions"];</code>
    */
   ai.visma.ssn.asyncton.v1.Annotation getPredictions(int index);
   /**
-   * <pre>
-   * Full prediction output from SmartScan.
-   * </pre>
-   *
-   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 3 [json_name = "predictions"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 2 [json_name = "predictions"];</code>
    */
   int getPredictionsCount();
   /**
-   * <pre>
-   * Full prediction output from SmartScan.
-   * </pre>
-   *
-   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 3 [json_name = "predictions"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 2 [json_name = "predictions"];</code>
    */
   java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
       getPredictionsOrBuilderList();
   /**
-   * <pre>
-   * Full prediction output from SmartScan.
-   * </pre>
-   *
-   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 3 [json_name = "predictions"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation predictions = 2 [json_name = "predictions"];</code>
    */
   ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getPredictionsOrBuilder(
       int index);
 
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 3 [json_name = "feedback"];</code>
    */
   java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
       getFeedbackList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 3 [json_name = "feedback"];</code>
    */
   ai.visma.ssn.asyncton.v1.Annotation getFeedback(int index);
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 3 [json_name = "feedback"];</code>
    */
   int getFeedbackCount();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 3 [json_name = "feedback"];</code>
    */
   java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
       getFeedbackOrBuilderList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 3 [json_name = "feedback"];</code>
    */
   ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getFeedbackOrBuilder(
       int index);
 
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
    */
   java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
       getLabelsList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
    */
   ai.visma.ssn.asyncton.v1.Annotation getLabels(int index);
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
    */
   java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
    */
   ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getLabelsOrBuilder(
       int index);

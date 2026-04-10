@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetDocumentDataRequest() {
     feedbackId_ = "";
+    consumer_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -43,6 +44,7 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.documentdataservice.v1.GetDocumentDataRequest.class, ai.visma.ssn.documentdataservice.v1.GetDocumentDataRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int FEEDBACK_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object feedbackId_ = "";
@@ -82,10 +84,57 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int INCLUDE_PREDICTIONS_FIELD_NUMBER = 2;
+  public static final int CONSUMER_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object consumer_ = "";
+  /**
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return Whether the consumer field is set.
+   */
+  @java.lang.Override
+  public boolean hasConsumer() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return The consumer.
+   */
+  @java.lang.Override
+  public java.lang.String getConsumer() {
+    java.lang.Object ref = consumer_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      consumer_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return The bytes for consumer.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConsumerBytes() {
+    java.lang.Object ref = consumer_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      consumer_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int INCLUDE_PREDICTIONS_FIELD_NUMBER = 3;
   private boolean includePredictions_ = false;
   /**
-   * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+   * <code>bool include_predictions = 3 [json_name = "includePredictions"];</code>
    * @return The includePredictions.
    */
   @java.lang.Override
@@ -93,10 +142,10 @@ private static final long serialVersionUID = 0L;
     return includePredictions_;
   }
 
-  public static final int INCLUDE_FEEDBACKS_FIELD_NUMBER = 3;
+  public static final int INCLUDE_FEEDBACKS_FIELD_NUMBER = 4;
   private boolean includeFeedbacks_ = false;
   /**
-   * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+   * <code>bool include_feedbacks = 4 [json_name = "includeFeedbacks"];</code>
    * @return The includeFeedbacks.
    */
   @java.lang.Override
@@ -104,10 +153,10 @@ private static final long serialVersionUID = 0L;
     return includeFeedbacks_;
   }
 
-  public static final int INCLUDE_LABELS_FIELD_NUMBER = 4;
+  public static final int INCLUDE_LABELS_FIELD_NUMBER = 5;
   private boolean includeLabels_ = false;
   /**
-   * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+   * <code>bool include_labels = 5 [json_name = "includeLabels"];</code>
    * @return The includeLabels.
    */
   @java.lang.Override
@@ -132,14 +181,17 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, feedbackId_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, consumer_);
+    }
     if (includePredictions_ != false) {
-      output.writeBool(2, includePredictions_);
+      output.writeBool(3, includePredictions_);
     }
     if (includeFeedbacks_ != false) {
-      output.writeBool(3, includeFeedbacks_);
+      output.writeBool(4, includeFeedbacks_);
     }
     if (includeLabels_ != false) {
-      output.writeBool(4, includeLabels_);
+      output.writeBool(5, includeLabels_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -153,17 +205,20 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, feedbackId_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, consumer_);
+    }
     if (includePredictions_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(2, includePredictions_);
+        .computeBoolSize(3, includePredictions_);
     }
     if (includeFeedbacks_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, includeFeedbacks_);
+        .computeBoolSize(4, includeFeedbacks_);
     }
     if (includeLabels_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, includeLabels_);
+        .computeBoolSize(5, includeLabels_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -182,6 +237,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getFeedbackId()
         .equals(other.getFeedbackId())) return false;
+    if (hasConsumer() != other.hasConsumer()) return false;
+    if (hasConsumer()) {
+      if (!getConsumer()
+          .equals(other.getConsumer())) return false;
+    }
     if (getIncludePredictions()
         != other.getIncludePredictions()) return false;
     if (getIncludeFeedbacks()
@@ -201,6 +261,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
     hash = (53 * hash) + getFeedbackId().hashCode();
+    if (hasConsumer()) {
+      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumer().hashCode();
+    }
     hash = (37 * hash) + INCLUDE_PREDICTIONS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludePredictions());
@@ -342,6 +406,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       feedbackId_ = "";
+      consumer_ = "";
       includePredictions_ = false;
       includeFeedbacks_ = false;
       includeLabels_ = false;
@@ -381,15 +446,21 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.feedbackId_ = feedbackId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.includePredictions_ = includePredictions_;
+        result.consumer_ = consumer_;
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.includeFeedbacks_ = includeFeedbacks_;
+        result.includePredictions_ = includePredictions_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeFeedbacks_ = includeFeedbacks_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.includeLabels_ = includeLabels_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -407,6 +478,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getFeedbackId().isEmpty()) {
         feedbackId_ = other.feedbackId_;
         bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.hasConsumer()) {
+        consumer_ = other.consumer_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getIncludePredictions() != false) {
@@ -449,21 +525,26 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              includePredictions_ = input.readBool();
+            case 18: {
+              consumer_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             case 24: {
-              includeFeedbacks_ = input.readBool();
+              includePredictions_ = input.readBool();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
-              includeLabels_ = input.readBool();
+              includeFeedbacks_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              includeLabels_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -553,9 +634,88 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object consumer_ = "";
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @return Whether the consumer field is set.
+     */
+    public boolean hasConsumer() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @return The consumer.
+     */
+    public java.lang.String getConsumer() {
+      java.lang.Object ref = consumer_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumer_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @return The bytes for consumer.
+     */
+    public com.google.protobuf.ByteString
+        getConsumerBytes() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @param value The consumer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConsumer(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      consumer_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConsumer() {
+      consumer_ = getDefaultInstance().getConsumer();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+     * @param value The bytes for consumer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConsumerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      consumer_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
     private boolean includePredictions_ ;
     /**
-     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * <code>bool include_predictions = 3 [json_name = "includePredictions"];</code>
      * @return The includePredictions.
      */
     @java.lang.Override
@@ -563,23 +723,23 @@ private static final long serialVersionUID = 0L;
       return includePredictions_;
     }
     /**
-     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * <code>bool include_predictions = 3 [json_name = "includePredictions"];</code>
      * @param value The includePredictions to set.
      * @return This builder for chaining.
      */
     public Builder setIncludePredictions(boolean value) {
 
       includePredictions_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * <code>bool include_predictions = 3 [json_name = "includePredictions"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludePredictions() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       includePredictions_ = false;
       onChanged();
       return this;
@@ -587,7 +747,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean includeFeedbacks_ ;
     /**
-     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * <code>bool include_feedbacks = 4 [json_name = "includeFeedbacks"];</code>
      * @return The includeFeedbacks.
      */
     @java.lang.Override
@@ -595,23 +755,23 @@ private static final long serialVersionUID = 0L;
       return includeFeedbacks_;
     }
     /**
-     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * <code>bool include_feedbacks = 4 [json_name = "includeFeedbacks"];</code>
      * @param value The includeFeedbacks to set.
      * @return This builder for chaining.
      */
     public Builder setIncludeFeedbacks(boolean value) {
 
       includeFeedbacks_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * <code>bool include_feedbacks = 4 [json_name = "includeFeedbacks"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeFeedbacks() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       includeFeedbacks_ = false;
       onChanged();
       return this;
@@ -619,7 +779,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean includeLabels_ ;
     /**
-     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * <code>bool include_labels = 5 [json_name = "includeLabels"];</code>
      * @return The includeLabels.
      */
     @java.lang.Override
@@ -627,23 +787,23 @@ private static final long serialVersionUID = 0L;
       return includeLabels_;
     }
     /**
-     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * <code>bool include_labels = 5 [json_name = "includeLabels"];</code>
      * @param value The includeLabels to set.
      * @return This builder for chaining.
      */
     public Builder setIncludeLabels(boolean value) {
 
       includeLabels_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * <code>bool include_labels = 5 [json_name = "includeLabels"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeLabels() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       includeLabels_ = false;
       onChanged();
       return this;

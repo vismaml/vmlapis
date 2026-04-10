@@ -47,31 +47,31 @@ public final class DocumentDataServiceProto {
       "\n6ssn/documentdataservice/v1/document_da" +
       "ta_service.proto\022\032ssn.documentdataservic" +
       "e.v1\032\034google/api/annotations.proto\032\036ssn/" +
-      "asyncton/v1/asyncton.proto\"\276\001\n\026GetDocume" +
+      "asyncton/v1/asyncton.proto\"\354\001\n\026GetDocume" +
       "ntDataRequest\022\037\n\013feedback_id\030\001 \001(\tR\nfeed" +
-      "backId\022/\n\023include_predictions\030\002 \001(\010R\022inc" +
-      "ludePredictions\022+\n\021include_feedbacks\030\003 \001" +
-      "(\010R\020includeFeedbacks\022%\n\016include_labels\030\004" +
-      " \001(\010R\rincludeLabels\"\216\002\n\027GetDocumentDataR" +
-      "esponse\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId" +
-      "\022%\n\016document_bytes\030\002 \001(\014R\rdocumentBytes\022" +
-      "=\n\013predictions\030\003 \003(\0132\033.ssn.asyncton.v1.A" +
-      "nnotationR\013predictions\0227\n\010feedback\030\004 \003(\013" +
-      "2\033.ssn.asyncton.v1.AnnotationR\010feedback\022" +
-      "3\n\006labels\030\005 \003(\0132\033.ssn.asyncton.v1.Annota" +
-      "tionR\006labels2\267\001\n\023DocumentDataService\022\237\001\n" +
-      "\017GetDocumentData\0222.ssn.documentdataservi" +
-      "ce.v1.GetDocumentDataRequest\0323.ssn.docum" +
-      "entdataservice.v1.GetDocumentDataRespons" +
-      "e\"#\202\323\344\223\002\035\022\033/v1/documents/{feedback_id}B\235" +
-      "\002\n#ai.visma.ssn.documentdataservice.v1B\030" +
-      "DocumentDataServiceProtoP\001ZRgithub.com/e" +
-      "-conomic/vmlapis/gen/go/ssn/documentdata" +
-      "service/v1;documentdataservice\242\002\003SDX\252\002\032S" +
-      "sn.Documentdataservice.V1\312\002\032Ssn\\Document" +
-      "dataservice\\V1\342\002&Ssn\\Documentdataservice" +
-      "\\V1\\GPBMetadata\352\002\034Ssn::Documentdataservi" +
-      "ce::V1b\006proto3"
+      "backId\022\037\n\010consumer\030\002 \001(\tH\000R\010consumer\210\001\001\022" +
+      "/\n\023include_predictions\030\003 \001(\010R\022includePre" +
+      "dictions\022+\n\021include_feedbacks\030\004 \001(\010R\020inc" +
+      "ludeFeedbacks\022%\n\016include_labels\030\005 \001(\010R\ri" +
+      "ncludeLabelsB\013\n\t_consumer\"\355\001\n\027GetDocumen" +
+      "tDataResponse\022%\n\016document_bytes\030\001 \001(\014R\rd" +
+      "ocumentBytes\022=\n\013predictions\030\002 \003(\0132\033.ssn." +
+      "asyncton.v1.AnnotationR\013predictions\0227\n\010f" +
+      "eedback\030\003 \003(\0132\033.ssn.asyncton.v1.Annotati" +
+      "onR\010feedback\0223\n\006labels\030\004 \003(\0132\033.ssn.async" +
+      "ton.v1.AnnotationR\006labels2\267\001\n\023DocumentDa" +
+      "taService\022\237\001\n\017GetDocumentData\0222.ssn.docu" +
+      "mentdataservice.v1.GetDocumentDataReques" +
+      "t\0323.ssn.documentdataservice.v1.GetDocume" +
+      "ntDataResponse\"#\202\323\344\223\002\035\022\033/v1/documents/{f" +
+      "eedback_id}B\235\002\n#ai.visma.ssn.documentdat" +
+      "aservice.v1B\030DocumentDataServiceProtoP\001Z" +
+      "Rgithub.com/e-conomic/vmlapis/gen/go/ssn" +
+      "/documentdataservice/v1;documentdataserv" +
+      "ice\242\002\003SDX\252\002\032Ssn.Documentdataservice.V1\312\002" +
+      "\032Ssn\\Documentdataservice\\V1\342\002&Ssn\\Docume" +
+      "ntdataservice\\V1\\GPBMetadata\352\002\034Ssn::Docu" +
+      "mentdataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -84,13 +84,13 @@ public final class DocumentDataServiceProto {
     internal_static_ssn_documentdataservice_v1_GetDocumentDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_GetDocumentDataRequest_descriptor,
-        new java.lang.String[] { "FeedbackId", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", });
     internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_descriptor,
-        new java.lang.String[] { "FeedbackId", "DocumentBytes", "Predictions", "Feedback", "Labels", });
+        new java.lang.String[] { "DocumentBytes", "Predictions", "Feedback", "Labels", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();
     ai.visma.ssn.asyncton.v1.AsynctonProto.getDescriptor();

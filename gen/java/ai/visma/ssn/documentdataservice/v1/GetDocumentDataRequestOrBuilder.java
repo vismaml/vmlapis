@@ -22,19 +22,36 @@ public interface GetDocumentDataRequestOrBuilder extends
       getFeedbackIdBytes();
 
   /**
-   * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return Whether the consumer field is set.
+   */
+  boolean hasConsumer();
+  /**
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return The consumer.
+   */
+  java.lang.String getConsumer();
+  /**
+   * <code>optional string consumer = 2 [json_name = "consumer"];</code>
+   * @return The bytes for consumer.
+   */
+  com.google.protobuf.ByteString
+      getConsumerBytes();
+
+  /**
+   * <code>bool include_predictions = 3 [json_name = "includePredictions"];</code>
    * @return The includePredictions.
    */
   boolean getIncludePredictions();
 
   /**
-   * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+   * <code>bool include_feedbacks = 4 [json_name = "includeFeedbacks"];</code>
    * @return The includeFeedbacks.
    */
   boolean getIncludeFeedbacks();
 
   /**
-   * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+   * <code>bool include_labels = 5 [json_name = "includeLabels"];</code>
    * @return The includeLabels.
    */
   boolean getIncludeLabels();

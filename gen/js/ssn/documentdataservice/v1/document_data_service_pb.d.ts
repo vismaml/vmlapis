@@ -8,6 +8,11 @@ export class GetDocumentDataRequest extends jspb.Message {
   getFeedbackId(): string;
   setFeedbackId(value: string): GetDocumentDataRequest;
 
+  getConsumer(): string;
+  setConsumer(value: string): GetDocumentDataRequest;
+  hasConsumer(): boolean;
+  clearConsumer(): GetDocumentDataRequest;
+
   getIncludePredictions(): boolean;
   setIncludePredictions(value: boolean): GetDocumentDataRequest;
 
@@ -28,16 +33,19 @@ export class GetDocumentDataRequest extends jspb.Message {
 export namespace GetDocumentDataRequest {
   export type AsObject = {
     feedbackId: string,
+    consumer?: string,
     includePredictions: boolean,
     includeFeedbacks: boolean,
     includeLabels: boolean,
   }
+
+  export enum ConsumerCase { 
+    _CONSUMER_NOT_SET = 0,
+    CONSUMER = 2,
+  }
 }
 
 export class GetDocumentDataResponse extends jspb.Message {
-  getFeedbackId(): string;
-  setFeedbackId(value: string): GetDocumentDataResponse;
-
   getDocumentBytes(): Uint8Array | string;
   getDocumentBytes_asU8(): Uint8Array;
   getDocumentBytes_asB64(): string;
@@ -68,7 +76,6 @@ export class GetDocumentDataResponse extends jspb.Message {
 
 export namespace GetDocumentDataResponse {
   export type AsObject = {
-    feedbackId: string,
     documentBytes: Uint8Array | string,
     predictionsList: Array<ssn_asyncton_v1_asyncton_pb.Annotation.AsObject>,
     feedbackList: Array<ssn_asyncton_v1_asyncton_pb.Annotation.AsObject>,

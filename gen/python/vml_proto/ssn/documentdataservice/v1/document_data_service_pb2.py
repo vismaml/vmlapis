@@ -26,7 +26,7 @@ from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotatio
 from vml_proto.ssn.asyncton.v1 import asyncton_pb2 as ssn_dot_asyncton_dot_v1_dot_asyncton__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6ssn/documentdataservice/v1/document_data_service.proto\x12\x1assn.documentdataservice.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1essn/asyncton/v1/asyncton.proto\"\xbe\x01\n\x16GetDocumentDataRequest\x12\x1f\n\x0b\x66\x65\x65\x64\x62\x61\x63k_id\x18\x01 \x01(\tR\nfeedbackId\x12/\n\x13include_predictions\x18\x02 \x01(\x08R\x12includePredictions\x12+\n\x11include_feedbacks\x18\x03 \x01(\x08R\x10includeFeedbacks\x12%\n\x0einclude_labels\x18\x04 \x01(\x08R\rincludeLabels\"\x8e\x02\n\x17GetDocumentDataResponse\x12\x1f\n\x0b\x66\x65\x65\x64\x62\x61\x63k_id\x18\x01 \x01(\tR\nfeedbackId\x12%\n\x0e\x64ocument_bytes\x18\x02 \x01(\x0cR\rdocumentBytes\x12=\n\x0bpredictions\x18\x03 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x0bpredictions\x12\x37\n\x08\x66\x65\x65\x64\x62\x61\x63k\x18\x04 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x08\x66\x65\x65\x64\x62\x61\x63k\x12\x33\n\x06labels\x18\x05 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x06labels2\xb7\x01\n\x13\x44ocumentDataService\x12\x9f\x01\n\x0fGetDocumentData\x12\x32.ssn.documentdataservice.v1.GetDocumentDataRequest\x1a\x33.ssn.documentdataservice.v1.GetDocumentDataResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/documents/{feedback_id}B\x8b\x01\x42\x18\x44ocumentDataServiceProtoZRgithub.com/e-conomic/vmlapis/gen/go/ssn/documentdataservice/v1;documentdataservice\xaa\x02\x1aSsn.Documentdataservice.V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6ssn/documentdataservice/v1/document_data_service.proto\x12\x1assn.documentdataservice.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1essn/asyncton/v1/asyncton.proto\"\xec\x01\n\x16GetDocumentDataRequest\x12\x1f\n\x0b\x66\x65\x65\x64\x62\x61\x63k_id\x18\x01 \x01(\tR\nfeedbackId\x12\x1f\n\x08\x63onsumer\x18\x02 \x01(\tH\x00R\x08\x63onsumer\x88\x01\x01\x12/\n\x13include_predictions\x18\x03 \x01(\x08R\x12includePredictions\x12+\n\x11include_feedbacks\x18\x04 \x01(\x08R\x10includeFeedbacks\x12%\n\x0einclude_labels\x18\x05 \x01(\x08R\rincludeLabelsB\x0b\n\t_consumer\"\xed\x01\n\x17GetDocumentDataResponse\x12%\n\x0e\x64ocument_bytes\x18\x01 \x01(\x0cR\rdocumentBytes\x12=\n\x0bpredictions\x18\x02 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x0bpredictions\x12\x37\n\x08\x66\x65\x65\x64\x62\x61\x63k\x18\x03 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x08\x66\x65\x65\x64\x62\x61\x63k\x12\x33\n\x06labels\x18\x04 \x03(\x0b\x32\x1b.ssn.asyncton.v1.AnnotationR\x06labels2\xb7\x01\n\x13\x44ocumentDataService\x12\x9f\x01\n\x0fGetDocumentData\x12\x32.ssn.documentdataservice.v1.GetDocumentDataRequest\x1a\x33.ssn.documentdataservice.v1.GetDocumentDataResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v1/documents/{feedback_id}B\x8b\x01\x42\x18\x44ocumentDataServiceProtoZRgithub.com/e-conomic/vmlapis/gen/go/ssn/documentdataservice/v1;documentdataservice\xaa\x02\x1aSsn.Documentdataservice.V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -37,9 +37,9 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_DOCUMENTDATASERVICE'].methods_by_name['GetDocumentData']._loaded_options = None
   _globals['_DOCUMENTDATASERVICE'].methods_by_name['GetDocumentData']._serialized_options = b'\202\323\344\223\002\035\022\033/v1/documents/{feedback_id}'
   _globals['_GETDOCUMENTDATAREQUEST']._serialized_start=149
-  _globals['_GETDOCUMENTDATAREQUEST']._serialized_end=339
-  _globals['_GETDOCUMENTDATARESPONSE']._serialized_start=342
-  _globals['_GETDOCUMENTDATARESPONSE']._serialized_end=612
-  _globals['_DOCUMENTDATASERVICE']._serialized_start=615
-  _globals['_DOCUMENTDATASERVICE']._serialized_end=798
+  _globals['_GETDOCUMENTDATAREQUEST']._serialized_end=385
+  _globals['_GETDOCUMENTDATARESPONSE']._serialized_start=388
+  _globals['_GETDOCUMENTDATARESPONSE']._serialized_end=625
+  _globals['_DOCUMENTDATASERVICE']._serialized_start=628
+  _globals['_DOCUMENTDATASERVICE']._serialized_end=811
 # @@protoc_insertion_point(module_scope)

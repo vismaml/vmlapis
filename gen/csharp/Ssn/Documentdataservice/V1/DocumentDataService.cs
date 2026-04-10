@@ -27,33 +27,33 @@ namespace Ssn.Documentdataservice.V1 {
             "CjZzc24vZG9jdW1lbnRkYXRhc2VydmljZS92MS9kb2N1bWVudF9kYXRhX3Nl",
             "cnZpY2UucHJvdG8SGnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxGhxnb29n",
             "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh5zc24vYXN5bmN0b24vdjEvYXN5",
-            "bmN0b24ucHJvdG8ivgEKFkdldERvY3VtZW50RGF0YVJlcXVlc3QSHwoLZmVl",
-            "ZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSLwoTaW5jbHVkZV9wcmVkaWN0",
-            "aW9ucxgCIAEoCFISaW5jbHVkZVByZWRpY3Rpb25zEisKEWluY2x1ZGVfZmVl",
-            "ZGJhY2tzGAMgASgIUhBpbmNsdWRlRmVlZGJhY2tzEiUKDmluY2x1ZGVfbGFi",
-            "ZWxzGAQgASgIUg1pbmNsdWRlTGFiZWxzIo4CChdHZXREb2N1bWVudERhdGFS",
-            "ZXNwb25zZRIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIlCg5k",
-            "b2N1bWVudF9ieXRlcxgCIAEoDFINZG9jdW1lbnRCeXRlcxI9CgtwcmVkaWN0",
-            "aW9ucxgDIAMoCzIbLnNzbi5hc3luY3Rvbi52MS5Bbm5vdGF0aW9uUgtwcmVk",
-            "aWN0aW9ucxI3CghmZWVkYmFjaxgEIAMoCzIbLnNzbi5hc3luY3Rvbi52MS5B",
-            "bm5vdGF0aW9uUghmZWVkYmFjaxIzCgZsYWJlbHMYBSADKAsyGy5zc24uYXN5",
-            "bmN0b24udjEuQW5ub3RhdGlvblIGbGFiZWxzMrcBChNEb2N1bWVudERhdGFT",
-            "ZXJ2aWNlEp8BCg9HZXREb2N1bWVudERhdGESMi5zc24uZG9jdW1lbnRkYXRh",
-            "c2VydmljZS52MS5HZXREb2N1bWVudERhdGFSZXF1ZXN0GjMuc3NuLmRvY3Vt",
-            "ZW50ZGF0YXNlcnZpY2UudjEuR2V0RG9jdW1lbnREYXRhUmVzcG9uc2UiI4LT",
-            "5JMCHRIbL3YxL2RvY3VtZW50cy97ZmVlZGJhY2tfaWR9Qp0CCiNhaS52aXNt",
-            "YS5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MUIYRG9jdW1lbnREYXRhU2Vy",
-            "dmljZVByb3RvUAFaUmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL3Nzbi9kb2N1bWVudGRhdGFzZXJ2aWNlL3YxO2RvY3VtZW50ZGF0YXNl",
-            "cnZpY2WiAgNTRFiqAhpTc24uRG9jdW1lbnRkYXRhc2VydmljZS5WMcoCGlNz",
-            "blxEb2N1bWVudGRhdGFzZXJ2aWNlXFYx4gImU3NuXERvY3VtZW50ZGF0YXNl",
-            "cnZpY2VcVjFcR1BCTWV0YWRhdGHqAhxTc246OkRvY3VtZW50ZGF0YXNlcnZp",
-            "Y2U6OlYxYgZwcm90bzM="));
+            "bmN0b24ucHJvdG8i7AEKFkdldERvY3VtZW50RGF0YVJlcXVlc3QSHwoLZmVl",
+            "ZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSHwoIY29uc3VtZXIYAiABKAlI",
+            "AFIIY29uc3VtZXKIAQESLwoTaW5jbHVkZV9wcmVkaWN0aW9ucxgDIAEoCFIS",
+            "aW5jbHVkZVByZWRpY3Rpb25zEisKEWluY2x1ZGVfZmVlZGJhY2tzGAQgASgI",
+            "UhBpbmNsdWRlRmVlZGJhY2tzEiUKDmluY2x1ZGVfbGFiZWxzGAUgASgIUg1p",
+            "bmNsdWRlTGFiZWxzQgsKCV9jb25zdW1lciLtAQoXR2V0RG9jdW1lbnREYXRh",
+            "UmVzcG9uc2USJQoOZG9jdW1lbnRfYnl0ZXMYASABKAxSDWRvY3VtZW50Qnl0",
+            "ZXMSPQoLcHJlZGljdGlvbnMYAiADKAsyGy5zc24uYXN5bmN0b24udjEuQW5u",
+            "b3RhdGlvblILcHJlZGljdGlvbnMSNwoIZmVlZGJhY2sYAyADKAsyGy5zc24u",
+            "YXN5bmN0b24udjEuQW5ub3RhdGlvblIIZmVlZGJhY2sSMwoGbGFiZWxzGAQg",
+            "AygLMhsuc3NuLmFzeW5jdG9uLnYxLkFubm90YXRpb25SBmxhYmVsczK3AQoT",
+            "RG9jdW1lbnREYXRhU2VydmljZRKfAQoPR2V0RG9jdW1lbnREYXRhEjIuc3Nu",
+            "LmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuR2V0RG9jdW1lbnREYXRhUmVxdWVz",
+            "dBozLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3VtZW50RGF0",
+            "YVJlc3BvbnNlIiOC0+STAh0SGy92MS9kb2N1bWVudHMve2ZlZWRiYWNrX2lk",
+            "fUKdAgojYWkudmlzbWEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjFCGERv",
+            "Y3VtZW50RGF0YVNlcnZpY2VQcm90b1ABWlJnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vZG9jdW1lbnRkYXRhc2VydmljZS92MTtk",
+            "b2N1bWVudGRhdGFzZXJ2aWNlogIDU0RYqgIaU3NuLkRvY3VtZW50ZGF0YXNl",
+            "cnZpY2UuVjHKAhpTc25cRG9jdW1lbnRkYXRhc2VydmljZVxWMeICJlNzblxE",
+            "b2N1bWVudGRhdGFzZXJ2aWNlXFYxXEdQQk1ldGFkYXRh6gIcU3NuOjpEb2N1",
+            "bWVudGRhdGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Ssn.Asyncton.V1.AsynctonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "DocumentBytes", "Predictions", "Feedback", "Labels" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels" }, new[]{ "Consumer" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "DocumentBytes", "Predictions", "Feedback", "Labels" }, null, null, null, null)
           }));
     }
     #endregion
@@ -96,6 +96,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetDocumentDataRequest(GetDocumentDataRequest other) : this() {
       feedbackId_ = other.feedbackId_;
+      consumer_ = other.consumer_;
       includePredictions_ = other.includePredictions_;
       includeFeedbacks_ = other.includeFeedbacks_;
       includeLabels_ = other.includeLabels_;
@@ -120,8 +121,34 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "consumer" field.</summary>
+    public const int ConsumerFieldNumber = 2;
+    private readonly static string ConsumerDefaultValue = "";
+
+    private string consumer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Consumer {
+      get { return consumer_ ?? ConsumerDefaultValue; }
+      set {
+        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "consumer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConsumer {
+      get { return consumer_ != null; }
+    }
+    /// <summary>Clears the value of the "consumer" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConsumer() {
+      consumer_ = null;
+    }
+
     /// <summary>Field number for the "include_predictions" field.</summary>
-    public const int IncludePredictionsFieldNumber = 2;
+    public const int IncludePredictionsFieldNumber = 3;
     private bool includePredictions_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,7 +160,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "include_feedbacks" field.</summary>
-    public const int IncludeFeedbacksFieldNumber = 3;
+    public const int IncludeFeedbacksFieldNumber = 4;
     private bool includeFeedbacks_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,7 +172,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "include_labels" field.</summary>
-    public const int IncludeLabelsFieldNumber = 4;
+    public const int IncludeLabelsFieldNumber = 5;
     private bool includeLabels_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -172,6 +199,7 @@ namespace Ssn.Documentdataservice.V1 {
         return true;
       }
       if (FeedbackId != other.FeedbackId) return false;
+      if (Consumer != other.Consumer) return false;
       if (IncludePredictions != other.IncludePredictions) return false;
       if (IncludeFeedbacks != other.IncludeFeedbacks) return false;
       if (IncludeLabels != other.IncludeLabels) return false;
@@ -183,6 +211,7 @@ namespace Ssn.Documentdataservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
+      if (HasConsumer) hash ^= Consumer.GetHashCode();
       if (IncludePredictions != false) hash ^= IncludePredictions.GetHashCode();
       if (IncludeFeedbacks != false) hash ^= IncludeFeedbacks.GetHashCode();
       if (IncludeLabels != false) hash ^= IncludeLabels.GetHashCode();
@@ -208,16 +237,20 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(FeedbackId);
       }
+      if (HasConsumer) {
+        output.WriteRawTag(18);
+        output.WriteString(Consumer);
+      }
       if (IncludePredictions != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteBool(IncludePredictions);
       }
       if (IncludeFeedbacks != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteBool(IncludeFeedbacks);
       }
       if (IncludeLabels != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(IncludeLabels);
       }
       if (_unknownFields != null) {
@@ -234,16 +267,20 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(FeedbackId);
       }
+      if (HasConsumer) {
+        output.WriteRawTag(18);
+        output.WriteString(Consumer);
+      }
       if (IncludePredictions != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteBool(IncludePredictions);
       }
       if (IncludeFeedbacks != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteBool(IncludeFeedbacks);
       }
       if (IncludeLabels != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(IncludeLabels);
       }
       if (_unknownFields != null) {
@@ -258,6 +295,9 @@ namespace Ssn.Documentdataservice.V1 {
       int size = 0;
       if (FeedbackId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
+      }
+      if (HasConsumer) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
       }
       if (IncludePredictions != false) {
         size += 1 + 1;
@@ -282,6 +322,9 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (other.FeedbackId.Length != 0) {
         FeedbackId = other.FeedbackId;
+      }
+      if (other.HasConsumer) {
+        Consumer = other.Consumer;
       }
       if (other.IncludePredictions != false) {
         IncludePredictions = other.IncludePredictions;
@@ -315,15 +358,19 @@ namespace Ssn.Documentdataservice.V1 {
             FeedbackId = input.ReadString();
             break;
           }
-          case 16: {
-            IncludePredictions = input.ReadBool();
+          case 18: {
+            Consumer = input.ReadString();
             break;
           }
           case 24: {
-            IncludeFeedbacks = input.ReadBool();
+            IncludePredictions = input.ReadBool();
             break;
           }
           case 32: {
+            IncludeFeedbacks = input.ReadBool();
+            break;
+          }
+          case 40: {
             IncludeLabels = input.ReadBool();
             break;
           }
@@ -350,15 +397,19 @@ namespace Ssn.Documentdataservice.V1 {
             FeedbackId = input.ReadString();
             break;
           }
-          case 16: {
-            IncludePredictions = input.ReadBool();
+          case 18: {
+            Consumer = input.ReadString();
             break;
           }
           case 24: {
-            IncludeFeedbacks = input.ReadBool();
+            IncludePredictions = input.ReadBool();
             break;
           }
           case 32: {
+            IncludeFeedbacks = input.ReadBool();
+            break;
+          }
+          case 40: {
             IncludeLabels = input.ReadBool();
             break;
           }
@@ -404,7 +455,6 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetDocumentDataResponse(GetDocumentDataResponse other) : this() {
-      feedbackId_ = other.feedbackId_;
       documentBytes_ = other.documentBytes_;
       predictions_ = other.predictions_.Clone();
       feedback_ = other.feedback_.Clone();
@@ -418,24 +468,9 @@ namespace Ssn.Documentdataservice.V1 {
       return new GetDocumentDataResponse(this);
     }
 
-    /// <summary>Field number for the "feedback_id" field.</summary>
-    public const int FeedbackIdFieldNumber = 1;
-    private string feedbackId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FeedbackId {
-      get { return feedbackId_; }
-      set {
-        feedbackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "document_bytes" field.</summary>
-    public const int DocumentBytesFieldNumber = 2;
+    public const int DocumentBytesFieldNumber = 1;
     private pb::ByteString documentBytes_ = pb::ByteString.Empty;
-    /// <summary>
-    /// Raw image or PDF bytes of the document. May be empty if not stored.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString DocumentBytes {
@@ -446,13 +481,10 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "predictions" field.</summary>
-    public const int PredictionsFieldNumber = 3;
+    public const int PredictionsFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Ssn.Asyncton.V1.Annotation> _repeated_predictions_codec
-        = pb::FieldCodec.ForMessage(26, global::Ssn.Asyncton.V1.Annotation.Parser);
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Asyncton.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> predictions_ = new pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation>();
-    /// <summary>
-    /// Full prediction output from SmartScan.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> Predictions {
@@ -460,9 +492,9 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "feedback" field.</summary>
-    public const int FeedbackFieldNumber = 4;
+    public const int FeedbackFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Ssn.Asyncton.V1.Annotation> _repeated_feedback_codec
-        = pb::FieldCodec.ForMessage(34, global::Ssn.Asyncton.V1.Annotation.Parser);
+        = pb::FieldCodec.ForMessage(26, global::Ssn.Asyncton.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> feedback_ = new pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -471,9 +503,9 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "labels" field.</summary>
-    public const int LabelsFieldNumber = 5;
+    public const int LabelsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Ssn.Asyncton.V1.Annotation> _repeated_labels_codec
-        = pb::FieldCodec.ForMessage(42, global::Ssn.Asyncton.V1.Annotation.Parser);
+        = pb::FieldCodec.ForMessage(34, global::Ssn.Asyncton.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> labels_ = new pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -496,7 +528,6 @@ namespace Ssn.Documentdataservice.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FeedbackId != other.FeedbackId) return false;
       if (DocumentBytes != other.DocumentBytes) return false;
       if(!predictions_.Equals(other.predictions_)) return false;
       if(!feedback_.Equals(other.feedback_)) return false;
@@ -508,7 +539,6 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
       if (DocumentBytes.Length != 0) hash ^= DocumentBytes.GetHashCode();
       hash ^= predictions_.GetHashCode();
       hash ^= feedback_.GetHashCode();
@@ -531,12 +561,8 @@ namespace Ssn.Documentdataservice.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FeedbackId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(FeedbackId);
-      }
       if (DocumentBytes.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteBytes(DocumentBytes);
       }
       predictions_.WriteTo(output, _repeated_predictions_codec);
@@ -552,12 +578,8 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FeedbackId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(FeedbackId);
-      }
       if (DocumentBytes.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteBytes(DocumentBytes);
       }
       predictions_.WriteTo(ref output, _repeated_predictions_codec);
@@ -573,9 +595,6 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FeedbackId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
-      }
       if (DocumentBytes.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(DocumentBytes);
       }
@@ -593,9 +612,6 @@ namespace Ssn.Documentdataservice.V1 {
     public void MergeFrom(GetDocumentDataResponse other) {
       if (other == null) {
         return;
-      }
-      if (other.FeedbackId.Length != 0) {
-        FeedbackId = other.FeedbackId;
       }
       if (other.DocumentBytes.Length != 0) {
         DocumentBytes = other.DocumentBytes;
@@ -623,22 +639,18 @@ namespace Ssn.Documentdataservice.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FeedbackId = input.ReadString();
-            break;
-          }
-          case 18: {
             DocumentBytes = input.ReadBytes();
             break;
           }
-          case 26: {
+          case 18: {
             predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
             break;
           }
-          case 34: {
+          case 26: {
             feedback_.AddEntriesFrom(input, _repeated_feedback_codec);
             break;
           }
-          case 42: {
+          case 34: {
             labels_.AddEntriesFrom(input, _repeated_labels_codec);
             break;
           }
@@ -662,22 +674,18 @@ namespace Ssn.Documentdataservice.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            FeedbackId = input.ReadString();
-            break;
-          }
-          case 18: {
             DocumentBytes = input.ReadBytes();
             break;
           }
-          case 26: {
+          case 18: {
             predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
             break;
           }
-          case 34: {
+          case 26: {
             feedback_.AddEntriesFrom(ref input, _repeated_feedback_codec);
             break;
           }
-          case 42: {
+          case 34: {
             labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
             break;
           }
