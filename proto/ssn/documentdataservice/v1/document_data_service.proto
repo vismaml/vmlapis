@@ -3,7 +3,6 @@ syntax = "proto3";
 package ssn.documentdataservice.v1;
 
 import "google/api/annotations.proto";
-import "ssn/annotator/v1/annotator.proto";
 import "ssn/asyncton/v1/asyncton.proto";
 
 option csharp_namespace = "Ssn.Documentdataservice.V1";
