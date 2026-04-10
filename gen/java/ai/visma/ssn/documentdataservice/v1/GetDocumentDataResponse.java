@@ -30,6 +30,7 @@ private static final long serialVersionUID = 0L;
     feedbackId_ = "";
     documentBytes_ = com.google.protobuf.ByteString.EMPTY;
     predictions_ = java.util.Collections.emptyList();
+    feedback_ = java.util.Collections.emptyList();
     labels_ = java.util.Collections.emptyList();
   }
 
@@ -161,18 +162,59 @@ private static final long serialVersionUID = 0L;
     return predictions_.get(index);
   }
 
-  public static final int LABELS_FIELD_NUMBER = 4;
+  public static final int FEEDBACK_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> feedback_;
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.asyncton.v1.Annotation> getFeedbackList() {
+    return feedback_;
+  }
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
+      getFeedbackOrBuilderList() {
+    return feedback_;
+  }
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  @java.lang.Override
+  public int getFeedbackCount() {
+    return feedback_.size();
+  }
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.asyncton.v1.Annotation getFeedback(int index) {
+    return feedback_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getFeedbackOrBuilder(
+      int index) {
+    return feedback_.get(index);
+  }
+
+  public static final int LABELS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> labels_;
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ssn.asyncton.v1.Annotation> getLabelsList() {
     return labels_;
   }
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
@@ -180,21 +222,21 @@ private static final long serialVersionUID = 0L;
     return labels_;
   }
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public int getLabelsCount() {
     return labels_.size();
   }
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.asyncton.v1.Annotation getLabels(int index) {
     return labels_.get(index);
   }
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getLabelsOrBuilder(
@@ -225,8 +267,11 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < predictions_.size(); i++) {
       output.writeMessage(3, predictions_.get(i));
     }
+    for (int i = 0; i < feedback_.size(); i++) {
+      output.writeMessage(4, feedback_.get(i));
+    }
     for (int i = 0; i < labels_.size(); i++) {
-      output.writeMessage(4, labels_.get(i));
+      output.writeMessage(5, labels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -248,9 +293,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, predictions_.get(i));
     }
+    for (int i = 0; i < feedback_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, feedback_.get(i));
+    }
     for (int i = 0; i < labels_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, labels_.get(i));
+        .computeMessageSize(5, labels_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -273,6 +322,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDocumentBytes())) return false;
     if (!getPredictionsList()
         .equals(other.getPredictionsList())) return false;
+    if (!getFeedbackList()
+        .equals(other.getFeedbackList())) return false;
     if (!getLabelsList()
         .equals(other.getLabelsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -293,6 +344,10 @@ private static final long serialVersionUID = 0L;
     if (getPredictionsCount() > 0) {
       hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getPredictionsList().hashCode();
+    }
+    if (getFeedbackCount() > 0) {
+      hash = (37 * hash) + FEEDBACK_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedbackList().hashCode();
     }
     if (getLabelsCount() > 0) {
       hash = (37 * hash) + LABELS_FIELD_NUMBER;
@@ -438,13 +493,20 @@ private static final long serialVersionUID = 0L;
         predictionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      if (feedbackBuilder_ == null) {
+        feedback_ = java.util.Collections.emptyList();
+      } else {
+        feedback_ = null;
+        feedbackBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
       } else {
         labels_ = null;
         labelsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -487,10 +549,19 @@ private static final long serialVersionUID = 0L;
       } else {
         result.predictions_ = predictionsBuilder_.build();
       }
-      if (labelsBuilder_ == null) {
+      if (feedbackBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          labels_ = java.util.Collections.unmodifiableList(labels_);
+          feedback_ = java.util.Collections.unmodifiableList(feedback_);
           bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.feedback_ = feedback_;
+      } else {
+        result.feedback_ = feedbackBuilder_.build();
+      }
+      if (labelsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          labels_ = java.util.Collections.unmodifiableList(labels_);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.labels_ = labels_;
       } else {
@@ -554,11 +625,37 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (feedbackBuilder_ == null) {
+        if (!other.feedback_.isEmpty()) {
+          if (feedback_.isEmpty()) {
+            feedback_ = other.feedback_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureFeedbackIsMutable();
+            feedback_.addAll(other.feedback_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.feedback_.isEmpty()) {
+          if (feedbackBuilder_.isEmpty()) {
+            feedbackBuilder_.dispose();
+            feedbackBuilder_ = null;
+            feedback_ = other.feedback_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            feedbackBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getFeedbackFieldBuilder() : null;
+          } else {
+            feedbackBuilder_.addAllMessages(other.feedback_);
+          }
+        }
+      }
       if (labelsBuilder_ == null) {
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -571,7 +668,7 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -634,6 +731,19 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.asyncton.v1.Annotation.parser(),
                       extensionRegistry);
+              if (feedbackBuilder_ == null) {
+                ensureFeedbackIsMutable();
+                feedback_.add(m);
+              } else {
+                feedbackBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              ai.visma.ssn.asyncton.v1.Annotation m =
+                  input.readMessage(
+                      ai.visma.ssn.asyncton.v1.Annotation.parser(),
+                      extensionRegistry);
               if (labelsBuilder_ == null) {
                 ensureLabelsIsMutable();
                 labels_.add(m);
@@ -641,7 +751,7 @@ private static final long serialVersionUID = 0L;
                 labelsBuilder_.addMessage(m);
               }
               break;
-            } // case 34
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1087,12 +1197,252 @@ private static final long serialVersionUID = 0L;
       return predictionsBuilder_;
     }
 
+    private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> feedback_ =
+      java.util.Collections.emptyList();
+    private void ensureFeedbackIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        feedback_ = new java.util.ArrayList<ai.visma.ssn.asyncton.v1.Annotation>(feedback_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> feedbackBuilder_;
+
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public java.util.List<ai.visma.ssn.asyncton.v1.Annotation> getFeedbackList() {
+      if (feedbackBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(feedback_);
+      } else {
+        return feedbackBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public int getFeedbackCount() {
+      if (feedbackBuilder_ == null) {
+        return feedback_.size();
+      } else {
+        return feedbackBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public ai.visma.ssn.asyncton.v1.Annotation getFeedback(int index) {
+      if (feedbackBuilder_ == null) {
+        return feedback_.get(index);
+      } else {
+        return feedbackBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder setFeedback(
+        int index, ai.visma.ssn.asyncton.v1.Annotation value) {
+      if (feedbackBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeedbackIsMutable();
+        feedback_.set(index, value);
+        onChanged();
+      } else {
+        feedbackBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder setFeedback(
+        int index, ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
+      if (feedbackBuilder_ == null) {
+        ensureFeedbackIsMutable();
+        feedback_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        feedbackBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder addFeedback(ai.visma.ssn.asyncton.v1.Annotation value) {
+      if (feedbackBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeedbackIsMutable();
+        feedback_.add(value);
+        onChanged();
+      } else {
+        feedbackBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder addFeedback(
+        int index, ai.visma.ssn.asyncton.v1.Annotation value) {
+      if (feedbackBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeedbackIsMutable();
+        feedback_.add(index, value);
+        onChanged();
+      } else {
+        feedbackBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder addFeedback(
+        ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
+      if (feedbackBuilder_ == null) {
+        ensureFeedbackIsMutable();
+        feedback_.add(builderForValue.build());
+        onChanged();
+      } else {
+        feedbackBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder addFeedback(
+        int index, ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
+      if (feedbackBuilder_ == null) {
+        ensureFeedbackIsMutable();
+        feedback_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        feedbackBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder addAllFeedback(
+        java.lang.Iterable<? extends ai.visma.ssn.asyncton.v1.Annotation> values) {
+      if (feedbackBuilder_ == null) {
+        ensureFeedbackIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, feedback_);
+        onChanged();
+      } else {
+        feedbackBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder clearFeedback() {
+      if (feedbackBuilder_ == null) {
+        feedback_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        feedbackBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public Builder removeFeedback(int index) {
+      if (feedbackBuilder_ == null) {
+        ensureFeedbackIsMutable();
+        feedback_.remove(index);
+        onChanged();
+      } else {
+        feedbackBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public ai.visma.ssn.asyncton.v1.Annotation.Builder getFeedbackBuilder(
+        int index) {
+      return getFeedbackFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getFeedbackOrBuilder(
+        int index) {
+      if (feedbackBuilder_ == null) {
+        return feedback_.get(index);  } else {
+        return feedbackBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
+         getFeedbackOrBuilderList() {
+      if (feedbackBuilder_ != null) {
+        return feedbackBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(feedback_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public ai.visma.ssn.asyncton.v1.Annotation.Builder addFeedbackBuilder() {
+      return getFeedbackFieldBuilder().addBuilder(
+          ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public ai.visma.ssn.asyncton.v1.Annotation.Builder addFeedbackBuilder(
+        int index) {
+      return getFeedbackFieldBuilder().addBuilder(
+          index, ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+     */
+    public java.util.List<ai.visma.ssn.asyncton.v1.Annotation.Builder> 
+         getFeedbackBuilderList() {
+      return getFeedbackFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
+        getFeedbackFieldBuilder() {
+      if (feedbackBuilder_ == null) {
+        feedbackBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder>(
+                feedback_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        feedback_ = null;
+      }
+      return feedbackBuilder_;
+    }
+
     private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         labels_ = new java.util.ArrayList<ai.visma.ssn.asyncton.v1.Annotation>(labels_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1100,7 +1450,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> labelsBuilder_;
 
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public java.util.List<ai.visma.ssn.asyncton.v1.Annotation> getLabelsList() {
       if (labelsBuilder_ == null) {
@@ -1110,7 +1460,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public int getLabelsCount() {
       if (labelsBuilder_ == null) {
@@ -1120,7 +1470,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation getLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -1130,7 +1480,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, ai.visma.ssn.asyncton.v1.Annotation value) {
@@ -1147,7 +1497,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
@@ -1161,7 +1511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder addLabels(ai.visma.ssn.asyncton.v1.Annotation value) {
       if (labelsBuilder_ == null) {
@@ -1177,7 +1527,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, ai.visma.ssn.asyncton.v1.Annotation value) {
@@ -1194,7 +1544,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
@@ -1208,7 +1558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, ai.visma.ssn.asyncton.v1.Annotation.Builder builderForValue) {
@@ -1222,7 +1572,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder addAllLabels(
         java.lang.Iterable<? extends ai.visma.ssn.asyncton.v1.Annotation> values) {
@@ -1237,12 +1587,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -1250,7 +1600,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public Builder removeLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -1263,14 +1613,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder getLabelsBuilder(
         int index) {
       return getLabelsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getLabelsOrBuilder(
         int index) {
@@ -1280,7 +1630,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
          getLabelsOrBuilderList() {
@@ -1291,14 +1641,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder addLabelsBuilder() {
       return getLabelsFieldBuilder().addBuilder(
           ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder addLabelsBuilder(
         int index) {
@@ -1306,7 +1656,7 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
     }
     /**
-     * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+     * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
      */
     public java.util.List<ai.visma.ssn.asyncton.v1.Annotation.Builder> 
          getLabelsBuilderList() {
@@ -1319,7 +1669,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;

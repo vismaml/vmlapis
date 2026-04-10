@@ -101,7 +101,10 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.toObject = fun
  */
 proto.ssn.documentdataservice.v1.GetDocumentDataRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    feedbackId: jspb.Message.getFieldWithDefault(msg, 1, "")
+    feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    includePredictions: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    includeFeedbacks: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    includeLabels: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
   };
 
   if (includeInstance) {
@@ -142,6 +145,18 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.deserializeBinaryFromRea
       var value = /** @type {string} */ (reader.readString());
       msg.setFeedbackId(value);
       break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIncludePredictions(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIncludeFeedbacks(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIncludeLabels(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -178,6 +193,27 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.serializeBinaryToWriter 
       f
     );
   }
+  f = message.getIncludePredictions();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getIncludeFeedbacks();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getIncludeLabels();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
 };
 
 
@@ -199,13 +235,67 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setFeedbackId 
 };
 
 
+/**
+ * optional bool include_predictions = 2;
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.getIncludePredictions = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setIncludePredictions = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool include_feedbacks = 3;
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.getIncludeFeedbacks = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setIncludeFeedbacks = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional bool include_labels = 4;
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.getIncludeLabels = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setIncludeLabels = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [3,4];
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [3,4,5];
 
 
 
@@ -241,6 +331,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.toObject = function(inc
     feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     documentBytes: msg.getDocumentBytes_asB64(),
     predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
+    ssn_asyncton_v1_asyncton_pb.Annotation.toObject, includeInstance),
+    feedbackList: jspb.Message.toObjectList(msg.getFeedbackList(),
     ssn_asyncton_v1_asyncton_pb.Annotation.toObject, includeInstance),
     labelsList: jspb.Message.toObjectList(msg.getLabelsList(),
     ssn_asyncton_v1_asyncton_pb.Annotation.toObject, includeInstance)
@@ -296,6 +388,11 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.deserializeBinaryFromRe
     case 4:
       var value = new ssn_asyncton_v1_asyncton_pb.Annotation;
       reader.readMessage(value,ssn_asyncton_v1_asyncton_pb.Annotation.deserializeBinaryFromReader);
+      msg.addFeedback(value);
+      break;
+    case 5:
+      var value = new ssn_asyncton_v1_asyncton_pb.Annotation;
+      reader.readMessage(value,ssn_asyncton_v1_asyncton_pb.Annotation.deserializeBinaryFromReader);
       msg.addLabels(value);
       break;
     default:
@@ -349,10 +446,18 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.serializeBinaryToWriter
       ssn_asyncton_v1_asyncton_pb.Annotation.serializeBinaryToWriter
     );
   }
-  f = message.getLabelsList();
+  f = message.getFeedbackList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       4,
+      f,
+      ssn_asyncton_v1_asyncton_pb.Annotation.serializeBinaryToWriter
+    );
+  }
+  f = message.getLabelsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      5,
       f,
       ssn_asyncton_v1_asyncton_pb.Annotation.serializeBinaryToWriter
     );
@@ -459,10 +564,10 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearPredicti
 
 
 /**
- * repeated ssn.asyncton.v1.Annotation labels = 4;
+ * repeated ssn.asyncton.v1.Annotation feedback = 4;
  * @return {!Array<!proto.ssn.asyncton.v1.Annotation>}
  */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getLabelsList = function() {
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getFeedbackList = function() {
   return /** @type{!Array<!proto.ssn.asyncton.v1.Annotation>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_asyncton_v1_asyncton_pb.Annotation, 4));
 };
@@ -472,7 +577,7 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getLabelsList
  * @param {!Array<!proto.ssn.asyncton.v1.Annotation>} value
  * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
 */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setLabelsList = function(value) {
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setFeedbackList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
@@ -482,8 +587,46 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setLabelsList
  * @param {number=} opt_index
  * @return {!proto.ssn.asyncton.v1.Annotation}
  */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addLabels = function(opt_value, opt_index) {
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addFeedback = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.ssn.asyncton.v1.Annotation, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearFeedbackList = function() {
+  return this.setFeedbackList([]);
+};
+
+
+/**
+ * repeated ssn.asyncton.v1.Annotation labels = 5;
+ * @return {!Array<!proto.ssn.asyncton.v1.Annotation>}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getLabelsList = function() {
+  return /** @type{!Array<!proto.ssn.asyncton.v1.Annotation>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_asyncton_v1_asyncton_pb.Annotation, 5));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.asyncton.v1.Annotation>} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+*/
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setLabelsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 5, value);
+};
+
+
+/**
+ * @param {!proto.ssn.asyncton.v1.Annotation=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.asyncton.v1.Annotation}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addLabels = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.ssn.asyncton.v1.Annotation, opt_index);
 };
 
 

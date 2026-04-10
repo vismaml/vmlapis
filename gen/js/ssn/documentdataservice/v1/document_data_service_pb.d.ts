@@ -8,6 +8,15 @@ export class GetDocumentDataRequest extends jspb.Message {
   getFeedbackId(): string;
   setFeedbackId(value: string): GetDocumentDataRequest;
 
+  getIncludePredictions(): boolean;
+  setIncludePredictions(value: boolean): GetDocumentDataRequest;
+
+  getIncludeFeedbacks(): boolean;
+  setIncludeFeedbacks(value: boolean): GetDocumentDataRequest;
+
+  getIncludeLabels(): boolean;
+  setIncludeLabels(value: boolean): GetDocumentDataRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataRequest): GetDocumentDataRequest.AsObject;
@@ -19,6 +28,9 @@ export class GetDocumentDataRequest extends jspb.Message {
 export namespace GetDocumentDataRequest {
   export type AsObject = {
     feedbackId: string,
+    includePredictions: boolean,
+    includeFeedbacks: boolean,
+    includeLabels: boolean,
   }
 }
 
@@ -35,6 +47,11 @@ export class GetDocumentDataResponse extends jspb.Message {
   setPredictionsList(value: Array<ssn_asyncton_v1_asyncton_pb.Annotation>): GetDocumentDataResponse;
   clearPredictionsList(): GetDocumentDataResponse;
   addPredictions(value?: ssn_asyncton_v1_asyncton_pb.Annotation, index?: number): ssn_asyncton_v1_asyncton_pb.Annotation;
+
+  getFeedbackList(): Array<ssn_asyncton_v1_asyncton_pb.Annotation>;
+  setFeedbackList(value: Array<ssn_asyncton_v1_asyncton_pb.Annotation>): GetDocumentDataResponse;
+  clearFeedbackList(): GetDocumentDataResponse;
+  addFeedback(value?: ssn_asyncton_v1_asyncton_pb.Annotation, index?: number): ssn_asyncton_v1_asyncton_pb.Annotation;
 
   getLabelsList(): Array<ssn_asyncton_v1_asyncton_pb.Annotation>;
   setLabelsList(value: Array<ssn_asyncton_v1_asyncton_pb.Annotation>): GetDocumentDataResponse;
@@ -54,6 +71,7 @@ export namespace GetDocumentDataResponse {
     feedbackId: string,
     documentBytes: Uint8Array | string,
     predictionsList: Array<ssn_asyncton_v1_asyncton_pb.Annotation.AsObject>,
+    feedbackList: Array<ssn_asyncton_v1_asyncton_pb.Annotation.AsObject>,
     labelsList: Array<ssn_asyncton_v1_asyncton_pb.Annotation.AsObject>,
   }
 }

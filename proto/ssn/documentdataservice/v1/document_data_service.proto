@@ -17,6 +17,9 @@ service DocumentDataService {
 
 message GetDocumentDataRequest {
   string feedback_id = 1;
+  bool include_predictions = 2;
+  bool include_feedbacks = 3;
+  bool include_labels = 4;
 }
 
 message GetDocumentDataResponse {
@@ -25,5 +28,6 @@ message GetDocumentDataResponse {
   bytes document_bytes = 2;
   // Full prediction output from SmartScan.
   repeated ssn.asyncton.v1.Annotation predictions = 3;
-  repeated ssn.asyncton.v1.Annotation labels = 4;
+  repeated ssn.asyncton.v1.Annotation feedback = 4;
+  repeated ssn.asyncton.v1.Annotation labels = 5;
 }

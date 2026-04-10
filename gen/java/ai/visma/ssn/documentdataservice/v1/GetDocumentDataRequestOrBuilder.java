@@ -20,4 +20,22 @@ public interface GetDocumentDataRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFeedbackIdBytes();
+
+  /**
+   * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+   * @return The includePredictions.
+   */
+  boolean getIncludePredictions();
+
+  /**
+   * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+   * @return The includeFeedbacks.
+   */
+  boolean getIncludeFeedbacks();
+
+  /**
+   * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+   * @return The includeLabels.
+   */
+  boolean getIncludeLabels();
 }

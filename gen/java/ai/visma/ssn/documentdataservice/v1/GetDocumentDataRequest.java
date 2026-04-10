@@ -82,6 +82,39 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int INCLUDE_PREDICTIONS_FIELD_NUMBER = 2;
+  private boolean includePredictions_ = false;
+  /**
+   * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+   * @return The includePredictions.
+   */
+  @java.lang.Override
+  public boolean getIncludePredictions() {
+    return includePredictions_;
+  }
+
+  public static final int INCLUDE_FEEDBACKS_FIELD_NUMBER = 3;
+  private boolean includeFeedbacks_ = false;
+  /**
+   * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+   * @return The includeFeedbacks.
+   */
+  @java.lang.Override
+  public boolean getIncludeFeedbacks() {
+    return includeFeedbacks_;
+  }
+
+  public static final int INCLUDE_LABELS_FIELD_NUMBER = 4;
+  private boolean includeLabels_ = false;
+  /**
+   * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+   * @return The includeLabels.
+   */
+  @java.lang.Override
+  public boolean getIncludeLabels() {
+    return includeLabels_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -99,6 +132,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, feedbackId_);
     }
+    if (includePredictions_ != false) {
+      output.writeBool(2, includePredictions_);
+    }
+    if (includeFeedbacks_ != false) {
+      output.writeBool(3, includeFeedbacks_);
+    }
+    if (includeLabels_ != false) {
+      output.writeBool(4, includeLabels_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -110,6 +152,18 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feedbackId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, feedbackId_);
+    }
+    if (includePredictions_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, includePredictions_);
+    }
+    if (includeFeedbacks_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, includeFeedbacks_);
+    }
+    if (includeLabels_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, includeLabels_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +182,12 @@ private static final long serialVersionUID = 0L;
 
     if (!getFeedbackId()
         .equals(other.getFeedbackId())) return false;
+    if (getIncludePredictions()
+        != other.getIncludePredictions()) return false;
+    if (getIncludeFeedbacks()
+        != other.getIncludeFeedbacks()) return false;
+    if (getIncludeLabels()
+        != other.getIncludeLabels()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,6 +201,15 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
     hash = (53 * hash) + getFeedbackId().hashCode();
+    hash = (37 * hash) + INCLUDE_PREDICTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludePredictions());
+    hash = (37 * hash) + INCLUDE_FEEDBACKS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeFeedbacks());
+    hash = (37 * hash) + INCLUDE_LABELS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeLabels());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -273,6 +342,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       feedbackId_ = "";
+      includePredictions_ = false;
+      includeFeedbacks_ = false;
+      includeLabels_ = false;
       return this;
     }
 
@@ -309,6 +381,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.feedbackId_ = feedbackId_;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.includePredictions_ = includePredictions_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.includeFeedbacks_ = includeFeedbacks_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeLabels_ = includeLabels_;
+      }
     }
 
     @java.lang.Override
@@ -327,6 +408,15 @@ private static final long serialVersionUID = 0L;
         feedbackId_ = other.feedbackId_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.getIncludePredictions() != false) {
+        setIncludePredictions(other.getIncludePredictions());
+      }
+      if (other.getIncludeFeedbacks() != false) {
+        setIncludeFeedbacks(other.getIncludeFeedbacks());
+      }
+      if (other.getIncludeLabels() != false) {
+        setIncludeLabels(other.getIncludeLabels());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -359,6 +449,21 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              includePredictions_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              includeFeedbacks_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              includeLabels_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -444,6 +549,102 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       feedbackId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean includePredictions_ ;
+    /**
+     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * @return The includePredictions.
+     */
+    @java.lang.Override
+    public boolean getIncludePredictions() {
+      return includePredictions_;
+    }
+    /**
+     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * @param value The includePredictions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludePredictions(boolean value) {
+
+      includePredictions_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool include_predictions = 2 [json_name = "includePredictions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludePredictions() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      includePredictions_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeFeedbacks_ ;
+    /**
+     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * @return The includeFeedbacks.
+     */
+    @java.lang.Override
+    public boolean getIncludeFeedbacks() {
+      return includeFeedbacks_;
+    }
+    /**
+     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * @param value The includeFeedbacks to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeFeedbacks(boolean value) {
+
+      includeFeedbacks_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool include_feedbacks = 3 [json_name = "includeFeedbacks"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeFeedbacks() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      includeFeedbacks_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeLabels_ ;
+    /**
+     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * @return The includeLabels.
+     */
+    @java.lang.Override
+    public boolean getIncludeLabels() {
+      return includeLabels_;
+    }
+    /**
+     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * @param value The includeLabels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeLabels(boolean value) {
+
+      includeLabels_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool include_labels = 4 [json_name = "includeLabels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeLabels() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      includeLabels_ = false;
       onChanged();
       return this;
     }

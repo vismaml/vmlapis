@@ -76,25 +76,49 @@ public interface GetDocumentDataResponseOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
+      getFeedbackList();
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  ai.visma.ssn.asyncton.v1.Annotation getFeedback(int index);
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  int getFeedbackCount();
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
+      getFeedbackOrBuilderList();
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation feedback = 4 [json_name = "feedback"];</code>
+   */
+  ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getFeedbackOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
       getLabelsList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   ai.visma.ssn.asyncton.v1.Annotation getLabels(int index);
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
       getLabelsOrBuilderList();
   /**
-   * <code>repeated .ssn.asyncton.v1.Annotation labels = 4 [json_name = "labels"];</code>
+   * <code>repeated .ssn.asyncton.v1.Annotation labels = 5 [json_name = "labels"];</code>
    */
   ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getLabelsOrBuilder(
       int index);
