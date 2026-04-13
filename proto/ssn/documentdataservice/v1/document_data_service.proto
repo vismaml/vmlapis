@@ -17,7 +17,7 @@ service DocumentDataService {
 
 message GetDocumentDataRequest {
   string feedback_id = 1;
-  optional string consumer = 2;
+  string consumer = 2;
   bool include_predictions = 3;
   bool include_feedbacks = 4;
   bool include_labels = 5;
