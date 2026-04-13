@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package ssn.documentdataservice.v1;
+
+import "google/api/annotations.proto";
+import "ssn/asyncton/v1/asyncton.proto";
+
+option csharp_namespace = "Ssn.Documentdataservice.V1";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/documentdataservice/v1;documentdataservice";
+option java_outer_classname = "DocumentDataServiceProto";
+
+service DocumentDataService {
+  rpc GetDocumentData(GetDocumentDataRequest) returns (GetDocumentDataResponse) {
+    option (google.api.http) = {get: "/v1/documents/{feedback_id}"};
+  }
+}
+
+message GetDocumentDataRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  bool include_predictions = 3;
+  bool include_feedbacks = 4;
+  bool include_labels = 5;
+}
+
+message GetDocumentDataResponse {
+  bytes document_bytes = 1;
+  repeated ssn.asyncton.v1.Annotation predictions = 2;
+  repeated ssn.asyncton.v1.Annotation feedback = 3;
+  repeated ssn.asyncton.v1.Annotation labels = 4;
+}
