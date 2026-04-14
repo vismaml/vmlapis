@@ -1522,6 +1522,60 @@ private static final long serialVersionUID = 0L;
     return jsDivergenceClasses_;
   }
 
+  public static final int TARGET_TRAIN_SIZE_FIELD_NUMBER = 13;
+  private int targetTrainSize_ = 0;
+  /**
+   * <pre>
+   * number of training samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+   * @return Whether the targetTrainSize field is set.
+   */
+  @java.lang.Override
+  public boolean hasTargetTrainSize() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * number of training samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+   * @return The targetTrainSize.
+   */
+  @java.lang.Override
+  public int getTargetTrainSize() {
+    return targetTrainSize_;
+  }
+
+  public static final int TARGET_TEST_SIZE_FIELD_NUMBER = 14;
+  private int targetTestSize_ = 0;
+  /**
+   * <pre>
+   * number of test/validation samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+   * @return Whether the targetTestSize field is set.
+   */
+  @java.lang.Override
+  public boolean hasTargetTestSize() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * number of test/validation samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+   * @return The targetTestSize.
+   */
+  @java.lang.Override
+  public int getTargetTestSize() {
+    return targetTestSize_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1562,6 +1616,12 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000040) != 0)) {
       output.writeFloat(12, jsDivergenceClasses_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeInt32(13, targetTrainSize_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeInt32(14, targetTestSize_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1606,6 +1666,14 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(12, jsDivergenceClasses_);
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(13, targetTrainSize_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(14, targetTestSize_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1667,6 +1735,16 @@ private static final long serialVersionUID = 0L;
           != java.lang.Float.floatToIntBits(
               other.getJsDivergenceClasses())) return false;
     }
+    if (hasTargetTrainSize() != other.hasTargetTrainSize()) return false;
+    if (hasTargetTrainSize()) {
+      if (getTargetTrainSize()
+          != other.getTargetTrainSize()) return false;
+    }
+    if (hasTargetTestSize() != other.hasTargetTestSize()) return false;
+    if (hasTargetTestSize()) {
+      if (getTargetTestSize()
+          != other.getTargetTestSize()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1717,6 +1795,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JS_DIVERGENCE_CLASSES_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getJsDivergenceClasses());
+    }
+    if (hasTargetTrainSize()) {
+      hash = (37 * hash) + TARGET_TRAIN_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetTrainSize();
+    }
+    if (hasTargetTestSize()) {
+      hash = (37 * hash) + TARGET_TEST_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetTestSize();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1864,6 +1950,8 @@ private static final long serialVersionUID = 0L;
       avgLabelsPerInconsistentSample_ = 0F;
       percentSamplesNotInTargetVocab_ = 0F;
       jsDivergenceClasses_ = 0F;
+      targetTrainSize_ = 0;
+      targetTestSize_ = 0;
       return this;
     }
 
@@ -1942,6 +2030,14 @@ private static final long serialVersionUID = 0L;
         result.jsDivergenceClasses_ = jsDivergenceClasses_;
         to_bitField0_ |= 0x00000040;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.targetTrainSize_ = targetTrainSize_;
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.targetTestSize_ = targetTestSize_;
+        to_bitField0_ |= 0x00000100;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -2008,6 +2104,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasJsDivergenceClasses()) {
         setJsDivergenceClasses(other.getJsDivergenceClasses());
+      }
+      if (other.hasTargetTrainSize()) {
+        setTargetTrainSize(other.getTargetTrainSize());
+      }
+      if (other.hasTargetTestSize()) {
+        setTargetTestSize(other.getTargetTestSize());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2088,6 +2190,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 101
+            case 104: {
+              targetTrainSize_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 104
+            case 112: {
+              targetTestSize_ = input.readInt32();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2805,6 +2917,118 @@ private static final long serialVersionUID = 0L;
     public Builder clearJsDivergenceClasses() {
       bitField0_ = (bitField0_ & ~0x00000100);
       jsDivergenceClasses_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private int targetTrainSize_ ;
+    /**
+     * <pre>
+     * number of training samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+     * @return Whether the targetTrainSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetTrainSize() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * number of training samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+     * @return The targetTrainSize.
+     */
+    @java.lang.Override
+    public int getTargetTrainSize() {
+      return targetTrainSize_;
+    }
+    /**
+     * <pre>
+     * number of training samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+     * @param value The targetTrainSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTargetTrainSize(int value) {
+
+      targetTrainSize_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * number of training samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTargetTrainSize() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      targetTrainSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int targetTestSize_ ;
+    /**
+     * <pre>
+     * number of test/validation samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+     * @return Whether the targetTestSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetTestSize() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * number of test/validation samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+     * @return The targetTestSize.
+     */
+    @java.lang.Override
+    public int getTargetTestSize() {
+      return targetTestSize_;
+    }
+    /**
+     * <pre>
+     * number of test/validation samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+     * @param value The targetTestSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTargetTestSize(int value) {
+
+      targetTestSize_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * number of test/validation samples with a label for this target
+     * </pre>
+     *
+     * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTargetTestSize() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      targetTestSize_ = 0;
       onChanged();
       return this;
     }

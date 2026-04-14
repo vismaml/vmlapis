@@ -24,8 +24,8 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSLx",
-            "CAoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSL8",
+            "CQoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
             "UgdtZXRyaWNzEh0KB2VudHJvcHkYBiABKAJIAFIHZW50cm9weYgBARIvChFu",
             "dW1iZXJfb2ZfY2xhc3NlcxgHIAEoBUgBUg9udW1iZXJPZkNsYXNzZXOIAQES",
@@ -36,29 +36,32 @@ namespace Asgt.Type {
             "bnNpc3RlbnRTYW1wbGWIAQESUAojcGVyY2VudF9zYW1wbGVzX25vdF9pbl90",
             "YXJnZXRfdm9jYWIYCyABKAJIBVIecGVyY2VudFNhbXBsZXNOb3RJblRhcmdl",
             "dFZvY2FiiAEBEjcKFWpzX2RpdmVyZ2VuY2VfY2xhc3NlcxgMIAEoAkgGUhNq",
-            "c0RpdmVyZ2VuY2VDbGFzc2VziAEBGpgDCgZNZXRyaWMSHAoJcHJlY2lzaW9u",
-            "GAEgASgCUglwcmVjaXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlk",
-            "ZW5jZRIfCgthbnN3ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVl",
-            "X3Bvc2l0aXZlGAQgASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2",
-            "ZRgFIAEoBVIMdHJ1ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgF",
-            "Ug1mYWxzZVBvc2l0aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxz",
-            "ZU5lZ2F0aXZlEhAKA21jYxgIIAEoAlIDbWNjEhoKCGFjY3VyYWN5GAkgASgC",
-            "UghhY2N1cmFjeRIrChFiYWxhbmNlZF9hY2N1cmFjeRgKIAEoAlIQYmFsYW5j",
-            "ZWRBY2N1cmFjeRI2ChdwcmVjaXNpb25fYm91bmRfZXBzaWxvbhgMIAEoAlIV",
-            "cHJlY2lzaW9uQm91bmRFcHNpbG9uSgQICxAMQgoKCF9lbnRyb3B5QhQKEl9u",
-            "dW1iZXJfb2ZfY2xhc3Nlc0IXChVfYXZnX3NhbXBsZV9wZXJfY2xhc3NCGwoZ",
-            "X2luY29uc2lzdGVudF9sYWJlbF9yYXRpb0IlCiNfYXZnX2xhYmVsc19wZXJf",
-            "aW5jb25zaXN0ZW50X3NhbXBsZUImCiRfcGVyY2VudF9zYW1wbGVzX25vdF9p",
-            "bl90YXJnZXRfdm9jYWJCGAoWX2pzX2RpdmVyZ2VuY2VfY2xhc3Nlc0oECAMQ",
-            "BEoECAQQBUoECAUQBkKlAQoSYWkudmlzbWEuYXNndC50eXBlQhJUYXJnZXRN",
-            "ZXRyaWNzUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJ",
-            "QXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlw",
-            "ZWIGcHJvdG8z"));
+            "c0RpdmVyZ2VuY2VDbGFzc2VziAEBEi8KEXRhcmdldF90cmFpbl9zaXplGA0g",
+            "ASgFSAdSD3RhcmdldFRyYWluU2l6ZYgBARItChB0YXJnZXRfdGVzdF9zaXpl",
+            "GA4gASgFSAhSDnRhcmdldFRlc3RTaXpliAEBGpgDCgZNZXRyaWMSHAoJcHJl",
+            "Y2lzaW9uGAEgASgCUglwcmVjaXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIK",
+            "Y29uZmlkZW5jZRIfCgthbnN3ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIj",
+            "Cg10cnVlX3Bvc2l0aXZlGAQgASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9u",
+            "ZWdhdGl2ZRgFIAEoBVIMdHJ1ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZl",
+            "GAYgASgFUg1mYWxzZVBvc2l0aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgF",
+            "Ug1mYWxzZU5lZ2F0aXZlEhAKA21jYxgIIAEoAlIDbWNjEhoKCGFjY3VyYWN5",
+            "GAkgASgCUghhY2N1cmFjeRIrChFiYWxhbmNlZF9hY2N1cmFjeRgKIAEoAlIQ",
+            "YmFsYW5jZWRBY2N1cmFjeRI2ChdwcmVjaXNpb25fYm91bmRfZXBzaWxvbhgM",
+            "IAEoAlIVcHJlY2lzaW9uQm91bmRFcHNpbG9uSgQICxAMQgoKCF9lbnRyb3B5",
+            "QhQKEl9udW1iZXJfb2ZfY2xhc3Nlc0IXChVfYXZnX3NhbXBsZV9wZXJfY2xh",
+            "c3NCGwoZX2luY29uc2lzdGVudF9sYWJlbF9yYXRpb0IlCiNfYXZnX2xhYmVs",
+            "c19wZXJfaW5jb25zaXN0ZW50X3NhbXBsZUImCiRfcGVyY2VudF9zYW1wbGVz",
+            "X25vdF9pbl90YXJnZXRfdm9jYWJCGAoWX2pzX2RpdmVyZ2VuY2VfY2xhc3Nl",
+            "c0IUChJfdGFyZ2V0X3RyYWluX3NpemVCEwoRX3RhcmdldF90ZXN0X3NpemVK",
+            "BAgDEARKBAgEEAVKBAgFEAZCpQEKEmFpLnZpc21hLmFzZ3QudHlwZUISVGFy",
+            "Z2V0TWV0cmljc1Byb3RvUAFaNmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFw",
+            "aXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZaICA0FUWKoCCUFzZ3QuVHlw",
+            "ZcoCCUFzZ3RcVHlwZeICFUFzZ3RcVHlwZVxHUEJNZXRhZGF0YeoCCkFzZ3Q6",
+            "OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses" }, new[]{ "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", "PrecisionBoundEpsilon" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics", "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses", "TargetTrainSize", "TargetTestSize" }, new[]{ "Entropy", "NumberOfClasses", "AvgSamplePerClass", "InconsistentLabelRatio", "AvgLabelsPerInconsistentSample", "PercentSamplesNotInTargetVocab", "JsDivergenceClasses", "TargetTrainSize", "TargetTestSize" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy", "PrecisionBoundEpsilon" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -111,6 +114,8 @@ namespace Asgt.Type {
       avgLabelsPerInconsistentSample_ = other.avgLabelsPerInconsistentSample_;
       percentSamplesNotInTargetVocab_ = other.percentSamplesNotInTargetVocab_;
       jsDivergenceClasses_ = other.jsDivergenceClasses_;
+      targetTrainSize_ = other.targetTrainSize_;
+      targetTestSize_ = other.targetTestSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -353,6 +358,66 @@ namespace Asgt.Type {
       _hasBits0 &= ~64;
     }
 
+    /// <summary>Field number for the "target_train_size" field.</summary>
+    public const int TargetTrainSizeFieldNumber = 13;
+    private readonly static int TargetTrainSizeDefaultValue = 0;
+
+    private int targetTrainSize_;
+    /// <summary>
+    /// number of training samples with a label for this target
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TargetTrainSize {
+      get { if ((_hasBits0 & 128) != 0) { return targetTrainSize_; } else { return TargetTrainSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        targetTrainSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "target_train_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetTrainSize {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "target_train_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetTrainSize() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "target_test_size" field.</summary>
+    public const int TargetTestSizeFieldNumber = 14;
+    private readonly static int TargetTestSizeDefaultValue = 0;
+
+    private int targetTestSize_;
+    /// <summary>
+    /// number of test/validation samples with a label for this target
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TargetTestSize {
+      get { if ((_hasBits0 & 256) != 0) { return targetTestSize_; } else { return TargetTestSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        targetTestSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "target_test_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetTestSize {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "target_test_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetTestSize() {
+      _hasBits0 &= ~256;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -377,6 +442,8 @@ namespace Asgt.Type {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AvgLabelsPerInconsistentSample, other.AvgLabelsPerInconsistentSample)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentSamplesNotInTargetVocab, other.PercentSamplesNotInTargetVocab)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(JsDivergenceClasses, other.JsDivergenceClasses)) return false;
+      if (TargetTrainSize != other.TargetTrainSize) return false;
+      if (TargetTestSize != other.TargetTestSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -393,6 +460,8 @@ namespace Asgt.Type {
       if (HasAvgLabelsPerInconsistentSample) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AvgLabelsPerInconsistentSample);
       if (HasPercentSamplesNotInTargetVocab) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSamplesNotInTargetVocab);
       if (HasJsDivergenceClasses) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(JsDivergenceClasses);
+      if (HasTargetTrainSize) hash ^= TargetTrainSize.GetHashCode();
+      if (HasTargetTestSize) hash ^= TargetTestSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -444,6 +513,14 @@ namespace Asgt.Type {
         output.WriteRawTag(101);
         output.WriteFloat(JsDivergenceClasses);
       }
+      if (HasTargetTrainSize) {
+        output.WriteRawTag(104);
+        output.WriteInt32(TargetTrainSize);
+      }
+      if (HasTargetTestSize) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TargetTestSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -487,6 +564,14 @@ namespace Asgt.Type {
         output.WriteRawTag(101);
         output.WriteFloat(JsDivergenceClasses);
       }
+      if (HasTargetTrainSize) {
+        output.WriteRawTag(104);
+        output.WriteInt32(TargetTrainSize);
+      }
+      if (HasTargetTestSize) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TargetTestSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -521,6 +606,12 @@ namespace Asgt.Type {
       }
       if (HasJsDivergenceClasses) {
         size += 1 + 4;
+      }
+      if (HasTargetTrainSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetTrainSize);
+      }
+      if (HasTargetTestSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetTestSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -558,6 +649,12 @@ namespace Asgt.Type {
       }
       if (other.HasJsDivergenceClasses) {
         JsDivergenceClasses = other.JsDivergenceClasses;
+      }
+      if (other.HasTargetTrainSize) {
+        TargetTrainSize = other.TargetTrainSize;
+      }
+      if (other.HasTargetTestSize) {
+        TargetTestSize = other.TargetTestSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -614,6 +711,14 @@ namespace Asgt.Type {
             JsDivergenceClasses = input.ReadFloat();
             break;
           }
+          case 104: {
+            TargetTrainSize = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            TargetTestSize = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -667,6 +772,14 @@ namespace Asgt.Type {
           }
           case 101: {
             JsDivergenceClasses = input.ReadFloat();
+            break;
+          }
+          case 104: {
+            TargetTrainSize = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            TargetTestSize = input.ReadInt32();
             break;
           }
         }

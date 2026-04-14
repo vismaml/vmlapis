@@ -46,6 +46,16 @@ export class TargetMetrics extends jspb.Message {
   hasJsDivergenceClasses(): boolean;
   clearJsDivergenceClasses(): TargetMetrics;
 
+  getTargetTrainSize(): number;
+  setTargetTrainSize(value: number): TargetMetrics;
+  hasTargetTrainSize(): boolean;
+  clearTargetTrainSize(): TargetMetrics;
+
+  getTargetTestSize(): number;
+  setTargetTestSize(value: number): TargetMetrics;
+  hasTargetTestSize(): boolean;
+  clearTargetTestSize(): TargetMetrics;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TargetMetrics.AsObject;
   static toObject(includeInstance: boolean, msg: TargetMetrics): TargetMetrics.AsObject;
@@ -65,6 +75,8 @@ export namespace TargetMetrics {
     avgLabelsPerInconsistentSample?: number,
     percentSamplesNotInTargetVocab?: number,
     jsDivergenceClasses?: number,
+    targetTrainSize?: number,
+    targetTestSize?: number,
   }
 
   export class Metric extends jspb.Message {
@@ -159,6 +171,16 @@ export namespace TargetMetrics {
   export enum JsDivergenceClassesCase { 
     _JS_DIVERGENCE_CLASSES_NOT_SET = 0,
     JS_DIVERGENCE_CLASSES = 12,
+  }
+
+  export enum TargetTrainSizeCase { 
+    _TARGET_TRAIN_SIZE_NOT_SET = 0,
+    TARGET_TRAIN_SIZE = 13,
+  }
+
+  export enum TargetTestSizeCase { 
+    _TARGET_TEST_SIZE_NOT_SET = 0,
+    TARGET_TEST_SIZE = 14,
   }
 }
 
