@@ -113,7 +113,9 @@ proto.asgt.type.TargetMetrics.toObject = function(includeInstance, msg) {
     inconsistentLabelRatio: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
     avgLabelsPerInconsistentSample: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
     percentSamplesNotInTargetVocab: jspb.Message.getFloatingPointFieldWithDefault(msg, 11, 0.0),
-    jsDivergenceClasses: jspb.Message.getFloatingPointFieldWithDefault(msg, 12, 0.0)
+    jsDivergenceClasses: jspb.Message.getFloatingPointFieldWithDefault(msg, 12, 0.0),
+    targetTrainSize: jspb.Message.getFieldWithDefault(msg, 13, 0),
+    targetTestSize: jspb.Message.getFieldWithDefault(msg, 14, 0)
   };
 
   if (includeInstance) {
@@ -186,6 +188,14 @@ proto.asgt.type.TargetMetrics.deserializeBinaryFromReader = function(msg, reader
     case 12:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setJsDivergenceClasses(value);
+      break;
+    case 13:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTargetTrainSize(value);
+      break;
+    case 14:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTargetTestSize(value);
       break;
     default:
       reader.skipField();
@@ -277,6 +287,20 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
   if (f != null) {
     writer.writeFloat(
       12,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 13));
+  if (f != null) {
+    writer.writeInt32(
+      13,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 14));
+  if (f != null) {
+    writer.writeInt32(
+      14,
       f
     );
   }
@@ -1018,6 +1042,78 @@ proto.asgt.type.TargetMetrics.prototype.clearJsDivergenceClasses = function() {
  */
 proto.asgt.type.TargetMetrics.prototype.hasJsDivergenceClasses = function() {
   return jspb.Message.getField(this, 12) != null;
+};
+
+
+/**
+ * optional int32 target_train_size = 13;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getTargetTrainSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setTargetTrainSize = function(value) {
+  return jspb.Message.setField(this, 13, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearTargetTrainSize = function() {
+  return jspb.Message.setField(this, 13, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasTargetTrainSize = function() {
+  return jspb.Message.getField(this, 13) != null;
+};
+
+
+/**
+ * optional int32 target_test_size = 14;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.prototype.getTargetTestSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setTargetTestSize = function(value) {
+  return jspb.Message.setField(this, 14, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearTargetTestSize = function() {
+  return jspb.Message.setField(this, 14, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.type.TargetMetrics.prototype.hasTargetTestSize = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

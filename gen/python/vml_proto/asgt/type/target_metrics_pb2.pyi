@@ -6,7 +6,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TargetMetrics(_message.Message):
-    __slots__ = ("target", "metrics", "entropy", "number_of_classes", "avg_sample_per_class", "inconsistent_label_ratio", "avg_labels_per_inconsistent_sample", "percent_samples_not_in_target_vocab", "js_divergence_classes")
+    __slots__ = ("target", "metrics", "entropy", "number_of_classes", "avg_sample_per_class", "inconsistent_label_ratio", "avg_labels_per_inconsistent_sample", "percent_samples_not_in_target_vocab", "js_divergence_classes", "target_train_size", "target_test_size")
     class Metric(_message.Message):
         __slots__ = ("precision", "confidence", "answer_rate", "true_positive", "true_negative", "false_positive", "false_negative", "mcc", "accuracy", "balanced_accuracy", "precision_bound_epsilon")
         PRECISION_FIELD_NUMBER: _ClassVar[int]
@@ -41,6 +41,8 @@ class TargetMetrics(_message.Message):
     AVG_LABELS_PER_INCONSISTENT_SAMPLE_FIELD_NUMBER: _ClassVar[int]
     PERCENT_SAMPLES_NOT_IN_TARGET_VOCAB_FIELD_NUMBER: _ClassVar[int]
     JS_DIVERGENCE_CLASSES_FIELD_NUMBER: _ClassVar[int]
+    TARGET_TRAIN_SIZE_FIELD_NUMBER: _ClassVar[int]
+    TARGET_TEST_SIZE_FIELD_NUMBER: _ClassVar[int]
     target: str
     metrics: _containers.RepeatedCompositeFieldContainer[TargetMetrics.Metric]
     entropy: float
@@ -50,4 +52,6 @@ class TargetMetrics(_message.Message):
     avg_labels_per_inconsistent_sample: float
     percent_samples_not_in_target_vocab: float
     js_divergence_classes: float
-    def __init__(self, target: _Optional[str] = ..., metrics: _Optional[_Iterable[_Union[TargetMetrics.Metric, _Mapping]]] = ..., entropy: _Optional[float] = ..., number_of_classes: _Optional[int] = ..., avg_sample_per_class: _Optional[float] = ..., inconsistent_label_ratio: _Optional[float] = ..., avg_labels_per_inconsistent_sample: _Optional[float] = ..., percent_samples_not_in_target_vocab: _Optional[float] = ..., js_divergence_classes: _Optional[float] = ...) -> None: ...
+    target_train_size: int
+    target_test_size: int
+    def __init__(self, target: _Optional[str] = ..., metrics: _Optional[_Iterable[_Union[TargetMetrics.Metric, _Mapping]]] = ..., entropy: _Optional[float] = ..., number_of_classes: _Optional[int] = ..., avg_sample_per_class: _Optional[float] = ..., inconsistent_label_ratio: _Optional[float] = ..., avg_labels_per_inconsistent_sample: _Optional[float] = ..., percent_samples_not_in_target_vocab: _Optional[float] = ..., js_divergence_classes: _Optional[float] = ..., target_train_size: _Optional[int] = ..., target_test_size: _Optional[int] = ...) -> None: ...

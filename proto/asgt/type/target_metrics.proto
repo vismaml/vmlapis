@@ -46,4 +46,10 @@ message TargetMetrics {
 
   optional float js_divergence_classes = 12;
   // Jensen-Shannon divergence for classes
+
+  optional int32 target_train_size = 13;
+  // number of training samples with a label for this target
+
+  optional int32 target_test_size = 14;
+  // number of test/validation samples with a label for this target
 }

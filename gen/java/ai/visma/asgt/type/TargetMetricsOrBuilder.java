@@ -177,4 +177,42 @@ public interface TargetMetricsOrBuilder extends
    * @return The jsDivergenceClasses.
    */
   float getJsDivergenceClasses();
+
+  /**
+   * <pre>
+   * number of training samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+   * @return Whether the targetTrainSize field is set.
+   */
+  boolean hasTargetTrainSize();
+  /**
+   * <pre>
+   * number of training samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
+   * @return The targetTrainSize.
+   */
+  int getTargetTrainSize();
+
+  /**
+   * <pre>
+   * number of test/validation samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+   * @return Whether the targetTestSize field is set.
+   */
+  boolean hasTargetTestSize();
+  /**
+   * <pre>
+   * number of test/validation samples with a label for this target
+   * </pre>
+   *
+   * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
+   * @return The targetTestSize.
+   */
+  int getTargetTestSize();
 }

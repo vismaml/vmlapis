@@ -810,6 +810,16 @@
           "type": "number",
           "format": "float",
           "title": "Jensen-Shannon divergence for classes"
+        },
+        "targetTrainSize": {
+          "type": "integer",
+          "format": "int32",
+          "title": "number of training samples with a label for this target"
+        },
+        "targetTestSize": {
+          "type": "integer",
+          "format": "int32",
+          "title": "number of test/validation samples with a label for this target"
         }
       }
     },
