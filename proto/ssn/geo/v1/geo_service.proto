@@ -39,8 +39,7 @@ message ValidateAddressResponse {
   bool valid = 1;
   ssn.type.Confidence confidence = 2;
   StructuredAddress address = 3;
-  string raw_input = 4;
-  AddressFeature feature = 5;
+  AddressFeature feature = 4;
 }
 
 message ValidateAddressesRequest {
