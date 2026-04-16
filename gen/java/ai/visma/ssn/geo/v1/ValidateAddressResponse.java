@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ValidateAddressResponse() {
-    rawInput_ = "";
     feature_ = 0;
   }
 
@@ -108,56 +107,17 @@ private static final long serialVersionUID = 0L;
     return address_ == null ? ai.visma.ssn.geo.v1.StructuredAddress.getDefaultInstance() : address_;
   }
 
-  public static final int RAW_INPUT_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object rawInput_ = "";
-  /**
-   * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-   * @return The rawInput.
-   */
-  @java.lang.Override
-  public java.lang.String getRawInput() {
-    java.lang.Object ref = rawInput_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      rawInput_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-   * @return The bytes for rawInput.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getRawInputBytes() {
-    java.lang.Object ref = rawInput_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      rawInput_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int FEATURE_FIELD_NUMBER = 5;
+  public static final int FEATURE_FIELD_NUMBER = 4;
   private int feature_ = 0;
   /**
-   * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+   * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
    * @return The enum numeric value on the wire for feature.
    */
   @java.lang.Override public int getFeatureValue() {
     return feature_;
   }
   /**
-   * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+   * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
    * @return The feature.
    */
   @java.lang.Override public ai.visma.ssn.geo.v1.AddressFeature getFeature() {
@@ -188,11 +148,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getAddress());
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rawInput_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, rawInput_);
-    }
     if (feature_ != ai.visma.ssn.geo.v1.AddressFeature.ADDRESS_FEATURE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(5, feature_);
+      output.writeEnum(4, feature_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -215,12 +172,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAddress());
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rawInput_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, rawInput_);
-    }
     if (feature_ != ai.visma.ssn.geo.v1.AddressFeature.ADDRESS_FEATURE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, feature_);
+        .computeEnumSize(4, feature_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,8 +203,6 @@ private static final long serialVersionUID = 0L;
       if (!getAddress()
           .equals(other.getAddress())) return false;
     }
-    if (!getRawInput()
-        .equals(other.getRawInput())) return false;
     if (feature_ != other.feature_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -274,8 +226,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getAddress().hashCode();
     }
-    hash = (37 * hash) + RAW_INPUT_FIELD_NUMBER;
-    hash = (53 * hash) + getRawInput().hashCode();
     hash = (37 * hash) + FEATURE_FIELD_NUMBER;
     hash = (53 * hash) + feature_;
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -427,7 +377,6 @@ private static final long serialVersionUID = 0L;
         addressBuilder_.dispose();
         addressBuilder_ = null;
       }
-      rawInput_ = "";
       feature_ = 0;
       return this;
     }
@@ -479,9 +428,6 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.rawInput_ = rawInput_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.feature_ = feature_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -507,11 +453,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAddress()) {
         mergeAddress(other.getAddress());
-      }
-      if (!other.getRawInput().isEmpty()) {
-        rawInput_ = other.rawInput_;
-        bitField0_ |= 0x00000008;
-        onChanged();
       }
       if (other.feature_ != 0) {
         setFeatureValue(other.getFeatureValue());
@@ -561,16 +502,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              rawInput_ = input.readStringRequireUtf8();
+            case 32: {
+              feature_ = input.readEnum();
               bitField0_ |= 0x00000008;
               break;
-            } // case 34
-            case 40: {
-              feature_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -862,99 +798,27 @@ private static final long serialVersionUID = 0L;
       return addressBuilder_;
     }
 
-    private java.lang.Object rawInput_ = "";
-    /**
-     * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-     * @return The rawInput.
-     */
-    public java.lang.String getRawInput() {
-      java.lang.Object ref = rawInput_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        rawInput_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-     * @return The bytes for rawInput.
-     */
-    public com.google.protobuf.ByteString
-        getRawInputBytes() {
-      java.lang.Object ref = rawInput_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        rawInput_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-     * @param value The rawInput to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRawInput(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      rawInput_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRawInput() {
-      rawInput_ = getDefaultInstance().getRawInput();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-     * @param value The bytes for rawInput to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRawInputBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      rawInput_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
     private int feature_ = 0;
     /**
-     * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+     * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
      * @return The enum numeric value on the wire for feature.
      */
     @java.lang.Override public int getFeatureValue() {
       return feature_;
     }
     /**
-     * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+     * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
      * @param value The enum numeric value on the wire for feature to set.
      * @return This builder for chaining.
      */
     public Builder setFeatureValue(int value) {
       feature_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+     * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
      * @return The feature.
      */
     @java.lang.Override
@@ -963,7 +827,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.ssn.geo.v1.AddressFeature.UNRECOGNIZED : result;
     }
     /**
-     * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+     * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
      * @param value The feature to set.
      * @return This builder for chaining.
      */
@@ -971,17 +835,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       feature_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+     * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFeature() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       feature_ = 0;
       onChanged();
       return this;

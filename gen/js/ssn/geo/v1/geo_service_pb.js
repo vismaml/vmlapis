@@ -759,8 +759,7 @@ proto.ssn.geo.v1.ValidateAddressResponse.toObject = function(includeInstance, ms
     valid: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     confidence: (f = msg.getConfidence()) && ssn_type_candidate_pb.Confidence.toObject(includeInstance, f),
     address: (f = msg.getAddress()) && proto.ssn.geo.v1.StructuredAddress.toObject(includeInstance, f),
-    rawInput: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    feature: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    feature: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -812,10 +811,6 @@ proto.ssn.geo.v1.ValidateAddressResponse.deserializeBinaryFromReader = function(
       msg.setAddress(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRawInput(value);
-      break;
-    case 5:
       var value = /** @type {!proto.ssn.geo.v1.AddressFeature} */ (reader.readEnum());
       msg.setFeature(value);
       break;
@@ -871,17 +866,10 @@ proto.ssn.geo.v1.ValidateAddressResponse.serializeBinaryToWriter = function(mess
       proto.ssn.geo.v1.StructuredAddress.serializeBinaryToWriter
     );
   }
-  f = message.getRawInput();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
   f = message.getFeature();
   if (f !== 0.0) {
     writer.writeEnum(
-      5,
+      4,
       f
     );
   }
@@ -981,29 +969,11 @@ proto.ssn.geo.v1.ValidateAddressResponse.prototype.hasAddress = function() {
 
 
 /**
- * optional string raw_input = 4;
- * @return {string}
- */
-proto.ssn.geo.v1.ValidateAddressResponse.prototype.getRawInput = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.geo.v1.ValidateAddressResponse} returns this
- */
-proto.ssn.geo.v1.ValidateAddressResponse.prototype.setRawInput = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional AddressFeature feature = 5;
+ * optional AddressFeature feature = 4;
  * @return {!proto.ssn.geo.v1.AddressFeature}
  */
 proto.ssn.geo.v1.ValidateAddressResponse.prototype.getFeature = function() {
-  return /** @type {!proto.ssn.geo.v1.AddressFeature} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {!proto.ssn.geo.v1.AddressFeature} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -1012,7 +982,7 @@ proto.ssn.geo.v1.ValidateAddressResponse.prototype.getFeature = function() {
  * @return {!proto.ssn.geo.v1.ValidateAddressResponse} returns this
  */
 proto.ssn.geo.v1.ValidateAddressResponse.prototype.setFeature = function(value) {
-  return jspb.Message.setProto3EnumField(this, 5, value);
+  return jspb.Message.setProto3EnumField(this, 4, value);
 };
 
 

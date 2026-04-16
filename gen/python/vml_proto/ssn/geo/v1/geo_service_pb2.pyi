@@ -51,18 +51,16 @@ class ValidateAddressRequest(_message.Message):
     def __init__(self, raw_address: _Optional[str] = ..., feature: _Optional[_Union[AddressFeature, str]] = ..., document_id: _Optional[str] = ...) -> None: ...
 
 class ValidateAddressResponse(_message.Message):
-    __slots__ = ("valid", "confidence", "address", "raw_input", "feature")
+    __slots__ = ("valid", "confidence", "address", "feature")
     VALID_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     ADDRESS_FIELD_NUMBER: _ClassVar[int]
-    RAW_INPUT_FIELD_NUMBER: _ClassVar[int]
     FEATURE_FIELD_NUMBER: _ClassVar[int]
     valid: bool
     confidence: _candidate_pb2.Confidence
     address: StructuredAddress
-    raw_input: str
     feature: AddressFeature
-    def __init__(self, valid: bool = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ..., address: _Optional[_Union[StructuredAddress, _Mapping]] = ..., raw_input: _Optional[str] = ..., feature: _Optional[_Union[AddressFeature, str]] = ...) -> None: ...
+    def __init__(self, valid: bool = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ..., address: _Optional[_Union[StructuredAddress, _Mapping]] = ..., feature: _Optional[_Union[AddressFeature, str]] = ...) -> None: ...
 
 class ValidateAddressesRequest(_message.Message):
     __slots__ = ("addresses",)

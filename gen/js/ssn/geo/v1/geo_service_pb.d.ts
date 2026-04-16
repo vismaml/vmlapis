@@ -97,9 +97,6 @@ export class ValidateAddressResponse extends jspb.Message {
   hasAddress(): boolean;
   clearAddress(): ValidateAddressResponse;
 
-  getRawInput(): string;
-  setRawInput(value: string): ValidateAddressResponse;
-
   getFeature(): AddressFeature;
   setFeature(value: AddressFeature): ValidateAddressResponse;
 
@@ -116,7 +113,6 @@ export namespace ValidateAddressResponse {
     valid: boolean,
     confidence?: ssn_type_candidate_pb.Confidence.AsObject,
     address?: StructuredAddress.AsObject,
-    rawInput: string,
     feature: AddressFeature,
   }
 }

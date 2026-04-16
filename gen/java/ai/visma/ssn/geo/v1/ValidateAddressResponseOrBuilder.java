@@ -46,24 +46,12 @@ public interface ValidateAddressResponseOrBuilder extends
   ai.visma.ssn.geo.v1.StructuredAddressOrBuilder getAddressOrBuilder();
 
   /**
-   * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-   * @return The rawInput.
-   */
-  java.lang.String getRawInput();
-  /**
-   * <code>string raw_input = 4 [json_name = "rawInput"];</code>
-   * @return The bytes for rawInput.
-   */
-  com.google.protobuf.ByteString
-      getRawInputBytes();
-
-  /**
-   * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+   * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
    * @return The enum numeric value on the wire for feature.
    */
   int getFeatureValue();
   /**
-   * <code>.ssn.geo.v1.AddressFeature feature = 5 [json_name = "feature"];</code>
+   * <code>.ssn.geo.v1.AddressFeature feature = 4 [json_name = "feature"];</code>
    * @return The feature.
    */
   ai.visma.ssn.geo.v1.AddressFeature getFeature();

@@ -72,27 +72,26 @@ public final class GeoServiceProto {
       "eAddressRequest\022\037\n\013raw_address\030\001 \001(\tR\nra" +
       "wAddress\0224\n\007feature\030\002 \001(\0162\032.ssn.geo.v1.A" +
       "ddressFeatureR\007feature\022\037\n\013document_id\030\003 " +
-      "\001(\tR\ndocumentId\"\361\001\n\027ValidateAddressRespo" +
+      "\001(\tR\ndocumentId\"\324\001\n\027ValidateAddressRespo" +
       "nse\022\024\n\005valid\030\001 \001(\010R\005valid\0224\n\nconfidence\030" +
       "\002 \001(\0132\024.ssn.type.ConfidenceR\nconfidence\022" +
       "7\n\007address\030\003 \001(\0132\035.ssn.geo.v1.Structured" +
-      "AddressR\007address\022\033\n\traw_input\030\004 \001(\tR\010raw" +
-      "Input\0224\n\007feature\030\005 \001(\0162\032.ssn.geo.v1.Addr" +
-      "essFeatureR\007feature\"\\\n\030ValidateAddresses" +
-      "Request\022@\n\taddresses\030\001 \003(\0132\".ssn.geo.v1." +
-      "ValidateAddressRequestR\taddresses\"Z\n\031Val" +
-      "idateAddressesResponse\022=\n\007results\030\001 \003(\0132" +
-      "#.ssn.geo.v1.ValidateAddressResponseR\007re" +
-      "sults*]\n\016AddressFeature\022\037\n\033ADDRESS_FEATU" +
-      "RE_UNSPECIFIED\020\000\022\024\n\020SUPPLIER_ADDRESS\020\001\022\024" +
-      "\n\020RECEIVER_ADDRESS\020\0022n\n\nGeoService\022`\n\021Va" +
-      "lidateAddresses\022$.ssn.geo.v1.ValidateAdd" +
-      "ressesRequest\032%.ssn.geo.v1.ValidateAddre" +
-      "ssesResponseB\244\001\n\023ai.visma.ssn.geo.v1B\017Ge" +
-      "oServiceProtoP\001Z2github.com/e-conomic/vm" +
-      "lapis/gen/go/ssn/geo/v1;geo\242\002\003SGX\252\002\nSsn." +
-      "Geo.V1\312\002\nSsn\\Geo\\V1\342\002\026Ssn\\Geo\\V1\\GPBMeta" +
-      "data\352\002\014Ssn::Geo::V1b\006proto3"
+      "AddressR\007address\0224\n\007feature\030\004 \001(\0162\032.ssn." +
+      "geo.v1.AddressFeatureR\007feature\"\\\n\030Valida" +
+      "teAddressesRequest\022@\n\taddresses\030\001 \003(\0132\"." +
+      "ssn.geo.v1.ValidateAddressRequestR\taddre" +
+      "sses\"Z\n\031ValidateAddressesResponse\022=\n\007res" +
+      "ults\030\001 \003(\0132#.ssn.geo.v1.ValidateAddressR" +
+      "esponseR\007results*]\n\016AddressFeature\022\037\n\033AD" +
+      "DRESS_FEATURE_UNSPECIFIED\020\000\022\024\n\020SUPPLIER_" +
+      "ADDRESS\020\001\022\024\n\020RECEIVER_ADDRESS\020\0022n\n\nGeoSe" +
+      "rvice\022`\n\021ValidateAddresses\022$.ssn.geo.v1." +
+      "ValidateAddressesRequest\032%.ssn.geo.v1.Va" +
+      "lidateAddressesResponseB\244\001\n\023ai.visma.ssn" +
+      ".geo.v1B\017GeoServiceProtoP\001Z2github.com/e" +
+      "-conomic/vmlapis/gen/go/ssn/geo/v1;geo\242\002" +
+      "\003SGX\252\002\nSsn.Geo.V1\312\002\nSsn\\Geo\\V1\342\002\026Ssn\\Geo" +
+      "\\V1\\GPBMetadata\352\002\014Ssn::Geo::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -116,7 +115,7 @@ public final class GeoServiceProto {
     internal_static_ssn_geo_v1_ValidateAddressResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_geo_v1_ValidateAddressResponse_descriptor,
-        new java.lang.String[] { "Valid", "Confidence", "Address", "RawInput", "Feature", });
+        new java.lang.String[] { "Valid", "Confidence", "Address", "Feature", });
     internal_static_ssn_geo_v1_ValidateAddressesRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_geo_v1_ValidateAddressesRequest_fieldAccessorTable = new

@@ -35,31 +35,31 @@ namespace Ssn.Geo.V1 {
             "cmVzcxgKIAEoCVIQZm9ybWF0dGVkQWRkcmVzcyKQAQoWVmFsaWRhdGVBZGRy",
             "ZXNzUmVxdWVzdBIfCgtyYXdfYWRkcmVzcxgBIAEoCVIKcmF3QWRkcmVzcxI0",
             "CgdmZWF0dXJlGAIgASgOMhouc3NuLmdlby52MS5BZGRyZXNzRmVhdHVyZVIH",
-            "ZmVhdHVyZRIfCgtkb2N1bWVudF9pZBgDIAEoCVIKZG9jdW1lbnRJZCLxAQoX",
+            "ZmVhdHVyZRIfCgtkb2N1bWVudF9pZBgDIAEoCVIKZG9jdW1lbnRJZCLUAQoX",
             "VmFsaWRhdGVBZGRyZXNzUmVzcG9uc2USFAoFdmFsaWQYASABKAhSBXZhbGlk",
             "EjQKCmNvbmZpZGVuY2UYAiABKAsyFC5zc24udHlwZS5Db25maWRlbmNlUgpj",
             "b25maWRlbmNlEjcKB2FkZHJlc3MYAyABKAsyHS5zc24uZ2VvLnYxLlN0cnVj",
-            "dHVyZWRBZGRyZXNzUgdhZGRyZXNzEhsKCXJhd19pbnB1dBgEIAEoCVIIcmF3",
-            "SW5wdXQSNAoHZmVhdHVyZRgFIAEoDjIaLnNzbi5nZW8udjEuQWRkcmVzc0Zl",
-            "YXR1cmVSB2ZlYXR1cmUiXAoYVmFsaWRhdGVBZGRyZXNzZXNSZXF1ZXN0EkAK",
-            "CWFkZHJlc3NlcxgBIAMoCzIiLnNzbi5nZW8udjEuVmFsaWRhdGVBZGRyZXNz",
-            "UmVxdWVzdFIJYWRkcmVzc2VzIloKGVZhbGlkYXRlQWRkcmVzc2VzUmVzcG9u",
-            "c2USPQoHcmVzdWx0cxgBIAMoCzIjLnNzbi5nZW8udjEuVmFsaWRhdGVBZGRy",
-            "ZXNzUmVzcG9uc2VSB3Jlc3VsdHMqXQoOQWRkcmVzc0ZlYXR1cmUSHwobQURE",
-            "UkVTU19GRUFUVVJFX1VOU1BFQ0lGSUVEEAASFAoQU1VQUExJRVJfQUREUkVT",
-            "UxABEhQKEFJFQ0VJVkVSX0FERFJFU1MQAjJuCgpHZW9TZXJ2aWNlEmAKEVZh",
-            "bGlkYXRlQWRkcmVzc2VzEiQuc3NuLmdlby52MS5WYWxpZGF0ZUFkZHJlc3Nl",
-            "c1JlcXVlc3QaJS5zc24uZ2VvLnYxLlZhbGlkYXRlQWRkcmVzc2VzUmVzcG9u",
-            "c2VCpAEKE2FpLnZpc21hLnNzbi5nZW8udjFCD0dlb1NlcnZpY2VQcm90b1AB",
-            "WjJnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vZ2Vv",
-            "L3YxO2dlb6ICA1NHWKoCClNzbi5HZW8uVjHKAgpTc25cR2VvXFYx4gIWU3Nu",
-            "XEdlb1xWMVxHUEJNZXRhZGF0YeoCDFNzbjo6R2VvOjpWMWIGcHJvdG8z"));
+            "dHVyZWRBZGRyZXNzUgdhZGRyZXNzEjQKB2ZlYXR1cmUYBCABKA4yGi5zc24u",
+            "Z2VvLnYxLkFkZHJlc3NGZWF0dXJlUgdmZWF0dXJlIlwKGFZhbGlkYXRlQWRk",
+            "cmVzc2VzUmVxdWVzdBJACglhZGRyZXNzZXMYASADKAsyIi5zc24uZ2VvLnYx",
+            "LlZhbGlkYXRlQWRkcmVzc1JlcXVlc3RSCWFkZHJlc3NlcyJaChlWYWxpZGF0",
+            "ZUFkZHJlc3Nlc1Jlc3BvbnNlEj0KB3Jlc3VsdHMYASADKAsyIy5zc24uZ2Vv",
+            "LnYxLlZhbGlkYXRlQWRkcmVzc1Jlc3BvbnNlUgdyZXN1bHRzKl0KDkFkZHJl",
+            "c3NGZWF0dXJlEh8KG0FERFJFU1NfRkVBVFVSRV9VTlNQRUNJRklFRBAAEhQK",
+            "EFNVUFBMSUVSX0FERFJFU1MQARIUChBSRUNFSVZFUl9BRERSRVNTEAIybgoK",
+            "R2VvU2VydmljZRJgChFWYWxpZGF0ZUFkZHJlc3NlcxIkLnNzbi5nZW8udjEu",
+            "VmFsaWRhdGVBZGRyZXNzZXNSZXF1ZXN0GiUuc3NuLmdlby52MS5WYWxpZGF0",
+            "ZUFkZHJlc3Nlc1Jlc3BvbnNlQqQBChNhaS52aXNtYS5zc24uZ2VvLnYxQg9H",
+            "ZW9TZXJ2aWNlUHJvdG9QAVoyZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vc3NuL2dlby92MTtnZW+iAgNTR1iqAgpTc24uR2VvLlYxygIK",
+            "U3NuXEdlb1xWMeICFlNzblxHZW9cVjFcR1BCTWV0YWRhdGHqAgxTc246Okdl",
+            "bzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Geo.V1.AddressFeature), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.StructuredAddress), global::Ssn.Geo.V1.StructuredAddress.Parser, new[]{ "Street", "HouseNumber", "PostalCode", "City", "State", "Country", "CountryCode", "Latitude", "Longitude", "FormattedAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.ValidateAddressRequest), global::Ssn.Geo.V1.ValidateAddressRequest.Parser, new[]{ "RawAddress", "Feature", "DocumentId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.ValidateAddressResponse), global::Ssn.Geo.V1.ValidateAddressResponse.Parser, new[]{ "Valid", "Confidence", "Address", "RawInput", "Feature" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.ValidateAddressResponse), global::Ssn.Geo.V1.ValidateAddressResponse.Parser, new[]{ "Valid", "Confidence", "Address", "Feature" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.ValidateAddressesRequest), global::Ssn.Geo.V1.ValidateAddressesRequest.Parser, new[]{ "Addresses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Geo.V1.ValidateAddressesResponse), global::Ssn.Geo.V1.ValidateAddressesResponse.Parser, new[]{ "Results" }, null, null, null, null)
           }));
@@ -921,7 +921,6 @@ namespace Ssn.Geo.V1 {
       valid_ = other.valid_;
       confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
       address_ = other.address_ != null ? other.address_.Clone() : null;
-      rawInput_ = other.rawInput_;
       feature_ = other.feature_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -968,20 +967,8 @@ namespace Ssn.Geo.V1 {
       }
     }
 
-    /// <summary>Field number for the "raw_input" field.</summary>
-    public const int RawInputFieldNumber = 4;
-    private string rawInput_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RawInput {
-      get { return rawInput_; }
-      set {
-        rawInput_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "feature" field.</summary>
-    public const int FeatureFieldNumber = 5;
+    public const int FeatureFieldNumber = 4;
     private global::Ssn.Geo.V1.AddressFeature feature_ = global::Ssn.Geo.V1.AddressFeature.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1010,7 +997,6 @@ namespace Ssn.Geo.V1 {
       if (Valid != other.Valid) return false;
       if (!object.Equals(Confidence, other.Confidence)) return false;
       if (!object.Equals(Address, other.Address)) return false;
-      if (RawInput != other.RawInput) return false;
       if (Feature != other.Feature) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1022,7 +1008,6 @@ namespace Ssn.Geo.V1 {
       if (Valid != false) hash ^= Valid.GetHashCode();
       if (confidence_ != null) hash ^= Confidence.GetHashCode();
       if (address_ != null) hash ^= Address.GetHashCode();
-      if (RawInput.Length != 0) hash ^= RawInput.GetHashCode();
       if (Feature != global::Ssn.Geo.V1.AddressFeature.Unspecified) hash ^= Feature.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1054,12 +1039,8 @@ namespace Ssn.Geo.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Address);
       }
-      if (RawInput.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(RawInput);
-      }
       if (Feature != global::Ssn.Geo.V1.AddressFeature.Unspecified) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteEnum((int) Feature);
       }
       if (_unknownFields != null) {
@@ -1084,12 +1065,8 @@ namespace Ssn.Geo.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Address);
       }
-      if (RawInput.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(RawInput);
-      }
       if (Feature != global::Ssn.Geo.V1.AddressFeature.Unspecified) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteEnum((int) Feature);
       }
       if (_unknownFields != null) {
@@ -1110,9 +1087,6 @@ namespace Ssn.Geo.V1 {
       }
       if (address_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Address);
-      }
-      if (RawInput.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RawInput);
       }
       if (Feature != global::Ssn.Geo.V1.AddressFeature.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Feature);
@@ -1143,9 +1117,6 @@ namespace Ssn.Geo.V1 {
           Address = new global::Ssn.Geo.V1.StructuredAddress();
         }
         Address.MergeFrom(other.Address);
-      }
-      if (other.RawInput.Length != 0) {
-        RawInput = other.RawInput;
       }
       if (other.Feature != global::Ssn.Geo.V1.AddressFeature.Unspecified) {
         Feature = other.Feature;
@@ -1187,11 +1158,7 @@ namespace Ssn.Geo.V1 {
             input.ReadMessage(Address);
             break;
           }
-          case 34: {
-            RawInput = input.ReadString();
-            break;
-          }
-          case 40: {
+          case 32: {
             Feature = (global::Ssn.Geo.V1.AddressFeature) input.ReadEnum();
             break;
           }
@@ -1232,11 +1199,7 @@ namespace Ssn.Geo.V1 {
             input.ReadMessage(Address);
             break;
           }
-          case 34: {
-            RawInput = input.ReadString();
-            break;
-          }
-          case 40: {
+          case 32: {
             Feature = (global::Ssn.Geo.V1.AddressFeature) input.ReadEnum();
             break;
           }
