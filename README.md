@@ -19,6 +19,9 @@ Generation is done with a dockerfile (docker command is included in the makefile
 ```bash
 make
 ```
+## Spanner proto bundle generation
+run `make` and copy `./gen/spanner_description.bin` to `../vml-spanner/spanner_description.bin` -> `cp ~/Documents/GitHub/vmlapis/gen/spanner_descriptor.bin ~/Documents/GitHub/vml-spanner/spanner_descriptor.bin` 
+
 ### Update with cli 
 # VML Buf
 
