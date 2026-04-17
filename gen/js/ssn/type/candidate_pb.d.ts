@@ -36,6 +36,7 @@ export namespace Confidence {
     HIGH = 4,
     VERY_HIGH = 5,
     VERIFIED = 6,
+    HUMAN_VERIFIED = 7,
   }
 }
 

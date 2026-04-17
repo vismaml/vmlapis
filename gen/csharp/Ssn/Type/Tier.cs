@@ -24,12 +24,12 @@ namespace Ssn.Type {
     static TierReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNzc24vdHlwZS90aWVyLnByb3RvEghzc24udHlwZSo5CgRUaWVyEgsKB0RF",
+            "ChNzc24vdHlwZS90aWVyLnByb3RvEghzc24udHlwZSpNCgRUaWVyEgsKB0RF",
             "RkFVTFQQABIMCghTVEFOREFSRBABEgsKB1BSRU1JVU0QAhIJCgVVTFRSQRAD",
-            "QpUBChFhaS52aXNtYS5zc24udHlwZUIJVGllclByb3RvUAFaNGdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWi",
-            "AgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0",
-            "YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
+            "EhIKDkhVTUFOX1ZFUklGSUVEEARClQEKEWFpLnZpc21hLnNzbi50eXBlQglU",
+            "aWVyUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
+            "Z28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygIIU3NuXFR5",
+            "cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Type.Tier), }, null, null));
@@ -46,6 +46,7 @@ namespace Ssn.Type {
     [pbr::OriginalName("STANDARD")] Standard = 1,
     [pbr::OriginalName("PREMIUM")] Premium = 2,
     [pbr::OriginalName("ULTRA")] Ultra = 3,
+    [pbr::OriginalName("HUMAN_VERIFIED")] HumanVerified = 4,
   }
 
   #endregion

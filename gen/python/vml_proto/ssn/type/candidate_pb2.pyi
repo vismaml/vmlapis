@@ -20,6 +20,7 @@ class Confidence(_message.Message):
         HIGH: _ClassVar[Confidence.Level]
         VERY_HIGH: _ClassVar[Confidence.Level]
         VERIFIED: _ClassVar[Confidence.Level]
+        HUMAN_VERIFIED: _ClassVar[Confidence.Level]
     UNKNOWN: Confidence.Level
     VERY_LOW: Confidence.Level
     LOW: Confidence.Level
@@ -27,6 +28,7 @@ class Confidence(_message.Message):
     HIGH: Confidence.Level
     VERY_HIGH: Confidence.Level
     VERIFIED: Confidence.Level
+    HUMAN_VERIFIED: Confidence.Level
     LEVEL_FIELD_NUMBER: _ClassVar[int]
     VALUE_FIELD_NUMBER: _ClassVar[int]
     level: Confidence.Level

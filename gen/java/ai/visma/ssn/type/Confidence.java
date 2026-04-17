@@ -76,6 +76,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 6;</code>
      */
     VERIFIED(6),
+    /**
+     * <code>HUMAN_VERIFIED = 7;</code>
+     */
+    HUMAN_VERIFIED(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -116,6 +120,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERIFIED = 6;</code>
      */
     public static final int VERIFIED_VALUE = 6;
+    /**
+     * <code>HUMAN_VERIFIED = 7;</code>
+     */
+    public static final int HUMAN_VERIFIED_VALUE = 7;
 
 
     public final int getNumber() {
@@ -149,6 +157,7 @@ private static final long serialVersionUID = 0L;
         case 4: return HIGH;
         case 5: return VERY_HIGH;
         case 6: return VERIFIED;
+        case 7: return HUMAN_VERIFIED;
         default: return null;
       }
     }
