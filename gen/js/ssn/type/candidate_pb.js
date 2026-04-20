@@ -407,8 +407,7 @@ proto.ssn.type.Confidence.Level = {
   MID: 3,
   HIGH: 4,
   VERY_HIGH: 5,
-  VERIFIED: 6,
-  HUMAN_VERIFIED: 7
+  VERIFIED: 6
 };
 
 /**

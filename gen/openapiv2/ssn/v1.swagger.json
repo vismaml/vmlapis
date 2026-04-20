@@ -297,8 +297,7 @@
               "MID",
               "HIGH",
               "VERY_HIGH",
-              "VERIFIED",
-              "HUMAN_VERIFIED"
+              "VERIFIED"
             ],
             "default": "UNKNOWN"
           },
@@ -465,8 +464,7 @@
               "MID",
               "HIGH",
               "VERY_HIGH",
-              "VERIFIED",
-              "HUMAN_VERIFIED"
+              "VERIFIED"
             ],
             "default": "UNKNOWN"
           },
@@ -579,8 +577,7 @@
         "MID",
         "HIGH",
         "VERY_HIGH",
-        "VERIFIED",
-        "HUMAN_VERIFIED"
+        "VERIFIED"
       ],
       "default": "UNKNOWN"
     },
