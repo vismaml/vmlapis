@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package ssn.geo.v1;
+
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/geo/v1;geo";
+
+service GeoService {
+  rpc ValidateAddresses(ValidateAddressesRequest) returns (ValidateAddressesResponse);
+}
+
+enum AddressFeature {
+  ADDRESS_FEATURE_UNSPECIFIED = 0;
+  SUPPLIER_ADDRESS = 1;
+  RECEIVER_ADDRESS = 2;
+}
+
+message StructuredAddress {
+  string street = 1;
+  string house_number = 2;
+  string postal_code = 3;
+  string city = 4;
+  string state = 5;
+  string country = 6;
+  string country_code = 7; // ISO 3166-1 alpha-2
+  double latitude = 8;
+  double longitude = 9;
+  string formatted_address = 10;
+}
+
+message ValidateAddressRequest {
+  string raw_address = 1;
+  AddressFeature feature = 2;
+  string document_id = 3;
+}
+
+message ValidateAddressResponse {
+  bool valid = 1;
+  ssn.type.Confidence confidence = 2;
+  StructuredAddress address = 3;
+  AddressFeature feature = 4;
+}
+
+message ValidateAddressesRequest {
+  repeated ValidateAddressRequest addresses = 1;
+}
+
+message ValidateAddressesResponse {
+  repeated ValidateAddressResponse results = 1;
+}

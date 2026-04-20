@@ -1,8 +1,6 @@
 module example
 
-go 1.24.0
-
-toolchain go1.24.5
+go 1.26.2
 
 require (
 	github.com/e-conomic/vmlapis v1.6.2
