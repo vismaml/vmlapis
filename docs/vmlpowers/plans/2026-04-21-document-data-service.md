@@ -6,7 +6,7 @@
 
 **Architecture:** Single proto file under `proto/ssn/documentdataservice/v1/`. Defines core shared types (`CandidateSource`, `InternalCandidate`, `InternalFieldAnnotation` with `oneof data`), complex field wrappers (purchase lines, VAT distribution, QR codes, QA), and three RPCs (`GetDocumentData`, `SetDocumentBlobs`, `AddAnnotations`). The new proto is added to the Spanner descriptor build since its types will be stored as PROTO columns in Spanner.
 
-**Tech Stack:** Protocol Buffers (proto3), buf CLI, `google/api/annotations.proto` (HTTP bindings), `ssn/type/candidate.proto`, `ssn/type/qr.proto`
+**Tech Stack:** Protocol Buffers (proto3), buf CLI, `google/api/annotations.proto` (HTTP bindings), `google/protobuf/wrappers.proto`, `ssn/type/candidate.proto`, `ssn/type/qr.proto`
 
 ---
 
@@ -29,6 +29,7 @@ syntax = "proto3";
 package ssn.documentdataservice.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/qr.proto";
 
@@ -191,9 +192,9 @@ message GetDocumentDataResponse {
   string consumer    = 2;
 
   // Authorized GCS URLs (signed, with expiration).
-  string          file_url            = 3; // always present
-  repeated string render_urls         = 4; // empty = not rendered yet; one per page in order
-  optional string text_annotation_url = 5; // absent = TA not stored
+  string                       file_url            = 3; // always present
+  repeated string              render_urls         = 4; // empty = not rendered yet; one per page in order
+  google.protobuf.StringValue  text_annotation_url = 5; // absent = TA not stored
 
   // Field annotations filtered by include_* flags.
   // InternalFieldAnnotation entries with customer_requested=true and empty
@@ -202,18 +203,18 @@ message GetDocumentDataResponse {
 }
 
 message SetDocumentBlobsRequest {
-  string          consumer    = 1;
-  string          feedback_id = 2;
-  optional string file_uri    = 3; // present → write; absent → leave untouched
-  repeated string render_uris = 4; // non-empty → write; empty → leave untouched
-  optional string ta_uri      = 5; // present → write; absent → leave untouched
+  string                      feedback_id = 1;
+  string                      consumer    = 2;
+  google.protobuf.StringValue file_uri    = 3; // set → write; absent → leave untouched
+  repeated string             render_uris = 4; // non-empty → write; empty → leave untouched
+  google.protobuf.StringValue ta_uri      = 5; // set → write; absent → leave untouched
 }
 
 message SetDocumentBlobsResponse {}
 
 message AddAnnotationsRequest {
-  string consumer    = 1;
-  string feedback_id = 2;
+  string feedback_id                           = 1;
+  string consumer                              = 2;
   repeated InternalFieldAnnotation annotations = 3;
 }
 

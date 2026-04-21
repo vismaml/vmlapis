@@ -7,14 +7,14 @@
 
 ## Overview
 
-`DocumentDataService` is an internal unification layer for retrieving document data from both the sync (annotator) and async (asyncton) pipelines. It provides a single gRPC endpoint that returns document blobs, rendered pages, text annotation, and field-level candidates (predictions, feedback, labels) for a given document, identified by `feedback_id`.
+`DocumentDataService` is an internal unification layer for retrieving and writing document data across the sync (annotator) and async (asyncton) pipelines. It provides gRPC endpoints that return document blobs, rendered pages, TextAnnotation, and field-level candidates (predictions, feedback, labels) for a given document, identified by `(consumer, feedback_id)`.
 
 ---
 
 ## Architecture
 
 ```
-Spanner (InternalFieldAnnotation protobufs)  ──┐
+Spanner (InternalFieldAnnotation protobufs)    ──┐
 GCS (file bytes, rendered pages, TextAnnotation) ──┤──► DocumentDataService ──► caller
                                                    │    - signs GCS URLs
                                                    │    - filters by requested sources
@@ -25,15 +25,15 @@ GCS (file bytes, rendered pages, TextAnnotation) ──┤──► DocumentData
 - **GCS** — stores raw document bytes, per-page rendered images, serialized `ssn.type.TextAnnotation`
 - The service returns **signed/authorized GCS URLs** (with expiration) for large blobs, never inline bytes
 
-**Indexing:** A daily Spanner → BigQuery export handles all ad-hoc filtering, data exploration, and model-based queries. Spanner itself is optimized for fast write and point-read by `(consumer, feedback_id)` — both are required to locate a document's blobs in GCS.
+**Indexing:** A daily Spanner → BigQuery export handles all ad-hoc filtering, data exploration, and model-based queries. Spanner itself is optimized for fast write and point-read by `(consumer, feedback_id)` — both are required to locate a document.
 
 ---
 
-## Core Messages
+## Core Proto Types
 
 ### `CandidateSource` enum
 
-Predictions, feedback, and labels are unified under a single `source` concept. A single feature can have multiple candidates from different sources — each is a separate `InternalCandidate` entry.
+Predictions, feedback, and labels are unified under a single `source` concept. A single feature can have multiple candidates from different sources — each is a separate entry.
 
 ```proto
 enum CandidateSource {
@@ -46,7 +46,7 @@ enum CandidateSource {
 
 ### `InternalCandidate`
 
-Wraps `ssn.type.Candidate` with provenance. Only standard field candidates are in scope — purchase lines, VAT distribution, answer candidates, QR codes, and page texts are excluded.
+Wraps `ssn.type.Candidate` with provenance. Used for all standard SSN fields (`TOTAL_INCL_VAT`, `CURRENCY`, `CHECK_IN_DATE`, etc.).
 
 ```proto
 message InternalCandidate {
@@ -62,9 +62,16 @@ Groups all candidates for a single feature. `customer_requested` lives here (not
 
 ```proto
 message InternalFieldAnnotation {
-  string   feature            = 1;
-  bool     customer_requested = 2;
-  repeated InternalCandidate candidates = 3;
+  string feature            = 1;
+  bool   customer_requested = 2;
+
+  oneof data {
+    FieldData            field_data            = 3; // standard fields (Candidate-based)
+    PurchaseLineData     purchase_line_data    = 4; // PURCHASE_LINES
+    VatDistributionData  vat_distribution_data = 5; // VAT_DISTRIBUTION
+    QrData               qr_data              = 6; // QR_CODES / SWISS_QR_BILLS
+    AnswerData           answer_data          = 7; // QA
+  }
 }
 ```
 
@@ -80,6 +87,109 @@ message InternalFieldAnnotation {
 
 ---
 
+## Complex Field Types
+
+Standard fields use `ssn.type.Candidate` and fit into `FieldData`. Purchase lines, VAT distribution, QR codes, and QA cannot — they are structured types with different shapes. The `oneof data` on `InternalFieldAnnotation` handles this.
+
+### Standard field wrapper
+
+```proto
+message FieldData {
+  repeated InternalCandidate candidates = 1;
+}
+```
+
+### Purchase line wrapper
+
+Only the new `ssn.type.PurchaseLine` format is stored. Old `PurchaseLineCandidate` data is converted at ingestion.
+
+```proto
+message InternalPurchaseLine {
+  ssn.type.PurchaseLine line      = 1;
+  CandidateSource       source    = 2;
+  string                source_id = 3;
+}
+
+message PurchaseLineData {
+  repeated InternalPurchaseLine lines = 1;
+}
+```
+
+### VAT distribution wrapper
+
+Only the new `ssn.type.VatDistribution` format is stored. Old `VatDistributionCandidate` data is converted at ingestion.
+
+```proto
+message InternalVatDistribution {
+  ssn.type.VatDistribution distribution = 1;
+  CandidateSource          source       = 2;
+  string                   source_id    = 3;
+}
+
+message VatDistributionData {
+  repeated InternalVatDistribution distributions = 1;
+}
+```
+
+### QR code wrapper
+
+Two QR types (`QrCodeData` and `SwissQrBill`) are distinguished via a `oneof`.
+
+```proto
+message InternalQrCode {
+  oneof qr_type {
+    ssn.type.QrCodeData  qr_code_data  = 1;
+    ssn.type.SwissQrBill swiss_qr_bill = 2;
+  }
+  CandidateSource source    = 3;
+  string          source_id = 4;
+}
+
+message QrData {
+  repeated InternalQrCode qr_codes = 1;
+}
+```
+
+### QA wrapper
+
+`AnswerCandidate` carries the question as part of the data and cannot be represented as a standard `Candidate`.
+
+```proto
+message InternalAnswerCandidate {
+  ssn.type.AnswerCandidate answer    = 1;
+  CandidateSource          source    = 2;
+  string                   source_id = 3;
+}
+
+message AnswerData {
+  repeated InternalAnswerCandidate answers = 1;
+}
+```
+
+### Feature → data branch mapping
+
+| `feature` | `oneof data` branch | Inner type |
+|---|---|---|
+| `"TOTAL_INCL_VAT"`, `"CURRENCY"`, etc. | `field_data` | `repeated InternalCandidate` → `ssn.type.Candidate` |
+| `"CHECK_IN_DATE"`, `"CHECK_OUT_DATE"` | `field_data` | `repeated InternalCandidate` (flattened from `HotelDates` at ingestion) |
+| `"PURCHASE_LINES"` | `purchase_line_data` | `repeated InternalPurchaseLine` → `ssn.type.PurchaseLine` |
+| `"VAT_DISTRIBUTION"` | `vat_distribution_data` | `repeated InternalVatDistribution` → `ssn.type.VatDistribution` |
+| `"QR_CODES"` / `"SWISS_QR_BILLS"` | `qr_data` | `repeated InternalQrCode` |
+| `"QA"` | `answer_data` | `repeated InternalAnswerCandidate` → `ssn.type.AnswerCandidate` |
+
+### Ingestion normalization
+
+Services writing to the unified store are responsible for converting old formats:
+
+| Source data | Ingestion action |
+|---|---|
+| `ssn.type.PurchaseLineCandidate` | Convert to `ssn.type.PurchaseLine` |
+| `ssn.type.VatDistributionCandidate` | Convert to `ssn.type.VatDistribution` |
+| `ssn.type.HotelDates` | Flatten into `CHECK_IN_DATE` and `CHECK_OUT_DATE` as separate `FieldData` entries |
+| All other types | Store as-is |
+
+---
+
 ## Service Definition
 
 **File:** `proto/ssn/documentdataservice/v1/documentdataservice.proto`
@@ -91,14 +201,36 @@ service DocumentDataService {
   rpc GetDocumentData(GetDocumentDataRequest) returns (GetDocumentDataResponse) {
     option (google.api.http) = {get: "/v1/consumers/{consumer}/documents/{feedback_id}"};
   }
-}
 
+  rpc SetDocumentBlobs(SetDocumentBlobsRequest) returns (SetDocumentBlobsResponse) {
+    option (google.api.http) = {
+      put: "/v1/consumers/{consumer}/documents/{feedback_id}/blobs"
+      body: "*"
+    };
+  }
+
+  rpc AddAnnotations(AddAnnotationsRequest) returns (AddAnnotationsResponse) {
+    option (google.api.http) = {
+      post: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"
+      body: "*"
+    };
+  }
+}
+```
+
+---
+
+## Read Endpoint — `GetDocumentData`
+
+Returns document blobs (as signed GCS URLs) and field annotations filtered by the `include_*` flags.
+
+```proto
 message GetDocumentDataRequest {
-  string feedback_id          = 1;
-  string consumer             = 2;
-  bool   include_predictions  = 3;
-  bool   include_feedbacks    = 4;
-  bool   include_labels       = 5;
+  string feedback_id         = 1;
+  string consumer            = 2;
+  bool   include_predictions = 3;
+  bool   include_feedbacks   = 4;
+  bool   include_labels      = 5;
 }
 
 message GetDocumentDataResponse {
@@ -106,28 +238,152 @@ message GetDocumentDataResponse {
   string consumer    = 2;
 
   // Authorized GCS URLs (signed, with expiration)
-  string          file_url            = 3; // always present
-  repeated string render_urls         = 4; // empty = not rendered yet
-  optional string text_annotation_url = 5; // absent = TA not stored
+  string                       file_url            = 3; // always present
+  repeated string              render_urls         = 4; // empty = not rendered yet; one per page in order
+  google.protobuf.StringValue  text_annotation_url = 5; // absent = TA not stored
 
-  // Field annotations filtered by include_* flags in request
-  // empty = none requested or none found
+  // Field annotations filtered by include_* flags
   repeated InternalFieldAnnotation fields = 6;
 }
 ```
 
-The `include_*` flags map to `CandidateSource` values: candidates not matching any requested source are omitted from `fields`. `InternalFieldAnnotation` entries with `customer_requested = true` and empty candidates are always returned (they carry the "field not found" signal).
+`InternalFieldAnnotation` entries with `customer_requested = true` and empty candidates are always returned — they carry the "field not found" signal.
 
 ---
 
-## Scope
+## Write Endpoints
 
-**In scope:**
-- Standard SSN field candidates (`ssn.type.Candidate`) only
-- Sync (annotator) and async (asyncton) as data sources
-- GCS-backed blobs returned as signed URLs
+Two endpoints with distinct semantics:
 
-**Out of scope:**
-- Purchase lines, VAT distribution, answer candidates, QR codes, page texts
-- Streaming / server-side pagination (iterate in future versions)
-- Write path (ingestion into Spanner/GCS is handled by existing pipelines)
+| Endpoint | Semantics | Covers |
+|---|---|---|
+| `SetDocumentBlobs` | Upsert — presence-based, replaces set fields | file URI, render URIs, TextAnnotation URI |
+| `AddAnnotations` | Upsert by key — latest-wins per `(feature, source, source_id)` | field annotations (all types) |
+
+### `SetDocumentBlobs`
+
+Presence-based upsert — only fields present in the request are written. Absent fields are left untouched.
+
+```proto
+message SetDocumentBlobsRequest {
+  string                      feedback_id = 1;
+  string                      consumer    = 2;
+  google.protobuf.StringValue file_uri    = 3; // set → write; absent → skip
+  repeated string             render_uris = 4; // non-empty → write; empty → skip
+  google.protobuf.StringValue ta_uri      = 5; // set → write; absent → skip
+}
+
+message SetDocumentBlobsResponse {}
+```
+
+### `AddAnnotations`
+
+Upsert by `(consumer, feedback_id, feature, source, source_id)`. Latest-wins — a second call with the same key replaces the previous entry. To preserve both versions, use a different `source_id`.
+
+```proto
+message AddAnnotationsRequest {
+  string feedback_id                       = 1;
+  string consumer                          = 2;
+  repeated InternalFieldAnnotation annotations = 3;
+}
+
+message AddAnnotationsResponse {}
+```
+
+**Update semantics:**
+
+| Scenario | Action |
+|---|---|
+| First feedback for a field | INSERT — new `(feature, FEEDBACK, source_id)` row |
+| Same consumer sends feedback again | UPSERT — replaces previous row, same key |
+| New model version predicts same field | INSERT — different `source_id` (model version), new row coexists |
+| DS annotator revises a label | UPSERT — same `source_id`, replaces previous label |
+| DS annotator wants to preserve old label | Use a versioned `source_id` (e.g. `annotator_id:v2`) |
+
+---
+
+## Spanner Schema
+
+Spanner is the **write and point-read store** — all ad-hoc querying happens via a daily Spanner → BigQuery export.
+
+**Key design decisions:**
+- Primary key `(consumer, feedback_id)` — UUID-based `feedback_id` (Envoy request ID) ensures random distribution across Spanner splits at 25M docs/month. No hash sharding needed.
+- Large blobs live in GCS; Spanner stores only URIs.
+- Interleaving co-locates all data for a document on the same Spanner split — a full document read is a single range scan.
+- No read-modify-write — new model predictions are always pure INSERTs.
+
+```sql
+-- Level 1: Document metadata and GCS URIs
+CREATE TABLE Documents (
+  consumer     STRING(MAX) NOT NULL,
+  feedback_id  STRING(MAX) NOT NULL,
+  file_uri     STRING(MAX),
+  render_uris  ARRAY<STRING(MAX)>,   -- one URI per rendered page, in page order
+  ta_uri       STRING(MAX),          -- GCS URI for serialized ssn.type.TextAnnotation
+  created_at   TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
+) PRIMARY KEY (consumer, feedback_id);
+
+
+-- Level 2: One row per feature per document
+CREATE TABLE FieldAnnotations (
+  consumer           STRING(MAX) NOT NULL,
+  feedback_id        STRING(MAX) NOT NULL,
+  feature            STRING(MAX) NOT NULL,
+  customer_requested BOOL NOT NULL DEFAULT (false),
+) PRIMARY KEY (consumer, feedback_id, feature),
+  INTERLEAVE IN PARENT Documents ON DELETE CASCADE;
+
+
+-- Level 3a: Standard field candidates
+-- Covers: all ssn.type.Candidate fields + CHECK_IN_DATE / CHECK_OUT_DATE (flattened from HotelDates)
+CREATE TABLE Candidates (
+  consumer    STRING(MAX) NOT NULL,
+  feedback_id STRING(MAX) NOT NULL,
+  feature     STRING(MAX) NOT NULL,
+  source      STRING(MAX) NOT NULL,   -- "PREDICTION" | "FEEDBACK" | "LABEL"
+  source_id   STRING(MAX) NOT NULL,   -- model_id or annotator_id
+  candidate   PROTO<ssn.type.Candidate>,
+  created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
+) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
+  INTERLEAVE IN PARENT FieldAnnotations ON DELETE CASCADE;
+
+
+-- Level 3b: Complex type annotations
+-- Covers: PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES / SWISS_QR_BILLS, QA
+-- data column holds serialized proto: PurchaseLineData | VatDistributionData | QrData | AnswerData
+CREATE TABLE ComplexAnnotations (
+  consumer    STRING(MAX) NOT NULL,
+  feedback_id STRING(MAX) NOT NULL,
+  feature     STRING(MAX) NOT NULL,
+  source      STRING(MAX) NOT NULL,
+  source_id   STRING(MAX) NOT NULL,
+  data        BYTES(MAX),
+  created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
+) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
+  INTERLEAVE IN PARENT FieldAnnotations ON DELETE CASCADE;
+```
+
+**Table hierarchy:**
+
+```
+Documents
+└── FieldAnnotations  (feature)
+      ├── Candidates          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
+      └── ComplexAnnotations  — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
+```
+
+**Feature → table mapping:**
+
+| Feature | Table | Data type |
+|---|---|---|
+| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `Candidates` | `PROTO<ssn.type.Candidate>` |
+| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `Candidates` | `PROTO<ssn.type.Candidate>` (flattened from `HotelDates`) |
+| `PURCHASE_LINES` | `ComplexAnnotations` | serialized `PurchaseLineData` |
+| `VAT_DISTRIBUTION` | `ComplexAnnotations` | serialized `VatDistributionData` |
+| `QR_CODES` / `SWISS_QR_BILLS` | `ComplexAnnotations` | serialized `QrData` |
+| `QA` | `ComplexAnnotations` | serialized `AnswerData` |
+
+**BigQuery export:**
+- `Candidates` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
+- `ComplexAnnotations` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
+- All filtering, joins, and ad-hoc queries happen in BQ — Spanner has no secondary indexes on these tables
