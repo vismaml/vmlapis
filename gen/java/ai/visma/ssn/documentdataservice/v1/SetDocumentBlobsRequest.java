@@ -254,6 +254,44 @@ private static final long serialVersionUID = 0L;
     return taUri_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : taUri_;
   }
 
+  public static final int EXPIRES_AT_FIELD_NUMBER = 6;
+  private com.google.protobuf.Timestamp expiresAt_;
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   * @return Whether the expiresAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasExpiresAt() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   * @return The expiresAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getExpiresAt() {
+    return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+  }
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+    return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -282,6 +320,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getTaUri());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(6, getExpiresAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -314,6 +355,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getTaUri());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getExpiresAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -345,6 +390,11 @@ private static final long serialVersionUID = 0L;
       if (!getTaUri()
           .equals(other.getTaUri())) return false;
     }
+    if (hasExpiresAt() != other.hasExpiresAt()) return false;
+    if (hasExpiresAt()) {
+      if (!getExpiresAt()
+          .equals(other.getExpiresAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -371,6 +421,10 @@ private static final long serialVersionUID = 0L;
     if (hasTaUri()) {
       hash = (37 * hash) + TA_URI_FIELD_NUMBER;
       hash = (53 * hash) + getTaUri().hashCode();
+    }
+    if (hasExpiresAt()) {
+      hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getExpiresAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -504,6 +558,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getFileUriFieldBuilder();
         getTaUriFieldBuilder();
+        getExpiresAtFieldBuilder();
       }
     }
     @java.lang.Override
@@ -523,6 +578,11 @@ private static final long serialVersionUID = 0L;
       if (taUriBuilder_ != null) {
         taUriBuilder_.dispose();
         taUriBuilder_ = null;
+      }
+      expiresAt_ = null;
+      if (expiresAtBuilder_ != null) {
+        expiresAtBuilder_.dispose();
+        expiresAtBuilder_ = null;
       }
       return this;
     }
@@ -580,6 +640,12 @@ private static final long serialVersionUID = 0L;
             : taUriBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.expiresAt_ = expiresAtBuilder_ == null
+            ? expiresAt_
+            : expiresAtBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -620,6 +686,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTaUri()) {
         mergeTaUri(other.getTaUri());
+      }
+      if (other.hasExpiresAt()) {
+        mergeExpiresAt(other.getExpiresAt());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -677,6 +746,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getExpiresAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1297,6 +1373,163 @@ private static final long serialVersionUID = 0L;
         taUri_ = null;
       }
       return taUriBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp expiresAt_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     * @return Whether the expiresAt field is set.
+     */
+    public boolean hasExpiresAt() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     * @return The expiresAt.
+     */
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      if (expiresAtBuilder_ == null) {
+        return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+      } else {
+        return expiresAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+      if (expiresAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        expiresAt_ = value;
+      } else {
+        expiresAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public Builder setExpiresAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (expiresAtBuilder_ == null) {
+        expiresAt_ = builderForValue.build();
+      } else {
+        expiresAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+      if (expiresAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          expiresAt_ != null &&
+          expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getExpiresAtBuilder().mergeFrom(value);
+        } else {
+          expiresAt_ = value;
+        }
+      } else {
+        expiresAtBuilder_.mergeFrom(value);
+      }
+      if (expiresAt_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public Builder clearExpiresAt() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      expiresAt_ = null;
+      if (expiresAtBuilder_ != null) {
+        expiresAtBuilder_.dispose();
+        expiresAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getExpiresAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+      if (expiresAtBuilder_ != null) {
+        return expiresAtBuilder_.getMessageOrBuilder();
+      } else {
+        return expiresAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+      }
+    }
+    /**
+     * <pre>
+     * Set → write; absent → leave untouched.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getExpiresAtFieldBuilder() {
+      if (expiresAtBuilder_ == null) {
+        expiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getExpiresAt(),
+                getParentForChildren(),
+                isClean());
+        expiresAt_ = null;
+      }
+      return expiresAtBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.SetDocumentBlobsRequest)

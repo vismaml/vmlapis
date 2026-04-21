@@ -174,4 +174,31 @@ public interface GetDocumentDataResponseOrBuilder extends
    */
   ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotationOrBuilder getFieldsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * When this document expires and will be garbage-collected.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 7 [json_name = "expiresAt"];</code>
+   * @return Whether the expiresAt field is set.
+   */
+  boolean hasExpiresAt();
+  /**
+   * <pre>
+   * When this document expires and will be garbage-collected.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 7 [json_name = "expiresAt"];</code>
+   * @return The expiresAt.
+   */
+  com.google.protobuf.Timestamp getExpiresAt();
+  /**
+   * <pre>
+   * When this document expires and will be garbage-collected.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 7 [json_name = "expiresAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 }

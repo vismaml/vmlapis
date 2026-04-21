@@ -1,4 +1,5 @@
 from google.api import annotations_pb2 as _annotations_pb2
+from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
 from ssn.type import qr_pb2 as _qr_pb2
@@ -136,34 +137,38 @@ class GetDocumentDataRequest(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ...) -> None: ...
 
 class GetDocumentDataResponse(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields")
+    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URL_FIELD_NUMBER: _ClassVar[int]
     RENDER_URLS_FIELD_NUMBER: _ClassVar[int]
     TEXT_ANNOTATION_URL_FIELD_NUMBER: _ClassVar[int]
     FIELDS_FIELD_NUMBER: _ClassVar[int]
+    EXPIRES_AT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_url: str
     render_urls: _containers.RepeatedScalarFieldContainer[str]
     text_annotation_url: _wrappers_pb2.StringValue
     fields: _containers.RepeatedCompositeFieldContainer[InternalFieldAnnotation]
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ...) -> None: ...
+    expires_at: _timestamp_pb2.Timestamp
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri")
+    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URI_FIELD_NUMBER: _ClassVar[int]
     RENDER_URIS_FIELD_NUMBER: _ClassVar[int]
     TA_URI_FIELD_NUMBER: _ClassVar[int]
+    EXPIRES_AT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_uri: _wrappers_pb2.StringValue
     render_uris: _containers.RepeatedScalarFieldContainer[str]
     ta_uri: _wrappers_pb2.StringValue
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ...) -> None: ...
+    expires_at: _timestamp_pb2.Timestamp
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class SetDocumentBlobsResponse(_message.Message):
     __slots__ = ()
