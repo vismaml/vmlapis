@@ -23,6 +23,8 @@ var global =
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+goog.object.extend(proto, google_protobuf_timestamp_pb);
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.object.extend(proto, google_protobuf_wrappers_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
@@ -3077,7 +3079,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.toObject = function(inc
     renderUrlsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     textAnnotationUrl: (f = msg.getTextAnnotationUrl()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     fieldsList: jspb.Message.toObjectList(msg.getFieldsList(),
-    proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance)
+    proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
+    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3139,6 +3142,11 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.deserializeBinaryFromRe
       var value = new proto.ssn.documentdataservice.v1.InternalFieldAnnotation;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.InternalFieldAnnotation.deserializeBinaryFromReader);
       msg.addFields(value);
+      break;
+    case 7:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setExpiresAt(value);
       break;
     default:
       reader.skipField();
@@ -3211,6 +3219,14 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.serializeBinaryToWriter
       6,
       f,
       proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
+    );
+  }
+  f = message.getExpiresAt();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -3382,6 +3398,43 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearFieldsLi
 };
 
 
+/**
+ * optional google.protobuf.Timestamp expires_at = 7;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getExpiresAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 7));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+*/
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setExpiresAt = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearExpiresAt = function() {
+  return this.setExpiresAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.hasExpiresAt = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
@@ -3425,7 +3478,8 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.toObject = function(inc
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     fileUri: (f = msg.getFileUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     renderUrisList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    taUri: (f = msg.getTaUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    taUri: (f = msg.getTaUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3483,6 +3537,11 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.deserializeBinaryFromRe
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setTaUri(value);
+      break;
+    case 6:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setExpiresAt(value);
       break;
     default:
       reader.skipField();
@@ -3548,6 +3607,14 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.serializeBinaryToWriter
       5,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getExpiresAt();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -3697,6 +3764,43 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.clearTaUri = 
  */
 proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.hasTaUri = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp expires_at = 6;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.getExpiresAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+*/
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.setExpiresAt = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.clearExpiresAt = function() {
+  return this.setExpiresAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.hasExpiresAt = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

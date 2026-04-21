@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.documentdataservice.v1;
 
 import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/qr.proto";
@@ -176,6 +177,9 @@ message GetDocumentDataResponse {
   // InternalFieldAnnotation entries with customer_requested=true and empty
   // candidates are always returned — they carry the "field not found" signal.
   repeated InternalFieldAnnotation fields = 6;
+
+  // When this document expires and will be garbage-collected.
+  google.protobuf.Timestamp expires_at = 7;
 }
 
 message SetDocumentBlobsRequest {
@@ -187,6 +191,8 @@ message SetDocumentBlobsRequest {
   repeated string render_uris = 4;
   // Set → write; absent → leave untouched.
   google.protobuf.StringValue ta_uri = 5;
+  // Set → write; absent → leave untouched.
+  google.protobuf.Timestamp expires_at = 6;
 }
 
 message SetDocumentBlobsResponse {}

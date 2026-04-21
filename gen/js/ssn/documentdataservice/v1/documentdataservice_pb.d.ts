@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
@@ -382,6 +383,11 @@ export class GetDocumentDataResponse extends jspb.Message {
   clearFieldsList(): GetDocumentDataResponse;
   addFields(value?: InternalFieldAnnotation, index?: number): InternalFieldAnnotation;
 
+  getExpiresAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setExpiresAt(value?: google_protobuf_timestamp_pb.Timestamp): GetDocumentDataResponse;
+  hasExpiresAt(): boolean;
+  clearExpiresAt(): GetDocumentDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataResponse): GetDocumentDataResponse.AsObject;
@@ -398,6 +404,7 @@ export namespace GetDocumentDataResponse {
     renderUrlsList: Array<string>,
     textAnnotationUrl?: google_protobuf_wrappers_pb.StringValue.AsObject,
     fieldsList: Array<InternalFieldAnnotation.AsObject>,
+    expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
@@ -423,6 +430,11 @@ export class SetDocumentBlobsRequest extends jspb.Message {
   hasTaUri(): boolean;
   clearTaUri(): SetDocumentBlobsRequest;
 
+  getExpiresAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setExpiresAt(value?: google_protobuf_timestamp_pb.Timestamp): SetDocumentBlobsRequest;
+  hasExpiresAt(): boolean;
+  clearExpiresAt(): SetDocumentBlobsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SetDocumentBlobsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SetDocumentBlobsRequest): SetDocumentBlobsRequest.AsObject;
@@ -438,6 +450,7 @@ export namespace SetDocumentBlobsRequest {
     fileUri?: google_protobuf_wrappers_pb.StringValue.AsObject,
     renderUrisList: Array<string>,
     taUri?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 

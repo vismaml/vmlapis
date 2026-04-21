@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
+
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')

@@ -127,4 +127,31 @@ public interface SetDocumentBlobsRequestOrBuilder extends
    * <code>.google.protobuf.StringValue ta_uri = 5 [json_name = "taUri"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTaUriOrBuilder();
+
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   * @return Whether the expiresAt field is set.
+   */
+  boolean hasExpiresAt();
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   * @return The expiresAt.
+   */
+  com.google.protobuf.Timestamp getExpiresAt();
+  /**
+   * <pre>
+   * Set → write; absent → leave untouched.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 }
