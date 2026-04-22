@@ -15,13 +15,13 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "typer",
-    "rich",
-    "pydantic",
-    "tomli-w",
-    "packaging",
-    "pyyaml",
-    "lxml",
+    "typer~=0.24.1",
+    "rich~=15.0.0",
+    "pydantic~=2.13.3",
+    "tomli-w~=1.2.0",
+    "packaging~=26.1",
+    "pyyaml~=6.0.3",
+    "lxml>=6.1.0",
 ]
 
 [project.scripts]
