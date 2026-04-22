@@ -154,4 +154,24 @@ public interface SetDocumentBlobsRequestOrBuilder extends
    * <code>.google.protobuf.Timestamp expires_at = 6 [json_name = "expiresAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
+
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 7 [json_name = "environment"];</code>
+   * @return The environment.
+   */
+  java.lang.String getEnvironment();
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 7 [json_name = "environment"];</code>
+   * @return The bytes for environment.
+   */
+  com.google.protobuf.ByteString
+      getEnvironmentBytes();
 }

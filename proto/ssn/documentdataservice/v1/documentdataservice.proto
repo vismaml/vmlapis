@@ -160,6 +160,8 @@ message GetDocumentDataRequest {
   bool include_predictions = 3;
   bool include_feedbacks = 4;
   bool include_labels = 5;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 6;
 }
 
 message GetDocumentDataResponse {
@@ -193,6 +195,8 @@ message SetDocumentBlobsRequest {
   google.protobuf.StringValue ta_uri = 5;
   // Set → write; absent → leave untouched.
   google.protobuf.Timestamp expires_at = 6;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 7;
 }
 
 message SetDocumentBlobsResponse {}
@@ -201,6 +205,8 @@ message AddAnnotationsRequest {
   string feedback_id = 1;
   string consumer = 2;
   repeated InternalFieldAnnotation annotations = 3;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 4;
 }
 
 message AddAnnotationsResponse {}

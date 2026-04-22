@@ -56,4 +56,24 @@ public interface AddAnnotationsRequestOrBuilder extends
    */
   ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotationOrBuilder getAnnotationsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 4 [json_name = "environment"];</code>
+   * @return The environment.
+   */
+  java.lang.String getEnvironment();
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 4 [json_name = "environment"];</code>
+   * @return The bytes for environment.
+   */
+  com.google.protobuf.ByteString
+      getEnvironmentBytes();
 }

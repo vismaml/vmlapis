@@ -30,6 +30,7 @@ private static final long serialVersionUID = 0L;
     feedbackId_ = "";
     consumer_ = "";
     annotations_ = java.util.Collections.emptyList();
+    environment_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -164,6 +165,53 @@ private static final long serialVersionUID = 0L;
     return annotations_.get(index);
   }
 
+  public static final int ENVIRONMENT_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object environment_ = "";
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 4 [json_name = "environment"];</code>
+   * @return The environment.
+   */
+  @java.lang.Override
+  public java.lang.String getEnvironment() {
+    java.lang.Object ref = environment_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      environment_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Target environment: "snbx", "stag", "prod".
+   * </pre>
+   *
+   * <code>string environment = 4 [json_name = "environment"];</code>
+   * @return The bytes for environment.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEnvironmentBytes() {
+    java.lang.Object ref = environment_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      environment_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -187,6 +235,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < annotations_.size(); i++) {
       output.writeMessage(3, annotations_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, environment_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -205,6 +256,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < annotations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, annotations_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, environment_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -227,6 +281,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConsumer())) return false;
     if (!getAnnotationsList()
         .equals(other.getAnnotationsList())) return false;
+    if (!getEnvironment()
+        .equals(other.getEnvironment())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -246,6 +302,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ANNOTATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getAnnotationsList().hashCode();
     }
+    hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getEnvironment().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -386,6 +444,7 @@ private static final long serialVersionUID = 0L;
         annotationsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      environment_ = "";
       return this;
     }
 
@@ -438,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.consumer_ = consumer_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.environment_ = environment_;
+      }
     }
 
     @java.lang.Override
@@ -488,6 +550,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getEnvironment().isEmpty()) {
+        environment_ = other.environment_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -537,6 +604,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
+            case 34: {
+              environment_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -936,6 +1008,98 @@ private static final long serialVersionUID = 0L;
         annotations_ = null;
       }
       return annotationsBuilder_;
+    }
+
+    private java.lang.Object environment_ = "";
+    /**
+     * <pre>
+     * Target environment: "snbx", "stag", "prod".
+     * </pre>
+     *
+     * <code>string environment = 4 [json_name = "environment"];</code>
+     * @return The environment.
+     */
+    public java.lang.String getEnvironment() {
+      java.lang.Object ref = environment_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        environment_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Target environment: "snbx", "stag", "prod".
+     * </pre>
+     *
+     * <code>string environment = 4 [json_name = "environment"];</code>
+     * @return The bytes for environment.
+     */
+    public com.google.protobuf.ByteString
+        getEnvironmentBytes() {
+      java.lang.Object ref = environment_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        environment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Target environment: "snbx", "stag", "prod".
+     * </pre>
+     *
+     * <code>string environment = 4 [json_name = "environment"];</code>
+     * @param value The environment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnvironment(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      environment_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Target environment: "snbx", "stag", "prod".
+     * </pre>
+     *
+     * <code>string environment = 4 [json_name = "environment"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnvironment() {
+      environment_ = getDefaultInstance().getEnvironment();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Target environment: "snbx", "stag", "prod".
+     * </pre>
+     *
+     * <code>string environment = 4 [json_name = "environment"];</code>
+     * @param value The bytes for environment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnvironmentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      environment_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.AddAnnotationsRequest)
