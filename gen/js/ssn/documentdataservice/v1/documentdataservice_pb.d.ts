@@ -340,6 +340,9 @@ export class GetDocumentDataRequest extends jspb.Message {
   getIncludeLabels(): boolean;
   setIncludeLabels(value: boolean): GetDocumentDataRequest;
 
+  getEnvironment(): string;
+  setEnvironment(value: string): GetDocumentDataRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataRequest): GetDocumentDataRequest.AsObject;
@@ -355,6 +358,7 @@ export namespace GetDocumentDataRequest {
     includePredictions: boolean,
     includeFeedbacks: boolean,
     includeLabels: boolean,
+    environment: string,
   }
 }
 
@@ -435,6 +439,9 @@ export class SetDocumentBlobsRequest extends jspb.Message {
   hasExpiresAt(): boolean;
   clearExpiresAt(): SetDocumentBlobsRequest;
 
+  getEnvironment(): string;
+  setEnvironment(value: string): SetDocumentBlobsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SetDocumentBlobsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SetDocumentBlobsRequest): SetDocumentBlobsRequest.AsObject;
@@ -451,6 +458,7 @@ export namespace SetDocumentBlobsRequest {
     renderUrisList: Array<string>,
     taUri?: google_protobuf_wrappers_pb.StringValue.AsObject,
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    environment: string,
   }
 }
 
@@ -480,6 +488,9 @@ export class AddAnnotationsRequest extends jspb.Message {
   clearAnnotationsList(): AddAnnotationsRequest;
   addAnnotations(value?: InternalFieldAnnotation, index?: number): InternalFieldAnnotation;
 
+  getEnvironment(): string;
+  setEnvironment(value: string): AddAnnotationsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddAnnotationsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AddAnnotationsRequest): AddAnnotationsRequest.AsObject;
@@ -493,6 +504,7 @@ export namespace AddAnnotationsRequest {
     feedbackId: string,
     consumer: string,
     annotationsList: Array<InternalFieldAnnotation.AsObject>,
+    environment: string,
   }
 }
 

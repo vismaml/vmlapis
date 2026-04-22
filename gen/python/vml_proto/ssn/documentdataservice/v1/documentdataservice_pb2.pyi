@@ -123,18 +123,20 @@ class InternalFieldAnnotation(_message.Message):
     def __init__(self, feature: _Optional[str] = ..., customer_requested: bool = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ...) -> None: ...
 
 class GetDocumentDataRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "include_predictions", "include_feedbacks", "include_labels")
+    __slots__ = ("feedback_id", "consumer", "include_predictions", "include_feedbacks", "include_labels", "environment")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     INCLUDE_PREDICTIONS_FIELD_NUMBER: _ClassVar[int]
     INCLUDE_FEEDBACKS_FIELD_NUMBER: _ClassVar[int]
     INCLUDE_LABELS_FIELD_NUMBER: _ClassVar[int]
+    ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     include_predictions: bool
     include_feedbacks: bool
     include_labels: bool
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ...) -> None: ...
+    environment: str
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ..., environment: _Optional[str] = ...) -> None: ...
 
 class GetDocumentDataResponse(_message.Message):
     __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at")
@@ -155,34 +157,38 @@ class GetDocumentDataResponse(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at")
+    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URI_FIELD_NUMBER: _ClassVar[int]
     RENDER_URIS_FIELD_NUMBER: _ClassVar[int]
     TA_URI_FIELD_NUMBER: _ClassVar[int]
     EXPIRES_AT_FIELD_NUMBER: _ClassVar[int]
+    ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_uri: _wrappers_pb2.StringValue
     render_uris: _containers.RepeatedScalarFieldContainer[str]
     ta_uri: _wrappers_pb2.StringValue
     expires_at: _timestamp_pb2.Timestamp
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    environment: str
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., environment: _Optional[str] = ...) -> None: ...
 
 class SetDocumentBlobsResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
 class AddAnnotationsRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "annotations")
+    __slots__ = ("feedback_id", "consumer", "annotations", "environment")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     ANNOTATIONS_FIELD_NUMBER: _ClassVar[int]
+    ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     annotations: _containers.RepeatedCompositeFieldContainer[InternalFieldAnnotation]
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ...) -> None: ...
+    environment: str
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., environment: _Optional[str] = ...) -> None: ...
 
 class AddAnnotationsResponse(_message.Message):
     __slots__ = ()

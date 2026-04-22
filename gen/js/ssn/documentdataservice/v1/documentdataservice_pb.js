@@ -2820,7 +2820,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.toObject = function(incl
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     includePredictions: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
     includeFeedbacks: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    includeLabels: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    includeLabels: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    environment: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -2876,6 +2877,10 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.deserializeBinaryFromRea
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIncludeLabels(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEnvironment(value);
       break;
     default:
       reader.skipField();
@@ -2938,6 +2943,13 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.serializeBinaryToWriter 
   if (f) {
     writer.writeBool(
       5,
+      f
+    );
+  }
+  f = message.getEnvironment();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -3031,6 +3043,24 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.getIncludeLabe
  */
 proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setIncludeLabels = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional string environment = 6;
+ * @return {string}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.getEnvironment = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setEnvironment = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -3479,7 +3509,8 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.toObject = function(inc
     fileUri: (f = msg.getFileUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     renderUrisList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     taUri: (f = msg.getTaUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    environment: jspb.Message.getFieldWithDefault(msg, 7, "")
   };
 
   if (includeInstance) {
@@ -3542,6 +3573,10 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.deserializeBinaryFromRe
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setExpiresAt(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEnvironment(value);
       break;
     default:
       reader.skipField();
@@ -3615,6 +3650,13 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.serializeBinaryToWriter
       6,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getEnvironment();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
     );
   }
 };
@@ -3804,6 +3846,24 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.hasExpiresAt 
 };
 
 
+/**
+ * optional string environment = 7;
+ * @return {string}
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.getEnvironment = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.setEnvironment = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
 
 
 
@@ -3947,7 +4007,8 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.toObject = function(inclu
     feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     annotationsList: jspb.Message.toObjectList(msg.getAnnotationsList(),
-    proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance)
+    proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
+    environment: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -3996,6 +4057,10 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.deserializeBinaryFromRead
       var value = new proto.ssn.documentdataservice.v1.InternalFieldAnnotation;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.InternalFieldAnnotation.deserializeBinaryFromReader);
       msg.addAnnotations(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEnvironment(value);
       break;
     default:
       reader.skipField();
@@ -4046,6 +4111,13 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.serializeBinaryToWriter =
       3,
       f,
       proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
+    );
+  }
+  f = message.getEnvironment();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
     );
   }
 };
@@ -4122,6 +4194,24 @@ proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.addAnnotations 
  */
 proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.clearAnnotationsList = function() {
   return this.setAnnotationsList([]);
+};
+
+
+/**
+ * optional string environment = 4;
+ * @return {string}
+ */
+proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.getEnvironment = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.documentdataservice.v1.AddAnnotationsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.AddAnnotationsRequest.prototype.setEnvironment = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
