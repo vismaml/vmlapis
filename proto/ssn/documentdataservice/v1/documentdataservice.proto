@@ -1,0 +1,214 @@
+syntax = "proto3";
+
+package ssn.documentdataservice.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "ssn/type/candidate.proto";
+import "ssn/type/qr.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/documentdataservice/v1;documentdataservice";
+
+// ---- Source provenance ----
+
+// CandidateSource identifies the origin of a candidate value.
+// Predictions, feedback, and labels are unified — the source field
+// distinguishes them. Multiple candidates for the same feature from
+// different sources coexist as separate entries.
+enum CandidateSource {
+  CANDIDATE_SOURCE_UNSPECIFIED = 0;
+  CANDIDATE_SOURCE_PREDICTION = 1;
+  CANDIDATE_SOURCE_FEEDBACK = 2;
+  CANDIDATE_SOURCE_LABEL = 3;
+}
+
+// ---- Core candidate wrapper ----
+
+// InternalCandidate wraps a standard ssn.type.Candidate with provenance.
+// Used for all standard SSN fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, etc.)
+message InternalCandidate {
+  ssn.type.Candidate candidate = 1;
+  CandidateSource source = 2;
+  // model_id for PREDICTION; annotator id for LABEL/FEEDBACK
+  string source_id = 3;
+}
+
+// ---- Field data wrappers ----
+
+// FieldData holds standard field candidates (ssn.type.Candidate-based fields).
+message FieldData {
+  repeated InternalCandidate candidates = 1;
+}
+
+// InternalPurchaseLine wraps ssn.type.PurchaseLine (new format only).
+// Old PurchaseLineCandidate data is normalized to PurchaseLine at ingestion.
+message InternalPurchaseLine {
+  ssn.type.PurchaseLine line = 1;
+  CandidateSource source = 2;
+  string source_id = 3;
+}
+
+// PurchaseLineData holds purchase line annotations for feature "PURCHASE_LINES".
+message PurchaseLineData {
+  repeated InternalPurchaseLine lines = 1;
+}
+
+// InternalVatDistribution wraps ssn.type.VatDistribution (new format only).
+// Old VatDistributionCandidate data is normalized to VatDistribution at ingestion.
+message InternalVatDistribution {
+  ssn.type.VatDistribution distribution = 1;
+  CandidateSource source = 2;
+  string source_id = 3;
+}
+
+// VatDistributionData holds VAT distribution annotations for feature "VAT_DISTRIBUTION".
+message VatDistributionData {
+  repeated InternalVatDistribution distributions = 1;
+}
+
+// InternalQrCode wraps either QrCodeData or SwissQrBill — both are QR extractions.
+message InternalQrCode {
+  oneof qr_type {
+    ssn.type.QrCodeData qr_code_data = 1;
+    ssn.type.SwissQrBill swiss_qr_bill = 2;
+  }
+  CandidateSource source = 3;
+  string source_id = 4;
+}
+
+// QrData holds QR code annotations for feature "QR_CODES".
+message QrData {
+  repeated InternalQrCode qr_codes = 1;
+}
+
+// InternalAnswerCandidate wraps ssn.type.AnswerCandidate.
+// AnswerCandidate carries the question as part of the data and cannot be
+// represented as a standard Candidate.
+message InternalAnswerCandidate {
+  ssn.type.AnswerCandidate answer = 1;
+  CandidateSource source = 2;
+  string source_id = 3;
+}
+
+// AnswerData holds QA annotations for feature "QA".
+message AnswerData {
+  repeated InternalAnswerCandidate answers = 1;
+}
+
+// ---- Unified field annotation ----
+
+// InternalFieldAnnotation groups all candidates for a single feature.
+message InternalFieldAnnotation {
+  // Feature name, e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES", "QA", "CHECK_IN_DATE"
+  string feature = 1;
+
+  oneof data {
+    FieldData field_data = 2;
+    PurchaseLineData purchase_line_data = 3;
+    VatDistributionData vat_distribution_data = 4;
+    QrData qr_data = 5;
+    AnswerData answer_data = 6;
+  }
+}
+
+// ---- Service ----
+
+service DocumentDataService {
+  // GetDocumentData returns document blobs (as signed GCS URLs) and field
+  // annotations for a given document. Large blobs (file, renders, TextAnnotation)
+  // are returned as signed GCS URLs — never inline bytes.
+  rpc GetDocumentData(GetDocumentDataRequest) returns (GetDocumentDataResponse) {
+    option (google.api.http) = {get: "/v1/consumers/{consumer}/documents/{feedback_id}"};
+  }
+
+  // SetDocumentBlobs upserts GCS URIs for the document's blobs.
+  // Presence-based: only fields present in the request are written.
+  // Absent optional fields leave existing values untouched.
+  rpc SetDocumentBlobs(SetDocumentBlobsRequest) returns (SetDocumentBlobsResponse) {
+    option (google.api.http) = {
+      put: "/v1/consumers/{consumer}/documents/{feedback_id}/blobs"
+      body: "*"
+    };
+  }
+
+  // AddAnnotations upserts field annotations by (feature, source, source_id).
+  // Latest-wins: a second call with the same key replaces the previous entry.
+  // To preserve history, use a distinct source_id (e.g. append a version suffix).
+  rpc AddAnnotations(AddAnnotationsRequest) returns (AddAnnotationsResponse) {
+    option (google.api.http) = {
+      post: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"
+      body: "*"
+    };
+  }
+}
+
+// ---- Request / Response messages ----
+
+message GetDocumentDataRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  bool include_predictions = 3;
+  bool include_feedbacks = 4;
+  bool include_labels = 5;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 6;
+}
+
+message GetDocumentDataResponse {
+  string feedback_id = 1;
+  string consumer = 2;
+
+  // Authorized GCS URLs (signed, with expiration).
+  string file_url = 3;
+  // One per page in order. Empty = not rendered yet.
+  repeated string render_urls = 4;
+  // Absent = TextAnnotation not stored.
+  google.protobuf.StringValue text_annotation_url = 5;
+
+  // Field annotations filtered by include_* flags.
+  repeated InternalFieldAnnotation fields = 6;
+
+  // When this document expires and will be garbage-collected.
+  google.protobuf.Timestamp expires_at = 7;
+
+  // Features the customer originally requested for this document.
+  repeated string requested_features = 8;
+
+  // When this document was last modified (server-managed, commit timestamp).
+  google.protobuf.Timestamp updated_at = 9;
+
+  // Document-level tags (e.g. transaction tags from asyncton).
+  repeated string tags = 10;
+}
+
+message SetDocumentBlobsRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  // Set → write; absent → leave untouched.
+  google.protobuf.StringValue file_uri = 3;
+  // Non-empty → write; empty → leave untouched.
+  repeated string render_uris = 4;
+  // Set → write; absent → leave untouched.
+  google.protobuf.StringValue ta_uri = 5;
+  // Set → write; absent → leave untouched.
+  google.protobuf.Timestamp expires_at = 6;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 7;
+  // Non-empty → write; empty → leave untouched.
+  repeated string requested_features = 8;
+  // Non-empty → write; empty → leave untouched.
+  repeated string tags = 9;
+}
+
+message SetDocumentBlobsResponse {}
+
+message AddAnnotationsRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  repeated InternalFieldAnnotation annotations = 3;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 4;
+}
+
+message AddAnnotationsResponse {}
