@@ -174,4 +174,45 @@ public interface SetDocumentBlobsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEnvironmentBytes();
+
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @return A list containing the requestedFeatures.
+   */
+  java.util.List<java.lang.String>
+      getRequestedFeaturesList();
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @return The count of requestedFeatures.
+   */
+  int getRequestedFeaturesCount();
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @param index The index of the element to return.
+   * @return The requestedFeatures at the given index.
+   */
+  java.lang.String getRequestedFeatures(int index);
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the requestedFeatures at the given index.
+   */
+  com.google.protobuf.ByteString
+      getRequestedFeaturesBytes(int index);
 }

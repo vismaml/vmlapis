@@ -68,32 +68,33 @@ message InternalCandidate {
 
 ### `InternalFieldAnnotation`
 
-Groups all candidates for a single feature. `customer_requested` lives here (not on the candidate) because a feature can be requested but produce zero candidates (field not found on document).
+Groups all candidates for a single feature. Pure annotation data — no document-level metadata.
 
 ```proto
 message InternalFieldAnnotation {
-  string feature            = 1;
-  bool   customer_requested = 2;
+  string feature = 1;
 
   oneof data {
-    FieldData            field_data            = 3; // standard fields (Candidate-based)
-    PurchaseLineData     purchase_line_data    = 4; // PURCHASE_LINES
-    VatDistributionData  vat_distribution_data = 5; // VAT_DISTRIBUTION
-    QrData               qr_data              = 6; // QR_CODES / SWISS_QR_BILLS
-    AnswerData           answer_data          = 7; // QA
+    FieldData            field_data            = 2; // standard fields (Candidate-based)
+    PurchaseLineData     purchase_line_data    = 3; // PURCHASE_LINES
+    VatDistributionData  vat_distribution_data = 4; // VAT_DISTRIBUTION
+    QrData               qr_data              = 5; // QR_CODES / SWISS_QR_BILLS
+    AnswerData           answer_data          = 6; // QA
   }
 }
 ```
 
-**State table:**
+### Requested features
 
-| `customer_requested` | `candidates` | Meaning |
+Which features the customer originally requested is **document-level metadata**, stored as `requested_features` on the `documents` table (and in `SetDocumentBlobsRequest` / `GetDocumentDataResponse`). This is separate from annotations — a feature can be requested but produce zero annotations (field not found), or annotated ad-hoc without being requested.
+
+| `requested_features` contains feature? | Annotations exist? | Meaning |
 |---|---|---|
-| true | empty | Feature was requested; not found on document |
-| true | non-empty (PREDICTION) | Requested and predicted |
-| true | non-empty (PREDICTION + LABEL) | Requested, predicted, and labeled |
-| false | non-empty (LABEL) | Ad-hoc human annotation (not originally requested) |
-| false | non-empty (PREDICTION) | Ad-hoc model run |
+| yes | no | Requested; not found on document |
+| yes | yes (PREDICTION) | Requested and predicted |
+| yes | yes (PREDICTION + LABEL) | Requested, predicted, and labeled |
+| no | yes (LABEL) | Ad-hoc human annotation |
+| no | yes (PREDICTION) | Ad-hoc model run |
 
 ---
 
@@ -259,6 +260,9 @@ message GetDocumentDataResponse {
 
   // When this document expires and will be garbage-collected.
   google.protobuf.Timestamp expires_at = 7;
+
+  // Features the customer originally requested for this document.
+  repeated string requested_features = 8;
 }
 ```
 
@@ -272,7 +276,7 @@ Two endpoints with distinct semantics:
 
 | Endpoint | Semantics | Covers |
 |---|---|---|
-| `SetDocumentBlobs` | Upsert — presence-based, replaces set fields | file URI, render URIs, TextAnnotation URI, expiration |
+| `SetDocumentBlobs` | Upsert — presence-based, replaces set fields | file URI, render URIs, TextAnnotation URI, expiration, requested features |
 | `AddAnnotations` | Upsert by key — latest-wins per `(feature, source, source_id)` | field annotations (all types) |
 
 ### `SetDocumentBlobs`
@@ -286,9 +290,11 @@ message SetDocumentBlobsRequest {
   google.protobuf.StringValue file_uri    = 3; // set → write; absent → skip
   repeated string             render_uris = 4; // non-empty → write; empty → skip
   google.protobuf.StringValue ta_uri      = 5; // set → write; absent → skip
-  google.protobuf.Timestamp   expires_at  = 6; // set → write; absent → skip
+  google.protobuf.Timestamp   expires_at          = 6; // set → write; absent → skip
   // Target environment: "snbx", "stag", "prod".
-  string                      environment = 7;
+  string                      environment         = 7;
+  // Non-empty → write; empty → leave untouched.
+  repeated string             requested_features  = 8;
 }
 
 message SetDocumentBlobsResponse {}
@@ -341,18 +347,18 @@ CREATE TABLE documents (
   file_uri     STRING(MAX),
   render_uris  ARRAY<STRING(MAX)>,   -- one URI per rendered page, in page order
   ta_uri       STRING(MAX),          -- GCS URI for serialized ssn.type.TextAnnotation
-  created_at   TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
-  expires_at   TIMESTAMP,            -- when this document should be garbage-collected
+  created_at          TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
+  expires_at          TIMESTAMP,            -- when this document should be garbage-collected
+  requested_features  ARRAY<STRING(MAX)>,   -- features the customer originally requested
 ) PRIMARY KEY (consumer, feedback_id),
   ROW DELETION POLICY (OLDER_THAN(expires_at, INTERVAL 1 DAY));
 
 
 -- Level 2: One row per feature per document
 CREATE TABLE field_annotations (
-  consumer           STRING(MAX) NOT NULL,
-  feedback_id        STRING(MAX) NOT NULL,
-  feature            STRING(MAX) NOT NULL,
-  customer_requested BOOL NOT NULL DEFAULT (false),
+  consumer    STRING(MAX) NOT NULL,
+  feedback_id STRING(MAX) NOT NULL,
+  feature     STRING(MAX) NOT NULL,
 ) PRIMARY KEY (consumer, feedback_id, feature),
   INTERLEAVE IN PARENT documents ON DELETE CASCADE;
 

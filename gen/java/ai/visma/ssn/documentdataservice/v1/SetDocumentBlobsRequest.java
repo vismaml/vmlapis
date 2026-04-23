@@ -32,6 +32,8 @@ private static final long serialVersionUID = 0L;
     renderUris_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     environment_ = "";
+    requestedFeatures_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -340,6 +342,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int REQUESTED_FEATURES_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList requestedFeatures_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @return A list containing the requestedFeatures.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getRequestedFeaturesList() {
+    return requestedFeatures_;
+  }
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @return The count of requestedFeatures.
+   */
+  public int getRequestedFeaturesCount() {
+    return requestedFeatures_.size();
+  }
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @param index The index of the element to return.
+   * @return The requestedFeatures at the given index.
+   */
+  public java.lang.String getRequestedFeatures(int index) {
+    return requestedFeatures_.get(index);
+  }
+  /**
+   * <pre>
+   * Non-empty → write; empty → leave untouched.
+   * </pre>
+   *
+   * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the requestedFeatures at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getRequestedFeaturesBytes(int index) {
+    return requestedFeatures_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -374,6 +429,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, environment_);
+    }
+    for (int i = 0; i < requestedFeatures_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 8, requestedFeatures_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -413,6 +471,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(7, environment_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < requestedFeatures_.size(); i++) {
+        dataSize += computeStringSizeNoTag(requestedFeatures_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getRequestedFeaturesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -451,6 +517,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getEnvironment()
         .equals(other.getEnvironment())) return false;
+    if (!getRequestedFeaturesList()
+        .equals(other.getRequestedFeaturesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -484,6 +552,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
     hash = (53 * hash) + getEnvironment().hashCode();
+    if (getRequestedFeaturesCount() > 0) {
+      hash = (37 * hash) + REQUESTED_FEATURES_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestedFeaturesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -643,6 +715,8 @@ private static final long serialVersionUID = 0L;
         expiresAtBuilder_ = null;
       }
       environment_ = "";
+      requestedFeatures_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -708,6 +782,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.environment_ = environment_;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        requestedFeatures_.makeImmutable();
+        result.requestedFeatures_ = requestedFeatures_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -755,6 +833,16 @@ private static final long serialVersionUID = 0L;
       if (!other.getEnvironment().isEmpty()) {
         environment_ = other.environment_;
         bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      if (!other.requestedFeatures_.isEmpty()) {
+        if (requestedFeatures_.isEmpty()) {
+          requestedFeatures_ = other.requestedFeatures_;
+          bitField0_ |= 0x00000080;
+        } else {
+          ensureRequestedFeaturesIsMutable();
+          requestedFeatures_.addAll(other.requestedFeatures_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -825,6 +913,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureRequestedFeaturesIsMutable();
+              requestedFeatures_.add(s);
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1692,6 +1786,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       environment_ = value;
       bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList requestedFeatures_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureRequestedFeaturesIsMutable() {
+      if (!requestedFeatures_.isModifiable()) {
+        requestedFeatures_ = new com.google.protobuf.LazyStringArrayList(requestedFeatures_);
+      }
+      bitField0_ |= 0x00000080;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @return A list containing the requestedFeatures.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRequestedFeaturesList() {
+      requestedFeatures_.makeImmutable();
+      return requestedFeatures_;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @return The count of requestedFeatures.
+     */
+    public int getRequestedFeaturesCount() {
+      return requestedFeatures_.size();
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param index The index of the element to return.
+     * @return The requestedFeatures at the given index.
+     */
+    public java.lang.String getRequestedFeatures(int index) {
+      return requestedFeatures_.get(index);
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requestedFeatures at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRequestedFeaturesBytes(int index) {
+      return requestedFeatures_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param index The index to set the value at.
+     * @param value The requestedFeatures to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestedFeatures(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRequestedFeaturesIsMutable();
+      requestedFeatures_.set(index, value);
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param value The requestedFeatures to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRequestedFeatures(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRequestedFeaturesIsMutable();
+      requestedFeatures_.add(value);
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param values The requestedFeatures to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRequestedFeatures(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRequestedFeaturesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, requestedFeatures_);
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequestedFeatures() {
+      requestedFeatures_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Non-empty → write; empty → leave untouched.
+     * </pre>
+     *
+     * <code>repeated string requested_features = 8 [json_name = "requestedFeatures"];</code>
+     * @param value The bytes of the requestedFeatures to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRequestedFeaturesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureRequestedFeaturesIsMutable();
+      requestedFeatures_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
