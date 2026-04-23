@@ -86,7 +86,7 @@ message InternalFieldAnnotation {
 
 ### Requested features
 
-Which features the customer originally requested is **document-level metadata**, stored as `requested_features` on the `documents` table (and in `SetDocumentBlobsRequest` / `GetDocumentDataResponse`). This is separate from annotations — a feature can be requested but produce zero annotations (field not found), or annotated ad-hoc without being requested.
+Which features the customer originally requested is **document-level metadata**, stored as `requested_features` on the `document` table (and in `SetDocumentBlobsRequest` / `GetDocumentDataResponse`). This is separate from annotations — a feature can be requested but produce zero annotations (field not found), or annotated ad-hoc without being requested.
 
 | `requested_features` contains feature? | Annotations exist? | Meaning |
 |---|---|---|
@@ -345,11 +345,11 @@ Spanner is the **write and point-read store** — all ad-hoc querying happens vi
 - Large blobs live in GCS; Spanner stores only URIs.
 - Interleaving co-locates all data for a document on the same Spanner split — a full document read is a single range scan.
 - No read-modify-write — new model predictions are always pure INSERTs.
-- `expires_at` on the `documents` table drives a `ROW DELETION POLICY` — expired documents and all interleaved children are garbage-collected automatically.
+- `expires_at` on the `document` table drives a `ROW DELETION POLICY` — expired documents and all interleaved children are garbage-collected automatically.
 
 ```sql
 -- Level 1: Document metadata and GCS URIs
-CREATE TABLE documents (
+CREATE TABLE document (
   consumer     STRING(MAX) NOT NULL,
   feedback_id  STRING(MAX) NOT NULL,
   file_uri     STRING(MAX),
@@ -365,17 +365,17 @@ CREATE TABLE documents (
 
 
 -- Level 2: One row per feature per document
-CREATE TABLE field_annotations (
+CREATE TABLE field_annotation (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
 ) PRIMARY KEY (consumer, feedback_id, feature),
-  INTERLEAVE IN PARENT documents ON DELETE CASCADE;
+  INTERLEAVE IN PARENT document ON DELETE CASCADE;
 
 
 -- Level 3a: Standard field candidates
 -- Covers: all ssn.type.Candidate fields + CHECK_IN_DATE / CHECK_OUT_DATE (flattened from HotelDates)
-CREATE TABLE candidates (
+CREATE TABLE candidate (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
@@ -384,13 +384,13 @@ CREATE TABLE candidates (
   candidate   ssn.type.Candidate,
   created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
-  INTERLEAVE IN PARENT field_annotations ON DELETE CASCADE;
+  INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
 
 
 -- Level 3b: Complex type annotations
 -- Covers: PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES / SWISS_QR_BILLS, QA
 -- data column holds serialized proto: PurchaseLineData | VatDistributionData | QrData | AnswerData
-CREATE TABLE complex_annotations (
+CREATE TABLE complex_annotation (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
@@ -399,30 +399,30 @@ CREATE TABLE complex_annotations (
   data        BYTES(MAX),
   created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
-  INTERLEAVE IN PARENT field_annotations ON DELETE CASCADE;
+  INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
 ```
 
 **Table hierarchy:**
 
 ```
-documents
-└── field_annotations  (feature)
-      ├── candidates          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
-      └── complex_annotations — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
+document
+└── field_annotation  (feature)
+      ├── candidate          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
+      └── complex_annotation — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
 ```
 
 **Feature → table mapping:**
 
 | Feature | Table | Data type |
 |---|---|---|
-| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `candidates` | `ssn.type.Candidate` (proto column) |
-| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `candidates` | `ssn.type.Candidate` (flattened from `HotelDates`) |
-| `PURCHASE_LINES` | `complex_annotations` | serialized `PurchaseLineData` |
-| `VAT_DISTRIBUTION` | `complex_annotations` | serialized `VatDistributionData` |
-| `QR_CODES` / `SWISS_QR_BILLS` | `complex_annotations` | serialized `QrData` |
-| `QA` | `complex_annotations` | serialized `AnswerData` |
+| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `candidate` | `ssn.type.Candidate` (proto column) |
+| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `candidate` | `ssn.type.Candidate` (flattened from `HotelDates`) |
+| `PURCHASE_LINES` | `complex_annotation` | serialized `PurchaseLineData` |
+| `VAT_DISTRIBUTION` | `complex_annotation` | serialized `VatDistributionData` |
+| `QR_CODES` / `SWISS_QR_BILLS` | `complex_annotation` | serialized `QrData` |
+| `QA` | `complex_annotation` | serialized `AnswerData` |
 
 **BigQuery export:**
-- `candidates` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
-- `complex_annotations` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
+- `candidate` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
+- `complex_annotation` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
 - All filtering, joins, and ad-hoc queries happen in BQ — Spanner has no secondary indexes on these tables
