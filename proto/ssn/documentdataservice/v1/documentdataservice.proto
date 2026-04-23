@@ -167,8 +167,6 @@ message GetDocumentDataResponse {
   google.protobuf.StringValue text_annotation_url = 5;
 
   // Field annotations filtered by include_* flags.
-  // InternalFieldAnnotation entries with customer_requested=true and empty
-  // candidates are always returned — they carry the "field not found" signal.
   repeated InternalFieldAnnotation fields = 6;
 
   // When this document expires and will be garbage-collected.
@@ -176,6 +174,9 @@ message GetDocumentDataResponse {
 
   // Features the customer originally requested for this document.
   repeated string requested_features = 8;
+
+  // When this document was last modified (server-managed, commit timestamp).
+  google.protobuf.Timestamp updated_at = 9;
 }
 
 message SetDocumentBlobsRequest {

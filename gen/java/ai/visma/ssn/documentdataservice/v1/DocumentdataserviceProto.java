@@ -178,7 +178,7 @@ public final class DocumentdataserviceProto {
       "Predictions\022+\n\021include_feedbacks\030\004 \001(\010R\020" +
       "includeFeedbacks\022%\n\016include_labels\030\005 \001(\010" +
       "R\rincludeLabels\022 \n\013environment\030\006 \001(\tR\013en" +
-      "vironment\"\227\003\n\027GetDocumentDataResponse\022\037\n" +
+      "vironment\"\322\003\n\027GetDocumentDataResponse\022\037\n" +
       "\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consum" +
       "er\030\002 \001(\tR\010consumer\022\031\n\010file_url\030\003 \001(\tR\007fi" +
       "leUrl\022\037\n\013render_urls\030\004 \003(\tR\nrenderUrls\022L" +
@@ -188,49 +188,50 @@ public final class DocumentdataserviceProto {
       "1.InternalFieldAnnotationR\006fields\0229\n\nexp" +
       "ires_at\030\007 \001(\0132\032.google.protobuf.Timestam" +
       "pR\texpiresAt\022-\n\022requested_features\030\010 \003(\t" +
-      "R\021requestedFeatures\"\361\002\n\027SetDocumentBlobs" +
-      "Request\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId" +
-      "\022\032\n\010consumer\030\002 \001(\tR\010consumer\0227\n\010file_uri" +
-      "\030\003 \001(\0132\034.google.protobuf.StringValueR\007fi" +
-      "leUri\022\037\n\013render_uris\030\004 \003(\tR\nrenderUris\0223" +
-      "\n\006ta_uri\030\005 \001(\0132\034.google.protobuf.StringV" +
-      "alueR\005taUri\0229\n\nexpires_at\030\006 \001(\0132\032.google" +
-      ".protobuf.TimestampR\texpiresAt\022 \n\013enviro" +
-      "nment\030\007 \001(\tR\013environment\022-\n\022requested_fe" +
-      "atures\030\010 \003(\tR\021requestedFeatures\"\032\n\030SetDo" +
-      "cumentBlobsResponse\"\315\001\n\025AddAnnotationsRe" +
-      "quest\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032" +
-      "\n\010consumer\030\002 \001(\tR\010consumer\022U\n\013annotation" +
-      "s\030\003 \003(\01323.ssn.documentdataservice.v1.Int" +
-      "ernalFieldAnnotationR\013annotations\022 \n\013env" +
-      "ironment\030\004 \001(\tR\013environment\"\030\n\026AddAnnota" +
-      "tionsResponse*\217\001\n\017CandidateSource\022 \n\034CAN" +
-      "DIDATE_SOURCE_UNSPECIFIED\020\000\022\037\n\033CANDIDATE" +
-      "_SOURCE_PREDICTION\020\001\022\035\n\031CANDIDATE_SOURCE" +
-      "_FEEDBACK\020\002\022\032\n\026CANDIDATE_SOURCE_LABEL\020\0032" +
-      "\322\004\n\023DocumentDataService\022\264\001\n\017GetDocumentD" +
-      "ata\0222.ssn.documentdataservice.v1.GetDocu" +
-      "mentDataRequest\0323.ssn.documentdataservic" +
-      "e.v1.GetDocumentDataResponse\"8\202\323\344\223\0022\0220/v" +
-      "1/consumers/{consumer}/documents/{feedba" +
-      "ck_id}\022\300\001\n\020SetDocumentBlobs\0223.ssn.docume" +
-      "ntdataservice.v1.SetDocumentBlobsRequest" +
-      "\0324.ssn.documentdataservice.v1.SetDocumen" +
-      "tBlobsResponse\"A\202\323\344\223\002;\0326/v1/consumers/{c" +
-      "onsumer}/documents/{feedback_id}/blobs:\001" +
-      "*\022\300\001\n\016AddAnnotations\0221.ssn.documentdatas" +
-      "ervice.v1.AddAnnotationsRequest\0322.ssn.do" +
-      "cumentdataservice.v1.AddAnnotationsRespo" +
-      "nse\"G\202\323\344\223\002A\"</v1/consumers/{consumer}/do" +
-      "cuments/{feedback_id}/annotations:\001*B\235\002\n" +
-      "#ai.visma.ssn.documentdataservice.v1B\030Do" +
-      "cumentdataserviceProtoP\001ZRgithub.com/e-c" +
-      "onomic/vmlapis/gen/go/ssn/documentdatase" +
-      "rvice/v1;documentdataservice\242\002\003SDX\252\002\032Ssn" +
-      ".Documentdataservice.V1\312\002\032Ssn\\Documentda" +
-      "taservice\\V1\342\002&Ssn\\Documentdataservice\\V" +
-      "1\\GPBMetadata\352\002\034Ssn::Documentdataservice" +
-      "::V1b\006proto3"
+      "R\021requestedFeatures\0229\n\nupdated_at\030\t \001(\0132" +
+      "\032.google.protobuf.TimestampR\tupdatedAt\"\361" +
+      "\002\n\027SetDocumentBlobsRequest\022\037\n\013feedback_i" +
+      "d\030\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010c" +
+      "onsumer\0227\n\010file_uri\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValueR\007fileUri\022\037\n\013render_uris\030" +
+      "\004 \003(\tR\nrenderUris\0223\n\006ta_uri\030\005 \001(\0132\034.goog" +
+      "le.protobuf.StringValueR\005taUri\0229\n\nexpire" +
+      "s_at\030\006 \001(\0132\032.google.protobuf.TimestampR\t" +
+      "expiresAt\022 \n\013environment\030\007 \001(\tR\013environm" +
+      "ent\022-\n\022requested_features\030\010 \003(\tR\021request" +
+      "edFeatures\"\032\n\030SetDocumentBlobsResponse\"\315" +
+      "\001\n\025AddAnnotationsRequest\022\037\n\013feedback_id\030" +
+      "\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010con" +
+      "sumer\022U\n\013annotations\030\003 \003(\01323.ssn.documen" +
+      "tdataservice.v1.InternalFieldAnnotationR" +
+      "\013annotations\022 \n\013environment\030\004 \001(\tR\013envir" +
+      "onment\"\030\n\026AddAnnotationsResponse*\217\001\n\017Can" +
+      "didateSource\022 \n\034CANDIDATE_SOURCE_UNSPECI" +
+      "FIED\020\000\022\037\n\033CANDIDATE_SOURCE_PREDICTION\020\001\022" +
+      "\035\n\031CANDIDATE_SOURCE_FEEDBACK\020\002\022\032\n\026CANDID" +
+      "ATE_SOURCE_LABEL\020\0032\322\004\n\023DocumentDataServi" +
+      "ce\022\264\001\n\017GetDocumentData\0222.ssn.documentdat" +
+      "aservice.v1.GetDocumentDataRequest\0323.ssn" +
+      ".documentdataservice.v1.GetDocumentDataR" +
+      "esponse\"8\202\323\344\223\0022\0220/v1/consumers/{consumer" +
+      "}/documents/{feedback_id}\022\300\001\n\020SetDocumen" +
+      "tBlobs\0223.ssn.documentdataservice.v1.SetD" +
+      "ocumentBlobsRequest\0324.ssn.documentdatase" +
+      "rvice.v1.SetDocumentBlobsResponse\"A\202\323\344\223\002" +
+      ";\0326/v1/consumers/{consumer}/documents/{f" +
+      "eedback_id}/blobs:\001*\022\300\001\n\016AddAnnotations\022" +
+      "1.ssn.documentdataservice.v1.AddAnnotati" +
+      "onsRequest\0322.ssn.documentdataservice.v1." +
+      "AddAnnotationsResponse\"G\202\323\344\223\002A\"</v1/cons" +
+      "umers/{consumer}/documents/{feedback_id}" +
+      "/annotations:\001*B\235\002\n#ai.visma.ssn.documen" +
+      "tdataservice.v1B\030DocumentdataserviceProt" +
+      "oP\001ZRgithub.com/e-conomic/vmlapis/gen/go" +
+      "/ssn/documentdataservice/v1;documentdata" +
+      "service\242\002\003SDX\252\002\032Ssn.Documentdataservice." +
+      "V1\312\002\032Ssn\\Documentdataservice\\V1\342\002&Ssn\\Do" +
+      "cumentdataservice\\V1\\GPBMetadata\352\002\034Ssn::" +
+      "Documentdataservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -318,7 +319,7 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_fieldAccessorTable = new

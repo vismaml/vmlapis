@@ -124,8 +124,6 @@ public interface GetDocumentDataResponseOrBuilder extends
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -135,8 +133,6 @@ public interface GetDocumentDataResponseOrBuilder extends
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -145,8 +141,6 @@ public interface GetDocumentDataResponseOrBuilder extends
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -155,8 +149,6 @@ public interface GetDocumentDataResponseOrBuilder extends
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -166,8 +158,6 @@ public interface GetDocumentDataResponseOrBuilder extends
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -242,4 +232,31 @@ public interface GetDocumentDataResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRequestedFeaturesBytes(int index);
+
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   * @return Whether the updatedAt field is set.
+   */
+  boolean hasUpdatedAt();
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   * @return The updatedAt.
+   */
+  com.google.protobuf.Timestamp getUpdatedAt();
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 }
