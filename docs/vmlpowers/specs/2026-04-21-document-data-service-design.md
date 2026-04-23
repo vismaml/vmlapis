@@ -348,6 +348,7 @@ CREATE TABLE documents (
   render_uris  ARRAY<STRING(MAX)>,   -- one URI per rendered page, in page order
   ta_uri       STRING(MAX),          -- GCS URI for serialized ssn.type.TextAnnotation
   created_at          TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
+  updated_at          TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
   expires_at          TIMESTAMP,            -- when this document should be garbage-collected
   requested_features  ARRAY<STRING(MAX)>,   -- features the customer originally requested
 ) PRIMARY KEY (consumer, feedback_id),
