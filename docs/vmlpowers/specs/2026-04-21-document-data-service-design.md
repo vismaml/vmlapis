@@ -1,6 +1,7 @@
 # DocumentDataService — Design Spec
 
 **Date:** 2026-04-21
+**Updated:** 2026-04-23
 **Status:** Approved
 
 ---
@@ -9,23 +10,32 @@
 
 `DocumentDataService` is an internal unification layer for retrieving and writing document data across the sync (annotator) and async (asyncton) pipelines. It provides gRPC endpoints that return document blobs, rendered pages, TextAnnotation, and field-level candidates (predictions, feedback, labels) for a given document, identified by `(consumer, feedback_id)`.
 
+The service supports **cross-environment access** — callers specify a target environment (`snbx`, `stag`, `prod`) in every request. The service holds Spanner connections to all environments and routes accordingly. Each environment's service account has read access to all other environments' Spanner databases and GCS buckets.
+
 ---
 
 ## Architecture
 
 ```
-Spanner (InternalFieldAnnotation protobufs)    ──┐
-GCS (file bytes, rendered pages, TextAnnotation) ──┤──► DocumentDataService ──► caller
+Spanner (per env: snbx/stag/prod)              ──┐
+GCS (per env: file bytes, renders, TA)           ──┤──► DocumentDataService ──► caller
+                                                   │    - routes by environment
                                                    │    - signs GCS URLs
                                                    │    - filters by requested sources
 ```
 
 **Storage split:**
-- **Spanner** — stores `InternalFieldAnnotation` protos (field-level candidates with source + state)
+- **Spanner** — stores field-level candidates with source + state (one database per environment)
 - **GCS** — stores raw document bytes, per-page rendered images, serialized `ssn.type.TextAnnotation`
 - The service returns **signed/authorized GCS URLs** (with expiration) for large blobs, never inline bytes
 
-**Indexing:** A daily Spanner → BigQuery export handles all ad-hoc filtering, data exploration, and model-based queries. Spanner itself is optimized for fast write and point-read by `(consumer, feedback_id)` — both are required to locate a document.
+**Multi-environment model:**
+- The `environment` field in every request selects which Spanner database + GCS project to use
+- Service config holds connection strings for all three environments
+- Service account has `spanner.databaseUser` on own env, `spanner.databaseReader` on other envs
+- Service account has `storage.objectViewer` on all envs (for URL signing)
+
+**Indexing:** A daily Spanner → BigQuery export handles all ad-hoc filtering, data exploration, and model-based queries. Spanner itself is optimized for fast write and point-read by `(consumer, feedback_id)`.
 
 ---
 
@@ -231,6 +241,8 @@ message GetDocumentDataRequest {
   bool   include_predictions = 3;
   bool   include_feedbacks   = 4;
   bool   include_labels      = 5;
+  // Target environment: "snbx", "stag", "prod".
+  string environment         = 6;
 }
 
 message GetDocumentDataResponse {
@@ -244,6 +256,9 @@ message GetDocumentDataResponse {
 
   // Field annotations filtered by include_* flags
   repeated InternalFieldAnnotation fields = 6;
+
+  // When this document expires and will be garbage-collected.
+  google.protobuf.Timestamp expires_at = 7;
 }
 ```
 
@@ -257,7 +272,7 @@ Two endpoints with distinct semantics:
 
 | Endpoint | Semantics | Covers |
 |---|---|---|
-| `SetDocumentBlobs` | Upsert — presence-based, replaces set fields | file URI, render URIs, TextAnnotation URI |
+| `SetDocumentBlobs` | Upsert — presence-based, replaces set fields | file URI, render URIs, TextAnnotation URI, expiration |
 | `AddAnnotations` | Upsert by key — latest-wins per `(feature, source, source_id)` | field annotations (all types) |
 
 ### `SetDocumentBlobs`
@@ -271,6 +286,9 @@ message SetDocumentBlobsRequest {
   google.protobuf.StringValue file_uri    = 3; // set → write; absent → skip
   repeated string             render_uris = 4; // non-empty → write; empty → skip
   google.protobuf.StringValue ta_uri      = 5; // set → write; absent → skip
+  google.protobuf.Timestamp   expires_at  = 6; // set → write; absent → skip
+  // Target environment: "snbx", "stag", "prod".
+  string                      environment = 7;
 }
 
 message SetDocumentBlobsResponse {}
@@ -285,6 +303,8 @@ message AddAnnotationsRequest {
   string feedback_id                       = 1;
   string consumer                          = 2;
   repeated InternalFieldAnnotation annotations = 3;
+  // Target environment: "snbx", "stag", "prod".
+  string environment                       = 4;
 }
 
 message AddAnnotationsResponse {}
@@ -311,47 +331,50 @@ Spanner is the **write and point-read store** — all ad-hoc querying happens vi
 - Large blobs live in GCS; Spanner stores only URIs.
 - Interleaving co-locates all data for a document on the same Spanner split — a full document read is a single range scan.
 - No read-modify-write — new model predictions are always pure INSERTs.
+- `expires_at` on the `documents` table drives a `ROW DELETION POLICY` — expired documents and all interleaved children are garbage-collected automatically.
 
 ```sql
 -- Level 1: Document metadata and GCS URIs
-CREATE TABLE Documents (
+CREATE TABLE documents (
   consumer     STRING(MAX) NOT NULL,
   feedback_id  STRING(MAX) NOT NULL,
   file_uri     STRING(MAX),
   render_uris  ARRAY<STRING(MAX)>,   -- one URI per rendered page, in page order
   ta_uri       STRING(MAX),          -- GCS URI for serialized ssn.type.TextAnnotation
   created_at   TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
-) PRIMARY KEY (consumer, feedback_id);
+  expires_at   TIMESTAMP,            -- when this document should be garbage-collected
+) PRIMARY KEY (consumer, feedback_id),
+  ROW DELETION POLICY (OLDER_THAN(expires_at, INTERVAL 1 DAY));
 
 
 -- Level 2: One row per feature per document
-CREATE TABLE FieldAnnotations (
+CREATE TABLE field_annotations (
   consumer           STRING(MAX) NOT NULL,
   feedback_id        STRING(MAX) NOT NULL,
   feature            STRING(MAX) NOT NULL,
   customer_requested BOOL NOT NULL DEFAULT (false),
 ) PRIMARY KEY (consumer, feedback_id, feature),
-  INTERLEAVE IN PARENT Documents ON DELETE CASCADE;
+  INTERLEAVE IN PARENT documents ON DELETE CASCADE;
 
 
 -- Level 3a: Standard field candidates
 -- Covers: all ssn.type.Candidate fields + CHECK_IN_DATE / CHECK_OUT_DATE (flattened from HotelDates)
-CREATE TABLE Candidates (
+CREATE TABLE candidates (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
   source      STRING(MAX) NOT NULL,   -- "PREDICTION" | "FEEDBACK" | "LABEL"
   source_id   STRING(MAX) NOT NULL,   -- model_id or annotator_id
-  candidate   PROTO<ssn.type.Candidate>,
+  candidate   ssn.type.Candidate,
   created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
-  INTERLEAVE IN PARENT FieldAnnotations ON DELETE CASCADE;
+  INTERLEAVE IN PARENT field_annotations ON DELETE CASCADE;
 
 
 -- Level 3b: Complex type annotations
 -- Covers: PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES / SWISS_QR_BILLS, QA
 -- data column holds serialized proto: PurchaseLineData | VatDistributionData | QrData | AnswerData
-CREATE TABLE ComplexAnnotations (
+CREATE TABLE complex_annotations (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
@@ -360,30 +383,30 @@ CREATE TABLE ComplexAnnotations (
   data        BYTES(MAX),
   created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
-  INTERLEAVE IN PARENT FieldAnnotations ON DELETE CASCADE;
+  INTERLEAVE IN PARENT field_annotations ON DELETE CASCADE;
 ```
 
 **Table hierarchy:**
 
 ```
-Documents
-└── FieldAnnotations  (feature)
-      ├── Candidates          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
-      └── ComplexAnnotations  — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
+documents
+└── field_annotations  (feature)
+      ├── candidates          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
+      └── complex_annotations — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
 ```
 
 **Feature → table mapping:**
 
 | Feature | Table | Data type |
 |---|---|---|
-| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `Candidates` | `PROTO<ssn.type.Candidate>` |
-| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `Candidates` | `PROTO<ssn.type.Candidate>` (flattened from `HotelDates`) |
-| `PURCHASE_LINES` | `ComplexAnnotations` | serialized `PurchaseLineData` |
-| `VAT_DISTRIBUTION` | `ComplexAnnotations` | serialized `VatDistributionData` |
-| `QR_CODES` / `SWISS_QR_BILLS` | `ComplexAnnotations` | serialized `QrData` |
-| `QA` | `ComplexAnnotations` | serialized `AnswerData` |
+| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `candidates` | `ssn.type.Candidate` (proto column) |
+| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `candidates` | `ssn.type.Candidate` (flattened from `HotelDates`) |
+| `PURCHASE_LINES` | `complex_annotations` | serialized `PurchaseLineData` |
+| `VAT_DISTRIBUTION` | `complex_annotations` | serialized `VatDistributionData` |
+| `QR_CODES` / `SWISS_QR_BILLS` | `complex_annotations` | serialized `QrData` |
+| `QA` | `complex_annotations` | serialized `AnswerData` |
 
 **BigQuery export:**
-- `Candidates` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
-- `ComplexAnnotations` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
+- `candidates` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
+- `complex_annotations` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
 - All filtering, joins, and ad-hoc queries happen in BQ — Spanner has no secondary indexes on these tables
