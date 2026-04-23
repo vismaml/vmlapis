@@ -263,10 +263,16 @@ message GetDocumentDataResponse {
 
   // Features the customer originally requested for this document.
   repeated string requested_features = 8;
+
+  // When this document was last modified (server-managed, commit timestamp).
+  google.protobuf.Timestamp updated_at = 9;
+
+  // Document-level tags.
+  repeated string tags = 10;
 }
 ```
 
-`InternalFieldAnnotation` entries with `customer_requested = true` and empty candidates are always returned — they carry the "field not found" signal.
+Whether a feature was "requested but not found" is determined by checking `requested_features` against the returned `fields` — no annotation for a requested feature means it wasn't found on the document.
 
 ---
 
@@ -295,6 +301,8 @@ message SetDocumentBlobsRequest {
   string                      environment         = 7;
   // Non-empty → write; empty → leave untouched.
   repeated string             requested_features  = 8;
+  // Non-empty → write; empty → leave untouched.
+  repeated string             tags                = 9;
 }
 
 message SetDocumentBlobsResponse {}
@@ -351,6 +359,7 @@ CREATE TABLE documents (
   updated_at          TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
   expires_at          TIMESTAMP,            -- when this document should be garbage-collected
   requested_features  ARRAY<STRING(MAX)>,   -- features the customer originally requested
+  tags                ARRAY<STRING(MAX)>,   -- document-level tags
 ) PRIMARY KEY (consumer, feedback_id),
   ROW DELETION POLICY (OLDER_THAN(expires_at, INTERVAL 1 DAY));
 

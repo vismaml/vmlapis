@@ -177,6 +177,9 @@ message GetDocumentDataResponse {
 
   // When this document was last modified (server-managed, commit timestamp).
   google.protobuf.Timestamp updated_at = 9;
+
+  // Document-level tags (e.g. transaction tags from asyncton).
+  repeated string tags = 10;
 }
 
 message SetDocumentBlobsRequest {
@@ -194,6 +197,8 @@ message SetDocumentBlobsRequest {
   string environment = 7;
   // Non-empty → write; empty → leave untouched.
   repeated string requested_features = 8;
+  // Non-empty → write; empty → leave untouched.
+  repeated string tags = 9;
 }
 
 message SetDocumentBlobsResponse {}

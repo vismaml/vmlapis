@@ -178,7 +178,7 @@ public final class DocumentdataserviceProto {
       "Predictions\022+\n\021include_feedbacks\030\004 \001(\010R\020" +
       "includeFeedbacks\022%\n\016include_labels\030\005 \001(\010" +
       "R\rincludeLabels\022 \n\013environment\030\006 \001(\tR\013en" +
-      "vironment\"\322\003\n\027GetDocumentDataResponse\022\037\n" +
+      "vironment\"\346\003\n\027GetDocumentDataResponse\022\037\n" +
       "\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consum" +
       "er\030\002 \001(\tR\010consumer\022\031\n\010file_url\030\003 \001(\tR\007fi" +
       "leUrl\022\037\n\013render_urls\030\004 \003(\tR\nrenderUrls\022L" +
@@ -189,17 +189,18 @@ public final class DocumentdataserviceProto {
       "ires_at\030\007 \001(\0132\032.google.protobuf.Timestam" +
       "pR\texpiresAt\022-\n\022requested_features\030\010 \003(\t" +
       "R\021requestedFeatures\0229\n\nupdated_at\030\t \001(\0132" +
-      "\032.google.protobuf.TimestampR\tupdatedAt\"\361" +
-      "\002\n\027SetDocumentBlobsRequest\022\037\n\013feedback_i" +
-      "d\030\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010c" +
-      "onsumer\0227\n\010file_uri\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValueR\007fileUri\022\037\n\013render_uris\030" +
-      "\004 \003(\tR\nrenderUris\0223\n\006ta_uri\030\005 \001(\0132\034.goog" +
-      "le.protobuf.StringValueR\005taUri\0229\n\nexpire" +
-      "s_at\030\006 \001(\0132\032.google.protobuf.TimestampR\t" +
-      "expiresAt\022 \n\013environment\030\007 \001(\tR\013environm" +
-      "ent\022-\n\022requested_features\030\010 \003(\tR\021request" +
-      "edFeatures\"\032\n\030SetDocumentBlobsResponse\"\315" +
+      "\032.google.protobuf.TimestampR\tupdatedAt\022\022" +
+      "\n\004tags\030\n \003(\tR\004tags\"\205\003\n\027SetDocumentBlobsR" +
+      "equest\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId\022" +
+      "\032\n\010consumer\030\002 \001(\tR\010consumer\0227\n\010file_uri\030" +
+      "\003 \001(\0132\034.google.protobuf.StringValueR\007fil" +
+      "eUri\022\037\n\013render_uris\030\004 \003(\tR\nrenderUris\0223\n" +
+      "\006ta_uri\030\005 \001(\0132\034.google.protobuf.StringVa" +
+      "lueR\005taUri\0229\n\nexpires_at\030\006 \001(\0132\032.google." +
+      "protobuf.TimestampR\texpiresAt\022 \n\013environ" +
+      "ment\030\007 \001(\tR\013environment\022-\n\022requested_fea" +
+      "tures\030\010 \003(\tR\021requestedFeatures\022\022\n\004tags\030\t" +
+      " \003(\tR\004tags\"\032\n\030SetDocumentBlobsResponse\"\315" +
       "\001\n\025AddAnnotationsRequest\022\037\n\013feedback_id\030" +
       "\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010con" +
       "sumer\022U\n\013annotations\030\003 \003(\01323.ssn.documen" +
@@ -319,13 +320,13 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", "Tags", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_fieldAccessorTable = new
