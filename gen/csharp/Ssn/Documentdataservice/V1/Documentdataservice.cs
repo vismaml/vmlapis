@@ -60,32 +60,32 @@ namespace Ssn.Documentdataservice.V1 {
             "ZGF0YXNlcnZpY2UudjEuQ2FuZGlkYXRlU291cmNlUgZzb3VyY2USGwoJc291",
             "cmNlX2lkGAMgASgJUghzb3VyY2VJZCJbCgpBbnN3ZXJEYXRhEk0KB2Fuc3dl",
             "cnMYASADKAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5h",
-            "bEFuc3dlckNhbmRpZGF0ZVIHYW5zd2VycyKBBAoXSW50ZXJuYWxGaWVsZEFu",
-            "bm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRItChJjdXN0b21l",
-            "cl9yZXF1ZXN0ZWQYAiABKAhSEWN1c3RvbWVyUmVxdWVzdGVkEkYKCmZpZWxk",
-            "X2RhdGEYAyABKAsyJS5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5GaWVs",
-            "ZERhdGFIAFIJZmllbGREYXRhElwKEnB1cmNoYXNlX2xpbmVfZGF0YRgEIAEo",
-            "CzIsLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlB1cmNoYXNlTGluZURh",
-            "dGFIAFIQcHVyY2hhc2VMaW5lRGF0YRJlChV2YXRfZGlzdHJpYnV0aW9uX2Rh",
-            "dGEYBSABKAsyLy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5WYXREaXN0",
-            "cmlidXRpb25EYXRhSABSE3ZhdERpc3RyaWJ1dGlvbkRhdGESPQoHcXJfZGF0",
-            "YRgGIAEoCzIiLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlFyRGF0YUgA",
-            "UgZxckRhdGESSQoLYW5zd2VyX2RhdGEYByABKAsyJi5zc24uZG9jdW1lbnRk",
-            "YXRhc2VydmljZS52MS5BbnN3ZXJEYXRhSABSCmFuc3dlckRhdGFCBgoEZGF0",
-            "YSL8AQoWR2V0RG9jdW1lbnREYXRhUmVxdWVzdBIfCgtmZWVkYmFja19pZBgB",
-            "IAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3VtZXIS",
-            "LwoTaW5jbHVkZV9wcmVkaWN0aW9ucxgDIAEoCFISaW5jbHVkZVByZWRpY3Rp",
-            "b25zEisKEWluY2x1ZGVfZmVlZGJhY2tzGAQgASgIUhBpbmNsdWRlRmVlZGJh",
-            "Y2tzEiUKDmluY2x1ZGVfbGFiZWxzGAUgASgIUg1pbmNsdWRlTGFiZWxzEiAK",
-            "C2Vudmlyb25tZW50GAYgASgJUgtlbnZpcm9ubWVudCLoAgoXR2V0RG9jdW1l",
-            "bnREYXRhUmVzcG9uc2USHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNr",
-            "SWQSGgoIY29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEhkKCGZpbGVfdXJsGAMg",
-            "ASgJUgdmaWxlVXJsEh8KC3JlbmRlcl91cmxzGAQgAygJUgpyZW5kZXJVcmxz",
-            "EkwKE3RleHRfYW5ub3RhdGlvbl91cmwYBSABKAsyHC5nb29nbGUucHJvdG9i",
-            "dWYuU3RyaW5nVmFsdWVSEXRleHRBbm5vdGF0aW9uVXJsEksKBmZpZWxkcxgG",
-            "IAMoCzIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkludGVybmFsRmll",
-            "bGRBbm5vdGF0aW9uUgZmaWVsZHMSOQoKZXhwaXJlc19hdBgHIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWV4cGlyZXNBdCLCAgoXU2V0RG9j",
+            "bEFuc3dlckNhbmRpZGF0ZVIHYW5zd2VycyLSAwoXSW50ZXJuYWxGaWVsZEFu",
+            "bm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRJGCgpmaWVsZF9k",
+            "YXRhGAIgASgLMiUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRmllbGRE",
+            "YXRhSABSCWZpZWxkRGF0YRJcChJwdXJjaGFzZV9saW5lX2RhdGEYAyABKAsy",
+            "LC5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5QdXJjaGFzZUxpbmVEYXRh",
+            "SABSEHB1cmNoYXNlTGluZURhdGESZQoVdmF0X2Rpc3RyaWJ1dGlvbl9kYXRh",
+            "GAQgASgLMi8uc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuVmF0RGlzdHJp",
+            "YnV0aW9uRGF0YUgAUhN2YXREaXN0cmlidXRpb25EYXRhEj0KB3FyX2RhdGEY",
+            "BSABKAsyIi5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5RckRhdGFIAFIG",
+            "cXJEYXRhEkkKC2Fuc3dlcl9kYXRhGAYgASgLMiYuc3NuLmRvY3VtZW50ZGF0",
+            "YXNlcnZpY2UudjEuQW5zd2VyRGF0YUgAUgphbnN3ZXJEYXRhQgYKBGRhdGEi",
+            "/AEKFkdldERvY3VtZW50RGF0YVJlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASAB",
+            "KAlSCmZlZWRiYWNrSWQSGgoIY29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEi8K",
+            "E2luY2x1ZGVfcHJlZGljdGlvbnMYAyABKAhSEmluY2x1ZGVQcmVkaWN0aW9u",
+            "cxIrChFpbmNsdWRlX2ZlZWRiYWNrcxgEIAEoCFIQaW5jbHVkZUZlZWRiYWNr",
+            "cxIlCg5pbmNsdWRlX2xhYmVscxgFIAEoCFINaW5jbHVkZUxhYmVscxIgCgtl",
+            "bnZpcm9ubWVudBgGIAEoCVILZW52aXJvbm1lbnQilwMKF0dldERvY3VtZW50",
+            "RGF0YVJlc3BvbnNlEh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lk",
+            "EhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchIZCghmaWxlX3VybBgDIAEo",
+            "CVIHZmlsZVVybBIfCgtyZW5kZXJfdXJscxgEIAMoCVIKcmVuZGVyVXJscxJM",
+            "ChN0ZXh0X2Fubm90YXRpb25fdXJsGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cmluZ1ZhbHVlUhF0ZXh0QW5ub3RhdGlvblVybBJLCgZmaWVsZHMYBiAD",
+            "KAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxk",
+            "QW5ub3RhdGlvblIGZmllbGRzEjkKCmV4cGlyZXNfYXQYByABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQSLQoScmVxdWVzdGVk",
+            "X2ZlYXR1cmVzGAggAygJUhFyZXF1ZXN0ZWRGZWF0dXJlcyLCAgoXU2V0RG9j",
             "dW1lbnRCbG9ic1JlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRi",
             "YWNrSWQSGgoIY29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEjcKCGZpbGVfdXJp",
             "GAMgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlUgdmaWxlVXJp",
@@ -135,9 +135,9 @@ namespace Ssn.Documentdataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.QrData), global::Ssn.Documentdataservice.V1.QrData.Parser, new[]{ "QrCodes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalAnswerCandidate), global::Ssn.Documentdataservice.V1.InternalAnswerCandidate.Parser, new[]{ "Answer", "Source", "SourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AnswerData), global::Ssn.Documentdataservice.V1.AnswerData.Parser, new[]{ "Answers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "CustomerRequested", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", "Environment" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse), global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsRequest), global::Ssn.Documentdataservice.V1.AddAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Annotations", "Environment" }, null, null, null, null),
@@ -2631,14 +2631,6 @@ namespace Ssn.Documentdataservice.V1 {
 
   /// <summary>
   /// InternalFieldAnnotation groups all candidates for a single feature.
-  ///
-  /// customer_requested lives on the feature (not the candidate) because a feature
-  /// can be requested but produce zero candidates (field not found on document).
-  ///
-  /// State table:
-  ///   customer_requested=true,  candidates empty   → requested, not found on document
-  ///   customer_requested=true,  candidates present → requested and annotated
-  ///   customer_requested=false, candidates present → ad-hoc annotation (not originally requested)
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InternalFieldAnnotation : pb::IMessage<InternalFieldAnnotation>
@@ -2676,7 +2668,6 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InternalFieldAnnotation(InternalFieldAnnotation other) : this() {
       feature_ = other.feature_;
-      customerRequested_ = other.customerRequested_;
       switch (other.DataCase) {
         case DataOneofCase.FieldData:
           FieldData = other.FieldData.Clone();
@@ -2719,20 +2710,8 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "customer_requested" field.</summary>
-    public const int CustomerRequestedFieldNumber = 2;
-    private bool customerRequested_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool CustomerRequested {
-      get { return customerRequested_; }
-      set {
-        customerRequested_ = value;
-      }
-    }
-
     /// <summary>Field number for the "field_data" field.</summary>
-    public const int FieldDataFieldNumber = 3;
+    public const int FieldDataFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Documentdataservice.V1.FieldData FieldData {
@@ -2744,7 +2723,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "purchase_line_data" field.</summary>
-    public const int PurchaseLineDataFieldNumber = 4;
+    public const int PurchaseLineDataFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Documentdataservice.V1.PurchaseLineData PurchaseLineData {
@@ -2756,7 +2735,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "vat_distribution_data" field.</summary>
-    public const int VatDistributionDataFieldNumber = 5;
+    public const int VatDistributionDataFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Documentdataservice.V1.VatDistributionData VatDistributionData {
@@ -2768,7 +2747,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "qr_data" field.</summary>
-    public const int QrDataFieldNumber = 6;
+    public const int QrDataFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Documentdataservice.V1.QrData QrData {
@@ -2780,7 +2759,7 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "answer_data" field.</summary>
-    public const int AnswerDataFieldNumber = 7;
+    public const int AnswerDataFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Documentdataservice.V1.AnswerData AnswerData {
@@ -2795,11 +2774,11 @@ namespace Ssn.Documentdataservice.V1 {
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
       None = 0,
-      FieldData = 3,
-      PurchaseLineData = 4,
-      VatDistributionData = 5,
-      QrData = 6,
-      AnswerData = 7,
+      FieldData = 2,
+      PurchaseLineData = 3,
+      VatDistributionData = 4,
+      QrData = 5,
+      AnswerData = 6,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2831,7 +2810,6 @@ namespace Ssn.Documentdataservice.V1 {
         return true;
       }
       if (Feature != other.Feature) return false;
-      if (CustomerRequested != other.CustomerRequested) return false;
       if (!object.Equals(FieldData, other.FieldData)) return false;
       if (!object.Equals(PurchaseLineData, other.PurchaseLineData)) return false;
       if (!object.Equals(VatDistributionData, other.VatDistributionData)) return false;
@@ -2846,7 +2824,6 @@ namespace Ssn.Documentdataservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Feature.Length != 0) hash ^= Feature.GetHashCode();
-      if (CustomerRequested != false) hash ^= CustomerRequested.GetHashCode();
       if (dataCase_ == DataOneofCase.FieldData) hash ^= FieldData.GetHashCode();
       if (dataCase_ == DataOneofCase.PurchaseLineData) hash ^= PurchaseLineData.GetHashCode();
       if (dataCase_ == DataOneofCase.VatDistributionData) hash ^= VatDistributionData.GetHashCode();
@@ -2875,28 +2852,24 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      if (CustomerRequested != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(CustomerRequested);
-      }
       if (dataCase_ == DataOneofCase.FieldData) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(FieldData);
       }
       if (dataCase_ == DataOneofCase.PurchaseLineData) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(PurchaseLineData);
       }
       if (dataCase_ == DataOneofCase.VatDistributionData) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(VatDistributionData);
       }
       if (dataCase_ == DataOneofCase.QrData) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(QrData);
       }
       if (dataCase_ == DataOneofCase.AnswerData) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(AnswerData);
       }
       if (_unknownFields != null) {
@@ -2913,28 +2886,24 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      if (CustomerRequested != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(CustomerRequested);
-      }
       if (dataCase_ == DataOneofCase.FieldData) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(FieldData);
       }
       if (dataCase_ == DataOneofCase.PurchaseLineData) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(PurchaseLineData);
       }
       if (dataCase_ == DataOneofCase.VatDistributionData) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(VatDistributionData);
       }
       if (dataCase_ == DataOneofCase.QrData) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(QrData);
       }
       if (dataCase_ == DataOneofCase.AnswerData) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(AnswerData);
       }
       if (_unknownFields != null) {
@@ -2949,9 +2918,6 @@ namespace Ssn.Documentdataservice.V1 {
       int size = 0;
       if (Feature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Feature);
-      }
-      if (CustomerRequested != false) {
-        size += 1 + 1;
       }
       if (dataCase_ == DataOneofCase.FieldData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldData);
@@ -2982,9 +2948,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (other.Feature.Length != 0) {
         Feature = other.Feature;
-      }
-      if (other.CustomerRequested != false) {
-        CustomerRequested = other.CustomerRequested;
       }
       switch (other.DataCase) {
         case DataOneofCase.FieldData:
@@ -3042,11 +3005,7 @@ namespace Ssn.Documentdataservice.V1 {
             Feature = input.ReadString();
             break;
           }
-          case 16: {
-            CustomerRequested = input.ReadBool();
-            break;
-          }
-          case 26: {
+          case 18: {
             global::Ssn.Documentdataservice.V1.FieldData subBuilder = new global::Ssn.Documentdataservice.V1.FieldData();
             if (dataCase_ == DataOneofCase.FieldData) {
               subBuilder.MergeFrom(FieldData);
@@ -3055,7 +3014,7 @@ namespace Ssn.Documentdataservice.V1 {
             FieldData = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::Ssn.Documentdataservice.V1.PurchaseLineData subBuilder = new global::Ssn.Documentdataservice.V1.PurchaseLineData();
             if (dataCase_ == DataOneofCase.PurchaseLineData) {
               subBuilder.MergeFrom(PurchaseLineData);
@@ -3064,7 +3023,7 @@ namespace Ssn.Documentdataservice.V1 {
             PurchaseLineData = subBuilder;
             break;
           }
-          case 42: {
+          case 34: {
             global::Ssn.Documentdataservice.V1.VatDistributionData subBuilder = new global::Ssn.Documentdataservice.V1.VatDistributionData();
             if (dataCase_ == DataOneofCase.VatDistributionData) {
               subBuilder.MergeFrom(VatDistributionData);
@@ -3073,7 +3032,7 @@ namespace Ssn.Documentdataservice.V1 {
             VatDistributionData = subBuilder;
             break;
           }
-          case 50: {
+          case 42: {
             global::Ssn.Documentdataservice.V1.QrData subBuilder = new global::Ssn.Documentdataservice.V1.QrData();
             if (dataCase_ == DataOneofCase.QrData) {
               subBuilder.MergeFrom(QrData);
@@ -3082,7 +3041,7 @@ namespace Ssn.Documentdataservice.V1 {
             QrData = subBuilder;
             break;
           }
-          case 58: {
+          case 50: {
             global::Ssn.Documentdataservice.V1.AnswerData subBuilder = new global::Ssn.Documentdataservice.V1.AnswerData();
             if (dataCase_ == DataOneofCase.AnswerData) {
               subBuilder.MergeFrom(AnswerData);
@@ -3114,11 +3073,7 @@ namespace Ssn.Documentdataservice.V1 {
             Feature = input.ReadString();
             break;
           }
-          case 16: {
-            CustomerRequested = input.ReadBool();
-            break;
-          }
-          case 26: {
+          case 18: {
             global::Ssn.Documentdataservice.V1.FieldData subBuilder = new global::Ssn.Documentdataservice.V1.FieldData();
             if (dataCase_ == DataOneofCase.FieldData) {
               subBuilder.MergeFrom(FieldData);
@@ -3127,7 +3082,7 @@ namespace Ssn.Documentdataservice.V1 {
             FieldData = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::Ssn.Documentdataservice.V1.PurchaseLineData subBuilder = new global::Ssn.Documentdataservice.V1.PurchaseLineData();
             if (dataCase_ == DataOneofCase.PurchaseLineData) {
               subBuilder.MergeFrom(PurchaseLineData);
@@ -3136,7 +3091,7 @@ namespace Ssn.Documentdataservice.V1 {
             PurchaseLineData = subBuilder;
             break;
           }
-          case 42: {
+          case 34: {
             global::Ssn.Documentdataservice.V1.VatDistributionData subBuilder = new global::Ssn.Documentdataservice.V1.VatDistributionData();
             if (dataCase_ == DataOneofCase.VatDistributionData) {
               subBuilder.MergeFrom(VatDistributionData);
@@ -3145,7 +3100,7 @@ namespace Ssn.Documentdataservice.V1 {
             VatDistributionData = subBuilder;
             break;
           }
-          case 50: {
+          case 42: {
             global::Ssn.Documentdataservice.V1.QrData subBuilder = new global::Ssn.Documentdataservice.V1.QrData();
             if (dataCase_ == DataOneofCase.QrData) {
               subBuilder.MergeFrom(QrData);
@@ -3154,7 +3109,7 @@ namespace Ssn.Documentdataservice.V1 {
             QrData = subBuilder;
             break;
           }
-          case 58: {
+          case 50: {
             global::Ssn.Documentdataservice.V1.AnswerData subBuilder = new global::Ssn.Documentdataservice.V1.AnswerData();
             if (dataCase_ == DataOneofCase.AnswerData) {
               subBuilder.MergeFrom(AnswerData);
@@ -3598,6 +3553,7 @@ namespace Ssn.Documentdataservice.V1 {
       TextAnnotationUrl = other.TextAnnotationUrl;
       fields_ = other.fields_.Clone();
       expiresAt_ = other.expiresAt_ != null ? other.expiresAt_.Clone() : null;
+      requestedFeatures_ = other.requestedFeatures_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3708,6 +3664,20 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "requested_features" field.</summary>
+    public const int RequestedFeaturesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_requestedFeatures_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> requestedFeatures_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Features the customer originally requested for this document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RequestedFeatures {
+      get { return requestedFeatures_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3730,6 +3700,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (TextAnnotationUrl != other.TextAnnotationUrl) return false;
       if(!fields_.Equals(other.fields_)) return false;
       if (!object.Equals(ExpiresAt, other.ExpiresAt)) return false;
+      if(!requestedFeatures_.Equals(other.requestedFeatures_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3744,6 +3715,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (textAnnotationUrl_ != null) hash ^= TextAnnotationUrl.GetHashCode();
       hash ^= fields_.GetHashCode();
       if (expiresAt_ != null) hash ^= ExpiresAt.GetHashCode();
+      hash ^= requestedFeatures_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3783,6 +3755,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ExpiresAt);
       }
+      requestedFeatures_.WriteTo(output, _repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3814,6 +3787,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ExpiresAt);
       }
+      requestedFeatures_.WriteTo(ref output, _repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3841,6 +3815,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (expiresAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpiresAt);
       }
+      size += requestedFeatures_.CalculateSize(_repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3875,6 +3850,7 @@ namespace Ssn.Documentdataservice.V1 {
         }
         ExpiresAt.MergeFrom(other.ExpiresAt);
       }
+      requestedFeatures_.Add(other.requestedFeatures_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3928,6 +3904,10 @@ namespace Ssn.Documentdataservice.V1 {
             input.ReadMessage(ExpiresAt);
             break;
           }
+          case 66: {
+            requestedFeatures_.AddEntriesFrom(input, _repeated_requestedFeatures_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3979,6 +3959,10 @@ namespace Ssn.Documentdataservice.V1 {
               ExpiresAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpiresAt);
+            break;
+          }
+          case 66: {
+            requestedFeatures_.AddEntriesFrom(ref input, _repeated_requestedFeatures_codec);
             break;
           }
         }

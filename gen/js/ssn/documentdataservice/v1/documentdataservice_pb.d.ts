@@ -265,9 +265,6 @@ export class InternalFieldAnnotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): InternalFieldAnnotation;
 
-  getCustomerRequested(): boolean;
-  setCustomerRequested(value: boolean): InternalFieldAnnotation;
-
   getFieldData(): FieldData | undefined;
   setFieldData(value?: FieldData): InternalFieldAnnotation;
   hasFieldData(): boolean;
@@ -306,7 +303,6 @@ export class InternalFieldAnnotation extends jspb.Message {
 export namespace InternalFieldAnnotation {
   export type AsObject = {
     feature: string,
-    customerRequested: boolean,
     fieldData?: FieldData.AsObject,
     purchaseLineData?: PurchaseLineData.AsObject,
     vatDistributionData?: VatDistributionData.AsObject,
@@ -316,11 +312,11 @@ export namespace InternalFieldAnnotation {
 
   export enum DataCase { 
     DATA_NOT_SET = 0,
-    FIELD_DATA = 3,
-    PURCHASE_LINE_DATA = 4,
-    VAT_DISTRIBUTION_DATA = 5,
-    QR_DATA = 6,
-    ANSWER_DATA = 7,
+    FIELD_DATA = 2,
+    PURCHASE_LINE_DATA = 3,
+    VAT_DISTRIBUTION_DATA = 4,
+    QR_DATA = 5,
+    ANSWER_DATA = 6,
   }
 }
 
@@ -392,6 +388,11 @@ export class GetDocumentDataResponse extends jspb.Message {
   hasExpiresAt(): boolean;
   clearExpiresAt(): GetDocumentDataResponse;
 
+  getRequestedFeaturesList(): Array<string>;
+  setRequestedFeaturesList(value: Array<string>): GetDocumentDataResponse;
+  clearRequestedFeaturesList(): GetDocumentDataResponse;
+  addRequestedFeatures(value: string, index?: number): GetDocumentDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataResponse): GetDocumentDataResponse.AsObject;
@@ -409,6 +410,7 @@ export namespace GetDocumentDataResponse {
     textAnnotationUrl?: google_protobuf_wrappers_pb.StringValue.AsObject,
     fieldsList: Array<InternalFieldAnnotation.AsObject>,
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    requestedFeaturesList: Array<string>,
   }
 }
 

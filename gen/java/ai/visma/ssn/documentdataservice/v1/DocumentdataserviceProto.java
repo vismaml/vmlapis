@@ -160,35 +160,35 @@ public final class DocumentdataserviceProto {
       "rce\022\033\n\tsource_id\030\003 \001(\tR\010sourceId\"[\n\nAnsw" +
       "erData\022M\n\007answers\030\001 \003(\01323.ssn.documentda" +
       "taservice.v1.InternalAnswerCandidateR\007an" +
-      "swers\"\201\004\n\027InternalFieldAnnotation\022\030\n\007fea" +
-      "ture\030\001 \001(\tR\007feature\022-\n\022customer_requeste" +
-      "d\030\002 \001(\010R\021customerRequested\022F\n\nfield_data" +
-      "\030\003 \001(\0132%.ssn.documentdataservice.v1.Fiel" +
-      "dDataH\000R\tfieldData\022\\\n\022purchase_line_data" +
-      "\030\004 \001(\0132,.ssn.documentdataservice.v1.Purc" +
-      "haseLineDataH\000R\020purchaseLineData\022e\n\025vat_" +
-      "distribution_data\030\005 \001(\0132/.ssn.documentda" +
-      "taservice.v1.VatDistributionDataH\000R\023vatD" +
-      "istributionData\022=\n\007qr_data\030\006 \001(\0132\".ssn.d" +
-      "ocumentdataservice.v1.QrDataH\000R\006qrData\022I" +
-      "\n\013answer_data\030\007 \001(\0132&.ssn.documentdatase" +
-      "rvice.v1.AnswerDataH\000R\nanswerDataB\006\n\004dat" +
-      "a\"\374\001\n\026GetDocumentDataRequest\022\037\n\013feedback" +
-      "_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR" +
-      "\010consumer\022/\n\023include_predictions\030\003 \001(\010R\022" +
-      "includePredictions\022+\n\021include_feedbacks\030" +
-      "\004 \001(\010R\020includeFeedbacks\022%\n\016include_label" +
-      "s\030\005 \001(\010R\rincludeLabels\022 \n\013environment\030\006 " +
-      "\001(\tR\013environment\"\350\002\n\027GetDocumentDataResp" +
-      "onse\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032\n" +
-      "\010consumer\030\002 \001(\tR\010consumer\022\031\n\010file_url\030\003 " +
-      "\001(\tR\007fileUrl\022\037\n\013render_urls\030\004 \003(\tR\nrende" +
-      "rUrls\022L\n\023text_annotation_url\030\005 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueR\021textAnnotation" +
-      "Url\022K\n\006fields\030\006 \003(\01323.ssn.documentdatase" +
-      "rvice.v1.InternalFieldAnnotationR\006fields" +
-      "\0229\n\nexpires_at\030\007 \001(\0132\032.google.protobuf.T" +
-      "imestampR\texpiresAt\"\302\002\n\027SetDocumentBlobs" +
+      "swers\"\322\003\n\027InternalFieldAnnotation\022\030\n\007fea" +
+      "ture\030\001 \001(\tR\007feature\022F\n\nfield_data\030\002 \001(\0132" +
+      "%.ssn.documentdataservice.v1.FieldDataH\000" +
+      "R\tfieldData\022\\\n\022purchase_line_data\030\003 \001(\0132" +
+      ",.ssn.documentdataservice.v1.PurchaseLin" +
+      "eDataH\000R\020purchaseLineData\022e\n\025vat_distrib" +
+      "ution_data\030\004 \001(\0132/.ssn.documentdataservi" +
+      "ce.v1.VatDistributionDataH\000R\023vatDistribu" +
+      "tionData\022=\n\007qr_data\030\005 \001(\0132\".ssn.document" +
+      "dataservice.v1.QrDataH\000R\006qrData\022I\n\013answe" +
+      "r_data\030\006 \001(\0132&.ssn.documentdataservice.v" +
+      "1.AnswerDataH\000R\nanswerDataB\006\n\004data\"\374\001\n\026G" +
+      "etDocumentDataRequest\022\037\n\013feedback_id\030\001 \001" +
+      "(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010consum" +
+      "er\022/\n\023include_predictions\030\003 \001(\010R\022include" +
+      "Predictions\022+\n\021include_feedbacks\030\004 \001(\010R\020" +
+      "includeFeedbacks\022%\n\016include_labels\030\005 \001(\010" +
+      "R\rincludeLabels\022 \n\013environment\030\006 \001(\tR\013en" +
+      "vironment\"\227\003\n\027GetDocumentDataResponse\022\037\n" +
+      "\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consum" +
+      "er\030\002 \001(\tR\010consumer\022\031\n\010file_url\030\003 \001(\tR\007fi" +
+      "leUrl\022\037\n\013render_urls\030\004 \003(\tR\nrenderUrls\022L" +
+      "\n\023text_annotation_url\030\005 \001(\0132\034.google.pro" +
+      "tobuf.StringValueR\021textAnnotationUrl\022K\n\006" +
+      "fields\030\006 \003(\01323.ssn.documentdataservice.v" +
+      "1.InternalFieldAnnotationR\006fields\0229\n\nexp" +
+      "ires_at\030\007 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\texpiresAt\022-\n\022requested_features\030\010 \003(\t" +
+      "R\021requestedFeatures\"\302\002\n\027SetDocumentBlobs" +
       "Request\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId" +
       "\022\032\n\010consumer\030\002 \001(\tR\010consumer\0227\n\010file_uri" +
       "\030\003 \001(\0132\034.google.protobuf.StringValueR\007fi" +
@@ -305,7 +305,7 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_InternalFieldAnnotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_InternalFieldAnnotation_descriptor,
-        new java.lang.String[] { "Feature", "CustomerRequested", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData", "Data", });
+        new java.lang.String[] { "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData", "Data", });
     internal_static_ssn_documentdataservice_v1_GetDocumentDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_ssn_documentdataservice_v1_GetDocumentDataRequest_fieldAccessorTable = new
@@ -317,7 +317,7 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_GetDocumentDataResponse_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_fieldAccessorTable = new

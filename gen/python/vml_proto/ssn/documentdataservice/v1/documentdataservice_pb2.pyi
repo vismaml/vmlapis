@@ -105,22 +105,20 @@ class AnswerData(_message.Message):
     def __init__(self, answers: _Optional[_Iterable[_Union[InternalAnswerCandidate, _Mapping]]] = ...) -> None: ...
 
 class InternalFieldAnnotation(_message.Message):
-    __slots__ = ("feature", "customer_requested", "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data")
+    __slots__ = ("feature", "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data")
     FEATURE_FIELD_NUMBER: _ClassVar[int]
-    CUSTOMER_REQUESTED_FIELD_NUMBER: _ClassVar[int]
     FIELD_DATA_FIELD_NUMBER: _ClassVar[int]
     PURCHASE_LINE_DATA_FIELD_NUMBER: _ClassVar[int]
     VAT_DISTRIBUTION_DATA_FIELD_NUMBER: _ClassVar[int]
     QR_DATA_FIELD_NUMBER: _ClassVar[int]
     ANSWER_DATA_FIELD_NUMBER: _ClassVar[int]
     feature: str
-    customer_requested: bool
     field_data: FieldData
     purchase_line_data: PurchaseLineData
     vat_distribution_data: VatDistributionData
     qr_data: QrData
     answer_data: AnswerData
-    def __init__(self, feature: _Optional[str] = ..., customer_requested: bool = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ...) -> None: ...
+    def __init__(self, feature: _Optional[str] = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ...) -> None: ...
 
 class GetDocumentDataRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "include_predictions", "include_feedbacks", "include_labels", "environment")
@@ -139,7 +137,7 @@ class GetDocumentDataRequest(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ..., environment: _Optional[str] = ...) -> None: ...
 
 class GetDocumentDataResponse(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at")
+    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at", "requested_features")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URL_FIELD_NUMBER: _ClassVar[int]
@@ -147,6 +145,7 @@ class GetDocumentDataResponse(_message.Message):
     TEXT_ANNOTATION_URL_FIELD_NUMBER: _ClassVar[int]
     FIELDS_FIELD_NUMBER: _ClassVar[int]
     EXPIRES_AT_FIELD_NUMBER: _ClassVar[int]
+    REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_url: str
@@ -154,7 +153,8 @@ class GetDocumentDataResponse(_message.Message):
     text_annotation_url: _wrappers_pb2.StringValue
     fields: _containers.RepeatedCompositeFieldContainer[InternalFieldAnnotation]
     expires_at: _timestamp_pb2.Timestamp
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    requested_features: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment")
