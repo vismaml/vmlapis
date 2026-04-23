@@ -93,6 +93,7 @@ Which features the customer originally requested is **document-level metadata**,
 | yes | no | Requested; not found on document |
 | yes | yes (PREDICTION) | Requested and predicted |
 | yes | yes (PREDICTION + LABEL) | Requested, predicted, and labeled |
+| yes | yes (LABEL only) | Requested, model missed it, human labeled |
 | no | yes (LABEL) | Ad-hoc human annotation |
 | no | yes (PREDICTION) | Ad-hoc model run |
 
