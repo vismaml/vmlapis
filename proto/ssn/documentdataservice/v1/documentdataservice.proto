@@ -191,6 +191,8 @@ message SetDocumentBlobsRequest {
   google.protobuf.Timestamp expires_at = 6;
   // Target environment: "snbx", "stag", "prod".
   string environment = 7;
+  // Non-empty → write; empty → leave untouched.
+  repeated string requested_features = 8;
 }
 
 message SetDocumentBlobsResponse {}

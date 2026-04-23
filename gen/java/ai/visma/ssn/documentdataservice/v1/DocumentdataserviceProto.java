@@ -188,7 +188,7 @@ public final class DocumentdataserviceProto {
       "1.InternalFieldAnnotationR\006fields\0229\n\nexp" +
       "ires_at\030\007 \001(\0132\032.google.protobuf.Timestam" +
       "pR\texpiresAt\022-\n\022requested_features\030\010 \003(\t" +
-      "R\021requestedFeatures\"\302\002\n\027SetDocumentBlobs" +
+      "R\021requestedFeatures\"\361\002\n\027SetDocumentBlobs" +
       "Request\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId" +
       "\022\032\n\010consumer\030\002 \001(\tR\010consumer\0227\n\010file_uri" +
       "\030\003 \001(\0132\034.google.protobuf.StringValueR\007fi" +
@@ -196,40 +196,41 @@ public final class DocumentdataserviceProto {
       "\n\006ta_uri\030\005 \001(\0132\034.google.protobuf.StringV" +
       "alueR\005taUri\0229\n\nexpires_at\030\006 \001(\0132\032.google" +
       ".protobuf.TimestampR\texpiresAt\022 \n\013enviro" +
-      "nment\030\007 \001(\tR\013environment\"\032\n\030SetDocumentB" +
-      "lobsResponse\"\315\001\n\025AddAnnotationsRequest\022\037" +
-      "\n\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consu" +
-      "mer\030\002 \001(\tR\010consumer\022U\n\013annotations\030\003 \003(\013" +
-      "23.ssn.documentdataservice.v1.InternalFi" +
-      "eldAnnotationR\013annotations\022 \n\013environmen" +
-      "t\030\004 \001(\tR\013environment\"\030\n\026AddAnnotationsRe" +
-      "sponse*\217\001\n\017CandidateSource\022 \n\034CANDIDATE_" +
-      "SOURCE_UNSPECIFIED\020\000\022\037\n\033CANDIDATE_SOURCE" +
-      "_PREDICTION\020\001\022\035\n\031CANDIDATE_SOURCE_FEEDBA" +
-      "CK\020\002\022\032\n\026CANDIDATE_SOURCE_LABEL\020\0032\322\004\n\023Doc" +
-      "umentDataService\022\264\001\n\017GetDocumentData\0222.s" +
-      "sn.documentdataservice.v1.GetDocumentDat" +
-      "aRequest\0323.ssn.documentdataservice.v1.Ge" +
-      "tDocumentDataResponse\"8\202\323\344\223\0022\0220/v1/consu" +
-      "mers/{consumer}/documents/{feedback_id}\022" +
-      "\300\001\n\020SetDocumentBlobs\0223.ssn.documentdatas" +
-      "ervice.v1.SetDocumentBlobsRequest\0324.ssn." +
-      "documentdataservice.v1.SetDocumentBlobsR" +
-      "esponse\"A\202\323\344\223\002;\0326/v1/consumers/{consumer" +
-      "}/documents/{feedback_id}/blobs:\001*\022\300\001\n\016A" +
-      "ddAnnotations\0221.ssn.documentdataservice." +
-      "v1.AddAnnotationsRequest\0322.ssn.documentd" +
-      "ataservice.v1.AddAnnotationsResponse\"G\202\323" +
-      "\344\223\002A\"</v1/consumers/{consumer}/documents" +
-      "/{feedback_id}/annotations:\001*B\235\002\n#ai.vis" +
-      "ma.ssn.documentdataservice.v1B\030Documentd" +
-      "ataserviceProtoP\001ZRgithub.com/e-conomic/" +
-      "vmlapis/gen/go/ssn/documentdataservice/v" +
-      "1;documentdataservice\242\002\003SDX\252\002\032Ssn.Docume" +
-      "ntdataservice.V1\312\002\032Ssn\\Documentdataservi" +
-      "ce\\V1\342\002&Ssn\\Documentdataservice\\V1\\GPBMe" +
-      "tadata\352\002\034Ssn::Documentdataservice::V1b\006p" +
-      "roto3"
+      "nment\030\007 \001(\tR\013environment\022-\n\022requested_fe" +
+      "atures\030\010 \003(\tR\021requestedFeatures\"\032\n\030SetDo" +
+      "cumentBlobsResponse\"\315\001\n\025AddAnnotationsRe" +
+      "quest\022\037\n\013feedback_id\030\001 \001(\tR\nfeedbackId\022\032" +
+      "\n\010consumer\030\002 \001(\tR\010consumer\022U\n\013annotation" +
+      "s\030\003 \003(\01323.ssn.documentdataservice.v1.Int" +
+      "ernalFieldAnnotationR\013annotations\022 \n\013env" +
+      "ironment\030\004 \001(\tR\013environment\"\030\n\026AddAnnota" +
+      "tionsResponse*\217\001\n\017CandidateSource\022 \n\034CAN" +
+      "DIDATE_SOURCE_UNSPECIFIED\020\000\022\037\n\033CANDIDATE" +
+      "_SOURCE_PREDICTION\020\001\022\035\n\031CANDIDATE_SOURCE" +
+      "_FEEDBACK\020\002\022\032\n\026CANDIDATE_SOURCE_LABEL\020\0032" +
+      "\322\004\n\023DocumentDataService\022\264\001\n\017GetDocumentD" +
+      "ata\0222.ssn.documentdataservice.v1.GetDocu" +
+      "mentDataRequest\0323.ssn.documentdataservic" +
+      "e.v1.GetDocumentDataResponse\"8\202\323\344\223\0022\0220/v" +
+      "1/consumers/{consumer}/documents/{feedba" +
+      "ck_id}\022\300\001\n\020SetDocumentBlobs\0223.ssn.docume" +
+      "ntdataservice.v1.SetDocumentBlobsRequest" +
+      "\0324.ssn.documentdataservice.v1.SetDocumen" +
+      "tBlobsResponse\"A\202\323\344\223\002;\0326/v1/consumers/{c" +
+      "onsumer}/documents/{feedback_id}/blobs:\001" +
+      "*\022\300\001\n\016AddAnnotations\0221.ssn.documentdatas" +
+      "ervice.v1.AddAnnotationsRequest\0322.ssn.do" +
+      "cumentdataservice.v1.AddAnnotationsRespo" +
+      "nse\"G\202\323\344\223\002A\"</v1/consumers/{consumer}/do" +
+      "cuments/{feedback_id}/annotations:\001*B\235\002\n" +
+      "#ai.visma.ssn.documentdataservice.v1B\030Do" +
+      "cumentdataserviceProtoP\001ZRgithub.com/e-c" +
+      "onomic/vmlapis/gen/go/ssn/documentdatase" +
+      "rvice/v1;documentdataservice\242\002\003SDX\252\002\032Ssn" +
+      ".Documentdataservice.V1\312\002\032Ssn\\Documentda" +
+      "taservice\\V1\342\002&Ssn\\Documentdataservice\\V" +
+      "1\\GPBMetadata\352\002\034Ssn::Documentdataservice" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -323,7 +324,7 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_fieldAccessorTable = new

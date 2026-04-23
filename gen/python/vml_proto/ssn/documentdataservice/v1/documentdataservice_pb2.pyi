@@ -157,7 +157,7 @@ class GetDocumentDataResponse(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment")
+    __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment", "requested_features")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URI_FIELD_NUMBER: _ClassVar[int]
@@ -165,6 +165,7 @@ class SetDocumentBlobsRequest(_message.Message):
     TA_URI_FIELD_NUMBER: _ClassVar[int]
     EXPIRES_AT_FIELD_NUMBER: _ClassVar[int]
     ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
+    REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_uri: _wrappers_pb2.StringValue
@@ -172,7 +173,8 @@ class SetDocumentBlobsRequest(_message.Message):
     ta_uri: _wrappers_pb2.StringValue
     expires_at: _timestamp_pb2.Timestamp
     environment: str
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., environment: _Optional[str] = ...) -> None: ...
+    requested_features: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., render_uris: _Optional[_Iterable[str]] = ..., ta_uri: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., environment: _Optional[str] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class SetDocumentBlobsResponse(_message.Message):
     __slots__ = ()

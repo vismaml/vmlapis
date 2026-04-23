@@ -85,43 +85,44 @@ namespace Ssn.Documentdataservice.V1 {
             "KAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxk",
             "QW5ub3RhdGlvblIGZmllbGRzEjkKCmV4cGlyZXNfYXQYByABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQSLQoScmVxdWVzdGVk",
-            "X2ZlYXR1cmVzGAggAygJUhFyZXF1ZXN0ZWRGZWF0dXJlcyLCAgoXU2V0RG9j",
+            "X2ZlYXR1cmVzGAggAygJUhFyZXF1ZXN0ZWRGZWF0dXJlcyLxAgoXU2V0RG9j",
             "dW1lbnRCbG9ic1JlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRi",
             "YWNrSWQSGgoIY29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEjcKCGZpbGVfdXJp",
             "GAMgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlUgdmaWxlVXJp",
             "Eh8KC3JlbmRlcl91cmlzGAQgAygJUgpyZW5kZXJVcmlzEjMKBnRhX3VyaRgF",
             "IAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIFdGFVcmkSOQoK",
             "ZXhwaXJlc19hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS",
-            "CWV4cGlyZXNBdBIgCgtlbnZpcm9ubWVudBgHIAEoCVILZW52aXJvbm1lbnQi",
-            "GgoYU2V0RG9jdW1lbnRCbG9ic1Jlc3BvbnNlIs0BChVBZGRBbm5vdGF0aW9u",
-            "c1JlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoI",
-            "Y29uc3VtZXIYAiABKAlSCGNvbnN1bWVyElUKC2Fubm90YXRpb25zGAMgAygL",
-            "MjMuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxGaWVsZEFu",
-            "bm90YXRpb25SC2Fubm90YXRpb25zEiAKC2Vudmlyb25tZW50GAQgASgJUgtl",
-            "bnZpcm9ubWVudCIYChZBZGRBbm5vdGF0aW9uc1Jlc3BvbnNlKo8BCg9DYW5k",
-            "aWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9VTlNQRUNJRklFRBAA",
-            "Eh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThABEh0KGUNBTkRJREFU",
-            "RV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVfU09VUkNFX0xBQkVM",
-            "EAMy0gQKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dldERvY3VtZW50RGF0",
-            "YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3VtZW50RGF0",
-            "YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5HZXREb2N1",
-            "bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29uc3VtZXJzL3tjb25z",
-            "dW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEKEFNldERvY3VtZW50",
-            "QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5TZXREb2N1bWVu",
-            "dEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlNl",
-            "dERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYvdjEvY29uc3VtZXJz",
-            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYmxvYnM6ASoS",
-            "wAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2Uu",
-            "djEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRvY3VtZW50ZGF0YXNl",
-            "cnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJHgtPkkwJBIjwvdjEv",
-            "Y29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0v",
-            "YW5ub3RhdGlvbnM6ASpCnQIKI2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFz",
-            "ZXJ2aWNlLnYxQhhEb2N1bWVudGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHVi",
-            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0",
-            "YXNlcnZpY2UvdjE7ZG9jdW1lbnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5E",
-            "b2N1bWVudGRhdGFzZXJ2aWNlLlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZp",
-            "Y2VcVjHiAiZTc25cRG9jdW1lbnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0",
-            "YeoCHFNzbjo6RG9jdW1lbnRkYXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
+            "CWV4cGlyZXNBdBIgCgtlbnZpcm9ubWVudBgHIAEoCVILZW52aXJvbm1lbnQS",
+            "LQoScmVxdWVzdGVkX2ZlYXR1cmVzGAggAygJUhFyZXF1ZXN0ZWRGZWF0dXJl",
+            "cyIaChhTZXREb2N1bWVudEJsb2JzUmVzcG9uc2UizQEKFUFkZEFubm90YXRp",
+            "b25zUmVxdWVzdBIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIa",
+            "Cghjb25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3RhdGlvbnMYAyAD",
+            "KAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxk",
+            "QW5ub3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1lbnQYBCABKAlS",
+            "C2Vudmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UqjwEKD0Nh",
+            "bmRpZGF0ZVNvdXJjZRIgChxDQU5ESURBVEVfU09VUkNFX1VOU1BFQ0lGSUVE",
+            "EAASHwobQ0FORElEQVRFX1NPVVJDRV9QUkVESUNUSU9OEAESHQoZQ0FORElE",
+            "QVRFX1NPVVJDRV9GRUVEQkFDSxACEhoKFkNBTkRJREFURV9TT1VSQ0VfTEFC",
+            "RUwQAzLSBAoTRG9jdW1lbnREYXRhU2VydmljZRK0AQoPR2V0RG9jdW1lbnRE",
+            "YXRhEjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuR2V0RG9jdW1lbnRE",
+            "YXRhUmVxdWVzdBozLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERv",
+            "Y3VtZW50RGF0YVJlc3BvbnNlIjiC0+STAjISMC92MS9jb25zdW1lcnMve2Nv",
+            "bnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lkfRLAAQoQU2V0RG9jdW1l",
+            "bnRCbG9icxIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlNldERvY3Vt",
+            "ZW50QmxvYnNSZXF1ZXN0GjQuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEu",
+            "U2V0RG9jdW1lbnRCbG9ic1Jlc3BvbnNlIkGC0+STAjsaNi92MS9jb25zdW1l",
+            "cnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lkfS9ibG9iczoB",
+            "KhLAAQoOQWRkQW5ub3RhdGlvbnMSMS5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
+            "ZS52MS5BZGRBbm5vdGF0aW9uc1JlcXVlc3QaMi5zc24uZG9jdW1lbnRkYXRh",
+            "c2VydmljZS52MS5BZGRBbm5vdGF0aW9uc1Jlc3BvbnNlIkeC0+STAkEiPC92",
+            "MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lk",
+            "fS9hbm5vdGF0aW9uczoBKkKdAgojYWkudmlzbWEuc3NuLmRvY3VtZW50ZGF0",
+            "YXNlcnZpY2UudjFCGERvY3VtZW50ZGF0YXNlcnZpY2VQcm90b1ABWlJnaXRo",
+            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vZG9jdW1lbnRk",
+            "YXRhc2VydmljZS92MTtkb2N1bWVudGRhdGFzZXJ2aWNlogIDU0RYqgIaU3Nu",
+            "LkRvY3VtZW50ZGF0YXNlcnZpY2UuVjHKAhpTc25cRG9jdW1lbnRkYXRhc2Vy",
+            "dmljZVxWMeICJlNzblxEb2N1bWVudGRhdGFzZXJ2aWNlXFYxXEdQQk1ldGFk",
+            "YXRh6gIcU3NuOjpEb2N1bWVudGRhdGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Documentdataservice.V1.CandidateSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,7 +139,7 @@ namespace Ssn.Documentdataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse), global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsRequest), global::Ssn.Documentdataservice.V1.AddAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Annotations", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsResponse), global::Ssn.Documentdataservice.V1.AddAnnotationsResponse.Parser, null, null, null, null, null)
@@ -4014,6 +4015,7 @@ namespace Ssn.Documentdataservice.V1 {
       TaUri = other.TaUri;
       expiresAt_ = other.expiresAt_ != null ? other.expiresAt_.Clone() : null;
       environment_ = other.environment_;
+      requestedFeatures_ = other.requestedFeatures_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4125,6 +4127,20 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "requested_features" field.</summary>
+    public const int RequestedFeaturesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_requestedFeatures_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> requestedFeatures_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Non-empty → write; empty → leave untouched.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RequestedFeatures {
+      get { return requestedFeatures_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4147,6 +4163,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (TaUri != other.TaUri) return false;
       if (!object.Equals(ExpiresAt, other.ExpiresAt)) return false;
       if (Environment != other.Environment) return false;
+      if(!requestedFeatures_.Equals(other.requestedFeatures_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4161,6 +4178,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (taUri_ != null) hash ^= TaUri.GetHashCode();
       if (expiresAt_ != null) hash ^= ExpiresAt.GetHashCode();
       if (Environment.Length != 0) hash ^= Environment.GetHashCode();
+      hash ^= requestedFeatures_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4202,6 +4220,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(58);
         output.WriteString(Environment);
       }
+      requestedFeatures_.WriteTo(output, _repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4235,6 +4254,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(58);
         output.WriteString(Environment);
       }
+      requestedFeatures_.WriteTo(ref output, _repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4264,6 +4284,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (Environment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Environment);
       }
+      size += requestedFeatures_.CalculateSize(_repeated_requestedFeatures_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4302,6 +4323,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (other.Environment.Length != 0) {
         Environment = other.Environment;
       }
+      requestedFeatures_.Add(other.requestedFeatures_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4358,6 +4380,10 @@ namespace Ssn.Documentdataservice.V1 {
             Environment = input.ReadString();
             break;
           }
+          case 66: {
+            requestedFeatures_.AddEntriesFrom(input, _repeated_requestedFeatures_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4412,6 +4438,10 @@ namespace Ssn.Documentdataservice.V1 {
           }
           case 58: {
             Environment = input.ReadString();
+            break;
+          }
+          case 66: {
+            requestedFeatures_.AddEntriesFrom(ref input, _repeated_requestedFeatures_codec);
             break;
           }
         }

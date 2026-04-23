@@ -3490,7 +3490,7 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearRequeste
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.repeatedFields_ = [4];
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.repeatedFields_ = [4,8];
 
 
 
@@ -3529,7 +3529,8 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.toObject = function(inc
     renderUrisList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     taUri: (f = msg.getTaUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    environment: jspb.Message.getFieldWithDefault(msg, 7, "")
+    environment: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3596,6 +3597,10 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.deserializeBinaryFromRe
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setEnvironment(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addRequestedFeatures(value);
       break;
     default:
       reader.skipField();
@@ -3675,6 +3680,13 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.serializeBinaryToWriter
   if (f.length > 0) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = message.getRequestedFeaturesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      8,
       f
     );
   }
@@ -3880,6 +3892,43 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.getEnvironmen
  */
 proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.setEnvironment = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * repeated string requested_features = 8;
+ * @return {!Array<string>}
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.getRequestedFeaturesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 8));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.setRequestedFeaturesList = function(value) {
+  return jspb.Message.setField(this, 8, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.addRequestedFeatures = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.clearRequestedFeaturesList = function() {
+  return this.setRequestedFeaturesList([]);
 };
 
 

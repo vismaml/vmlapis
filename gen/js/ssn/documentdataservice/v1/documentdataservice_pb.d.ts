@@ -444,6 +444,11 @@ export class SetDocumentBlobsRequest extends jspb.Message {
   getEnvironment(): string;
   setEnvironment(value: string): SetDocumentBlobsRequest;
 
+  getRequestedFeaturesList(): Array<string>;
+  setRequestedFeaturesList(value: Array<string>): SetDocumentBlobsRequest;
+  clearRequestedFeaturesList(): SetDocumentBlobsRequest;
+  addRequestedFeatures(value: string, index?: number): SetDocumentBlobsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SetDocumentBlobsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SetDocumentBlobsRequest): SetDocumentBlobsRequest.AsObject;
@@ -461,6 +466,7 @@ export namespace SetDocumentBlobsRequest {
     taUri?: google_protobuf_wrappers_pb.StringValue.AsObject,
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     environment: string,
+    requestedFeaturesList: Array<string>,
   }
 }
 
