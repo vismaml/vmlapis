@@ -393,6 +393,11 @@ export class GetDocumentDataResponse extends jspb.Message {
   clearRequestedFeaturesList(): GetDocumentDataResponse;
   addRequestedFeatures(value: string, index?: number): GetDocumentDataResponse;
 
+  getUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): GetDocumentDataResponse;
+  hasUpdatedAt(): boolean;
+  clearUpdatedAt(): GetDocumentDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataResponse): GetDocumentDataResponse.AsObject;
@@ -411,6 +416,7 @@ export namespace GetDocumentDataResponse {
     fieldsList: Array<InternalFieldAnnotation.AsObject>,
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     requestedFeaturesList: Array<string>,
+    updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 

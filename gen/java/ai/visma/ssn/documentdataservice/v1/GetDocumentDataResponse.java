@@ -273,8 +273,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -286,8 +284,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -300,8 +296,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -313,8 +307,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -326,8 +318,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Field annotations filtered by include_* flags.
-   * InternalFieldAnnotation entries with customer_requested=true and empty
-   * candidates are always returned — they carry the "field not found" signal.
    * </pre>
    *
    * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -429,6 +419,44 @@ private static final long serialVersionUID = 0L;
     return requestedFeatures_.getByteString(index);
   }
 
+  public static final int UPDATED_AT_FIELD_NUMBER = 9;
+  private com.google.protobuf.Timestamp updatedAt_;
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   * @return Whether the updatedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpdatedAt() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   * @return The updatedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getUpdatedAt() {
+    return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+  }
+  /**
+   * <pre>
+   * When this document was last modified (server-managed, commit timestamp).
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+    return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -466,6 +494,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < requestedFeatures_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 8, requestedFeatures_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(9, getUpdatedAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -513,6 +544,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getRequestedFeaturesList().size();
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getUpdatedAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -550,6 +585,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRequestedFeaturesList()
         .equals(other.getRequestedFeaturesList())) return false;
+    if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+    if (hasUpdatedAt()) {
+      if (!getUpdatedAt()
+          .equals(other.getUpdatedAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -586,6 +626,10 @@ private static final long serialVersionUID = 0L;
     if (getRequestedFeaturesCount() > 0) {
       hash = (37 * hash) + REQUESTED_FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getRequestedFeaturesList().hashCode();
+    }
+    if (hasUpdatedAt()) {
+      hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -720,6 +764,7 @@ private static final long serialVersionUID = 0L;
         getTextAnnotationUrlFieldBuilder();
         getFieldsFieldBuilder();
         getExpiresAtFieldBuilder();
+        getUpdatedAtFieldBuilder();
       }
     }
     @java.lang.Override
@@ -750,6 +795,11 @@ private static final long serialVersionUID = 0L;
       }
       requestedFeatures_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      updatedAt_ = null;
+      if (updatedAtBuilder_ != null) {
+        updatedAtBuilder_.dispose();
+        updatedAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -825,6 +875,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         requestedFeatures_.makeImmutable();
         result.requestedFeatures_ = requestedFeatures_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.updatedAt_ = updatedAtBuilder_ == null
+            ? updatedAt_
+            : updatedAtBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -908,6 +964,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasUpdatedAt()) {
+        mergeUpdatedAt(other.getUpdatedAt());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -988,6 +1047,13 @@ private static final long serialVersionUID = 0L;
               requestedFeatures_.add(s);
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getUpdatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1560,8 +1626,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1576,8 +1640,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1592,8 +1654,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1608,8 +1668,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1631,8 +1689,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1651,8 +1707,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1673,8 +1727,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1696,8 +1748,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1716,8 +1766,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1736,8 +1784,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1757,8 +1803,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1776,8 +1820,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1795,8 +1837,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1808,8 +1848,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1824,8 +1862,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1841,8 +1877,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1854,8 +1888,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -1868,8 +1900,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Field annotations filtered by include_* flags.
-     * InternalFieldAnnotation entries with customer_requested=true and empty
-     * candidates are always returned — they carry the "field not found" signal.
      * </pre>
      *
      * <code>repeated .ssn.documentdataservice.v1.InternalFieldAnnotation fields = 6 [json_name = "fields"];</code>
@@ -2195,6 +2225,163 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp updatedAt_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    public boolean hasUpdatedAt() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     * @return The updatedAt.
+     */
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      if (updatedAtBuilder_ == null) {
+        return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+      } else {
+        return updatedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+      if (updatedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        updatedAt_ = value;
+      } else {
+        updatedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public Builder setUpdatedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (updatedAtBuilder_ == null) {
+        updatedAt_ = builderForValue.build();
+      } else {
+        updatedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+      if (updatedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          updatedAt_ != null &&
+          updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getUpdatedAtBuilder().mergeFrom(value);
+        } else {
+          updatedAt_ = value;
+        }
+      } else {
+        updatedAtBuilder_.mergeFrom(value);
+      }
+      if (updatedAt_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public Builder clearUpdatedAt() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      updatedAt_ = null;
+      if (updatedAtBuilder_ != null) {
+        updatedAtBuilder_.dispose();
+        updatedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getUpdatedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      if (updatedAtBuilder_ != null) {
+        return updatedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return updatedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * When this document was last modified (server-managed, commit timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 9 [json_name = "updatedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getUpdatedAtFieldBuilder() {
+      if (updatedAtBuilder_ == null) {
+        updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getUpdatedAt(),
+                getParentForChildren(),
+                isClean());
+        updatedAt_ = null;
+      }
+      return updatedAtBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.GetDocumentDataResponse)

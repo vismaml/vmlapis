@@ -3081,7 +3081,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.toObject = function(inc
     fieldsList: jspb.Message.toObjectList(msg.getFieldsList(),
     proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
     expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
+    updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3152,6 +3153,11 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.deserializeBinaryFromRe
     case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.addRequestedFeatures(value);
+      break;
+    case 9:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setUpdatedAt(value);
       break;
     default:
       reader.skipField();
@@ -3239,6 +3245,14 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.serializeBinaryToWriter
     writer.writeRepeatedString(
       8,
       f
+    );
+  }
+  f = message.getUpdatedAt();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -3481,6 +3495,43 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addRequestedF
  */
 proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearRequestedFeaturesList = function() {
   return this.setRequestedFeaturesList([]);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp updated_at = 9;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getUpdatedAt = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 9));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+*/
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setUpdatedAt = function(value) {
+  return jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearUpdatedAt = function() {
+  return this.setUpdatedAt(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.hasUpdatedAt = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
