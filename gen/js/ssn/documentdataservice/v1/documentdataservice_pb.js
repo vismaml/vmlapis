@@ -3040,7 +3040,7 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setEnvironment
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [4,6,8];
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [4,6,8,10];
 
 
 
@@ -3082,7 +3082,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.toObject = function(inc
     proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
     expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
-    updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3158,6 +3159,10 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.deserializeBinaryFromRe
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setUpdatedAt(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -3253,6 +3258,13 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.serializeBinaryToWriter
       9,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      10,
+      f
     );
   }
 };
@@ -3535,13 +3547,50 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.hasUpdatedAt 
 };
 
 
+/**
+ * repeated string tags = 10;
+ * @return {!Array<string>}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 10));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setTagsList = function(value) {
+  return jspb.Message.setField(this, 10, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addTags = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 10, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearTagsList = function() {
+  return this.setTagsList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.repeatedFields_ = [4,8];
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.repeatedFields_ = [4,8,9];
 
 
 
@@ -3581,7 +3630,8 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.toObject = function(inc
     taUri: (f = msg.getTaUri()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     environment: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3652,6 +3702,10 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.deserializeBinaryFromRe
     case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.addRequestedFeatures(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -3738,6 +3792,13 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.serializeBinaryToWriter
   if (f.length > 0) {
     writer.writeRepeatedString(
       8,
+      f
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
       f
     );
   }
@@ -3980,6 +4041,43 @@ proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.addRequestedF
  */
 proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.clearRequestedFeaturesList = function() {
   return this.setRequestedFeaturesList([]);
+};
+
+
+/**
+ * repeated string tags = 9;
+ * @return {!Array<string>}
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.setTagsList = function(value) {
+  return jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.addTags = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest} returns this
+ */
+proto.ssn.documentdataservice.v1.SetDocumentBlobsRequest.prototype.clearTagsList = function() {
+  return this.setTagsList([]);
 };
 
 

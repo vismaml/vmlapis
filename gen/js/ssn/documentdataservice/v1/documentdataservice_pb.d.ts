@@ -398,6 +398,11 @@ export class GetDocumentDataResponse extends jspb.Message {
   hasUpdatedAt(): boolean;
   clearUpdatedAt(): GetDocumentDataResponse;
 
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): GetDocumentDataResponse;
+  clearTagsList(): GetDocumentDataResponse;
+  addTags(value: string, index?: number): GetDocumentDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataResponse): GetDocumentDataResponse.AsObject;
@@ -417,6 +422,7 @@ export namespace GetDocumentDataResponse {
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     requestedFeaturesList: Array<string>,
     updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    tagsList: Array<string>,
   }
 }
 
@@ -455,6 +461,11 @@ export class SetDocumentBlobsRequest extends jspb.Message {
   clearRequestedFeaturesList(): SetDocumentBlobsRequest;
   addRequestedFeatures(value: string, index?: number): SetDocumentBlobsRequest;
 
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): SetDocumentBlobsRequest;
+  clearTagsList(): SetDocumentBlobsRequest;
+  addTags(value: string, index?: number): SetDocumentBlobsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SetDocumentBlobsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SetDocumentBlobsRequest): SetDocumentBlobsRequest.AsObject;
@@ -473,6 +484,7 @@ export namespace SetDocumentBlobsRequest {
     expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     environment: string,
     requestedFeaturesList: Array<string>,
+    tagsList: Array<string>,
   }
 }
 
