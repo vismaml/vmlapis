@@ -99,25 +99,16 @@ message AnswerData {
 // ---- Unified field annotation ----
 
 // InternalFieldAnnotation groups all candidates for a single feature.
-//
-// customer_requested lives on the feature (not the candidate) because a feature
-// can be requested but produce zero candidates (field not found on document).
-//
-// State table:
-//   customer_requested=true,  candidates empty   → requested, not found on document
-//   customer_requested=true,  candidates present → requested and annotated
-//   customer_requested=false, candidates present → ad-hoc annotation (not originally requested)
 message InternalFieldAnnotation {
   // Feature name, e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES", "QA", "CHECK_IN_DATE"
   string feature = 1;
-  bool customer_requested = 2;
 
   oneof data {
-    FieldData field_data = 3;
-    PurchaseLineData purchase_line_data = 4;
-    VatDistributionData vat_distribution_data = 5;
-    QrData qr_data = 6;
-    AnswerData answer_data = 7;
+    FieldData field_data = 2;
+    PurchaseLineData purchase_line_data = 3;
+    VatDistributionData vat_distribution_data = 4;
+    QrData qr_data = 5;
+    AnswerData answer_data = 6;
   }
 }
 
@@ -182,6 +173,9 @@ message GetDocumentDataResponse {
 
   // When this document expires and will be garbage-collected.
   google.protobuf.Timestamp expires_at = 7;
+
+  // Features the customer originally requested for this document.
+  repeated string requested_features = 8;
 }
 
 message SetDocumentBlobsRequest {

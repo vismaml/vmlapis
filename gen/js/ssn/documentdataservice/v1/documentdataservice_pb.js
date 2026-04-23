@@ -2349,18 +2349,18 @@ proto.ssn.documentdataservice.v1.AnswerData.prototype.clearAnswersList = functio
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_ = [[3,4,5,6,7]];
+proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_ = [[2,3,4,5,6]];
 
 /**
  * @enum {number}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.DataCase = {
   DATA_NOT_SET: 0,
-  FIELD_DATA: 3,
-  PURCHASE_LINE_DATA: 4,
-  VAT_DISTRIBUTION_DATA: 5,
-  QR_DATA: 6,
-  ANSWER_DATA: 7
+  FIELD_DATA: 2,
+  PURCHASE_LINE_DATA: 3,
+  VAT_DISTRIBUTION_DATA: 4,
+  QR_DATA: 5,
+  ANSWER_DATA: 6
 };
 
 /**
@@ -2402,7 +2402,6 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.toObject = fu
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject = function(includeInstance, msg) {
   var f, obj = {
     feature: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    customerRequested: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
     fieldData: (f = msg.getFieldData()) && proto.ssn.documentdataservice.v1.FieldData.toObject(includeInstance, f),
     purchaseLineData: (f = msg.getPurchaseLineData()) && proto.ssn.documentdataservice.v1.PurchaseLineData.toObject(includeInstance, f),
     vatDistributionData: (f = msg.getVatDistributionData()) && proto.ssn.documentdataservice.v1.VatDistributionData.toObject(includeInstance, f),
@@ -2449,30 +2448,26 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.deserializeBinaryFromRe
       msg.setFeature(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setCustomerRequested(value);
-      break;
-    case 3:
       var value = new proto.ssn.documentdataservice.v1.FieldData;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.FieldData.deserializeBinaryFromReader);
       msg.setFieldData(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.ssn.documentdataservice.v1.PurchaseLineData;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.PurchaseLineData.deserializeBinaryFromReader);
       msg.setPurchaseLineData(value);
       break;
-    case 5:
+    case 4:
       var value = new proto.ssn.documentdataservice.v1.VatDistributionData;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.VatDistributionData.deserializeBinaryFromReader);
       msg.setVatDistributionData(value);
       break;
-    case 6:
+    case 5:
       var value = new proto.ssn.documentdataservice.v1.QrData;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.QrData.deserializeBinaryFromReader);
       msg.setQrData(value);
       break;
-    case 7:
+    case 6:
       var value = new proto.ssn.documentdataservice.v1.AnswerData;
       reader.readMessage(value,proto.ssn.documentdataservice.v1.AnswerData.deserializeBinaryFromReader);
       msg.setAnswerData(value);
@@ -2513,17 +2508,10 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
       f
     );
   }
-  f = message.getCustomerRequested();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
   f = message.getFieldData();
   if (f != null) {
     writer.writeMessage(
-      3,
+      2,
       f,
       proto.ssn.documentdataservice.v1.FieldData.serializeBinaryToWriter
     );
@@ -2531,7 +2519,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
   f = message.getPurchaseLineData();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.ssn.documentdataservice.v1.PurchaseLineData.serializeBinaryToWriter
     );
@@ -2539,7 +2527,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
   f = message.getVatDistributionData();
   if (f != null) {
     writer.writeMessage(
-      5,
+      4,
       f,
       proto.ssn.documentdataservice.v1.VatDistributionData.serializeBinaryToWriter
     );
@@ -2547,7 +2535,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
   f = message.getQrData();
   if (f != null) {
     writer.writeMessage(
-      6,
+      5,
       f,
       proto.ssn.documentdataservice.v1.QrData.serializeBinaryToWriter
     );
@@ -2555,7 +2543,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.serializeBinaryToWriter
   f = message.getAnswerData();
   if (f != null) {
     writer.writeMessage(
-      7,
+      6,
       f,
       proto.ssn.documentdataservice.v1.AnswerData.serializeBinaryToWriter
     );
@@ -2582,30 +2570,12 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setFeature = 
 
 
 /**
- * optional bool customer_requested = 2;
- * @return {boolean}
- */
-proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getCustomerRequested = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
- */
-proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setCustomerRequested = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional FieldData field_data = 3;
+ * optional FieldData field_data = 2;
  * @return {?proto.ssn.documentdataservice.v1.FieldData}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getFieldData = function() {
   return /** @type{?proto.ssn.documentdataservice.v1.FieldData} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.FieldData, 3));
+    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.FieldData, 2));
 };
 
 
@@ -2614,7 +2584,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getFieldData 
  * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
 */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setFieldData = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 3, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 2, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
 };
 
 
@@ -2632,17 +2602,17 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.clearFieldDat
  * @return {boolean}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.hasFieldData = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional PurchaseLineData purchase_line_data = 4;
+ * optional PurchaseLineData purchase_line_data = 3;
  * @return {?proto.ssn.documentdataservice.v1.PurchaseLineData}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getPurchaseLineData = function() {
   return /** @type{?proto.ssn.documentdataservice.v1.PurchaseLineData} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.PurchaseLineData, 4));
+    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.PurchaseLineData, 3));
 };
 
 
@@ -2651,7 +2621,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getPurchaseLi
  * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
 */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setPurchaseLineData = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 4, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 3, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
 };
 
 
@@ -2669,17 +2639,17 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.clearPurchase
  * @return {boolean}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.hasPurchaseLineData = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * optional VatDistributionData vat_distribution_data = 5;
+ * optional VatDistributionData vat_distribution_data = 4;
  * @return {?proto.ssn.documentdataservice.v1.VatDistributionData}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getVatDistributionData = function() {
   return /** @type{?proto.ssn.documentdataservice.v1.VatDistributionData} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.VatDistributionData, 5));
+    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.VatDistributionData, 4));
 };
 
 
@@ -2688,7 +2658,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getVatDistrib
  * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
 */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setVatDistributionData = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 5, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 4, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
 };
 
 
@@ -2706,17 +2676,17 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.clearVatDistr
  * @return {boolean}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.hasVatDistributionData = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * optional QrData qr_data = 6;
+ * optional QrData qr_data = 5;
  * @return {?proto.ssn.documentdataservice.v1.QrData}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getQrData = function() {
   return /** @type{?proto.ssn.documentdataservice.v1.QrData} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.QrData, 6));
+    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.QrData, 5));
 };
 
 
@@ -2725,7 +2695,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getQrData = f
  * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
 */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setQrData = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 6, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 5, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
 };
 
 
@@ -2743,17 +2713,17 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.clearQrData =
  * @return {boolean}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.hasQrData = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * optional AnswerData answer_data = 7;
+ * optional AnswerData answer_data = 6;
  * @return {?proto.ssn.documentdataservice.v1.AnswerData}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getAnswerData = function() {
   return /** @type{?proto.ssn.documentdataservice.v1.AnswerData} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.AnswerData, 7));
+    jspb.Message.getWrapperField(this, proto.ssn.documentdataservice.v1.AnswerData, 6));
 };
 
 
@@ -2762,7 +2732,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.getAnswerData
  * @return {!proto.ssn.documentdataservice.v1.InternalFieldAnnotation} returns this
 */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.setAnswerData = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 7, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 6, proto.ssn.documentdataservice.v1.InternalFieldAnnotation.oneofGroups_[0], value);
 };
 
 
@@ -2780,7 +2750,7 @@ proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.clearAnswerDa
  * @return {boolean}
  */
 proto.ssn.documentdataservice.v1.InternalFieldAnnotation.prototype.hasAnswerData = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -3070,7 +3040,7 @@ proto.ssn.documentdataservice.v1.GetDocumentDataRequest.prototype.setEnvironment
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [4,6];
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.repeatedFields_ = [4,6,8];
 
 
 
@@ -3110,7 +3080,8 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.toObject = function(inc
     textAnnotationUrl: (f = msg.getTextAnnotationUrl()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     fieldsList: jspb.Message.toObjectList(msg.getFieldsList(),
     proto.ssn.documentdataservice.v1.InternalFieldAnnotation.toObject, includeInstance),
-    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    expiresAt: (f = msg.getExpiresAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3177,6 +3148,10 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.deserializeBinaryFromRe
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setExpiresAt(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addRequestedFeatures(value);
       break;
     default:
       reader.skipField();
@@ -3257,6 +3232,13 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.serializeBinaryToWriter
       7,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getRequestedFeaturesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      8,
+      f
     );
   }
 };
@@ -3462,6 +3444,43 @@ proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearExpiresA
  */
 proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.hasExpiresAt = function() {
   return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * repeated string requested_features = 8;
+ * @return {!Array<string>}
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.getRequestedFeaturesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 8));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.setRequestedFeaturesList = function(value) {
+  return jspb.Message.setField(this, 8, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.addRequestedFeatures = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.documentdataservice.v1.GetDocumentDataResponse} returns this
+ */
+proto.ssn.documentdataservice.v1.GetDocumentDataResponse.prototype.clearRequestedFeaturesList = function() {
+  return this.setRequestedFeaturesList([]);
 };
 
 

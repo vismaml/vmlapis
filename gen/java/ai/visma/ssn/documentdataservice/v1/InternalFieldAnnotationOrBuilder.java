@@ -30,83 +30,77 @@ public interface InternalFieldAnnotationOrBuilder extends
       getFeatureBytes();
 
   /**
-   * <code>bool customer_requested = 2 [json_name = "customerRequested"];</code>
-   * @return The customerRequested.
-   */
-  boolean getCustomerRequested();
-
-  /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 3 [json_name = "fieldData"];</code>
+   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
    * @return Whether the fieldData field is set.
    */
   boolean hasFieldData();
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 3 [json_name = "fieldData"];</code>
+   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
    * @return The fieldData.
    */
   ai.visma.ssn.documentdataservice.v1.FieldData getFieldData();
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 3 [json_name = "fieldData"];</code>
+   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
    */
   ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder getFieldDataOrBuilder();
 
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 4 [json_name = "purchaseLineData"];</code>
+   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
    * @return Whether the purchaseLineData field is set.
    */
   boolean hasPurchaseLineData();
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 4 [json_name = "purchaseLineData"];</code>
+   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
    * @return The purchaseLineData.
    */
   ai.visma.ssn.documentdataservice.v1.PurchaseLineData getPurchaseLineData();
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 4 [json_name = "purchaseLineData"];</code>
+   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
    */
   ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder getPurchaseLineDataOrBuilder();
 
   /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 5 [json_name = "vatDistributionData"];</code>
+   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
    * @return Whether the vatDistributionData field is set.
    */
   boolean hasVatDistributionData();
   /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 5 [json_name = "vatDistributionData"];</code>
+   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
    * @return The vatDistributionData.
    */
   ai.visma.ssn.documentdataservice.v1.VatDistributionData getVatDistributionData();
   /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 5 [json_name = "vatDistributionData"];</code>
+   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
    */
   ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder getVatDistributionDataOrBuilder();
 
   /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 6 [json_name = "qrData"];</code>
+   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
    * @return Whether the qrData field is set.
    */
   boolean hasQrData();
   /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 6 [json_name = "qrData"];</code>
+   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
    * @return The qrData.
    */
   ai.visma.ssn.documentdataservice.v1.QrData getQrData();
   /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 6 [json_name = "qrData"];</code>
+   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
    */
   ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder getQrDataOrBuilder();
 
   /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 7 [json_name = "answerData"];</code>
+   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
    * @return Whether the answerData field is set.
    */
   boolean hasAnswerData();
   /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 7 [json_name = "answerData"];</code>
+   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
    * @return The answerData.
    */
   ai.visma.ssn.documentdataservice.v1.AnswerData getAnswerData();
   /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 7 [json_name = "answerData"];</code>
+   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
    */
   ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder getAnswerDataOrBuilder();
 
