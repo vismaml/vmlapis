@@ -382,7 +382,6 @@ CREATE TABLE candidate (
   source      STRING(MAX) NOT NULL,   -- "PREDICTION" | "FEEDBACK" | "LABEL"
   source_id   STRING(MAX) NOT NULL,   -- model_id or annotator_id
   candidate   ssn.type.Candidate,
-  created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
   INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
 
@@ -397,7 +396,6 @@ CREATE TABLE complex_annotation (
   source      STRING(MAX) NOT NULL,
   source_id   STRING(MAX) NOT NULL,
   data        BYTES(MAX),
-  created_at  TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
   INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
 ```
