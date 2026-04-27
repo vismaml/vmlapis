@@ -77,6 +77,8 @@ message CreateTransactionRequest {
   ssn.type.Tier tier = 5; // default: STANDARD
   // Questions to ask about the document
   repeated string questions = 6;
+  // Required if tier == HUMAN_VERIFIED; forbidden otherwise.
+  HumanVerificationPolicy human_verification = 7;
 }
 
 message CreateTransactionResponse {
@@ -84,6 +86,32 @@ message CreateTransactionResponse {
   string custom_id = 2;
   // CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
   // but I think I'm more prone to separate them in /results endpoint
+}
+
+message HumanVerificationPolicy {
+  // Pre-filter conditions. ALL must hold against the AI output, otherwise
+  // the AI answer is returned and human verification is skipped.
+  repeated MinimalCondition minimal_conditions = 1;
+  // Per-feature confidence floors. If the AI meets ALL of these, human
+  // verification is skipped. Every `feature` must also appear in
+  // CreateTransactionRequest.features (else INVALID_ARGUMENT).
+  repeated FeatureMinConfidence min_feature_confidences = 2;
+}
+
+message MinimalCondition {
+  // Feature name, e.g. "DOCUMENT_TYPE".
+  string feature = 1;
+  // If non-empty, predicted value must be one of these.
+  repeated string expected_values = 2;
+  // Predicted confidence must be at least this level.
+  ssn.type.Confidence.Level min_confidence = 3;
+}
+
+message FeatureMinConfidence {
+  // Feature name, e.g. "TOTAL_INCL_VAT".
+  string feature = 1;
+  // AI's per-feature confidence must be at least this level.
+  ssn.type.Confidence.Level min_confidence = 2;
 }
 // --- post: "/v1/transactions" ---
 
@@ -133,8 +161,12 @@ message GetTransactionStatusRequest {
 
 message GetTransactionStatusResponse {
   string id = 1;
-  // e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-  // "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+  // e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED",
+  //      "AWAITING_HUMAN_VERIFICATION".
+  // "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed,
+  // or human verification failed.
+  // "AWAITING_HUMAN_VERIFICATION" is when AI completed and the document was dispatched
+  // to a human verifier; results are not yet available.
   string status = 2;
   // Only populated when status == "FAILED" or status == "PARTIAL"
   string error_message = 3;
