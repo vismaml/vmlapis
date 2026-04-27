@@ -374,28 +374,15 @@ CREATE TABLE field_annotation (
   INTERLEAVE IN PARENT document ON DELETE CASCADE;
 
 
--- Level 3a: Standard field candidates
--- Covers: all ssn.type.Candidate fields + CHECK_IN_DATE / CHECK_OUT_DATE (flattened from HotelDates)
-CREATE TABLE candidate (
+-- Level 3: All annotation data (standard fields + complex types)
+-- data column holds serialized proto: FieldData | PurchaseLineData | VatDistributionData | QrData | AnswerData
+-- Standard candidates (ssn.type.Candidate) are serialized to bytes — proto.Unmarshal in Go is microseconds.
+CREATE TABLE annotation (
   consumer    STRING(MAX) NOT NULL,
   feedback_id STRING(MAX) NOT NULL,
   feature     STRING(MAX) NOT NULL,
   source      STRING(MAX) NOT NULL,   -- "PREDICTION" | "FEEDBACK" | "LABEL"
   source_id   STRING(MAX) NOT NULL,   -- model_id or annotator_id
-  candidate   ssn.type.Candidate,
-) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
-  INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
-
-
--- Level 3b: Complex type annotations
--- Covers: PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES / SWISS_QR_BILLS, QA
--- data column holds serialized proto: PurchaseLineData | VatDistributionData | QrData | AnswerData
-CREATE TABLE complex_annotation (
-  consumer    STRING(MAX) NOT NULL,
-  feedback_id STRING(MAX) NOT NULL,
-  feature     STRING(MAX) NOT NULL,
-  source      STRING(MAX) NOT NULL,
-  source_id   STRING(MAX) NOT NULL,
   data        BYTES(MAX),
 ) PRIMARY KEY (consumer, feedback_id, feature, source, source_id),
   INTERLEAVE IN PARENT field_annotation ON DELETE CASCADE;
@@ -406,22 +393,20 @@ CREATE TABLE complex_annotation (
 ```
 document
 └── field_annotation  (feature)
-      ├── candidate          — standard fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, ...)
-      └── complex_annotation — complex fields (PURCHASE_LINES, VAT_DISTRIBUTION, QR_CODES, QA)
+      └── annotation — all annotation data (standard + complex), serialized proto bytes
 ```
 
-**Feature → table mapping:**
+**Feature → data mapping:**
 
-| Feature | Table | Data type |
-|---|---|---|
-| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `candidate` | `ssn.type.Candidate` (proto column) |
-| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `candidate` | `ssn.type.Candidate` (flattened from `HotelDates`) |
-| `PURCHASE_LINES` | `complex_annotation` | serialized `PurchaseLineData` |
-| `VAT_DISTRIBUTION` | `complex_annotation` | serialized `VatDistributionData` |
-| `QR_CODES` / `SWISS_QR_BILLS` | `complex_annotation` | serialized `QrData` |
-| `QA` | `complex_annotation` | serialized `AnswerData` |
+| Feature | Serialized proto in `data` |
+|---|---|
+| `TOTAL_INCL_VAT`, `CURRENCY`, `DOCUMENT_DATE`, etc. | `FieldData` (wraps `InternalCandidate` → `ssn.type.Candidate`) |
+| `CHECK_IN_DATE`, `CHECK_OUT_DATE` | `FieldData` (flattened from `HotelDates` at ingestion) |
+| `PURCHASE_LINES` | `PurchaseLineData` |
+| `VAT_DISTRIBUTION` | `VatDistributionData` |
+| `QR_CODES` / `SWISS_QR_BILLS` | `QrData` |
+| `QA` | `AnswerData` |
 
 **BigQuery export:**
-- `candidate` — exports as flat rows, `candidate` proto column decoded natively via proto bundle
-- `complex_annotation` — `data` column requires proto deserialization in BQ (proto bundle for `PurchaseLineData`, `VatDistributionData`, `QrData`, `AnswerData`)
+- `annotation.data` requires proto bundle deserialization in BQ for all feature types
 - All filtering, joins, and ad-hoc queries happen in BQ — Spanner has no secondary indexes on these tables
