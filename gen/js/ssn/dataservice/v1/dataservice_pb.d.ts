@@ -56,6 +56,11 @@ export class Document extends jspb.Message {
   hasPredictionMetadata(): boolean;
   clearPredictionMetadata(): Document;
 
+  getRequestedFeaturesList(): Array<string>;
+  setRequestedFeaturesList(value: Array<string>): Document;
+  clearRequestedFeaturesList(): Document;
+  addRequestedFeatures(value: string, index?: number): Document;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Document.AsObject;
   static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
@@ -76,6 +81,7 @@ export namespace Document {
     feedbackTime: number,
     predictionConfidences?: PredictionConfidences.AsObject,
     predictionMetadata?: PredictionMetadata.AsObject,
+    requestedFeaturesList: Array<string>,
   }
 }
 
@@ -1297,6 +1303,11 @@ export class PrepareFeedbackRequest extends jspb.Message {
   clearSegmentsList(): PrepareFeedbackRequest;
   addSegments(value: string, index?: number): PrepareFeedbackRequest;
 
+  getRequestedFeaturesList(): Array<string>;
+  setRequestedFeaturesList(value: Array<string>): PrepareFeedbackRequest;
+  clearRequestedFeaturesList(): PrepareFeedbackRequest;
+  addRequestedFeatures(value: string, index?: number): PrepareFeedbackRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PrepareFeedbackRequest.AsObject;
   static toObject(includeInstance: boolean, msg: PrepareFeedbackRequest): PrepareFeedbackRequest.AsObject;
@@ -1316,6 +1327,7 @@ export namespace PrepareFeedbackRequest {
     predictionMetadata?: PredictionMetadata.AsObject,
     tier: ssn_type_tier_pb.Tier,
     segmentsList: Array<string>,
+    requestedFeaturesList: Array<string>,
   }
 }
 

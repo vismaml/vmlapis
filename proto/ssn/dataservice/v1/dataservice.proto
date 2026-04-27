@@ -58,6 +58,7 @@ message Document {
   }];
   PredictionConfidences prediction_confidences = 9;
   PredictionMetadata prediction_metadata = 10;
+  repeated string requested_features = 11;
 }
 
 message TrueValues {
@@ -276,6 +277,7 @@ message PrepareFeedbackRequest {
   PredictionMetadata prediction_metadata = 7;
   ssn.type.Tier tier = 8;
   repeated string segments = 9;
+  repeated string requested_features = 10;
 }
 
 message FeedbackRequest {
