@@ -821,6 +821,12 @@
         },
         "predictionMetadata": {
           "$ref": "#/definitions/v1PredictionMetadata"
+        },
+        "requestedFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

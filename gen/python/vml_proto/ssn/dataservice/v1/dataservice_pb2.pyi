@@ -15,7 +15,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Document(_message.Message):
-    __slots__ = ("ta", "bytes", "id", "consumer", "tags", "true_values", "prediction_values", "feedback_time", "prediction_confidences", "prediction_metadata")
+    __slots__ = ("ta", "bytes", "id", "consumer", "tags", "true_values", "prediction_values", "feedback_time", "prediction_confidences", "prediction_metadata", "requested_features")
     TA_FIELD_NUMBER: _ClassVar[int]
     BYTES_FIELD_NUMBER: _ClassVar[int]
     ID_FIELD_NUMBER: _ClassVar[int]
@@ -26,6 +26,7 @@ class Document(_message.Message):
     FEEDBACK_TIME_FIELD_NUMBER: _ClassVar[int]
     PREDICTION_CONFIDENCES_FIELD_NUMBER: _ClassVar[int]
     PREDICTION_METADATA_FIELD_NUMBER: _ClassVar[int]
+    REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
     ta: _text_annotation_pb2.TextAnnotation
     bytes: bytes
     id: str
@@ -36,7 +37,8 @@ class Document(_message.Message):
     feedback_time: int
     prediction_confidences: PredictionConfidences
     prediction_metadata: PredictionMetadata
-    def __init__(self, ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., bytes: _Optional[bytes] = ..., id: _Optional[str] = ..., consumer: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., true_values: _Optional[_Union[TrueValues, _Mapping]] = ..., prediction_values: _Optional[_Union[PredictionValues, _Mapping]] = ..., feedback_time: _Optional[int] = ..., prediction_confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ...) -> None: ...
+    requested_features: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., bytes: _Optional[bytes] = ..., id: _Optional[str] = ..., consumer: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., true_values: _Optional[_Union[TrueValues, _Mapping]] = ..., prediction_values: _Optional[_Union[PredictionValues, _Mapping]] = ..., feedback_time: _Optional[int] = ..., prediction_confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class TrueValues(_message.Message):
     __slots__ = ("total_incl_vat", "total_vat", "total_excl_vat", "order_date", "payment_due_date", "document_type", "currency", "credit_card_last_four", "payment_method", "ocr_line_dk_type", "ocr_line_dk_payment_id", "ocr_line_dk_creditor_id", "ocr_line_se_payment_id", "ocr_line_se_bankgiro_creditor_id", "ocr_line_se_plusgiro_creditor_id", "ocr_line_no_payment_id", "ocr_line_fi_payment_id", "ocr_line_nl_payment_id", "supplier_corporate_id", "supplier_country_code", "invoice_number", "iban", "order_reference", "bank_account_number", "bank_registration_number", "supplier_name", "bic", "document_number", "document_date", "order_number", "supplier_vat_number", "supplier_organisation_number", "supplier_address", "customer_number", "receiver_order_number", "ocr_line_be_payment_id", "receiver_address", "receiver_country_code", "receiver_name", "receiver_vat_number", "purchase_lines", "answers", "vat_distribution", "check_in_date", "check_out_date")
@@ -427,7 +429,7 @@ class ReadDocumentResponse(_message.Message):
     def __init__(self, document: _Optional[_Union[Document, _Mapping]] = ...) -> None: ...
 
 class PrepareFeedbackRequest(_message.Message):
-    __slots__ = ("id", "ta", "document_bytes", "predictions", "tags", "confidences", "prediction_metadata", "tier", "segments")
+    __slots__ = ("id", "ta", "document_bytes", "predictions", "tags", "confidences", "prediction_metadata", "tier", "segments", "requested_features")
     ID_FIELD_NUMBER: _ClassVar[int]
     TA_FIELD_NUMBER: _ClassVar[int]
     DOCUMENT_BYTES_FIELD_NUMBER: _ClassVar[int]
@@ -437,6 +439,7 @@ class PrepareFeedbackRequest(_message.Message):
     PREDICTION_METADATA_FIELD_NUMBER: _ClassVar[int]
     TIER_FIELD_NUMBER: _ClassVar[int]
     SEGMENTS_FIELD_NUMBER: _ClassVar[int]
+    REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
     id: str
     ta: _text_annotation_pb2.TextAnnotation
     document_bytes: bytes
@@ -446,7 +449,8 @@ class PrepareFeedbackRequest(_message.Message):
     prediction_metadata: PredictionMetadata
     tier: _tier_pb2.Tier
     segments: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, id: _Optional[str] = ..., ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., document_bytes: _Optional[bytes] = ..., predictions: _Optional[_Union[PredictionValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ..., segments: _Optional[_Iterable[str]] = ...) -> None: ...
+    requested_features: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, id: _Optional[str] = ..., ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., document_bytes: _Optional[bytes] = ..., predictions: _Optional[_Union[PredictionValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ..., segments: _Optional[_Iterable[str]] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class FeedbackRequest(_message.Message):
     __slots__ = ("id", "true_values", "tags")
