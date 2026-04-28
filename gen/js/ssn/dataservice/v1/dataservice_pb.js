@@ -485,7 +485,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.Document.repeatedFields_ = [5];
+proto.ssn.dataservice.v1.Document.repeatedFields_ = [5,11];
 
 
 
@@ -527,7 +527,8 @@ proto.ssn.dataservice.v1.Document.toObject = function(includeInstance, msg) {
     predictionValues: (f = msg.getPredictionValues()) && proto.ssn.dataservice.v1.PredictionValues.toObject(includeInstance, f),
     feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0),
     predictionConfidences: (f = msg.getPredictionConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
-    predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f)
+    predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f),
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -608,6 +609,10 @@ proto.ssn.dataservice.v1.Document.deserializeBinaryFromReader = function(msg, re
       var value = new proto.ssn.dataservice.v1.PredictionMetadata;
       reader.readMessage(value,proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader);
       msg.setPredictionMetadata(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addRequestedFeatures(value);
       break;
     default:
       reader.skipField();
@@ -711,6 +716,13 @@ proto.ssn.dataservice.v1.Document.serializeBinaryToWriter = function(message, wr
       10,
       f,
       proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter
+    );
+  }
+  f = message.getRequestedFeaturesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      11,
+      f
     );
   }
 };
@@ -1031,6 +1043,43 @@ proto.ssn.dataservice.v1.Document.prototype.clearPredictionMetadata = function()
  */
 proto.ssn.dataservice.v1.Document.prototype.hasPredictionMetadata = function() {
   return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * repeated string requested_features = 11;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.Document.prototype.getRequestedFeaturesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 11));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.Document} returns this
+ */
+proto.ssn.dataservice.v1.Document.prototype.setRequestedFeaturesList = function(value) {
+  return jspb.Message.setField(this, 11, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.Document} returns this
+ */
+proto.ssn.dataservice.v1.Document.prototype.addRequestedFeatures = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 11, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.Document} returns this
+ */
+proto.ssn.dataservice.v1.Document.prototype.clearRequestedFeaturesList = function() {
+  return this.setRequestedFeaturesList([]);
 };
 
 
@@ -11168,7 +11217,7 @@ proto.ssn.dataservice.v1.ReadDocumentResponse.prototype.hasDocument = function()
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5,9];
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.repeatedFields_ = [5,9,10];
 
 
 
@@ -11209,7 +11258,8 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.toObject = function(includeInsta
     confidences: (f = msg.getConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
     predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f),
     tier: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    segmentsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
+    segmentsList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f,
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11285,6 +11335,10 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.deserializeBinaryFromReader = fu
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.addSegments(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addRequestedFeatures(value);
       break;
     default:
       reader.skipField();
@@ -11379,6 +11433,13 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.serializeBinaryToWriter = functi
   if (f.length > 0) {
     writer.writeRepeatedString(
       9,
+      f
+    );
+  }
+  f = message.getRequestedFeaturesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      10,
       f
     );
   }
@@ -11682,6 +11743,43 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.addSegments = function
  */
 proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearSegmentsList = function() {
   return this.setSegmentsList([]);
+};
+
+
+/**
+ * repeated string requested_features = 10;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getRequestedFeaturesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 10));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setRequestedFeaturesList = function(value) {
+  return jspb.Message.setField(this, 10, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.addRequestedFeatures = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 10, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PrepareFeedbackRequest} returns this
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearRequestedFeaturesList = function() {
+  return this.setRequestedFeaturesList([]);
 };
 
 
