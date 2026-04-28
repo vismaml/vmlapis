@@ -7,4 +7,5 @@ export enum Tier {
   STANDARD = 1,
   PREMIUM = 2,
   ULTRA = 3,
+  HUMAN_VERIFIED = 4,
 }

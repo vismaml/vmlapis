@@ -10,7 +10,9 @@ class Tier(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     STANDARD: _ClassVar[Tier]
     PREMIUM: _ClassVar[Tier]
     ULTRA: _ClassVar[Tier]
+    HUMAN_VERIFIED: _ClassVar[Tier]
 DEFAULT: Tier
 STANDARD: Tier
 PREMIUM: Tier
 ULTRA: Tier
+HUMAN_VERIFIED: Tier

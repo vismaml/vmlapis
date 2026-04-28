@@ -1530,7 +1530,8 @@
         "DEFAULT",
         "STANDARD",
         "PREMIUM",
-        "ULTRA"
+        "ULTRA",
+        "HUMAN_VERIFIED"
       ],
       "default": "DEFAULT",
       "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."

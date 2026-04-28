@@ -29,7 +29,8 @@ proto.ssn.type.Tier = {
   DEFAULT: 0,
   STANDARD: 1,
   PREMIUM: 2,
-  ULTRA: 3
+  ULTRA: 3,
+  HUMAN_VERIFIED: 4
 };
 
 goog.object.extend(exports, proto.ssn.type);

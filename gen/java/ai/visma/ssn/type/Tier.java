@@ -30,6 +30,10 @@ public enum Tier
    * <code>ULTRA = 3;</code>
    */
   ULTRA(3),
+  /**
+   * <code>HUMAN_VERIFIED = 4;</code>
+   */
+  HUMAN_VERIFIED(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -62,6 +66,10 @@ public enum Tier
    * <code>ULTRA = 3;</code>
    */
   public static final int ULTRA_VALUE = 3;
+  /**
+   * <code>HUMAN_VERIFIED = 4;</code>
+   */
+  public static final int HUMAN_VERIFIED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -92,6 +100,7 @@ public enum Tier
       case 1: return STANDARD;
       case 2: return PREMIUM;
       case 3: return ULTRA;
+      case 4: return HUMAN_VERIFIED;
       default: return null;
     }
   }
