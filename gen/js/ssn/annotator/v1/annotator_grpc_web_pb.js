@@ -24,6 +24,8 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')
 
+var ssn_type_address_pb = require('../../../ssn/type/address_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_hotel_dates_pb = require('../../../ssn/type/hotel_dates_pb.js')

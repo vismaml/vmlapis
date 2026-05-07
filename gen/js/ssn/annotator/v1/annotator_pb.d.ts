@@ -2,6 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
+import * as ssn_type_address_pb from '../../../ssn/type/address_pb'; // proto import: "ssn/type/address.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_hotel_dates_pb from '../../../ssn/type/hotel_dates_pb'; // proto import: "ssn/type/hotel_dates.proto"
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
@@ -409,6 +410,16 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearVatDistributionDetailsList(): DocumentAnnotatorResponse;
   addVatDistributionDetails(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
 
+  getStructuredSupplierAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
+  setStructuredSupplierAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): DocumentAnnotatorResponse;
+  clearStructuredSupplierAddressList(): DocumentAnnotatorResponse;
+  addStructuredSupplierAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
+
+  getStructuredReceiverAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
+  setStructuredReceiverAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): DocumentAnnotatorResponse;
+  clearStructuredReceiverAddressList(): DocumentAnnotatorResponse;
+  addStructuredReceiverAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -474,6 +485,8 @@ export namespace DocumentAnnotatorResponse {
     hotelDates?: ssn_type_hotel_dates_pb.HotelDates.AsObject,
     purchaseLinesDetailsList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
     vatDistributionDetailsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
+    structuredSupplierAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
+    structuredReceiverAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
   }
 }
 

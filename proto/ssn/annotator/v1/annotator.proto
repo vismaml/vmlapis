@@ -4,10 +4,10 @@ package ssn.annotator.v1;
 
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
+import "ssn/type/address.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/hotel_dates.proto";
 import "ssn/type/qr.proto";
-import "ssn/type/address.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
