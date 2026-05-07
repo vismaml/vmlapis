@@ -7,6 +7,7 @@ import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/hotel_dates.proto";
 import "ssn/type/qr.proto";
+import "ssn/type/address.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
@@ -325,6 +326,16 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.PurchaseLine purchase_lines_details = 56;
   // VAT distribution for the document. This is a list where each field is a candidate.
   repeated ssn.type.VatDistribution vat_distribution_details = 57;
+  // Structured supplier address, returned when VERIFIED feature is requested
+  // and supplier address is available. Parsed from the raw supplier address
+  // using the geo service. Each entry corresponds to the candidate at the
+  // same index in supplier_address.
+  repeated ssn.type.StructuredAddress structured_supplier_address = 58;
+  // Structured receiver address, returned when VERIFIED feature is requested
+  // and receiver address is available. Parsed from the raw receiver address
+  // using the geo service. Each entry corresponds to the candidate at the
+  // same index in receiver_address.
+  repeated ssn.type.StructuredAddress structured_receiver_address = 59;
 }
 
 message Document {
