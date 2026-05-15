@@ -29,6 +29,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
 goog.object.extend(proto, ssn_annotator_v1_annotator_pb);
+var ssn_type_address_pb = require('../../../ssn/type/address_pb.js');
+goog.object.extend(proto, ssn_type_address_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js');
@@ -1282,7 +1284,7 @@ proto.ssn.asyncton.v1.GetTransactionResultsResponse.prototype.setCustomId = func
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,13];
+proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,13,14,15];
 
 
 
@@ -1334,7 +1336,11 @@ proto.ssn.asyncton.v1.Annotation.toObject = function(includeInstance, msg) {
     purchaseLinesDetailsList: jspb.Message.toObjectList(msg.getPurchaseLinesDetailsList(),
     ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance),
     vatDistributionDetailsList: jspb.Message.toObjectList(msg.getVatDistributionDetailsList(),
-    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance),
+    structuredSupplierAddressList: jspb.Message.toObjectList(msg.getStructuredSupplierAddressList(),
+    ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
+    structuredReceiverAddressList: jspb.Message.toObjectList(msg.getStructuredReceiverAddressList(),
+    ssn_type_address_pb.StructuredAddress.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1424,6 +1430,16 @@ proto.ssn.asyncton.v1.Annotation.deserializeBinaryFromReader = function(msg, rea
       var value = new ssn_type_candidate_pb.VatDistribution;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
       msg.addVatDistributionDetails(value);
+      break;
+    case 14:
+      var value = new ssn_type_address_pb.StructuredAddress;
+      reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
+      msg.addStructuredSupplierAddress(value);
+      break;
+    case 15:
+      var value = new ssn_type_address_pb.StructuredAddress;
+      reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
+      msg.addStructuredReceiverAddress(value);
       break;
     default:
       reader.skipField();
@@ -1539,6 +1555,22 @@ proto.ssn.asyncton.v1.Annotation.serializeBinaryToWriter = function(message, wri
       13,
       f,
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
+    );
+  }
+  f = message.getStructuredSupplierAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      14,
+      f,
+      ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
+    );
+  }
+  f = message.getStructuredReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      15,
+      f,
+      ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
     );
   }
 };
@@ -1938,6 +1970,82 @@ proto.ssn.asyncton.v1.Annotation.prototype.addVatDistributionDetails = function(
  */
 proto.ssn.asyncton.v1.Annotation.prototype.clearVatDistributionDetailsList = function() {
   return this.setVatDistributionDetailsList([]);
+};
+
+
+/**
+ * repeated ssn.type.StructuredAddress structured_supplier_address = 14;
+ * @return {!Array<!proto.ssn.type.StructuredAddress>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getStructuredSupplierAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 14));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.StructuredAddress>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setStructuredSupplierAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 14, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.StructuredAddress=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.StructuredAddress}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addStructuredSupplierAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.ssn.type.StructuredAddress, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearStructuredSupplierAddressList = function() {
+  return this.setStructuredSupplierAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.StructuredAddress structured_receiver_address = 15;
+ * @return {!Array<!proto.ssn.type.StructuredAddress>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getStructuredReceiverAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 15));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.StructuredAddress>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setStructuredReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 15, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.StructuredAddress=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.StructuredAddress}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addStructuredReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.ssn.type.StructuredAddress, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearStructuredReceiverAddressList = function() {
+  return this.setStructuredReceiverAddressList([]);
 };
 
 
