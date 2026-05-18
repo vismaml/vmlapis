@@ -1284,7 +1284,7 @@ proto.ssn.asyncton.v1.GetTransactionResultsResponse.prototype.setCustomId = func
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,13,14,15];
+proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6,7,8,9,12,13,14];
 
 
 
@@ -1337,9 +1337,7 @@ proto.ssn.asyncton.v1.Annotation.toObject = function(includeInstance, msg) {
     ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance),
     vatDistributionDetailsList: jspb.Message.toObjectList(msg.getVatDistributionDetailsList(),
     ssn_type_candidate_pb.VatDistribution.toObject, includeInstance),
-    structuredSupplierAddressList: jspb.Message.toObjectList(msg.getStructuredSupplierAddressList(),
-    ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
-    structuredReceiverAddressList: jspb.Message.toObjectList(msg.getStructuredReceiverAddressList(),
+    structuredAddressList: jspb.Message.toObjectList(msg.getStructuredAddressList(),
     ssn_type_address_pb.StructuredAddress.toObject, includeInstance)
   };
 
@@ -1434,12 +1432,7 @@ proto.ssn.asyncton.v1.Annotation.deserializeBinaryFromReader = function(msg, rea
     case 14:
       var value = new ssn_type_address_pb.StructuredAddress;
       reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
-      msg.addStructuredSupplierAddress(value);
-      break;
-    case 15:
-      var value = new ssn_type_address_pb.StructuredAddress;
-      reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
-      msg.addStructuredReceiverAddress(value);
+      msg.addStructuredAddress(value);
       break;
     default:
       reader.skipField();
@@ -1557,18 +1550,10 @@ proto.ssn.asyncton.v1.Annotation.serializeBinaryToWriter = function(message, wri
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
     );
   }
-  f = message.getStructuredSupplierAddressList();
+  f = message.getStructuredAddressList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       14,
-      f,
-      ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
-    );
-  }
-  f = message.getStructuredReceiverAddressList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      15,
       f,
       ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
     );
@@ -1974,10 +1959,10 @@ proto.ssn.asyncton.v1.Annotation.prototype.clearVatDistributionDetailsList = fun
 
 
 /**
- * repeated ssn.type.StructuredAddress structured_supplier_address = 14;
+ * repeated ssn.type.StructuredAddress structured_address = 14;
  * @return {!Array<!proto.ssn.type.StructuredAddress>}
  */
-proto.ssn.asyncton.v1.Annotation.prototype.getStructuredSupplierAddressList = function() {
+proto.ssn.asyncton.v1.Annotation.prototype.getStructuredAddressList = function() {
   return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 14));
 };
@@ -1987,7 +1972,7 @@ proto.ssn.asyncton.v1.Annotation.prototype.getStructuredSupplierAddressList = fu
  * @param {!Array<!proto.ssn.type.StructuredAddress>} value
  * @return {!proto.ssn.asyncton.v1.Annotation} returns this
 */
-proto.ssn.asyncton.v1.Annotation.prototype.setStructuredSupplierAddressList = function(value) {
+proto.ssn.asyncton.v1.Annotation.prototype.setStructuredAddressList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
@@ -1997,7 +1982,7 @@ proto.ssn.asyncton.v1.Annotation.prototype.setStructuredSupplierAddressList = fu
  * @param {number=} opt_index
  * @return {!proto.ssn.type.StructuredAddress}
  */
-proto.ssn.asyncton.v1.Annotation.prototype.addStructuredSupplierAddress = function(opt_value, opt_index) {
+proto.ssn.asyncton.v1.Annotation.prototype.addStructuredAddress = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.ssn.type.StructuredAddress, opt_index);
 };
 
@@ -2006,46 +1991,8 @@ proto.ssn.asyncton.v1.Annotation.prototype.addStructuredSupplierAddress = functi
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.asyncton.v1.Annotation} returns this
  */
-proto.ssn.asyncton.v1.Annotation.prototype.clearStructuredSupplierAddressList = function() {
-  return this.setStructuredSupplierAddressList([]);
-};
-
-
-/**
- * repeated ssn.type.StructuredAddress structured_receiver_address = 15;
- * @return {!Array<!proto.ssn.type.StructuredAddress>}
- */
-proto.ssn.asyncton.v1.Annotation.prototype.getStructuredReceiverAddressList = function() {
-  return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 15));
-};
-
-
-/**
- * @param {!Array<!proto.ssn.type.StructuredAddress>} value
- * @return {!proto.ssn.asyncton.v1.Annotation} returns this
-*/
-proto.ssn.asyncton.v1.Annotation.prototype.setStructuredReceiverAddressList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 15, value);
-};
-
-
-/**
- * @param {!proto.ssn.type.StructuredAddress=} opt_value
- * @param {number=} opt_index
- * @return {!proto.ssn.type.StructuredAddress}
- */
-proto.ssn.asyncton.v1.Annotation.prototype.addStructuredReceiverAddress = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.ssn.type.StructuredAddress, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ssn.asyncton.v1.Annotation} returns this
- */
-proto.ssn.asyncton.v1.Annotation.prototype.clearStructuredReceiverAddressList = function() {
-  return this.setStructuredReceiverAddressList([]);
+proto.ssn.asyncton.v1.Annotation.prototype.clearStructuredAddressList = function() {
+  return this.setStructuredAddressList([]);
 };
 
 

@@ -454,89 +454,45 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   java.util.List<ai.visma.ssn.type.StructuredAddress> 
-      getStructuredSupplierAddressList();
+      getStructuredAddressList();
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
-  ai.visma.ssn.type.StructuredAddress getStructuredSupplierAddress(int index);
+  ai.visma.ssn.type.StructuredAddress getStructuredAddress(int index);
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
-  int getStructuredSupplierAddressCount();
+  int getStructuredAddressCount();
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-      getStructuredSupplierAddressOrBuilderList();
-  /**
-   * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
-   */
-  ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredSupplierAddressOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  java.util.List<ai.visma.ssn.type.StructuredAddress> 
-      getStructuredReceiverAddressList();
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  ai.visma.ssn.type.StructuredAddress getStructuredReceiverAddress(int index);
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  int getStructuredReceiverAddressCount();
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-      getStructuredReceiverAddressOrBuilderList();
+      getStructuredAddressOrBuilderList();
   /**
    * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
-  ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredReceiverAddressOrBuilder(
+  ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredAddressOrBuilder(
       int index);
 }

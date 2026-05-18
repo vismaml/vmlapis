@@ -196,15 +196,10 @@ export class Annotation extends jspb.Message {
   clearVatDistributionDetailsList(): Annotation;
   addVatDistributionDetails(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
 
-  getStructuredSupplierAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
-  setStructuredSupplierAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): Annotation;
-  clearStructuredSupplierAddressList(): Annotation;
-  addStructuredSupplierAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
-
-  getStructuredReceiverAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
-  setStructuredReceiverAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): Annotation;
-  clearStructuredReceiverAddressList(): Annotation;
-  addStructuredReceiverAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
+  getStructuredAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
+  setStructuredAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): Annotation;
+  clearStructuredAddressList(): Annotation;
+  addStructuredAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
@@ -227,8 +222,7 @@ export namespace Annotation {
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
     purchaseLinesDetailsList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
     vatDistributionDetailsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
-    structuredSupplierAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
-    structuredReceiverAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
+    structuredAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
   }
 }
 

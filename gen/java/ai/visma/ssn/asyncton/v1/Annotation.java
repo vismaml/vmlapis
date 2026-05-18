@@ -37,8 +37,7 @@ private static final long serialVersionUID = 0L;
     swissQrBills_ = java.util.Collections.emptyList();
     purchaseLinesDetails_ = java.util.Collections.emptyList();
     vatDistributionDetails_ = java.util.Collections.emptyList();
-    structuredSupplierAddress_ = java.util.Collections.emptyList();
-    structuredReceiverAddress_ = java.util.Collections.emptyList();
+    structuredAddress_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -689,126 +688,65 @@ private static final long serialVersionUID = 0L;
     return vatDistributionDetails_.get(index);
   }
 
-  public static final int STRUCTURED_SUPPLIER_ADDRESS_FIELD_NUMBER = 14;
+  public static final int STRUCTURED_ADDRESS_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredSupplierAddress_;
+  private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredAddress_;
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredSupplierAddressList() {
-    return structuredSupplierAddress_;
+  public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredAddressList() {
+    return structuredAddress_;
   }
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-      getStructuredSupplierAddressOrBuilderList() {
-    return structuredSupplierAddress_;
+      getStructuredAddressOrBuilderList() {
+    return structuredAddress_;
   }
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   @java.lang.Override
-  public int getStructuredSupplierAddressCount() {
-    return structuredSupplierAddress_.size();
+  public int getStructuredAddressCount() {
+    return structuredAddress_.size();
   }
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.StructuredAddress getStructuredSupplierAddress(int index) {
-    return structuredSupplierAddress_.get(index);
+  public ai.visma.ssn.type.StructuredAddress getStructuredAddress(int index) {
+    return structuredAddress_.get(index);
   }
   /**
    * <pre>
-   * Structured supplier address, parsed from the raw supplier address using the geo service.
+   * Structured address, parsed from the raw address using the geo service.
    * </pre>
    *
-   * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredSupplierAddressOrBuilder(
+  public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredAddressOrBuilder(
       int index) {
-    return structuredSupplierAddress_.get(index);
-  }
-
-  public static final int STRUCTURED_RECEIVER_ADDRESS_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredReceiverAddress_;
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredReceiverAddressList() {
-    return structuredReceiverAddress_;
-  }
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-      getStructuredReceiverAddressOrBuilderList() {
-    return structuredReceiverAddress_;
-  }
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  @java.lang.Override
-  public int getStructuredReceiverAddressCount() {
-    return structuredReceiverAddress_.size();
-  }
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.StructuredAddress getStructuredReceiverAddress(int index) {
-    return structuredReceiverAddress_.get(index);
-  }
-  /**
-   * <pre>
-   * Structured receiver address, parsed from the raw receiver address using the geo service.
-   * </pre>
-   *
-   * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredReceiverAddressOrBuilder(
-      int index) {
-    return structuredReceiverAddress_.get(index);
+    return structuredAddress_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -858,11 +796,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < vatDistributionDetails_.size(); i++) {
       output.writeMessage(13, vatDistributionDetails_.get(i));
     }
-    for (int i = 0; i < structuredSupplierAddress_.size(); i++) {
-      output.writeMessage(14, structuredSupplierAddress_.get(i));
-    }
-    for (int i = 0; i < structuredReceiverAddress_.size(); i++) {
-      output.writeMessage(15, structuredReceiverAddress_.get(i));
+    for (int i = 0; i < structuredAddress_.size(); i++) {
+      output.writeMessage(14, structuredAddress_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -916,13 +851,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, vatDistributionDetails_.get(i));
     }
-    for (int i = 0; i < structuredSupplierAddress_.size(); i++) {
+    for (int i = 0; i < structuredAddress_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, structuredSupplierAddress_.get(i));
-    }
-    for (int i = 0; i < structuredReceiverAddress_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, structuredReceiverAddress_.get(i));
+        .computeMessageSize(14, structuredAddress_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -964,10 +895,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPurchaseLinesDetailsList())) return false;
     if (!getVatDistributionDetailsList()
         .equals(other.getVatDistributionDetailsList())) return false;
-    if (!getStructuredSupplierAddressList()
-        .equals(other.getStructuredSupplierAddressList())) return false;
-    if (!getStructuredReceiverAddressList()
-        .equals(other.getStructuredReceiverAddressList())) return false;
+    if (!getStructuredAddressList()
+        .equals(other.getStructuredAddressList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1021,13 +950,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VAT_DISTRIBUTION_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getVatDistributionDetailsList().hashCode();
     }
-    if (getStructuredSupplierAddressCount() > 0) {
-      hash = (37 * hash) + STRUCTURED_SUPPLIER_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getStructuredSupplierAddressList().hashCode();
-    }
-    if (getStructuredReceiverAddressCount() > 0) {
-      hash = (37 * hash) + STRUCTURED_RECEIVER_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getStructuredReceiverAddressList().hashCode();
+    if (getStructuredAddressCount() > 0) {
+      hash = (37 * hash) + STRUCTURED_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getStructuredAddressList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1169,8 +1094,7 @@ private static final long serialVersionUID = 0L;
         getSwissQrBillsFieldBuilder();
         getPurchaseLinesDetailsFieldBuilder();
         getVatDistributionDetailsFieldBuilder();
-        getStructuredSupplierAddressFieldBuilder();
-        getStructuredReceiverAddressFieldBuilder();
+        getStructuredAddressFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1246,20 +1170,13 @@ private static final long serialVersionUID = 0L;
         vatDistributionDetailsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000400);
-      if (structuredSupplierAddressBuilder_ == null) {
-        structuredSupplierAddress_ = java.util.Collections.emptyList();
+      if (structuredAddressBuilder_ == null) {
+        structuredAddress_ = java.util.Collections.emptyList();
       } else {
-        structuredSupplierAddress_ = null;
-        structuredSupplierAddressBuilder_.clear();
+        structuredAddress_ = null;
+        structuredAddressBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000800);
-      if (structuredReceiverAddressBuilder_ == null) {
-        structuredReceiverAddress_ = java.util.Collections.emptyList();
-      } else {
-        structuredReceiverAddress_ = null;
-        structuredReceiverAddressBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00001000);
       return this;
     }
 
@@ -1374,23 +1291,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.vatDistributionDetails_ = vatDistributionDetailsBuilder_.build();
       }
-      if (structuredSupplierAddressBuilder_ == null) {
+      if (structuredAddressBuilder_ == null) {
         if (((bitField0_ & 0x00000800) != 0)) {
-          structuredSupplierAddress_ = java.util.Collections.unmodifiableList(structuredSupplierAddress_);
+          structuredAddress_ = java.util.Collections.unmodifiableList(structuredAddress_);
           bitField0_ = (bitField0_ & ~0x00000800);
         }
-        result.structuredSupplierAddress_ = structuredSupplierAddress_;
+        result.structuredAddress_ = structuredAddress_;
       } else {
-        result.structuredSupplierAddress_ = structuredSupplierAddressBuilder_.build();
-      }
-      if (structuredReceiverAddressBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
-          structuredReceiverAddress_ = java.util.Collections.unmodifiableList(structuredReceiverAddress_);
-          bitField0_ = (bitField0_ & ~0x00001000);
-        }
-        result.structuredReceiverAddress_ = structuredReceiverAddress_;
-      } else {
-        result.structuredReceiverAddress_ = structuredReceiverAddressBuilder_.build();
+        result.structuredAddress_ = structuredAddressBuilder_.build();
       }
     }
 
@@ -1663,55 +1571,29 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (structuredSupplierAddressBuilder_ == null) {
-        if (!other.structuredSupplierAddress_.isEmpty()) {
-          if (structuredSupplierAddress_.isEmpty()) {
-            structuredSupplierAddress_ = other.structuredSupplierAddress_;
+      if (structuredAddressBuilder_ == null) {
+        if (!other.structuredAddress_.isEmpty()) {
+          if (structuredAddress_.isEmpty()) {
+            structuredAddress_ = other.structuredAddress_;
             bitField0_ = (bitField0_ & ~0x00000800);
           } else {
-            ensureStructuredSupplierAddressIsMutable();
-            structuredSupplierAddress_.addAll(other.structuredSupplierAddress_);
+            ensureStructuredAddressIsMutable();
+            structuredAddress_.addAll(other.structuredAddress_);
           }
           onChanged();
         }
       } else {
-        if (!other.structuredSupplierAddress_.isEmpty()) {
-          if (structuredSupplierAddressBuilder_.isEmpty()) {
-            structuredSupplierAddressBuilder_.dispose();
-            structuredSupplierAddressBuilder_ = null;
-            structuredSupplierAddress_ = other.structuredSupplierAddress_;
+        if (!other.structuredAddress_.isEmpty()) {
+          if (structuredAddressBuilder_.isEmpty()) {
+            structuredAddressBuilder_.dispose();
+            structuredAddressBuilder_ = null;
+            structuredAddress_ = other.structuredAddress_;
             bitField0_ = (bitField0_ & ~0x00000800);
-            structuredSupplierAddressBuilder_ = 
+            structuredAddressBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getStructuredSupplierAddressFieldBuilder() : null;
+                 getStructuredAddressFieldBuilder() : null;
           } else {
-            structuredSupplierAddressBuilder_.addAllMessages(other.structuredSupplierAddress_);
-          }
-        }
-      }
-      if (structuredReceiverAddressBuilder_ == null) {
-        if (!other.structuredReceiverAddress_.isEmpty()) {
-          if (structuredReceiverAddress_.isEmpty()) {
-            structuredReceiverAddress_ = other.structuredReceiverAddress_;
-            bitField0_ = (bitField0_ & ~0x00001000);
-          } else {
-            ensureStructuredReceiverAddressIsMutable();
-            structuredReceiverAddress_.addAll(other.structuredReceiverAddress_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.structuredReceiverAddress_.isEmpty()) {
-          if (structuredReceiverAddressBuilder_.isEmpty()) {
-            structuredReceiverAddressBuilder_.dispose();
-            structuredReceiverAddressBuilder_ = null;
-            structuredReceiverAddress_ = other.structuredReceiverAddress_;
-            bitField0_ = (bitField0_ & ~0x00001000);
-            structuredReceiverAddressBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getStructuredReceiverAddressFieldBuilder() : null;
-          } else {
-            structuredReceiverAddressBuilder_.addAllMessages(other.structuredReceiverAddress_);
+            structuredAddressBuilder_.addAllMessages(other.structuredAddress_);
           }
         }
       }
@@ -1875,27 +1757,14 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.StructuredAddress.parser(),
                       extensionRegistry);
-              if (structuredSupplierAddressBuilder_ == null) {
-                ensureStructuredSupplierAddressIsMutable();
-                structuredSupplierAddress_.add(m);
+              if (structuredAddressBuilder_ == null) {
+                ensureStructuredAddressIsMutable();
+                structuredAddress_.add(m);
               } else {
-                structuredSupplierAddressBuilder_.addMessage(m);
+                structuredAddressBuilder_.addMessage(m);
               }
               break;
             } // case 114
-            case 122: {
-              ai.visma.ssn.type.StructuredAddress m =
-                  input.readMessage(
-                      ai.visma.ssn.type.StructuredAddress.parser(),
-                      extensionRegistry);
-              if (structuredReceiverAddressBuilder_ == null) {
-                ensureStructuredReceiverAddressIsMutable();
-                structuredReceiverAddress_.add(m);
-              } else {
-                structuredReceiverAddressBuilder_.addMessage(m);
-              }
-              break;
-            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4970,628 +4839,316 @@ private static final long serialVersionUID = 0L;
       return vatDistributionDetailsBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredSupplierAddress_ =
+    private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredAddress_ =
       java.util.Collections.emptyList();
-    private void ensureStructuredSupplierAddressIsMutable() {
+    private void ensureStructuredAddressIsMutable() {
       if (!((bitField0_ & 0x00000800) != 0)) {
-        structuredSupplierAddress_ = new java.util.ArrayList<ai.visma.ssn.type.StructuredAddress>(structuredSupplierAddress_);
+        structuredAddress_ = new java.util.ArrayList<ai.visma.ssn.type.StructuredAddress>(structuredAddress_);
         bitField0_ |= 0x00000800;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder> structuredSupplierAddressBuilder_;
+        ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder> structuredAddressBuilder_;
 
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredSupplierAddressList() {
-      if (structuredSupplierAddressBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(structuredSupplierAddress_);
+    public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredAddressList() {
+      if (structuredAddressBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(structuredAddress_);
       } else {
-        return structuredSupplierAddressBuilder_.getMessageList();
+        return structuredAddressBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public int getStructuredSupplierAddressCount() {
-      if (structuredSupplierAddressBuilder_ == null) {
-        return structuredSupplierAddress_.size();
+    public int getStructuredAddressCount() {
+      if (structuredAddressBuilder_ == null) {
+        return structuredAddress_.size();
       } else {
-        return structuredSupplierAddressBuilder_.getCount();
+        return structuredAddressBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public ai.visma.ssn.type.StructuredAddress getStructuredSupplierAddress(int index) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        return structuredSupplierAddress_.get(index);
+    public ai.visma.ssn.type.StructuredAddress getStructuredAddress(int index) {
+      if (structuredAddressBuilder_ == null) {
+        return structuredAddress_.get(index);
       } else {
-        return structuredSupplierAddressBuilder_.getMessage(index);
+        return structuredAddressBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder setStructuredSupplierAddress(
+    public Builder setStructuredAddress(
         int index, ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredSupplierAddressBuilder_ == null) {
+      if (structuredAddressBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.set(index, value);
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.set(index, value);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.setMessage(index, value);
+        structuredAddressBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder setStructuredSupplierAddress(
+    public Builder setStructuredAddress(
         int index, ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.set(index, builderForValue.build());
+      if (structuredAddressBuilder_ == null) {
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.set(index, builderForValue.build());
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.setMessage(index, builderForValue.build());
+        structuredAddressBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder addStructuredSupplierAddress(ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredSupplierAddressBuilder_ == null) {
+    public Builder addStructuredAddress(ai.visma.ssn.type.StructuredAddress value) {
+      if (structuredAddressBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.add(value);
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.add(value);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.addMessage(value);
+        structuredAddressBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder addStructuredSupplierAddress(
+    public Builder addStructuredAddress(
         int index, ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredSupplierAddressBuilder_ == null) {
+      if (structuredAddressBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.add(index, value);
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.add(index, value);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.addMessage(index, value);
+        structuredAddressBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder addStructuredSupplierAddress(
+    public Builder addStructuredAddress(
         ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.add(builderForValue.build());
+      if (structuredAddressBuilder_ == null) {
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.add(builderForValue.build());
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.addMessage(builderForValue.build());
+        structuredAddressBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder addStructuredSupplierAddress(
+    public Builder addStructuredAddress(
         int index, ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.add(index, builderForValue.build());
+      if (structuredAddressBuilder_ == null) {
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.add(index, builderForValue.build());
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.addMessage(index, builderForValue.build());
+        structuredAddressBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder addAllStructuredSupplierAddress(
+    public Builder addAllStructuredAddress(
         java.lang.Iterable<? extends ai.visma.ssn.type.StructuredAddress> values) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        ensureStructuredSupplierAddressIsMutable();
+      if (structuredAddressBuilder_ == null) {
+        ensureStructuredAddressIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, structuredSupplierAddress_);
+            values, structuredAddress_);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.addAllMessages(values);
+        structuredAddressBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder clearStructuredSupplierAddress() {
-      if (structuredSupplierAddressBuilder_ == null) {
-        structuredSupplierAddress_ = java.util.Collections.emptyList();
+    public Builder clearStructuredAddress() {
+      if (structuredAddressBuilder_ == null) {
+        structuredAddress_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.clear();
+        structuredAddressBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public Builder removeStructuredSupplierAddress(int index) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        ensureStructuredSupplierAddressIsMutable();
-        structuredSupplierAddress_.remove(index);
+    public Builder removeStructuredAddress(int index) {
+      if (structuredAddressBuilder_ == null) {
+        ensureStructuredAddressIsMutable();
+        structuredAddress_.remove(index);
         onChanged();
       } else {
-        structuredSupplierAddressBuilder_.remove(index);
+        structuredAddressBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public ai.visma.ssn.type.StructuredAddress.Builder getStructuredSupplierAddressBuilder(
+    public ai.visma.ssn.type.StructuredAddress.Builder getStructuredAddressBuilder(
         int index) {
-      return getStructuredSupplierAddressFieldBuilder().getBuilder(index);
+      return getStructuredAddressFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredSupplierAddressOrBuilder(
+    public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredAddressOrBuilder(
         int index) {
-      if (structuredSupplierAddressBuilder_ == null) {
-        return structuredSupplierAddress_.get(index);  } else {
-        return structuredSupplierAddressBuilder_.getMessageOrBuilder(index);
+      if (structuredAddressBuilder_ == null) {
+        return structuredAddress_.get(index);  } else {
+        return structuredAddressBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-         getStructuredSupplierAddressOrBuilderList() {
-      if (structuredSupplierAddressBuilder_ != null) {
-        return structuredSupplierAddressBuilder_.getMessageOrBuilderList();
+         getStructuredAddressOrBuilderList() {
+      if (structuredAddressBuilder_ != null) {
+        return structuredAddressBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(structuredSupplierAddress_);
+        return java.util.Collections.unmodifiableList(structuredAddress_);
       }
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredSupplierAddressBuilder() {
-      return getStructuredSupplierAddressFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredAddressBuilder() {
+      return getStructuredAddressFieldBuilder().addBuilder(
           ai.visma.ssn.type.StructuredAddress.getDefaultInstance());
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
-    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredSupplierAddressBuilder(
+    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredAddressBuilder(
         int index) {
-      return getStructuredSupplierAddressFieldBuilder().addBuilder(
+      return getStructuredAddressFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.StructuredAddress.getDefaultInstance());
     }
     /**
      * <pre>
-     * Structured supplier address, parsed from the raw supplier address using the geo service.
+     * Structured address, parsed from the raw address using the geo service.
      * </pre>
      *
-     * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 14 [json_name = "structuredSupplierAddress"];</code>
+     * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
      */
     public java.util.List<ai.visma.ssn.type.StructuredAddress.Builder> 
-         getStructuredSupplierAddressBuilderList() {
-      return getStructuredSupplierAddressFieldBuilder().getBuilderList();
+         getStructuredAddressBuilderList() {
+      return getStructuredAddressFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder> 
-        getStructuredSupplierAddressFieldBuilder() {
-      if (structuredSupplierAddressBuilder_ == null) {
-        structuredSupplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getStructuredAddressFieldBuilder() {
+      if (structuredAddressBuilder_ == null) {
+        structuredAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder>(
-                structuredSupplierAddress_,
+                structuredAddress_,
                 ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
-        structuredSupplierAddress_ = null;
+        structuredAddress_ = null;
       }
-      return structuredSupplierAddressBuilder_;
-    }
-
-    private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredReceiverAddress_ =
-      java.util.Collections.emptyList();
-    private void ensureStructuredReceiverAddressIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
-        structuredReceiverAddress_ = new java.util.ArrayList<ai.visma.ssn.type.StructuredAddress>(structuredReceiverAddress_);
-        bitField0_ |= 0x00001000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder> structuredReceiverAddressBuilder_;
-
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.StructuredAddress> getStructuredReceiverAddressList() {
-      if (structuredReceiverAddressBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(structuredReceiverAddress_);
-      } else {
-        return structuredReceiverAddressBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public int getStructuredReceiverAddressCount() {
-      if (structuredReceiverAddressBuilder_ == null) {
-        return structuredReceiverAddress_.size();
-      } else {
-        return structuredReceiverAddressBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public ai.visma.ssn.type.StructuredAddress getStructuredReceiverAddress(int index) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        return structuredReceiverAddress_.get(index);
-      } else {
-        return structuredReceiverAddressBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder setStructuredReceiverAddress(
-        int index, ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.set(index, value);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder setStructuredReceiverAddress(
-        int index, ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder addStructuredReceiverAddress(ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.add(value);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder addStructuredReceiverAddress(
-        int index, ai.visma.ssn.type.StructuredAddress value) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.add(index, value);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder addStructuredReceiverAddress(
-        ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.add(builderForValue.build());
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder addStructuredReceiverAddress(
-        int index, ai.visma.ssn.type.StructuredAddress.Builder builderForValue) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder addAllStructuredReceiverAddress(
-        java.lang.Iterable<? extends ai.visma.ssn.type.StructuredAddress> values) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        ensureStructuredReceiverAddressIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, structuredReceiverAddress_);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder clearStructuredReceiverAddress() {
-      if (structuredReceiverAddressBuilder_ == null) {
-        structuredReceiverAddress_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public Builder removeStructuredReceiverAddress(int index) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        ensureStructuredReceiverAddressIsMutable();
-        structuredReceiverAddress_.remove(index);
-        onChanged();
-      } else {
-        structuredReceiverAddressBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public ai.visma.ssn.type.StructuredAddress.Builder getStructuredReceiverAddressBuilder(
-        int index) {
-      return getStructuredReceiverAddressFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredReceiverAddressOrBuilder(
-        int index) {
-      if (structuredReceiverAddressBuilder_ == null) {
-        return structuredReceiverAddress_.get(index);  } else {
-        return structuredReceiverAddressBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
-         getStructuredReceiverAddressOrBuilderList() {
-      if (structuredReceiverAddressBuilder_ != null) {
-        return structuredReceiverAddressBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(structuredReceiverAddress_);
-      }
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredReceiverAddressBuilder() {
-      return getStructuredReceiverAddressFieldBuilder().addBuilder(
-          ai.visma.ssn.type.StructuredAddress.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public ai.visma.ssn.type.StructuredAddress.Builder addStructuredReceiverAddressBuilder(
-        int index) {
-      return getStructuredReceiverAddressFieldBuilder().addBuilder(
-          index, ai.visma.ssn.type.StructuredAddress.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Structured receiver address, parsed from the raw receiver address using the geo service.
-     * </pre>
-     *
-     * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 15 [json_name = "structuredReceiverAddress"];</code>
-     */
-    public java.util.List<ai.visma.ssn.type.StructuredAddress.Builder> 
-         getStructuredReceiverAddressBuilderList() {
-      return getStructuredReceiverAddressFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder> 
-        getStructuredReceiverAddressFieldBuilder() {
-      if (structuredReceiverAddressBuilder_ == null) {
-        structuredReceiverAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.type.StructuredAddress, ai.visma.ssn.type.StructuredAddress.Builder, ai.visma.ssn.type.StructuredAddressOrBuilder>(
-                structuredReceiverAddress_,
-                ((bitField0_ & 0x00001000) != 0),
-                getParentForChildren(),
-                isClean());
-        structuredReceiverAddress_ = null;
-      }
-      return structuredReceiverAddressBuilder_;
+      return structuredAddressBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.asyncton.v1.Annotation)

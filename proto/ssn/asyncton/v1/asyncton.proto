@@ -123,10 +123,8 @@ message Annotation {
   repeated ssn.type.PurchaseLine purchase_lines_details = 12;
   // VAT distribution for the document. This is a list where each field is a candidate.
   repeated ssn.type.VatDistribution vat_distribution_details = 13;
-  // Structured supplier address, parsed from the raw supplier address using the geo service.
-  repeated ssn.type.StructuredAddress structured_supplier_address = 14;
-  // Structured receiver address, parsed from the raw receiver address using the geo service.
-  repeated ssn.type.StructuredAddress structured_receiver_address = 15;
+  // Structured address, parsed from the raw address using the geo service.
+  repeated ssn.type.StructuredAddress structured_address = 14;
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

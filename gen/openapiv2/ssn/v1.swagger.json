@@ -740,21 +740,13 @@
           },
           "description": "VAT distribution for the document. This is a list where each field is a candidate."
         },
-        "structuredSupplierAddress": {
+        "structuredAddress": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeStructuredAddress"
           },
-          "description": "Structured supplier address, parsed from the raw supplier address using the geo service."
-        },
-        "structuredReceiverAddress": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeStructuredAddress"
-          },
-          "description": "Structured receiver address, parsed from the raw receiver address using the geo service."
+          "description": "Structured address, parsed from the raw address using the geo service."
         }
       }
     },
