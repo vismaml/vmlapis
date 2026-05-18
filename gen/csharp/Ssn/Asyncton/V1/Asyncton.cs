@@ -28,90 +28,92 @@ namespace Ssn.Asyncton.V1 {
             "bi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3By",
             "b3RvYnVmL2VtcHR5LnByb3RvGi5wcm90b2MtZ2VuLW9wZW5hcGl2Mi9vcHRp",
             "b25zL2Fubm90YXRpb25zLnByb3RvGiBzc24vYW5ub3RhdG9yL3YxL2Fubm90",
-            "YXRvci5wcm90bxoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3RvGhFzc24vdHlw",
-            "ZS9xci5wcm90bxoec3NuL3R5cGUvdGV4dF9hbm5vdGF0aW9uLnByb3RvGhNz",
-            "c24vdHlwZS90aWVyLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0ZS5wcm90byLh",
-            "AQoYQ3JlYXRlVHJhbnNhY3Rpb25SZXF1ZXN0EjYKCGRvY3VtZW50GAEgASgL",
-            "Mhouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFIIZG9jdW1lbnQSEgoEdGFn",
-            "cxgCIAMoCVIEdGFncxIaCghmZWF0dXJlcxgDIAMoCVIIZmVhdHVyZXMSGwoJ",
-            "Y3VzdG9tX2lkGAQgASgJUghjdXN0b21JZBIiCgR0aWVyGAUgASgOMg4uc3Nu",
-            "LnR5cGUuVGllclIEdGllchIcCglxdWVzdGlvbnMYBiADKAlSCXF1ZXN0aW9u",
-            "cyJIChlDcmVhdGVUcmFuc2FjdGlvblJlc3BvbnNlEg4KAmlkGAEgASgJUgJp",
-            "ZBIbCgljdXN0b21faWQYAiABKAlSCGN1c3RvbUlkIq8BChxHZXRUcmFuc2Fj",
-            "dGlvblJlc3VsdHNSZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZBIbCgljdXN0b21f",
-            "aWQYAiABKAlSCGN1c3RvbUlkEkEKDm1pbl9jb25maWRlbmNlGAMgASgOMhou",
-            "c3NuLnR5cGUuQ29uZmlkZW5jZS5MZXZlbFINbWluQ29uZmlkZW5jZRIfCgtt",
-            "YXhfcmVzdWx0cxgEIAEoBVIKbWF4UmVzdWx0cyKwAQodR2V0VHJhbnNhY3Rp",
-            "b25SZXN1bHRzUmVzcG9uc2USDgoCaWQYASABKAlSAmlkEj0KC2Fubm90YXRp",
-            "b25zGAIgAygLMhsuc3NuLmFzeW5jdG9uLnYxLkFubm90YXRpb25SC2Fubm90",
-            "YXRpb25zEiMKDWVycm9yX21lc3NhZ2UYAyABKAlSDGVycm9yTWVzc2FnZRIb",
-            "CgljdXN0b21faWQYBCABKAlSCGN1c3RvbUlkIvUFCgpBbm5vdGF0aW9uEhgK",
-            "B2ZlYXR1cmUYASABKAlSB2ZlYXR1cmUSMwoKY2FuZGlkYXRlcxgCIAMoCzIT",
-            "LnNzbi50eXBlLkNhbmRpZGF0ZVIKY2FuZGlkYXRlcxJZChhwdXJjaGFzZV9s",
-            "aW5lX2NhbmRpZGF0ZXMYAyADKAsyHy5zc24udHlwZS5QdXJjaGFzZUxpbmVD",
-            "YW5kaWRhdGVSFnB1cmNoYXNlTGluZUNhbmRpZGF0ZXMSRgoRYW5zd2VyX2Nh",
-            "bmRpZGF0ZXMYBCADKAsyGS5zc24udHlwZS5BbnN3ZXJDYW5kaWRhdGVSEGFu",
-            "c3dlckNhbmRpZGF0ZXMSQQoPdGV4dF9hbm5vdGF0aW9uGAUgASgLMhguc3Nu",
-            "LnR5cGUuVGV4dEFubm90YXRpb25SDnRleHRBbm5vdGF0aW9uEjEKCnBhZ2Vf",
-            "dGV4dHMYBiADKAsyEi5zc24udHlwZS5QYWdlVGV4dFIJcGFnZVRleHRzEmIK",
-            "G3ZhdF9kaXN0cmlidXRpb25fY2FuZGlkYXRlcxgHIAMoCzIiLnNzbi50eXBl",
-            "LlZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZVIZdmF0RGlzdHJpYnV0aW9uQ2Fu",
-            "ZGlkYXRlcxIvCghxcl9jb2RlcxgIIAMoCzIULnNzbi50eXBlLlFyQ29kZURh",
-            "dGFSB3FyQ29kZXMSOwoOc3dpc3NfcXJfYmlsbHMYCSADKAsyFS5zc24udHlw",
-            "ZS5Td2lzc1FyQmlsbFIMc3dpc3NRckJpbGxzEkwKFnB1cmNoYXNlX2xpbmVz",
-            "X2RldGFpbHMYDCADKAsyFi5zc24udHlwZS5QdXJjaGFzZUxpbmVSFHB1cmNo",
-            "YXNlTGluZXNEZXRhaWxzElMKGHZhdF9kaXN0cmlidXRpb25fZGV0YWlscxgN",
-            "IAMoCzIZLnNzbi50eXBlLlZhdERpc3RyaWJ1dGlvblIWdmF0RGlzdHJpYnV0",
-            "aW9uRGV0YWlsc0oECAoQC0oECAsQDCJKChtHZXRUcmFuc2FjdGlvblN0YXR1",
-            "c1JlcXVlc3QSDgoCaWQYASABKAlSAmlkEhsKCWN1c3RvbV9pZBgCIAEoCVII",
-            "Y3VzdG9tSWQiiAEKHEdldFRyYW5zYWN0aW9uU3RhdHVzUmVzcG9uc2USDgoC",
-            "aWQYASABKAlSAmlkEhYKBnN0YXR1cxgCIAEoCVIGc3RhdHVzEiMKDWVycm9y",
-            "X21lc3NhZ2UYAyABKAlSDGVycm9yTWVzc2FnZRIbCgljdXN0b21faWQYBCAB",
-            "KAlSCGN1c3RvbUlkIkcKGERlbGV0ZVRyYW5zYWN0aW9uUmVxdWVzdBIOCgJp",
-            "ZBgBIAEoCVICaWQSGwoJY3VzdG9tX2lkGAIgASgJUghjdXN0b21JZCJXChBE",
-            "ZWxldGVUYWdSZXF1ZXN0EkMKCHRhZ19uYW1lGAEgASgJQij6QiVyIyiAAjIe",
-            "XltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgd0YWdOYW1lIo0BCh9V",
-            "cGRhdGVUcmFuc2FjdGlvblJlc3VsdHNSZXF1ZXN0Eg4KAmlkGAEgASgJUgJp",
-            "ZBIbCgljdXN0b21faWQYAiABKAlSCGN1c3RvbUlkEj0KC2Fubm90YXRpb25z",
-            "GAMgAygLMhsuc3NuLmFzeW5jdG9uLnYxLkFubm90YXRpb25SC2Fubm90YXRp",
-            "b25zIk8KIFVwZGF0ZVRyYW5zYWN0aW9uUmVzdWx0c1Jlc3BvbnNlEg4KAmlk",
-            "GAEgASgJUgJpZBIbCgljdXN0b21faWQYAiABKAlSCGN1c3RvbUlkMsoHChJU",
-            "cmFuc2FjdGlvblNlcnZpY2UShwEKEUNyZWF0ZVRyYW5zYWN0aW9uEikuc3Nu",
-            "LmFzeW5jdG9uLnYxLkNyZWF0ZVRyYW5zYWN0aW9uUmVxdWVzdBoqLnNzbi5h",
-            "c3luY3Rvbi52MS5DcmVhdGVUcmFuc2FjdGlvblJlc3BvbnNlIhuC0+STAhUi",
-            "EC92MS90cmFuc2FjdGlvbnM6ASoSuQEKFUdldFRyYW5zYWN0aW9uUmVzdWx0",
-            "cxItLnNzbi5hc3luY3Rvbi52MS5HZXRUcmFuc2FjdGlvblJlc3VsdHNSZXF1",
-            "ZXN0Gi4uc3NuLmFzeW5jdG9uLnYxLkdldFRyYW5zYWN0aW9uUmVzdWx0c1Jl",
-            "c3BvbnNlIkGC0+STAjsSHS92MS90cmFuc2FjdGlvbnMve2lkfS9yZXN1bHRz",
-            "WhoSGC92MS90cmFuc2FjdGlvbnMvcmVzdWx0cxK0AQoUR2V0VHJhbnNhY3Rp",
-            "b25TdGF0dXMSLC5zc24uYXN5bmN0b24udjEuR2V0VHJhbnNhY3Rpb25TdGF0",
-            "dXNSZXF1ZXN0Gi0uc3NuLmFzeW5jdG9uLnYxLkdldFRyYW5zYWN0aW9uU3Rh",
-            "dHVzUmVzcG9uc2UiP4LT5JMCORIcL3YxL3RyYW5zYWN0aW9ucy97aWR9L3N0",
-            "YXR1c1oZEhcvdjEvdHJhbnNhY3Rpb25zL3N0YXR1cxKJAQoRRGVsZXRlVHJh",
-            "bnNhY3Rpb24SKS5zc24uYXN5bmN0b24udjEuRGVsZXRlVHJhbnNhY3Rpb25S",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjGC0+STAisqFS92MS90",
-            "cmFuc2FjdGlvbnMve2lkfVoSKhAvdjEvdHJhbnNhY3Rpb25zEmMKCURlbGV0",
-            "ZVRhZxIhLnNzbi5hc3luY3Rvbi52MS5EZWxldGVUYWdSZXF1ZXN0GhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5IhuC0+STAhUqEy92MS90YWdzL3t0YWdfbmFt",
-            "ZX0SxQEKGFVwZGF0ZVRyYW5zYWN0aW9uUmVzdWx0cxIwLnNzbi5hc3luY3Rv",
-            "bi52MS5VcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNSZXF1ZXN0GjEuc3NuLmFz",
-            "eW5jdG9uLnYxLlVwZGF0ZVRyYW5zYWN0aW9uUmVzdWx0c1Jlc3BvbnNlIkSC",
-            "0+STAj4aHS92MS90cmFuc2FjdGlvbnMve2lkfS9yZXN1bHRzOgEqWhoaGC92",
-            "MS90cmFuc2FjdGlvbnMvcmVzdWx0c0KDAgoYYWkudmlzbWEuc3NuLmFzeW5j",
-            "dG9uLnYxQg1Bc3luY3RvblByb3RvUAFaP2dpdGh1Yi5jb20vZS1jb25vbWlj",
-            "L3ZtbGFwaXMvZ2VuL2dvL3Nzbi9hc3luY3Rvbi92MTt0cmFuc2FjdGlvbqIC",
-            "A1NBWKoCD1Nzbi5Bc3luY3Rvbi5WMcoCD1NzblxBc3luY3RvblxWMeICG1Nz",
-            "blxBc3luY3RvblxWMVxHUEJNZXRhZGF0YeoCEVNzbjo6QXN5bmN0b246OlYx",
-            "kkE4Eg8KCUFzeW5jIEFQSTICdjEqAQIyEGFwcGxpY2F0aW9uL2pzb246EGFw",
-            "cGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "YXRvci5wcm90bxoWc3NuL3R5cGUvYWRkcmVzcy5wcm90bxoYc3NuL3R5cGUv",
+            "Y2FuZGlkYXRlLnByb3RvGhFzc24vdHlwZS9xci5wcm90bxoec3NuL3R5cGUv",
+            "dGV4dF9hbm5vdGF0aW9uLnByb3RvGhNzc24vdHlwZS90aWVyLnByb3RvGhd2",
+            "YWxpZGF0ZS92YWxpZGF0ZS5wcm90byLhAQoYQ3JlYXRlVHJhbnNhY3Rpb25S",
+            "ZXF1ZXN0EjYKCGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5E",
+            "b2N1bWVudFIIZG9jdW1lbnQSEgoEdGFncxgCIAMoCVIEdGFncxIaCghmZWF0",
+            "dXJlcxgDIAMoCVIIZmVhdHVyZXMSGwoJY3VzdG9tX2lkGAQgASgJUghjdXN0",
+            "b21JZBIiCgR0aWVyGAUgASgOMg4uc3NuLnR5cGUuVGllclIEdGllchIcCglx",
+            "dWVzdGlvbnMYBiADKAlSCXF1ZXN0aW9ucyJIChlDcmVhdGVUcmFuc2FjdGlv",
+            "blJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBIbCgljdXN0b21faWQYAiABKAlS",
+            "CGN1c3RvbUlkIq8BChxHZXRUcmFuc2FjdGlvblJlc3VsdHNSZXF1ZXN0Eg4K",
+            "AmlkGAEgASgJUgJpZBIbCgljdXN0b21faWQYAiABKAlSCGN1c3RvbUlkEkEK",
+            "Dm1pbl9jb25maWRlbmNlGAMgASgOMhouc3NuLnR5cGUuQ29uZmlkZW5jZS5M",
+            "ZXZlbFINbWluQ29uZmlkZW5jZRIfCgttYXhfcmVzdWx0cxgEIAEoBVIKbWF4",
+            "UmVzdWx0cyKwAQodR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVzcG9uc2USDgoC",
+            "aWQYASABKAlSAmlkEj0KC2Fubm90YXRpb25zGAIgAygLMhsuc3NuLmFzeW5j",
+            "dG9uLnYxLkFubm90YXRpb25SC2Fubm90YXRpb25zEiMKDWVycm9yX21lc3Nh",
+            "Z2UYAyABKAlSDGVycm9yTWVzc2FnZRIbCgljdXN0b21faWQYBCABKAlSCGN1",
+            "c3RvbUlkIsEGCgpBbm5vdGF0aW9uEhgKB2ZlYXR1cmUYASABKAlSB2ZlYXR1",
+            "cmUSMwoKY2FuZGlkYXRlcxgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIK",
+            "Y2FuZGlkYXRlcxJZChhwdXJjaGFzZV9saW5lX2NhbmRpZGF0ZXMYAyADKAsy",
+            "Hy5zc24udHlwZS5QdXJjaGFzZUxpbmVDYW5kaWRhdGVSFnB1cmNoYXNlTGlu",
+            "ZUNhbmRpZGF0ZXMSRgoRYW5zd2VyX2NhbmRpZGF0ZXMYBCADKAsyGS5zc24u",
+            "dHlwZS5BbnN3ZXJDYW5kaWRhdGVSEGFuc3dlckNhbmRpZGF0ZXMSQQoPdGV4",
+            "dF9hbm5vdGF0aW9uGAUgASgLMhguc3NuLnR5cGUuVGV4dEFubm90YXRpb25S",
+            "DnRleHRBbm5vdGF0aW9uEjEKCnBhZ2VfdGV4dHMYBiADKAsyEi5zc24udHlw",
+            "ZS5QYWdlVGV4dFIJcGFnZVRleHRzEmIKG3ZhdF9kaXN0cmlidXRpb25fY2Fu",
+            "ZGlkYXRlcxgHIAMoCzIiLnNzbi50eXBlLlZhdERpc3RyaWJ1dGlvbkNhbmRp",
+            "ZGF0ZVIZdmF0RGlzdHJpYnV0aW9uQ2FuZGlkYXRlcxIvCghxcl9jb2RlcxgI",
+            "IAMoCzIULnNzbi50eXBlLlFyQ29kZURhdGFSB3FyQ29kZXMSOwoOc3dpc3Nf",
+            "cXJfYmlsbHMYCSADKAsyFS5zc24udHlwZS5Td2lzc1FyQmlsbFIMc3dpc3NR",
+            "ckJpbGxzEkwKFnB1cmNoYXNlX2xpbmVzX2RldGFpbHMYDCADKAsyFi5zc24u",
+            "dHlwZS5QdXJjaGFzZUxpbmVSFHB1cmNoYXNlTGluZXNEZXRhaWxzElMKGHZh",
+            "dF9kaXN0cmlidXRpb25fZGV0YWlscxgNIAMoCzIZLnNzbi50eXBlLlZhdERp",
+            "c3RyaWJ1dGlvblIWdmF0RGlzdHJpYnV0aW9uRGV0YWlscxJKChJzdHJ1Y3R1",
+            "cmVkX2FkZHJlc3MYDiADKAsyGy5zc24udHlwZS5TdHJ1Y3R1cmVkQWRkcmVz",
+            "c1IRc3RydWN0dXJlZEFkZHJlc3NKBAgKEAtKBAgLEAwiSgobR2V0VHJhbnNh",
+            "Y3Rpb25TdGF0dXNSZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZBIbCgljdXN0b21f",
+            "aWQYAiABKAlSCGN1c3RvbUlkIogBChxHZXRUcmFuc2FjdGlvblN0YXR1c1Jl",
+            "c3BvbnNlEg4KAmlkGAEgASgJUgJpZBIWCgZzdGF0dXMYAiABKAlSBnN0YXR1",
+            "cxIjCg1lcnJvcl9tZXNzYWdlGAMgASgJUgxlcnJvck1lc3NhZ2USGwoJY3Vz",
+            "dG9tX2lkGAQgASgJUghjdXN0b21JZCJHChhEZWxldGVUcmFuc2FjdGlvblJl",
+            "cXVlc3QSDgoCaWQYASABKAlSAmlkEhsKCWN1c3RvbV9pZBgCIAEoCVIIY3Vz",
+            "dG9tSWQiVwoQRGVsZXRlVGFnUmVxdWVzdBJDCgh0YWdfbmFtZRgBIAEoCUIo",
+            "+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJFIHdGFn",
+            "TmFtZSKNAQofVXBkYXRlVHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBIOCgJp",
+            "ZBgBIAEoCVICaWQSGwoJY3VzdG9tX2lkGAIgASgJUghjdXN0b21JZBI9Cgth",
+            "bm5vdGF0aW9ucxgDIAMoCzIbLnNzbi5hc3luY3Rvbi52MS5Bbm5vdGF0aW9u",
+            "Ugthbm5vdGF0aW9ucyJPCiBVcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNSZXNw",
+            "b25zZRIOCgJpZBgBIAEoCVICaWQSGwoJY3VzdG9tX2lkGAIgASgJUghjdXN0",
+            "b21JZDLKBwoSVHJhbnNhY3Rpb25TZXJ2aWNlEocBChFDcmVhdGVUcmFuc2Fj",
+            "dGlvbhIpLnNzbi5hc3luY3Rvbi52MS5DcmVhdGVUcmFuc2FjdGlvblJlcXVl",
+            "c3QaKi5zc24uYXN5bmN0b24udjEuQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25z",
+            "ZSIbgtPkkwIVIhAvdjEvdHJhbnNhY3Rpb25zOgEqErkBChVHZXRUcmFuc2Fj",
+            "dGlvblJlc3VsdHMSLS5zc24uYXN5bmN0b24udjEuR2V0VHJhbnNhY3Rpb25S",
+            "ZXN1bHRzUmVxdWVzdBouLnNzbi5hc3luY3Rvbi52MS5HZXRUcmFuc2FjdGlv",
+            "blJlc3VsdHNSZXNwb25zZSJBgtPkkwI7Eh0vdjEvdHJhbnNhY3Rpb25zL3tp",
+            "ZH0vcmVzdWx0c1oaEhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHMStAEKFEdl",
+            "dFRyYW5zYWN0aW9uU3RhdHVzEiwuc3NuLmFzeW5jdG9uLnYxLkdldFRyYW5z",
+            "YWN0aW9uU3RhdHVzUmVxdWVzdBotLnNzbi5hc3luY3Rvbi52MS5HZXRUcmFu",
+            "c2FjdGlvblN0YXR1c1Jlc3BvbnNlIj+C0+STAjkSHC92MS90cmFuc2FjdGlv",
+            "bnMve2lkfS9zdGF0dXNaGRIXL3YxL3RyYW5zYWN0aW9ucy9zdGF0dXMSiQEK",
+            "EURlbGV0ZVRyYW5zYWN0aW9uEikuc3NuLmFzeW5jdG9uLnYxLkRlbGV0ZVRy",
+            "YW5zYWN0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIxgtPk",
+            "kwIrKhUvdjEvdHJhbnNhY3Rpb25zL3tpZH1aEioQL3YxL3RyYW5zYWN0aW9u",
+            "cxJjCglEZWxldGVUYWcSIS5zc24uYXN5bmN0b24udjEuRGVsZXRlVGFnUmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIbgtPkkwIVKhMvdjEvdGFn",
+            "cy97dGFnX25hbWV9EsUBChhVcGRhdGVUcmFuc2FjdGlvblJlc3VsdHMSMC5z",
+            "c24uYXN5bmN0b24udjEuVXBkYXRlVHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVz",
+            "dBoxLnNzbi5hc3luY3Rvbi52MS5VcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNS",
+            "ZXNwb25zZSJEgtPkkwI+Gh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVzdWx0",
+            "czoBKloaGhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHNCgwIKGGFpLnZpc21h",
+            "LnNzbi5hc3luY3Rvbi52MUINQXN5bmN0b25Qcm90b1ABWj9naXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmN0b24vdjE7dHJh",
+            "bnNhY3Rpb26iAgNTQViqAg9Tc24uQXN5bmN0b24uVjHKAg9Tc25cQXN5bmN0",
+            "b25cVjHiAhtTc25cQXN5bmN0b25cVjFcR1BCTWV0YWRhdGHqAhFTc246OkFz",
+            "eW5jdG9uOjpWMZJBOBIPCglBc3luYyBBUEkyAnYxKgECMhBhcHBsaWNhdGlv",
+            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.CreateTransactionRequest), global::Ssn.Asyncton.V1.CreateTransactionRequest.Parser, new[]{ "Document", "Tags", "Features", "CustomId", "Tier", "Questions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.CreateTransactionResponse), global::Ssn.Asyncton.V1.CreateTransactionResponse.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.GetTransactionResultsRequest), global::Ssn.Asyncton.V1.GetTransactionResultsRequest.Parser, new[]{ "Id", "CustomId", "MinConfidence", "MaxResults" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.GetTransactionResultsResponse), global::Ssn.Asyncton.V1.GetTransactionResultsResponse.Parser, new[]{ "Id", "Annotations", "ErrorMessage", "CustomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.Annotation), global::Ssn.Asyncton.V1.Annotation.Parser, new[]{ "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", "PageTexts", "VatDistributionCandidates", "QrCodes", "SwissQrBills", "PurchaseLinesDetails", "VatDistributionDetails" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.Annotation), global::Ssn.Asyncton.V1.Annotation.Parser, new[]{ "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", "PageTexts", "VatDistributionCandidates", "QrCodes", "SwissQrBills", "PurchaseLinesDetails", "VatDistributionDetails", "StructuredAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.GetTransactionStatusRequest), global::Ssn.Asyncton.V1.GetTransactionStatusRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.GetTransactionStatusResponse), global::Ssn.Asyncton.V1.GetTransactionStatusResponse.Parser, new[]{ "Id", "Status", "ErrorMessage", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Asyncton.V1.DeleteTransactionRequest), global::Ssn.Asyncton.V1.DeleteTransactionRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
@@ -1404,6 +1406,7 @@ namespace Ssn.Asyncton.V1 {
       swissQrBills_ = other.swissQrBills_.Clone();
       purchaseLinesDetails_ = other.purchaseLinesDetails_.Clone();
       vatDistributionDetails_ = other.vatDistributionDetails_.Clone();
+      structuredAddress_ = other.structuredAddress_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1569,6 +1572,20 @@ namespace Ssn.Asyncton.V1 {
       get { return vatDistributionDetails_; }
     }
 
+    /// <summary>Field number for the "structured_address" field.</summary>
+    public const int StructuredAddressFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Ssn.Type.StructuredAddress> _repeated_structuredAddress_codec
+        = pb::FieldCodec.ForMessage(114, global::Ssn.Type.StructuredAddress.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.StructuredAddress> structuredAddress_ = new pbc::RepeatedField<global::Ssn.Type.StructuredAddress>();
+    /// <summary>
+    /// Structured address, parsed from the raw address using the geo service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.StructuredAddress> StructuredAddress {
+      get { return structuredAddress_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1595,6 +1612,7 @@ namespace Ssn.Asyncton.V1 {
       if(!swissQrBills_.Equals(other.swissQrBills_)) return false;
       if(!purchaseLinesDetails_.Equals(other.purchaseLinesDetails_)) return false;
       if(!vatDistributionDetails_.Equals(other.vatDistributionDetails_)) return false;
+      if(!structuredAddress_.Equals(other.structuredAddress_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1613,6 +1631,7 @@ namespace Ssn.Asyncton.V1 {
       hash ^= swissQrBills_.GetHashCode();
       hash ^= purchaseLinesDetails_.GetHashCode();
       hash ^= vatDistributionDetails_.GetHashCode();
+      hash ^= structuredAddress_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1648,6 +1667,7 @@ namespace Ssn.Asyncton.V1 {
       swissQrBills_.WriteTo(output, _repeated_swissQrBills_codec);
       purchaseLinesDetails_.WriteTo(output, _repeated_purchaseLinesDetails_codec);
       vatDistributionDetails_.WriteTo(output, _repeated_vatDistributionDetails_codec);
+      structuredAddress_.WriteTo(output, _repeated_structuredAddress_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1675,6 +1695,7 @@ namespace Ssn.Asyncton.V1 {
       swissQrBills_.WriteTo(ref output, _repeated_swissQrBills_codec);
       purchaseLinesDetails_.WriteTo(ref output, _repeated_purchaseLinesDetails_codec);
       vatDistributionDetails_.WriteTo(ref output, _repeated_vatDistributionDetails_codec);
+      structuredAddress_.WriteTo(ref output, _repeated_structuredAddress_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1700,6 +1721,7 @@ namespace Ssn.Asyncton.V1 {
       size += swissQrBills_.CalculateSize(_repeated_swissQrBills_codec);
       size += purchaseLinesDetails_.CalculateSize(_repeated_purchaseLinesDetails_codec);
       size += vatDistributionDetails_.CalculateSize(_repeated_vatDistributionDetails_codec);
+      size += structuredAddress_.CalculateSize(_repeated_structuredAddress_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1730,6 +1752,7 @@ namespace Ssn.Asyncton.V1 {
       swissQrBills_.Add(other.swissQrBills_);
       purchaseLinesDetails_.Add(other.purchaseLinesDetails_);
       vatDistributionDetails_.Add(other.vatDistributionDetails_);
+      structuredAddress_.Add(other.structuredAddress_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1796,6 +1819,10 @@ namespace Ssn.Asyncton.V1 {
             vatDistributionDetails_.AddEntriesFrom(input, _repeated_vatDistributionDetails_codec);
             break;
           }
+          case 114: {
+            structuredAddress_.AddEntriesFrom(input, _repeated_structuredAddress_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1860,6 +1887,10 @@ namespace Ssn.Asyncton.V1 {
           }
           case 106: {
             vatDistributionDetails_.AddEntriesFrom(ref input, _repeated_vatDistributionDetails_codec);
+            break;
+          }
+          case 114: {
+            structuredAddress_.AddEntriesFrom(ref input, _repeated_structuredAddress_codec);
             break;
           }
         }

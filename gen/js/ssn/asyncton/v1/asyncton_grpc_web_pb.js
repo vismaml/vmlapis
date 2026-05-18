@@ -28,6 +28,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
 
+var ssn_type_address_pb = require('../../../ssn/type/address_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js')

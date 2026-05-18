@@ -6,6 +6,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
+import "ssn/type/address.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/qr.proto";
 import "ssn/type/text_annotation.proto";
@@ -122,6 +123,8 @@ message Annotation {
   repeated ssn.type.PurchaseLine purchase_lines_details = 12;
   // VAT distribution for the document. This is a list where each field is a candidate.
   repeated ssn.type.VatDistribution vat_distribution_details = 13;
+  // Structured address, parsed from the raw address using the geo service.
+  repeated ssn.type.StructuredAddress structured_address = 14;
 }
 // --- get: "/v1/transactions/{id}/results" ---
 

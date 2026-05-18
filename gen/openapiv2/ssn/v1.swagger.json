@@ -739,6 +739,14 @@
             "$ref": "#/definitions/typeVatDistribution"
           },
           "description": "VAT distribution for the document. This is a list where each field is a candidate."
+        },
+        "structuredAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeStructuredAddress"
+          },
+          "description": "Structured address, parsed from the raw address using the geo service."
         }
       }
     },
