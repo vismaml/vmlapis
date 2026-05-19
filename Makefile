@@ -66,6 +66,7 @@ all:
 #	--as-file-descriptor-set ensures plain FileDescriptorSet format (not Buf Image)
 	buf build proto --as-file-descriptor-set -o gen/spanner_descriptor.bin \
 		--path proto/ssn/asyncton/v1/asyncton.proto \
+		--path proto/ssn/documentdataservice/v1/documentdataservice.proto \
 		--path proto/ssn/mlservice/v2/mlservice.proto \
 		--path proto/ssn/type/candidate.proto \
 		--path proto/ssn/type/text_annotation.proto \
