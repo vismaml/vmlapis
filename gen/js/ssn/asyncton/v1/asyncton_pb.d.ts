@@ -4,6 +4,7 @@ import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
+import * as ssn_type_address_pb from '../../../ssn/type/address_pb'; // proto import: "ssn/type/address.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
@@ -195,6 +196,11 @@ export class Annotation extends jspb.Message {
   clearVatDistributionDetailsList(): Annotation;
   addVatDistributionDetails(value?: ssn_type_candidate_pb.VatDistribution, index?: number): ssn_type_candidate_pb.VatDistribution;
 
+  getStructuredAddressList(): Array<ssn_type_address_pb.StructuredAddress>;
+  setStructuredAddressList(value: Array<ssn_type_address_pb.StructuredAddress>): Annotation;
+  clearStructuredAddressList(): Annotation;
+  addStructuredAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
   static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
@@ -216,6 +222,7 @@ export namespace Annotation {
     swissQrBillsList: Array<ssn_type_qr_pb.SwissQrBill.AsObject>,
     purchaseLinesDetailsList: Array<ssn_type_candidate_pb.PurchaseLine.AsObject>,
     vatDistributionDetailsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
+    structuredAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
   }
 }
 

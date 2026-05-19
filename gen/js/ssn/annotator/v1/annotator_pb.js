@@ -25,6 +25,8 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 goog.object.extend(proto, google_api_annotations_pb);
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
 goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
+var ssn_type_address_pb = require('../../../ssn/type/address_pb.js');
+goog.object.extend(proto, ssn_type_address_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_hotel_dates_pb = require('../../../ssn/type/hotel_dates_pb.js');
@@ -833,7 +835,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57,58,59];
 
 
 
@@ -969,7 +971,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     purchaseLinesDetailsList: jspb.Message.toObjectList(msg.getPurchaseLinesDetailsList(),
     ssn_type_candidate_pb.PurchaseLine.toObject, includeInstance),
     vatDistributionDetailsList: jspb.Message.toObjectList(msg.getVatDistributionDetailsList(),
-    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance)
+    ssn_type_candidate_pb.VatDistribution.toObject, includeInstance),
+    structuredSupplierAddressList: jspb.Message.toObjectList(msg.getStructuredSupplierAddressList(),
+    ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
+    structuredReceiverAddressList: jspb.Message.toObjectList(msg.getStructuredReceiverAddressList(),
+    ssn_type_address_pb.StructuredAddress.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1277,6 +1283,16 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.VatDistribution;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistribution.deserializeBinaryFromReader);
       msg.addVatDistributionDetails(value);
+      break;
+    case 58:
+      var value = new ssn_type_address_pb.StructuredAddress;
+      reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
+      msg.addStructuredSupplierAddress(value);
+      break;
+    case 59:
+      var value = new ssn_type_address_pb.StructuredAddress;
+      reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
+      msg.addStructuredReceiverAddress(value);
       break;
     default:
       reader.skipField();
@@ -1742,6 +1758,22 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       57,
       f,
       ssn_type_candidate_pb.VatDistribution.serializeBinaryToWriter
+    );
+  }
+  f = message.getStructuredSupplierAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      58,
+      f,
+      ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
+    );
+  }
+  f = message.getStructuredReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      59,
+      f,
+      ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
     );
   }
 };
@@ -3771,6 +3803,82 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionDet
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionDetailsList = function() {
   return this.setVatDistributionDetailsList([]);
+};
+
+
+/**
+ * repeated ssn.type.StructuredAddress structured_supplier_address = 58;
+ * @return {!Array<!proto.ssn.type.StructuredAddress>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getStructuredSupplierAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 58));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.StructuredAddress>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setStructuredSupplierAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 58, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.StructuredAddress=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.StructuredAddress}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addStructuredSupplierAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 58, opt_value, proto.ssn.type.StructuredAddress, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearStructuredSupplierAddressList = function() {
+  return this.setStructuredSupplierAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.StructuredAddress structured_receiver_address = 59;
+ * @return {!Array<!proto.ssn.type.StructuredAddress>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getStructuredReceiverAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.StructuredAddress>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_address_pb.StructuredAddress, 59));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.StructuredAddress>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setStructuredReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 59, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.StructuredAddress=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.StructuredAddress}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addStructuredReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 59, opt_value, proto.ssn.type.StructuredAddress, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearStructuredReceiverAddressList = function() {
+  return this.setStructuredReceiverAddressList([]);
 };
 
 

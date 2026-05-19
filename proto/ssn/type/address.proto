@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ssn.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
+
+message StructuredAddress {
+  string street = 1;
+  string postal_code = 2;
+  string city = 3;
+  string country = 4;
+  string country_code = 5; // ISO 3166-1 alpha-2
+}

@@ -739,6 +739,14 @@
             "$ref": "#/definitions/typeVatDistribution"
           },
           "description": "VAT distribution for the document. This is a list where each field is a candidate."
+        },
+        "structuredAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeStructuredAddress"
+          },
+          "description": "Structured address, parsed from the raw address using the geo service."
         }
       }
     },
@@ -1373,6 +1381,27 @@
       "properties": {
         "content": {
           "type": "string"
+        }
+      }
+    },
+    "typeStructuredAddress": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "countryCode": {
+          "type": "string",
+          "title": "ISO 3166-1 alpha-2"
         }
       }
     },
@@ -2260,6 +2289,22 @@
             "$ref": "#/definitions/typeVatDistribution"
           },
           "description": "VAT distribution for the document. This is a list where each field is a candidate."
+        },
+        "structuredSupplierAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeStructuredAddress"
+          },
+          "description": "Structured supplier address, returned when VERIFIED feature is requested\nand supplier address is available. Parsed from the raw supplier address\nusing the geo service. Each entry corresponds to the candidate at the\nsame index in supplier_address."
+        },
+        "structuredReceiverAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeStructuredAddress"
+          },
+          "description": "Structured receiver address, returned when VERIFIED feature is requested\nand receiver address is available. Parsed from the raw receiver address\nusing the geo service. Each entry corresponds to the candidate at the\nsame index in receiver_address."
         }
       }
     },

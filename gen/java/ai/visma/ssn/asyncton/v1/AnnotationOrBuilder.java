@@ -451,4 +451,48 @@ public interface AnnotationOrBuilder extends
    */
   ai.visma.ssn.type.VatDistributionOrBuilder getVatDistributionDetailsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Structured address, parsed from the raw address using the geo service.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.StructuredAddress> 
+      getStructuredAddressList();
+  /**
+   * <pre>
+   * Structured address, parsed from the raw address using the geo service.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
+   */
+  ai.visma.ssn.type.StructuredAddress getStructuredAddress(int index);
+  /**
+   * <pre>
+   * Structured address, parsed from the raw address using the geo service.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
+   */
+  int getStructuredAddressCount();
+  /**
+   * <pre>
+   * Structured address, parsed from the raw address using the geo service.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.StructuredAddressOrBuilder> 
+      getStructuredAddressOrBuilderList();
+  /**
+   * <pre>
+   * Structured address, parsed from the raw address using the geo service.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
+   */
+  ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredAddressOrBuilder(
+      int index);
 }
