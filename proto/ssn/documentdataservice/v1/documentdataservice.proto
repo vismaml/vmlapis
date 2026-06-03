@@ -5,6 +5,7 @@ package ssn.documentdataservice.v1;
 import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
+import "ssn/type/address.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/qr.proto";
 
@@ -21,6 +22,7 @@ enum CandidateSource {
   CANDIDATE_SOURCE_PREDICTION = 1;
   CANDIDATE_SOURCE_FEEDBACK = 2;
   CANDIDATE_SOURCE_LABEL = 3;
+  CANDIDATE_SOURCE_GEO = 4;
 }
 
 // ---- Core candidate wrapper ----
@@ -96,6 +98,18 @@ message AnswerData {
   repeated InternalAnswerCandidate answers = 1;
 }
 
+// InternalStructuredAddress wraps ssn.type.StructuredAddress with provenance.
+message InternalStructuredAddress {
+  ssn.type.StructuredAddress address   = 1;
+  CandidateSource            source    = 2;
+  string                     source_id = 3;
+}
+
+// AddressData holds address annotations for feature "ADDRESS".
+message AddressData {
+  repeated InternalStructuredAddress addresses = 1;
+}
+
 // ---- Unified field annotation ----
 
 // InternalFieldAnnotation groups all candidates for a single feature.
@@ -104,11 +118,12 @@ message InternalFieldAnnotation {
   string feature = 1;
 
   oneof data {
-    FieldData field_data = 2;
-    PurchaseLineData purchase_line_data = 3;
-    VatDistributionData vat_distribution_data = 4;
-    QrData qr_data = 5;
-    AnswerData answer_data = 6;
+    FieldData            field_data            = 2;
+    PurchaseLineData     purchase_line_data    = 3;
+    VatDistributionData  vat_distribution_data = 4;
+    QrData               qr_data              = 5;
+    AnswerData           answer_data          = 6;
+    AddressData          address_data         = 7;
   }
 }
 
