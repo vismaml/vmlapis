@@ -33,6 +33,10 @@ public enum CandidateSource
    * <code>CANDIDATE_SOURCE_LABEL = 3;</code>
    */
   CANDIDATE_SOURCE_LABEL(3),
+  /**
+   * <code>CANDIDATE_SOURCE_GEO = 4;</code>
+   */
+  CANDIDATE_SOURCE_GEO(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -61,6 +65,10 @@ public enum CandidateSource
    * <code>CANDIDATE_SOURCE_LABEL = 3;</code>
    */
   public static final int CANDIDATE_SOURCE_LABEL_VALUE = 3;
+  /**
+   * <code>CANDIDATE_SOURCE_GEO = 4;</code>
+   */
+  public static final int CANDIDATE_SOURCE_GEO_VALUE = 4;
 
 
   public final int getNumber() {
@@ -91,6 +99,7 @@ public enum CandidateSource
       case 1: return CANDIDATE_SOURCE_PREDICTION;
       case 2: return CANDIDATE_SOURCE_FEEDBACK;
       case 3: return CANDIDATE_SOURCE_LABEL;
+      case 4: return CANDIDATE_SOURCE_GEO;
       default: return null;
     }
   }

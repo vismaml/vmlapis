@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
     VAT_DISTRIBUTION_DATA(4),
     QR_DATA(5),
     ANSWER_DATA(6),
+    ADDRESS_DATA(7),
     DATA_NOT_SET(0);
     private final int value;
     private DataCase(int value) {
@@ -80,6 +81,7 @@ private static final long serialVersionUID = 0L;
         case 4: return VAT_DISTRIBUTION_DATA;
         case 5: return QR_DATA;
         case 6: return ANSWER_DATA;
+        case 7: return ADDRESS_DATA;
         case 0: return DATA_NOT_SET;
         default: return null;
       }
@@ -297,6 +299,37 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
   }
 
+  public static final int ADDRESS_DATA_FIELD_NUMBER = 7;
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   * @return Whether the addressData field is set.
+   */
+  @java.lang.Override
+  public boolean hasAddressData() {
+    return dataCase_ == 7;
+  }
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   * @return The addressData.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.documentdataservice.v1.AddressData getAddressData() {
+    if (dataCase_ == 7) {
+       return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
+    }
+    return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+  }
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder() {
+    if (dataCase_ == 7) {
+       return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
+    }
+    return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -329,6 +362,9 @@ private static final long serialVersionUID = 0L;
     if (dataCase_ == 6) {
       output.writeMessage(6, (ai.visma.ssn.documentdataservice.v1.AnswerData) data_);
     }
+    if (dataCase_ == 7) {
+      output.writeMessage(7, (ai.visma.ssn.documentdataservice.v1.AddressData) data_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -360,6 +396,10 @@ private static final long serialVersionUID = 0L;
     if (dataCase_ == 6) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, (ai.visma.ssn.documentdataservice.v1.AnswerData) data_);
+    }
+    if (dataCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (ai.visma.ssn.documentdataservice.v1.AddressData) data_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -400,6 +440,10 @@ private static final long serialVersionUID = 0L;
         if (!getAnswerData()
             .equals(other.getAnswerData())) return false;
         break;
+      case 7:
+        if (!getAddressData()
+            .equals(other.getAddressData())) return false;
+        break;
       case 0:
       default:
     }
@@ -436,6 +480,10 @@ private static final long serialVersionUID = 0L;
       case 6:
         hash = (37 * hash) + ANSWER_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getAnswerData().hashCode();
+        break;
+      case 7:
+        hash = (37 * hash) + ADDRESS_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAddressData().hashCode();
         break;
       case 0:
       default:
@@ -591,6 +639,9 @@ private static final long serialVersionUID = 0L;
       if (answerDataBuilder_ != null) {
         answerDataBuilder_.clear();
       }
+      if (addressDataBuilder_ != null) {
+        addressDataBuilder_.clear();
+      }
       dataCase_ = 0;
       data_ = null;
       return this;
@@ -655,6 +706,10 @@ private static final long serialVersionUID = 0L;
           answerDataBuilder_ != null) {
         result.data_ = answerDataBuilder_.build();
       }
+      if (dataCase_ == 7 &&
+          addressDataBuilder_ != null) {
+        result.data_ = addressDataBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -693,6 +748,10 @@ private static final long serialVersionUID = 0L;
         }
         case ANSWER_DATA: {
           mergeAnswerData(other.getAnswerData());
+          break;
+        }
+        case ADDRESS_DATA: {
+          mergeAddressData(other.getAddressData());
           break;
         }
         case DATA_NOT_SET: {
@@ -765,6 +824,13 @@ private static final long serialVersionUID = 0L;
               dataCase_ = 6;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getAddressDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dataCase_ = 7;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1597,6 +1663,148 @@ private static final long serialVersionUID = 0L;
       dataCase_ = 6;
       onChanged();
       return answerDataBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder> addressDataBuilder_;
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     * @return Whether the addressData field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddressData() {
+      return dataCase_ == 7;
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     * @return The addressData.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.documentdataservice.v1.AddressData getAddressData() {
+      if (addressDataBuilder_ == null) {
+        if (dataCase_ == 7) {
+          return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
+        }
+        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+      } else {
+        if (dataCase_ == 7) {
+          return addressDataBuilder_.getMessage();
+        }
+        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    public Builder setAddressData(ai.visma.ssn.documentdataservice.v1.AddressData value) {
+      if (addressDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        data_ = value;
+        onChanged();
+      } else {
+        addressDataBuilder_.setMessage(value);
+      }
+      dataCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    public Builder setAddressData(
+        ai.visma.ssn.documentdataservice.v1.AddressData.Builder builderForValue) {
+      if (addressDataBuilder_ == null) {
+        data_ = builderForValue.build();
+        onChanged();
+      } else {
+        addressDataBuilder_.setMessage(builderForValue.build());
+      }
+      dataCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    public Builder mergeAddressData(ai.visma.ssn.documentdataservice.v1.AddressData value) {
+      if (addressDataBuilder_ == null) {
+        if (dataCase_ == 7 &&
+            data_ != ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance()) {
+          data_ = ai.visma.ssn.documentdataservice.v1.AddressData.newBuilder((ai.visma.ssn.documentdataservice.v1.AddressData) data_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          data_ = value;
+        }
+        onChanged();
+      } else {
+        if (dataCase_ == 7) {
+          addressDataBuilder_.mergeFrom(value);
+        } else {
+          addressDataBuilder_.setMessage(value);
+        }
+      }
+      dataCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    public Builder clearAddressData() {
+      if (addressDataBuilder_ == null) {
+        if (dataCase_ == 7) {
+          dataCase_ = 0;
+          data_ = null;
+          onChanged();
+        }
+      } else {
+        if (dataCase_ == 7) {
+          dataCase_ = 0;
+          data_ = null;
+        }
+        addressDataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.AddressData.Builder getAddressDataBuilder() {
+      return getAddressDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder() {
+      if ((dataCase_ == 7) && (addressDataBuilder_ != null)) {
+        return addressDataBuilder_.getMessageOrBuilder();
+      } else {
+        if (dataCase_ == 7) {
+          return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
+        }
+        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder> 
+        getAddressDataFieldBuilder() {
+      if (addressDataBuilder_ == null) {
+        if (!(dataCase_ == 7)) {
+          data_ = ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+        }
+        addressDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder>(
+                (ai.visma.ssn.documentdataservice.v1.AddressData) data_,
+                getParentForChildren(),
+                isClean());
+        data_ = null;
+      }
+      dataCase_ = 7;
+      onChanged();
+      return addressDataBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.InternalFieldAnnotation)

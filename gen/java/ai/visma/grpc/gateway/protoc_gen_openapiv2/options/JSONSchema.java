@@ -1599,6 +1599,12 @@ private static final long serialVersionUID = 0L;
     return internalGetExtensions().getMap().size();
   }
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -1616,6 +1622,12 @@ private static final long serialVersionUID = 0L;
     return getExtensionsMap();
   }
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -1623,6 +1635,12 @@ private static final long serialVersionUID = 0L;
     return internalGetExtensions().getMap();
   }
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -1637,6 +1655,12 @@ com.google.protobuf.Value defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -4542,6 +4566,12 @@ com.google.protobuf.Value defaultValue) {
       return internalGetExtensions().ensureBuilderMap().size();
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4559,6 +4589,12 @@ com.google.protobuf.Value defaultValue) {
       return getExtensionsMap();
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4566,6 +4602,12 @@ com.google.protobuf.Value defaultValue) {
       return internalGetExtensions().getImmutableMap();
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4579,6 +4621,12 @@ com.google.protobuf.Value defaultValue) {
       return map.containsKey(key) ? extensionsConverter.build(map.get(key)) : defaultValue;
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4597,6 +4645,12 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     public Builder removeExtensions(
@@ -4616,6 +4670,12 @@ com.google.protobuf.Value defaultValue) {
       return internalGetMutableExtensions().ensureMessageMap();
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     public Builder putExtensions(
@@ -4629,6 +4689,12 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     public Builder putAllExtensions(
@@ -4644,6 +4710,12 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Custom properties that start with "x-" such as "x-foo" used to describe
+     * extra functionality that is not covered by the standard OpenAPI Specification.
+     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+     * </pre>
+     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 48 [json_name = "extensions"];</code>
      */
     public com.google.protobuf.Value.Builder putExtensionsBuilderIfAbsent(

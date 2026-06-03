@@ -429,6 +429,55 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue);
 
   /**
    * <pre>
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   * </pre>
+   *
+   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
+   */
+  java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> 
+      getTagsList();
+  /**
+   * <pre>
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   * </pre>
+   *
+   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
+   */
+  ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag getTags(int index);
+  /**
+   * <pre>
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   * </pre>
+   *
+   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
+   */
+  int getTagsCount();
+  /**
+   * <pre>
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   * </pre>
+   *
+   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
+   */
+  java.util.List<? extends ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder> 
+      getTagsOrBuilderList();
+  /**
+   * <pre>
+   * A list of tags for API documentation control. Tags can be used for logical
+   * grouping of operations by resources or any other qualifier.
+   * </pre>
+   *
+   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
+   */
+  ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder getTagsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Additional external documentation.
    * </pre>
    *
@@ -455,10 +504,22 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue);
   ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentationOrBuilder getExternalDocsOrBuilder();
 
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   int getExtensionsCount();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   boolean containsExtensions(
@@ -470,11 +531,23 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue);
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensions();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensionsMap();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   /* nullable */
@@ -483,6 +556,12 @@ com.google.protobuf.Value getExtensionsOrDefault(
       /* nullable */
 com.google.protobuf.Value defaultValue);
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   com.google.protobuf.Value getExtensionsOrThrow(

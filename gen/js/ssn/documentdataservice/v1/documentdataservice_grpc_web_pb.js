@@ -26,6 +26,8 @@ var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/time
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 
+var ssn_type_address_pb = require('../../../ssn/type/address_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_qr_pb = require('../../../ssn/type/qr_pb.js')

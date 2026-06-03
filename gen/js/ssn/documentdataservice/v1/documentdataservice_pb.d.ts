@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
+import * as ssn_type_address_pb from '../../../ssn/type/address_pb'; // proto import: "ssn/type/address.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 
@@ -261,6 +262,54 @@ export namespace AnswerData {
   }
 }
 
+export class InternalStructuredAddress extends jspb.Message {
+  getAddress(): ssn_type_address_pb.StructuredAddress | undefined;
+  setAddress(value?: ssn_type_address_pb.StructuredAddress): InternalStructuredAddress;
+  hasAddress(): boolean;
+  clearAddress(): InternalStructuredAddress;
+
+  getSource(): CandidateSource;
+  setSource(value: CandidateSource): InternalStructuredAddress;
+
+  getSourceId(): string;
+  setSourceId(value: string): InternalStructuredAddress;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): InternalStructuredAddress.AsObject;
+  static toObject(includeInstance: boolean, msg: InternalStructuredAddress): InternalStructuredAddress.AsObject;
+  static serializeBinaryToWriter(message: InternalStructuredAddress, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InternalStructuredAddress;
+  static deserializeBinaryFromReader(message: InternalStructuredAddress, reader: jspb.BinaryReader): InternalStructuredAddress;
+}
+
+export namespace InternalStructuredAddress {
+  export type AsObject = {
+    address?: ssn_type_address_pb.StructuredAddress.AsObject,
+    source: CandidateSource,
+    sourceId: string,
+  }
+}
+
+export class AddressData extends jspb.Message {
+  getAddressesList(): Array<InternalStructuredAddress>;
+  setAddressesList(value: Array<InternalStructuredAddress>): AddressData;
+  clearAddressesList(): AddressData;
+  addAddresses(value?: InternalStructuredAddress, index?: number): InternalStructuredAddress;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AddressData.AsObject;
+  static toObject(includeInstance: boolean, msg: AddressData): AddressData.AsObject;
+  static serializeBinaryToWriter(message: AddressData, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AddressData;
+  static deserializeBinaryFromReader(message: AddressData, reader: jspb.BinaryReader): AddressData;
+}
+
+export namespace AddressData {
+  export type AsObject = {
+    addressesList: Array<InternalStructuredAddress.AsObject>,
+  }
+}
+
 export class InternalFieldAnnotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): InternalFieldAnnotation;
@@ -290,6 +339,11 @@ export class InternalFieldAnnotation extends jspb.Message {
   hasAnswerData(): boolean;
   clearAnswerData(): InternalFieldAnnotation;
 
+  getAddressData(): AddressData | undefined;
+  setAddressData(value?: AddressData): InternalFieldAnnotation;
+  hasAddressData(): boolean;
+  clearAddressData(): InternalFieldAnnotation;
+
   getDataCase(): InternalFieldAnnotation.DataCase;
 
   serializeBinary(): Uint8Array;
@@ -308,6 +362,7 @@ export namespace InternalFieldAnnotation {
     vatDistributionData?: VatDistributionData.AsObject,
     qrData?: QrData.AsObject,
     answerData?: AnswerData.AsObject,
+    addressData?: AddressData.AsObject,
   }
 
   export enum DataCase { 
@@ -317,6 +372,7 @@ export namespace InternalFieldAnnotation {
     VAT_DISTRIBUTION_DATA = 4,
     QR_DATA = 5,
     ANSWER_DATA = 6,
+    ADDRESS_DATA = 7,
   }
 }
 
@@ -553,4 +609,5 @@ export enum CandidateSource {
   CANDIDATE_SOURCE_PREDICTION = 1,
   CANDIDATE_SOURCE_FEEDBACK = 2,
   CANDIDATE_SOURCE_LABEL = 3,
+  CANDIDATE_SOURCE_GEO = 4,
 }

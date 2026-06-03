@@ -24,14 +24,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16ssn/type/address.proto\x12\x08ssn.type\"\x9d\x01\n\x11StructuredAddress\x12\x16\n\x06street\x18\x01 \x01(\tR\x06street\x12\x1f\n\x0bpostal_code\x18\x02 \x01(\tR\npostalCode\x12\x12\n\x04\x63ity\x18\x03 \x01(\tR\x04\x63ity\x12\x18\n\x07\x63ountry\x18\x04 \x01(\tR\x07\x63ountry\x12!\n\x0c\x63ountry_code\x18\x05 \x01(\tR\x0b\x63ountryCodeB6Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16ssn/type/address.proto\x12\x08ssn.type\"\x9d\x01\n\x11StructuredAddress\x12\x16\n\x06street\x18\x01 \x01(\tR\x06street\x12\x1f\n\x0bpostal_code\x18\x02 \x01(\tR\npostalCode\x12\x12\n\x04\x63ity\x18\x03 \x01(\tR\x04\x63ity\x12\x18\n\x07\x63ountry\x18\x04 \x01(\tR\x07\x63ountry\x12!\n\x0c\x63ountry_code\x18\x05 \x01(\tR\x0b\x63ountryCodeB\x98\x01\n\x11\x61i.visma.ssn.typeB\x0c\x41\x64\x64ressProtoP\x01Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype\xa2\x02\x03STX\xaa\x02\x08Ssn.Type\xca\x02\x08Ssn\\Type\xe2\x02\x14Ssn\\Type\\GPBMetadata\xea\x02\tSsn::Typeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ssn.type.address_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype'
+  _globals['DESCRIPTOR']._serialized_options = b'\n\021ai.visma.ssn.typeB\014AddressProtoP\001Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Type'
   _globals['_STRUCTUREDADDRESS']._serialized_start=37
   _globals['_STRUCTUREDADDRESS']._serialized_end=194
 # @@protoc_insertion_point(module_scope)

@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vml_proto.ssn.documentdataservice.v1 import documentdataservice_pb2 as ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2
+from ssn.documentdataservice.v1 import documentdataservice_pb2 as ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2
 
 
 class DocumentDataServiceStub(object):

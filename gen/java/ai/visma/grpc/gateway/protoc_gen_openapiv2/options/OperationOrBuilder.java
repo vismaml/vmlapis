@@ -443,10 +443,22 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue);
       int index);
 
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   int getExtensionsCount();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   boolean containsExtensions(
@@ -458,11 +470,23 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue);
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensions();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensionsMap();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   /* nullable */
@@ -471,8 +495,47 @@ com.google.protobuf.Value getExtensionsOrDefault(
       /* nullable */
 com.google.protobuf.Value defaultValue);
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   com.google.protobuf.Value getExtensionsOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * Custom parameters such as HTTP request headers.
+   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
+   * and https://swagger.io/specification/v2/#parameter-object.
+   * </pre>
+   *
+   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
+   * @return Whether the parameters field is set.
+   */
+  boolean hasParameters();
+  /**
+   * <pre>
+   * Custom parameters such as HTTP request headers.
+   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
+   * and https://swagger.io/specification/v2/#parameter-object.
+   * </pre>
+   *
+   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
+   * @return The parameters.
+   */
+  ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters getParameters();
+  /**
+   * <pre>
+   * Custom parameters such as HTTP request headers.
+   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
+   * and https://swagger.io/specification/v2/#parameter-object.
+   * </pre>
+   *
+   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
+   */
+  ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder getParametersOrBuilder();
 }

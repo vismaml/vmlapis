@@ -197,10 +197,22 @@ public interface SecuritySchemeOrBuilder extends
   ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ScopesOrBuilder getScopesOrBuilder();
 
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
    */
   int getExtensionsCount();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
    */
   boolean containsExtensions(
@@ -212,11 +224,23 @@ public interface SecuritySchemeOrBuilder extends
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensions();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
    */
   java.util.Map<java.lang.String, com.google.protobuf.Value>
   getExtensionsMap();
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
    */
   /* nullable */
@@ -225,6 +249,12 @@ com.google.protobuf.Value getExtensionsOrDefault(
       /* nullable */
 com.google.protobuf.Value defaultValue);
   /**
+   * <pre>
+   * Custom properties that start with "x-" such as "x-foo" used to describe
+   * extra functionality that is not covered by the standard OpenAPI Specification.
+   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
+   * </pre>
+   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 9 [json_name = "extensions"];</code>
    */
   com.google.protobuf.Value getExtensionsOrThrow(

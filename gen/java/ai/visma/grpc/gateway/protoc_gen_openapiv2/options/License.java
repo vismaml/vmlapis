@@ -18,7 +18,7 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * ...
  * license: {
  * name: "BSD 3-Clause License";
- * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
+ * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/LICENSE.txt";
  * };
  * ...
  * };
@@ -337,7 +337,7 @@ private static final long serialVersionUID = 0L;
    * ...
    * license: {
    * name: "BSD 3-Clause License";
-   * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
+   * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/LICENSE.txt";
    * };
    * ...
    * };
