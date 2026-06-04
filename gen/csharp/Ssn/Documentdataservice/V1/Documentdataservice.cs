@@ -27,107 +27,115 @@ namespace Ssn.Documentdataservice.V1 {
             "CjRzc24vZG9jdW1lbnRkYXRhc2VydmljZS92MS9kb2N1bWVudGRhdGFzZXJ2",
             "aWNlLnByb3RvEhpzc24uZG9jdW1lbnRkYXRhc2VydmljZS52MRocZ29vZ2xl",
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhhz",
-            "c24vdHlwZS9jYW5kaWRhdGUucHJvdG8aEXNzbi90eXBlL3FyLnByb3RvIqgB",
-            "ChFJbnRlcm5hbENhbmRpZGF0ZRIxCgljYW5kaWRhdGUYASABKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSCWNhbmRpZGF0ZRJDCgZzb3VyY2UYAiABKA4yKy5z",
-            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNv",
-            "dXJjZRIbCglzb3VyY2VfaWQYAyABKAlSCHNvdXJjZUlkIloKCUZpZWxkRGF0",
-            "YRJNCgpjYW5kaWRhdGVzGAEgAygLMi0uc3NuLmRvY3VtZW50ZGF0YXNlcnZp",
-            "Y2UudjEuSW50ZXJuYWxDYW5kaWRhdGVSCmNhbmRpZGF0ZXMipAEKFEludGVy",
-            "bmFsUHVyY2hhc2VMaW5lEioKBGxpbmUYASABKAsyFi5zc24udHlwZS5QdXJj",
-            "aGFzZUxpbmVSBGxpbmUSQwoGc291cmNlGAIgASgOMisuc3NuLmRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UudjEuQ2FuZGlkYXRlU291cmNlUgZzb3VyY2USGwoJc291",
-            "cmNlX2lkGAMgASgJUghzb3VyY2VJZCJaChBQdXJjaGFzZUxpbmVEYXRhEkYK",
-            "BWxpbmVzGAEgAygLMjAuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuSW50",
-            "ZXJuYWxQdXJjaGFzZUxpbmVSBWxpbmVzIroBChdJbnRlcm5hbFZhdERpc3Ry",
-            "aWJ1dGlvbhI9CgxkaXN0cmlidXRpb24YASABKAsyGS5zc24udHlwZS5WYXRE",
-            "aXN0cmlidXRpb25SDGRpc3RyaWJ1dGlvbhJDCgZzb3VyY2UYAiABKA4yKy5z",
-            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNv",
-            "dXJjZRIbCglzb3VyY2VfaWQYAyABKAlSCHNvdXJjZUlkInAKE1ZhdERpc3Ry",
-            "aWJ1dGlvbkRhdGESWQoNZGlzdHJpYnV0aW9ucxgBIAMoCzIzLnNzbi5kb2N1",
-            "bWVudGRhdGFzZXJ2aWNlLnYxLkludGVybmFsVmF0RGlzdHJpYnV0aW9uUg1k",
-            "aXN0cmlidXRpb25zIvQBCg5JbnRlcm5hbFFyQ29kZRI4Cgxxcl9jb2RlX2Rh",
-            "dGEYASABKAsyFC5zc24udHlwZS5RckNvZGVEYXRhSABSCnFyQ29kZURhdGES",
-            "OwoNc3dpc3NfcXJfYmlsbBgCIAEoCzIVLnNzbi50eXBlLlN3aXNzUXJCaWxs",
-            "SABSC3N3aXNzUXJCaWxsEkMKBnNvdXJjZRgDIAEoDjIrLnNzbi5kb2N1bWVu",
-            "dGRhdGFzZXJ2aWNlLnYxLkNhbmRpZGF0ZVNvdXJjZVIGc291cmNlEhsKCXNv",
-            "dXJjZV9pZBgEIAEoCVIIc291cmNlSWRCCQoHcXJfdHlwZSJPCgZRckRhdGES",
-            "RQoIcXJfY29kZXMYASADKAsyKi5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52",
-            "MS5JbnRlcm5hbFFyQ29kZVIHcXJDb2RlcyKuAQoXSW50ZXJuYWxBbnN3ZXJD",
-            "YW5kaWRhdGUSMQoGYW5zd2VyGAEgASgLMhkuc3NuLnR5cGUuQW5zd2VyQ2Fu",
-            "ZGlkYXRlUgZhbnN3ZXISQwoGc291cmNlGAIgASgOMisuc3NuLmRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UudjEuQ2FuZGlkYXRlU291cmNlUgZzb3VyY2USGwoJc291",
-            "cmNlX2lkGAMgASgJUghzb3VyY2VJZCJbCgpBbnN3ZXJEYXRhEk0KB2Fuc3dl",
-            "cnMYASADKAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5h",
-            "bEFuc3dlckNhbmRpZGF0ZVIHYW5zd2VycyLSAwoXSW50ZXJuYWxGaWVsZEFu",
-            "bm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRJGCgpmaWVsZF9k",
-            "YXRhGAIgASgLMiUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRmllbGRE",
-            "YXRhSABSCWZpZWxkRGF0YRJcChJwdXJjaGFzZV9saW5lX2RhdGEYAyABKAsy",
-            "LC5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5QdXJjaGFzZUxpbmVEYXRh",
-            "SABSEHB1cmNoYXNlTGluZURhdGESZQoVdmF0X2Rpc3RyaWJ1dGlvbl9kYXRh",
-            "GAQgASgLMi8uc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuVmF0RGlzdHJp",
-            "YnV0aW9uRGF0YUgAUhN2YXREaXN0cmlidXRpb25EYXRhEj0KB3FyX2RhdGEY",
-            "BSABKAsyIi5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5RckRhdGFIAFIG",
-            "cXJEYXRhEkkKC2Fuc3dlcl9kYXRhGAYgASgLMiYuc3NuLmRvY3VtZW50ZGF0",
-            "YXNlcnZpY2UudjEuQW5zd2VyRGF0YUgAUgphbnN3ZXJEYXRhQgYKBGRhdGEi",
-            "/AEKFkdldERvY3VtZW50RGF0YVJlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASAB",
-            "KAlSCmZlZWRiYWNrSWQSGgoIY29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEi8K",
-            "E2luY2x1ZGVfcHJlZGljdGlvbnMYAyABKAhSEmluY2x1ZGVQcmVkaWN0aW9u",
-            "cxIrChFpbmNsdWRlX2ZlZWRiYWNrcxgEIAEoCFIQaW5jbHVkZUZlZWRiYWNr",
-            "cxIlCg5pbmNsdWRlX2xhYmVscxgFIAEoCFINaW5jbHVkZUxhYmVscxIgCgtl",
-            "bnZpcm9ubWVudBgGIAEoCVILZW52aXJvbm1lbnQi5gMKF0dldERvY3VtZW50",
-            "RGF0YVJlc3BvbnNlEh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lk",
-            "EhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchIZCghmaWxlX3VybBgDIAEo",
-            "CVIHZmlsZVVybBIfCgtyZW5kZXJfdXJscxgEIAMoCVIKcmVuZGVyVXJscxJM",
-            "ChN0ZXh0X2Fubm90YXRpb25fdXJsGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cmluZ1ZhbHVlUhF0ZXh0QW5ub3RhdGlvblVybBJLCgZmaWVsZHMYBiAD",
-            "KAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxk",
-            "QW5ub3RhdGlvblIGZmllbGRzEjkKCmV4cGlyZXNfYXQYByABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQSLQoScmVxdWVzdGVk",
-            "X2ZlYXR1cmVzGAggAygJUhFyZXF1ZXN0ZWRGZWF0dXJlcxI5Cgp1cGRhdGVk",
-            "X2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJdXBkYXRl",
-            "ZEF0EhIKBHRhZ3MYCiADKAlSBHRhZ3MihQMKF1NldERvY3VtZW50QmxvYnNS",
+            "dGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhZz",
+            "c24vdHlwZS9hZGRyZXNzLnByb3RvGhhzc24vdHlwZS9jYW5kaWRhdGUucHJv",
+            "dG8aEXNzbi90eXBlL3FyLnByb3RvIqgBChFJbnRlcm5hbENhbmRpZGF0ZRIx",
+            "CgljYW5kaWRhdGUYASABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCWNhbmRp",
+            "ZGF0ZRJDCgZzb3VyY2UYAiABKA4yKy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
+            "ZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNvdXJjZRIbCglzb3VyY2VfaWQYAyAB",
+            "KAlSCHNvdXJjZUlkIloKCUZpZWxkRGF0YRJNCgpjYW5kaWRhdGVzGAEgAygL",
+            "Mi0uc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxDYW5kaWRh",
+            "dGVSCmNhbmRpZGF0ZXMipAEKFEludGVybmFsUHVyY2hhc2VMaW5lEioKBGxp",
+            "bmUYASABKAsyFi5zc24udHlwZS5QdXJjaGFzZUxpbmVSBGxpbmUSQwoGc291",
+            "cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuQ2FuZGlk",
+            "YXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghzb3VyY2VJ",
+            "ZCJaChBQdXJjaGFzZUxpbmVEYXRhEkYKBWxpbmVzGAEgAygLMjAuc3NuLmRv",
+            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxQdXJjaGFzZUxpbmVSBWxp",
+            "bmVzIroBChdJbnRlcm5hbFZhdERpc3RyaWJ1dGlvbhI9CgxkaXN0cmlidXRp",
+            "b24YASABKAsyGS5zc24udHlwZS5WYXREaXN0cmlidXRpb25SDGRpc3RyaWJ1",
+            "dGlvbhJDCgZzb3VyY2UYAiABKA4yKy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
+            "ZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNvdXJjZRIbCglzb3VyY2VfaWQYAyAB",
+            "KAlSCHNvdXJjZUlkInAKE1ZhdERpc3RyaWJ1dGlvbkRhdGESWQoNZGlzdHJp",
+            "YnV0aW9ucxgBIAMoCzIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLklu",
+            "dGVybmFsVmF0RGlzdHJpYnV0aW9uUg1kaXN0cmlidXRpb25zIvQBCg5JbnRl",
+            "cm5hbFFyQ29kZRI4Cgxxcl9jb2RlX2RhdGEYASABKAsyFC5zc24udHlwZS5R",
+            "ckNvZGVEYXRhSABSCnFyQ29kZURhdGESOwoNc3dpc3NfcXJfYmlsbBgCIAEo",
+            "CzIVLnNzbi50eXBlLlN3aXNzUXJCaWxsSABSC3N3aXNzUXJCaWxsEkMKBnNv",
+            "dXJjZRgDIAEoDjIrLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkNhbmRp",
+            "ZGF0ZVNvdXJjZVIGc291cmNlEhsKCXNvdXJjZV9pZBgEIAEoCVIIc291cmNl",
+            "SWRCCQoHcXJfdHlwZSJPCgZRckRhdGESRQoIcXJfY29kZXMYASADKAsyKi5z",
+            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbFFyQ29kZVIHcXJD",
+            "b2RlcyKuAQoXSW50ZXJuYWxBbnN3ZXJDYW5kaWRhdGUSMQoGYW5zd2VyGAEg",
+            "ASgLMhkuc3NuLnR5cGUuQW5zd2VyQ2FuZGlkYXRlUgZhbnN3ZXISQwoGc291",
+            "cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuQ2FuZGlk",
+            "YXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghzb3VyY2VJ",
+            "ZCJbCgpBbnN3ZXJEYXRhEk0KB2Fuc3dlcnMYASADKAsyMy5zc24uZG9jdW1l",
+            "bnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEFuc3dlckNhbmRpZGF0ZVIHYW5z",
+            "d2VycyK0AQoZSW50ZXJuYWxTdHJ1Y3R1cmVkQWRkcmVzcxI1CgdhZGRyZXNz",
+            "GAEgASgLMhsuc3NuLnR5cGUuU3RydWN0dXJlZEFkZHJlc3NSB2FkZHJlc3MS",
+            "QwoGc291cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEu",
+            "Q2FuZGlkYXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghz",
+            "b3VyY2VJZCJiCgtBZGRyZXNzRGF0YRJTCglhZGRyZXNzZXMYASADKAsyNS5z",
+            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbFN0cnVjdHVyZWRB",
+            "ZGRyZXNzUglhZGRyZXNzZXMioAQKF0ludGVybmFsRmllbGRBbm5vdGF0aW9u",
+            "EhgKB2ZlYXR1cmUYASABKAlSB2ZlYXR1cmUSRgoKZmllbGRfZGF0YRgCIAEo",
+            "CzIlLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkZpZWxkRGF0YUgAUglm",
+            "aWVsZERhdGESXAoScHVyY2hhc2VfbGluZV9kYXRhGAMgASgLMiwuc3NuLmRv",
+            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuUHVyY2hhc2VMaW5lRGF0YUgAUhBwdXJj",
+            "aGFzZUxpbmVEYXRhEmUKFXZhdF9kaXN0cmlidXRpb25fZGF0YRgEIAEoCzIv",
+            "LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlZhdERpc3RyaWJ1dGlvbkRh",
+            "dGFIAFITdmF0RGlzdHJpYnV0aW9uRGF0YRI9Cgdxcl9kYXRhGAUgASgLMiIu",
+            "c3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuUXJEYXRhSABSBnFyRGF0YRJJ",
+            "CgthbnN3ZXJfZGF0YRgGIAEoCzImLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
+            "LnYxLkFuc3dlckRhdGFIAFIKYW5zd2VyRGF0YRJMCgxhZGRyZXNzX2RhdGEY",
+            "ByABKAsyJy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5BZGRyZXNzRGF0",
+            "YUgAUgthZGRyZXNzRGF0YUIGCgRkYXRhIvwBChZHZXREb2N1bWVudERhdGFS",
             "ZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lkEhoKCGNv",
-            "bnN1bWVyGAIgASgJUghjb25zdW1lchI3CghmaWxlX3VyaRgDIAEoCzIcLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIHZmlsZVVyaRIfCgtyZW5kZXJf",
-            "dXJpcxgEIAMoCVIKcmVuZGVyVXJpcxIzCgZ0YV91cmkYBSABKAsyHC5nb29n",
-            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWVSBXRhVXJpEjkKCmV4cGlyZXNfYXQY",
-            "BiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglleHBpcmVzQXQS",
-            "IAoLZW52aXJvbm1lbnQYByABKAlSC2Vudmlyb25tZW50Ei0KEnJlcXVlc3Rl",
-            "ZF9mZWF0dXJlcxgIIAMoCVIRcmVxdWVzdGVkRmVhdHVyZXMSEgoEdGFncxgJ",
-            "IAMoCVIEdGFncyIaChhTZXREb2N1bWVudEJsb2JzUmVzcG9uc2UizQEKFUFk",
-            "ZEFubm90YXRpb25zUmVxdWVzdBIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVl",
-            "ZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3Rh",
-            "dGlvbnMYAyADKAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRl",
-            "cm5hbEZpZWxkQW5ub3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1l",
-            "bnQYBCABKAlSC2Vudmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9u",
-            "c2UqjwEKD0NhbmRpZGF0ZVNvdXJjZRIgChxDQU5ESURBVEVfU09VUkNFX1VO",
-            "U1BFQ0lGSUVEEAASHwobQ0FORElEQVRFX1NPVVJDRV9QUkVESUNUSU9OEAES",
-            "HQoZQ0FORElEQVRFX1NPVVJDRV9GRUVEQkFDSxACEhoKFkNBTkRJREFURV9T",
-            "T1VSQ0VfTEFCRUwQAzLSBAoTRG9jdW1lbnREYXRhU2VydmljZRK0AQoPR2V0",
-            "RG9jdW1lbnREYXRhEjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuR2V0",
-            "RG9jdW1lbnREYXRhUmVxdWVzdBozLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
-            "LnYxLkdldERvY3VtZW50RGF0YVJlc3BvbnNlIjiC0+STAjISMC92MS9jb25z",
-            "dW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lkfRLAAQoQ",
-            "U2V0RG9jdW1lbnRCbG9icxIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYx",
-            "LlNldERvY3VtZW50QmxvYnNSZXF1ZXN0GjQuc3NuLmRvY3VtZW50ZGF0YXNl",
-            "cnZpY2UudjEuU2V0RG9jdW1lbnRCbG9ic1Jlc3BvbnNlIkGC0+STAjsaNi92",
-            "MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lk",
-            "fS9ibG9iczoBKhLAAQoOQWRkQW5ub3RhdGlvbnMSMS5zc24uZG9jdW1lbnRk",
-            "YXRhc2VydmljZS52MS5BZGRBbm5vdGF0aW9uc1JlcXVlc3QaMi5zc24uZG9j",
-            "dW1lbnRkYXRhc2VydmljZS52MS5BZGRBbm5vdGF0aW9uc1Jlc3BvbnNlIkeC",
-            "0+STAkEiPC92MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2Zl",
-            "ZWRiYWNrX2lkfS9hbm5vdGF0aW9uczoBKkKdAgojYWkudmlzbWEuc3NuLmRv",
-            "Y3VtZW50ZGF0YXNlcnZpY2UudjFCGERvY3VtZW50ZGF0YXNlcnZpY2VQcm90",
-            "b1ABWlJnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24v",
-            "ZG9jdW1lbnRkYXRhc2VydmljZS92MTtkb2N1bWVudGRhdGFzZXJ2aWNlogID",
-            "U0RYqgIaU3NuLkRvY3VtZW50ZGF0YXNlcnZpY2UuVjHKAhpTc25cRG9jdW1l",
-            "bnRkYXRhc2VydmljZVxWMeICJlNzblxEb2N1bWVudGRhdGFzZXJ2aWNlXFYx",
-            "XEdQQk1ldGFkYXRh6gIcU3NuOjpEb2N1bWVudGRhdGFzZXJ2aWNlOjpWMWIG",
-            "cHJvdG8z"));
+            "bnN1bWVyGAIgASgJUghjb25zdW1lchIvChNpbmNsdWRlX3ByZWRpY3Rpb25z",
+            "GAMgASgIUhJpbmNsdWRlUHJlZGljdGlvbnMSKwoRaW5jbHVkZV9mZWVkYmFj",
+            "a3MYBCABKAhSEGluY2x1ZGVGZWVkYmFja3MSJQoOaW5jbHVkZV9sYWJlbHMY",
+            "BSABKAhSDWluY2x1ZGVMYWJlbHMSIAoLZW52aXJvbm1lbnQYBiABKAlSC2Vu",
+            "dmlyb25tZW50IuYDChdHZXREb2N1bWVudERhdGFSZXNwb25zZRIfCgtmZWVk",
+            "YmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVII",
+            "Y29uc3VtZXISGQoIZmlsZV91cmwYAyABKAlSB2ZpbGVVcmwSHwoLcmVuZGVy",
+            "X3VybHMYBCADKAlSCnJlbmRlclVybHMSTAoTdGV4dF9hbm5vdGF0aW9uX3Vy",
+            "bBgFIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIRdGV4dEFu",
+            "bm90YXRpb25VcmwSSwoGZmllbGRzGAYgAygLMjMuc3NuLmRvY3VtZW50ZGF0",
+            "YXNlcnZpY2UudjEuSW50ZXJuYWxGaWVsZEFubm90YXRpb25SBmZpZWxkcxI5",
+            "CgpleHBpcmVzX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cFIJZXhwaXJlc0F0Ei0KEnJlcXVlc3RlZF9mZWF0dXJlcxgIIAMoCVIRcmVx",
+            "dWVzdGVkRmVhdHVyZXMSOQoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdBISCgR0YWdzGAogAygJUgR0",
+            "YWdzIoUDChdTZXREb2N1bWVudEJsb2JzUmVxdWVzdBIfCgtmZWVkYmFja19p",
+            "ZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3Vt",
+            "ZXISNwoIZmlsZV91cmkYAyABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
+            "VmFsdWVSB2ZpbGVVcmkSHwoLcmVuZGVyX3VyaXMYBCADKAlSCnJlbmRlclVy",
+            "aXMSMwoGdGFfdXJpGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
+            "bHVlUgV0YVVyaRI5CgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcFIJZXhwaXJlc0F0EiAKC2Vudmlyb25tZW50GAcgASgJ",
+            "UgtlbnZpcm9ubWVudBItChJyZXF1ZXN0ZWRfZmVhdHVyZXMYCCADKAlSEXJl",
+            "cXVlc3RlZEZlYXR1cmVzEhIKBHRhZ3MYCSADKAlSBHRhZ3MiGgoYU2V0RG9j",
+            "dW1lbnRCbG9ic1Jlc3BvbnNlIs0BChVBZGRBbm5vdGF0aW9uc1JlcXVlc3QS",
+            "HwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoIY29uc3VtZXIY",
+            "AiABKAlSCGNvbnN1bWVyElUKC2Fubm90YXRpb25zGAMgAygLMjMuc3NuLmRv",
+            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxGaWVsZEFubm90YXRpb25S",
+            "C2Fubm90YXRpb25zEiAKC2Vudmlyb25tZW50GAQgASgJUgtlbnZpcm9ubWVu",
+            "dCIYChZBZGRBbm5vdGF0aW9uc1Jlc3BvbnNlKo8BCg9DYW5kaWRhdGVTb3Vy",
+            "Y2USIAocQ0FORElEQVRFX1NPVVJDRV9VTlNQRUNJRklFRBAAEh8KG0NBTkRJ",
+            "REFURV9TT1VSQ0VfUFJFRElDVElPThABEh0KGUNBTkRJREFURV9TT1VSQ0Vf",
+            "RkVFREJBQ0sQAhIaChZDQU5ESURBVEVfU09VUkNFX0xBQkVMEAMy0gQKE0Rv",
+            "Y3VtZW50RGF0YVNlcnZpY2UStAEKD0dldERvY3VtZW50RGF0YRIyLnNzbi5k",
+            "b2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3VtZW50RGF0YVJlcXVlc3Qa",
+            "My5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5HZXREb2N1bWVudERhdGFS",
+            "ZXNwb25zZSI4gtPkkwIyEjAvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9j",
+            "dW1lbnRzL3tmZWVkYmFja19pZH0SwAEKEFNldERvY3VtZW50QmxvYnMSMy5z",
+            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5TZXREb2N1bWVudEJsb2JzUmVx",
+            "dWVzdBo0LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlNldERvY3VtZW50",
+            "QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYvdjEvY29uc3VtZXJzL3tjb25zdW1l",
+            "cn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYmxvYnM6ASoSwAEKDkFkZEFu",
+            "bm90YXRpb25zEjEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuQWRkQW5u",
+            "b3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEu",
+            "QWRkQW5ub3RhdGlvbnNSZXNwb25zZSJHgtPkkwJBIjwvdjEvY29uc3VtZXJz",
+            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlv",
+            "bnM6ASpCnQIKI2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYx",
+            "QhhEb2N1bWVudGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHViLmNvbS9lLWNv",
+            "bm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0YXNlcnZpY2Uv",
+            "djE7ZG9jdW1lbnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5Eb2N1bWVudGRh",
+            "dGFzZXJ2aWNlLlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZpY2VcVjHiAiZT",
+            "c25cRG9jdW1lbnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCHFNzbjo6",
+            "RG9jdW1lbnRkYXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Documentdataservice.V1.CandidateSource), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalCandidate), global::Ssn.Documentdataservice.V1.InternalCandidate.Parser, new[]{ "Candidate", "Source", "SourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.FieldData), global::Ssn.Documentdataservice.V1.FieldData.Parser, new[]{ "Candidates" }, null, null, null, null),
@@ -139,7 +147,9 @@ namespace Ssn.Documentdataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.QrData), global::Ssn.Documentdataservice.V1.QrData.Parser, new[]{ "QrCodes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalAnswerCandidate), global::Ssn.Documentdataservice.V1.InternalAnswerCandidate.Parser, new[]{ "Answer", "Source", "SourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AnswerData), global::Ssn.Documentdataservice.V1.AnswerData.Parser, new[]{ "Answers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalStructuredAddress), global::Ssn.Documentdataservice.V1.InternalStructuredAddress.Parser, new[]{ "Address", "Source", "SourceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddressData), global::Ssn.Documentdataservice.V1.AddressData.Parser, new[]{ "Addresses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData", "AddressData" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags" }, null, null, null, null),
@@ -2634,6 +2644,480 @@ namespace Ssn.Documentdataservice.V1 {
   }
 
   /// <summary>
+  /// InternalStructuredAddress wraps ssn.type.StructuredAddress with provenance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InternalStructuredAddress : pb::IMessage<InternalStructuredAddress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InternalStructuredAddress> _parser = new pb::MessageParser<InternalStructuredAddress>(() => new InternalStructuredAddress());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InternalStructuredAddress> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalStructuredAddress() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalStructuredAddress(InternalStructuredAddress other) : this() {
+      address_ = other.address_ != null ? other.address_.Clone() : null;
+      source_ = other.source_;
+      sourceId_ = other.sourceId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalStructuredAddress Clone() {
+      return new InternalStructuredAddress(this);
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 1;
+    private global::Ssn.Type.StructuredAddress address_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.StructuredAddress Address {
+      get { return address_; }
+      set {
+        address_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 2;
+    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
+      get { return source_; }
+      set {
+        source_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source_id" field.</summary>
+    public const int SourceIdFieldNumber = 3;
+    private string sourceId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceId {
+      get { return sourceId_; }
+      set {
+        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InternalStructuredAddress);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InternalStructuredAddress other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Address, other.Address)) return false;
+      if (Source != other.Source) return false;
+      if (SourceId != other.SourceId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (address_ != null) hash ^= Address.GetHashCode();
+      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
+      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (address_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Address);
+      }
+      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Source);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (address_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Address);
+      }
+      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Source);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (address_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Address);
+      }
+      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
+      }
+      if (SourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InternalStructuredAddress other) {
+      if (other == null) {
+        return;
+      }
+      if (other.address_ != null) {
+        if (address_ == null) {
+          Address = new global::Ssn.Type.StructuredAddress();
+        }
+        Address.MergeFrom(other.Address);
+      }
+      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
+        Source = other.Source;
+      }
+      if (other.SourceId.Length != 0) {
+        SourceId = other.SourceId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (address_ == null) {
+              Address = new global::Ssn.Type.StructuredAddress();
+            }
+            input.ReadMessage(Address);
+            break;
+          }
+          case 16: {
+            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            SourceId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (address_ == null) {
+              Address = new global::Ssn.Type.StructuredAddress();
+            }
+            input.ReadMessage(Address);
+            break;
+          }
+          case 16: {
+            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            SourceId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// AddressData holds address annotations for feature "ADDRESS".
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddressData : pb::IMessage<AddressData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddressData> _parser = new pb::MessageParser<AddressData>(() => new AddressData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddressData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddressData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddressData(AddressData other) : this() {
+      addresses_ = other.addresses_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddressData Clone() {
+      return new AddressData(this);
+    }
+
+    /// <summary>Field number for the "addresses" field.</summary>
+    public const int AddressesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> _repeated_addresses_codec
+        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalStructuredAddress.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> addresses_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> Addresses {
+      get { return addresses_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddressData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddressData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!addresses_.Equals(other.addresses_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= addresses_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      addresses_.WriteTo(output, _repeated_addresses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      addresses_.WriteTo(ref output, _repeated_addresses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += addresses_.CalculateSize(_repeated_addresses_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddressData other) {
+      if (other == null) {
+        return;
+      }
+      addresses_.Add(other.addresses_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            addresses_.AddEntriesFrom(input, _repeated_addresses_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            addresses_.AddEntriesFrom(ref input, _repeated_addresses_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// InternalFieldAnnotation groups all candidates for a single feature.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2651,7 +3135,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2687,6 +3171,9 @@ namespace Ssn.Documentdataservice.V1 {
           break;
         case DataOneofCase.AnswerData:
           AnswerData = other.AnswerData.Clone();
+          break;
+        case DataOneofCase.AddressData:
+          AddressData = other.AddressData.Clone();
           break;
       }
 
@@ -2774,6 +3261,18 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "address_data" field.</summary>
+    public const int AddressDataFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Documentdataservice.V1.AddressData AddressData {
+      get { return dataCase_ == DataOneofCase.AddressData ? (global::Ssn.Documentdataservice.V1.AddressData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.AddressData;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
@@ -2783,6 +3282,7 @@ namespace Ssn.Documentdataservice.V1 {
       VatDistributionData = 4,
       QrData = 5,
       AnswerData = 6,
+      AddressData = 7,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2819,6 +3319,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (!object.Equals(VatDistributionData, other.VatDistributionData)) return false;
       if (!object.Equals(QrData, other.QrData)) return false;
       if (!object.Equals(AnswerData, other.AnswerData)) return false;
+      if (!object.Equals(AddressData, other.AddressData)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2833,6 +3334,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (dataCase_ == DataOneofCase.VatDistributionData) hash ^= VatDistributionData.GetHashCode();
       if (dataCase_ == DataOneofCase.QrData) hash ^= QrData.GetHashCode();
       if (dataCase_ == DataOneofCase.AnswerData) hash ^= AnswerData.GetHashCode();
+      if (dataCase_ == DataOneofCase.AddressData) hash ^= AddressData.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2876,6 +3378,10 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(AnswerData);
       }
+      if (dataCase_ == DataOneofCase.AddressData) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AddressData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2910,6 +3416,10 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(AnswerData);
       }
+      if (dataCase_ == DataOneofCase.AddressData) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AddressData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2937,6 +3447,9 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (dataCase_ == DataOneofCase.AnswerData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnswerData);
+      }
+      if (dataCase_ == DataOneofCase.AddressData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddressData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2983,6 +3496,12 @@ namespace Ssn.Documentdataservice.V1 {
             AnswerData = new global::Ssn.Documentdataservice.V1.AnswerData();
           }
           AnswerData.MergeFrom(other.AnswerData);
+          break;
+        case DataOneofCase.AddressData:
+          if (AddressData == null) {
+            AddressData = new global::Ssn.Documentdataservice.V1.AddressData();
+          }
+          AddressData.MergeFrom(other.AddressData);
           break;
       }
 
@@ -3054,6 +3573,15 @@ namespace Ssn.Documentdataservice.V1 {
             AnswerData = subBuilder;
             break;
           }
+          case 58: {
+            global::Ssn.Documentdataservice.V1.AddressData subBuilder = new global::Ssn.Documentdataservice.V1.AddressData();
+            if (dataCase_ == DataOneofCase.AddressData) {
+              subBuilder.MergeFrom(AddressData);
+            }
+            input.ReadMessage(subBuilder);
+            AddressData = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3122,6 +3650,15 @@ namespace Ssn.Documentdataservice.V1 {
             AnswerData = subBuilder;
             break;
           }
+          case 58: {
+            global::Ssn.Documentdataservice.V1.AddressData subBuilder = new global::Ssn.Documentdataservice.V1.AddressData();
+            if (dataCase_ == DataOneofCase.AddressData) {
+              subBuilder.MergeFrom(AddressData);
+            }
+            input.ReadMessage(subBuilder);
+            AddressData = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -3144,7 +3681,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3530,7 +4067,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4067,7 +4604,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4574,7 +5111,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4735,7 +5272,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5036,7 +5573,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -104,5 +104,20 @@ public interface InternalFieldAnnotationOrBuilder extends
    */
   ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder getAnswerDataOrBuilder();
 
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   * @return Whether the addressData field is set.
+   */
+  boolean hasAddressData();
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   * @return The addressData.
+   */
+  ai.visma.ssn.documentdataservice.v1.AddressData getAddressData();
+  /**
+   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
+   */
+  ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder();
+
   ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation.DataCase getDataCase();
 }
