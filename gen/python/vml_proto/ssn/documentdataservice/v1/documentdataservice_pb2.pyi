@@ -1,6 +1,7 @@
 from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
+from ssn.type import address_pb2 as _address_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
 from ssn.type import qr_pb2 as _qr_pb2
 from google.protobuf.internal import containers as _containers
@@ -104,21 +105,39 @@ class AnswerData(_message.Message):
     answers: _containers.RepeatedCompositeFieldContainer[InternalAnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[InternalAnswerCandidate, _Mapping]]] = ...) -> None: ...
 
+class InternalStructuredAddress(_message.Message):
+    __slots__ = ("address", "source", "source_id")
+    ADDRESS_FIELD_NUMBER: _ClassVar[int]
+    SOURCE_FIELD_NUMBER: _ClassVar[int]
+    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+    address: _address_pb2.StructuredAddress
+    source: CandidateSource
+    source_id: str
+    def __init__(self, address: _Optional[_Union[_address_pb2.StructuredAddress, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
+
+class AddressData(_message.Message):
+    __slots__ = ("addresses",)
+    ADDRESSES_FIELD_NUMBER: _ClassVar[int]
+    addresses: _containers.RepeatedCompositeFieldContainer[InternalStructuredAddress]
+    def __init__(self, addresses: _Optional[_Iterable[_Union[InternalStructuredAddress, _Mapping]]] = ...) -> None: ...
+
 class InternalFieldAnnotation(_message.Message):
-    __slots__ = ("feature", "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data")
+    __slots__ = ("feature", "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data", "address_data")
     FEATURE_FIELD_NUMBER: _ClassVar[int]
     FIELD_DATA_FIELD_NUMBER: _ClassVar[int]
     PURCHASE_LINE_DATA_FIELD_NUMBER: _ClassVar[int]
     VAT_DISTRIBUTION_DATA_FIELD_NUMBER: _ClassVar[int]
     QR_DATA_FIELD_NUMBER: _ClassVar[int]
     ANSWER_DATA_FIELD_NUMBER: _ClassVar[int]
+    ADDRESS_DATA_FIELD_NUMBER: _ClassVar[int]
     feature: str
     field_data: FieldData
     purchase_line_data: PurchaseLineData
     vat_distribution_data: VatDistributionData
     qr_data: QrData
     answer_data: AnswerData
-    def __init__(self, feature: _Optional[str] = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ...) -> None: ...
+    address_data: AddressData
+    def __init__(self, feature: _Optional[str] = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ..., address_data: _Optional[_Union[AddressData, _Mapping]] = ...) -> None: ...
 
 class GetDocumentDataRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "include_predictions", "include_feedbacks", "include_labels", "environment")

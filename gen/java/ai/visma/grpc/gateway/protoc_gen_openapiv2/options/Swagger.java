@@ -25,7 +25,7 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * };
  * license: {
  * name: "BSD 3-Clause License";
- * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/LICENSE.txt";
+ * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
  * };
  * };
  * schemes: HTTPS;
@@ -64,7 +64,6 @@ private static final long serialVersionUID = 0L;
     produces_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     security_ = java.util.Collections.emptyList();
-    tags_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -726,72 +725,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return security_.get(index);
   }
 
-  public static final int TAGS_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> tags_;
-  /**
-   * <pre>
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   * </pre>
-   *
-   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> getTagsList() {
-    return tags_;
-  }
-  /**
-   * <pre>
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   * </pre>
-   *
-   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder> 
-      getTagsOrBuilderList() {
-    return tags_;
-  }
-  /**
-   * <pre>
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   * </pre>
-   *
-   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-   */
-  @java.lang.Override
-  public int getTagsCount() {
-    return tags_.size();
-  }
-  /**
-   * <pre>
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   * </pre>
-   *
-   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag getTags(int index) {
-    return tags_.get(index);
-  }
-  /**
-   * <pre>
-   * A list of tags for API documentation control. Tags can be used for logical
-   * grouping of operations by resources or any other qualifier.
-   * </pre>
-   *
-   * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder getTagsOrBuilder(
-      int index) {
-    return tags_.get(index);
-  }
-
   public static final int EXTERNAL_DOCS_FIELD_NUMBER = 14;
   private ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation externalDocs_;
   /**
@@ -857,12 +790,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return internalGetExtensions().getMap().size();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -880,12 +807,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return getExtensionsMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -893,12 +814,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return internalGetExtensions().getMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -913,12 +828,6 @@ com.google.protobuf.Value defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -984,9 +893,6 @@ com.google.protobuf.Value defaultValue) {
     }
     for (int i = 0; i < security_.size(); i++) {
       output.writeMessage(12, security_.get(i));
-    }
-    for (int i = 0; i < tags_.size(); i++) {
-      output.writeMessage(13, tags_.get(i));
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(14, getExternalDocs());
@@ -1065,10 +971,6 @@ com.google.protobuf.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, security_.get(i));
     }
-    for (int i = 0; i < tags_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, tags_.get(i));
-    }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getExternalDocs());
@@ -1123,8 +1025,6 @@ com.google.protobuf.Value defaultValue) {
     }
     if (!getSecurityList()
         .equals(other.getSecurityList())) return false;
-    if (!getTagsList()
-        .equals(other.getTagsList())) return false;
     if (hasExternalDocs() != other.hasExternalDocs()) return false;
     if (hasExternalDocs()) {
       if (!getExternalDocs()
@@ -1176,10 +1076,6 @@ com.google.protobuf.Value defaultValue) {
     if (getSecurityCount() > 0) {
       hash = (37 * hash) + SECURITY_FIELD_NUMBER;
       hash = (53 * hash) + getSecurityList().hashCode();
-    }
-    if (getTagsCount() > 0) {
-      hash = (37 * hash) + TAGS_FIELD_NUMBER;
-      hash = (53 * hash) + getTagsList().hashCode();
     }
     if (hasExternalDocs()) {
       hash = (37 * hash) + EXTERNAL_DOCS_FIELD_NUMBER;
@@ -1306,7 +1202,7 @@ com.google.protobuf.Value defaultValue) {
    * };
    * license: {
    * name: "BSD 3-Clause License";
-   * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/LICENSE.txt";
+   * url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
    * };
    * };
    * schemes: HTTPS;
@@ -1376,7 +1272,6 @@ com.google.protobuf.Value defaultValue) {
         getInfoFieldBuilder();
         getSecurityDefinitionsFieldBuilder();
         getSecurityFieldBuilder();
-        getTagsFieldBuilder();
         getExternalDocsFieldBuilder();
       }
     }
@@ -1411,13 +1306,6 @@ com.google.protobuf.Value defaultValue) {
         securityBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000200);
-      if (tagsBuilder_ == null) {
-        tags_ = java.util.Collections.emptyList();
-      } else {
-        tags_ = null;
-        tagsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000400);
       externalDocs_ = null;
       if (externalDocsBuilder_ != null) {
         externalDocsBuilder_.dispose();
@@ -1471,15 +1359,6 @@ com.google.protobuf.Value defaultValue) {
       } else {
         result.security_ = securityBuilder_.build();
       }
-      if (tagsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
-          tags_ = java.util.Collections.unmodifiableList(tags_);
-          bitField0_ = (bitField0_ & ~0x00000400);
-        }
-        result.tags_ = tags_;
-      } else {
-        result.tags_ = tagsBuilder_.build();
-      }
     }
 
     private void buildPartial0(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Swagger result) {
@@ -1517,13 +1396,13 @@ com.google.protobuf.Value defaultValue) {
             : securityDefinitionsBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.externalDocs_ = externalDocsBuilder_ == null
             ? externalDocs_
             : externalDocsBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.extensions_ = internalGetExtensions().build(ExtensionsDefaultEntryHolder.defaultEntry);
       }
       result.bitField0_ |= to_bitField0_;
@@ -1621,38 +1500,12 @@ com.google.protobuf.Value defaultValue) {
           }
         }
       }
-      if (tagsBuilder_ == null) {
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000400);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.tags_.isEmpty()) {
-          if (tagsBuilder_.isEmpty()) {
-            tagsBuilder_.dispose();
-            tagsBuilder_ = null;
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000400);
-            tagsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getTagsFieldBuilder() : null;
-          } else {
-            tagsBuilder_.addAllMessages(other.tags_);
-          }
-        }
-      }
       if (other.hasExternalDocs()) {
         mergeExternalDocs(other.getExternalDocs());
       }
       internalGetMutableExtensions().mergeFrom(
           other.internalGetExtensions());
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1759,24 +1612,11 @@ com.google.protobuf.Value defaultValue) {
               }
               break;
             } // case 98
-            case 106: {
-              ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag m =
-                  input.readMessage(
-                      ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.parser(),
-                      extensionRegistry);
-              if (tagsBuilder_ == null) {
-                ensureTagsIsMutable();
-                tags_.add(m);
-              } else {
-                tagsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 106
             case 114: {
               input.readMessage(
                   getExternalDocsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               break;
             } // case 114
             case 122: {
@@ -1785,7 +1625,7 @@ com.google.protobuf.Value defaultValue) {
                   ExtensionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableExtensions().ensureBuilderMap().put(
                   extensions__.getKey(), extensions__.getValue());
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               break;
             } // case 122
             default: {
@@ -3572,336 +3412,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return securityBuilder_;
     }
 
-    private java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> tags_ =
-      java.util.Collections.emptyList();
-    private void ensureTagsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
-        tags_ = new java.util.ArrayList<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag>(tags_);
-        bitField0_ |= 0x00000400;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder> tagsBuilder_;
-
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> getTagsList() {
-      if (tagsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(tags_);
-      } else {
-        return tagsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public int getTagsCount() {
-      if (tagsBuilder_ == null) {
-        return tags_.size();
-      } else {
-        return tagsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag getTags(int index) {
-      if (tagsBuilder_ == null) {
-        return tags_.get(index);
-      } else {
-        return tagsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder setTags(
-        int index, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag value) {
-      if (tagsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-      } else {
-        tagsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder setTags(
-        int index, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder builderForValue) {
-      if (tagsBuilder_ == null) {
-        ensureTagsIsMutable();
-        tags_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        tagsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder addTags(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag value) {
-      if (tagsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-      } else {
-        tagsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder addTags(
-        int index, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag value) {
-      if (tagsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagsIsMutable();
-        tags_.add(index, value);
-        onChanged();
-      } else {
-        tagsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder addTags(
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder builderForValue) {
-      if (tagsBuilder_ == null) {
-        ensureTagsIsMutable();
-        tags_.add(builderForValue.build());
-        onChanged();
-      } else {
-        tagsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder addTags(
-        int index, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder builderForValue) {
-      if (tagsBuilder_ == null) {
-        ensureTagsIsMutable();
-        tags_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        tagsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder addAllTags(
-        java.lang.Iterable<? extends ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag> values) {
-      if (tagsBuilder_ == null) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-      } else {
-        tagsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder clearTags() {
-      if (tagsBuilder_ == null) {
-        tags_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
-        onChanged();
-      } else {
-        tagsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public Builder removeTags(int index) {
-      if (tagsBuilder_ == null) {
-        ensureTagsIsMutable();
-        tags_.remove(index);
-        onChanged();
-      } else {
-        tagsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder getTagsBuilder(
-        int index) {
-      return getTagsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder getTagsOrBuilder(
-        int index) {
-      if (tagsBuilder_ == null) {
-        return tags_.get(index);  } else {
-        return tagsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public java.util.List<? extends ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder> 
-         getTagsOrBuilderList() {
-      if (tagsBuilder_ != null) {
-        return tagsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(tags_);
-      }
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder addTagsBuilder() {
-      return getTagsFieldBuilder().addBuilder(
-          ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder addTagsBuilder(
-        int index) {
-      return getTagsFieldBuilder().addBuilder(
-          index, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * A list of tags for API documentation control. Tags can be used for logical
-     * grouping of operations by resources or any other qualifier.
-     * </pre>
-     *
-     * <code>repeated .grpc.gateway.protoc_gen_openapiv2.options.Tag tags = 13 [json_name = "tags"];</code>
-     */
-    public java.util.List<ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder> 
-         getTagsBuilderList() {
-      return getTagsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder> 
-        getTagsFieldBuilder() {
-      if (tagsBuilder_ == null) {
-        tagsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.TagOrBuilder>(
-                tags_,
-                ((bitField0_ & 0x00000400) != 0),
-                getParentForChildren(),
-                isClean());
-        tags_ = null;
-      }
-      return tagsBuilder_;
-    }
-
     private ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation externalDocs_;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentationOrBuilder> externalDocsBuilder_;
@@ -3914,7 +3424,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
      * @return Whether the externalDocs field is set.
      */
     public boolean hasExternalDocs() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -3947,7 +3457,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       } else {
         externalDocsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3965,7 +3475,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       } else {
         externalDocsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3978,7 +3488,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
      */
     public Builder mergeExternalDocs(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation value) {
       if (externalDocsBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
+        if (((bitField0_ & 0x00000400) != 0) &&
           externalDocs_ != null &&
           externalDocs_ != ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.getDefaultInstance()) {
           getExternalDocsBuilder().mergeFrom(value);
@@ -3989,7 +3499,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
         externalDocsBuilder_.mergeFrom(value);
       }
       if (externalDocs_ != null) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       return this;
@@ -4002,7 +3512,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
      * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
      */
     public Builder clearExternalDocs() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000400);
       externalDocs_ = null;
       if (externalDocsBuilder_ != null) {
         externalDocsBuilder_.dispose();
@@ -4019,7 +3529,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
      * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 14 [json_name = "externalDocs"];</code>
      */
     public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.Builder getExternalDocsBuilder() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return getExternalDocsFieldBuilder().getBuilder();
     }
@@ -4087,7 +3597,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       if (extensions_ == null) {
         extensions_ = new com.google.protobuf.MapFieldBuilder<>(extensionsConverter);
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return extensions_;
     }
@@ -4095,12 +3605,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return internalGetExtensions().ensureBuilderMap().size();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4118,12 +3622,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return getExtensionsMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4131,12 +3629,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return internalGetExtensions().getImmutableMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4150,12 +3642,6 @@ com.google.protobuf.Value defaultValue) {
       return map.containsKey(key) ? extensionsConverter.build(map.get(key)) : defaultValue;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -4169,17 +3655,11 @@ com.google.protobuf.Value defaultValue) {
       return extensionsConverter.build(map.get(key));
     }
     public Builder clearExtensions() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       internalGetMutableExtensions().clear();
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     public Builder removeExtensions(
@@ -4195,16 +3675,10 @@ com.google.protobuf.Value defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.google.protobuf.Value>
         getMutableExtensions() {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       return internalGetMutableExtensions().ensureMessageMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     public Builder putExtensions(
@@ -4214,16 +3688,10 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableExtensions().ensureBuilderMap()
           .put(key, value);
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     public Builder putAllExtensions(
@@ -4235,16 +3703,10 @@ com.google.protobuf.Value defaultValue) {
       }
       internalGetMutableExtensions().ensureBuilderMap()
           .putAll(values);
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 15 [json_name = "extensions"];</code>
      */
     public com.google.protobuf.Value.Builder putExtensionsBuilderIfAbsent(

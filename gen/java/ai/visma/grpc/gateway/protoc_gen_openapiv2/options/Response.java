@@ -385,12 +385,6 @@ java.lang.String defaultValue) {
     return internalGetExtensions().getMap().size();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -408,12 +402,6 @@ java.lang.String defaultValue) {
     return getExtensionsMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -421,12 +409,6 @@ java.lang.String defaultValue) {
     return internalGetExtensions().getMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -441,12 +423,6 @@ com.google.protobuf.Value defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -1615,12 +1591,6 @@ java.lang.String defaultValue) {
       return internalGetExtensions().ensureBuilderMap().size();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -1638,12 +1608,6 @@ java.lang.String defaultValue) {
       return getExtensionsMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -1651,12 +1615,6 @@ java.lang.String defaultValue) {
       return internalGetExtensions().getImmutableMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -1670,12 +1628,6 @@ com.google.protobuf.Value defaultValue) {
       return map.containsKey(key) ? extensionsConverter.build(map.get(key)) : defaultValue;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -1694,12 +1646,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     public Builder removeExtensions(
@@ -1719,12 +1665,6 @@ com.google.protobuf.Value defaultValue) {
       return internalGetMutableExtensions().ensureMessageMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     public Builder putExtensions(
@@ -1738,12 +1678,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     public Builder putAllExtensions(
@@ -1759,12 +1693,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 5 [json_name = "extensions"];</code>
      */
     public com.google.protobuf.Value.Builder putExtensionsBuilderIfAbsent(

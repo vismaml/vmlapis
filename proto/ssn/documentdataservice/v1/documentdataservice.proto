@@ -99,9 +99,9 @@ message AnswerData {
 
 // InternalStructuredAddress wraps ssn.type.StructuredAddress with provenance.
 message InternalStructuredAddress {
-  ssn.type.StructuredAddress address   = 1;
-  CandidateSource            source    = 2;
-  string                     source_id = 3;
+  ssn.type.StructuredAddress address = 1;
+  CandidateSource source = 2;
+  string source_id = 3;
 }
 
 // AddressData holds address annotations for feature "ADDRESS".
@@ -117,12 +117,12 @@ message InternalFieldAnnotation {
   string feature = 1;
 
   oneof data {
-    FieldData            field_data            = 2;
-    PurchaseLineData     purchase_line_data    = 3;
-    VatDistributionData  vat_distribution_data = 4;
-    QrData               qr_data              = 5;
-    AnswerData           answer_data          = 6;
-    AddressData          address_data         = 7;
+    FieldData field_data = 2;
+    PurchaseLineData purchase_line_data = 3;
+    VatDistributionData vat_distribution_data = 4;
+    QrData qr_data = 5;
+    AnswerData answer_data = 6;
+    AddressData address_data = 7;
   }
 }
 

@@ -775,12 +775,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return internalGetExtensions().getMap().size();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -798,12 +792,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return getExtensionsMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -811,12 +799,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
     return internalGetExtensions().getMap();
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -831,12 +813,6 @@ com.google.protobuf.Value defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
    * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
    */
   @java.lang.Override
@@ -849,50 +825,6 @@ com.google.protobuf.Value defaultValue) {
       throw new java.lang.IllegalArgumentException();
     }
     return map.get(key);
-  }
-
-  public static final int PARAMETERS_FIELD_NUMBER = 14;
-  private ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters_;
-  /**
-   * <pre>
-   * Custom parameters such as HTTP request headers.
-   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-   * and https://swagger.io/specification/v2/#parameter-object.
-   * </pre>
-   *
-   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-   * @return Whether the parameters field is set.
-   */
-  @java.lang.Override
-  public boolean hasParameters() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <pre>
-   * Custom parameters such as HTTP request headers.
-   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-   * and https://swagger.io/specification/v2/#parameter-object.
-   * </pre>
-   *
-   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-   * @return The parameters.
-   */
-  @java.lang.Override
-  public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters getParameters() {
-    return parameters_ == null ? ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance() : parameters_;
-  }
-  /**
-   * <pre>
-   * Custom parameters such as HTTP request headers.
-   * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-   * and https://swagger.io/specification/v2/#parameter-object.
-   * </pre>
-   *
-   * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder getParametersOrBuilder() {
-    return parameters_ == null ? ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance() : parameters_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -956,9 +888,6 @@ com.google.protobuf.Value defaultValue) {
         internalGetExtensions(),
         ExtensionsDefaultEntryHolder.defaultEntry,
         13);
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(14, getParameters());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1045,10 +974,6 @@ com.google.protobuf.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, extensions__);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, getParameters());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1090,11 +1015,6 @@ com.google.protobuf.Value defaultValue) {
         .equals(other.getSecurityList())) return false;
     if (!internalGetExtensions().equals(
         other.internalGetExtensions())) return false;
-    if (hasParameters() != other.hasParameters()) return false;
-    if (hasParameters()) {
-      if (!getParameters()
-          .equals(other.getParameters())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1146,10 +1066,6 @@ com.google.protobuf.Value defaultValue) {
     if (!internalGetExtensions().getMap().isEmpty()) {
       hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetExtensions().hashCode();
-    }
-    if (hasParameters()) {
-      hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
-      hash = (53 * hash) + getParameters().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1337,7 +1253,6 @@ com.google.protobuf.Value defaultValue) {
               .alwaysUseFieldBuilders) {
         getExternalDocsFieldBuilder();
         getSecurityFieldBuilder();
-        getParametersFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1370,11 +1285,6 @@ com.google.protobuf.Value defaultValue) {
       }
       bitField0_ = (bitField0_ & ~0x00000400);
       internalGetMutableExtensions().clear();
-      parameters_ = null;
-      if (parametersBuilder_ != null) {
-        parametersBuilder_.dispose();
-        parametersBuilder_ = null;
-      }
       return this;
     }
 
@@ -1462,12 +1372,6 @@ com.google.protobuf.Value defaultValue) {
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.extensions_ = internalGetExtensions().build(ExtensionsDefaultEntryHolder.defaultEntry);
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.parameters_ = parametersBuilder_ == null
-            ? parameters_
-            : parametersBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1577,9 +1481,6 @@ com.google.protobuf.Value defaultValue) {
       internalGetMutableExtensions().mergeFrom(
           other.internalGetExtensions());
       bitField0_ |= 0x00000800;
-      if (other.hasParameters()) {
-        mergeParameters(other.getParameters());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1699,13 +1600,6 @@ com.google.protobuf.Value defaultValue) {
               bitField0_ |= 0x00000800;
               break;
             } // case 106
-            case 114: {
-              input.readMessage(
-                  getParametersFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3541,12 +3435,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return internalGetExtensions().ensureBuilderMap().size();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -3564,12 +3452,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return getExtensionsMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -3577,12 +3459,6 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
       return internalGetExtensions().getImmutableMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -3596,12 +3472,6 @@ com.google.protobuf.Value defaultValue) {
       return map.containsKey(key) ? extensionsConverter.build(map.get(key)) : defaultValue;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     @java.lang.Override
@@ -3620,12 +3490,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     public Builder removeExtensions(
@@ -3645,12 +3509,6 @@ com.google.protobuf.Value defaultValue) {
       return internalGetMutableExtensions().ensureMessageMap();
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     public Builder putExtensions(
@@ -3664,12 +3522,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     public Builder putAllExtensions(
@@ -3685,12 +3537,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
      * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 13 [json_name = "extensions"];</code>
      */
     public com.google.protobuf.Value.Builder putExtensionsBuilderIfAbsent(
@@ -3706,181 +3552,6 @@ com.google.protobuf.Value defaultValue) {
         builderMap.put(key, entry);
       }
       return (com.google.protobuf.Value.Builder) entry;
-    }
-
-    private ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder> parametersBuilder_;
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     * @return Whether the parameters field is set.
-     */
-    public boolean hasParameters() {
-      return ((bitField0_ & 0x00001000) != 0);
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     * @return The parameters.
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters getParameters() {
-      if (parametersBuilder_ == null) {
-        return parameters_ == null ? ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance() : parameters_;
-      } else {
-        return parametersBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public Builder setParameters(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters value) {
-      if (parametersBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        parameters_ = value;
-      } else {
-        parametersBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public Builder setParameters(
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.Builder builderForValue) {
-      if (parametersBuilder_ == null) {
-        parameters_ = builderForValue.build();
-      } else {
-        parametersBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public Builder mergeParameters(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters value) {
-      if (parametersBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0) &&
-          parameters_ != null &&
-          parameters_ != ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance()) {
-          getParametersBuilder().mergeFrom(value);
-        } else {
-          parameters_ = value;
-        }
-      } else {
-        parametersBuilder_.mergeFrom(value);
-      }
-      if (parameters_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public Builder clearParameters() {
-      bitField0_ = (bitField0_ & ~0x00001000);
-      parameters_ = null;
-      if (parametersBuilder_ != null) {
-        parametersBuilder_.dispose();
-        parametersBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.Builder getParametersBuilder() {
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return getParametersFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder getParametersOrBuilder() {
-      if (parametersBuilder_ != null) {
-        return parametersBuilder_.getMessageOrBuilder();
-      } else {
-        return parameters_ == null ?
-            ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.getDefaultInstance() : parameters_;
-      }
-    }
-    /**
-     * <pre>
-     * Custom parameters such as HTTP request headers.
-     * See: https://swagger.io/docs/specification/2-0/describing-parameters/
-     * and https://swagger.io/specification/v2/#parameter-object.
-     * </pre>
-     *
-     * <code>.grpc.gateway.protoc_gen_openapiv2.options.Parameters parameters = 14 [json_name = "parameters"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder> 
-        getParametersFieldBuilder() {
-      if (parametersBuilder_ == null) {
-        parametersBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Parameters.Builder, ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ParametersOrBuilder>(
-                getParameters(),
-                getParentForChildren(),
-                isClean());
-        parameters_ = null;
-      }
-      return parametersBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:grpc.gateway.protoc_gen_openapiv2.options.Operation)

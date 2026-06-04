@@ -33,7 +33,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Tag() {
-    name_ = "";
     description_ = "";
   }
 
@@ -42,18 +41,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-      int number) {
-    switch (number) {
-      case 4:
-        return internalGetExtensions();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -63,57 +50,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <pre>
-   * The name of the tag. Use it to allow override of the name of a
-   * global Tag object, then use that name to reference the tag throughout the
-   * OpenAPI file.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The name of the tag. Use it to allow override of the name of a
-   * global Tag object, then use that name to reference the tag throughout the
-   * OpenAPI file.
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
@@ -201,109 +137,6 @@ private static final long serialVersionUID = 0L;
     return externalDocs_ == null ? ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.getDefaultInstance() : externalDocs_;
   }
 
-  public static final int EXTENSIONS_FIELD_NUMBER = 4;
-  private static final class ExtensionsDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, com.google.protobuf.Value> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, com.google.protobuf.Value>newDefaultInstance(
-                ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_ExtensionsEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                com.google.protobuf.Value.getDefaultInstance());
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, com.google.protobuf.Value> extensions_;
-  private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
-  internalGetExtensions() {
-    if (extensions_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          ExtensionsDefaultEntryHolder.defaultEntry);
-    }
-    return extensions_;
-  }
-  public int getExtensionsCount() {
-    return internalGetExtensions().getMap().size();
-  }
-  /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
-   * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-   */
-  @java.lang.Override
-  public boolean containsExtensions(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetExtensions().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getExtensionsMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
-    return getExtensionsMap();
-  }
-  /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
-   * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
-    return internalGetExtensions().getMap();
-  }
-  /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
-   * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-com.google.protobuf.Value getExtensionsOrDefault(
-      java.lang.String key,
-      /* nullable */
-com.google.protobuf.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, com.google.protobuf.Value> map =
-        internalGetExtensions().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * Custom properties that start with "x-" such as "x-foo" used to describe
-   * extra functionality that is not covered by the standard OpenAPI Specification.
-   * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-   * </pre>
-   *
-   * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.Value getExtensionsOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, com.google.protobuf.Value> map =
-        internalGetExtensions().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -318,21 +151,12 @@ com.google.protobuf.Value defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, description_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getExternalDocs());
     }
-    com.google.protobuf.GeneratedMessage
-      .serializeStringMapTo(
-        output,
-        internalGetExtensions(),
-        ExtensionsDefaultEntryHolder.defaultEntry,
-        4);
     getUnknownFields().writeTo(output);
   }
 
@@ -342,25 +166,12 @@ com.google.protobuf.Value defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, description_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getExternalDocs());
-    }
-    for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
-         : internalGetExtensions().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
-      extensions__ = ExtensionsDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, extensions__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -377,8 +188,6 @@ com.google.protobuf.Value defaultValue) {
     }
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag other = (ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
     if (hasExternalDocs() != other.hasExternalDocs()) return false;
@@ -386,8 +195,6 @@ com.google.protobuf.Value defaultValue) {
       if (!getExternalDocs()
           .equals(other.getExternalDocs())) return false;
     }
-    if (!internalGetExtensions().equals(
-        other.internalGetExtensions())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -399,17 +206,11 @@ com.google.protobuf.Value defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
     if (hasExternalDocs()) {
       hash = (37 * hash) + EXTERNAL_DOCS_FIELD_NUMBER;
       hash = (53 * hash) + getExternalDocs().hashCode();
-    }
-    if (!internalGetExtensions().getMap().isEmpty()) {
-      hash = (37 * hash) + EXTENSIONS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetExtensions().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -526,28 +327,6 @@ com.google.protobuf.Value defaultValue) {
       return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetExtensions();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetMutableExtensions();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -576,14 +355,12 @@ com.google.protobuf.Value defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      name_ = "";
       description_ = "";
       externalDocs_ = null;
       if (externalDocsBuilder_ != null) {
         externalDocsBuilder_.dispose();
         externalDocsBuilder_ = null;
       }
-      internalGetMutableExtensions().clear();
       return this;
     }
 
@@ -618,20 +395,14 @@ com.google.protobuf.Value defaultValue) {
     private void buildPartial0(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.description_ = description_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.externalDocs_ = externalDocsBuilder_ == null
             ? externalDocs_
             : externalDocsBuilder_.build();
         to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.extensions_ = internalGetExtensions().build(ExtensionsDefaultEntryHolder.defaultEntry);
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -648,22 +419,14 @@ com.google.protobuf.Value defaultValue) {
 
     public Builder mergeFrom(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag other) {
       if (other == ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Tag.getDefaultInstance()) return this;
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasExternalDocs()) {
         mergeExternalDocs(other.getExternalDocs());
       }
-      internalGetMutableExtensions().mergeFrom(
-          other.internalGetExtensions());
-      bitField0_ |= 0x00000008;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -690,32 +453,18 @@ com.google.protobuf.Value defaultValue) {
             case 0:
               done = true;
               break;
-            case 10: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 18: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getExternalDocsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
-            case 34: {
-              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
-              extensions__ = input.readMessage(
-                  ExtensionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableExtensions().ensureBuilderMap().put(
-                  extensions__.getKey(), extensions__.getValue());
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -732,108 +481,6 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
     private int bitField0_;
-
-    private java.lang.Object name_ = "";
-    /**
-     * <pre>
-     * The name of the tag. Use it to allow override of the name of a
-     * global Tag object, then use that name to reference the tag throughout the
-     * OpenAPI file.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The name of the tag. Use it to allow override of the name of a
-     * global Tag object, then use that name to reference the tag throughout the
-     * OpenAPI file.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The name of the tag. Use it to allow override of the name of a
-     * global Tag object, then use that name to reference the tag throughout the
-     * OpenAPI file.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the tag. Use it to allow override of the name of a
-     * global Tag object, then use that name to reference the tag throughout the
-     * OpenAPI file.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the tag. Use it to allow override of the name of a
-     * global Tag object, then use that name to reference the tag throughout the
-     * OpenAPI file.
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
 
     private java.lang.Object description_ = "";
     /**
@@ -893,7 +540,7 @@ com.google.protobuf.Value defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -908,7 +555,7 @@ com.google.protobuf.Value defaultValue) {
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -927,7 +574,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -944,7 +591,7 @@ com.google.protobuf.Value defaultValue) {
      * @return Whether the externalDocs field is set.
      */
     public boolean hasExternalDocs() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -977,7 +624,7 @@ com.google.protobuf.Value defaultValue) {
       } else {
         externalDocsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -995,7 +642,7 @@ com.google.protobuf.Value defaultValue) {
       } else {
         externalDocsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1008,7 +655,7 @@ com.google.protobuf.Value defaultValue) {
      */
     public Builder mergeExternalDocs(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation value) {
       if (externalDocsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000002) != 0) &&
           externalDocs_ != null &&
           externalDocs_ != ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.getDefaultInstance()) {
           getExternalDocsBuilder().mergeFrom(value);
@@ -1019,7 +666,7 @@ com.google.protobuf.Value defaultValue) {
         externalDocsBuilder_.mergeFrom(value);
       }
       if (externalDocs_ != null) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       return this;
@@ -1032,7 +679,7 @@ com.google.protobuf.Value defaultValue) {
      * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
      */
     public Builder clearExternalDocs() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       externalDocs_ = null;
       if (externalDocsBuilder_ != null) {
         externalDocsBuilder_.dispose();
@@ -1049,7 +696,7 @@ com.google.protobuf.Value defaultValue) {
      * <code>.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation external_docs = 3 [json_name = "externalDocs"];</code>
      */
     public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation.Builder getExternalDocsBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return getExternalDocsFieldBuilder().getBuilder();
     }
@@ -1087,209 +734,6 @@ com.google.protobuf.Value defaultValue) {
         externalDocs_ = null;
       }
       return externalDocsBuilder_;
-    }
-
-    private static final class ExtensionsConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value> {
-      @java.lang.Override
-      public com.google.protobuf.Value build(com.google.protobuf.ValueOrBuilder val) {
-        if (val instanceof com.google.protobuf.Value) { return (com.google.protobuf.Value) val; }
-        return ((com.google.protobuf.Value.Builder) val).build();
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value> defaultEntry() {
-        return ExtensionsDefaultEntryHolder.defaultEntry;
-      }
-    };
-    private static final ExtensionsConverter extensionsConverter = new ExtensionsConverter();
-
-    private com.google.protobuf.MapFieldBuilder<
-        java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder> extensions_;
-    private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder>
-        internalGetExtensions() {
-      if (extensions_ == null) {
-        return new com.google.protobuf.MapFieldBuilder<>(extensionsConverter);
-      }
-      return extensions_;
-    }
-    private com.google.protobuf.MapFieldBuilder<java.lang.String, com.google.protobuf.ValueOrBuilder, com.google.protobuf.Value, com.google.protobuf.Value.Builder>
-        internalGetMutableExtensions() {
-      if (extensions_ == null) {
-        extensions_ = new com.google.protobuf.MapFieldBuilder<>(extensionsConverter);
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return extensions_;
-    }
-    public int getExtensionsCount() {
-      return internalGetExtensions().ensureBuilderMap().size();
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    @java.lang.Override
-    public boolean containsExtensions(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetExtensions().ensureBuilderMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getExtensionsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensions() {
-      return getExtensionsMap();
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, com.google.protobuf.Value> getExtensionsMap() {
-      return internalGetExtensions().getImmutableMap();
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-com.google.protobuf.Value getExtensionsOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> map = internalGetMutableExtensions().ensureBuilderMap();
-      return map.containsKey(key) ? extensionsConverter.build(map.get(key)) : defaultValue;
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Value getExtensionsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> map = internalGetMutableExtensions().ensureBuilderMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return extensionsConverter.build(map.get(key));
-    }
-    public Builder clearExtensions() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      internalGetMutableExtensions().clear();
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    public Builder removeExtensions(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableExtensions().ensureBuilderMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Value>
-        getMutableExtensions() {
-      bitField0_ |= 0x00000008;
-      return internalGetMutableExtensions().ensureMessageMap();
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    public Builder putExtensions(
-        java.lang.String key,
-        com.google.protobuf.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableExtensions().ensureBuilderMap()
-          .put(key, value);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    public Builder putAllExtensions(
-        java.util.Map<java.lang.String, com.google.protobuf.Value> values) {
-      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> e : values.entrySet()) {
-        if (e.getKey() == null || e.getValue() == null) {
-          throw new NullPointerException();
-        }
-      }
-      internalGetMutableExtensions().ensureBuilderMap()
-          .putAll(values);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-    /**
-     * <pre>
-     * Custom properties that start with "x-" such as "x-foo" used to describe
-     * extra functionality that is not covered by the standard OpenAPI Specification.
-     * See: https://swagger.io/docs/specification/2-0/swagger-extensions/
-     * </pre>
-     *
-     * <code>map&lt;string, .google.protobuf.Value&gt; extensions = 4 [json_name = "extensions"];</code>
-     */
-    public com.google.protobuf.Value.Builder putExtensionsBuilderIfAbsent(
-        java.lang.String key) {
-      java.util.Map<java.lang.String, com.google.protobuf.ValueOrBuilder> builderMap = internalGetMutableExtensions().ensureBuilderMap();
-      com.google.protobuf.ValueOrBuilder entry = builderMap.get(key);
-      if (entry == null) {
-        entry = com.google.protobuf.Value.newBuilder();
-        builderMap.put(key, entry);
-      }
-      if (entry instanceof com.google.protobuf.Value) {
-        entry = ((com.google.protobuf.Value) entry).toBuilder();
-        builderMap.put(key, entry);
-      }
-      return (com.google.protobuf.Value.Builder) entry;
     }
 
     // @@protoc_insertion_point(builder_scope:grpc.gateway.protoc_gen_openapiv2.options.Tag)

@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from asgt.v2 import product_service_pb2 as asgt_dot_v2_dot_product__service__pb2
+from vml_proto.asgt.v2 import product_service_pb2 as asgt_dot_v2_dot_product__service__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
