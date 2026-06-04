@@ -226,34 +226,33 @@ public final class DocumentdataserviceProto {
       "tions\030\003 \003(\01323.ssn.documentdataservice.v1" +
       ".InternalFieldAnnotationR\013annotations\022 \n" +
       "\013environment\030\004 \001(\tR\013environment\"\030\n\026AddAn" +
-      "notationsResponse*\251\001\n\017CandidateSource\022 \n" +
+      "notationsResponse*\217\001\n\017CandidateSource\022 \n" +
       "\034CANDIDATE_SOURCE_UNSPECIFIED\020\000\022\037\n\033CANDI" +
       "DATE_SOURCE_PREDICTION\020\001\022\035\n\031CANDIDATE_SO" +
       "URCE_FEEDBACK\020\002\022\032\n\026CANDIDATE_SOURCE_LABE" +
-      "L\020\003\022\030\n\024CANDIDATE_SOURCE_GEO\020\0042\322\004\n\023Docume" +
-      "ntDataService\022\264\001\n\017GetDocumentData\0222.ssn." +
-      "documentdataservice.v1.GetDocumentDataRe" +
-      "quest\0323.ssn.documentdataservice.v1.GetDo" +
-      "cumentDataResponse\"8\202\323\344\223\0022\0220/v1/consumer" +
-      "s/{consumer}/documents/{feedback_id}\022\300\001\n" +
-      "\020SetDocumentBlobs\0223.ssn.documentdataserv" +
-      "ice.v1.SetDocumentBlobsRequest\0324.ssn.doc" +
-      "umentdataservice.v1.SetDocumentBlobsResp" +
-      "onse\"A\202\323\344\223\002;\0326/v1/consumers/{consumer}/d" +
-      "ocuments/{feedback_id}/blobs:\001*\022\300\001\n\016AddA" +
-      "nnotations\0221.ssn.documentdataservice.v1." +
-      "AddAnnotationsRequest\0322.ssn.documentdata" +
-      "service.v1.AddAnnotationsResponse\"G\202\323\344\223\002" +
-      "A\"</v1/consumers/{consumer}/documents/{f" +
-      "eedback_id}/annotations:\001*B\235\002\n#ai.visma." +
-      "ssn.documentdataservice.v1B\030Documentdata" +
-      "serviceProtoP\001ZRgithub.com/e-conomic/vml" +
-      "apis/gen/go/ssn/documentdataservice/v1;d" +
-      "ocumentdataservice\242\002\003SDX\252\002\032Ssn.Documentd" +
-      "ataservice.V1\312\002\032Ssn\\Documentdataservice\\" +
-      "V1\342\002&Ssn\\Documentdataservice\\V1\\GPBMetad" +
-      "ata\352\002\034Ssn::Documentdataservice::V1b\006prot" +
-      "o3"
+      "L\020\0032\322\004\n\023DocumentDataService\022\264\001\n\017GetDocum" +
+      "entData\0222.ssn.documentdataservice.v1.Get" +
+      "DocumentDataRequest\0323.ssn.documentdatase" +
+      "rvice.v1.GetDocumentDataResponse\"8\202\323\344\223\0022" +
+      "\0220/v1/consumers/{consumer}/documents/{fe" +
+      "edback_id}\022\300\001\n\020SetDocumentBlobs\0223.ssn.do" +
+      "cumentdataservice.v1.SetDocumentBlobsReq" +
+      "uest\0324.ssn.documentdataservice.v1.SetDoc" +
+      "umentBlobsResponse\"A\202\323\344\223\002;\0326/v1/consumer" +
+      "s/{consumer}/documents/{feedback_id}/blo" +
+      "bs:\001*\022\300\001\n\016AddAnnotations\0221.ssn.documentd" +
+      "ataservice.v1.AddAnnotationsRequest\0322.ss" +
+      "n.documentdataservice.v1.AddAnnotationsR" +
+      "esponse\"G\202\323\344\223\002A\"</v1/consumers/{consumer" +
+      "}/documents/{feedback_id}/annotations:\001*" +
+      "B\235\002\n#ai.visma.ssn.documentdataservice.v1" +
+      "B\030DocumentdataserviceProtoP\001ZRgithub.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/documentda" +
+      "taservice/v1;documentdataservice\242\002\003SDX\252\002" +
+      "\032Ssn.Documentdataservice.V1\312\002\032Ssn\\Docume" +
+      "ntdataservice\\V1\342\002&Ssn\\Documentdataservi" +
+      "ce\\V1\\GPBMetadata\352\002\034Ssn::Documentdataser" +
+      "vice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

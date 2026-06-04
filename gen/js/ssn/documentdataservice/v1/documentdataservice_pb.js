@@ -5009,8 +5009,7 @@ proto.ssn.documentdataservice.v1.CandidateSource = {
   CANDIDATE_SOURCE_UNSPECIFIED: 0,
   CANDIDATE_SOURCE_PREDICTION: 1,
   CANDIDATE_SOURCE_FEEDBACK: 2,
-  CANDIDATE_SOURCE_LABEL: 3,
-  CANDIDATE_SOURCE_GEO: 4
+  CANDIDATE_SOURCE_LABEL: 3
 };
 
 goog.object.extend(exports, proto.ssn.documentdataservice.v1);
