@@ -29,7 +29,6 @@ private static final long serialVersionUID = 0L;
   private DeleteAnnotationsRequest() {
     feedbackId_ = "";
     consumer_ = "";
-    environment_ = "";
     feature_ = "";
     source_ = "";
     sourceId_ = "";
@@ -120,53 +119,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       consumer_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ENVIRONMENT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object environment_ = "";
-  /**
-   * <pre>
-   * Target environment: "snbx", "stag", "prod".
-   * </pre>
-   *
-   * <code>string environment = 3 [json_name = "environment"];</code>
-   * @return The environment.
-   */
-  @java.lang.Override
-  public java.lang.String getEnvironment() {
-    java.lang.Object ref = environment_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      environment_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Target environment: "snbx", "stag", "prod".
-   * </pre>
-   *
-   * <code>string environment = 3 [json_name = "environment"];</code>
-   * @return The bytes for environment.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getEnvironmentBytes() {
-    java.lang.Object ref = environment_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      environment_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -334,9 +286,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(consumer_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, consumer_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, environment_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feature_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, feature_);
     }
@@ -360,9 +309,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(consumer_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, consumer_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(environment_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, environment_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feature_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, feature_);
@@ -392,8 +338,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFeedbackId())) return false;
     if (!getConsumer()
         .equals(other.getConsumer())) return false;
-    if (!getEnvironment()
-        .equals(other.getEnvironment())) return false;
     if (!getFeature()
         .equals(other.getFeature())) return false;
     if (!getSource()
@@ -415,8 +359,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFeedbackId().hashCode();
     hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
     hash = (53 * hash) + getConsumer().hashCode();
-    hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
-    hash = (53 * hash) + getEnvironment().hashCode();
     hash = (37 * hash) + FEATURE_FIELD_NUMBER;
     hash = (53 * hash) + getFeature().hashCode();
     hash = (37 * hash) + SOURCE_FIELD_NUMBER;
@@ -556,7 +498,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       feedbackId_ = "";
       consumer_ = "";
-      environment_ = "";
       feature_ = "";
       source_ = "";
       sourceId_ = "";
@@ -600,15 +541,12 @@ private static final long serialVersionUID = 0L;
         result.consumer_ = consumer_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.environment_ = environment_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.feature_ = feature_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.source_ = source_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.sourceId_ = sourceId_;
       }
     }
@@ -635,24 +573,19 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getEnvironment().isEmpty()) {
-        environment_ = other.environment_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
       if (!other.getFeature().isEmpty()) {
         feature_ = other.feature_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getSource().isEmpty()) {
         source_ = other.source_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getSourceId().isEmpty()) {
         sourceId_ = other.sourceId_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -691,24 +624,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              environment_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             case 34: {
               feature_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             case 42: {
               source_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               sourceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             default: {
@@ -872,98 +800,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object environment_ = "";
-    /**
-     * <pre>
-     * Target environment: "snbx", "stag", "prod".
-     * </pre>
-     *
-     * <code>string environment = 3 [json_name = "environment"];</code>
-     * @return The environment.
-     */
-    public java.lang.String getEnvironment() {
-      java.lang.Object ref = environment_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        environment_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Target environment: "snbx", "stag", "prod".
-     * </pre>
-     *
-     * <code>string environment = 3 [json_name = "environment"];</code>
-     * @return The bytes for environment.
-     */
-    public com.google.protobuf.ByteString
-        getEnvironmentBytes() {
-      java.lang.Object ref = environment_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        environment_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Target environment: "snbx", "stag", "prod".
-     * </pre>
-     *
-     * <code>string environment = 3 [json_name = "environment"];</code>
-     * @param value The environment to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEnvironment(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      environment_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Target environment: "snbx", "stag", "prod".
-     * </pre>
-     *
-     * <code>string environment = 3 [json_name = "environment"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEnvironment() {
-      environment_ = getDefaultInstance().getEnvironment();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Target environment: "snbx", "stag", "prod".
-     * </pre>
-     *
-     * <code>string environment = 3 [json_name = "environment"];</code>
-     * @param value The bytes for environment to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEnvironmentBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      environment_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object feature_ = "";
     /**
      * <pre>
@@ -1019,7 +855,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       feature_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1033,7 +869,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFeature() {
       feature_ = getDefaultInstance().getFeature();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1051,7 +887,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       feature_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1111,7 +947,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       source_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1125,7 +961,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSource() {
       source_ = getDefaultInstance().getSource();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1143,7 +979,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       source_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1203,7 +1039,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       sourceId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1217,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSourceId() {
       sourceId_ = getDefaultInstance().getSourceId();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1235,7 +1071,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       sourceId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

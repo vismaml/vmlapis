@@ -5304,8 +5304,7 @@ proto.ssn.documentdataservice.v1.DeleteDocumentRequest.prototype.toObject = func
 proto.ssn.documentdataservice.v1.DeleteDocumentRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    environment: jspb.Message.getFieldWithDefault(msg, 3, "")
+    consumer: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -5350,10 +5349,6 @@ proto.ssn.documentdataservice.v1.DeleteDocumentRequest.deserializeBinaryFromRead
       var value = /** @type {string} */ (reader.readString());
       msg.setConsumer(value);
       break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEnvironment(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -5397,13 +5392,6 @@ proto.ssn.documentdataservice.v1.DeleteDocumentRequest.serializeBinaryToWriter =
       f
     );
   }
-  f = message.getEnvironment();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
 };
 
 
@@ -5440,24 +5428,6 @@ proto.ssn.documentdataservice.v1.DeleteDocumentRequest.prototype.getConsumer = f
  */
 proto.ssn.documentdataservice.v1.DeleteDocumentRequest.prototype.setConsumer = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string environment = 3;
- * @return {string}
- */
-proto.ssn.documentdataservice.v1.DeleteDocumentRequest.prototype.getEnvironment = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.documentdataservice.v1.DeleteDocumentRequest} returns this
- */
-proto.ssn.documentdataservice.v1.DeleteDocumentRequest.prototype.setEnvironment = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -5596,7 +5566,6 @@ proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.toObject = function(in
   var f, obj = {
     feedbackId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    environment: jspb.Message.getFieldWithDefault(msg, 3, ""),
     feature: jspb.Message.getFieldWithDefault(msg, 4, ""),
     source: jspb.Message.getFieldWithDefault(msg, 5, ""),
     sourceId: jspb.Message.getFieldWithDefault(msg, 6, "")
@@ -5643,10 +5612,6 @@ proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.deserializeBinaryFromR
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setConsumer(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEnvironment(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -5700,13 +5665,6 @@ proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.serializeBinaryToWrite
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
-    );
-  }
-  f = message.getEnvironment();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
       f
     );
   }
@@ -5767,24 +5725,6 @@ proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.prototype.getConsumer 
  */
 proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.prototype.setConsumer = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string environment = 3;
- * @return {string}
- */
-proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.prototype.getEnvironment = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest} returns this
- */
-proto.ssn.documentdataservice.v1.DeleteAnnotationsRequest.prototype.setEnvironment = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

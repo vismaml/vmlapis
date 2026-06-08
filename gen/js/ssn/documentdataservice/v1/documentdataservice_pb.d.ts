@@ -629,9 +629,6 @@ export class DeleteDocumentRequest extends jspb.Message {
   getConsumer(): string;
   setConsumer(value: string): DeleteDocumentRequest;
 
-  getEnvironment(): string;
-  setEnvironment(value: string): DeleteDocumentRequest;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteDocumentRequest.AsObject;
   static toObject(includeInstance: boolean, msg: DeleteDocumentRequest): DeleteDocumentRequest.AsObject;
@@ -644,7 +641,6 @@ export namespace DeleteDocumentRequest {
   export type AsObject = {
     feedbackId: string,
     consumer: string,
-    environment: string,
   }
 }
 
@@ -669,9 +665,6 @@ export class DeleteAnnotationsRequest extends jspb.Message {
   getConsumer(): string;
   setConsumer(value: string): DeleteAnnotationsRequest;
 
-  getEnvironment(): string;
-  setEnvironment(value: string): DeleteAnnotationsRequest;
-
   getFeature(): string;
   setFeature(value: string): DeleteAnnotationsRequest;
 
@@ -693,7 +686,6 @@ export namespace DeleteAnnotationsRequest {
   export type AsObject = {
     feedbackId: string,
     consumer: string,
-    environment: string,
     feature: string,
     source: string,
     sourceId: string,

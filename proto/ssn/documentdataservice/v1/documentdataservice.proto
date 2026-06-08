@@ -256,8 +256,7 @@ message AddAnnotationsResponse {}
 message DeleteDocumentRequest {
   string feedback_id = 1;
   string consumer = 2;
-  // Target environment: "snbx", "stag", "prod".
-  string environment = 3;
+  reserved 3;
 }
 
 message DeleteDocumentResponse {}
@@ -265,8 +264,7 @@ message DeleteDocumentResponse {}
 message DeleteAnnotationsRequest {
   string feedback_id = 1;
   string consumer = 2;
-  // Target environment: "snbx", "stag", "prod".
-  string environment = 3;
+  reserved 3;
   // Required. The feature whose annotations should be deleted.
   string feature = 4;
   // Optional. If set, only delete annotations with this source.

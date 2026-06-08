@@ -32,24 +32,4 @@ public interface DeleteDocumentRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConsumerBytes();
-
-  /**
-   * <pre>
-   * Target environment: "snbx", "stag", "prod".
-   * </pre>
-   *
-   * <code>string environment = 3 [json_name = "environment"];</code>
-   * @return The environment.
-   */
-  java.lang.String getEnvironment();
-  /**
-   * <pre>
-   * Target environment: "snbx", "stag", "prod".
-   * </pre>
-   *
-   * <code>string environment = 3 [json_name = "environment"];</code>
-   * @return The bytes for environment.
-   */
-  com.google.protobuf.ByteString
-      getEnvironmentBytes();
 }

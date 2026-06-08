@@ -112,47 +112,46 @@ namespace Ssn.Documentdataservice.V1 {
             "b25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3RhdGlvbnMYAyADKAsy",
             "My5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxkQW5u",
             "b3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1lbnQYBCABKAlSC2Vu",
-            "dmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UidgoVRGVsZXRl",
+            "dmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UiWgoVRGVsZXRl",
             "RG9jdW1lbnRSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFj",
-            "a0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchIgCgtlbnZpcm9ubWVu",
-            "dBgDIAEoCVILZW52aXJvbm1lbnQiGAoWRGVsZXRlRG9jdW1lbnRSZXNwb25z",
-            "ZSLIAQoYRGVsZXRlQW5ub3RhdGlvbnNSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lk",
-            "GAEgASgJUgpmZWVkYmFja0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1l",
-            "chIgCgtlbnZpcm9ubWVudBgDIAEoCVILZW52aXJvbm1lbnQSGAoHZmVhdHVy",
-            "ZRgEIAEoCVIHZmVhdHVyZRIWCgZzb3VyY2UYBSABKAlSBnNvdXJjZRIbCglz",
-            "b3VyY2VfaWQYBiABKAlSCHNvdXJjZUlkIhsKGURlbGV0ZUFubm90YXRpb25z",
-            "UmVzcG9uc2UqjwEKD0NhbmRpZGF0ZVNvdXJjZRIgChxDQU5ESURBVEVfU09V",
-            "UkNFX1VOU1BFQ0lGSUVEEAASHwobQ0FORElEQVRFX1NPVVJDRV9QUkVESUNU",
-            "SU9OEAESHQoZQ0FORElEQVRFX1NPVVJDRV9GRUVEQkFDSxACEhoKFkNBTkRJ",
-            "REFURV9TT1VSQ0VfTEFCRUwQAzLPBwoTRG9jdW1lbnREYXRhU2VydmljZRK0",
-            "AQoPR2V0RG9jdW1lbnREYXRhEjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2Uu",
-            "djEuR2V0RG9jdW1lbnREYXRhUmVxdWVzdBozLnNzbi5kb2N1bWVudGRhdGFz",
-            "ZXJ2aWNlLnYxLkdldERvY3VtZW50RGF0YVJlc3BvbnNlIjiC0+STAjISMC92",
-            "MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lk",
-            "fRLAAQoQU2V0RG9jdW1lbnRCbG9icxIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2",
-            "aWNlLnYxLlNldERvY3VtZW50QmxvYnNSZXF1ZXN0GjQuc3NuLmRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UudjEuU2V0RG9jdW1lbnRCbG9ic1Jlc3BvbnNlIkGC0+ST",
-            "AjsaNi92MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRi",
-            "YWNrX2lkfS9ibG9iczoBKhLAAQoOQWRkQW5ub3RhdGlvbnMSMS5zc24uZG9j",
-            "dW1lbnRkYXRhc2VydmljZS52MS5BZGRBbm5vdGF0aW9uc1JlcXVlc3QaMi5z",
-            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5BZGRBbm5vdGF0aW9uc1Jlc3Bv",
-            "bnNlIkeC0+STAkEiPC92MS9jb25zdW1lcnMve2NvbnN1bWVyfS9kb2N1bWVu",
-            "dHMve2ZlZWRiYWNrX2lkfS9hbm5vdGF0aW9uczoBKhKxAQoORGVsZXRlRG9j",
-            "dW1lbnQSMS5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5EZWxldGVEb2N1",
-            "bWVudFJlcXVlc3QaMi5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5EZWxl",
-            "dGVEb2N1bWVudFJlc3BvbnNlIjiC0+STAjIqMC92MS9jb25zdW1lcnMve2Nv",
-            "bnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lkfRLGAQoRRGVsZXRlQW5u",
-            "b3RhdGlvbnMSNC5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5EZWxldGVB",
-            "bm5vdGF0aW9uc1JlcXVlc3QaNS5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52",
-            "MS5EZWxldGVBbm5vdGF0aW9uc1Jlc3BvbnNlIkSC0+STAj4qPC92MS9jb25z",
-            "dW1lcnMve2NvbnN1bWVyfS9kb2N1bWVudHMve2ZlZWRiYWNrX2lkfS9hbm5v",
-            "dGF0aW9uc0KdAgojYWkudmlzbWEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2Uu",
-            "djFCGERvY3VtZW50ZGF0YXNlcnZpY2VQcm90b1ABWlJnaXRodWIuY29tL2Ut",
-            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vZG9jdW1lbnRkYXRhc2Vydmlj",
-            "ZS92MTtkb2N1bWVudGRhdGFzZXJ2aWNlogIDU0RYqgIaU3NuLkRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UuVjHKAhpTc25cRG9jdW1lbnRkYXRhc2VydmljZVxWMeIC",
-            "JlNzblxEb2N1bWVudGRhdGFzZXJ2aWNlXFYxXEdQQk1ldGFkYXRh6gIcU3Nu",
-            "OjpEb2N1bWVudGRhdGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
+            "a0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lckoECAMQBCIYChZEZWxl",
+            "dGVEb2N1bWVudFJlc3BvbnNlIqwBChhEZWxldGVBbm5vdGF0aW9uc1JlcXVl",
+            "c3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoIY29uc3Vt",
+            "ZXIYAiABKAlSCGNvbnN1bWVyEhgKB2ZlYXR1cmUYBCABKAlSB2ZlYXR1cmUS",
+            "FgoGc291cmNlGAUgASgJUgZzb3VyY2USGwoJc291cmNlX2lkGAYgASgJUghz",
+            "b3VyY2VJZEoECAMQBCIbChlEZWxldGVBbm5vdGF0aW9uc1Jlc3BvbnNlKo8B",
+            "Cg9DYW5kaWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9VTlNQRUNJ",
+            "RklFRBAAEh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThABEh0KGUNB",
+            "TkRJREFURV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVfU09VUkNF",
+            "X0xBQkVMEAMyzwcKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dldERvY3Vt",
+            "ZW50RGF0YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3Vt",
+            "ZW50RGF0YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5H",
+            "ZXREb2N1bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29uc3VtZXJz",
+            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEKEFNldERv",
+            "Y3VtZW50QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5TZXRE",
+            "b2N1bWVudEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
+            "LnYxLlNldERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYvdjEvY29u",
+            "c3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYmxv",
+            "YnM6ASoSwAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50ZGF0YXNl",
+            "cnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRvY3VtZW50",
+            "ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJHgtPkkwJB",
+            "IjwvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFj",
+            "a19pZH0vYW5ub3RhdGlvbnM6ASoSsQEKDkRlbGV0ZURvY3VtZW50EjEuc3Nu",
+            "LmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRSZXF1ZXN0",
+            "GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRS",
+            "ZXNwb25zZSI4gtPkkwIyKjAvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9j",
+            "dW1lbnRzL3tmZWVkYmFja19pZH0SxgEKEURlbGV0ZUFubm90YXRpb25zEjQu",
+            "c3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5ub3RhdGlvbnNS",
+            "ZXF1ZXN0GjUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5u",
+            "b3RhdGlvbnNSZXNwb25zZSJEgtPkkwI+KjwvdjEvY29uc3VtZXJzL3tjb25z",
+            "dW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlvbnNCnQIK",
+            "I2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxQhhEb2N1bWVu",
+            "dGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0YXNlcnZpY2UvdjE7ZG9jdW1l",
+            "bnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5Eb2N1bWVudGRhdGFzZXJ2aWNl",
+            "LlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZpY2VcVjHiAiZTc25cRG9jdW1l",
+            "bnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCHFNzbjo6RG9jdW1lbnRk",
+            "YXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Documentdataservice.V1.CandidateSource), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -175,9 +174,9 @@ namespace Ssn.Documentdataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse), global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsRequest), global::Ssn.Documentdataservice.V1.AddAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Annotations", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsResponse), global::Ssn.Documentdataservice.V1.AddAnnotationsResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest), global::Ssn.Documentdataservice.V1.DeleteDocumentRequest.Parser, new[]{ "FeedbackId", "Consumer", "Environment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest), global::Ssn.Documentdataservice.V1.DeleteDocumentRequest.Parser, new[]{ "FeedbackId", "Consumer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteDocumentResponse), global::Ssn.Documentdataservice.V1.DeleteDocumentResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest), global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Environment", "Feature", "Source", "SourceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest), global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Feature", "Source", "SourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse), global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse.Parser, null, null, null, null, null)
           }));
     }
@@ -5891,7 +5890,6 @@ namespace Ssn.Documentdataservice.V1 {
     public DeleteDocumentRequest(DeleteDocumentRequest other) : this() {
       feedbackId_ = other.feedbackId_;
       consumer_ = other.consumer_;
-      environment_ = other.environment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5925,21 +5923,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "environment" field.</summary>
-    public const int EnvironmentFieldNumber = 3;
-    private string environment_ = "";
-    /// <summary>
-    /// Target environment: "snbx", "stag", "prod".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Environment {
-      get { return environment_; }
-      set {
-        environment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5957,7 +5940,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (FeedbackId != other.FeedbackId) return false;
       if (Consumer != other.Consumer) return false;
-      if (Environment != other.Environment) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5967,7 +5949,6 @@ namespace Ssn.Documentdataservice.V1 {
       int hash = 1;
       if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (Environment.Length != 0) hash ^= Environment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5994,10 +5975,6 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(18);
         output.WriteString(Consumer);
       }
-      if (Environment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Environment);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6016,10 +5993,6 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(18);
         output.WriteString(Consumer);
       }
-      if (Environment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Environment);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6035,9 +6008,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (Consumer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
-      }
-      if (Environment.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Environment);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6056,9 +6026,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (other.Consumer.Length != 0) {
         Consumer = other.Consumer;
-      }
-      if (other.Environment.Length != 0) {
-        Environment = other.Environment;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6087,10 +6054,6 @@ namespace Ssn.Documentdataservice.V1 {
             Consumer = input.ReadString();
             break;
           }
-          case 26: {
-            Environment = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -6116,10 +6079,6 @@ namespace Ssn.Documentdataservice.V1 {
           }
           case 18: {
             Consumer = input.ReadString();
-            break;
-          }
-          case 26: {
-            Environment = input.ReadString();
             break;
           }
         }
@@ -6327,7 +6286,6 @@ namespace Ssn.Documentdataservice.V1 {
     public DeleteAnnotationsRequest(DeleteAnnotationsRequest other) : this() {
       feedbackId_ = other.feedbackId_;
       consumer_ = other.consumer_;
-      environment_ = other.environment_;
       feature_ = other.feature_;
       source_ = other.source_;
       sourceId_ = other.sourceId_;
@@ -6361,21 +6319,6 @@ namespace Ssn.Documentdataservice.V1 {
       get { return consumer_; }
       set {
         consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "environment" field.</summary>
-    public const int EnvironmentFieldNumber = 3;
-    private string environment_ = "";
-    /// <summary>
-    /// Target environment: "snbx", "stag", "prod".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Environment {
-      get { return environment_; }
-      set {
-        environment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6441,7 +6384,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (FeedbackId != other.FeedbackId) return false;
       if (Consumer != other.Consumer) return false;
-      if (Environment != other.Environment) return false;
       if (Feature != other.Feature) return false;
       if (Source != other.Source) return false;
       if (SourceId != other.SourceId) return false;
@@ -6454,7 +6396,6 @@ namespace Ssn.Documentdataservice.V1 {
       int hash = 1;
       if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (Environment.Length != 0) hash ^= Environment.GetHashCode();
       if (Feature.Length != 0) hash ^= Feature.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
       if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
@@ -6483,10 +6424,6 @@ namespace Ssn.Documentdataservice.V1 {
       if (Consumer.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Consumer);
-      }
-      if (Environment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Environment);
       }
       if (Feature.Length != 0) {
         output.WriteRawTag(34);
@@ -6518,10 +6455,6 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(18);
         output.WriteString(Consumer);
       }
-      if (Environment.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Environment);
-      }
       if (Feature.Length != 0) {
         output.WriteRawTag(34);
         output.WriteString(Feature);
@@ -6550,9 +6483,6 @@ namespace Ssn.Documentdataservice.V1 {
       if (Consumer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
       }
-      if (Environment.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Environment);
-      }
       if (Feature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Feature);
       }
@@ -6579,9 +6509,6 @@ namespace Ssn.Documentdataservice.V1 {
       }
       if (other.Consumer.Length != 0) {
         Consumer = other.Consumer;
-      }
-      if (other.Environment.Length != 0) {
-        Environment = other.Environment;
       }
       if (other.Feature.Length != 0) {
         Feature = other.Feature;
@@ -6617,10 +6544,6 @@ namespace Ssn.Documentdataservice.V1 {
           }
           case 18: {
             Consumer = input.ReadString();
-            break;
-          }
-          case 26: {
-            Environment = input.ReadString();
             break;
           }
           case 34: {
@@ -6660,10 +6583,6 @@ namespace Ssn.Documentdataservice.V1 {
           }
           case 18: {
             Consumer = input.ReadString();
-            break;
-          }
-          case 26: {
-            Environment = input.ReadString();
             break;
           }
           case 34: {
