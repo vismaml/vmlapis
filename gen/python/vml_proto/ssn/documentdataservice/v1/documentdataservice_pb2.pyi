@@ -240,3 +240,23 @@ class DeleteDocumentRequest(_message.Message):
 class DeleteDocumentResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
+
+class DeleteAnnotationsRequest(_message.Message):
+    __slots__ = ("feedback_id", "consumer", "environment", "feature", "source", "source_id")
+    FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
+    CONSUMER_FIELD_NUMBER: _ClassVar[int]
+    ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
+    FEATURE_FIELD_NUMBER: _ClassVar[int]
+    SOURCE_FIELD_NUMBER: _ClassVar[int]
+    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+    feedback_id: str
+    consumer: str
+    environment: str
+    feature: str
+    source: str
+    source_id: str
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., environment: _Optional[str] = ..., feature: _Optional[str] = ..., source: _Optional[str] = ..., source_id: _Optional[str] = ...) -> None: ...
+
+class DeleteAnnotationsResponse(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...

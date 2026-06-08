@@ -36,6 +36,11 @@ class DocumentDataServiceStub(object):
                 request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentRequest.SerializeToString,
                 response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentResponse.FromString,
                 _registered_method=True)
+        self.DeleteAnnotations = channel.unary_unary(
+                '/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations',
+                request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.SerializeToString,
+                response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.FromString,
+                _registered_method=True)
 
 
 class DocumentDataServiceServicer(object):
@@ -78,6 +83,15 @@ class DocumentDataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def DeleteAnnotations(self, request, context):
+        """DeleteAnnotations removes annotations for a specific feature, optionally
+        narrowed by source and source_id. Cleans up the field_annotation marker
+        if no annotations remain for the feature.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DocumentDataServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -100,6 +114,11 @@ def add_DocumentDataServiceServicer_to_server(servicer, server):
                     servicer.DeleteDocument,
                     request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentRequest.FromString,
                     response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentResponse.SerializeToString,
+            ),
+            'DeleteAnnotations': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteAnnotations,
+                    request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.FromString,
+                    response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -212,6 +231,33 @@ class DocumentDataService(object):
             '/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument',
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentRequest.SerializeToString,
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteDocumentResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteAnnotations(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations',
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.SerializeToString,
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.FromString,
             options,
             channel_credentials,
             insecure,

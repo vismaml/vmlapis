@@ -19,10 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DocumentDataService_GetDocumentData_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
-	DocumentDataService_SetDocumentBlobs_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
-	DocumentDataService_AddAnnotations_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
-	DocumentDataService_DeleteDocument_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
+	DocumentDataService_GetDocumentData_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
+	DocumentDataService_SetDocumentBlobs_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
+	DocumentDataService_AddAnnotations_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
+	DocumentDataService_DeleteDocument_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
+	DocumentDataService_DeleteAnnotations_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations"
 )
 
 // DocumentDataServiceClient is the client API for DocumentDataService service.
@@ -44,6 +45,10 @@ type DocumentDataServiceClient interface {
 	// DeleteDocument schedules asynchronous deletion of a document and all its
 	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
 	DeleteDocument(ctx context.Context, in *DeleteDocumentRequest, opts ...grpc.CallOption) (*DeleteDocumentResponse, error)
+	// DeleteAnnotations removes annotations for a specific feature, optionally
+	// narrowed by source and source_id. Cleans up the field_annotation marker
+	// if no annotations remain for the feature.
+	DeleteAnnotations(ctx context.Context, in *DeleteAnnotationsRequest, opts ...grpc.CallOption) (*DeleteAnnotationsResponse, error)
 }
 
 type documentDataServiceClient struct {
@@ -90,6 +95,15 @@ func (c *documentDataServiceClient) DeleteDocument(ctx context.Context, in *Dele
 	return out, nil
 }
 
+func (c *documentDataServiceClient) DeleteAnnotations(ctx context.Context, in *DeleteAnnotationsRequest, opts ...grpc.CallOption) (*DeleteAnnotationsResponse, error) {
+	out := new(DeleteAnnotationsResponse)
+	err := c.cc.Invoke(ctx, DocumentDataService_DeleteAnnotations_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DocumentDataServiceServer is the server API for DocumentDataService service.
 // All implementations should embed UnimplementedDocumentDataServiceServer
 // for forward compatibility
@@ -109,6 +123,10 @@ type DocumentDataServiceServer interface {
 	// DeleteDocument schedules asynchronous deletion of a document and all its
 	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
 	DeleteDocument(context.Context, *DeleteDocumentRequest) (*DeleteDocumentResponse, error)
+	// DeleteAnnotations removes annotations for a specific feature, optionally
+	// narrowed by source and source_id. Cleans up the field_annotation marker
+	// if no annotations remain for the feature.
+	DeleteAnnotations(context.Context, *DeleteAnnotationsRequest) (*DeleteAnnotationsResponse, error)
 }
 
 // UnimplementedDocumentDataServiceServer should be embedded to have forward compatible implementations.
@@ -126,6 +144,9 @@ func (UnimplementedDocumentDataServiceServer) AddAnnotations(context.Context, *A
 }
 func (UnimplementedDocumentDataServiceServer) DeleteDocument(context.Context, *DeleteDocumentRequest) (*DeleteDocumentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteDocument not implemented")
+}
+func (UnimplementedDocumentDataServiceServer) DeleteAnnotations(context.Context, *DeleteAnnotationsRequest) (*DeleteAnnotationsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteAnnotations not implemented")
 }
 
 // UnsafeDocumentDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -211,6 +232,24 @@ func _DocumentDataService_DeleteDocument_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DocumentDataService_DeleteAnnotations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteAnnotationsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DocumentDataServiceServer).DeleteAnnotations(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DocumentDataService_DeleteAnnotations_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentDataServiceServer).DeleteAnnotations(ctx, req.(*DeleteAnnotationsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DocumentDataService_ServiceDesc is the grpc.ServiceDesc for DocumentDataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -233,6 +272,10 @@ var DocumentDataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteDocument",
 			Handler:    _DocumentDataService_DeleteDocument_Handler,
+		},
+		{
+			MethodName: "DeleteAnnotations",
+			Handler:    _DocumentDataService_DeleteAnnotations_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

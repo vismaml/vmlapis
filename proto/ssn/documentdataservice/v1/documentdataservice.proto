@@ -163,6 +163,15 @@ service DocumentDataService {
       delete: "/v1/consumers/{consumer}/documents/{feedback_id}"
     };
   }
+
+  // DeleteAnnotations removes annotations for a specific feature, optionally
+  // narrowed by source and source_id. Cleans up the field_annotation marker
+  // if no annotations remain for the feature.
+  rpc DeleteAnnotations(DeleteAnnotationsRequest) returns (DeleteAnnotationsResponse) {
+    option (google.api.http) = {
+      delete: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"
+    };
+  }
 }
 
 // ---- Request / Response messages ----
@@ -252,3 +261,18 @@ message DeleteDocumentRequest {
 }
 
 message DeleteDocumentResponse {}
+
+message DeleteAnnotationsRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 3;
+  // Required. The feature whose annotations should be deleted.
+  string feature = 4;
+  // Optional. If set, only delete annotations with this source.
+  string source = 5;
+  // Optional. If set with source, delete only the specific (source, source_id) entry.
+  string source_id = 6;
+}
+
+message DeleteAnnotationsResponse {}

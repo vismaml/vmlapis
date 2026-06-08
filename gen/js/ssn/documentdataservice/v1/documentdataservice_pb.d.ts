@@ -662,6 +662,58 @@ export namespace DeleteDocumentResponse {
   }
 }
 
+export class DeleteAnnotationsRequest extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): DeleteAnnotationsRequest;
+
+  getConsumer(): string;
+  setConsumer(value: string): DeleteAnnotationsRequest;
+
+  getEnvironment(): string;
+  setEnvironment(value: string): DeleteAnnotationsRequest;
+
+  getFeature(): string;
+  setFeature(value: string): DeleteAnnotationsRequest;
+
+  getSource(): string;
+  setSource(value: string): DeleteAnnotationsRequest;
+
+  getSourceId(): string;
+  setSourceId(value: string): DeleteAnnotationsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteAnnotationsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteAnnotationsRequest): DeleteAnnotationsRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteAnnotationsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteAnnotationsRequest;
+  static deserializeBinaryFromReader(message: DeleteAnnotationsRequest, reader: jspb.BinaryReader): DeleteAnnotationsRequest;
+}
+
+export namespace DeleteAnnotationsRequest {
+  export type AsObject = {
+    feedbackId: string,
+    consumer: string,
+    environment: string,
+    feature: string,
+    source: string,
+    sourceId: string,
+  }
+}
+
+export class DeleteAnnotationsResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteAnnotationsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteAnnotationsResponse): DeleteAnnotationsResponse.AsObject;
+  static serializeBinaryToWriter(message: DeleteAnnotationsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteAnnotationsResponse;
+  static deserializeBinaryFromReader(message: DeleteAnnotationsResponse, reader: jspb.BinaryReader): DeleteAnnotationsResponse;
+}
+
+export namespace DeleteAnnotationsResponse {
+  export type AsObject = {
+  }
+}
+
 export enum CandidateSource { 
   CANDIDATE_SOURCE_UNSPECIFIED = 0,
   CANDIDATE_SOURCE_PREDICTION = 1,
