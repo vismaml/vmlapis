@@ -22,6 +22,7 @@ const (
 	DocumentDataService_GetDocumentData_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
 	DocumentDataService_SetDocumentBlobs_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
 	DocumentDataService_AddAnnotations_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
+	DocumentDataService_DeleteDocument_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
 )
 
 // DocumentDataServiceClient is the client API for DocumentDataService service.
@@ -40,6 +41,9 @@ type DocumentDataServiceClient interface {
 	// Latest-wins: a second call with the same key replaces the previous entry.
 	// To preserve history, use a distinct source_id (e.g. append a version suffix).
 	AddAnnotations(ctx context.Context, in *AddAnnotationsRequest, opts ...grpc.CallOption) (*AddAnnotationsResponse, error)
+	// DeleteDocument schedules asynchronous deletion of a document and all its
+	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+	DeleteDocument(ctx context.Context, in *DeleteDocumentRequest, opts ...grpc.CallOption) (*DeleteDocumentResponse, error)
 }
 
 type documentDataServiceClient struct {
@@ -77,6 +81,15 @@ func (c *documentDataServiceClient) AddAnnotations(ctx context.Context, in *AddA
 	return out, nil
 }
 
+func (c *documentDataServiceClient) DeleteDocument(ctx context.Context, in *DeleteDocumentRequest, opts ...grpc.CallOption) (*DeleteDocumentResponse, error) {
+	out := new(DeleteDocumentResponse)
+	err := c.cc.Invoke(ctx, DocumentDataService_DeleteDocument_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DocumentDataServiceServer is the server API for DocumentDataService service.
 // All implementations should embed UnimplementedDocumentDataServiceServer
 // for forward compatibility
@@ -93,6 +106,9 @@ type DocumentDataServiceServer interface {
 	// Latest-wins: a second call with the same key replaces the previous entry.
 	// To preserve history, use a distinct source_id (e.g. append a version suffix).
 	AddAnnotations(context.Context, *AddAnnotationsRequest) (*AddAnnotationsResponse, error)
+	// DeleteDocument schedules asynchronous deletion of a document and all its
+	// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+	DeleteDocument(context.Context, *DeleteDocumentRequest) (*DeleteDocumentResponse, error)
 }
 
 // UnimplementedDocumentDataServiceServer should be embedded to have forward compatible implementations.
@@ -107,6 +123,9 @@ func (UnimplementedDocumentDataServiceServer) SetDocumentBlobs(context.Context, 
 }
 func (UnimplementedDocumentDataServiceServer) AddAnnotations(context.Context, *AddAnnotationsRequest) (*AddAnnotationsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddAnnotations not implemented")
+}
+func (UnimplementedDocumentDataServiceServer) DeleteDocument(context.Context, *DeleteDocumentRequest) (*DeleteDocumentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteDocument not implemented")
 }
 
 // UnsafeDocumentDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -174,6 +193,24 @@ func _DocumentDataService_AddAnnotations_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DocumentDataService_DeleteDocument_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteDocumentRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DocumentDataServiceServer).DeleteDocument(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DocumentDataService_DeleteDocument_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentDataServiceServer).DeleteDocument(ctx, req.(*DeleteDocumentRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DocumentDataService_ServiceDesc is the grpc.ServiceDesc for DocumentDataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -192,6 +229,10 @@ var DocumentDataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddAnnotations",
 			Handler:    _DocumentDataService_AddAnnotations_Handler,
+		},
+		{
+			MethodName: "DeleteDocument",
+			Handler:    _DocumentDataService_DeleteDocument_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

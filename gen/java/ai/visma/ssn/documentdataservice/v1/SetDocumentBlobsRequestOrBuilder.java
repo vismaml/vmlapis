@@ -256,4 +256,58 @@ public interface SetDocumentBlobsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <pre>
+   * Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+   * Takes precedence over file_uri when both are provided.
+   * </pre>
+   *
+   * <code>bytes content = 10 [json_name = "content"];</code>
+   * @return The content.
+   */
+  com.google.protobuf.ByteString getContent();
+
+  /**
+   * <pre>
+   * Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+   * Takes precedence over ta_uri when both are provided.
+   * </pre>
+   *
+   * <code>bytes ta_content = 11 [json_name = "taContent"];</code>
+   * @return The taContent.
+   */
+  com.google.protobuf.ByteString getTaContent();
+
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @return A list containing the renderContents.
+   */
+  java.util.List<com.google.protobuf.ByteString> getRenderContentsList();
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @return The count of renderContents.
+   */
+  int getRenderContentsCount();
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @param index The index of the element to return.
+   * @return The renderContents at the given index.
+   */
+  com.google.protobuf.ByteString getRenderContents(int index);
 }

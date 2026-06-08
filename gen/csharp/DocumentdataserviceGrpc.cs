@@ -57,6 +57,10 @@ namespace Ssn.Documentdataservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.AddAnnotationsRequest> __Marshaller_ssn_documentdataservice_v1_AddAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.AddAnnotationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.AddAnnotationsResponse> __Marshaller_ssn_documentdataservice_v1_AddAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.AddAnnotationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest> __Marshaller_ssn_documentdataservice_v1_DeleteDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.DeleteDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.DeleteDocumentResponse> __Marshaller_ssn_documentdataservice_v1_DeleteDocumentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse> __Method_GetDocumentData = new grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse>(
@@ -81,6 +85,14 @@ namespace Ssn.Documentdataservice.V1 {
         "AddAnnotations",
         __Marshaller_ssn_documentdataservice_v1_AddAnnotationsRequest,
         __Marshaller_ssn_documentdataservice_v1_AddAnnotationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse> __Method_DeleteDocument = new grpc::Method<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDocument",
+        __Marshaller_ssn_documentdataservice_v1_DeleteDocumentRequest,
+        __Marshaller_ssn_documentdataservice_v1_DeleteDocumentResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -130,6 +142,19 @@ namespace Ssn.Documentdataservice.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.AddAnnotationsResponse> AddAnnotations(global::Ssn.Documentdataservice.V1.AddAnnotationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// DeleteDocument schedules asynchronous deletion of a document and all its
+      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.DeleteDocumentResponse> DeleteDocument(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -331,6 +356,58 @@ namespace Ssn.Documentdataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddAnnotations, null, options, request);
       }
+      /// <summary>
+      /// DeleteDocument schedules asynchronous deletion of a document and all its
+      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.DeleteDocumentResponse DeleteDocument(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// DeleteDocument schedules asynchronous deletion of a document and all its
+      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.DeleteDocumentResponse DeleteDocument(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDocument, null, options, request);
+      }
+      /// <summary>
+      /// DeleteDocument schedules asynchronous deletion of a document and all its
+      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.DeleteDocumentResponse> DeleteDocumentAsync(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// DeleteDocument schedules asynchronous deletion of a document and all its
+      /// blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.DeleteDocumentResponse> DeleteDocumentAsync(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDocument, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentDataServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -347,7 +424,8 @@ namespace Ssn.Documentdataservice.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetDocumentData, serviceImpl.GetDocumentData)
           .AddMethod(__Method_SetDocumentBlobs, serviceImpl.SetDocumentBlobs)
-          .AddMethod(__Method_AddAnnotations, serviceImpl.AddAnnotations).Build();
+          .AddMethod(__Method_AddAnnotations, serviceImpl.AddAnnotations)
+          .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -360,6 +438,7 @@ namespace Ssn.Documentdataservice.V1 {
       serviceBinder.AddMethod(__Method_GetDocumentData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse>(serviceImpl.GetDocumentData));
       serviceBinder.AddMethod(__Method_SetDocumentBlobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest, global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse>(serviceImpl.SetDocumentBlobs));
       serviceBinder.AddMethod(__Method_AddAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.AddAnnotationsRequest, global::Ssn.Documentdataservice.V1.AddAnnotationsResponse>(serviceImpl.AddAnnotations));
+      serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse>(serviceImpl.DeleteDocument));
     }
 
   }
