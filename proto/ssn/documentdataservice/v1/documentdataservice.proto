@@ -159,18 +159,14 @@ service DocumentDataService {
   // DeleteDocument schedules asynchronous deletion of a document and all its
   // blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
   rpc DeleteDocument(DeleteDocumentRequest) returns (DeleteDocumentResponse) {
-    option (google.api.http) = {
-      delete: "/v1/consumers/{consumer}/documents/{feedback_id}"
-    };
+    option (google.api.http) = {delete: "/v1/consumers/{consumer}/documents/{feedback_id}"};
   }
 
   // DeleteAnnotations removes annotations for a specific feature, optionally
   // narrowed by source and source_id. Cleans up the field_annotation marker
   // if no annotations remain for the feature.
   rpc DeleteAnnotations(DeleteAnnotationsRequest) returns (DeleteAnnotationsResponse) {
-    option (google.api.http) = {
-      delete: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"
-    };
+    option (google.api.http) = {delete: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"};
   }
 }
 
