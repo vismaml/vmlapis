@@ -522,6 +522,21 @@ export class SetDocumentBlobsRequest extends jspb.Message {
   clearTagsList(): SetDocumentBlobsRequest;
   addTags(value: string, index?: number): SetDocumentBlobsRequest;
 
+  getContent(): Uint8Array | string;
+  getContent_asU8(): Uint8Array;
+  getContent_asB64(): string;
+  setContent(value: Uint8Array | string): SetDocumentBlobsRequest;
+
+  getTaContent(): Uint8Array | string;
+  getTaContent_asU8(): Uint8Array;
+  getTaContent_asB64(): string;
+  setTaContent(value: Uint8Array | string): SetDocumentBlobsRequest;
+
+  getRenderContentsList(): Array<Uint8Array | string>;
+  setRenderContentsList(value: Array<Uint8Array | string>): SetDocumentBlobsRequest;
+  clearRenderContentsList(): SetDocumentBlobsRequest;
+  addRenderContents(value: Uint8Array | string, index?: number): SetDocumentBlobsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SetDocumentBlobsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SetDocumentBlobsRequest): SetDocumentBlobsRequest.AsObject;
@@ -541,6 +556,9 @@ export namespace SetDocumentBlobsRequest {
     environment: string,
     requestedFeaturesList: Array<string>,
     tagsList: Array<string>,
+    content: Uint8Array | string,
+    taContent: Uint8Array | string,
+    renderContentsList: Array<Uint8Array | string>,
   }
 }
 
@@ -600,6 +618,90 @@ export class AddAnnotationsResponse extends jspb.Message {
 }
 
 export namespace AddAnnotationsResponse {
+  export type AsObject = {
+  }
+}
+
+export class DeleteDocumentRequest extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): DeleteDocumentRequest;
+
+  getConsumer(): string;
+  setConsumer(value: string): DeleteDocumentRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteDocumentRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteDocumentRequest): DeleteDocumentRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteDocumentRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteDocumentRequest;
+  static deserializeBinaryFromReader(message: DeleteDocumentRequest, reader: jspb.BinaryReader): DeleteDocumentRequest;
+}
+
+export namespace DeleteDocumentRequest {
+  export type AsObject = {
+    feedbackId: string,
+    consumer: string,
+  }
+}
+
+export class DeleteDocumentResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteDocumentResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteDocumentResponse): DeleteDocumentResponse.AsObject;
+  static serializeBinaryToWriter(message: DeleteDocumentResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteDocumentResponse;
+  static deserializeBinaryFromReader(message: DeleteDocumentResponse, reader: jspb.BinaryReader): DeleteDocumentResponse;
+}
+
+export namespace DeleteDocumentResponse {
+  export type AsObject = {
+  }
+}
+
+export class DeleteAnnotationsRequest extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): DeleteAnnotationsRequest;
+
+  getConsumer(): string;
+  setConsumer(value: string): DeleteAnnotationsRequest;
+
+  getFeature(): string;
+  setFeature(value: string): DeleteAnnotationsRequest;
+
+  getSource(): string;
+  setSource(value: string): DeleteAnnotationsRequest;
+
+  getSourceId(): string;
+  setSourceId(value: string): DeleteAnnotationsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteAnnotationsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteAnnotationsRequest): DeleteAnnotationsRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteAnnotationsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteAnnotationsRequest;
+  static deserializeBinaryFromReader(message: DeleteAnnotationsRequest, reader: jspb.BinaryReader): DeleteAnnotationsRequest;
+}
+
+export namespace DeleteAnnotationsRequest {
+  export type AsObject = {
+    feedbackId: string,
+    consumer: string,
+    feature: string,
+    source: string,
+    sourceId: string,
+  }
+}
+
+export class DeleteAnnotationsResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteAnnotationsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteAnnotationsResponse): DeleteAnnotationsResponse.AsObject;
+  static serializeBinaryToWriter(message: DeleteAnnotationsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteAnnotationsResponse;
+  static deserializeBinaryFromReader(message: DeleteAnnotationsResponse, reader: jspb.BinaryReader): DeleteAnnotationsResponse;
+}
+
+export namespace DeleteAnnotationsResponse {
   export type AsObject = {
   }
 }

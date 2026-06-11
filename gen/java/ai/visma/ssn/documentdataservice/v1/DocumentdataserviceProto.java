@@ -120,6 +120,26 @@ public final class DocumentdataserviceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_documentdataservice_v1_AddAnnotationsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_documentdataservice_v1_DeleteDocumentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_documentdataservice_v1_DeleteDocumentResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_documentdataservice_v1_DeleteAnnotationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_documentdataservice_v1_DeleteAnnotationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -210,7 +230,7 @@ public final class DocumentdataserviceProto {
       "\022requested_features\030\010 \003(\tR\021requestedFeat" +
       "ures\0229\n\nupdated_at\030\t \001(\0132\032.google.protob" +
       "uf.TimestampR\tupdatedAt\022\022\n\004tags\030\n \003(\tR\004t" +
-      "ags\"\205\003\n\027SetDocumentBlobsRequest\022\037\n\013feedb" +
+      "ags\"\347\003\n\027SetDocumentBlobsRequest\022\037\n\013feedb" +
       "ack_id\030\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001" +
       "(\tR\010consumer\0227\n\010file_uri\030\003 \001(\0132\034.google." +
       "protobuf.StringValueR\007fileUri\022\037\n\013render_" +
@@ -219,40 +239,60 @@ public final class DocumentdataserviceProto {
       "xpires_at\030\006 \001(\0132\032.google.protobuf.Timest" +
       "ampR\texpiresAt\022 \n\013environment\030\007 \001(\tR\013env" +
       "ironment\022-\n\022requested_features\030\010 \003(\tR\021re" +
-      "questedFeatures\022\022\n\004tags\030\t \003(\tR\004tags\"\032\n\030S" +
-      "etDocumentBlobsResponse\"\315\001\n\025AddAnnotatio" +
-      "nsRequest\022\037\n\013feedback_id\030\001 \001(\tR\nfeedback" +
-      "Id\022\032\n\010consumer\030\002 \001(\tR\010consumer\022U\n\013annota" +
-      "tions\030\003 \003(\01323.ssn.documentdataservice.v1" +
-      ".InternalFieldAnnotationR\013annotations\022 \n" +
-      "\013environment\030\004 \001(\tR\013environment\"\030\n\026AddAn" +
-      "notationsResponse*\217\001\n\017CandidateSource\022 \n" +
-      "\034CANDIDATE_SOURCE_UNSPECIFIED\020\000\022\037\n\033CANDI" +
-      "DATE_SOURCE_PREDICTION\020\001\022\035\n\031CANDIDATE_SO" +
-      "URCE_FEEDBACK\020\002\022\032\n\026CANDIDATE_SOURCE_LABE" +
-      "L\020\0032\322\004\n\023DocumentDataService\022\264\001\n\017GetDocum" +
-      "entData\0222.ssn.documentdataservice.v1.Get" +
-      "DocumentDataRequest\0323.ssn.documentdatase" +
-      "rvice.v1.GetDocumentDataResponse\"8\202\323\344\223\0022" +
-      "\0220/v1/consumers/{consumer}/documents/{fe" +
-      "edback_id}\022\300\001\n\020SetDocumentBlobs\0223.ssn.do" +
-      "cumentdataservice.v1.SetDocumentBlobsReq" +
-      "uest\0324.ssn.documentdataservice.v1.SetDoc" +
-      "umentBlobsResponse\"A\202\323\344\223\002;\0326/v1/consumer" +
-      "s/{consumer}/documents/{feedback_id}/blo" +
-      "bs:\001*\022\300\001\n\016AddAnnotations\0221.ssn.documentd" +
-      "ataservice.v1.AddAnnotationsRequest\0322.ss" +
-      "n.documentdataservice.v1.AddAnnotationsR" +
-      "esponse\"G\202\323\344\223\002A\"</v1/consumers/{consumer" +
-      "}/documents/{feedback_id}/annotations:\001*" +
-      "B\235\002\n#ai.visma.ssn.documentdataservice.v1" +
-      "B\030DocumentdataserviceProtoP\001ZRgithub.com" +
-      "/e-conomic/vmlapis/gen/go/ssn/documentda" +
-      "taservice/v1;documentdataservice\242\002\003SDX\252\002" +
-      "\032Ssn.Documentdataservice.V1\312\002\032Ssn\\Docume" +
-      "ntdataservice\\V1\342\002&Ssn\\Documentdataservi" +
-      "ce\\V1\\GPBMetadata\352\002\034Ssn::Documentdataser" +
-      "vice::V1b\006proto3"
+      "questedFeatures\022\022\n\004tags\030\t \003(\tR\004tags\022\030\n\007c" +
+      "ontent\030\n \001(\014R\007content\022\035\n\nta_content\030\013 \001(" +
+      "\014R\ttaContent\022\'\n\017render_contents\030\014 \003(\014R\016r" +
+      "enderContents\"\032\n\030SetDocumentBlobsRespons" +
+      "e\"\315\001\n\025AddAnnotationsRequest\022\037\n\013feedback_" +
+      "id\030\001 \001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010" +
+      "consumer\022U\n\013annotations\030\003 \003(\01323.ssn.docu" +
+      "mentdataservice.v1.InternalFieldAnnotati" +
+      "onR\013annotations\022 \n\013environment\030\004 \001(\tR\013en" +
+      "vironment\"\030\n\026AddAnnotationsResponse\"Z\n\025D" +
+      "eleteDocumentRequest\022\037\n\013feedback_id\030\001 \001(" +
+      "\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010consume" +
+      "rJ\004\010\003\020\004\"\030\n\026DeleteDocumentResponse\"\254\001\n\030De" +
+      "leteAnnotationsRequest\022\037\n\013feedback_id\030\001 " +
+      "\001(\tR\nfeedbackId\022\032\n\010consumer\030\002 \001(\tR\010consu" +
+      "mer\022\030\n\007feature\030\004 \001(\tR\007feature\022\026\n\006source\030" +
+      "\005 \001(\tR\006source\022\033\n\tsource_id\030\006 \001(\tR\010source" +
+      "IdJ\004\010\003\020\004\"\033\n\031DeleteAnnotationsResponse*\217\001" +
+      "\n\017CandidateSource\022 \n\034CANDIDATE_SOURCE_UN" +
+      "SPECIFIED\020\000\022\037\n\033CANDIDATE_SOURCE_PREDICTI" +
+      "ON\020\001\022\035\n\031CANDIDATE_SOURCE_FEEDBACK\020\002\022\032\n\026C" +
+      "ANDIDATE_SOURCE_LABEL\020\0032\317\007\n\023DocumentData" +
+      "Service\022\264\001\n\017GetDocumentData\0222.ssn.docume" +
+      "ntdataservice.v1.GetDocumentDataRequest\032" +
+      "3.ssn.documentdataservice.v1.GetDocument" +
+      "DataResponse\"8\202\323\344\223\0022\0220/v1/consumers/{con" +
+      "sumer}/documents/{feedback_id}\022\300\001\n\020SetDo" +
+      "cumentBlobs\0223.ssn.documentdataservice.v1" +
+      ".SetDocumentBlobsRequest\0324.ssn.documentd" +
+      "ataservice.v1.SetDocumentBlobsResponse\"A" +
+      "\202\323\344\223\002;\0326/v1/consumers/{consumer}/documen" +
+      "ts/{feedback_id}/blobs:\001*\022\300\001\n\016AddAnnotat" +
+      "ions\0221.ssn.documentdataservice.v1.AddAnn" +
+      "otationsRequest\0322.ssn.documentdataservic" +
+      "e.v1.AddAnnotationsResponse\"G\202\323\344\223\002A\"</v1" +
+      "/consumers/{consumer}/documents/{feedbac" +
+      "k_id}/annotations:\001*\022\261\001\n\016DeleteDocument\022" +
+      "1.ssn.documentdataservice.v1.DeleteDocum" +
+      "entRequest\0322.ssn.documentdataservice.v1." +
+      "DeleteDocumentResponse\"8\202\323\344\223\0022*0/v1/cons" +
+      "umers/{consumer}/documents/{feedback_id}" +
+      "\022\306\001\n\021DeleteAnnotations\0224.ssn.documentdat" +
+      "aservice.v1.DeleteAnnotationsRequest\0325.s" +
+      "sn.documentdataservice.v1.DeleteAnnotati" +
+      "onsResponse\"D\202\323\344\223\002>*</v1/consumers/{cons" +
+      "umer}/documents/{feedback_id}/annotation" +
+      "sB\235\002\n#ai.visma.ssn.documentdataservice.v" +
+      "1B\030DocumentdataserviceProtoP\001ZRgithub.co" +
+      "m/e-conomic/vmlapis/gen/go/ssn/documentd" +
+      "ataservice/v1;documentdataservice\242\002\003SDX\252" +
+      "\002\032Ssn.Documentdataservice.V1\312\002\032Ssn\\Docum" +
+      "entdataservice\\V1\342\002&Ssn\\Documentdataserv" +
+      "ice\\V1\\GPBMetadata\352\002\034Ssn::Documentdatase" +
+      "rvice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -359,7 +399,7 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_SetDocumentBlobsRequest_descriptor,
-        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags", });
+        new java.lang.String[] { "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags", "Content", "TaContent", "RenderContents", });
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_ssn_documentdataservice_v1_SetDocumentBlobsResponse_fieldAccessorTable = new
@@ -377,6 +417,30 @@ public final class DocumentdataserviceProto {
     internal_static_ssn_documentdataservice_v1_AddAnnotationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_documentdataservice_v1_AddAnnotationsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_documentdataservice_v1_DeleteDocumentRequest_descriptor,
+        new java.lang.String[] { "FeedbackId", "Consumer", });
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_ssn_documentdataservice_v1_DeleteDocumentResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_documentdataservice_v1_DeleteDocumentResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_documentdataservice_v1_DeleteAnnotationsRequest_descriptor,
+        new java.lang.String[] { "FeedbackId", "Consumer", "Feature", "Source", "SourceId", });
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_ssn_documentdataservice_v1_DeleteAnnotationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_documentdataservice_v1_DeleteAnnotationsResponse_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.AnnotationsProto.getDescriptor();

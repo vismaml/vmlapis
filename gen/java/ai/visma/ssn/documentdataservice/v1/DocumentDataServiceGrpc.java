@@ -108,6 +108,68 @@ public final class DocumentDataServiceGrpc {
     return getAddAnnotationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest,
+      ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> getDeleteDocumentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDocument",
+      requestType = ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest.class,
+      responseType = ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest,
+      ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> getDeleteDocumentMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest, ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> getDeleteDocumentMethod;
+    if ((getDeleteDocumentMethod = DocumentDataServiceGrpc.getDeleteDocumentMethod) == null) {
+      synchronized (DocumentDataServiceGrpc.class) {
+        if ((getDeleteDocumentMethod = DocumentDataServiceGrpc.getDeleteDocumentMethod) == null) {
+          DocumentDataServiceGrpc.getDeleteDocumentMethod = getDeleteDocumentMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest, ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDocument"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DocumentDataServiceMethodDescriptorSupplier("DeleteDocument"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDocumentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest,
+      ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> getDeleteAnnotationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAnnotations",
+      requestType = ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest.class,
+      responseType = ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest,
+      ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> getDeleteAnnotationsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest, ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> getDeleteAnnotationsMethod;
+    if ((getDeleteAnnotationsMethod = DocumentDataServiceGrpc.getDeleteAnnotationsMethod) == null) {
+      synchronized (DocumentDataServiceGrpc.class) {
+        if ((getDeleteAnnotationsMethod = DocumentDataServiceGrpc.getDeleteAnnotationsMethod) == null) {
+          DocumentDataServiceGrpc.getDeleteAnnotationsMethod = getDeleteAnnotationsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest, ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAnnotations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DocumentDataServiceMethodDescriptorSupplier("DeleteAnnotations"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAnnotationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -206,6 +268,29 @@ public final class DocumentDataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.AddAnnotationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddAnnotationsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * DeleteDocument schedules asynchronous deletion of a document and all its
+     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * </pre>
+     */
+    default void deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDocumentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAnnotations removes annotations for a specific feature, optionally
+     * narrowed by source and source_id. Cleans up the field_annotation marker
+     * if no annotations remain for the feature.
+     * </pre>
+     */
+    default void deleteAnnotations(ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAnnotationsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -273,6 +358,31 @@ public final class DocumentDataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddAnnotationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DeleteDocument schedules asynchronous deletion of a document and all its
+     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * </pre>
+     */
+    public void deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDocumentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAnnotations removes annotations for a specific feature, optionally
+     * narrowed by source and source_id. Cleans up the field_annotation marker
+     * if no annotations remain for the feature.
+     * </pre>
+     */
+    public void deleteAnnotations(ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAnnotationsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -326,6 +436,29 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddAnnotationsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DeleteDocument schedules asynchronous deletion of a document and all its
+     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAnnotations removes annotations for a specific feature, optionally
+     * narrowed by source and source_id. Cleans up the field_annotation marker
+     * if no annotations remain for the feature.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse deleteAnnotations(ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAnnotationsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -378,6 +511,29 @@ public final class DocumentDataServiceGrpc {
     public ai.visma.ssn.documentdataservice.v1.AddAnnotationsResponse addAnnotations(ai.visma.ssn.documentdataservice.v1.AddAnnotationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddAnnotationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteDocument schedules asynchronous deletion of a document and all its
+     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse deleteDocument(ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAnnotations removes annotations for a specific feature, optionally
+     * narrowed by source and source_id. Cleans up the field_annotation marker
+     * if no annotations remain for the feature.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse deleteAnnotations(ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAnnotationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -435,11 +591,38 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddAnnotationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DeleteDocument schedules asynchronous deletion of a document and all its
+     * blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse> deleteDocument(
+        ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDocumentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAnnotations removes annotations for a specific feature, optionally
+     * narrowed by source and source_id. Cleans up the field_annotation marker
+     * if no annotations remain for the feature.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> deleteAnnotations(
+        ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAnnotationsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DOCUMENT_DATA = 0;
   private static final int METHODID_SET_DOCUMENT_BLOBS = 1;
   private static final int METHODID_ADD_ANNOTATIONS = 2;
+  private static final int METHODID_DELETE_DOCUMENT = 3;
+  private static final int METHODID_DELETE_ANNOTATIONS = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -469,6 +652,14 @@ public final class DocumentDataServiceGrpc {
         case METHODID_ADD_ANNOTATIONS:
           serviceImpl.addAnnotations((ai.visma.ssn.documentdataservice.v1.AddAnnotationsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.AddAnnotationsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_DOCUMENT:
+          serviceImpl.deleteDocument((ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_ANNOTATIONS:
+          serviceImpl.deleteAnnotations((ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -509,6 +700,20 @@ public final class DocumentDataServiceGrpc {
               ai.visma.ssn.documentdataservice.v1.AddAnnotationsRequest,
               ai.visma.ssn.documentdataservice.v1.AddAnnotationsResponse>(
                 service, METHODID_ADD_ANNOTATIONS)))
+        .addMethod(
+          getDeleteDocumentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.documentdataservice.v1.DeleteDocumentRequest,
+              ai.visma.ssn.documentdataservice.v1.DeleteDocumentResponse>(
+                service, METHODID_DELETE_DOCUMENT)))
+        .addMethod(
+          getDeleteAnnotationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest,
+              ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse>(
+                service, METHODID_DELETE_ANNOTATIONS)))
         .build();
   }
 
@@ -560,6 +765,8 @@ public final class DocumentDataServiceGrpc {
               .addMethod(getGetDocumentDataMethod())
               .addMethod(getSetDocumentBlobsMethod())
               .addMethod(getAddAnnotationsMethod())
+              .addMethod(getDeleteDocumentMethod())
+              .addMethod(getDeleteAnnotationsMethod())
               .build();
         }
       }

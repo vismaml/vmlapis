@@ -36,6 +36,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     tags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    content_ = com.google.protobuf.ByteString.EMPTY;
+    taContent_ = com.google.protobuf.ByteString.EMPTY;
+    renderContents_ = emptyList(com.google.protobuf.ByteString.class);
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -450,6 +453,82 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int CONTENT_FIELD_NUMBER = 10;
+  private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+  /**
+   * <pre>
+   * Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+   * Takes precedence over file_uri when both are provided.
+   * </pre>
+   *
+   * <code>bytes content = 10 [json_name = "content"];</code>
+   * @return The content.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getContent() {
+    return content_;
+  }
+
+  public static final int TA_CONTENT_FIELD_NUMBER = 11;
+  private com.google.protobuf.ByteString taContent_ = com.google.protobuf.ByteString.EMPTY;
+  /**
+   * <pre>
+   * Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+   * Takes precedence over ta_uri when both are provided.
+   * </pre>
+   *
+   * <code>bytes ta_content = 11 [json_name = "taContent"];</code>
+   * @return The taContent.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getTaContent() {
+    return taContent_;
+  }
+
+  public static final int RENDER_CONTENTS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> renderContents_ =
+      emptyList(com.google.protobuf.ByteString.class);
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @return A list containing the renderContents.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.protobuf.ByteString>
+      getRenderContentsList() {
+    return renderContents_;
+  }
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @return The count of renderContents.
+   */
+  public int getRenderContentsCount() {
+    return renderContents_.size();
+  }
+  /**
+   * <pre>
+   * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+   * Takes precedence over render_uris when both are provided.
+   * </pre>
+   *
+   * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+   * @param index The index of the element to return.
+   * @return The renderContents at the given index.
+   */
+  public com.google.protobuf.ByteString getRenderContents(int index) {
+    return renderContents_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -490,6 +569,15 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 9, tags_.getRaw(i));
+    }
+    if (!content_.isEmpty()) {
+      output.writeBytes(10, content_);
+    }
+    if (!taContent_.isEmpty()) {
+      output.writeBytes(11, taContent_);
+    }
+    for (int i = 0; i < renderContents_.size(); i++) {
+      output.writeBytes(12, renderContents_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -545,6 +633,23 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    if (!content_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(10, content_);
+    }
+    if (!taContent_.isEmpty()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBytesSize(11, taContent_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < renderContents_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeBytesSizeNoTag(renderContents_.get(i));
+      }
+      size += dataSize;
+      size += 1 * getRenderContentsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -587,6 +692,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRequestedFeaturesList())) return false;
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (!getContent()
+        .equals(other.getContent())) return false;
+    if (!getTaContent()
+        .equals(other.getTaContent())) return false;
+    if (!getRenderContentsList()
+        .equals(other.getRenderContentsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -627,6 +738,14 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
+    }
+    hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+    hash = (53 * hash) + getContent().hashCode();
+    hash = (37 * hash) + TA_CONTENT_FIELD_NUMBER;
+    hash = (53 * hash) + getTaContent().hashCode();
+    if (getRenderContentsCount() > 0) {
+      hash = (37 * hash) + RENDER_CONTENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRenderContentsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -791,6 +910,9 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      content_ = com.google.protobuf.ByteString.EMPTY;
+      taContent_ = com.google.protobuf.ByteString.EMPTY;
+      renderContents_ = emptyList(com.google.protobuf.ByteString.class);
       return this;
     }
 
@@ -864,6 +986,16 @@ private static final long serialVersionUID = 0L;
         tags_.makeImmutable();
         result.tags_ = tags_;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.content_ = content_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.taContent_ = taContent_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        renderContents_.makeImmutable();
+        result.renderContents_ = renderContents_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -930,6 +1062,23 @@ private static final long serialVersionUID = 0L;
         } else {
           ensureTagsIsMutable();
           tags_.addAll(other.tags_);
+        }
+        onChanged();
+      }
+      if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
+        setContent(other.getContent());
+      }
+      if (other.getTaContent() != com.google.protobuf.ByteString.EMPTY) {
+        setTaContent(other.getTaContent());
+      }
+      if (!other.renderContents_.isEmpty()) {
+        if (renderContents_.isEmpty()) {
+          renderContents_ = other.renderContents_;
+          renderContents_.makeImmutable();
+          bitField0_ |= 0x00000800;
+        } else {
+          ensureRenderContentsIsMutable();
+          renderContents_.addAll(other.renderContents_);
         }
         onChanged();
       }
@@ -1013,6 +1162,22 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 74
+            case 82: {
+              content_ = input.readBytes();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              taContent_ = input.readBytes();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              com.google.protobuf.ByteString v = input.readBytes();
+              ensureRenderContentsIsMutable();
+              renderContents_.add(v);
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2174,6 +2339,219 @@ private static final long serialVersionUID = 0L;
       ensureTagsIsMutable();
       tags_.add(value);
       bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+     * Takes precedence over file_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes content = 10 [json_name = "content"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContent() {
+      return content_;
+    }
+    /**
+     * <pre>
+     * Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+     * Takes precedence over file_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes content = 10 [json_name = "content"];</code>
+     * @param value The content to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContent(com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      content_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+     * Takes precedence over file_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes content = 10 [json_name = "content"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContent() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      content_ = getDefaultInstance().getContent();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.ByteString taContent_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+     * Takes precedence over ta_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes ta_content = 11 [json_name = "taContent"];</code>
+     * @return The taContent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTaContent() {
+      return taContent_;
+    }
+    /**
+     * <pre>
+     * Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+     * Takes precedence over ta_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes ta_content = 11 [json_name = "taContent"];</code>
+     * @param value The taContent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTaContent(com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      taContent_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+     * Takes precedence over ta_uri when both are provided.
+     * </pre>
+     *
+     * <code>bytes ta_content = 11 [json_name = "taContent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTaContent() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      taContent_ = getDefaultInstance().getTaContent();
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> renderContents_ = emptyList(com.google.protobuf.ByteString.class);
+    private void ensureRenderContentsIsMutable() {
+      if (!renderContents_.isModifiable()) {
+        renderContents_ = makeMutableCopy(renderContents_);
+      }
+      bitField0_ |= 0x00000800;
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @return A list containing the renderContents.
+     */
+    public java.util.List<com.google.protobuf.ByteString>
+        getRenderContentsList() {
+      renderContents_.makeImmutable();
+      return renderContents_;
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @return The count of renderContents.
+     */
+    public int getRenderContentsCount() {
+      return renderContents_.size();
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @param index The index of the element to return.
+     * @return The renderContents at the given index.
+     */
+    public com.google.protobuf.ByteString getRenderContents(int index) {
+      return renderContents_.get(index);
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @param index The index to set the value at.
+     * @param value The renderContents to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRenderContents(
+        int index, com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRenderContentsIsMutable();
+      renderContents_.set(index, value);
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @param value The renderContents to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRenderContents(com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRenderContentsIsMutable();
+      renderContents_.add(value);
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @param values The renderContents to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRenderContents(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureRenderContentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, renderContents_);
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+     * Takes precedence over render_uris when both are provided.
+     * </pre>
+     *
+     * <code>repeated bytes render_contents = 12 [json_name = "renderContents"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRenderContents() {
+      renderContents_ = emptyList(com.google.protobuf.ByteString.class);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }

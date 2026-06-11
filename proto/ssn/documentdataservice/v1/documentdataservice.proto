@@ -155,6 +155,23 @@ service DocumentDataService {
       body: "*"
     };
   }
+
+  // DeleteDocument schedules asynchronous deletion of a document and all its
+  // blobs and annotations. Deletion is durable (Pub/Sub) and retried on failure.
+  rpc DeleteDocument(DeleteDocumentRequest) returns (DeleteDocumentResponse) {
+    option (google.api.http) = {
+      delete: "/v1/consumers/{consumer}/documents/{feedback_id}"
+    };
+  }
+
+  // DeleteAnnotations removes annotations for a specific feature, optionally
+  // narrowed by source and source_id. Cleans up the field_annotation marker
+  // if no annotations remain for the feature.
+  rpc DeleteAnnotations(DeleteAnnotationsRequest) returns (DeleteAnnotationsResponse) {
+    option (google.api.http) = {
+      delete: "/v1/consumers/{consumer}/documents/{feedback_id}/annotations"
+    };
+  }
 }
 
 // ---- Request / Response messages ----
@@ -213,6 +230,15 @@ message SetDocumentBlobsRequest {
   repeated string requested_features = 8;
   // Non-empty → write; empty → leave untouched.
   repeated string tags = 9;
+  // Raw document bytes. If set, DDS uploads to GCS and derives file_uri.
+  // Takes precedence over file_uri when both are provided.
+  bytes content = 10;
+  // Text annotation bytes. If set, DDS uploads to GCS and derives ta_uri.
+  // Takes precedence over ta_uri when both are provided.
+  bytes ta_content = 11;
+  // Rendered page image bytes. If set, DDS uploads to GCS and derives render_uris.
+  // Takes precedence over render_uris when both are provided.
+  repeated bytes render_contents = 12;
 }
 
 message SetDocumentBlobsResponse {}
@@ -226,3 +252,25 @@ message AddAnnotationsRequest {
 }
 
 message AddAnnotationsResponse {}
+
+message DeleteDocumentRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  reserved 3;
+}
+
+message DeleteDocumentResponse {}
+
+message DeleteAnnotationsRequest {
+  string feedback_id = 1;
+  string consumer = 2;
+  reserved 3;
+  // Required. The feature whose annotations should be deleted.
+  string feature = 4;
+  // Optional. If set, only delete annotations with this source.
+  string source = 5;
+  // Optional. If set with source, delete only the specific (source, source_id) entry.
+  string source_id = 6;
+}
+
+message DeleteAnnotationsResponse {}
