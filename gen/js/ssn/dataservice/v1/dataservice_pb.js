@@ -1169,7 +1169,8 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
     checkInDate: (f = msg.getCheckInDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
-    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f)
+    checkOutDate: (f = msg.getCheckOutDate()) && google_type_date_pb.Date.toObject(includeInstance, f),
+    ksef: (f = msg.getKsef()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1430,6 +1431,11 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_type_date_pb.Date;
       reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
       msg.setCheckOutDate(value);
+      break;
+    case 46:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setKsef(value);
       break;
     default:
       reader.skipField();
@@ -1818,6 +1824,14 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
       45,
       f,
       google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getKsef();
+  if (f != null) {
+    writer.writeMessage(
+      46,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
 };
@@ -3491,13 +3505,50 @@ proto.ssn.dataservice.v1.TrueValues.prototype.hasCheckOutDate = function() {
 };
 
 
+/**
+ * optional google.protobuf.StringValue ksef = 46;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getKsef = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 46));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setKsef = function(value) {
+  return jspb.Message.setWrapperField(this, 46, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearKsef = function() {
+  return this.setKsef(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasKsef = function() {
+  return jspb.Message.getField(this, 46) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46];
 
 
 
@@ -3619,7 +3670,9 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
     google_type_date_pb.Date.toObject, includeInstance),
     checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
-    google_type_date_pb.Date.toObject, includeInstance)
+    google_type_date_pb.Date.toObject, includeInstance),
+    ksefList: jspb.Message.toObjectList(msg.getKsefList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3880,6 +3933,11 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new google_type_date_pb.Date;
       reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
       msg.addCheckOutDate(value);
+      break;
+    case 46:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addKsef(value);
       break;
     default:
       reader.skipField();
@@ -4268,6 +4326,14 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
       45,
       f,
       google_type_date_pb.Date.serializeBinaryToWriter
+    );
+  }
+  f = message.getKsefList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      46,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
 };
@@ -5983,13 +6049,51 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearCheckOutDateList = func
 };
 
 
+/**
+ * repeated google.protobuf.StringValue ksef = 46;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getKsefList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 46));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setKsefList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 46, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addKsef = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 46, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearKsefList = function() {
+  return this.setKsefList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43];
 
 
 
@@ -6105,6 +6209,8 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    ksefList: jspb.Message.toObjectList(msg.getKsefList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -6351,6 +6457,11 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addCheckOutDate(value);
+      break;
+    case 43:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addKsef(value);
       break;
     default:
       reader.skipField();
@@ -6713,6 +6824,14 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       42,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getKsefList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      43,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -8316,13 +8435,51 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCheckOutDateList =
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue ksef = 43;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getKsefList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 43));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setKsefList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 43, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addKsef = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 43, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearKsefList = function() {
+  return this.setKsefList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43];
 
 
 
@@ -8438,6 +8595,8 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     checkInDateList: jspb.Message.toObjectList(msg.getCheckInDateList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    ksefList: jspb.Message.toObjectList(msg.getKsefList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -8684,6 +8843,11 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addCheckOutDate(value);
+      break;
+    case 43:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addKsef(value);
       break;
     default:
       reader.skipField();
@@ -9046,6 +9210,14 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       42,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getKsefList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      43,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -10646,6 +10818,44 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCheckOutDate = function
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCheckOutDateList = function() {
   return this.setCheckOutDateList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec ksef = 43;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getKsefList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 43));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setKsefList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 43, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addKsef = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 43, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearKsefList = function() {
+  return this.setKsefList([]);
 };
 
 

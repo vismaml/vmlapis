@@ -481,6 +481,15 @@ private static final long serialVersionUID = 0L;
      * <code>PRODUCT_TYPES = 52;</code>
      */
     PRODUCT_TYPES(52),
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
+     * Extracted via the QA/questions model.
+     * </pre>
+     *
+     * <code>KSEF = 53;</code>
+     */
+    KSEF(53),
     UNRECOGNIZED(-1),
     ;
 
@@ -922,6 +931,15 @@ private static final long serialVersionUID = 0L;
      * <code>PRODUCT_TYPES = 52;</code>
      */
     public static final int PRODUCT_TYPES_VALUE = 52;
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
+     * Extracted via the QA/questions model.
+     * </pre>
+     *
+     * <code>KSEF = 53;</code>
+     */
+    public static final int KSEF_VALUE = 53;
 
 
     public final int getNumber() {
@@ -1001,6 +1019,7 @@ private static final long serialVersionUID = 0L;
         case 50: return VERIFIED;
         case 51: return HOTEL_DATES;
         case 52: return PRODUCT_TYPES;
+        case 53: return KSEF;
         default: return null;
       }
     }

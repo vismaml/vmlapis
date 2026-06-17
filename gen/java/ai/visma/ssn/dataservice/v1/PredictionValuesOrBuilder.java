@@ -1088,4 +1088,28 @@ public interface PredictionValuesOrBuilder extends
    */
   com.google.type.DateOrBuilder getCheckOutDateOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getKsefList();
+  /**
+   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  com.google.protobuf.StringValue getKsef(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  int getKsefCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getKsefOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getKsefOrBuilder(
+      int index);
 }

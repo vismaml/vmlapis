@@ -1262,6 +1262,32 @@ private static final long serialVersionUID = 0L;
     return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
   }
 
+  public static final int KSEF_FIELD_NUMBER = 46;
+  private com.google.protobuf.StringValue ksef_;
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return Whether the ksef field is set.
+   */
+  @java.lang.Override
+  public boolean hasKsef() {
+    return ((bitField1_ & 0x00000400) != 0);
+  }
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return The ksef.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getKsef() {
+    return ksef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ksef_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getKsefOrBuilder() {
+    return ksef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ksef_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1410,6 +1436,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField1_ & 0x00000200) != 0)) {
       output.writeMessage(45, getCheckOutDate());
+    }
+    if (((bitField1_ & 0x00000400) != 0)) {
+      output.writeMessage(46, getKsef());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1599,6 +1628,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, getCheckOutDate());
+    }
+    if (((bitField1_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(46, getKsef());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1831,6 +1864,11 @@ private static final long serialVersionUID = 0L;
       if (!getCheckOutDate()
           .equals(other.getCheckOutDate())) return false;
     }
+    if (hasKsef() != other.hasKsef()) return false;
+    if (hasKsef()) {
+      if (!getKsef()
+          .equals(other.getKsef())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2022,6 +2060,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHECK_OUT_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCheckOutDate().hashCode();
     }
+    if (hasKsef()) {
+      hash = (37 * hash) + KSEF_FIELD_NUMBER;
+      hash = (53 * hash) + getKsef().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2197,6 +2239,7 @@ private static final long serialVersionUID = 0L;
         getVatDistributionFieldBuilder();
         getCheckInDateFieldBuilder();
         getCheckOutDateFieldBuilder();
+        getKsefFieldBuilder();
       }
     }
     @java.lang.Override
@@ -2434,6 +2477,11 @@ private static final long serialVersionUID = 0L;
       if (checkOutDateBuilder_ != null) {
         checkOutDateBuilder_.dispose();
         checkOutDateBuilder_ = null;
+      }
+      ksef_ = null;
+      if (ksefBuilder_ != null) {
+        ksefBuilder_.dispose();
+        ksefBuilder_ = null;
       }
       return this;
     }
@@ -2759,6 +2807,12 @@ private static final long serialVersionUID = 0L;
             : checkOutDateBuilder_.build();
         to_bitField1_ |= 0x00000200;
       }
+      if (((from_bitField1_ & 0x00002000) != 0)) {
+        result.ksef_ = ksefBuilder_ == null
+            ? ksef_
+            : ksefBuilder_.build();
+        to_bitField1_ |= 0x00000400;
+      }
       result.bitField1_ |= to_bitField1_;
     }
 
@@ -2977,6 +3031,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCheckOutDate()) {
         mergeCheckOutDate(other.getCheckOutDate());
+      }
+      if (other.hasKsef()) {
+        mergeKsef(other.getKsef());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -3337,6 +3394,13 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00001000;
               break;
             } // case 362
+            case 370: {
+              input.readMessage(
+                  getKsefFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 370
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -9155,6 +9219,127 @@ private static final long serialVersionUID = 0L;
         checkOutDate_ = null;
       }
       return checkOutDateBuilder_;
+    }
+
+    private com.google.protobuf.StringValue ksef_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ksefBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * @return Whether the ksef field is set.
+     */
+    public boolean hasKsef() {
+      return ((bitField1_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * @return The ksef.
+     */
+    public com.google.protobuf.StringValue getKsef() {
+      if (ksefBuilder_ == null) {
+        return ksef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ksef_;
+      } else {
+        return ksefBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public Builder setKsef(com.google.protobuf.StringValue value) {
+      if (ksefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ksef_ = value;
+      } else {
+        ksefBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public Builder setKsef(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (ksefBuilder_ == null) {
+        ksef_ = builderForValue.build();
+      } else {
+        ksefBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public Builder mergeKsef(com.google.protobuf.StringValue value) {
+      if (ksefBuilder_ == null) {
+        if (((bitField1_ & 0x00002000) != 0) &&
+          ksef_ != null &&
+          ksef_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getKsefBuilder().mergeFrom(value);
+        } else {
+          ksef_ = value;
+        }
+      } else {
+        ksefBuilder_.mergeFrom(value);
+      }
+      if (ksef_ != null) {
+        bitField1_ |= 0x00002000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public Builder clearKsef() {
+      bitField1_ = (bitField1_ & ~0x00002000);
+      ksef_ = null;
+      if (ksefBuilder_ != null) {
+        ksefBuilder_.dispose();
+        ksefBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getKsefBuilder() {
+      bitField1_ |= 0x00002000;
+      onChanged();
+      return getKsefFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getKsefOrBuilder() {
+      if (ksefBuilder_ != null) {
+        return ksefBuilder_.getMessageOrBuilder();
+      } else {
+        return ksef_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : ksef_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getKsefFieldBuilder() {
+      if (ksefBuilder_ == null) {
+        ksefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getKsef(),
+                getParentForChildren(),
+                isClean());
+        ksef_ = null;
+      }
+      return ksefBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.TrueValues)
