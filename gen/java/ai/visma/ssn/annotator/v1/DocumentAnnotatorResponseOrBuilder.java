@@ -2638,10 +2638,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
-      getKsefList();
+      getOcrLinePlCreditorIdList();
   /**
    * <pre>
    * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
@@ -2649,9 +2649,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  ai.visma.ssn.type.Candidate getKsef(int index);
+  ai.visma.ssn.type.Candidate getOcrLinePlCreditorId(int index);
   /**
    * <pre>
    * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
@@ -2659,9 +2659,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  int getKsefCount();
+  int getOcrLinePlCreditorIdCount();
   /**
    * <pre>
    * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
@@ -2669,10 +2669,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getKsefOrBuilderList();
+      getOcrLinePlCreditorIdOrBuilderList();
   /**
    * <pre>
    * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
@@ -2680,8 +2680,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
+  ai.visma.ssn.type.CandidateOrBuilder getOcrLinePlCreditorIdOrBuilder(
       int index);
 }

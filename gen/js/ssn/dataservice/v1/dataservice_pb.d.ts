@@ -311,10 +311,10 @@ export class TrueValues extends jspb.Message {
   hasCheckOutDate(): boolean;
   clearCheckOutDate(): TrueValues;
 
-  getKsef(): google_protobuf_wrappers_pb.StringValue | undefined;
-  setKsef(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
-  hasKsef(): boolean;
-  clearKsef(): TrueValues;
+  getOcrLinePlCreditorId(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setOcrLinePlCreditorId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasOcrLinePlCreditorId(): boolean;
+  clearOcrLinePlCreditorId(): TrueValues;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
@@ -371,7 +371,7 @@ export namespace TrueValues {
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     checkInDate?: google_type_date_pb.Date.AsObject,
     checkOutDate?: google_type_date_pb.Date.AsObject,
-    ksef?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    ocrLinePlCreditorId?: google_protobuf_wrappers_pb.StringValue.AsObject,
   }
 }
 
@@ -601,10 +601,10 @@ export class PredictionValues extends jspb.Message {
   clearCheckOutDateList(): PredictionValues;
   addCheckOutDate(value?: google_type_date_pb.Date, index?: number): google_type_date_pb.Date;
 
-  getKsefList(): Array<google_protobuf_wrappers_pb.StringValue>;
-  setKsefList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
-  clearKsefList(): PredictionValues;
-  addKsef(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+  getOcrLinePlCreditorIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setOcrLinePlCreditorIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearOcrLinePlCreditorIdList(): PredictionValues;
+  addOcrLinePlCreditorId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
@@ -661,7 +661,7 @@ export namespace PredictionValues {
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     checkInDateList: Array<google_type_date_pb.Date.AsObject>,
     checkOutDateList: Array<google_type_date_pb.Date.AsObject>,
-    ksefList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    ocrLinePlCreditorIdList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
   }
 }
 
@@ -876,10 +876,10 @@ export class PredictionConfidences extends jspb.Message {
   clearCheckOutDateList(): PredictionConfidences;
   addCheckOutDate(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
-  getKsefList(): Array<google_protobuf_wrappers_pb.FloatValue>;
-  setKsefList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
-  clearKsefList(): PredictionConfidences;
-  addKsef(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+  getOcrLinePlCreditorIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setOcrLinePlCreditorIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearOcrLinePlCreditorIdList(): PredictionConfidences;
+  addOcrLinePlCreditorId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
@@ -933,7 +933,7 @@ export namespace PredictionConfidences {
     receiverVatNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     checkInDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     checkOutDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
-    ksefList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    ocrLinePlCreditorIdList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
   }
 }
 
@@ -1148,10 +1148,10 @@ export class PredictionMetadata extends jspb.Message {
   clearCheckOutDateList(): PredictionMetadata;
   addCheckOutDate(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
-  getKsefList(): Array<ssn_type_candidate_pb.ModelSpec>;
-  setKsefList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
-  clearKsefList(): PredictionMetadata;
-  addKsef(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+  getOcrLinePlCreditorIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setOcrLinePlCreditorIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearOcrLinePlCreditorIdList(): PredictionMetadata;
+  addOcrLinePlCreditorId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
@@ -1205,7 +1205,7 @@ export namespace PredictionMetadata {
     receiverVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     checkInDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     checkOutDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
-    ksefList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    ocrLinePlCreditorIdList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 

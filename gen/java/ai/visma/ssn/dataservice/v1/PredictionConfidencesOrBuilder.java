@@ -1018,26 +1018,26 @@ public interface PredictionConfidencesOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.FloatValue ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
    */
   java.util.List<com.google.protobuf.FloatValue> 
-      getKsefList();
+      getOcrLinePlCreditorIdList();
   /**
-   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.FloatValue ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  com.google.protobuf.FloatValue getKsef(int index);
+  com.google.protobuf.FloatValue getOcrLinePlCreditorId(int index);
   /**
-   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.FloatValue ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  int getKsefCount();
+  int getOcrLinePlCreditorIdCount();
   /**
-   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.FloatValue ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
    */
   java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
-      getKsefOrBuilderList();
+      getOcrLinePlCreditorIdOrBuilderList();
   /**
-   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.FloatValue ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
    */
-  com.google.protobuf.FloatValueOrBuilder getKsefOrBuilder(
+  com.google.protobuf.FloatValueOrBuilder getOcrLinePlCreditorIdOrBuilder(
       int index);
 }
