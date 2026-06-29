@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
     vatDistribution_ = java.util.Collections.emptyList();
     checkInDate_ = java.util.Collections.emptyList();
     checkOutDate_ = java.util.Collections.emptyList();
-    ksef_ = java.util.Collections.emptyList();
+    ocrLinePlCreditorId_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1933,45 +1933,45 @@ private static final long serialVersionUID = 0L;
     return checkOutDate_.get(index);
   }
 
-  public static final int KSEF_FIELD_NUMBER = 46;
+  public static final int OCR_LINE_PL_CREDITOR_ID_FIELD_NUMBER = 46;
   @SuppressWarnings("serial")
-  private java.util.List<com.google.protobuf.StringValue> ksef_;
+  private java.util.List<com.google.protobuf.StringValue> ocrLinePlCreditorId_;
   /**
-   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.protobuf.StringValue> getKsefList() {
-    return ksef_;
+  public java.util.List<com.google.protobuf.StringValue> getOcrLinePlCreditorIdList() {
+    return ocrLinePlCreditorId_;
   }
   /**
-   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-      getKsefOrBuilderList() {
-    return ksef_;
+      getOcrLinePlCreditorIdOrBuilderList() {
+    return ocrLinePlCreditorId_;
   }
   /**
-   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
    */
   @java.lang.Override
-  public int getKsefCount() {
-    return ksef_.size();
+  public int getOcrLinePlCreditorIdCount() {
+    return ocrLinePlCreditorId_.size();
   }
   /**
-   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.StringValue getKsef(int index) {
-    return ksef_.get(index);
+  public com.google.protobuf.StringValue getOcrLinePlCreditorId(int index) {
+    return ocrLinePlCreditorId_.get(index);
   }
   /**
-   * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getKsefOrBuilder(
+  public com.google.protobuf.StringValueOrBuilder getOcrLinePlCreditorIdOrBuilder(
       int index) {
-    return ksef_.get(index);
+    return ocrLinePlCreditorId_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2123,8 +2123,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < checkOutDate_.size(); i++) {
       output.writeMessage(45, checkOutDate_.get(i));
     }
-    for (int i = 0; i < ksef_.size(); i++) {
-      output.writeMessage(46, ksef_.get(i));
+    for (int i = 0; i < ocrLinePlCreditorId_.size(); i++) {
+      output.writeMessage(46, ocrLinePlCreditorId_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2315,9 +2315,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, checkOutDate_.get(i));
     }
-    for (int i = 0; i < ksef_.size(); i++) {
+    for (int i = 0; i < ocrLinePlCreditorId_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(46, ksef_.get(i));
+        .computeMessageSize(46, ocrLinePlCreditorId_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2424,8 +2424,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCheckInDateList())) return false;
     if (!getCheckOutDateList()
         .equals(other.getCheckOutDateList())) return false;
-    if (!getKsefList()
-        .equals(other.getKsefList())) return false;
+    if (!getOcrLinePlCreditorIdList()
+        .equals(other.getOcrLinePlCreditorIdList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2617,9 +2617,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHECK_OUT_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCheckOutDateList().hashCode();
     }
-    if (getKsefCount() > 0) {
-      hash = (37 * hash) + KSEF_FIELD_NUMBER;
-      hash = (53 * hash) + getKsefList().hashCode();
+    if (getOcrLinePlCreditorIdCount() > 0) {
+      hash = (37 * hash) + OCR_LINE_PL_CREDITOR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOcrLinePlCreditorIdList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3068,11 +3068,11 @@ private static final long serialVersionUID = 0L;
         checkOutDateBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00001000);
-      if (ksefBuilder_ == null) {
-        ksef_ = java.util.Collections.emptyList();
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ocrLinePlCreditorId_ = java.util.Collections.emptyList();
       } else {
-        ksef_ = null;
-        ksefBuilder_.clear();
+        ocrLinePlCreditorId_ = null;
+        ocrLinePlCreditorIdBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00002000);
       return this;
@@ -3514,14 +3514,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.checkOutDate_ = checkOutDateBuilder_.build();
       }
-      if (ksefBuilder_ == null) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
         if (((bitField1_ & 0x00002000) != 0)) {
-          ksef_ = java.util.Collections.unmodifiableList(ksef_);
+          ocrLinePlCreditorId_ = java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
           bitField1_ = (bitField1_ & ~0x00002000);
         }
-        result.ksef_ = ksef_;
+        result.ocrLinePlCreditorId_ = ocrLinePlCreditorId_;
       } else {
-        result.ksef_ = ksefBuilder_.build();
+        result.ocrLinePlCreditorId_ = ocrLinePlCreditorIdBuilder_.build();
       }
     }
 
@@ -4715,29 +4715,29 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (ksefBuilder_ == null) {
-        if (!other.ksef_.isEmpty()) {
-          if (ksef_.isEmpty()) {
-            ksef_ = other.ksef_;
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        if (!other.ocrLinePlCreditorId_.isEmpty()) {
+          if (ocrLinePlCreditorId_.isEmpty()) {
+            ocrLinePlCreditorId_ = other.ocrLinePlCreditorId_;
             bitField1_ = (bitField1_ & ~0x00002000);
           } else {
-            ensureKsefIsMutable();
-            ksef_.addAll(other.ksef_);
+            ensureOcrLinePlCreditorIdIsMutable();
+            ocrLinePlCreditorId_.addAll(other.ocrLinePlCreditorId_);
           }
           onChanged();
         }
       } else {
-        if (!other.ksef_.isEmpty()) {
-          if (ksefBuilder_.isEmpty()) {
-            ksefBuilder_.dispose();
-            ksefBuilder_ = null;
-            ksef_ = other.ksef_;
+        if (!other.ocrLinePlCreditorId_.isEmpty()) {
+          if (ocrLinePlCreditorIdBuilder_.isEmpty()) {
+            ocrLinePlCreditorIdBuilder_.dispose();
+            ocrLinePlCreditorIdBuilder_ = null;
+            ocrLinePlCreditorId_ = other.ocrLinePlCreditorId_;
             bitField1_ = (bitField1_ & ~0x00002000);
-            ksefBuilder_ = 
+            ocrLinePlCreditorIdBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getKsefFieldBuilder() : null;
+                 getOcrLinePlCreditorIdFieldBuilder() : null;
           } else {
-            ksefBuilder_.addAllMessages(other.ksef_);
+            ocrLinePlCreditorIdBuilder_.addAllMessages(other.ocrLinePlCreditorId_);
           }
         }
       }
@@ -5357,11 +5357,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.google.protobuf.StringValue.parser(),
                       extensionRegistry);
-              if (ksefBuilder_ == null) {
-                ensureKsefIsMutable();
-                ksef_.add(m);
+              if (ocrLinePlCreditorIdBuilder_ == null) {
+                ensureOcrLinePlCreditorIdIsMutable();
+                ocrLinePlCreditorId_.add(m);
               } else {
-                ksefBuilder_.addMessage(m);
+                ocrLinePlCreditorIdBuilder_.addMessage(m);
               }
               break;
             } // case 370
@@ -16183,244 +16183,244 @@ private static final long serialVersionUID = 0L;
       return checkOutDateBuilder_;
     }
 
-    private java.util.List<com.google.protobuf.StringValue> ksef_ =
+    private java.util.List<com.google.protobuf.StringValue> ocrLinePlCreditorId_ =
       java.util.Collections.emptyList();
-    private void ensureKsefIsMutable() {
+    private void ensureOcrLinePlCreditorIdIsMutable() {
       if (!((bitField1_ & 0x00002000) != 0)) {
-        ksef_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ksef_);
+        ocrLinePlCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLinePlCreditorId_);
         bitField1_ |= 0x00002000;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ksefBuilder_;
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLinePlCreditorIdBuilder_;
 
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public java.util.List<com.google.protobuf.StringValue> getKsefList() {
-      if (ksefBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(ksef_);
+    public java.util.List<com.google.protobuf.StringValue> getOcrLinePlCreditorIdList() {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
       } else {
-        return ksefBuilder_.getMessageList();
+        return ocrLinePlCreditorIdBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public int getKsefCount() {
-      if (ksefBuilder_ == null) {
-        return ksef_.size();
+    public int getOcrLinePlCreditorIdCount() {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        return ocrLinePlCreditorId_.size();
       } else {
-        return ksefBuilder_.getCount();
+        return ocrLinePlCreditorIdBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public com.google.protobuf.StringValue getKsef(int index) {
-      if (ksefBuilder_ == null) {
-        return ksef_.get(index);
+    public com.google.protobuf.StringValue getOcrLinePlCreditorId(int index) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        return ocrLinePlCreditorId_.get(index);
       } else {
-        return ksefBuilder_.getMessage(index);
+        return ocrLinePlCreditorIdBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder setKsef(
+    public Builder setOcrLinePlCreditorId(
         int index, com.google.protobuf.StringValue value) {
-      if (ksefBuilder_ == null) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureKsefIsMutable();
-        ksef_.set(index, value);
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.set(index, value);
         onChanged();
       } else {
-        ksefBuilder_.setMessage(index, value);
+        ocrLinePlCreditorIdBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder setKsef(
+    public Builder setOcrLinePlCreditorId(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
-      if (ksefBuilder_ == null) {
-        ensureKsefIsMutable();
-        ksef_.set(index, builderForValue.build());
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.set(index, builderForValue.build());
         onChanged();
       } else {
-        ksefBuilder_.setMessage(index, builderForValue.build());
+        ocrLinePlCreditorIdBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder addKsef(com.google.protobuf.StringValue value) {
-      if (ksefBuilder_ == null) {
+    public Builder addOcrLinePlCreditorId(com.google.protobuf.StringValue value) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureKsefIsMutable();
-        ksef_.add(value);
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.add(value);
         onChanged();
       } else {
-        ksefBuilder_.addMessage(value);
+        ocrLinePlCreditorIdBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder addKsef(
+    public Builder addOcrLinePlCreditorId(
         int index, com.google.protobuf.StringValue value) {
-      if (ksefBuilder_ == null) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureKsefIsMutable();
-        ksef_.add(index, value);
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.add(index, value);
         onChanged();
       } else {
-        ksefBuilder_.addMessage(index, value);
+        ocrLinePlCreditorIdBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder addKsef(
+    public Builder addOcrLinePlCreditorId(
         com.google.protobuf.StringValue.Builder builderForValue) {
-      if (ksefBuilder_ == null) {
-        ensureKsefIsMutable();
-        ksef_.add(builderForValue.build());
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.add(builderForValue.build());
         onChanged();
       } else {
-        ksefBuilder_.addMessage(builderForValue.build());
+        ocrLinePlCreditorIdBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder addKsef(
+    public Builder addOcrLinePlCreditorId(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
-      if (ksefBuilder_ == null) {
-        ensureKsefIsMutable();
-        ksef_.add(index, builderForValue.build());
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.add(index, builderForValue.build());
         onChanged();
       } else {
-        ksefBuilder_.addMessage(index, builderForValue.build());
+        ocrLinePlCreditorIdBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder addAllKsef(
+    public Builder addAllOcrLinePlCreditorId(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
-      if (ksefBuilder_ == null) {
-        ensureKsefIsMutable();
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ensureOcrLinePlCreditorIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ksef_);
+            values, ocrLinePlCreditorId_);
         onChanged();
       } else {
-        ksefBuilder_.addAllMessages(values);
+        ocrLinePlCreditorIdBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder clearKsef() {
-      if (ksefBuilder_ == null) {
-        ksef_ = java.util.Collections.emptyList();
+    public Builder clearOcrLinePlCreditorId() {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ocrLinePlCreditorId_ = java.util.Collections.emptyList();
         bitField1_ = (bitField1_ & ~0x00002000);
         onChanged();
       } else {
-        ksefBuilder_.clear();
+        ocrLinePlCreditorIdBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public Builder removeKsef(int index) {
-      if (ksefBuilder_ == null) {
-        ensureKsefIsMutable();
-        ksef_.remove(index);
+    public Builder removeOcrLinePlCreditorId(int index) {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ensureOcrLinePlCreditorIdIsMutable();
+        ocrLinePlCreditorId_.remove(index);
         onChanged();
       } else {
-        ksefBuilder_.remove(index);
+        ocrLinePlCreditorIdBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public com.google.protobuf.StringValue.Builder getKsefBuilder(
+    public com.google.protobuf.StringValue.Builder getOcrLinePlCreditorIdBuilder(
         int index) {
-      return getKsefFieldBuilder().getBuilder(index);
+      return getOcrLinePlCreditorIdFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getKsefOrBuilder(
+    public com.google.protobuf.StringValueOrBuilder getOcrLinePlCreditorIdOrBuilder(
         int index) {
-      if (ksefBuilder_ == null) {
-        return ksef_.get(index);  } else {
-        return ksefBuilder_.getMessageOrBuilder(index);
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        return ocrLinePlCreditorId_.get(index);  } else {
+        return ocrLinePlCreditorIdBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-         getKsefOrBuilderList() {
-      if (ksefBuilder_ != null) {
-        return ksefBuilder_.getMessageOrBuilderList();
+         getOcrLinePlCreditorIdOrBuilderList() {
+      if (ocrLinePlCreditorIdBuilder_ != null) {
+        return ocrLinePlCreditorIdBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(ksef_);
+        return java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
       }
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public com.google.protobuf.StringValue.Builder addKsefBuilder() {
-      return getKsefFieldBuilder().addBuilder(
+    public com.google.protobuf.StringValue.Builder addOcrLinePlCreditorIdBuilder() {
+      return getOcrLinePlCreditorIdFieldBuilder().addBuilder(
           com.google.protobuf.StringValue.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
-    public com.google.protobuf.StringValue.Builder addKsefBuilder(
+    public com.google.protobuf.StringValue.Builder addOcrLinePlCreditorIdBuilder(
         int index) {
-      return getKsefFieldBuilder().addBuilder(
+      return getOcrLinePlCreditorIdFieldBuilder().addBuilder(
           index, com.google.protobuf.StringValue.getDefaultInstance());
     }
     /**
-     * <code>repeated .google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+     * <code>repeated .google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
-         getKsefBuilderList() {
-      return getKsefFieldBuilder().getBuilderList();
+         getOcrLinePlCreditorIdBuilderList() {
+      return getOcrLinePlCreditorIdFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getKsefFieldBuilder() {
-      if (ksefBuilder_ == null) {
-        ksefBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getOcrLinePlCreditorIdFieldBuilder() {
+      if (ocrLinePlCreditorIdBuilder_ == null) {
+        ocrLinePlCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                ksef_,
+                ocrLinePlCreditorId_,
                 ((bitField1_ & 0x00002000) != 0),
                 getParentForChildren(),
                 isClean());
-        ksef_ = null;
+        ocrLinePlCreditorId_ = null;
       }
-      return ksefBuilder_;
+      return ocrLinePlCreditorIdBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionValues)
