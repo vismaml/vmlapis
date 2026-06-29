@@ -1016,4 +1016,28 @@ public interface PredictionConfidencesOrBuilder extends
    */
   com.google.protobuf.FloatValueOrBuilder getCheckOutDateOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getKsefList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   */
+  com.google.protobuf.FloatValue getKsef(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   */
+  int getKsefCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getKsefOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ksef = 43 [json_name = "ksef"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getKsefOrBuilder(
+      int index);
 }

@@ -1016,4 +1016,28 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getCheckOutDateOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.ModelSpec> 
+      getKsefList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
+   */
+  ai.visma.ssn.type.ModelSpec getKsef(int index);
+  /**
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
+   */
+  int getKsefCount();
+  /**
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getKsefOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getKsefOrBuilder(
+      int index);
 }

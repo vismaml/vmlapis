@@ -89,6 +89,7 @@ export namespace Feature {
     VERIFIED = 50,
     HOTEL_DATES = 51,
     PRODUCT_TYPES = 52,
+    KSEF = 53,
   }
 }
 
@@ -420,6 +421,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearStructuredReceiverAddressList(): DocumentAnnotatorResponse;
   addStructuredReceiverAddress(value?: ssn_type_address_pb.StructuredAddress, index?: number): ssn_type_address_pb.StructuredAddress;
 
+  getKsefList(): Array<ssn_type_candidate_pb.Candidate>;
+  setKsefList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearKsefList(): DocumentAnnotatorResponse;
+  addKsef(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -487,6 +493,7 @@ export namespace DocumentAnnotatorResponse {
     vatDistributionDetailsList: Array<ssn_type_candidate_pb.VatDistribution.AsObject>,
     structuredSupplierAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
     structuredReceiverAddressList: Array<ssn_type_address_pb.StructuredAddress.AsObject>,
+    ksefList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

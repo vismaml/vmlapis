@@ -151,6 +151,9 @@ message Feature {
     HOTEL_DATES = 51;
     // Product type classification for purchase lines
     PRODUCT_TYPES = 52;
+    // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
+    // Extracted via the QA/questions model.
+    KSEF = 53;
   }
   // The feature type.
   Type type = 1;
@@ -336,6 +339,10 @@ message DocumentAnnotatorResponse {
   // using the geo service. Each entry corresponds to the candidate at the
   // same index in receiver_address.
   repeated ssn.type.StructuredAddress structured_receiver_address = 59;
+  // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+  // via the QA/questions model. A reference number of up to 35 characters
+  // (alphanumeric, may contain hyphens).
+  repeated ssn.type.Candidate ksef = 60;
 }
 
 message Document {
