@@ -153,7 +153,7 @@ message Feature {
     PRODUCT_TYPES = 52;
     // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
     // Extracted via the QA/questions model.
-    OCR_LINE_PL_CREDITOR_ID = 53;
+    KSEF = 53;
   }
   // The feature type.
   Type type = 1;
@@ -342,7 +342,7 @@ message DocumentAnnotatorResponse {
   // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
   // via the QA/questions model. A reference number of up to 35 characters
   // (alphanumeric, may contain hyphens).
-  repeated ssn.type.Candidate ocr_line_pl_creditor_id = 60;
+  repeated ssn.type.Candidate ksef = 60;
 }
 
 message Document {

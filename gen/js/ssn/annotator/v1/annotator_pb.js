@@ -385,7 +385,7 @@ proto.ssn.annotator.v1.Feature.Type = {
   VERIFIED: 50,
   HOTEL_DATES: 51,
   PRODUCT_TYPES: 52,
-  OCR_LINE_PL_CREDITOR_ID: 53
+  KSEF: 53
 };
 
 /**
@@ -977,7 +977,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
     structuredReceiverAddressList: jspb.Message.toObjectList(msg.getStructuredReceiverAddressList(),
     ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
-    ocrLinePlCreditorIdList: jspb.Message.toObjectList(msg.getOcrLinePlCreditorIdList(),
+    ksefList: jspb.Message.toObjectList(msg.getKsefList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
@@ -1300,7 +1300,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
     case 60:
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
-      msg.addOcrLinePlCreditorId(value);
+      msg.addKsef(value);
       break;
     default:
       reader.skipField();
@@ -1784,7 +1784,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
     );
   }
-  f = message.getOcrLinePlCreditorIdList();
+  f = message.getKsefList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       60,
@@ -3899,10 +3899,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearStructuredReceiv
 
 
 /**
- * repeated ssn.type.Candidate ocr_line_pl_creditor_id = 60;
+ * repeated ssn.type.Candidate ksef = 60;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLinePlCreditorIdList = function() {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getKsefList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 60));
 };
@@ -3912,7 +3912,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLinePlCreditorI
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setOcrLinePlCreditorIdList = function(value) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setKsefList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 60, value);
 };
 
@@ -3922,7 +3922,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setOcrLinePlCreditorI
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addOcrLinePlCreditorId = function(opt_value, opt_index) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addKsef = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 60, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -3931,8 +3931,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addOcrLinePlCreditorI
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLinePlCreditorIdList = function() {
-  return this.setOcrLinePlCreditorIdList([]);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearKsefList = function() {
+  return this.setKsefList([]);
 };
 
 

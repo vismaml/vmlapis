@@ -712,17 +712,17 @@ public interface TrueValuesOrBuilder extends
   com.google.type.DateOrBuilder getCheckOutDateOrBuilder();
 
   /**
-   * <code>.google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
-   * @return Whether the ocrLinePlCreditorId field is set.
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return Whether the ksef field is set.
    */
-  boolean hasOcrLinePlCreditorId();
+  boolean hasKsef();
   /**
-   * <code>.google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
-   * @return The ocrLinePlCreditorId.
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return The ksef.
    */
-  com.google.protobuf.StringValue getOcrLinePlCreditorId();
+  com.google.protobuf.StringValue getKsef();
   /**
-   * <code>.google.protobuf.StringValue ocr_line_pl_creditor_id = 46 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    */
-  com.google.protobuf.StringValueOrBuilder getOcrLinePlCreditorIdOrBuilder();
+  com.google.protobuf.StringValueOrBuilder getKsefOrBuilder();
 }
