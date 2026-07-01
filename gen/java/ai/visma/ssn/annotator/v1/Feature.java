@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
      * Extracted via the QA/questions model.
      * </pre>
      *
-     * <code>OCR_LINE_PL_CREDITOR_ID = 53;</code>
+     * <code>KSEF = 53;</code>
      */
-    OCR_LINE_PL_CREDITOR_ID(53),
+    KSEF(53),
     UNRECOGNIZED(-1),
     ;
 
@@ -937,9 +937,9 @@ private static final long serialVersionUID = 0L;
      * Extracted via the QA/questions model.
      * </pre>
      *
-     * <code>OCR_LINE_PL_CREDITOR_ID = 53;</code>
+     * <code>KSEF = 53;</code>
      */
-    public static final int OCR_LINE_PL_CREDITOR_ID_VALUE = 53;
+    public static final int KSEF_VALUE = 53;
 
 
     public final int getNumber() {
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
         case 50: return VERIFIED;
         case 51: return HOTEL_DATES;
         case 52: return PRODUCT_TYPES;
-        case 53: return OCR_LINE_PL_CREDITOR_ID;
+        case 53: return KSEF;
         default: return null;
       }
     }

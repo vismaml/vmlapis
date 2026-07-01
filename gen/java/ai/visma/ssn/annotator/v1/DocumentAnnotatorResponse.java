@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
     vatDistributionDetails_ = java.util.Collections.emptyList();
     structuredSupplierAddress_ = java.util.Collections.emptyList();
     structuredReceiverAddress_ = java.util.Collections.emptyList();
-    ocrLinePlCreditorId_ = java.util.Collections.emptyList();
+    ksef_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -3701,9 +3701,9 @@ private static final long serialVersionUID = 0L;
     return structuredReceiverAddress_.get(index);
   }
 
-  public static final int OCR_LINE_PL_CREDITOR_ID_FIELD_NUMBER = 60;
+  public static final int KSEF_FIELD_NUMBER = 60;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> ocrLinePlCreditorId_;
+  private java.util.List<ai.visma.ssn.type.Candidate> ksef_;
   /**
    * <pre>
    * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
@@ -3711,11 +3711,11 @@ private static final long serialVersionUID = 0L;
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getOcrLinePlCreditorIdList() {
-    return ocrLinePlCreditorId_;
+  public java.util.List<ai.visma.ssn.type.Candidate> getKsefList() {
+    return ksef_;
   }
   /**
    * <pre>
@@ -3724,12 +3724,12 @@ private static final long serialVersionUID = 0L;
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getOcrLinePlCreditorIdOrBuilderList() {
-    return ocrLinePlCreditorId_;
+      getKsefOrBuilderList() {
+    return ksef_;
   }
   /**
    * <pre>
@@ -3738,11 +3738,11 @@ private static final long serialVersionUID = 0L;
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
    */
   @java.lang.Override
-  public int getOcrLinePlCreditorIdCount() {
-    return ocrLinePlCreditorId_.size();
+  public int getKsefCount() {
+    return ksef_.size();
   }
   /**
    * <pre>
@@ -3751,11 +3751,11 @@ private static final long serialVersionUID = 0L;
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getOcrLinePlCreditorId(int index) {
-    return ocrLinePlCreditorId_.get(index);
+  public ai.visma.ssn.type.Candidate getKsef(int index) {
+    return ksef_.get(index);
   }
   /**
    * <pre>
@@ -3764,12 +3764,12 @@ private static final long serialVersionUID = 0L;
    * (alphanumeric, may contain hyphens).
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getOcrLinePlCreditorIdOrBuilder(
+  public ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
       int index) {
-    return ocrLinePlCreditorId_.get(index);
+    return ksef_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3957,8 +3957,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < structuredReceiverAddress_.size(); i++) {
       output.writeMessage(59, structuredReceiverAddress_.get(i));
     }
-    for (int i = 0; i < ocrLinePlCreditorId_.size(); i++) {
-      output.writeMessage(60, ocrLinePlCreditorId_.get(i));
+    for (int i = 0; i < ksef_.size(); i++) {
+      output.writeMessage(60, ksef_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -4194,9 +4194,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(59, structuredReceiverAddress_.get(i));
     }
-    for (int i = 0; i < ocrLinePlCreditorId_.size(); i++) {
+    for (int i = 0; i < ksef_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(60, ocrLinePlCreditorId_.get(i));
+        .computeMessageSize(60, ksef_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -4336,8 +4336,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getStructuredSupplierAddressList())) return false;
     if (!getStructuredReceiverAddressList()
         .equals(other.getStructuredReceiverAddressList())) return false;
-    if (!getOcrLinePlCreditorIdList()
-        .equals(other.getOcrLinePlCreditorIdList())) return false;
+    if (!getKsefList()
+        .equals(other.getKsefList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4571,9 +4571,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STRUCTURED_RECEIVER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getStructuredReceiverAddressList().hashCode();
     }
-    if (getOcrLinePlCreditorIdCount() > 0) {
-      hash = (37 * hash) + OCR_LINE_PL_CREDITOR_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOcrLinePlCreditorIdList().hashCode();
+    if (getKsefCount() > 0) {
+      hash = (37 * hash) + KSEF_FIELD_NUMBER;
+      hash = (53 * hash) + getKsefList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4759,7 +4759,7 @@ private static final long serialVersionUID = 0L;
         getVatDistributionDetailsFieldBuilder();
         getStructuredSupplierAddressFieldBuilder();
         getStructuredReceiverAddressFieldBuilder();
-        getOcrLinePlCreditorIdFieldBuilder();
+        getKsefFieldBuilder();
       }
     }
     @java.lang.Override
@@ -5142,11 +5142,11 @@ private static final long serialVersionUID = 0L;
         structuredReceiverAddressBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x01000000);
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ocrLinePlCreditorId_ = java.util.Collections.emptyList();
+      if (ksefBuilder_ == null) {
+        ksef_ = java.util.Collections.emptyList();
       } else {
-        ocrLinePlCreditorId_ = null;
-        ocrLinePlCreditorIdBuilder_.clear();
+        ksef_ = null;
+        ksefBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x02000000);
       return this;
@@ -5642,14 +5642,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.structuredReceiverAddress_ = structuredReceiverAddressBuilder_.build();
       }
-      if (ocrLinePlCreditorIdBuilder_ == null) {
+      if (ksefBuilder_ == null) {
         if (((bitField1_ & 0x02000000) != 0)) {
-          ocrLinePlCreditorId_ = java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
+          ksef_ = java.util.Collections.unmodifiableList(ksef_);
           bitField1_ = (bitField1_ & ~0x02000000);
         }
-        result.ocrLinePlCreditorId_ = ocrLinePlCreditorId_;
+        result.ksef_ = ksef_;
       } else {
-        result.ocrLinePlCreditorId_ = ocrLinePlCreditorIdBuilder_.build();
+        result.ksef_ = ksefBuilder_.build();
       }
     }
 
@@ -7054,29 +7054,29 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        if (!other.ocrLinePlCreditorId_.isEmpty()) {
-          if (ocrLinePlCreditorId_.isEmpty()) {
-            ocrLinePlCreditorId_ = other.ocrLinePlCreditorId_;
+      if (ksefBuilder_ == null) {
+        if (!other.ksef_.isEmpty()) {
+          if (ksef_.isEmpty()) {
+            ksef_ = other.ksef_;
             bitField1_ = (bitField1_ & ~0x02000000);
           } else {
-            ensureOcrLinePlCreditorIdIsMutable();
-            ocrLinePlCreditorId_.addAll(other.ocrLinePlCreditorId_);
+            ensureKsefIsMutable();
+            ksef_.addAll(other.ksef_);
           }
           onChanged();
         }
       } else {
-        if (!other.ocrLinePlCreditorId_.isEmpty()) {
-          if (ocrLinePlCreditorIdBuilder_.isEmpty()) {
-            ocrLinePlCreditorIdBuilder_.dispose();
-            ocrLinePlCreditorIdBuilder_ = null;
-            ocrLinePlCreditorId_ = other.ocrLinePlCreditorId_;
+        if (!other.ksef_.isEmpty()) {
+          if (ksefBuilder_.isEmpty()) {
+            ksefBuilder_.dispose();
+            ksefBuilder_ = null;
+            ksef_ = other.ksef_;
             bitField1_ = (bitField1_ & ~0x02000000);
-            ocrLinePlCreditorIdBuilder_ = 
+            ksefBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getOcrLinePlCreditorIdFieldBuilder() : null;
+                 getKsefFieldBuilder() : null;
           } else {
-            ocrLinePlCreditorIdBuilder_.addAllMessages(other.ocrLinePlCreditorId_);
+            ksefBuilder_.addAllMessages(other.ksef_);
           }
         }
       }
@@ -7810,11 +7810,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
                       extensionRegistry);
-              if (ocrLinePlCreditorIdBuilder_ == null) {
-                ensureOcrLinePlCreditorIdIsMutable();
-                ocrLinePlCreditorId_.add(m);
+              if (ksefBuilder_ == null) {
+                ensureKsefIsMutable();
+                ksef_.add(m);
               } else {
-                ocrLinePlCreditorIdBuilder_.addMessage(m);
+                ksefBuilder_.addMessage(m);
               }
               break;
             } // case 482
@@ -25346,17 +25346,17 @@ private static final long serialVersionUID = 0L;
       return structuredReceiverAddressBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> ocrLinePlCreditorId_ =
+    private java.util.List<ai.visma.ssn.type.Candidate> ksef_ =
       java.util.Collections.emptyList();
-    private void ensureOcrLinePlCreditorIdIsMutable() {
+    private void ensureKsefIsMutable() {
       if (!((bitField1_ & 0x02000000) != 0)) {
-        ocrLinePlCreditorId_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(ocrLinePlCreditorId_);
+        ksef_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(ksef_);
         bitField1_ |= 0x02000000;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> ocrLinePlCreditorIdBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> ksefBuilder_;
 
     /**
      * <pre>
@@ -25365,13 +25365,13 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getOcrLinePlCreditorIdList() {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
+    public java.util.List<ai.visma.ssn.type.Candidate> getKsefList() {
+      if (ksefBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ksef_);
       } else {
-        return ocrLinePlCreditorIdBuilder_.getMessageList();
+        return ksefBuilder_.getMessageList();
       }
     }
     /**
@@ -25381,13 +25381,13 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public int getOcrLinePlCreditorIdCount() {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        return ocrLinePlCreditorId_.size();
+    public int getKsefCount() {
+      if (ksefBuilder_ == null) {
+        return ksef_.size();
       } else {
-        return ocrLinePlCreditorIdBuilder_.getCount();
+        return ksefBuilder_.getCount();
       }
     }
     /**
@@ -25397,13 +25397,13 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public ai.visma.ssn.type.Candidate getOcrLinePlCreditorId(int index) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        return ocrLinePlCreditorId_.get(index);
+    public ai.visma.ssn.type.Candidate getKsef(int index) {
+      if (ksefBuilder_ == null) {
+        return ksef_.get(index);
       } else {
-        return ocrLinePlCreditorIdBuilder_.getMessage(index);
+        return ksefBuilder_.getMessage(index);
       }
     }
     /**
@@ -25413,19 +25413,19 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder setOcrLinePlCreditorId(
+    public Builder setKsef(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
+      if (ksefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.set(index, value);
+        ensureKsefIsMutable();
+        ksef_.set(index, value);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.setMessage(index, value);
+        ksefBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -25436,16 +25436,16 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder setOcrLinePlCreditorId(
+    public Builder setKsef(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.set(index, builderForValue.build());
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.set(index, builderForValue.build());
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.setMessage(index, builderForValue.build());
+        ksefBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -25456,18 +25456,18 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder addOcrLinePlCreditorId(ai.visma.ssn.type.Candidate value) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
+    public Builder addKsef(ai.visma.ssn.type.Candidate value) {
+      if (ksefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.add(value);
+        ensureKsefIsMutable();
+        ksef_.add(value);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.addMessage(value);
+        ksefBuilder_.addMessage(value);
       }
       return this;
     }
@@ -25478,19 +25478,19 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder addOcrLinePlCreditorId(
+    public Builder addKsef(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
+      if (ksefBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.add(index, value);
+        ensureKsefIsMutable();
+        ksef_.add(index, value);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.addMessage(index, value);
+        ksefBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -25501,16 +25501,16 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder addOcrLinePlCreditorId(
+    public Builder addKsef(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.add(builderForValue.build());
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.add(builderForValue.build());
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.addMessage(builderForValue.build());
+        ksefBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -25521,16 +25521,16 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder addOcrLinePlCreditorId(
+    public Builder addKsef(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.add(index, builderForValue.build());
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.add(index, builderForValue.build());
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.addMessage(index, builderForValue.build());
+        ksefBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -25541,17 +25541,17 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder addAllOcrLinePlCreditorId(
+    public Builder addAllKsef(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ensureOcrLinePlCreditorIdIsMutable();
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ocrLinePlCreditorId_);
+            values, ksef_);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.addAllMessages(values);
+        ksefBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -25562,15 +25562,15 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder clearOcrLinePlCreditorId() {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ocrLinePlCreditorId_ = java.util.Collections.emptyList();
+    public Builder clearKsef() {
+      if (ksefBuilder_ == null) {
+        ksef_ = java.util.Collections.emptyList();
         bitField1_ = (bitField1_ & ~0x02000000);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.clear();
+        ksefBuilder_.clear();
       }
       return this;
     }
@@ -25581,15 +25581,15 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public Builder removeOcrLinePlCreditorId(int index) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ensureOcrLinePlCreditorIdIsMutable();
-        ocrLinePlCreditorId_.remove(index);
+    public Builder removeKsef(int index) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.remove(index);
         onChanged();
       } else {
-        ocrLinePlCreditorIdBuilder_.remove(index);
+        ksefBuilder_.remove(index);
       }
       return this;
     }
@@ -25600,11 +25600,11 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getOcrLinePlCreditorIdBuilder(
+    public ai.visma.ssn.type.Candidate.Builder getKsefBuilder(
         int index) {
-      return getOcrLinePlCreditorIdFieldBuilder().getBuilder(index);
+      return getKsefFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
@@ -25613,13 +25613,13 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getOcrLinePlCreditorIdOrBuilder(
+    public ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
         int index) {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        return ocrLinePlCreditorId_.get(index);  } else {
-        return ocrLinePlCreditorIdBuilder_.getMessageOrBuilder(index);
+      if (ksefBuilder_ == null) {
+        return ksef_.get(index);  } else {
+        return ksefBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -25629,14 +25629,14 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getOcrLinePlCreditorIdOrBuilderList() {
-      if (ocrLinePlCreditorIdBuilder_ != null) {
-        return ocrLinePlCreditorIdBuilder_.getMessageOrBuilderList();
+         getKsefOrBuilderList() {
+      if (ksefBuilder_ != null) {
+        return ksefBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(ocrLinePlCreditorId_);
+        return java.util.Collections.unmodifiableList(ksef_);
       }
     }
     /**
@@ -25646,10 +25646,10 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addOcrLinePlCreditorIdBuilder() {
-      return getOcrLinePlCreditorIdFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addKsefBuilder() {
+      return getKsefFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -25659,11 +25659,11 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addOcrLinePlCreditorIdBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addKsefBuilder(
         int index) {
-      return getOcrLinePlCreditorIdFieldBuilder().addBuilder(
+      return getKsefFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -25673,25 +25673,25 @@ private static final long serialVersionUID = 0L;
      * (alphanumeric, may contain hyphens).
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate ocr_line_pl_creditor_id = 60 [json_name = "ocrLinePlCreditorId"];</code>
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getOcrLinePlCreditorIdBuilderList() {
-      return getOcrLinePlCreditorIdFieldBuilder().getBuilderList();
+         getKsefBuilderList() {
+      return getKsefFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getOcrLinePlCreditorIdFieldBuilder() {
-      if (ocrLinePlCreditorIdBuilder_ == null) {
-        ocrLinePlCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+        getKsefFieldBuilder() {
+      if (ksefBuilder_ == null) {
+        ksefBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                ocrLinePlCreditorId_,
+                ksef_,
                 ((bitField1_ & 0x02000000) != 0),
                 getParentForChildren(),
                 isClean());
-        ocrLinePlCreditorId_ = null;
+        ksef_ = null;
       }
-      return ocrLinePlCreditorIdBuilder_;
+      return ksefBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

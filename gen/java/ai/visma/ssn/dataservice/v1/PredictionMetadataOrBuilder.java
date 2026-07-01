@@ -1018,26 +1018,26 @@ public interface PredictionMetadataOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .ssn.type.ModelSpec ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
    */
   java.util.List<ai.visma.ssn.type.ModelSpec> 
-      getOcrLinePlCreditorIdList();
+      getKsefList();
   /**
-   * <code>repeated .ssn.type.ModelSpec ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
    */
-  ai.visma.ssn.type.ModelSpec getOcrLinePlCreditorId(int index);
+  ai.visma.ssn.type.ModelSpec getKsef(int index);
   /**
-   * <code>repeated .ssn.type.ModelSpec ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
    */
-  int getOcrLinePlCreditorIdCount();
+  int getKsefCount();
   /**
-   * <code>repeated .ssn.type.ModelSpec ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
-      getOcrLinePlCreditorIdOrBuilderList();
+      getKsefOrBuilderList();
   /**
-   * <code>repeated .ssn.type.ModelSpec ocr_line_pl_creditor_id = 43 [json_name = "ocrLinePlCreditorId"];</code>
+   * <code>repeated .ssn.type.ModelSpec ksef = 43 [json_name = "ksef"];</code>
    */
-  ai.visma.ssn.type.ModelSpecOrBuilder getOcrLinePlCreditorIdOrBuilder(
+  ai.visma.ssn.type.ModelSpecOrBuilder getKsefOrBuilder(
       int index);
 }
