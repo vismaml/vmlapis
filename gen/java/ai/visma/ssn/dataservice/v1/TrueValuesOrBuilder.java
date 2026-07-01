@@ -710,4 +710,19 @@ public interface TrueValuesOrBuilder extends
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getCheckOutDateOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return Whether the ksef field is set.
+   */
+  boolean hasKsef();
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   * @return The ksef.
+   */
+  com.google.protobuf.StringValue getKsef();
+  /**
+   * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getKsefOrBuilder();
 }

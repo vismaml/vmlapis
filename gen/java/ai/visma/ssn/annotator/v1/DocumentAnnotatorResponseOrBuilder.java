@@ -2630,4 +2630,58 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.StructuredAddressOrBuilder getStructuredReceiverAddressOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getKsefList();
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  ai.visma.ssn.type.Candidate getKsef(int index);
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  int getKsefCount();
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getKsefOrBuilderList();
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
+      int index);
 }

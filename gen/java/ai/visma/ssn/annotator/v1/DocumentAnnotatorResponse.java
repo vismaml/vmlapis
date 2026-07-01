@@ -81,6 +81,7 @@ private static final long serialVersionUID = 0L;
     vatDistributionDetails_ = java.util.Collections.emptyList();
     structuredSupplierAddress_ = java.util.Collections.emptyList();
     structuredReceiverAddress_ = java.util.Collections.emptyList();
+    ksef_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -3700,6 +3701,77 @@ private static final long serialVersionUID = 0L;
     return structuredReceiverAddress_.get(index);
   }
 
+  public static final int KSEF_FIELD_NUMBER = 60;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> ksef_;
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getKsefList() {
+    return ksef_;
+  }
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getKsefOrBuilderList() {
+    return ksef_;
+  }
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public int getKsefCount() {
+    return ksef_.size();
+  }
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getKsef(int index) {
+    return ksef_.get(index);
+  }
+  /**
+   * <pre>
+   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+   * via the QA/questions model. A reference number of up to 35 characters
+   * (alphanumeric, may contain hyphens).
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
+      int index) {
+    return ksef_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3884,6 +3956,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < structuredReceiverAddress_.size(); i++) {
       output.writeMessage(59, structuredReceiverAddress_.get(i));
+    }
+    for (int i = 0; i < ksef_.size(); i++) {
+      output.writeMessage(60, ksef_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -4119,6 +4194,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(59, structuredReceiverAddress_.get(i));
     }
+    for (int i = 0; i < ksef_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(60, ksef_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4257,6 +4336,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getStructuredSupplierAddressList())) return false;
     if (!getStructuredReceiverAddressList()
         .equals(other.getStructuredReceiverAddressList())) return false;
+    if (!getKsefList()
+        .equals(other.getKsefList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4490,6 +4571,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + STRUCTURED_RECEIVER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getStructuredReceiverAddressList().hashCode();
     }
+    if (getKsefCount() > 0) {
+      hash = (37 * hash) + KSEF_FIELD_NUMBER;
+      hash = (53 * hash) + getKsefList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4674,6 +4759,7 @@ private static final long serialVersionUID = 0L;
         getVatDistributionDetailsFieldBuilder();
         getStructuredSupplierAddressFieldBuilder();
         getStructuredReceiverAddressFieldBuilder();
+        getKsefFieldBuilder();
       }
     }
     @java.lang.Override
@@ -5056,6 +5142,13 @@ private static final long serialVersionUID = 0L;
         structuredReceiverAddressBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x01000000);
+      if (ksefBuilder_ == null) {
+        ksef_ = java.util.Collections.emptyList();
+      } else {
+        ksef_ = null;
+        ksefBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x02000000);
       return this;
     }
 
@@ -5548,6 +5641,15 @@ private static final long serialVersionUID = 0L;
         result.structuredReceiverAddress_ = structuredReceiverAddress_;
       } else {
         result.structuredReceiverAddress_ = structuredReceiverAddressBuilder_.build();
+      }
+      if (ksefBuilder_ == null) {
+        if (((bitField1_ & 0x02000000) != 0)) {
+          ksef_ = java.util.Collections.unmodifiableList(ksef_);
+          bitField1_ = (bitField1_ & ~0x02000000);
+        }
+        result.ksef_ = ksef_;
+      } else {
+        result.ksef_ = ksefBuilder_.build();
       }
     }
 
@@ -6952,6 +7054,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (ksefBuilder_ == null) {
+        if (!other.ksef_.isEmpty()) {
+          if (ksef_.isEmpty()) {
+            ksef_ = other.ksef_;
+            bitField1_ = (bitField1_ & ~0x02000000);
+          } else {
+            ensureKsefIsMutable();
+            ksef_.addAll(other.ksef_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.ksef_.isEmpty()) {
+          if (ksefBuilder_.isEmpty()) {
+            ksefBuilder_.dispose();
+            ksefBuilder_ = null;
+            ksef_ = other.ksef_;
+            bitField1_ = (bitField1_ & ~0x02000000);
+            ksefBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getKsefFieldBuilder() : null;
+          } else {
+            ksefBuilder_.addAllMessages(other.ksef_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -7677,6 +7805,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 474
+            case 482: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (ksefBuilder_ == null) {
+                ensureKsefIsMutable();
+                ksef_.add(m);
+              } else {
+                ksefBuilder_.addMessage(m);
+              }
+              break;
+            } // case 482
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -25203,6 +25344,354 @@ private static final long serialVersionUID = 0L;
         structuredReceiverAddress_ = null;
       }
       return structuredReceiverAddressBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> ksef_ =
+      java.util.Collections.emptyList();
+    private void ensureKsefIsMutable() {
+      if (!((bitField1_ & 0x02000000) != 0)) {
+        ksef_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(ksef_);
+        bitField1_ |= 0x02000000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> ksefBuilder_;
+
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getKsefList() {
+      if (ksefBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ksef_);
+      } else {
+        return ksefBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public int getKsefCount() {
+      if (ksefBuilder_ == null) {
+        return ksef_.size();
+      } else {
+        return ksefBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getKsef(int index) {
+      if (ksefBuilder_ == null) {
+        return ksef_.get(index);
+      } else {
+        return ksefBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder setKsef(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (ksefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKsefIsMutable();
+        ksef_.set(index, value);
+        onChanged();
+      } else {
+        ksefBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder setKsef(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ksefBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder addKsef(ai.visma.ssn.type.Candidate value) {
+      if (ksefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKsefIsMutable();
+        ksef_.add(value);
+        onChanged();
+      } else {
+        ksefBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder addKsef(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (ksefBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKsefIsMutable();
+        ksef_.add(index, value);
+        onChanged();
+      } else {
+        ksefBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder addKsef(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ksefBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder addKsef(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ksefBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder addAllKsef(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ksef_);
+        onChanged();
+      } else {
+        ksefBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder clearKsef() {
+      if (ksefBuilder_ == null) {
+        ksef_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x02000000);
+        onChanged();
+      } else {
+        ksefBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public Builder removeKsef(int index) {
+      if (ksefBuilder_ == null) {
+        ensureKsefIsMutable();
+        ksef_.remove(index);
+        onChanged();
+      } else {
+        ksefBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getKsefBuilder(
+        int index) {
+      return getKsefFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getKsefOrBuilder(
+        int index) {
+      if (ksefBuilder_ == null) {
+        return ksef_.get(index);  } else {
+        return ksefBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getKsefOrBuilderList() {
+      if (ksefBuilder_ != null) {
+        return ksefBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ksef_);
+      }
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addKsefBuilder() {
+      return getKsefFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addKsefBuilder(
+        int index) {
+      return getKsefFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
+     * via the QA/questions model. A reference number of up to 35 characters
+     * (alphanumeric, may contain hyphens).
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getKsefBuilderList() {
+      return getKsefFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getKsefFieldBuilder() {
+      if (ksefBuilder_ == null) {
+        ksefBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                ksef_,
+                ((bitField1_ & 0x02000000) != 0),
+                getParentForChildren(),
+                isClean());
+        ksef_ = null;
+      }
+      return ksefBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.annotator.v1.DocumentAnnotatorResponse)

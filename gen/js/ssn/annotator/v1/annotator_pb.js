@@ -384,7 +384,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   SWISS_QR_BILLS: 49,
   VERIFIED: 50,
   HOTEL_DATES: 51,
-  PRODUCT_TYPES: 52
+  PRODUCT_TYPES: 52,
+  KSEF: 53
 };
 
 /**
@@ -835,7 +836,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57,58,59];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50,51,52,56,57,58,59,60];
 
 
 
@@ -975,7 +976,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     structuredSupplierAddressList: jspb.Message.toObjectList(msg.getStructuredSupplierAddressList(),
     ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
     structuredReceiverAddressList: jspb.Message.toObjectList(msg.getStructuredReceiverAddressList(),
-    ssn_type_address_pb.StructuredAddress.toObject, includeInstance)
+    ssn_type_address_pb.StructuredAddress.toObject, includeInstance),
+    ksefList: jspb.Message.toObjectList(msg.getKsefList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1293,6 +1296,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_address_pb.StructuredAddress;
       reader.readMessage(value,ssn_type_address_pb.StructuredAddress.deserializeBinaryFromReader);
       msg.addStructuredReceiverAddress(value);
+      break;
+    case 60:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addKsef(value);
       break;
     default:
       reader.skipField();
@@ -1774,6 +1782,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       59,
       f,
       ssn_type_address_pb.StructuredAddress.serializeBinaryToWriter
+    );
+  }
+  f = message.getKsefList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      60,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -3879,6 +3895,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addStructuredReceiver
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearStructuredReceiverAddressList = function() {
   return this.setStructuredReceiverAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate ksef = 60;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getKsefList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 60));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setKsefList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 60, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addKsef = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 60, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearKsefList = function() {
+  return this.setKsefList([]);
 };
 
 
