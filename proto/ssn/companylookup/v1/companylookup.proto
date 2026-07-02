@@ -28,21 +28,30 @@ enum EnrichmentStatus {
   FAILED = 3;
 }
 
+// CompanyField is a single extracted invoice field: the smartscan normalized
+// value plus its prediction confidence (the Confidence.Level enum is what the
+// service records per field).
+message CompanyField {
+  string value = 1;
+  ssn.type.Confidence confidence = 2;
+}
+
+// Company carries the extracted company fields for one role (supplier or
+// receiver); the role is conveyed by which request field it occupies. Column
+// names in storage match these smartscan field names.
 message Company {
-  string vat_number = 1;
-  string organisation_number = 2;
-  string country_code = 3; // ISO 3166-1 alpha-2
-  string name = 4;
-  string raw_address = 5;
-  ssn.type.Confidence confidence = 6;
+  CompanyField name = 1;
+  CompanyField vat_number = 2;
+  CompanyField organisation_number = 3;
+  CompanyField country_code = 4; // ISO 3166-1 alpha-2
+  CompanyField address = 5;
 }
 
 message BankAccount {
-  string iban = 1;
-  string bic = 2;
-  string bank_account_number = 3;
-  string bank_registration_number = 4;
-  ssn.type.Confidence confidence = 5;
+  CompanyField iban = 1;
+  CompanyField bic = 2;
+  CompanyField bank_account_number = 3;
+  CompanyField bank_registration_number = 4;
 }
 
 message ProcessInvoiceCompanyDataRequest {
