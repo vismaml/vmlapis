@@ -27,10 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BankAccount() {
-    iban_ = "";
-    bic_ = "";
-    bankAccountNumber_ = "";
-    bankRegistrationNumber_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -48,185 +44,107 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int IBAN_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object iban_ = "";
+  private ai.visma.ssn.companylookup.v1.CompanyField iban_;
   /**
-   * <code>string iban = 1 [json_name = "iban"];</code>
-   * @return The iban.
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
+   * @return Whether the iban field is set.
    */
   @java.lang.Override
-  public java.lang.String getIban() {
-    java.lang.Object ref = iban_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      iban_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string iban = 1 [json_name = "iban"];</code>
-   * @return The bytes for iban.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getIbanBytes() {
-    java.lang.Object ref = iban_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      iban_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int BIC_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object bic_ = "";
-  /**
-   * <code>string bic = 2 [json_name = "bic"];</code>
-   * @return The bic.
-   */
-  @java.lang.Override
-  public java.lang.String getBic() {
-    java.lang.Object ref = bic_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      bic_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string bic = 2 [json_name = "bic"];</code>
-   * @return The bytes for bic.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBicBytes() {
-    java.lang.Object ref = bic_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      bic_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object bankAccountNumber_ = "";
-  /**
-   * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-   * @return The bankAccountNumber.
-   */
-  @java.lang.Override
-  public java.lang.String getBankAccountNumber() {
-    java.lang.Object ref = bankAccountNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      bankAccountNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-   * @return The bytes for bankAccountNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBankAccountNumberBytes() {
-    java.lang.Object ref = bankAccountNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      bankAccountNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object bankRegistrationNumber_ = "";
-  /**
-   * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-   * @return The bankRegistrationNumber.
-   */
-  @java.lang.Override
-  public java.lang.String getBankRegistrationNumber() {
-    java.lang.Object ref = bankRegistrationNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      bankRegistrationNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-   * @return The bytes for bankRegistrationNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBankRegistrationNumberBytes() {
-    java.lang.Object ref = bankRegistrationNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      bankRegistrationNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CONFIDENCE_FIELD_NUMBER = 5;
-  private ai.visma.ssn.type.Confidence confidence_;
-  /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-   * @return Whether the confidence field is set.
-   */
-  @java.lang.Override
-  public boolean hasConfidence() {
+  public boolean hasIban() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-   * @return The confidence.
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
+   * @return The iban.
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Confidence getConfidence() {
-    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  public ai.visma.ssn.companylookup.v1.CompanyField getIban() {
+    return iban_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : iban_;
   }
   /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
-    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getIbanOrBuilder() {
+    return iban_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : iban_;
+  }
+
+  public static final int BIC_FIELD_NUMBER = 2;
+  private ai.visma.ssn.companylookup.v1.CompanyField bic_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+   * @return Whether the bic field is set.
+   */
+  @java.lang.Override
+  public boolean hasBic() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+   * @return The bic.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getBic() {
+    return bic_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bic_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBicOrBuilder() {
+    return bic_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bic_;
+  }
+
+  public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 3;
+  private ai.visma.ssn.companylookup.v1.CompanyField bankAccountNumber_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+   * @return Whether the bankAccountNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasBankAccountNumber() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+   * @return The bankAccountNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getBankAccountNumber() {
+    return bankAccountNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankAccountNumber_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankAccountNumberOrBuilder() {
+    return bankAccountNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankAccountNumber_;
+  }
+
+  public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 4;
+  private ai.visma.ssn.companylookup.v1.CompanyField bankRegistrationNumber_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+   * @return Whether the bankRegistrationNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasBankRegistrationNumber() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+   * @return The bankRegistrationNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getBankRegistrationNumber() {
+    return bankRegistrationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankRegistrationNumber_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankRegistrationNumberOrBuilder() {
+    return bankRegistrationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankRegistrationNumber_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -243,20 +161,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(iban_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, iban_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bic_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, bic_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bankAccountNumber_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, bankAccountNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bankRegistrationNumber_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, bankRegistrationNumber_);
-    }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(5, getConfidence());
+      output.writeMessage(1, getIban());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(2, getBic());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getBankAccountNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getBankRegistrationNumber());
     }
     getUnknownFields().writeTo(output);
   }
@@ -267,21 +182,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(iban_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, iban_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bic_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, bic_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bankAccountNumber_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, bankAccountNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bankRegistrationNumber_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, bankRegistrationNumber_);
-    }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getConfidence());
+        .computeMessageSize(1, getIban());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getBic());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getBankAccountNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getBankRegistrationNumber());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -298,18 +213,25 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.companylookup.v1.BankAccount other = (ai.visma.ssn.companylookup.v1.BankAccount) obj;
 
-    if (!getIban()
-        .equals(other.getIban())) return false;
-    if (!getBic()
-        .equals(other.getBic())) return false;
-    if (!getBankAccountNumber()
-        .equals(other.getBankAccountNumber())) return false;
-    if (!getBankRegistrationNumber()
-        .equals(other.getBankRegistrationNumber())) return false;
-    if (hasConfidence() != other.hasConfidence()) return false;
-    if (hasConfidence()) {
-      if (!getConfidence()
-          .equals(other.getConfidence())) return false;
+    if (hasIban() != other.hasIban()) return false;
+    if (hasIban()) {
+      if (!getIban()
+          .equals(other.getIban())) return false;
+    }
+    if (hasBic() != other.hasBic()) return false;
+    if (hasBic()) {
+      if (!getBic()
+          .equals(other.getBic())) return false;
+    }
+    if (hasBankAccountNumber() != other.hasBankAccountNumber()) return false;
+    if (hasBankAccountNumber()) {
+      if (!getBankAccountNumber()
+          .equals(other.getBankAccountNumber())) return false;
+    }
+    if (hasBankRegistrationNumber() != other.hasBankRegistrationNumber()) return false;
+    if (hasBankRegistrationNumber()) {
+      if (!getBankRegistrationNumber()
+          .equals(other.getBankRegistrationNumber())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -322,17 +244,21 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + IBAN_FIELD_NUMBER;
-    hash = (53 * hash) + getIban().hashCode();
-    hash = (37 * hash) + BIC_FIELD_NUMBER;
-    hash = (53 * hash) + getBic().hashCode();
-    hash = (37 * hash) + BANK_ACCOUNT_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getBankAccountNumber().hashCode();
-    hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getBankRegistrationNumber().hashCode();
-    if (hasConfidence()) {
-      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getConfidence().hashCode();
+    if (hasIban()) {
+      hash = (37 * hash) + IBAN_FIELD_NUMBER;
+      hash = (53 * hash) + getIban().hashCode();
+    }
+    if (hasBic()) {
+      hash = (37 * hash) + BIC_FIELD_NUMBER;
+      hash = (53 * hash) + getBic().hashCode();
+    }
+    if (hasBankAccountNumber()) {
+      hash = (37 * hash) + BANK_ACCOUNT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getBankAccountNumber().hashCode();
+    }
+    if (hasBankRegistrationNumber()) {
+      hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getBankRegistrationNumber().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -464,21 +390,35 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
-        getConfidenceFieldBuilder();
+        getIbanFieldBuilder();
+        getBicFieldBuilder();
+        getBankAccountNumberFieldBuilder();
+        getBankRegistrationNumberFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      iban_ = "";
-      bic_ = "";
-      bankAccountNumber_ = "";
-      bankRegistrationNumber_ = "";
-      confidence_ = null;
-      if (confidenceBuilder_ != null) {
-        confidenceBuilder_.dispose();
-        confidenceBuilder_ = null;
+      iban_ = null;
+      if (ibanBuilder_ != null) {
+        ibanBuilder_.dispose();
+        ibanBuilder_ = null;
+      }
+      bic_ = null;
+      if (bicBuilder_ != null) {
+        bicBuilder_.dispose();
+        bicBuilder_ = null;
+      }
+      bankAccountNumber_ = null;
+      if (bankAccountNumberBuilder_ != null) {
+        bankAccountNumberBuilder_.dispose();
+        bankAccountNumberBuilder_ = null;
+      }
+      bankRegistrationNumber_ = null;
+      if (bankRegistrationNumberBuilder_ != null) {
+        bankRegistrationNumberBuilder_.dispose();
+        bankRegistrationNumberBuilder_ = null;
       }
       return this;
     }
@@ -513,24 +453,30 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.ssn.companylookup.v1.BankAccount result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.iban_ = iban_;
+        result.iban_ = ibanBuilder_ == null
+            ? iban_
+            : ibanBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.bic_ = bic_;
+        result.bic_ = bicBuilder_ == null
+            ? bic_
+            : bicBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.bankAccountNumber_ = bankAccountNumber_;
+        result.bankAccountNumber_ = bankAccountNumberBuilder_ == null
+            ? bankAccountNumber_
+            : bankAccountNumberBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.bankRegistrationNumber_ = bankRegistrationNumber_;
-      }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.confidence_ = confidenceBuilder_ == null
-            ? confidence_
-            : confidenceBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_ == null
+            ? bankRegistrationNumber_
+            : bankRegistrationNumberBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -547,28 +493,17 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.companylookup.v1.BankAccount other) {
       if (other == ai.visma.ssn.companylookup.v1.BankAccount.getDefaultInstance()) return this;
-      if (!other.getIban().isEmpty()) {
-        iban_ = other.iban_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.hasIban()) {
+        mergeIban(other.getIban());
       }
-      if (!other.getBic().isEmpty()) {
-        bic_ = other.bic_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.hasBic()) {
+        mergeBic(other.getBic());
       }
-      if (!other.getBankAccountNumber().isEmpty()) {
-        bankAccountNumber_ = other.bankAccountNumber_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.hasBankAccountNumber()) {
+        mergeBankAccountNumber(other.getBankAccountNumber());
       }
-      if (!other.getBankRegistrationNumber().isEmpty()) {
-        bankRegistrationNumber_ = other.bankRegistrationNumber_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
-      if (other.hasConfidence()) {
-        mergeConfidence(other.getConfidence());
+      if (other.hasBankRegistrationNumber()) {
+        mergeBankRegistrationNumber(other.getBankRegistrationNumber());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -597,32 +532,33 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              iban_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getIbanFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              bic_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getBicFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              bankAccountNumber_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getBankAccountNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
-              bankRegistrationNumber_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getBankRegistrationNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 42: {
-              input.readMessage(
-                  getConfidenceFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -640,413 +576,488 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object iban_ = "";
+    private ai.visma.ssn.companylookup.v1.CompanyField iban_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> ibanBuilder_;
     /**
-     * <code>string iban = 1 [json_name = "iban"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
+     * @return Whether the iban field is set.
+     */
+    public boolean hasIban() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      * @return The iban.
      */
-    public java.lang.String getIban() {
-      java.lang.Object ref = iban_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        iban_ = s;
-        return s;
+    public ai.visma.ssn.companylookup.v1.CompanyField getIban() {
+      if (ibanBuilder_ == null) {
+        return iban_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : iban_;
       } else {
-        return (java.lang.String) ref;
+        return ibanBuilder_.getMessage();
       }
     }
     /**
-     * <code>string iban = 1 [json_name = "iban"];</code>
-     * @return The bytes for iban.
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public com.google.protobuf.ByteString
-        getIbanBytes() {
-      java.lang.Object ref = iban_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        iban_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string iban = 1 [json_name = "iban"];</code>
-     * @param value The iban to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIban(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      iban_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string iban = 1 [json_name = "iban"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIban() {
-      iban_ = getDefaultInstance().getIban();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string iban = 1 [json_name = "iban"];</code>
-     * @param value The bytes for iban to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIbanBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      iban_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object bic_ = "";
-    /**
-     * <code>string bic = 2 [json_name = "bic"];</code>
-     * @return The bic.
-     */
-    public java.lang.String getBic() {
-      java.lang.Object ref = bic_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bic_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string bic = 2 [json_name = "bic"];</code>
-     * @return The bytes for bic.
-     */
-    public com.google.protobuf.ByteString
-        getBicBytes() {
-      java.lang.Object ref = bic_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bic_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string bic = 2 [json_name = "bic"];</code>
-     * @param value The bic to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBic(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      bic_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bic = 2 [json_name = "bic"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBic() {
-      bic_ = getDefaultInstance().getBic();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bic = 2 [json_name = "bic"];</code>
-     * @param value The bytes for bic to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBicBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      bic_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object bankAccountNumber_ = "";
-    /**
-     * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-     * @return The bankAccountNumber.
-     */
-    public java.lang.String getBankAccountNumber() {
-      java.lang.Object ref = bankAccountNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bankAccountNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-     * @return The bytes for bankAccountNumber.
-     */
-    public com.google.protobuf.ByteString
-        getBankAccountNumberBytes() {
-      java.lang.Object ref = bankAccountNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bankAccountNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-     * @param value The bankAccountNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankAccountNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      bankAccountNumber_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBankAccountNumber() {
-      bankAccountNumber_ = getDefaultInstance().getBankAccountNumber();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-     * @param value The bytes for bankAccountNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankAccountNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      bankAccountNumber_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object bankRegistrationNumber_ = "";
-    /**
-     * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-     * @return The bankRegistrationNumber.
-     */
-    public java.lang.String getBankRegistrationNumber() {
-      java.lang.Object ref = bankRegistrationNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bankRegistrationNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-     * @return The bytes for bankRegistrationNumber.
-     */
-    public com.google.protobuf.ByteString
-        getBankRegistrationNumberBytes() {
-      java.lang.Object ref = bankRegistrationNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bankRegistrationNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-     * @param value The bankRegistrationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankRegistrationNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      bankRegistrationNumber_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBankRegistrationNumber() {
-      bankRegistrationNumber_ = getDefaultInstance().getBankRegistrationNumber();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-     * @param value The bytes for bankRegistrationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankRegistrationNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      bankRegistrationNumber_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private ai.visma.ssn.type.Confidence confidence_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> confidenceBuilder_;
-    /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-     * @return Whether the confidence field is set.
-     */
-    public boolean hasConfidence() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-     * @return The confidence.
-     */
-    public ai.visma.ssn.type.Confidence getConfidence() {
-      if (confidenceBuilder_ == null) {
-        return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
-      } else {
-        return confidenceBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-     */
-    public Builder setConfidence(ai.visma.ssn.type.Confidence value) {
-      if (confidenceBuilder_ == null) {
+    public Builder setIban(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (ibanBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        confidence_ = value;
+        iban_ = value;
       } else {
-        confidenceBuilder_.setMessage(value);
+        ibanBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public Builder setConfidence(
-        ai.visma.ssn.type.Confidence.Builder builderForValue) {
-      if (confidenceBuilder_ == null) {
-        confidence_ = builderForValue.build();
+    public Builder setIban(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (ibanBuilder_ == null) {
+        iban_ = builderForValue.build();
       } else {
-        confidenceBuilder_.setMessage(builderForValue.build());
+        ibanBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public Builder mergeConfidence(ai.visma.ssn.type.Confidence value) {
-      if (confidenceBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          confidence_ != null &&
-          confidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
-          getConfidenceBuilder().mergeFrom(value);
+    public Builder mergeIban(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (ibanBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          iban_ != null &&
+          iban_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getIbanBuilder().mergeFrom(value);
         } else {
-          confidence_ = value;
+          iban_ = value;
         }
       } else {
-        confidenceBuilder_.mergeFrom(value);
+        ibanBuilder_.mergeFrom(value);
       }
-      if (confidence_ != null) {
-        bitField0_ |= 0x00000010;
+      if (iban_ != null) {
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public Builder clearConfidence() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      confidence_ = null;
-      if (confidenceBuilder_ != null) {
-        confidenceBuilder_.dispose();
-        confidenceBuilder_ = null;
+    public Builder clearIban() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      iban_ = null;
+      if (ibanBuilder_ != null) {
+        ibanBuilder_.dispose();
+        ibanBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public ai.visma.ssn.type.Confidence.Builder getConfidenceBuilder() {
-      bitField0_ |= 0x00000010;
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getIbanBuilder() {
+      bitField0_ |= 0x00000001;
       onChanged();
-      return getConfidenceFieldBuilder().getBuilder();
+      return getIbanFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
-    public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
-      if (confidenceBuilder_ != null) {
-        return confidenceBuilder_.getMessageOrBuilder();
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getIbanOrBuilder() {
+      if (ibanBuilder_ != null) {
+        return ibanBuilder_.getMessageOrBuilder();
       } else {
-        return confidence_ == null ?
-            ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+        return iban_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : iban_;
       }
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
-        getConfidenceFieldBuilder() {
-      if (confidenceBuilder_ == null) {
-        confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
-                getConfidence(),
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getIbanFieldBuilder() {
+      if (ibanBuilder_ == null) {
+        ibanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getIban(),
                 getParentForChildren(),
                 isClean());
-        confidence_ = null;
+        iban_ = null;
       }
-      return confidenceBuilder_;
+      return ibanBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField bic_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> bicBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     * @return Whether the bic field is set.
+     */
+    public boolean hasBic() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     * @return The bic.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getBic() {
+      if (bicBuilder_ == null) {
+        return bic_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bic_;
+      } else {
+        return bicBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public Builder setBic(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bicBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bic_ = value;
+      } else {
+        bicBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public Builder setBic(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (bicBuilder_ == null) {
+        bic_ = builderForValue.build();
+      } else {
+        bicBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public Builder mergeBic(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bicBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          bic_ != null &&
+          bic_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getBicBuilder().mergeFrom(value);
+        } else {
+          bic_ = value;
+        }
+      } else {
+        bicBuilder_.mergeFrom(value);
+      }
+      if (bic_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public Builder clearBic() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      bic_ = null;
+      if (bicBuilder_ != null) {
+        bicBuilder_.dispose();
+        bicBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getBicBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getBicFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBicOrBuilder() {
+      if (bicBuilder_ != null) {
+        return bicBuilder_.getMessageOrBuilder();
+      } else {
+        return bic_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bic_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getBicFieldBuilder() {
+      if (bicBuilder_ == null) {
+        bicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getBic(),
+                getParentForChildren(),
+                isClean());
+        bic_ = null;
+      }
+      return bicBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField bankAccountNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> bankAccountNumberBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     * @return Whether the bankAccountNumber field is set.
+     */
+    public boolean hasBankAccountNumber() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     * @return The bankAccountNumber.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getBankAccountNumber() {
+      if (bankAccountNumberBuilder_ == null) {
+        return bankAccountNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankAccountNumber_;
+      } else {
+        return bankAccountNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder setBankAccountNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bankAccountNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bankAccountNumber_ = value;
+      } else {
+        bankAccountNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder setBankAccountNumber(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (bankAccountNumberBuilder_ == null) {
+        bankAccountNumber_ = builderForValue.build();
+      } else {
+        bankAccountNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder mergeBankAccountNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bankAccountNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          bankAccountNumber_ != null &&
+          bankAccountNumber_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getBankAccountNumberBuilder().mergeFrom(value);
+        } else {
+          bankAccountNumber_ = value;
+        }
+      } else {
+        bankAccountNumberBuilder_.mergeFrom(value);
+      }
+      if (bankAccountNumber_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder clearBankAccountNumber() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      bankAccountNumber_ = null;
+      if (bankAccountNumberBuilder_ != null) {
+        bankAccountNumberBuilder_.dispose();
+        bankAccountNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getBankAccountNumberBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getBankAccountNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankAccountNumberOrBuilder() {
+      if (bankAccountNumberBuilder_ != null) {
+        return bankAccountNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return bankAccountNumber_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankAccountNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getBankAccountNumberFieldBuilder() {
+      if (bankAccountNumberBuilder_ == null) {
+        bankAccountNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getBankAccountNumber(),
+                getParentForChildren(),
+                isClean());
+        bankAccountNumber_ = null;
+      }
+      return bankAccountNumberBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField bankRegistrationNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> bankRegistrationNumberBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     * @return Whether the bankRegistrationNumber field is set.
+     */
+    public boolean hasBankRegistrationNumber() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     * @return The bankRegistrationNumber.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getBankRegistrationNumber() {
+      if (bankRegistrationNumberBuilder_ == null) {
+        return bankRegistrationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankRegistrationNumber_;
+      } else {
+        return bankRegistrationNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder setBankRegistrationNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bankRegistrationNumber_ = value;
+      } else {
+        bankRegistrationNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder setBankRegistrationNumber(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        bankRegistrationNumber_ = builderForValue.build();
+      } else {
+        bankRegistrationNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder mergeBankRegistrationNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          bankRegistrationNumber_ != null &&
+          bankRegistrationNumber_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getBankRegistrationNumberBuilder().mergeFrom(value);
+        } else {
+          bankRegistrationNumber_ = value;
+        }
+      } else {
+        bankRegistrationNumberBuilder_.mergeFrom(value);
+      }
+      if (bankRegistrationNumber_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder clearBankRegistrationNumber() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      bankRegistrationNumber_ = null;
+      if (bankRegistrationNumberBuilder_ != null) {
+        bankRegistrationNumberBuilder_.dispose();
+        bankRegistrationNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getBankRegistrationNumberBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getBankRegistrationNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankRegistrationNumberOrBuilder() {
+      if (bankRegistrationNumberBuilder_ != null) {
+        return bankRegistrationNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return bankRegistrationNumber_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : bankRegistrationNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getBankRegistrationNumberFieldBuilder() {
+      if (bankRegistrationNumberBuilder_ == null) {
+        bankRegistrationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getBankRegistrationNumber(),
+                getParentForChildren(),
+                isClean());
+        bankRegistrationNumber_ = null;
+      }
+      return bankRegistrationNumberBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.companylookup.v1.BankAccount)

@@ -6,6 +6,12 @@
 package ai.visma.ssn.companylookup.v1;
 
 /**
+ * <pre>
+ * Company carries the extracted company fields for one role (supplier or
+ * receiver); the role is conveyed by which request field it occupies. Column
+ * names in storage match these smartscan field names.
+ * </pre>
+ *
  * Protobuf type {@code ssn.companylookup.v1.Company}
  */
 public final class Company extends
@@ -27,11 +33,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Company() {
-    vatNumber_ = "";
-    organisationNumber_ = "";
-    countryCode_ = "";
-    name_ = "";
-    rawAddress_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -48,233 +49,146 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int VAT_NUMBER_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object vatNumber_ = "";
+  public static final int NAME_FIELD_NUMBER = 1;
+  private ai.visma.ssn.companylookup.v1.CompanyField name_;
   /**
-   * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-   * @return The vatNumber.
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
+   * @return Whether the name field is set.
    */
   @java.lang.Override
-  public java.lang.String getVatNumber() {
-    java.lang.Object ref = vatNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      vatNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-   * @return The bytes for vatNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getVatNumberBytes() {
-    java.lang.Object ref = vatNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      vatNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ORGANISATION_NUMBER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object organisationNumber_ = "";
-  /**
-   * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-   * @return The organisationNumber.
-   */
-  @java.lang.Override
-  public java.lang.String getOrganisationNumber() {
-    java.lang.Object ref = organisationNumber_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      organisationNumber_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-   * @return The bytes for organisationNumber.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrganisationNumberBytes() {
-    java.lang.Object ref = organisationNumber_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      organisationNumber_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int COUNTRY_CODE_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object countryCode_ = "";
-  /**
-   * <pre>
-   * ISO 3166-1 alpha-2
-   * </pre>
-   *
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
-   * @return The countryCode.
-   */
-  @java.lang.Override
-  public java.lang.String getCountryCode() {
-    java.lang.Object ref = countryCode_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      countryCode_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * ISO 3166-1 alpha-2
-   * </pre>
-   *
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
-   * @return The bytes for countryCode.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCountryCodeBytes() {
-    java.lang.Object ref = countryCode_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      countryCode_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NAME_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <code>string name = 4 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string name = 4 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int RAW_ADDRESS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object rawAddress_ = "";
-  /**
-   * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-   * @return The rawAddress.
-   */
-  @java.lang.Override
-  public java.lang.String getRawAddress() {
-    java.lang.Object ref = rawAddress_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      rawAddress_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-   * @return The bytes for rawAddress.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getRawAddressBytes() {
-    java.lang.Object ref = rawAddress_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      rawAddress_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CONFIDENCE_FIELD_NUMBER = 6;
-  private ai.visma.ssn.type.Confidence confidence_;
-  /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-   * @return Whether the confidence field is set.
-   */
-  @java.lang.Override
-  public boolean hasConfidence() {
+  public boolean hasName() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-   * @return The confidence.
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
+   * @return The name.
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Confidence getConfidence() {
-    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  public ai.visma.ssn.companylookup.v1.CompanyField getName() {
+    return name_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : name_;
   }
   /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
-    return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getNameOrBuilder() {
+    return name_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : name_;
+  }
+
+  public static final int VAT_NUMBER_FIELD_NUMBER = 2;
+  private ai.visma.ssn.companylookup.v1.CompanyField vatNumber_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   * @return Whether the vatNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasVatNumber() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   * @return The vatNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getVatNumber() {
+    return vatNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : vatNumber_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getVatNumberOrBuilder() {
+    return vatNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : vatNumber_;
+  }
+
+  public static final int ORGANISATION_NUMBER_FIELD_NUMBER = 3;
+  private ai.visma.ssn.companylookup.v1.CompanyField organisationNumber_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+   * @return Whether the organisationNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasOrganisationNumber() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+   * @return The organisationNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getOrganisationNumber() {
+    return organisationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : organisationNumber_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getOrganisationNumberOrBuilder() {
+    return organisationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : organisationNumber_;
+  }
+
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 4;
+  private ai.visma.ssn.companylookup.v1.CompanyField countryCode_;
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   * @return Whether the countryCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasCountryCode() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getCountryCode() {
+    return countryCode_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : countryCode_;
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getCountryCodeOrBuilder() {
+    return countryCode_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : countryCode_;
+  }
+
+  public static final int ADDRESS_FIELD_NUMBER = 5;
+  private ai.visma.ssn.companylookup.v1.CompanyField address_;
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   * @return Whether the address field is set.
+   */
+  @java.lang.Override
+  public boolean hasAddress() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   * @return The address.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyField getAddress() {
+    return address_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : address_;
+  }
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getAddressOrBuilder() {
+    return address_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : address_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -291,23 +205,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(vatNumber_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, vatNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(organisationNumber_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, organisationNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(countryCode_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, countryCode_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rawAddress_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 5, rawAddress_);
-    }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(6, getConfidence());
+      output.writeMessage(1, getName());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(2, getVatNumber());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(4, getCountryCode());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(5, getAddress());
     }
     getUnknownFields().writeTo(output);
   }
@@ -318,24 +229,25 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(vatNumber_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, vatNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(organisationNumber_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, organisationNumber_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(countryCode_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, countryCode_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rawAddress_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, rawAddress_);
-    }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getConfidence());
+        .computeMessageSize(1, getName());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getVatNumber());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getCountryCode());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getAddress());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -352,20 +264,30 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.companylookup.v1.Company other = (ai.visma.ssn.companylookup.v1.Company) obj;
 
-    if (!getVatNumber()
-        .equals(other.getVatNumber())) return false;
-    if (!getOrganisationNumber()
-        .equals(other.getOrganisationNumber())) return false;
-    if (!getCountryCode()
-        .equals(other.getCountryCode())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getRawAddress()
-        .equals(other.getRawAddress())) return false;
-    if (hasConfidence() != other.hasConfidence()) return false;
-    if (hasConfidence()) {
-      if (!getConfidence()
-          .equals(other.getConfidence())) return false;
+    if (hasName() != other.hasName()) return false;
+    if (hasName()) {
+      if (!getName()
+          .equals(other.getName())) return false;
+    }
+    if (hasVatNumber() != other.hasVatNumber()) return false;
+    if (hasVatNumber()) {
+      if (!getVatNumber()
+          .equals(other.getVatNumber())) return false;
+    }
+    if (hasOrganisationNumber() != other.hasOrganisationNumber()) return false;
+    if (hasOrganisationNumber()) {
+      if (!getOrganisationNumber()
+          .equals(other.getOrganisationNumber())) return false;
+    }
+    if (hasCountryCode() != other.hasCountryCode()) return false;
+    if (hasCountryCode()) {
+      if (!getCountryCode()
+          .equals(other.getCountryCode())) return false;
+    }
+    if (hasAddress() != other.hasAddress()) return false;
+    if (hasAddress()) {
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -378,19 +300,25 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VAT_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getVatNumber().hashCode();
-    hash = (37 * hash) + ORGANISATION_NUMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getOrganisationNumber().hashCode();
-    hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getCountryCode().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + RAW_ADDRESS_FIELD_NUMBER;
-    hash = (53 * hash) + getRawAddress().hashCode();
-    if (hasConfidence()) {
-      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getConfidence().hashCode();
+    if (hasName()) {
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+    }
+    if (hasVatNumber()) {
+      hash = (37 * hash) + VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getVatNumber().hashCode();
+    }
+    if (hasOrganisationNumber()) {
+      hash = (37 * hash) + ORGANISATION_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganisationNumber().hashCode();
+    }
+    if (hasCountryCode()) {
+      hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCountryCode().hashCode();
+    }
+    if (hasAddress()) {
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -490,6 +418,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Company carries the extracted company fields for one role (supplier or
+   * receiver); the role is conveyed by which request field it occupies. Column
+   * names in storage match these smartscan field names.
+   * </pre>
+   *
    * Protobuf type {@code ssn.companylookup.v1.Company}
    */
   public static final class Builder extends
@@ -522,22 +456,41 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
-        getConfidenceFieldBuilder();
+        getNameFieldBuilder();
+        getVatNumberFieldBuilder();
+        getOrganisationNumberFieldBuilder();
+        getCountryCodeFieldBuilder();
+        getAddressFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      vatNumber_ = "";
-      organisationNumber_ = "";
-      countryCode_ = "";
-      name_ = "";
-      rawAddress_ = "";
-      confidence_ = null;
-      if (confidenceBuilder_ != null) {
-        confidenceBuilder_.dispose();
-        confidenceBuilder_ = null;
+      name_ = null;
+      if (nameBuilder_ != null) {
+        nameBuilder_.dispose();
+        nameBuilder_ = null;
+      }
+      vatNumber_ = null;
+      if (vatNumberBuilder_ != null) {
+        vatNumberBuilder_.dispose();
+        vatNumberBuilder_ = null;
+      }
+      organisationNumber_ = null;
+      if (organisationNumberBuilder_ != null) {
+        organisationNumberBuilder_.dispose();
+        organisationNumberBuilder_ = null;
+      }
+      countryCode_ = null;
+      if (countryCodeBuilder_ != null) {
+        countryCodeBuilder_.dispose();
+        countryCodeBuilder_ = null;
+      }
+      address_ = null;
+      if (addressBuilder_ != null) {
+        addressBuilder_.dispose();
+        addressBuilder_ = null;
       }
       return this;
     }
@@ -572,27 +525,36 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.ssn.companylookup.v1.Company result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.vatNumber_ = vatNumber_;
+        result.name_ = nameBuilder_ == null
+            ? name_
+            : nameBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.organisationNumber_ = organisationNumber_;
+        result.vatNumber_ = vatNumberBuilder_ == null
+            ? vatNumber_
+            : vatNumberBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.countryCode_ = countryCode_;
+        result.organisationNumber_ = organisationNumberBuilder_ == null
+            ? organisationNumber_
+            : organisationNumberBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.name_ = name_;
+        result.countryCode_ = countryCodeBuilder_ == null
+            ? countryCode_
+            : countryCodeBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.rawAddress_ = rawAddress_;
-      }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.confidence_ = confidenceBuilder_ == null
-            ? confidence_
-            : confidenceBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        result.address_ = addressBuilder_ == null
+            ? address_
+            : addressBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -609,33 +571,20 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.companylookup.v1.Company other) {
       if (other == ai.visma.ssn.companylookup.v1.Company.getDefaultInstance()) return this;
-      if (!other.getVatNumber().isEmpty()) {
-        vatNumber_ = other.vatNumber_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.hasName()) {
+        mergeName(other.getName());
       }
-      if (!other.getOrganisationNumber().isEmpty()) {
-        organisationNumber_ = other.organisationNumber_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.hasVatNumber()) {
+        mergeVatNumber(other.getVatNumber());
       }
-      if (!other.getCountryCode().isEmpty()) {
-        countryCode_ = other.countryCode_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.hasOrganisationNumber()) {
+        mergeOrganisationNumber(other.getOrganisationNumber());
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000008;
-        onChanged();
+      if (other.hasCountryCode()) {
+        mergeCountryCode(other.getCountryCode());
       }
-      if (!other.getRawAddress().isEmpty()) {
-        rawAddress_ = other.rawAddress_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (other.hasConfidence()) {
-        mergeConfidence(other.getConfidence());
+      if (other.hasAddress()) {
+        mergeAddress(other.getAddress());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -664,37 +613,40 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              vatNumber_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getNameFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              organisationNumber_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getVatNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              countryCode_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getOrganisationNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
-              name_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getCountryCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              rawAddress_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getAddressFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              input.readMessage(
-                  getConfidenceFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -712,505 +664,645 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object vatNumber_ = "";
+    private ai.visma.ssn.companylookup.v1.CompanyField name_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> nameBuilder_;
     /**
-     * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-     * @return The vatNumber.
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
+     * @return Whether the name field is set.
      */
-    public java.lang.String getVatNumber() {
-      java.lang.Object ref = vatNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        vatNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-     * @return The bytes for vatNumber.
-     */
-    public com.google.protobuf.ByteString
-        getVatNumberBytes() {
-      java.lang.Object ref = vatNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        vatNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-     * @param value The vatNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setVatNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      vatNumber_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearVatNumber() {
-      vatNumber_ = getDefaultInstance().getVatNumber();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-     * @param value The bytes for vatNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setVatNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      vatNumber_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object organisationNumber_ = "";
-    /**
-     * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-     * @return The organisationNumber.
-     */
-    public java.lang.String getOrganisationNumber() {
-      java.lang.Object ref = organisationNumber_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        organisationNumber_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-     * @return The bytes for organisationNumber.
-     */
-    public com.google.protobuf.ByteString
-        getOrganisationNumberBytes() {
-      java.lang.Object ref = organisationNumber_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        organisationNumber_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-     * @param value The organisationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrganisationNumber(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      organisationNumber_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrganisationNumber() {
-      organisationNumber_ = getDefaultInstance().getOrganisationNumber();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-     * @param value The bytes for organisationNumber to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrganisationNumberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      organisationNumber_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object countryCode_ = "";
-    /**
-     * <pre>
-     * ISO 3166-1 alpha-2
-     * </pre>
-     *
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
-     * @return The countryCode.
-     */
-    public java.lang.String getCountryCode() {
-      java.lang.Object ref = countryCode_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        countryCode_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * ISO 3166-1 alpha-2
-     * </pre>
-     *
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
-     * @return The bytes for countryCode.
-     */
-    public com.google.protobuf.ByteString
-        getCountryCodeBytes() {
-      java.lang.Object ref = countryCode_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        countryCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * ISO 3166-1 alpha-2
-     * </pre>
-     *
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
-     * @param value The countryCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCountryCode(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      countryCode_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ISO 3166-1 alpha-2
-     * </pre>
-     *
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCountryCode() {
-      countryCode_ = getDefaultInstance().getCountryCode();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ISO 3166-1 alpha-2
-     * </pre>
-     *
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
-     * @param value The bytes for countryCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCountryCodeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      countryCode_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object name_ = "";
-    /**
-     * <code>string name = 4 [json_name = "name"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      * @return The name.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
+    public ai.visma.ssn.companylookup.v1.CompanyField getName() {
+      if (nameBuilder_ == null) {
+        return name_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : name_;
       } else {
-        return (java.lang.String) ref;
+        return nameBuilder_.getMessage();
       }
     }
     /**
-     * <code>string name = 4 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string name = 4 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 4 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string name = 4 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object rawAddress_ = "";
-    /**
-     * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-     * @return The rawAddress.
-     */
-    public java.lang.String getRawAddress() {
-      java.lang.Object ref = rawAddress_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        rawAddress_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-     * @return The bytes for rawAddress.
-     */
-    public com.google.protobuf.ByteString
-        getRawAddressBytes() {
-      java.lang.Object ref = rawAddress_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        rawAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-     * @param value The rawAddress to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRawAddress(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      rawAddress_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRawAddress() {
-      rawAddress_ = getDefaultInstance().getRawAddress();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-     * @param value The bytes for rawAddress to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRawAddressBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      rawAddress_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private ai.visma.ssn.type.Confidence confidence_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> confidenceBuilder_;
-    /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-     * @return Whether the confidence field is set.
-     */
-    public boolean hasConfidence() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-     * @return The confidence.
-     */
-    public ai.visma.ssn.type.Confidence getConfidence() {
-      if (confidenceBuilder_ == null) {
-        return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
-      } else {
-        return confidenceBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-     */
-    public Builder setConfidence(ai.visma.ssn.type.Confidence value) {
-      if (confidenceBuilder_ == null) {
+    public Builder setName(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (nameBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        confidence_ = value;
+        name_ = value;
       } else {
-        confidenceBuilder_.setMessage(value);
+        nameBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public Builder setConfidence(
-        ai.visma.ssn.type.Confidence.Builder builderForValue) {
-      if (confidenceBuilder_ == null) {
-        confidence_ = builderForValue.build();
+    public Builder setName(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (nameBuilder_ == null) {
+        name_ = builderForValue.build();
       } else {
-        confidenceBuilder_.setMessage(builderForValue.build());
+        nameBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public Builder mergeConfidence(ai.visma.ssn.type.Confidence value) {
-      if (confidenceBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          confidence_ != null &&
-          confidence_ != ai.visma.ssn.type.Confidence.getDefaultInstance()) {
-          getConfidenceBuilder().mergeFrom(value);
+    public Builder mergeName(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (nameBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          name_ != null &&
+          name_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getNameBuilder().mergeFrom(value);
         } else {
-          confidence_ = value;
+          name_ = value;
         }
       } else {
-        confidenceBuilder_.mergeFrom(value);
+        nameBuilder_.mergeFrom(value);
       }
-      if (confidence_ != null) {
-        bitField0_ |= 0x00000020;
+      if (name_ != null) {
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public Builder clearConfidence() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      confidence_ = null;
-      if (confidenceBuilder_ != null) {
-        confidenceBuilder_.dispose();
-        confidenceBuilder_ = null;
+    public Builder clearName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      name_ = null;
+      if (nameBuilder_ != null) {
+        nameBuilder_.dispose();
+        nameBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public ai.visma.ssn.type.Confidence.Builder getConfidenceBuilder() {
-      bitField0_ |= 0x00000020;
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getNameBuilder() {
+      bitField0_ |= 0x00000001;
       onChanged();
-      return getConfidenceFieldBuilder().getBuilder();
+      return getNameFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
-    public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
-      if (confidenceBuilder_ != null) {
-        return confidenceBuilder_.getMessageOrBuilder();
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getNameOrBuilder() {
+      if (nameBuilder_ != null) {
+        return nameBuilder_.getMessageOrBuilder();
       } else {
-        return confidence_ == null ?
-            ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
+        return name_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : name_;
       }
     }
     /**
-     * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+     * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> 
-        getConfidenceFieldBuilder() {
-      if (confidenceBuilder_ == null) {
-        confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder>(
-                getConfidence(),
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getNameFieldBuilder() {
+      if (nameBuilder_ == null) {
+        nameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getName(),
                 getParentForChildren(),
                 isClean());
-        confidence_ = null;
+        name_ = null;
       }
-      return confidenceBuilder_;
+      return nameBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField vatNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> vatNumberBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     * @return Whether the vatNumber field is set.
+     */
+    public boolean hasVatNumber() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     * @return The vatNumber.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getVatNumber() {
+      if (vatNumberBuilder_ == null) {
+        return vatNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : vatNumber_;
+      } else {
+        return vatNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public Builder setVatNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (vatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        vatNumber_ = value;
+      } else {
+        vatNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public Builder setVatNumber(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (vatNumberBuilder_ == null) {
+        vatNumber_ = builderForValue.build();
+      } else {
+        vatNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public Builder mergeVatNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (vatNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          vatNumber_ != null &&
+          vatNumber_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getVatNumberBuilder().mergeFrom(value);
+        } else {
+          vatNumber_ = value;
+        }
+      } else {
+        vatNumberBuilder_.mergeFrom(value);
+      }
+      if (vatNumber_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public Builder clearVatNumber() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      vatNumber_ = null;
+      if (vatNumberBuilder_ != null) {
+        vatNumberBuilder_.dispose();
+        vatNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getVatNumberBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getVatNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getVatNumberOrBuilder() {
+      if (vatNumberBuilder_ != null) {
+        return vatNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return vatNumber_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : vatNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getVatNumberFieldBuilder() {
+      if (vatNumberBuilder_ == null) {
+        vatNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getVatNumber(),
+                getParentForChildren(),
+                isClean());
+        vatNumber_ = null;
+      }
+      return vatNumberBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField organisationNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> organisationNumberBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     * @return Whether the organisationNumber field is set.
+     */
+    public boolean hasOrganisationNumber() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     * @return The organisationNumber.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getOrganisationNumber() {
+      if (organisationNumberBuilder_ == null) {
+        return organisationNumber_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : organisationNumber_;
+      } else {
+        return organisationNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public Builder setOrganisationNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (organisationNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organisationNumber_ = value;
+      } else {
+        organisationNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public Builder setOrganisationNumber(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (organisationNumberBuilder_ == null) {
+        organisationNumber_ = builderForValue.build();
+      } else {
+        organisationNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public Builder mergeOrganisationNumber(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (organisationNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          organisationNumber_ != null &&
+          organisationNumber_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getOrganisationNumberBuilder().mergeFrom(value);
+        } else {
+          organisationNumber_ = value;
+        }
+      } else {
+        organisationNumberBuilder_.mergeFrom(value);
+      }
+      if (organisationNumber_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public Builder clearOrganisationNumber() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      organisationNumber_ = null;
+      if (organisationNumberBuilder_ != null) {
+        organisationNumberBuilder_.dispose();
+        organisationNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getOrganisationNumberBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getOrganisationNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getOrganisationNumberOrBuilder() {
+      if (organisationNumberBuilder_ != null) {
+        return organisationNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return organisationNumber_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : organisationNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getOrganisationNumberFieldBuilder() {
+      if (organisationNumberBuilder_ == null) {
+        organisationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getOrganisationNumber(),
+                getParentForChildren(),
+                isClean());
+        organisationNumber_ = null;
+      }
+      return organisationNumberBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField countryCode_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> countryCodeBuilder_;
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     * @return Whether the countryCode field is set.
+     */
+    public boolean hasCountryCode() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     * @return The countryCode.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getCountryCode() {
+      if (countryCodeBuilder_ == null) {
+        return countryCode_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : countryCode_;
+      } else {
+        return countryCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public Builder setCountryCode(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (countryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        countryCode_ = value;
+      } else {
+        countryCodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public Builder setCountryCode(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (countryCodeBuilder_ == null) {
+        countryCode_ = builderForValue.build();
+      } else {
+        countryCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public Builder mergeCountryCode(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (countryCodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          countryCode_ != null &&
+          countryCode_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getCountryCodeBuilder().mergeFrom(value);
+        } else {
+          countryCode_ = value;
+        }
+      } else {
+        countryCodeBuilder_.mergeFrom(value);
+      }
+      if (countryCode_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public Builder clearCountryCode() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      countryCode_ = null;
+      if (countryCodeBuilder_ != null) {
+        countryCodeBuilder_.dispose();
+        countryCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getCountryCodeBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getCountryCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getCountryCodeOrBuilder() {
+      if (countryCodeBuilder_ != null) {
+        return countryCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return countryCode_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : countryCode_;
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getCountryCodeFieldBuilder() {
+      if (countryCodeBuilder_ == null) {
+        countryCodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getCountryCode(),
+                getParentForChildren(),
+                isClean());
+        countryCode_ = null;
+      }
+      return countryCodeBuilder_;
+    }
+
+    private ai.visma.ssn.companylookup.v1.CompanyField address_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> addressBuilder_;
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     * @return The address.
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField getAddress() {
+      if (addressBuilder_ == null) {
+        return address_ == null ? ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : address_;
+      } else {
+        return addressBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public Builder setAddress(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (addressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        address_ = value;
+      } else {
+        addressBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public Builder setAddress(
+        ai.visma.ssn.companylookup.v1.CompanyField.Builder builderForValue) {
+      if (addressBuilder_ == null) {
+        address_ = builderForValue.build();
+      } else {
+        addressBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public Builder mergeAddress(ai.visma.ssn.companylookup.v1.CompanyField value) {
+      if (addressBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          address_ != null &&
+          address_ != ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance()) {
+          getAddressBuilder().mergeFrom(value);
+        } else {
+          address_ = value;
+        }
+      } else {
+        addressBuilder_.mergeFrom(value);
+      }
+      if (address_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public Builder clearAddress() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      address_ = null;
+      if (addressBuilder_ != null) {
+        addressBuilder_.dispose();
+        addressBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyField.Builder getAddressBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getAddressFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    public ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getAddressOrBuilder() {
+      if (addressBuilder_ != null) {
+        return addressBuilder_.getMessageOrBuilder();
+      } else {
+        return address_ == null ?
+            ai.visma.ssn.companylookup.v1.CompanyField.getDefaultInstance() : address_;
+      }
+    }
+    /**
+     * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder> 
+        getAddressFieldBuilder() {
+      if (addressBuilder_ == null) {
+        addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.companylookup.v1.CompanyField, ai.visma.ssn.companylookup.v1.CompanyField.Builder, ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder>(
+                getAddress(),
+                getParentForChildren(),
+                isClean());
+        address_ = null;
+      }
+      return addressBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.companylookup.v1.Company)

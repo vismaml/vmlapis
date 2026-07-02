@@ -10,85 +10,89 @@ public interface CompanyOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-   * @return The vatNumber.
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
+   * @return Whether the name field is set.
    */
-  java.lang.String getVatNumber();
+  boolean hasName();
   /**
-   * <code>string vat_number = 1 [json_name = "vatNumber"];</code>
-   * @return The bytes for vatNumber.
-   */
-  com.google.protobuf.ByteString
-      getVatNumberBytes();
-
-  /**
-   * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-   * @return The organisationNumber.
-   */
-  java.lang.String getOrganisationNumber();
-  /**
-   * <code>string organisation_number = 2 [json_name = "organisationNumber"];</code>
-   * @return The bytes for organisationNumber.
-   */
-  com.google.protobuf.ByteString
-      getOrganisationNumberBytes();
-
-  /**
-   * <pre>
-   * ISO 3166-1 alpha-2
-   * </pre>
-   *
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
-   * @return The countryCode.
-   */
-  java.lang.String getCountryCode();
-  /**
-   * <pre>
-   * ISO 3166-1 alpha-2
-   * </pre>
-   *
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
-   * @return The bytes for countryCode.
-   */
-  com.google.protobuf.ByteString
-      getCountryCodeBytes();
-
-  /**
-   * <code>string name = 4 [json_name = "name"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
    * @return The name.
    */
-  java.lang.String getName();
+  ai.visma.ssn.companylookup.v1.CompanyField getName();
   /**
-   * <code>string name = 4 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>.ssn.companylookup.v1.CompanyField name = 1 [json_name = "name"];</code>
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getNameOrBuilder();
 
   /**
-   * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-   * @return The rawAddress.
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   * @return Whether the vatNumber field is set.
    */
-  java.lang.String getRawAddress();
+  boolean hasVatNumber();
   /**
-   * <code>string raw_address = 5 [json_name = "rawAddress"];</code>
-   * @return The bytes for rawAddress.
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   * @return The vatNumber.
    */
-  com.google.protobuf.ByteString
-      getRawAddressBytes();
+  ai.visma.ssn.companylookup.v1.CompanyField getVatNumber();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField vat_number = 2 [json_name = "vatNumber"];</code>
+   */
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getVatNumberOrBuilder();
 
   /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-   * @return Whether the confidence field is set.
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+   * @return Whether the organisationNumber field is set.
    */
-  boolean hasConfidence();
+  boolean hasOrganisationNumber();
   /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
-   * @return The confidence.
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
+   * @return The organisationNumber.
    */
-  ai.visma.ssn.type.Confidence getConfidence();
+  ai.visma.ssn.companylookup.v1.CompanyField getOrganisationNumber();
   /**
-   * <code>.ssn.type.Confidence confidence = 6 [json_name = "confidence"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField organisation_number = 3 [json_name = "organisationNumber"];</code>
    */
-  ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getOrganisationNumberOrBuilder();
+
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   * @return Whether the countryCode field is set.
+   */
+  boolean hasCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   * @return The countryCode.
+   */
+  ai.visma.ssn.companylookup.v1.CompanyField getCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.companylookup.v1.CompanyField country_code = 4 [json_name = "countryCode"];</code>
+   */
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getCountryCodeOrBuilder();
+
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   * @return Whether the address field is set.
+   */
+  boolean hasAddress();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   * @return The address.
+   */
+  ai.visma.ssn.companylookup.v1.CompanyField getAddress();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField address = 5 [json_name = "address"];</code>
+   */
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getAddressOrBuilder();
 }

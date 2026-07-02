@@ -10,65 +10,62 @@ public interface BankAccountOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string iban = 1 [json_name = "iban"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
+   * @return Whether the iban field is set.
+   */
+  boolean hasIban();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
    * @return The iban.
    */
-  java.lang.String getIban();
+  ai.visma.ssn.companylookup.v1.CompanyField getIban();
   /**
-   * <code>string iban = 1 [json_name = "iban"];</code>
-   * @return The bytes for iban.
+   * <code>.ssn.companylookup.v1.CompanyField iban = 1 [json_name = "iban"];</code>
    */
-  com.google.protobuf.ByteString
-      getIbanBytes();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getIbanOrBuilder();
 
   /**
-   * <code>string bic = 2 [json_name = "bic"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
+   * @return Whether the bic field is set.
+   */
+  boolean hasBic();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
    * @return The bic.
    */
-  java.lang.String getBic();
+  ai.visma.ssn.companylookup.v1.CompanyField getBic();
   /**
-   * <code>string bic = 2 [json_name = "bic"];</code>
-   * @return The bytes for bic.
+   * <code>.ssn.companylookup.v1.CompanyField bic = 2 [json_name = "bic"];</code>
    */
-  com.google.protobuf.ByteString
-      getBicBytes();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBicOrBuilder();
 
   /**
-   * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
+   * @return Whether the bankAccountNumber field is set.
+   */
+  boolean hasBankAccountNumber();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
    * @return The bankAccountNumber.
    */
-  java.lang.String getBankAccountNumber();
+  ai.visma.ssn.companylookup.v1.CompanyField getBankAccountNumber();
   /**
-   * <code>string bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
-   * @return The bytes for bankAccountNumber.
+   * <code>.ssn.companylookup.v1.CompanyField bank_account_number = 3 [json_name = "bankAccountNumber"];</code>
    */
-  com.google.protobuf.ByteString
-      getBankAccountNumberBytes();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankAccountNumberOrBuilder();
 
   /**
-   * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
+   * @return Whether the bankRegistrationNumber field is set.
+   */
+  boolean hasBankRegistrationNumber();
+  /**
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
    * @return The bankRegistrationNumber.
    */
-  java.lang.String getBankRegistrationNumber();
+  ai.visma.ssn.companylookup.v1.CompanyField getBankRegistrationNumber();
   /**
-   * <code>string bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
-   * @return The bytes for bankRegistrationNumber.
+   * <code>.ssn.companylookup.v1.CompanyField bank_registration_number = 4 [json_name = "bankRegistrationNumber"];</code>
    */
-  com.google.protobuf.ByteString
-      getBankRegistrationNumberBytes();
-
-  /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-   * @return Whether the confidence field is set.
-   */
-  boolean hasConfidence();
-  /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-   * @return The confidence.
-   */
-  ai.visma.ssn.type.Confidence getConfidence();
-  /**
-   * <code>.ssn.type.Confidence confidence = 5 [json_name = "confidence"];</code>
-   */
-  ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
+  ai.visma.ssn.companylookup.v1.CompanyFieldOrBuilder getBankRegistrationNumberOrBuilder();
 }

@@ -26,7 +26,7 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(ssn/companylookup/v1/companylookup.proto\x12\x14ssn.companylookup.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x18ssn/type/candidate.proto\"\xe7\x01\n\x07\x43ompany\x12\x1d\n\nvat_number\x18\x01 \x01(\tR\tvatNumber\x12/\n\x13organisation_number\x18\x02 \x01(\tR\x12organisationNumber\x12!\n\x0c\x63ountry_code\x18\x03 \x01(\tR\x0b\x63ountryCode\x12\x12\n\x04name\x18\x04 \x01(\tR\x04name\x12\x1f\n\x0braw_address\x18\x05 \x01(\tR\nrawAddress\x12\x34\n\nconfidence\x18\x06 \x01(\x0b\x32\x14.ssn.type.ConfidenceR\nconfidence\"\xd3\x01\n\x0b\x42\x61nkAccount\x12\x12\n\x04iban\x18\x01 \x01(\tR\x04iban\x12\x10\n\x03\x62ic\x18\x02 \x01(\tR\x03\x62ic\x12.\n\x13\x62\x61nk_account_number\x18\x03 \x01(\tR\x11\x62\x61nkAccountNumber\x12\x38\n\x18\x62\x61nk_registration_number\x18\x04 \x01(\tR\x16\x62\x61nkRegistrationNumber\x12\x34\n\nconfidence\x18\x05 \x01(\x0b\x32\x14.ssn.type.ConfidenceR\nconfidence\"\xcf\x02\n ProcessInvoiceCompanyDataRequest\x12!\n\x0cproject_name\x18\x01 \x01(\tR\x0bprojectName\x12%\n\x0etransaction_id\x18\x02 \x01(\tR\rtransactionId\x12\x39\n\x08supplier\x18\x03 \x01(\x0b\x32\x1d.ssn.companylookup.v1.CompanyR\x08supplier\x12\x39\n\x08receiver\x18\x04 \x01(\x0b\x32\x1d.ssn.companylookup.v1.CompanyR\x08receiver\x12\x46\n\rbank_accounts\x18\x05 \x03(\x0b\x32!.ssn.companylookup.v1.BankAccountR\x0c\x62\x61nkAccounts\x12#\n\rproduct_types\x18\x06 \x03(\tR\x0cproductTypes\"\xcf\x02\n\x12\x42\x61nkAccountVerdict\x12\x1f\n\x0b\x61\x63\x63ount_key\x18\x01 \x01(\tR\naccountKey\x12<\n\x07verdict\x18\x02 \x01(\x0e\x32\".ssn.companylookup.v1.TrustVerdictR\x07verdict\x12\x32\n\x15observed_count_tenant\x18\x03 \x01(\x03R\x13observedCountTenant\x12\x32\n\x15observed_count_global\x18\x04 \x01(\x03R\x13observedCountGlobal\x12\x39\n\nfirst_seen\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tfirstSeen\x12\x37\n\tlast_seen\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x08lastSeen\"\x90\x02\n\x0f\x45nrichedCompany\x12\x1f\n\x0b\x63ompany_key\x18\x01 \x01(\tR\ncompanyKey\x12#\n\rregistry_name\x18\x02 \x01(\tR\x0cregistryName\x12)\n\x10registry_address\x18\x03 \x01(\tR\x0fregistryAddress\x12\x1b\n\tvat_valid\x18\x04 \x01(\x08R\x08vatValid\x12\x1a\n\x08industry\x18\x05 \x01(\tR\x08industry\x12S\n\x11\x65nrichment_status\x18\x06 \x01(\x0e\x32&.ssn.companylookup.v1.EnrichmentStatusR\x10\x65nrichmentStatus\"\xc4\x01\n!ProcessInvoiceCompanyDataResponse\x12\x41\n\x08supplier\x18\x01 \x01(\x0b\x32%.ssn.companylookup.v1.EnrichedCompanyR\x08supplier\x12\\\n\x15\x62\x61nk_account_verdicts\x18\x02 \x03(\x0b\x32(.ssn.companylookup.v1.BankAccountVerdictR\x13\x62\x61nkAccountVerdicts*A\n\x0cTrustVerdict\x12\x1d\n\x19TRUST_VERDICT_UNSPECIFIED\x10\x00\x12\x07\n\x03NEW\x10\x01\x12\t\n\x05KNOWN\x10\x02*\\\n\x10\x45nrichmentStatus\x12!\n\x1d\x45NRICHMENT_STATUS_UNSPECIFIED\x10\x00\x12\x0b\n\x07PENDING\x10\x01\x12\x0c\n\x08\x45NRICHED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x32\xa5\x01\n\x14\x43ompanyLookupService\x12\x8c\x01\n\x19ProcessInvoiceCompanyData\x12\x36.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest\x1a\x37.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponseBHZFgithub.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookupb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(ssn/companylookup/v1/companylookup.proto\x12\x14ssn.companylookup.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x18ssn/type/candidate.proto\"Z\n\x0c\x43ompanyField\x12\x14\n\x05value\x18\x01 \x01(\tR\x05value\x12\x34\n\nconfidence\x18\x02 \x01(\x0b\x32\x14.ssn.type.ConfidenceR\nconfidence\"\xde\x02\n\x07\x43ompany\x12\x36\n\x04name\x18\x01 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x04name\x12\x41\n\nvat_number\x18\x02 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\tvatNumber\x12S\n\x13organisation_number\x18\x03 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x12organisationNumber\x12\x45\n\x0c\x63ountry_code\x18\x04 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x0b\x63ountryCode\x12<\n\x07\x61\x64\x64ress\x18\x05 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x07\x61\x64\x64ress\"\xad\x02\n\x0b\x42\x61nkAccount\x12\x36\n\x04iban\x18\x01 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x04iban\x12\x34\n\x03\x62ic\x18\x02 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x03\x62ic\x12R\n\x13\x62\x61nk_account_number\x18\x03 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x11\x62\x61nkAccountNumber\x12\\\n\x18\x62\x61nk_registration_number\x18\x04 \x01(\x0b\x32\".ssn.companylookup.v1.CompanyFieldR\x16\x62\x61nkRegistrationNumber\"\xcf\x02\n ProcessInvoiceCompanyDataRequest\x12!\n\x0cproject_name\x18\x01 \x01(\tR\x0bprojectName\x12%\n\x0etransaction_id\x18\x02 \x01(\tR\rtransactionId\x12\x39\n\x08supplier\x18\x03 \x01(\x0b\x32\x1d.ssn.companylookup.v1.CompanyR\x08supplier\x12\x39\n\x08receiver\x18\x04 \x01(\x0b\x32\x1d.ssn.companylookup.v1.CompanyR\x08receiver\x12\x46\n\rbank_accounts\x18\x05 \x03(\x0b\x32!.ssn.companylookup.v1.BankAccountR\x0c\x62\x61nkAccounts\x12#\n\rproduct_types\x18\x06 \x03(\tR\x0cproductTypes\"\xcf\x02\n\x12\x42\x61nkAccountVerdict\x12\x1f\n\x0b\x61\x63\x63ount_key\x18\x01 \x01(\tR\naccountKey\x12<\n\x07verdict\x18\x02 \x01(\x0e\x32\".ssn.companylookup.v1.TrustVerdictR\x07verdict\x12\x32\n\x15observed_count_tenant\x18\x03 \x01(\x03R\x13observedCountTenant\x12\x32\n\x15observed_count_global\x18\x04 \x01(\x03R\x13observedCountGlobal\x12\x39\n\nfirst_seen\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tfirstSeen\x12\x37\n\tlast_seen\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x08lastSeen\"\x90\x02\n\x0f\x45nrichedCompany\x12\x1f\n\x0b\x63ompany_key\x18\x01 \x01(\tR\ncompanyKey\x12#\n\rregistry_name\x18\x02 \x01(\tR\x0cregistryName\x12)\n\x10registry_address\x18\x03 \x01(\tR\x0fregistryAddress\x12\x1b\n\tvat_valid\x18\x04 \x01(\x08R\x08vatValid\x12\x1a\n\x08industry\x18\x05 \x01(\tR\x08industry\x12S\n\x11\x65nrichment_status\x18\x06 \x01(\x0e\x32&.ssn.companylookup.v1.EnrichmentStatusR\x10\x65nrichmentStatus\"\xc4\x01\n!ProcessInvoiceCompanyDataResponse\x12\x41\n\x08supplier\x18\x01 \x01(\x0b\x32%.ssn.companylookup.v1.EnrichedCompanyR\x08supplier\x12\\\n\x15\x62\x61nk_account_verdicts\x18\x02 \x03(\x0b\x32(.ssn.companylookup.v1.BankAccountVerdictR\x13\x62\x61nkAccountVerdicts*A\n\x0cTrustVerdict\x12\x1d\n\x19TRUST_VERDICT_UNSPECIFIED\x10\x00\x12\x07\n\x03NEW\x10\x01\x12\t\n\x05KNOWN\x10\x02*\\\n\x10\x45nrichmentStatus\x12!\n\x1d\x45NRICHMENT_STATUS_UNSPECIFIED\x10\x00\x12\x0b\n\x07PENDING\x10\x01\x12\x0c\n\x08\x45NRICHED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x32\xa5\x01\n\x14\x43ompanyLookupService\x12\x8c\x01\n\x19ProcessInvoiceCompanyData\x12\x36.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest\x1a\x37.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponseBHZFgithub.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookupb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -34,22 +34,24 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ssn.companylookup.v1.compan
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'ZFgithub.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup'
-  _globals['_TRUSTVERDICT']._serialized_start=1723
-  _globals['_TRUSTVERDICT']._serialized_end=1788
-  _globals['_ENRICHMENTSTATUS']._serialized_start=1790
-  _globals['_ENRICHMENTSTATUS']._serialized_end=1882
-  _globals['_COMPANY']._serialized_start=126
-  _globals['_COMPANY']._serialized_end=357
-  _globals['_BANKACCOUNT']._serialized_start=360
-  _globals['_BANKACCOUNT']._serialized_end=571
-  _globals['_PROCESSINVOICECOMPANYDATAREQUEST']._serialized_start=574
-  _globals['_PROCESSINVOICECOMPANYDATAREQUEST']._serialized_end=909
-  _globals['_BANKACCOUNTVERDICT']._serialized_start=912
-  _globals['_BANKACCOUNTVERDICT']._serialized_end=1247
-  _globals['_ENRICHEDCOMPANY']._serialized_start=1250
-  _globals['_ENRICHEDCOMPANY']._serialized_end=1522
-  _globals['_PROCESSINVOICECOMPANYDATARESPONSE']._serialized_start=1525
-  _globals['_PROCESSINVOICECOMPANYDATARESPONSE']._serialized_end=1721
-  _globals['_COMPANYLOOKUPSERVICE']._serialized_start=1885
-  _globals['_COMPANYLOOKUPSERVICE']._serialized_end=2050
+  _globals['_TRUSTVERDICT']._serialized_start=2024
+  _globals['_TRUSTVERDICT']._serialized_end=2089
+  _globals['_ENRICHMENTSTATUS']._serialized_start=2091
+  _globals['_ENRICHMENTSTATUS']._serialized_end=2183
+  _globals['_COMPANYFIELD']._serialized_start=125
+  _globals['_COMPANYFIELD']._serialized_end=215
+  _globals['_COMPANY']._serialized_start=218
+  _globals['_COMPANY']._serialized_end=568
+  _globals['_BANKACCOUNT']._serialized_start=571
+  _globals['_BANKACCOUNT']._serialized_end=872
+  _globals['_PROCESSINVOICECOMPANYDATAREQUEST']._serialized_start=875
+  _globals['_PROCESSINVOICECOMPANYDATAREQUEST']._serialized_end=1210
+  _globals['_BANKACCOUNTVERDICT']._serialized_start=1213
+  _globals['_BANKACCOUNTVERDICT']._serialized_end=1548
+  _globals['_ENRICHEDCOMPANY']._serialized_start=1551
+  _globals['_ENRICHEDCOMPANY']._serialized_end=1823
+  _globals['_PROCESSINVOICECOMPANYDATARESPONSE']._serialized_start=1826
+  _globals['_PROCESSINVOICECOMPANYDATARESPONSE']._serialized_end=2022
+  _globals['_COMPANYLOOKUPSERVICE']._serialized_start=2186
+  _globals['_COMPANYLOOKUPSERVICE']._serialized_end=2351
 # @@protoc_insertion_point(module_scope)

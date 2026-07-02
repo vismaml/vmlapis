@@ -28,35 +28,39 @@ PENDING: EnrichmentStatus
 ENRICHED: EnrichmentStatus
 FAILED: EnrichmentStatus
 
+class CompanyField(_message.Message):
+    __slots__ = ("value", "confidence")
+    VALUE_FIELD_NUMBER: _ClassVar[int]
+    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    value: str
+    confidence: _candidate_pb2.Confidence
+    def __init__(self, value: _Optional[str] = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ...) -> None: ...
+
 class Company(_message.Message):
-    __slots__ = ("vat_number", "organisation_number", "country_code", "name", "raw_address", "confidence")
+    __slots__ = ("name", "vat_number", "organisation_number", "country_code", "address")
+    NAME_FIELD_NUMBER: _ClassVar[int]
     VAT_NUMBER_FIELD_NUMBER: _ClassVar[int]
     ORGANISATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
-    NAME_FIELD_NUMBER: _ClassVar[int]
-    RAW_ADDRESS_FIELD_NUMBER: _ClassVar[int]
-    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    vat_number: str
-    organisation_number: str
-    country_code: str
-    name: str
-    raw_address: str
-    confidence: _candidate_pb2.Confidence
-    def __init__(self, vat_number: _Optional[str] = ..., organisation_number: _Optional[str] = ..., country_code: _Optional[str] = ..., name: _Optional[str] = ..., raw_address: _Optional[str] = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ...) -> None: ...
+    ADDRESS_FIELD_NUMBER: _ClassVar[int]
+    name: CompanyField
+    vat_number: CompanyField
+    organisation_number: CompanyField
+    country_code: CompanyField
+    address: CompanyField
+    def __init__(self, name: _Optional[_Union[CompanyField, _Mapping]] = ..., vat_number: _Optional[_Union[CompanyField, _Mapping]] = ..., organisation_number: _Optional[_Union[CompanyField, _Mapping]] = ..., country_code: _Optional[_Union[CompanyField, _Mapping]] = ..., address: _Optional[_Union[CompanyField, _Mapping]] = ...) -> None: ...
 
 class BankAccount(_message.Message):
-    __slots__ = ("iban", "bic", "bank_account_number", "bank_registration_number", "confidence")
+    __slots__ = ("iban", "bic", "bank_account_number", "bank_registration_number")
     IBAN_FIELD_NUMBER: _ClassVar[int]
     BIC_FIELD_NUMBER: _ClassVar[int]
     BANK_ACCOUNT_NUMBER_FIELD_NUMBER: _ClassVar[int]
     BANK_REGISTRATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
-    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    iban: str
-    bic: str
-    bank_account_number: str
-    bank_registration_number: str
-    confidence: _candidate_pb2.Confidence
-    def __init__(self, iban: _Optional[str] = ..., bic: _Optional[str] = ..., bank_account_number: _Optional[str] = ..., bank_registration_number: _Optional[str] = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ...) -> None: ...
+    iban: CompanyField
+    bic: CompanyField
+    bank_account_number: CompanyField
+    bank_registration_number: CompanyField
+    def __init__(self, iban: _Optional[_Union[CompanyField, _Mapping]] = ..., bic: _Optional[_Union[CompanyField, _Mapping]] = ..., bank_account_number: _Optional[_Union[CompanyField, _Mapping]] = ..., bank_registration_number: _Optional[_Union[CompanyField, _Mapping]] = ...) -> None: ...
 
 class ProcessInvoiceCompanyDataRequest(_message.Message):
     __slots__ = ("project_name", "transaction_id", "supplier", "receiver", "bank_accounts", "product_types")

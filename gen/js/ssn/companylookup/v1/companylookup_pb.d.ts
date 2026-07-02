@@ -4,26 +4,55 @@ import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/t
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
-export class Company extends jspb.Message {
-  getVatNumber(): string;
-  setVatNumber(value: string): Company;
-
-  getOrganisationNumber(): string;
-  setOrganisationNumber(value: string): Company;
-
-  getCountryCode(): string;
-  setCountryCode(value: string): Company;
-
-  getName(): string;
-  setName(value: string): Company;
-
-  getRawAddress(): string;
-  setRawAddress(value: string): Company;
+export class CompanyField extends jspb.Message {
+  getValue(): string;
+  setValue(value: string): CompanyField;
 
   getConfidence(): ssn_type_candidate_pb.Confidence | undefined;
-  setConfidence(value?: ssn_type_candidate_pb.Confidence): Company;
+  setConfidence(value?: ssn_type_candidate_pb.Confidence): CompanyField;
   hasConfidence(): boolean;
-  clearConfidence(): Company;
+  clearConfidence(): CompanyField;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CompanyField.AsObject;
+  static toObject(includeInstance: boolean, msg: CompanyField): CompanyField.AsObject;
+  static serializeBinaryToWriter(message: CompanyField, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CompanyField;
+  static deserializeBinaryFromReader(message: CompanyField, reader: jspb.BinaryReader): CompanyField;
+}
+
+export namespace CompanyField {
+  export type AsObject = {
+    value: string,
+    confidence?: ssn_type_candidate_pb.Confidence.AsObject,
+  }
+}
+
+export class Company extends jspb.Message {
+  getName(): CompanyField | undefined;
+  setName(value?: CompanyField): Company;
+  hasName(): boolean;
+  clearName(): Company;
+
+  getVatNumber(): CompanyField | undefined;
+  setVatNumber(value?: CompanyField): Company;
+  hasVatNumber(): boolean;
+  clearVatNumber(): Company;
+
+  getOrganisationNumber(): CompanyField | undefined;
+  setOrganisationNumber(value?: CompanyField): Company;
+  hasOrganisationNumber(): boolean;
+  clearOrganisationNumber(): Company;
+
+  getCountryCode(): CompanyField | undefined;
+  setCountryCode(value?: CompanyField): Company;
+  hasCountryCode(): boolean;
+  clearCountryCode(): Company;
+
+  getAddress(): CompanyField | undefined;
+  setAddress(value?: CompanyField): Company;
+  hasAddress(): boolean;
+  clearAddress(): Company;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Company.AsObject;
@@ -35,32 +64,34 @@ export class Company extends jspb.Message {
 
 export namespace Company {
   export type AsObject = {
-    vatNumber: string,
-    organisationNumber: string,
-    countryCode: string,
-    name: string,
-    rawAddress: string,
-    confidence?: ssn_type_candidate_pb.Confidence.AsObject,
+    name?: CompanyField.AsObject,
+    vatNumber?: CompanyField.AsObject,
+    organisationNumber?: CompanyField.AsObject,
+    countryCode?: CompanyField.AsObject,
+    address?: CompanyField.AsObject,
   }
 }
 
 export class BankAccount extends jspb.Message {
-  getIban(): string;
-  setIban(value: string): BankAccount;
+  getIban(): CompanyField | undefined;
+  setIban(value?: CompanyField): BankAccount;
+  hasIban(): boolean;
+  clearIban(): BankAccount;
 
-  getBic(): string;
-  setBic(value: string): BankAccount;
+  getBic(): CompanyField | undefined;
+  setBic(value?: CompanyField): BankAccount;
+  hasBic(): boolean;
+  clearBic(): BankAccount;
 
-  getBankAccountNumber(): string;
-  setBankAccountNumber(value: string): BankAccount;
+  getBankAccountNumber(): CompanyField | undefined;
+  setBankAccountNumber(value?: CompanyField): BankAccount;
+  hasBankAccountNumber(): boolean;
+  clearBankAccountNumber(): BankAccount;
 
-  getBankRegistrationNumber(): string;
-  setBankRegistrationNumber(value: string): BankAccount;
-
-  getConfidence(): ssn_type_candidate_pb.Confidence | undefined;
-  setConfidence(value?: ssn_type_candidate_pb.Confidence): BankAccount;
-  hasConfidence(): boolean;
-  clearConfidence(): BankAccount;
+  getBankRegistrationNumber(): CompanyField | undefined;
+  setBankRegistrationNumber(value?: CompanyField): BankAccount;
+  hasBankRegistrationNumber(): boolean;
+  clearBankRegistrationNumber(): BankAccount;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BankAccount.AsObject;
@@ -72,11 +103,10 @@ export class BankAccount extends jspb.Message {
 
 export namespace BankAccount {
   export type AsObject = {
-    iban: string,
-    bic: string,
-    bankAccountNumber: string,
-    bankRegistrationNumber: string,
-    confidence?: ssn_type_candidate_pb.Confidence.AsObject,
+    iban?: CompanyField.AsObject,
+    bic?: CompanyField.AsObject,
+    bankAccountNumber?: CompanyField.AsObject,
+    bankRegistrationNumber?: CompanyField.AsObject,
   }
 }
 
