@@ -6,6 +6,12 @@
 package ai.visma.ssn.companylookup.v1;
 
 /**
+ * <pre>
+ * The request is flat: each field is the top-1 smartscan candidate for the
+ * corresponding PredictResponse field, so callers pass candidates through
+ * without mapping. The service records value + confidence level per field.
+ * </pre>
+ *
  * Protobuf type {@code ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest}
  */
 public final class ProcessInvoiceCompanyDataRequest extends
@@ -29,7 +35,6 @@ private static final long serialVersionUID = 0L;
   private ProcessInvoiceCompanyDataRequest() {
     projectName_ = "";
     transactionId_ = "";
-    bankAccounts_ = java.util.Collections.emptyList();
     productTypes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -126,105 +131,400 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SUPPLIER_FIELD_NUMBER = 3;
-  private ai.visma.ssn.companylookup.v1.Company supplier_;
+  public static final int SUPPLIER_NAME_FIELD_NUMBER = 3;
+  private ai.visma.ssn.type.Candidate supplierName_;
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-   * @return Whether the supplier field is set.
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+   * @return Whether the supplierName field is set.
    */
   @java.lang.Override
-  public boolean hasSupplier() {
+  public boolean hasSupplierName() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-   * @return The supplier.
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+   * @return The supplierName.
    */
   @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.Company getSupplier() {
-    return supplier_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : supplier_;
+  public ai.visma.ssn.type.Candidate getSupplierName() {
+    return supplierName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierName_;
   }
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.CompanyOrBuilder getSupplierOrBuilder() {
-    return supplier_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : supplier_;
+  public ai.visma.ssn.type.CandidateOrBuilder getSupplierNameOrBuilder() {
+    return supplierName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierName_;
   }
 
-  public static final int RECEIVER_FIELD_NUMBER = 4;
-  private ai.visma.ssn.companylookup.v1.Company receiver_;
+  public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 4;
+  private ai.visma.ssn.type.Candidate supplierVatNumber_;
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-   * @return Whether the receiver field is set.
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+   * @return Whether the supplierVatNumber field is set.
    */
   @java.lang.Override
-  public boolean hasReceiver() {
+  public boolean hasSupplierVatNumber() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-   * @return The receiver.
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+   * @return The supplierVatNumber.
    */
   @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.Company getReceiver() {
-    return receiver_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : receiver_;
+  public ai.visma.ssn.type.Candidate getSupplierVatNumber() {
+    return supplierVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierVatNumber_;
   }
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.CompanyOrBuilder getReceiverOrBuilder() {
-    return receiver_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : receiver_;
+  public ai.visma.ssn.type.CandidateOrBuilder getSupplierVatNumberOrBuilder() {
+    return supplierVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierVatNumber_;
   }
 
-  public static final int BANK_ACCOUNTS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.companylookup.v1.BankAccount> bankAccounts_;
+  public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 5;
+  private ai.visma.ssn.type.Candidate supplierOrganisationNumber_;
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+   * @return Whether the supplierOrganisationNumber field is set.
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.companylookup.v1.BankAccount> getBankAccountsList() {
-    return bankAccounts_;
+  public boolean hasSupplierOrganisationNumber() {
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+   * @return The supplierOrganisationNumber.
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountOrBuilder> 
-      getBankAccountsOrBuilderList() {
-    return bankAccounts_;
+  public ai.visma.ssn.type.Candidate getSupplierOrganisationNumber() {
+    return supplierOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierOrganisationNumber_;
   }
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
    */
   @java.lang.Override
-  public int getBankAccountsCount() {
-    return bankAccounts_.size();
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.BankAccount getBankAccounts(int index) {
-    return bankAccounts_.get(index);
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.BankAccountOrBuilder getBankAccountsOrBuilder(
-      int index) {
-    return bankAccounts_.get(index);
+  public ai.visma.ssn.type.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder() {
+    return supplierOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierOrganisationNumber_;
   }
 
-  public static final int PRODUCT_TYPES_FIELD_NUMBER = 6;
+  public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 6;
+  private ai.visma.ssn.type.Candidate supplierCountryCode_;
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   * @return Whether the supplierCountryCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasSupplierCountryCode() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   * @return The supplierCountryCode.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getSupplierCountryCode() {
+    return supplierCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierCountryCode_;
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getSupplierCountryCodeOrBuilder() {
+    return supplierCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierCountryCode_;
+  }
+
+  public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 7;
+  private ai.visma.ssn.type.Candidate supplierAddress_;
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   * @return Whether the supplierAddress field is set.
+   */
+  @java.lang.Override
+  public boolean hasSupplierAddress() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   * @return The supplierAddress.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getSupplierAddress() {
+    return supplierAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierAddress_;
+  }
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getSupplierAddressOrBuilder() {
+    return supplierAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierAddress_;
+  }
+
+  public static final int RECEIVER_NAME_FIELD_NUMBER = 8;
+  private ai.visma.ssn.type.Candidate receiverName_;
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   * @return Whether the receiverName field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverName() {
+    return ((bitField0_ & 0x00000020) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   * @return The receiverName.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverName() {
+    return receiverName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverName_;
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder() {
+    return receiverName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverName_;
+  }
+
+  public static final int RECEIVER_VAT_NUMBER_FIELD_NUMBER = 9;
+  private ai.visma.ssn.type.Candidate receiverVatNumber_;
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   * @return Whether the receiverVatNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverVatNumber() {
+    return ((bitField0_ & 0x00000040) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   * @return The receiverVatNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverVatNumber() {
+    return receiverVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverVatNumber_;
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder() {
+    return receiverVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverVatNumber_;
+  }
+
+  public static final int RECEIVER_ORGANISATION_NUMBER_FIELD_NUMBER = 10;
+  private ai.visma.ssn.type.Candidate receiverOrganisationNumber_;
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   * @return Whether the receiverOrganisationNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverOrganisationNumber() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   * @return The receiverOrganisationNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverOrganisationNumber() {
+    return receiverOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverOrganisationNumber_;
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverOrganisationNumberOrBuilder() {
+    return receiverOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverOrganisationNumber_;
+  }
+
+  public static final int RECEIVER_COUNTRY_CODE_FIELD_NUMBER = 11;
+  private ai.visma.ssn.type.Candidate receiverCountryCode_;
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   * @return Whether the receiverCountryCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverCountryCode() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   * @return The receiverCountryCode.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverCountryCode() {
+    return receiverCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverCountryCode_;
+  }
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder() {
+    return receiverCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverCountryCode_;
+  }
+
+  public static final int RECEIVER_ADDRESS_FIELD_NUMBER = 12;
+  private ai.visma.ssn.type.Candidate receiverAddress_;
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   * @return Whether the receiverAddress field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverAddress() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   * @return The receiverAddress.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverAddress() {
+    return receiverAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverAddress_;
+  }
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder() {
+    return receiverAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverAddress_;
+  }
+
+  public static final int IBAN_FIELD_NUMBER = 13;
+  private ai.visma.ssn.type.Candidate iban_;
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   * @return Whether the iban field is set.
+   */
+  @java.lang.Override
+  public boolean hasIban() {
+    return ((bitField0_ & 0x00000400) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   * @return The iban.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getIban() {
+    return iban_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : iban_;
+  }
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getIbanOrBuilder() {
+    return iban_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : iban_;
+  }
+
+  public static final int BIC_FIELD_NUMBER = 14;
+  private ai.visma.ssn.type.Candidate bic_;
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   * @return Whether the bic field is set.
+   */
+  @java.lang.Override
+  public boolean hasBic() {
+    return ((bitField0_ & 0x00000800) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   * @return The bic.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getBic() {
+    return bic_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bic_;
+  }
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getBicOrBuilder() {
+    return bic_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bic_;
+  }
+
+  public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 15;
+  private ai.visma.ssn.type.Candidate bankAccountNumber_;
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   * @return Whether the bankAccountNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasBankAccountNumber() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   * @return The bankAccountNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getBankAccountNumber() {
+    return bankAccountNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankAccountNumber_;
+  }
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getBankAccountNumberOrBuilder() {
+    return bankAccountNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankAccountNumber_;
+  }
+
+  public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 16;
+  private ai.visma.ssn.type.Candidate bankRegistrationNumber_;
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   * @return Whether the bankRegistrationNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasBankRegistrationNumber() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   * @return The bankRegistrationNumber.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getBankRegistrationNumber() {
+    return bankRegistrationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankRegistrationNumber_;
+  }
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getBankRegistrationNumberOrBuilder() {
+    return bankRegistrationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankRegistrationNumber_;
+  }
+
+  public static final int PRODUCT_TYPES_FIELD_NUMBER = 17;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList productTypes_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @return A list containing the productTypes.
    */
   public com.google.protobuf.ProtocolStringList
@@ -232,14 +532,14 @@ private static final long serialVersionUID = 0L;
     return productTypes_;
   }
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @return The count of productTypes.
    */
   public int getProductTypesCount() {
     return productTypes_.size();
   }
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @param index The index of the element to return.
    * @return The productTypes at the given index.
    */
@@ -247,7 +547,7 @@ private static final long serialVersionUID = 0L;
     return productTypes_.get(index);
   }
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the productTypes at the given index.
    */
@@ -277,16 +577,49 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessage.writeString(output, 2, transactionId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(3, getSupplier());
+      output.writeMessage(3, getSupplierName());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(4, getReceiver());
+      output.writeMessage(4, getSupplierVatNumber());
     }
-    for (int i = 0; i < bankAccounts_.size(); i++) {
-      output.writeMessage(5, bankAccounts_.get(i));
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(5, getSupplierOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(6, getSupplierCountryCode());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeMessage(7, getSupplierAddress());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      output.writeMessage(8, getReceiverName());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      output.writeMessage(9, getReceiverVatNumber());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeMessage(10, getReceiverOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeMessage(11, getReceiverCountryCode());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeMessage(12, getReceiverAddress());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      output.writeMessage(13, getIban());
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      output.writeMessage(14, getBic());
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeMessage(15, getBankAccountNumber());
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeMessage(16, getBankRegistrationNumber());
     }
     for (int i = 0; i < productTypes_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 6, productTypes_.getRaw(i));
+      com.google.protobuf.GeneratedMessage.writeString(output, 17, productTypes_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -305,15 +638,59 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getSupplier());
+        .computeMessageSize(3, getSupplierName());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getReceiver());
+        .computeMessageSize(4, getSupplierVatNumber());
     }
-    for (int i = 0; i < bankAccounts_.size(); i++) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, bankAccounts_.get(i));
+        .computeMessageSize(5, getSupplierOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getSupplierCountryCode());
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getSupplierAddress());
+    }
+    if (((bitField0_ & 0x00000020) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getReceiverName());
+    }
+    if (((bitField0_ & 0x00000040) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getReceiverVatNumber());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getReceiverOrganisationNumber());
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getReceiverCountryCode());
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getReceiverAddress());
+    }
+    if (((bitField0_ & 0x00000400) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getIban());
+    }
+    if (((bitField0_ & 0x00000800) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getBic());
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getBankAccountNumber());
+    }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, getBankRegistrationNumber());
     }
     {
       int dataSize = 0;
@@ -321,7 +698,7 @@ private static final long serialVersionUID = 0L;
         dataSize += computeStringSizeNoTag(productTypes_.getRaw(i));
       }
       size += dataSize;
-      size += 1 * getProductTypesList().size();
+      size += 2 * getProductTypesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -342,18 +719,76 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProjectName())) return false;
     if (!getTransactionId()
         .equals(other.getTransactionId())) return false;
-    if (hasSupplier() != other.hasSupplier()) return false;
-    if (hasSupplier()) {
-      if (!getSupplier()
-          .equals(other.getSupplier())) return false;
+    if (hasSupplierName() != other.hasSupplierName()) return false;
+    if (hasSupplierName()) {
+      if (!getSupplierName()
+          .equals(other.getSupplierName())) return false;
     }
-    if (hasReceiver() != other.hasReceiver()) return false;
-    if (hasReceiver()) {
-      if (!getReceiver()
-          .equals(other.getReceiver())) return false;
+    if (hasSupplierVatNumber() != other.hasSupplierVatNumber()) return false;
+    if (hasSupplierVatNumber()) {
+      if (!getSupplierVatNumber()
+          .equals(other.getSupplierVatNumber())) return false;
     }
-    if (!getBankAccountsList()
-        .equals(other.getBankAccountsList())) return false;
+    if (hasSupplierOrganisationNumber() != other.hasSupplierOrganisationNumber()) return false;
+    if (hasSupplierOrganisationNumber()) {
+      if (!getSupplierOrganisationNumber()
+          .equals(other.getSupplierOrganisationNumber())) return false;
+    }
+    if (hasSupplierCountryCode() != other.hasSupplierCountryCode()) return false;
+    if (hasSupplierCountryCode()) {
+      if (!getSupplierCountryCode()
+          .equals(other.getSupplierCountryCode())) return false;
+    }
+    if (hasSupplierAddress() != other.hasSupplierAddress()) return false;
+    if (hasSupplierAddress()) {
+      if (!getSupplierAddress()
+          .equals(other.getSupplierAddress())) return false;
+    }
+    if (hasReceiverName() != other.hasReceiverName()) return false;
+    if (hasReceiverName()) {
+      if (!getReceiverName()
+          .equals(other.getReceiverName())) return false;
+    }
+    if (hasReceiverVatNumber() != other.hasReceiverVatNumber()) return false;
+    if (hasReceiverVatNumber()) {
+      if (!getReceiverVatNumber()
+          .equals(other.getReceiverVatNumber())) return false;
+    }
+    if (hasReceiverOrganisationNumber() != other.hasReceiverOrganisationNumber()) return false;
+    if (hasReceiverOrganisationNumber()) {
+      if (!getReceiverOrganisationNumber()
+          .equals(other.getReceiverOrganisationNumber())) return false;
+    }
+    if (hasReceiverCountryCode() != other.hasReceiverCountryCode()) return false;
+    if (hasReceiverCountryCode()) {
+      if (!getReceiverCountryCode()
+          .equals(other.getReceiverCountryCode())) return false;
+    }
+    if (hasReceiverAddress() != other.hasReceiverAddress()) return false;
+    if (hasReceiverAddress()) {
+      if (!getReceiverAddress()
+          .equals(other.getReceiverAddress())) return false;
+    }
+    if (hasIban() != other.hasIban()) return false;
+    if (hasIban()) {
+      if (!getIban()
+          .equals(other.getIban())) return false;
+    }
+    if (hasBic() != other.hasBic()) return false;
+    if (hasBic()) {
+      if (!getBic()
+          .equals(other.getBic())) return false;
+    }
+    if (hasBankAccountNumber() != other.hasBankAccountNumber()) return false;
+    if (hasBankAccountNumber()) {
+      if (!getBankAccountNumber()
+          .equals(other.getBankAccountNumber())) return false;
+    }
+    if (hasBankRegistrationNumber() != other.hasBankRegistrationNumber()) return false;
+    if (hasBankRegistrationNumber()) {
+      if (!getBankRegistrationNumber()
+          .equals(other.getBankRegistrationNumber())) return false;
+    }
     if (!getProductTypesList()
         .equals(other.getProductTypesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -371,17 +806,61 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProjectName().hashCode();
     hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getTransactionId().hashCode();
-    if (hasSupplier()) {
-      hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
-      hash = (53 * hash) + getSupplier().hashCode();
+    if (hasSupplierName()) {
+      hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplierName().hashCode();
     }
-    if (hasReceiver()) {
-      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
-      hash = (53 * hash) + getReceiver().hashCode();
+    if (hasSupplierVatNumber()) {
+      hash = (37 * hash) + SUPPLIER_VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplierVatNumber().hashCode();
     }
-    if (getBankAccountsCount() > 0) {
-      hash = (37 * hash) + BANK_ACCOUNTS_FIELD_NUMBER;
-      hash = (53 * hash) + getBankAccountsList().hashCode();
+    if (hasSupplierOrganisationNumber()) {
+      hash = (37 * hash) + SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplierOrganisationNumber().hashCode();
+    }
+    if (hasSupplierCountryCode()) {
+      hash = (37 * hash) + SUPPLIER_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplierCountryCode().hashCode();
+    }
+    if (hasSupplierAddress()) {
+      hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSupplierAddress().hashCode();
+    }
+    if (hasReceiverName()) {
+      hash = (37 * hash) + RECEIVER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverName().hashCode();
+    }
+    if (hasReceiverVatNumber()) {
+      hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverVatNumber().hashCode();
+    }
+    if (hasReceiverOrganisationNumber()) {
+      hash = (37 * hash) + RECEIVER_ORGANISATION_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverOrganisationNumber().hashCode();
+    }
+    if (hasReceiverCountryCode()) {
+      hash = (37 * hash) + RECEIVER_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverCountryCode().hashCode();
+    }
+    if (hasReceiverAddress()) {
+      hash = (37 * hash) + RECEIVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverAddress().hashCode();
+    }
+    if (hasIban()) {
+      hash = (37 * hash) + IBAN_FIELD_NUMBER;
+      hash = (53 * hash) + getIban().hashCode();
+    }
+    if (hasBic()) {
+      hash = (37 * hash) + BIC_FIELD_NUMBER;
+      hash = (53 * hash) + getBic().hashCode();
+    }
+    if (hasBankAccountNumber()) {
+      hash = (37 * hash) + BANK_ACCOUNT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getBankAccountNumber().hashCode();
+    }
+    if (hasBankRegistrationNumber()) {
+      hash = (37 * hash) + BANK_REGISTRATION_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getBankRegistrationNumber().hashCode();
     }
     if (getProductTypesCount() > 0) {
       hash = (37 * hash) + PRODUCT_TYPES_FIELD_NUMBER;
@@ -485,6 +964,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The request is flat: each field is the top-1 smartscan candidate for the
+   * corresponding PredictResponse field, so callers pass candidates through
+   * without mapping. The service records value + confidence level per field.
+   * </pre>
+   *
    * Protobuf type {@code ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest}
    */
   public static final class Builder extends
@@ -517,9 +1002,20 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
-        getSupplierFieldBuilder();
-        getReceiverFieldBuilder();
-        getBankAccountsFieldBuilder();
+        getSupplierNameFieldBuilder();
+        getSupplierVatNumberFieldBuilder();
+        getSupplierOrganisationNumberFieldBuilder();
+        getSupplierCountryCodeFieldBuilder();
+        getSupplierAddressFieldBuilder();
+        getReceiverNameFieldBuilder();
+        getReceiverVatNumberFieldBuilder();
+        getReceiverOrganisationNumberFieldBuilder();
+        getReceiverCountryCodeFieldBuilder();
+        getReceiverAddressFieldBuilder();
+        getIbanFieldBuilder();
+        getBicFieldBuilder();
+        getBankAccountNumberFieldBuilder();
+        getBankRegistrationNumberFieldBuilder();
       }
     }
     @java.lang.Override
@@ -528,23 +1024,76 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       projectName_ = "";
       transactionId_ = "";
-      supplier_ = null;
-      if (supplierBuilder_ != null) {
-        supplierBuilder_.dispose();
-        supplierBuilder_ = null;
+      supplierName_ = null;
+      if (supplierNameBuilder_ != null) {
+        supplierNameBuilder_.dispose();
+        supplierNameBuilder_ = null;
       }
-      receiver_ = null;
-      if (receiverBuilder_ != null) {
-        receiverBuilder_.dispose();
-        receiverBuilder_ = null;
+      supplierVatNumber_ = null;
+      if (supplierVatNumberBuilder_ != null) {
+        supplierVatNumberBuilder_.dispose();
+        supplierVatNumberBuilder_ = null;
       }
-      if (bankAccountsBuilder_ == null) {
-        bankAccounts_ = java.util.Collections.emptyList();
-      } else {
-        bankAccounts_ = null;
-        bankAccountsBuilder_.clear();
+      supplierOrganisationNumber_ = null;
+      if (supplierOrganisationNumberBuilder_ != null) {
+        supplierOrganisationNumberBuilder_.dispose();
+        supplierOrganisationNumberBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      supplierCountryCode_ = null;
+      if (supplierCountryCodeBuilder_ != null) {
+        supplierCountryCodeBuilder_.dispose();
+        supplierCountryCodeBuilder_ = null;
+      }
+      supplierAddress_ = null;
+      if (supplierAddressBuilder_ != null) {
+        supplierAddressBuilder_.dispose();
+        supplierAddressBuilder_ = null;
+      }
+      receiverName_ = null;
+      if (receiverNameBuilder_ != null) {
+        receiverNameBuilder_.dispose();
+        receiverNameBuilder_ = null;
+      }
+      receiverVatNumber_ = null;
+      if (receiverVatNumberBuilder_ != null) {
+        receiverVatNumberBuilder_.dispose();
+        receiverVatNumberBuilder_ = null;
+      }
+      receiverOrganisationNumber_ = null;
+      if (receiverOrganisationNumberBuilder_ != null) {
+        receiverOrganisationNumberBuilder_.dispose();
+        receiverOrganisationNumberBuilder_ = null;
+      }
+      receiverCountryCode_ = null;
+      if (receiverCountryCodeBuilder_ != null) {
+        receiverCountryCodeBuilder_.dispose();
+        receiverCountryCodeBuilder_ = null;
+      }
+      receiverAddress_ = null;
+      if (receiverAddressBuilder_ != null) {
+        receiverAddressBuilder_.dispose();
+        receiverAddressBuilder_ = null;
+      }
+      iban_ = null;
+      if (ibanBuilder_ != null) {
+        ibanBuilder_.dispose();
+        ibanBuilder_ = null;
+      }
+      bic_ = null;
+      if (bicBuilder_ != null) {
+        bicBuilder_.dispose();
+        bicBuilder_ = null;
+      }
+      bankAccountNumber_ = null;
+      if (bankAccountNumberBuilder_ != null) {
+        bankAccountNumberBuilder_.dispose();
+        bankAccountNumberBuilder_ = null;
+      }
+      bankRegistrationNumber_ = null;
+      if (bankRegistrationNumberBuilder_ != null) {
+        bankRegistrationNumberBuilder_.dispose();
+        bankRegistrationNumberBuilder_ = null;
+      }
       productTypes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -573,22 +1122,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest buildPartial() {
       ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest result = new ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest result) {
-      if (bankAccountsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
-          bankAccounts_ = java.util.Collections.unmodifiableList(bankAccounts_);
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.bankAccounts_ = bankAccounts_;
-      } else {
-        result.bankAccounts_ = bankAccountsBuilder_.build();
-      }
     }
 
     private void buildPartial0(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest result) {
@@ -601,18 +1137,90 @@ private static final long serialVersionUID = 0L;
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.supplier_ = supplierBuilder_ == null
-            ? supplier_
-            : supplierBuilder_.build();
+        result.supplierName_ = supplierNameBuilder_ == null
+            ? supplierName_
+            : supplierNameBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.receiver_ = receiverBuilder_ == null
-            ? receiver_
-            : receiverBuilder_.build();
+        result.supplierVatNumber_ = supplierVatNumberBuilder_ == null
+            ? supplierVatNumber_
+            : supplierVatNumberBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_ == null
+            ? supplierOrganisationNumber_
+            : supplierOrganisationNumberBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.supplierCountryCode_ = supplierCountryCodeBuilder_ == null
+            ? supplierCountryCode_
+            : supplierCountryCodeBuilder_.build();
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.supplierAddress_ = supplierAddressBuilder_ == null
+            ? supplierAddress_
+            : supplierAddressBuilder_.build();
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.receiverName_ = receiverNameBuilder_ == null
+            ? receiverName_
+            : receiverNameBuilder_.build();
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.receiverVatNumber_ = receiverVatNumberBuilder_ == null
+            ? receiverVatNumber_
+            : receiverVatNumberBuilder_.build();
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.receiverOrganisationNumber_ = receiverOrganisationNumberBuilder_ == null
+            ? receiverOrganisationNumber_
+            : receiverOrganisationNumberBuilder_.build();
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.receiverCountryCode_ = receiverCountryCodeBuilder_ == null
+            ? receiverCountryCode_
+            : receiverCountryCodeBuilder_.build();
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.receiverAddress_ = receiverAddressBuilder_ == null
+            ? receiverAddress_
+            : receiverAddressBuilder_.build();
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.iban_ = ibanBuilder_ == null
+            ? iban_
+            : ibanBuilder_.build();
+        to_bitField0_ |= 0x00000400;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.bic_ = bicBuilder_ == null
+            ? bic_
+            : bicBuilder_.build();
+        to_bitField0_ |= 0x00000800;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.bankAccountNumber_ = bankAccountNumberBuilder_ == null
+            ? bankAccountNumber_
+            : bankAccountNumberBuilder_.build();
+        to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_ == null
+            ? bankRegistrationNumber_
+            : bankRegistrationNumberBuilder_.build();
+        to_bitField0_ |= 0x00002000;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         productTypes_.makeImmutable();
         result.productTypes_ = productTypes_;
       }
@@ -641,42 +1249,52 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.hasSupplier()) {
-        mergeSupplier(other.getSupplier());
+      if (other.hasSupplierName()) {
+        mergeSupplierName(other.getSupplierName());
       }
-      if (other.hasReceiver()) {
-        mergeReceiver(other.getReceiver());
+      if (other.hasSupplierVatNumber()) {
+        mergeSupplierVatNumber(other.getSupplierVatNumber());
       }
-      if (bankAccountsBuilder_ == null) {
-        if (!other.bankAccounts_.isEmpty()) {
-          if (bankAccounts_.isEmpty()) {
-            bankAccounts_ = other.bankAccounts_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-          } else {
-            ensureBankAccountsIsMutable();
-            bankAccounts_.addAll(other.bankAccounts_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.bankAccounts_.isEmpty()) {
-          if (bankAccountsBuilder_.isEmpty()) {
-            bankAccountsBuilder_.dispose();
-            bankAccountsBuilder_ = null;
-            bankAccounts_ = other.bankAccounts_;
-            bitField0_ = (bitField0_ & ~0x00000010);
-            bankAccountsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getBankAccountsFieldBuilder() : null;
-          } else {
-            bankAccountsBuilder_.addAllMessages(other.bankAccounts_);
-          }
-        }
+      if (other.hasSupplierOrganisationNumber()) {
+        mergeSupplierOrganisationNumber(other.getSupplierOrganisationNumber());
+      }
+      if (other.hasSupplierCountryCode()) {
+        mergeSupplierCountryCode(other.getSupplierCountryCode());
+      }
+      if (other.hasSupplierAddress()) {
+        mergeSupplierAddress(other.getSupplierAddress());
+      }
+      if (other.hasReceiverName()) {
+        mergeReceiverName(other.getReceiverName());
+      }
+      if (other.hasReceiverVatNumber()) {
+        mergeReceiverVatNumber(other.getReceiverVatNumber());
+      }
+      if (other.hasReceiverOrganisationNumber()) {
+        mergeReceiverOrganisationNumber(other.getReceiverOrganisationNumber());
+      }
+      if (other.hasReceiverCountryCode()) {
+        mergeReceiverCountryCode(other.getReceiverCountryCode());
+      }
+      if (other.hasReceiverAddress()) {
+        mergeReceiverAddress(other.getReceiverAddress());
+      }
+      if (other.hasIban()) {
+        mergeIban(other.getIban());
+      }
+      if (other.hasBic()) {
+        mergeBic(other.getBic());
+      }
+      if (other.hasBankAccountNumber()) {
+        mergeBankAccountNumber(other.getBankAccountNumber());
+      }
+      if (other.hasBankRegistrationNumber()) {
+        mergeBankRegistrationNumber(other.getBankRegistrationNumber());
       }
       if (!other.productTypes_.isEmpty()) {
         if (productTypes_.isEmpty()) {
           productTypes_ = other.productTypes_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00010000;
         } else {
           ensureProductTypesIsMutable();
           productTypes_.addAll(other.productTypes_);
@@ -721,37 +1339,108 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               input.readMessage(
-                  getSupplierFieldBuilder().getBuilder(),
+                  getSupplierNameFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
-                  getReceiverFieldBuilder().getBuilder(),
+                  getSupplierVatNumberFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              ai.visma.ssn.companylookup.v1.BankAccount m =
-                  input.readMessage(
-                      ai.visma.ssn.companylookup.v1.BankAccount.parser(),
-                      extensionRegistry);
-              if (bankAccountsBuilder_ == null) {
-                ensureBankAccountsIsMutable();
-                bankAccounts_.add(m);
-              } else {
-                bankAccountsBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getSupplierOrganisationNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
+              input.readMessage(
+                  getSupplierCountryCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getSupplierAddressFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getReceiverNameFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getReceiverVatNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getReceiverOrganisationNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getReceiverCountryCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getReceiverAddressFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getIbanFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getBicFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getBankAccountNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getBankRegistrationNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
+            case 138: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureProductTypesIsMutable();
               productTypes_.add(s);
               break;
-            } // case 50
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -913,486 +1602,1770 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private ai.visma.ssn.companylookup.v1.Company supplier_;
+    private ai.visma.ssn.type.Candidate supplierName_;
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder> supplierBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> supplierNameBuilder_;
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-     * @return Whether the supplier field is set.
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+     * @return Whether the supplierName field is set.
      */
-    public boolean hasSupplier() {
+    public boolean hasSupplierName() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-     * @return The supplier.
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+     * @return The supplierName.
      */
-    public ai.visma.ssn.companylookup.v1.Company getSupplier() {
-      if (supplierBuilder_ == null) {
-        return supplier_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : supplier_;
+    public ai.visma.ssn.type.Candidate getSupplierName() {
+      if (supplierNameBuilder_ == null) {
+        return supplierName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierName_;
       } else {
-        return supplierBuilder_.getMessage();
+        return supplierNameBuilder_.getMessage();
       }
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public Builder setSupplier(ai.visma.ssn.companylookup.v1.Company value) {
-      if (supplierBuilder_ == null) {
+    public Builder setSupplierName(ai.visma.ssn.type.Candidate value) {
+      if (supplierNameBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        supplier_ = value;
+        supplierName_ = value;
       } else {
-        supplierBuilder_.setMessage(value);
+        supplierNameBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public Builder setSupplier(
-        ai.visma.ssn.companylookup.v1.Company.Builder builderForValue) {
-      if (supplierBuilder_ == null) {
-        supplier_ = builderForValue.build();
+    public Builder setSupplierName(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (supplierNameBuilder_ == null) {
+        supplierName_ = builderForValue.build();
       } else {
-        supplierBuilder_.setMessage(builderForValue.build());
+        supplierNameBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public Builder mergeSupplier(ai.visma.ssn.companylookup.v1.Company value) {
-      if (supplierBuilder_ == null) {
+    public Builder mergeSupplierName(ai.visma.ssn.type.Candidate value) {
+      if (supplierNameBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-          supplier_ != null &&
-          supplier_ != ai.visma.ssn.companylookup.v1.Company.getDefaultInstance()) {
-          getSupplierBuilder().mergeFrom(value);
+          supplierName_ != null &&
+          supplierName_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getSupplierNameBuilder().mergeFrom(value);
         } else {
-          supplier_ = value;
+          supplierName_ = value;
         }
       } else {
-        supplierBuilder_.mergeFrom(value);
+        supplierNameBuilder_.mergeFrom(value);
       }
-      if (supplier_ != null) {
+      if (supplierName_ != null) {
         bitField0_ |= 0x00000004;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public Builder clearSupplier() {
+    public Builder clearSupplierName() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      supplier_ = null;
-      if (supplierBuilder_ != null) {
-        supplierBuilder_.dispose();
-        supplierBuilder_ = null;
+      supplierName_ = null;
+      if (supplierNameBuilder_ != null) {
+        supplierNameBuilder_.dispose();
+        supplierNameBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public ai.visma.ssn.companylookup.v1.Company.Builder getSupplierBuilder() {
+    public ai.visma.ssn.type.Candidate.Builder getSupplierNameBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return getSupplierFieldBuilder().getBuilder();
+      return getSupplierNameFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
-    public ai.visma.ssn.companylookup.v1.CompanyOrBuilder getSupplierOrBuilder() {
-      if (supplierBuilder_ != null) {
-        return supplierBuilder_.getMessageOrBuilder();
+    public ai.visma.ssn.type.CandidateOrBuilder getSupplierNameOrBuilder() {
+      if (supplierNameBuilder_ != null) {
+        return supplierNameBuilder_.getMessageOrBuilder();
       } else {
-        return supplier_ == null ?
-            ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : supplier_;
+        return supplierName_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierName_;
       }
     }
     /**
-     * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+     * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder> 
-        getSupplierFieldBuilder() {
-      if (supplierBuilder_ == null) {
-        supplierBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder>(
-                getSupplier(),
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getSupplierNameFieldBuilder() {
+      if (supplierNameBuilder_ == null) {
+        supplierNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getSupplierName(),
                 getParentForChildren(),
                 isClean());
-        supplier_ = null;
+        supplierName_ = null;
       }
-      return supplierBuilder_;
+      return supplierNameBuilder_;
     }
 
-    private ai.visma.ssn.companylookup.v1.Company receiver_;
+    private ai.visma.ssn.type.Candidate supplierVatNumber_;
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder> receiverBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> supplierVatNumberBuilder_;
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-     * @return Whether the receiver field is set.
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+     * @return Whether the supplierVatNumber field is set.
      */
-    public boolean hasReceiver() {
+    public boolean hasSupplierVatNumber() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-     * @return The receiver.
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+     * @return The supplierVatNumber.
      */
-    public ai.visma.ssn.companylookup.v1.Company getReceiver() {
-      if (receiverBuilder_ == null) {
-        return receiver_ == null ? ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : receiver_;
+    public ai.visma.ssn.type.Candidate getSupplierVatNumber() {
+      if (supplierVatNumberBuilder_ == null) {
+        return supplierVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierVatNumber_;
       } else {
-        return receiverBuilder_.getMessage();
+        return supplierVatNumberBuilder_.getMessage();
       }
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public Builder setReceiver(ai.visma.ssn.companylookup.v1.Company value) {
-      if (receiverBuilder_ == null) {
+    public Builder setSupplierVatNumber(ai.visma.ssn.type.Candidate value) {
+      if (supplierVatNumberBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        receiver_ = value;
+        supplierVatNumber_ = value;
       } else {
-        receiverBuilder_.setMessage(value);
+        supplierVatNumberBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public Builder setReceiver(
-        ai.visma.ssn.companylookup.v1.Company.Builder builderForValue) {
-      if (receiverBuilder_ == null) {
-        receiver_ = builderForValue.build();
+    public Builder setSupplierVatNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (supplierVatNumberBuilder_ == null) {
+        supplierVatNumber_ = builderForValue.build();
       } else {
-        receiverBuilder_.setMessage(builderForValue.build());
+        supplierVatNumberBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public Builder mergeReceiver(ai.visma.ssn.companylookup.v1.Company value) {
-      if (receiverBuilder_ == null) {
+    public Builder mergeSupplierVatNumber(ai.visma.ssn.type.Candidate value) {
+      if (supplierVatNumberBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
-          receiver_ != null &&
-          receiver_ != ai.visma.ssn.companylookup.v1.Company.getDefaultInstance()) {
-          getReceiverBuilder().mergeFrom(value);
+          supplierVatNumber_ != null &&
+          supplierVatNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getSupplierVatNumberBuilder().mergeFrom(value);
         } else {
-          receiver_ = value;
+          supplierVatNumber_ = value;
         }
       } else {
-        receiverBuilder_.mergeFrom(value);
+        supplierVatNumberBuilder_.mergeFrom(value);
       }
-      if (receiver_ != null) {
+      if (supplierVatNumber_ != null) {
         bitField0_ |= 0x00000008;
         onChanged();
       }
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public Builder clearReceiver() {
+    public Builder clearSupplierVatNumber() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      receiver_ = null;
-      if (receiverBuilder_ != null) {
-        receiverBuilder_.dispose();
-        receiverBuilder_ = null;
+      supplierVatNumber_ = null;
+      if (supplierVatNumberBuilder_ != null) {
+        supplierVatNumberBuilder_.dispose();
+        supplierVatNumberBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public ai.visma.ssn.companylookup.v1.Company.Builder getReceiverBuilder() {
+    public ai.visma.ssn.type.Candidate.Builder getSupplierVatNumberBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
-      return getReceiverFieldBuilder().getBuilder();
+      return getSupplierVatNumberFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
-    public ai.visma.ssn.companylookup.v1.CompanyOrBuilder getReceiverOrBuilder() {
-      if (receiverBuilder_ != null) {
-        return receiverBuilder_.getMessageOrBuilder();
+    public ai.visma.ssn.type.CandidateOrBuilder getSupplierVatNumberOrBuilder() {
+      if (supplierVatNumberBuilder_ != null) {
+        return supplierVatNumberBuilder_.getMessageOrBuilder();
       } else {
-        return receiver_ == null ?
-            ai.visma.ssn.companylookup.v1.Company.getDefaultInstance() : receiver_;
+        return supplierVatNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierVatNumber_;
       }
     }
     /**
-     * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+     * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder> 
-        getReceiverFieldBuilder() {
-      if (receiverBuilder_ == null) {
-        receiverBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.companylookup.v1.Company, ai.visma.ssn.companylookup.v1.Company.Builder, ai.visma.ssn.companylookup.v1.CompanyOrBuilder>(
-                getReceiver(),
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getSupplierVatNumberFieldBuilder() {
+      if (supplierVatNumberBuilder_ == null) {
+        supplierVatNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getSupplierVatNumber(),
                 getParentForChildren(),
                 isClean());
-        receiver_ = null;
+        supplierVatNumber_ = null;
       }
-      return receiverBuilder_;
+      return supplierVatNumberBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.companylookup.v1.BankAccount> bankAccounts_ =
-      java.util.Collections.emptyList();
-    private void ensureBankAccountsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        bankAccounts_ = new java.util.ArrayList<ai.visma.ssn.companylookup.v1.BankAccount>(bankAccounts_);
+    private ai.visma.ssn.type.Candidate supplierOrganisationNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> supplierOrganisationNumberBuilder_;
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     * @return Whether the supplierOrganisationNumber field is set.
+     */
+    public boolean hasSupplierOrganisationNumber() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     * @return The supplierOrganisationNumber.
+     */
+    public ai.visma.ssn.type.Candidate getSupplierOrganisationNumber() {
+      if (supplierOrganisationNumberBuilder_ == null) {
+        return supplierOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierOrganisationNumber_;
+      } else {
+        return supplierOrganisationNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     */
+    public Builder setSupplierOrganisationNumber(ai.visma.ssn.type.Candidate value) {
+      if (supplierOrganisationNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        supplierOrganisationNumber_ = value;
+      } else {
+        supplierOrganisationNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     */
+    public Builder setSupplierOrganisationNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (supplierOrganisationNumberBuilder_ == null) {
+        supplierOrganisationNumber_ = builderForValue.build();
+      } else {
+        supplierOrganisationNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     */
+    public Builder mergeSupplierOrganisationNumber(ai.visma.ssn.type.Candidate value) {
+      if (supplierOrganisationNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          supplierOrganisationNumber_ != null &&
+          supplierOrganisationNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getSupplierOrganisationNumberBuilder().mergeFrom(value);
+        } else {
+          supplierOrganisationNumber_ = value;
+        }
+      } else {
+        supplierOrganisationNumberBuilder_.mergeFrom(value);
+      }
+      if (supplierOrganisationNumber_ != null) {
         bitField0_ |= 0x00000010;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.companylookup.v1.BankAccount, ai.visma.ssn.companylookup.v1.BankAccount.Builder, ai.visma.ssn.companylookup.v1.BankAccountOrBuilder> bankAccountsBuilder_;
-
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public java.util.List<ai.visma.ssn.companylookup.v1.BankAccount> getBankAccountsList() {
-      if (bankAccountsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(bankAccounts_);
-      } else {
-        return bankAccountsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public int getBankAccountsCount() {
-      if (bankAccountsBuilder_ == null) {
-        return bankAccounts_.size();
-      } else {
-        return bankAccountsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccount getBankAccounts(int index) {
-      if (bankAccountsBuilder_ == null) {
-        return bankAccounts_.get(index);
-      } else {
-        return bankAccountsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder setBankAccounts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccount value) {
-      if (bankAccountsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountsIsMutable();
-        bankAccounts_.set(index, value);
         onChanged();
-      } else {
-        bankAccountsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
      */
-    public Builder setBankAccounts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccount.Builder builderForValue) {
-      if (bankAccountsBuilder_ == null) {
-        ensureBankAccountsIsMutable();
-        bankAccounts_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountsBuilder_.setMessage(index, builderForValue.build());
+    public Builder clearSupplierOrganisationNumber() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      supplierOrganisationNumber_ = null;
+      if (supplierOrganisationNumberBuilder_ != null) {
+        supplierOrganisationNumberBuilder_.dispose();
+        supplierOrganisationNumberBuilder_ = null;
       }
+      onChanged();
       return this;
     }
     /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
      */
-    public Builder addBankAccounts(ai.visma.ssn.companylookup.v1.BankAccount value) {
-      if (bankAccountsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountsIsMutable();
-        bankAccounts_.add(value);
-        onChanged();
+    public ai.visma.ssn.type.Candidate.Builder getSupplierOrganisationNumberBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getSupplierOrganisationNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder() {
+      if (supplierOrganisationNumberBuilder_ != null) {
+        return supplierOrganisationNumberBuilder_.getMessageOrBuilder();
       } else {
-        bankAccountsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder addBankAccounts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccount value) {
-      if (bankAccountsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountsIsMutable();
-        bankAccounts_.add(index, value);
-        onChanged();
-      } else {
-        bankAccountsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder addBankAccounts(
-        ai.visma.ssn.companylookup.v1.BankAccount.Builder builderForValue) {
-      if (bankAccountsBuilder_ == null) {
-        ensureBankAccountsIsMutable();
-        bankAccounts_.add(builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder addBankAccounts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccount.Builder builderForValue) {
-      if (bankAccountsBuilder_ == null) {
-        ensureBankAccountsIsMutable();
-        bankAccounts_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder addAllBankAccounts(
-        java.lang.Iterable<? extends ai.visma.ssn.companylookup.v1.BankAccount> values) {
-      if (bankAccountsBuilder_ == null) {
-        ensureBankAccountsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bankAccounts_);
-        onChanged();
-      } else {
-        bankAccountsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder clearBankAccounts() {
-      if (bankAccountsBuilder_ == null) {
-        bankAccounts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-      } else {
-        bankAccountsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public Builder removeBankAccounts(int index) {
-      if (bankAccountsBuilder_ == null) {
-        ensureBankAccountsIsMutable();
-        bankAccounts_.remove(index);
-        onChanged();
-      } else {
-        bankAccountsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccount.Builder getBankAccountsBuilder(
-        int index) {
-      return getBankAccountsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountOrBuilder getBankAccountsOrBuilder(
-        int index) {
-      if (bankAccountsBuilder_ == null) {
-        return bankAccounts_.get(index);  } else {
-        return bankAccountsBuilder_.getMessageOrBuilder(index);
+        return supplierOrganisationNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierOrganisationNumber_;
       }
     }
     /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+     * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountOrBuilder> 
-         getBankAccountsOrBuilderList() {
-      if (bankAccountsBuilder_ != null) {
-        return bankAccountsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(bankAccounts_);
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccount.Builder addBankAccountsBuilder() {
-      return getBankAccountsFieldBuilder().addBuilder(
-          ai.visma.ssn.companylookup.v1.BankAccount.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccount.Builder addBankAccountsBuilder(
-        int index) {
-      return getBankAccountsFieldBuilder().addBuilder(
-          index, ai.visma.ssn.companylookup.v1.BankAccount.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-     */
-    public java.util.List<ai.visma.ssn.companylookup.v1.BankAccount.Builder> 
-         getBankAccountsBuilderList() {
-      return getBankAccountsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.companylookup.v1.BankAccount, ai.visma.ssn.companylookup.v1.BankAccount.Builder, ai.visma.ssn.companylookup.v1.BankAccountOrBuilder> 
-        getBankAccountsFieldBuilder() {
-      if (bankAccountsBuilder_ == null) {
-        bankAccountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.companylookup.v1.BankAccount, ai.visma.ssn.companylookup.v1.BankAccount.Builder, ai.visma.ssn.companylookup.v1.BankAccountOrBuilder>(
-                bankAccounts_,
-                ((bitField0_ & 0x00000010) != 0),
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getSupplierOrganisationNumberFieldBuilder() {
+      if (supplierOrganisationNumberBuilder_ == null) {
+        supplierOrganisationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getSupplierOrganisationNumber(),
                 getParentForChildren(),
                 isClean());
-        bankAccounts_ = null;
+        supplierOrganisationNumber_ = null;
       }
-      return bankAccountsBuilder_;
+      return supplierOrganisationNumberBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate supplierCountryCode_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> supplierCountryCodeBuilder_;
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     * @return Whether the supplierCountryCode field is set.
+     */
+    public boolean hasSupplierCountryCode() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     * @return The supplierCountryCode.
+     */
+    public ai.visma.ssn.type.Candidate getSupplierCountryCode() {
+      if (supplierCountryCodeBuilder_ == null) {
+        return supplierCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierCountryCode_;
+      } else {
+        return supplierCountryCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public Builder setSupplierCountryCode(ai.visma.ssn.type.Candidate value) {
+      if (supplierCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        supplierCountryCode_ = value;
+      } else {
+        supplierCountryCodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public Builder setSupplierCountryCode(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (supplierCountryCodeBuilder_ == null) {
+        supplierCountryCode_ = builderForValue.build();
+      } else {
+        supplierCountryCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public Builder mergeSupplierCountryCode(ai.visma.ssn.type.Candidate value) {
+      if (supplierCountryCodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          supplierCountryCode_ != null &&
+          supplierCountryCode_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getSupplierCountryCodeBuilder().mergeFrom(value);
+        } else {
+          supplierCountryCode_ = value;
+        }
+      } else {
+        supplierCountryCodeBuilder_.mergeFrom(value);
+      }
+      if (supplierCountryCode_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public Builder clearSupplierCountryCode() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      supplierCountryCode_ = null;
+      if (supplierCountryCodeBuilder_ != null) {
+        supplierCountryCodeBuilder_.dispose();
+        supplierCountryCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getSupplierCountryCodeBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getSupplierCountryCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getSupplierCountryCodeOrBuilder() {
+      if (supplierCountryCodeBuilder_ != null) {
+        return supplierCountryCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return supplierCountryCode_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierCountryCode_;
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getSupplierCountryCodeFieldBuilder() {
+      if (supplierCountryCodeBuilder_ == null) {
+        supplierCountryCodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getSupplierCountryCode(),
+                getParentForChildren(),
+                isClean());
+        supplierCountryCode_ = null;
+      }
+      return supplierCountryCodeBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate supplierAddress_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> supplierAddressBuilder_;
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     * @return Whether the supplierAddress field is set.
+     */
+    public boolean hasSupplierAddress() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     * @return The supplierAddress.
+     */
+    public ai.visma.ssn.type.Candidate getSupplierAddress() {
+      if (supplierAddressBuilder_ == null) {
+        return supplierAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierAddress_;
+      } else {
+        return supplierAddressBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public Builder setSupplierAddress(ai.visma.ssn.type.Candidate value) {
+      if (supplierAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        supplierAddress_ = value;
+      } else {
+        supplierAddressBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public Builder setSupplierAddress(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (supplierAddressBuilder_ == null) {
+        supplierAddress_ = builderForValue.build();
+      } else {
+        supplierAddressBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public Builder mergeSupplierAddress(ai.visma.ssn.type.Candidate value) {
+      if (supplierAddressBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          supplierAddress_ != null &&
+          supplierAddress_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getSupplierAddressBuilder().mergeFrom(value);
+        } else {
+          supplierAddress_ = value;
+        }
+      } else {
+        supplierAddressBuilder_.mergeFrom(value);
+      }
+      if (supplierAddress_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public Builder clearSupplierAddress() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      supplierAddress_ = null;
+      if (supplierAddressBuilder_ != null) {
+        supplierAddressBuilder_.dispose();
+        supplierAddressBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getSupplierAddressBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getSupplierAddressFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getSupplierAddressOrBuilder() {
+      if (supplierAddressBuilder_ != null) {
+        return supplierAddressBuilder_.getMessageOrBuilder();
+      } else {
+        return supplierAddress_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : supplierAddress_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getSupplierAddressFieldBuilder() {
+      if (supplierAddressBuilder_ == null) {
+        supplierAddressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getSupplierAddress(),
+                getParentForChildren(),
+                isClean());
+        supplierAddress_ = null;
+      }
+      return supplierAddressBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate receiverName_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverNameBuilder_;
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     * @return Whether the receiverName field is set.
+     */
+    public boolean hasReceiverName() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     * @return The receiverName.
+     */
+    public ai.visma.ssn.type.Candidate getReceiverName() {
+      if (receiverNameBuilder_ == null) {
+        return receiverName_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverName_;
+      } else {
+        return receiverNameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(ai.visma.ssn.type.Candidate value) {
+      if (receiverNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverName_ = value;
+      } else {
+        receiverNameBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverNameBuilder_ == null) {
+        receiverName_ = builderForValue.build();
+      } else {
+        receiverNameBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public Builder mergeReceiverName(ai.visma.ssn.type.Candidate value) {
+      if (receiverNameBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          receiverName_ != null &&
+          receiverName_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getReceiverNameBuilder().mergeFrom(value);
+        } else {
+          receiverName_ = value;
+        }
+      } else {
+        receiverNameBuilder_.mergeFrom(value);
+      }
+      if (receiverName_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public Builder clearReceiverName() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      receiverName_ = null;
+      if (receiverNameBuilder_ != null) {
+        receiverNameBuilder_.dispose();
+        receiverNameBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverNameBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getReceiverNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder() {
+      if (receiverNameBuilder_ != null) {
+        return receiverNameBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverName_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverName_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverNameFieldBuilder() {
+      if (receiverNameBuilder_ == null) {
+        receiverNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getReceiverName(),
+                getParentForChildren(),
+                isClean());
+        receiverName_ = null;
+      }
+      return receiverNameBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate receiverVatNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverVatNumberBuilder_;
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     * @return Whether the receiverVatNumber field is set.
+     */
+    public boolean hasReceiverVatNumber() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     * @return The receiverVatNumber.
+     */
+    public ai.visma.ssn.type.Candidate getReceiverVatNumber() {
+      if (receiverVatNumberBuilder_ == null) {
+        return receiverVatNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverVatNumber_;
+      } else {
+        return receiverVatNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverVatNumber_ = value;
+      } else {
+        receiverVatNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumber_ = builderForValue.build();
+      } else {
+        receiverVatNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder mergeReceiverVatNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          receiverVatNumber_ != null &&
+          receiverVatNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getReceiverVatNumberBuilder().mergeFrom(value);
+        } else {
+          receiverVatNumber_ = value;
+        }
+      } else {
+        receiverVatNumberBuilder_.mergeFrom(value);
+      }
+      if (receiverVatNumber_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder clearReceiverVatNumber() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      receiverVatNumber_ = null;
+      if (receiverVatNumberBuilder_ != null) {
+        receiverVatNumberBuilder_.dispose();
+        receiverVatNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverVatNumberBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getReceiverVatNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder() {
+      if (receiverVatNumberBuilder_ != null) {
+        return receiverVatNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverVatNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverVatNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverVatNumberFieldBuilder() {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getReceiverVatNumber(),
+                getParentForChildren(),
+                isClean());
+        receiverVatNumber_ = null;
+      }
+      return receiverVatNumberBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate receiverOrganisationNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverOrganisationNumberBuilder_;
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     * @return Whether the receiverOrganisationNumber field is set.
+     */
+    public boolean hasReceiverOrganisationNumber() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     * @return The receiverOrganisationNumber.
+     */
+    public ai.visma.ssn.type.Candidate getReceiverOrganisationNumber() {
+      if (receiverOrganisationNumberBuilder_ == null) {
+        return receiverOrganisationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverOrganisationNumber_;
+      } else {
+        return receiverOrganisationNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public Builder setReceiverOrganisationNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverOrganisationNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverOrganisationNumber_ = value;
+      } else {
+        receiverOrganisationNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public Builder setReceiverOrganisationNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverOrganisationNumberBuilder_ == null) {
+        receiverOrganisationNumber_ = builderForValue.build();
+      } else {
+        receiverOrganisationNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public Builder mergeReceiverOrganisationNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverOrganisationNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          receiverOrganisationNumber_ != null &&
+          receiverOrganisationNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getReceiverOrganisationNumberBuilder().mergeFrom(value);
+        } else {
+          receiverOrganisationNumber_ = value;
+        }
+      } else {
+        receiverOrganisationNumberBuilder_.mergeFrom(value);
+      }
+      if (receiverOrganisationNumber_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public Builder clearReceiverOrganisationNumber() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      receiverOrganisationNumber_ = null;
+      if (receiverOrganisationNumberBuilder_ != null) {
+        receiverOrganisationNumberBuilder_.dispose();
+        receiverOrganisationNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverOrganisationNumberBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getReceiverOrganisationNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverOrganisationNumberOrBuilder() {
+      if (receiverOrganisationNumberBuilder_ != null) {
+        return receiverOrganisationNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverOrganisationNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverOrganisationNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverOrganisationNumberFieldBuilder() {
+      if (receiverOrganisationNumberBuilder_ == null) {
+        receiverOrganisationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getReceiverOrganisationNumber(),
+                getParentForChildren(),
+                isClean());
+        receiverOrganisationNumber_ = null;
+      }
+      return receiverOrganisationNumberBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate receiverCountryCode_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverCountryCodeBuilder_;
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     * @return Whether the receiverCountryCode field is set.
+     */
+    public boolean hasReceiverCountryCode() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     * @return The receiverCountryCode.
+     */
+    public ai.visma.ssn.type.Candidate getReceiverCountryCode() {
+      if (receiverCountryCodeBuilder_ == null) {
+        return receiverCountryCode_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverCountryCode_;
+      } else {
+        return receiverCountryCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(ai.visma.ssn.type.Candidate value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverCountryCode_ = value;
+      } else {
+        receiverCountryCodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCode_ = builderForValue.build();
+      } else {
+        receiverCountryCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder mergeReceiverCountryCode(ai.visma.ssn.type.Candidate value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          receiverCountryCode_ != null &&
+          receiverCountryCode_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getReceiverCountryCodeBuilder().mergeFrom(value);
+        } else {
+          receiverCountryCode_ = value;
+        }
+      } else {
+        receiverCountryCodeBuilder_.mergeFrom(value);
+      }
+      if (receiverCountryCode_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder clearReceiverCountryCode() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      receiverCountryCode_ = null;
+      if (receiverCountryCodeBuilder_ != null) {
+        receiverCountryCodeBuilder_.dispose();
+        receiverCountryCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverCountryCodeBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getReceiverCountryCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder() {
+      if (receiverCountryCodeBuilder_ != null) {
+        return receiverCountryCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverCountryCode_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverCountryCode_;
+      }
+    }
+    /**
+     * <pre>
+     * ISO 3166-1 alpha-2
+     * </pre>
+     *
+     * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverCountryCodeFieldBuilder() {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getReceiverCountryCode(),
+                getParentForChildren(),
+                isClean());
+        receiverCountryCode_ = null;
+      }
+      return receiverCountryCodeBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate receiverAddress_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverAddressBuilder_;
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     * @return Whether the receiverAddress field is set.
+     */
+    public boolean hasReceiverAddress() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     * @return The receiverAddress.
+     */
+    public ai.visma.ssn.type.Candidate getReceiverAddress() {
+      if (receiverAddressBuilder_ == null) {
+        return receiverAddress_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverAddress_;
+      } else {
+        return receiverAddressBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(ai.visma.ssn.type.Candidate value) {
+      if (receiverAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverAddress_ = value;
+      } else {
+        receiverAddressBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddress_ = builderForValue.build();
+      } else {
+        receiverAddressBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public Builder mergeReceiverAddress(ai.visma.ssn.type.Candidate value) {
+      if (receiverAddressBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          receiverAddress_ != null &&
+          receiverAddress_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getReceiverAddressBuilder().mergeFrom(value);
+        } else {
+          receiverAddress_ = value;
+        }
+      } else {
+        receiverAddressBuilder_.mergeFrom(value);
+      }
+      if (receiverAddress_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public Builder clearReceiverAddress() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      receiverAddress_ = null;
+      if (receiverAddressBuilder_ != null) {
+        receiverAddressBuilder_.dispose();
+        receiverAddressBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverAddressBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return getReceiverAddressFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder() {
+      if (receiverAddressBuilder_ != null) {
+        return receiverAddressBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverAddress_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : receiverAddress_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverAddressFieldBuilder() {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getReceiverAddress(),
+                getParentForChildren(),
+                isClean());
+        receiverAddress_ = null;
+      }
+      return receiverAddressBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate iban_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> ibanBuilder_;
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     * @return Whether the iban field is set.
+     */
+    public boolean hasIban() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     * @return The iban.
+     */
+    public ai.visma.ssn.type.Candidate getIban() {
+      if (ibanBuilder_ == null) {
+        return iban_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : iban_;
+      } else {
+        return ibanBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public Builder setIban(ai.visma.ssn.type.Candidate value) {
+      if (ibanBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        iban_ = value;
+      } else {
+        ibanBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public Builder setIban(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ibanBuilder_ == null) {
+        iban_ = builderForValue.build();
+      } else {
+        ibanBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public Builder mergeIban(ai.visma.ssn.type.Candidate value) {
+      if (ibanBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          iban_ != null &&
+          iban_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getIbanBuilder().mergeFrom(value);
+        } else {
+          iban_ = value;
+        }
+      } else {
+        ibanBuilder_.mergeFrom(value);
+      }
+      if (iban_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public Builder clearIban() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      iban_ = null;
+      if (ibanBuilder_ != null) {
+        ibanBuilder_.dispose();
+        ibanBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getIbanBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getIbanFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getIbanOrBuilder() {
+      if (ibanBuilder_ != null) {
+        return ibanBuilder_.getMessageOrBuilder();
+      } else {
+        return iban_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : iban_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getIbanFieldBuilder() {
+      if (ibanBuilder_ == null) {
+        ibanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getIban(),
+                getParentForChildren(),
+                isClean());
+        iban_ = null;
+      }
+      return ibanBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate bic_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> bicBuilder_;
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     * @return Whether the bic field is set.
+     */
+    public boolean hasBic() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     * @return The bic.
+     */
+    public ai.visma.ssn.type.Candidate getBic() {
+      if (bicBuilder_ == null) {
+        return bic_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bic_;
+      } else {
+        return bicBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public Builder setBic(ai.visma.ssn.type.Candidate value) {
+      if (bicBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bic_ = value;
+      } else {
+        bicBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public Builder setBic(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (bicBuilder_ == null) {
+        bic_ = builderForValue.build();
+      } else {
+        bicBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public Builder mergeBic(ai.visma.ssn.type.Candidate value) {
+      if (bicBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          bic_ != null &&
+          bic_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getBicBuilder().mergeFrom(value);
+        } else {
+          bic_ = value;
+        }
+      } else {
+        bicBuilder_.mergeFrom(value);
+      }
+      if (bic_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public Builder clearBic() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      bic_ = null;
+      if (bicBuilder_ != null) {
+        bicBuilder_.dispose();
+        bicBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getBicBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getBicFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getBicOrBuilder() {
+      if (bicBuilder_ != null) {
+        return bicBuilder_.getMessageOrBuilder();
+      } else {
+        return bic_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : bic_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getBicFieldBuilder() {
+      if (bicBuilder_ == null) {
+        bicBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getBic(),
+                getParentForChildren(),
+                isClean());
+        bic_ = null;
+      }
+      return bicBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate bankAccountNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> bankAccountNumberBuilder_;
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     * @return Whether the bankAccountNumber field is set.
+     */
+    public boolean hasBankAccountNumber() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     * @return The bankAccountNumber.
+     */
+    public ai.visma.ssn.type.Candidate getBankAccountNumber() {
+      if (bankAccountNumberBuilder_ == null) {
+        return bankAccountNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankAccountNumber_;
+      } else {
+        return bankAccountNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder setBankAccountNumber(ai.visma.ssn.type.Candidate value) {
+      if (bankAccountNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bankAccountNumber_ = value;
+      } else {
+        bankAccountNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder setBankAccountNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (bankAccountNumberBuilder_ == null) {
+        bankAccountNumber_ = builderForValue.build();
+      } else {
+        bankAccountNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder mergeBankAccountNumber(ai.visma.ssn.type.Candidate value) {
+      if (bankAccountNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          bankAccountNumber_ != null &&
+          bankAccountNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getBankAccountNumberBuilder().mergeFrom(value);
+        } else {
+          bankAccountNumber_ = value;
+        }
+      } else {
+        bankAccountNumberBuilder_.mergeFrom(value);
+      }
+      if (bankAccountNumber_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public Builder clearBankAccountNumber() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      bankAccountNumber_ = null;
+      if (bankAccountNumberBuilder_ != null) {
+        bankAccountNumberBuilder_.dispose();
+        bankAccountNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getBankAccountNumberBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getBankAccountNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getBankAccountNumberOrBuilder() {
+      if (bankAccountNumberBuilder_ != null) {
+        return bankAccountNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return bankAccountNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : bankAccountNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getBankAccountNumberFieldBuilder() {
+      if (bankAccountNumberBuilder_ == null) {
+        bankAccountNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getBankAccountNumber(),
+                getParentForChildren(),
+                isClean());
+        bankAccountNumber_ = null;
+      }
+      return bankAccountNumberBuilder_;
+    }
+
+    private ai.visma.ssn.type.Candidate bankRegistrationNumber_;
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> bankRegistrationNumberBuilder_;
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     * @return Whether the bankRegistrationNumber field is set.
+     */
+    public boolean hasBankRegistrationNumber() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     * @return The bankRegistrationNumber.
+     */
+    public ai.visma.ssn.type.Candidate getBankRegistrationNumber() {
+      if (bankRegistrationNumberBuilder_ == null) {
+        return bankRegistrationNumber_ == null ? ai.visma.ssn.type.Candidate.getDefaultInstance() : bankRegistrationNumber_;
+      } else {
+        return bankRegistrationNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder setBankRegistrationNumber(ai.visma.ssn.type.Candidate value) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bankRegistrationNumber_ = value;
+      } else {
+        bankRegistrationNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder setBankRegistrationNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        bankRegistrationNumber_ = builderForValue.build();
+      } else {
+        bankRegistrationNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder mergeBankRegistrationNumber(ai.visma.ssn.type.Candidate value) {
+      if (bankRegistrationNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          bankRegistrationNumber_ != null &&
+          bankRegistrationNumber_ != ai.visma.ssn.type.Candidate.getDefaultInstance()) {
+          getBankRegistrationNumberBuilder().mergeFrom(value);
+        } else {
+          bankRegistrationNumber_ = value;
+        }
+      } else {
+        bankRegistrationNumberBuilder_.mergeFrom(value);
+      }
+      if (bankRegistrationNumber_ != null) {
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public Builder clearBankRegistrationNumber() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      bankRegistrationNumber_ = null;
+      if (bankRegistrationNumberBuilder_ != null) {
+        bankRegistrationNumberBuilder_.dispose();
+        bankRegistrationNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getBankRegistrationNumberBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getBankRegistrationNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getBankRegistrationNumberOrBuilder() {
+      if (bankRegistrationNumberBuilder_ != null) {
+        return bankRegistrationNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return bankRegistrationNumber_ == null ?
+            ai.visma.ssn.type.Candidate.getDefaultInstance() : bankRegistrationNumber_;
+      }
+    }
+    /**
+     * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getBankRegistrationNumberFieldBuilder() {
+      if (bankRegistrationNumberBuilder_ == null) {
+        bankRegistrationNumberBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                getBankRegistrationNumber(),
+                getParentForChildren(),
+                isClean());
+        bankRegistrationNumber_ = null;
+      }
+      return bankRegistrationNumberBuilder_;
     }
 
     private com.google.protobuf.LazyStringArrayList productTypes_ =
@@ -1401,10 +3374,10 @@ private static final long serialVersionUID = 0L;
       if (!productTypes_.isModifiable()) {
         productTypes_ = new com.google.protobuf.LazyStringArrayList(productTypes_);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00010000;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @return A list containing the productTypes.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1413,14 +3386,14 @@ private static final long serialVersionUID = 0L;
       return productTypes_;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @return The count of productTypes.
      */
     public int getProductTypesCount() {
       return productTypes_.size();
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param index The index of the element to return.
      * @return The productTypes at the given index.
      */
@@ -1428,7 +3401,7 @@ private static final long serialVersionUID = 0L;
       return productTypes_.get(index);
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the productTypes at the given index.
      */
@@ -1437,7 +3410,7 @@ private static final long serialVersionUID = 0L;
       return productTypes_.getByteString(index);
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param index The index to set the value at.
      * @param value The productTypes to set.
      * @return This builder for chaining.
@@ -1447,12 +3420,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureProductTypesIsMutable();
       productTypes_.set(index, value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param value The productTypes to add.
      * @return This builder for chaining.
      */
@@ -1461,12 +3434,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureProductTypesIsMutable();
       productTypes_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param values The productTypes to add.
      * @return This builder for chaining.
      */
@@ -1475,23 +3448,23 @@ private static final long serialVersionUID = 0L;
       ensureProductTypesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, productTypes_);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypes() {
       productTypes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
+      bitField0_ = (bitField0_ & ~0x00010000);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+     * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
      * @param value The bytes of the productTypes to add.
      * @return This builder for chaining.
      */
@@ -1501,7 +3474,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureProductTypesIsMutable();
       productTypes_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }

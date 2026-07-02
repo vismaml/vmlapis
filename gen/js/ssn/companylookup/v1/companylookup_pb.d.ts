@@ -4,112 +4,6 @@ import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/t
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
-export class CompanyField extends jspb.Message {
-  getValue(): string;
-  setValue(value: string): CompanyField;
-
-  getConfidence(): ssn_type_candidate_pb.Confidence | undefined;
-  setConfidence(value?: ssn_type_candidate_pb.Confidence): CompanyField;
-  hasConfidence(): boolean;
-  clearConfidence(): CompanyField;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CompanyField.AsObject;
-  static toObject(includeInstance: boolean, msg: CompanyField): CompanyField.AsObject;
-  static serializeBinaryToWriter(message: CompanyField, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CompanyField;
-  static deserializeBinaryFromReader(message: CompanyField, reader: jspb.BinaryReader): CompanyField;
-}
-
-export namespace CompanyField {
-  export type AsObject = {
-    value: string,
-    confidence?: ssn_type_candidate_pb.Confidence.AsObject,
-  }
-}
-
-export class Company extends jspb.Message {
-  getName(): CompanyField | undefined;
-  setName(value?: CompanyField): Company;
-  hasName(): boolean;
-  clearName(): Company;
-
-  getVatNumber(): CompanyField | undefined;
-  setVatNumber(value?: CompanyField): Company;
-  hasVatNumber(): boolean;
-  clearVatNumber(): Company;
-
-  getOrganisationNumber(): CompanyField | undefined;
-  setOrganisationNumber(value?: CompanyField): Company;
-  hasOrganisationNumber(): boolean;
-  clearOrganisationNumber(): Company;
-
-  getCountryCode(): CompanyField | undefined;
-  setCountryCode(value?: CompanyField): Company;
-  hasCountryCode(): boolean;
-  clearCountryCode(): Company;
-
-  getAddress(): CompanyField | undefined;
-  setAddress(value?: CompanyField): Company;
-  hasAddress(): boolean;
-  clearAddress(): Company;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Company.AsObject;
-  static toObject(includeInstance: boolean, msg: Company): Company.AsObject;
-  static serializeBinaryToWriter(message: Company, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Company;
-  static deserializeBinaryFromReader(message: Company, reader: jspb.BinaryReader): Company;
-}
-
-export namespace Company {
-  export type AsObject = {
-    name?: CompanyField.AsObject,
-    vatNumber?: CompanyField.AsObject,
-    organisationNumber?: CompanyField.AsObject,
-    countryCode?: CompanyField.AsObject,
-    address?: CompanyField.AsObject,
-  }
-}
-
-export class BankAccount extends jspb.Message {
-  getIban(): CompanyField | undefined;
-  setIban(value?: CompanyField): BankAccount;
-  hasIban(): boolean;
-  clearIban(): BankAccount;
-
-  getBic(): CompanyField | undefined;
-  setBic(value?: CompanyField): BankAccount;
-  hasBic(): boolean;
-  clearBic(): BankAccount;
-
-  getBankAccountNumber(): CompanyField | undefined;
-  setBankAccountNumber(value?: CompanyField): BankAccount;
-  hasBankAccountNumber(): boolean;
-  clearBankAccountNumber(): BankAccount;
-
-  getBankRegistrationNumber(): CompanyField | undefined;
-  setBankRegistrationNumber(value?: CompanyField): BankAccount;
-  hasBankRegistrationNumber(): boolean;
-  clearBankRegistrationNumber(): BankAccount;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): BankAccount.AsObject;
-  static toObject(includeInstance: boolean, msg: BankAccount): BankAccount.AsObject;
-  static serializeBinaryToWriter(message: BankAccount, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): BankAccount;
-  static deserializeBinaryFromReader(message: BankAccount, reader: jspb.BinaryReader): BankAccount;
-}
-
-export namespace BankAccount {
-  export type AsObject = {
-    iban?: CompanyField.AsObject,
-    bic?: CompanyField.AsObject,
-    bankAccountNumber?: CompanyField.AsObject,
-    bankRegistrationNumber?: CompanyField.AsObject,
-  }
-}
-
 export class ProcessInvoiceCompanyDataRequest extends jspb.Message {
   getProjectName(): string;
   setProjectName(value: string): ProcessInvoiceCompanyDataRequest;
@@ -117,20 +11,75 @@ export class ProcessInvoiceCompanyDataRequest extends jspb.Message {
   getTransactionId(): string;
   setTransactionId(value: string): ProcessInvoiceCompanyDataRequest;
 
-  getSupplier(): Company | undefined;
-  setSupplier(value?: Company): ProcessInvoiceCompanyDataRequest;
-  hasSupplier(): boolean;
-  clearSupplier(): ProcessInvoiceCompanyDataRequest;
+  getSupplierName(): ssn_type_candidate_pb.Candidate | undefined;
+  setSupplierName(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasSupplierName(): boolean;
+  clearSupplierName(): ProcessInvoiceCompanyDataRequest;
 
-  getReceiver(): Company | undefined;
-  setReceiver(value?: Company): ProcessInvoiceCompanyDataRequest;
-  hasReceiver(): boolean;
-  clearReceiver(): ProcessInvoiceCompanyDataRequest;
+  getSupplierVatNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setSupplierVatNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasSupplierVatNumber(): boolean;
+  clearSupplierVatNumber(): ProcessInvoiceCompanyDataRequest;
 
-  getBankAccountsList(): Array<BankAccount>;
-  setBankAccountsList(value: Array<BankAccount>): ProcessInvoiceCompanyDataRequest;
-  clearBankAccountsList(): ProcessInvoiceCompanyDataRequest;
-  addBankAccounts(value?: BankAccount, index?: number): BankAccount;
+  getSupplierOrganisationNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setSupplierOrganisationNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasSupplierOrganisationNumber(): boolean;
+  clearSupplierOrganisationNumber(): ProcessInvoiceCompanyDataRequest;
+
+  getSupplierCountryCode(): ssn_type_candidate_pb.Candidate | undefined;
+  setSupplierCountryCode(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasSupplierCountryCode(): boolean;
+  clearSupplierCountryCode(): ProcessInvoiceCompanyDataRequest;
+
+  getSupplierAddress(): ssn_type_candidate_pb.Candidate | undefined;
+  setSupplierAddress(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasSupplierAddress(): boolean;
+  clearSupplierAddress(): ProcessInvoiceCompanyDataRequest;
+
+  getReceiverName(): ssn_type_candidate_pb.Candidate | undefined;
+  setReceiverName(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasReceiverName(): boolean;
+  clearReceiverName(): ProcessInvoiceCompanyDataRequest;
+
+  getReceiverVatNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setReceiverVatNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasReceiverVatNumber(): boolean;
+  clearReceiverVatNumber(): ProcessInvoiceCompanyDataRequest;
+
+  getReceiverOrganisationNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setReceiverOrganisationNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasReceiverOrganisationNumber(): boolean;
+  clearReceiverOrganisationNumber(): ProcessInvoiceCompanyDataRequest;
+
+  getReceiverCountryCode(): ssn_type_candidate_pb.Candidate | undefined;
+  setReceiverCountryCode(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasReceiverCountryCode(): boolean;
+  clearReceiverCountryCode(): ProcessInvoiceCompanyDataRequest;
+
+  getReceiverAddress(): ssn_type_candidate_pb.Candidate | undefined;
+  setReceiverAddress(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasReceiverAddress(): boolean;
+  clearReceiverAddress(): ProcessInvoiceCompanyDataRequest;
+
+  getIban(): ssn_type_candidate_pb.Candidate | undefined;
+  setIban(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasIban(): boolean;
+  clearIban(): ProcessInvoiceCompanyDataRequest;
+
+  getBic(): ssn_type_candidate_pb.Candidate | undefined;
+  setBic(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasBic(): boolean;
+  clearBic(): ProcessInvoiceCompanyDataRequest;
+
+  getBankAccountNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setBankAccountNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasBankAccountNumber(): boolean;
+  clearBankAccountNumber(): ProcessInvoiceCompanyDataRequest;
+
+  getBankRegistrationNumber(): ssn_type_candidate_pb.Candidate | undefined;
+  setBankRegistrationNumber(value?: ssn_type_candidate_pb.Candidate): ProcessInvoiceCompanyDataRequest;
+  hasBankRegistrationNumber(): boolean;
+  clearBankRegistrationNumber(): ProcessInvoiceCompanyDataRequest;
 
   getProductTypesList(): Array<string>;
   setProductTypesList(value: Array<string>): ProcessInvoiceCompanyDataRequest;
@@ -149,9 +98,20 @@ export namespace ProcessInvoiceCompanyDataRequest {
   export type AsObject = {
     projectName: string,
     transactionId: string,
-    supplier?: Company.AsObject,
-    receiver?: Company.AsObject,
-    bankAccountsList: Array<BankAccount.AsObject>,
+    supplierName?: ssn_type_candidate_pb.Candidate.AsObject,
+    supplierVatNumber?: ssn_type_candidate_pb.Candidate.AsObject,
+    supplierOrganisationNumber?: ssn_type_candidate_pb.Candidate.AsObject,
+    supplierCountryCode?: ssn_type_candidate_pb.Candidate.AsObject,
+    supplierAddress?: ssn_type_candidate_pb.Candidate.AsObject,
+    receiverName?: ssn_type_candidate_pb.Candidate.AsObject,
+    receiverVatNumber?: ssn_type_candidate_pb.Candidate.AsObject,
+    receiverOrganisationNumber?: ssn_type_candidate_pb.Candidate.AsObject,
+    receiverCountryCode?: ssn_type_candidate_pb.Candidate.AsObject,
+    receiverAddress?: ssn_type_candidate_pb.Candidate.AsObject,
+    iban?: ssn_type_candidate_pb.Candidate.AsObject,
+    bic?: ssn_type_candidate_pb.Candidate.AsObject,
+    bankAccountNumber?: ssn_type_candidate_pb.Candidate.AsObject,
+    bankRegistrationNumber?: ssn_type_candidate_pb.Candidate.AsObject,
     productTypesList: Array<string>,
   }
 }

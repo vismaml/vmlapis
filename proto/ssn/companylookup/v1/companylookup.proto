@@ -28,39 +28,31 @@ enum EnrichmentStatus {
   FAILED = 3;
 }
 
-// CompanyField is a single extracted invoice field: the smartscan normalized
-// value plus its prediction confidence (the Confidence.Level enum is what the
-// service records per field).
-message CompanyField {
-  string value = 1;
-  ssn.type.Confidence confidence = 2;
-}
-
-// Company carries the extracted company fields for one role (supplier or
-// receiver); the role is conveyed by which request field it occupies. Column
-// names in storage match these smartscan field names.
-message Company {
-  CompanyField name = 1;
-  CompanyField vat_number = 2;
-  CompanyField organisation_number = 3;
-  CompanyField country_code = 4; // ISO 3166-1 alpha-2
-  CompanyField address = 5;
-}
-
-message BankAccount {
-  CompanyField iban = 1;
-  CompanyField bic = 2;
-  CompanyField bank_account_number = 3;
-  CompanyField bank_registration_number = 4;
-}
-
+// The request is flat: each field is the top-1 smartscan candidate for the
+// corresponding PredictResponse field, so callers pass candidates through
+// without mapping. The service records value + confidence level per field.
 message ProcessInvoiceCompanyDataRequest {
   string project_name = 1;
   string transaction_id = 2;
-  Company supplier = 3;
-  Company receiver = 4;
-  repeated BankAccount bank_accounts = 5;
-  repeated string product_types = 6;
+
+  ssn.type.Candidate supplier_name = 3;
+  ssn.type.Candidate supplier_vat_number = 4;
+  ssn.type.Candidate supplier_organisation_number = 5;
+  ssn.type.Candidate supplier_country_code = 6; // ISO 3166-1 alpha-2
+  ssn.type.Candidate supplier_address = 7;
+
+  ssn.type.Candidate receiver_name = 8;
+  ssn.type.Candidate receiver_vat_number = 9;
+  ssn.type.Candidate receiver_organisation_number = 10;
+  ssn.type.Candidate receiver_country_code = 11; // ISO 3166-1 alpha-2
+  ssn.type.Candidate receiver_address = 12;
+
+  ssn.type.Candidate iban = 13;
+  ssn.type.Candidate bic = 14;
+  ssn.type.Candidate bank_account_number = 15;
+  ssn.type.Candidate bank_registration_number = 16;
+
+  repeated string product_types = 17;
 }
 
 message BankAccountVerdict {

@@ -34,78 +34,258 @@ public interface ProcessInvoiceCompanyDataRequestOrBuilder extends
       getTransactionIdBytes();
 
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-   * @return Whether the supplier field is set.
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+   * @return Whether the supplierName field is set.
    */
-  boolean hasSupplier();
+  boolean hasSupplierName();
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
-   * @return The supplier.
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
+   * @return The supplierName.
    */
-  ai.visma.ssn.companylookup.v1.Company getSupplier();
+  ai.visma.ssn.type.Candidate getSupplierName();
   /**
-   * <code>.ssn.companylookup.v1.Company supplier = 3 [json_name = "supplier"];</code>
+   * <code>.ssn.type.Candidate supplier_name = 3 [json_name = "supplierName"];</code>
    */
-  ai.visma.ssn.companylookup.v1.CompanyOrBuilder getSupplierOrBuilder();
+  ai.visma.ssn.type.CandidateOrBuilder getSupplierNameOrBuilder();
 
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-   * @return Whether the receiver field is set.
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+   * @return Whether the supplierVatNumber field is set.
    */
-  boolean hasReceiver();
+  boolean hasSupplierVatNumber();
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
-   * @return The receiver.
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
+   * @return The supplierVatNumber.
    */
-  ai.visma.ssn.companylookup.v1.Company getReceiver();
+  ai.visma.ssn.type.Candidate getSupplierVatNumber();
   /**
-   * <code>.ssn.companylookup.v1.Company receiver = 4 [json_name = "receiver"];</code>
+   * <code>.ssn.type.Candidate supplier_vat_number = 4 [json_name = "supplierVatNumber"];</code>
    */
-  ai.visma.ssn.companylookup.v1.CompanyOrBuilder getReceiverOrBuilder();
+  ai.visma.ssn.type.CandidateOrBuilder getSupplierVatNumberOrBuilder();
 
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+   * @return Whether the supplierOrganisationNumber field is set.
    */
-  java.util.List<ai.visma.ssn.companylookup.v1.BankAccount> 
-      getBankAccountsList();
+  boolean hasSupplierOrganisationNumber();
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
+   * @return The supplierOrganisationNumber.
    */
-  ai.visma.ssn.companylookup.v1.BankAccount getBankAccounts(int index);
+  ai.visma.ssn.type.Candidate getSupplierOrganisationNumber();
   /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
+   * <code>.ssn.type.Candidate supplier_organisation_number = 5 [json_name = "supplierOrganisationNumber"];</code>
    */
-  int getBankAccountsCount();
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountOrBuilder> 
-      getBankAccountsOrBuilderList();
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccount bank_accounts = 5 [json_name = "bankAccounts"];</code>
-   */
-  ai.visma.ssn.companylookup.v1.BankAccountOrBuilder getBankAccountsOrBuilder(
-      int index);
+  ai.visma.ssn.type.CandidateOrBuilder getSupplierOrganisationNumberOrBuilder();
 
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   * @return Whether the supplierCountryCode field is set.
+   */
+  boolean hasSupplierCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   * @return The supplierCountryCode.
+   */
+  ai.visma.ssn.type.Candidate getSupplierCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate supplier_country_code = 6 [json_name = "supplierCountryCode"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getSupplierCountryCodeOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   * @return Whether the supplierAddress field is set.
+   */
+  boolean hasSupplierAddress();
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   * @return The supplierAddress.
+   */
+  ai.visma.ssn.type.Candidate getSupplierAddress();
+  /**
+   * <code>.ssn.type.Candidate supplier_address = 7 [json_name = "supplierAddress"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getSupplierAddressOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   * @return Whether the receiverName field is set.
+   */
+  boolean hasReceiverName();
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   * @return The receiverName.
+   */
+  ai.visma.ssn.type.Candidate getReceiverName();
+  /**
+   * <code>.ssn.type.Candidate receiver_name = 8 [json_name = "receiverName"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   * @return Whether the receiverVatNumber field is set.
+   */
+  boolean hasReceiverVatNumber();
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   * @return The receiverVatNumber.
+   */
+  ai.visma.ssn.type.Candidate getReceiverVatNumber();
+  /**
+   * <code>.ssn.type.Candidate receiver_vat_number = 9 [json_name = "receiverVatNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   * @return Whether the receiverOrganisationNumber field is set.
+   */
+  boolean hasReceiverOrganisationNumber();
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   * @return The receiverOrganisationNumber.
+   */
+  ai.visma.ssn.type.Candidate getReceiverOrganisationNumber();
+  /**
+   * <code>.ssn.type.Candidate receiver_organisation_number = 10 [json_name = "receiverOrganisationNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverOrganisationNumberOrBuilder();
+
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   * @return Whether the receiverCountryCode field is set.
+   */
+  boolean hasReceiverCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   * @return The receiverCountryCode.
+   */
+  ai.visma.ssn.type.Candidate getReceiverCountryCode();
+  /**
+   * <pre>
+   * ISO 3166-1 alpha-2
+   * </pre>
+   *
+   * <code>.ssn.type.Candidate receiver_country_code = 11 [json_name = "receiverCountryCode"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   * @return Whether the receiverAddress field is set.
+   */
+  boolean hasReceiverAddress();
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   * @return The receiverAddress.
+   */
+  ai.visma.ssn.type.Candidate getReceiverAddress();
+  /**
+   * <code>.ssn.type.Candidate receiver_address = 12 [json_name = "receiverAddress"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   * @return Whether the iban field is set.
+   */
+  boolean hasIban();
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   * @return The iban.
+   */
+  ai.visma.ssn.type.Candidate getIban();
+  /**
+   * <code>.ssn.type.Candidate iban = 13 [json_name = "iban"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getIbanOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   * @return Whether the bic field is set.
+   */
+  boolean hasBic();
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   * @return The bic.
+   */
+  ai.visma.ssn.type.Candidate getBic();
+  /**
+   * <code>.ssn.type.Candidate bic = 14 [json_name = "bic"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getBicOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   * @return Whether the bankAccountNumber field is set.
+   */
+  boolean hasBankAccountNumber();
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   * @return The bankAccountNumber.
+   */
+  ai.visma.ssn.type.Candidate getBankAccountNumber();
+  /**
+   * <code>.ssn.type.Candidate bank_account_number = 15 [json_name = "bankAccountNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getBankAccountNumberOrBuilder();
+
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   * @return Whether the bankRegistrationNumber field is set.
+   */
+  boolean hasBankRegistrationNumber();
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   * @return The bankRegistrationNumber.
+   */
+  ai.visma.ssn.type.Candidate getBankRegistrationNumber();
+  /**
+   * <code>.ssn.type.Candidate bank_registration_number = 16 [json_name = "bankRegistrationNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getBankRegistrationNumberOrBuilder();
+
+  /**
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @return A list containing the productTypes.
    */
   java.util.List<java.lang.String>
       getProductTypesList();
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @return The count of productTypes.
    */
   int getProductTypesCount();
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @param index The index of the element to return.
    * @return The productTypes at the given index.
    */
   java.lang.String getProductTypes(int index);
   /**
-   * <code>repeated string product_types = 6 [json_name = "productTypes"];</code>
+   * <code>repeated string product_types = 17 [json_name = "productTypes"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the productTypes at the given index.
    */

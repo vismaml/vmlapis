@@ -28,55 +28,43 @@ PENDING: EnrichmentStatus
 ENRICHED: EnrichmentStatus
 FAILED: EnrichmentStatus
 
-class CompanyField(_message.Message):
-    __slots__ = ("value", "confidence")
-    VALUE_FIELD_NUMBER: _ClassVar[int]
-    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    value: str
-    confidence: _candidate_pb2.Confidence
-    def __init__(self, value: _Optional[str] = ..., confidence: _Optional[_Union[_candidate_pb2.Confidence, _Mapping]] = ...) -> None: ...
-
-class Company(_message.Message):
-    __slots__ = ("name", "vat_number", "organisation_number", "country_code", "address")
-    NAME_FIELD_NUMBER: _ClassVar[int]
-    VAT_NUMBER_FIELD_NUMBER: _ClassVar[int]
-    ORGANISATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
-    COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
-    ADDRESS_FIELD_NUMBER: _ClassVar[int]
-    name: CompanyField
-    vat_number: CompanyField
-    organisation_number: CompanyField
-    country_code: CompanyField
-    address: CompanyField
-    def __init__(self, name: _Optional[_Union[CompanyField, _Mapping]] = ..., vat_number: _Optional[_Union[CompanyField, _Mapping]] = ..., organisation_number: _Optional[_Union[CompanyField, _Mapping]] = ..., country_code: _Optional[_Union[CompanyField, _Mapping]] = ..., address: _Optional[_Union[CompanyField, _Mapping]] = ...) -> None: ...
-
-class BankAccount(_message.Message):
-    __slots__ = ("iban", "bic", "bank_account_number", "bank_registration_number")
+class ProcessInvoiceCompanyDataRequest(_message.Message):
+    __slots__ = ("project_name", "transaction_id", "supplier_name", "supplier_vat_number", "supplier_organisation_number", "supplier_country_code", "supplier_address", "receiver_name", "receiver_vat_number", "receiver_organisation_number", "receiver_country_code", "receiver_address", "iban", "bic", "bank_account_number", "bank_registration_number", "product_types")
+    PROJECT_NAME_FIELD_NUMBER: _ClassVar[int]
+    TRANSACTION_ID_FIELD_NUMBER: _ClassVar[int]
+    SUPPLIER_NAME_FIELD_NUMBER: _ClassVar[int]
+    SUPPLIER_VAT_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    SUPPLIER_COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
+    SUPPLIER_ADDRESS_FIELD_NUMBER: _ClassVar[int]
+    RECEIVER_NAME_FIELD_NUMBER: _ClassVar[int]
+    RECEIVER_VAT_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    RECEIVER_ORGANISATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    RECEIVER_COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECEIVER_ADDRESS_FIELD_NUMBER: _ClassVar[int]
     IBAN_FIELD_NUMBER: _ClassVar[int]
     BIC_FIELD_NUMBER: _ClassVar[int]
     BANK_ACCOUNT_NUMBER_FIELD_NUMBER: _ClassVar[int]
     BANK_REGISTRATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
-    iban: CompanyField
-    bic: CompanyField
-    bank_account_number: CompanyField
-    bank_registration_number: CompanyField
-    def __init__(self, iban: _Optional[_Union[CompanyField, _Mapping]] = ..., bic: _Optional[_Union[CompanyField, _Mapping]] = ..., bank_account_number: _Optional[_Union[CompanyField, _Mapping]] = ..., bank_registration_number: _Optional[_Union[CompanyField, _Mapping]] = ...) -> None: ...
-
-class ProcessInvoiceCompanyDataRequest(_message.Message):
-    __slots__ = ("project_name", "transaction_id", "supplier", "receiver", "bank_accounts", "product_types")
-    PROJECT_NAME_FIELD_NUMBER: _ClassVar[int]
-    TRANSACTION_ID_FIELD_NUMBER: _ClassVar[int]
-    SUPPLIER_FIELD_NUMBER: _ClassVar[int]
-    RECEIVER_FIELD_NUMBER: _ClassVar[int]
-    BANK_ACCOUNTS_FIELD_NUMBER: _ClassVar[int]
     PRODUCT_TYPES_FIELD_NUMBER: _ClassVar[int]
     project_name: str
     transaction_id: str
-    supplier: Company
-    receiver: Company
-    bank_accounts: _containers.RepeatedCompositeFieldContainer[BankAccount]
+    supplier_name: _candidate_pb2.Candidate
+    supplier_vat_number: _candidate_pb2.Candidate
+    supplier_organisation_number: _candidate_pb2.Candidate
+    supplier_country_code: _candidate_pb2.Candidate
+    supplier_address: _candidate_pb2.Candidate
+    receiver_name: _candidate_pb2.Candidate
+    receiver_vat_number: _candidate_pb2.Candidate
+    receiver_organisation_number: _candidate_pb2.Candidate
+    receiver_country_code: _candidate_pb2.Candidate
+    receiver_address: _candidate_pb2.Candidate
+    iban: _candidate_pb2.Candidate
+    bic: _candidate_pb2.Candidate
+    bank_account_number: _candidate_pb2.Candidate
+    bank_registration_number: _candidate_pb2.Candidate
     product_types: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, project_name: _Optional[str] = ..., transaction_id: _Optional[str] = ..., supplier: _Optional[_Union[Company, _Mapping]] = ..., receiver: _Optional[_Union[Company, _Mapping]] = ..., bank_accounts: _Optional[_Iterable[_Union[BankAccount, _Mapping]]] = ..., product_types: _Optional[_Iterable[str]] = ...) -> None: ...
+    def __init__(self, project_name: _Optional[str] = ..., transaction_id: _Optional[str] = ..., supplier_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., iban: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bic: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_account_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_registration_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., product_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class BankAccountVerdict(_message.Message):
     __slots__ = ("account_key", "verdict", "observed_count_tenant", "observed_count_global", "first_seen", "last_seen")

@@ -26,21 +26,6 @@ public final class CompanylookupProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_companylookup_v1_CompanyField_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ssn_companylookup_v1_CompanyField_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_companylookup_v1_Company_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ssn_companylookup_v1_Company_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_companylookup_v1_BankAccount_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ssn_companylookup_v1_BankAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -72,68 +57,68 @@ public final class CompanylookupProto {
       "\n(ssn/companylookup/v1/companylookup.pro" +
       "to\022\024ssn.companylookup.v1\032\037google/protobu" +
       "f/timestamp.proto\032\030ssn/type/candidate.pr" +
-      "oto\"Z\n\014CompanyField\022\024\n\005value\030\001 \001(\tR\005valu" +
-      "e\0224\n\nconfidence\030\002 \001(\0132\024.ssn.type.Confide" +
-      "nceR\nconfidence\"\336\002\n\007Company\0226\n\004name\030\001 \001(" +
-      "\0132\".ssn.companylookup.v1.CompanyFieldR\004n" +
-      "ame\022A\n\nvat_number\030\002 \001(\0132\".ssn.companyloo" +
-      "kup.v1.CompanyFieldR\tvatNumber\022S\n\023organi" +
-      "sation_number\030\003 \001(\0132\".ssn.companylookup." +
-      "v1.CompanyFieldR\022organisationNumber\022E\n\014c" +
-      "ountry_code\030\004 \001(\0132\".ssn.companylookup.v1" +
-      ".CompanyFieldR\013countryCode\022<\n\007address\030\005 " +
-      "\001(\0132\".ssn.companylookup.v1.CompanyFieldR" +
-      "\007address\"\255\002\n\013BankAccount\0226\n\004iban\030\001 \001(\0132\"" +
-      ".ssn.companylookup.v1.CompanyFieldR\004iban" +
-      "\0224\n\003bic\030\002 \001(\0132\".ssn.companylookup.v1.Com" +
-      "panyFieldR\003bic\022R\n\023bank_account_number\030\003 " +
-      "\001(\0132\".ssn.companylookup.v1.CompanyFieldR" +
-      "\021bankAccountNumber\022\\\n\030bank_registration_" +
-      "number\030\004 \001(\0132\".ssn.companylookup.v1.Comp" +
-      "anyFieldR\026bankRegistrationNumber\"\317\002\n Pro" +
-      "cessInvoiceCompanyDataRequest\022!\n\014project" +
-      "_name\030\001 \001(\tR\013projectName\022%\n\016transaction_" +
-      "id\030\002 \001(\tR\rtransactionId\0229\n\010supplier\030\003 \001(" +
-      "\0132\035.ssn.companylookup.v1.CompanyR\010suppli" +
-      "er\0229\n\010receiver\030\004 \001(\0132\035.ssn.companylookup" +
-      ".v1.CompanyR\010receiver\022F\n\rbank_accounts\030\005" +
-      " \003(\0132!.ssn.companylookup.v1.BankAccountR" +
-      "\014bankAccounts\022#\n\rproduct_types\030\006 \003(\tR\014pr" +
-      "oductTypes\"\317\002\n\022BankAccountVerdict\022\037\n\013acc" +
-      "ount_key\030\001 \001(\tR\naccountKey\022<\n\007verdict\030\002 " +
-      "\001(\0162\".ssn.companylookup.v1.TrustVerdictR" +
-      "\007verdict\0222\n\025observed_count_tenant\030\003 \001(\003R" +
-      "\023observedCountTenant\0222\n\025observed_count_g" +
-      "lobal\030\004 \001(\003R\023observedCountGlobal\0229\n\nfirs" +
-      "t_seen\030\005 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\tfirstSeen\0227\n\tlast_seen\030\006 \001(\0132\032.google." +
-      "protobuf.TimestampR\010lastSeen\"\220\002\n\017Enriche" +
-      "dCompany\022\037\n\013company_key\030\001 \001(\tR\ncompanyKe" +
-      "y\022#\n\rregistry_name\030\002 \001(\tR\014registryName\022)" +
-      "\n\020registry_address\030\003 \001(\tR\017registryAddres" +
-      "s\022\033\n\tvat_valid\030\004 \001(\010R\010vatValid\022\032\n\010indust" +
-      "ry\030\005 \001(\tR\010industry\022S\n\021enrichment_status\030" +
-      "\006 \001(\0162&.ssn.companylookup.v1.EnrichmentS" +
-      "tatusR\020enrichmentStatus\"\304\001\n!ProcessInvoi" +
-      "ceCompanyDataResponse\022A\n\010supplier\030\001 \001(\0132" +
-      "%.ssn.companylookup.v1.EnrichedCompanyR\010" +
-      "supplier\022\\\n\025bank_account_verdicts\030\002 \003(\0132" +
-      "(.ssn.companylookup.v1.BankAccountVerdic" +
-      "tR\023bankAccountVerdicts*A\n\014TrustVerdict\022\035" +
-      "\n\031TRUST_VERDICT_UNSPECIFIED\020\000\022\007\n\003NEW\020\001\022\t" +
-      "\n\005KNOWN\020\002*\\\n\020EnrichmentStatus\022!\n\035ENRICHM" +
-      "ENT_STATUS_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\014\n" +
-      "\010ENRICHED\020\002\022\n\n\006FAILED\020\0032\245\001\n\024CompanyLooku" +
-      "pService\022\214\001\n\031ProcessInvoiceCompanyData\0226" +
-      ".ssn.companylookup.v1.ProcessInvoiceComp" +
-      "anyDataRequest\0327.ssn.companylookup.v1.Pr" +
-      "ocessInvoiceCompanyDataResponseB\355\001\n\035ai.v" +
-      "isma.ssn.companylookup.v1B\022Companylookup" +
-      "ProtoP\001ZFgithub.com/e-conomic/vmlapis/ge" +
-      "n/go/ssn/companylookup/v1;companylookup\242" +
-      "\002\003SCX\252\002\024Ssn.Companylookup.V1\312\002\024Ssn\\Compa" +
-      "nylookup\\V1\342\002 Ssn\\Companylookup\\V1\\GPBMe" +
-      "tadata\352\002\026Ssn::Companylookup::V1b\006proto3"
+      "oto\"\263\010\n ProcessInvoiceCompanyDataRequest" +
+      "\022!\n\014project_name\030\001 \001(\tR\013projectName\022%\n\016t" +
+      "ransaction_id\030\002 \001(\tR\rtransactionId\0228\n\rsu" +
+      "pplier_name\030\003 \001(\0132\023.ssn.type.CandidateR\014" +
+      "supplierName\022C\n\023supplier_vat_number\030\004 \001(" +
+      "\0132\023.ssn.type.CandidateR\021supplierVatNumbe" +
+      "r\022U\n\034supplier_organisation_number\030\005 \001(\0132" +
+      "\023.ssn.type.CandidateR\032supplierOrganisati" +
+      "onNumber\022G\n\025supplier_country_code\030\006 \001(\0132" +
+      "\023.ssn.type.CandidateR\023supplierCountryCod" +
+      "e\022>\n\020supplier_address\030\007 \001(\0132\023.ssn.type.C" +
+      "andidateR\017supplierAddress\0228\n\rreceiver_na" +
+      "me\030\010 \001(\0132\023.ssn.type.CandidateR\014receiverN" +
+      "ame\022C\n\023receiver_vat_number\030\t \001(\0132\023.ssn.t" +
+      "ype.CandidateR\021receiverVatNumber\022U\n\034rece" +
+      "iver_organisation_number\030\n \001(\0132\023.ssn.typ" +
+      "e.CandidateR\032receiverOrganisationNumber\022" +
+      "G\n\025receiver_country_code\030\013 \001(\0132\023.ssn.typ" +
+      "e.CandidateR\023receiverCountryCode\022>\n\020rece" +
+      "iver_address\030\014 \001(\0132\023.ssn.type.CandidateR" +
+      "\017receiverAddress\022\'\n\004iban\030\r \001(\0132\023.ssn.typ" +
+      "e.CandidateR\004iban\022%\n\003bic\030\016 \001(\0132\023.ssn.typ" +
+      "e.CandidateR\003bic\022C\n\023bank_account_number\030" +
+      "\017 \001(\0132\023.ssn.type.CandidateR\021bankAccountN" +
+      "umber\022M\n\030bank_registration_number\030\020 \001(\0132" +
+      "\023.ssn.type.CandidateR\026bankRegistrationNu" +
+      "mber\022#\n\rproduct_types\030\021 \003(\tR\014productType" +
+      "s\"\317\002\n\022BankAccountVerdict\022\037\n\013account_key\030" +
+      "\001 \001(\tR\naccountKey\022<\n\007verdict\030\002 \001(\0162\".ssn" +
+      ".companylookup.v1.TrustVerdictR\007verdict\022" +
+      "2\n\025observed_count_tenant\030\003 \001(\003R\023observed" +
+      "CountTenant\0222\n\025observed_count_global\030\004 \001" +
+      "(\003R\023observedCountGlobal\0229\n\nfirst_seen\030\005 " +
+      "\001(\0132\032.google.protobuf.TimestampR\tfirstSe" +
+      "en\0227\n\tlast_seen\030\006 \001(\0132\032.google.protobuf." +
+      "TimestampR\010lastSeen\"\220\002\n\017EnrichedCompany\022" +
+      "\037\n\013company_key\030\001 \001(\tR\ncompanyKey\022#\n\rregi" +
+      "stry_name\030\002 \001(\tR\014registryName\022)\n\020registr" +
+      "y_address\030\003 \001(\tR\017registryAddress\022\033\n\tvat_" +
+      "valid\030\004 \001(\010R\010vatValid\022\032\n\010industry\030\005 \001(\tR" +
+      "\010industry\022S\n\021enrichment_status\030\006 \001(\0162&.s" +
+      "sn.companylookup.v1.EnrichmentStatusR\020en" +
+      "richmentStatus\"\304\001\n!ProcessInvoiceCompany" +
+      "DataResponse\022A\n\010supplier\030\001 \001(\0132%.ssn.com" +
+      "panylookup.v1.EnrichedCompanyR\010supplier\022" +
+      "\\\n\025bank_account_verdicts\030\002 \003(\0132(.ssn.com" +
+      "panylookup.v1.BankAccountVerdictR\023bankAc" +
+      "countVerdicts*A\n\014TrustVerdict\022\035\n\031TRUST_V" +
+      "ERDICT_UNSPECIFIED\020\000\022\007\n\003NEW\020\001\022\t\n\005KNOWN\020\002" +
+      "*\\\n\020EnrichmentStatus\022!\n\035ENRICHMENT_STATU" +
+      "S_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\014\n\010ENRICHED" +
+      "\020\002\022\n\n\006FAILED\020\0032\245\001\n\024CompanyLookupService\022" +
+      "\214\001\n\031ProcessInvoiceCompanyData\0226.ssn.comp" +
+      "anylookup.v1.ProcessInvoiceCompanyDataRe" +
+      "quest\0327.ssn.companylookup.v1.ProcessInvo" +
+      "iceCompanyDataResponseB\355\001\n\035ai.visma.ssn." +
+      "companylookup.v1B\022CompanylookupProtoP\001ZF" +
+      "github.com/e-conomic/vmlapis/gen/go/ssn/" +
+      "companylookup/v1;companylookup\242\002\003SCX\252\002\024S" +
+      "sn.Companylookup.V1\312\002\024Ssn\\Companylookup\\" +
+      "V1\342\002 Ssn\\Companylookup\\V1\\GPBMetadata\352\002\026" +
+      "Ssn::Companylookup::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,44 +126,26 @@ public final class CompanylookupProto {
           com.google.protobuf.TimestampProto.getDescriptor(),
           ai.visma.ssn.type.CandidateProto.getDescriptor(),
         });
-    internal_static_ssn_companylookup_v1_CompanyField_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_ssn_companylookup_v1_CompanyField_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ssn_companylookup_v1_CompanyField_descriptor,
-        new java.lang.String[] { "Value", "Confidence", });
-    internal_static_ssn_companylookup_v1_Company_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_ssn_companylookup_v1_Company_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ssn_companylookup_v1_Company_descriptor,
-        new java.lang.String[] { "Name", "VatNumber", "OrganisationNumber", "CountryCode", "Address", });
-    internal_static_ssn_companylookup_v1_BankAccount_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_ssn_companylookup_v1_BankAccount_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ssn_companylookup_v1_BankAccount_descriptor,
-        new java.lang.String[] { "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", });
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest_descriptor,
-        new java.lang.String[] { "ProjectName", "TransactionId", "Supplier", "Receiver", "BankAccounts", "ProductTypes", });
+        new java.lang.String[] { "ProjectName", "TransactionId", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierCountryCode", "SupplierAddress", "ReceiverName", "ReceiverVatNumber", "ReceiverOrganisationNumber", "ReceiverCountryCode", "ReceiverAddress", "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", "ProductTypes", });
     internal_static_ssn_companylookup_v1_BankAccountVerdict_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_companylookup_v1_BankAccountVerdict_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_BankAccountVerdict_descriptor,
         new java.lang.String[] { "AccountKey", "Verdict", "ObservedCountTenant", "ObservedCountGlobal", "FirstSeen", "LastSeen", });
     internal_static_ssn_companylookup_v1_EnrichedCompany_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_companylookup_v1_EnrichedCompany_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_EnrichedCompany_descriptor,
         new java.lang.String[] { "CompanyKey", "RegistryName", "RegistryAddress", "VatValid", "Industry", "EnrichmentStatus", });
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_descriptor,
