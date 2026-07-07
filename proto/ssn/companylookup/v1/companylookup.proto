@@ -2,30 +2,16 @@ syntax = "proto3";
 
 package ssn.companylookup.v1;
 
-import "google/protobuf/timestamp.proto";
 import "ssn/type/candidate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup";
 
 // CompanyLookupService is an internal service called during invoice
-// post-processing. It records observations, verifies bank accounts against
-// accumulated history, and returns already-known company enrichment. It never
+// post-processing. It records company/bank-account observations and returns
+// whether the supplier VAT number has been confirmed by a registry. It never
 // calls external registries — enrichment is fetched out of band by a job.
 service CompanyLookupService {
   rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
-}
-
-enum TrustVerdict {
-  TRUST_VERDICT_UNSPECIFIED = 0;
-  NEW = 1;
-  KNOWN = 2;
-}
-
-enum EnrichmentStatus {
-  ENRICHMENT_STATUS_UNSPECIFIED = 0;
-  PENDING = 1;
-  ENRICHED = 2;
-  FAILED = 3;
 }
 
 // The request is flat: each field is the top-1 smartscan candidate for the
@@ -55,25 +41,8 @@ message ProcessInvoiceCompanyDataRequest {
   repeated string product_types = 17;
 }
 
-message BankAccountVerdict {
-  string account_key = 1;
-  TrustVerdict verdict = 2;
-  int64 observed_count_tenant = 3;
-  int64 observed_count_global = 4;
-  google.protobuf.Timestamp first_seen = 5;
-  google.protobuf.Timestamp last_seen = 6;
-}
-
-message EnrichedCompany {
-  string company_key = 1;
-  string registry_name = 2;
-  string registry_address = 3;
-  bool vat_valid = 4;
-  string industry = 5;
-  EnrichmentStatus enrichment_status = 6;
-}
-
 message ProcessInvoiceCompanyDataResponse {
-  EnrichedCompany supplier = 1;
-  repeated BankAccountVerdict bank_account_verdicts = 2;
+  // True only when the supplier company has been enriched and the registry
+  // (VIES) confirmed the VAT number.
+  bool supplier_vat_valid = 1;
 }

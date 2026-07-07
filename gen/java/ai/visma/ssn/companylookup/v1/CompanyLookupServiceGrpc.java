@@ -5,8 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * CompanyLookupService is an internal service called during invoice
- * post-processing. It records observations, verifies bank accounts against
- * accumulated history, and returns already-known company enrichment. It never
+ * post-processing. It records company/bank-account observations and returns
+ * whether the supplier VAT number has been confirmed by a registry. It never
  * calls external registries — enrichment is fetched out of band by a job.
  * </pre>
  */
@@ -114,8 +114,8 @@ public final class CompanyLookupServiceGrpc {
   /**
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */
@@ -133,8 +133,8 @@ public final class CompanyLookupServiceGrpc {
    * Base class for the server implementation of the service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */
@@ -150,8 +150,8 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */
@@ -181,8 +181,8 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */
@@ -211,8 +211,8 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */
@@ -241,8 +241,8 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records observations, verifies bank accounts against
-   * accumulated history, and returns already-known company enrichment. It never
+   * post-processing. It records company/bank-account observations and returns
+   * whether the supplier VAT number has been confirmed by a registry. It never
    * calls external registries — enrichment is fetched out of band by a job.
    * </pre>
    */

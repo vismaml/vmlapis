@@ -10,41 +10,13 @@ public interface ProcessInvoiceCompanyDataResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   * @return Whether the supplier field is set.
+   * <pre>
+   * True only when the supplier company has been enriched and the registry
+   * (VIES) confirmed the VAT number.
+   * </pre>
+   *
+   * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
+   * @return The supplierVatValid.
    */
-  boolean hasSupplier();
-  /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   * @return The supplier.
-   */
-  ai.visma.ssn.companylookup.v1.EnrichedCompany getSupplier();
-  /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   */
-  ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder getSupplierOrBuilder();
-
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict> 
-      getBankAccountVerdictsList();
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  ai.visma.ssn.companylookup.v1.BankAccountVerdict getBankAccountVerdicts(int index);
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  int getBankAccountVerdictsCount();
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder> 
-      getBankAccountVerdictsOrBuilderList();
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder getBankAccountVerdictsOrBuilder(
-      int index);
+  boolean getSupplierVatValid();
 }

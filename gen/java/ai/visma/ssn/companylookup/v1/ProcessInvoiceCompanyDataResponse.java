@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProcessInvoiceCompanyDataResponse() {
-    bankAccountVerdicts_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -43,72 +42,20 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.class, ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.Builder.class);
   }
 
-  private int bitField0_;
-  public static final int SUPPLIER_FIELD_NUMBER = 1;
-  private ai.visma.ssn.companylookup.v1.EnrichedCompany supplier_;
+  public static final int SUPPLIER_VAT_VALID_FIELD_NUMBER = 1;
+  private boolean supplierVatValid_ = false;
   /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   * @return Whether the supplier field is set.
+   * <pre>
+   * True only when the supplier company has been enriched and the registry
+   * (VIES) confirmed the VAT number.
+   * </pre>
+   *
+   * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
+   * @return The supplierVatValid.
    */
   @java.lang.Override
-  public boolean hasSupplier() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   * @return The supplier.
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.EnrichedCompany getSupplier() {
-    return supplier_ == null ? ai.visma.ssn.companylookup.v1.EnrichedCompany.getDefaultInstance() : supplier_;
-  }
-  /**
-   * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder getSupplierOrBuilder() {
-    return supplier_ == null ? ai.visma.ssn.companylookup.v1.EnrichedCompany.getDefaultInstance() : supplier_;
-  }
-
-  public static final int BANK_ACCOUNT_VERDICTS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict> bankAccountVerdicts_;
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict> getBankAccountVerdictsList() {
-    return bankAccountVerdicts_;
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder> 
-      getBankAccountVerdictsOrBuilderList() {
-    return bankAccountVerdicts_;
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  @java.lang.Override
-  public int getBankAccountVerdictsCount() {
-    return bankAccountVerdicts_.size();
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.BankAccountVerdict getBankAccountVerdicts(int index) {
-    return bankAccountVerdicts_.get(index);
-  }
-  /**
-   * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder getBankAccountVerdictsOrBuilder(
-      int index) {
-    return bankAccountVerdicts_.get(index);
+  public boolean getSupplierVatValid() {
+    return supplierVatValid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -125,11 +72,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(1, getSupplier());
-    }
-    for (int i = 0; i < bankAccountVerdicts_.size(); i++) {
-      output.writeMessage(2, bankAccountVerdicts_.get(i));
+    if (supplierVatValid_ != false) {
+      output.writeBool(1, supplierVatValid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -140,13 +84,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (supplierVatValid_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getSupplier());
-    }
-    for (int i = 0; i < bankAccountVerdicts_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, bankAccountVerdicts_.get(i));
+        .computeBoolSize(1, supplierVatValid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -163,13 +103,8 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse other = (ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse) obj;
 
-    if (hasSupplier() != other.hasSupplier()) return false;
-    if (hasSupplier()) {
-      if (!getSupplier()
-          .equals(other.getSupplier())) return false;
-    }
-    if (!getBankAccountVerdictsList()
-        .equals(other.getBankAccountVerdictsList())) return false;
+    if (getSupplierVatValid()
+        != other.getSupplierVatValid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -181,14 +116,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasSupplier()) {
-      hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
-      hash = (53 * hash) + getSupplier().hashCode();
-    }
-    if (getBankAccountVerdictsCount() > 0) {
-      hash = (37 * hash) + BANK_ACCOUNT_VERDICTS_FIELD_NUMBER;
-      hash = (53 * hash) + getBankAccountVerdictsList().hashCode();
-    }
+    hash = (37 * hash) + SUPPLIER_VAT_VALID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSupplierVatValid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,37 +238,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getSupplierFieldBuilder();
-        getBankAccountVerdictsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      supplier_ = null;
-      if (supplierBuilder_ != null) {
-        supplierBuilder_.dispose();
-        supplierBuilder_ = null;
-      }
-      if (bankAccountVerdictsBuilder_ == null) {
-        bankAccountVerdicts_ = java.util.Collections.emptyList();
-      } else {
-        bankAccountVerdicts_ = null;
-        bankAccountVerdictsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      supplierVatValid_ = false;
       return this;
     }
 
@@ -365,34 +277,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse buildPartial() {
       ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse result = new ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse result) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          bankAccountVerdicts_ = java.util.Collections.unmodifiableList(bankAccountVerdicts_);
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.bankAccountVerdicts_ = bankAccountVerdicts_;
-      } else {
-        result.bankAccountVerdicts_ = bankAccountVerdictsBuilder_.build();
-      }
-    }
-
     private void buildPartial0(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.supplier_ = supplierBuilder_ == null
-            ? supplier_
-            : supplierBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        result.supplierVatValid_ = supplierVatValid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -407,34 +301,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse other) {
       if (other == ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.getDefaultInstance()) return this;
-      if (other.hasSupplier()) {
-        mergeSupplier(other.getSupplier());
-      }
-      if (bankAccountVerdictsBuilder_ == null) {
-        if (!other.bankAccountVerdicts_.isEmpty()) {
-          if (bankAccountVerdicts_.isEmpty()) {
-            bankAccountVerdicts_ = other.bankAccountVerdicts_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureBankAccountVerdictsIsMutable();
-            bankAccountVerdicts_.addAll(other.bankAccountVerdicts_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.bankAccountVerdicts_.isEmpty()) {
-          if (bankAccountVerdictsBuilder_.isEmpty()) {
-            bankAccountVerdictsBuilder_.dispose();
-            bankAccountVerdictsBuilder_ = null;
-            bankAccountVerdicts_ = other.bankAccountVerdicts_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-            bankAccountVerdictsBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getBankAccountVerdictsFieldBuilder() : null;
-          } else {
-            bankAccountVerdictsBuilder_.addAllMessages(other.bankAccountVerdicts_);
-          }
-        }
+      if (other.getSupplierVatValid() != false) {
+        setSupplierVatValid(other.getSupplierVatValid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -462,26 +330,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getSupplierFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 8: {
+              supplierVatValid_ = input.readBool();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
-              ai.visma.ssn.companylookup.v1.BankAccountVerdict m =
-                  input.readMessage(
-                      ai.visma.ssn.companylookup.v1.BankAccountVerdict.parser(),
-                      extensionRegistry);
-              if (bankAccountVerdictsBuilder_ == null) {
-                ensureBankAccountVerdictsIsMutable();
-                bankAccountVerdicts_.add(m);
-              } else {
-                bankAccountVerdictsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -499,365 +352,51 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private ai.visma.ssn.companylookup.v1.EnrichedCompany supplier_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.EnrichedCompany, ai.visma.ssn.companylookup.v1.EnrichedCompany.Builder, ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder> supplierBuilder_;
+    private boolean supplierVatValid_ ;
     /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     * @return Whether the supplier field is set.
+     * <pre>
+     * True only when the supplier company has been enriched and the registry
+     * (VIES) confirmed the VAT number.
+     * </pre>
+     *
+     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
+     * @return The supplierVatValid.
      */
-    public boolean hasSupplier() {
-      return ((bitField0_ & 0x00000001) != 0);
+    @java.lang.Override
+    public boolean getSupplierVatValid() {
+      return supplierVatValid_;
     }
     /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     * @return The supplier.
+     * <pre>
+     * True only when the supplier company has been enriched and the registry
+     * (VIES) confirmed the VAT number.
+     * </pre>
+     *
+     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
+     * @param value The supplierVatValid to set.
+     * @return This builder for chaining.
      */
-    public ai.visma.ssn.companylookup.v1.EnrichedCompany getSupplier() {
-      if (supplierBuilder_ == null) {
-        return supplier_ == null ? ai.visma.ssn.companylookup.v1.EnrichedCompany.getDefaultInstance() : supplier_;
-      } else {
-        return supplierBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    public Builder setSupplier(ai.visma.ssn.companylookup.v1.EnrichedCompany value) {
-      if (supplierBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        supplier_ = value;
-      } else {
-        supplierBuilder_.setMessage(value);
-      }
+    public Builder setSupplierVatValid(boolean value) {
+
+      supplierVatValid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
+     * <pre>
+     * True only when the supplier company has been enriched and the registry
+     * (VIES) confirmed the VAT number.
+     * </pre>
+     *
+     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
+     * @return This builder for chaining.
      */
-    public Builder setSupplier(
-        ai.visma.ssn.companylookup.v1.EnrichedCompany.Builder builderForValue) {
-      if (supplierBuilder_ == null) {
-        supplier_ = builderForValue.build();
-      } else {
-        supplierBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    public Builder mergeSupplier(ai.visma.ssn.companylookup.v1.EnrichedCompany value) {
-      if (supplierBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          supplier_ != null &&
-          supplier_ != ai.visma.ssn.companylookup.v1.EnrichedCompany.getDefaultInstance()) {
-          getSupplierBuilder().mergeFrom(value);
-        } else {
-          supplier_ = value;
-        }
-      } else {
-        supplierBuilder_.mergeFrom(value);
-      }
-      if (supplier_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    public Builder clearSupplier() {
+    public Builder clearSupplierVatValid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      supplier_ = null;
-      if (supplierBuilder_ != null) {
-        supplierBuilder_.dispose();
-        supplierBuilder_ = null;
-      }
+      supplierVatValid_ = false;
       onChanged();
       return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.EnrichedCompany.Builder getSupplierBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getSupplierFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder getSupplierOrBuilder() {
-      if (supplierBuilder_ != null) {
-        return supplierBuilder_.getMessageOrBuilder();
-      } else {
-        return supplier_ == null ?
-            ai.visma.ssn.companylookup.v1.EnrichedCompany.getDefaultInstance() : supplier_;
-      }
-    }
-    /**
-     * <code>.ssn.companylookup.v1.EnrichedCompany supplier = 1 [json_name = "supplier"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.companylookup.v1.EnrichedCompany, ai.visma.ssn.companylookup.v1.EnrichedCompany.Builder, ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder> 
-        getSupplierFieldBuilder() {
-      if (supplierBuilder_ == null) {
-        supplierBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.companylookup.v1.EnrichedCompany, ai.visma.ssn.companylookup.v1.EnrichedCompany.Builder, ai.visma.ssn.companylookup.v1.EnrichedCompanyOrBuilder>(
-                getSupplier(),
-                getParentForChildren(),
-                isClean());
-        supplier_ = null;
-      }
-      return supplierBuilder_;
-    }
-
-    private java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict> bankAccountVerdicts_ =
-      java.util.Collections.emptyList();
-    private void ensureBankAccountVerdictsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        bankAccountVerdicts_ = new java.util.ArrayList<ai.visma.ssn.companylookup.v1.BankAccountVerdict>(bankAccountVerdicts_);
-        bitField0_ |= 0x00000002;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.companylookup.v1.BankAccountVerdict, ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder, ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder> bankAccountVerdictsBuilder_;
-
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict> getBankAccountVerdictsList() {
-      if (bankAccountVerdictsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(bankAccountVerdicts_);
-      } else {
-        return bankAccountVerdictsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public int getBankAccountVerdictsCount() {
-      if (bankAccountVerdictsBuilder_ == null) {
-        return bankAccountVerdicts_.size();
-      } else {
-        return bankAccountVerdictsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdict getBankAccountVerdicts(int index) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        return bankAccountVerdicts_.get(index);
-      } else {
-        return bankAccountVerdictsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder setBankAccountVerdicts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccountVerdict value) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.set(index, value);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder setBankAccountVerdicts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder builderForValue) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder addBankAccountVerdicts(ai.visma.ssn.companylookup.v1.BankAccountVerdict value) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.add(value);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder addBankAccountVerdicts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccountVerdict value) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.add(index, value);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder addBankAccountVerdicts(
-        ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder builderForValue) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.add(builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder addBankAccountVerdicts(
-        int index, ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder builderForValue) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder addAllBankAccountVerdicts(
-        java.lang.Iterable<? extends ai.visma.ssn.companylookup.v1.BankAccountVerdict> values) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        ensureBankAccountVerdictsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bankAccountVerdicts_);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder clearBankAccountVerdicts() {
-      if (bankAccountVerdictsBuilder_ == null) {
-        bankAccountVerdicts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public Builder removeBankAccountVerdicts(int index) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        ensureBankAccountVerdictsIsMutable();
-        bankAccountVerdicts_.remove(index);
-        onChanged();
-      } else {
-        bankAccountVerdictsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder getBankAccountVerdictsBuilder(
-        int index) {
-      return getBankAccountVerdictsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder getBankAccountVerdictsOrBuilder(
-        int index) {
-      if (bankAccountVerdictsBuilder_ == null) {
-        return bankAccountVerdicts_.get(index);  } else {
-        return bankAccountVerdictsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public java.util.List<? extends ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder> 
-         getBankAccountVerdictsOrBuilderList() {
-      if (bankAccountVerdictsBuilder_ != null) {
-        return bankAccountVerdictsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(bankAccountVerdicts_);
-      }
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder addBankAccountVerdictsBuilder() {
-      return getBankAccountVerdictsFieldBuilder().addBuilder(
-          ai.visma.ssn.companylookup.v1.BankAccountVerdict.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder addBankAccountVerdictsBuilder(
-        int index) {
-      return getBankAccountVerdictsFieldBuilder().addBuilder(
-          index, ai.visma.ssn.companylookup.v1.BankAccountVerdict.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .ssn.companylookup.v1.BankAccountVerdict bank_account_verdicts = 2 [json_name = "bankAccountVerdicts"];</code>
-     */
-    public java.util.List<ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder> 
-         getBankAccountVerdictsBuilderList() {
-      return getBankAccountVerdictsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        ai.visma.ssn.companylookup.v1.BankAccountVerdict, ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder, ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder> 
-        getBankAccountVerdictsFieldBuilder() {
-      if (bankAccountVerdictsBuilder_ == null) {
-        bankAccountVerdictsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            ai.visma.ssn.companylookup.v1.BankAccountVerdict, ai.visma.ssn.companylookup.v1.BankAccountVerdict.Builder, ai.visma.ssn.companylookup.v1.BankAccountVerdictOrBuilder>(
-                bankAccountVerdicts_,
-                ((bitField0_ & 0x00000002) != 0),
-                getParentForChildren(),
-                isClean());
-        bankAccountVerdicts_ = null;
-      }
-      return bankAccountVerdictsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse)

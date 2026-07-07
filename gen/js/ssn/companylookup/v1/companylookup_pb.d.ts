@@ -1,6 +1,5 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
@@ -116,96 +115,9 @@ export namespace ProcessInvoiceCompanyDataRequest {
   }
 }
 
-export class BankAccountVerdict extends jspb.Message {
-  getAccountKey(): string;
-  setAccountKey(value: string): BankAccountVerdict;
-
-  getVerdict(): TrustVerdict;
-  setVerdict(value: TrustVerdict): BankAccountVerdict;
-
-  getObservedCountTenant(): number;
-  setObservedCountTenant(value: number): BankAccountVerdict;
-
-  getObservedCountGlobal(): number;
-  setObservedCountGlobal(value: number): BankAccountVerdict;
-
-  getFirstSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
-  setFirstSeen(value?: google_protobuf_timestamp_pb.Timestamp): BankAccountVerdict;
-  hasFirstSeen(): boolean;
-  clearFirstSeen(): BankAccountVerdict;
-
-  getLastSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
-  setLastSeen(value?: google_protobuf_timestamp_pb.Timestamp): BankAccountVerdict;
-  hasLastSeen(): boolean;
-  clearLastSeen(): BankAccountVerdict;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): BankAccountVerdict.AsObject;
-  static toObject(includeInstance: boolean, msg: BankAccountVerdict): BankAccountVerdict.AsObject;
-  static serializeBinaryToWriter(message: BankAccountVerdict, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): BankAccountVerdict;
-  static deserializeBinaryFromReader(message: BankAccountVerdict, reader: jspb.BinaryReader): BankAccountVerdict;
-}
-
-export namespace BankAccountVerdict {
-  export type AsObject = {
-    accountKey: string,
-    verdict: TrustVerdict,
-    observedCountTenant: number,
-    observedCountGlobal: number,
-    firstSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
-    lastSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
-  }
-}
-
-export class EnrichedCompany extends jspb.Message {
-  getCompanyKey(): string;
-  setCompanyKey(value: string): EnrichedCompany;
-
-  getRegistryName(): string;
-  setRegistryName(value: string): EnrichedCompany;
-
-  getRegistryAddress(): string;
-  setRegistryAddress(value: string): EnrichedCompany;
-
-  getVatValid(): boolean;
-  setVatValid(value: boolean): EnrichedCompany;
-
-  getIndustry(): string;
-  setIndustry(value: string): EnrichedCompany;
-
-  getEnrichmentStatus(): EnrichmentStatus;
-  setEnrichmentStatus(value: EnrichmentStatus): EnrichedCompany;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): EnrichedCompany.AsObject;
-  static toObject(includeInstance: boolean, msg: EnrichedCompany): EnrichedCompany.AsObject;
-  static serializeBinaryToWriter(message: EnrichedCompany, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): EnrichedCompany;
-  static deserializeBinaryFromReader(message: EnrichedCompany, reader: jspb.BinaryReader): EnrichedCompany;
-}
-
-export namespace EnrichedCompany {
-  export type AsObject = {
-    companyKey: string,
-    registryName: string,
-    registryAddress: string,
-    vatValid: boolean,
-    industry: string,
-    enrichmentStatus: EnrichmentStatus,
-  }
-}
-
 export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
-  getSupplier(): EnrichedCompany | undefined;
-  setSupplier(value?: EnrichedCompany): ProcessInvoiceCompanyDataResponse;
-  hasSupplier(): boolean;
-  clearSupplier(): ProcessInvoiceCompanyDataResponse;
-
-  getBankAccountVerdictsList(): Array<BankAccountVerdict>;
-  setBankAccountVerdictsList(value: Array<BankAccountVerdict>): ProcessInvoiceCompanyDataResponse;
-  clearBankAccountVerdictsList(): ProcessInvoiceCompanyDataResponse;
-  addBankAccountVerdicts(value?: BankAccountVerdict, index?: number): BankAccountVerdict;
+  getSupplierVatValid(): boolean;
+  setSupplierVatValid(value: boolean): ProcessInvoiceCompanyDataResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProcessInvoiceCompanyDataResponse.AsObject;
@@ -217,19 +129,7 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
 
 export namespace ProcessInvoiceCompanyDataResponse {
   export type AsObject = {
-    supplier?: EnrichedCompany.AsObject,
-    bankAccountVerdictsList: Array<BankAccountVerdict.AsObject>,
+    supplierVatValid: boolean,
   }
 }
 
-export enum TrustVerdict { 
-  TRUST_VERDICT_UNSPECIFIED = 0,
-  NEW = 1,
-  KNOWN = 2,
-}
-export enum EnrichmentStatus { 
-  ENRICHMENT_STATUS_UNSPECIFIED = 0,
-  PENDING = 1,
-  ENRICHED = 2,
-  FAILED = 3,
-}

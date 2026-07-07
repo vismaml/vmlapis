@@ -25,91 +25,53 @@ namespace Ssn.Companylookup.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihzc24vY29tcGFueWxvb2t1cC92MS9jb21wYW55bG9va3VwLnByb3RvEhRz",
-            "c24uY29tcGFueWxvb2t1cC52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90bxoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3RvIrMICiBQcm9jZXNz",
-            "SW52b2ljZUNvbXBhbnlEYXRhUmVxdWVzdBIhCgxwcm9qZWN0X25hbWUYASAB",
-            "KAlSC3Byb2plY3ROYW1lEiUKDnRyYW5zYWN0aW9uX2lkGAIgASgJUg10cmFu",
-            "c2FjdGlvbklkEjgKDXN1cHBsaWVyX25hbWUYAyABKAsyEy5zc24udHlwZS5D",
-            "YW5kaWRhdGVSDHN1cHBsaWVyTmFtZRJDChNzdXBwbGllcl92YXRfbnVtYmVy",
-            "GAQgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhFzdXBwbGllclZhdE51bWJl",
-            "chJVChxzdXBwbGllcl9vcmdhbmlzYXRpb25fbnVtYmVyGAUgASgLMhMuc3Nu",
-            "LnR5cGUuQ2FuZGlkYXRlUhpzdXBwbGllck9yZ2FuaXNhdGlvbk51bWJlchJH",
-            "ChVzdXBwbGllcl9jb3VudHJ5X2NvZGUYBiABKAsyEy5zc24udHlwZS5DYW5k",
-            "aWRhdGVSE3N1cHBsaWVyQ291bnRyeUNvZGUSPgoQc3VwcGxpZXJfYWRkcmVz",
-            "cxgHIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIPc3VwcGxpZXJBZGRyZXNz",
-            "EjgKDXJlY2VpdmVyX25hbWUYCCABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
-            "DHJlY2VpdmVyTmFtZRJDChNyZWNlaXZlcl92YXRfbnVtYmVyGAkgASgLMhMu",
-            "c3NuLnR5cGUuQ2FuZGlkYXRlUhFyZWNlaXZlclZhdE51bWJlchJVChxyZWNl",
-            "aXZlcl9vcmdhbmlzYXRpb25fbnVtYmVyGAogASgLMhMuc3NuLnR5cGUuQ2Fu",
-            "ZGlkYXRlUhpyZWNlaXZlck9yZ2FuaXNhdGlvbk51bWJlchJHChVyZWNlaXZl",
-            "cl9jb3VudHJ5X2NvZGUYCyABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSE3Jl",
-            "Y2VpdmVyQ291bnRyeUNvZGUSPgoQcmVjZWl2ZXJfYWRkcmVzcxgMIAEoCzIT",
-            "LnNzbi50eXBlLkNhbmRpZGF0ZVIPcmVjZWl2ZXJBZGRyZXNzEicKBGliYW4Y",
-            "DSABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGliYW4SJQoDYmljGA4gASgL",
-            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgNiaWMSQwoTYmFua19hY2NvdW50X251",
-            "bWJlchgPIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIRYmFua0FjY291bnRO",
-            "dW1iZXISTQoYYmFua19yZWdpc3RyYXRpb25fbnVtYmVyGBAgASgLMhMuc3Nu",
-            "LnR5cGUuQ2FuZGlkYXRlUhZiYW5rUmVnaXN0cmF0aW9uTnVtYmVyEiMKDXBy",
-            "b2R1Y3RfdHlwZXMYESADKAlSDHByb2R1Y3RUeXBlcyLPAgoSQmFua0FjY291",
-            "bnRWZXJkaWN0Eh8KC2FjY291bnRfa2V5GAEgASgJUgphY2NvdW50S2V5EjwK",
-            "B3ZlcmRpY3QYAiABKA4yIi5zc24uY29tcGFueWxvb2t1cC52MS5UcnVzdFZl",
-            "cmRpY3RSB3ZlcmRpY3QSMgoVb2JzZXJ2ZWRfY291bnRfdGVuYW50GAMgASgD",
-            "UhNvYnNlcnZlZENvdW50VGVuYW50EjIKFW9ic2VydmVkX2NvdW50X2dsb2Jh",
-            "bBgEIAEoA1ITb2JzZXJ2ZWRDb3VudEdsb2JhbBI5CgpmaXJzdF9zZWVuGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJZmlyc3RTZWVuEjcK",
-            "CWxhc3Rfc2VlbhgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS",
-            "CGxhc3RTZWVuIpACCg9FbnJpY2hlZENvbXBhbnkSHwoLY29tcGFueV9rZXkY",
-            "ASABKAlSCmNvbXBhbnlLZXkSIwoNcmVnaXN0cnlfbmFtZRgCIAEoCVIMcmVn",
-            "aXN0cnlOYW1lEikKEHJlZ2lzdHJ5X2FkZHJlc3MYAyABKAlSD3JlZ2lzdHJ5",
-            "QWRkcmVzcxIbCgl2YXRfdmFsaWQYBCABKAhSCHZhdFZhbGlkEhoKCGluZHVz",
-            "dHJ5GAUgASgJUghpbmR1c3RyeRJTChFlbnJpY2htZW50X3N0YXR1cxgGIAEo",
-            "DjImLnNzbi5jb21wYW55bG9va3VwLnYxLkVucmljaG1lbnRTdGF0dXNSEGVu",
-            "cmljaG1lbnRTdGF0dXMixAEKIVByb2Nlc3NJbnZvaWNlQ29tcGFueURhdGFS",
-            "ZXNwb25zZRJBCghzdXBwbGllchgBIAEoCzIlLnNzbi5jb21wYW55bG9va3Vw",
-            "LnYxLkVucmljaGVkQ29tcGFueVIIc3VwcGxpZXISXAoVYmFua19hY2NvdW50",
-            "X3ZlcmRpY3RzGAIgAygLMiguc3NuLmNvbXBhbnlsb29rdXAudjEuQmFua0Fj",
-            "Y291bnRWZXJkaWN0UhNiYW5rQWNjb3VudFZlcmRpY3RzKkEKDFRydXN0VmVy",
-            "ZGljdBIdChlUUlVTVF9WRVJESUNUX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAES",
-            "CQoFS05PV04QAipcChBFbnJpY2htZW50U3RhdHVzEiEKHUVOUklDSE1FTlRf",
-            "U1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCEVOUklDSEVE",
-            "EAISCgoGRkFJTEVEEAMypQEKFENvbXBhbnlMb29rdXBTZXJ2aWNlEowBChlQ",
-            "cm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhEjYuc3NuLmNvbXBhbnlsb29rdXAu",
-            "djEuUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0YVJlcXVlc3QaNy5zc24uY29t",
-            "cGFueWxvb2t1cC52MS5Qcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9u",
-            "c2VC7QEKHWFpLnZpc21hLnNzbi5jb21wYW55bG9va3VwLnYxQhJDb21wYW55",
-            "bG9va3VwUHJvdG9QAVpGZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vc3NuL2NvbXBhbnlsb29rdXAvdjE7Y29tcGFueWxvb2t1cKICA1ND",
-            "WKoCFFNzbi5Db21wYW55bG9va3VwLlYxygIUU3NuXENvbXBhbnlsb29rdXBc",
-            "VjHiAiBTc25cQ29tcGFueWxvb2t1cFxWMVxHUEJNZXRhZGF0YeoCFlNzbjo6",
-            "Q29tcGFueWxvb2t1cDo6VjFiBnByb3RvMw=="));
+            "c24uY29tcGFueWxvb2t1cC52MRoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3Rv",
+            "IrMICiBQcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVxdWVzdBIhCgxwcm9q",
+            "ZWN0X25hbWUYASABKAlSC3Byb2plY3ROYW1lEiUKDnRyYW5zYWN0aW9uX2lk",
+            "GAIgASgJUg10cmFuc2FjdGlvbklkEjgKDXN1cHBsaWVyX25hbWUYAyABKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSDHN1cHBsaWVyTmFtZRJDChNzdXBwbGll",
+            "cl92YXRfbnVtYmVyGAQgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhFzdXBw",
+            "bGllclZhdE51bWJlchJVChxzdXBwbGllcl9vcmdhbmlzYXRpb25fbnVtYmVy",
+            "GAUgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhpzdXBwbGllck9yZ2FuaXNh",
+            "dGlvbk51bWJlchJHChVzdXBwbGllcl9jb3VudHJ5X2NvZGUYBiABKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGVSE3N1cHBsaWVyQ291bnRyeUNvZGUSPgoQc3Vw",
+            "cGxpZXJfYWRkcmVzcxgHIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIPc3Vw",
+            "cGxpZXJBZGRyZXNzEjgKDXJlY2VpdmVyX25hbWUYCCABKAsyEy5zc24udHlw",
+            "ZS5DYW5kaWRhdGVSDHJlY2VpdmVyTmFtZRJDChNyZWNlaXZlcl92YXRfbnVt",
+            "YmVyGAkgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhFyZWNlaXZlclZhdE51",
+            "bWJlchJVChxyZWNlaXZlcl9vcmdhbmlzYXRpb25fbnVtYmVyGAogASgLMhMu",
+            "c3NuLnR5cGUuQ2FuZGlkYXRlUhpyZWNlaXZlck9yZ2FuaXNhdGlvbk51bWJl",
+            "chJHChVyZWNlaXZlcl9jb3VudHJ5X2NvZGUYCyABKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSE3JlY2VpdmVyQ291bnRyeUNvZGUSPgoQcmVjZWl2ZXJfYWRk",
+            "cmVzcxgMIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIPcmVjZWl2ZXJBZGRy",
+            "ZXNzEicKBGliYW4YDSABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGliYW4S",
+            "JQoDYmljGA4gASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgNiaWMSQwoTYmFu",
+            "a19hY2NvdW50X251bWJlchgPIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIR",
+            "YmFua0FjY291bnROdW1iZXISTQoYYmFua19yZWdpc3RyYXRpb25fbnVtYmVy",
+            "GBAgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhZiYW5rUmVnaXN0cmF0aW9u",
+            "TnVtYmVyEiMKDXByb2R1Y3RfdHlwZXMYESADKAlSDHByb2R1Y3RUeXBlcyJR",
+            "CiFQcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9uc2USLAoSc3VwcGxp",
+            "ZXJfdmF0X3ZhbGlkGAEgASgIUhBzdXBwbGllclZhdFZhbGlkMqUBChRDb21w",
+            "YW55TG9va3VwU2VydmljZRKMAQoZUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0",
+            "YRI2LnNzbi5jb21wYW55bG9va3VwLnYxLlByb2Nlc3NJbnZvaWNlQ29tcGFu",
+            "eURhdGFSZXF1ZXN0Gjcuc3NuLmNvbXBhbnlsb29rdXAudjEuUHJvY2Vzc0lu",
+            "dm9pY2VDb21wYW55RGF0YVJlc3BvbnNlQu0BCh1haS52aXNtYS5zc24uY29t",
+            "cGFueWxvb2t1cC52MUISQ29tcGFueWxvb2t1cFByb3RvUAFaRmdpdGh1Yi5j",
+            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9jb21wYW55bG9va3Vw",
+            "L3YxO2NvbXBhbnlsb29rdXCiAgNTQ1iqAhRTc24uQ29tcGFueWxvb2t1cC5W",
+            "McoCFFNzblxDb21wYW55bG9va3VwXFYx4gIgU3NuXENvbXBhbnlsb29rdXBc",
+            "VjFcR1BCTWV0YWRhdGHqAhZTc246OkNvbXBhbnlsb29rdXA6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Companylookup.V1.TrustVerdict), typeof(global::Ssn.Companylookup.V1.EnrichmentStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Ssn.Type.CandidateReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest.Parser, new[]{ "ProjectName", "TransactionId", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierCountryCode", "SupplierAddress", "ReceiverName", "ReceiverVatNumber", "ReceiverOrganisationNumber", "ReceiverCountryCode", "ReceiverAddress", "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", "ProductTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.BankAccountVerdict), global::Ssn.Companylookup.V1.BankAccountVerdict.Parser, new[]{ "AccountKey", "Verdict", "ObservedCountTenant", "ObservedCountGlobal", "FirstSeen", "LastSeen" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.EnrichedCompany), global::Ssn.Companylookup.V1.EnrichedCompany.Parser, new[]{ "CompanyKey", "RegistryName", "RegistryAddress", "VatValid", "Industry", "EnrichmentStatus" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "Supplier", "BankAccountVerdicts" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "SupplierVatValid" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  public enum TrustVerdict {
-    [pbr::OriginalName("TRUST_VERDICT_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("NEW")] New = 1,
-    [pbr::OriginalName("KNOWN")] Known = 2,
-  }
-
-  public enum EnrichmentStatus {
-    [pbr::OriginalName("ENRICHMENT_STATUS_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("PENDING")] Pending = 1,
-    [pbr::OriginalName("ENRICHED")] Enriched = 2,
-    [pbr::OriginalName("FAILED")] Failed = 3,
-  }
-
-  #endregion
-
   #region Messages
   /// <summary>
   /// The request is flat: each field is the top-1 smartscan candidate for the
@@ -1028,790 +990,6 @@ namespace Ssn.Companylookup.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class BankAccountVerdict : pb::IMessage<BankAccountVerdict>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<BankAccountVerdict> _parser = new pb::MessageParser<BankAccountVerdict>(() => new BankAccountVerdict());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<BankAccountVerdict> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public BankAccountVerdict() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public BankAccountVerdict(BankAccountVerdict other) : this() {
-      accountKey_ = other.accountKey_;
-      verdict_ = other.verdict_;
-      observedCountTenant_ = other.observedCountTenant_;
-      observedCountGlobal_ = other.observedCountGlobal_;
-      firstSeen_ = other.firstSeen_ != null ? other.firstSeen_.Clone() : null;
-      lastSeen_ = other.lastSeen_ != null ? other.lastSeen_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public BankAccountVerdict Clone() {
-      return new BankAccountVerdict(this);
-    }
-
-    /// <summary>Field number for the "account_key" field.</summary>
-    public const int AccountKeyFieldNumber = 1;
-    private string accountKey_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AccountKey {
-      get { return accountKey_; }
-      set {
-        accountKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "verdict" field.</summary>
-    public const int VerdictFieldNumber = 2;
-    private global::Ssn.Companylookup.V1.TrustVerdict verdict_ = global::Ssn.Companylookup.V1.TrustVerdict.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Companylookup.V1.TrustVerdict Verdict {
-      get { return verdict_; }
-      set {
-        verdict_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "observed_count_tenant" field.</summary>
-    public const int ObservedCountTenantFieldNumber = 3;
-    private long observedCountTenant_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ObservedCountTenant {
-      get { return observedCountTenant_; }
-      set {
-        observedCountTenant_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "observed_count_global" field.</summary>
-    public const int ObservedCountGlobalFieldNumber = 4;
-    private long observedCountGlobal_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ObservedCountGlobal {
-      get { return observedCountGlobal_; }
-      set {
-        observedCountGlobal_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "first_seen" field.</summary>
-    public const int FirstSeenFieldNumber = 5;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp firstSeen_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp FirstSeen {
-      get { return firstSeen_; }
-      set {
-        firstSeen_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "last_seen" field.</summary>
-    public const int LastSeenFieldNumber = 6;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp lastSeen_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp LastSeen {
-      get { return lastSeen_; }
-      set {
-        lastSeen_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as BankAccountVerdict);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(BankAccountVerdict other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (AccountKey != other.AccountKey) return false;
-      if (Verdict != other.Verdict) return false;
-      if (ObservedCountTenant != other.ObservedCountTenant) return false;
-      if (ObservedCountGlobal != other.ObservedCountGlobal) return false;
-      if (!object.Equals(FirstSeen, other.FirstSeen)) return false;
-      if (!object.Equals(LastSeen, other.LastSeen)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (AccountKey.Length != 0) hash ^= AccountKey.GetHashCode();
-      if (Verdict != global::Ssn.Companylookup.V1.TrustVerdict.Unspecified) hash ^= Verdict.GetHashCode();
-      if (ObservedCountTenant != 0L) hash ^= ObservedCountTenant.GetHashCode();
-      if (ObservedCountGlobal != 0L) hash ^= ObservedCountGlobal.GetHashCode();
-      if (firstSeen_ != null) hash ^= FirstSeen.GetHashCode();
-      if (lastSeen_ != null) hash ^= LastSeen.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (AccountKey.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AccountKey);
-      }
-      if (Verdict != global::Ssn.Companylookup.V1.TrustVerdict.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Verdict);
-      }
-      if (ObservedCountTenant != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(ObservedCountTenant);
-      }
-      if (ObservedCountGlobal != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(ObservedCountGlobal);
-      }
-      if (firstSeen_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(FirstSeen);
-      }
-      if (lastSeen_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(LastSeen);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AccountKey.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AccountKey);
-      }
-      if (Verdict != global::Ssn.Companylookup.V1.TrustVerdict.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Verdict);
-      }
-      if (ObservedCountTenant != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(ObservedCountTenant);
-      }
-      if (ObservedCountGlobal != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(ObservedCountGlobal);
-      }
-      if (firstSeen_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(FirstSeen);
-      }
-      if (lastSeen_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(LastSeen);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (AccountKey.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountKey);
-      }
-      if (Verdict != global::Ssn.Companylookup.V1.TrustVerdict.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Verdict);
-      }
-      if (ObservedCountTenant != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ObservedCountTenant);
-      }
-      if (ObservedCountGlobal != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ObservedCountGlobal);
-      }
-      if (firstSeen_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirstSeen);
-      }
-      if (lastSeen_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastSeen);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(BankAccountVerdict other) {
-      if (other == null) {
-        return;
-      }
-      if (other.AccountKey.Length != 0) {
-        AccountKey = other.AccountKey;
-      }
-      if (other.Verdict != global::Ssn.Companylookup.V1.TrustVerdict.Unspecified) {
-        Verdict = other.Verdict;
-      }
-      if (other.ObservedCountTenant != 0L) {
-        ObservedCountTenant = other.ObservedCountTenant;
-      }
-      if (other.ObservedCountGlobal != 0L) {
-        ObservedCountGlobal = other.ObservedCountGlobal;
-      }
-      if (other.firstSeen_ != null) {
-        if (firstSeen_ == null) {
-          FirstSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        FirstSeen.MergeFrom(other.FirstSeen);
-      }
-      if (other.lastSeen_ != null) {
-        if (lastSeen_ == null) {
-          LastSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        LastSeen.MergeFrom(other.LastSeen);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            AccountKey = input.ReadString();
-            break;
-          }
-          case 16: {
-            Verdict = (global::Ssn.Companylookup.V1.TrustVerdict) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            ObservedCountTenant = input.ReadInt64();
-            break;
-          }
-          case 32: {
-            ObservedCountGlobal = input.ReadInt64();
-            break;
-          }
-          case 42: {
-            if (firstSeen_ == null) {
-              FirstSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(FirstSeen);
-            break;
-          }
-          case 50: {
-            if (lastSeen_ == null) {
-              LastSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(LastSeen);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            AccountKey = input.ReadString();
-            break;
-          }
-          case 16: {
-            Verdict = (global::Ssn.Companylookup.V1.TrustVerdict) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            ObservedCountTenant = input.ReadInt64();
-            break;
-          }
-          case 32: {
-            ObservedCountGlobal = input.ReadInt64();
-            break;
-          }
-          case 42: {
-            if (firstSeen_ == null) {
-              FirstSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(FirstSeen);
-            break;
-          }
-          case 50: {
-            if (lastSeen_ == null) {
-              LastSeen = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(LastSeen);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class EnrichedCompany : pb::IMessage<EnrichedCompany>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<EnrichedCompany> _parser = new pb::MessageParser<EnrichedCompany>(() => new EnrichedCompany());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<EnrichedCompany> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public EnrichedCompany() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public EnrichedCompany(EnrichedCompany other) : this() {
-      companyKey_ = other.companyKey_;
-      registryName_ = other.registryName_;
-      registryAddress_ = other.registryAddress_;
-      vatValid_ = other.vatValid_;
-      industry_ = other.industry_;
-      enrichmentStatus_ = other.enrichmentStatus_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public EnrichedCompany Clone() {
-      return new EnrichedCompany(this);
-    }
-
-    /// <summary>Field number for the "company_key" field.</summary>
-    public const int CompanyKeyFieldNumber = 1;
-    private string companyKey_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CompanyKey {
-      get { return companyKey_; }
-      set {
-        companyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "registry_name" field.</summary>
-    public const int RegistryNameFieldNumber = 2;
-    private string registryName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RegistryName {
-      get { return registryName_; }
-      set {
-        registryName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "registry_address" field.</summary>
-    public const int RegistryAddressFieldNumber = 3;
-    private string registryAddress_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RegistryAddress {
-      get { return registryAddress_; }
-      set {
-        registryAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "vat_valid" field.</summary>
-    public const int VatValidFieldNumber = 4;
-    private bool vatValid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool VatValid {
-      get { return vatValid_; }
-      set {
-        vatValid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "industry" field.</summary>
-    public const int IndustryFieldNumber = 5;
-    private string industry_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Industry {
-      get { return industry_; }
-      set {
-        industry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enrichment_status" field.</summary>
-    public const int EnrichmentStatusFieldNumber = 6;
-    private global::Ssn.Companylookup.V1.EnrichmentStatus enrichmentStatus_ = global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Companylookup.V1.EnrichmentStatus EnrichmentStatus {
-      get { return enrichmentStatus_; }
-      set {
-        enrichmentStatus_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as EnrichedCompany);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(EnrichedCompany other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (CompanyKey != other.CompanyKey) return false;
-      if (RegistryName != other.RegistryName) return false;
-      if (RegistryAddress != other.RegistryAddress) return false;
-      if (VatValid != other.VatValid) return false;
-      if (Industry != other.Industry) return false;
-      if (EnrichmentStatus != other.EnrichmentStatus) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (CompanyKey.Length != 0) hash ^= CompanyKey.GetHashCode();
-      if (RegistryName.Length != 0) hash ^= RegistryName.GetHashCode();
-      if (RegistryAddress.Length != 0) hash ^= RegistryAddress.GetHashCode();
-      if (VatValid != false) hash ^= VatValid.GetHashCode();
-      if (Industry.Length != 0) hash ^= Industry.GetHashCode();
-      if (EnrichmentStatus != global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified) hash ^= EnrichmentStatus.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (CompanyKey.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CompanyKey);
-      }
-      if (RegistryName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RegistryName);
-      }
-      if (RegistryAddress.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RegistryAddress);
-      }
-      if (VatValid != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(VatValid);
-      }
-      if (Industry.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Industry);
-      }
-      if (EnrichmentStatus != global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) EnrichmentStatus);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CompanyKey.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(CompanyKey);
-      }
-      if (RegistryName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RegistryName);
-      }
-      if (RegistryAddress.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RegistryAddress);
-      }
-      if (VatValid != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(VatValid);
-      }
-      if (Industry.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Industry);
-      }
-      if (EnrichmentStatus != global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) EnrichmentStatus);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (CompanyKey.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyKey);
-      }
-      if (RegistryName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegistryName);
-      }
-      if (RegistryAddress.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegistryAddress);
-      }
-      if (VatValid != false) {
-        size += 1 + 1;
-      }
-      if (Industry.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Industry);
-      }
-      if (EnrichmentStatus != global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnrichmentStatus);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(EnrichedCompany other) {
-      if (other == null) {
-        return;
-      }
-      if (other.CompanyKey.Length != 0) {
-        CompanyKey = other.CompanyKey;
-      }
-      if (other.RegistryName.Length != 0) {
-        RegistryName = other.RegistryName;
-      }
-      if (other.RegistryAddress.Length != 0) {
-        RegistryAddress = other.RegistryAddress;
-      }
-      if (other.VatValid != false) {
-        VatValid = other.VatValid;
-      }
-      if (other.Industry.Length != 0) {
-        Industry = other.Industry;
-      }
-      if (other.EnrichmentStatus != global::Ssn.Companylookup.V1.EnrichmentStatus.Unspecified) {
-        EnrichmentStatus = other.EnrichmentStatus;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            CompanyKey = input.ReadString();
-            break;
-          }
-          case 18: {
-            RegistryName = input.ReadString();
-            break;
-          }
-          case 26: {
-            RegistryAddress = input.ReadString();
-            break;
-          }
-          case 32: {
-            VatValid = input.ReadBool();
-            break;
-          }
-          case 42: {
-            Industry = input.ReadString();
-            break;
-          }
-          case 48: {
-            EnrichmentStatus = (global::Ssn.Companylookup.V1.EnrichmentStatus) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            CompanyKey = input.ReadString();
-            break;
-          }
-          case 18: {
-            RegistryName = input.ReadString();
-            break;
-          }
-          case 26: {
-            RegistryAddress = input.ReadString();
-            break;
-          }
-          case 32: {
-            VatValid = input.ReadBool();
-            break;
-          }
-          case 42: {
-            Industry = input.ReadString();
-            break;
-          }
-          case 48: {
-            EnrichmentStatus = (global::Ssn.Companylookup.V1.EnrichmentStatus) input.ReadEnum();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessInvoiceCompanyDataResponse : pb::IMessage<ProcessInvoiceCompanyDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1826,7 +1004,7 @@ namespace Ssn.Companylookup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1846,8 +1024,7 @@ namespace Ssn.Companylookup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProcessInvoiceCompanyDataResponse(ProcessInvoiceCompanyDataResponse other) : this() {
-      supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
-      bankAccountVerdicts_ = other.bankAccountVerdicts_.Clone();
+      supplierVatValid_ = other.supplierVatValid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1857,27 +1034,20 @@ namespace Ssn.Companylookup.V1 {
       return new ProcessInvoiceCompanyDataResponse(this);
     }
 
-    /// <summary>Field number for the "supplier" field.</summary>
-    public const int SupplierFieldNumber = 1;
-    private global::Ssn.Companylookup.V1.EnrichedCompany supplier_;
+    /// <summary>Field number for the "supplier_vat_valid" field.</summary>
+    public const int SupplierVatValidFieldNumber = 1;
+    private bool supplierVatValid_;
+    /// <summary>
+    /// True only when the supplier company has been enriched and the registry
+    /// (VIES) confirmed the VAT number.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Companylookup.V1.EnrichedCompany Supplier {
-      get { return supplier_; }
+    public bool SupplierVatValid {
+      get { return supplierVatValid_; }
       set {
-        supplier_ = value;
+        supplierVatValid_ = value;
       }
-    }
-
-    /// <summary>Field number for the "bank_account_verdicts" field.</summary>
-    public const int BankAccountVerdictsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Ssn.Companylookup.V1.BankAccountVerdict> _repeated_bankAccountVerdicts_codec
-        = pb::FieldCodec.ForMessage(18, global::Ssn.Companylookup.V1.BankAccountVerdict.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Companylookup.V1.BankAccountVerdict> bankAccountVerdicts_ = new pbc::RepeatedField<global::Ssn.Companylookup.V1.BankAccountVerdict>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Companylookup.V1.BankAccountVerdict> BankAccountVerdicts {
-      get { return bankAccountVerdicts_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1895,8 +1065,7 @@ namespace Ssn.Companylookup.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Supplier, other.Supplier)) return false;
-      if(!bankAccountVerdicts_.Equals(other.bankAccountVerdicts_)) return false;
+      if (SupplierVatValid != other.SupplierVatValid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1904,8 +1073,7 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (supplier_ != null) hash ^= Supplier.GetHashCode();
-      hash ^= bankAccountVerdicts_.GetHashCode();
+      if (SupplierVatValid != false) hash ^= SupplierVatValid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1924,11 +1092,10 @@ namespace Ssn.Companylookup.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (supplier_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Supplier);
+      if (SupplierVatValid != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(SupplierVatValid);
       }
-      bankAccountVerdicts_.WriteTo(output, _repeated_bankAccountVerdicts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1939,11 +1106,10 @@ namespace Ssn.Companylookup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (supplier_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Supplier);
+      if (SupplierVatValid != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(SupplierVatValid);
       }
-      bankAccountVerdicts_.WriteTo(ref output, _repeated_bankAccountVerdicts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1954,10 +1120,9 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (supplier_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Supplier);
+      if (SupplierVatValid != false) {
+        size += 1 + 1;
       }
-      size += bankAccountVerdicts_.CalculateSize(_repeated_bankAccountVerdicts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1970,13 +1135,9 @@ namespace Ssn.Companylookup.V1 {
       if (other == null) {
         return;
       }
-      if (other.supplier_ != null) {
-        if (supplier_ == null) {
-          Supplier = new global::Ssn.Companylookup.V1.EnrichedCompany();
-        }
-        Supplier.MergeFrom(other.Supplier);
+      if (other.SupplierVatValid != false) {
+        SupplierVatValid = other.SupplierVatValid;
       }
-      bankAccountVerdicts_.Add(other.bankAccountVerdicts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1996,15 +1157,8 @@ namespace Ssn.Companylookup.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (supplier_ == null) {
-              Supplier = new global::Ssn.Companylookup.V1.EnrichedCompany();
-            }
-            input.ReadMessage(Supplier);
-            break;
-          }
-          case 18: {
-            bankAccountVerdicts_.AddEntriesFrom(input, _repeated_bankAccountVerdicts_codec);
+          case 8: {
+            SupplierVatValid = input.ReadBool();
             break;
           }
         }
@@ -2026,15 +1180,8 @@ namespace Ssn.Companylookup.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (supplier_ == null) {
-              Supplier = new global::Ssn.Companylookup.V1.EnrichedCompany();
-            }
-            input.ReadMessage(Supplier);
-            break;
-          }
-          case 18: {
-            bankAccountVerdicts_.AddEntriesFrom(ref input, _repeated_bankAccountVerdicts_codec);
+          case 8: {
+            SupplierVatValid = input.ReadBool();
             break;
           }
         }

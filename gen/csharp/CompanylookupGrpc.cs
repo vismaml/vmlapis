@@ -10,8 +10,8 @@ using grpc = global::Grpc.Core;
 namespace Ssn.Companylookup.V1 {
   /// <summary>
   /// CompanyLookupService is an internal service called during invoice
-  /// post-processing. It records observations, verifies bank accounts against
-  /// accumulated history, and returns already-known company enrichment. It never
+  /// post-processing. It records company/bank-account observations and returns
+  /// whether the supplier VAT number has been confirmed by a registry. It never
   /// calls external registries — enrichment is fetched out of band by a job.
   /// </summary>
   public static partial class CompanyLookupService
