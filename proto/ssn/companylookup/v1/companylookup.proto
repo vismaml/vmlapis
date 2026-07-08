@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package ssn.companylookup.v1;
+
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup";
+
+// CompanyLookupService is an internal service called during invoice
+// post-processing. It records company/bank-account observations and returns
+// whether the supplier VAT number has been confirmed by a registry. It never
+// calls external registries — enrichment is fetched out of band by a job.
+service CompanyLookupService {
+  rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
+}
+
+// The request is flat: each field is the top-1 smartscan candidate for the
+// corresponding PredictResponse field, so callers pass candidates through
+// without mapping. The service records value + confidence level per field.
+message ProcessInvoiceCompanyDataRequest {
+  string project_name = 1;
+  string transaction_id = 2;
+
+  ssn.type.Candidate supplier_name = 3;
+  ssn.type.Candidate supplier_vat_number = 4;
+  ssn.type.Candidate supplier_organisation_number = 5;
+  ssn.type.Candidate supplier_country_code = 6; // ISO 3166-1 alpha-2
+  ssn.type.Candidate supplier_address = 7;
+
+  ssn.type.Candidate receiver_name = 8;
+  ssn.type.Candidate receiver_vat_number = 9;
+  ssn.type.Candidate receiver_organisation_number = 10;
+  ssn.type.Candidate receiver_country_code = 11; // ISO 3166-1 alpha-2
+  ssn.type.Candidate receiver_address = 12;
+
+  ssn.type.Candidate iban = 13;
+  ssn.type.Candidate bic = 14;
+  ssn.type.Candidate bank_account_number = 15;
+  ssn.type.Candidate bank_registration_number = 16;
+
+  repeated string product_types = 17;
+}
+
+message ProcessInvoiceCompanyDataResponse {
+  // True only when the supplier company has been enriched and the registry
+  // (VIES) confirmed the VAT number.
+  bool supplier_vat_valid = 1;
+}
