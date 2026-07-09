@@ -24,106 +24,57 @@ enum CandidateSource {
   CANDIDATE_SOURCE_LABEL = 3;
 }
 
-// ---- Core candidate wrapper ----
+// ---- Unified annotation entry ----
 
-// InternalCandidate wraps a standard ssn.type.Candidate with provenance.
-// Used for all standard SSN fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, etc.)
-message InternalCandidate {
-  ssn.type.Candidate candidate = 1;
-  CandidateSource source = 2;
-  // model_id for PREDICTION; annotator id for LABEL/FEEDBACK
-  string source_id = 3;
-}
+// InternalEntry is a single annotation entry — one stored row. Provenance
+// (source, source_id, created_at) is carried once, and the payload oneof holds
+// the value, whose type is determined by the parent feature. The old per-type
+// wrappers (InternalCandidate, InternalPurchaseLine, …) collapse into this one
+// message.
+message InternalEntry {
+  CandidateSource source = 1;
+  // model_id for PREDICTION; annotator id for LABEL/FEEDBACK.
+  string source_id = 2;
+  // Server-set write time of this entry's stored version (commit timestamp).
+  google.protobuf.Timestamp created_at = 3;
+  // Server-assigned 0-based ordinal within a (source, source_id) group,
+  // numbered by entry order: TOPK rank for simple fields, line/entry order for
+  // multi-entry features. Both identifies and orders the entry. Ignored on
+  // write (assigned from entry order), populated on read.
+  int64 candidate_id = 4;
 
-// ---- Field data wrappers ----
-
-// FieldData holds standard field candidates (ssn.type.Candidate-based fields).
-message FieldData {
-  repeated InternalCandidate candidates = 1;
-}
-
-// InternalPurchaseLine wraps ssn.type.PurchaseLine (new format only).
-// Old PurchaseLineCandidate data is normalized to PurchaseLine at ingestion.
-message InternalPurchaseLine {
-  ssn.type.PurchaseLine line = 1;
-  CandidateSource source = 2;
-  string source_id = 3;
-}
-
-// PurchaseLineData holds purchase line annotations for feature "PURCHASE_LINES".
-message PurchaseLineData {
-  repeated InternalPurchaseLine lines = 1;
-}
-
-// InternalVatDistribution wraps ssn.type.VatDistribution (new format only).
-// Old VatDistributionCandidate data is normalized to VatDistribution at ingestion.
-message InternalVatDistribution {
-  ssn.type.VatDistribution distribution = 1;
-  CandidateSource source = 2;
-  string source_id = 3;
-}
-
-// VatDistributionData holds VAT distribution annotations for feature "VAT_DISTRIBUTION".
-message VatDistributionData {
-  repeated InternalVatDistribution distributions = 1;
-}
-
-// InternalQrCode wraps either QrCodeData or SwissQrBill — both are QR extractions.
-message InternalQrCode {
-  oneof qr_type {
-    ssn.type.QrCodeData qr_code_data = 1;
-    ssn.type.SwissQrBill swiss_qr_bill = 2;
+  // The annotated value. Which field is set follows from the feature:
+  //   candidate       — standard fields (TOTAL_INCL_VAT, CURRENCY, …)
+  //   line            — PURCHASE_LINES
+  //   distribution    — VAT_DISTRIBUTION
+  //   qr_code_data /
+  //   swiss_qr_bill   — QR_CODES
+  //   answer          — QA
+  //   address         — STRUCTURED_SUPPLIER_ADDRESS / STRUCTURED_RECEIVER_ADDRESS
+  oneof payload {
+    ssn.type.Candidate candidate = 5;
+    ssn.type.PurchaseLine line = 6;
+    ssn.type.VatDistribution distribution = 7;
+    ssn.type.QrCodeData qr_code_data = 8;
+    ssn.type.SwissQrBill swiss_qr_bill = 9;
+    ssn.type.AnswerCandidate answer = 10;
+    ssn.type.StructuredAddress address = 11;
   }
-  CandidateSource source = 3;
-  string source_id = 4;
-}
-
-// QrData holds QR code annotations for feature "QR_CODES".
-message QrData {
-  repeated InternalQrCode qr_codes = 1;
-}
-
-// InternalAnswerCandidate wraps ssn.type.AnswerCandidate.
-// AnswerCandidate carries the question as part of the data and cannot be
-// represented as a standard Candidate.
-message InternalAnswerCandidate {
-  ssn.type.AnswerCandidate answer = 1;
-  CandidateSource source = 2;
-  string source_id = 3;
-}
-
-// AnswerData holds QA annotations for feature "QA".
-message AnswerData {
-  repeated InternalAnswerCandidate answers = 1;
-}
-
-// InternalStructuredAddress wraps ssn.type.StructuredAddress with provenance.
-message InternalStructuredAddress {
-  ssn.type.StructuredAddress address = 1;
-  CandidateSource source = 2;
-  string source_id = 3;
-}
-
-// AddressData holds address annotations for feature "ADDRESS".
-message AddressData {
-  repeated InternalStructuredAddress addresses = 1;
 }
 
 // ---- Unified field annotation ----
 
-// InternalFieldAnnotation groups all candidates for a single feature.
+// InternalFieldAnnotation groups all entries for a single feature.
 message InternalFieldAnnotation {
+  // Field numbers 2-7 previously held the per-type `oneof data` wrappers
+  // (field_data, purchase_line_data, …) that InternalEntry replaces.
+  reserved 2, 3, 4, 5, 6, 7;
+  reserved "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data", "address_data";
+
   // Feature name, e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES", "QA", "CHECK_IN_DATE"
   string feature = 1;
-
-  oneof data {
-    FieldData field_data = 2;
-    PurchaseLineData purchase_line_data = 3;
-    VatDistributionData vat_distribution_data = 4;
-    QrData qr_data = 5;
-    AnswerData answer_data = 6;
-    AddressData address_data = 7;
-  }
+  // All stored entries for this feature, across provenances and TOPK.
+  repeated InternalEntry entries = 8;
 }
 
 // ---- Service ----

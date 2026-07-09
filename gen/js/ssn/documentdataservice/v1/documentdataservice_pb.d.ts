@@ -8,305 +8,90 @@ import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // prot
 import * as ssn_type_qr_pb from '../../../ssn/type/qr_pb'; // proto import: "ssn/type/qr.proto"
 
 
-export class InternalCandidate extends jspb.Message {
+export class InternalEntry extends jspb.Message {
+  getSource(): CandidateSource;
+  setSource(value: CandidateSource): InternalEntry;
+
+  getSourceId(): string;
+  setSourceId(value: string): InternalEntry;
+
+  getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): InternalEntry;
+  hasCreatedAt(): boolean;
+  clearCreatedAt(): InternalEntry;
+
+  getCandidateId(): number;
+  setCandidateId(value: number): InternalEntry;
+
   getCandidate(): ssn_type_candidate_pb.Candidate | undefined;
-  setCandidate(value?: ssn_type_candidate_pb.Candidate): InternalCandidate;
+  setCandidate(value?: ssn_type_candidate_pb.Candidate): InternalEntry;
   hasCandidate(): boolean;
-  clearCandidate(): InternalCandidate;
+  clearCandidate(): InternalEntry;
 
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalCandidate;
-
-  getSourceId(): string;
-  setSourceId(value: string): InternalCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalCandidate): InternalCandidate.AsObject;
-  static serializeBinaryToWriter(message: InternalCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalCandidate;
-  static deserializeBinaryFromReader(message: InternalCandidate, reader: jspb.BinaryReader): InternalCandidate;
-}
-
-export namespace InternalCandidate {
-  export type AsObject = {
-    candidate?: ssn_type_candidate_pb.Candidate.AsObject,
-    source: CandidateSource,
-    sourceId: string,
-  }
-}
-
-export class FieldData extends jspb.Message {
-  getCandidatesList(): Array<InternalCandidate>;
-  setCandidatesList(value: Array<InternalCandidate>): FieldData;
-  clearCandidatesList(): FieldData;
-  addCandidates(value?: InternalCandidate, index?: number): InternalCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FieldData.AsObject;
-  static toObject(includeInstance: boolean, msg: FieldData): FieldData.AsObject;
-  static serializeBinaryToWriter(message: FieldData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FieldData;
-  static deserializeBinaryFromReader(message: FieldData, reader: jspb.BinaryReader): FieldData;
-}
-
-export namespace FieldData {
-  export type AsObject = {
-    candidatesList: Array<InternalCandidate.AsObject>,
-  }
-}
-
-export class InternalPurchaseLine extends jspb.Message {
   getLine(): ssn_type_candidate_pb.PurchaseLine | undefined;
-  setLine(value?: ssn_type_candidate_pb.PurchaseLine): InternalPurchaseLine;
+  setLine(value?: ssn_type_candidate_pb.PurchaseLine): InternalEntry;
   hasLine(): boolean;
-  clearLine(): InternalPurchaseLine;
+  clearLine(): InternalEntry;
 
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalPurchaseLine;
-
-  getSourceId(): string;
-  setSourceId(value: string): InternalPurchaseLine;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalPurchaseLine.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalPurchaseLine): InternalPurchaseLine.AsObject;
-  static serializeBinaryToWriter(message: InternalPurchaseLine, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalPurchaseLine;
-  static deserializeBinaryFromReader(message: InternalPurchaseLine, reader: jspb.BinaryReader): InternalPurchaseLine;
-}
-
-export namespace InternalPurchaseLine {
-  export type AsObject = {
-    line?: ssn_type_candidate_pb.PurchaseLine.AsObject,
-    source: CandidateSource,
-    sourceId: string,
-  }
-}
-
-export class PurchaseLineData extends jspb.Message {
-  getLinesList(): Array<InternalPurchaseLine>;
-  setLinesList(value: Array<InternalPurchaseLine>): PurchaseLineData;
-  clearLinesList(): PurchaseLineData;
-  addLines(value?: InternalPurchaseLine, index?: number): InternalPurchaseLine;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PurchaseLineData.AsObject;
-  static toObject(includeInstance: boolean, msg: PurchaseLineData): PurchaseLineData.AsObject;
-  static serializeBinaryToWriter(message: PurchaseLineData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PurchaseLineData;
-  static deserializeBinaryFromReader(message: PurchaseLineData, reader: jspb.BinaryReader): PurchaseLineData;
-}
-
-export namespace PurchaseLineData {
-  export type AsObject = {
-    linesList: Array<InternalPurchaseLine.AsObject>,
-  }
-}
-
-export class InternalVatDistribution extends jspb.Message {
   getDistribution(): ssn_type_candidate_pb.VatDistribution | undefined;
-  setDistribution(value?: ssn_type_candidate_pb.VatDistribution): InternalVatDistribution;
+  setDistribution(value?: ssn_type_candidate_pb.VatDistribution): InternalEntry;
   hasDistribution(): boolean;
-  clearDistribution(): InternalVatDistribution;
+  clearDistribution(): InternalEntry;
 
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalVatDistribution;
-
-  getSourceId(): string;
-  setSourceId(value: string): InternalVatDistribution;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalVatDistribution.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalVatDistribution): InternalVatDistribution.AsObject;
-  static serializeBinaryToWriter(message: InternalVatDistribution, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalVatDistribution;
-  static deserializeBinaryFromReader(message: InternalVatDistribution, reader: jspb.BinaryReader): InternalVatDistribution;
-}
-
-export namespace InternalVatDistribution {
-  export type AsObject = {
-    distribution?: ssn_type_candidate_pb.VatDistribution.AsObject,
-    source: CandidateSource,
-    sourceId: string,
-  }
-}
-
-export class VatDistributionData extends jspb.Message {
-  getDistributionsList(): Array<InternalVatDistribution>;
-  setDistributionsList(value: Array<InternalVatDistribution>): VatDistributionData;
-  clearDistributionsList(): VatDistributionData;
-  addDistributions(value?: InternalVatDistribution, index?: number): InternalVatDistribution;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): VatDistributionData.AsObject;
-  static toObject(includeInstance: boolean, msg: VatDistributionData): VatDistributionData.AsObject;
-  static serializeBinaryToWriter(message: VatDistributionData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): VatDistributionData;
-  static deserializeBinaryFromReader(message: VatDistributionData, reader: jspb.BinaryReader): VatDistributionData;
-}
-
-export namespace VatDistributionData {
-  export type AsObject = {
-    distributionsList: Array<InternalVatDistribution.AsObject>,
-  }
-}
-
-export class InternalQrCode extends jspb.Message {
   getQrCodeData(): ssn_type_qr_pb.QrCodeData | undefined;
-  setQrCodeData(value?: ssn_type_qr_pb.QrCodeData): InternalQrCode;
+  setQrCodeData(value?: ssn_type_qr_pb.QrCodeData): InternalEntry;
   hasQrCodeData(): boolean;
-  clearQrCodeData(): InternalQrCode;
+  clearQrCodeData(): InternalEntry;
 
   getSwissQrBill(): ssn_type_qr_pb.SwissQrBill | undefined;
-  setSwissQrBill(value?: ssn_type_qr_pb.SwissQrBill): InternalQrCode;
+  setSwissQrBill(value?: ssn_type_qr_pb.SwissQrBill): InternalEntry;
   hasSwissQrBill(): boolean;
-  clearSwissQrBill(): InternalQrCode;
+  clearSwissQrBill(): InternalEntry;
 
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalQrCode;
+  getAnswer(): ssn_type_candidate_pb.AnswerCandidate | undefined;
+  setAnswer(value?: ssn_type_candidate_pb.AnswerCandidate): InternalEntry;
+  hasAnswer(): boolean;
+  clearAnswer(): InternalEntry;
 
-  getSourceId(): string;
-  setSourceId(value: string): InternalQrCode;
+  getAddress(): ssn_type_address_pb.StructuredAddress | undefined;
+  setAddress(value?: ssn_type_address_pb.StructuredAddress): InternalEntry;
+  hasAddress(): boolean;
+  clearAddress(): InternalEntry;
 
-  getQrTypeCase(): InternalQrCode.QrTypeCase;
+  getPayloadCase(): InternalEntry.PayloadCase;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalQrCode.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalQrCode): InternalQrCode.AsObject;
-  static serializeBinaryToWriter(message: InternalQrCode, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalQrCode;
-  static deserializeBinaryFromReader(message: InternalQrCode, reader: jspb.BinaryReader): InternalQrCode;
+  toObject(includeInstance?: boolean): InternalEntry.AsObject;
+  static toObject(includeInstance: boolean, msg: InternalEntry): InternalEntry.AsObject;
+  static serializeBinaryToWriter(message: InternalEntry, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InternalEntry;
+  static deserializeBinaryFromReader(message: InternalEntry, reader: jspb.BinaryReader): InternalEntry;
 }
 
-export namespace InternalQrCode {
+export namespace InternalEntry {
   export type AsObject = {
+    source: CandidateSource,
+    sourceId: string,
+    createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    candidateId: number,
+    candidate?: ssn_type_candidate_pb.Candidate.AsObject,
+    line?: ssn_type_candidate_pb.PurchaseLine.AsObject,
+    distribution?: ssn_type_candidate_pb.VatDistribution.AsObject,
     qrCodeData?: ssn_type_qr_pb.QrCodeData.AsObject,
     swissQrBill?: ssn_type_qr_pb.SwissQrBill.AsObject,
-    source: CandidateSource,
-    sourceId: string,
-  }
-
-  export enum QrTypeCase { 
-    QR_TYPE_NOT_SET = 0,
-    QR_CODE_DATA = 1,
-    SWISS_QR_BILL = 2,
-  }
-}
-
-export class QrData extends jspb.Message {
-  getQrCodesList(): Array<InternalQrCode>;
-  setQrCodesList(value: Array<InternalQrCode>): QrData;
-  clearQrCodesList(): QrData;
-  addQrCodes(value?: InternalQrCode, index?: number): InternalQrCode;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): QrData.AsObject;
-  static toObject(includeInstance: boolean, msg: QrData): QrData.AsObject;
-  static serializeBinaryToWriter(message: QrData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): QrData;
-  static deserializeBinaryFromReader(message: QrData, reader: jspb.BinaryReader): QrData;
-}
-
-export namespace QrData {
-  export type AsObject = {
-    qrCodesList: Array<InternalQrCode.AsObject>,
-  }
-}
-
-export class InternalAnswerCandidate extends jspb.Message {
-  getAnswer(): ssn_type_candidate_pb.AnswerCandidate | undefined;
-  setAnswer(value?: ssn_type_candidate_pb.AnswerCandidate): InternalAnswerCandidate;
-  hasAnswer(): boolean;
-  clearAnswer(): InternalAnswerCandidate;
-
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalAnswerCandidate;
-
-  getSourceId(): string;
-  setSourceId(value: string): InternalAnswerCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalAnswerCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalAnswerCandidate): InternalAnswerCandidate.AsObject;
-  static serializeBinaryToWriter(message: InternalAnswerCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalAnswerCandidate;
-  static deserializeBinaryFromReader(message: InternalAnswerCandidate, reader: jspb.BinaryReader): InternalAnswerCandidate;
-}
-
-export namespace InternalAnswerCandidate {
-  export type AsObject = {
     answer?: ssn_type_candidate_pb.AnswerCandidate.AsObject,
-    source: CandidateSource,
-    sourceId: string,
-  }
-}
-
-export class AnswerData extends jspb.Message {
-  getAnswersList(): Array<InternalAnswerCandidate>;
-  setAnswersList(value: Array<InternalAnswerCandidate>): AnswerData;
-  clearAnswersList(): AnswerData;
-  addAnswers(value?: InternalAnswerCandidate, index?: number): InternalAnswerCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AnswerData.AsObject;
-  static toObject(includeInstance: boolean, msg: AnswerData): AnswerData.AsObject;
-  static serializeBinaryToWriter(message: AnswerData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AnswerData;
-  static deserializeBinaryFromReader(message: AnswerData, reader: jspb.BinaryReader): AnswerData;
-}
-
-export namespace AnswerData {
-  export type AsObject = {
-    answersList: Array<InternalAnswerCandidate.AsObject>,
-  }
-}
-
-export class InternalStructuredAddress extends jspb.Message {
-  getAddress(): ssn_type_address_pb.StructuredAddress | undefined;
-  setAddress(value?: ssn_type_address_pb.StructuredAddress): InternalStructuredAddress;
-  hasAddress(): boolean;
-  clearAddress(): InternalStructuredAddress;
-
-  getSource(): CandidateSource;
-  setSource(value: CandidateSource): InternalStructuredAddress;
-
-  getSourceId(): string;
-  setSourceId(value: string): InternalStructuredAddress;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InternalStructuredAddress.AsObject;
-  static toObject(includeInstance: boolean, msg: InternalStructuredAddress): InternalStructuredAddress.AsObject;
-  static serializeBinaryToWriter(message: InternalStructuredAddress, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InternalStructuredAddress;
-  static deserializeBinaryFromReader(message: InternalStructuredAddress, reader: jspb.BinaryReader): InternalStructuredAddress;
-}
-
-export namespace InternalStructuredAddress {
-  export type AsObject = {
     address?: ssn_type_address_pb.StructuredAddress.AsObject,
-    source: CandidateSource,
-    sourceId: string,
   }
-}
 
-export class AddressData extends jspb.Message {
-  getAddressesList(): Array<InternalStructuredAddress>;
-  setAddressesList(value: Array<InternalStructuredAddress>): AddressData;
-  clearAddressesList(): AddressData;
-  addAddresses(value?: InternalStructuredAddress, index?: number): InternalStructuredAddress;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AddressData.AsObject;
-  static toObject(includeInstance: boolean, msg: AddressData): AddressData.AsObject;
-  static serializeBinaryToWriter(message: AddressData, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AddressData;
-  static deserializeBinaryFromReader(message: AddressData, reader: jspb.BinaryReader): AddressData;
-}
-
-export namespace AddressData {
-  export type AsObject = {
-    addressesList: Array<InternalStructuredAddress.AsObject>,
+  export enum PayloadCase { 
+    PAYLOAD_NOT_SET = 0,
+    CANDIDATE = 5,
+    LINE = 6,
+    DISTRIBUTION = 7,
+    QR_CODE_DATA = 8,
+    SWISS_QR_BILL = 9,
+    ANSWER = 10,
+    ADDRESS = 11,
   }
 }
 
@@ -314,37 +99,10 @@ export class InternalFieldAnnotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): InternalFieldAnnotation;
 
-  getFieldData(): FieldData | undefined;
-  setFieldData(value?: FieldData): InternalFieldAnnotation;
-  hasFieldData(): boolean;
-  clearFieldData(): InternalFieldAnnotation;
-
-  getPurchaseLineData(): PurchaseLineData | undefined;
-  setPurchaseLineData(value?: PurchaseLineData): InternalFieldAnnotation;
-  hasPurchaseLineData(): boolean;
-  clearPurchaseLineData(): InternalFieldAnnotation;
-
-  getVatDistributionData(): VatDistributionData | undefined;
-  setVatDistributionData(value?: VatDistributionData): InternalFieldAnnotation;
-  hasVatDistributionData(): boolean;
-  clearVatDistributionData(): InternalFieldAnnotation;
-
-  getQrData(): QrData | undefined;
-  setQrData(value?: QrData): InternalFieldAnnotation;
-  hasQrData(): boolean;
-  clearQrData(): InternalFieldAnnotation;
-
-  getAnswerData(): AnswerData | undefined;
-  setAnswerData(value?: AnswerData): InternalFieldAnnotation;
-  hasAnswerData(): boolean;
-  clearAnswerData(): InternalFieldAnnotation;
-
-  getAddressData(): AddressData | undefined;
-  setAddressData(value?: AddressData): InternalFieldAnnotation;
-  hasAddressData(): boolean;
-  clearAddressData(): InternalFieldAnnotation;
-
-  getDataCase(): InternalFieldAnnotation.DataCase;
+  getEntriesList(): Array<InternalEntry>;
+  setEntriesList(value: Array<InternalEntry>): InternalFieldAnnotation;
+  clearEntriesList(): InternalFieldAnnotation;
+  addEntries(value?: InternalEntry, index?: number): InternalEntry;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): InternalFieldAnnotation.AsObject;
@@ -357,22 +115,7 @@ export class InternalFieldAnnotation extends jspb.Message {
 export namespace InternalFieldAnnotation {
   export type AsObject = {
     feature: string,
-    fieldData?: FieldData.AsObject,
-    purchaseLineData?: PurchaseLineData.AsObject,
-    vatDistributionData?: VatDistributionData.AsObject,
-    qrData?: QrData.AsObject,
-    answerData?: AnswerData.AsObject,
-    addressData?: AddressData.AsObject,
-  }
-
-  export enum DataCase { 
-    DATA_NOT_SET = 0,
-    FIELD_DATA = 2,
-    PURCHASE_LINE_DATA = 3,
-    VAT_DISTRIBUTION_DATA = 4,
-    QR_DATA = 5,
-    ANSWER_DATA = 6,
-    ADDRESS_DATA = 7,
+    entriesList: Array<InternalEntry.AsObject>,
   }
 }
 

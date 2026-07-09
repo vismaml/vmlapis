@@ -23,121 +23,39 @@ CANDIDATE_SOURCE_PREDICTION: CandidateSource
 CANDIDATE_SOURCE_FEEDBACK: CandidateSource
 CANDIDATE_SOURCE_LABEL: CandidateSource
 
-class InternalCandidate(_message.Message):
-    __slots__ = ("candidate", "source", "source_id")
+class InternalEntry(_message.Message):
+    __slots__ = ("source", "source_id", "created_at", "candidate_id", "candidate", "line", "distribution", "qr_code_data", "swiss_qr_bill", "answer", "address")
+    SOURCE_FIELD_NUMBER: _ClassVar[int]
+    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+    CREATED_AT_FIELD_NUMBER: _ClassVar[int]
+    CANDIDATE_ID_FIELD_NUMBER: _ClassVar[int]
     CANDIDATE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
-    candidate: _candidate_pb2.Candidate
-    source: CandidateSource
-    source_id: str
-    def __init__(self, candidate: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class FieldData(_message.Message):
-    __slots__ = ("candidates",)
-    CANDIDATES_FIELD_NUMBER: _ClassVar[int]
-    candidates: _containers.RepeatedCompositeFieldContainer[InternalCandidate]
-    def __init__(self, candidates: _Optional[_Iterable[_Union[InternalCandidate, _Mapping]]] = ...) -> None: ...
-
-class InternalPurchaseLine(_message.Message):
-    __slots__ = ("line", "source", "source_id")
     LINE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
-    line: _candidate_pb2.PurchaseLine
-    source: CandidateSource
-    source_id: str
-    def __init__(self, line: _Optional[_Union[_candidate_pb2.PurchaseLine, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class PurchaseLineData(_message.Message):
-    __slots__ = ("lines",)
-    LINES_FIELD_NUMBER: _ClassVar[int]
-    lines: _containers.RepeatedCompositeFieldContainer[InternalPurchaseLine]
-    def __init__(self, lines: _Optional[_Iterable[_Union[InternalPurchaseLine, _Mapping]]] = ...) -> None: ...
-
-class InternalVatDistribution(_message.Message):
-    __slots__ = ("distribution", "source", "source_id")
     DISTRIBUTION_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
-    distribution: _candidate_pb2.VatDistribution
-    source: CandidateSource
-    source_id: str
-    def __init__(self, distribution: _Optional[_Union[_candidate_pb2.VatDistribution, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class VatDistributionData(_message.Message):
-    __slots__ = ("distributions",)
-    DISTRIBUTIONS_FIELD_NUMBER: _ClassVar[int]
-    distributions: _containers.RepeatedCompositeFieldContainer[InternalVatDistribution]
-    def __init__(self, distributions: _Optional[_Iterable[_Union[InternalVatDistribution, _Mapping]]] = ...) -> None: ...
-
-class InternalQrCode(_message.Message):
-    __slots__ = ("qr_code_data", "swiss_qr_bill", "source", "source_id")
     QR_CODE_DATA_FIELD_NUMBER: _ClassVar[int]
     SWISS_QR_BILL_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+    ANSWER_FIELD_NUMBER: _ClassVar[int]
+    ADDRESS_FIELD_NUMBER: _ClassVar[int]
+    source: CandidateSource
+    source_id: str
+    created_at: _timestamp_pb2.Timestamp
+    candidate_id: int
+    candidate: _candidate_pb2.Candidate
+    line: _candidate_pb2.PurchaseLine
+    distribution: _candidate_pb2.VatDistribution
     qr_code_data: _qr_pb2.QrCodeData
     swiss_qr_bill: _qr_pb2.SwissQrBill
-    source: CandidateSource
-    source_id: str
-    def __init__(self, qr_code_data: _Optional[_Union[_qr_pb2.QrCodeData, _Mapping]] = ..., swiss_qr_bill: _Optional[_Union[_qr_pb2.SwissQrBill, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class QrData(_message.Message):
-    __slots__ = ("qr_codes",)
-    QR_CODES_FIELD_NUMBER: _ClassVar[int]
-    qr_codes: _containers.RepeatedCompositeFieldContainer[InternalQrCode]
-    def __init__(self, qr_codes: _Optional[_Iterable[_Union[InternalQrCode, _Mapping]]] = ...) -> None: ...
-
-class InternalAnswerCandidate(_message.Message):
-    __slots__ = ("answer", "source", "source_id")
-    ANSWER_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
     answer: _candidate_pb2.AnswerCandidate
-    source: CandidateSource
-    source_id: str
-    def __init__(self, answer: _Optional[_Union[_candidate_pb2.AnswerCandidate, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class AnswerData(_message.Message):
-    __slots__ = ("answers",)
-    ANSWERS_FIELD_NUMBER: _ClassVar[int]
-    answers: _containers.RepeatedCompositeFieldContainer[InternalAnswerCandidate]
-    def __init__(self, answers: _Optional[_Iterable[_Union[InternalAnswerCandidate, _Mapping]]] = ...) -> None: ...
-
-class InternalStructuredAddress(_message.Message):
-    __slots__ = ("address", "source", "source_id")
-    ADDRESS_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_FIELD_NUMBER: _ClassVar[int]
-    SOURCE_ID_FIELD_NUMBER: _ClassVar[int]
     address: _address_pb2.StructuredAddress
-    source: CandidateSource
-    source_id: str
-    def __init__(self, address: _Optional[_Union[_address_pb2.StructuredAddress, _Mapping]] = ..., source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ...) -> None: ...
-
-class AddressData(_message.Message):
-    __slots__ = ("addresses",)
-    ADDRESSES_FIELD_NUMBER: _ClassVar[int]
-    addresses: _containers.RepeatedCompositeFieldContainer[InternalStructuredAddress]
-    def __init__(self, addresses: _Optional[_Iterable[_Union[InternalStructuredAddress, _Mapping]]] = ...) -> None: ...
+    def __init__(self, source: _Optional[_Union[CandidateSource, str]] = ..., source_id: _Optional[str] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., candidate_id: _Optional[int] = ..., candidate: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., line: _Optional[_Union[_candidate_pb2.PurchaseLine, _Mapping]] = ..., distribution: _Optional[_Union[_candidate_pb2.VatDistribution, _Mapping]] = ..., qr_code_data: _Optional[_Union[_qr_pb2.QrCodeData, _Mapping]] = ..., swiss_qr_bill: _Optional[_Union[_qr_pb2.SwissQrBill, _Mapping]] = ..., answer: _Optional[_Union[_candidate_pb2.AnswerCandidate, _Mapping]] = ..., address: _Optional[_Union[_address_pb2.StructuredAddress, _Mapping]] = ...) -> None: ...
 
 class InternalFieldAnnotation(_message.Message):
-    __slots__ = ("feature", "field_data", "purchase_line_data", "vat_distribution_data", "qr_data", "answer_data", "address_data")
+    __slots__ = ("feature", "entries")
     FEATURE_FIELD_NUMBER: _ClassVar[int]
-    FIELD_DATA_FIELD_NUMBER: _ClassVar[int]
-    PURCHASE_LINE_DATA_FIELD_NUMBER: _ClassVar[int]
-    VAT_DISTRIBUTION_DATA_FIELD_NUMBER: _ClassVar[int]
-    QR_DATA_FIELD_NUMBER: _ClassVar[int]
-    ANSWER_DATA_FIELD_NUMBER: _ClassVar[int]
-    ADDRESS_DATA_FIELD_NUMBER: _ClassVar[int]
+    ENTRIES_FIELD_NUMBER: _ClassVar[int]
     feature: str
-    field_data: FieldData
-    purchase_line_data: PurchaseLineData
-    vat_distribution_data: VatDistributionData
-    qr_data: QrData
-    answer_data: AnswerData
-    address_data: AddressData
-    def __init__(self, feature: _Optional[str] = ..., field_data: _Optional[_Union[FieldData, _Mapping]] = ..., purchase_line_data: _Optional[_Union[PurchaseLineData, _Mapping]] = ..., vat_distribution_data: _Optional[_Union[VatDistributionData, _Mapping]] = ..., qr_data: _Optional[_Union[QrData, _Mapping]] = ..., answer_data: _Optional[_Union[AnswerData, _Mapping]] = ..., address_data: _Optional[_Union[AddressData, _Mapping]] = ...) -> None: ...
+    entries: _containers.RepeatedCompositeFieldContainer[InternalEntry]
+    def __init__(self, feature: _Optional[str] = ..., entries: _Optional[_Iterable[_Union[InternalEntry, _Mapping]]] = ...) -> None: ...
 
 class GetDocumentDataRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "include_predictions", "include_feedbacks", "include_labels", "environment")
