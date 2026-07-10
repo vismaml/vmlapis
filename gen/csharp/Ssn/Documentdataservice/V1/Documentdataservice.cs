@@ -29,145 +29,103 @@ namespace Ssn.Documentdataservice.V1 {
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
             "dGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhZz",
             "c24vdHlwZS9hZGRyZXNzLnByb3RvGhhzc24vdHlwZS9jYW5kaWRhdGUucHJv",
-            "dG8aEXNzbi90eXBlL3FyLnByb3RvIqgBChFJbnRlcm5hbENhbmRpZGF0ZRIx",
-            "CgljYW5kaWRhdGUYASABKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCWNhbmRp",
-            "ZGF0ZRJDCgZzb3VyY2UYAiABKA4yKy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
-            "ZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNvdXJjZRIbCglzb3VyY2VfaWQYAyAB",
-            "KAlSCHNvdXJjZUlkIloKCUZpZWxkRGF0YRJNCgpjYW5kaWRhdGVzGAEgAygL",
-            "Mi0uc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxDYW5kaWRh",
-            "dGVSCmNhbmRpZGF0ZXMipAEKFEludGVybmFsUHVyY2hhc2VMaW5lEioKBGxp",
-            "bmUYASABKAsyFi5zc24udHlwZS5QdXJjaGFzZUxpbmVSBGxpbmUSQwoGc291",
-            "cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuQ2FuZGlk",
-            "YXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghzb3VyY2VJ",
-            "ZCJaChBQdXJjaGFzZUxpbmVEYXRhEkYKBWxpbmVzGAEgAygLMjAuc3NuLmRv",
-            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxQdXJjaGFzZUxpbmVSBWxp",
-            "bmVzIroBChdJbnRlcm5hbFZhdERpc3RyaWJ1dGlvbhI9CgxkaXN0cmlidXRp",
-            "b24YASABKAsyGS5zc24udHlwZS5WYXREaXN0cmlidXRpb25SDGRpc3RyaWJ1",
-            "dGlvbhJDCgZzb3VyY2UYAiABKA4yKy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
-            "ZS52MS5DYW5kaWRhdGVTb3VyY2VSBnNvdXJjZRIbCglzb3VyY2VfaWQYAyAB",
-            "KAlSCHNvdXJjZUlkInAKE1ZhdERpc3RyaWJ1dGlvbkRhdGESWQoNZGlzdHJp",
-            "YnV0aW9ucxgBIAMoCzIzLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLklu",
-            "dGVybmFsVmF0RGlzdHJpYnV0aW9uUg1kaXN0cmlidXRpb25zIvQBCg5JbnRl",
-            "cm5hbFFyQ29kZRI4Cgxxcl9jb2RlX2RhdGEYASABKAsyFC5zc24udHlwZS5R",
-            "ckNvZGVEYXRhSABSCnFyQ29kZURhdGESOwoNc3dpc3NfcXJfYmlsbBgCIAEo",
-            "CzIVLnNzbi50eXBlLlN3aXNzUXJCaWxsSABSC3N3aXNzUXJCaWxsEkMKBnNv",
-            "dXJjZRgDIAEoDjIrLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkNhbmRp",
-            "ZGF0ZVNvdXJjZVIGc291cmNlEhsKCXNvdXJjZV9pZBgEIAEoCVIIc291cmNl",
-            "SWRCCQoHcXJfdHlwZSJPCgZRckRhdGESRQoIcXJfY29kZXMYASADKAsyKi5z",
-            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbFFyQ29kZVIHcXJD",
-            "b2RlcyKuAQoXSW50ZXJuYWxBbnN3ZXJDYW5kaWRhdGUSMQoGYW5zd2VyGAEg",
-            "ASgLMhkuc3NuLnR5cGUuQW5zd2VyQ2FuZGlkYXRlUgZhbnN3ZXISQwoGc291",
-            "cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuQ2FuZGlk",
-            "YXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghzb3VyY2VJ",
-            "ZCJbCgpBbnN3ZXJEYXRhEk0KB2Fuc3dlcnMYASADKAsyMy5zc24uZG9jdW1l",
-            "bnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEFuc3dlckNhbmRpZGF0ZVIHYW5z",
-            "d2VycyK0AQoZSW50ZXJuYWxTdHJ1Y3R1cmVkQWRkcmVzcxI1CgdhZGRyZXNz",
-            "GAEgASgLMhsuc3NuLnR5cGUuU3RydWN0dXJlZEFkZHJlc3NSB2FkZHJlc3MS",
-            "QwoGc291cmNlGAIgASgOMisuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEu",
-            "Q2FuZGlkYXRlU291cmNlUgZzb3VyY2USGwoJc291cmNlX2lkGAMgASgJUghz",
-            "b3VyY2VJZCJiCgtBZGRyZXNzRGF0YRJTCglhZGRyZXNzZXMYASADKAsyNS5z",
-            "c24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbFN0cnVjdHVyZWRB",
-            "ZGRyZXNzUglhZGRyZXNzZXMioAQKF0ludGVybmFsRmllbGRBbm5vdGF0aW9u",
-            "EhgKB2ZlYXR1cmUYASABKAlSB2ZlYXR1cmUSRgoKZmllbGRfZGF0YRgCIAEo",
-            "CzIlLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkZpZWxkRGF0YUgAUglm",
-            "aWVsZERhdGESXAoScHVyY2hhc2VfbGluZV9kYXRhGAMgASgLMiwuc3NuLmRv",
-            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuUHVyY2hhc2VMaW5lRGF0YUgAUhBwdXJj",
-            "aGFzZUxpbmVEYXRhEmUKFXZhdF9kaXN0cmlidXRpb25fZGF0YRgEIAEoCzIv",
-            "LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLlZhdERpc3RyaWJ1dGlvbkRh",
-            "dGFIAFITdmF0RGlzdHJpYnV0aW9uRGF0YRI9Cgdxcl9kYXRhGAUgASgLMiIu",
-            "c3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuUXJEYXRhSABSBnFyRGF0YRJJ",
-            "CgthbnN3ZXJfZGF0YRgGIAEoCzImLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
-            "LnYxLkFuc3dlckRhdGFIAFIKYW5zd2VyRGF0YRJMCgxhZGRyZXNzX2RhdGEY",
-            "ByABKAsyJy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5BZGRyZXNzRGF0",
-            "YUgAUgthZGRyZXNzRGF0YUIGCgRkYXRhIvwBChZHZXREb2N1bWVudERhdGFS",
-            "ZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lkEhoKCGNv",
-            "bnN1bWVyGAIgASgJUghjb25zdW1lchIvChNpbmNsdWRlX3ByZWRpY3Rpb25z",
-            "GAMgASgIUhJpbmNsdWRlUHJlZGljdGlvbnMSKwoRaW5jbHVkZV9mZWVkYmFj",
-            "a3MYBCABKAhSEGluY2x1ZGVGZWVkYmFja3MSJQoOaW5jbHVkZV9sYWJlbHMY",
-            "BSABKAhSDWluY2x1ZGVMYWJlbHMSIAoLZW52aXJvbm1lbnQYBiABKAlSC2Vu",
-            "dmlyb25tZW50IuYDChdHZXREb2N1bWVudERhdGFSZXNwb25zZRIfCgtmZWVk",
+            "dG8aEXNzbi90eXBlL3FyLnByb3RvIuMECg1JbnRlcm5hbEVudHJ5EkMKBnNv",
+            "dXJjZRgBIAEoDjIrLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkNhbmRp",
+            "ZGF0ZVNvdXJjZVIGc291cmNlEhsKCXNvdXJjZV9pZBgCIAEoCVIIc291cmNl",
+            "SWQSOQoKY3JlYXRlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBSCWNyZWF0ZWRBdBIhCgxjYW5kaWRhdGVfaWQYBCABKANSC2NhbmRp",
+            "ZGF0ZUlkEjMKCWNhbmRpZGF0ZRgFIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0",
+            "ZUgAUgljYW5kaWRhdGUSLAoEbGluZRgGIAEoCzIWLnNzbi50eXBlLlB1cmNo",
+            "YXNlTGluZUgAUgRsaW5lEj8KDGRpc3RyaWJ1dGlvbhgHIAEoCzIZLnNzbi50",
+            "eXBlLlZhdERpc3RyaWJ1dGlvbkgAUgxkaXN0cmlidXRpb24SOAoMcXJfY29k",
+            "ZV9kYXRhGAggASgLMhQuc3NuLnR5cGUuUXJDb2RlRGF0YUgAUgpxckNvZGVE",
+            "YXRhEjsKDXN3aXNzX3FyX2JpbGwYCSABKAsyFS5zc24udHlwZS5Td2lzc1Fy",
+            "QmlsbEgAUgtzd2lzc1FyQmlsbBIzCgZhbnN3ZXIYCiABKAsyGS5zc24udHlw",
+            "ZS5BbnN3ZXJDYW5kaWRhdGVIAFIGYW5zd2VyEjcKB2FkZHJlc3MYCyABKAsy",
+            "Gy5zc24udHlwZS5TdHJ1Y3R1cmVkQWRkcmVzc0gAUgdhZGRyZXNzQgkKB3Bh",
+            "eWxvYWQi9wEKF0ludGVybmFsRmllbGRBbm5vdGF0aW9uEhgKB2ZlYXR1cmUY",
+            "ASABKAlSB2ZlYXR1cmUSQwoHZW50cmllcxgIIAMoCzIpLnNzbi5kb2N1bWVu",
+            "dGRhdGFzZXJ2aWNlLnYxLkludGVybmFsRW50cnlSB2VudHJpZXNKBAgCEANK",
+            "BAgDEARKBAgEEAVKBAgFEAZKBAgGEAdKBAgHEAhSCmZpZWxkX2RhdGFSEnB1",
+            "cmNoYXNlX2xpbmVfZGF0YVIVdmF0X2Rpc3RyaWJ1dGlvbl9kYXRhUgdxcl9k",
+            "YXRhUgthbnN3ZXJfZGF0YVIMYWRkcmVzc19kYXRhIvwBChZHZXREb2N1bWVu",
+            "dERhdGFSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lk",
+            "EhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchIvChNpbmNsdWRlX3ByZWRp",
+            "Y3Rpb25zGAMgASgIUhJpbmNsdWRlUHJlZGljdGlvbnMSKwoRaW5jbHVkZV9m",
+            "ZWVkYmFja3MYBCABKAhSEGluY2x1ZGVGZWVkYmFja3MSJQoOaW5jbHVkZV9s",
+            "YWJlbHMYBSABKAhSDWluY2x1ZGVMYWJlbHMSIAoLZW52aXJvbm1lbnQYBiAB",
+            "KAlSC2Vudmlyb25tZW50IuYDChdHZXREb2N1bWVudERhdGFSZXNwb25zZRIf",
+            "CgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgC",
+            "IAEoCVIIY29uc3VtZXISGQoIZmlsZV91cmwYAyABKAlSB2ZpbGVVcmwSHwoL",
+            "cmVuZGVyX3VybHMYBCADKAlSCnJlbmRlclVybHMSTAoTdGV4dF9hbm5vdGF0",
+            "aW9uX3VybBgFIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIR",
+            "dGV4dEFubm90YXRpb25VcmwSSwoGZmllbGRzGAYgAygLMjMuc3NuLmRvY3Vt",
+            "ZW50ZGF0YXNlcnZpY2UudjEuSW50ZXJuYWxGaWVsZEFubm90YXRpb25SBmZp",
+            "ZWxkcxI5CgpleHBpcmVzX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcFIJZXhwaXJlc0F0Ei0KEnJlcXVlc3RlZF9mZWF0dXJlcxgIIAMo",
+            "CVIRcmVxdWVzdGVkRmVhdHVyZXMSOQoKdXBkYXRlZF9hdBgJIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdBISCgR0YWdzGAog",
+            "AygJUgR0YWdzIucDChdTZXREb2N1bWVudEJsb2JzUmVxdWVzdBIfCgtmZWVk",
             "YmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVII",
-            "Y29uc3VtZXISGQoIZmlsZV91cmwYAyABKAlSB2ZpbGVVcmwSHwoLcmVuZGVy",
-            "X3VybHMYBCADKAlSCnJlbmRlclVybHMSTAoTdGV4dF9hbm5vdGF0aW9uX3Vy",
-            "bBgFIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIRdGV4dEFu",
-            "bm90YXRpb25VcmwSSwoGZmllbGRzGAYgAygLMjMuc3NuLmRvY3VtZW50ZGF0",
-            "YXNlcnZpY2UudjEuSW50ZXJuYWxGaWVsZEFubm90YXRpb25SBmZpZWxkcxI5",
-            "CgpleHBpcmVzX2F0GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cFIJZXhwaXJlc0F0Ei0KEnJlcXVlc3RlZF9mZWF0dXJlcxgIIAMoCVIRcmVx",
-            "dWVzdGVkRmVhdHVyZXMSOQoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdBISCgR0YWdzGAogAygJUgR0",
-            "YWdzIucDChdTZXREb2N1bWVudEJsb2JzUmVxdWVzdBIfCgtmZWVkYmFja19p",
-            "ZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3Vt",
-            "ZXISNwoIZmlsZV91cmkYAyABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
-            "VmFsdWVSB2ZpbGVVcmkSHwoLcmVuZGVyX3VyaXMYBCADKAlSCnJlbmRlclVy",
-            "aXMSMwoGdGFfdXJpGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
-            "bHVlUgV0YVVyaRI5CgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcFIJZXhwaXJlc0F0EiAKC2Vudmlyb25tZW50GAcgASgJ",
-            "UgtlbnZpcm9ubWVudBItChJyZXF1ZXN0ZWRfZmVhdHVyZXMYCCADKAlSEXJl",
-            "cXVlc3RlZEZlYXR1cmVzEhIKBHRhZ3MYCSADKAlSBHRhZ3MSGAoHY29udGVu",
-            "dBgKIAEoDFIHY29udGVudBIdCgp0YV9jb250ZW50GAsgASgMUgl0YUNvbnRl",
-            "bnQSJwoPcmVuZGVyX2NvbnRlbnRzGAwgAygMUg5yZW5kZXJDb250ZW50cyIa",
-            "ChhTZXREb2N1bWVudEJsb2JzUmVzcG9uc2UizQEKFUFkZEFubm90YXRpb25z",
-            "UmVxdWVzdBIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghj",
-            "b25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3RhdGlvbnMYAyADKAsy",
-            "My5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZpZWxkQW5u",
-            "b3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1lbnQYBCABKAlSC2Vu",
-            "dmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UiWgoVRGVsZXRl",
-            "RG9jdW1lbnRSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFj",
-            "a0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lckoECAMQBCIYChZEZWxl",
-            "dGVEb2N1bWVudFJlc3BvbnNlIqwBChhEZWxldGVBbm5vdGF0aW9uc1JlcXVl",
-            "c3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoIY29uc3Vt",
-            "ZXIYAiABKAlSCGNvbnN1bWVyEhgKB2ZlYXR1cmUYBCABKAlSB2ZlYXR1cmUS",
-            "FgoGc291cmNlGAUgASgJUgZzb3VyY2USGwoJc291cmNlX2lkGAYgASgJUghz",
-            "b3VyY2VJZEoECAMQBCIbChlEZWxldGVBbm5vdGF0aW9uc1Jlc3BvbnNlKo8B",
-            "Cg9DYW5kaWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9VTlNQRUNJ",
-            "RklFRBAAEh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThABEh0KGUNB",
-            "TkRJREFURV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVfU09VUkNF",
-            "X0xBQkVMEAMyzwcKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dldERvY3Vt",
-            "ZW50RGF0YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3Vt",
-            "ZW50RGF0YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5H",
-            "ZXREb2N1bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29uc3VtZXJz",
-            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEKEFNldERv",
-            "Y3VtZW50QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5TZXRE",
-            "b2N1bWVudEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
-            "LnYxLlNldERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYvdjEvY29u",
-            "c3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYmxv",
-            "YnM6ASoSwAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50ZGF0YXNl",
-            "cnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJHgtPkkwJB",
-            "IjwvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFj",
-            "a19pZH0vYW5ub3RhdGlvbnM6ASoSsQEKDkRlbGV0ZURvY3VtZW50EjEuc3Nu",
-            "LmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRSZXF1ZXN0",
-            "GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRS",
-            "ZXNwb25zZSI4gtPkkwIyKjAvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9j",
-            "dW1lbnRzL3tmZWVkYmFja19pZH0SxgEKEURlbGV0ZUFubm90YXRpb25zEjQu",
-            "c3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5ub3RhdGlvbnNS",
-            "ZXF1ZXN0GjUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5u",
-            "b3RhdGlvbnNSZXNwb25zZSJEgtPkkwI+KjwvdjEvY29uc3VtZXJzL3tjb25z",
-            "dW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlvbnNCnQIK",
-            "I2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxQhhEb2N1bWVu",
-            "dGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
-            "YXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0YXNlcnZpY2UvdjE7ZG9jdW1l",
-            "bnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5Eb2N1bWVudGRhdGFzZXJ2aWNl",
-            "LlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZpY2VcVjHiAiZTc25cRG9jdW1l",
-            "bnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCHFNzbjo6RG9jdW1lbnRk",
-            "YXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
+            "Y29uc3VtZXISNwoIZmlsZV91cmkYAyABKAsyHC5nb29nbGUucHJvdG9idWYu",
+            "U3RyaW5nVmFsdWVSB2ZpbGVVcmkSHwoLcmVuZGVyX3VyaXMYBCADKAlSCnJl",
+            "bmRlclVyaXMSMwoGdGFfdXJpGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cmluZ1ZhbHVlUgV0YVVyaRI5CgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcFIJZXhwaXJlc0F0EiAKC2Vudmlyb25tZW50",
+            "GAcgASgJUgtlbnZpcm9ubWVudBItChJyZXF1ZXN0ZWRfZmVhdHVyZXMYCCAD",
+            "KAlSEXJlcXVlc3RlZEZlYXR1cmVzEhIKBHRhZ3MYCSADKAlSBHRhZ3MSGAoH",
+            "Y29udGVudBgKIAEoDFIHY29udGVudBIdCgp0YV9jb250ZW50GAsgASgMUgl0",
+            "YUNvbnRlbnQSJwoPcmVuZGVyX2NvbnRlbnRzGAwgAygMUg5yZW5kZXJDb250",
+            "ZW50cyIaChhTZXREb2N1bWVudEJsb2JzUmVzcG9uc2UizQEKFUFkZEFubm90",
+            "YXRpb25zUmVxdWVzdBIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJ",
+            "ZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3RhdGlvbnMY",
+            "AyADKAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZp",
+            "ZWxkQW5ub3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1lbnQYBCAB",
+            "KAlSC2Vudmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UiWgoV",
+            "RGVsZXRlRG9jdW1lbnRSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpm",
+            "ZWVkYmFja0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lckoECAMQBCIY",
+            "ChZEZWxldGVEb2N1bWVudFJlc3BvbnNlIqwBChhEZWxldGVBbm5vdGF0aW9u",
+            "c1JlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoI",
+            "Y29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEhgKB2ZlYXR1cmUYBCABKAlSB2Zl",
+            "YXR1cmUSFgoGc291cmNlGAUgASgJUgZzb3VyY2USGwoJc291cmNlX2lkGAYg",
+            "ASgJUghzb3VyY2VJZEoECAMQBCIbChlEZWxldGVBbm5vdGF0aW9uc1Jlc3Bv",
+            "bnNlKo8BCg9DYW5kaWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9V",
+            "TlNQRUNJRklFRBAAEh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThAB",
+            "Eh0KGUNBTkRJREFURV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVf",
+            "U09VUkNFX0xBQkVMEAMyzwcKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dl",
+            "dERvY3VtZW50RGF0YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdl",
+            "dERvY3VtZW50RGF0YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
+            "ZS52MS5HZXREb2N1bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29u",
+            "c3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEK",
+            "EFNldERvY3VtZW50QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52",
+            "MS5TZXREb2N1bWVudEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFz",
+            "ZXJ2aWNlLnYxLlNldERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYv",
+            "djEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19p",
+            "ZH0vYmxvYnM6ASoSwAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50",
+            "ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRv",
+            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJH",
+            "gtPkkwJBIjwvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tm",
+            "ZWVkYmFja19pZH0vYW5ub3RhdGlvbnM6ASoSsQEKDkRlbGV0ZURvY3VtZW50",
+            "EjEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRS",
+            "ZXF1ZXN0GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9j",
+            "dW1lbnRSZXNwb25zZSI4gtPkkwIyKjAvdjEvY29uc3VtZXJzL3tjb25zdW1l",
+            "cn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SxgEKEURlbGV0ZUFubm90YXRp",
+            "b25zEjQuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5ub3Rh",
+            "dGlvbnNSZXF1ZXN0GjUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVs",
+            "ZXRlQW5ub3RhdGlvbnNSZXNwb25zZSJEgtPkkwI+KjwvdjEvY29uc3VtZXJz",
+            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlv",
+            "bnNCnQIKI2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxQhhE",
+            "b2N1bWVudGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHViLmNvbS9lLWNvbm9t",
+            "aWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0YXNlcnZpY2UvdjE7",
+            "ZG9jdW1lbnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5Eb2N1bWVudGRhdGFz",
+            "ZXJ2aWNlLlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZpY2VcVjHiAiZTc25c",
+            "RG9jdW1lbnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCHFNzbjo6RG9j",
+            "dW1lbnRkYXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Documentdataservice.V1.CandidateSource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalCandidate), global::Ssn.Documentdataservice.V1.InternalCandidate.Parser, new[]{ "Candidate", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.FieldData), global::Ssn.Documentdataservice.V1.FieldData.Parser, new[]{ "Candidates" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalPurchaseLine), global::Ssn.Documentdataservice.V1.InternalPurchaseLine.Parser, new[]{ "Line", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.PurchaseLineData), global::Ssn.Documentdataservice.V1.PurchaseLineData.Parser, new[]{ "Lines" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalVatDistribution), global::Ssn.Documentdataservice.V1.InternalVatDistribution.Parser, new[]{ "Distribution", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.VatDistributionData), global::Ssn.Documentdataservice.V1.VatDistributionData.Parser, new[]{ "Distributions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalQrCode), global::Ssn.Documentdataservice.V1.InternalQrCode.Parser, new[]{ "QrCodeData", "SwissQrBill", "Source", "SourceId" }, new[]{ "QrType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.QrData), global::Ssn.Documentdataservice.V1.QrData.Parser, new[]{ "QrCodes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalAnswerCandidate), global::Ssn.Documentdataservice.V1.InternalAnswerCandidate.Parser, new[]{ "Answer", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AnswerData), global::Ssn.Documentdataservice.V1.AnswerData.Parser, new[]{ "Answers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalStructuredAddress), global::Ssn.Documentdataservice.V1.InternalStructuredAddress.Parser, new[]{ "Address", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddressData), global::Ssn.Documentdataservice.V1.AddressData.Parser, new[]{ "Addresses" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "FieldData", "PurchaseLineData", "VatDistributionData", "QrData", "AnswerData", "AddressData" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalEntry), global::Ssn.Documentdataservice.V1.InternalEntry.Parser, new[]{ "Source", "SourceId", "CreatedAt", "CandidateId", "Candidate", "Line", "Distribution", "QrCodeData", "SwissQrBill", "Answer", "Address" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "Entries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", "Environment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags", "Content", "TaContent", "RenderContents" }, null, null, null, null),
@@ -201,20 +159,23 @@ namespace Ssn.Documentdataservice.V1 {
 
   #region Messages
   /// <summary>
-  /// InternalCandidate wraps a standard ssn.type.Candidate with provenance.
-  /// Used for all standard SSN fields (TOTAL_INCL_VAT, CURRENCY, CHECK_IN_DATE, etc.)
+  /// InternalEntry is a single annotation entry — one stored row. Provenance
+  /// (source, source_id, created_at) is carried once, and the payload oneof holds
+  /// the value, whose type is determined by the parent feature. The old per-type
+  /// wrappers (InternalCandidate, InternalPurchaseLine, …) collapse into this one
+  /// message.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalCandidate : pb::IMessage<InternalCandidate>
+  public sealed partial class InternalEntry : pb::IMessage<InternalEntry>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<InternalCandidate> _parser = new pb::MessageParser<InternalCandidate>(() => new InternalCandidate());
+    private static readonly pb::MessageParser<InternalEntry> _parser = new pb::MessageParser<InternalEntry>(() => new InternalEntry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalCandidate> Parser { get { return _parser; } }
+    public static pb::MessageParser<InternalEntry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -230,7 +191,7 @@ namespace Ssn.Documentdataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalCandidate() {
+    public InternalEntry() {
       OnConstruction();
     }
 
@@ -238,33 +199,46 @@ namespace Ssn.Documentdataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalCandidate(InternalCandidate other) : this() {
-      candidate_ = other.candidate_ != null ? other.candidate_.Clone() : null;
+    public InternalEntry(InternalEntry other) : this() {
       source_ = other.source_;
       sourceId_ = other.sourceId_;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      candidateId_ = other.candidateId_;
+      switch (other.PayloadCase) {
+        case PayloadOneofCase.Candidate:
+          Candidate = other.Candidate.Clone();
+          break;
+        case PayloadOneofCase.Line:
+          Line = other.Line.Clone();
+          break;
+        case PayloadOneofCase.Distribution:
+          Distribution = other.Distribution.Clone();
+          break;
+        case PayloadOneofCase.QrCodeData:
+          QrCodeData = other.QrCodeData.Clone();
+          break;
+        case PayloadOneofCase.SwissQrBill:
+          SwissQrBill = other.SwissQrBill.Clone();
+          break;
+        case PayloadOneofCase.Answer:
+          Answer = other.Answer.Clone();
+          break;
+        case PayloadOneofCase.Address:
+          Address = other.Address.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalCandidate Clone() {
-      return new InternalCandidate(this);
-    }
-
-    /// <summary>Field number for the "candidate" field.</summary>
-    public const int CandidateFieldNumber = 1;
-    private global::Ssn.Type.Candidate candidate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Type.Candidate Candidate {
-      get { return candidate_; }
-      set {
-        candidate_ = value;
-      }
+    public InternalEntry Clone() {
+      return new InternalEntry(this);
     }
 
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
+    public const int SourceFieldNumber = 1;
     private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -276,10 +250,10 @@ namespace Ssn.Documentdataservice.V1 {
     }
 
     /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 3;
+    public const int SourceIdFieldNumber = 2;
     private string sourceId_ = "";
     /// <summary>
-    /// model_id for PREDICTION; annotator id for LABEL/FEEDBACK
+    /// model_id for PREDICTION; annotator id for LABEL/FEEDBACK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -290,1491 +264,176 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    /// <summary>
+    /// Server-set write time of this entry's stored version (commit timestamp).
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InternalCandidate);
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
     }
 
+    /// <summary>Field number for the "candidate_id" field.</summary>
+    public const int CandidateIdFieldNumber = 4;
+    private long candidateId_;
+    /// <summary>
+    /// Server-assigned 0-based ordinal within a (source, source_id) group,
+    /// numbered by entry order: TOPK rank for simple fields, line/entry order for
+    /// multi-entry features. Both identifies and orders the entry. Ignored on
+    /// write (assigned from entry order), populated on read.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalCandidate other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
+    public long CandidateId {
+      get { return candidateId_; }
+      set {
+        candidateId_ = value;
       }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Candidate, other.Candidate)) return false;
-      if (Source != other.Source) return false;
-      if (SourceId != other.SourceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
     }
 
+    /// <summary>Field number for the "candidate" field.</summary>
+    public const int CandidateFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (candidate_ != null) hash ^= Candidate.GetHashCode();
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
-      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
+    public global::Ssn.Type.Candidate Candidate {
+      get { return payloadCase_ == PayloadOneofCase.Candidate ? (global::Ssn.Type.Candidate) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Candidate;
       }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (candidate_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Candidate);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (candidate_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Candidate);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (candidate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Candidate);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalCandidate other) {
-      if (other == null) {
-        return;
-      }
-      if (other.candidate_ != null) {
-        if (candidate_ == null) {
-          Candidate = new global::Ssn.Type.Candidate();
-        }
-        Candidate.MergeFrom(other.Candidate);
-      }
-      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        Source = other.Source;
-      }
-      if (other.SourceId.Length != 0) {
-        SourceId = other.SourceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (candidate_ == null) {
-              Candidate = new global::Ssn.Type.Candidate();
-            }
-            input.ReadMessage(Candidate);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (candidate_ == null) {
-              Candidate = new global::Ssn.Type.Candidate();
-            }
-            input.ReadMessage(Candidate);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// FieldData holds standard field candidates (ssn.type.Candidate-based fields).
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class FieldData : pb::IMessage<FieldData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<FieldData> _parser = new pb::MessageParser<FieldData>(() => new FieldData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<FieldData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FieldData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FieldData(FieldData other) : this() {
-      candidates_ = other.candidates_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FieldData Clone() {
-      return new FieldData(this);
-    }
-
-    /// <summary>Field number for the "candidates" field.</summary>
-    public const int CandidatesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalCandidate> _repeated_candidates_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalCandidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalCandidate> candidates_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalCandidate>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalCandidate> Candidates {
-      get { return candidates_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as FieldData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(FieldData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!candidates_.Equals(other.candidates_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= candidates_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      candidates_.WriteTo(output, _repeated_candidates_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      candidates_.WriteTo(ref output, _repeated_candidates_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += candidates_.CalculateSize(_repeated_candidates_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(FieldData other) {
-      if (other == null) {
-        return;
-      }
-      candidates_.Add(other.candidates_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            candidates_.AddEntriesFrom(input, _repeated_candidates_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            candidates_.AddEntriesFrom(ref input, _repeated_candidates_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalPurchaseLine wraps ssn.type.PurchaseLine (new format only).
-  /// Old PurchaseLineCandidate data is normalized to PurchaseLine at ingestion.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalPurchaseLine : pb::IMessage<InternalPurchaseLine>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InternalPurchaseLine> _parser = new pb::MessageParser<InternalPurchaseLine>(() => new InternalPurchaseLine());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalPurchaseLine> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalPurchaseLine() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalPurchaseLine(InternalPurchaseLine other) : this() {
-      line_ = other.line_ != null ? other.line_.Clone() : null;
-      source_ = other.source_;
-      sourceId_ = other.sourceId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalPurchaseLine Clone() {
-      return new InternalPurchaseLine(this);
     }
 
     /// <summary>Field number for the "line" field.</summary>
-    public const int LineFieldNumber = 1;
-    private global::Ssn.Type.PurchaseLine line_;
+    public const int LineFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.PurchaseLine Line {
-      get { return line_; }
+      get { return payloadCase_ == PayloadOneofCase.Line ? (global::Ssn.Type.PurchaseLine) payload_ : null; }
       set {
-        line_ = value;
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Line;
       }
-    }
-
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
-    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
-      get { return source_; }
-      set {
-        source_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 3;
-    private string sourceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceId {
-      get { return sourceId_; }
-      set {
-        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InternalPurchaseLine);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalPurchaseLine other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Line, other.Line)) return false;
-      if (Source != other.Source) return false;
-      if (SourceId != other.SourceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (line_ != null) hash ^= Line.GetHashCode();
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
-      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (line_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Line);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (line_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Line);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (line_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Line);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalPurchaseLine other) {
-      if (other == null) {
-        return;
-      }
-      if (other.line_ != null) {
-        if (line_ == null) {
-          Line = new global::Ssn.Type.PurchaseLine();
-        }
-        Line.MergeFrom(other.Line);
-      }
-      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        Source = other.Source;
-      }
-      if (other.SourceId.Length != 0) {
-        SourceId = other.SourceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (line_ == null) {
-              Line = new global::Ssn.Type.PurchaseLine();
-            }
-            input.ReadMessage(Line);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (line_ == null) {
-              Line = new global::Ssn.Type.PurchaseLine();
-            }
-            input.ReadMessage(Line);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// PurchaseLineData holds purchase line annotations for feature "PURCHASE_LINES".
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class PurchaseLineData : pb::IMessage<PurchaseLineData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PurchaseLineData> _parser = new pb::MessageParser<PurchaseLineData>(() => new PurchaseLineData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PurchaseLineData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PurchaseLineData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PurchaseLineData(PurchaseLineData other) : this() {
-      lines_ = other.lines_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PurchaseLineData Clone() {
-      return new PurchaseLineData(this);
-    }
-
-    /// <summary>Field number for the "lines" field.</summary>
-    public const int LinesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalPurchaseLine> _repeated_lines_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalPurchaseLine.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalPurchaseLine> lines_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalPurchaseLine>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalPurchaseLine> Lines {
-      get { return lines_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PurchaseLineData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PurchaseLineData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!lines_.Equals(other.lines_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= lines_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      lines_.WriteTo(output, _repeated_lines_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lines_.WriteTo(ref output, _repeated_lines_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += lines_.CalculateSize(_repeated_lines_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PurchaseLineData other) {
-      if (other == null) {
-        return;
-      }
-      lines_.Add(other.lines_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            lines_.AddEntriesFrom(input, _repeated_lines_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            lines_.AddEntriesFrom(ref input, _repeated_lines_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalVatDistribution wraps ssn.type.VatDistribution (new format only).
-  /// Old VatDistributionCandidate data is normalized to VatDistribution at ingestion.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalVatDistribution : pb::IMessage<InternalVatDistribution>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InternalVatDistribution> _parser = new pb::MessageParser<InternalVatDistribution>(() => new InternalVatDistribution());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalVatDistribution> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalVatDistribution() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalVatDistribution(InternalVatDistribution other) : this() {
-      distribution_ = other.distribution_ != null ? other.distribution_.Clone() : null;
-      source_ = other.source_;
-      sourceId_ = other.sourceId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalVatDistribution Clone() {
-      return new InternalVatDistribution(this);
     }
 
     /// <summary>Field number for the "distribution" field.</summary>
-    public const int DistributionFieldNumber = 1;
-    private global::Ssn.Type.VatDistribution distribution_;
+    public const int DistributionFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.VatDistribution Distribution {
-      get { return distribution_; }
+      get { return payloadCase_ == PayloadOneofCase.Distribution ? (global::Ssn.Type.VatDistribution) payload_ : null; }
       set {
-        distribution_ = value;
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Distribution;
       }
-    }
-
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
-    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
-      get { return source_; }
-      set {
-        source_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 3;
-    private string sourceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceId {
-      get { return sourceId_; }
-      set {
-        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InternalVatDistribution);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalVatDistribution other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Distribution, other.Distribution)) return false;
-      if (Source != other.Source) return false;
-      if (SourceId != other.SourceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (distribution_ != null) hash ^= Distribution.GetHashCode();
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
-      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (distribution_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Distribution);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (distribution_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Distribution);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (distribution_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distribution);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalVatDistribution other) {
-      if (other == null) {
-        return;
-      }
-      if (other.distribution_ != null) {
-        if (distribution_ == null) {
-          Distribution = new global::Ssn.Type.VatDistribution();
-        }
-        Distribution.MergeFrom(other.Distribution);
-      }
-      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        Source = other.Source;
-      }
-      if (other.SourceId.Length != 0) {
-        SourceId = other.SourceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (distribution_ == null) {
-              Distribution = new global::Ssn.Type.VatDistribution();
-            }
-            input.ReadMessage(Distribution);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (distribution_ == null) {
-              Distribution = new global::Ssn.Type.VatDistribution();
-            }
-            input.ReadMessage(Distribution);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// VatDistributionData holds VAT distribution annotations for feature "VAT_DISTRIBUTION".
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class VatDistributionData : pb::IMessage<VatDistributionData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<VatDistributionData> _parser = new pb::MessageParser<VatDistributionData>(() => new VatDistributionData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<VatDistributionData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatDistributionData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatDistributionData(VatDistributionData other) : this() {
-      distributions_ = other.distributions_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatDistributionData Clone() {
-      return new VatDistributionData(this);
-    }
-
-    /// <summary>Field number for the "distributions" field.</summary>
-    public const int DistributionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalVatDistribution> _repeated_distributions_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalVatDistribution.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalVatDistribution> distributions_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalVatDistribution>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalVatDistribution> Distributions {
-      get { return distributions_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as VatDistributionData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(VatDistributionData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!distributions_.Equals(other.distributions_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= distributions_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      distributions_.WriteTo(output, _repeated_distributions_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      distributions_.WriteTo(ref output, _repeated_distributions_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += distributions_.CalculateSize(_repeated_distributions_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(VatDistributionData other) {
-      if (other == null) {
-        return;
-      }
-      distributions_.Add(other.distributions_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            distributions_.AddEntriesFrom(input, _repeated_distributions_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            distributions_.AddEntriesFrom(ref input, _repeated_distributions_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalQrCode wraps either QrCodeData or SwissQrBill — both are QR extractions.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalQrCode : pb::IMessage<InternalQrCode>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InternalQrCode> _parser = new pb::MessageParser<InternalQrCode>(() => new InternalQrCode());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalQrCode> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[6]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalQrCode() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalQrCode(InternalQrCode other) : this() {
-      source_ = other.source_;
-      sourceId_ = other.sourceId_;
-      switch (other.QrTypeCase) {
-        case QrTypeOneofCase.QrCodeData:
-          QrCodeData = other.QrCodeData.Clone();
-          break;
-        case QrTypeOneofCase.SwissQrBill:
-          SwissQrBill = other.SwissQrBill.Clone();
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalQrCode Clone() {
-      return new InternalQrCode(this);
     }
 
     /// <summary>Field number for the "qr_code_data" field.</summary>
-    public const int QrCodeDataFieldNumber = 1;
+    public const int QrCodeDataFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.QrCodeData QrCodeData {
-      get { return qrTypeCase_ == QrTypeOneofCase.QrCodeData ? (global::Ssn.Type.QrCodeData) qrType_ : null; }
+      get { return payloadCase_ == PayloadOneofCase.QrCodeData ? (global::Ssn.Type.QrCodeData) payload_ : null; }
       set {
-        qrType_ = value;
-        qrTypeCase_ = value == null ? QrTypeOneofCase.None : QrTypeOneofCase.QrCodeData;
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.QrCodeData;
       }
     }
 
     /// <summary>Field number for the "swiss_qr_bill" field.</summary>
-    public const int SwissQrBillFieldNumber = 2;
+    public const int SwissQrBillFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.SwissQrBill SwissQrBill {
-      get { return qrTypeCase_ == QrTypeOneofCase.SwissQrBill ? (global::Ssn.Type.SwissQrBill) qrType_ : null; }
+      get { return payloadCase_ == PayloadOneofCase.SwissQrBill ? (global::Ssn.Type.SwissQrBill) payload_ : null; }
       set {
-        qrType_ = value;
-        qrTypeCase_ = value == null ? QrTypeOneofCase.None : QrTypeOneofCase.SwissQrBill;
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.SwissQrBill;
       }
     }
 
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 3;
-    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
+    /// <summary>Field number for the "answer" field.</summary>
+    public const int AnswerFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
-      get { return source_; }
+    public global::Ssn.Type.AnswerCandidate Answer {
+      get { return payloadCase_ == PayloadOneofCase.Answer ? (global::Ssn.Type.AnswerCandidate) payload_ : null; }
       set {
-        source_ = value;
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Answer;
       }
     }
 
-    /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 4;
-    private string sourceId_ = "";
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceId {
-      get { return sourceId_; }
+    public global::Ssn.Type.StructuredAddress Address {
+      get { return payloadCase_ == PayloadOneofCase.Address ? (global::Ssn.Type.StructuredAddress) payload_ : null; }
       set {
-        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.Address;
       }
     }
 
-    private object qrType_;
-    /// <summary>Enum of possible cases for the "qr_type" oneof.</summary>
-    public enum QrTypeOneofCase {
+    private object payload_;
+    /// <summary>Enum of possible cases for the "payload" oneof.</summary>
+    public enum PayloadOneofCase {
       None = 0,
-      QrCodeData = 1,
-      SwissQrBill = 2,
+      Candidate = 5,
+      Line = 6,
+      Distribution = 7,
+      QrCodeData = 8,
+      SwissQrBill = 9,
+      Answer = 10,
+      Address = 11,
     }
-    private QrTypeOneofCase qrTypeCase_ = QrTypeOneofCase.None;
+    private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrTypeOneofCase QrTypeCase {
-      get { return qrTypeCase_; }
+    public PayloadOneofCase PayloadCase {
+      get { return payloadCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearQrType() {
-      qrTypeCase_ = QrTypeOneofCase.None;
-      qrType_ = null;
+    public void ClearPayload() {
+      payloadCase_ = PayloadOneofCase.None;
+      payload_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as InternalQrCode);
+      return Equals(other as InternalEntry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalQrCode other) {
+    public bool Equals(InternalEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(QrCodeData, other.QrCodeData)) return false;
-      if (!object.Equals(SwissQrBill, other.SwissQrBill)) return false;
       if (Source != other.Source) return false;
       if (SourceId != other.SourceId) return false;
-      if (QrTypeCase != other.QrTypeCase) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (CandidateId != other.CandidateId) return false;
+      if (!object.Equals(Candidate, other.Candidate)) return false;
+      if (!object.Equals(Line, other.Line)) return false;
+      if (!object.Equals(Distribution, other.Distribution)) return false;
+      if (!object.Equals(QrCodeData, other.QrCodeData)) return false;
+      if (!object.Equals(SwissQrBill, other.SwissQrBill)) return false;
+      if (!object.Equals(Answer, other.Answer)) return false;
+      if (!object.Equals(Address, other.Address)) return false;
+      if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1782,11 +441,18 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) hash ^= QrCodeData.GetHashCode();
-      if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) hash ^= SwissQrBill.GetHashCode();
       if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
       if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      hash ^= (int) qrTypeCase_;
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (CandidateId != 0L) hash ^= CandidateId.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Candidate) hash ^= Candidate.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Line) hash ^= Line.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Distribution) hash ^= Distribution.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.QrCodeData) hash ^= QrCodeData.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.SwissQrBill) hash ^= SwissQrBill.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Answer) hash ^= Answer.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.Address) hash ^= Address.GetHashCode();
+      hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1805,21 +471,49 @@ namespace Ssn.Documentdataservice.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) {
-        output.WriteRawTag(10);
-        output.WriteMessage(QrCodeData);
-      }
-      if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) {
-        output.WriteRawTag(18);
-        output.WriteMessage(SwissQrBill);
-      }
       if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Source);
       }
       if (SourceId.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteString(SourceId);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreatedAt);
+      }
+      if (CandidateId != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CandidateId);
+      }
+      if (payloadCase_ == PayloadOneofCase.Candidate) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Candidate);
+      }
+      if (payloadCase_ == PayloadOneofCase.Line) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Line);
+      }
+      if (payloadCase_ == PayloadOneofCase.Distribution) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Distribution);
+      }
+      if (payloadCase_ == PayloadOneofCase.QrCodeData) {
+        output.WriteRawTag(66);
+        output.WriteMessage(QrCodeData);
+      }
+      if (payloadCase_ == PayloadOneofCase.SwissQrBill) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SwissQrBill);
+      }
+      if (payloadCase_ == PayloadOneofCase.Answer) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Answer);
+      }
+      if (payloadCase_ == PayloadOneofCase.Address) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Address);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1831,21 +525,49 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) {
-        output.WriteRawTag(10);
-        output.WriteMessage(QrCodeData);
-      }
-      if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) {
-        output.WriteRawTag(18);
-        output.WriteMessage(SwissQrBill);
-      }
       if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Source);
       }
       if (SourceId.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteString(SourceId);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreatedAt);
+      }
+      if (CandidateId != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CandidateId);
+      }
+      if (payloadCase_ == PayloadOneofCase.Candidate) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Candidate);
+      }
+      if (payloadCase_ == PayloadOneofCase.Line) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Line);
+      }
+      if (payloadCase_ == PayloadOneofCase.Distribution) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Distribution);
+      }
+      if (payloadCase_ == PayloadOneofCase.QrCodeData) {
+        output.WriteRawTag(66);
+        output.WriteMessage(QrCodeData);
+      }
+      if (payloadCase_ == PayloadOneofCase.SwissQrBill) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SwissQrBill);
+      }
+      if (payloadCase_ == PayloadOneofCase.Answer) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Answer);
+      }
+      if (payloadCase_ == PayloadOneofCase.Address) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Address);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1857,17 +579,38 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QrCodeData);
-      }
-      if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SwissQrBill);
-      }
       if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
       }
       if (SourceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
+      }
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
+      }
+      if (CandidateId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CandidateId);
+      }
+      if (payloadCase_ == PayloadOneofCase.Candidate) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Candidate);
+      }
+      if (payloadCase_ == PayloadOneofCase.Line) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Line);
+      }
+      if (payloadCase_ == PayloadOneofCase.Distribution) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distribution);
+      }
+      if (payloadCase_ == PayloadOneofCase.QrCodeData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QrCodeData);
+      }
+      if (payloadCase_ == PayloadOneofCase.SwissQrBill) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SwissQrBill);
+      }
+      if (payloadCase_ == PayloadOneofCase.Answer) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Answer);
+      }
+      if (payloadCase_ == PayloadOneofCase.Address) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Address);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1877,7 +620,7 @@ namespace Ssn.Documentdataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalQrCode other) {
+    public void MergeFrom(InternalEntry other) {
       if (other == null) {
         return;
       }
@@ -1887,18 +630,57 @@ namespace Ssn.Documentdataservice.V1 {
       if (other.SourceId.Length != 0) {
         SourceId = other.SourceId;
       }
-      switch (other.QrTypeCase) {
-        case QrTypeOneofCase.QrCodeData:
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAt.MergeFrom(other.CreatedAt);
+      }
+      if (other.CandidateId != 0L) {
+        CandidateId = other.CandidateId;
+      }
+      switch (other.PayloadCase) {
+        case PayloadOneofCase.Candidate:
+          if (Candidate == null) {
+            Candidate = new global::Ssn.Type.Candidate();
+          }
+          Candidate.MergeFrom(other.Candidate);
+          break;
+        case PayloadOneofCase.Line:
+          if (Line == null) {
+            Line = new global::Ssn.Type.PurchaseLine();
+          }
+          Line.MergeFrom(other.Line);
+          break;
+        case PayloadOneofCase.Distribution:
+          if (Distribution == null) {
+            Distribution = new global::Ssn.Type.VatDistribution();
+          }
+          Distribution.MergeFrom(other.Distribution);
+          break;
+        case PayloadOneofCase.QrCodeData:
           if (QrCodeData == null) {
             QrCodeData = new global::Ssn.Type.QrCodeData();
           }
           QrCodeData.MergeFrom(other.QrCodeData);
           break;
-        case QrTypeOneofCase.SwissQrBill:
+        case PayloadOneofCase.SwissQrBill:
           if (SwissQrBill == null) {
             SwissQrBill = new global::Ssn.Type.SwissQrBill();
           }
           SwissQrBill.MergeFrom(other.SwissQrBill);
+          break;
+        case PayloadOneofCase.Answer:
+          if (Answer == null) {
+            Answer = new global::Ssn.Type.AnswerCandidate();
+          }
+          Answer.MergeFrom(other.Answer);
+          break;
+        case PayloadOneofCase.Address:
+          if (Address == null) {
+            Address = new global::Ssn.Type.StructuredAddress();
+          }
+          Address.MergeFrom(other.Address);
           break;
       }
 
@@ -1921,30 +703,86 @@ namespace Ssn.Documentdataservice.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 32: {
+            CandidateId = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            global::Ssn.Type.Candidate subBuilder = new global::Ssn.Type.Candidate();
+            if (payloadCase_ == PayloadOneofCase.Candidate) {
+              subBuilder.MergeFrom(Candidate);
+            }
+            input.ReadMessage(subBuilder);
+            Candidate = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Ssn.Type.PurchaseLine subBuilder = new global::Ssn.Type.PurchaseLine();
+            if (payloadCase_ == PayloadOneofCase.Line) {
+              subBuilder.MergeFrom(Line);
+            }
+            input.ReadMessage(subBuilder);
+            Line = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Ssn.Type.VatDistribution subBuilder = new global::Ssn.Type.VatDistribution();
+            if (payloadCase_ == PayloadOneofCase.Distribution) {
+              subBuilder.MergeFrom(Distribution);
+            }
+            input.ReadMessage(subBuilder);
+            Distribution = subBuilder;
+            break;
+          }
+          case 66: {
             global::Ssn.Type.QrCodeData subBuilder = new global::Ssn.Type.QrCodeData();
-            if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) {
+            if (payloadCase_ == PayloadOneofCase.QrCodeData) {
               subBuilder.MergeFrom(QrCodeData);
             }
             input.ReadMessage(subBuilder);
             QrCodeData = subBuilder;
             break;
           }
-          case 18: {
+          case 74: {
             global::Ssn.Type.SwissQrBill subBuilder = new global::Ssn.Type.SwissQrBill();
-            if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) {
+            if (payloadCase_ == PayloadOneofCase.SwissQrBill) {
               subBuilder.MergeFrom(SwissQrBill);
             }
             input.ReadMessage(subBuilder);
             SwissQrBill = subBuilder;
             break;
           }
-          case 24: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
+          case 82: {
+            global::Ssn.Type.AnswerCandidate subBuilder = new global::Ssn.Type.AnswerCandidate();
+            if (payloadCase_ == PayloadOneofCase.Answer) {
+              subBuilder.MergeFrom(Answer);
+            }
+            input.ReadMessage(subBuilder);
+            Answer = subBuilder;
             break;
           }
-          case 34: {
-            SourceId = input.ReadString();
+          case 90: {
+            global::Ssn.Type.StructuredAddress subBuilder = new global::Ssn.Type.StructuredAddress();
+            if (payloadCase_ == PayloadOneofCase.Address) {
+              subBuilder.MergeFrom(Address);
+            }
+            input.ReadMessage(subBuilder);
+            Address = subBuilder;
             break;
           }
         }
@@ -1966,506 +804,86 @@ namespace Ssn.Documentdataservice.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+          case 32: {
+            CandidateId = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            global::Ssn.Type.Candidate subBuilder = new global::Ssn.Type.Candidate();
+            if (payloadCase_ == PayloadOneofCase.Candidate) {
+              subBuilder.MergeFrom(Candidate);
+            }
+            input.ReadMessage(subBuilder);
+            Candidate = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Ssn.Type.PurchaseLine subBuilder = new global::Ssn.Type.PurchaseLine();
+            if (payloadCase_ == PayloadOneofCase.Line) {
+              subBuilder.MergeFrom(Line);
+            }
+            input.ReadMessage(subBuilder);
+            Line = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Ssn.Type.VatDistribution subBuilder = new global::Ssn.Type.VatDistribution();
+            if (payloadCase_ == PayloadOneofCase.Distribution) {
+              subBuilder.MergeFrom(Distribution);
+            }
+            input.ReadMessage(subBuilder);
+            Distribution = subBuilder;
+            break;
+          }
+          case 66: {
             global::Ssn.Type.QrCodeData subBuilder = new global::Ssn.Type.QrCodeData();
-            if (qrTypeCase_ == QrTypeOneofCase.QrCodeData) {
+            if (payloadCase_ == PayloadOneofCase.QrCodeData) {
               subBuilder.MergeFrom(QrCodeData);
             }
             input.ReadMessage(subBuilder);
             QrCodeData = subBuilder;
             break;
           }
-          case 18: {
+          case 74: {
             global::Ssn.Type.SwissQrBill subBuilder = new global::Ssn.Type.SwissQrBill();
-            if (qrTypeCase_ == QrTypeOneofCase.SwissQrBill) {
+            if (payloadCase_ == PayloadOneofCase.SwissQrBill) {
               subBuilder.MergeFrom(SwissQrBill);
             }
             input.ReadMessage(subBuilder);
             SwissQrBill = subBuilder;
             break;
           }
-          case 24: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// QrData holds QR code annotations for feature "QR_CODES".
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class QrData : pb::IMessage<QrData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<QrData> _parser = new pb::MessageParser<QrData>(() => new QrData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<QrData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrData(QrData other) : this() {
-      qrCodes_ = other.qrCodes_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrData Clone() {
-      return new QrData(this);
-    }
-
-    /// <summary>Field number for the "qr_codes" field.</summary>
-    public const int QrCodesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalQrCode> _repeated_qrCodes_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalQrCode.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalQrCode> qrCodes_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalQrCode>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalQrCode> QrCodes {
-      get { return qrCodes_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as QrData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(QrData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!qrCodes_.Equals(other.qrCodes_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= qrCodes_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      qrCodes_.WriteTo(output, _repeated_qrCodes_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      qrCodes_.WriteTo(ref output, _repeated_qrCodes_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += qrCodes_.CalculateSize(_repeated_qrCodes_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(QrData other) {
-      if (other == null) {
-        return;
-      }
-      qrCodes_.Add(other.qrCodes_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            qrCodes_.AddEntriesFrom(input, _repeated_qrCodes_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            qrCodes_.AddEntriesFrom(ref input, _repeated_qrCodes_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalAnswerCandidate wraps ssn.type.AnswerCandidate.
-  /// AnswerCandidate carries the question as part of the data and cannot be
-  /// represented as a standard Candidate.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalAnswerCandidate : pb::IMessage<InternalAnswerCandidate>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InternalAnswerCandidate> _parser = new pb::MessageParser<InternalAnswerCandidate>(() => new InternalAnswerCandidate());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalAnswerCandidate> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[8]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalAnswerCandidate() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalAnswerCandidate(InternalAnswerCandidate other) : this() {
-      answer_ = other.answer_ != null ? other.answer_.Clone() : null;
-      source_ = other.source_;
-      sourceId_ = other.sourceId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalAnswerCandidate Clone() {
-      return new InternalAnswerCandidate(this);
-    }
-
-    /// <summary>Field number for the "answer" field.</summary>
-    public const int AnswerFieldNumber = 1;
-    private global::Ssn.Type.AnswerCandidate answer_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Type.AnswerCandidate Answer {
-      get { return answer_; }
-      set {
-        answer_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
-    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
-      get { return source_; }
-      set {
-        source_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 3;
-    private string sourceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceId {
-      get { return sourceId_; }
-      set {
-        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InternalAnswerCandidate);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalAnswerCandidate other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Answer, other.Answer)) return false;
-      if (Source != other.Source) return false;
-      if (SourceId != other.SourceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (answer_ != null) hash ^= Answer.GetHashCode();
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
-      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (answer_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Answer);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (answer_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Answer);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (answer_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Answer);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalAnswerCandidate other) {
-      if (other == null) {
-        return;
-      }
-      if (other.answer_ != null) {
-        if (answer_ == null) {
-          Answer = new global::Ssn.Type.AnswerCandidate();
-        }
-        Answer.MergeFrom(other.Answer);
-      }
-      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        Source = other.Source;
-      }
-      if (other.SourceId.Length != 0) {
-        SourceId = other.SourceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (answer_ == null) {
-              Answer = new global::Ssn.Type.AnswerCandidate();
+          case 82: {
+            global::Ssn.Type.AnswerCandidate subBuilder = new global::Ssn.Type.AnswerCandidate();
+            if (payloadCase_ == PayloadOneofCase.Answer) {
+              subBuilder.MergeFrom(Answer);
             }
-            input.ReadMessage(Answer);
+            input.ReadMessage(subBuilder);
+            Answer = subBuilder;
             break;
           }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (answer_ == null) {
-              Answer = new global::Ssn.Type.AnswerCandidate();
+          case 90: {
+            global::Ssn.Type.StructuredAddress subBuilder = new global::Ssn.Type.StructuredAddress();
+            if (payloadCase_ == PayloadOneofCase.Address) {
+              subBuilder.MergeFrom(Address);
             }
-            input.ReadMessage(Answer);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
+            input.ReadMessage(subBuilder);
+            Address = subBuilder;
             break;
           }
         }
@@ -2476,671 +894,7 @@ namespace Ssn.Documentdataservice.V1 {
   }
 
   /// <summary>
-  /// AnswerData holds QA annotations for feature "QA".
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class AnswerData : pb::IMessage<AnswerData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AnswerData> _parser = new pb::MessageParser<AnswerData>(() => new AnswerData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AnswerData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnswerData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnswerData(AnswerData other) : this() {
-      answers_ = other.answers_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AnswerData Clone() {
-      return new AnswerData(this);
-    }
-
-    /// <summary>Field number for the "answers" field.</summary>
-    public const int AnswersFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalAnswerCandidate> _repeated_answers_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalAnswerCandidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalAnswerCandidate> answers_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalAnswerCandidate>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalAnswerCandidate> Answers {
-      get { return answers_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AnswerData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AnswerData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!answers_.Equals(other.answers_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= answers_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      answers_.WriteTo(output, _repeated_answers_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      answers_.WriteTo(ref output, _repeated_answers_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += answers_.CalculateSize(_repeated_answers_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AnswerData other) {
-      if (other == null) {
-        return;
-      }
-      answers_.Add(other.answers_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            answers_.AddEntriesFrom(input, _repeated_answers_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            answers_.AddEntriesFrom(ref input, _repeated_answers_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalStructuredAddress wraps ssn.type.StructuredAddress with provenance.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class InternalStructuredAddress : pb::IMessage<InternalStructuredAddress>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InternalStructuredAddress> _parser = new pb::MessageParser<InternalStructuredAddress>(() => new InternalStructuredAddress());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InternalStructuredAddress> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalStructuredAddress() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalStructuredAddress(InternalStructuredAddress other) : this() {
-      address_ = other.address_ != null ? other.address_.Clone() : null;
-      source_ = other.source_;
-      sourceId_ = other.sourceId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InternalStructuredAddress Clone() {
-      return new InternalStructuredAddress(this);
-    }
-
-    /// <summary>Field number for the "address" field.</summary>
-    public const int AddressFieldNumber = 1;
-    private global::Ssn.Type.StructuredAddress address_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Type.StructuredAddress Address {
-      get { return address_; }
-      set {
-        address_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
-    private global::Ssn.Documentdataservice.V1.CandidateSource source_ = global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.CandidateSource Source {
-      get { return source_; }
-      set {
-        source_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "source_id" field.</summary>
-    public const int SourceIdFieldNumber = 3;
-    private string sourceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SourceId {
-      get { return sourceId_; }
-      set {
-        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InternalStructuredAddress);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InternalStructuredAddress other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Address, other.Address)) return false;
-      if (Source != other.Source) return false;
-      if (SourceId != other.SourceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (address_ != null) hash ^= Address.GetHashCode();
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) hash ^= Source.GetHashCode();
-      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (address_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Address);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (address_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Address);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(SourceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (address_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Address);
-      }
-      if (Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
-      if (SourceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InternalStructuredAddress other) {
-      if (other == null) {
-        return;
-      }
-      if (other.address_ != null) {
-        if (address_ == null) {
-          Address = new global::Ssn.Type.StructuredAddress();
-        }
-        Address.MergeFrom(other.Address);
-      }
-      if (other.Source != global::Ssn.Documentdataservice.V1.CandidateSource.Unspecified) {
-        Source = other.Source;
-      }
-      if (other.SourceId.Length != 0) {
-        SourceId = other.SourceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (address_ == null) {
-              Address = new global::Ssn.Type.StructuredAddress();
-            }
-            input.ReadMessage(Address);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (address_ == null) {
-              Address = new global::Ssn.Type.StructuredAddress();
-            }
-            input.ReadMessage(Address);
-            break;
-          }
-          case 16: {
-            Source = (global::Ssn.Documentdataservice.V1.CandidateSource) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            SourceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// AddressData holds address annotations for feature "ADDRESS".
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class AddressData : pb::IMessage<AddressData>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AddressData> _parser = new pb::MessageParser<AddressData>(() => new AddressData());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AddressData> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[11]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddressData() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddressData(AddressData other) : this() {
-      addresses_ = other.addresses_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddressData Clone() {
-      return new AddressData(this);
-    }
-
-    /// <summary>Field number for the "addresses" field.</summary>
-    public const int AddressesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> _repeated_addresses_codec
-        = pb::FieldCodec.ForMessage(10, global::Ssn.Documentdataservice.V1.InternalStructuredAddress.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> addresses_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalStructuredAddress> Addresses {
-      get { return addresses_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AddressData);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AddressData other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!addresses_.Equals(other.addresses_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= addresses_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      addresses_.WriteTo(output, _repeated_addresses_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      addresses_.WriteTo(ref output, _repeated_addresses_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += addresses_.CalculateSize(_repeated_addresses_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AddressData other) {
-      if (other == null) {
-        return;
-      }
-      addresses_.Add(other.addresses_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            addresses_.AddEntriesFrom(input, _repeated_addresses_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            addresses_.AddEntriesFrom(ref input, _repeated_addresses_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// InternalFieldAnnotation groups all candidates for a single feature.
+  /// InternalFieldAnnotation groups all entries for a single feature.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InternalFieldAnnotation : pb::IMessage<InternalFieldAnnotation>
@@ -3157,7 +911,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3178,27 +932,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InternalFieldAnnotation(InternalFieldAnnotation other) : this() {
       feature_ = other.feature_;
-      switch (other.DataCase) {
-        case DataOneofCase.FieldData:
-          FieldData = other.FieldData.Clone();
-          break;
-        case DataOneofCase.PurchaseLineData:
-          PurchaseLineData = other.PurchaseLineData.Clone();
-          break;
-        case DataOneofCase.VatDistributionData:
-          VatDistributionData = other.VatDistributionData.Clone();
-          break;
-        case DataOneofCase.QrData:
-          QrData = other.QrData.Clone();
-          break;
-        case DataOneofCase.AnswerData:
-          AnswerData = other.AnswerData.Clone();
-          break;
-        case DataOneofCase.AddressData:
-          AddressData = other.AddressData.Clone();
-          break;
-      }
-
+      entries_ = other.entries_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3223,101 +957,18 @@ namespace Ssn.Documentdataservice.V1 {
       }
     }
 
-    /// <summary>Field number for the "field_data" field.</summary>
-    public const int FieldDataFieldNumber = 2;
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Ssn.Documentdataservice.V1.InternalEntry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(66, global::Ssn.Documentdataservice.V1.InternalEntry.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalEntry> entries_ = new pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalEntry>();
+    /// <summary>
+    /// All stored entries for this feature, across provenances and TOPK.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.FieldData FieldData {
-      get { return dataCase_ == DataOneofCase.FieldData ? (global::Ssn.Documentdataservice.V1.FieldData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.FieldData;
-      }
-    }
-
-    /// <summary>Field number for the "purchase_line_data" field.</summary>
-    public const int PurchaseLineDataFieldNumber = 3;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.PurchaseLineData PurchaseLineData {
-      get { return dataCase_ == DataOneofCase.PurchaseLineData ? (global::Ssn.Documentdataservice.V1.PurchaseLineData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.PurchaseLineData;
-      }
-    }
-
-    /// <summary>Field number for the "vat_distribution_data" field.</summary>
-    public const int VatDistributionDataFieldNumber = 4;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.VatDistributionData VatDistributionData {
-      get { return dataCase_ == DataOneofCase.VatDistributionData ? (global::Ssn.Documentdataservice.V1.VatDistributionData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.VatDistributionData;
-      }
-    }
-
-    /// <summary>Field number for the "qr_data" field.</summary>
-    public const int QrDataFieldNumber = 5;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.QrData QrData {
-      get { return dataCase_ == DataOneofCase.QrData ? (global::Ssn.Documentdataservice.V1.QrData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.QrData;
-      }
-    }
-
-    /// <summary>Field number for the "answer_data" field.</summary>
-    public const int AnswerDataFieldNumber = 6;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.AnswerData AnswerData {
-      get { return dataCase_ == DataOneofCase.AnswerData ? (global::Ssn.Documentdataservice.V1.AnswerData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.AnswerData;
-      }
-    }
-
-    /// <summary>Field number for the "address_data" field.</summary>
-    public const int AddressDataFieldNumber = 7;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Documentdataservice.V1.AddressData AddressData {
-      get { return dataCase_ == DataOneofCase.AddressData ? (global::Ssn.Documentdataservice.V1.AddressData) data_ : null; }
-      set {
-        data_ = value;
-        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.AddressData;
-      }
-    }
-
-    private object data_;
-    /// <summary>Enum of possible cases for the "data" oneof.</summary>
-    public enum DataOneofCase {
-      None = 0,
-      FieldData = 2,
-      PurchaseLineData = 3,
-      VatDistributionData = 4,
-      QrData = 5,
-      AnswerData = 6,
-      AddressData = 7,
-    }
-    private DataOneofCase dataCase_ = DataOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataOneofCase DataCase {
-      get { return dataCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearData() {
-      dataCase_ = DataOneofCase.None;
-      data_ = null;
+    public pbc::RepeatedField<global::Ssn.Documentdataservice.V1.InternalEntry> Entries {
+      get { return entries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3336,13 +987,7 @@ namespace Ssn.Documentdataservice.V1 {
         return true;
       }
       if (Feature != other.Feature) return false;
-      if (!object.Equals(FieldData, other.FieldData)) return false;
-      if (!object.Equals(PurchaseLineData, other.PurchaseLineData)) return false;
-      if (!object.Equals(VatDistributionData, other.VatDistributionData)) return false;
-      if (!object.Equals(QrData, other.QrData)) return false;
-      if (!object.Equals(AnswerData, other.AnswerData)) return false;
-      if (!object.Equals(AddressData, other.AddressData)) return false;
-      if (DataCase != other.DataCase) return false;
+      if(!entries_.Equals(other.entries_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3351,13 +996,7 @@ namespace Ssn.Documentdataservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Feature.Length != 0) hash ^= Feature.GetHashCode();
-      if (dataCase_ == DataOneofCase.FieldData) hash ^= FieldData.GetHashCode();
-      if (dataCase_ == DataOneofCase.PurchaseLineData) hash ^= PurchaseLineData.GetHashCode();
-      if (dataCase_ == DataOneofCase.VatDistributionData) hash ^= VatDistributionData.GetHashCode();
-      if (dataCase_ == DataOneofCase.QrData) hash ^= QrData.GetHashCode();
-      if (dataCase_ == DataOneofCase.AnswerData) hash ^= AnswerData.GetHashCode();
-      if (dataCase_ == DataOneofCase.AddressData) hash ^= AddressData.GetHashCode();
-      hash ^= (int) dataCase_;
+      hash ^= entries_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3380,30 +1019,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      if (dataCase_ == DataOneofCase.FieldData) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FieldData);
-      }
-      if (dataCase_ == DataOneofCase.PurchaseLineData) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PurchaseLineData);
-      }
-      if (dataCase_ == DataOneofCase.VatDistributionData) {
-        output.WriteRawTag(34);
-        output.WriteMessage(VatDistributionData);
-      }
-      if (dataCase_ == DataOneofCase.QrData) {
-        output.WriteRawTag(42);
-        output.WriteMessage(QrData);
-      }
-      if (dataCase_ == DataOneofCase.AnswerData) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AnswerData);
-      }
-      if (dataCase_ == DataOneofCase.AddressData) {
-        output.WriteRawTag(58);
-        output.WriteMessage(AddressData);
-      }
+      entries_.WriteTo(output, _repeated_entries_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3418,30 +1034,7 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      if (dataCase_ == DataOneofCase.FieldData) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FieldData);
-      }
-      if (dataCase_ == DataOneofCase.PurchaseLineData) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PurchaseLineData);
-      }
-      if (dataCase_ == DataOneofCase.VatDistributionData) {
-        output.WriteRawTag(34);
-        output.WriteMessage(VatDistributionData);
-      }
-      if (dataCase_ == DataOneofCase.QrData) {
-        output.WriteRawTag(42);
-        output.WriteMessage(QrData);
-      }
-      if (dataCase_ == DataOneofCase.AnswerData) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AnswerData);
-      }
-      if (dataCase_ == DataOneofCase.AddressData) {
-        output.WriteRawTag(58);
-        output.WriteMessage(AddressData);
-      }
+      entries_.WriteTo(ref output, _repeated_entries_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3455,24 +1048,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (Feature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Feature);
       }
-      if (dataCase_ == DataOneofCase.FieldData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldData);
-      }
-      if (dataCase_ == DataOneofCase.PurchaseLineData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PurchaseLineData);
-      }
-      if (dataCase_ == DataOneofCase.VatDistributionData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VatDistributionData);
-      }
-      if (dataCase_ == DataOneofCase.QrData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QrData);
-      }
-      if (dataCase_ == DataOneofCase.AnswerData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnswerData);
-      }
-      if (dataCase_ == DataOneofCase.AddressData) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddressData);
-      }
+      size += entries_.CalculateSize(_repeated_entries_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3488,45 +1064,7 @@ namespace Ssn.Documentdataservice.V1 {
       if (other.Feature.Length != 0) {
         Feature = other.Feature;
       }
-      switch (other.DataCase) {
-        case DataOneofCase.FieldData:
-          if (FieldData == null) {
-            FieldData = new global::Ssn.Documentdataservice.V1.FieldData();
-          }
-          FieldData.MergeFrom(other.FieldData);
-          break;
-        case DataOneofCase.PurchaseLineData:
-          if (PurchaseLineData == null) {
-            PurchaseLineData = new global::Ssn.Documentdataservice.V1.PurchaseLineData();
-          }
-          PurchaseLineData.MergeFrom(other.PurchaseLineData);
-          break;
-        case DataOneofCase.VatDistributionData:
-          if (VatDistributionData == null) {
-            VatDistributionData = new global::Ssn.Documentdataservice.V1.VatDistributionData();
-          }
-          VatDistributionData.MergeFrom(other.VatDistributionData);
-          break;
-        case DataOneofCase.QrData:
-          if (QrData == null) {
-            QrData = new global::Ssn.Documentdataservice.V1.QrData();
-          }
-          QrData.MergeFrom(other.QrData);
-          break;
-        case DataOneofCase.AnswerData:
-          if (AnswerData == null) {
-            AnswerData = new global::Ssn.Documentdataservice.V1.AnswerData();
-          }
-          AnswerData.MergeFrom(other.AnswerData);
-          break;
-        case DataOneofCase.AddressData:
-          if (AddressData == null) {
-            AddressData = new global::Ssn.Documentdataservice.V1.AddressData();
-          }
-          AddressData.MergeFrom(other.AddressData);
-          break;
-      }
-
+      entries_.Add(other.entries_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3550,58 +1088,8 @@ namespace Ssn.Documentdataservice.V1 {
             Feature = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ssn.Documentdataservice.V1.FieldData subBuilder = new global::Ssn.Documentdataservice.V1.FieldData();
-            if (dataCase_ == DataOneofCase.FieldData) {
-              subBuilder.MergeFrom(FieldData);
-            }
-            input.ReadMessage(subBuilder);
-            FieldData = subBuilder;
-            break;
-          }
-          case 26: {
-            global::Ssn.Documentdataservice.V1.PurchaseLineData subBuilder = new global::Ssn.Documentdataservice.V1.PurchaseLineData();
-            if (dataCase_ == DataOneofCase.PurchaseLineData) {
-              subBuilder.MergeFrom(PurchaseLineData);
-            }
-            input.ReadMessage(subBuilder);
-            PurchaseLineData = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Ssn.Documentdataservice.V1.VatDistributionData subBuilder = new global::Ssn.Documentdataservice.V1.VatDistributionData();
-            if (dataCase_ == DataOneofCase.VatDistributionData) {
-              subBuilder.MergeFrom(VatDistributionData);
-            }
-            input.ReadMessage(subBuilder);
-            VatDistributionData = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Ssn.Documentdataservice.V1.QrData subBuilder = new global::Ssn.Documentdataservice.V1.QrData();
-            if (dataCase_ == DataOneofCase.QrData) {
-              subBuilder.MergeFrom(QrData);
-            }
-            input.ReadMessage(subBuilder);
-            QrData = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Ssn.Documentdataservice.V1.AnswerData subBuilder = new global::Ssn.Documentdataservice.V1.AnswerData();
-            if (dataCase_ == DataOneofCase.AnswerData) {
-              subBuilder.MergeFrom(AnswerData);
-            }
-            input.ReadMessage(subBuilder);
-            AnswerData = subBuilder;
-            break;
-          }
-          case 58: {
-            global::Ssn.Documentdataservice.V1.AddressData subBuilder = new global::Ssn.Documentdataservice.V1.AddressData();
-            if (dataCase_ == DataOneofCase.AddressData) {
-              subBuilder.MergeFrom(AddressData);
-            }
-            input.ReadMessage(subBuilder);
-            AddressData = subBuilder;
+          case 66: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
             break;
           }
         }
@@ -3627,58 +1115,8 @@ namespace Ssn.Documentdataservice.V1 {
             Feature = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ssn.Documentdataservice.V1.FieldData subBuilder = new global::Ssn.Documentdataservice.V1.FieldData();
-            if (dataCase_ == DataOneofCase.FieldData) {
-              subBuilder.MergeFrom(FieldData);
-            }
-            input.ReadMessage(subBuilder);
-            FieldData = subBuilder;
-            break;
-          }
-          case 26: {
-            global::Ssn.Documentdataservice.V1.PurchaseLineData subBuilder = new global::Ssn.Documentdataservice.V1.PurchaseLineData();
-            if (dataCase_ == DataOneofCase.PurchaseLineData) {
-              subBuilder.MergeFrom(PurchaseLineData);
-            }
-            input.ReadMessage(subBuilder);
-            PurchaseLineData = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Ssn.Documentdataservice.V1.VatDistributionData subBuilder = new global::Ssn.Documentdataservice.V1.VatDistributionData();
-            if (dataCase_ == DataOneofCase.VatDistributionData) {
-              subBuilder.MergeFrom(VatDistributionData);
-            }
-            input.ReadMessage(subBuilder);
-            VatDistributionData = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Ssn.Documentdataservice.V1.QrData subBuilder = new global::Ssn.Documentdataservice.V1.QrData();
-            if (dataCase_ == DataOneofCase.QrData) {
-              subBuilder.MergeFrom(QrData);
-            }
-            input.ReadMessage(subBuilder);
-            QrData = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Ssn.Documentdataservice.V1.AnswerData subBuilder = new global::Ssn.Documentdataservice.V1.AnswerData();
-            if (dataCase_ == DataOneofCase.AnswerData) {
-              subBuilder.MergeFrom(AnswerData);
-            }
-            input.ReadMessage(subBuilder);
-            AnswerData = subBuilder;
-            break;
-          }
-          case 58: {
-            global::Ssn.Documentdataservice.V1.AddressData subBuilder = new global::Ssn.Documentdataservice.V1.AddressData();
-            if (dataCase_ == DataOneofCase.AddressData) {
-              subBuilder.MergeFrom(AddressData);
-            }
-            input.ReadMessage(subBuilder);
-            AddressData = subBuilder;
+          case 66: {
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
             break;
           }
         }
@@ -3703,7 +1141,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4089,7 +1527,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4626,7 +2064,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5245,7 +2683,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5406,7 +2844,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5707,7 +3145,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5868,7 +3306,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6103,7 +3541,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6264,7 +3702,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6619,7 +4057,7 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

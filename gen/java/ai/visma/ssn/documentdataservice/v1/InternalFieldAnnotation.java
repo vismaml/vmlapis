@@ -7,7 +7,7 @@ package ai.visma.ssn.documentdataservice.v1;
 
 /**
  * <pre>
- * InternalFieldAnnotation groups all candidates for a single feature.
+ * InternalFieldAnnotation groups all entries for a single feature.
  * </pre>
  *
  * Protobuf type {@code ssn.documentdataservice.v1.InternalFieldAnnotation}
@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
   }
   private InternalFieldAnnotation() {
     feature_ = "";
+    entries_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -45,56 +46,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ssn.documentdataservice.v1.DocumentdataserviceProto.internal_static_ssn_documentdataservice_v1_InternalFieldAnnotation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation.class, ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation.Builder.class);
-  }
-
-  private int dataCase_ = 0;
-  @SuppressWarnings("serial")
-  private java.lang.Object data_;
-  public enum DataCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    FIELD_DATA(2),
-    PURCHASE_LINE_DATA(3),
-    VAT_DISTRIBUTION_DATA(4),
-    QR_DATA(5),
-    ANSWER_DATA(6),
-    ADDRESS_DATA(7),
-    DATA_NOT_SET(0);
-    private final int value;
-    private DataCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static DataCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static DataCase forNumber(int value) {
-      switch (value) {
-        case 2: return FIELD_DATA;
-        case 3: return PURCHASE_LINE_DATA;
-        case 4: return VAT_DISTRIBUTION_DATA;
-        case 5: return QR_DATA;
-        case 6: return ANSWER_DATA;
-        case 7: return ADDRESS_DATA;
-        case 0: return DATA_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public DataCase
-  getDataCase() {
-    return DataCase.forNumber(
-        dataCase_);
   }
 
   public static final int FEATURE_FIELD_NUMBER = 1;
@@ -144,190 +95,65 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FIELD_DATA_FIELD_NUMBER = 2;
+  public static final int ENTRIES_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry> entries_;
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-   * @return Whether the fieldData field is set.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
   @java.lang.Override
-  public boolean hasFieldData() {
-    return dataCase_ == 2;
+  public java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry> getEntriesList() {
+    return entries_;
   }
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-   * @return The fieldData.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.FieldData getFieldData() {
-    if (dataCase_ == 2) {
-       return (ai.visma.ssn.documentdataservice.v1.FieldData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
+  public java.util.List<? extends ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder> 
+      getEntriesOrBuilderList() {
+    return entries_;
   }
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder getFieldDataOrBuilder() {
-    if (dataCase_ == 2) {
-       return (ai.visma.ssn.documentdataservice.v1.FieldData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
-  }
-
-  public static final int PURCHASE_LINE_DATA_FIELD_NUMBER = 3;
-  /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-   * @return Whether the purchaseLineData field is set.
-   */
-  @java.lang.Override
-  public boolean hasPurchaseLineData() {
-    return dataCase_ == 3;
+  public int getEntriesCount() {
+    return entries_.size();
   }
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-   * @return The purchaseLineData.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.PurchaseLineData getPurchaseLineData() {
-    if (dataCase_ == 3) {
-       return (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
+  public ai.visma.ssn.documentdataservice.v1.InternalEntry getEntries(int index) {
+    return entries_.get(index);
   }
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder getPurchaseLineDataOrBuilder() {
-    if (dataCase_ == 3) {
-       return (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
-  }
-
-  public static final int VAT_DISTRIBUTION_DATA_FIELD_NUMBER = 4;
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   * @return Whether the vatDistributionData field is set.
-   */
-  @java.lang.Override
-  public boolean hasVatDistributionData() {
-    return dataCase_ == 4;
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   * @return The vatDistributionData.
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.VatDistributionData getVatDistributionData() {
-    if (dataCase_ == 4) {
-       return (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder getVatDistributionDataOrBuilder() {
-    if (dataCase_ == 4) {
-       return (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
-  }
-
-  public static final int QR_DATA_FIELD_NUMBER = 5;
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   * @return Whether the qrData field is set.
-   */
-  @java.lang.Override
-  public boolean hasQrData() {
-    return dataCase_ == 5;
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   * @return The qrData.
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.QrData getQrData() {
-    if (dataCase_ == 5) {
-       return (ai.visma.ssn.documentdataservice.v1.QrData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder getQrDataOrBuilder() {
-    if (dataCase_ == 5) {
-       return (ai.visma.ssn.documentdataservice.v1.QrData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-  }
-
-  public static final int ANSWER_DATA_FIELD_NUMBER = 6;
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   * @return Whether the answerData field is set.
-   */
-  @java.lang.Override
-  public boolean hasAnswerData() {
-    return dataCase_ == 6;
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   * @return The answerData.
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.AnswerData getAnswerData() {
-    if (dataCase_ == 6) {
-       return (ai.visma.ssn.documentdataservice.v1.AnswerData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder getAnswerDataOrBuilder() {
-    if (dataCase_ == 6) {
-       return (ai.visma.ssn.documentdataservice.v1.AnswerData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
-  }
-
-  public static final int ADDRESS_DATA_FIELD_NUMBER = 7;
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   * @return Whether the addressData field is set.
-   */
-  @java.lang.Override
-  public boolean hasAddressData() {
-    return dataCase_ == 7;
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   * @return The addressData.
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.AddressData getAddressData() {
-    if (dataCase_ == 7) {
-       return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
-  }
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder() {
-    if (dataCase_ == 7) {
-       return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
-    }
-    return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
+  public ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder getEntriesOrBuilder(
+      int index) {
+    return entries_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -347,23 +173,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feature_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, feature_);
     }
-    if (dataCase_ == 2) {
-      output.writeMessage(2, (ai.visma.ssn.documentdataservice.v1.FieldData) data_);
-    }
-    if (dataCase_ == 3) {
-      output.writeMessage(3, (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_);
-    }
-    if (dataCase_ == 4) {
-      output.writeMessage(4, (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_);
-    }
-    if (dataCase_ == 5) {
-      output.writeMessage(5, (ai.visma.ssn.documentdataservice.v1.QrData) data_);
-    }
-    if (dataCase_ == 6) {
-      output.writeMessage(6, (ai.visma.ssn.documentdataservice.v1.AnswerData) data_);
-    }
-    if (dataCase_ == 7) {
-      output.writeMessage(7, (ai.visma.ssn.documentdataservice.v1.AddressData) data_);
+    for (int i = 0; i < entries_.size(); i++) {
+      output.writeMessage(8, entries_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -377,29 +188,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(feature_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, feature_);
     }
-    if (dataCase_ == 2) {
+    for (int i = 0; i < entries_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (ai.visma.ssn.documentdataservice.v1.FieldData) data_);
-    }
-    if (dataCase_ == 3) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_);
-    }
-    if (dataCase_ == 4) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_);
-    }
-    if (dataCase_ == 5) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, (ai.visma.ssn.documentdataservice.v1.QrData) data_);
-    }
-    if (dataCase_ == 6) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, (ai.visma.ssn.documentdataservice.v1.AnswerData) data_);
-    }
-    if (dataCase_ == 7) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, (ai.visma.ssn.documentdataservice.v1.AddressData) data_);
+        .computeMessageSize(8, entries_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -418,35 +209,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getFeature()
         .equals(other.getFeature())) return false;
-    if (!getDataCase().equals(other.getDataCase())) return false;
-    switch (dataCase_) {
-      case 2:
-        if (!getFieldData()
-            .equals(other.getFieldData())) return false;
-        break;
-      case 3:
-        if (!getPurchaseLineData()
-            .equals(other.getPurchaseLineData())) return false;
-        break;
-      case 4:
-        if (!getVatDistributionData()
-            .equals(other.getVatDistributionData())) return false;
-        break;
-      case 5:
-        if (!getQrData()
-            .equals(other.getQrData())) return false;
-        break;
-      case 6:
-        if (!getAnswerData()
-            .equals(other.getAnswerData())) return false;
-        break;
-      case 7:
-        if (!getAddressData()
-            .equals(other.getAddressData())) return false;
-        break;
-      case 0:
-      default:
-    }
+    if (!getEntriesList()
+        .equals(other.getEntriesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -460,33 +224,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FEATURE_FIELD_NUMBER;
     hash = (53 * hash) + getFeature().hashCode();
-    switch (dataCase_) {
-      case 2:
-        hash = (37 * hash) + FIELD_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getFieldData().hashCode();
-        break;
-      case 3:
-        hash = (37 * hash) + PURCHASE_LINE_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getPurchaseLineData().hashCode();
-        break;
-      case 4:
-        hash = (37 * hash) + VAT_DISTRIBUTION_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getVatDistributionData().hashCode();
-        break;
-      case 5:
-        hash = (37 * hash) + QR_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getQrData().hashCode();
-        break;
-      case 6:
-        hash = (37 * hash) + ANSWER_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getAnswerData().hashCode();
-        break;
-      case 7:
-        hash = (37 * hash) + ADDRESS_DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getAddressData().hashCode();
-        break;
-      case 0:
-      default:
+    if (getEntriesCount() > 0) {
+      hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+      hash = (53 * hash) + getEntriesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -587,7 +327,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * InternalFieldAnnotation groups all candidates for a single feature.
+   * InternalFieldAnnotation groups all entries for a single feature.
    * </pre>
    *
    * Protobuf type {@code ssn.documentdataservice.v1.InternalFieldAnnotation}
@@ -624,26 +364,13 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       feature_ = "";
-      if (fieldDataBuilder_ != null) {
-        fieldDataBuilder_.clear();
+      if (entriesBuilder_ == null) {
+        entries_ = java.util.Collections.emptyList();
+      } else {
+        entries_ = null;
+        entriesBuilder_.clear();
       }
-      if (purchaseLineDataBuilder_ != null) {
-        purchaseLineDataBuilder_.clear();
-      }
-      if (vatDistributionDataBuilder_ != null) {
-        vatDistributionDataBuilder_.clear();
-      }
-      if (qrDataBuilder_ != null) {
-        qrDataBuilder_.clear();
-      }
-      if (answerDataBuilder_ != null) {
-        answerDataBuilder_.clear();
-      }
-      if (addressDataBuilder_ != null) {
-        addressDataBuilder_.clear();
-      }
-      dataCase_ = 0;
-      data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -670,45 +397,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation buildPartial() {
       ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation result = new ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation result) {
+      if (entriesBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.entries_ = entries_;
+      } else {
+        result.entries_ = entriesBuilder_.build();
+      }
     }
 
     private void buildPartial0(ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.feature_ = feature_;
-      }
-    }
-
-    private void buildPartialOneofs(ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation result) {
-      result.dataCase_ = dataCase_;
-      result.data_ = this.data_;
-      if (dataCase_ == 2 &&
-          fieldDataBuilder_ != null) {
-        result.data_ = fieldDataBuilder_.build();
-      }
-      if (dataCase_ == 3 &&
-          purchaseLineDataBuilder_ != null) {
-        result.data_ = purchaseLineDataBuilder_.build();
-      }
-      if (dataCase_ == 4 &&
-          vatDistributionDataBuilder_ != null) {
-        result.data_ = vatDistributionDataBuilder_.build();
-      }
-      if (dataCase_ == 5 &&
-          qrDataBuilder_ != null) {
-        result.data_ = qrDataBuilder_.build();
-      }
-      if (dataCase_ == 6 &&
-          answerDataBuilder_ != null) {
-        result.data_ = answerDataBuilder_.build();
-      }
-      if (dataCase_ == 7 &&
-          addressDataBuilder_ != null) {
-        result.data_ = addressDataBuilder_.build();
       }
     }
 
@@ -729,33 +439,30 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      switch (other.getDataCase()) {
-        case FIELD_DATA: {
-          mergeFieldData(other.getFieldData());
-          break;
+      if (entriesBuilder_ == null) {
+        if (!other.entries_.isEmpty()) {
+          if (entries_.isEmpty()) {
+            entries_ = other.entries_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureEntriesIsMutable();
+            entries_.addAll(other.entries_);
+          }
+          onChanged();
         }
-        case PURCHASE_LINE_DATA: {
-          mergePurchaseLineData(other.getPurchaseLineData());
-          break;
-        }
-        case VAT_DISTRIBUTION_DATA: {
-          mergeVatDistributionData(other.getVatDistributionData());
-          break;
-        }
-        case QR_DATA: {
-          mergeQrData(other.getQrData());
-          break;
-        }
-        case ANSWER_DATA: {
-          mergeAnswerData(other.getAnswerData());
-          break;
-        }
-        case ADDRESS_DATA: {
-          mergeAddressData(other.getAddressData());
-          break;
-        }
-        case DATA_NOT_SET: {
-          break;
+      } else {
+        if (!other.entries_.isEmpty()) {
+          if (entriesBuilder_.isEmpty()) {
+            entriesBuilder_.dispose();
+            entriesBuilder_ = null;
+            entries_ = other.entries_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            entriesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getEntriesFieldBuilder() : null;
+          } else {
+            entriesBuilder_.addAllMessages(other.entries_);
+          }
         }
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -789,48 +496,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getFieldDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 2;
+            case 66: {
+              ai.visma.ssn.documentdataservice.v1.InternalEntry m =
+                  input.readMessage(
+                      ai.visma.ssn.documentdataservice.v1.InternalEntry.parser(),
+                      extensionRegistry);
+              if (entriesBuilder_ == null) {
+                ensureEntriesIsMutable();
+                entries_.add(m);
+              } else {
+                entriesBuilder_.addMessage(m);
+              }
               break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getPurchaseLineDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 3;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getVatDistributionDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 4;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getQrDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 5;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getAnswerDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getAddressDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 7;
-              break;
-            } // case 58
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -846,21 +524,6 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int dataCase_ = 0;
-    private java.lang.Object data_;
-    public DataCase
-        getDataCase() {
-      return DataCase.forNumber(
-          dataCase_);
-    }
-
-    public Builder clearData() {
-      dataCase_ = 0;
-      data_ = null;
-      onChanged();
-      return this;
-    }
-
     private int bitField0_;
 
     private java.lang.Object feature_ = "";
@@ -955,856 +618,316 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.FieldData, ai.visma.ssn.documentdataservice.v1.FieldData.Builder, ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder> fieldDataBuilder_;
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     * @return Whether the fieldData field is set.
-     */
-    @java.lang.Override
-    public boolean hasFieldData() {
-      return dataCase_ == 2;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     * @return The fieldData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.FieldData getFieldData() {
-      if (fieldDataBuilder_ == null) {
-        if (dataCase_ == 2) {
-          return (ai.visma.ssn.documentdataservice.v1.FieldData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
-      } else {
-        if (dataCase_ == 2) {
-          return fieldDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    public Builder setFieldData(ai.visma.ssn.documentdataservice.v1.FieldData value) {
-      if (fieldDataBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        data_ = value;
-        onChanged();
-      } else {
-        fieldDataBuilder_.setMessage(value);
-      }
-      dataCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    public Builder setFieldData(
-        ai.visma.ssn.documentdataservice.v1.FieldData.Builder builderForValue) {
-      if (fieldDataBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        fieldDataBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    public Builder mergeFieldData(ai.visma.ssn.documentdataservice.v1.FieldData value) {
-      if (fieldDataBuilder_ == null) {
-        if (dataCase_ == 2 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.FieldData.newBuilder((ai.visma.ssn.documentdataservice.v1.FieldData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 2) {
-          fieldDataBuilder_.mergeFrom(value);
-        } else {
-          fieldDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    public Builder clearFieldData() {
-      if (fieldDataBuilder_ == null) {
-        if (dataCase_ == 2) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 2) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        fieldDataBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    public ai.visma.ssn.documentdataservice.v1.FieldData.Builder getFieldDataBuilder() {
-      return getFieldDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder getFieldDataOrBuilder() {
-      if ((dataCase_ == 2) && (fieldDataBuilder_ != null)) {
-        return fieldDataBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 2) {
-          return (ai.visma.ssn.documentdataservice.v1.FieldData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.FieldData, ai.visma.ssn.documentdataservice.v1.FieldData.Builder, ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder> 
-        getFieldDataFieldBuilder() {
-      if (fieldDataBuilder_ == null) {
-        if (!(dataCase_ == 2)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.FieldData.getDefaultInstance();
-        }
-        fieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.FieldData, ai.visma.ssn.documentdataservice.v1.FieldData.Builder, ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.FieldData) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 2;
-      onChanged();
-      return fieldDataBuilder_;
+    private java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry> entries_ =
+      java.util.Collections.emptyList();
+    private void ensureEntriesIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        entries_ = new java.util.ArrayList<ai.visma.ssn.documentdataservice.v1.InternalEntry>(entries_);
+        bitField0_ |= 0x00000002;
+       }
     }
 
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.PurchaseLineData, ai.visma.ssn.documentdataservice.v1.PurchaseLineData.Builder, ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder> purchaseLineDataBuilder_;
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     * @return Whether the purchaseLineData field is set.
-     */
-    @java.lang.Override
-    public boolean hasPurchaseLineData() {
-      return dataCase_ == 3;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     * @return The purchaseLineData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.PurchaseLineData getPurchaseLineData() {
-      if (purchaseLineDataBuilder_ == null) {
-        if (dataCase_ == 3) {
-          return (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
-      } else {
-        if (dataCase_ == 3) {
-          return purchaseLineDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    public Builder setPurchaseLineData(ai.visma.ssn.documentdataservice.v1.PurchaseLineData value) {
-      if (purchaseLineDataBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        data_ = value;
-        onChanged();
-      } else {
-        purchaseLineDataBuilder_.setMessage(value);
-      }
-      dataCase_ = 3;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    public Builder setPurchaseLineData(
-        ai.visma.ssn.documentdataservice.v1.PurchaseLineData.Builder builderForValue) {
-      if (purchaseLineDataBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        purchaseLineDataBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 3;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    public Builder mergePurchaseLineData(ai.visma.ssn.documentdataservice.v1.PurchaseLineData value) {
-      if (purchaseLineDataBuilder_ == null) {
-        if (dataCase_ == 3 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.PurchaseLineData.newBuilder((ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 3) {
-          purchaseLineDataBuilder_.mergeFrom(value);
-        } else {
-          purchaseLineDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 3;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    public Builder clearPurchaseLineData() {
-      if (purchaseLineDataBuilder_ == null) {
-        if (dataCase_ == 3) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 3) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        purchaseLineDataBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    public ai.visma.ssn.documentdataservice.v1.PurchaseLineData.Builder getPurchaseLineDataBuilder() {
-      return getPurchaseLineDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder getPurchaseLineDataOrBuilder() {
-      if ((dataCase_ == 3) && (purchaseLineDataBuilder_ != null)) {
-        return purchaseLineDataBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 3) {
-          return (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.PurchaseLineData, ai.visma.ssn.documentdataservice.v1.PurchaseLineData.Builder, ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder> 
-        getPurchaseLineDataFieldBuilder() {
-      if (purchaseLineDataBuilder_ == null) {
-        if (!(dataCase_ == 3)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.PurchaseLineData.getDefaultInstance();
-        }
-        purchaseLineDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.PurchaseLineData, ai.visma.ssn.documentdataservice.v1.PurchaseLineData.Builder, ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.PurchaseLineData) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 3;
-      onChanged();
-      return purchaseLineDataBuilder_;
-    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.documentdataservice.v1.InternalEntry, ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder, ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder> entriesBuilder_;
 
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.VatDistributionData, ai.visma.ssn.documentdataservice.v1.VatDistributionData.Builder, ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder> vatDistributionDataBuilder_;
     /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     * @return Whether the vatDistributionData field is set.
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    @java.lang.Override
-    public boolean hasVatDistributionData() {
-      return dataCase_ == 4;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     * @return The vatDistributionData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.VatDistributionData getVatDistributionData() {
-      if (vatDistributionDataBuilder_ == null) {
-        if (dataCase_ == 4) {
-          return (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
+    public java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry> getEntriesList() {
+      if (entriesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(entries_);
       } else {
-        if (dataCase_ == 4) {
-          return vatDistributionDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
+        return entriesBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public Builder setVatDistributionData(ai.visma.ssn.documentdataservice.v1.VatDistributionData value) {
-      if (vatDistributionDataBuilder_ == null) {
+    public int getEntriesCount() {
+      if (entriesBuilder_ == null) {
+        return entries_.size();
+      } else {
+        return entriesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.InternalEntry getEntries(int index) {
+      if (entriesBuilder_ == null) {
+        return entries_.get(index);
+      } else {
+        return entriesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public Builder setEntries(
+        int index, ai.visma.ssn.documentdataservice.v1.InternalEntry value) {
+      if (entriesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        data_ = value;
+        ensureEntriesIsMutable();
+        entries_.set(index, value);
         onChanged();
       } else {
-        vatDistributionDataBuilder_.setMessage(value);
+        entriesBuilder_.setMessage(index, value);
       }
-      dataCase_ = 4;
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public Builder setVatDistributionData(
-        ai.visma.ssn.documentdataservice.v1.VatDistributionData.Builder builderForValue) {
-      if (vatDistributionDataBuilder_ == null) {
-        data_ = builderForValue.build();
+    public Builder setEntries(
+        int index, ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.set(index, builderForValue.build());
         onChanged();
       } else {
-        vatDistributionDataBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 4;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     */
-    public Builder mergeVatDistributionData(ai.visma.ssn.documentdataservice.v1.VatDistributionData value) {
-      if (vatDistributionDataBuilder_ == null) {
-        if (dataCase_ == 4 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.VatDistributionData.newBuilder((ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 4) {
-          vatDistributionDataBuilder_.mergeFrom(value);
-        } else {
-          vatDistributionDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 4;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     */
-    public Builder clearVatDistributionData() {
-      if (vatDistributionDataBuilder_ == null) {
-        if (dataCase_ == 4) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 4) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        vatDistributionDataBuilder_.clear();
+        entriesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public ai.visma.ssn.documentdataservice.v1.VatDistributionData.Builder getVatDistributionDataBuilder() {
-      return getVatDistributionDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder getVatDistributionDataOrBuilder() {
-      if ((dataCase_ == 4) && (vatDistributionDataBuilder_ != null)) {
-        return vatDistributionDataBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 4) {
-          return (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.VatDistributionData, ai.visma.ssn.documentdataservice.v1.VatDistributionData.Builder, ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder> 
-        getVatDistributionDataFieldBuilder() {
-      if (vatDistributionDataBuilder_ == null) {
-        if (!(dataCase_ == 4)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.VatDistributionData.getDefaultInstance();
-        }
-        vatDistributionDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.VatDistributionData, ai.visma.ssn.documentdataservice.v1.VatDistributionData.Builder, ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.VatDistributionData) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 4;
-      onChanged();
-      return vatDistributionDataBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.QrData, ai.visma.ssn.documentdataservice.v1.QrData.Builder, ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder> qrDataBuilder_;
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     * @return Whether the qrData field is set.
-     */
-    @java.lang.Override
-    public boolean hasQrData() {
-      return dataCase_ == 5;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     * @return The qrData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.QrData getQrData() {
-      if (qrDataBuilder_ == null) {
-        if (dataCase_ == 5) {
-          return (ai.visma.ssn.documentdataservice.v1.QrData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-      } else {
-        if (dataCase_ == 5) {
-          return qrDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    public Builder setQrData(ai.visma.ssn.documentdataservice.v1.QrData value) {
-      if (qrDataBuilder_ == null) {
+    public Builder addEntries(ai.visma.ssn.documentdataservice.v1.InternalEntry value) {
+      if (entriesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        data_ = value;
+        ensureEntriesIsMutable();
+        entries_.add(value);
         onChanged();
       } else {
-        qrDataBuilder_.setMessage(value);
-      }
-      dataCase_ = 5;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    public Builder setQrData(
-        ai.visma.ssn.documentdataservice.v1.QrData.Builder builderForValue) {
-      if (qrDataBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        qrDataBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 5;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    public Builder mergeQrData(ai.visma.ssn.documentdataservice.v1.QrData value) {
-      if (qrDataBuilder_ == null) {
-        if (dataCase_ == 5 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.QrData.newBuilder((ai.visma.ssn.documentdataservice.v1.QrData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 5) {
-          qrDataBuilder_.mergeFrom(value);
-        } else {
-          qrDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 5;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    public Builder clearQrData() {
-      if (qrDataBuilder_ == null) {
-        if (dataCase_ == 5) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 5) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        qrDataBuilder_.clear();
+        entriesBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public ai.visma.ssn.documentdataservice.v1.QrData.Builder getQrDataBuilder() {
-      return getQrDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder getQrDataOrBuilder() {
-      if ((dataCase_ == 5) && (qrDataBuilder_ != null)) {
-        return qrDataBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 5) {
-          return (ai.visma.ssn.documentdataservice.v1.QrData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.QrData, ai.visma.ssn.documentdataservice.v1.QrData.Builder, ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder> 
-        getQrDataFieldBuilder() {
-      if (qrDataBuilder_ == null) {
-        if (!(dataCase_ == 5)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.QrData.getDefaultInstance();
-        }
-        qrDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.QrData, ai.visma.ssn.documentdataservice.v1.QrData.Builder, ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.QrData) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 5;
-      onChanged();
-      return qrDataBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.AnswerData, ai.visma.ssn.documentdataservice.v1.AnswerData.Builder, ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder> answerDataBuilder_;
-    /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-     * @return Whether the answerData field is set.
-     */
-    @java.lang.Override
-    public boolean hasAnswerData() {
-      return dataCase_ == 6;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-     * @return The answerData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.AnswerData getAnswerData() {
-      if (answerDataBuilder_ == null) {
-        if (dataCase_ == 6) {
-          return (ai.visma.ssn.documentdataservice.v1.AnswerData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
-      } else {
-        if (dataCase_ == 6) {
-          return answerDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-     */
-    public Builder setAnswerData(ai.visma.ssn.documentdataservice.v1.AnswerData value) {
-      if (answerDataBuilder_ == null) {
+    public Builder addEntries(
+        int index, ai.visma.ssn.documentdataservice.v1.InternalEntry value) {
+      if (entriesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        data_ = value;
+        ensureEntriesIsMutable();
+        entries_.add(index, value);
         onChanged();
       } else {
-        answerDataBuilder_.setMessage(value);
+        entriesBuilder_.addMessage(index, value);
       }
-      dataCase_ = 6;
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public Builder setAnswerData(
-        ai.visma.ssn.documentdataservice.v1.AnswerData.Builder builderForValue) {
-      if (answerDataBuilder_ == null) {
-        data_ = builderForValue.build();
+    public Builder addEntries(
+        ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.add(builderForValue.build());
         onChanged();
       } else {
-        answerDataBuilder_.setMessage(builderForValue.build());
+        entriesBuilder_.addMessage(builderForValue.build());
       }
-      dataCase_ = 6;
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public Builder mergeAnswerData(ai.visma.ssn.documentdataservice.v1.AnswerData value) {
-      if (answerDataBuilder_ == null) {
-        if (dataCase_ == 6 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.AnswerData.newBuilder((ai.visma.ssn.documentdataservice.v1.AnswerData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
+    public Builder addEntries(
+        int index, ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.add(index, builderForValue.build());
         onChanged();
       } else {
-        if (dataCase_ == 6) {
-          answerDataBuilder_.mergeFrom(value);
-        } else {
-          answerDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 6;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-     */
-    public Builder clearAnswerData() {
-      if (answerDataBuilder_ == null) {
-        if (dataCase_ == 6) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 6) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        answerDataBuilder_.clear();
+        entriesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    public ai.visma.ssn.documentdataservice.v1.AnswerData.Builder getAnswerDataBuilder() {
-      return getAnswerDataFieldBuilder().getBuilder();
+    public Builder addAllEntries(
+        java.lang.Iterable<? extends ai.visma.ssn.documentdataservice.v1.InternalEntry> values) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, entries_);
+        onChanged();
+      } else {
+        entriesBuilder_.addAllMessages(values);
+      }
+      return this;
     }
     /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder getAnswerDataOrBuilder() {
-      if ((dataCase_ == 6) && (answerDataBuilder_ != null)) {
-        return answerDataBuilder_.getMessageOrBuilder();
+    public Builder clearEntries() {
+      if (entriesBuilder_ == null) {
+        entries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
       } else {
-        if (dataCase_ == 6) {
-          return (ai.visma.ssn.documentdataservice.v1.AnswerData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
+        entriesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public Builder removeEntries(int index) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.remove(index);
+        onChanged();
+      } else {
+        entriesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder getEntriesBuilder(
+        int index) {
+      return getEntriesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      if (entriesBuilder_ == null) {
+        return entries_.get(index);  } else {
+        return entriesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.AnswerData, ai.visma.ssn.documentdataservice.v1.AnswerData.Builder, ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder> 
-        getAnswerDataFieldBuilder() {
-      if (answerDataBuilder_ == null) {
-        if (!(dataCase_ == 6)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.AnswerData.getDefaultInstance();
-        }
-        answerDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.AnswerData, ai.visma.ssn.documentdataservice.v1.AnswerData.Builder, ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.AnswerData) data_,
+    public java.util.List<? extends ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder> 
+         getEntriesOrBuilderList() {
+      if (entriesBuilder_ != null) {
+        return entriesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(entries_);
+      }
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder addEntriesBuilder() {
+      return getEntriesFieldBuilder().addBuilder(
+          ai.visma.ssn.documentdataservice.v1.InternalEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder addEntriesBuilder(
+        int index) {
+      return getEntriesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.documentdataservice.v1.InternalEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * All stored entries for this feature, across provenances and TOPK.
+     * </pre>
+     *
+     * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
+     */
+    public java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder> 
+         getEntriesBuilderList() {
+      return getEntriesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.documentdataservice.v1.InternalEntry, ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder, ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder> 
+        getEntriesFieldBuilder() {
+      if (entriesBuilder_ == null) {
+        entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.documentdataservice.v1.InternalEntry, ai.visma.ssn.documentdataservice.v1.InternalEntry.Builder, ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder>(
+                entries_,
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
-        data_ = null;
+        entries_ = null;
       }
-      dataCase_ = 6;
-      onChanged();
-      return answerDataBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder> addressDataBuilder_;
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     * @return Whether the addressData field is set.
-     */
-    @java.lang.Override
-    public boolean hasAddressData() {
-      return dataCase_ == 7;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     * @return The addressData.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.AddressData getAddressData() {
-      if (addressDataBuilder_ == null) {
-        if (dataCase_ == 7) {
-          return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
-      } else {
-        if (dataCase_ == 7) {
-          return addressDataBuilder_.getMessage();
-        }
-        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    public Builder setAddressData(ai.visma.ssn.documentdataservice.v1.AddressData value) {
-      if (addressDataBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        data_ = value;
-        onChanged();
-      } else {
-        addressDataBuilder_.setMessage(value);
-      }
-      dataCase_ = 7;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    public Builder setAddressData(
-        ai.visma.ssn.documentdataservice.v1.AddressData.Builder builderForValue) {
-      if (addressDataBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        addressDataBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 7;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    public Builder mergeAddressData(ai.visma.ssn.documentdataservice.v1.AddressData value) {
-      if (addressDataBuilder_ == null) {
-        if (dataCase_ == 7 &&
-            data_ != ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance()) {
-          data_ = ai.visma.ssn.documentdataservice.v1.AddressData.newBuilder((ai.visma.ssn.documentdataservice.v1.AddressData) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 7) {
-          addressDataBuilder_.mergeFrom(value);
-        } else {
-          addressDataBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 7;
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    public Builder clearAddressData() {
-      if (addressDataBuilder_ == null) {
-        if (dataCase_ == 7) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 7) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        addressDataBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    public ai.visma.ssn.documentdataservice.v1.AddressData.Builder getAddressDataBuilder() {
-      return getAddressDataFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    @java.lang.Override
-    public ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder() {
-      if ((dataCase_ == 7) && (addressDataBuilder_ != null)) {
-        return addressDataBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 7) {
-          return (ai.visma.ssn.documentdataservice.v1.AddressData) data_;
-        }
-        return ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder> 
-        getAddressDataFieldBuilder() {
-      if (addressDataBuilder_ == null) {
-        if (!(dataCase_ == 7)) {
-          data_ = ai.visma.ssn.documentdataservice.v1.AddressData.getDefaultInstance();
-        }
-        addressDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ssn.documentdataservice.v1.AddressData, ai.visma.ssn.documentdataservice.v1.AddressData.Builder, ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder>(
-                (ai.visma.ssn.documentdataservice.v1.AddressData) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 7;
-      onChanged();
-      return addressDataBuilder_;
+      return entriesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.InternalFieldAnnotation)

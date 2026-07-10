@@ -30,94 +30,46 @@ public interface InternalFieldAnnotationOrBuilder extends
       getFeatureBytes();
 
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-   * @return Whether the fieldData field is set.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
-  boolean hasFieldData();
+  java.util.List<ai.visma.ssn.documentdataservice.v1.InternalEntry> 
+      getEntriesList();
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
-   * @return The fieldData.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
-  ai.visma.ssn.documentdataservice.v1.FieldData getFieldData();
+  ai.visma.ssn.documentdataservice.v1.InternalEntry getEntries(int index);
   /**
-   * <code>.ssn.documentdataservice.v1.FieldData field_data = 2 [json_name = "fieldData"];</code>
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
-  ai.visma.ssn.documentdataservice.v1.FieldDataOrBuilder getFieldDataOrBuilder();
-
+  int getEntriesCount();
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-   * @return Whether the purchaseLineData field is set.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
-  boolean hasPurchaseLineData();
+  java.util.List<? extends ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder> 
+      getEntriesOrBuilderList();
   /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-   * @return The purchaseLineData.
+   * <pre>
+   * All stored entries for this feature, across provenances and TOPK.
+   * </pre>
+   *
+   * <code>repeated .ssn.documentdataservice.v1.InternalEntry entries = 8 [json_name = "entries"];</code>
    */
-  ai.visma.ssn.documentdataservice.v1.PurchaseLineData getPurchaseLineData();
-  /**
-   * <code>.ssn.documentdataservice.v1.PurchaseLineData purchase_line_data = 3 [json_name = "purchaseLineData"];</code>
-   */
-  ai.visma.ssn.documentdataservice.v1.PurchaseLineDataOrBuilder getPurchaseLineDataOrBuilder();
-
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   * @return Whether the vatDistributionData field is set.
-   */
-  boolean hasVatDistributionData();
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   * @return The vatDistributionData.
-   */
-  ai.visma.ssn.documentdataservice.v1.VatDistributionData getVatDistributionData();
-  /**
-   * <code>.ssn.documentdataservice.v1.VatDistributionData vat_distribution_data = 4 [json_name = "vatDistributionData"];</code>
-   */
-  ai.visma.ssn.documentdataservice.v1.VatDistributionDataOrBuilder getVatDistributionDataOrBuilder();
-
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   * @return Whether the qrData field is set.
-   */
-  boolean hasQrData();
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   * @return The qrData.
-   */
-  ai.visma.ssn.documentdataservice.v1.QrData getQrData();
-  /**
-   * <code>.ssn.documentdataservice.v1.QrData qr_data = 5 [json_name = "qrData"];</code>
-   */
-  ai.visma.ssn.documentdataservice.v1.QrDataOrBuilder getQrDataOrBuilder();
-
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   * @return Whether the answerData field is set.
-   */
-  boolean hasAnswerData();
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   * @return The answerData.
-   */
-  ai.visma.ssn.documentdataservice.v1.AnswerData getAnswerData();
-  /**
-   * <code>.ssn.documentdataservice.v1.AnswerData answer_data = 6 [json_name = "answerData"];</code>
-   */
-  ai.visma.ssn.documentdataservice.v1.AnswerDataOrBuilder getAnswerDataOrBuilder();
-
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   * @return Whether the addressData field is set.
-   */
-  boolean hasAddressData();
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   * @return The addressData.
-   */
-  ai.visma.ssn.documentdataservice.v1.AddressData getAddressData();
-  /**
-   * <code>.ssn.documentdataservice.v1.AddressData address_data = 7 [json_name = "addressData"];</code>
-   */
-  ai.visma.ssn.documentdataservice.v1.AddressDataOrBuilder getAddressDataOrBuilder();
-
-  ai.visma.ssn.documentdataservice.v1.InternalFieldAnnotation.DataCase getDataCase();
+  ai.visma.ssn.documentdataservice.v1.InternalEntryOrBuilder getEntriesOrBuilder(
+      int index);
 }
