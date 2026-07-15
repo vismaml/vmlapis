@@ -3452,6 +3452,17 @@
         }
       }
     },
+    "v1Returned": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "confidenceLevel": {
+          "type": "string"
+        }
+      }
+    },
     "v1TrueValues": {
       "type": "object",
       "properties": {

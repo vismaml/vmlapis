@@ -1285,6 +1285,28 @@ export namespace ReadDocumentResponse {
   }
 }
 
+export class Returned extends jspb.Message {
+  getField(): string;
+  setField(value: string): Returned;
+
+  getConfidenceLevel(): string;
+  setConfidenceLevel(value: string): Returned;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Returned.AsObject;
+  static toObject(includeInstance: boolean, msg: Returned): Returned.AsObject;
+  static serializeBinaryToWriter(message: Returned, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Returned;
+  static deserializeBinaryFromReader(message: Returned, reader: jspb.BinaryReader): Returned;
+}
+
+export namespace Returned {
+  export type AsObject = {
+    field: string,
+    confidenceLevel: string,
+  }
+}
+
 export class PrepareFeedbackRequest extends jspb.Message {
   getId(): string;
   setId(value: string): PrepareFeedbackRequest;
@@ -1332,6 +1354,11 @@ export class PrepareFeedbackRequest extends jspb.Message {
   clearRequestedFeaturesList(): PrepareFeedbackRequest;
   addRequestedFeatures(value: string, index?: number): PrepareFeedbackRequest;
 
+  getReturnedList(): Array<Returned>;
+  setReturnedList(value: Array<Returned>): PrepareFeedbackRequest;
+  clearReturnedList(): PrepareFeedbackRequest;
+  addReturned(value?: Returned, index?: number): Returned;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PrepareFeedbackRequest.AsObject;
   static toObject(includeInstance: boolean, msg: PrepareFeedbackRequest): PrepareFeedbackRequest.AsObject;
@@ -1352,6 +1379,7 @@ export namespace PrepareFeedbackRequest {
     tier: ssn_type_tier_pb.Tier,
     segmentsList: Array<string>,
     requestedFeaturesList: Array<string>,
+    returnedList: Array<Returned.AsObject>,
   }
 }
 
