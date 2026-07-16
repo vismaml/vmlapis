@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     requestedFeatures_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    returned_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -335,6 +336,47 @@ private static final long serialVersionUID = 0L;
     return requestedFeatures_.getByteString(index);
   }
 
+  public static final int RETURNED_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.dataservice.v1.Returned> returned_;
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.dataservice.v1.Returned> getReturnedList() {
+    return returned_;
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.dataservice.v1.ReturnedOrBuilder> 
+      getReturnedOrBuilderList() {
+    return returned_;
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  @java.lang.Override
+  public int getReturnedCount() {
+    return returned_.size();
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.dataservice.v1.Returned getReturned(int index) {
+    return returned_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.dataservice.v1.ReturnedOrBuilder getReturnedOrBuilder(
+      int index) {
+    return returned_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -378,6 +420,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < requestedFeatures_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 10, requestedFeatures_.getRaw(i));
+    }
+    for (int i = 0; i < returned_.size(); i++) {
+      output.writeMessage(11, returned_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -439,6 +484,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getRequestedFeaturesList().size();
     }
+    for (int i = 0; i < returned_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, returned_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -485,6 +534,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSegmentsList())) return false;
     if (!getRequestedFeaturesList()
         .equals(other.getRequestedFeaturesList())) return false;
+    if (!getReturnedList()
+        .equals(other.getReturnedList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -529,6 +580,10 @@ private static final long serialVersionUID = 0L;
     if (getRequestedFeaturesCount() > 0) {
       hash = (37 * hash) + REQUESTED_FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getRequestedFeaturesList().hashCode();
+    }
+    if (getReturnedCount() > 0) {
+      hash = (37 * hash) + RETURNED_FIELD_NUMBER;
+      hash = (53 * hash) + getReturnedList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -664,6 +719,7 @@ private static final long serialVersionUID = 0L;
         getPredictionsFieldBuilder();
         getConfidencesFieldBuilder();
         getPredictionMetadataFieldBuilder();
+        getReturnedFieldBuilder();
       }
     }
     @java.lang.Override
@@ -699,6 +755,13 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       requestedFeatures_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      if (returnedBuilder_ == null) {
+        returned_ = java.util.Collections.emptyList();
+      } else {
+        returned_ = null;
+        returnedBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -725,9 +788,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest buildPartial() {
       ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest result = new ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest result) {
+      if (returnedBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          returned_ = java.util.Collections.unmodifiableList(returned_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.returned_ = returned_;
+      } else {
+        result.returned_ = returnedBuilder_.build();
+      }
     }
 
     private void buildPartial0(ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest result) {
@@ -846,6 +922,32 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (returnedBuilder_ == null) {
+        if (!other.returned_.isEmpty()) {
+          if (returned_.isEmpty()) {
+            returned_ = other.returned_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureReturnedIsMutable();
+            returned_.addAll(other.returned_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.returned_.isEmpty()) {
+          if (returnedBuilder_.isEmpty()) {
+            returnedBuilder_.dispose();
+            returnedBuilder_ = null;
+            returned_ = other.returned_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            returnedBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getReturnedFieldBuilder() : null;
+          } else {
+            returnedBuilder_.addAllMessages(other.returned_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -933,6 +1035,19 @@ private static final long serialVersionUID = 0L;
               requestedFeatures_.add(s);
               break;
             } // case 82
+            case 90: {
+              ai.visma.ssn.dataservice.v1.Returned m =
+                  input.readMessage(
+                      ai.visma.ssn.dataservice.v1.Returned.parser(),
+                      extensionRegistry);
+              if (returnedBuilder_ == null) {
+                ensureReturnedIsMutable();
+                returned_.add(m);
+              } else {
+                returnedBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1922,6 +2037,246 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000200;
       onChanged();
       return this;
+    }
+
+    private java.util.List<ai.visma.ssn.dataservice.v1.Returned> returned_ =
+      java.util.Collections.emptyList();
+    private void ensureReturnedIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        returned_ = new java.util.ArrayList<ai.visma.ssn.dataservice.v1.Returned>(returned_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.dataservice.v1.Returned, ai.visma.ssn.dataservice.v1.Returned.Builder, ai.visma.ssn.dataservice.v1.ReturnedOrBuilder> returnedBuilder_;
+
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public java.util.List<ai.visma.ssn.dataservice.v1.Returned> getReturnedList() {
+      if (returnedBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(returned_);
+      } else {
+        return returnedBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public int getReturnedCount() {
+      if (returnedBuilder_ == null) {
+        return returned_.size();
+      } else {
+        return returnedBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.Returned getReturned(int index) {
+      if (returnedBuilder_ == null) {
+        return returned_.get(index);
+      } else {
+        return returnedBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder setReturned(
+        int index, ai.visma.ssn.dataservice.v1.Returned value) {
+      if (returnedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReturnedIsMutable();
+        returned_.set(index, value);
+        onChanged();
+      } else {
+        returnedBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder setReturned(
+        int index, ai.visma.ssn.dataservice.v1.Returned.Builder builderForValue) {
+      if (returnedBuilder_ == null) {
+        ensureReturnedIsMutable();
+        returned_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        returnedBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder addReturned(ai.visma.ssn.dataservice.v1.Returned value) {
+      if (returnedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReturnedIsMutable();
+        returned_.add(value);
+        onChanged();
+      } else {
+        returnedBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder addReturned(
+        int index, ai.visma.ssn.dataservice.v1.Returned value) {
+      if (returnedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReturnedIsMutable();
+        returned_.add(index, value);
+        onChanged();
+      } else {
+        returnedBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder addReturned(
+        ai.visma.ssn.dataservice.v1.Returned.Builder builderForValue) {
+      if (returnedBuilder_ == null) {
+        ensureReturnedIsMutable();
+        returned_.add(builderForValue.build());
+        onChanged();
+      } else {
+        returnedBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder addReturned(
+        int index, ai.visma.ssn.dataservice.v1.Returned.Builder builderForValue) {
+      if (returnedBuilder_ == null) {
+        ensureReturnedIsMutable();
+        returned_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        returnedBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder addAllReturned(
+        java.lang.Iterable<? extends ai.visma.ssn.dataservice.v1.Returned> values) {
+      if (returnedBuilder_ == null) {
+        ensureReturnedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, returned_);
+        onChanged();
+      } else {
+        returnedBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder clearReturned() {
+      if (returnedBuilder_ == null) {
+        returned_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        returnedBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public Builder removeReturned(int index) {
+      if (returnedBuilder_ == null) {
+        ensureReturnedIsMutable();
+        returned_.remove(index);
+        onChanged();
+      } else {
+        returnedBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.Returned.Builder getReturnedBuilder(
+        int index) {
+      return getReturnedFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.ReturnedOrBuilder getReturnedOrBuilder(
+        int index) {
+      if (returnedBuilder_ == null) {
+        return returned_.get(index);  } else {
+        return returnedBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.dataservice.v1.ReturnedOrBuilder> 
+         getReturnedOrBuilderList() {
+      if (returnedBuilder_ != null) {
+        return returnedBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(returned_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.Returned.Builder addReturnedBuilder() {
+      return getReturnedFieldBuilder().addBuilder(
+          ai.visma.ssn.dataservice.v1.Returned.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public ai.visma.ssn.dataservice.v1.Returned.Builder addReturnedBuilder(
+        int index) {
+      return getReturnedFieldBuilder().addBuilder(
+          index, ai.visma.ssn.dataservice.v1.Returned.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+     */
+    public java.util.List<ai.visma.ssn.dataservice.v1.Returned.Builder> 
+         getReturnedBuilderList() {
+      return getReturnedFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.dataservice.v1.Returned, ai.visma.ssn.dataservice.v1.Returned.Builder, ai.visma.ssn.dataservice.v1.ReturnedOrBuilder> 
+        getReturnedFieldBuilder() {
+      if (returnedBuilder_ == null) {
+        returnedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.dataservice.v1.Returned, ai.visma.ssn.dataservice.v1.Returned.Builder, ai.visma.ssn.dataservice.v1.ReturnedOrBuilder>(
+                returned_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        returned_ = null;
+      }
+      return returnedBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PrepareFeedbackRequest)

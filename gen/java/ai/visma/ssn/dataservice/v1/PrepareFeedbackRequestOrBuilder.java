@@ -172,4 +172,28 @@ public interface PrepareFeedbackRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRequestedFeaturesBytes(int index);
+
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  java.util.List<ai.visma.ssn.dataservice.v1.Returned> 
+      getReturnedList();
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  ai.visma.ssn.dataservice.v1.Returned getReturned(int index);
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  int getReturnedCount();
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.dataservice.v1.ReturnedOrBuilder> 
+      getReturnedOrBuilderList();
+  /**
+   * <code>repeated .ssn.dataservice.v1.Returned returned = 11 [json_name = "returned"];</code>
+   */
+  ai.visma.ssn.dataservice.v1.ReturnedOrBuilder getReturnedOrBuilder(
+      int index);
 }

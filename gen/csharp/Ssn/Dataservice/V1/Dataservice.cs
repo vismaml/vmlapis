@@ -336,18 +336,21 @@ namespace Ssn.Dataservice.V1 {
             "bWVudFJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZCIlChNSZWFkRG9jdW1lbnRS",
             "ZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZCJQChRSZWFkRG9jdW1lbnRSZXNwb25z",
             "ZRI4Cghkb2N1bWVudBgBIAEoCzIcLnNzbi5kYXRhc2VydmljZS52MS5Eb2N1",
-            "bWVudFIIZG9jdW1lbnQi6gMKFlByZXBhcmVGZWVkYmFja1JlcXVlc3QSDgoC",
-            "aWQYASABKAlSAmlkEigKAnRhGAIgASgLMhguc3NuLnR5cGUuVGV4dEFubm90",
-            "YXRpb25SAnRhEiUKDmRvY3VtZW50X2J5dGVzGAMgASgMUg1kb2N1bWVudEJ5",
-            "dGVzEkYKC3ByZWRpY3Rpb25zGAQgASgLMiQuc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "LlByZWRpY3Rpb25WYWx1ZXNSC3ByZWRpY3Rpb25zEhIKBHRhZ3MYBSADKAlS",
-            "BHRhZ3MSSwoLY29uZmlkZW5jZXMYBiABKAsyKS5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuUHJlZGljdGlvbkNvbmZpZGVuY2VzUgtjb25maWRlbmNlcxJXChNwcmVk",
-            "aWN0aW9uX21ldGFkYXRhGAcgASgLMiYuc3NuLmRhdGFzZXJ2aWNlLnYxLlBy",
-            "ZWRpY3Rpb25NZXRhZGF0YVIScHJlZGljdGlvbk1ldGFkYXRhEiIKBHRpZXIY",
-            "CCABKA4yDi5zc24udHlwZS5UaWVyUgR0aWVyEhoKCHNlZ21lbnRzGAkgAygJ",
-            "UghzZWdtZW50cxItChJyZXF1ZXN0ZWRfZmVhdHVyZXMYCiADKAlSEXJlcXVl",
-            "c3RlZEZlYXR1cmVzInYKD0ZlZWRiYWNrUmVxdWVzdBIOCgJpZBgBIAEoCVIC",
+            "bWVudFIIZG9jdW1lbnQiSwoIUmV0dXJuZWQSFAoFZmllbGQYASABKAlSBWZp",
+            "ZWxkEikKEGNvbmZpZGVuY2VfbGV2ZWwYAiABKAlSD2NvbmZpZGVuY2VMZXZl",
+            "bCKkBAoWUHJlcGFyZUZlZWRiYWNrUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQS",
+            "KAoCdGEYAiABKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlvblICdGESJQoO",
+            "ZG9jdW1lbnRfYnl0ZXMYAyABKAxSDWRvY3VtZW50Qnl0ZXMSRgoLcHJlZGlj",
+            "dGlvbnMYBCABKAsyJC5zc24uZGF0YXNlcnZpY2UudjEuUHJlZGljdGlvblZh",
+            "bHVlc1ILcHJlZGljdGlvbnMSEgoEdGFncxgFIAMoCVIEdGFncxJLCgtjb25m",
+            "aWRlbmNlcxgGIAEoCzIpLnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0aW9u",
+            "Q29uZmlkZW5jZXNSC2NvbmZpZGVuY2VzElcKE3ByZWRpY3Rpb25fbWV0YWRh",
+            "dGEYByABKAsyJi5zc24uZGF0YXNlcnZpY2UudjEuUHJlZGljdGlvbk1ldGFk",
+            "YXRhUhJwcmVkaWN0aW9uTWV0YWRhdGESIgoEdGllchgIIAEoDjIOLnNzbi50",
+            "eXBlLlRpZXJSBHRpZXISGgoIc2VnbWVudHMYCSADKAlSCHNlZ21lbnRzEi0K",
+            "EnJlcXVlc3RlZF9mZWF0dXJlcxgKIAMoCVIRcmVxdWVzdGVkRmVhdHVyZXMS",
+            "OAoIcmV0dXJuZWQYCyADKAsyHC5zc24uZGF0YXNlcnZpY2UudjEuUmV0dXJu",
+            "ZWRSCHJldHVybmVkInYKD0ZlZWRiYWNrUmVxdWVzdBIOCgJpZBgBIAEoCVIC",
             "aWQSPwoLdHJ1ZV92YWx1ZXMYAiABKAsyHi5zc24uZGF0YXNlcnZpY2UudjEu",
             "VHJ1ZVZhbHVlc1IKdHJ1ZVZhbHVlcxISCgR0YWdzGAMgAygJUgR0YWdzIsIB",
             "Cg5NZXRyaWNzUmVxdWVzdBIdCgpzdGFydF90aW1lGAIgASgDUglzdGFydFRp",
@@ -428,7 +431,8 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CreateDocumentResponse), global::Ssn.Dataservice.V1.CreateDocumentResponse.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentRequest), global::Ssn.Dataservice.V1.ReadDocumentRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentResponse), global::Ssn.Dataservice.V1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments", "RequestedFeatures" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Returned), global::Ssn.Dataservice.V1.Returned.Parser, new[]{ "Field", "ConfidenceLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments", "RequestedFeatures", "Returned" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
@@ -7941,6 +7945,241 @@ namespace Ssn.Dataservice.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Returned : pb::IMessage<Returned>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Returned> _parser = new pb::MessageParser<Returned>(() => new Returned());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Returned> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Returned() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Returned(Returned other) : this() {
+      field_ = other.field_;
+      confidenceLevel_ = other.confidenceLevel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Returned Clone() {
+      return new Returned(this);
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 1;
+    private string field_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Field {
+      get { return field_; }
+      set {
+        field_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "confidence_level" field.</summary>
+    public const int ConfidenceLevelFieldNumber = 2;
+    private string confidenceLevel_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConfidenceLevel {
+      get { return confidenceLevel_; }
+      set {
+        confidenceLevel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Returned);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Returned other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Field != other.Field) return false;
+      if (ConfidenceLevel != other.ConfidenceLevel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Field.Length != 0) hash ^= Field.GetHashCode();
+      if (ConfidenceLevel.Length != 0) hash ^= ConfidenceLevel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Field.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Field);
+      }
+      if (ConfidenceLevel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ConfidenceLevel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Field.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Field);
+      }
+      if (ConfidenceLevel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ConfidenceLevel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Field.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Field);
+      }
+      if (ConfidenceLevel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConfidenceLevel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Returned other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Field.Length != 0) {
+        Field = other.Field;
+      }
+      if (other.ConfidenceLevel.Length != 0) {
+        ConfidenceLevel = other.ConfidenceLevel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Field = input.ReadString();
+            break;
+          }
+          case 18: {
+            ConfidenceLevel = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Field = input.ReadString();
+            break;
+          }
+          case 18: {
+            ConfidenceLevel = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrepareFeedbackRequest : pb::IMessage<PrepareFeedbackRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7955,7 +8194,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7985,6 +8224,7 @@ namespace Ssn.Dataservice.V1 {
       tier_ = other.tier_;
       segments_ = other.segments_.Clone();
       requestedFeatures_ = other.requestedFeatures_.Clone();
+      returned_ = other.returned_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8111,6 +8351,17 @@ namespace Ssn.Dataservice.V1 {
       get { return requestedFeatures_; }
     }
 
+    /// <summary>Field number for the "returned" field.</summary>
+    public const int ReturnedFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1.Returned> _repeated_returned_codec
+        = pb::FieldCodec.ForMessage(90, global::Ssn.Dataservice.V1.Returned.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1.Returned> returned_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1.Returned>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1.Returned> Returned {
+      get { return returned_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8136,6 +8387,7 @@ namespace Ssn.Dataservice.V1 {
       if (Tier != other.Tier) return false;
       if(!segments_.Equals(other.segments_)) return false;
       if(!requestedFeatures_.Equals(other.requestedFeatures_)) return false;
+      if(!returned_.Equals(other.returned_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8153,6 +8405,7 @@ namespace Ssn.Dataservice.V1 {
       if (Tier != global::Ssn.Type.Tier.Default) hash ^= Tier.GetHashCode();
       hash ^= segments_.GetHashCode();
       hash ^= requestedFeatures_.GetHashCode();
+      hash ^= returned_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8202,6 +8455,7 @@ namespace Ssn.Dataservice.V1 {
       }
       segments_.WriteTo(output, _repeated_segments_codec);
       requestedFeatures_.WriteTo(output, _repeated_requestedFeatures_codec);
+      returned_.WriteTo(output, _repeated_returned_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8243,6 +8497,7 @@ namespace Ssn.Dataservice.V1 {
       }
       segments_.WriteTo(ref output, _repeated_segments_codec);
       requestedFeatures_.WriteTo(ref output, _repeated_requestedFeatures_codec);
+      returned_.WriteTo(ref output, _repeated_returned_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8277,6 +8532,7 @@ namespace Ssn.Dataservice.V1 {
       }
       size += segments_.CalculateSize(_repeated_segments_codec);
       size += requestedFeatures_.CalculateSize(_repeated_requestedFeatures_codec);
+      size += returned_.CalculateSize(_repeated_returned_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8325,6 +8581,7 @@ namespace Ssn.Dataservice.V1 {
       }
       segments_.Add(other.segments_);
       requestedFeatures_.Add(other.requestedFeatures_);
+      returned_.Add(other.returned_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8394,6 +8651,10 @@ namespace Ssn.Dataservice.V1 {
           }
           case 82: {
             requestedFeatures_.AddEntriesFrom(input, _repeated_requestedFeatures_codec);
+            break;
+          }
+          case 90: {
+            returned_.AddEntriesFrom(input, _repeated_returned_codec);
             break;
           }
         }
@@ -8467,6 +8728,10 @@ namespace Ssn.Dataservice.V1 {
             requestedFeatures_.AddEntriesFrom(ref input, _repeated_requestedFeatures_codec);
             break;
           }
+          case 90: {
+            returned_.AddEntriesFrom(ref input, _repeated_returned_codec);
+            break;
+          }
         }
       }
     }
@@ -8489,7 +8754,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8759,7 +9024,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9098,7 +9363,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9405,7 +9670,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9751,7 +10016,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9938,7 +10203,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10247,7 +10512,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10434,7 +10699,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10710,7 +10975,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10997,7 +11262,7 @@ namespace Ssn.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

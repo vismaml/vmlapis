@@ -273,6 +273,11 @@ message ReadDocumentResponse {
   Document document = 1;
 }
 
+message Returned {
+  string field = 1;
+  string confidence_level = 2;
+}
+
 message PrepareFeedbackRequest {
   string id = 1;
   ssn.type.TextAnnotation ta = 2;
@@ -284,6 +289,7 @@ message PrepareFeedbackRequest {
   ssn.type.Tier tier = 8;
   repeated string segments = 9;
   repeated string requested_features = 10;
+  repeated Returned returned = 11;
 }
 
 message FeedbackRequest {

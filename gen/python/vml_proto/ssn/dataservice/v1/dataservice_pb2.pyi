@@ -436,8 +436,16 @@ class ReadDocumentResponse(_message.Message):
     document: Document
     def __init__(self, document: _Optional[_Union[Document, _Mapping]] = ...) -> None: ...
 
+class Returned(_message.Message):
+    __slots__ = ("field", "confidence_level")
+    FIELD_FIELD_NUMBER: _ClassVar[int]
+    CONFIDENCE_LEVEL_FIELD_NUMBER: _ClassVar[int]
+    field: str
+    confidence_level: str
+    def __init__(self, field: _Optional[str] = ..., confidence_level: _Optional[str] = ...) -> None: ...
+
 class PrepareFeedbackRequest(_message.Message):
-    __slots__ = ("id", "ta", "document_bytes", "predictions", "tags", "confidences", "prediction_metadata", "tier", "segments", "requested_features")
+    __slots__ = ("id", "ta", "document_bytes", "predictions", "tags", "confidences", "prediction_metadata", "tier", "segments", "requested_features", "returned")
     ID_FIELD_NUMBER: _ClassVar[int]
     TA_FIELD_NUMBER: _ClassVar[int]
     DOCUMENT_BYTES_FIELD_NUMBER: _ClassVar[int]
@@ -448,6 +456,7 @@ class PrepareFeedbackRequest(_message.Message):
     TIER_FIELD_NUMBER: _ClassVar[int]
     SEGMENTS_FIELD_NUMBER: _ClassVar[int]
     REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_FIELD_NUMBER: _ClassVar[int]
     id: str
     ta: _text_annotation_pb2.TextAnnotation
     document_bytes: bytes
@@ -458,7 +467,8 @@ class PrepareFeedbackRequest(_message.Message):
     tier: _tier_pb2.Tier
     segments: _containers.RepeatedScalarFieldContainer[str]
     requested_features: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, id: _Optional[str] = ..., ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., document_bytes: _Optional[bytes] = ..., predictions: _Optional[_Union[PredictionValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ..., segments: _Optional[_Iterable[str]] = ..., requested_features: _Optional[_Iterable[str]] = ...) -> None: ...
+    returned: _containers.RepeatedCompositeFieldContainer[Returned]
+    def __init__(self, id: _Optional[str] = ..., ta: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., document_bytes: _Optional[bytes] = ..., predictions: _Optional[_Union[PredictionValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., confidences: _Optional[_Union[PredictionConfidences, _Mapping]] = ..., prediction_metadata: _Optional[_Union[PredictionMetadata, _Mapping]] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ..., segments: _Optional[_Iterable[str]] = ..., requested_features: _Optional[_Iterable[str]] = ..., returned: _Optional[_Iterable[_Union[Returned, _Mapping]]] = ...) -> None: ...
 
 class FeedbackRequest(_message.Message):
     __slots__ = ("id", "true_values", "tags")
