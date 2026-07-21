@@ -63,4 +63,34 @@ public interface RegisterQueryStatsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <code>int32 returned_very_low = 5 [json_name = "returnedVeryLow"];</code>
+   * @return The returnedVeryLow.
+   */
+  int getReturnedVeryLow();
+
+  /**
+   * <code>int32 returned_low = 6 [json_name = "returnedLow"];</code>
+   * @return The returnedLow.
+   */
+  int getReturnedLow();
+
+  /**
+   * <code>int32 returned_mid = 7 [json_name = "returnedMid"];</code>
+   * @return The returnedMid.
+   */
+  int getReturnedMid();
+
+  /**
+   * <code>int32 returned_high = 8 [json_name = "returnedHigh"];</code>
+   * @return The returnedHigh.
+   */
+  int getReturnedHigh();
+
+  /**
+   * <code>int32 returned_very_high = 9 [json_name = "returnedVeryHigh"];</code>
+   * @return The returnedVeryHigh.
+   */
+  int getReturnedVeryHigh();
 }

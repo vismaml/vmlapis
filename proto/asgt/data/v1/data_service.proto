@@ -121,4 +121,9 @@ message RegisterQueryStatsRequest {
   string model_type = 2;
   int32 batch_size = 3;
   repeated string tags = 4;
+  int32 returned_very_low = 5;
+  int32 returned_low = 6;
+  int32 returned_mid = 7;
+  int32 returned_high = 8;
+  int32 returned_very_high = 9;
 }

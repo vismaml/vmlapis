@@ -306,6 +306,21 @@ export class RegisterQueryStatsRequest extends jspb.Message {
   clearTagsList(): RegisterQueryStatsRequest;
   addTags(value: string, index?: number): RegisterQueryStatsRequest;
 
+  getReturnedVeryLow(): number;
+  setReturnedVeryLow(value: number): RegisterQueryStatsRequest;
+
+  getReturnedLow(): number;
+  setReturnedLow(value: number): RegisterQueryStatsRequest;
+
+  getReturnedMid(): number;
+  setReturnedMid(value: number): RegisterQueryStatsRequest;
+
+  getReturnedHigh(): number;
+  setReturnedHigh(value: number): RegisterQueryStatsRequest;
+
+  getReturnedVeryHigh(): number;
+  setReturnedVeryHigh(value: number): RegisterQueryStatsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterQueryStatsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterQueryStatsRequest): RegisterQueryStatsRequest.AsObject;
@@ -320,6 +335,11 @@ export namespace RegisterQueryStatsRequest {
     modelType: string,
     batchSize: number,
     tagsList: Array<string>,
+    returnedVeryLow: number,
+    returnedLow: number,
+    returnedMid: number,
+    returnedHigh: number,
+    returnedVeryHigh: number,
   }
 }
 
