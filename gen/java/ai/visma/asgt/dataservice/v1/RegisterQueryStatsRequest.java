@@ -172,6 +172,61 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int RETURNED_VERY_LOW_FIELD_NUMBER = 5;
+  private int returnedVeryLow_ = 0;
+  /**
+   * <code>int32 returned_very_low = 5 [json_name = "returnedVeryLow"];</code>
+   * @return The returnedVeryLow.
+   */
+  @java.lang.Override
+  public int getReturnedVeryLow() {
+    return returnedVeryLow_;
+  }
+
+  public static final int RETURNED_LOW_FIELD_NUMBER = 6;
+  private int returnedLow_ = 0;
+  /**
+   * <code>int32 returned_low = 6 [json_name = "returnedLow"];</code>
+   * @return The returnedLow.
+   */
+  @java.lang.Override
+  public int getReturnedLow() {
+    return returnedLow_;
+  }
+
+  public static final int RETURNED_MID_FIELD_NUMBER = 7;
+  private int returnedMid_ = 0;
+  /**
+   * <code>int32 returned_mid = 7 [json_name = "returnedMid"];</code>
+   * @return The returnedMid.
+   */
+  @java.lang.Override
+  public int getReturnedMid() {
+    return returnedMid_;
+  }
+
+  public static final int RETURNED_HIGH_FIELD_NUMBER = 8;
+  private int returnedHigh_ = 0;
+  /**
+   * <code>int32 returned_high = 8 [json_name = "returnedHigh"];</code>
+   * @return The returnedHigh.
+   */
+  @java.lang.Override
+  public int getReturnedHigh() {
+    return returnedHigh_;
+  }
+
+  public static final int RETURNED_VERY_HIGH_FIELD_NUMBER = 9;
+  private int returnedVeryHigh_ = 0;
+  /**
+   * <code>int32 returned_very_high = 9 [json_name = "returnedVeryHigh"];</code>
+   * @return The returnedVeryHigh.
+   */
+  @java.lang.Override
+  public int getReturnedVeryHigh() {
+    return returnedVeryHigh_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -197,6 +252,21 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, tags_.getRaw(i));
+    }
+    if (returnedVeryLow_ != 0) {
+      output.writeInt32(5, returnedVeryLow_);
+    }
+    if (returnedLow_ != 0) {
+      output.writeInt32(6, returnedLow_);
+    }
+    if (returnedMid_ != 0) {
+      output.writeInt32(7, returnedMid_);
+    }
+    if (returnedHigh_ != 0) {
+      output.writeInt32(8, returnedHigh_);
+    }
+    if (returnedVeryHigh_ != 0) {
+      output.writeInt32(9, returnedVeryHigh_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -225,6 +295,26 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    if (returnedVeryLow_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, returnedVeryLow_);
+    }
+    if (returnedLow_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, returnedLow_);
+    }
+    if (returnedMid_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, returnedMid_);
+    }
+    if (returnedHigh_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(8, returnedHigh_);
+    }
+    if (returnedVeryHigh_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(9, returnedVeryHigh_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -248,6 +338,16 @@ private static final long serialVersionUID = 0L;
         != other.getBatchSize()) return false;
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (getReturnedVeryLow()
+        != other.getReturnedVeryLow()) return false;
+    if (getReturnedLow()
+        != other.getReturnedLow()) return false;
+    if (getReturnedMid()
+        != other.getReturnedMid()) return false;
+    if (getReturnedHigh()
+        != other.getReturnedHigh()) return false;
+    if (getReturnedVeryHigh()
+        != other.getReturnedVeryHigh()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -269,6 +369,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
     }
+    hash = (37 * hash) + RETURNED_VERY_LOW_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedVeryLow();
+    hash = (37 * hash) + RETURNED_LOW_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedLow();
+    hash = (37 * hash) + RETURNED_MID_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedMid();
+    hash = (37 * hash) + RETURNED_HIGH_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedHigh();
+    hash = (37 * hash) + RETURNED_VERY_HIGH_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedVeryHigh();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -405,6 +515,11 @@ private static final long serialVersionUID = 0L;
       batchSize_ = 0;
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      returnedVeryLow_ = 0;
+      returnedLow_ = 0;
+      returnedMid_ = 0;
+      returnedHigh_ = 0;
+      returnedVeryHigh_ = 0;
       return this;
     }
 
@@ -451,6 +566,21 @@ private static final long serialVersionUID = 0L;
         tags_.makeImmutable();
         result.tags_ = tags_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.returnedVeryLow_ = returnedVeryLow_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.returnedLow_ = returnedLow_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.returnedMid_ = returnedMid_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.returnedHigh_ = returnedHigh_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.returnedVeryHigh_ = returnedVeryHigh_;
+      }
     }
 
     @java.lang.Override
@@ -487,6 +617,21 @@ private static final long serialVersionUID = 0L;
           tags_.addAll(other.tags_);
         }
         onChanged();
+      }
+      if (other.getReturnedVeryLow() != 0) {
+        setReturnedVeryLow(other.getReturnedVeryLow());
+      }
+      if (other.getReturnedLow() != 0) {
+        setReturnedLow(other.getReturnedLow());
+      }
+      if (other.getReturnedMid() != 0) {
+        setReturnedMid(other.getReturnedMid());
+      }
+      if (other.getReturnedHigh() != 0) {
+        setReturnedHigh(other.getReturnedHigh());
+      }
+      if (other.getReturnedVeryHigh() != 0) {
+        setReturnedVeryHigh(other.getReturnedVeryHigh());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -535,6 +680,31 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 34
+            case 40: {
+              returnedVeryLow_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              returnedLow_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              returnedMid_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              returnedHigh_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              returnedVeryHigh_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -835,6 +1005,166 @@ private static final long serialVersionUID = 0L;
       ensureTagsIsMutable();
       tags_.add(value);
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private int returnedVeryLow_ ;
+    /**
+     * <code>int32 returned_very_low = 5 [json_name = "returnedVeryLow"];</code>
+     * @return The returnedVeryLow.
+     */
+    @java.lang.Override
+    public int getReturnedVeryLow() {
+      return returnedVeryLow_;
+    }
+    /**
+     * <code>int32 returned_very_low = 5 [json_name = "returnedVeryLow"];</code>
+     * @param value The returnedVeryLow to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedVeryLow(int value) {
+
+      returnedVeryLow_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_very_low = 5 [json_name = "returnedVeryLow"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedVeryLow() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      returnedVeryLow_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int returnedLow_ ;
+    /**
+     * <code>int32 returned_low = 6 [json_name = "returnedLow"];</code>
+     * @return The returnedLow.
+     */
+    @java.lang.Override
+    public int getReturnedLow() {
+      return returnedLow_;
+    }
+    /**
+     * <code>int32 returned_low = 6 [json_name = "returnedLow"];</code>
+     * @param value The returnedLow to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedLow(int value) {
+
+      returnedLow_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_low = 6 [json_name = "returnedLow"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedLow() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      returnedLow_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int returnedMid_ ;
+    /**
+     * <code>int32 returned_mid = 7 [json_name = "returnedMid"];</code>
+     * @return The returnedMid.
+     */
+    @java.lang.Override
+    public int getReturnedMid() {
+      return returnedMid_;
+    }
+    /**
+     * <code>int32 returned_mid = 7 [json_name = "returnedMid"];</code>
+     * @param value The returnedMid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedMid(int value) {
+
+      returnedMid_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_mid = 7 [json_name = "returnedMid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedMid() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      returnedMid_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int returnedHigh_ ;
+    /**
+     * <code>int32 returned_high = 8 [json_name = "returnedHigh"];</code>
+     * @return The returnedHigh.
+     */
+    @java.lang.Override
+    public int getReturnedHigh() {
+      return returnedHigh_;
+    }
+    /**
+     * <code>int32 returned_high = 8 [json_name = "returnedHigh"];</code>
+     * @param value The returnedHigh to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedHigh(int value) {
+
+      returnedHigh_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_high = 8 [json_name = "returnedHigh"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedHigh() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      returnedHigh_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int returnedVeryHigh_ ;
+    /**
+     * <code>int32 returned_very_high = 9 [json_name = "returnedVeryHigh"];</code>
+     * @return The returnedVeryHigh.
+     */
+    @java.lang.Override
+    public int getReturnedVeryHigh() {
+      return returnedVeryHigh_;
+    }
+    /**
+     * <code>int32 returned_very_high = 9 [json_name = "returnedVeryHigh"];</code>
+     * @param value The returnedVeryHigh to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedVeryHigh(int value) {
+
+      returnedVeryHigh_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_very_high = 9 [json_name = "returnedVeryHigh"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedVeryHigh() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      returnedVeryHigh_ = 0;
       onChanged();
       return this;
     }

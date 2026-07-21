@@ -2458,7 +2458,12 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.toObject = function(includeI
     dataset: jspb.Message.getFieldWithDefault(msg, 1, ""),
     modelType: jspb.Message.getFieldWithDefault(msg, 2, ""),
     batchSize: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    returnedVeryLow: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    returnedLow: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    returnedMid: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    returnedHigh: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    returnedVeryHigh: jspb.Message.getFieldWithDefault(msg, 9, 0)
   };
 
   if (includeInstance) {
@@ -2510,6 +2515,26 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.deserializeBinaryFromReader 
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedVeryLow(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedLow(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedMid(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedHigh(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedVeryHigh(value);
       break;
     default:
       reader.skipField();
@@ -2565,6 +2590,41 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.serializeBinaryToWriter = fu
   if (f.length > 0) {
     writer.writeRepeatedString(
       4,
+      f
+    );
+  }
+  f = message.getReturnedVeryLow();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getReturnedLow();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getReturnedMid();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
+      f
+    );
+  }
+  f = message.getReturnedHigh();
+  if (f !== 0) {
+    writer.writeInt32(
+      8,
+      f
+    );
+  }
+  f = message.getReturnedVeryHigh();
+  if (f !== 0) {
+    writer.writeInt32(
+      9,
       f
     );
   }
@@ -2659,6 +2719,96 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.addTags = function
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * optional int32 returned_very_low = 5;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedVeryLow = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedVeryLow = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 returned_low = 6;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedLow = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedLow = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 returned_mid = 7;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedMid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedMid = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
+};
+
+
+/**
+ * optional int32 returned_high = 8;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedHigh = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedHigh = function(value) {
+  return jspb.Message.setProto3IntField(this, 8, value);
+};
+
+
+/**
+ * optional int32 returned_very_high = 9;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedVeryHigh = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedVeryHigh = function(value) {
+  return jspb.Message.setProto3IntField(this, 9, value);
 };
 
 

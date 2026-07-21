@@ -109,13 +109,23 @@ class GetInfoResponse(_message.Message):
     def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class RegisterQueryStatsRequest(_message.Message):
-    __slots__ = ("dataset", "model_type", "batch_size", "tags")
+    __slots__ = ("dataset", "model_type", "batch_size", "tags", "returned_very_low", "returned_low", "returned_mid", "returned_high", "returned_very_high")
     DATASET_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     BATCH_SIZE_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_VERY_LOW_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_LOW_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_MID_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_HIGH_FIELD_NUMBER: _ClassVar[int]
+    RETURNED_VERY_HIGH_FIELD_NUMBER: _ClassVar[int]
     dataset: str
     model_type: str
     batch_size: int
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    returned_very_low: int
+    returned_low: int
+    returned_mid: int
+    returned_high: int
+    returned_very_high: int
+    def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ..., returned_very_low: _Optional[int] = ..., returned_low: _Optional[int] = ..., returned_mid: _Optional[int] = ..., returned_high: _Optional[int] = ..., returned_very_high: _Optional[int] = ...) -> None: ...
