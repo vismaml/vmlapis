@@ -64,6 +64,9 @@ export class InvoiceLine extends jspb.Message {
   getCustomerRef(): string;
   setCustomerRef(value: string): InvoiceLine;
 
+  getCurrency(): string;
+  setCurrency(value: string): InvoiceLine;
+
   getAmount(): number;
   setAmount(value: number): InvoiceLine;
 
@@ -82,6 +85,7 @@ export namespace InvoiceLine {
     issueDate?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     supplier?: Supplier.AsObject,
     customerRef: string,
+    currency: string,
     amount: number,
   }
 }

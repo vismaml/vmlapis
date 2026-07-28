@@ -28,29 +28,29 @@ namespace Asgt.V2.Type {
             "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0",
             "ZS5wcm90byIdCgdJbnZvaWNlEhIKBHRleHQYASABKAlSBHRleHQiOQoLVHJh",
             "bnNhY3Rpb24SEgoEdGV4dBgBIAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAJS",
-            "BmFtb3VudCLkAQoLSW52b2ljZUxpbmUSFwoHaXRlbV9pZBgBIAEoCVIGaXRl",
+            "BmFtb3VudCKAAgoLSW52b2ljZUxpbmUSFwoHaXRlbV9pZBgBIAEoCVIGaXRl",
             "bUlkEhIKBHRleHQYAiABKAlSBHRleHQSOQoKaXNzdWVfZGF0ZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWlzc3VlRGF0ZRIyCghzdXBw",
             "bGllchgEIAEoCzIWLmFzZ3QudjIudHlwZS5TdXBwbGllclIIc3VwcGxpZXIS",
-            "IQoMY3VzdG9tZXJfcmVmGAUgASgJUgtjdXN0b21lclJlZhIWCgZhbW91bnQY",
-            "ByABKAJSBmFtb3VudCJkCghTdXBwbGllchInCgJpZBgBIAEoCUIX+kIUchIo",
-            "QDIOXltBLVphLXowLTldKiRSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSGwoJ",
-            "Z2xvYmFsX2lkGAMgASgJUghnbG9iYWxJZCLKAQoERGF0YRI9Cgt0cmFuc2Fj",
-            "dGlvbhgBIAEoCzIZLmFzZ3QudjIudHlwZS5UcmFuc2FjdGlvbkgAUgt0cmFu",
-            "c2FjdGlvbhIxCgdpbnZvaWNlGAIgASgLMhUuYXNndC52Mi50eXBlLkludm9p",
-            "Y2VIAFIHaW52b2ljZRI+CgxpbnZvaWNlX2xpbmUYAyABKAsyGS5hc2d0LnYy",
-            "LnR5cGUuSW52b2ljZUxpbmVIAFILaW52b2ljZUxpbmVCEAoOZGF0YV9zdHJ1",
-            "Y3R1cmVCrwEKFWFpLnZpc21hLmFzZ3QudjIudHlwZUIJRGF0YVByb3RvUAFa",
-            "OWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjIv",
-            "dHlwZTthc2d0dHlwZaICA0FWVKoCDEFzZ3QuVjIuVHlwZcoCDEFzZ3RcVjJc",
-            "VHlwZeICGEFzZ3RcVjJcVHlwZVxHUEJNZXRhZGF0YeoCDkFzZ3Q6OlYyOjpU",
-            "eXBlYgZwcm90bzM="));
+            "IQoMY3VzdG9tZXJfcmVmGAUgASgJUgtjdXN0b21lclJlZhIaCghjdXJyZW5j",
+            "eRgGIAEoCVIIY3VycmVuY3kSFgoGYW1vdW50GAcgASgCUgZhbW91bnQiZAoI",
+            "U3VwcGxpZXISJwoCaWQYASABKAlCF/pCFHISKEAyDl5bQS1aYS16MC05XSok",
+            "UgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhsKCWdsb2JhbF9pZBgDIAEoCVII",
+            "Z2xvYmFsSWQiygEKBERhdGESPQoLdHJhbnNhY3Rpb24YASABKAsyGS5hc2d0",
+            "LnYyLnR5cGUuVHJhbnNhY3Rpb25IAFILdHJhbnNhY3Rpb24SMQoHaW52b2lj",
+            "ZRgCIAEoCzIVLmFzZ3QudjIudHlwZS5JbnZvaWNlSABSB2ludm9pY2USPgoM",
+            "aW52b2ljZV9saW5lGAMgASgLMhkuYXNndC52Mi50eXBlLkludm9pY2VMaW5l",
+            "SABSC2ludm9pY2VMaW5lQhAKDmRhdGFfc3RydWN0dXJlQq8BChVhaS52aXNt",
+            "YS5hc2d0LnYyLnR5cGVCCURhdGFQcm90b1ABWjlnaXRodWIuY29tL2UtY29u",
+            "b21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3YyL3R5cGU7YXNndHR5cGWiAgNB",
+            "VlSqAgxBc2d0LlYyLlR5cGXKAgxBc2d0XFYyXFR5cGXiAhhBc2d0XFYyXFR5",
+            "cGVcR1BCTWV0YWRhdGHqAg5Bc2d0OjpWMjo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Invoice), global::Asgt.V2.Type.Invoice.Parser, new[]{ "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Transaction), global::Asgt.V2.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.InvoiceLine), global::Asgt.V2.Type.InvoiceLine.Parser, new[]{ "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Currency", "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Supplier), global::Asgt.V2.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.Type.Data), global::Asgt.V2.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, new[]{ "DataStructure" }, null, null, null)
           }));
@@ -550,6 +550,7 @@ namespace Asgt.V2.Type {
       issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
       supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
       customerRef_ = other.customerRef_;
+      currency_ = other.currency_;
       amount_ = other.amount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -632,6 +633,21 @@ namespace Asgt.V2.Type {
       }
     }
 
+    /// <summary>Field number for the "currency" field.</summary>
+    public const int CurrencyFieldNumber = 6;
+    private string currency_ = "";
+    /// <summary>
+    /// Name of the currency as a string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Currency {
+      get { return currency_; }
+      set {
+        currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 7;
     private float amount_;
@@ -667,6 +683,7 @@ namespace Asgt.V2.Type {
       if (!object.Equals(IssueDate, other.IssueDate)) return false;
       if (!object.Equals(Supplier, other.Supplier)) return false;
       if (CustomerRef != other.CustomerRef) return false;
+      if (Currency != other.Currency) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -680,6 +697,7 @@ namespace Asgt.V2.Type {
       if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
       if (supplier_ != null) hash ^= Supplier.GetHashCode();
       if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
+      if (Currency.Length != 0) hash ^= Currency.GetHashCode();
       if (Amount != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Amount);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -719,6 +737,10 @@ namespace Asgt.V2.Type {
         output.WriteRawTag(42);
         output.WriteString(CustomerRef);
       }
+      if (Currency.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Currency);
+      }
       if (Amount != 0F) {
         output.WriteRawTag(61);
         output.WriteFloat(Amount);
@@ -753,6 +775,10 @@ namespace Asgt.V2.Type {
         output.WriteRawTag(42);
         output.WriteString(CustomerRef);
       }
+      if (Currency.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Currency);
+      }
       if (Amount != 0F) {
         output.WriteRawTag(61);
         output.WriteFloat(Amount);
@@ -781,6 +807,9 @@ namespace Asgt.V2.Type {
       }
       if (CustomerRef.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
+      }
+      if (Currency.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
       }
       if (Amount != 0F) {
         size += 1 + 4;
@@ -817,6 +846,9 @@ namespace Asgt.V2.Type {
       }
       if (other.CustomerRef.Length != 0) {
         CustomerRef = other.CustomerRef;
+      }
+      if (other.Currency.Length != 0) {
+        Currency = other.Currency;
       }
       if (other.Amount != 0F) {
         Amount = other.Amount;
@@ -866,6 +898,10 @@ namespace Asgt.V2.Type {
             CustomerRef = input.ReadString();
             break;
           }
+          case 50: {
+            Currency = input.ReadString();
+            break;
+          }
           case 61: {
             Amount = input.ReadFloat();
             break;
@@ -913,6 +949,10 @@ namespace Asgt.V2.Type {
           }
           case 42: {
             CustomerRef = input.ReadString();
+            break;
+          }
+          case 50: {
+            Currency = input.ReadString();
             break;
           }
           case 61: {

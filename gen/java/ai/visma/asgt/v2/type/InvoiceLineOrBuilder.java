@@ -113,6 +113,26 @@ public interface InvoiceLineOrBuilder extends
 
   /**
    * <pre>
+   * Name of the currency as a string.
+   * </pre>
+   *
+   * <code>string currency = 6 [json_name = "currency"];</code>
+   * @return The currency.
+   */
+  java.lang.String getCurrency();
+  /**
+   * <pre>
+   * Name of the currency as a string.
+   * </pre>
+   *
+   * <code>string currency = 6 [json_name = "currency"];</code>
+   * @return The bytes for currency.
+   */
+  com.google.protobuf.ByteString
+      getCurrencyBytes();
+
+  /**
+   * <pre>
    * Amount of the invoice line.
    * </pre>
    *
