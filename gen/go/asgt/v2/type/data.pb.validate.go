@@ -324,6 +324,8 @@ func (m *InvoiceLine) validate(all bool) error {
 
 	// no validation rules for CustomerRef
 
+	// no validation rules for Currency
+
 	// no validation rules for Amount
 
 	if len(errors) > 0 {

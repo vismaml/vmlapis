@@ -463,6 +463,7 @@ proto.asgt.v2.type.InvoiceLine.toObject = function(includeInstance, msg) {
     issueDate: (f = msg.getIssueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     supplier: (f = msg.getSupplier()) && proto.asgt.v2.type.Supplier.toObject(includeInstance, f),
     customerRef: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    currency: jspb.Message.getFieldWithDefault(msg, 6, ""),
     amount: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0)
   };
 
@@ -521,6 +522,10 @@ proto.asgt.v2.type.InvoiceLine.deserializeBinaryFromReader = function(msg, reade
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setCustomerRef(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCurrency(value);
       break;
     case 7:
       var value = /** @type {number} */ (reader.readFloat());
@@ -589,6 +594,13 @@ proto.asgt.v2.type.InvoiceLine.serializeBinaryToWriter = function(message, write
   if (f.length > 0) {
     writer.writeString(
       5,
+      f
+    );
+  }
+  f = message.getCurrency();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -727,6 +739,24 @@ proto.asgt.v2.type.InvoiceLine.prototype.getCustomerRef = function() {
  */
 proto.asgt.v2.type.InvoiceLine.prototype.setCustomerRef = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string currency = 6;
+ * @return {string}
+ */
+proto.asgt.v2.type.InvoiceLine.prototype.getCurrency = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.v2.type.InvoiceLine} returns this
+ */
+proto.asgt.v2.type.InvoiceLine.prototype.setCurrency = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

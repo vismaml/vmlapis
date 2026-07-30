@@ -1060,6 +1060,10 @@
           "type": "string",
           "description": "reference to the customer."
         },
+        "currency": {
+          "type": "string",
+          "description": "Name of the currency as a string."
+        },
         "amount": {
           "type": "number",
           "format": "float",

@@ -34,6 +34,7 @@ private static final long serialVersionUID = 0L;
     itemId_ = "";
     text_ = "";
     customerRef_ = "";
+    currency_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -255,6 +256,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CURRENCY_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currency_ = "";
+  /**
+   * <pre>
+   * Name of the currency as a string.
+   * </pre>
+   *
+   * <code>string currency = 6 [json_name = "currency"];</code>
+   * @return The currency.
+   */
+  @java.lang.Override
+  public java.lang.String getCurrency() {
+    java.lang.Object ref = currency_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      currency_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Name of the currency as a string.
+   * </pre>
+   *
+   * <code>string currency = 6 [json_name = "currency"];</code>
+   * @return The bytes for currency.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCurrencyBytes() {
+    java.lang.Object ref = currency_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      currency_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int AMOUNT_FIELD_NUMBER = 7;
   private float amount_ = 0F;
   /**
@@ -299,6 +347,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customerRef_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, customerRef_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(currency_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, currency_);
+    }
     if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
       output.writeFloat(7, amount_);
     }
@@ -327,6 +378,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(customerRef_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, customerRef_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(currency_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, currency_);
     }
     if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -363,6 +417,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCustomerRef()
         .equals(other.getCustomerRef())) return false;
+    if (!getCurrency()
+        .equals(other.getCurrency())) return false;
     if (java.lang.Float.floatToIntBits(getAmount())
         != java.lang.Float.floatToIntBits(
             other.getAmount())) return false;
@@ -391,6 +447,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
     hash = (53 * hash) + getCustomerRef().hashCode();
+    hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
+    hash = (53 * hash) + getCurrency().hashCode();
     hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getAmount());
@@ -549,6 +607,7 @@ private static final long serialVersionUID = 0L;
         supplierBuilder_ = null;
       }
       customerRef_ = "";
+      currency_ = "";
       amount_ = 0F;
       return this;
     }
@@ -606,6 +665,9 @@ private static final long serialVersionUID = 0L;
         result.customerRef_ = customerRef_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.currency_ = currency_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.amount_ = amount_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -642,6 +704,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getCustomerRef().isEmpty()) {
         customerRef_ = other.customerRef_;
         bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getCurrency().isEmpty()) {
+        currency_ = other.currency_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.getAmount() != 0F) {
@@ -702,9 +769,14 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              currency_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             case 61: {
               amount_ = input.readFloat();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 61
             default: {
@@ -1278,6 +1350,98 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object currency_ = "";
+    /**
+     * <pre>
+     * Name of the currency as a string.
+     * </pre>
+     *
+     * <code>string currency = 6 [json_name = "currency"];</code>
+     * @return The currency.
+     */
+    public java.lang.String getCurrency() {
+      java.lang.Object ref = currency_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currency_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the currency as a string.
+     * </pre>
+     *
+     * <code>string currency = 6 [json_name = "currency"];</code>
+     * @return The bytes for currency.
+     */
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the currency as a string.
+     * </pre>
+     *
+     * <code>string currency = 6 [json_name = "currency"];</code>
+     * @param value The currency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCurrency(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      currency_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the currency as a string.
+     * </pre>
+     *
+     * <code>string currency = 6 [json_name = "currency"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCurrency() {
+      currency_ = getDefaultInstance().getCurrency();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the currency as a string.
+     * </pre>
+     *
+     * <code>string currency = 6 [json_name = "currency"];</code>
+     * @param value The bytes for currency to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCurrencyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      currency_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
     private float amount_ ;
     /**
      * <pre>
@@ -1303,7 +1467,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAmount(float value) {
 
       amount_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1316,7 +1480,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAmount() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       amount_ = 0F;
       onChanged();
       return this;

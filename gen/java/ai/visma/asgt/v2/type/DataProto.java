@@ -63,25 +63,26 @@ public final class DataProto {
       "\037google/protobuf/timestamp.proto\032\027valida" +
       "te/validate.proto\"\035\n\007Invoice\022\022\n\004text\030\001 \001" +
       "(\tR\004text\"9\n\013Transaction\022\022\n\004text\030\001 \001(\tR\004t" +
-      "ext\022\026\n\006amount\030\002 \001(\002R\006amount\"\344\001\n\013InvoiceL" +
+      "ext\022\026\n\006amount\030\002 \001(\002R\006amount\"\200\002\n\013InvoiceL" +
       "ine\022\027\n\007item_id\030\001 \001(\tR\006itemId\022\022\n\004text\030\002 \001" +
       "(\tR\004text\0229\n\nissue_date\030\003 \001(\0132\032.google.pr" +
       "otobuf.TimestampR\tissueDate\0222\n\010supplier\030" +
       "\004 \001(\0132\026.asgt.v2.type.SupplierR\010supplier\022" +
-      "!\n\014customer_ref\030\005 \001(\tR\013customerRef\022\026\n\006am" +
-      "ount\030\007 \001(\002R\006amount\"d\n\010Supplier\022\'\n\002id\030\001 \001" +
-      "(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9]*$R\002id\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\022\033\n\tglobal_id\030\003 \001(\tR\010globalId" +
-      "\"\312\001\n\004Data\022=\n\013transaction\030\001 \001(\0132\031.asgt.v2" +
-      ".type.TransactionH\000R\013transaction\0221\n\007invo" +
-      "ice\030\002 \001(\0132\025.asgt.v2.type.InvoiceH\000R\007invo" +
-      "ice\022>\n\014invoice_line\030\003 \001(\0132\031.asgt.v2.type" +
-      ".InvoiceLineH\000R\013invoiceLineB\020\n\016data_stru" +
-      "ctureB\257\001\n\025ai.visma.asgt.v2.typeB\tDataPro" +
-      "toP\001Z9github.com/e-conomic/vmlapis/gen/g" +
-      "o/asgt/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2." +
-      "Type\312\002\014Asgt\\V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMe" +
-      "tadata\352\002\016Asgt::V2::Typeb\006proto3"
+      "!\n\014customer_ref\030\005 \001(\tR\013customerRef\022\032\n\010cu" +
+      "rrency\030\006 \001(\tR\010currency\022\026\n\006amount\030\007 \001(\002R\006" +
+      "amount\"d\n\010Supplier\022\'\n\002id\030\001 \001(\tB\027\372B\024r\022(@2" +
+      "\016^[A-Za-z0-9]*$R\002id\022\022\n\004name\030\002 \001(\tR\004name\022" +
+      "\033\n\tglobal_id\030\003 \001(\tR\010globalId\"\312\001\n\004Data\022=\n" +
+      "\013transaction\030\001 \001(\0132\031.asgt.v2.type.Transa" +
+      "ctionH\000R\013transaction\0221\n\007invoice\030\002 \001(\0132\025." +
+      "asgt.v2.type.InvoiceH\000R\007invoice\022>\n\014invoi" +
+      "ce_line\030\003 \001(\0132\031.asgt.v2.type.InvoiceLine" +
+      "H\000R\013invoiceLineB\020\n\016data_structureB\257\001\n\025ai" +
+      ".visma.asgt.v2.typeB\tDataProtoP\001Z9github" +
+      ".com/e-conomic/vmlapis/gen/go/asgt/v2/ty" +
+      "pe;asgttype\242\002\003AVT\252\002\014Asgt.V2.Type\312\002\014Asgt\\" +
+      "V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMetadata\352\002\016Asg" +
+      "t::V2::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -106,7 +107,7 @@ public final class DataProto {
     internal_static_asgt_v2_type_InvoiceLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_v2_type_InvoiceLine_descriptor,
-        new java.lang.String[] { "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Amount", });
+        new java.lang.String[] { "ItemId", "Text", "IssueDate", "Supplier", "CustomerRef", "Currency", "Amount", });
     internal_static_asgt_v2_type_Supplier_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2_type_Supplier_fieldAccessorTable = new

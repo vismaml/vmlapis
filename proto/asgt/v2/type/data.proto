@@ -38,6 +38,9 @@ message InvoiceLine {
   // reference to the customer.
   string customer_ref = 5;
 
+  // Name of the currency as a string.
+  string currency = 6;
+
   // Amount of the invoice line.
   float amount = 7;
 }

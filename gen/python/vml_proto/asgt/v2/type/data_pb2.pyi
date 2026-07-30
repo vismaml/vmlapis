@@ -21,20 +21,22 @@ class Transaction(_message.Message):
     def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
 
 class InvoiceLine(_message.Message):
-    __slots__ = ("item_id", "text", "issue_date", "supplier", "customer_ref", "amount")
+    __slots__ = ("item_id", "text", "issue_date", "supplier", "customer_ref", "currency", "amount")
     ITEM_ID_FIELD_NUMBER: _ClassVar[int]
     TEXT_FIELD_NUMBER: _ClassVar[int]
     ISSUE_DATE_FIELD_NUMBER: _ClassVar[int]
     SUPPLIER_FIELD_NUMBER: _ClassVar[int]
     CUSTOMER_REF_FIELD_NUMBER: _ClassVar[int]
+    CURRENCY_FIELD_NUMBER: _ClassVar[int]
     AMOUNT_FIELD_NUMBER: _ClassVar[int]
     item_id: str
     text: str
     issue_date: _timestamp_pb2.Timestamp
     supplier: Supplier
     customer_ref: str
+    currency: str
     amount: float
-    def __init__(self, item_id: _Optional[str] = ..., text: _Optional[str] = ..., issue_date: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., supplier: _Optional[_Union[Supplier, _Mapping]] = ..., customer_ref: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
+    def __init__(self, item_id: _Optional[str] = ..., text: _Optional[str] = ..., issue_date: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., supplier: _Optional[_Union[Supplier, _Mapping]] = ..., customer_ref: _Optional[str] = ..., currency: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
 
 class Supplier(_message.Message):
     __slots__ = ("id", "name", "global_id")
