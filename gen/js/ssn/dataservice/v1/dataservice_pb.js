@@ -550,7 +550,8 @@ proto.ssn.dataservice.v1.Document.toObject = function(includeInstance, msg) {
     feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0),
     predictionConfidences: (f = msg.getPredictionConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
     predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f),
-    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f
+    requestedFeaturesList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
+    documentText: jspb.Message.getFieldWithDefault(msg, 12, "")
   };
 
   if (includeInstance) {
@@ -635,6 +636,10 @@ proto.ssn.dataservice.v1.Document.deserializeBinaryFromReader = function(msg, re
     case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.addRequestedFeatures(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDocumentText(value);
       break;
     default:
       reader.skipField();
@@ -744,6 +749,13 @@ proto.ssn.dataservice.v1.Document.serializeBinaryToWriter = function(message, wr
   if (f.length > 0) {
     writer.writeRepeatedString(
       11,
+      f
+    );
+  }
+  f = message.getDocumentText();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
       f
     );
   }
@@ -1102,6 +1114,24 @@ proto.ssn.dataservice.v1.Document.prototype.addRequestedFeatures = function(valu
  */
 proto.ssn.dataservice.v1.Document.prototype.clearRequestedFeaturesList = function() {
   return this.setRequestedFeaturesList([]);
+};
+
+
+/**
+ * optional string document_text = 12;
+ * @return {string}
+ */
+proto.ssn.dataservice.v1.Document.prototype.getDocumentText = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.dataservice.v1.Document} returns this
+ */
+proto.ssn.dataservice.v1.Document.prototype.setDocumentText = function(value) {
+  return jspb.Message.setProto3StringField(this, 12, value);
 };
 
 

@@ -61,6 +61,9 @@ export class Document extends jspb.Message {
   clearRequestedFeaturesList(): Document;
   addRequestedFeatures(value: string, index?: number): Document;
 
+  getDocumentText(): string;
+  setDocumentText(value: string): Document;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Document.AsObject;
   static toObject(includeInstance: boolean, msg: Document): Document.AsObject;
@@ -82,6 +85,7 @@ export namespace Document {
     predictionConfidences?: PredictionConfidences.AsObject,
     predictionMetadata?: PredictionMetadata.AsObject,
     requestedFeaturesList: Array<string>,
+    documentText: string,
   }
 }
 
