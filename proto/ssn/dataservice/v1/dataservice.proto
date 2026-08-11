@@ -59,6 +59,7 @@ message Document {
   PredictionConfidences prediction_confidences = 9;
   PredictionMetadata prediction_metadata = 10;
   repeated string requested_features = 11;
+  string document_text = 12 [(gen_bq_schema.bigquery).ignore = true];
 }
 
 message TrueValues {
