@@ -835,6 +835,9 @@
           "items": {
             "type": "string"
           }
+        },
+        "documentText": {
+          "type": "string"
         }
       }
     },

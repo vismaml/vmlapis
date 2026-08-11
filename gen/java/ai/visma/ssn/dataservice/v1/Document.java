@@ -34,6 +34,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     requestedFeatures_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    documentText_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -354,6 +355,45 @@ private static final long serialVersionUID = 0L;
     return requestedFeatures_.getByteString(index);
   }
 
+  public static final int DOCUMENT_TEXT_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object documentText_ = "";
+  /**
+   * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The documentText.
+   */
+  @java.lang.Override
+  public java.lang.String getDocumentText() {
+    java.lang.Object ref = documentText_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      documentText_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The bytes for documentText.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDocumentTextBytes() {
+    java.lang.Object ref = documentText_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      documentText_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -400,6 +440,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < requestedFeatures_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 11, requestedFeatures_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(documentText_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 12, documentText_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -460,6 +503,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getRequestedFeaturesList().size();
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(documentText_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(12, documentText_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -512,6 +558,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRequestedFeaturesList()
         .equals(other.getRequestedFeaturesList())) return false;
+    if (!getDocumentText()
+        .equals(other.getDocumentText())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -560,6 +608,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REQUESTED_FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getRequestedFeaturesList().hashCode();
     }
+    hash = (37 * hash) + DOCUMENT_TEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getDocumentText().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -734,6 +784,7 @@ private static final long serialVersionUID = 0L;
       }
       requestedFeatures_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      documentText_ = "";
       return this;
     }
 
@@ -818,6 +869,9 @@ private static final long serialVersionUID = 0L;
         requestedFeatures_.makeImmutable();
         result.requestedFeatures_ = requestedFeatures_;
       }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.documentText_ = documentText_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -882,6 +936,11 @@ private static final long serialVersionUID = 0L;
           ensureRequestedFeaturesIsMutable();
           requestedFeatures_.addAll(other.requestedFeatures_);
         }
+        onChanged();
+      }
+      if (!other.getDocumentText().isEmpty()) {
+        documentText_ = other.documentText_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -977,6 +1036,11 @@ private static final long serialVersionUID = 0L;
               requestedFeatures_.add(s);
               break;
             } // case 90
+            case 98: {
+              documentText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2025,6 +2089,78 @@ private static final long serialVersionUID = 0L;
       ensureRequestedFeaturesIsMutable();
       requestedFeatures_.add(value);
       bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object documentText_ = "";
+    /**
+     * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The documentText.
+     */
+    public java.lang.String getDocumentText() {
+      java.lang.Object ref = documentText_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        documentText_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return The bytes for documentText.
+     */
+    public com.google.protobuf.ByteString
+        getDocumentTextBytes() {
+      java.lang.Object ref = documentText_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        documentText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @param value The documentText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDocumentText(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      documentText_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDocumentText() {
+      documentText_ = getDefaultInstance().getDocumentText();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+     * @param value The bytes for documentText to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDocumentTextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      documentText_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }

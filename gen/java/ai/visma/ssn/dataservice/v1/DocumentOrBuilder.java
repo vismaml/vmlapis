@@ -169,4 +169,16 @@ public interface DocumentOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRequestedFeaturesBytes(int index);
+
+  /**
+   * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The documentText.
+   */
+  java.lang.String getDocumentText();
+  /**
+   * <code>string document_text = 12 [json_name = "documentText", (.gen_bq_schema.bigquery) = { ... }</code>
+   * @return The bytes for documentText.
+   */
+  com.google.protobuf.ByteString
+      getDocumentTextBytes();
 }
