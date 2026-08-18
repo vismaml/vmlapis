@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/type/model_type.proto\x12\tasgt.type*2\n\tModelType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nTENSORFLOW\x10\x01\x12\x08\n\x04ONNX\x10\x02\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/type/model_type.proto\x12\tasgt.type*>\n\tModelType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0e\n\nTENSORFLOW\x10\x01\x12\x08\n\x04ONNX\x10\x02\x12\n\n\x06TABICL\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,5 +33,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _globals['_MODELTYPE']._serialized_start=41
-  _globals['_MODELTYPE']._serialized_end=91
+  _globals['_MODELTYPE']._serialized_end=103
 # @@protoc_insertion_point(module_scope)

@@ -24,12 +24,13 @@ namespace Asgt.Type {
     static ModelTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3R5cGUvbW9kZWxfdHlwZS5wcm90bxIJYXNndC50eXBlKjIKCU1v",
+            "Chphc2d0L3R5cGUvbW9kZWxfdHlwZS5wcm90bxIJYXNndC50eXBlKj4KCU1v",
             "ZGVsVHlwZRILCgdERUZBVUxUEAASDgoKVEVOU09SRkxPVxABEggKBE9OTlgQ",
-            "AkKhAQoSYWkudmlzbWEuYXNndC50eXBlQg5Nb2RlbFR5cGVQcm90b1ABWjZn",
-            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7",
-            "YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0",
-            "XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
+            "AhIKCgZUQUJJQ0wQA0KhAQoSYWkudmlzbWEuYXNndC50eXBlQg5Nb2RlbFR5",
+            "cGVQcm90b1ABWjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
+            "by9hc2d0L3R5cGU7YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0",
+            "XFR5cGXiAhVBc2d0XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Asgt.Type.ModelType), }, null, null));
@@ -42,6 +43,11 @@ namespace Asgt.Type {
     [pbr::OriginalName("DEFAULT")] Default = 0,
     [pbr::OriginalName("TENSORFLOW")] Tensorflow = 1,
     [pbr::OriginalName("ONNX")] Onnx = 2,
+    /// <summary>
+    /// In-context tabular classification over the dataset's labeled examples;
+    /// serving-only, not a trained/registered model type.
+    /// </summary>
+    [pbr::OriginalName("TABICL")] Tabicl = 3,
   }
 
   #endregion

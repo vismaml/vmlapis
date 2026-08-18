@@ -28,7 +28,8 @@ goog.exportSymbol('proto.asgt.type.ModelType', null, global);
 proto.asgt.type.ModelType = {
   DEFAULT: 0,
   TENSORFLOW: 1,
-  ONNX: 2
+  ONNX: 2,
+  TABICL: 3
 };
 
 goog.object.extend(exports, proto.asgt.type);

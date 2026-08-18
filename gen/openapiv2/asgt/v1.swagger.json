@@ -702,9 +702,11 @@
       "enum": [
         "DEFAULT",
         "TENSORFLOW",
-        "ONNX"
+        "ONNX",
+        "TABICL"
       ],
-      "default": "DEFAULT"
+      "default": "DEFAULT",
+      "description": " - TABICL: In-context tabular classification over the dataset's labeled examples;\nserving-only, not a trained/registered model type."
     },
     "typePrediction": {
       "type": "object",

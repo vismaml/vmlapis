@@ -35,12 +35,12 @@ public final class ModelTypeProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/model_type.proto\022\tasgt.type*" +
-      "2\n\tModelType\022\013\n\007DEFAULT\020\000\022\016\n\nTENSORFLOW\020" +
-      "\001\022\010\n\004ONNX\020\002B\241\001\n\022ai.visma.asgt.typeB\016Mode" +
-      "lTypeProtoP\001Z6github.com/e-conomic/vmlap" +
-      "is/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsg" +
-      "t.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetada" +
-      "ta\352\002\nAsgt::Typeb\006proto3"
+      ">\n\tModelType\022\013\n\007DEFAULT\020\000\022\016\n\nTENSORFLOW\020" +
+      "\001\022\010\n\004ONNX\020\002\022\n\n\006TABICL\020\003B\241\001\n\022ai.visma.asg" +
+      "t.typeB\016ModelTypeProtoP\001Z6github.com/e-c" +
+      "onomic/vmlapis/gen/go/asgt/type;asgttype" +
+      "\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Ty" +
+      "pe\\GPBMetadata\352\002\nAsgt::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

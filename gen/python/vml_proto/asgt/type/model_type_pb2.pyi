@@ -9,6 +9,8 @@ class ModelType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     DEFAULT: _ClassVar[ModelType]
     TENSORFLOW: _ClassVar[ModelType]
     ONNX: _ClassVar[ModelType]
+    TABICL: _ClassVar[ModelType]
 DEFAULT: ModelType
 TENSORFLOW: ModelType
 ONNX: ModelType
+TABICL: ModelType

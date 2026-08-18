@@ -6,4 +6,5 @@ export enum ModelType {
   DEFAULT = 0,
   TENSORFLOW = 1,
   ONNX = 2,
+  TABICL = 3,
 }

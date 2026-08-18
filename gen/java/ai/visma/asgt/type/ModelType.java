@@ -22,6 +22,15 @@ public enum ModelType
    * <code>ONNX = 2;</code>
    */
   ONNX(2),
+  /**
+   * <pre>
+   * In-context tabular classification over the dataset's labeled examples;
+   * serving-only, not a trained/registered model type.
+   * </pre>
+   *
+   * <code>TABICL = 3;</code>
+   */
+  TABICL(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -46,6 +55,15 @@ public enum ModelType
    * <code>ONNX = 2;</code>
    */
   public static final int ONNX_VALUE = 2;
+  /**
+   * <pre>
+   * In-context tabular classification over the dataset's labeled examples;
+   * serving-only, not a trained/registered model type.
+   * </pre>
+   *
+   * <code>TABICL = 3;</code>
+   */
+  public static final int TABICL_VALUE = 3;
 
 
   public final int getNumber() {
@@ -75,6 +93,7 @@ public enum ModelType
       case 0: return DEFAULT;
       case 1: return TENSORFLOW;
       case 2: return ONNX;
+      case 3: return TABICL;
       default: return null;
     }
   }
