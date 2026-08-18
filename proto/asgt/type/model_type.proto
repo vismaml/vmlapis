@@ -8,4 +8,7 @@ enum ModelType {
   DEFAULT = 0;
   TENSORFLOW = 1;
   ONNX = 2;
+  // In-context tabular classification over the dataset's labeled examples;
+  // serving-only, not a trained/registered model type.
+  TABICL = 3;
 }
