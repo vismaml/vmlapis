@@ -1310,6 +1310,25 @@
         }
       }
     },
+    "v2InternalProductTypeBatchSuggestResponse": {
+      "type": "object",
+      "properties": {
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeSuggestion"
+          }
+        },
+        "logits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v2ProductTypeLogits"
+          }
+        }
+      }
+    },
     "v2ModelRequestOptions": {
       "type": "object",
       "properties": {
@@ -1468,6 +1487,18 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        }
+      }
+    },
+    "v2ProductTypeLogits": {
+      "type": "object",
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
           }
         }
       }

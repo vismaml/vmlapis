@@ -302,6 +302,282 @@ var _ interface {
 	ErrorName() string
 } = ProductTypeBatchSuggestResponseValidationError{}
 
+// Validate checks the field values on InternalProductTypeBatchSuggestResponse
+// with the rules defined in the proto definition for this message. If any
+// rules are violated, the first error encountered is returned, or nil if
+// there are no violations.
+func (m *InternalProductTypeBatchSuggestResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on
+// InternalProductTypeBatchSuggestResponse with the rules defined in the proto
+// definition for this message. If any rules are violated, the result is a
+// list of violation errors wrapped in
+// InternalProductTypeBatchSuggestResponseMultiError, or nil if none found.
+func (m *InternalProductTypeBatchSuggestResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *InternalProductTypeBatchSuggestResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	for idx, item := range m.GetSuggestions() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, InternalProductTypeBatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Suggestions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, InternalProductTypeBatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Suggestions[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return InternalProductTypeBatchSuggestResponseValidationError{
+					field:  fmt.Sprintf("Suggestions[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetLogits() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, InternalProductTypeBatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Logits[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, InternalProductTypeBatchSuggestResponseValidationError{
+						field:  fmt.Sprintf("Logits[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return InternalProductTypeBatchSuggestResponseValidationError{
+					field:  fmt.Sprintf("Logits[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if len(errors) > 0 {
+		return InternalProductTypeBatchSuggestResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// InternalProductTypeBatchSuggestResponseMultiError is an error wrapping
+// multiple validation errors returned by
+// InternalProductTypeBatchSuggestResponse.ValidateAll() if the designated
+// constraints aren't met.
+type InternalProductTypeBatchSuggestResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m InternalProductTypeBatchSuggestResponseMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m InternalProductTypeBatchSuggestResponseMultiError) AllErrors() []error { return m }
+
+// InternalProductTypeBatchSuggestResponseValidationError is the validation
+// error returned by InternalProductTypeBatchSuggestResponse.Validate if the
+// designated constraints aren't met.
+type InternalProductTypeBatchSuggestResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e InternalProductTypeBatchSuggestResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e InternalProductTypeBatchSuggestResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e InternalProductTypeBatchSuggestResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e InternalProductTypeBatchSuggestResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e InternalProductTypeBatchSuggestResponseValidationError) ErrorName() string {
+	return "InternalProductTypeBatchSuggestResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e InternalProductTypeBatchSuggestResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sInternalProductTypeBatchSuggestResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = InternalProductTypeBatchSuggestResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = InternalProductTypeBatchSuggestResponseValidationError{}
+
+// Validate checks the field values on ProductTypeLogits with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
+func (m *ProductTypeLogits) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ProductTypeLogits with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// ProductTypeLogitsMultiError, or nil if none found.
+func (m *ProductTypeLogits) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ProductTypeLogits) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(errors) > 0 {
+		return ProductTypeLogitsMultiError(errors)
+	}
+
+	return nil
+}
+
+// ProductTypeLogitsMultiError is an error wrapping multiple validation errors
+// returned by ProductTypeLogits.ValidateAll() if the designated constraints
+// aren't met.
+type ProductTypeLogitsMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ProductTypeLogitsMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ProductTypeLogitsMultiError) AllErrors() []error { return m }
+
+// ProductTypeLogitsValidationError is the validation error returned by
+// ProductTypeLogits.Validate if the designated constraints aren't met.
+type ProductTypeLogitsValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ProductTypeLogitsValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ProductTypeLogitsValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ProductTypeLogitsValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ProductTypeLogitsValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ProductTypeLogitsValidationError) ErrorName() string {
+	return "ProductTypeLogitsValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ProductTypeLogitsValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sProductTypeLogits.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ProductTypeLogitsValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ProductTypeLogitsValidationError{}
+
 // Validate checks the field values on ProductTypeSuggestion with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, the first error encountered is returned, or nil if there are no violations.

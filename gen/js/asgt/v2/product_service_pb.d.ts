@@ -46,6 +46,52 @@ export namespace ProductTypeBatchSuggestResponse {
   }
 }
 
+export class InternalProductTypeBatchSuggestResponse extends jspb.Message {
+  getSuggestionsList(): Array<ProductTypeSuggestion>;
+  setSuggestionsList(value: Array<ProductTypeSuggestion>): InternalProductTypeBatchSuggestResponse;
+  clearSuggestionsList(): InternalProductTypeBatchSuggestResponse;
+  addSuggestions(value?: ProductTypeSuggestion, index?: number): ProductTypeSuggestion;
+
+  getLogitsList(): Array<ProductTypeLogits>;
+  setLogitsList(value: Array<ProductTypeLogits>): InternalProductTypeBatchSuggestResponse;
+  clearLogitsList(): InternalProductTypeBatchSuggestResponse;
+  addLogits(value?: ProductTypeLogits, index?: number): ProductTypeLogits;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): InternalProductTypeBatchSuggestResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: InternalProductTypeBatchSuggestResponse): InternalProductTypeBatchSuggestResponse.AsObject;
+  static serializeBinaryToWriter(message: InternalProductTypeBatchSuggestResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InternalProductTypeBatchSuggestResponse;
+  static deserializeBinaryFromReader(message: InternalProductTypeBatchSuggestResponse, reader: jspb.BinaryReader): InternalProductTypeBatchSuggestResponse;
+}
+
+export namespace InternalProductTypeBatchSuggestResponse {
+  export type AsObject = {
+    suggestionsList: Array<ProductTypeSuggestion.AsObject>,
+    logitsList: Array<ProductTypeLogits.AsObject>,
+  }
+}
+
+export class ProductTypeLogits extends jspb.Message {
+  getValuesList(): Array<number>;
+  setValuesList(value: Array<number>): ProductTypeLogits;
+  clearValuesList(): ProductTypeLogits;
+  addValues(value: number, index?: number): ProductTypeLogits;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ProductTypeLogits.AsObject;
+  static toObject(includeInstance: boolean, msg: ProductTypeLogits): ProductTypeLogits.AsObject;
+  static serializeBinaryToWriter(message: ProductTypeLogits, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ProductTypeLogits;
+  static deserializeBinaryFromReader(message: ProductTypeLogits, reader: jspb.BinaryReader): ProductTypeLogits;
+}
+
+export namespace ProductTypeLogits {
+  export type AsObject = {
+    valuesList: Array<number>,
+  }
+}
+
 export class ProductTypeSuggestion extends jspb.Message {
   getCandidatesList(): Array<ProductTypeCandidate>;
   setCandidatesList(value: Array<ProductTypeCandidate>): ProductTypeSuggestion;
