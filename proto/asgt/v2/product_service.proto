@@ -33,6 +33,9 @@ service ProductTypeService {
   // Internal cluster-only batch suggest for product types.
   rpc InternalBatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {}
 
+  // Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+  rpc InternalBatchSuggestWithLogits(ProductTypeBatchSuggestRequest) returns (InternalProductTypeBatchSuggestResponse) {}
+
   // Submit feedback for product type predictions.
   rpc Feedback(ProductTypeFeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
@@ -55,6 +58,15 @@ message ProductTypeBatchSuggestRequest {
 
 message ProductTypeBatchSuggestResponse {
   repeated ProductTypeSuggestion suggestions = 1;
+}
+
+message InternalProductTypeBatchSuggestResponse {
+  repeated ProductTypeSuggestion suggestions = 1;
+  repeated ProductTypeLogits logits = 2;
+}
+
+message ProductTypeLogits {
+  repeated float values = 1;
 }
 
 message ProductTypeSuggestion {

@@ -20,9 +20,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	ProductTypeService_BatchSuggest_FullMethodName         = "/asgt.v2.ProductTypeService/BatchSuggest"
-	ProductTypeService_InternalBatchSuggest_FullMethodName = "/asgt.v2.ProductTypeService/InternalBatchSuggest"
-	ProductTypeService_Feedback_FullMethodName             = "/asgt.v2.ProductTypeService/Feedback"
+	ProductTypeService_BatchSuggest_FullMethodName                   = "/asgt.v2.ProductTypeService/BatchSuggest"
+	ProductTypeService_InternalBatchSuggest_FullMethodName           = "/asgt.v2.ProductTypeService/InternalBatchSuggest"
+	ProductTypeService_InternalBatchSuggestWithLogits_FullMethodName = "/asgt.v2.ProductTypeService/InternalBatchSuggestWithLogits"
+	ProductTypeService_Feedback_FullMethodName                       = "/asgt.v2.ProductTypeService/Feedback"
 )
 
 // ProductTypeServiceClient is the client API for ProductTypeService service.
@@ -33,6 +34,8 @@ type ProductTypeServiceClient interface {
 	BatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
+	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+	InternalBatchSuggestWithLogits(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*InternalProductTypeBatchSuggestResponse, error)
 	// Submit feedback for product type predictions.
 	Feedback(ctx context.Context, in *ProductTypeFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
@@ -63,6 +66,15 @@ func (c *productTypeServiceClient) InternalBatchSuggest(ctx context.Context, in 
 	return out, nil
 }
 
+func (c *productTypeServiceClient) InternalBatchSuggestWithLogits(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*InternalProductTypeBatchSuggestResponse, error) {
+	out := new(InternalProductTypeBatchSuggestResponse)
+	err := c.cc.Invoke(ctx, ProductTypeService_InternalBatchSuggestWithLogits_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *productTypeServiceClient) Feedback(ctx context.Context, in *ProductTypeFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
 	err := c.cc.Invoke(ctx, ProductTypeService_Feedback_FullMethodName, in, out, opts...)
@@ -80,6 +92,8 @@ type ProductTypeServiceServer interface {
 	BatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
+	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+	InternalBatchSuggestWithLogits(context.Context, *ProductTypeBatchSuggestRequest) (*InternalProductTypeBatchSuggestResponse, error)
 	// Submit feedback for product type predictions.
 	Feedback(context.Context, *ProductTypeFeedbackRequest) (*emptypb.Empty, error)
 }
@@ -93,6 +107,9 @@ func (UnimplementedProductTypeServiceServer) BatchSuggest(context.Context, *Prod
 }
 func (UnimplementedProductTypeServiceServer) InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InternalBatchSuggest not implemented")
+}
+func (UnimplementedProductTypeServiceServer) InternalBatchSuggestWithLogits(context.Context, *ProductTypeBatchSuggestRequest) (*InternalProductTypeBatchSuggestResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method InternalBatchSuggestWithLogits not implemented")
 }
 func (UnimplementedProductTypeServiceServer) Feedback(context.Context, *ProductTypeFeedbackRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
@@ -145,6 +162,24 @@ func _ProductTypeService_InternalBatchSuggest_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProductTypeService_InternalBatchSuggestWithLogits_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProductTypeBatchSuggestRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProductTypeServiceServer).InternalBatchSuggestWithLogits(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProductTypeService_InternalBatchSuggestWithLogits_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProductTypeServiceServer).InternalBatchSuggestWithLogits(ctx, req.(*ProductTypeBatchSuggestRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _ProductTypeService_Feedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProductTypeFeedbackRequest)
 	if err := dec(in); err != nil {
@@ -177,6 +212,10 @@ var ProductTypeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "InternalBatchSuggest",
 			Handler:    _ProductTypeService_InternalBatchSuggest_Handler,
+		},
+		{
+			MethodName: "InternalBatchSuggestWithLogits",
+			Handler:    _ProductTypeService_InternalBatchSuggestWithLogits_Handler,
 		},
 		{
 			MethodName: "Feedback",

@@ -23,6 +23,13 @@ export class ProductTypeServiceClient {
                response: asgt_v2_product_service_pb.ProductTypeBatchSuggestResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_v2_product_service_pb.ProductTypeBatchSuggestResponse>;
 
+  internalBatchSuggestWithLogits(
+    request: asgt_v2_product_service_pb.ProductTypeBatchSuggestRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: asgt_v2_product_service_pb.InternalProductTypeBatchSuggestResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_v2_product_service_pb.InternalProductTypeBatchSuggestResponse>;
+
   feedback(
     request: asgt_v2_product_service_pb.ProductTypeFeedbackRequest,
     metadata: grpcWeb.Metadata | undefined,
@@ -46,6 +53,11 @@ export class ProductTypeServicePromiseClient {
     request: asgt_v2_product_service_pb.ProductTypeBatchSuggestRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_v2_product_service_pb.ProductTypeBatchSuggestResponse>;
+
+  internalBatchSuggestWithLogits(
+    request: asgt_v2_product_service_pb.ProductTypeBatchSuggestRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<asgt_v2_product_service_pb.InternalProductTypeBatchSuggestResponse>;
 
   feedback(
     request: asgt_v2_product_service_pb.ProductTypeFeedbackRequest,

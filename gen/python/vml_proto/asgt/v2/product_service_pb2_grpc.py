@@ -25,6 +25,11 @@ class ProductTypeServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
                 _registered_method=True)
+        self.InternalBatchSuggestWithLogits = channel.unary_unary(
+                '/asgt.v2.ProductTypeService/InternalBatchSuggestWithLogits',
+                request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2_dot_product__service__pb2.InternalProductTypeBatchSuggestResponse.FromString,
+                _registered_method=True)
         self.Feedback = channel.unary_unary(
                 '/asgt.v2.ProductTypeService/Feedback',
                 request_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeFeedbackRequest.SerializeToString,
@@ -49,6 +54,13 @@ class ProductTypeServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def InternalBatchSuggestWithLogits(self, request, context):
+        """Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Feedback(self, request, context):
         """Submit feedback for product type predictions.
         """
@@ -68,6 +80,11 @@ def add_ProductTypeServiceServicer_to_server(servicer, server):
                     servicer.InternalBatchSuggest,
                     request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.SerializeToString,
+            ),
+            'InternalBatchSuggestWithLogits': grpc.unary_unary_rpc_method_handler(
+                    servicer.InternalBatchSuggestWithLogits,
+                    request_deserializer=asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.FromString,
+                    response_serializer=asgt_dot_v2_dot_product__service__pb2.InternalProductTypeBatchSuggestResponse.SerializeToString,
             ),
             'Feedback': grpc.unary_unary_rpc_method_handler(
                     servicer.Feedback,
@@ -129,6 +146,33 @@ class ProductTypeService(object):
             '/asgt.v2.ProductTypeService/InternalBatchSuggest',
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def InternalBatchSuggestWithLogits(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.ProductTypeService/InternalBatchSuggestWithLogits',
+            asgt_dot_v2_dot_product__service__pb2.ProductTypeBatchSuggestRequest.SerializeToString,
+            asgt_dot_v2_dot_product__service__pb2.InternalProductTypeBatchSuggestResponse.FromString,
             options,
             channel_credentials,
             insecure,

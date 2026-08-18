@@ -190,6 +190,20 @@ class ProductTypeBatchSuggestResponse(_message.Message):
     suggestions: _containers.RepeatedCompositeFieldContainer[ProductTypeSuggestion]
     def __init__(self, suggestions: _Optional[_Iterable[_Union[ProductTypeSuggestion, _Mapping]]] = ...) -> None: ...
 
+class InternalProductTypeBatchSuggestResponse(_message.Message):
+    __slots__ = ("suggestions", "logits")
+    SUGGESTIONS_FIELD_NUMBER: _ClassVar[int]
+    LOGITS_FIELD_NUMBER: _ClassVar[int]
+    suggestions: _containers.RepeatedCompositeFieldContainer[ProductTypeSuggestion]
+    logits: _containers.RepeatedCompositeFieldContainer[ProductTypeLogits]
+    def __init__(self, suggestions: _Optional[_Iterable[_Union[ProductTypeSuggestion, _Mapping]]] = ..., logits: _Optional[_Iterable[_Union[ProductTypeLogits, _Mapping]]] = ...) -> None: ...
+
+class ProductTypeLogits(_message.Message):
+    __slots__ = ("values",)
+    VALUES_FIELD_NUMBER: _ClassVar[int]
+    values: _containers.RepeatedScalarFieldContainer[float]
+    def __init__(self, values: _Optional[_Iterable[float]] = ...) -> None: ...
+
 class ProductTypeSuggestion(_message.Message):
     __slots__ = ("candidates",)
     CANDIDATES_FIELD_NUMBER: _ClassVar[int]

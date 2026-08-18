@@ -77,6 +77,37 @@ public final class ProductTypeServiceGrpc {
     return getInternalBatchSuggestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+      ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> getInternalBatchSuggestWithLogitsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InternalBatchSuggestWithLogits",
+      requestType = ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.class,
+      responseType = ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+      ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> getInternalBatchSuggestWithLogitsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest, ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> getInternalBatchSuggestWithLogitsMethod;
+    if ((getInternalBatchSuggestWithLogitsMethod = ProductTypeServiceGrpc.getInternalBatchSuggestWithLogitsMethod) == null) {
+      synchronized (ProductTypeServiceGrpc.class) {
+        if ((getInternalBatchSuggestWithLogitsMethod = ProductTypeServiceGrpc.getInternalBatchSuggestWithLogitsMethod) == null) {
+          ProductTypeServiceGrpc.getInternalBatchSuggestWithLogitsMethod = getInternalBatchSuggestWithLogitsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.v2.ProductTypeBatchSuggestRequest, ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InternalBatchSuggestWithLogits"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.ProductTypeBatchSuggestRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductTypeServiceMethodDescriptorSupplier("InternalBatchSuggestWithLogits"))
+              .build();
+        }
+      }
+    }
+    return getInternalBatchSuggestWithLogitsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.ProductTypeFeedbackRequest,
       com.google.protobuf.Empty> getFeedbackMethod;
 
@@ -193,6 +224,16 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * </pre>
+     */
+    default void internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInternalBatchSuggestWithLogitsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Submit feedback for product type predictions.
      * </pre>
      */
@@ -253,6 +294,17 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * </pre>
+     */
+    public void internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInternalBatchSuggestWithLogitsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Submit feedback for product type predictions.
      * </pre>
      */
@@ -301,6 +353,16 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * </pre>
+     */
+    public ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalBatchSuggestWithLogitsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Submit feedback for product type predictions.
      * </pre>
      */
@@ -344,6 +406,16 @@ public final class ProductTypeServiceGrpc {
     public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse internalBatchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInternalBatchSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * </pre>
+     */
+    public ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalBatchSuggestWithLogitsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -397,6 +469,17 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> internalBatchSuggestWithLogits(
+        ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInternalBatchSuggestWithLogitsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Submit feedback for product type predictions.
      * </pre>
      */
@@ -409,7 +492,8 @@ public final class ProductTypeServiceGrpc {
 
   private static final int METHODID_BATCH_SUGGEST = 0;
   private static final int METHODID_INTERNAL_BATCH_SUGGEST = 1;
-  private static final int METHODID_FEEDBACK = 2;
+  private static final int METHODID_INTERNAL_BATCH_SUGGEST_WITH_LOGITS = 2;
+  private static final int METHODID_FEEDBACK = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -435,6 +519,10 @@ public final class ProductTypeServiceGrpc {
         case METHODID_INTERNAL_BATCH_SUGGEST:
           serviceImpl.internalBatchSuggest((ai.visma.asgt.v2.ProductTypeBatchSuggestRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>) responseObserver);
+          break;
+        case METHODID_INTERNAL_BATCH_SUGGEST_WITH_LOGITS:
+          serviceImpl.internalBatchSuggestWithLogits((ai.visma.asgt.v2.ProductTypeBatchSuggestRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse>) responseObserver);
           break;
         case METHODID_FEEDBACK:
           serviceImpl.feedback((ai.visma.asgt.v2.ProductTypeFeedbackRequest) request,
@@ -472,6 +560,13 @@ public final class ProductTypeServiceGrpc {
               ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
               ai.visma.asgt.v2.ProductTypeBatchSuggestResponse>(
                 service, METHODID_INTERNAL_BATCH_SUGGEST)))
+        .addMethod(
+          getInternalBatchSuggestWithLogitsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.ProductTypeBatchSuggestRequest,
+              ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse>(
+                service, METHODID_INTERNAL_BATCH_SUGGEST_WITH_LOGITS)))
         .addMethod(
           getFeedbackMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -529,6 +624,7 @@ public final class ProductTypeServiceGrpc {
               .setSchemaDescriptor(new ProductTypeServiceFileDescriptorSupplier())
               .addMethod(getBatchSuggestMethod())
               .addMethod(getInternalBatchSuggestMethod())
+              .addMethod(getInternalBatchSuggestWithLogitsMethod())
               .addMethod(getFeedbackMethod())
               .build();
         }
