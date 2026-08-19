@@ -9,11 +9,8 @@ import "validate/validate.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl";
 
 // TabiclService performs in-context tabular classification over a dataset's
-// labeled examples. Cluster-internal only; not exposed on the public HTTP
-// surface.
+// labeled examples.
 service TabiclService {
-  // Suggest predicts every target found in the dataset's labeled examples
-  // for each input.
   rpc Suggest(SuggestRequest) returns (SuggestResponse) {}
 }
 
