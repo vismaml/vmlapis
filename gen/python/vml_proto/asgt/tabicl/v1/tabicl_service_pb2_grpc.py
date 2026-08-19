@@ -7,8 +7,7 @@ from vml_proto.asgt.tabicl.v1 import tabicl_service_pb2 as asgt_dot_tabicl_dot_v
 
 class TabiclServiceStub(object):
     """TabiclService performs in-context tabular classification over a dataset's
-    labeled examples. Cluster-internal only; not exposed on the public HTTP
-    surface.
+    labeled examples.
     """
 
     def __init__(self, channel):
@@ -26,14 +25,11 @@ class TabiclServiceStub(object):
 
 class TabiclServiceServicer(object):
     """TabiclService performs in-context tabular classification over a dataset's
-    labeled examples. Cluster-internal only; not exposed on the public HTTP
-    surface.
+    labeled examples.
     """
 
     def Suggest(self, request, context):
-        """Suggest predicts every target found in the dataset's labeled examples
-        for each input.
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -56,8 +52,7 @@ def add_TabiclServiceServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class TabiclService(object):
     """TabiclService performs in-context tabular classification over a dataset's
-    labeled examples. Cluster-internal only; not exposed on the public HTTP
-    surface.
+    labeled examples.
     """
 
     @staticmethod

@@ -5,8 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * TabiclService performs in-context tabular classification over a dataset's
- * labeled examples. Cluster-internal only; not exposed on the public HTTP
- * surface.
+ * labeled examples.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -113,17 +112,12 @@ public final class TabiclServiceGrpc {
   /**
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public interface AsyncService {
 
     /**
-     * <pre>
-     * Suggest predicts every target found in the dataset's labeled examples
-     * for each input.
-     * </pre>
      */
     default void suggest(ai.visma.asgt.tabicl.v1.SuggestRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.SuggestResponse> responseObserver) {
@@ -135,8 +129,7 @@ public final class TabiclServiceGrpc {
    * Base class for the server implementation of the service TabiclService.
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public static abstract class TabiclServiceImplBase
@@ -151,8 +144,7 @@ public final class TabiclServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service TabiclService.
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public static final class TabiclServiceStub
@@ -169,10 +161,6 @@ public final class TabiclServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Suggest predicts every target found in the dataset's labeled examples
-     * for each input.
-     * </pre>
      */
     public void suggest(ai.visma.asgt.tabicl.v1.SuggestRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.SuggestResponse> responseObserver) {
@@ -185,8 +173,7 @@ public final class TabiclServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service TabiclService.
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public static final class TabiclServiceBlockingV2Stub
@@ -203,10 +190,6 @@ public final class TabiclServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Suggest predicts every target found in the dataset's labeled examples
-     * for each input.
-     * </pre>
      */
     public ai.visma.asgt.tabicl.v1.SuggestResponse suggest(ai.visma.asgt.tabicl.v1.SuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -218,8 +201,7 @@ public final class TabiclServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service TabiclService.
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public static final class TabiclServiceBlockingStub
@@ -236,10 +218,6 @@ public final class TabiclServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Suggest predicts every target found in the dataset's labeled examples
-     * for each input.
-     * </pre>
      */
     public ai.visma.asgt.tabicl.v1.SuggestResponse suggest(ai.visma.asgt.tabicl.v1.SuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -251,8 +229,7 @@ public final class TabiclServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service TabiclService.
    * <pre>
    * TabiclService performs in-context tabular classification over a dataset's
-   * labeled examples. Cluster-internal only; not exposed on the public HTTP
-   * surface.
+   * labeled examples.
    * </pre>
    */
   public static final class TabiclServiceFutureStub
@@ -269,10 +246,6 @@ public final class TabiclServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Suggest predicts every target found in the dataset's labeled examples
-     * for each input.
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.tabicl.v1.SuggestResponse> suggest(
         ai.visma.asgt.tabicl.v1.SuggestRequest request) {

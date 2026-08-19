@@ -26,8 +26,6 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TabiclServiceClient interface {
-	// Suggest predicts every target found in the dataset's labeled examples
-	// for each input.
 	Suggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
 }
 
@@ -52,8 +50,6 @@ func (c *tabiclServiceClient) Suggest(ctx context.Context, in *SuggestRequest, o
 // All implementations should embed UnimplementedTabiclServiceServer
 // for forward compatibility
 type TabiclServiceServer interface {
-	// Suggest predicts every target found in the dataset's labeled examples
-	// for each input.
 	Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
 }
 

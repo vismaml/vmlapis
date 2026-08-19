@@ -10,8 +10,7 @@ using grpc = global::Grpc.Core;
 namespace Asgt.Tabicl.V1 {
   /// <summary>
   /// TabiclService performs in-context tabular classification over a dataset's
-  /// labeled examples. Cluster-internal only; not exposed on the public HTTP
-  /// surface.
+  /// labeled examples.
   /// </summary>
   public static partial class TabiclService
   {
@@ -73,13 +72,6 @@ namespace Asgt.Tabicl.V1 {
     [grpc::BindServiceMethod(typeof(TabiclService), "BindService")]
     public abstract partial class TabiclServiceBase
     {
-      /// <summary>
-      /// Suggest predicts every target found in the dataset's labeled examples
-      /// for each input.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.Tabicl.V1.SuggestResponse> Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::ServerCallContext context)
       {
@@ -115,53 +107,21 @@ namespace Asgt.Tabicl.V1 {
       {
       }
 
-      /// <summary>
-      /// Suggest predicts every target found in the dataset's labeled examples
-      /// for each input.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Asgt.Tabicl.V1.SuggestResponse Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Suggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Suggest predicts every target found in the dataset's labeled examples
-      /// for each input.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Asgt.Tabicl.V1.SuggestResponse Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Suggest, null, options, request);
       }
-      /// <summary>
-      /// Suggest predicts every target found in the dataset's labeled examples
-      /// for each input.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.SuggestResponse> SuggestAsync(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Suggest predicts every target found in the dataset's labeled examples
-      /// for each input.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.SuggestResponse> SuggestAsync(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::CallOptions options)
       {
