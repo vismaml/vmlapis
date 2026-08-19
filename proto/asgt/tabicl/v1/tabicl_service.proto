@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package asgt.tabicl.v1;
+
+import "asgt/type/data.proto";
+import "asgt/type/prediction.proto";
+import "validate/validate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl";
+
+// TabiclService performs in-context tabular classification over a dataset's
+// labeled examples.
+service TabiclService {
+  rpc Suggest(SuggestRequest) returns (SuggestResponse) {}
+}
+
+message SuggestRequest {
+  string dataset_name = 1 [(validate.rules).string = {min_len: 1}];
+  string consumer_name = 2 [(validate.rules).string = {min_len: 1}];
+  repeated asgt.type.Data inputs = 3 [(validate.rules).repeated = {min_items: 1}];
+  int32 suggest_limit = 4;
+}
+
+message SuggestResponse {
+  // One prediction per input, in request order.
+  repeated asgt.type.Prediction predictions = 1;
+}
