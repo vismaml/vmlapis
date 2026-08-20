@@ -15,6 +15,13 @@ export class CompanyLookupServiceClient {
                response: ssn_companylookup_v1_companylookup_pb.ProcessInvoiceCompanyDataResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_companylookup_v1_companylookup_pb.ProcessInvoiceCompanyDataResponse>;
 
+  verifySupplier(
+    request: ssn_companylookup_v1_companylookup_pb.VerifySupplierRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_companylookup_v1_companylookup_pb.VerifySupplierResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_companylookup_v1_companylookup_pb.VerifySupplierResponse>;
+
 }
 
 export class CompanyLookupServicePromiseClient {
@@ -26,6 +33,11 @@ export class CompanyLookupServicePromiseClient {
     request: ssn_companylookup_v1_companylookup_pb.ProcessInvoiceCompanyDataRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_companylookup_v1_companylookup_pb.ProcessInvoiceCompanyDataResponse>;
+
+  verifySupplier(
+    request: ssn_companylookup_v1_companylookup_pb.VerifySupplierRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_companylookup_v1_companylookup_pb.VerifySupplierResponse>;
 
 }
 

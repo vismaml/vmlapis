@@ -1,5 +1,6 @@
 import * as jspb from 'google-protobuf'
 
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
@@ -119,6 +120,25 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
   getSupplierVatValid(): boolean;
   setSupplierVatValid(value: boolean): ProcessInvoiceCompanyDataResponse;
 
+  getBankAccountVerdict(): BankAccountVerdict;
+  setBankAccountVerdict(value: BankAccountVerdict): ProcessInvoiceCompanyDataResponse;
+
+  getObservedCountTenant(): number;
+  setObservedCountTenant(value: number): ProcessInvoiceCompanyDataResponse;
+
+  getObservedCountGlobal(): number;
+  setObservedCountGlobal(value: number): ProcessInvoiceCompanyDataResponse;
+
+  getFirstSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setFirstSeen(value?: google_protobuf_timestamp_pb.Timestamp): ProcessInvoiceCompanyDataResponse;
+  hasFirstSeen(): boolean;
+  clearFirstSeen(): ProcessInvoiceCompanyDataResponse;
+
+  getLastSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setLastSeen(value?: google_protobuf_timestamp_pb.Timestamp): ProcessInvoiceCompanyDataResponse;
+  hasLastSeen(): boolean;
+  clearLastSeen(): ProcessInvoiceCompanyDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProcessInvoiceCompanyDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: ProcessInvoiceCompanyDataResponse): ProcessInvoiceCompanyDataResponse.AsObject;
@@ -130,6 +150,94 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
 export namespace ProcessInvoiceCompanyDataResponse {
   export type AsObject = {
     supplierVatValid: boolean,
+    bankAccountVerdict: BankAccountVerdict,
+    observedCountTenant: number,
+    observedCountGlobal: number,
+    firstSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    lastSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
+export class VerifySupplierRequest extends jspb.Message {
+  getCountryCode(): string;
+  setCountryCode(value: string): VerifySupplierRequest;
+
+  getVatNumber(): string;
+  setVatNumber(value: string): VerifySupplierRequest;
+
+  getOrganisationNumber(): string;
+  setOrganisationNumber(value: string): VerifySupplierRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VerifySupplierRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: VerifySupplierRequest): VerifySupplierRequest.AsObject;
+  static serializeBinaryToWriter(message: VerifySupplierRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VerifySupplierRequest;
+  static deserializeBinaryFromReader(message: VerifySupplierRequest, reader: jspb.BinaryReader): VerifySupplierRequest;
+}
+
+export namespace VerifySupplierRequest {
+  export type AsObject = {
+    countryCode: string,
+    vatNumber: string,
+    organisationNumber: string,
+  }
+}
+
+export class VerifySupplierResponse extends jspb.Message {
+  getVerified(): boolean;
+  setVerified(value: boolean): VerifySupplierResponse;
+
+  getReason(): SupplierVerdictReason;
+  setReason(value: SupplierVerdictReason): VerifySupplierResponse;
+
+  getIdentifier(): VerifiedIdentifier;
+  setIdentifier(value: VerifiedIdentifier): VerifySupplierResponse;
+
+  getRegistrySource(): string;
+  setRegistrySource(value: string): VerifySupplierResponse;
+
+  getRegistryFetchedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setRegistryFetchedAt(value?: google_protobuf_timestamp_pb.Timestamp): VerifySupplierResponse;
+  hasRegistryFetchedAt(): boolean;
+  clearRegistryFetchedAt(): VerifySupplierResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VerifySupplierResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: VerifySupplierResponse): VerifySupplierResponse.AsObject;
+  static serializeBinaryToWriter(message: VerifySupplierResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VerifySupplierResponse;
+  static deserializeBinaryFromReader(message: VerifySupplierResponse, reader: jspb.BinaryReader): VerifySupplierResponse;
+}
+
+export namespace VerifySupplierResponse {
+  export type AsObject = {
+    verified: boolean,
+    reason: SupplierVerdictReason,
+    identifier: VerifiedIdentifier,
+    registrySource: string,
+    registryFetchedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+  }
+}
+
+export enum SupplierVerdictReason { 
+  SUPPLIER_VERDICT_REASON_UNSPECIFIED = 0,
+  VERIFIED_BY_REGISTRY = 1,
+  REFUTED_BY_REGISTRY = 2,
+  NOT_ATTEMPTED = 3,
+  ATTEMPT_FAILED = 4,
+  NO_REGISTRY_FOR_COUNTRY = 5,
+  NO_IDENTIFIER = 6,
+  STALE = 7,
+}
+export enum VerifiedIdentifier { 
+  VERIFIED_IDENTIFIER_UNSPECIFIED = 0,
+  VAT_NUMBER = 1,
+  ORGANISATION_NUMBER = 2,
+}
+export enum BankAccountVerdict { 
+  BANK_ACCOUNT_VERDICT_UNSPECIFIED = 0,
+  BANK_ACCOUNT_KNOWN = 1,
+  BANK_ACCOUNT_NEW = 2,
+  BANK_ACCOUNT_UNKNOWN = 3,
+}

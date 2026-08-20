@@ -55,6 +55,10 @@ namespace Ssn.Companylookup.V1 {
     static readonly grpc::Marshaller<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest> __Marshaller_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse> __Marshaller_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Companylookup.V1.VerifySupplierRequest> __Marshaller_ssn_companylookup_v1_VerifySupplierRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Companylookup.V1.VerifySupplierRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Companylookup.V1.VerifySupplierResponse> __Marshaller_ssn_companylookup_v1_VerifySupplierResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Companylookup.V1.VerifySupplierResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest, global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse> __Method_ProcessInvoiceCompanyData = new grpc::Method<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest, global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse>(
@@ -63,6 +67,14 @@ namespace Ssn.Companylookup.V1 {
         "ProcessInvoiceCompanyData",
         __Marshaller_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest,
         __Marshaller_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Companylookup.V1.VerifySupplierRequest, global::Ssn.Companylookup.V1.VerifySupplierResponse> __Method_VerifySupplier = new grpc::Method<global::Ssn.Companylookup.V1.VerifySupplierRequest, global::Ssn.Companylookup.V1.VerifySupplierResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifySupplier",
+        __Marshaller_ssn_companylookup_v1_VerifySupplierRequest,
+        __Marshaller_ssn_companylookup_v1_VerifySupplierResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -76,6 +88,20 @@ namespace Ssn.Companylookup.V1 {
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse> ProcessInvoiceCompanyData(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// VerifySupplier reports whether a registry has confirmed the supplier's
+      /// identifier. Read-only: a single Spanner primary-key read, no external call
+      /// and no write, so it is cheap enough for a synchronous caller.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Companylookup.V1.VerifySupplierResponse> VerifySupplier(global::Ssn.Companylookup.V1.VerifySupplierRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -129,6 +155,62 @@ namespace Ssn.Companylookup.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ProcessInvoiceCompanyData, null, options, request);
       }
+      /// <summary>
+      /// VerifySupplier reports whether a registry has confirmed the supplier's
+      /// identifier. Read-only: a single Spanner primary-key read, no external call
+      /// and no write, so it is cheap enough for a synchronous caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Companylookup.V1.VerifySupplierResponse VerifySupplier(global::Ssn.Companylookup.V1.VerifySupplierRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifySupplier(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// VerifySupplier reports whether a registry has confirmed the supplier's
+      /// identifier. Read-only: a single Spanner primary-key read, no external call
+      /// and no write, so it is cheap enough for a synchronous caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Companylookup.V1.VerifySupplierResponse VerifySupplier(global::Ssn.Companylookup.V1.VerifySupplierRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifySupplier, null, options, request);
+      }
+      /// <summary>
+      /// VerifySupplier reports whether a registry has confirmed the supplier's
+      /// identifier. Read-only: a single Spanner primary-key read, no external call
+      /// and no write, so it is cheap enough for a synchronous caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Companylookup.V1.VerifySupplierResponse> VerifySupplierAsync(global::Ssn.Companylookup.V1.VerifySupplierRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifySupplierAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// VerifySupplier reports whether a registry has confirmed the supplier's
+      /// identifier. Read-only: a single Spanner primary-key read, no external call
+      /// and no write, so it is cheap enough for a synchronous caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Companylookup.V1.VerifySupplierResponse> VerifySupplierAsync(global::Ssn.Companylookup.V1.VerifySupplierRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifySupplier, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CompanyLookupServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -143,7 +225,8 @@ namespace Ssn.Companylookup.V1 {
     public static grpc::ServerServiceDefinition BindService(CompanyLookupServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ProcessInvoiceCompanyData, serviceImpl.ProcessInvoiceCompanyData).Build();
+          .AddMethod(__Method_ProcessInvoiceCompanyData, serviceImpl.ProcessInvoiceCompanyData)
+          .AddMethod(__Method_VerifySupplier, serviceImpl.VerifySupplier).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -154,6 +237,7 @@ namespace Ssn.Companylookup.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CompanyLookupServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ProcessInvoiceCompanyData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest, global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse>(serviceImpl.ProcessInvoiceCompanyData));
+      serviceBinder.AddMethod(__Method_VerifySupplier, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Companylookup.V1.VerifySupplierRequest, global::Ssn.Companylookup.V1.VerifySupplierResponse>(serviceImpl.VerifySupplier));
     }
 
   }

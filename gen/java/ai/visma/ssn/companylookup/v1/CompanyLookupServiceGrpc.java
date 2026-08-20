@@ -52,6 +52,37 @@ public final class CompanyLookupServiceGrpc {
     return getProcessInvoiceCompanyDataMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.companylookup.v1.VerifySupplierRequest,
+      ai.visma.ssn.companylookup.v1.VerifySupplierResponse> getVerifySupplierMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "VerifySupplier",
+      requestType = ai.visma.ssn.companylookup.v1.VerifySupplierRequest.class,
+      responseType = ai.visma.ssn.companylookup.v1.VerifySupplierResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.companylookup.v1.VerifySupplierRequest,
+      ai.visma.ssn.companylookup.v1.VerifySupplierResponse> getVerifySupplierMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.companylookup.v1.VerifySupplierRequest, ai.visma.ssn.companylookup.v1.VerifySupplierResponse> getVerifySupplierMethod;
+    if ((getVerifySupplierMethod = CompanyLookupServiceGrpc.getVerifySupplierMethod) == null) {
+      synchronized (CompanyLookupServiceGrpc.class) {
+        if ((getVerifySupplierMethod = CompanyLookupServiceGrpc.getVerifySupplierMethod) == null) {
+          CompanyLookupServiceGrpc.getVerifySupplierMethod = getVerifySupplierMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.companylookup.v1.VerifySupplierRequest, ai.visma.ssn.companylookup.v1.VerifySupplierResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "VerifySupplier"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.companylookup.v1.VerifySupplierRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.companylookup.v1.VerifySupplierResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CompanyLookupServiceMethodDescriptorSupplier("VerifySupplier"))
+              .build();
+        }
+      }
+    }
+    return getVerifySupplierMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -127,6 +158,18 @@ public final class CompanyLookupServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessInvoiceCompanyDataMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * VerifySupplier reports whether a registry has confirmed the supplier's
+     * identifier. Read-only: a single Spanner primary-key read, no external call
+     * and no write, so it is cheap enough for a synchronous caller.
+     * </pre>
+     */
+    default void verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.companylookup.v1.VerifySupplierResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVerifySupplierMethod(), responseObserver);
+    }
   }
 
   /**
@@ -175,6 +218,19 @@ public final class CompanyLookupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessInvoiceCompanyDataMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * VerifySupplier reports whether a registry has confirmed the supplier's
+     * identifier. Read-only: a single Spanner primary-key read, no external call
+     * and no write, so it is cheap enough for a synchronous caller.
+     * </pre>
+     */
+    public void verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.companylookup.v1.VerifySupplierResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getVerifySupplierMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -205,6 +261,18 @@ public final class CompanyLookupServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessInvoiceCompanyDataMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * VerifySupplier reports whether a registry has confirmed the supplier's
+     * identifier. Read-only: a single Spanner primary-key read, no external call
+     * and no write, so it is cheap enough for a synchronous caller.
+     * </pre>
+     */
+    public ai.visma.ssn.companylookup.v1.VerifySupplierResponse verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getVerifySupplierMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -234,6 +302,18 @@ public final class CompanyLookupServiceGrpc {
     public ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse processInvoiceCompanyData(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessInvoiceCompanyDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * VerifySupplier reports whether a registry has confirmed the supplier's
+     * identifier. Read-only: a single Spanner primary-key read, no external call
+     * and no write, so it is cheap enough for a synchronous caller.
+     * </pre>
+     */
+    public ai.visma.ssn.companylookup.v1.VerifySupplierResponse verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getVerifySupplierMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,9 +346,23 @@ public final class CompanyLookupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessInvoiceCompanyDataMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * VerifySupplier reports whether a registry has confirmed the supplier's
+     * identifier. Read-only: a single Spanner primary-key read, no external call
+     * and no write, so it is cheap enough for a synchronous caller.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.companylookup.v1.VerifySupplierResponse> verifySupplier(
+        ai.visma.ssn.companylookup.v1.VerifySupplierRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getVerifySupplierMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PROCESS_INVOICE_COMPANY_DATA = 0;
+  private static final int METHODID_VERIFY_SUPPLIER = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -290,6 +384,10 @@ public final class CompanyLookupServiceGrpc {
         case METHODID_PROCESS_INVOICE_COMPANY_DATA:
           serviceImpl.processInvoiceCompanyData((ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse>) responseObserver);
+          break;
+        case METHODID_VERIFY_SUPPLIER:
+          serviceImpl.verifySupplier((ai.visma.ssn.companylookup.v1.VerifySupplierRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.companylookup.v1.VerifySupplierResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -316,6 +414,13 @@ public final class CompanyLookupServiceGrpc {
               ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest,
               ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse>(
                 service, METHODID_PROCESS_INVOICE_COMPANY_DATA)))
+        .addMethod(
+          getVerifySupplierMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.companylookup.v1.VerifySupplierRequest,
+              ai.visma.ssn.companylookup.v1.VerifySupplierResponse>(
+                service, METHODID_VERIFY_SUPPLIER)))
         .build();
   }
 
@@ -365,6 +470,7 @@ public final class CompanyLookupServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CompanyLookupServiceFileDescriptorSupplier())
               .addMethod(getProcessInvoiceCompanyDataMethod())
+              .addMethod(getVerifySupplierMethod())
               .build();
         }
       }

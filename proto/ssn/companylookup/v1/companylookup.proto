@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package ssn.companylookup.v1;
 
+import "google/protobuf/timestamp.proto";
 import "ssn/type/candidate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup";
@@ -12,6 +13,11 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;co
 // calls external registries — enrichment is fetched out of band by a job.
 service CompanyLookupService {
   rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
+
+  // VerifySupplier reports whether a registry has confirmed the supplier's
+  // identifier. Read-only: a single Spanner primary-key read, no external call
+  // and no write, so it is cheap enough for a synchronous caller.
+  rpc VerifySupplier(VerifySupplierRequest) returns (VerifySupplierResponse);
 }
 
 // The request is flat: each field is the top-1 smartscan candidate for the
@@ -45,4 +51,79 @@ message ProcessInvoiceCompanyDataResponse {
   // True only when the supplier company has been enriched and the registry
   // (VIES) confirmed the VAT number.
   bool supplier_vat_valid = 1;
+
+  // Bank-account trust for the invoice's account, computed from accumulated
+  // observations. Not surfaced to customers yet — see BankAccountVerdict.
+  BankAccountVerdict bank_account_verdict = 2;
+  // Observations of this (consumer, supplier, account) triple.
+  int64 observed_count_tenant = 3;
+  // Observations of this account across all consumers. A large gap between this
+  // and observed_count_tenant is cross-consumer pooling: evidence contributed by
+  // businesses other than this one.
+  int64 observed_count_global = 4;
+  google.protobuf.Timestamp first_seen = 5;
+  google.protobuf.Timestamp last_seen = 6;
+}
+
+message VerifySupplierRequest {
+  string country_code = 1; // ISO 3166-1 alpha-2
+  string vat_number = 2;
+  string organisation_number = 3;
+}
+
+// SupplierVerdictReason explains the verdict. Only VERIFIED_BY_REGISTRY is
+// definitive; every other value means "no confirmation" and must never be
+// rendered to a customer as a negative claim about the supplier.
+enum SupplierVerdictReason {
+  SUPPLIER_VERDICT_REASON_UNSPECIFIED = 0;
+  // A registry positively confirmed the identifier.
+  VERIFIED_BY_REGISTRY = 1;
+  // A registry that covers this country returned "not valid".
+  REFUTED_BY_REGISTRY = 2;
+  // Discovered but never looked up yet.
+  NOT_ATTEMPTED = 3;
+  // Looked up, and the registry call failed.
+  ATTEMPT_FAILED = 4;
+  // No configured registry covers this country, so absence of confirmation
+  // says nothing about the supplier. Distinct from REFUTED_BY_REGISTRY: a
+  // valid GB VAT number is unverifiable, not invalid.
+  NO_REGISTRY_FOR_COUNTRY = 5;
+  // Neither a VAT nor an organisation number was extracted.
+  NO_IDENTIFIER = 6;
+  // Confirmed once, but the confirmation is older than the freshness window.
+  STALE = 7;
+}
+
+// VerifiedIdentifier says which identifier the verdict is about, so the caller
+// knows which candidate to mark.
+enum VerifiedIdentifier {
+  VERIFIED_IDENTIFIER_UNSPECIFIED = 0;
+  VAT_NUMBER = 1;
+  ORGANISATION_NUMBER = 2;
+}
+
+message VerifySupplierResponse {
+  // True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
+  // "refuted" — read reason to tell the cases apart.
+  bool verified = 1;
+  SupplierVerdictReason reason = 2;
+  VerifiedIdentifier identifier = 3;
+  // Which registry answered, e.g. "vies". Empty when none did.
+  string registry_source = 4;
+  // When the registry answered. Unset when it never did.
+  google.protobuf.Timestamp registry_fetched_at = 5;
+}
+
+// BankAccountVerdict is the trust verdict for a (supplier, bank account) pair.
+// Populated on every invoice; not surfaced to customers yet, because "we have
+// seen this account paid before" is a reputation claim, not the identifier
+// validation that Confidence.VERIFIED denotes elsewhere.
+enum BankAccountVerdict {
+  BANK_ACCOUNT_VERDICT_UNSPECIFIED = 0;
+  // Crossed both the volume and maturity thresholds at tenant scope.
+  BANK_ACCOUNT_KNOWN = 1;
+  // Has not. Not an assertion of fraud.
+  BANK_ACCOUNT_NEW = 2;
+  // No supplier key or no account key, so there is nothing to judge.
+  BANK_ACCOUNT_UNKNOWN = 3;
 }

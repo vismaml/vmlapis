@@ -20,6 +20,8 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 const proto = {};
 proto.ssn = {};
@@ -136,6 +138,67 @@ proto.ssn.companylookup.v1.CompanyLookupServicePromiseClient.prototype.processIn
       request,
       metadata || {},
       methodDescriptor_CompanyLookupService_ProcessInvoiceCompanyData);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.companylookup.v1.VerifySupplierRequest,
+ *   !proto.ssn.companylookup.v1.VerifySupplierResponse>}
+ */
+const methodDescriptor_CompanyLookupService_VerifySupplier = new grpc.web.MethodDescriptor(
+  '/ssn.companylookup.v1.CompanyLookupService/VerifySupplier',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.companylookup.v1.VerifySupplierRequest,
+  proto.ssn.companylookup.v1.VerifySupplierResponse,
+  /**
+   * @param {!proto.ssn.companylookup.v1.VerifySupplierRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.companylookup.v1.VerifySupplierResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.companylookup.v1.VerifySupplierRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.companylookup.v1.VerifySupplierResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.companylookup.v1.VerifySupplierResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.companylookup.v1.CompanyLookupServiceClient.prototype.verifySupplier =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.companylookup.v1.CompanyLookupService/VerifySupplier',
+      request,
+      metadata || {},
+      methodDescriptor_CompanyLookupService_VerifySupplier,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.companylookup.v1.VerifySupplierRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.companylookup.v1.VerifySupplierResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.companylookup.v1.CompanyLookupServicePromiseClient.prototype.verifySupplier =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.companylookup.v1.CompanyLookupService/VerifySupplier',
+      request,
+      metadata || {},
+      methodDescriptor_CompanyLookupService_VerifySupplier);
 };
 
 

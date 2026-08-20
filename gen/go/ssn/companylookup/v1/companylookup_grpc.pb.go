@@ -20,6 +20,7 @@ const _ = grpc.SupportPackageIsVersion7
 
 const (
 	CompanyLookupService_ProcessInvoiceCompanyData_FullMethodName = "/ssn.companylookup.v1.CompanyLookupService/ProcessInvoiceCompanyData"
+	CompanyLookupService_VerifySupplier_FullMethodName            = "/ssn.companylookup.v1.CompanyLookupService/VerifySupplier"
 )
 
 // CompanyLookupServiceClient is the client API for CompanyLookupService service.
@@ -27,6 +28,10 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CompanyLookupServiceClient interface {
 	ProcessInvoiceCompanyData(ctx context.Context, in *ProcessInvoiceCompanyDataRequest, opts ...grpc.CallOption) (*ProcessInvoiceCompanyDataResponse, error)
+	// VerifySupplier reports whether a registry has confirmed the supplier's
+	// identifier. Read-only: a single Spanner primary-key read, no external call
+	// and no write, so it is cheap enough for a synchronous caller.
+	VerifySupplier(ctx context.Context, in *VerifySupplierRequest, opts ...grpc.CallOption) (*VerifySupplierResponse, error)
 }
 
 type companyLookupServiceClient struct {
@@ -46,11 +51,24 @@ func (c *companyLookupServiceClient) ProcessInvoiceCompanyData(ctx context.Conte
 	return out, nil
 }
 
+func (c *companyLookupServiceClient) VerifySupplier(ctx context.Context, in *VerifySupplierRequest, opts ...grpc.CallOption) (*VerifySupplierResponse, error) {
+	out := new(VerifySupplierResponse)
+	err := c.cc.Invoke(ctx, CompanyLookupService_VerifySupplier_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CompanyLookupServiceServer is the server API for CompanyLookupService service.
 // All implementations should embed UnimplementedCompanyLookupServiceServer
 // for forward compatibility
 type CompanyLookupServiceServer interface {
 	ProcessInvoiceCompanyData(context.Context, *ProcessInvoiceCompanyDataRequest) (*ProcessInvoiceCompanyDataResponse, error)
+	// VerifySupplier reports whether a registry has confirmed the supplier's
+	// identifier. Read-only: a single Spanner primary-key read, no external call
+	// and no write, so it is cheap enough for a synchronous caller.
+	VerifySupplier(context.Context, *VerifySupplierRequest) (*VerifySupplierResponse, error)
 }
 
 // UnimplementedCompanyLookupServiceServer should be embedded to have forward compatible implementations.
@@ -59,6 +77,9 @@ type UnimplementedCompanyLookupServiceServer struct {
 
 func (UnimplementedCompanyLookupServiceServer) ProcessInvoiceCompanyData(context.Context, *ProcessInvoiceCompanyDataRequest) (*ProcessInvoiceCompanyDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessInvoiceCompanyData not implemented")
+}
+func (UnimplementedCompanyLookupServiceServer) VerifySupplier(context.Context, *VerifySupplierRequest) (*VerifySupplierResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method VerifySupplier not implemented")
 }
 
 // UnsafeCompanyLookupServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -90,6 +111,24 @@ func _CompanyLookupService_ProcessInvoiceCompanyData_Handler(srv interface{}, ct
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CompanyLookupService_VerifySupplier_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(VerifySupplierRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CompanyLookupServiceServer).VerifySupplier(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CompanyLookupService_VerifySupplier_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CompanyLookupServiceServer).VerifySupplier(ctx, req.(*VerifySupplierRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CompanyLookupService_ServiceDesc is the grpc.ServiceDesc for CompanyLookupService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -100,6 +139,10 @@ var CompanyLookupService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ProcessInvoiceCompanyData",
 			Handler:    _CompanyLookupService_ProcessInvoiceCompanyData_Handler,
+		},
+		{
+			MethodName: "VerifySupplier",
+			Handler:    _CompanyLookupService_VerifySupplier_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -35,6 +35,16 @@ public final class CompanylookupProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_companylookup_v1_VerifySupplierRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_companylookup_v1_VerifySupplierResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,41 +55,75 @@ public final class CompanylookupProto {
   static {
     java.lang.String[] descriptorData = {
       "\n(ssn/companylookup/v1/companylookup.pro" +
-      "to\022\024ssn.companylookup.v1\032\030ssn/type/candi" +
-      "date.proto\"\263\010\n ProcessInvoiceCompanyData" +
-      "Request\022!\n\014project_name\030\001 \001(\tR\013projectNa" +
-      "me\022%\n\016transaction_id\030\002 \001(\tR\rtransactionI" +
-      "d\0228\n\rsupplier_name\030\003 \001(\0132\023.ssn.type.Cand" +
-      "idateR\014supplierName\022C\n\023supplier_vat_numb" +
-      "er\030\004 \001(\0132\023.ssn.type.CandidateR\021supplierV" +
-      "atNumber\022U\n\034supplier_organisation_number" +
-      "\030\005 \001(\0132\023.ssn.type.CandidateR\032supplierOrg" +
-      "anisationNumber\022G\n\025supplier_country_code" +
-      "\030\006 \001(\0132\023.ssn.type.CandidateR\023supplierCou" +
-      "ntryCode\022>\n\020supplier_address\030\007 \001(\0132\023.ssn" +
-      ".type.CandidateR\017supplierAddress\0228\n\rrece" +
-      "iver_name\030\010 \001(\0132\023.ssn.type.CandidateR\014re" +
-      "ceiverName\022C\n\023receiver_vat_number\030\t \001(\0132" +
-      "\023.ssn.type.CandidateR\021receiverVatNumber\022" +
-      "U\n\034receiver_organisation_number\030\n \001(\0132\023." +
-      "ssn.type.CandidateR\032receiverOrganisation" +
-      "Number\022G\n\025receiver_country_code\030\013 \001(\0132\023." +
-      "ssn.type.CandidateR\023receiverCountryCode\022" +
-      ">\n\020receiver_address\030\014 \001(\0132\023.ssn.type.Can" +
-      "didateR\017receiverAddress\022\'\n\004iban\030\r \001(\0132\023." +
-      "ssn.type.CandidateR\004iban\022%\n\003bic\030\016 \001(\0132\023." +
-      "ssn.type.CandidateR\003bic\022C\n\023bank_account_" +
-      "number\030\017 \001(\0132\023.ssn.type.CandidateR\021bankA" +
-      "ccountNumber\022M\n\030bank_registration_number" +
-      "\030\020 \001(\0132\023.ssn.type.CandidateR\026bankRegistr" +
-      "ationNumber\022#\n\rproduct_types\030\021 \003(\tR\014prod" +
-      "uctTypes\"Q\n!ProcessInvoiceCompanyDataRes" +
-      "ponse\022,\n\022supplier_vat_valid\030\001 \001(\010R\020suppl" +
-      "ierVatValid2\245\001\n\024CompanyLookupService\022\214\001\n" +
-      "\031ProcessInvoiceCompanyData\0226.ssn.company" +
-      "lookup.v1.ProcessInvoiceCompanyDataReque" +
-      "st\0327.ssn.companylookup.v1.ProcessInvoice" +
-      "CompanyDataResponseB\355\001\n\035ai.visma.ssn.com" +
+      "to\022\024ssn.companylookup.v1\032\037google/protobu" +
+      "f/timestamp.proto\032\030ssn/type/candidate.pr" +
+      "oto\"\263\010\n ProcessInvoiceCompanyDataRequest" +
+      "\022!\n\014project_name\030\001 \001(\tR\013projectName\022%\n\016t" +
+      "ransaction_id\030\002 \001(\tR\rtransactionId\0228\n\rsu" +
+      "pplier_name\030\003 \001(\0132\023.ssn.type.CandidateR\014" +
+      "supplierName\022C\n\023supplier_vat_number\030\004 \001(" +
+      "\0132\023.ssn.type.CandidateR\021supplierVatNumbe" +
+      "r\022U\n\034supplier_organisation_number\030\005 \001(\0132" +
+      "\023.ssn.type.CandidateR\032supplierOrganisati" +
+      "onNumber\022G\n\025supplier_country_code\030\006 \001(\0132" +
+      "\023.ssn.type.CandidateR\023supplierCountryCod" +
+      "e\022>\n\020supplier_address\030\007 \001(\0132\023.ssn.type.C" +
+      "andidateR\017supplierAddress\0228\n\rreceiver_na" +
+      "me\030\010 \001(\0132\023.ssn.type.CandidateR\014receiverN" +
+      "ame\022C\n\023receiver_vat_number\030\t \001(\0132\023.ssn.t" +
+      "ype.CandidateR\021receiverVatNumber\022U\n\034rece" +
+      "iver_organisation_number\030\n \001(\0132\023.ssn.typ" +
+      "e.CandidateR\032receiverOrganisationNumber\022" +
+      "G\n\025receiver_country_code\030\013 \001(\0132\023.ssn.typ" +
+      "e.CandidateR\023receiverCountryCode\022>\n\020rece" +
+      "iver_address\030\014 \001(\0132\023.ssn.type.CandidateR" +
+      "\017receiverAddress\022\'\n\004iban\030\r \001(\0132\023.ssn.typ" +
+      "e.CandidateR\004iban\022%\n\003bic\030\016 \001(\0132\023.ssn.typ" +
+      "e.CandidateR\003bic\022C\n\023bank_account_number\030" +
+      "\017 \001(\0132\023.ssn.type.CandidateR\021bankAccountN" +
+      "umber\022M\n\030bank_registration_number\030\020 \001(\0132" +
+      "\023.ssn.type.CandidateR\026bankRegistrationNu" +
+      "mber\022#\n\rproduct_types\030\021 \003(\tR\014productType" +
+      "s\"\211\003\n!ProcessInvoiceCompanyDataResponse\022" +
+      ",\n\022supplier_vat_valid\030\001 \001(\010R\020supplierVat" +
+      "Valid\022Z\n\024bank_account_verdict\030\002 \001(\0162(.ss" +
+      "n.companylookup.v1.BankAccountVerdictR\022b" +
+      "ankAccountVerdict\0222\n\025observed_count_tena" +
+      "nt\030\003 \001(\003R\023observedCountTenant\0222\n\025observe" +
+      "d_count_global\030\004 \001(\003R\023observedCountGloba" +
+      "l\0229\n\nfirst_seen\030\005 \001(\0132\032.google.protobuf." +
+      "TimestampR\tfirstSeen\0227\n\tlast_seen\030\006 \001(\0132" +
+      "\032.google.protobuf.TimestampR\010lastSeen\"\212\001" +
+      "\n\025VerifySupplierRequest\022!\n\014country_code\030" +
+      "\001 \001(\tR\013countryCode\022\035\n\nvat_number\030\002 \001(\tR\t" +
+      "vatNumber\022/\n\023organisation_number\030\003 \001(\tR\022" +
+      "organisationNumber\"\270\002\n\026VerifySupplierRes" +
+      "ponse\022\032\n\010verified\030\001 \001(\010R\010verified\022C\n\006rea" +
+      "son\030\002 \001(\0162+.ssn.companylookup.v1.Supplie" +
+      "rVerdictReasonR\006reason\022H\n\nidentifier\030\003 \001" +
+      "(\0162(.ssn.companylookup.v1.VerifiedIdenti" +
+      "fierR\nidentifier\022\'\n\017registry_source\030\004 \001(" +
+      "\tR\016registrySource\022J\n\023registry_fetched_at" +
+      "\030\005 \001(\0132\032.google.protobuf.TimestampR\021regi" +
+      "stryFetchedAt*\325\001\n\025SupplierVerdictReason\022" +
+      "\'\n#SUPPLIER_VERDICT_REASON_UNSPECIFIED\020\000" +
+      "\022\030\n\024VERIFIED_BY_REGISTRY\020\001\022\027\n\023REFUTED_BY" +
+      "_REGISTRY\020\002\022\021\n\rNOT_ATTEMPTED\020\003\022\022\n\016ATTEMP" +
+      "T_FAILED\020\004\022\033\n\027NO_REGISTRY_FOR_COUNTRY\020\005\022" +
+      "\021\n\rNO_IDENTIFIER\020\006\022\t\n\005STALE\020\007*b\n\022Verifie" +
+      "dIdentifier\022#\n\037VERIFIED_IDENTIFIER_UNSPE" +
+      "CIFIED\020\000\022\016\n\nVAT_NUMBER\020\001\022\027\n\023ORGANISATION" +
+      "_NUMBER\020\002*\202\001\n\022BankAccountVerdict\022$\n BANK" +
+      "_ACCOUNT_VERDICT_UNSPECIFIED\020\000\022\026\n\022BANK_A" +
+      "CCOUNT_KNOWN\020\001\022\024\n\020BANK_ACCOUNT_NEW\020\002\022\030\n\024" +
+      "BANK_ACCOUNT_UNKNOWN\020\0032\222\002\n\024CompanyLookup" +
+      "Service\022\214\001\n\031ProcessInvoiceCompanyData\0226." +
+      "ssn.companylookup.v1.ProcessInvoiceCompa" +
+      "nyDataRequest\0327.ssn.companylookup.v1.Pro" +
+      "cessInvoiceCompanyDataResponse\022k\n\016Verify" +
+      "Supplier\022+.ssn.companylookup.v1.VerifySu" +
+      "pplierRequest\032,.ssn.companylookup.v1.Ver" +
+      "ifySupplierResponseB\355\001\n\035ai.visma.ssn.com" +
       "panylookup.v1B\022CompanylookupProtoP\001ZFgit" +
       "hub.com/e-conomic/vmlapis/gen/go/ssn/com" +
       "panylookup/v1;companylookup\242\002\003SCX\252\002\024Ssn." +
@@ -90,6 +134,7 @@ public final class CompanylookupProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
           ai.visma.ssn.type.CandidateProto.getDescriptor(),
         });
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataRequest_descriptor =
@@ -103,8 +148,21 @@ public final class CompanylookupProto {
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_descriptor,
-        new java.lang.String[] { "SupplierVatValid", });
+        new java.lang.String[] { "SupplierVatValid", "BankAccountVerdict", "ObservedCountTenant", "ObservedCountGlobal", "FirstSeen", "LastSeen", });
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor,
+        new java.lang.String[] { "CountryCode", "VatNumber", "OrganisationNumber", });
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor,
+        new java.lang.String[] { "Verified", "Reason", "Identifier", "RegistrySource", "RegistryFetchedAt", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.protobuf.TimestampProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
   }
 
