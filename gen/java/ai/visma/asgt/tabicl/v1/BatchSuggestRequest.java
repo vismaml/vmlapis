@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
   public static final int SUGGEST_LIMIT_FIELD_NUMBER = 4;
   private int suggestLimit_ = 0;
   /**
-   * <code>int32 suggest_limit = 4 [json_name = "suggestLimit"];</code>
+   * <code>int32 suggest_limit = 4 [json_name = "suggestLimit", (.validate.rules) = { ... }</code>
    * @return The suggestLimit.
    */
   @java.lang.Override
@@ -974,7 +974,7 @@ private static final long serialVersionUID = 0L;
 
     private int suggestLimit_ ;
     /**
-     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit"];</code>
+     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit", (.validate.rules) = { ... }</code>
      * @return The suggestLimit.
      */
     @java.lang.Override
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
       return suggestLimit_;
     }
     /**
-     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit"];</code>
+     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit", (.validate.rules) = { ... }</code>
      * @param value The suggestLimit to set.
      * @return This builder for chaining.
      */
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit"];</code>
+     * <code>int32 suggest_limit = 4 [json_name = "suggestLimit", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearSuggestLimit() {

@@ -124,7 +124,16 @@ func (m *BatchSuggestRequest) validate(all bool) error {
 
 	}
 
-	// no validation rules for SuggestLimit
+	if m.GetSuggestLimit() <= 0 {
+		err := BatchSuggestRequestValidationError{
+			field:  "SuggestLimit",
+			reason: "value must be greater than 0",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
 	if len(errors) > 0 {
 		return BatchSuggestRequestMultiError(errors)
