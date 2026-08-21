@@ -16,10 +16,10 @@ class TabiclServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Suggest = channel.unary_unary(
-                '/asgt.tabicl.v1.TabiclService/Suggest',
-                request_serializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestRequest.SerializeToString,
-                response_deserializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestResponse.FromString,
+        self.BatchSuggest = channel.unary_unary(
+                '/asgt.tabicl.v1.TabiclService/BatchSuggest',
+                request_serializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestRequest.SerializeToString,
+                response_deserializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestResponse.FromString,
                 _registered_method=True)
 
 
@@ -28,7 +28,7 @@ class TabiclServiceServicer(object):
     labeled examples.
     """
 
-    def Suggest(self, request, context):
+    def BatchSuggest(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -37,10 +37,10 @@ class TabiclServiceServicer(object):
 
 def add_TabiclServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Suggest': grpc.unary_unary_rpc_method_handler(
-                    servicer.Suggest,
-                    request_deserializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestRequest.FromString,
-                    response_serializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestResponse.SerializeToString,
+            'BatchSuggest': grpc.unary_unary_rpc_method_handler(
+                    servicer.BatchSuggest,
+                    request_deserializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestRequest.FromString,
+                    response_serializer=asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -56,7 +56,7 @@ class TabiclService(object):
     """
 
     @staticmethod
-    def Suggest(request,
+    def BatchSuggest(request,
             target,
             options=(),
             channel_credentials=None,
@@ -69,9 +69,9 @@ class TabiclService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/asgt.tabicl.v1.TabiclService/Suggest',
-            asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestRequest.SerializeToString,
-            asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.SuggestResponse.FromString,
+            '/asgt.tabicl.v1.TabiclService/BatchSuggest',
+            asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestRequest.SerializeToString,
+            asgt_dot_tabicl_dot_v1_dot_tabicl__service__pb2.BatchSuggestResponse.FromString,
             options,
             channel_credentials,
             insecure,

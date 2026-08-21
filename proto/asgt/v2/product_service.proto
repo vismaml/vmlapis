@@ -49,7 +49,7 @@ message ProductTypeBatchSuggestRequest {
   // Text descriptions to classify into product types.
   repeated string texts = 1 [(validate.rules).repeated = {
     min_items: 1
-    max_items: 128
+    max_items: 512
     items: {
       string: {min_len: 1}
     }

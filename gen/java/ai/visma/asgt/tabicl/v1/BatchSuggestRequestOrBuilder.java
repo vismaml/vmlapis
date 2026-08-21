@@ -5,8 +5,8 @@
 
 package ai.visma.asgt.tabicl.v1;
 
-public interface SuggestRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:asgt.tabicl.v1.SuggestRequest)
+public interface BatchSuggestRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:asgt.tabicl.v1.BatchSuggestRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

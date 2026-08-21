@@ -5,30 +5,30 @@ import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // 
 import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
-export class SuggestRequest extends jspb.Message {
+export class BatchSuggestRequest extends jspb.Message {
   getDatasetName(): string;
-  setDatasetName(value: string): SuggestRequest;
+  setDatasetName(value: string): BatchSuggestRequest;
 
   getConsumerName(): string;
-  setConsumerName(value: string): SuggestRequest;
+  setConsumerName(value: string): BatchSuggestRequest;
 
   getInputsList(): Array<asgt_type_data_pb.Data>;
-  setInputsList(value: Array<asgt_type_data_pb.Data>): SuggestRequest;
-  clearInputsList(): SuggestRequest;
+  setInputsList(value: Array<asgt_type_data_pb.Data>): BatchSuggestRequest;
+  clearInputsList(): BatchSuggestRequest;
   addInputs(value?: asgt_type_data_pb.Data, index?: number): asgt_type_data_pb.Data;
 
   getSuggestLimit(): number;
-  setSuggestLimit(value: number): SuggestRequest;
+  setSuggestLimit(value: number): BatchSuggestRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): SuggestRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: SuggestRequest): SuggestRequest.AsObject;
-  static serializeBinaryToWriter(message: SuggestRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): SuggestRequest;
-  static deserializeBinaryFromReader(message: SuggestRequest, reader: jspb.BinaryReader): SuggestRequest;
+  toObject(includeInstance?: boolean): BatchSuggestRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: BatchSuggestRequest): BatchSuggestRequest.AsObject;
+  static serializeBinaryToWriter(message: BatchSuggestRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): BatchSuggestRequest;
+  static deserializeBinaryFromReader(message: BatchSuggestRequest, reader: jspb.BinaryReader): BatchSuggestRequest;
 }
 
-export namespace SuggestRequest {
+export namespace BatchSuggestRequest {
   export type AsObject = {
     datasetName: string,
     consumerName: string,
@@ -37,21 +37,21 @@ export namespace SuggestRequest {
   }
 }
 
-export class SuggestResponse extends jspb.Message {
+export class BatchSuggestResponse extends jspb.Message {
   getPredictionsList(): Array<asgt_type_prediction_pb.Prediction>;
-  setPredictionsList(value: Array<asgt_type_prediction_pb.Prediction>): SuggestResponse;
-  clearPredictionsList(): SuggestResponse;
+  setPredictionsList(value: Array<asgt_type_prediction_pb.Prediction>): BatchSuggestResponse;
+  clearPredictionsList(): BatchSuggestResponse;
   addPredictions(value?: asgt_type_prediction_pb.Prediction, index?: number): asgt_type_prediction_pb.Prediction;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): SuggestResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: SuggestResponse): SuggestResponse.AsObject;
-  static serializeBinaryToWriter(message: SuggestResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): SuggestResponse;
-  static deserializeBinaryFromReader(message: SuggestResponse, reader: jspb.BinaryReader): SuggestResponse;
+  toObject(includeInstance?: boolean): BatchSuggestResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: BatchSuggestResponse): BatchSuggestResponse.AsObject;
+  static serializeBinaryToWriter(message: BatchSuggestResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): BatchSuggestResponse;
+  static deserializeBinaryFromReader(message: BatchSuggestResponse, reader: jspb.BinaryReader): BatchSuggestResponse;
 }
 
-export namespace SuggestResponse {
+export namespace BatchSuggestResponse {
   export type AsObject = {
     predictionsList: Array<asgt_type_prediction_pb.Prediction.AsObject>,
   }

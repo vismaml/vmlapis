@@ -26,25 +26,26 @@ namespace Asgt.Tabicl.V1 {
           string.Concat(
             "CiNhc2d0L3RhYmljbC92MS90YWJpY2xfc2VydmljZS5wcm90bxIOYXNndC50",
             "YWJpY2wudjEaFGFzZ3QvdHlwZS9kYXRhLnByb3RvGhphc2d0L3R5cGUvcHJl",
-            "ZGljdGlvbi5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8iwgEKDlN1",
-            "Z2dlc3RSZXF1ZXN0EioKDGRhdGFzZXRfbmFtZRgBIAEoCUIH+kIEcgIQAVIL",
-            "ZGF0YXNldE5hbWUSLAoNY29uc3VtZXJfbmFtZRgCIAEoCUIH+kIEcgIQAVIM",
-            "Y29uc3VtZXJOYW1lEjEKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5EYXRh",
-            "Qgj6QgWSAQIIAVIGaW5wdXRzEiMKDXN1Z2dlc3RfbGltaXQYBCABKAVSDHN1",
-            "Z2dlc3RMaW1pdCJKCg9TdWdnZXN0UmVzcG9uc2USNwoLcHJlZGljdGlvbnMY",
-            "ASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblILcHJlZGljdGlvbnMyXQoN",
-            "VGFiaWNsU2VydmljZRJMCgdTdWdnZXN0Eh4uYXNndC50YWJpY2wudjEuU3Vn",
-            "Z2VzdFJlcXVlc3QaHy5hc2d0LnRhYmljbC52MS5TdWdnZXN0UmVzcG9uc2Ui",
-            "AELCAQoXYWkudmlzbWEuYXNndC50YWJpY2wudjFCElRhYmljbFNlcnZpY2VQ",
-            "cm90b1ABWjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9h",
-            "c2d0L3RhYmljbC92MTt0YWJpY2yiAgNBVFiqAg5Bc2d0LlRhYmljbC5WMcoC",
-            "DkFzZ3RcVGFiaWNsXFYx4gIaQXNndFxUYWJpY2xcVjFcR1BCTWV0YWRhdGHq",
-            "AhBBc2d0OjpUYWJpY2w6OlYxYgZwcm90bzM="));
+            "ZGljdGlvbi5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8iygEKE0Jh",
+            "dGNoU3VnZ2VzdFJlcXVlc3QSKgoMZGF0YXNldF9uYW1lGAEgASgJQgf6QgRy",
+            "AhABUgtkYXRhc2V0TmFtZRIsCg1jb25zdW1lcl9uYW1lGAIgASgJQgf6QgRy",
+            "AhABUgxjb25zdW1lck5hbWUSNAoGaW5wdXRzGAMgAygLMg8uYXNndC50eXBl",
+            "LkRhdGFCC/pCCJIBBQgBEIACUgZpbnB1dHMSIwoNc3VnZ2VzdF9saW1pdBgE",
+            "IAEoBVIMc3VnZ2VzdExpbWl0Ik8KFEJhdGNoU3VnZ2VzdFJlc3BvbnNlEjcK",
+            "C3ByZWRpY3Rpb25zGAEgAygLMhUuYXNndC50eXBlLlByZWRpY3Rpb25SC3By",
+            "ZWRpY3Rpb25zMmwKDVRhYmljbFNlcnZpY2USWwoMQmF0Y2hTdWdnZXN0EiMu",
+            "YXNndC50YWJpY2wudjEuQmF0Y2hTdWdnZXN0UmVxdWVzdBokLmFzZ3QudGFi",
+            "aWNsLnYxLkJhdGNoU3VnZ2VzdFJlc3BvbnNlIgBCwgEKF2FpLnZpc21hLmFz",
+            "Z3QudGFiaWNsLnYxQhJUYWJpY2xTZXJ2aWNlUHJvdG9QAVo5Z2l0aHViLmNv",
+            "bS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90YWJpY2wvdjE7dGFi",
+            "aWNsogIDQVRYqgIOQXNndC5UYWJpY2wuVjHKAg5Bc2d0XFRhYmljbFxWMeIC",
+            "GkFzZ3RcVGFiaWNsXFYxXEdQQk1ldGFkYXRh6gIQQXNndDo6VGFiaWNsOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.SuggestRequest), global::Asgt.Tabicl.V1.SuggestRequest.Parser, new[]{ "DatasetName", "ConsumerName", "Inputs", "SuggestLimit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.SuggestResponse), global::Asgt.Tabicl.V1.SuggestResponse.Parser, new[]{ "Predictions" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestRequest), global::Asgt.Tabicl.V1.BatchSuggestRequest.Parser, new[]{ "DatasetName", "ConsumerName", "Inputs", "SuggestLimit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestResponse), global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser, new[]{ "Predictions" }, null, null, null, null)
           }));
     }
     #endregion
@@ -52,16 +53,16 @@ namespace Asgt.Tabicl.V1 {
   }
   #region Messages
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SuggestRequest : pb::IMessage<SuggestRequest>
+  public sealed partial class BatchSuggestRequest : pb::IMessage<BatchSuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SuggestRequest> _parser = new pb::MessageParser<SuggestRequest>(() => new SuggestRequest());
+    private static readonly pb::MessageParser<BatchSuggestRequest> _parser = new pb::MessageParser<BatchSuggestRequest>(() => new BatchSuggestRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SuggestRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<BatchSuggestRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -77,7 +78,7 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestRequest() {
+    public BatchSuggestRequest() {
       OnConstruction();
     }
 
@@ -85,7 +86,7 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestRequest(SuggestRequest other) : this() {
+    public BatchSuggestRequest(BatchSuggestRequest other) : this() {
       datasetName_ = other.datasetName_;
       consumerName_ = other.consumerName_;
       inputs_ = other.inputs_.Clone();
@@ -95,8 +96,8 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestRequest Clone() {
-      return new SuggestRequest(this);
+    public BatchSuggestRequest Clone() {
+      return new BatchSuggestRequest(this);
     }
 
     /// <summary>Field number for the "dataset_name" field.</summary>
@@ -149,12 +150,12 @@ namespace Asgt.Tabicl.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SuggestRequest);
+      return Equals(other as BatchSuggestRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SuggestRequest other) {
+    public bool Equals(BatchSuggestRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -258,7 +259,7 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SuggestRequest other) {
+    public void MergeFrom(BatchSuggestRequest other) {
       if (other == null) {
         return;
       }
@@ -350,16 +351,16 @@ namespace Asgt.Tabicl.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class SuggestResponse : pb::IMessage<SuggestResponse>
+  public sealed partial class BatchSuggestResponse : pb::IMessage<BatchSuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SuggestResponse> _parser = new pb::MessageParser<SuggestResponse>(() => new SuggestResponse());
+    private static readonly pb::MessageParser<BatchSuggestResponse> _parser = new pb::MessageParser<BatchSuggestResponse>(() => new BatchSuggestResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SuggestResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<BatchSuggestResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -375,7 +376,7 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestResponse() {
+    public BatchSuggestResponse() {
       OnConstruction();
     }
 
@@ -383,15 +384,15 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestResponse(SuggestResponse other) : this() {
+    public BatchSuggestResponse(BatchSuggestResponse other) : this() {
       predictions_ = other.predictions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SuggestResponse Clone() {
-      return new SuggestResponse(this);
+    public BatchSuggestResponse Clone() {
+      return new BatchSuggestResponse(this);
     }
 
     /// <summary>Field number for the "predictions" field.</summary>
@@ -411,12 +412,12 @@ namespace Asgt.Tabicl.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SuggestResponse);
+      return Equals(other as BatchSuggestResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SuggestResponse other) {
+    public bool Equals(BatchSuggestResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -481,7 +482,7 @@ namespace Asgt.Tabicl.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SuggestResponse other) {
+    public void MergeFrom(BatchSuggestResponse other) {
       if (other == null) {
         return;
       }

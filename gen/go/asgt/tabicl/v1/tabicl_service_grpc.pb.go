@@ -19,14 +19,14 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	TabiclService_Suggest_FullMethodName = "/asgt.tabicl.v1.TabiclService/Suggest"
+	TabiclService_BatchSuggest_FullMethodName = "/asgt.tabicl.v1.TabiclService/BatchSuggest"
 )
 
 // TabiclServiceClient is the client API for TabiclService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TabiclServiceClient interface {
-	Suggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
+	BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
 }
 
 type tabiclServiceClient struct {
@@ -37,9 +37,9 @@ func NewTabiclServiceClient(cc grpc.ClientConnInterface) TabiclServiceClient {
 	return &tabiclServiceClient{cc}
 }
 
-func (c *tabiclServiceClient) Suggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error) {
-	out := new(SuggestResponse)
-	err := c.cc.Invoke(ctx, TabiclService_Suggest_FullMethodName, in, out, opts...)
+func (c *tabiclServiceClient) BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error) {
+	out := new(BatchSuggestResponse)
+	err := c.cc.Invoke(ctx, TabiclService_BatchSuggest_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -50,15 +50,15 @@ func (c *tabiclServiceClient) Suggest(ctx context.Context, in *SuggestRequest, o
 // All implementations should embed UnimplementedTabiclServiceServer
 // for forward compatibility
 type TabiclServiceServer interface {
-	Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
+	BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
 }
 
 // UnimplementedTabiclServiceServer should be embedded to have forward compatible implementations.
 type UnimplementedTabiclServiceServer struct {
 }
 
-func (UnimplementedTabiclServiceServer) Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Suggest not implemented")
+func (UnimplementedTabiclServiceServer) BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BatchSuggest not implemented")
 }
 
 // UnsafeTabiclServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -72,20 +72,20 @@ func RegisterTabiclServiceServer(s grpc.ServiceRegistrar, srv TabiclServiceServe
 	s.RegisterService(&TabiclService_ServiceDesc, srv)
 }
 
-func _TabiclService_Suggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SuggestRequest)
+func _TabiclService_BatchSuggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BatchSuggestRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TabiclServiceServer).Suggest(ctx, in)
+		return srv.(TabiclServiceServer).BatchSuggest(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: TabiclService_Suggest_FullMethodName,
+		FullMethod: TabiclService_BatchSuggest_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TabiclServiceServer).Suggest(ctx, req.(*SuggestRequest))
+		return srv.(TabiclServiceServer).BatchSuggest(ctx, req.(*BatchSuggestRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -98,8 +98,8 @@ var TabiclService_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*TabiclServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Suggest",
-			Handler:    _TabiclService_Suggest_Handler,
+			MethodName: "BatchSuggest",
+			Handler:    _TabiclService_BatchSuggest_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

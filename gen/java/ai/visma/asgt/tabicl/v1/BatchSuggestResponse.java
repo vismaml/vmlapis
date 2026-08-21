@@ -6,12 +6,12 @@
 package ai.visma.asgt.tabicl.v1;
 
 /**
- * Protobuf type {@code asgt.tabicl.v1.SuggestResponse}
+ * Protobuf type {@code asgt.tabicl.v1.BatchSuggestResponse}
  */
-public final class SuggestResponse extends
+public final class BatchSuggestResponse extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:asgt.tabicl.v1.SuggestResponse)
-    SuggestResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:asgt.tabicl.v1.BatchSuggestResponse)
+    BatchSuggestResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,27 +20,27 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      SuggestResponse.class.getName());
+      BatchSuggestResponse.class.getName());
   }
-  // Use SuggestResponse.newBuilder() to construct.
-  private SuggestResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use BatchSuggestResponse.newBuilder() to construct.
+  private BatchSuggestResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private SuggestResponse() {
+  private BatchSuggestResponse() {
     predictions_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_SuggestResponse_descriptor;
+    return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_SuggestResponse_fieldAccessorTable
+    return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.asgt.tabicl.v1.SuggestResponse.class, ai.visma.asgt.tabicl.v1.SuggestResponse.Builder.class);
+            ai.visma.asgt.tabicl.v1.BatchSuggestResponse.class, ai.visma.asgt.tabicl.v1.BatchSuggestResponse.Builder.class);
   }
 
   public static final int PREDICTIONS_FIELD_NUMBER = 1;
@@ -144,10 +144,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.asgt.tabicl.v1.SuggestResponse)) {
+    if (!(obj instanceof ai.visma.asgt.tabicl.v1.BatchSuggestResponse)) {
       return super.equals(obj);
     }
-    ai.visma.asgt.tabicl.v1.SuggestResponse other = (ai.visma.asgt.tabicl.v1.SuggestResponse) obj;
+    ai.visma.asgt.tabicl.v1.BatchSuggestResponse other = (ai.visma.asgt.tabicl.v1.BatchSuggestResponse) obj;
 
     if (!getPredictionsList()
         .equals(other.getPredictionsList())) return false;
@@ -171,44 +171,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(byte[] data)
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(java.io.InputStream input)
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -216,26 +216,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseDelimitedFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse parseFrom(
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.asgt.tabicl.v1.SuggestResponse prototype) {
+  public static Builder newBuilder(ai.visma.asgt.tabicl.v1.BatchSuggestResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -264,26 +264,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code asgt.tabicl.v1.SuggestResponse}
+   * Protobuf type {@code asgt.tabicl.v1.BatchSuggestResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:asgt.tabicl.v1.SuggestResponse)
-      ai.visma.asgt.tabicl.v1.SuggestResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:asgt.tabicl.v1.BatchSuggestResponse)
+      ai.visma.asgt.tabicl.v1.BatchSuggestResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_SuggestResponse_descriptor;
+      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_SuggestResponse_fieldAccessorTable
+      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.asgt.tabicl.v1.SuggestResponse.class, ai.visma.asgt.tabicl.v1.SuggestResponse.Builder.class);
+              ai.visma.asgt.tabicl.v1.BatchSuggestResponse.class, ai.visma.asgt.tabicl.v1.BatchSuggestResponse.Builder.class);
     }
 
-    // Construct using ai.visma.asgt.tabicl.v1.SuggestResponse.newBuilder()
+    // Construct using ai.visma.asgt.tabicl.v1.BatchSuggestResponse.newBuilder()
     private Builder() {
 
     }
@@ -310,17 +310,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_SuggestResponse_descriptor;
+      return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.asgt.tabicl.v1.SuggestResponse getDefaultInstanceForType() {
-      return ai.visma.asgt.tabicl.v1.SuggestResponse.getDefaultInstance();
+    public ai.visma.asgt.tabicl.v1.BatchSuggestResponse getDefaultInstanceForType() {
+      return ai.visma.asgt.tabicl.v1.BatchSuggestResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.asgt.tabicl.v1.SuggestResponse build() {
-      ai.visma.asgt.tabicl.v1.SuggestResponse result = buildPartial();
+    public ai.visma.asgt.tabicl.v1.BatchSuggestResponse build() {
+      ai.visma.asgt.tabicl.v1.BatchSuggestResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -328,15 +328,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.asgt.tabicl.v1.SuggestResponse buildPartial() {
-      ai.visma.asgt.tabicl.v1.SuggestResponse result = new ai.visma.asgt.tabicl.v1.SuggestResponse(this);
+    public ai.visma.asgt.tabicl.v1.BatchSuggestResponse buildPartial() {
+      ai.visma.asgt.tabicl.v1.BatchSuggestResponse result = new ai.visma.asgt.tabicl.v1.BatchSuggestResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.asgt.tabicl.v1.SuggestResponse result) {
+    private void buildPartialRepeatedFields(ai.visma.asgt.tabicl.v1.BatchSuggestResponse result) {
       if (predictionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           predictions_ = java.util.Collections.unmodifiableList(predictions_);
@@ -348,22 +348,22 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(ai.visma.asgt.tabicl.v1.SuggestResponse result) {
+    private void buildPartial0(ai.visma.asgt.tabicl.v1.BatchSuggestResponse result) {
       int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.asgt.tabicl.v1.SuggestResponse) {
-        return mergeFrom((ai.visma.asgt.tabicl.v1.SuggestResponse)other);
+      if (other instanceof ai.visma.asgt.tabicl.v1.BatchSuggestResponse) {
+        return mergeFrom((ai.visma.asgt.tabicl.v1.BatchSuggestResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.asgt.tabicl.v1.SuggestResponse other) {
-      if (other == ai.visma.asgt.tabicl.v1.SuggestResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.asgt.tabicl.v1.BatchSuggestResponse other) {
+      if (other == ai.visma.asgt.tabicl.v1.BatchSuggestResponse.getDefaultInstance()) return this;
       if (predictionsBuilder_ == null) {
         if (!other.predictions_.isEmpty()) {
           if (predictions_.isEmpty()) {
@@ -758,23 +758,23 @@ private static final long serialVersionUID = 0L;
       return predictionsBuilder_;
     }
 
-    // @@protoc_insertion_point(builder_scope:asgt.tabicl.v1.SuggestResponse)
+    // @@protoc_insertion_point(builder_scope:asgt.tabicl.v1.BatchSuggestResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:asgt.tabicl.v1.SuggestResponse)
-  private static final ai.visma.asgt.tabicl.v1.SuggestResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:asgt.tabicl.v1.BatchSuggestResponse)
+  private static final ai.visma.asgt.tabicl.v1.BatchSuggestResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.asgt.tabicl.v1.SuggestResponse();
+    DEFAULT_INSTANCE = new ai.visma.asgt.tabicl.v1.BatchSuggestResponse();
   }
 
-  public static ai.visma.asgt.tabicl.v1.SuggestResponse getDefaultInstance() {
+  public static ai.visma.asgt.tabicl.v1.BatchSuggestResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SuggestResponse>
-      PARSER = new com.google.protobuf.AbstractParser<SuggestResponse>() {
+  private static final com.google.protobuf.Parser<BatchSuggestResponse>
+      PARSER = new com.google.protobuf.AbstractParser<BatchSuggestResponse>() {
     @java.lang.Override
-    public SuggestResponse parsePartialFrom(
+    public BatchSuggestResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -793,17 +793,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SuggestResponse> parser() {
+  public static com.google.protobuf.Parser<BatchSuggestResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SuggestResponse> getParserForType() {
+  public com.google.protobuf.Parser<BatchSuggestResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.asgt.tabicl.v1.SuggestResponse getDefaultInstanceForType() {
+  public ai.visma.asgt.tabicl.v1.BatchSuggestResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

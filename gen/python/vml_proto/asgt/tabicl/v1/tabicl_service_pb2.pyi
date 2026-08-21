@@ -8,7 +8,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
-class SuggestRequest(_message.Message):
+class BatchSuggestRequest(_message.Message):
     __slots__ = ("dataset_name", "consumer_name", "inputs", "suggest_limit")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_NAME_FIELD_NUMBER: _ClassVar[int]
@@ -20,7 +20,7 @@ class SuggestRequest(_message.Message):
     suggest_limit: int
     def __init__(self, dataset_name: _Optional[str] = ..., consumer_name: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., suggest_limit: _Optional[int] = ...) -> None: ...
 
-class SuggestResponse(_message.Message):
+class BatchSuggestResponse(_message.Message):
     __slots__ = ("predictions",)
     PREDICTIONS_FIELD_NUMBER: _ClassVar[int]
     predictions: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Prediction]
