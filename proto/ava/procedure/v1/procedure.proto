@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package ava.procedure.v1;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1";
+
+message Procedure {
+  InputContract inputs = 1;
+  OutputContract outputs = 2;
+  Selector selector = 3;
+  string root_step_id = 4;
+  repeated Step steps = 5;
+}
+
+message InputContract {
+  repeated FactBinding facts = 1;
+}
+
+message FactBinding {
+  string fact_name = 1;
+  FactType type = 2;
+  repeated FactSource sources = 3;
+  Disagreement on_disagreement = 4;
+}
+
+message FactSource {
+  string from = 1;
+  string field = 2;
+  repeated string args = 3;
+}
+
+enum Disagreement {
+  DISAGREEMENT_UNSPECIFIED = 0;
+  DISAGREEMENT_UNKNOWN = 1;
+  DISAGREEMENT_FIRST_WINS = 2;
+}
+
+enum FactType {
+  FACT_TYPE_UNSPECIFIED = 0;
+  FACT_TYPE_STRING = 1;
+  FACT_TYPE_MONEY = 2;
+  FACT_TYPE_DATE = 3;
+  FACT_TYPE_BOOL = 4;
+  FACT_TYPE_INT = 5;
+}
+
+message OutputContract {
+  repeated string produces = 1;
+}
+
+message Selector {
+  string cel = 1;
+  int32 priority = 2;
+}
+
+message Step {
+  string step_id = 1;
+  StepKind kind = 2;
+  string question = 3;
+  string guidance = 4;
+  Judgment judgment = 5;
+  repeated Branch branches = 6;
+  Origin origin = 7;
+}
+
+enum StepKind {
+  STEP_KIND_UNSPECIFIED = 0;
+  STEP_KIND_TEST = 1;
+  STEP_KIND_JUDGMENT = 2;
+}
+
+message Judgment {
+  string prompt_ref = 1;
+  bool requires_span = 2;
+}
+
+message Branch {
+  string branch_id = 1;
+  string label = 2;
+  string criterion = 3;
+  string when = 4;
+  map<string, string> sets = 5;
+  string next_step_id = 6;
+  bool is_escalation = 7;
+  string rationale = 8;
+}
+
+enum Origin {
+  ORIGIN_UNSPECIFIED = 0;
+  ORIGIN_MINED = 1;
+  ORIGIN_HUMAN = 2;
+}
