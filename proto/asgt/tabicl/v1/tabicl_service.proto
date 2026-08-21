@@ -21,7 +21,7 @@ message BatchSuggestRequest {
     min_items: 1
     max_items: 256
   }];
-  int32 suggest_limit = 4;
+  int32 suggest_limit = 4 [(validate.rules).int32 = {gt: 0}];
 }
 
 message BatchSuggestResponse {

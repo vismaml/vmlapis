@@ -58,7 +58,7 @@ public interface BatchSuggestRequestOrBuilder extends
       int index);
 
   /**
-   * <code>int32 suggest_limit = 4 [json_name = "suggestLimit"];</code>
+   * <code>int32 suggest_limit = 4 [json_name = "suggestLimit", (.validate.rules) = { ... }</code>
    * @return The suggestLimit.
    */
   int getSuggestLimit();
