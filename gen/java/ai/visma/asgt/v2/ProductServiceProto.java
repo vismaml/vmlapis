@@ -74,7 +74,7 @@ public final class ProductServiceProto {
       "rotobuf/empty.proto\032.protoc-gen-openapiv" +
       "2/options/annotations.proto\032\027validate/va" +
       "lidate.proto\"I\n\036ProductTypeBatchSuggestR" +
-      "equest\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013\010\001\020\200\001\"\004r\002\020\001" +
+      "equest\022\'\n\005texts\030\001 \003(\tB\021\372B\016\222\001\013\010\001\020\200\004\"\004r\002\020\001" +
       "R\005texts\"c\n\037ProductTypeBatchSuggestRespon" +
       "se\022@\n\013suggestions\030\001 \003(\0132\036.asgt.v2.Produc" +
       "tTypeSuggestionR\013suggestions\"\237\001\n\'Interna" +

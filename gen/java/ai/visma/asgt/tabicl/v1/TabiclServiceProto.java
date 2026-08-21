@@ -26,15 +26,15 @@ public final class TabiclServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_tabicl_v1_SuggestRequest_descriptor;
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_asgt_tabicl_v1_SuggestRequest_fieldAccessorTable;
+      internal_static_asgt_tabicl_v1_BatchSuggestRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_tabicl_v1_SuggestResponse_descriptor;
+    internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_asgt_tabicl_v1_SuggestResponse_fieldAccessorTable;
+      internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47,21 +47,22 @@ public final class TabiclServiceProto {
       "\n#asgt/tabicl/v1/tabicl_service.proto\022\016a" +
       "sgt.tabicl.v1\032\024asgt/type/data.proto\032\032asg" +
       "t/type/prediction.proto\032\027validate/valida" +
-      "te.proto\"\302\001\n\016SuggestRequest\022*\n\014dataset_n" +
-      "ame\030\001 \001(\tB\007\372B\004r\002\020\001R\013datasetName\022,\n\rconsu" +
-      "mer_name\030\002 \001(\tB\007\372B\004r\002\020\001R\014consumerName\0221\n" +
-      "\006inputs\030\003 \003(\0132\017.asgt.type.DataB\010\372B\005\222\001\002\010\001" +
-      "R\006inputs\022#\n\rsuggest_limit\030\004 \001(\005R\014suggest" +
-      "Limit\"J\n\017SuggestResponse\0227\n\013predictions\030" +
-      "\001 \003(\0132\025.asgt.type.PredictionR\013prediction" +
-      "s2]\n\rTabiclService\022L\n\007Suggest\022\036.asgt.tab" +
-      "icl.v1.SuggestRequest\032\037.asgt.tabicl.v1.S" +
-      "uggestResponse\"\000B\302\001\n\027ai.visma.asgt.tabic" +
-      "l.v1B\022TabiclServiceProtoP\001Z9github.com/e" +
-      "-conomic/vmlapis/gen/go/asgt/tabicl/v1;t" +
-      "abicl\242\002\003ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabi" +
-      "cl\\V1\342\002\032Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asg" +
-      "t::Tabicl::V1b\006proto3"
+      "te.proto\"\312\001\n\023BatchSuggestRequest\022*\n\014data" +
+      "set_name\030\001 \001(\tB\007\372B\004r\002\020\001R\013datasetName\022,\n\r" +
+      "consumer_name\030\002 \001(\tB\007\372B\004r\002\020\001R\014consumerNa" +
+      "me\0224\n\006inputs\030\003 \003(\0132\017.asgt.type.DataB\013\372B\010" +
+      "\222\001\005\010\001\020\200\002R\006inputs\022#\n\rsuggest_limit\030\004 \001(\005R" +
+      "\014suggestLimit\"O\n\024BatchSuggestResponse\0227\n" +
+      "\013predictions\030\001 \003(\0132\025.asgt.type.Predictio" +
+      "nR\013predictions2l\n\rTabiclService\022[\n\014Batch" +
+      "Suggest\022#.asgt.tabicl.v1.BatchSuggestReq" +
+      "uest\032$.asgt.tabicl.v1.BatchSuggestRespon" +
+      "se\"\000B\302\001\n\027ai.visma.asgt.tabicl.v1B\022Tabicl" +
+      "ServiceProtoP\001Z9github.com/e-conomic/vml" +
+      "apis/gen/go/asgt/tabicl/v1;tabicl\242\002\003ATX\252" +
+      "\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\V1\342\002\032Asgt" +
+      "\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::Tabicl::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -70,17 +71,17 @@ public final class TabiclServiceProto {
           ai.visma.asgt.type.PredictionProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
         });
-    internal_static_asgt_tabicl_v1_SuggestRequest_descriptor =
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_asgt_tabicl_v1_SuggestRequest_fieldAccessorTable = new
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_asgt_tabicl_v1_SuggestRequest_descriptor,
+        internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor,
         new java.lang.String[] { "DatasetName", "ConsumerName", "Inputs", "SuggestLimit", });
-    internal_static_asgt_tabicl_v1_SuggestResponse_descriptor =
+    internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_tabicl_v1_SuggestResponse_fieldAccessorTable = new
+    internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_asgt_tabicl_v1_SuggestResponse_descriptor,
+        internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor,
         new java.lang.String[] { "Predictions", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DataProto.getDescriptor();

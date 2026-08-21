@@ -8,12 +8,12 @@ export class TabiclServiceClient {
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
 
-  suggest(
-    request: asgt_tabicl_v1_tabicl_service_pb.SuggestRequest,
+  batchSuggest(
+    request: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
-               response: asgt_tabicl_v1_tabicl_service_pb.SuggestResponse) => void
-  ): grpcWeb.ClientReadableStream<asgt_tabicl_v1_tabicl_service_pb.SuggestResponse>;
+               response: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
 
 }
 
@@ -22,10 +22,10 @@ export class TabiclServicePromiseClient {
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
 
-  suggest(
-    request: asgt_tabicl_v1_tabicl_service_pb.SuggestRequest,
+  batchSuggest(
+    request: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestRequest,
     metadata?: grpcWeb.Metadata
-  ): Promise<asgt_tabicl_v1_tabicl_service_pb.SuggestResponse>;
+  ): Promise<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
 
 }
 

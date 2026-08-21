@@ -11,17 +11,20 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl";
 // TabiclService performs in-context tabular classification over a dataset's
 // labeled examples.
 service TabiclService {
-  rpc Suggest(SuggestRequest) returns (SuggestResponse) {}
+  rpc BatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {}
 }
 
-message SuggestRequest {
+message BatchSuggestRequest {
   string dataset_name = 1 [(validate.rules).string = {min_len: 1}];
   string consumer_name = 2 [(validate.rules).string = {min_len: 1}];
-  repeated asgt.type.Data inputs = 3 [(validate.rules).repeated = {min_items: 1}];
+  repeated asgt.type.Data inputs = 3 [(validate.rules).repeated = {
+    min_items: 1
+    max_items: 256
+  }];
   int32 suggest_limit = 4;
 }
 
-message SuggestResponse {
+message BatchSuggestResponse {
   // One prediction per input, in request order.
   repeated asgt.type.Prediction predictions = 1;
 }

@@ -85,61 +85,61 @@ proto.asgt.tabicl.v1.TabiclServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.tabicl.v1.SuggestRequest,
- *   !proto.asgt.tabicl.v1.SuggestResponse>}
+ *   !proto.asgt.tabicl.v1.BatchSuggestRequest,
+ *   !proto.asgt.tabicl.v1.BatchSuggestResponse>}
  */
-const methodDescriptor_TabiclService_Suggest = new grpc.web.MethodDescriptor(
-  '/asgt.tabicl.v1.TabiclService/Suggest',
+const methodDescriptor_TabiclService_BatchSuggest = new grpc.web.MethodDescriptor(
+  '/asgt.tabicl.v1.TabiclService/BatchSuggest',
   grpc.web.MethodType.UNARY,
-  proto.asgt.tabicl.v1.SuggestRequest,
-  proto.asgt.tabicl.v1.SuggestResponse,
+  proto.asgt.tabicl.v1.BatchSuggestRequest,
+  proto.asgt.tabicl.v1.BatchSuggestResponse,
   /**
-   * @param {!proto.asgt.tabicl.v1.SuggestRequest} request
+   * @param {!proto.asgt.tabicl.v1.BatchSuggestRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.tabicl.v1.SuggestResponse.deserializeBinary
+  proto.asgt.tabicl.v1.BatchSuggestResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.tabicl.v1.SuggestRequest} request The
+ * @param {!proto.asgt.tabicl.v1.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.asgt.tabicl.v1.SuggestResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.tabicl.v1.BatchSuggestResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.tabicl.v1.SuggestResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.tabicl.v1.BatchSuggestResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.tabicl.v1.TabiclServiceClient.prototype.suggest =
+proto.asgt.tabicl.v1.TabiclServiceClient.prototype.batchSuggest =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.tabicl.v1.TabiclService/Suggest',
+      '/asgt.tabicl.v1.TabiclService/BatchSuggest',
       request,
       metadata || {},
-      methodDescriptor_TabiclService_Suggest,
+      methodDescriptor_TabiclService_BatchSuggest,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.tabicl.v1.SuggestRequest} request The
+ * @param {!proto.asgt.tabicl.v1.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.tabicl.v1.SuggestResponse>}
+ * @return {!Promise<!proto.asgt.tabicl.v1.BatchSuggestResponse>}
  *     Promise that resolves to the response
  */
-proto.asgt.tabicl.v1.TabiclServicePromiseClient.prototype.suggest =
+proto.asgt.tabicl.v1.TabiclServicePromiseClient.prototype.batchSuggest =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.tabicl.v1.TabiclService/Suggest',
+      '/asgt.tabicl.v1.TabiclService/BatchSuggest',
       request,
       metadata || {},
-      methodDescriptor_TabiclService_Suggest);
+      methodDescriptor_TabiclService_BatchSuggest);
 };
 
 

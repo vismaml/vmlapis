@@ -27,7 +27,7 @@ from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#asgt/tabicl/v1/tabicl_service.proto\x12\x0e\x61sgt.tabicl.v1\x1a\x14\x61sgt/type/data.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17validate/validate.proto\"\xc2\x01\n\x0eSuggestRequest\x12*\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0b\x64\x61tasetName\x12,\n\rconsumer_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0c\x63onsumerName\x12\x31\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataB\x08\xfa\x42\x05\x92\x01\x02\x08\x01R\x06inputs\x12#\n\rsuggest_limit\x18\x04 \x01(\x05R\x0csuggestLimit\"J\n\x0fSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions2]\n\rTabiclService\x12L\n\x07Suggest\x12\x1e.asgt.tabicl.v1.SuggestRequest\x1a\x1f.asgt.tabicl.v1.SuggestResponse\"\x00\x42;Z9github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabiclb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#asgt/tabicl/v1/tabicl_service.proto\x12\x0e\x61sgt.tabicl.v1\x1a\x14\x61sgt/type/data.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17validate/validate.proto\"\xca\x01\n\x13\x42\x61tchSuggestRequest\x12*\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0b\x64\x61tasetName\x12,\n\rconsumer_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0c\x63onsumerName\x12\x34\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataB\x0b\xfa\x42\x08\x92\x01\x05\x08\x01\x10\x80\x02R\x06inputs\x12#\n\rsuggest_limit\x18\x04 \x01(\x05R\x0csuggestLimit\"O\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions2l\n\rTabiclService\x12[\n\x0c\x42\x61tchSuggest\x12#.asgt.tabicl.v1.BatchSuggestRequest\x1a$.asgt.tabicl.v1.BatchSuggestResponse\"\x00\x42;Z9github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabiclb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,16 +35,16 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.tabicl.v1.tabicl_servi
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl'
-  _globals['_SUGGESTREQUEST'].fields_by_name['dataset_name']._loaded_options = None
-  _globals['_SUGGESTREQUEST'].fields_by_name['dataset_name']._serialized_options = b'\372B\004r\002\020\001'
-  _globals['_SUGGESTREQUEST'].fields_by_name['consumer_name']._loaded_options = None
-  _globals['_SUGGESTREQUEST'].fields_by_name['consumer_name']._serialized_options = b'\372B\004r\002\020\001'
-  _globals['_SUGGESTREQUEST'].fields_by_name['inputs']._loaded_options = None
-  _globals['_SUGGESTREQUEST'].fields_by_name['inputs']._serialized_options = b'\372B\005\222\001\002\010\001'
-  _globals['_SUGGESTREQUEST']._serialized_start=131
-  _globals['_SUGGESTREQUEST']._serialized_end=325
-  _globals['_SUGGESTRESPONSE']._serialized_start=327
-  _globals['_SUGGESTRESPONSE']._serialized_end=401
-  _globals['_TABICLSERVICE']._serialized_start=403
-  _globals['_TABICLSERVICE']._serialized_end=496
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['dataset_name']._loaded_options = None
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['dataset_name']._serialized_options = b'\372B\004r\002\020\001'
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['consumer_name']._loaded_options = None
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['consumer_name']._serialized_options = b'\372B\004r\002\020\001'
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['inputs']._loaded_options = None
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['inputs']._serialized_options = b'\372B\010\222\001\005\010\001\020\200\002'
+  _globals['_BATCHSUGGESTREQUEST']._serialized_start=131
+  _globals['_BATCHSUGGESTREQUEST']._serialized_end=333
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_start=335
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_end=414
+  _globals['_TABICLSERVICE']._serialized_start=416
+  _globals['_TABICLSERVICE']._serialized_end=524
 # @@protoc_insertion_point(module_scope)

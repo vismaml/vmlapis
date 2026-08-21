@@ -57,10 +57,10 @@ func (m *ProductTypeBatchSuggestRequest) validate(all bool) error {
 
 	var errors []error
 
-	if l := len(m.GetTexts()); l < 1 || l > 128 {
+	if l := len(m.GetTexts()); l < 1 || l > 512 {
 		err := ProductTypeBatchSuggestRequestValidationError{
 			field:  "Texts",
-			reason: "value must contain between 1 and 128 items, inclusive",
+			reason: "value must contain between 1 and 512 items, inclusive",
 		}
 		if !all {
 			return err

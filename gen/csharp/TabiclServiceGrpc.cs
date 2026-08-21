@@ -50,17 +50,17 @@ namespace Asgt.Tabicl.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.SuggestRequest> __Marshaller_asgt_tabicl_v1_SuggestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.SuggestRequest.Parser));
+    static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.BatchSuggestRequest> __Marshaller_asgt_tabicl_v1_BatchSuggestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.BatchSuggestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.SuggestResponse> __Marshaller_asgt_tabicl_v1_SuggestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.SuggestResponse.Parser));
+    static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.BatchSuggestResponse> __Marshaller_asgt_tabicl_v1_BatchSuggestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Asgt.Tabicl.V1.SuggestRequest, global::Asgt.Tabicl.V1.SuggestResponse> __Method_Suggest = new grpc::Method<global::Asgt.Tabicl.V1.SuggestRequest, global::Asgt.Tabicl.V1.SuggestResponse>(
+    static readonly grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse> __Method_BatchSuggest = new grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "Suggest",
-        __Marshaller_asgt_tabicl_v1_SuggestRequest,
-        __Marshaller_asgt_tabicl_v1_SuggestResponse);
+        "BatchSuggest",
+        __Marshaller_asgt_tabicl_v1_BatchSuggestRequest,
+        __Marshaller_asgt_tabicl_v1_BatchSuggestResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -73,7 +73,7 @@ namespace Asgt.Tabicl.V1 {
     public abstract partial class TabiclServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Asgt.Tabicl.V1.SuggestResponse> Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggest(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -108,24 +108,24 @@ namespace Asgt.Tabicl.V1 {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Asgt.Tabicl.V1.SuggestResponse Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Asgt.Tabicl.V1.BatchSuggestResponse BatchSuggest(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return Suggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return BatchSuggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Asgt.Tabicl.V1.SuggestResponse Suggest(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::CallOptions options)
+      public virtual global::Asgt.Tabicl.V1.BatchSuggestResponse BatchSuggest(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_Suggest, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_BatchSuggest, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.SuggestResponse> SuggestAsync(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggestAsync(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return BatchSuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.SuggestResponse> SuggestAsync(global::Asgt.Tabicl.V1.SuggestRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggestAsync(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_Suggest, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_BatchSuggest, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -141,7 +141,7 @@ namespace Asgt.Tabicl.V1 {
     public static grpc::ServerServiceDefinition BindService(TabiclServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Suggest, serviceImpl.Suggest).Build();
+          .AddMethod(__Method_BatchSuggest, serviceImpl.BatchSuggest).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -151,7 +151,7 @@ namespace Asgt.Tabicl.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TabiclServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Suggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Tabicl.V1.SuggestRequest, global::Asgt.Tabicl.V1.SuggestResponse>(serviceImpl.Suggest));
+      serviceBinder.AddMethod(__Method_BatchSuggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(serviceImpl.BatchSuggest));
     }
 
   }
