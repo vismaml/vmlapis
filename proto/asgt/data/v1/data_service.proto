@@ -11,6 +11,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
+import "google/type/date.proto";
 import "ssn/dataservice/v1/dataservice.proto";
 
 option csharp_namespace = "Asgt.Dataservice.V1";
@@ -55,6 +56,9 @@ service DataService {
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
 
   rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
+
+  rpc CalculateMetricsTimeseries(CalculateMetricsTimeseriesRequest)
+      returns (CalculateMetricsTimeseriesResponse);
 }
 
 message CalculateMetricsRequest {
@@ -73,6 +77,21 @@ message CalculateMetricsResponse {
     asgt.type.Confidence confidence_level = 5;
   }
   repeated MetricRow metrics = 1;
+}
+
+message CalculateMetricsTimeseriesRequest {
+  google.protobuf.Timestamp start_time = 1;
+  google.protobuf.Timestamp end_time = 2;
+  repeated string tags = 3;
+  bool legacy = 4;
+}
+
+message CalculateMetricsTimeseriesResponse {
+  message DailyMetrics {
+    google.type.Date date = 1;
+    repeated CalculateMetricsResponse.MetricRow metrics = 2;
+  }
+  repeated DailyMetrics buckets = 1;
 }
 
 message CreateRequest {

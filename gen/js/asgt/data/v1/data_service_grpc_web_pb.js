@@ -38,6 +38,8 @@ var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/time
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 
+var google_type_date_pb = require('../../../google/type/date_pb.js')
+
 var ssn_dataservice_v1_dataservice_pb = require('../../../ssn/dataservice/v1/dataservice_pb.js')
 const proto = {};
 proto.asgt = {};
@@ -581,6 +583,67 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
       request,
       metadata || {},
       methodDescriptor_DataService_CalculateMetrics);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.dataservice.v1.CalculateMetricsTimeseriesRequest,
+ *   !proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse>}
+ */
+const methodDescriptor_DataService_CalculateMetricsTimeseries = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/CalculateMetricsTimeseries',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.dataservice.v1.CalculateMetricsTimeseriesRequest,
+  proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1.CalculateMetricsTimeseriesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsTimeseriesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.calculateMetricsTimeseries =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CalculateMetricsTimeseries',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetricsTimeseries,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsTimeseriesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.dataservice.v1.CalculateMetricsTimeseriesResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.calculateMetricsTimeseries =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CalculateMetricsTimeseries',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetricsTimeseries);
 };
 
 

@@ -9,6 +9,7 @@ import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
+import * as google_type_date_pb from '../../../google/type/date_pb'; // proto import: "google/type/date.proto"
 import * as ssn_dataservice_v1_dataservice_pb from '../../../ssn/dataservice/v1/dataservice_pb'; // proto import: "ssn/dataservice/v1/dataservice.proto"
 
 
@@ -102,6 +103,89 @@ export namespace CalculateMetricsResponse {
       correct: number,
       incorrect: number,
       confidenceLevel?: asgt_type_prediction_pb.Confidence.AsObject,
+    }
+  }
+
+}
+
+export class CalculateMetricsTimeseriesRequest extends jspb.Message {
+  getStartTime(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setStartTime(value?: google_protobuf_timestamp_pb.Timestamp): CalculateMetricsTimeseriesRequest;
+  hasStartTime(): boolean;
+  clearStartTime(): CalculateMetricsTimeseriesRequest;
+
+  getEndTime(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setEndTime(value?: google_protobuf_timestamp_pb.Timestamp): CalculateMetricsTimeseriesRequest;
+  hasEndTime(): boolean;
+  clearEndTime(): CalculateMetricsTimeseriesRequest;
+
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): CalculateMetricsTimeseriesRequest;
+  clearTagsList(): CalculateMetricsTimeseriesRequest;
+  addTags(value: string, index?: number): CalculateMetricsTimeseriesRequest;
+
+  getLegacy(): boolean;
+  setLegacy(value: boolean): CalculateMetricsTimeseriesRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CalculateMetricsTimeseriesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CalculateMetricsTimeseriesRequest): CalculateMetricsTimeseriesRequest.AsObject;
+  static serializeBinaryToWriter(message: CalculateMetricsTimeseriesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CalculateMetricsTimeseriesRequest;
+  static deserializeBinaryFromReader(message: CalculateMetricsTimeseriesRequest, reader: jspb.BinaryReader): CalculateMetricsTimeseriesRequest;
+}
+
+export namespace CalculateMetricsTimeseriesRequest {
+  export type AsObject = {
+    startTime?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    endTime?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    tagsList: Array<string>,
+    legacy: boolean,
+  }
+}
+
+export class CalculateMetricsTimeseriesResponse extends jspb.Message {
+  getBucketsList(): Array<CalculateMetricsTimeseriesResponse.DailyMetrics>;
+  setBucketsList(value: Array<CalculateMetricsTimeseriesResponse.DailyMetrics>): CalculateMetricsTimeseriesResponse;
+  clearBucketsList(): CalculateMetricsTimeseriesResponse;
+  addBuckets(value?: CalculateMetricsTimeseriesResponse.DailyMetrics, index?: number): CalculateMetricsTimeseriesResponse.DailyMetrics;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CalculateMetricsTimeseriesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CalculateMetricsTimeseriesResponse): CalculateMetricsTimeseriesResponse.AsObject;
+  static serializeBinaryToWriter(message: CalculateMetricsTimeseriesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CalculateMetricsTimeseriesResponse;
+  static deserializeBinaryFromReader(message: CalculateMetricsTimeseriesResponse, reader: jspb.BinaryReader): CalculateMetricsTimeseriesResponse;
+}
+
+export namespace CalculateMetricsTimeseriesResponse {
+  export type AsObject = {
+    bucketsList: Array<CalculateMetricsTimeseriesResponse.DailyMetrics.AsObject>,
+  }
+
+  export class DailyMetrics extends jspb.Message {
+    getDate(): google_type_date_pb.Date | undefined;
+    setDate(value?: google_type_date_pb.Date): DailyMetrics;
+    hasDate(): boolean;
+    clearDate(): DailyMetrics;
+
+    getMetricsList(): Array<CalculateMetricsResponse.MetricRow>;
+    setMetricsList(value: Array<CalculateMetricsResponse.MetricRow>): DailyMetrics;
+    clearMetricsList(): DailyMetrics;
+    addMetrics(value?: CalculateMetricsResponse.MetricRow, index?: number): CalculateMetricsResponse.MetricRow;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): DailyMetrics.AsObject;
+    static toObject(includeInstance: boolean, msg: DailyMetrics): DailyMetrics.AsObject;
+    static serializeBinaryToWriter(message: DailyMetrics, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): DailyMetrics;
+    static deserializeBinaryFromReader(message: DailyMetrics, reader: jspb.BinaryReader): DailyMetrics;
+  }
+
+  export namespace DailyMetrics {
+    export type AsObject = {
+      date?: google_type_date_pb.Date.AsObject,
+      metricsList: Array<CalculateMetricsResponse.MetricRow.AsObject>,
     }
   }
 

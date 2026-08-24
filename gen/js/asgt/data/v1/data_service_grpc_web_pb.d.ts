@@ -66,6 +66,13 @@ export class DataServiceClient {
                response: asgt_data_v1_data_service_pb.CalculateMetricsResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_data_v1_data_service_pb.CalculateMetricsResponse>;
 
+  calculateMetricsTimeseries(
+    request: asgt_data_v1_data_service_pb.CalculateMetricsTimeseriesRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: asgt_data_v1_data_service_pb.CalculateMetricsTimeseriesResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_data_v1_data_service_pb.CalculateMetricsTimeseriesResponse>;
+
 }
 
 export class DataServicePromiseClient {
@@ -112,6 +119,11 @@ export class DataServicePromiseClient {
     request: asgt_data_v1_data_service_pb.CalculateMetricsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_data_v1_data_service_pb.CalculateMetricsResponse>;
+
+  calculateMetricsTimeseries(
+    request: asgt_data_v1_data_service_pb.CalculateMetricsTimeseriesRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<asgt_data_v1_data_service_pb.CalculateMetricsTimeseriesResponse>;
 
 }
 

@@ -21,14 +21,15 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DataService_CreateDataset_FullMethodName       = "/asgt.dataservice.v1.DataService/CreateDataset"
-	DataService_AppendData_FullMethodName          = "/asgt.dataservice.v1.DataService/AppendData"
-	DataService_DeleteData_FullMethodName          = "/asgt.dataservice.v1.DataService/DeleteData"
-	DataService_GetInfo_FullMethodName             = "/asgt.dataservice.v1.DataService/GetInfo"
-	DataService_UpdateDataset_FullMethodName       = "/asgt.dataservice.v1.DataService/UpdateDataset"
-	DataService_RegisterQueryStats_FullMethodName  = "/asgt.dataservice.v1.DataService/RegisterQueryStats"
-	DataService_CallsPerMonthMetric_FullMethodName = "/asgt.dataservice.v1.DataService/CallsPerMonthMetric"
-	DataService_CalculateMetrics_FullMethodName    = "/asgt.dataservice.v1.DataService/CalculateMetrics"
+	DataService_CreateDataset_FullMethodName              = "/asgt.dataservice.v1.DataService/CreateDataset"
+	DataService_AppendData_FullMethodName                 = "/asgt.dataservice.v1.DataService/AppendData"
+	DataService_DeleteData_FullMethodName                 = "/asgt.dataservice.v1.DataService/DeleteData"
+	DataService_GetInfo_FullMethodName                    = "/asgt.dataservice.v1.DataService/GetInfo"
+	DataService_UpdateDataset_FullMethodName              = "/asgt.dataservice.v1.DataService/UpdateDataset"
+	DataService_RegisterQueryStats_FullMethodName         = "/asgt.dataservice.v1.DataService/RegisterQueryStats"
+	DataService_CallsPerMonthMetric_FullMethodName        = "/asgt.dataservice.v1.DataService/CallsPerMonthMetric"
+	DataService_CalculateMetrics_FullMethodName           = "/asgt.dataservice.v1.DataService/CalculateMetrics"
+	DataService_CalculateMetricsTimeseries_FullMethodName = "/asgt.dataservice.v1.DataService/CalculateMetricsTimeseries"
 )
 
 // DataServiceClient is the client API for DataService service.
@@ -43,6 +44,7 @@ type DataServiceClient interface {
 	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
+	CalculateMetricsTimeseries(ctx context.Context, in *CalculateMetricsTimeseriesRequest, opts ...grpc.CallOption) (*CalculateMetricsTimeseriesResponse, error)
 }
 
 type dataServiceClient struct {
@@ -125,6 +127,15 @@ func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *CalculateM
 	return out, nil
 }
 
+func (c *dataServiceClient) CalculateMetricsTimeseries(ctx context.Context, in *CalculateMetricsTimeseriesRequest, opts ...grpc.CallOption) (*CalculateMetricsTimeseriesResponse, error) {
+	out := new(CalculateMetricsTimeseriesResponse)
+	err := c.cc.Invoke(ctx, DataService_CalculateMetricsTimeseries_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DataServiceServer is the server API for DataService service.
 // All implementations should embed UnimplementedDataServiceServer
 // for forward compatibility
@@ -137,6 +148,7 @@ type DataServiceServer interface {
 	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error)
+	CalculateMetricsTimeseries(context.Context, *CalculateMetricsTimeseriesRequest) (*CalculateMetricsTimeseriesResponse, error)
 }
 
 // UnimplementedDataServiceServer should be embedded to have forward compatible implementations.
@@ -166,6 +178,9 @@ func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empt
 }
 func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
+}
+func (UnimplementedDataServiceServer) CalculateMetricsTimeseries(context.Context, *CalculateMetricsTimeseriesRequest) (*CalculateMetricsTimeseriesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetricsTimeseries not implemented")
 }
 
 // UnsafeDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -323,6 +338,24 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DataService_CalculateMetricsTimeseries_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CalculateMetricsTimeseriesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).CalculateMetricsTimeseries(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DataService_CalculateMetricsTimeseries_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).CalculateMetricsTimeseries(ctx, req.(*CalculateMetricsTimeseriesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DataService_ServiceDesc is the grpc.ServiceDesc for DataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -361,6 +394,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CalculateMetrics",
 			Handler:    _DataService_CalculateMetrics_Handler,
+		},
+		{
+			MethodName: "CalculateMetricsTimeseries",
+			Handler:    _DataService_CalculateMetricsTimeseries_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
