@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+package ava.procedure.v1;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1";
+
+message Procedure {
+  reserved 3;
+  reserved "selector";
+
+  InputContract inputs = 1;
+  OutputContract outputs = 2;
+  string root_step_id = 4;
+  repeated Step steps = 5;
+}
+
+message InputContract {
+  repeated FactBinding facts = 1;
+}
+
+message FactBinding {
+  reserved 4;
+  reserved "on_disagreement";
+
+  string fact_name = 1;
+  FactType type = 2;
+  repeated FactSource sources = 3;
+  repeated string values = 5;
+}
+
+message FactSource {
+  reserved 1;
+  reserved "from";
+
+  string field = 2;
+  repeated string args = 3;
+  SourceKind kind = 4;
+  string name = 5;
+  string group = 6;
+}
+
+enum SourceKind {
+  SOURCE_KIND_UNSPECIFIED = 0;
+  SOURCE_KIND_CASE = 1;
+  SOURCE_KIND_DERIVED = 2;
+  SOURCE_KIND_LOOKUP = 3;
+  SOURCE_KIND_INFERRED = 4;
+}
+
+enum FactType {
+  reserved 2;
+  reserved "FACT_TYPE_MONEY";
+
+  FACT_TYPE_UNSPECIFIED = 0;
+  FACT_TYPE_STRING = 1;
+  FACT_TYPE_DATE = 3;
+  FACT_TYPE_BOOL = 4;
+  FACT_TYPE_INT = 5;
+  FACT_TYPE_FLOAT = 6;
+  FACT_TYPE_ENUM = 7;
+}
+
+message OutputContract {
+  repeated string produces = 1;
+}
+
+message Step {
+  string step_id = 1;
+  StepKind kind = 2;
+  string question = 3;
+  string guidance = 4;
+  Judgment judgment = 5;
+  repeated Branch branches = 6;
+  Origin origin = 7;
+}
+
+enum StepKind {
+  STEP_KIND_UNSPECIFIED = 0;
+  STEP_KIND_TEST = 1;
+  STEP_KIND_JUDGMENT = 2;
+}
+
+message Judgment {
+  string prompt_ref = 1;
+  bool requires_span = 2;
+  repeated string reads = 3;
+}
+
+message Branch {
+  string branch_id = 1;
+  string label = 2;
+  string criterion = 3;
+  string when = 4;
+  map<string, string> sets = 5;
+  string next_step_id = 6;
+  bool is_escalation = 7;
+  string rationale = 8;
+}
+
+enum Origin {
+  ORIGIN_UNSPECIFIED = 0;
+  ORIGIN_MINED = 1;
+  ORIGIN_HUMAN = 2;
+}
