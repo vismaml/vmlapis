@@ -57,13 +57,27 @@ public interface FactBindingOrBuilder extends
       int index);
 
   /**
-   * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-   * @return The enum numeric value on the wire for onDisagreement.
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @return A list containing the values.
    */
-  int getOnDisagreementValue();
+  java.util.List<java.lang.String>
+      getValuesList();
   /**
-   * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-   * @return The onDisagreement.
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @return The count of values.
    */
-  ai.visma.ava.procedure.v1.Disagreement getOnDisagreement();
+  int getValuesCount();
+  /**
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @param index The index of the element to return.
+   * @return The values at the given index.
+   */
+  java.lang.String getValues(int index);
+  /**
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the values at the given index.
+   */
+  com.google.protobuf.ByteString
+      getValuesBytes(int index);
 }

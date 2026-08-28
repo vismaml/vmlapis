@@ -28,6 +28,8 @@ private static final long serialVersionUID = 0L;
   }
   private Judgment() {
     promptRef_ = "";
+    reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -93,6 +95,43 @@ private static final long serialVersionUID = 0L;
     return requiresSpan_;
   }
 
+  public static final int READS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList reads_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @return A list containing the reads.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getReadsList() {
+    return reads_;
+  }
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @return The count of reads.
+   */
+  public int getReadsCount() {
+    return reads_.size();
+  }
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @param index The index of the element to return.
+   * @return The reads at the given index.
+   */
+  public java.lang.String getReads(int index) {
+    return reads_.get(index);
+  }
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the reads at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getReadsBytes(int index) {
+    return reads_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +152,9 @@ private static final long serialVersionUID = 0L;
     if (requiresSpan_ != false) {
       output.writeBool(2, requiresSpan_);
     }
+    for (int i = 0; i < reads_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, reads_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -128,6 +170,14 @@ private static final long serialVersionUID = 0L;
     if (requiresSpan_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, requiresSpan_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < reads_.size(); i++) {
+        dataSize += computeStringSizeNoTag(reads_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getReadsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -148,6 +198,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPromptRef())) return false;
     if (getRequiresSpan()
         != other.getRequiresSpan()) return false;
+    if (!getReadsList()
+        .equals(other.getReadsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -164,6 +216,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + REQUIRES_SPAN_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getRequiresSpan());
+    if (getReadsCount() > 0) {
+      hash = (37 * hash) + READS_FIELD_NUMBER;
+      hash = (53 * hash) + getReadsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -297,6 +353,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       promptRef_ = "";
       requiresSpan_ = false;
+      reads_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -336,6 +394,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.requiresSpan_ = requiresSpan_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        reads_.makeImmutable();
+        result.reads_ = reads_;
+      }
     }
 
     @java.lang.Override
@@ -357,6 +419,16 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getRequiresSpan() != false) {
         setRequiresSpan(other.getRequiresSpan());
+      }
+      if (!other.reads_.isEmpty()) {
+        if (reads_.isEmpty()) {
+          reads_ = other.reads_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureReadsIsMutable();
+          reads_.addAll(other.reads_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -394,6 +466,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureReadsIsMutable();
+              reads_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -511,6 +589,117 @@ private static final long serialVersionUID = 0L;
     public Builder clearRequiresSpan() {
       bitField0_ = (bitField0_ & ~0x00000002);
       requiresSpan_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureReadsIsMutable() {
+      if (!reads_.isModifiable()) {
+        reads_ = new com.google.protobuf.LazyStringArrayList(reads_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @return A list containing the reads.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getReadsList() {
+      reads_.makeImmutable();
+      return reads_;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @return The count of reads.
+     */
+    public int getReadsCount() {
+      return reads_.size();
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param index The index of the element to return.
+     * @return The reads at the given index.
+     */
+    public java.lang.String getReads(int index) {
+      return reads_.get(index);
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the reads at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getReadsBytes(int index) {
+      return reads_.getByteString(index);
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param index The index to set the value at.
+     * @param value The reads to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReads(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReadsIsMutable();
+      reads_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param value The reads to add.
+     * @return This builder for chaining.
+     */
+    public Builder addReads(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReadsIsMutable();
+      reads_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param values The reads to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllReads(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureReadsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, reads_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReads() {
+      reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 3 [json_name = "reads"];</code>
+     * @param value The bytes of the reads to add.
+     * @return This builder for chaining.
+     */
+    public Builder addReadsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureReadsIsMutable();
+      reads_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

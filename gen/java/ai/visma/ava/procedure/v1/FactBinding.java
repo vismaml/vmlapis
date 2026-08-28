@@ -30,7 +30,8 @@ private static final long serialVersionUID = 0L;
     factName_ = "";
     type_ = 0;
     sources_ = java.util.Collections.emptyList();
-    onDisagreement_ = 0;
+    values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -144,22 +145,41 @@ private static final long serialVersionUID = 0L;
     return sources_.get(index);
   }
 
-  public static final int ON_DISAGREEMENT_FIELD_NUMBER = 4;
-  private int onDisagreement_ = 0;
+  public static final int VALUES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList values_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-   * @return The enum numeric value on the wire for onDisagreement.
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @return A list containing the values.
    */
-  @java.lang.Override public int getOnDisagreementValue() {
-    return onDisagreement_;
+  public com.google.protobuf.ProtocolStringList
+      getValuesList() {
+    return values_;
   }
   /**
-   * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-   * @return The onDisagreement.
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @return The count of values.
    */
-  @java.lang.Override public ai.visma.ava.procedure.v1.Disagreement getOnDisagreement() {
-    ai.visma.ava.procedure.v1.Disagreement result = ai.visma.ava.procedure.v1.Disagreement.forNumber(onDisagreement_);
-    return result == null ? ai.visma.ava.procedure.v1.Disagreement.UNRECOGNIZED : result;
+  public int getValuesCount() {
+    return values_.size();
+  }
+  /**
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @param index The index of the element to return.
+   * @return The values at the given index.
+   */
+  public java.lang.String getValues(int index) {
+    return values_.get(index);
+  }
+  /**
+   * <code>repeated string values = 5 [json_name = "values"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the values at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getValuesBytes(int index) {
+    return values_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -185,8 +205,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sources_.size(); i++) {
       output.writeMessage(3, sources_.get(i));
     }
-    if (onDisagreement_ != ai.visma.ava.procedure.v1.Disagreement.DISAGREEMENT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, onDisagreement_);
+    for (int i = 0; i < values_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, values_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -208,9 +228,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, sources_.get(i));
     }
-    if (onDisagreement_ != ai.visma.ava.procedure.v1.Disagreement.DISAGREEMENT_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, onDisagreement_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < values_.size(); i++) {
+        dataSize += computeStringSizeNoTag(values_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getValuesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -232,7 +256,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (!getSourcesList()
         .equals(other.getSourcesList())) return false;
-    if (onDisagreement_ != other.onDisagreement_) return false;
+    if (!getValuesList()
+        .equals(other.getValuesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -252,8 +277,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getSourcesList().hashCode();
     }
-    hash = (37 * hash) + ON_DISAGREEMENT_FIELD_NUMBER;
-    hash = (53 * hash) + onDisagreement_;
+    if (getValuesCount() > 0) {
+      hash = (37 * hash) + VALUES_FIELD_NUMBER;
+      hash = (53 * hash) + getValuesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -394,7 +421,8 @@ private static final long serialVersionUID = 0L;
         sourcesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      onDisagreement_ = 0;
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -448,7 +476,8 @@ private static final long serialVersionUID = 0L;
         result.type_ = type_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.onDisagreement_ = onDisagreement_;
+        values_.makeImmutable();
+        result.values_ = values_;
       }
     }
 
@@ -498,8 +527,15 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.onDisagreement_ != 0) {
-        setOnDisagreementValue(other.getOnDisagreementValue());
+      if (!other.values_.isEmpty()) {
+        if (values_.isEmpty()) {
+          values_ = other.values_;
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureValuesIsMutable();
+          values_.addAll(other.values_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -550,11 +586,12 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
-            case 32: {
-              onDisagreement_ = input.readEnum();
-              bitField0_ |= 0x00000008;
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureValuesIsMutable();
+              values_.add(s);
               break;
-            } // case 32
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -937,55 +974,113 @@ private static final long serialVersionUID = 0L;
       return sourcesBuilder_;
     }
 
-    private int onDisagreement_ = 0;
-    /**
-     * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-     * @return The enum numeric value on the wire for onDisagreement.
-     */
-    @java.lang.Override public int getOnDisagreementValue() {
-      return onDisagreement_;
-    }
-    /**
-     * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-     * @param value The enum numeric value on the wire for onDisagreement to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOnDisagreementValue(int value) {
-      onDisagreement_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-     * @return The onDisagreement.
-     */
-    @java.lang.Override
-    public ai.visma.ava.procedure.v1.Disagreement getOnDisagreement() {
-      ai.visma.ava.procedure.v1.Disagreement result = ai.visma.ava.procedure.v1.Disagreement.forNumber(onDisagreement_);
-      return result == null ? ai.visma.ava.procedure.v1.Disagreement.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
-     * @param value The onDisagreement to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOnDisagreement(ai.visma.ava.procedure.v1.Disagreement value) {
-      if (value == null) {
-        throw new NullPointerException();
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureValuesIsMutable() {
+      if (!values_.isModifiable()) {
+        values_ = new com.google.protobuf.LazyStringArrayList(values_);
       }
       bitField0_ |= 0x00000008;
-      onDisagreement_ = value.getNumber();
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValuesList() {
+      values_.makeImmutable();
+      return values_;
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public java.lang.String getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the values at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValuesBytes(int index) {
+      return values_.getByteString(index);
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param index The index to set the value at.
+     * @param value The values to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValues(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureValuesIsMutable();
+      values_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param value The values to add.
      * @return This builder for chaining.
      */
-    public Builder clearOnDisagreement() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onDisagreement_ = 0;
+    public Builder addValues(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureValuesIsMutable();
+      values_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param values The values to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllValues(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureValuesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, values_);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValues() {
+      values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string values = 5 [json_name = "values"];</code>
+     * @param value The bytes of the values to add.
+     * @return This builder for chaining.
+     */
+    public Builder addValuesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureValuesIsMutable();
+      values_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -6,22 +6,30 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * Protobuf enum {@code ava.procedure.v1.Disagreement}
+ * Protobuf enum {@code ava.procedure.v1.SourceKind}
  */
-public enum Disagreement
+public enum SourceKind
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>DISAGREEMENT_UNSPECIFIED = 0;</code>
+   * <code>SOURCE_KIND_UNSPECIFIED = 0;</code>
    */
-  DISAGREEMENT_UNSPECIFIED(0),
+  SOURCE_KIND_UNSPECIFIED(0),
   /**
-   * <code>DISAGREEMENT_UNKNOWN = 1;</code>
+   * <code>SOURCE_KIND_CASE = 1;</code>
    */
-  DISAGREEMENT_UNKNOWN(1),
+  SOURCE_KIND_CASE(1),
   /**
-   * <code>DISAGREEMENT_FIRST_WINS = 2;</code>
+   * <code>SOURCE_KIND_DERIVED = 2;</code>
    */
-  DISAGREEMENT_FIRST_WINS(2),
+  SOURCE_KIND_DERIVED(2),
+  /**
+   * <code>SOURCE_KIND_LOOKUP = 3;</code>
+   */
+  SOURCE_KIND_LOOKUP(3),
+  /**
+   * <code>SOURCE_KIND_INFERRED = 4;</code>
+   */
+  SOURCE_KIND_INFERRED(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -32,20 +40,28 @@ public enum Disagreement
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      Disagreement.class.getName());
+      SourceKind.class.getName());
   }
   /**
-   * <code>DISAGREEMENT_UNSPECIFIED = 0;</code>
+   * <code>SOURCE_KIND_UNSPECIFIED = 0;</code>
    */
-  public static final int DISAGREEMENT_UNSPECIFIED_VALUE = 0;
+  public static final int SOURCE_KIND_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>DISAGREEMENT_UNKNOWN = 1;</code>
+   * <code>SOURCE_KIND_CASE = 1;</code>
    */
-  public static final int DISAGREEMENT_UNKNOWN_VALUE = 1;
+  public static final int SOURCE_KIND_CASE_VALUE = 1;
   /**
-   * <code>DISAGREEMENT_FIRST_WINS = 2;</code>
+   * <code>SOURCE_KIND_DERIVED = 2;</code>
    */
-  public static final int DISAGREEMENT_FIRST_WINS_VALUE = 2;
+  public static final int SOURCE_KIND_DERIVED_VALUE = 2;
+  /**
+   * <code>SOURCE_KIND_LOOKUP = 3;</code>
+   */
+  public static final int SOURCE_KIND_LOOKUP_VALUE = 3;
+  /**
+   * <code>SOURCE_KIND_INFERRED = 4;</code>
+   */
+  public static final int SOURCE_KIND_INFERRED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -62,7 +78,7 @@ public enum Disagreement
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static Disagreement valueOf(int value) {
+  public static SourceKind valueOf(int value) {
     return forNumber(value);
   }
 
@@ -70,24 +86,26 @@ public enum Disagreement
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static Disagreement forNumber(int value) {
+  public static SourceKind forNumber(int value) {
     switch (value) {
-      case 0: return DISAGREEMENT_UNSPECIFIED;
-      case 1: return DISAGREEMENT_UNKNOWN;
-      case 2: return DISAGREEMENT_FIRST_WINS;
+      case 0: return SOURCE_KIND_UNSPECIFIED;
+      case 1: return SOURCE_KIND_CASE;
+      case 2: return SOURCE_KIND_DERIVED;
+      case 3: return SOURCE_KIND_LOOKUP;
+      case 4: return SOURCE_KIND_INFERRED;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<Disagreement>
+  public static com.google.protobuf.Internal.EnumLiteMap<SourceKind>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      Disagreement> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Disagreement>() {
-          public Disagreement findValueByNumber(int number) {
-            return Disagreement.forNumber(number);
+      SourceKind> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<SourceKind>() {
+          public SourceKind findValueByNumber(int number) {
+            return SourceKind.forNumber(number);
           }
         };
 
@@ -108,9 +126,9 @@ public enum Disagreement
     return ai.visma.ava.procedure.v1.ProcedureProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final Disagreement[] VALUES = values();
+  private static final SourceKind[] VALUES = values();
 
-  public static Disagreement valueOf(
+  public static SourceKind valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -124,10 +142,10 @@ public enum Disagreement
 
   private final int value;
 
-  private Disagreement(int value) {
+  private SourceKind(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:ava.procedure.v1.Disagreement)
+  // @@protoc_insertion_point(enum_scope:ava.procedure.v1.SourceKind)
 }
 

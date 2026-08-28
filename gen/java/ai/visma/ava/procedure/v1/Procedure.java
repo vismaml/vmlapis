@@ -97,32 +97,6 @@ private static final long serialVersionUID = 0L;
     return outputs_ == null ? ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
   }
 
-  public static final int SELECTOR_FIELD_NUMBER = 3;
-  private ai.visma.ava.procedure.v1.Selector selector_;
-  /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   * @return Whether the selector field is set.
-   */
-  @java.lang.Override
-  public boolean hasSelector() {
-    return ((bitField0_ & 0x00000004) != 0);
-  }
-  /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   * @return The selector.
-   */
-  @java.lang.Override
-  public ai.visma.ava.procedure.v1.Selector getSelector() {
-    return selector_ == null ? ai.visma.ava.procedure.v1.Selector.getDefaultInstance() : selector_;
-  }
-  /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ava.procedure.v1.SelectorOrBuilder getSelectorOrBuilder() {
-    return selector_ == null ? ai.visma.ava.procedure.v1.Selector.getDefaultInstance() : selector_;
-  }
-
   public static final int ROOT_STEP_ID_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object rootStepId_ = "";
@@ -223,9 +197,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getOutputs());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeMessage(3, getSelector());
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, rootStepId_);
     }
@@ -248,10 +219,6 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getOutputs());
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getSelector());
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, rootStepId_);
@@ -285,11 +252,6 @@ private static final long serialVersionUID = 0L;
       if (!getOutputs()
           .equals(other.getOutputs())) return false;
     }
-    if (hasSelector() != other.hasSelector()) return false;
-    if (hasSelector()) {
-      if (!getSelector()
-          .equals(other.getSelector())) return false;
-    }
     if (!getRootStepId()
         .equals(other.getRootStepId())) return false;
     if (!getStepsList()
@@ -312,10 +274,6 @@ private static final long serialVersionUID = 0L;
     if (hasOutputs()) {
       hash = (37 * hash) + OUTPUTS_FIELD_NUMBER;
       hash = (53 * hash) + getOutputs().hashCode();
-    }
-    if (hasSelector()) {
-      hash = (37 * hash) + SELECTOR_FIELD_NUMBER;
-      hash = (53 * hash) + getSelector().hashCode();
     }
     hash = (37 * hash) + ROOT_STEP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRootStepId().hashCode();
@@ -455,7 +413,6 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getInputsFieldBuilder();
         getOutputsFieldBuilder();
-        getSelectorFieldBuilder();
         getStepsFieldBuilder();
       }
     }
@@ -473,11 +430,6 @@ private static final long serialVersionUID = 0L;
         outputsBuilder_.dispose();
         outputsBuilder_ = null;
       }
-      selector_ = null;
-      if (selectorBuilder_ != null) {
-        selectorBuilder_.dispose();
-        selectorBuilder_ = null;
-      }
       rootStepId_ = "";
       if (stepsBuilder_ == null) {
         steps_ = java.util.Collections.emptyList();
@@ -485,7 +437,7 @@ private static final long serialVersionUID = 0L;
         steps_ = null;
         stepsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -520,9 +472,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(ai.visma.ava.procedure.v1.Procedure result) {
       if (stepsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           steps_ = java.util.Collections.unmodifiableList(steps_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.steps_ = steps_;
       } else {
@@ -546,12 +498,6 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.selector_ = selectorBuilder_ == null
-            ? selector_
-            : selectorBuilder_.build();
-        to_bitField0_ |= 0x00000004;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.rootStepId_ = rootStepId_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -575,19 +521,16 @@ private static final long serialVersionUID = 0L;
       if (other.hasOutputs()) {
         mergeOutputs(other.getOutputs());
       }
-      if (other.hasSelector()) {
-        mergeSelector(other.getSelector());
-      }
       if (!other.getRootStepId().isEmpty()) {
         rootStepId_ = other.rootStepId_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (stepsBuilder_ == null) {
         if (!other.steps_.isEmpty()) {
           if (steps_.isEmpty()) {
             steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStepsIsMutable();
             steps_.addAll(other.steps_);
@@ -600,7 +543,7 @@ private static final long serialVersionUID = 0L;
             stepsBuilder_.dispose();
             stepsBuilder_ = null;
             steps_ = other.steps_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
             stepsBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getStepsFieldBuilder() : null;
@@ -649,16 +592,9 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              input.readMessage(
-                  getSelectorFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             case 34: {
               rootStepId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             case 42: {
@@ -933,127 +869,6 @@ private static final long serialVersionUID = 0L;
       return outputsBuilder_;
     }
 
-    private ai.visma.ava.procedure.v1.Selector selector_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.Selector, ai.visma.ava.procedure.v1.Selector.Builder, ai.visma.ava.procedure.v1.SelectorOrBuilder> selectorBuilder_;
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     * @return Whether the selector field is set.
-     */
-    public boolean hasSelector() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     * @return The selector.
-     */
-    public ai.visma.ava.procedure.v1.Selector getSelector() {
-      if (selectorBuilder_ == null) {
-        return selector_ == null ? ai.visma.ava.procedure.v1.Selector.getDefaultInstance() : selector_;
-      } else {
-        return selectorBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public Builder setSelector(ai.visma.ava.procedure.v1.Selector value) {
-      if (selectorBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        selector_ = value;
-      } else {
-        selectorBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public Builder setSelector(
-        ai.visma.ava.procedure.v1.Selector.Builder builderForValue) {
-      if (selectorBuilder_ == null) {
-        selector_ = builderForValue.build();
-      } else {
-        selectorBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public Builder mergeSelector(ai.visma.ava.procedure.v1.Selector value) {
-      if (selectorBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          selector_ != null &&
-          selector_ != ai.visma.ava.procedure.v1.Selector.getDefaultInstance()) {
-          getSelectorBuilder().mergeFrom(value);
-        } else {
-          selector_ = value;
-        }
-      } else {
-        selectorBuilder_.mergeFrom(value);
-      }
-      if (selector_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public Builder clearSelector() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      selector_ = null;
-      if (selectorBuilder_ != null) {
-        selectorBuilder_.dispose();
-        selectorBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public ai.visma.ava.procedure.v1.Selector.Builder getSelectorBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getSelectorFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    public ai.visma.ava.procedure.v1.SelectorOrBuilder getSelectorOrBuilder() {
-      if (selectorBuilder_ != null) {
-        return selectorBuilder_.getMessageOrBuilder();
-      } else {
-        return selector_ == null ?
-            ai.visma.ava.procedure.v1.Selector.getDefaultInstance() : selector_;
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.Selector, ai.visma.ava.procedure.v1.Selector.Builder, ai.visma.ava.procedure.v1.SelectorOrBuilder> 
-        getSelectorFieldBuilder() {
-      if (selectorBuilder_ == null) {
-        selectorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ava.procedure.v1.Selector, ai.visma.ava.procedure.v1.Selector.Builder, ai.visma.ava.procedure.v1.SelectorOrBuilder>(
-                getSelector(),
-                getParentForChildren(),
-                isClean());
-        selector_ = null;
-      }
-      return selectorBuilder_;
-    }
-
     private java.lang.Object rootStepId_ = "";
     /**
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
@@ -1097,7 +912,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       rootStepId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1107,7 +922,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearRootStepId() {
       rootStepId_ = getDefaultInstance().getRootStepId();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1121,7 +936,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       rootStepId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1129,9 +944,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<ai.visma.ava.procedure.v1.Step> steps_ =
       java.util.Collections.emptyList();
     private void ensureStepsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         steps_ = new java.util.ArrayList<ai.visma.ava.procedure.v1.Step>(steps_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1281,7 +1096,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSteps() {
       if (stepsBuilder_ == null) {
         steps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         stepsBuilder_.clear();
@@ -1358,7 +1173,7 @@ private static final long serialVersionUID = 0L;
         stepsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ava.procedure.v1.Step, ai.visma.ava.procedure.v1.Step.Builder, ai.visma.ava.procedure.v1.StepOrBuilder>(
                 steps_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         steps_ = null;

@@ -13,11 +13,6 @@ export class Procedure extends jspb.Message {
   hasOutputs(): boolean;
   clearOutputs(): Procedure;
 
-  getSelector(): Selector | undefined;
-  setSelector(value?: Selector): Procedure;
-  hasSelector(): boolean;
-  clearSelector(): Procedure;
-
   getRootStepId(): string;
   setRootStepId(value: string): Procedure;
 
@@ -38,7 +33,6 @@ export namespace Procedure {
   export type AsObject = {
     inputs?: InputContract.AsObject,
     outputs?: OutputContract.AsObject,
-    selector?: Selector.AsObject,
     rootStepId: string,
     stepsList: Array<Step.AsObject>,
   }
@@ -76,8 +70,10 @@ export class FactBinding extends jspb.Message {
   clearSourcesList(): FactBinding;
   addSources(value?: FactSource, index?: number): FactSource;
 
-  getOnDisagreement(): Disagreement;
-  setOnDisagreement(value: Disagreement): FactBinding;
+  getValuesList(): Array<string>;
+  setValuesList(value: Array<string>): FactBinding;
+  clearValuesList(): FactBinding;
+  addValues(value: string, index?: number): FactBinding;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FactBinding.AsObject;
@@ -92,14 +88,11 @@ export namespace FactBinding {
     factName: string,
     type: FactType,
     sourcesList: Array<FactSource.AsObject>,
-    onDisagreement: Disagreement,
+    valuesList: Array<string>,
   }
 }
 
 export class FactSource extends jspb.Message {
-  getFrom(): string;
-  setFrom(value: string): FactSource;
-
   getField(): string;
   setField(value: string): FactSource;
 
@@ -107,6 +100,15 @@ export class FactSource extends jspb.Message {
   setArgsList(value: Array<string>): FactSource;
   clearArgsList(): FactSource;
   addArgs(value: string, index?: number): FactSource;
+
+  getKind(): SourceKind;
+  setKind(value: SourceKind): FactSource;
+
+  getName(): string;
+  setName(value: string): FactSource;
+
+  getGroup(): string;
+  setGroup(value: string): FactSource;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FactSource.AsObject;
@@ -118,9 +120,11 @@ export class FactSource extends jspb.Message {
 
 export namespace FactSource {
   export type AsObject = {
-    from: string,
     field: string,
     argsList: Array<string>,
+    kind: SourceKind,
+    name: string,
+    group: string,
   }
 }
 
@@ -141,28 +145,6 @@ export class OutputContract extends jspb.Message {
 export namespace OutputContract {
   export type AsObject = {
     producesList: Array<string>,
-  }
-}
-
-export class Selector extends jspb.Message {
-  getCel(): string;
-  setCel(value: string): Selector;
-
-  getPriority(): number;
-  setPriority(value: number): Selector;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Selector.AsObject;
-  static toObject(includeInstance: boolean, msg: Selector): Selector.AsObject;
-  static serializeBinaryToWriter(message: Selector, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Selector;
-  static deserializeBinaryFromReader(message: Selector, reader: jspb.BinaryReader): Selector;
-}
-
-export namespace Selector {
-  export type AsObject = {
-    cel: string,
-    priority: number,
   }
 }
 
@@ -219,6 +201,11 @@ export class Judgment extends jspb.Message {
   getRequiresSpan(): boolean;
   setRequiresSpan(value: boolean): Judgment;
 
+  getReadsList(): Array<string>;
+  setReadsList(value: Array<string>): Judgment;
+  clearReadsList(): Judgment;
+  addReads(value: string, index?: number): Judgment;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Judgment.AsObject;
   static toObject(includeInstance: boolean, msg: Judgment): Judgment.AsObject;
@@ -231,6 +218,7 @@ export namespace Judgment {
   export type AsObject = {
     promptRef: string,
     requiresSpan: boolean,
+    readsList: Array<string>,
   }
 }
 
@@ -280,18 +268,21 @@ export namespace Branch {
   }
 }
 
-export enum Disagreement { 
-  DISAGREEMENT_UNSPECIFIED = 0,
-  DISAGREEMENT_UNKNOWN = 1,
-  DISAGREEMENT_FIRST_WINS = 2,
+export enum SourceKind { 
+  SOURCE_KIND_UNSPECIFIED = 0,
+  SOURCE_KIND_CASE = 1,
+  SOURCE_KIND_DERIVED = 2,
+  SOURCE_KIND_LOOKUP = 3,
+  SOURCE_KIND_INFERRED = 4,
 }
 export enum FactType { 
   FACT_TYPE_UNSPECIFIED = 0,
   FACT_TYPE_STRING = 1,
-  FACT_TYPE_MONEY = 2,
   FACT_TYPE_DATE = 3,
   FACT_TYPE_BOOL = 4,
   FACT_TYPE_INT = 5,
+  FACT_TYPE_FLOAT = 6,
+  FACT_TYPE_ENUM = 7,
 }
 export enum StepKind { 
   STEP_KIND_UNSPECIFIED = 0,

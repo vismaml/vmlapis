@@ -26,4 +26,29 @@ public interface JudgmentOrBuilder extends
    * @return The requiresSpan.
    */
   boolean getRequiresSpan();
+
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @return A list containing the reads.
+   */
+  java.util.List<java.lang.String>
+      getReadsList();
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @return The count of reads.
+   */
+  int getReadsCount();
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @param index The index of the element to return.
+   * @return The reads at the given index.
+   */
+  java.lang.String getReads(int index);
+  /**
+   * <code>repeated string reads = 3 [json_name = "reads"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the reads at the given index.
+   */
+  com.google.protobuf.ByteString
+      getReadsBytes(int index);
 }

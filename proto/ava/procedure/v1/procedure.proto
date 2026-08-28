@@ -5,9 +5,11 @@ package ava.procedure.v1;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1";
 
 message Procedure {
+  reserved 3;
+  reserved "selector";
+
   InputContract inputs = 1;
   OutputContract outputs = 2;
-  Selector selector = 3;
   string root_step_id = 4;
   repeated Step steps = 5;
 }
@@ -17,40 +19,49 @@ message InputContract {
 }
 
 message FactBinding {
+  reserved 4;
+  reserved "on_disagreement";
+
   string fact_name = 1;
   FactType type = 2;
   repeated FactSource sources = 3;
-  Disagreement on_disagreement = 4;
+  repeated string values = 5;
 }
 
 message FactSource {
-  string from = 1;
+  reserved 1;
+  reserved "from";
+
   string field = 2;
   repeated string args = 3;
+  SourceKind kind = 4;
+  string name = 5;
+  string group = 6;
 }
 
-enum Disagreement {
-  DISAGREEMENT_UNSPECIFIED = 0;
-  DISAGREEMENT_UNKNOWN = 1;
-  DISAGREEMENT_FIRST_WINS = 2;
+enum SourceKind {
+  SOURCE_KIND_UNSPECIFIED = 0;
+  SOURCE_KIND_CASE = 1;
+  SOURCE_KIND_DERIVED = 2;
+  SOURCE_KIND_LOOKUP = 3;
+  SOURCE_KIND_INFERRED = 4;
 }
 
 enum FactType {
+  reserved 2;
+  reserved "FACT_TYPE_MONEY";
+
   FACT_TYPE_UNSPECIFIED = 0;
   FACT_TYPE_STRING = 1;
-  FACT_TYPE_MONEY = 2;
   FACT_TYPE_DATE = 3;
   FACT_TYPE_BOOL = 4;
   FACT_TYPE_INT = 5;
+  FACT_TYPE_FLOAT = 6;
+  FACT_TYPE_ENUM = 7;
 }
 
 message OutputContract {
   repeated string produces = 1;
-}
-
-message Selector {
-  string cel = 1;
-  int32 priority = 2;
 }
 
 message Step {
@@ -72,6 +83,7 @@ enum StepKind {
 message Judgment {
   string prompt_ref = 1;
   bool requires_span = 2;
+  repeated string reads = 3;
 }
 
 message Branch {

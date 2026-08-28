@@ -40,21 +40,6 @@ public interface ProcedureOrBuilder extends
   ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder();
 
   /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   * @return Whether the selector field is set.
-   */
-  boolean hasSelector();
-  /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   * @return The selector.
-   */
-  ai.visma.ava.procedure.v1.Selector getSelector();
-  /**
-   * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
-   */
-  ai.visma.ava.procedure.v1.SelectorOrBuilder getSelectorOrBuilder();
-
-  /**
    * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
    * @return The rootStepId.
    */

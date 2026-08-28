@@ -27,10 +27,12 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private FactSource() {
-    from_ = "";
     field_ = "";
     args_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    kind_ = 0;
+    name_ = "";
+    group_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -44,45 +46,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactSource_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ai.visma.ava.procedure.v1.FactSource.class, ai.visma.ava.procedure.v1.FactSource.Builder.class);
-  }
-
-  public static final int FROM_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object from_ = "";
-  /**
-   * <code>string from = 1 [json_name = "from"];</code>
-   * @return The from.
-   */
-  @java.lang.Override
-  public java.lang.String getFrom() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      from_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string from = 1 [json_name = "from"];</code>
-   * @return The bytes for from.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getFromBytes() {
-    java.lang.Object ref = from_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      from_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int FIELD_FIELD_NUMBER = 2;
@@ -161,6 +124,102 @@ private static final long serialVersionUID = 0L;
     return args_.getByteString(index);
   }
 
+  public static final int KIND_FIELD_NUMBER = 4;
+  private int kind_ = 0;
+  /**
+   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * @return The enum numeric value on the wire for kind.
+   */
+  @java.lang.Override public int getKindValue() {
+    return kind_;
+  }
+  /**
+   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * @return The kind.
+   */
+  @java.lang.Override public ai.visma.ava.procedure.v1.SourceKind getKind() {
+    ai.visma.ava.procedure.v1.SourceKind result = ai.visma.ava.procedure.v1.SourceKind.forNumber(kind_);
+    return result == null ? ai.visma.ava.procedure.v1.SourceKind.UNRECOGNIZED : result;
+  }
+
+  public static final int NAME_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int GROUP_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object group_ = "";
+  /**
+   * <code>string group = 6 [json_name = "group"];</code>
+   * @return The group.
+   */
+  @java.lang.Override
+  public java.lang.String getGroup() {
+    java.lang.Object ref = group_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      group_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string group = 6 [json_name = "group"];</code>
+   * @return The bytes for group.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getGroupBytes() {
+    java.lang.Object ref = group_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      group_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -175,14 +234,20 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(from_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, from_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(field_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, field_);
     }
     for (int i = 0; i < args_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, args_.getRaw(i));
+    }
+    if (kind_ != ai.visma.ava.procedure.v1.SourceKind.SOURCE_KIND_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, kind_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, name_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(group_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, group_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -193,9 +258,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(from_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, from_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(field_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, field_);
     }
@@ -206,6 +268,16 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getArgsList().size();
+    }
+    if (kind_ != ai.visma.ava.procedure.v1.SourceKind.SOURCE_KIND_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, kind_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, name_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(group_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, group_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -222,12 +294,15 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ava.procedure.v1.FactSource other = (ai.visma.ava.procedure.v1.FactSource) obj;
 
-    if (!getFrom()
-        .equals(other.getFrom())) return false;
     if (!getField()
         .equals(other.getField())) return false;
     if (!getArgsList()
         .equals(other.getArgsList())) return false;
+    if (kind_ != other.kind_) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getGroup()
+        .equals(other.getGroup())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -239,14 +314,18 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FROM_FIELD_NUMBER;
-    hash = (53 * hash) + getFrom().hashCode();
     hash = (37 * hash) + FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getField().hashCode();
     if (getArgsCount() > 0) {
       hash = (37 * hash) + ARGS_FIELD_NUMBER;
       hash = (53 * hash) + getArgsList().hashCode();
     }
+    hash = (37 * hash) + KIND_FIELD_NUMBER;
+    hash = (53 * hash) + kind_;
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + GROUP_FIELD_NUMBER;
+    hash = (53 * hash) + getGroup().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -378,10 +457,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      from_ = "";
       field_ = "";
       args_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      kind_ = 0;
+      name_ = "";
+      group_ = "";
       return this;
     }
 
@@ -416,14 +497,20 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.ava.procedure.v1.FactSource result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.from_ = from_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.field_ = field_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         args_.makeImmutable();
         result.args_ = args_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.kind_ = kind_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.group_ = group_;
       }
     }
 
@@ -439,24 +526,32 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ava.procedure.v1.FactSource other) {
       if (other == ai.visma.ava.procedure.v1.FactSource.getDefaultInstance()) return this;
-      if (!other.getFrom().isEmpty()) {
-        from_ = other.from_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.getField().isEmpty()) {
         field_ = other.field_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.args_.isEmpty()) {
         if (args_.isEmpty()) {
           args_ = other.args_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
         } else {
           ensureArgsIsMutable();
           args_.addAll(other.args_);
         }
+        onChanged();
+      }
+      if (other.kind_ != 0) {
+        setKindValue(other.getKindValue());
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getGroup().isEmpty()) {
+        group_ = other.group_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -485,14 +580,9 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              from_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 18: {
               field_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             case 26: {
@@ -501,6 +591,21 @@ private static final long serialVersionUID = 0L;
               args_.add(s);
               break;
             } // case 26
+            case 32: {
+              kind_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 32
+            case 42: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
+            case 50: {
+              group_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -517,78 +622,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
-
-    private java.lang.Object from_ = "";
-    /**
-     * <code>string from = 1 [json_name = "from"];</code>
-     * @return The from.
-     */
-    public java.lang.String getFrom() {
-      java.lang.Object ref = from_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        from_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string from = 1 [json_name = "from"];</code>
-     * @return The bytes for from.
-     */
-    public com.google.protobuf.ByteString
-        getFromBytes() {
-      java.lang.Object ref = from_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        from_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string from = 1 [json_name = "from"];</code>
-     * @param value The from to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFrom(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      from_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string from = 1 [json_name = "from"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearFrom() {
-      from_ = getDefaultInstance().getFrom();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string from = 1 [json_name = "from"];</code>
-     * @param value The bytes for from to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFromBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      from_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
 
     private java.lang.Object field_ = "";
     /**
@@ -633,7 +666,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       field_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -643,7 +676,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearField() {
       field_ = getDefaultInstance().getField();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -657,7 +690,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       field_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -668,7 +701,7 @@ private static final long serialVersionUID = 0L;
       if (!args_.isModifiable()) {
         args_ = new com.google.protobuf.LazyStringArrayList(args_);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated string args = 3 [json_name = "args"];</code>
@@ -714,7 +747,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureArgsIsMutable();
       args_.set(index, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -728,7 +761,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureArgsIsMutable();
       args_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -742,7 +775,7 @@ private static final long serialVersionUID = 0L;
       ensureArgsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, args_);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -753,7 +786,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearArgs() {
       args_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -768,7 +801,204 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureArgsIsMutable();
       args_.add(value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int kind_ = 0;
+    /**
+     * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+     * @return The enum numeric value on the wire for kind.
+     */
+    @java.lang.Override public int getKindValue() {
+      return kind_;
+    }
+    /**
+     * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+     * @param value The enum numeric value on the wire for kind to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKindValue(int value) {
+      kind_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+     * @return The kind.
+     */
+    @java.lang.Override
+    public ai.visma.ava.procedure.v1.SourceKind getKind() {
+      ai.visma.ava.procedure.v1.SourceKind result = ai.visma.ava.procedure.v1.SourceKind.forNumber(kind_);
+      return result == null ? ai.visma.ava.procedure.v1.SourceKind.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+     * @param value The kind to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKind(ai.visma.ava.procedure.v1.SourceKind value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      kind_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearKind() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      kind_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 5 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object group_ = "";
+    /**
+     * <code>string group = 6 [json_name = "group"];</code>
+     * @return The group.
+     */
+    public java.lang.String getGroup() {
+      java.lang.Object ref = group_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        group_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string group = 6 [json_name = "group"];</code>
+     * @return The bytes for group.
+     */
+    public com.google.protobuf.ByteString
+        getGroupBytes() {
+      java.lang.Object ref = group_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        group_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string group = 6 [json_name = "group"];</code>
+     * @param value The group to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroup(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      group_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string group = 6 [json_name = "group"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGroup() {
+      group_ = getDefaultInstance().getGroup();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string group = 6 [json_name = "group"];</code>
+     * @param value The bytes for group to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGroupBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      group_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

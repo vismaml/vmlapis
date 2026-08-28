@@ -10,18 +10,6 @@ public interface FactSourceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string from = 1 [json_name = "from"];</code>
-   * @return The from.
-   */
-  java.lang.String getFrom();
-  /**
-   * <code>string from = 1 [json_name = "from"];</code>
-   * @return The bytes for from.
-   */
-  com.google.protobuf.ByteString
-      getFromBytes();
-
-  /**
    * <code>string field = 2 [json_name = "field"];</code>
    * @return The field.
    */
@@ -57,4 +45,39 @@ public interface FactSourceOrBuilder extends
    */
   com.google.protobuf.ByteString
       getArgsBytes(int index);
+
+  /**
+   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * @return The enum numeric value on the wire for kind.
+   */
+  int getKindValue();
+  /**
+   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * @return The kind.
+   */
+  ai.visma.ava.procedure.v1.SourceKind getKind();
+
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <code>string name = 5 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
+
+  /**
+   * <code>string group = 6 [json_name = "group"];</code>
+   * @return The group.
+   */
+  java.lang.String getGroup();
+  /**
+   * <code>string group = 6 [json_name = "group"];</code>
+   * @return The bytes for group.
+   */
+  com.google.protobuf.ByteString
+      getGroupBytes();
 }

@@ -19,10 +19,6 @@ public enum FactType
    */
   FACT_TYPE_STRING(1),
   /**
-   * <code>FACT_TYPE_MONEY = 2;</code>
-   */
-  FACT_TYPE_MONEY(2),
-  /**
    * <code>FACT_TYPE_DATE = 3;</code>
    */
   FACT_TYPE_DATE(3),
@@ -34,6 +30,14 @@ public enum FactType
    * <code>FACT_TYPE_INT = 5;</code>
    */
   FACT_TYPE_INT(5),
+  /**
+   * <code>FACT_TYPE_FLOAT = 6;</code>
+   */
+  FACT_TYPE_FLOAT(6),
+  /**
+   * <code>FACT_TYPE_ENUM = 7;</code>
+   */
+  FACT_TYPE_ENUM(7),
   UNRECOGNIZED(-1),
   ;
 
@@ -55,10 +59,6 @@ public enum FactType
    */
   public static final int FACT_TYPE_STRING_VALUE = 1;
   /**
-   * <code>FACT_TYPE_MONEY = 2;</code>
-   */
-  public static final int FACT_TYPE_MONEY_VALUE = 2;
-  /**
    * <code>FACT_TYPE_DATE = 3;</code>
    */
   public static final int FACT_TYPE_DATE_VALUE = 3;
@@ -70,6 +70,14 @@ public enum FactType
    * <code>FACT_TYPE_INT = 5;</code>
    */
   public static final int FACT_TYPE_INT_VALUE = 5;
+  /**
+   * <code>FACT_TYPE_FLOAT = 6;</code>
+   */
+  public static final int FACT_TYPE_FLOAT_VALUE = 6;
+  /**
+   * <code>FACT_TYPE_ENUM = 7;</code>
+   */
+  public static final int FACT_TYPE_ENUM_VALUE = 7;
 
 
   public final int getNumber() {
@@ -98,10 +106,11 @@ public enum FactType
     switch (value) {
       case 0: return FACT_TYPE_UNSPECIFIED;
       case 1: return FACT_TYPE_STRING;
-      case 2: return FACT_TYPE_MONEY;
       case 3: return FACT_TYPE_DATE;
       case 4: return FACT_TYPE_BOOL;
       case 5: return FACT_TYPE_INT;
+      case 6: return FACT_TYPE_FLOAT;
+      case 7: return FACT_TYPE_ENUM;
       default: return null;
     }
   }
