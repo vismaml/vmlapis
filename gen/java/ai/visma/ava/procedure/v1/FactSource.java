@@ -50,12 +50,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object from_ = "";
   /**
-   * <pre>
-   * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-   * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-   * pure function and returns one value, so field is unset.
-   * </pre>
-   *
    * <code>string from = 1 [json_name = "from"];</code>
    * @return The from.
    */
@@ -73,12 +67,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-   * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-   * pure function and returns one value, so field is unset.
-   * </pre>
-   *
    * <code>string from = 1 [json_name = "from"];</code>
    * @return The bytes for from.
    */
@@ -141,10 +129,6 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList args_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @return A list containing the args.
    */
@@ -153,10 +137,6 @@ private static final long serialVersionUID = 0L;
     return args_;
   }
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @return The count of args.
    */
@@ -164,10 +144,6 @@ private static final long serialVersionUID = 0L;
     return args_.size();
   }
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @param index The index of the element to return.
    * @return The args at the given index.
@@ -176,10 +152,6 @@ private static final long serialVersionUID = 0L;
     return args_.get(index);
   }
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the args at the given index.
@@ -548,12 +520,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object from_ = "";
     /**
-     * <pre>
-     * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-     * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-     * pure function and returns one value, so field is unset.
-     * </pre>
-     *
      * <code>string from = 1 [json_name = "from"];</code>
      * @return The from.
      */
@@ -570,12 +536,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-     * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-     * pure function and returns one value, so field is unset.
-     * </pre>
-     *
      * <code>string from = 1 [json_name = "from"];</code>
      * @return The bytes for from.
      */
@@ -593,12 +553,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-     * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-     * pure function and returns one value, so field is unset.
-     * </pre>
-     *
      * <code>string from = 1 [json_name = "from"];</code>
      * @param value The from to set.
      * @return This builder for chaining.
@@ -612,12 +566,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-     * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-     * pure function and returns one value, so field is unset.
-     * </pre>
-     *
      * <code>string from = 1 [json_name = "from"];</code>
      * @return This builder for chaining.
      */
@@ -628,12 +576,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-     * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-     * pure function and returns one value, so field is unset.
-     * </pre>
-     *
      * <code>string from = 1 [json_name = "from"];</code>
      * @param value The bytes for from to set.
      * @return This builder for chaining.
@@ -729,10 +671,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000004;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @return A list containing the args.
      */
@@ -742,10 +680,6 @@ private static final long serialVersionUID = 0L;
       return args_;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @return The count of args.
      */
@@ -753,10 +687,6 @@ private static final long serialVersionUID = 0L;
       return args_.size();
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param index The index of the element to return.
      * @return The args at the given index.
@@ -765,10 +695,6 @@ private static final long serialVersionUID = 0L;
       return args_.get(index);
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the args at the given index.
@@ -778,10 +704,6 @@ private static final long serialVersionUID = 0L;
       return args_.getByteString(index);
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param index The index to set the value at.
      * @param value The args to set.
@@ -797,10 +719,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param value The args to add.
      * @return This builder for chaining.
@@ -815,10 +733,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param values The args to add.
      * @return This builder for chaining.
@@ -833,10 +747,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @return This builder for chaining.
      */
@@ -848,10 +758,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * fact names, positional; resolved first
-     * </pre>
-     *
      * <code>repeated string args = 3 [json_name = "args"];</code>
      * @param value The bytes of the args to add.
      * @return This builder for chaining.

@@ -6,11 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * Facts are declared, so an expression type-checks at generation time rather
- * than failing on a case at run time.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.InputContract}
  */
 public final class InputContract extends
@@ -249,11 +244,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Facts are declared, so an expression type-checks at generation time rather
-   * than failing on a case at run time.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.InputContract}
    */
   public static final class Builder extends

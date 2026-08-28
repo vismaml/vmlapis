@@ -19,10 +19,6 @@ public enum FactType
    */
   FACT_TYPE_STRING(1),
   /**
-   * <pre>
-   * an exact decimal carried as a string, never a float
-   * </pre>
-   *
    * <code>FACT_TYPE_MONEY = 2;</code>
    */
   FACT_TYPE_MONEY(2),
@@ -59,10 +55,6 @@ public enum FactType
    */
   public static final int FACT_TYPE_STRING_VALUE = 1;
   /**
-   * <pre>
-   * an exact decimal carried as a string, never a float
-   * </pre>
-   *
    * <code>FACT_TYPE_MONEY = 2;</code>
    */
   public static final int FACT_TYPE_MONEY_VALUE = 2;

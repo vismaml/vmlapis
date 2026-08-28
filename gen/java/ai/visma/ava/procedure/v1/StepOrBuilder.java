@@ -33,19 +33,11 @@ public interface StepOrBuilder extends
   ai.visma.ava.procedure.v1.StepKind getKind();
 
   /**
-   * <pre>
-   * plain language, written for a human to read
-   * </pre>
-   *
    * <code>string question = 3 [json_name = "question"];</code>
    * @return The question.
    */
   java.lang.String getQuestion();
   /**
-   * <pre>
-   * plain language, written for a human to read
-   * </pre>
-   *
    * <code>string question = 3 [json_name = "question"];</code>
    * @return The bytes for question.
    */
@@ -53,19 +45,11 @@ public interface StepOrBuilder extends
       getQuestionBytes();
 
   /**
-   * <pre>
-   * how to answer it
-   * </pre>
-   *
    * <code>string guidance = 4 [json_name = "guidance"];</code>
    * @return The guidance.
    */
   java.lang.String getGuidance();
   /**
-   * <pre>
-   * how to answer it
-   * </pre>
-   *
    * <code>string guidance = 4 [json_name = "guidance"];</code>
    * @return The bytes for guidance.
    */
@@ -73,71 +57,39 @@ public interface StepOrBuilder extends
       getGuidanceBytes();
 
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    * @return Whether the judgment field is set.
    */
   boolean hasJudgment();
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    * @return The judgment.
    */
   ai.visma.ava.procedure.v1.Judgment getJudgment();
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    */
   ai.visma.ava.procedure.v1.JudgmentOrBuilder getJudgmentOrBuilder();
 
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   java.util.List<ai.visma.ava.procedure.v1.Branch> 
       getBranchesList();
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   ai.visma.ava.procedure.v1.Branch getBranches(int index);
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   int getBranchesCount();
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   java.util.List<? extends ai.visma.ava.procedure.v1.BranchOrBuilder> 
       getBranchesOrBuilderList();
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   ai.visma.ava.procedure.v1.BranchOrBuilder getBranchesOrBuilder(

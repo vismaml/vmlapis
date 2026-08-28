@@ -23,9 +23,9 @@ const (
 type Disagreement int32
 
 const (
-	Disagreement_DISAGREEMENT_UNSPECIFIED Disagreement = 0 // treated as DISAGREEMENT_UNKNOWN
-	Disagreement_DISAGREEMENT_UNKNOWN     Disagreement = 1 // the fact becomes unknown, so readers escalate
-	Disagreement_DISAGREEMENT_FIRST_WINS  Disagreement = 2 // the earlier source wins, and the conflict is recorded
+	Disagreement_DISAGREEMENT_UNSPECIFIED Disagreement = 0
+	Disagreement_DISAGREEMENT_UNKNOWN     Disagreement = 1
+	Disagreement_DISAGREEMENT_FIRST_WINS  Disagreement = 2
 )
 
 // Enum value maps for Disagreement.
@@ -74,7 +74,7 @@ type FactType int32
 const (
 	FactType_FACT_TYPE_UNSPECIFIED FactType = 0
 	FactType_FACT_TYPE_STRING      FactType = 1
-	FactType_FACT_TYPE_MONEY       FactType = 2 // an exact decimal carried as a string, never a float
+	FactType_FACT_TYPE_MONEY       FactType = 2
 	FactType_FACT_TYPE_DATE        FactType = 3
 	FactType_FACT_TYPE_BOOL        FactType = 4
 	FactType_FACT_TYPE_INT         FactType = 5
@@ -131,8 +131,8 @@ type StepKind int32
 
 const (
 	StepKind_STEP_KIND_UNSPECIFIED StepKind = 0
-	StepKind_STEP_KIND_TEST        StepKind = 1 // decided from data, by expression
-	StepKind_STEP_KIND_JUDGMENT    StepKind = 2 // a model answers, among the declared branches
+	StepKind_STEP_KIND_TEST        StepKind = 1
+	StepKind_STEP_KIND_JUDGMENT    StepKind = 2
 )
 
 // Enum value maps for StepKind.
@@ -225,23 +225,16 @@ func (Origin) EnumDescriptor() ([]byte, []int) {
 	return file_ava_procedure_v1_procedure_proto_rawDescGZIP(), []int{3}
 }
 
-// A decision procedure: an ordered structure of steps that decides one or more
-// named things. The order carries meaning — a step reached second only fires if
-// the first did not — so the path taken through it is the explanation.
-//
-// The engine knows nothing about accounting. What a procedure reads and what it
-// produces are declared as data; "account" and "approver" are strings it passes
-// through.
 type Procedure struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Inputs     *InputContract  `protobuf:"bytes,1,opt,name=inputs,proto3" json:"inputs,omitempty"`                             // what facts it may read, and from where
-	Outputs    *OutputContract `protobuf:"bytes,2,opt,name=outputs,proto3" json:"outputs,omitempty"`                           // what it decides
-	Selector   *Selector       `protobuf:"bytes,3,opt,name=selector,proto3" json:"selector,omitempty"`                         // when it applies
-	RootStepId string          `protobuf:"bytes,4,opt,name=root_step_id,json=rootStepId,proto3" json:"root_step_id,omitempty"` // must name one of steps
-	Steps      []*Step         `protobuf:"bytes,5,rep,name=steps,proto3" json:"steps,omitempty"`                               // indexed by step_id at load time
+	Inputs     *InputContract  `protobuf:"bytes,1,opt,name=inputs,proto3" json:"inputs,omitempty"`
+	Outputs    *OutputContract `protobuf:"bytes,2,opt,name=outputs,proto3" json:"outputs,omitempty"`
+	Selector   *Selector       `protobuf:"bytes,3,opt,name=selector,proto3" json:"selector,omitempty"`
+	RootStepId string          `protobuf:"bytes,4,opt,name=root_step_id,json=rootStepId,proto3" json:"root_step_id,omitempty"`
+	Steps      []*Step         `protobuf:"bytes,5,rep,name=steps,proto3" json:"steps,omitempty"`
 }
 
 func (x *Procedure) Reset() {
@@ -311,8 +304,6 @@ func (x *Procedure) GetSteps() []*Step {
 	return nil
 }
 
-// Facts are declared, so an expression type-checks at generation time rather
-// than failing on a case at run time.
 type InputContract struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -360,19 +351,15 @@ func (x *InputContract) GetFacts() []*FactBinding {
 	return nil
 }
 
-// One fact: one name, one type, and an ordered list of places it can come from.
-// A fact has a single name however many sources it has — supplier_vat_number is
-// supplier_vat_number whether it was read off the document or fetched from a
-// registry.
 type FactBinding struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	FactName       string        `protobuf:"bytes,1,opt,name=fact_name,json=factName,proto3" json:"fact_name,omitempty"` // the name an expression sees
+	FactName       string        `protobuf:"bytes,1,opt,name=fact_name,json=factName,proto3" json:"fact_name,omitempty"`
 	Type           FactType      `protobuf:"varint,2,opt,name=type,proto3,enum=ava.procedure.v1.FactType" json:"type,omitempty"`
-	Sources        []*FactSource `protobuf:"bytes,3,rep,name=sources,proto3" json:"sources,omitempty"`                                                                         // ordered: the first that yields wins
-	OnDisagreement Disagreement  `protobuf:"varint,4,opt,name=on_disagreement,json=onDisagreement,proto3,enum=ava.procedure.v1.Disagreement" json:"on_disagreement,omitempty"` // when two both yield and differ
+	Sources        []*FactSource `protobuf:"bytes,3,rep,name=sources,proto3" json:"sources,omitempty"`
+	OnDisagreement Disagreement  `protobuf:"varint,4,opt,name=on_disagreement,json=onDisagreement,proto3,enum=ava.procedure.v1.Disagreement" json:"on_disagreement,omitempty"`
 }
 
 func (x *FactBinding) Reset() {
@@ -440,12 +427,9 @@ type FactSource struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// "case" reads the case payload. "lookup.<name>" runs a named parameterised
-	// query and returns a row, so field picks the column. "derived.<name>" runs a
-	// pure function and returns one value, so field is unset.
 	From  string   `protobuf:"bytes,1,opt,name=from,proto3" json:"from,omitempty"`
 	Field string   `protobuf:"bytes,2,opt,name=field,proto3" json:"field,omitempty"`
-	Args  []string `protobuf:"bytes,3,rep,name=args,proto3" json:"args,omitempty"` // fact names, positional; resolved first
+	Args  []string `protobuf:"bytes,3,rep,name=args,proto3" json:"args,omitempty"`
 }
 
 func (x *FactSource) Reset() {
@@ -501,8 +485,6 @@ func (x *FactSource) GetArgs() []string {
 	return nil
 }
 
-// The names of the things this procedure decides. A walk that does not set every
-// one of them escalates rather than returning half a decision.
 type OutputContract struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -550,15 +532,13 @@ func (x *OutputContract) GetProduces() []string {
 	return nil
 }
 
-// Which procedure applies to a case. Resolved from data so the choice is visible
-// in the trace rather than hidden in a lookup key.
 type Selector struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Cel      string `protobuf:"bytes,1,opt,name=cel,proto3" json:"cel,omitempty"`            // reads case.* only; selection happens before binding
-	Priority int32  `protobuf:"varint,2,opt,name=priority,proto3" json:"priority,omitempty"` // advisory ordering only. Two matches still escalate.
+	Cel      string `protobuf:"bytes,1,opt,name=cel,proto3" json:"cel,omitempty"`
+	Priority int32  `protobuf:"varint,2,opt,name=priority,proto3" json:"priority,omitempty"`
 }
 
 func (x *Selector) Reset() {
@@ -607,7 +587,6 @@ func (x *Selector) GetPriority() int32 {
 	return 0
 }
 
-// One unit of a procedure: a question, and the branches that answer it.
 type Step struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -615,10 +594,10 @@ type Step struct {
 
 	StepId   string    `protobuf:"bytes,1,opt,name=step_id,json=stepId,proto3" json:"step_id,omitempty"`
 	Kind     StepKind  `protobuf:"varint,2,opt,name=kind,proto3,enum=ava.procedure.v1.StepKind" json:"kind,omitempty"`
-	Question string    `protobuf:"bytes,3,opt,name=question,proto3" json:"question,omitempty"` // plain language, written for a human to read
-	Guidance string    `protobuf:"bytes,4,opt,name=guidance,proto3" json:"guidance,omitempty"` // how to answer it
-	Judgment *Judgment `protobuf:"bytes,5,opt,name=judgment,proto3" json:"judgment,omitempty"` // set when kind is STEP_KIND_JUDGMENT
-	Branches []*Branch `protobuf:"bytes,6,rep,name=branches,proto3" json:"branches,omitempty"` // order is precedence
+	Question string    `protobuf:"bytes,3,opt,name=question,proto3" json:"question,omitempty"`
+	Guidance string    `protobuf:"bytes,4,opt,name=guidance,proto3" json:"guidance,omitempty"`
+	Judgment *Judgment `protobuf:"bytes,5,opt,name=judgment,proto3" json:"judgment,omitempty"`
+	Branches []*Branch `protobuf:"bytes,6,rep,name=branches,proto3" json:"branches,omitempty"`
 	Origin   Origin    `protobuf:"varint,7,opt,name=origin,proto3,enum=ava.procedure.v1.Origin" json:"origin,omitempty"`
 }
 
@@ -708,8 +687,8 @@ type Judgment struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PromptRef    string `protobuf:"bytes,1,opt,name=prompt_ref,json=promptRef,proto3" json:"prompt_ref,omitempty"`           // a versioned template id, never the prompt text
-	RequiresSpan bool   `protobuf:"varint,2,opt,name=requires_span,json=requiresSpan,proto3" json:"requires_span,omitempty"` // the answer must cite a span, which we verify
+	PromptRef    string `protobuf:"bytes,1,opt,name=prompt_ref,json=promptRef,proto3" json:"prompt_ref,omitempty"`
+	RequiresSpan bool   `protobuf:"varint,2,opt,name=requires_span,json=requiresSpan,proto3" json:"requires_span,omitempty"`
 }
 
 func (x *Judgment) Reset() {
@@ -758,20 +737,19 @@ func (x *Judgment) GetRequiresSpan() bool {
 	return false
 }
 
-// One possible answer to a step, and what happens if it is taken.
 type Branch struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BranchId     string            `protobuf:"bytes,1,opt,name=branch_id,json=branchId,proto3" json:"branch_id,omitempty"` // stable: the trace references it
+	BranchId     string            `protobuf:"bytes,1,opt,name=branch_id,json=branchId,proto3" json:"branch_id,omitempty"`
 	Label        string            `protobuf:"bytes,2,opt,name=label,proto3" json:"label,omitempty"`
-	Criterion    string            `protobuf:"bytes,3,opt,name=criterion,proto3" json:"criterion,omitempty"`                                                                               // the plain-language test. Recorded as the trace's answer.
-	When         string            `protobuf:"bytes,4,opt,name=when,proto3" json:"when,omitempty"`                                                                                         // TEST only. Empty means fallback, and must be last.
-	Sets         map[string]string `protobuf:"bytes,5,rep,name=sets,proto3" json:"sets,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"` // terminal: output name -> literal value
-	NextStepId   string            `protobuf:"bytes,6,opt,name=next_step_id,json=nextStepId,proto3" json:"next_step_id,omitempty"`                                                         // or continue
-	IsEscalation bool              `protobuf:"varint,7,opt,name=is_escalation,json=isEscalation,proto3" json:"is_escalation,omitempty"`                                                    // this branch means we cannot answer
-	Rationale    string            `protobuf:"bytes,8,opt,name=rationale,proto3" json:"rationale,omitempty"`                                                                               // why the generator wrote it; never read at run time
+	Criterion    string            `protobuf:"bytes,3,opt,name=criterion,proto3" json:"criterion,omitempty"`
+	When         string            `protobuf:"bytes,4,opt,name=when,proto3" json:"when,omitempty"`
+	Sets         map[string]string `protobuf:"bytes,5,rep,name=sets,proto3" json:"sets,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	NextStepId   string            `protobuf:"bytes,6,opt,name=next_step_id,json=nextStepId,proto3" json:"next_step_id,omitempty"`
+	IsEscalation bool              `protobuf:"varint,7,opt,name=is_escalation,json=isEscalation,proto3" json:"is_escalation,omitempty"`
+	Rationale    string            `protobuf:"bytes,8,opt,name=rationale,proto3" json:"rationale,omitempty"`
 }
 
 func (x *Branch) Reset() {

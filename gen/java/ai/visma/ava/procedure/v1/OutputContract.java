@@ -6,11 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * The names of the things this procedure decides. A walk that does not set every
- * one of them escalates rather than returning half a decision.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.OutputContract}
  */
 public final class OutputContract extends
@@ -250,11 +245,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * The names of the things this procedure decides. A walk that does not set every
-   * one of them escalates rather than returning half a decision.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.OutputContract}
    */
   public static final class Builder extends

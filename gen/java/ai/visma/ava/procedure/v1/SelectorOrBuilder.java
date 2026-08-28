@@ -10,19 +10,11 @@ public interface SelectorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * reads case.* only; selection happens before binding
-   * </pre>
-   *
    * <code>string cel = 1 [json_name = "cel"];</code>
    * @return The cel.
    */
   java.lang.String getCel();
   /**
-   * <pre>
-   * reads case.* only; selection happens before binding
-   * </pre>
-   *
    * <code>string cel = 1 [json_name = "cel"];</code>
    * @return The bytes for cel.
    */
@@ -30,10 +22,6 @@ public interface SelectorOrBuilder extends
       getCelBytes();
 
   /**
-   * <pre>
-   * advisory ordering only. Two matches still escalate.
-   * </pre>
-   *
    * <code>int32 priority = 2 [json_name = "priority"];</code>
    * @return The priority.
    */

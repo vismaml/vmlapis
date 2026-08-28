@@ -10,23 +10,11 @@ public interface FactSourceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-   * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-   * pure function and returns one value, so field is unset.
-   * </pre>
-   *
    * <code>string from = 1 [json_name = "from"];</code>
    * @return The from.
    */
   java.lang.String getFrom();
   /**
-   * <pre>
-   * "case" reads the case payload. "lookup.&lt;name&gt;" runs a named parameterised
-   * query and returns a row, so field picks the column. "derived.&lt;name&gt;" runs a
-   * pure function and returns one value, so field is unset.
-   * </pre>
-   *
    * <code>string from = 1 [json_name = "from"];</code>
    * @return The bytes for from.
    */
@@ -46,39 +34,23 @@ public interface FactSourceOrBuilder extends
       getFieldBytes();
 
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @return A list containing the args.
    */
   java.util.List<java.lang.String>
       getArgsList();
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @return The count of args.
    */
   int getArgsCount();
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @param index The index of the element to return.
    * @return The args at the given index.
    */
   java.lang.String getArgs(int index);
   /**
-   * <pre>
-   * fact names, positional; resolved first
-   * </pre>
-   *
    * <code>repeated string args = 3 [json_name = "args"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the args at the given index.

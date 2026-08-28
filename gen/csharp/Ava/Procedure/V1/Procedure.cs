@@ -90,26 +90,14 @@ namespace Ava.Procedure.V1 {
   }
   #region Enums
   public enum Disagreement {
-    /// <summary>
-    /// treated as DISAGREEMENT_UNKNOWN
-    /// </summary>
     [pbr::OriginalName("DISAGREEMENT_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// the fact becomes unknown, so readers escalate
-    /// </summary>
     [pbr::OriginalName("DISAGREEMENT_UNKNOWN")] Unknown = 1,
-    /// <summary>
-    /// the earlier source wins, and the conflict is recorded
-    /// </summary>
     [pbr::OriginalName("DISAGREEMENT_FIRST_WINS")] FirstWins = 2,
   }
 
   public enum FactType {
     [pbr::OriginalName("FACT_TYPE_UNSPECIFIED")] Unspecified = 0,
     [pbr::OriginalName("FACT_TYPE_STRING")] String = 1,
-    /// <summary>
-    /// an exact decimal carried as a string, never a float
-    /// </summary>
     [pbr::OriginalName("FACT_TYPE_MONEY")] Money = 2,
     [pbr::OriginalName("FACT_TYPE_DATE")] Date = 3,
     [pbr::OriginalName("FACT_TYPE_BOOL")] Bool = 4,
@@ -118,13 +106,7 @@ namespace Ava.Procedure.V1 {
 
   public enum StepKind {
     [pbr::OriginalName("STEP_KIND_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// decided from data, by expression
-    /// </summary>
     [pbr::OriginalName("STEP_KIND_TEST")] Test = 1,
-    /// <summary>
-    /// a model answers, among the declared branches
-    /// </summary>
     [pbr::OriginalName("STEP_KIND_JUDGMENT")] Judgment = 2,
   }
 
@@ -137,15 +119,6 @@ namespace Ava.Procedure.V1 {
   #endregion
 
   #region Messages
-  /// <summary>
-  /// A decision procedure: an ordered structure of steps that decides one or more
-  /// named things. The order carries meaning — a step reached second only fires if
-  /// the first did not — so the path taken through it is the explanation.
-  ///
-  /// The engine knows nothing about accounting. What a procedure reads and what it
-  /// produces are declared as data; "account" and "approver" are strings it passes
-  /// through.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Procedure : pb::IMessage<Procedure>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -198,9 +171,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
     private global::Ava.Procedure.V1.InputContract inputs_;
-    /// <summary>
-    /// what facts it may read, and from where
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ava.Procedure.V1.InputContract Inputs {
@@ -213,9 +183,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "outputs" field.</summary>
     public const int OutputsFieldNumber = 2;
     private global::Ava.Procedure.V1.OutputContract outputs_;
-    /// <summary>
-    /// what it decides
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ava.Procedure.V1.OutputContract Outputs {
@@ -228,9 +195,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "selector" field.</summary>
     public const int SelectorFieldNumber = 3;
     private global::Ava.Procedure.V1.Selector selector_;
-    /// <summary>
-    /// when it applies
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ava.Procedure.V1.Selector Selector {
@@ -243,9 +207,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "root_step_id" field.</summary>
     public const int RootStepIdFieldNumber = 4;
     private string rootStepId_ = "";
-    /// <summary>
-    /// must name one of steps
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootStepId {
@@ -260,9 +221,6 @@ namespace Ava.Procedure.V1 {
     private static readonly pb::FieldCodec<global::Ava.Procedure.V1.Step> _repeated_steps_codec
         = pb::FieldCodec.ForMessage(42, global::Ava.Procedure.V1.Step.Parser);
     private readonly pbc::RepeatedField<global::Ava.Procedure.V1.Step> steps_ = new pbc::RepeatedField<global::Ava.Procedure.V1.Step>();
-    /// <summary>
-    /// indexed by step_id at load time
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ava.Procedure.V1.Step> Steps {
@@ -523,10 +481,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// Facts are declared, so an expression type-checks at generation time rather
-  /// than failing on a case at run time.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputContract : pb::IMessage<InputContract>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -714,12 +668,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// One fact: one name, one type, and an ordered list of places it can come from.
-  /// A fact has a single name however many sources it has — supplier_vat_number is
-  /// supplier_vat_number whether it was read off the document or fetched from a
-  /// registry.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FactBinding : pb::IMessage<FactBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -771,9 +719,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "fact_name" field.</summary>
     public const int FactNameFieldNumber = 1;
     private string factName_ = "";
-    /// <summary>
-    /// the name an expression sees
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FactName {
@@ -800,9 +745,6 @@ namespace Ava.Procedure.V1 {
     private static readonly pb::FieldCodec<global::Ava.Procedure.V1.FactSource> _repeated_sources_codec
         = pb::FieldCodec.ForMessage(26, global::Ava.Procedure.V1.FactSource.Parser);
     private readonly pbc::RepeatedField<global::Ava.Procedure.V1.FactSource> sources_ = new pbc::RepeatedField<global::Ava.Procedure.V1.FactSource>();
-    /// <summary>
-    /// ordered: the first that yields wins
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ava.Procedure.V1.FactSource> Sources {
@@ -812,9 +754,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "on_disagreement" field.</summary>
     public const int OnDisagreementFieldNumber = 4;
     private global::Ava.Procedure.V1.Disagreement onDisagreement_ = global::Ava.Procedure.V1.Disagreement.Unspecified;
-    /// <summary>
-    /// when two both yield and differ
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ava.Procedure.V1.Disagreement OnDisagreement {
@@ -1077,11 +1016,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "from" field.</summary>
     public const int FromFieldNumber = 1;
     private string from_ = "";
-    /// <summary>
-    /// "case" reads the case payload. "lookup.&lt;name>" runs a named parameterised
-    /// query and returns a row, so field picks the column. "derived.&lt;name>" runs a
-    /// pure function and returns one value, so field is unset.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string From {
@@ -1108,9 +1042,6 @@ namespace Ava.Procedure.V1 {
     private static readonly pb::FieldCodec<string> _repeated_args_codec
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> args_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// fact names, positional; resolved first
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Args {
@@ -1296,10 +1227,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// The names of the things this procedure decides. A walk that does not set every
-  /// one of them escalates rather than returning half a decision.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputContract : pb::IMessage<OutputContract>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1487,10 +1414,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// Which procedure applies to a case. Resolved from data so the choice is visible
-  /// in the trace rather than hidden in a lookup key.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Selector : pb::IMessage<Selector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1540,9 +1463,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "cel" field.</summary>
     public const int CelFieldNumber = 1;
     private string cel_ = "";
-    /// <summary>
-    /// reads case.* only; selection happens before binding
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Cel {
@@ -1555,9 +1475,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "priority" field.</summary>
     public const int PriorityFieldNumber = 2;
     private int priority_;
-    /// <summary>
-    /// advisory ordering only. Two matches still escalate.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Priority {
@@ -1732,9 +1649,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// One unit of a procedure: a question, and the branches that answer it.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Step : pb::IMessage<Step>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1813,9 +1727,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "question" field.</summary>
     public const int QuestionFieldNumber = 3;
     private string question_ = "";
-    /// <summary>
-    /// plain language, written for a human to read
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Question {
@@ -1828,9 +1739,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "guidance" field.</summary>
     public const int GuidanceFieldNumber = 4;
     private string guidance_ = "";
-    /// <summary>
-    /// how to answer it
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Guidance {
@@ -1843,9 +1751,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "judgment" field.</summary>
     public const int JudgmentFieldNumber = 5;
     private global::Ava.Procedure.V1.Judgment judgment_;
-    /// <summary>
-    /// set when kind is STEP_KIND_JUDGMENT
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ava.Procedure.V1.Judgment Judgment {
@@ -1860,9 +1765,6 @@ namespace Ava.Procedure.V1 {
     private static readonly pb::FieldCodec<global::Ava.Procedure.V1.Branch> _repeated_branches_codec
         = pb::FieldCodec.ForMessage(50, global::Ava.Procedure.V1.Branch.Parser);
     private readonly pbc::RepeatedField<global::Ava.Procedure.V1.Branch> branches_ = new pbc::RepeatedField<global::Ava.Procedure.V1.Branch>();
-    /// <summary>
-    /// order is precedence
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ava.Procedure.V1.Branch> Branches {
@@ -2214,9 +2116,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "prompt_ref" field.</summary>
     public const int PromptRefFieldNumber = 1;
     private string promptRef_ = "";
-    /// <summary>
-    /// a versioned template id, never the prompt text
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PromptRef {
@@ -2229,9 +2128,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "requires_span" field.</summary>
     public const int RequiresSpanFieldNumber = 2;
     private bool requiresSpan_;
-    /// <summary>
-    /// the answer must cite a span, which we verify
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RequiresSpan {
@@ -2406,9 +2302,6 @@ namespace Ava.Procedure.V1 {
 
   }
 
-  /// <summary>
-  /// One possible answer to a step, and what happens if it is taken.
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Branch : pb::IMessage<Branch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2464,9 +2357,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "branch_id" field.</summary>
     public const int BranchIdFieldNumber = 1;
     private string branchId_ = "";
-    /// <summary>
-    /// stable: the trace references it
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BranchId {
@@ -2491,9 +2381,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "criterion" field.</summary>
     public const int CriterionFieldNumber = 3;
     private string criterion_ = "";
-    /// <summary>
-    /// the plain-language test. Recorded as the trace's answer.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Criterion {
@@ -2506,9 +2393,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "when" field.</summary>
     public const int WhenFieldNumber = 4;
     private string when_ = "";
-    /// <summary>
-    /// TEST only. Empty means fallback, and must be last.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string When {
@@ -2523,9 +2407,6 @@ namespace Ava.Procedure.V1 {
     private static readonly pbc::MapField<string, string>.Codec _map_sets_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> sets_ = new pbc::MapField<string, string>();
-    /// <summary>
-    /// terminal: output name -> literal value
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Sets {
@@ -2535,9 +2416,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "next_step_id" field.</summary>
     public const int NextStepIdFieldNumber = 6;
     private string nextStepId_ = "";
-    /// <summary>
-    /// or continue
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextStepId {
@@ -2550,9 +2428,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "is_escalation" field.</summary>
     public const int IsEscalationFieldNumber = 7;
     private bool isEscalation_;
-    /// <summary>
-    /// this branch means we cannot answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsEscalation {
@@ -2565,9 +2440,6 @@ namespace Ava.Procedure.V1 {
     /// <summary>Field number for the "rationale" field.</summary>
     public const int RationaleFieldNumber = 8;
     private string rationale_ = "";
-    /// <summary>
-    /// why the generator wrote it; never read at run time
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Rationale {

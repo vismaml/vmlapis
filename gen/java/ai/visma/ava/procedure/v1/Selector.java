@@ -6,11 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * Which procedure applies to a case. Resolved from data so the choice is visible
- * in the trace rather than hidden in a lookup key.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.Selector}
  */
 public final class Selector extends
@@ -52,10 +47,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object cel_ = "";
   /**
-   * <pre>
-   * reads case.* only; selection happens before binding
-   * </pre>
-   *
    * <code>string cel = 1 [json_name = "cel"];</code>
    * @return The cel.
    */
@@ -73,10 +64,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * reads case.* only; selection happens before binding
-   * </pre>
-   *
    * <code>string cel = 1 [json_name = "cel"];</code>
    * @return The bytes for cel.
    */
@@ -98,10 +85,6 @@ private static final long serialVersionUID = 0L;
   public static final int PRIORITY_FIELD_NUMBER = 2;
   private int priority_ = 0;
   /**
-   * <pre>
-   * advisory ordering only. Two matches still escalate.
-   * </pre>
-   *
    * <code>int32 priority = 2 [json_name = "priority"];</code>
    * @return The priority.
    */
@@ -278,11 +261,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Which procedure applies to a case. Resolved from data so the choice is visible
-   * in the trace rather than hidden in a lookup key.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.Selector}
    */
   public static final class Builder extends
@@ -434,10 +412,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object cel_ = "";
     /**
-     * <pre>
-     * reads case.* only; selection happens before binding
-     * </pre>
-     *
      * <code>string cel = 1 [json_name = "cel"];</code>
      * @return The cel.
      */
@@ -454,10 +428,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * reads case.* only; selection happens before binding
-     * </pre>
-     *
      * <code>string cel = 1 [json_name = "cel"];</code>
      * @return The bytes for cel.
      */
@@ -475,10 +445,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * reads case.* only; selection happens before binding
-     * </pre>
-     *
      * <code>string cel = 1 [json_name = "cel"];</code>
      * @param value The cel to set.
      * @return This builder for chaining.
@@ -492,10 +458,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * reads case.* only; selection happens before binding
-     * </pre>
-     *
      * <code>string cel = 1 [json_name = "cel"];</code>
      * @return This builder for chaining.
      */
@@ -506,10 +468,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * reads case.* only; selection happens before binding
-     * </pre>
-     *
      * <code>string cel = 1 [json_name = "cel"];</code>
      * @param value The bytes for cel to set.
      * @return This builder for chaining.
@@ -526,10 +484,6 @@ private static final long serialVersionUID = 0L;
 
     private int priority_ ;
     /**
-     * <pre>
-     * advisory ordering only. Two matches still escalate.
-     * </pre>
-     *
      * <code>int32 priority = 2 [json_name = "priority"];</code>
      * @return The priority.
      */
@@ -538,10 +492,6 @@ private static final long serialVersionUID = 0L;
       return priority_;
     }
     /**
-     * <pre>
-     * advisory ordering only. Two matches still escalate.
-     * </pre>
-     *
      * <code>int32 priority = 2 [json_name = "priority"];</code>
      * @param value The priority to set.
      * @return This builder for chaining.
@@ -554,10 +504,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * advisory ordering only. Two matches still escalate.
-     * </pre>
-     *
      * <code>int32 priority = 2 [json_name = "priority"];</code>
      * @return This builder for chaining.
      */

@@ -11,26 +11,14 @@ package ai.visma.ava.procedure.v1;
 public enum Disagreement
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <pre>
-   * treated as DISAGREEMENT_UNKNOWN
-   * </pre>
-   *
    * <code>DISAGREEMENT_UNSPECIFIED = 0;</code>
    */
   DISAGREEMENT_UNSPECIFIED(0),
   /**
-   * <pre>
-   * the fact becomes unknown, so readers escalate
-   * </pre>
-   *
    * <code>DISAGREEMENT_UNKNOWN = 1;</code>
    */
   DISAGREEMENT_UNKNOWN(1),
   /**
-   * <pre>
-   * the earlier source wins, and the conflict is recorded
-   * </pre>
-   *
    * <code>DISAGREEMENT_FIRST_WINS = 2;</code>
    */
   DISAGREEMENT_FIRST_WINS(2),
@@ -47,26 +35,14 @@ public enum Disagreement
       Disagreement.class.getName());
   }
   /**
-   * <pre>
-   * treated as DISAGREEMENT_UNKNOWN
-   * </pre>
-   *
    * <code>DISAGREEMENT_UNSPECIFIED = 0;</code>
    */
   public static final int DISAGREEMENT_UNSPECIFIED_VALUE = 0;
   /**
-   * <pre>
-   * the fact becomes unknown, so readers escalate
-   * </pre>
-   *
    * <code>DISAGREEMENT_UNKNOWN = 1;</code>
    */
   public static final int DISAGREEMENT_UNKNOWN_VALUE = 1;
   /**
-   * <pre>
-   * the earlier source wins, and the conflict is recorded
-   * </pre>
-   *
    * <code>DISAGREEMENT_FIRST_WINS = 2;</code>
    */
   public static final int DISAGREEMENT_FIRST_WINS_VALUE = 2;

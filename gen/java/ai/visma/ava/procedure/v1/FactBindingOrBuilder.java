@@ -10,19 +10,11 @@ public interface FactBindingOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the name an expression sees
-   * </pre>
-   *
    * <code>string fact_name = 1 [json_name = "factName"];</code>
    * @return The factName.
    */
   java.lang.String getFactName();
   /**
-   * <pre>
-   * the name an expression sees
-   * </pre>
-   *
    * <code>string fact_name = 1 [json_name = "factName"];</code>
    * @return The bytes for factName.
    */
@@ -41,63 +33,35 @@ public interface FactBindingOrBuilder extends
   ai.visma.ava.procedure.v1.FactType getType();
 
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   java.util.List<ai.visma.ava.procedure.v1.FactSource> 
       getSourcesList();
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   ai.visma.ava.procedure.v1.FactSource getSources(int index);
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   int getSourcesCount();
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   java.util.List<? extends ai.visma.ava.procedure.v1.FactSourceOrBuilder> 
       getSourcesOrBuilderList();
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   ai.visma.ava.procedure.v1.FactSourceOrBuilder getSourcesOrBuilder(
       int index);
 
   /**
-   * <pre>
-   * when two both yield and differ
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
    * @return The enum numeric value on the wire for onDisagreement.
    */
   int getOnDisagreementValue();
   /**
-   * <pre>
-   * when two both yield and differ
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
    * @return The onDisagreement.
    */

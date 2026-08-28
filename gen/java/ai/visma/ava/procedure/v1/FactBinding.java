@@ -6,13 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * One fact: one name, one type, and an ordered list of places it can come from.
- * A fact has a single name however many sources it has — supplier_vat_number is
- * supplier_vat_number whether it was read off the document or fetched from a
- * registry.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.FactBinding}
  */
 public final class FactBinding extends
@@ -57,10 +50,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object factName_ = "";
   /**
-   * <pre>
-   * the name an expression sees
-   * </pre>
-   *
    * <code>string fact_name = 1 [json_name = "factName"];</code>
    * @return The factName.
    */
@@ -78,10 +67,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the name an expression sees
-   * </pre>
-   *
    * <code>string fact_name = 1 [json_name = "factName"];</code>
    * @return The bytes for factName.
    */
@@ -122,10 +107,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.FactSource> sources_;
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   @java.lang.Override
@@ -133,10 +114,6 @@ private static final long serialVersionUID = 0L;
     return sources_;
   }
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   @java.lang.Override
@@ -145,10 +122,6 @@ private static final long serialVersionUID = 0L;
     return sources_;
   }
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   @java.lang.Override
@@ -156,10 +129,6 @@ private static final long serialVersionUID = 0L;
     return sources_.size();
   }
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   @java.lang.Override
@@ -167,10 +136,6 @@ private static final long serialVersionUID = 0L;
     return sources_.get(index);
   }
   /**
-   * <pre>
-   * ordered: the first that yields wins
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
    */
   @java.lang.Override
@@ -182,10 +147,6 @@ private static final long serialVersionUID = 0L;
   public static final int ON_DISAGREEMENT_FIELD_NUMBER = 4;
   private int onDisagreement_ = 0;
   /**
-   * <pre>
-   * when two both yield and differ
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
    * @return The enum numeric value on the wire for onDisagreement.
    */
@@ -193,10 +154,6 @@ private static final long serialVersionUID = 0L;
     return onDisagreement_;
   }
   /**
-   * <pre>
-   * when two both yield and differ
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
    * @return The onDisagreement.
    */
@@ -395,13 +352,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * One fact: one name, one type, and an ordered list of places it can come from.
-   * A fact has a single name however many sources it has — supplier_vat_number is
-   * supplier_vat_number whether it was read off the document or fetched from a
-   * registry.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.FactBinding}
    */
   public static final class Builder extends
@@ -624,10 +574,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object factName_ = "";
     /**
-     * <pre>
-     * the name an expression sees
-     * </pre>
-     *
      * <code>string fact_name = 1 [json_name = "factName"];</code>
      * @return The factName.
      */
@@ -644,10 +590,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the name an expression sees
-     * </pre>
-     *
      * <code>string fact_name = 1 [json_name = "factName"];</code>
      * @return The bytes for factName.
      */
@@ -665,10 +607,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the name an expression sees
-     * </pre>
-     *
      * <code>string fact_name = 1 [json_name = "factName"];</code>
      * @param value The factName to set.
      * @return This builder for chaining.
@@ -682,10 +620,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the name an expression sees
-     * </pre>
-     *
      * <code>string fact_name = 1 [json_name = "factName"];</code>
      * @return This builder for chaining.
      */
@@ -696,10 +630,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the name an expression sees
-     * </pre>
-     *
      * <code>string fact_name = 1 [json_name = "factName"];</code>
      * @param value The bytes for factName to set.
      * @return This builder for chaining.
@@ -780,10 +710,6 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.FactSource, ai.visma.ava.procedure.v1.FactSource.Builder, ai.visma.ava.procedure.v1.FactSourceOrBuilder> sourcesBuilder_;
 
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.FactSource> getSourcesList() {
@@ -794,10 +720,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public int getSourcesCount() {
@@ -808,10 +730,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource getSources(int index) {
@@ -822,10 +740,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder setSources(
@@ -843,10 +757,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder setSources(
@@ -861,10 +771,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder addSources(ai.visma.ava.procedure.v1.FactSource value) {
@@ -881,10 +787,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder addSources(
@@ -902,10 +804,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder addSources(
@@ -920,10 +818,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder addSources(
@@ -938,10 +832,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder addAllSources(
@@ -957,10 +847,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder clearSources() {
@@ -974,10 +860,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public Builder removeSources(int index) {
@@ -991,10 +873,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder getSourcesBuilder(
@@ -1002,10 +880,6 @@ private static final long serialVersionUID = 0L;
       return getSourcesFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSourceOrBuilder getSourcesOrBuilder(
@@ -1016,10 +890,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.FactSourceOrBuilder> 
@@ -1031,10 +901,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder addSourcesBuilder() {
@@ -1042,10 +908,6 @@ private static final long serialVersionUID = 0L;
           ai.visma.ava.procedure.v1.FactSource.getDefaultInstance());
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder addSourcesBuilder(
@@ -1054,10 +916,6 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.FactSource.getDefaultInstance());
     }
     /**
-     * <pre>
-     * ordered: the first that yields wins
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.FactSource.Builder> 
@@ -1081,10 +939,6 @@ private static final long serialVersionUID = 0L;
 
     private int onDisagreement_ = 0;
     /**
-     * <pre>
-     * when two both yield and differ
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
      * @return The enum numeric value on the wire for onDisagreement.
      */
@@ -1092,10 +946,6 @@ private static final long serialVersionUID = 0L;
       return onDisagreement_;
     }
     /**
-     * <pre>
-     * when two both yield and differ
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
      * @param value The enum numeric value on the wire for onDisagreement to set.
      * @return This builder for chaining.
@@ -1107,10 +957,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when two both yield and differ
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
      * @return The onDisagreement.
      */
@@ -1120,10 +966,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.ava.procedure.v1.Disagreement.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * when two both yield and differ
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
      * @param value The onDisagreement to set.
      * @return This builder for chaining.
@@ -1138,10 +980,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when two both yield and differ
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Disagreement on_disagreement = 4 [json_name = "onDisagreement"];</code>
      * @return This builder for chaining.
      */

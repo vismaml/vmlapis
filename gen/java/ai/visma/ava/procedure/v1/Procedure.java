@@ -6,16 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * A decision procedure: an ordered structure of steps that decides one or more
- * named things. The order carries meaning — a step reached second only fires if
- * the first did not — so the path taken through it is the explanation.
- *
- * The engine knows nothing about accounting. What a procedure reads and what it
- * produces are declared as data; "account" and "approver" are strings it passes
- * through.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.Procedure}
  */
 public final class Procedure extends
@@ -58,10 +48,6 @@ private static final long serialVersionUID = 0L;
   public static final int INPUTS_FIELD_NUMBER = 1;
   private ai.visma.ava.procedure.v1.InputContract inputs_;
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    * @return Whether the inputs field is set.
    */
@@ -70,10 +56,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    * @return The inputs.
    */
@@ -82,10 +64,6 @@ private static final long serialVersionUID = 0L;
     return inputs_ == null ? ai.visma.ava.procedure.v1.InputContract.getDefaultInstance() : inputs_;
   }
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    */
   @java.lang.Override
@@ -96,10 +74,6 @@ private static final long serialVersionUID = 0L;
   public static final int OUTPUTS_FIELD_NUMBER = 2;
   private ai.visma.ava.procedure.v1.OutputContract outputs_;
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    * @return Whether the outputs field is set.
    */
@@ -108,10 +82,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    * @return The outputs.
    */
@@ -120,10 +90,6 @@ private static final long serialVersionUID = 0L;
     return outputs_ == null ? ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
   }
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    */
   @java.lang.Override
@@ -134,10 +100,6 @@ private static final long serialVersionUID = 0L;
   public static final int SELECTOR_FIELD_NUMBER = 3;
   private ai.visma.ava.procedure.v1.Selector selector_;
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    * @return Whether the selector field is set.
    */
@@ -146,10 +108,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    * @return The selector.
    */
@@ -158,10 +116,6 @@ private static final long serialVersionUID = 0L;
     return selector_ == null ? ai.visma.ava.procedure.v1.Selector.getDefaultInstance() : selector_;
   }
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    */
   @java.lang.Override
@@ -173,10 +127,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object rootStepId_ = "";
   /**
-   * <pre>
-   * must name one of steps
-   * </pre>
-   *
    * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
    * @return The rootStepId.
    */
@@ -194,10 +144,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * must name one of steps
-   * </pre>
-   *
    * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
    * @return The bytes for rootStepId.
    */
@@ -220,10 +166,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.Step> steps_;
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   @java.lang.Override
@@ -231,10 +173,6 @@ private static final long serialVersionUID = 0L;
     return steps_;
   }
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   @java.lang.Override
@@ -243,10 +181,6 @@ private static final long serialVersionUID = 0L;
     return steps_;
   }
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   @java.lang.Override
@@ -254,10 +188,6 @@ private static final long serialVersionUID = 0L;
     return steps_.size();
   }
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   @java.lang.Override
@@ -265,10 +195,6 @@ private static final long serialVersionUID = 0L;
     return steps_.get(index);
   }
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   @java.lang.Override
@@ -495,16 +421,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * A decision procedure: an ordered structure of steps that decides one or more
-   * named things. The order carries meaning — a step reached second only fires if
-   * the first did not — so the path taken through it is the explanation.
-   *
-   * The engine knows nothing about accounting. What a procedure reads and what it
-   * produces are declared as data; "account" and "approver" are strings it passes
-   * through.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.Procedure}
    */
   public static final class Builder extends
@@ -779,10 +695,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ava.procedure.v1.InputContract, ai.visma.ava.procedure.v1.InputContract.Builder, ai.visma.ava.procedure.v1.InputContractOrBuilder> inputsBuilder_;
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      * @return Whether the inputs field is set.
      */
@@ -790,10 +702,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      * @return The inputs.
      */
@@ -805,10 +713,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public Builder setInputs(ai.visma.ava.procedure.v1.InputContract value) {
@@ -825,10 +729,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public Builder setInputs(
@@ -843,10 +743,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public Builder mergeInputs(ai.visma.ava.procedure.v1.InputContract value) {
@@ -868,10 +764,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public Builder clearInputs() {
@@ -885,10 +777,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public ai.visma.ava.procedure.v1.InputContract.Builder getInputsBuilder() {
@@ -897,10 +785,6 @@ private static final long serialVersionUID = 0L;
       return getInputsFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     public ai.visma.ava.procedure.v1.InputContractOrBuilder getInputsOrBuilder() {
@@ -912,10 +796,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * what facts it may read, and from where
-     * </pre>
-     *
      * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -936,10 +816,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ava.procedure.v1.OutputContract, ai.visma.ava.procedure.v1.OutputContract.Builder, ai.visma.ava.procedure.v1.OutputContractOrBuilder> outputsBuilder_;
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      * @return Whether the outputs field is set.
      */
@@ -947,10 +823,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      * @return The outputs.
      */
@@ -962,10 +834,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public Builder setOutputs(ai.visma.ava.procedure.v1.OutputContract value) {
@@ -982,10 +850,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public Builder setOutputs(
@@ -1000,10 +864,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public Builder mergeOutputs(ai.visma.ava.procedure.v1.OutputContract value) {
@@ -1025,10 +885,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public Builder clearOutputs() {
@@ -1042,10 +898,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public ai.visma.ava.procedure.v1.OutputContract.Builder getOutputsBuilder() {
@@ -1054,10 +906,6 @@ private static final long serialVersionUID = 0L;
       return getOutputsFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     public ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder() {
@@ -1069,10 +917,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * what it decides
-     * </pre>
-     *
      * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1093,10 +937,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ava.procedure.v1.Selector, ai.visma.ava.procedure.v1.Selector.Builder, ai.visma.ava.procedure.v1.SelectorOrBuilder> selectorBuilder_;
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      * @return Whether the selector field is set.
      */
@@ -1104,10 +944,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      * @return The selector.
      */
@@ -1119,10 +955,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public Builder setSelector(ai.visma.ava.procedure.v1.Selector value) {
@@ -1139,10 +971,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public Builder setSelector(
@@ -1157,10 +985,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public Builder mergeSelector(ai.visma.ava.procedure.v1.Selector value) {
@@ -1182,10 +1006,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public Builder clearSelector() {
@@ -1199,10 +1019,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public ai.visma.ava.procedure.v1.Selector.Builder getSelectorBuilder() {
@@ -1211,10 +1027,6 @@ private static final long serialVersionUID = 0L;
       return getSelectorFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     public ai.visma.ava.procedure.v1.SelectorOrBuilder getSelectorOrBuilder() {
@@ -1226,10 +1038,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * when it applies
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1248,10 +1056,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object rootStepId_ = "";
     /**
-     * <pre>
-     * must name one of steps
-     * </pre>
-     *
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
      * @return The rootStepId.
      */
@@ -1268,10 +1072,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * must name one of steps
-     * </pre>
-     *
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
      * @return The bytes for rootStepId.
      */
@@ -1289,10 +1089,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * must name one of steps
-     * </pre>
-     *
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
      * @param value The rootStepId to set.
      * @return This builder for chaining.
@@ -1306,10 +1102,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * must name one of steps
-     * </pre>
-     *
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
      * @return This builder for chaining.
      */
@@ -1320,10 +1112,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * must name one of steps
-     * </pre>
-     *
      * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
      * @param value The bytes for rootStepId to set.
      * @return This builder for chaining.
@@ -1351,10 +1139,6 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.Step, ai.visma.ava.procedure.v1.Step.Builder, ai.visma.ava.procedure.v1.StepOrBuilder> stepsBuilder_;
 
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Step> getStepsList() {
@@ -1365,10 +1149,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public int getStepsCount() {
@@ -1379,10 +1159,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step getSteps(int index) {
@@ -1393,10 +1169,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder setSteps(
@@ -1414,10 +1186,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder setSteps(
@@ -1432,10 +1200,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder addSteps(ai.visma.ava.procedure.v1.Step value) {
@@ -1452,10 +1216,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder addSteps(
@@ -1473,10 +1233,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder addSteps(
@@ -1491,10 +1247,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder addSteps(
@@ -1509,10 +1261,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder addAllSteps(
@@ -1528,10 +1276,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder clearSteps() {
@@ -1545,10 +1289,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public Builder removeSteps(int index) {
@@ -1562,10 +1302,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder getStepsBuilder(
@@ -1573,10 +1309,6 @@ private static final long serialVersionUID = 0L;
       return getStepsFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.StepOrBuilder getStepsOrBuilder(
@@ -1587,10 +1319,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.StepOrBuilder> 
@@ -1602,10 +1330,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder addStepsBuilder() {
@@ -1613,10 +1337,6 @@ private static final long serialVersionUID = 0L;
           ai.visma.ava.procedure.v1.Step.getDefaultInstance());
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder addStepsBuilder(
@@ -1625,10 +1345,6 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.Step.getDefaultInstance());
     }
     /**
-     * <pre>
-     * indexed by step_id at load time
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Step.Builder> 

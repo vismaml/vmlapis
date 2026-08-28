@@ -10,19 +10,11 @@ public interface JudgmentOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * a versioned template id, never the prompt text
-   * </pre>
-   *
    * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
    * @return The promptRef.
    */
   java.lang.String getPromptRef();
   /**
-   * <pre>
-   * a versioned template id, never the prompt text
-   * </pre>
-   *
    * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
    * @return The bytes for promptRef.
    */
@@ -30,10 +22,6 @@ public interface JudgmentOrBuilder extends
       getPromptRefBytes();
 
   /**
-   * <pre>
-   * the answer must cite a span, which we verify
-   * </pre>
-   *
    * <code>bool requires_span = 2 [json_name = "requiresSpan"];</code>
    * @return The requiresSpan.
    */

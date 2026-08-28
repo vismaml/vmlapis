@@ -10,100 +10,56 @@ public interface ProcedureOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    * @return Whether the inputs field is set.
    */
   boolean hasInputs();
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    * @return The inputs.
    */
   ai.visma.ava.procedure.v1.InputContract getInputs();
   /**
-   * <pre>
-   * what facts it may read, and from where
-   * </pre>
-   *
    * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
    */
   ai.visma.ava.procedure.v1.InputContractOrBuilder getInputsOrBuilder();
 
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    * @return Whether the outputs field is set.
    */
   boolean hasOutputs();
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    * @return The outputs.
    */
   ai.visma.ava.procedure.v1.OutputContract getOutputs();
   /**
-   * <pre>
-   * what it decides
-   * </pre>
-   *
    * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
    */
   ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder();
 
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    * @return Whether the selector field is set.
    */
   boolean hasSelector();
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    * @return The selector.
    */
   ai.visma.ava.procedure.v1.Selector getSelector();
   /**
-   * <pre>
-   * when it applies
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Selector selector = 3 [json_name = "selector"];</code>
    */
   ai.visma.ava.procedure.v1.SelectorOrBuilder getSelectorOrBuilder();
 
   /**
-   * <pre>
-   * must name one of steps
-   * </pre>
-   *
    * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
    * @return The rootStepId.
    */
   java.lang.String getRootStepId();
   /**
-   * <pre>
-   * must name one of steps
-   * </pre>
-   *
    * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
    * @return The bytes for rootStepId.
    */
@@ -111,44 +67,24 @@ public interface ProcedureOrBuilder extends
       getRootStepIdBytes();
 
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   java.util.List<ai.visma.ava.procedure.v1.Step> 
       getStepsList();
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   ai.visma.ava.procedure.v1.Step getSteps(int index);
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   int getStepsCount();
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   java.util.List<? extends ai.visma.ava.procedure.v1.StepOrBuilder> 
       getStepsOrBuilderList();
   /**
-   * <pre>
-   * indexed by step_id at load time
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
    */
   ai.visma.ava.procedure.v1.StepOrBuilder getStepsOrBuilder(

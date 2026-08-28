@@ -6,10 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * One unit of a procedure: a question, and the branches that answer it.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.Step}
  */
 public final class Step extends
@@ -114,10 +110,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object question_ = "";
   /**
-   * <pre>
-   * plain language, written for a human to read
-   * </pre>
-   *
    * <code>string question = 3 [json_name = "question"];</code>
    * @return The question.
    */
@@ -135,10 +127,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * plain language, written for a human to read
-   * </pre>
-   *
    * <code>string question = 3 [json_name = "question"];</code>
    * @return The bytes for question.
    */
@@ -161,10 +149,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object guidance_ = "";
   /**
-   * <pre>
-   * how to answer it
-   * </pre>
-   *
    * <code>string guidance = 4 [json_name = "guidance"];</code>
    * @return The guidance.
    */
@@ -182,10 +166,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * how to answer it
-   * </pre>
-   *
    * <code>string guidance = 4 [json_name = "guidance"];</code>
    * @return The bytes for guidance.
    */
@@ -207,10 +187,6 @@ private static final long serialVersionUID = 0L;
   public static final int JUDGMENT_FIELD_NUMBER = 5;
   private ai.visma.ava.procedure.v1.Judgment judgment_;
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    * @return Whether the judgment field is set.
    */
@@ -219,10 +195,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    * @return The judgment.
    */
@@ -231,10 +203,6 @@ private static final long serialVersionUID = 0L;
     return judgment_ == null ? ai.visma.ava.procedure.v1.Judgment.getDefaultInstance() : judgment_;
   }
   /**
-   * <pre>
-   * set when kind is STEP_KIND_JUDGMENT
-   * </pre>
-   *
    * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
    */
   @java.lang.Override
@@ -246,10 +214,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.Branch> branches_;
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   @java.lang.Override
@@ -257,10 +221,6 @@ private static final long serialVersionUID = 0L;
     return branches_;
   }
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   @java.lang.Override
@@ -269,10 +229,6 @@ private static final long serialVersionUID = 0L;
     return branches_;
   }
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   @java.lang.Override
@@ -280,10 +236,6 @@ private static final long serialVersionUID = 0L;
     return branches_.size();
   }
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   @java.lang.Override
@@ -291,10 +243,6 @@ private static final long serialVersionUID = 0L;
     return branches_.get(index);
   }
   /**
-   * <pre>
-   * order is precedence
-   * </pre>
-   *
    * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
    */
   @java.lang.Override
@@ -547,10 +495,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * One unit of a procedure: a question, and the branches that answer it.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.Step}
    */
   public static final class Builder extends
@@ -956,10 +900,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object question_ = "";
     /**
-     * <pre>
-     * plain language, written for a human to read
-     * </pre>
-     *
      * <code>string question = 3 [json_name = "question"];</code>
      * @return The question.
      */
@@ -976,10 +916,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * plain language, written for a human to read
-     * </pre>
-     *
      * <code>string question = 3 [json_name = "question"];</code>
      * @return The bytes for question.
      */
@@ -997,10 +933,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * plain language, written for a human to read
-     * </pre>
-     *
      * <code>string question = 3 [json_name = "question"];</code>
      * @param value The question to set.
      * @return This builder for chaining.
@@ -1014,10 +946,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * plain language, written for a human to read
-     * </pre>
-     *
      * <code>string question = 3 [json_name = "question"];</code>
      * @return This builder for chaining.
      */
@@ -1028,10 +956,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * plain language, written for a human to read
-     * </pre>
-     *
      * <code>string question = 3 [json_name = "question"];</code>
      * @param value The bytes for question to set.
      * @return This builder for chaining.
@@ -1048,10 +972,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object guidance_ = "";
     /**
-     * <pre>
-     * how to answer it
-     * </pre>
-     *
      * <code>string guidance = 4 [json_name = "guidance"];</code>
      * @return The guidance.
      */
@@ -1068,10 +988,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * how to answer it
-     * </pre>
-     *
      * <code>string guidance = 4 [json_name = "guidance"];</code>
      * @return The bytes for guidance.
      */
@@ -1089,10 +1005,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * how to answer it
-     * </pre>
-     *
      * <code>string guidance = 4 [json_name = "guidance"];</code>
      * @param value The guidance to set.
      * @return This builder for chaining.
@@ -1106,10 +1018,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * how to answer it
-     * </pre>
-     *
      * <code>string guidance = 4 [json_name = "guidance"];</code>
      * @return This builder for chaining.
      */
@@ -1120,10 +1028,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * how to answer it
-     * </pre>
-     *
      * <code>string guidance = 4 [json_name = "guidance"];</code>
      * @param value The bytes for guidance to set.
      * @return This builder for chaining.
@@ -1142,10 +1046,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ava.procedure.v1.Judgment, ai.visma.ava.procedure.v1.Judgment.Builder, ai.visma.ava.procedure.v1.JudgmentOrBuilder> judgmentBuilder_;
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      * @return Whether the judgment field is set.
      */
@@ -1153,10 +1053,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      * @return The judgment.
      */
@@ -1168,10 +1064,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public Builder setJudgment(ai.visma.ava.procedure.v1.Judgment value) {
@@ -1188,10 +1080,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public Builder setJudgment(
@@ -1206,10 +1094,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public Builder mergeJudgment(ai.visma.ava.procedure.v1.Judgment value) {
@@ -1231,10 +1115,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public Builder clearJudgment() {
@@ -1248,10 +1128,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public ai.visma.ava.procedure.v1.Judgment.Builder getJudgmentBuilder() {
@@ -1260,10 +1136,6 @@ private static final long serialVersionUID = 0L;
       return getJudgmentFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     public ai.visma.ava.procedure.v1.JudgmentOrBuilder getJudgmentOrBuilder() {
@@ -1275,10 +1147,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * set when kind is STEP_KIND_JUDGMENT
-     * </pre>
-     *
      * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1308,10 +1176,6 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.Branch, ai.visma.ava.procedure.v1.Branch.Builder, ai.visma.ava.procedure.v1.BranchOrBuilder> branchesBuilder_;
 
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Branch> getBranchesList() {
@@ -1322,10 +1186,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public int getBranchesCount() {
@@ -1336,10 +1196,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch getBranches(int index) {
@@ -1350,10 +1206,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder setBranches(
@@ -1371,10 +1223,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder setBranches(
@@ -1389,10 +1237,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder addBranches(ai.visma.ava.procedure.v1.Branch value) {
@@ -1409,10 +1253,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder addBranches(
@@ -1430,10 +1270,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder addBranches(
@@ -1448,10 +1284,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder addBranches(
@@ -1466,10 +1298,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder addAllBranches(
@@ -1485,10 +1313,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder clearBranches() {
@@ -1502,10 +1326,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public Builder removeBranches(int index) {
@@ -1519,10 +1339,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder getBranchesBuilder(
@@ -1530,10 +1346,6 @@ private static final long serialVersionUID = 0L;
       return getBranchesFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.BranchOrBuilder getBranchesOrBuilder(
@@ -1544,10 +1356,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.BranchOrBuilder> 
@@ -1559,10 +1367,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder addBranchesBuilder() {
@@ -1570,10 +1374,6 @@ private static final long serialVersionUID = 0L;
           ai.visma.ava.procedure.v1.Branch.getDefaultInstance());
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder addBranchesBuilder(
@@ -1582,10 +1382,6 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.Branch.getDefaultInstance());
     }
     /**
-     * <pre>
-     * order is precedence
-     * </pre>
-     *
      * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Branch.Builder> 

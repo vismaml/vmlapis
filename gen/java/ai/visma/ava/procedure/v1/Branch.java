@@ -6,10 +6,6 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * <pre>
- * One possible answer to a step, and what happens if it is taken.
- * </pre>
- *
  * Protobuf type {@code ava.procedure.v1.Branch}
  */
 public final class Branch extends
@@ -68,10 +64,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object branchId_ = "";
   /**
-   * <pre>
-   * stable: the trace references it
-   * </pre>
-   *
    * <code>string branch_id = 1 [json_name = "branchId"];</code>
    * @return The branchId.
    */
@@ -89,10 +81,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * stable: the trace references it
-   * </pre>
-   *
    * <code>string branch_id = 1 [json_name = "branchId"];</code>
    * @return The bytes for branchId.
    */
@@ -154,10 +142,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object criterion_ = "";
   /**
-   * <pre>
-   * the plain-language test. Recorded as the trace's answer.
-   * </pre>
-   *
    * <code>string criterion = 3 [json_name = "criterion"];</code>
    * @return The criterion.
    */
@@ -175,10 +159,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the plain-language test. Recorded as the trace's answer.
-   * </pre>
-   *
    * <code>string criterion = 3 [json_name = "criterion"];</code>
    * @return The bytes for criterion.
    */
@@ -201,10 +181,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object when_ = "";
   /**
-   * <pre>
-   * TEST only. Empty means fallback, and must be last.
-   * </pre>
-   *
    * <code>string when = 4 [json_name = "when"];</code>
    * @return The when.
    */
@@ -222,10 +198,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * TEST only. Empty means fallback, and must be last.
-   * </pre>
-   *
    * <code>string when = 4 [json_name = "when"];</code>
    * @return The bytes for when.
    */
@@ -271,10 +243,6 @@ private static final long serialVersionUID = 0L;
     return internalGetSets().getMap().size();
   }
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   @java.lang.Override
@@ -292,10 +260,6 @@ private static final long serialVersionUID = 0L;
     return getSetsMap();
   }
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   @java.lang.Override
@@ -303,10 +267,6 @@ private static final long serialVersionUID = 0L;
     return internalGetSets().getMap();
   }
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   @java.lang.Override
@@ -321,10 +281,6 @@ java.lang.String defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   @java.lang.Override
@@ -343,10 +299,6 @@ java.lang.String defaultValue) {
   @SuppressWarnings("serial")
   private volatile java.lang.Object nextStepId_ = "";
   /**
-   * <pre>
-   * or continue
-   * </pre>
-   *
    * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
    * @return The nextStepId.
    */
@@ -364,10 +316,6 @@ java.lang.String defaultValue) {
     }
   }
   /**
-   * <pre>
-   * or continue
-   * </pre>
-   *
    * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
    * @return The bytes for nextStepId.
    */
@@ -389,10 +337,6 @@ java.lang.String defaultValue) {
   public static final int IS_ESCALATION_FIELD_NUMBER = 7;
   private boolean isEscalation_ = false;
   /**
-   * <pre>
-   * this branch means we cannot answer
-   * </pre>
-   *
    * <code>bool is_escalation = 7 [json_name = "isEscalation"];</code>
    * @return The isEscalation.
    */
@@ -405,10 +349,6 @@ java.lang.String defaultValue) {
   @SuppressWarnings("serial")
   private volatile java.lang.Object rationale_ = "";
   /**
-   * <pre>
-   * why the generator wrote it; never read at run time
-   * </pre>
-   *
    * <code>string rationale = 8 [json_name = "rationale"];</code>
    * @return The rationale.
    */
@@ -426,10 +366,6 @@ java.lang.String defaultValue) {
     }
   }
   /**
-   * <pre>
-   * why the generator wrote it; never read at run time
-   * </pre>
-   *
    * <code>string rationale = 8 [json_name = "rationale"];</code>
    * @return The bytes for rationale.
    */
@@ -689,10 +625,6 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
-   * <pre>
-   * One possible answer to a step, and what happens if it is taken.
-   * </pre>
-   *
    * Protobuf type {@code ava.procedure.v1.Branch}
    */
   public static final class Builder extends
@@ -953,10 +885,6 @@ java.lang.String defaultValue) {
 
     private java.lang.Object branchId_ = "";
     /**
-     * <pre>
-     * stable: the trace references it
-     * </pre>
-     *
      * <code>string branch_id = 1 [json_name = "branchId"];</code>
      * @return The branchId.
      */
@@ -973,10 +901,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * stable: the trace references it
-     * </pre>
-     *
      * <code>string branch_id = 1 [json_name = "branchId"];</code>
      * @return The bytes for branchId.
      */
@@ -994,10 +918,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * stable: the trace references it
-     * </pre>
-     *
      * <code>string branch_id = 1 [json_name = "branchId"];</code>
      * @param value The branchId to set.
      * @return This builder for chaining.
@@ -1011,10 +931,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * stable: the trace references it
-     * </pre>
-     *
      * <code>string branch_id = 1 [json_name = "branchId"];</code>
      * @return This builder for chaining.
      */
@@ -1025,10 +941,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * stable: the trace references it
-     * </pre>
-     *
      * <code>string branch_id = 1 [json_name = "branchId"];</code>
      * @param value The bytes for branchId to set.
      * @return This builder for chaining.
@@ -1117,10 +1029,6 @@ java.lang.String defaultValue) {
 
     private java.lang.Object criterion_ = "";
     /**
-     * <pre>
-     * the plain-language test. Recorded as the trace's answer.
-     * </pre>
-     *
      * <code>string criterion = 3 [json_name = "criterion"];</code>
      * @return The criterion.
      */
@@ -1137,10 +1045,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * the plain-language test. Recorded as the trace's answer.
-     * </pre>
-     *
      * <code>string criterion = 3 [json_name = "criterion"];</code>
      * @return The bytes for criterion.
      */
@@ -1158,10 +1062,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * the plain-language test. Recorded as the trace's answer.
-     * </pre>
-     *
      * <code>string criterion = 3 [json_name = "criterion"];</code>
      * @param value The criterion to set.
      * @return This builder for chaining.
@@ -1175,10 +1075,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * the plain-language test. Recorded as the trace's answer.
-     * </pre>
-     *
      * <code>string criterion = 3 [json_name = "criterion"];</code>
      * @return This builder for chaining.
      */
@@ -1189,10 +1085,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * the plain-language test. Recorded as the trace's answer.
-     * </pre>
-     *
      * <code>string criterion = 3 [json_name = "criterion"];</code>
      * @param value The bytes for criterion to set.
      * @return This builder for chaining.
@@ -1209,10 +1101,6 @@ java.lang.String defaultValue) {
 
     private java.lang.Object when_ = "";
     /**
-     * <pre>
-     * TEST only. Empty means fallback, and must be last.
-     * </pre>
-     *
      * <code>string when = 4 [json_name = "when"];</code>
      * @return The when.
      */
@@ -1229,10 +1117,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * TEST only. Empty means fallback, and must be last.
-     * </pre>
-     *
      * <code>string when = 4 [json_name = "when"];</code>
      * @return The bytes for when.
      */
@@ -1250,10 +1134,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * TEST only. Empty means fallback, and must be last.
-     * </pre>
-     *
      * <code>string when = 4 [json_name = "when"];</code>
      * @param value The when to set.
      * @return This builder for chaining.
@@ -1267,10 +1147,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * TEST only. Empty means fallback, and must be last.
-     * </pre>
-     *
      * <code>string when = 4 [json_name = "when"];</code>
      * @return This builder for chaining.
      */
@@ -1281,10 +1157,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * TEST only. Empty means fallback, and must be last.
-     * </pre>
-     *
      * <code>string when = 4 [json_name = "when"];</code>
      * @param value The bytes for when to set.
      * @return This builder for chaining.
@@ -1326,10 +1198,6 @@ java.lang.String defaultValue) {
       return internalGetSets().getMap().size();
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     @java.lang.Override
@@ -1347,10 +1215,6 @@ java.lang.String defaultValue) {
       return getSetsMap();
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     @java.lang.Override
@@ -1358,10 +1222,6 @@ java.lang.String defaultValue) {
       return internalGetSets().getMap();
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     @java.lang.Override
@@ -1376,10 +1236,6 @@ java.lang.String defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     @java.lang.Override
@@ -1400,10 +1256,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     public Builder removeSets(
@@ -1423,10 +1275,6 @@ java.lang.String defaultValue) {
       return internalGetMutableSets().getMutableMap();
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     public Builder putSets(
@@ -1440,10 +1288,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * terminal: output name -&gt; literal value
-     * </pre>
-     *
      * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
      */
     public Builder putAllSets(
@@ -1456,10 +1300,6 @@ java.lang.String defaultValue) {
 
     private java.lang.Object nextStepId_ = "";
     /**
-     * <pre>
-     * or continue
-     * </pre>
-     *
      * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
      * @return The nextStepId.
      */
@@ -1476,10 +1316,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * or continue
-     * </pre>
-     *
      * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
      * @return The bytes for nextStepId.
      */
@@ -1497,10 +1333,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * or continue
-     * </pre>
-     *
      * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
      * @param value The nextStepId to set.
      * @return This builder for chaining.
@@ -1514,10 +1346,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * or continue
-     * </pre>
-     *
      * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
      * @return This builder for chaining.
      */
@@ -1528,10 +1356,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * or continue
-     * </pre>
-     *
      * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
      * @param value The bytes for nextStepId to set.
      * @return This builder for chaining.
@@ -1548,10 +1372,6 @@ java.lang.String defaultValue) {
 
     private boolean isEscalation_ ;
     /**
-     * <pre>
-     * this branch means we cannot answer
-     * </pre>
-     *
      * <code>bool is_escalation = 7 [json_name = "isEscalation"];</code>
      * @return The isEscalation.
      */
@@ -1560,10 +1380,6 @@ java.lang.String defaultValue) {
       return isEscalation_;
     }
     /**
-     * <pre>
-     * this branch means we cannot answer
-     * </pre>
-     *
      * <code>bool is_escalation = 7 [json_name = "isEscalation"];</code>
      * @param value The isEscalation to set.
      * @return This builder for chaining.
@@ -1576,10 +1392,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * this branch means we cannot answer
-     * </pre>
-     *
      * <code>bool is_escalation = 7 [json_name = "isEscalation"];</code>
      * @return This builder for chaining.
      */
@@ -1592,10 +1404,6 @@ java.lang.String defaultValue) {
 
     private java.lang.Object rationale_ = "";
     /**
-     * <pre>
-     * why the generator wrote it; never read at run time
-     * </pre>
-     *
      * <code>string rationale = 8 [json_name = "rationale"];</code>
      * @return The rationale.
      */
@@ -1612,10 +1420,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * why the generator wrote it; never read at run time
-     * </pre>
-     *
      * <code>string rationale = 8 [json_name = "rationale"];</code>
      * @return The bytes for rationale.
      */
@@ -1633,10 +1437,6 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <pre>
-     * why the generator wrote it; never read at run time
-     * </pre>
-     *
      * <code>string rationale = 8 [json_name = "rationale"];</code>
      * @param value The rationale to set.
      * @return This builder for chaining.
@@ -1650,10 +1450,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * why the generator wrote it; never read at run time
-     * </pre>
-     *
      * <code>string rationale = 8 [json_name = "rationale"];</code>
      * @return This builder for chaining.
      */
@@ -1664,10 +1460,6 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <pre>
-     * why the generator wrote it; never read at run time
-     * </pre>
-     *
      * <code>string rationale = 8 [json_name = "rationale"];</code>
      * @param value The bytes for rationale to set.
      * @return This builder for chaining.

@@ -47,10 +47,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object promptRef_ = "";
   /**
-   * <pre>
-   * a versioned template id, never the prompt text
-   * </pre>
-   *
    * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
    * @return The promptRef.
    */
@@ -68,10 +64,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * a versioned template id, never the prompt text
-   * </pre>
-   *
    * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
    * @return The bytes for promptRef.
    */
@@ -93,10 +85,6 @@ private static final long serialVersionUID = 0L;
   public static final int REQUIRES_SPAN_FIELD_NUMBER = 2;
   private boolean requiresSpan_ = false;
   /**
-   * <pre>
-   * the answer must cite a span, which we verify
-   * </pre>
-   *
    * <code>bool requires_span = 2 [json_name = "requiresSpan"];</code>
    * @return The requiresSpan.
    */
@@ -425,10 +413,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object promptRef_ = "";
     /**
-     * <pre>
-     * a versioned template id, never the prompt text
-     * </pre>
-     *
      * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
      * @return The promptRef.
      */
@@ -445,10 +429,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * a versioned template id, never the prompt text
-     * </pre>
-     *
      * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
      * @return The bytes for promptRef.
      */
@@ -466,10 +446,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * a versioned template id, never the prompt text
-     * </pre>
-     *
      * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
      * @param value The promptRef to set.
      * @return This builder for chaining.
@@ -483,10 +459,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a versioned template id, never the prompt text
-     * </pre>
-     *
      * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
      * @return This builder for chaining.
      */
@@ -497,10 +469,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a versioned template id, never the prompt text
-     * </pre>
-     *
      * <code>string prompt_ref = 1 [json_name = "promptRef"];</code>
      * @param value The bytes for promptRef to set.
      * @return This builder for chaining.
@@ -517,10 +485,6 @@ private static final long serialVersionUID = 0L;
 
     private boolean requiresSpan_ ;
     /**
-     * <pre>
-     * the answer must cite a span, which we verify
-     * </pre>
-     *
      * <code>bool requires_span = 2 [json_name = "requiresSpan"];</code>
      * @return The requiresSpan.
      */
@@ -529,10 +493,6 @@ private static final long serialVersionUID = 0L;
       return requiresSpan_;
     }
     /**
-     * <pre>
-     * the answer must cite a span, which we verify
-     * </pre>
-     *
      * <code>bool requires_span = 2 [json_name = "requiresSpan"];</code>
      * @param value The requiresSpan to set.
      * @return This builder for chaining.
@@ -545,10 +505,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the answer must cite a span, which we verify
-     * </pre>
-     *
      * <code>bool requires_span = 2 [json_name = "requiresSpan"];</code>
      * @return This builder for chaining.
      */

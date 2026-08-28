@@ -10,19 +10,11 @@ public interface BranchOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * stable: the trace references it
-   * </pre>
-   *
    * <code>string branch_id = 1 [json_name = "branchId"];</code>
    * @return The branchId.
    */
   java.lang.String getBranchId();
   /**
-   * <pre>
-   * stable: the trace references it
-   * </pre>
-   *
    * <code>string branch_id = 1 [json_name = "branchId"];</code>
    * @return The bytes for branchId.
    */
@@ -42,19 +34,11 @@ public interface BranchOrBuilder extends
       getLabelBytes();
 
   /**
-   * <pre>
-   * the plain-language test. Recorded as the trace's answer.
-   * </pre>
-   *
    * <code>string criterion = 3 [json_name = "criterion"];</code>
    * @return The criterion.
    */
   java.lang.String getCriterion();
   /**
-   * <pre>
-   * the plain-language test. Recorded as the trace's answer.
-   * </pre>
-   *
    * <code>string criterion = 3 [json_name = "criterion"];</code>
    * @return The bytes for criterion.
    */
@@ -62,19 +46,11 @@ public interface BranchOrBuilder extends
       getCriterionBytes();
 
   /**
-   * <pre>
-   * TEST only. Empty means fallback, and must be last.
-   * </pre>
-   *
    * <code>string when = 4 [json_name = "when"];</code>
    * @return The when.
    */
   java.lang.String getWhen();
   /**
-   * <pre>
-   * TEST only. Empty means fallback, and must be last.
-   * </pre>
-   *
    * <code>string when = 4 [json_name = "when"];</code>
    * @return The bytes for when.
    */
@@ -82,18 +58,10 @@ public interface BranchOrBuilder extends
       getWhenBytes();
 
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   int getSetsCount();
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   boolean containsSets(
@@ -105,19 +73,11 @@ public interface BranchOrBuilder extends
   java.util.Map<java.lang.String, java.lang.String>
   getSets();
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getSetsMap();
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   /* nullable */
@@ -126,29 +86,17 @@ java.lang.String getSetsOrDefault(
       /* nullable */
 java.lang.String defaultValue);
   /**
-   * <pre>
-   * terminal: output name -&gt; literal value
-   * </pre>
-   *
    * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
    */
   java.lang.String getSetsOrThrow(
       java.lang.String key);
 
   /**
-   * <pre>
-   * or continue
-   * </pre>
-   *
    * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
    * @return The nextStepId.
    */
   java.lang.String getNextStepId();
   /**
-   * <pre>
-   * or continue
-   * </pre>
-   *
    * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
    * @return The bytes for nextStepId.
    */
@@ -156,29 +104,17 @@ java.lang.String defaultValue);
       getNextStepIdBytes();
 
   /**
-   * <pre>
-   * this branch means we cannot answer
-   * </pre>
-   *
    * <code>bool is_escalation = 7 [json_name = "isEscalation"];</code>
    * @return The isEscalation.
    */
   boolean getIsEscalation();
 
   /**
-   * <pre>
-   * why the generator wrote it; never read at run time
-   * </pre>
-   *
    * <code>string rationale = 8 [json_name = "rationale"];</code>
    * @return The rationale.
    */
   java.lang.String getRationale();
   /**
-   * <pre>
-   * why the generator wrote it; never read at run time
-   * </pre>
-   *
    * <code>string rationale = 8 [json_name = "rationale"];</code>
    * @return The bytes for rationale.
    */

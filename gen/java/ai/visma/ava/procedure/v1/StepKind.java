@@ -15,18 +15,10 @@ public enum StepKind
    */
   STEP_KIND_UNSPECIFIED(0),
   /**
-   * <pre>
-   * decided from data, by expression
-   * </pre>
-   *
    * <code>STEP_KIND_TEST = 1;</code>
    */
   STEP_KIND_TEST(1),
   /**
-   * <pre>
-   * a model answers, among the declared branches
-   * </pre>
-   *
    * <code>STEP_KIND_JUDGMENT = 2;</code>
    */
   STEP_KIND_JUDGMENT(2),
@@ -47,18 +39,10 @@ public enum StepKind
    */
   public static final int STEP_KIND_UNSPECIFIED_VALUE = 0;
   /**
-   * <pre>
-   * decided from data, by expression
-   * </pre>
-   *
    * <code>STEP_KIND_TEST = 1;</code>
    */
   public static final int STEP_KIND_TEST_VALUE = 1;
   /**
-   * <pre>
-   * a model answers, among the declared branches
-   * </pre>
-   *
    * <code>STEP_KIND_JUDGMENT = 2;</code>
    */
   public static final int STEP_KIND_JUDGMENT_VALUE = 2;
