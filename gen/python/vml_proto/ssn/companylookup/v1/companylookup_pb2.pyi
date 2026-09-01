@@ -1,39 +1,10 @@
 from ssn.type import candidate_pb2 as _candidate_pb2
 from google.protobuf.internal import containers as _containers
-from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
-
-class SupplierVerdictReason(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = ()
-    SUPPLIER_VERDICT_REASON_UNSPECIFIED: _ClassVar[SupplierVerdictReason]
-    VERIFIED_BY_REGISTRY: _ClassVar[SupplierVerdictReason]
-    REFUTED_BY_REGISTRY: _ClassVar[SupplierVerdictReason]
-    NOT_ATTEMPTED: _ClassVar[SupplierVerdictReason]
-    ATTEMPT_FAILED: _ClassVar[SupplierVerdictReason]
-    NO_REGISTRY_FOR_COUNTRY: _ClassVar[SupplierVerdictReason]
-    NO_IDENTIFIER: _ClassVar[SupplierVerdictReason]
-    STALE: _ClassVar[SupplierVerdictReason]
-
-class VerifiedIdentifier(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = ()
-    VERIFIED_IDENTIFIER_UNSPECIFIED: _ClassVar[VerifiedIdentifier]
-    VAT_NUMBER: _ClassVar[VerifiedIdentifier]
-    ORGANISATION_NUMBER: _ClassVar[VerifiedIdentifier]
-SUPPLIER_VERDICT_REASON_UNSPECIFIED: SupplierVerdictReason
-VERIFIED_BY_REGISTRY: SupplierVerdictReason
-REFUTED_BY_REGISTRY: SupplierVerdictReason
-NOT_ATTEMPTED: SupplierVerdictReason
-ATTEMPT_FAILED: SupplierVerdictReason
-NO_REGISTRY_FOR_COUNTRY: SupplierVerdictReason
-NO_IDENTIFIER: SupplierVerdictReason
-STALE: SupplierVerdictReason
-VERIFIED_IDENTIFIER_UNSPECIFIED: VerifiedIdentifier
-VAT_NUMBER: VerifiedIdentifier
-ORGANISATION_NUMBER: VerifiedIdentifier
 
 class ProcessInvoiceCompanyDataRequest(_message.Message):
     __slots__ = ("project_name", "transaction_id", "supplier_name", "supplier_vat_number", "supplier_organisation_number", "supplier_country_code", "supplier_address", "receiver_name", "receiver_vat_number", "receiver_organisation_number", "receiver_country_code", "receiver_address", "iban", "bic", "bank_account_number", "bank_registration_number", "product_types")
@@ -90,11 +61,7 @@ class VerifySupplierRequest(_message.Message):
     def __init__(self, country_code: _Optional[str] = ..., vat_number: _Optional[str] = ..., organisation_number: _Optional[str] = ...) -> None: ...
 
 class VerifySupplierResponse(_message.Message):
-    __slots__ = ("verified", "reason", "identifier")
+    __slots__ = ("verified",)
     VERIFIED_FIELD_NUMBER: _ClassVar[int]
-    REASON_FIELD_NUMBER: _ClassVar[int]
-    IDENTIFIER_FIELD_NUMBER: _ClassVar[int]
     verified: bool
-    reason: SupplierVerdictReason
-    identifier: VerifiedIdentifier
-    def __init__(self, verified: bool = ..., reason: _Optional[_Union[SupplierVerdictReason, str]] = ..., identifier: _Optional[_Union[VerifiedIdentifier, str]] = ...) -> None: ...
+    def __init__(self, verified: bool = ...) -> None: ...

@@ -27,8 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VerifySupplierResponse() {
-    reason_ = 0;
-    identifier_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -48,8 +46,9 @@ private static final long serialVersionUID = 0L;
   private boolean verified_ = false;
   /**
    * <pre>
-   * True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-   * "refuted" — read reason to tell the cases apart.
+   * True only when a registry confirmed the identifier and the confirmation is
+   * still within the freshness window. False means "no confirmation" — never
+   * "refuted", and never a negative claim about the supplier.
    * </pre>
    *
    * <code>bool verified = 1 [json_name = "verified"];</code>
@@ -58,42 +57,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getVerified() {
     return verified_;
-  }
-
-  public static final int REASON_FIELD_NUMBER = 2;
-  private int reason_ = 0;
-  /**
-   * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-   * @return The enum numeric value on the wire for reason.
-   */
-  @java.lang.Override public int getReasonValue() {
-    return reason_;
-  }
-  /**
-   * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-   * @return The reason.
-   */
-  @java.lang.Override public ai.visma.ssn.companylookup.v1.SupplierVerdictReason getReason() {
-    ai.visma.ssn.companylookup.v1.SupplierVerdictReason result = ai.visma.ssn.companylookup.v1.SupplierVerdictReason.forNumber(reason_);
-    return result == null ? ai.visma.ssn.companylookup.v1.SupplierVerdictReason.UNRECOGNIZED : result;
-  }
-
-  public static final int IDENTIFIER_FIELD_NUMBER = 3;
-  private int identifier_ = 0;
-  /**
-   * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-   * @return The enum numeric value on the wire for identifier.
-   */
-  @java.lang.Override public int getIdentifierValue() {
-    return identifier_;
-  }
-  /**
-   * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-   * @return The identifier.
-   */
-  @java.lang.Override public ai.visma.ssn.companylookup.v1.VerifiedIdentifier getIdentifier() {
-    ai.visma.ssn.companylookup.v1.VerifiedIdentifier result = ai.visma.ssn.companylookup.v1.VerifiedIdentifier.forNumber(identifier_);
-    return result == null ? ai.visma.ssn.companylookup.v1.VerifiedIdentifier.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -113,12 +76,6 @@ private static final long serialVersionUID = 0L;
     if (verified_ != false) {
       output.writeBool(1, verified_);
     }
-    if (reason_ != ai.visma.ssn.companylookup.v1.SupplierVerdictReason.SUPPLIER_VERDICT_REASON_UNSPECIFIED.getNumber()) {
-      output.writeEnum(2, reason_);
-    }
-    if (identifier_ != ai.visma.ssn.companylookup.v1.VerifiedIdentifier.VERIFIED_IDENTIFIER_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, identifier_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -131,14 +88,6 @@ private static final long serialVersionUID = 0L;
     if (verified_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, verified_);
-    }
-    if (reason_ != ai.visma.ssn.companylookup.v1.SupplierVerdictReason.SUPPLIER_VERDICT_REASON_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, reason_);
-    }
-    if (identifier_ != ai.visma.ssn.companylookup.v1.VerifiedIdentifier.VERIFIED_IDENTIFIER_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, identifier_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -157,8 +106,6 @@ private static final long serialVersionUID = 0L;
 
     if (getVerified()
         != other.getVerified()) return false;
-    if (reason_ != other.reason_) return false;
-    if (identifier_ != other.identifier_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -173,10 +120,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getVerified());
-    hash = (37 * hash) + REASON_FIELD_NUMBER;
-    hash = (53 * hash) + reason_;
-    hash = (37 * hash) + IDENTIFIER_FIELD_NUMBER;
-    hash = (53 * hash) + identifier_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -309,8 +252,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       verified_ = false;
-      reason_ = 0;
-      identifier_ = 0;
       return this;
     }
 
@@ -347,12 +288,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.verified_ = verified_;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.reason_ = reason_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.identifier_ = identifier_;
-      }
     }
 
     @java.lang.Override
@@ -369,12 +304,6 @@ private static final long serialVersionUID = 0L;
       if (other == ai.visma.ssn.companylookup.v1.VerifySupplierResponse.getDefaultInstance()) return this;
       if (other.getVerified() != false) {
         setVerified(other.getVerified());
-      }
-      if (other.reason_ != 0) {
-        setReasonValue(other.getReasonValue());
-      }
-      if (other.identifier_ != 0) {
-        setIdentifierValue(other.getIdentifierValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -407,16 +336,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              reason_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              identifier_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -437,8 +356,9 @@ private static final long serialVersionUID = 0L;
     private boolean verified_ ;
     /**
      * <pre>
-     * True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-     * "refuted" — read reason to tell the cases apart.
+     * True only when a registry confirmed the identifier and the confirmation is
+     * still within the freshness window. False means "no confirmation" — never
+     * "refuted", and never a negative claim about the supplier.
      * </pre>
      *
      * <code>bool verified = 1 [json_name = "verified"];</code>
@@ -450,8 +370,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-     * "refuted" — read reason to tell the cases apart.
+     * True only when a registry confirmed the identifier and the confirmation is
+     * still within the freshness window. False means "no confirmation" — never
+     * "refuted", and never a negative claim about the supplier.
      * </pre>
      *
      * <code>bool verified = 1 [json_name = "verified"];</code>
@@ -467,8 +388,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-     * "refuted" — read reason to tell the cases apart.
+     * True only when a registry confirmed the identifier and the confirmation is
+     * still within the freshness window. False means "no confirmation" — never
+     * "refuted", and never a negative claim about the supplier.
      * </pre>
      *
      * <code>bool verified = 1 [json_name = "verified"];</code>
@@ -477,112 +399,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearVerified() {
       bitField0_ = (bitField0_ & ~0x00000001);
       verified_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int reason_ = 0;
-    /**
-     * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-     * @return The enum numeric value on the wire for reason.
-     */
-    @java.lang.Override public int getReasonValue() {
-      return reason_;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-     * @param value The enum numeric value on the wire for reason to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReasonValue(int value) {
-      reason_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-     * @return The reason.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.companylookup.v1.SupplierVerdictReason getReason() {
-      ai.visma.ssn.companylookup.v1.SupplierVerdictReason result = ai.visma.ssn.companylookup.v1.SupplierVerdictReason.forNumber(reason_);
-      return result == null ? ai.visma.ssn.companylookup.v1.SupplierVerdictReason.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-     * @param value The reason to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReason(ai.visma.ssn.companylookup.v1.SupplierVerdictReason value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000002;
-      reason_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearReason() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      reason_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int identifier_ = 0;
-    /**
-     * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-     * @return The enum numeric value on the wire for identifier.
-     */
-    @java.lang.Override public int getIdentifierValue() {
-      return identifier_;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-     * @param value The enum numeric value on the wire for identifier to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdentifierValue(int value) {
-      identifier_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-     * @return The identifier.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.companylookup.v1.VerifiedIdentifier getIdentifier() {
-      ai.visma.ssn.companylookup.v1.VerifiedIdentifier result = ai.visma.ssn.companylookup.v1.VerifiedIdentifier.forNumber(identifier_);
-      return result == null ? ai.visma.ssn.companylookup.v1.VerifiedIdentifier.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-     * @param value The identifier to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIdentifier(ai.visma.ssn.companylookup.v1.VerifiedIdentifier value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      identifier_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIdentifier() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      identifier_ = 0;
       onChanged();
       return this;
     }

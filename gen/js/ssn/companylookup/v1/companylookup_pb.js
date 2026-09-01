@@ -25,8 +25,6 @@ var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 goog.exportSymbol('proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse', null, global);
-goog.exportSymbol('proto.ssn.companylookup.v1.SupplierVerdictReason', null, global);
-goog.exportSymbol('proto.ssn.companylookup.v1.VerifiedIdentifier', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.VerifySupplierRequest', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.VerifySupplierResponse', null, global);
 /**
@@ -1395,9 +1393,7 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.toObject = function(
  */
 proto.ssn.companylookup.v1.VerifySupplierResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    verified: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
-    reason: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    identifier: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    verified: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -1438,14 +1434,6 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.deserializeBinaryFromReader = 
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setVerified(value);
       break;
-    case 2:
-      var value = /** @type {!proto.ssn.companylookup.v1.SupplierVerdictReason} */ (reader.readEnum());
-      msg.setReason(value);
-      break;
-    case 3:
-      var value = /** @type {!proto.ssn.companylookup.v1.VerifiedIdentifier} */ (reader.readEnum());
-      msg.setIdentifier(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -1482,20 +1470,6 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.serializeBinaryToWriter = func
       f
     );
   }
-  f = message.getReason();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      2,
-      f
-    );
-  }
-  f = message.getIdentifier();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      3,
-      f
-    );
-  }
 };
 
 
@@ -1516,64 +1490,5 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setVerified = functi
   return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
-
-/**
- * optional SupplierVerdictReason reason = 2;
- * @return {!proto.ssn.companylookup.v1.SupplierVerdictReason}
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.getReason = function() {
-  return /** @type {!proto.ssn.companylookup.v1.SupplierVerdictReason} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {!proto.ssn.companylookup.v1.SupplierVerdictReason} value
- * @return {!proto.ssn.companylookup.v1.VerifySupplierResponse} returns this
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setReason = function(value) {
-  return jspb.Message.setProto3EnumField(this, 2, value);
-};
-
-
-/**
- * optional VerifiedIdentifier identifier = 3;
- * @return {!proto.ssn.companylookup.v1.VerifiedIdentifier}
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.getIdentifier = function() {
-  return /** @type {!proto.ssn.companylookup.v1.VerifiedIdentifier} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {!proto.ssn.companylookup.v1.VerifiedIdentifier} value
- * @return {!proto.ssn.companylookup.v1.VerifySupplierResponse} returns this
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setIdentifier = function(value) {
-  return jspb.Message.setProto3EnumField(this, 3, value);
-};
-
-
-/**
- * @enum {number}
- */
-proto.ssn.companylookup.v1.SupplierVerdictReason = {
-  SUPPLIER_VERDICT_REASON_UNSPECIFIED: 0,
-  VERIFIED_BY_REGISTRY: 1,
-  REFUTED_BY_REGISTRY: 2,
-  NOT_ATTEMPTED: 3,
-  ATTEMPT_FAILED: 4,
-  NO_REGISTRY_FOR_COUNTRY: 5,
-  NO_IDENTIFIER: 6,
-  STALE: 7
-};
-
-/**
- * @enum {number}
- */
-proto.ssn.companylookup.v1.VerifiedIdentifier = {
-  VERIFIED_IDENTIFIER_UNSPECIFIED: 0,
-  VAT_NUMBER: 1,
-  ORGANISATION_NUMBER: 2
-};
 
 goog.object.extend(exports, proto.ssn.companylookup.v1);

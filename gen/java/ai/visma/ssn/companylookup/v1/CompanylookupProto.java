@@ -88,33 +88,22 @@ public final class CompanylookupProto {
       "ierVatValid\"\212\001\n\025VerifySupplierRequest\022!\n" +
       "\014country_code\030\001 \001(\tR\013countryCode\022\035\n\nvat_" +
       "number\030\002 \001(\tR\tvatNumber\022/\n\023organisation_" +
-      "number\030\003 \001(\tR\022organisationNumber\"\303\001\n\026Ver" +
-      "ifySupplierResponse\022\032\n\010verified\030\001 \001(\010R\010v" +
-      "erified\022C\n\006reason\030\002 \001(\0162+.ssn.companyloo" +
-      "kup.v1.SupplierVerdictReasonR\006reason\022H\n\n" +
-      "identifier\030\003 \001(\0162(.ssn.companylookup.v1." +
-      "VerifiedIdentifierR\nidentifier*\325\001\n\025Suppl" +
-      "ierVerdictReason\022\'\n#SUPPLIER_VERDICT_REA" +
-      "SON_UNSPECIFIED\020\000\022\030\n\024VERIFIED_BY_REGISTR" +
-      "Y\020\001\022\027\n\023REFUTED_BY_REGISTRY\020\002\022\021\n\rNOT_ATTE" +
-      "MPTED\020\003\022\022\n\016ATTEMPT_FAILED\020\004\022\033\n\027NO_REGIST" +
-      "RY_FOR_COUNTRY\020\005\022\021\n\rNO_IDENTIFIER\020\006\022\t\n\005S" +
-      "TALE\020\007*b\n\022VerifiedIdentifier\022#\n\037VERIFIED" +
-      "_IDENTIFIER_UNSPECIFIED\020\000\022\016\n\nVAT_NUMBER\020" +
-      "\001\022\027\n\023ORGANISATION_NUMBER\020\0022\222\002\n\024CompanyLo" +
-      "okupService\022\214\001\n\031ProcessInvoiceCompanyDat" +
-      "a\0226.ssn.companylookup.v1.ProcessInvoiceC" +
-      "ompanyDataRequest\0327.ssn.companylookup.v1" +
-      ".ProcessInvoiceCompanyDataResponse\022k\n\016Ve" +
-      "rifySupplier\022+.ssn.companylookup.v1.Veri" +
-      "fySupplierRequest\032,.ssn.companylookup.v1" +
-      ".VerifySupplierResponseB\355\001\n\035ai.visma.ssn" +
-      ".companylookup.v1B\022CompanylookupProtoP\001Z" +
-      "Fgithub.com/e-conomic/vmlapis/gen/go/ssn" +
-      "/companylookup/v1;companylookup\242\002\003SCX\252\002\024" +
-      "Ssn.Companylookup.V1\312\002\024Ssn\\Companylookup" +
-      "\\V1\342\002 Ssn\\Companylookup\\V1\\GPBMetadata\352\002" +
-      "\026Ssn::Companylookup::V1b\006proto3"
+      "number\030\003 \001(\tR\022organisationNumber\"4\n\026Veri" +
+      "fySupplierResponse\022\032\n\010verified\030\001 \001(\010R\010ve" +
+      "rified2\222\002\n\024CompanyLookupService\022\214\001\n\031Proc" +
+      "essInvoiceCompanyData\0226.ssn.companylooku" +
+      "p.v1.ProcessInvoiceCompanyDataRequest\0327." +
+      "ssn.companylookup.v1.ProcessInvoiceCompa" +
+      "nyDataResponse\022k\n\016VerifySupplier\022+.ssn.c" +
+      "ompanylookup.v1.VerifySupplierRequest\032,." +
+      "ssn.companylookup.v1.VerifySupplierRespo" +
+      "nseB\355\001\n\035ai.visma.ssn.companylookup.v1B\022C" +
+      "ompanylookupProtoP\001ZFgithub.com/e-conomi" +
+      "c/vmlapis/gen/go/ssn/companylookup/v1;co" +
+      "mpanylookup\242\002\003SCX\252\002\024Ssn.Companylookup.V1" +
+      "\312\002\024Ssn\\Companylookup\\V1\342\002 Ssn\\Companyloo" +
+      "kup\\V1\\GPBMetadata\352\002\026Ssn::Companylookup:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,7 +133,7 @@ public final class CompanylookupProto {
     internal_static_ssn_companylookup_v1_VerifySupplierResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor,
-        new java.lang.String[] { "Verified", "Reason", "Identifier", });
+        new java.lang.String[] { "Verified", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
   }

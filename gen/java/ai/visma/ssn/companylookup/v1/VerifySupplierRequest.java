@@ -6,6 +6,11 @@
 package ai.visma.ssn.companylookup.v1;
 
 /**
+ * <pre>
+ * Send the one identifier the caller intends to act on: a VAT number, or an
+ * organisation number when there is no VAT number.
+ * </pre>
+ *
  * Protobuf type {@code ssn.companylookup.v1.VerifySupplierRequest}
  */
 public final class VerifySupplierRequest extends
@@ -347,6 +352,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Send the one identifier the caller intends to act on: a VAT number, or an
+   * organisation number when there is no VAT number.
+   * </pre>
+   *
    * Protobuf type {@code ssn.companylookup.v1.VerifySupplierRequest}
    */
   public static final class Builder extends

@@ -54,95 +54,32 @@ namespace Ssn.Companylookup.V1 {
             "ZXJfdmF0X3ZhbGlkGAEgASgIUhBzdXBwbGllclZhdFZhbGlkIooBChVWZXJp",
             "ZnlTdXBwbGllclJlcXVlc3QSIQoMY291bnRyeV9jb2RlGAEgASgJUgtjb3Vu",
             "dHJ5Q29kZRIdCgp2YXRfbnVtYmVyGAIgASgJUgl2YXROdW1iZXISLwoTb3Jn",
-            "YW5pc2F0aW9uX251bWJlchgDIAEoCVISb3JnYW5pc2F0aW9uTnVtYmVyIsMB",
-            "ChZWZXJpZnlTdXBwbGllclJlc3BvbnNlEhoKCHZlcmlmaWVkGAEgASgIUgh2",
-            "ZXJpZmllZBJDCgZyZWFzb24YAiABKA4yKy5zc24uY29tcGFueWxvb2t1cC52",
-            "MS5TdXBwbGllclZlcmRpY3RSZWFzb25SBnJlYXNvbhJICgppZGVudGlmaWVy",
-            "GAMgASgOMiguc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZpZWRJZGVudGlm",
-            "aWVyUgppZGVudGlmaWVyKtUBChVTdXBwbGllclZlcmRpY3RSZWFzb24SJwoj",
-            "U1VQUExJRVJfVkVSRElDVF9SRUFTT05fVU5TUEVDSUZJRUQQABIYChRWRVJJ",
-            "RklFRF9CWV9SRUdJU1RSWRABEhcKE1JFRlVURURfQllfUkVHSVNUUlkQAhIR",
-            "Cg1OT1RfQVRURU1QVEVEEAMSEgoOQVRURU1QVF9GQUlMRUQQBBIbChdOT19S",
-            "RUdJU1RSWV9GT1JfQ09VTlRSWRAFEhEKDU5PX0lERU5USUZJRVIQBhIJCgVT",
-            "VEFMRRAHKmIKElZlcmlmaWVkSWRlbnRpZmllchIjCh9WRVJJRklFRF9JREVO",
-            "VElGSUVSX1VOU1BFQ0lGSUVEEAASDgoKVkFUX05VTUJFUhABEhcKE09SR0FO",
-            "SVNBVElPTl9OVU1CRVIQAjKSAgoUQ29tcGFueUxvb2t1cFNlcnZpY2USjAEK",
-            "GVByb2Nlc3NJbnZvaWNlQ29tcGFueURhdGESNi5zc24uY29tcGFueWxvb2t1",
-            "cC52MS5Qcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVxdWVzdBo3LnNzbi5j",
-            "b21wYW55bG9va3VwLnYxLlByb2Nlc3NJbnZvaWNlQ29tcGFueURhdGFSZXNw",
-            "b25zZRJrCg5WZXJpZnlTdXBwbGllchIrLnNzbi5jb21wYW55bG9va3VwLnYx",
-            "LlZlcmlmeVN1cHBsaWVyUmVxdWVzdBosLnNzbi5jb21wYW55bG9va3VwLnYx",
-            "LlZlcmlmeVN1cHBsaWVyUmVzcG9uc2VC7QEKHWFpLnZpc21hLnNzbi5jb21w",
-            "YW55bG9va3VwLnYxQhJDb21wYW55bG9va3VwUHJvdG9QAVpGZ2l0aHViLmNv",
-            "bS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2NvbXBhbnlsb29rdXAv",
-            "djE7Y29tcGFueWxvb2t1cKICA1NDWKoCFFNzbi5Db21wYW55bG9va3VwLlYx",
-            "ygIUU3NuXENvbXBhbnlsb29rdXBcVjHiAiBTc25cQ29tcGFueWxvb2t1cFxW",
-            "MVxHUEJNZXRhZGF0YeoCFlNzbjo6Q29tcGFueWxvb2t1cDo6VjFiBnByb3Rv",
-            "Mw=="));
+            "YW5pc2F0aW9uX251bWJlchgDIAEoCVISb3JnYW5pc2F0aW9uTnVtYmVyIjQK",
+            "FlZlcmlmeVN1cHBsaWVyUmVzcG9uc2USGgoIdmVyaWZpZWQYASABKAhSCHZl",
+            "cmlmaWVkMpICChRDb21wYW55TG9va3VwU2VydmljZRKMAQoZUHJvY2Vzc0lu",
+            "dm9pY2VDb21wYW55RGF0YRI2LnNzbi5jb21wYW55bG9va3VwLnYxLlByb2Nl",
+            "c3NJbnZvaWNlQ29tcGFueURhdGFSZXF1ZXN0Gjcuc3NuLmNvbXBhbnlsb29r",
+            "dXAudjEuUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0YVJlc3BvbnNlEmsKDlZl",
+            "cmlmeVN1cHBsaWVyEisuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
+            "cGxpZXJSZXF1ZXN0Giwuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
+            "cGxpZXJSZXNwb25zZULtAQodYWkudmlzbWEuc3NuLmNvbXBhbnlsb29rdXAu",
+            "djFCEkNvbXBhbnlsb29rdXBQcm90b1ABWkZnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vY29tcGFueWxvb2t1cC92MTtjb21wYW55",
+            "bG9va3VwogIDU0NYqgIUU3NuLkNvbXBhbnlsb29rdXAuVjHKAhRTc25cQ29t",
+            "cGFueWxvb2t1cFxWMeICIFNzblxDb21wYW55bG9va3VwXFYxXEdQQk1ldGFk",
+            "YXRh6gIWU3NuOjpDb21wYW55bG9va3VwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.CandidateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Companylookup.V1.SupplierVerdictReason), typeof(global::Ssn.Companylookup.V1.VerifiedIdentifier), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest.Parser, new[]{ "ProjectName", "TransactionId", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierCountryCode", "SupplierAddress", "ReceiverName", "ReceiverVatNumber", "ReceiverOrganisationNumber", "ReceiverCountryCode", "ReceiverAddress", "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", "ProductTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "SupplierVatValid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierRequest), global::Ssn.Companylookup.V1.VerifySupplierRequest.Parser, new[]{ "CountryCode", "VatNumber", "OrganisationNumber" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierResponse), global::Ssn.Companylookup.V1.VerifySupplierResponse.Parser, new[]{ "Verified", "Reason", "Identifier" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierResponse), global::Ssn.Companylookup.V1.VerifySupplierResponse.Parser, new[]{ "Verified" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  /// <summary>
-  /// SupplierVerdictReason explains the verdict. Only VERIFIED_BY_REGISTRY is
-  /// definitive; every other value means "no confirmation" and must never be
-  /// rendered to a customer as a negative claim about the supplier.
-  /// </summary>
-  public enum SupplierVerdictReason {
-    [pbr::OriginalName("SUPPLIER_VERDICT_REASON_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// A registry positively confirmed the identifier.
-    /// </summary>
-    [pbr::OriginalName("VERIFIED_BY_REGISTRY")] VerifiedByRegistry = 1,
-    /// <summary>
-    /// A registry that covers this country returned "not valid".
-    /// </summary>
-    [pbr::OriginalName("REFUTED_BY_REGISTRY")] RefutedByRegistry = 2,
-    /// <summary>
-    /// Discovered but never looked up yet.
-    /// </summary>
-    [pbr::OriginalName("NOT_ATTEMPTED")] NotAttempted = 3,
-    /// <summary>
-    /// Looked up, and the registry call failed.
-    /// </summary>
-    [pbr::OriginalName("ATTEMPT_FAILED")] AttemptFailed = 4,
-    /// <summary>
-    /// No configured registry covers this country, so absence of confirmation
-    /// says nothing about the supplier. Distinct from REFUTED_BY_REGISTRY: a
-    /// valid GB VAT number is unverifiable, not invalid.
-    /// </summary>
-    [pbr::OriginalName("NO_REGISTRY_FOR_COUNTRY")] NoRegistryForCountry = 5,
-    /// <summary>
-    /// Neither a VAT nor an organisation number was extracted.
-    /// </summary>
-    [pbr::OriginalName("NO_IDENTIFIER")] NoIdentifier = 6,
-    /// <summary>
-    /// Confirmed once, but the confirmation is older than the freshness window.
-    /// </summary>
-    [pbr::OriginalName("STALE")] Stale = 7,
-  }
-
-  /// <summary>
-  /// VerifiedIdentifier says which identifier the verdict is about, so the caller
-  /// knows which candidate to mark.
-  /// </summary>
-  public enum VerifiedIdentifier {
-    [pbr::OriginalName("VERIFIED_IDENTIFIER_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("VAT_NUMBER")] VatNumber = 1,
-    [pbr::OriginalName("ORGANISATION_NUMBER")] OrganisationNumber = 2,
-  }
-
-  #endregion
-
   #region Messages
   /// <summary>
   /// The request is flat: each field is the top-1 smartscan candidate for the
@@ -1262,6 +1199,10 @@ namespace Ssn.Companylookup.V1 {
 
   }
 
+  /// <summary>
+  /// Send the one identifier the caller intends to act on: a VAT number, or an
+  /// organisation number when there is no VAT number.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifySupplierRequest : pb::IMessage<VerifySupplierRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1573,8 +1514,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VerifySupplierResponse(VerifySupplierResponse other) : this() {
       verified_ = other.verified_;
-      reason_ = other.reason_;
-      identifier_ = other.identifier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1588,8 +1527,9 @@ namespace Ssn.Companylookup.V1 {
     public const int VerifiedFieldNumber = 1;
     private bool verified_;
     /// <summary>
-    /// True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-    /// "refuted" — read reason to tell the cases apart.
+    /// True only when a registry confirmed the identifier and the confirmation is
+    /// still within the freshness window. False means "no confirmation" — never
+    /// "refuted", and never a negative claim about the supplier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1597,30 +1537,6 @@ namespace Ssn.Companylookup.V1 {
       get { return verified_; }
       set {
         verified_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 2;
-    private global::Ssn.Companylookup.V1.SupplierVerdictReason reason_ = global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Companylookup.V1.SupplierVerdictReason Reason {
-      get { return reason_; }
-      set {
-        reason_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "identifier" field.</summary>
-    public const int IdentifierFieldNumber = 3;
-    private global::Ssn.Companylookup.V1.VerifiedIdentifier identifier_ = global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Companylookup.V1.VerifiedIdentifier Identifier {
-      get { return identifier_; }
-      set {
-        identifier_ = value;
       }
     }
 
@@ -1640,8 +1556,6 @@ namespace Ssn.Companylookup.V1 {
         return true;
       }
       if (Verified != other.Verified) return false;
-      if (Reason != other.Reason) return false;
-      if (Identifier != other.Identifier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1650,8 +1564,6 @@ namespace Ssn.Companylookup.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Verified != false) hash ^= Verified.GetHashCode();
-      if (Reason != global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified) hash ^= Reason.GetHashCode();
-      if (Identifier != global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified) hash ^= Identifier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1674,14 +1586,6 @@ namespace Ssn.Companylookup.V1 {
         output.WriteRawTag(8);
         output.WriteBool(Verified);
       }
-      if (Reason != global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Reason);
-      }
-      if (Identifier != global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Identifier);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1696,14 +1600,6 @@ namespace Ssn.Companylookup.V1 {
         output.WriteRawTag(8);
         output.WriteBool(Verified);
       }
-      if (Reason != global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Reason);
-      }
-      if (Identifier != global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Identifier);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1716,12 +1612,6 @@ namespace Ssn.Companylookup.V1 {
       int size = 0;
       if (Verified != false) {
         size += 1 + 1;
-      }
-      if (Reason != global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
-      }
-      if (Identifier != global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Identifier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1737,12 +1627,6 @@ namespace Ssn.Companylookup.V1 {
       }
       if (other.Verified != false) {
         Verified = other.Verified;
-      }
-      if (other.Reason != global::Ssn.Companylookup.V1.SupplierVerdictReason.Unspecified) {
-        Reason = other.Reason;
-      }
-      if (other.Identifier != global::Ssn.Companylookup.V1.VerifiedIdentifier.Unspecified) {
-        Identifier = other.Identifier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1767,14 +1651,6 @@ namespace Ssn.Companylookup.V1 {
             Verified = input.ReadBool();
             break;
           }
-          case 16: {
-            Reason = (global::Ssn.Companylookup.V1.SupplierVerdictReason) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            Identifier = (global::Ssn.Companylookup.V1.VerifiedIdentifier) input.ReadEnum();
-            break;
-          }
         }
       }
     #endif
@@ -1796,14 +1672,6 @@ namespace Ssn.Companylookup.V1 {
             break;
           case 8: {
             Verified = input.ReadBool();
-            break;
-          }
-          case 16: {
-            Reason = (global::Ssn.Companylookup.V1.SupplierVerdictReason) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            Identifier = (global::Ssn.Companylookup.V1.VerifiedIdentifier) input.ReadEnum();
             break;
           }
         }

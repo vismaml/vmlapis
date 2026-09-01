@@ -51,47 +51,17 @@ message ProcessInvoiceCompanyDataResponse {
   bool supplier_vat_valid = 1;
 }
 
+// Send the one identifier the caller intends to act on: a VAT number, or an
+// organisation number when there is no VAT number.
 message VerifySupplierRequest {
   string country_code = 1; // ISO 3166-1 alpha-2
   string vat_number = 2;
   string organisation_number = 3;
 }
 
-// SupplierVerdictReason explains the verdict. Only VERIFIED_BY_REGISTRY is
-// definitive; every other value means "no confirmation" and must never be
-// rendered to a customer as a negative claim about the supplier.
-enum SupplierVerdictReason {
-  SUPPLIER_VERDICT_REASON_UNSPECIFIED = 0;
-  // A registry positively confirmed the identifier.
-  VERIFIED_BY_REGISTRY = 1;
-  // A registry that covers this country returned "not valid".
-  REFUTED_BY_REGISTRY = 2;
-  // Discovered but never looked up yet.
-  NOT_ATTEMPTED = 3;
-  // Looked up, and the registry call failed.
-  ATTEMPT_FAILED = 4;
-  // No configured registry covers this country, so absence of confirmation
-  // says nothing about the supplier. Distinct from REFUTED_BY_REGISTRY: a
-  // valid GB VAT number is unverifiable, not invalid.
-  NO_REGISTRY_FOR_COUNTRY = 5;
-  // Neither a VAT nor an organisation number was extracted.
-  NO_IDENTIFIER = 6;
-  // Confirmed once, but the confirmation is older than the freshness window.
-  STALE = 7;
-}
-
-// VerifiedIdentifier says which identifier the verdict is about, so the caller
-// knows which candidate to mark.
-enum VerifiedIdentifier {
-  VERIFIED_IDENTIFIER_UNSPECIFIED = 0;
-  VAT_NUMBER = 1;
-  ORGANISATION_NUMBER = 2;
-}
-
 message VerifySupplierResponse {
-  // True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-  // "refuted" — read reason to tell the cases apart.
+  // True only when a registry confirmed the identifier and the confirmation is
+  // still within the freshness window. False means "no confirmation" — never
+  // "refuted", and never a negative claim about the supplier.
   bool verified = 1;
-  SupplierVerdictReason reason = 2;
-  VerifiedIdentifier identifier = 3;
 }

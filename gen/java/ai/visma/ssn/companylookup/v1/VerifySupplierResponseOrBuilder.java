@@ -11,34 +11,13 @@ public interface VerifySupplierResponseOrBuilder extends
 
   /**
    * <pre>
-   * True only for VERIFIED_BY_REGISTRY. False means "no confirmation", never
-   * "refuted" — read reason to tell the cases apart.
+   * True only when a registry confirmed the identifier and the confirmation is
+   * still within the freshness window. False means "no confirmation" — never
+   * "refuted", and never a negative claim about the supplier.
    * </pre>
    *
    * <code>bool verified = 1 [json_name = "verified"];</code>
    * @return The verified.
    */
   boolean getVerified();
-
-  /**
-   * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-   * @return The enum numeric value on the wire for reason.
-   */
-  int getReasonValue();
-  /**
-   * <code>.ssn.companylookup.v1.SupplierVerdictReason reason = 2 [json_name = "reason"];</code>
-   * @return The reason.
-   */
-  ai.visma.ssn.companylookup.v1.SupplierVerdictReason getReason();
-
-  /**
-   * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-   * @return The enum numeric value on the wire for identifier.
-   */
-  int getIdentifierValue();
-  /**
-   * <code>.ssn.companylookup.v1.VerifiedIdentifier identifier = 3 [json_name = "identifier"];</code>
-   * @return The identifier.
-   */
-  ai.visma.ssn.companylookup.v1.VerifiedIdentifier getIdentifier();
 }

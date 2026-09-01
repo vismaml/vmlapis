@@ -163,12 +163,6 @@ export class VerifySupplierResponse extends jspb.Message {
   getVerified(): boolean;
   setVerified(value: boolean): VerifySupplierResponse;
 
-  getReason(): SupplierVerdictReason;
-  setReason(value: SupplierVerdictReason): VerifySupplierResponse;
-
-  getIdentifier(): VerifiedIdentifier;
-  setIdentifier(value: VerifiedIdentifier): VerifySupplierResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VerifySupplierResponse.AsObject;
   static toObject(includeInstance: boolean, msg: VerifySupplierResponse): VerifySupplierResponse.AsObject;
@@ -180,23 +174,6 @@ export class VerifySupplierResponse extends jspb.Message {
 export namespace VerifySupplierResponse {
   export type AsObject = {
     verified: boolean,
-    reason: SupplierVerdictReason,
-    identifier: VerifiedIdentifier,
   }
 }
 
-export enum SupplierVerdictReason { 
-  SUPPLIER_VERDICT_REASON_UNSPECIFIED = 0,
-  VERIFIED_BY_REGISTRY = 1,
-  REFUTED_BY_REGISTRY = 2,
-  NOT_ATTEMPTED = 3,
-  ATTEMPT_FAILED = 4,
-  NO_REGISTRY_FOR_COUNTRY = 5,
-  NO_IDENTIFIER = 6,
-  STALE = 7,
-}
-export enum VerifiedIdentifier { 
-  VERIFIED_IDENTIFIER_UNSPECIFIED = 0,
-  VAT_NUMBER = 1,
-  ORGANISATION_NUMBER = 2,
-}
