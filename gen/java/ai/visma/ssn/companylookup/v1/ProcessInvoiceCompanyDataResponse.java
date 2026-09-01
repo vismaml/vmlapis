@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProcessInvoiceCompanyDataResponse() {
-    bankAccountVerdict_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -43,7 +42,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.class, ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SUPPLIER_VAT_VALID_FIELD_NUMBER = 1;
   private boolean supplierVatValid_ = false;
   /**
@@ -58,118 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getSupplierVatValid() {
     return supplierVatValid_;
-  }
-
-  public static final int BANK_ACCOUNT_VERDICT_FIELD_NUMBER = 2;
-  private int bankAccountVerdict_ = 0;
-  /**
-   * <pre>
-   * Bank-account trust for the invoice's account, computed from accumulated
-   * observations. Not surfaced to customers yet — see BankAccountVerdict.
-   * </pre>
-   *
-   * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-   * @return The enum numeric value on the wire for bankAccountVerdict.
-   */
-  @java.lang.Override public int getBankAccountVerdictValue() {
-    return bankAccountVerdict_;
-  }
-  /**
-   * <pre>
-   * Bank-account trust for the invoice's account, computed from accumulated
-   * observations. Not surfaced to customers yet — see BankAccountVerdict.
-   * </pre>
-   *
-   * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-   * @return The bankAccountVerdict.
-   */
-  @java.lang.Override public ai.visma.ssn.companylookup.v1.BankAccountVerdict getBankAccountVerdict() {
-    ai.visma.ssn.companylookup.v1.BankAccountVerdict result = ai.visma.ssn.companylookup.v1.BankAccountVerdict.forNumber(bankAccountVerdict_);
-    return result == null ? ai.visma.ssn.companylookup.v1.BankAccountVerdict.UNRECOGNIZED : result;
-  }
-
-  public static final int OBSERVED_COUNT_TENANT_FIELD_NUMBER = 3;
-  private long observedCountTenant_ = 0L;
-  /**
-   * <pre>
-   * Observations of this (consumer, supplier, account) triple.
-   * </pre>
-   *
-   * <code>int64 observed_count_tenant = 3 [json_name = "observedCountTenant"];</code>
-   * @return The observedCountTenant.
-   */
-  @java.lang.Override
-  public long getObservedCountTenant() {
-    return observedCountTenant_;
-  }
-
-  public static final int OBSERVED_COUNT_GLOBAL_FIELD_NUMBER = 4;
-  private long observedCountGlobal_ = 0L;
-  /**
-   * <pre>
-   * Observations of this account across all consumers. A large gap between this
-   * and observed_count_tenant is cross-consumer pooling: evidence contributed by
-   * businesses other than this one.
-   * </pre>
-   *
-   * <code>int64 observed_count_global = 4 [json_name = "observedCountGlobal"];</code>
-   * @return The observedCountGlobal.
-   */
-  @java.lang.Override
-  public long getObservedCountGlobal() {
-    return observedCountGlobal_;
-  }
-
-  public static final int FIRST_SEEN_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp firstSeen_;
-  /**
-   * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-   * @return Whether the firstSeen field is set.
-   */
-  @java.lang.Override
-  public boolean hasFirstSeen() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-   * @return The firstSeen.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getFirstSeen() {
-    return firstSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : firstSeen_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getFirstSeenOrBuilder() {
-    return firstSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : firstSeen_;
-  }
-
-  public static final int LAST_SEEN_FIELD_NUMBER = 6;
-  private com.google.protobuf.Timestamp lastSeen_;
-  /**
-   * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-   * @return Whether the lastSeen field is set.
-   */
-  @java.lang.Override
-  public boolean hasLastSeen() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-   * @return The lastSeen.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getLastSeen() {
-    return lastSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSeen_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getLastSeenOrBuilder() {
-    return lastSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSeen_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -189,21 +75,6 @@ private static final long serialVersionUID = 0L;
     if (supplierVatValid_ != false) {
       output.writeBool(1, supplierVatValid_);
     }
-    if (bankAccountVerdict_ != ai.visma.ssn.companylookup.v1.BankAccountVerdict.BANK_ACCOUNT_VERDICT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(2, bankAccountVerdict_);
-    }
-    if (observedCountTenant_ != 0L) {
-      output.writeInt64(3, observedCountTenant_);
-    }
-    if (observedCountGlobal_ != 0L) {
-      output.writeInt64(4, observedCountGlobal_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(5, getFirstSeen());
-    }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(6, getLastSeen());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -216,26 +87,6 @@ private static final long serialVersionUID = 0L;
     if (supplierVatValid_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, supplierVatValid_);
-    }
-    if (bankAccountVerdict_ != ai.visma.ssn.companylookup.v1.BankAccountVerdict.BANK_ACCOUNT_VERDICT_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, bankAccountVerdict_);
-    }
-    if (observedCountTenant_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, observedCountTenant_);
-    }
-    if (observedCountGlobal_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, observedCountGlobal_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getFirstSeen());
-    }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getLastSeen());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -254,21 +105,6 @@ private static final long serialVersionUID = 0L;
 
     if (getSupplierVatValid()
         != other.getSupplierVatValid()) return false;
-    if (bankAccountVerdict_ != other.bankAccountVerdict_) return false;
-    if (getObservedCountTenant()
-        != other.getObservedCountTenant()) return false;
-    if (getObservedCountGlobal()
-        != other.getObservedCountGlobal()) return false;
-    if (hasFirstSeen() != other.hasFirstSeen()) return false;
-    if (hasFirstSeen()) {
-      if (!getFirstSeen()
-          .equals(other.getFirstSeen())) return false;
-    }
-    if (hasLastSeen() != other.hasLastSeen()) return false;
-    if (hasLastSeen()) {
-      if (!getLastSeen()
-          .equals(other.getLastSeen())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -283,22 +119,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SUPPLIER_VAT_VALID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getSupplierVatValid());
-    hash = (37 * hash) + BANK_ACCOUNT_VERDICT_FIELD_NUMBER;
-    hash = (53 * hash) + bankAccountVerdict_;
-    hash = (37 * hash) + OBSERVED_COUNT_TENANT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getObservedCountTenant());
-    hash = (37 * hash) + OBSERVED_COUNT_GLOBAL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getObservedCountGlobal());
-    if (hasFirstSeen()) {
-      hash = (37 * hash) + FIRST_SEEN_FIELD_NUMBER;
-      hash = (53 * hash) + getFirstSeen().hashCode();
-    }
-    if (hasLastSeen()) {
-      hash = (37 * hash) + LAST_SEEN_FIELD_NUMBER;
-      hash = (53 * hash) + getLastSeen().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -418,39 +238,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getFirstSeenFieldBuilder();
-        getLastSeenFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
       supplierVatValid_ = false;
-      bankAccountVerdict_ = 0;
-      observedCountTenant_ = 0L;
-      observedCountGlobal_ = 0L;
-      firstSeen_ = null;
-      if (firstSeenBuilder_ != null) {
-        firstSeenBuilder_.dispose();
-        firstSeenBuilder_ = null;
-      }
-      lastSeen_ = null;
-      if (lastSeenBuilder_ != null) {
-        lastSeenBuilder_.dispose();
-        lastSeenBuilder_ = null;
-      }
       return this;
     }
 
@@ -487,29 +287,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.supplierVatValid_ = supplierVatValid_;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.bankAccountVerdict_ = bankAccountVerdict_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.observedCountTenant_ = observedCountTenant_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.observedCountGlobal_ = observedCountGlobal_;
-      }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.firstSeen_ = firstSeenBuilder_ == null
-            ? firstSeen_
-            : firstSeenBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.lastSeen_ = lastSeenBuilder_ == null
-            ? lastSeen_
-            : lastSeenBuilder_.build();
-        to_bitField0_ |= 0x00000002;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -526,21 +303,6 @@ private static final long serialVersionUID = 0L;
       if (other == ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.getDefaultInstance()) return this;
       if (other.getSupplierVatValid() != false) {
         setSupplierVatValid(other.getSupplierVatValid());
-      }
-      if (other.bankAccountVerdict_ != 0) {
-        setBankAccountVerdictValue(other.getBankAccountVerdictValue());
-      }
-      if (other.getObservedCountTenant() != 0L) {
-        setObservedCountTenant(other.getObservedCountTenant());
-      }
-      if (other.getObservedCountGlobal() != 0L) {
-        setObservedCountGlobal(other.getObservedCountGlobal());
-      }
-      if (other.hasFirstSeen()) {
-        mergeFirstSeen(other.getFirstSeen());
-      }
-      if (other.hasLastSeen()) {
-        mergeLastSeen(other.getLastSeen());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -573,35 +335,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              bankAccountVerdict_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              observedCountTenant_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              observedCountGlobal_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 42: {
-              input.readMessage(
-                  getFirstSeenFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getLastSeenFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -664,420 +397,6 @@ private static final long serialVersionUID = 0L;
       supplierVatValid_ = false;
       onChanged();
       return this;
-    }
-
-    private int bankAccountVerdict_ = 0;
-    /**
-     * <pre>
-     * Bank-account trust for the invoice's account, computed from accumulated
-     * observations. Not surfaced to customers yet — see BankAccountVerdict.
-     * </pre>
-     *
-     * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-     * @return The enum numeric value on the wire for bankAccountVerdict.
-     */
-    @java.lang.Override public int getBankAccountVerdictValue() {
-      return bankAccountVerdict_;
-    }
-    /**
-     * <pre>
-     * Bank-account trust for the invoice's account, computed from accumulated
-     * observations. Not surfaced to customers yet — see BankAccountVerdict.
-     * </pre>
-     *
-     * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-     * @param value The enum numeric value on the wire for bankAccountVerdict to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankAccountVerdictValue(int value) {
-      bankAccountVerdict_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Bank-account trust for the invoice's account, computed from accumulated
-     * observations. Not surfaced to customers yet — see BankAccountVerdict.
-     * </pre>
-     *
-     * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-     * @return The bankAccountVerdict.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.companylookup.v1.BankAccountVerdict getBankAccountVerdict() {
-      ai.visma.ssn.companylookup.v1.BankAccountVerdict result = ai.visma.ssn.companylookup.v1.BankAccountVerdict.forNumber(bankAccountVerdict_);
-      return result == null ? ai.visma.ssn.companylookup.v1.BankAccountVerdict.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Bank-account trust for the invoice's account, computed from accumulated
-     * observations. Not surfaced to customers yet — see BankAccountVerdict.
-     * </pre>
-     *
-     * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-     * @param value The bankAccountVerdict to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBankAccountVerdict(ai.visma.ssn.companylookup.v1.BankAccountVerdict value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000002;
-      bankAccountVerdict_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Bank-account trust for the invoice's account, computed from accumulated
-     * observations. Not surfaced to customers yet — see BankAccountVerdict.
-     * </pre>
-     *
-     * <code>.ssn.companylookup.v1.BankAccountVerdict bank_account_verdict = 2 [json_name = "bankAccountVerdict"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBankAccountVerdict() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      bankAccountVerdict_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private long observedCountTenant_ ;
-    /**
-     * <pre>
-     * Observations of this (consumer, supplier, account) triple.
-     * </pre>
-     *
-     * <code>int64 observed_count_tenant = 3 [json_name = "observedCountTenant"];</code>
-     * @return The observedCountTenant.
-     */
-    @java.lang.Override
-    public long getObservedCountTenant() {
-      return observedCountTenant_;
-    }
-    /**
-     * <pre>
-     * Observations of this (consumer, supplier, account) triple.
-     * </pre>
-     *
-     * <code>int64 observed_count_tenant = 3 [json_name = "observedCountTenant"];</code>
-     * @param value The observedCountTenant to set.
-     * @return This builder for chaining.
-     */
-    public Builder setObservedCountTenant(long value) {
-
-      observedCountTenant_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Observations of this (consumer, supplier, account) triple.
-     * </pre>
-     *
-     * <code>int64 observed_count_tenant = 3 [json_name = "observedCountTenant"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearObservedCountTenant() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      observedCountTenant_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long observedCountGlobal_ ;
-    /**
-     * <pre>
-     * Observations of this account across all consumers. A large gap between this
-     * and observed_count_tenant is cross-consumer pooling: evidence contributed by
-     * businesses other than this one.
-     * </pre>
-     *
-     * <code>int64 observed_count_global = 4 [json_name = "observedCountGlobal"];</code>
-     * @return The observedCountGlobal.
-     */
-    @java.lang.Override
-    public long getObservedCountGlobal() {
-      return observedCountGlobal_;
-    }
-    /**
-     * <pre>
-     * Observations of this account across all consumers. A large gap between this
-     * and observed_count_tenant is cross-consumer pooling: evidence contributed by
-     * businesses other than this one.
-     * </pre>
-     *
-     * <code>int64 observed_count_global = 4 [json_name = "observedCountGlobal"];</code>
-     * @param value The observedCountGlobal to set.
-     * @return This builder for chaining.
-     */
-    public Builder setObservedCountGlobal(long value) {
-
-      observedCountGlobal_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Observations of this account across all consumers. A large gap between this
-     * and observed_count_tenant is cross-consumer pooling: evidence contributed by
-     * businesses other than this one.
-     * </pre>
-     *
-     * <code>int64 observed_count_global = 4 [json_name = "observedCountGlobal"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearObservedCountGlobal() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      observedCountGlobal_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Timestamp firstSeen_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> firstSeenBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     * @return Whether the firstSeen field is set.
-     */
-    public boolean hasFirstSeen() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     * @return The firstSeen.
-     */
-    public com.google.protobuf.Timestamp getFirstSeen() {
-      if (firstSeenBuilder_ == null) {
-        return firstSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : firstSeen_;
-      } else {
-        return firstSeenBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public Builder setFirstSeen(com.google.protobuf.Timestamp value) {
-      if (firstSeenBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        firstSeen_ = value;
-      } else {
-        firstSeenBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public Builder setFirstSeen(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (firstSeenBuilder_ == null) {
-        firstSeen_ = builderForValue.build();
-      } else {
-        firstSeenBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public Builder mergeFirstSeen(com.google.protobuf.Timestamp value) {
-      if (firstSeenBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          firstSeen_ != null &&
-          firstSeen_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getFirstSeenBuilder().mergeFrom(value);
-        } else {
-          firstSeen_ = value;
-        }
-      } else {
-        firstSeenBuilder_.mergeFrom(value);
-      }
-      if (firstSeen_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public Builder clearFirstSeen() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      firstSeen_ = null;
-      if (firstSeenBuilder_ != null) {
-        firstSeenBuilder_.dispose();
-        firstSeenBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getFirstSeenBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getFirstSeenFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getFirstSeenOrBuilder() {
-      if (firstSeenBuilder_ != null) {
-        return firstSeenBuilder_.getMessageOrBuilder();
-      } else {
-        return firstSeen_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : firstSeen_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp first_seen = 5 [json_name = "firstSeen"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getFirstSeenFieldBuilder() {
-      if (firstSeenBuilder_ == null) {
-        firstSeenBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getFirstSeen(),
-                getParentForChildren(),
-                isClean());
-        firstSeen_ = null;
-      }
-      return firstSeenBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp lastSeen_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastSeenBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     * @return Whether the lastSeen field is set.
-     */
-    public boolean hasLastSeen() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     * @return The lastSeen.
-     */
-    public com.google.protobuf.Timestamp getLastSeen() {
-      if (lastSeenBuilder_ == null) {
-        return lastSeen_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSeen_;
-      } else {
-        return lastSeenBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public Builder setLastSeen(com.google.protobuf.Timestamp value) {
-      if (lastSeenBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        lastSeen_ = value;
-      } else {
-        lastSeenBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public Builder setLastSeen(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (lastSeenBuilder_ == null) {
-        lastSeen_ = builderForValue.build();
-      } else {
-        lastSeenBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public Builder mergeLastSeen(com.google.protobuf.Timestamp value) {
-      if (lastSeenBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          lastSeen_ != null &&
-          lastSeen_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastSeenBuilder().mergeFrom(value);
-        } else {
-          lastSeen_ = value;
-        }
-      } else {
-        lastSeenBuilder_.mergeFrom(value);
-      }
-      if (lastSeen_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public Builder clearLastSeen() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      lastSeen_ = null;
-      if (lastSeenBuilder_ != null) {
-        lastSeenBuilder_.dispose();
-        lastSeenBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getLastSeenBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getLastSeenFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getLastSeenOrBuilder() {
-      if (lastSeenBuilder_ != null) {
-        return lastSeenBuilder_.getMessageOrBuilder();
-      } else {
-        return lastSeen_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : lastSeen_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_seen = 6 [json_name = "lastSeen"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getLastSeenFieldBuilder() {
-      if (lastSeenBuilder_ == null) {
-        lastSeenBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getLastSeen(),
-                getParentForChildren(),
-                isClean());
-        lastSeen_ = null;
-      }
-      return lastSeenBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse)

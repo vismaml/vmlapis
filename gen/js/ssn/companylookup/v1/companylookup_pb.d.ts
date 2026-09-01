@@ -1,6 +1,5 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
@@ -120,25 +119,6 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
   getSupplierVatValid(): boolean;
   setSupplierVatValid(value: boolean): ProcessInvoiceCompanyDataResponse;
 
-  getBankAccountVerdict(): BankAccountVerdict;
-  setBankAccountVerdict(value: BankAccountVerdict): ProcessInvoiceCompanyDataResponse;
-
-  getObservedCountTenant(): number;
-  setObservedCountTenant(value: number): ProcessInvoiceCompanyDataResponse;
-
-  getObservedCountGlobal(): number;
-  setObservedCountGlobal(value: number): ProcessInvoiceCompanyDataResponse;
-
-  getFirstSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
-  setFirstSeen(value?: google_protobuf_timestamp_pb.Timestamp): ProcessInvoiceCompanyDataResponse;
-  hasFirstSeen(): boolean;
-  clearFirstSeen(): ProcessInvoiceCompanyDataResponse;
-
-  getLastSeen(): google_protobuf_timestamp_pb.Timestamp | undefined;
-  setLastSeen(value?: google_protobuf_timestamp_pb.Timestamp): ProcessInvoiceCompanyDataResponse;
-  hasLastSeen(): boolean;
-  clearLastSeen(): ProcessInvoiceCompanyDataResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProcessInvoiceCompanyDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: ProcessInvoiceCompanyDataResponse): ProcessInvoiceCompanyDataResponse.AsObject;
@@ -150,11 +130,6 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
 export namespace ProcessInvoiceCompanyDataResponse {
   export type AsObject = {
     supplierVatValid: boolean,
-    bankAccountVerdict: BankAccountVerdict,
-    observedCountTenant: number,
-    observedCountGlobal: number,
-    firstSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
-    lastSeen?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
@@ -194,14 +169,6 @@ export class VerifySupplierResponse extends jspb.Message {
   getIdentifier(): VerifiedIdentifier;
   setIdentifier(value: VerifiedIdentifier): VerifySupplierResponse;
 
-  getRegistrySource(): string;
-  setRegistrySource(value: string): VerifySupplierResponse;
-
-  getRegistryFetchedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
-  setRegistryFetchedAt(value?: google_protobuf_timestamp_pb.Timestamp): VerifySupplierResponse;
-  hasRegistryFetchedAt(): boolean;
-  clearRegistryFetchedAt(): VerifySupplierResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VerifySupplierResponse.AsObject;
   static toObject(includeInstance: boolean, msg: VerifySupplierResponse): VerifySupplierResponse.AsObject;
@@ -215,8 +182,6 @@ export namespace VerifySupplierResponse {
     verified: boolean,
     reason: SupplierVerdictReason,
     identifier: VerifiedIdentifier,
-    registrySource: string,
-    registryFetchedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
@@ -234,10 +199,4 @@ export enum VerifiedIdentifier {
   VERIFIED_IDENTIFIER_UNSPECIFIED = 0,
   VAT_NUMBER = 1,
   ORGANISATION_NUMBER = 2,
-}
-export enum BankAccountVerdict { 
-  BANK_ACCOUNT_VERDICT_UNSPECIFIED = 0,
-  BANK_ACCOUNT_KNOWN = 1,
-  BANK_ACCOUNT_NEW = 2,
-  BANK_ACCOUNT_UNKNOWN = 3,
 }

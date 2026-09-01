@@ -45,8 +45,7 @@ class CompanyLookupServiceServicer(object):
 
     def VerifySupplier(self, request, context):
         """VerifySupplier reports whether a registry has confirmed the supplier's
-        identifier. Read-only: a single Spanner primary-key read, no external call
-        and no write, so it is cheap enough for a synchronous caller.
+        identifier. Read-only.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

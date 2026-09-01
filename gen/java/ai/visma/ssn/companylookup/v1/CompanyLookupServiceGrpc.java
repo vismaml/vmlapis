@@ -162,8 +162,7 @@ public final class CompanyLookupServiceGrpc {
     /**
      * <pre>
      * VerifySupplier reports whether a registry has confirmed the supplier's
-     * identifier. Read-only: a single Spanner primary-key read, no external call
-     * and no write, so it is cheap enough for a synchronous caller.
+     * identifier. Read-only.
      * </pre>
      */
     default void verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request,
@@ -222,8 +221,7 @@ public final class CompanyLookupServiceGrpc {
     /**
      * <pre>
      * VerifySupplier reports whether a registry has confirmed the supplier's
-     * identifier. Read-only: a single Spanner primary-key read, no external call
-     * and no write, so it is cheap enough for a synchronous caller.
+     * identifier. Read-only.
      * </pre>
      */
     public void verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request,
@@ -265,8 +263,7 @@ public final class CompanyLookupServiceGrpc {
     /**
      * <pre>
      * VerifySupplier reports whether a registry has confirmed the supplier's
-     * identifier. Read-only: a single Spanner primary-key read, no external call
-     * and no write, so it is cheap enough for a synchronous caller.
+     * identifier. Read-only.
      * </pre>
      */
     public ai.visma.ssn.companylookup.v1.VerifySupplierResponse verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request) {
@@ -307,8 +304,7 @@ public final class CompanyLookupServiceGrpc {
     /**
      * <pre>
      * VerifySupplier reports whether a registry has confirmed the supplier's
-     * identifier. Read-only: a single Spanner primary-key read, no external call
-     * and no write, so it is cheap enough for a synchronous caller.
+     * identifier. Read-only.
      * </pre>
      */
     public ai.visma.ssn.companylookup.v1.VerifySupplierResponse verifySupplier(ai.visma.ssn.companylookup.v1.VerifySupplierRequest request) {
@@ -350,8 +346,7 @@ public final class CompanyLookupServiceGrpc {
     /**
      * <pre>
      * VerifySupplier reports whether a registry has confirmed the supplier's
-     * identifier. Read-only: a single Spanner primary-key read, no external call
-     * and no write, so it is cheap enough for a synchronous caller.
+     * identifier. Read-only.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.companylookup.v1.VerifySupplierResponse> verifySupplier(

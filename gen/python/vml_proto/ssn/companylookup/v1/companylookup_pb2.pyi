@@ -1,4 +1,3 @@
-from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
@@ -24,13 +23,6 @@ class VerifiedIdentifier(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     VERIFIED_IDENTIFIER_UNSPECIFIED: _ClassVar[VerifiedIdentifier]
     VAT_NUMBER: _ClassVar[VerifiedIdentifier]
     ORGANISATION_NUMBER: _ClassVar[VerifiedIdentifier]
-
-class BankAccountVerdict(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = ()
-    BANK_ACCOUNT_VERDICT_UNSPECIFIED: _ClassVar[BankAccountVerdict]
-    BANK_ACCOUNT_KNOWN: _ClassVar[BankAccountVerdict]
-    BANK_ACCOUNT_NEW: _ClassVar[BankAccountVerdict]
-    BANK_ACCOUNT_UNKNOWN: _ClassVar[BankAccountVerdict]
 SUPPLIER_VERDICT_REASON_UNSPECIFIED: SupplierVerdictReason
 VERIFIED_BY_REGISTRY: SupplierVerdictReason
 REFUTED_BY_REGISTRY: SupplierVerdictReason
@@ -42,10 +34,6 @@ STALE: SupplierVerdictReason
 VERIFIED_IDENTIFIER_UNSPECIFIED: VerifiedIdentifier
 VAT_NUMBER: VerifiedIdentifier
 ORGANISATION_NUMBER: VerifiedIdentifier
-BANK_ACCOUNT_VERDICT_UNSPECIFIED: BankAccountVerdict
-BANK_ACCOUNT_KNOWN: BankAccountVerdict
-BANK_ACCOUNT_NEW: BankAccountVerdict
-BANK_ACCOUNT_UNKNOWN: BankAccountVerdict
 
 class ProcessInvoiceCompanyDataRequest(_message.Message):
     __slots__ = ("project_name", "transaction_id", "supplier_name", "supplier_vat_number", "supplier_organisation_number", "supplier_country_code", "supplier_address", "receiver_name", "receiver_vat_number", "receiver_organisation_number", "receiver_country_code", "receiver_address", "iban", "bic", "bank_account_number", "bank_registration_number", "product_types")
@@ -86,20 +74,10 @@ class ProcessInvoiceCompanyDataRequest(_message.Message):
     def __init__(self, project_name: _Optional[str] = ..., transaction_id: _Optional[str] = ..., supplier_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., iban: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bic: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_account_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_registration_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., product_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class ProcessInvoiceCompanyDataResponse(_message.Message):
-    __slots__ = ("supplier_vat_valid", "bank_account_verdict", "observed_count_tenant", "observed_count_global", "first_seen", "last_seen")
+    __slots__ = ("supplier_vat_valid",)
     SUPPLIER_VAT_VALID_FIELD_NUMBER: _ClassVar[int]
-    BANK_ACCOUNT_VERDICT_FIELD_NUMBER: _ClassVar[int]
-    OBSERVED_COUNT_TENANT_FIELD_NUMBER: _ClassVar[int]
-    OBSERVED_COUNT_GLOBAL_FIELD_NUMBER: _ClassVar[int]
-    FIRST_SEEN_FIELD_NUMBER: _ClassVar[int]
-    LAST_SEEN_FIELD_NUMBER: _ClassVar[int]
     supplier_vat_valid: bool
-    bank_account_verdict: BankAccountVerdict
-    observed_count_tenant: int
-    observed_count_global: int
-    first_seen: _timestamp_pb2.Timestamp
-    last_seen: _timestamp_pb2.Timestamp
-    def __init__(self, supplier_vat_valid: bool = ..., bank_account_verdict: _Optional[_Union[BankAccountVerdict, str]] = ..., observed_count_tenant: _Optional[int] = ..., observed_count_global: _Optional[int] = ..., first_seen: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., last_seen: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    def __init__(self, supplier_vat_valid: bool = ...) -> None: ...
 
 class VerifySupplierRequest(_message.Message):
     __slots__ = ("country_code", "vat_number", "organisation_number")
@@ -112,15 +90,11 @@ class VerifySupplierRequest(_message.Message):
     def __init__(self, country_code: _Optional[str] = ..., vat_number: _Optional[str] = ..., organisation_number: _Optional[str] = ...) -> None: ...
 
 class VerifySupplierResponse(_message.Message):
-    __slots__ = ("verified", "reason", "identifier", "registry_source", "registry_fetched_at")
+    __slots__ = ("verified", "reason", "identifier")
     VERIFIED_FIELD_NUMBER: _ClassVar[int]
     REASON_FIELD_NUMBER: _ClassVar[int]
     IDENTIFIER_FIELD_NUMBER: _ClassVar[int]
-    REGISTRY_SOURCE_FIELD_NUMBER: _ClassVar[int]
-    REGISTRY_FETCHED_AT_FIELD_NUMBER: _ClassVar[int]
     verified: bool
     reason: SupplierVerdictReason
     identifier: VerifiedIdentifier
-    registry_source: str
-    registry_fetched_at: _timestamp_pb2.Timestamp
-    def __init__(self, verified: bool = ..., reason: _Optional[_Union[SupplierVerdictReason, str]] = ..., identifier: _Optional[_Union[VerifiedIdentifier, str]] = ..., registry_source: _Optional[str] = ..., registry_fetched_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    def __init__(self, verified: bool = ..., reason: _Optional[_Union[SupplierVerdictReason, str]] = ..., identifier: _Optional[_Union[VerifiedIdentifier, str]] = ...) -> None: ...

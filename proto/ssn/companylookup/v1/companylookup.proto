@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package ssn.companylookup.v1;
 
-import "google/protobuf/timestamp.proto";
 import "ssn/type/candidate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup";
@@ -15,8 +14,7 @@ service CompanyLookupService {
   rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
 
   // VerifySupplier reports whether a registry has confirmed the supplier's
-  // identifier. Read-only: a single Spanner primary-key read, no external call
-  // and no write, so it is cheap enough for a synchronous caller.
+  // identifier. Read-only.
   rpc VerifySupplier(VerifySupplierRequest) returns (VerifySupplierResponse);
 }
 
@@ -51,18 +49,6 @@ message ProcessInvoiceCompanyDataResponse {
   // True only when the supplier company has been enriched and the registry
   // (VIES) confirmed the VAT number.
   bool supplier_vat_valid = 1;
-
-  // Bank-account trust for the invoice's account, computed from accumulated
-  // observations. Not surfaced to customers yet — see BankAccountVerdict.
-  BankAccountVerdict bank_account_verdict = 2;
-  // Observations of this (consumer, supplier, account) triple.
-  int64 observed_count_tenant = 3;
-  // Observations of this account across all consumers. A large gap between this
-  // and observed_count_tenant is cross-consumer pooling: evidence contributed by
-  // businesses other than this one.
-  int64 observed_count_global = 4;
-  google.protobuf.Timestamp first_seen = 5;
-  google.protobuf.Timestamp last_seen = 6;
 }
 
 message VerifySupplierRequest {
@@ -108,22 +94,4 @@ message VerifySupplierResponse {
   bool verified = 1;
   SupplierVerdictReason reason = 2;
   VerifiedIdentifier identifier = 3;
-  // Which registry answered, e.g. "vies". Empty when none did.
-  string registry_source = 4;
-  // When the registry answered. Unset when it never did.
-  google.protobuf.Timestamp registry_fetched_at = 5;
-}
-
-// BankAccountVerdict is the trust verdict for a (supplier, bank account) pair.
-// Populated on every invoice; not surfaced to customers yet, because "we have
-// seen this account paid before" is a reputation claim, not the identifier
-// validation that Confidence.VERIFIED denotes elsewhere.
-enum BankAccountVerdict {
-  BANK_ACCOUNT_VERDICT_UNSPECIFIED = 0;
-  // Crossed both the volume and maturity thresholds at tenant scope.
-  BANK_ACCOUNT_KNOWN = 1;
-  // Has not. Not an assertion of fraud.
-  BANK_ACCOUNT_NEW = 2;
-  // No supplier key or no account key, so there is nothing to judge.
-  BANK_ACCOUNT_UNKNOWN = 3;
 }

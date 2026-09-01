@@ -94,8 +94,7 @@ namespace Ssn.Companylookup.V1 {
 
       /// <summary>
       /// VerifySupplier reports whether a registry has confirmed the supplier's
-      /// identifier. Read-only: a single Spanner primary-key read, no external call
-      /// and no write, so it is cheap enough for a synchronous caller.
+      /// identifier. Read-only.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -157,8 +156,7 @@ namespace Ssn.Companylookup.V1 {
       }
       /// <summary>
       /// VerifySupplier reports whether a registry has confirmed the supplier's
-      /// identifier. Read-only: a single Spanner primary-key read, no external call
-      /// and no write, so it is cheap enough for a synchronous caller.
+      /// identifier. Read-only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -172,8 +170,7 @@ namespace Ssn.Companylookup.V1 {
       }
       /// <summary>
       /// VerifySupplier reports whether a registry has confirmed the supplier's
-      /// identifier. Read-only: a single Spanner primary-key read, no external call
-      /// and no write, so it is cheap enough for a synchronous caller.
+      /// identifier. Read-only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -185,8 +182,7 @@ namespace Ssn.Companylookup.V1 {
       }
       /// <summary>
       /// VerifySupplier reports whether a registry has confirmed the supplier's
-      /// identifier. Read-only: a single Spanner primary-key read, no external call
-      /// and no write, so it is cheap enough for a synchronous caller.
+      /// identifier. Read-only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -200,8 +196,7 @@ namespace Ssn.Companylookup.V1 {
       }
       /// <summary>
       /// VerifySupplier reports whether a registry has confirmed the supplier's
-      /// identifier. Read-only: a single Spanner primary-key read, no external call
-      /// and no write, so it is cheap enough for a synchronous caller.
+      /// identifier. Read-only.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

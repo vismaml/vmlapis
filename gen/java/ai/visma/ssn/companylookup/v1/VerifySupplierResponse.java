@@ -29,7 +29,6 @@ private static final long serialVersionUID = 0L;
   private VerifySupplierResponse() {
     reason_ = 0;
     identifier_ = 0;
-    registrySource_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -45,7 +44,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.companylookup.v1.VerifySupplierResponse.class, ai.visma.ssn.companylookup.v1.VerifySupplierResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int VERIFIED_FIELD_NUMBER = 1;
   private boolean verified_ = false;
   /**
@@ -98,91 +96,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.ssn.companylookup.v1.VerifiedIdentifier.UNRECOGNIZED : result;
   }
 
-  public static final int REGISTRY_SOURCE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object registrySource_ = "";
-  /**
-   * <pre>
-   * Which registry answered, e.g. "vies". Empty when none did.
-   * </pre>
-   *
-   * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-   * @return The registrySource.
-   */
-  @java.lang.Override
-  public java.lang.String getRegistrySource() {
-    java.lang.Object ref = registrySource_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      registrySource_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Which registry answered, e.g. "vies". Empty when none did.
-   * </pre>
-   *
-   * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-   * @return The bytes for registrySource.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getRegistrySourceBytes() {
-    java.lang.Object ref = registrySource_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      registrySource_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int REGISTRY_FETCHED_AT_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp registryFetchedAt_;
-  /**
-   * <pre>
-   * When the registry answered. Unset when it never did.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-   * @return Whether the registryFetchedAt field is set.
-   */
-  @java.lang.Override
-  public boolean hasRegistryFetchedAt() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <pre>
-   * When the registry answered. Unset when it never did.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-   * @return The registryFetchedAt.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getRegistryFetchedAt() {
-    return registryFetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : registryFetchedAt_;
-  }
-  /**
-   * <pre>
-   * When the registry answered. Unset when it never did.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getRegistryFetchedAtOrBuilder() {
-    return registryFetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : registryFetchedAt_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -206,12 +119,6 @@ private static final long serialVersionUID = 0L;
     if (identifier_ != ai.visma.ssn.companylookup.v1.VerifiedIdentifier.VERIFIED_IDENTIFIER_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, identifier_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registrySource_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, registrySource_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(5, getRegistryFetchedAt());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -233,13 +140,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, identifier_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registrySource_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, registrySource_);
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getRegistryFetchedAt());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -259,13 +159,6 @@ private static final long serialVersionUID = 0L;
         != other.getVerified()) return false;
     if (reason_ != other.reason_) return false;
     if (identifier_ != other.identifier_) return false;
-    if (!getRegistrySource()
-        .equals(other.getRegistrySource())) return false;
-    if (hasRegistryFetchedAt() != other.hasRegistryFetchedAt()) return false;
-    if (hasRegistryFetchedAt()) {
-      if (!getRegistryFetchedAt()
-          .equals(other.getRegistryFetchedAt())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -284,12 +177,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + reason_;
     hash = (37 * hash) + IDENTIFIER_FIELD_NUMBER;
     hash = (53 * hash) + identifier_;
-    hash = (37 * hash) + REGISTRY_SOURCE_FIELD_NUMBER;
-    hash = (53 * hash) + getRegistrySource().hashCode();
-    if (hasRegistryFetchedAt()) {
-      hash = (37 * hash) + REGISTRY_FETCHED_AT_FIELD_NUMBER;
-      hash = (53 * hash) + getRegistryFetchedAt().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -409,19 +296,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ssn.companylookup.v1.VerifySupplierResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getRegistryFetchedAtFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -430,12 +311,6 @@ private static final long serialVersionUID = 0L;
       verified_ = false;
       reason_ = 0;
       identifier_ = 0;
-      registrySource_ = "";
-      registryFetchedAt_ = null;
-      if (registryFetchedAtBuilder_ != null) {
-        registryFetchedAtBuilder_.dispose();
-        registryFetchedAtBuilder_ = null;
-      }
       return this;
     }
 
@@ -478,17 +353,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.identifier_ = identifier_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.registrySource_ = registrySource_;
-      }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.registryFetchedAt_ = registryFetchedAtBuilder_ == null
-            ? registryFetchedAt_
-            : registryFetchedAtBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -511,14 +375,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.identifier_ != 0) {
         setIdentifierValue(other.getIdentifierValue());
-      }
-      if (!other.getRegistrySource().isEmpty()) {
-        registrySource_ = other.registrySource_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
-      if (other.hasRegistryFetchedAt()) {
-        mergeRegistryFetchedAt(other.getRegistryFetchedAt());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -561,18 +417,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 34: {
-              registrySource_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getRegistryFetchedAtFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -741,255 +585,6 @@ private static final long serialVersionUID = 0L;
       identifier_ = 0;
       onChanged();
       return this;
-    }
-
-    private java.lang.Object registrySource_ = "";
-    /**
-     * <pre>
-     * Which registry answered, e.g. "vies". Empty when none did.
-     * </pre>
-     *
-     * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-     * @return The registrySource.
-     */
-    public java.lang.String getRegistrySource() {
-      java.lang.Object ref = registrySource_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        registrySource_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Which registry answered, e.g. "vies". Empty when none did.
-     * </pre>
-     *
-     * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-     * @return The bytes for registrySource.
-     */
-    public com.google.protobuf.ByteString
-        getRegistrySourceBytes() {
-      java.lang.Object ref = registrySource_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        registrySource_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Which registry answered, e.g. "vies". Empty when none did.
-     * </pre>
-     *
-     * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-     * @param value The registrySource to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRegistrySource(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      registrySource_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Which registry answered, e.g. "vies". Empty when none did.
-     * </pre>
-     *
-     * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRegistrySource() {
-      registrySource_ = getDefaultInstance().getRegistrySource();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Which registry answered, e.g. "vies". Empty when none did.
-     * </pre>
-     *
-     * <code>string registry_source = 4 [json_name = "registrySource"];</code>
-     * @param value The bytes for registrySource to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRegistrySourceBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      registrySource_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Timestamp registryFetchedAt_;
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> registryFetchedAtBuilder_;
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     * @return Whether the registryFetchedAt field is set.
-     */
-    public boolean hasRegistryFetchedAt() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     * @return The registryFetchedAt.
-     */
-    public com.google.protobuf.Timestamp getRegistryFetchedAt() {
-      if (registryFetchedAtBuilder_ == null) {
-        return registryFetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : registryFetchedAt_;
-      } else {
-        return registryFetchedAtBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public Builder setRegistryFetchedAt(com.google.protobuf.Timestamp value) {
-      if (registryFetchedAtBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        registryFetchedAt_ = value;
-      } else {
-        registryFetchedAtBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public Builder setRegistryFetchedAt(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (registryFetchedAtBuilder_ == null) {
-        registryFetchedAt_ = builderForValue.build();
-      } else {
-        registryFetchedAtBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public Builder mergeRegistryFetchedAt(com.google.protobuf.Timestamp value) {
-      if (registryFetchedAtBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          registryFetchedAt_ != null &&
-          registryFetchedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getRegistryFetchedAtBuilder().mergeFrom(value);
-        } else {
-          registryFetchedAt_ = value;
-        }
-      } else {
-        registryFetchedAtBuilder_.mergeFrom(value);
-      }
-      if (registryFetchedAt_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public Builder clearRegistryFetchedAt() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      registryFetchedAt_ = null;
-      if (registryFetchedAtBuilder_ != null) {
-        registryFetchedAtBuilder_.dispose();
-        registryFetchedAtBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getRegistryFetchedAtBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getRegistryFetchedAtFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getRegistryFetchedAtOrBuilder() {
-      if (registryFetchedAtBuilder_ != null) {
-        return registryFetchedAtBuilder_.getMessageOrBuilder();
-      } else {
-        return registryFetchedAt_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : registryFetchedAt_;
-      }
-    }
-    /**
-     * <pre>
-     * When the registry answered. Unset when it never did.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp registry_fetched_at = 5 [json_name = "registryFetchedAt"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getRegistryFetchedAtFieldBuilder() {
-      if (registryFetchedAtBuilder_ == null) {
-        registryFetchedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getRegistryFetchedAt(),
-                getParentForChildren(),
-                isClean());
-        registryFetchedAt_ = null;
-      }
-      return registryFetchedAtBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.companylookup.v1.VerifySupplierResponse)

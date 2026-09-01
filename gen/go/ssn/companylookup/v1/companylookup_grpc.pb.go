@@ -29,8 +29,7 @@ const (
 type CompanyLookupServiceClient interface {
 	ProcessInvoiceCompanyData(ctx context.Context, in *ProcessInvoiceCompanyDataRequest, opts ...grpc.CallOption) (*ProcessInvoiceCompanyDataResponse, error)
 	// VerifySupplier reports whether a registry has confirmed the supplier's
-	// identifier. Read-only: a single Spanner primary-key read, no external call
-	// and no write, so it is cheap enough for a synchronous caller.
+	// identifier. Read-only.
 	VerifySupplier(ctx context.Context, in *VerifySupplierRequest, opts ...grpc.CallOption) (*VerifySupplierResponse, error)
 }
 
@@ -66,8 +65,7 @@ func (c *companyLookupServiceClient) VerifySupplier(ctx context.Context, in *Ver
 type CompanyLookupServiceServer interface {
 	ProcessInvoiceCompanyData(context.Context, *ProcessInvoiceCompanyDataRequest) (*ProcessInvoiceCompanyDataResponse, error)
 	// VerifySupplier reports whether a registry has confirmed the supplier's
-	// identifier. Read-only: a single Spanner primary-key read, no external call
-	// and no write, so it is cheap enough for a synchronous caller.
+	// identifier. Read-only.
 	VerifySupplier(context.Context, *VerifySupplierRequest) (*VerifySupplierResponse, error)
 }
 

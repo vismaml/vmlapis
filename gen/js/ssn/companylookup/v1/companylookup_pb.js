@@ -21,11 +21,8 @@ var global =
     (function () { return this; }).call(null) ||
     Function('return this')();
 
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-goog.object.extend(proto, google_protobuf_timestamp_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
-goog.exportSymbol('proto.ssn.companylookup.v1.BankAccountVerdict', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse', null, global);
 goog.exportSymbol('proto.ssn.companylookup.v1.SupplierVerdictReason', null, global);
@@ -1078,12 +1075,7 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.toObject 
  */
 proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    supplierVatValid: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
-    bankAccountVerdict: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    observedCountTenant: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    observedCountGlobal: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    firstSeen: (f = msg.getFirstSeen()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    lastSeen: (f = msg.getLastSeen()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    supplierVatValid: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -1124,28 +1116,6 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.deserializeBinaryFr
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setSupplierVatValid(value);
       break;
-    case 2:
-      var value = /** @type {!proto.ssn.companylookup.v1.BankAccountVerdict} */ (reader.readEnum());
-      msg.setBankAccountVerdict(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setObservedCountTenant(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setObservedCountGlobal(value);
-      break;
-    case 5:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setFirstSeen(value);
-      break;
-    case 6:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setLastSeen(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -1182,43 +1152,6 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.serializeBinaryToWr
       f
     );
   }
-  f = message.getBankAccountVerdict();
-  if (f !== 0.0) {
-    writer.writeEnum(
-      2,
-      f
-    );
-  }
-  f = message.getObservedCountTenant();
-  if (f !== 0) {
-    writer.writeInt64(
-      3,
-      f
-    );
-  }
-  f = message.getObservedCountGlobal();
-  if (f !== 0) {
-    writer.writeInt64(
-      4,
-      f
-    );
-  }
-  f = message.getFirstSeen();
-  if (f != null) {
-    writer.writeMessage(
-      5,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
-    );
-  }
-  f = message.getLastSeen();
-  if (f != null) {
-    writer.writeMessage(
-      6,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
-    );
-  }
 };
 
 
@@ -1237,134 +1170,6 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getSuppli
  */
 proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setSupplierVatValid = function(value) {
   return jspb.Message.setProto3BooleanField(this, 1, value);
-};
-
-
-/**
- * optional BankAccountVerdict bank_account_verdict = 2;
- * @return {!proto.ssn.companylookup.v1.BankAccountVerdict}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getBankAccountVerdict = function() {
-  return /** @type {!proto.ssn.companylookup.v1.BankAccountVerdict} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {!proto.ssn.companylookup.v1.BankAccountVerdict} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setBankAccountVerdict = function(value) {
-  return jspb.Message.setProto3EnumField(this, 2, value);
-};
-
-
-/**
- * optional int64 observed_count_tenant = 3;
- * @return {number}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getObservedCountTenant = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setObservedCountTenant = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * optional int64 observed_count_global = 4;
- * @return {number}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getObservedCountGlobal = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setObservedCountGlobal = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
-};
-
-
-/**
- * optional google.protobuf.Timestamp first_seen = 5;
- * @return {?proto.google.protobuf.Timestamp}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getFirstSeen = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
-*/
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setFirstSeen = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.clearFirstSeen = function() {
-  return this.setFirstSeen(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.hasFirstSeen = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-/**
- * optional google.protobuf.Timestamp last_seen = 6;
- * @return {?proto.google.protobuf.Timestamp}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getLastSeen = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
-*/
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setLastSeen = function(value) {
-  return jspb.Message.setWrapperField(this, 6, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.clearLastSeen = function() {
-  return this.setLastSeen(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.hasLastSeen = function() {
-  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -1592,9 +1397,7 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.toObject = function(includeIns
   var f, obj = {
     verified: jspb.Message.getBooleanFieldWithDefault(msg, 1, false),
     reason: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    identifier: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    registrySource: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    registryFetchedAt: (f = msg.getRegistryFetchedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    identifier: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -1642,15 +1445,6 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.deserializeBinaryFromReader = 
     case 3:
       var value = /** @type {!proto.ssn.companylookup.v1.VerifiedIdentifier} */ (reader.readEnum());
       msg.setIdentifier(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRegistrySource(value);
-      break;
-    case 5:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setRegistryFetchedAt(value);
       break;
     default:
       reader.skipField();
@@ -1700,21 +1494,6 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.serializeBinaryToWriter = func
     writer.writeEnum(
       3,
       f
-    );
-  }
-  f = message.getRegistrySource();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getRegistryFetchedAt();
-  if (f != null) {
-    writer.writeMessage(
-      5,
-      f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -1775,61 +1554,6 @@ proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setIdentifier = func
 
 
 /**
- * optional string registry_source = 4;
- * @return {string}
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.getRegistrySource = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.companylookup.v1.VerifySupplierResponse} returns this
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setRegistrySource = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional google.protobuf.Timestamp registry_fetched_at = 5;
- * @return {?proto.google.protobuf.Timestamp}
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.getRegistryFetchedAt = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
-};
-
-
-/**
- * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.ssn.companylookup.v1.VerifySupplierResponse} returns this
-*/
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.setRegistryFetchedAt = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.ssn.companylookup.v1.VerifySupplierResponse} returns this
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.clearRegistryFetchedAt = function() {
-  return this.setRegistryFetchedAt(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.companylookup.v1.VerifySupplierResponse.prototype.hasRegistryFetchedAt = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-/**
  * @enum {number}
  */
 proto.ssn.companylookup.v1.SupplierVerdictReason = {
@@ -1850,16 +1574,6 @@ proto.ssn.companylookup.v1.VerifiedIdentifier = {
   VERIFIED_IDENTIFIER_UNSPECIFIED: 0,
   VAT_NUMBER: 1,
   ORGANISATION_NUMBER: 2
-};
-
-/**
- * @enum {number}
- */
-proto.ssn.companylookup.v1.BankAccountVerdict = {
-  BANK_ACCOUNT_VERDICT_UNSPECIFIED: 0,
-  BANK_ACCOUNT_KNOWN: 1,
-  BANK_ACCOUNT_NEW: 2,
-  BANK_ACCOUNT_UNKNOWN: 3
 };
 
 goog.object.extend(exports, proto.ssn.companylookup.v1);
