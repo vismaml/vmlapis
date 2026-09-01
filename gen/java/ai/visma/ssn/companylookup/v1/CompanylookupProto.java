@@ -35,6 +35,16 @@ public final class CompanylookupProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_companylookup_v1_VerifySupplierRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ssn_companylookup_v1_VerifySupplierResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -75,17 +85,25 @@ public final class CompanylookupProto {
       "ationNumber\022#\n\rproduct_types\030\021 \003(\tR\014prod" +
       "uctTypes\"Q\n!ProcessInvoiceCompanyDataRes" +
       "ponse\022,\n\022supplier_vat_valid\030\001 \001(\010R\020suppl" +
-      "ierVatValid2\245\001\n\024CompanyLookupService\022\214\001\n" +
-      "\031ProcessInvoiceCompanyData\0226.ssn.company" +
-      "lookup.v1.ProcessInvoiceCompanyDataReque" +
-      "st\0327.ssn.companylookup.v1.ProcessInvoice" +
-      "CompanyDataResponseB\355\001\n\035ai.visma.ssn.com" +
-      "panylookup.v1B\022CompanylookupProtoP\001ZFgit" +
-      "hub.com/e-conomic/vmlapis/gen/go/ssn/com" +
-      "panylookup/v1;companylookup\242\002\003SCX\252\002\024Ssn." +
-      "Companylookup.V1\312\002\024Ssn\\Companylookup\\V1\342" +
-      "\002 Ssn\\Companylookup\\V1\\GPBMetadata\352\002\026Ssn" +
-      "::Companylookup::V1b\006proto3"
+      "ierVatValid\"\212\001\n\025VerifySupplierRequest\022!\n" +
+      "\014country_code\030\001 \001(\tR\013countryCode\022\035\n\nvat_" +
+      "number\030\002 \001(\tR\tvatNumber\022/\n\023organisation_" +
+      "number\030\003 \001(\tR\022organisationNumber\"4\n\026Veri" +
+      "fySupplierResponse\022\032\n\010verified\030\001 \001(\010R\010ve" +
+      "rified2\222\002\n\024CompanyLookupService\022\214\001\n\031Proc" +
+      "essInvoiceCompanyData\0226.ssn.companylooku" +
+      "p.v1.ProcessInvoiceCompanyDataRequest\0327." +
+      "ssn.companylookup.v1.ProcessInvoiceCompa" +
+      "nyDataResponse\022k\n\016VerifySupplier\022+.ssn.c" +
+      "ompanylookup.v1.VerifySupplierRequest\032,." +
+      "ssn.companylookup.v1.VerifySupplierRespo" +
+      "nseB\355\001\n\035ai.visma.ssn.companylookup.v1B\022C" +
+      "ompanylookupProtoP\001ZFgithub.com/e-conomi" +
+      "c/vmlapis/gen/go/ssn/companylookup/v1;co" +
+      "mpanylookup\242\002\003SCX\252\002\024Ssn.Companylookup.V1" +
+      "\312\002\024Ssn\\Companylookup\\V1\342\002 Ssn\\Companyloo" +
+      "kup\\V1\\GPBMetadata\352\002\026Ssn::Companylookup:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,6 +122,18 @@ public final class CompanylookupProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_descriptor,
         new java.lang.String[] { "SupplierVatValid", });
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_companylookup_v1_VerifySupplierRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor,
+        new java.lang.String[] { "CountryCode", "VatNumber", "OrganisationNumber", });
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ssn_companylookup_v1_VerifySupplierResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ssn_companylookup_v1_VerifySupplierResponse_descriptor,
+        new java.lang.String[] { "Verified", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
   }

@@ -248,6 +248,121 @@ func (x *ProcessInvoiceCompanyDataResponse) GetSupplierVatValid() bool {
 	return false
 }
 
+// Send the one identifier the caller intends to act on: a VAT number, or an
+// organisation number when there is no VAT number.
+type VerifySupplierRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CountryCode        string `protobuf:"bytes,1,opt,name=country_code,json=countryCode,proto3" json:"country_code,omitempty"` // ISO 3166-1 alpha-2
+	VatNumber          string `protobuf:"bytes,2,opt,name=vat_number,json=vatNumber,proto3" json:"vat_number,omitempty"`
+	OrganisationNumber string `protobuf:"bytes,3,opt,name=organisation_number,json=organisationNumber,proto3" json:"organisation_number,omitempty"`
+}
+
+func (x *VerifySupplierRequest) Reset() {
+	*x = VerifySupplierRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_ssn_companylookup_v1_companylookup_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VerifySupplierRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VerifySupplierRequest) ProtoMessage() {}
+
+func (x *VerifySupplierRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_ssn_companylookup_v1_companylookup_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VerifySupplierRequest.ProtoReflect.Descriptor instead.
+func (*VerifySupplierRequest) Descriptor() ([]byte, []int) {
+	return file_ssn_companylookup_v1_companylookup_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *VerifySupplierRequest) GetCountryCode() string {
+	if x != nil {
+		return x.CountryCode
+	}
+	return ""
+}
+
+func (x *VerifySupplierRequest) GetVatNumber() string {
+	if x != nil {
+		return x.VatNumber
+	}
+	return ""
+}
+
+func (x *VerifySupplierRequest) GetOrganisationNumber() string {
+	if x != nil {
+		return x.OrganisationNumber
+	}
+	return ""
+}
+
+type VerifySupplierResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// True only when a registry confirmed the identifier and the confirmation is
+	// still within the freshness window. False means "no confirmation" — never
+	// "refuted", and never a negative claim about the supplier.
+	Verified bool `protobuf:"varint,1,opt,name=verified,proto3" json:"verified,omitempty"`
+}
+
+func (x *VerifySupplierResponse) Reset() {
+	*x = VerifySupplierResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_ssn_companylookup_v1_companylookup_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VerifySupplierResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VerifySupplierResponse) ProtoMessage() {}
+
+func (x *VerifySupplierResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_ssn_companylookup_v1_companylookup_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VerifySupplierResponse.ProtoReflect.Descriptor instead.
+func (*VerifySupplierResponse) Descriptor() ([]byte, []int) {
+	return file_ssn_companylookup_v1_companylookup_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *VerifySupplierResponse) GetVerified() bool {
+	if x != nil {
+		return x.Verified
+	}
+	return false
+}
+
 var File_ssn_companylookup_v1_companylookup_proto protoreflect.FileDescriptor
 
 var file_ssn_companylookup_v1_companylookup_proto_rawDesc = []byte{
@@ -329,17 +444,36 @@ var file_ssn_companylookup_v1_companylookup_proto_rawDesc = []byte{
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2c, 0x0a, 0x12, 0x73, 0x75, 0x70, 0x70, 0x6c, 0x69, 0x65,
 	0x72, 0x5f, 0x76, 0x61, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x08, 0x52, 0x10, 0x73, 0x75, 0x70, 0x70, 0x6c, 0x69, 0x65, 0x72, 0x56, 0x61, 0x74, 0x56, 0x61,
-	0x6c, 0x69, 0x64, 0x32, 0xa5, 0x01, 0x0a, 0x14, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x4c,
-	0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x8c, 0x01, 0x0a,
-	0x19, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x49, 0x6e, 0x76, 0x6f, 0x69, 0x63, 0x65, 0x43,
-	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x44, 0x61, 0x74, 0x61, 0x12, 0x36, 0x2e, 0x73, 0x73, 0x6e,
-	0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x2e, 0x76,
-	0x31, 0x2e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x49, 0x6e, 0x76, 0x6f, 0x69, 0x63, 0x65,
-	0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x37, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79,
-	0x6c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73,
-	0x73, 0x49, 0x6e, 0x76, 0x6f, 0x69, 0x63, 0x65, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x44,
-	0x61, 0x74, 0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0xed, 0x01, 0x0a, 0x1d,
+	0x6c, 0x69, 0x64, 0x22, 0x8a, 0x01, 0x0a, 0x15, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x53, 0x75,
+	0x70, 0x70, 0x6c, 0x69, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21, 0x0a,
+	0x0c, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x43, 0x6f, 0x64, 0x65,
+	0x12, 0x1d, 0x0a, 0x0a, 0x76, 0x61, 0x74, 0x5f, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x76, 0x61, 0x74, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12,
+	0x2f, 0x0a, 0x13, 0x6f, 0x72, 0x67, 0x61, 0x6e, 0x69, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f,
+	0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x12, 0x6f, 0x72,
+	0x67, 0x61, 0x6e, 0x69, 0x73, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72,
+	0x22, 0x34, 0x0a, 0x16, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x53, 0x75, 0x70, 0x70, 0x6c, 0x69,
+	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x76, 0x65,
+	0x72, 0x69, 0x66, 0x69, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x08, 0x76, 0x65,
+	0x72, 0x69, 0x66, 0x69, 0x65, 0x64, 0x32, 0x92, 0x02, 0x0a, 0x14, 0x43, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x79, 0x4c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x8c, 0x01, 0x0a, 0x19, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x49, 0x6e, 0x76, 0x6f, 0x69,
+	0x63, 0x65, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x44, 0x61, 0x74, 0x61, 0x12, 0x36, 0x2e,
+	0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75,
+	0x70, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x49, 0x6e, 0x76, 0x6f,
+	0x69, 0x63, 0x65, 0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x37, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x72, 0x6f,
+	0x63, 0x65, 0x73, 0x73, 0x49, 0x6e, 0x76, 0x6f, 0x69, 0x63, 0x65, 0x43, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x79, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x6b,
+	0x0a, 0x0e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x53, 0x75, 0x70, 0x70, 0x6c, 0x69, 0x65, 0x72,
+	0x12, 0x2b, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f,
+	0x6f, 0x6b, 0x75, 0x70, 0x2e, 0x76, 0x31, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x53, 0x75,
+	0x70, 0x70, 0x6c, 0x69, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2c, 0x2e,
+	0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75,
+	0x70, 0x2e, 0x76, 0x31, 0x2e, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x53, 0x75, 0x70, 0x70, 0x6c,
+	0x69, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0xed, 0x01, 0x0a, 0x1d,
 	0x61, 0x69, 0x2e, 0x76, 0x69, 0x73, 0x6d, 0x61, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x63, 0x6f, 0x6d,
 	0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x2e, 0x76, 0x31, 0x42, 0x12, 0x43,
 	0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x6c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x50, 0x72, 0x6f, 0x74,
@@ -370,31 +504,35 @@ func file_ssn_companylookup_v1_companylookup_proto_rawDescGZIP() []byte {
 	return file_ssn_companylookup_v1_companylookup_proto_rawDescData
 }
 
-var file_ssn_companylookup_v1_companylookup_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_ssn_companylookup_v1_companylookup_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_ssn_companylookup_v1_companylookup_proto_goTypes = []interface{}{
 	(*ProcessInvoiceCompanyDataRequest)(nil),  // 0: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest
 	(*ProcessInvoiceCompanyDataResponse)(nil), // 1: ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse
-	(*_type.Candidate)(nil),                   // 2: ssn.type.Candidate
+	(*VerifySupplierRequest)(nil),             // 2: ssn.companylookup.v1.VerifySupplierRequest
+	(*VerifySupplierResponse)(nil),            // 3: ssn.companylookup.v1.VerifySupplierResponse
+	(*_type.Candidate)(nil),                   // 4: ssn.type.Candidate
 }
 var file_ssn_companylookup_v1_companylookup_proto_depIdxs = []int32{
-	2,  // 0: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_name:type_name -> ssn.type.Candidate
-	2,  // 1: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_vat_number:type_name -> ssn.type.Candidate
-	2,  // 2: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_organisation_number:type_name -> ssn.type.Candidate
-	2,  // 3: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_country_code:type_name -> ssn.type.Candidate
-	2,  // 4: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_address:type_name -> ssn.type.Candidate
-	2,  // 5: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_name:type_name -> ssn.type.Candidate
-	2,  // 6: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_vat_number:type_name -> ssn.type.Candidate
-	2,  // 7: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_organisation_number:type_name -> ssn.type.Candidate
-	2,  // 8: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_country_code:type_name -> ssn.type.Candidate
-	2,  // 9: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_address:type_name -> ssn.type.Candidate
-	2,  // 10: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.iban:type_name -> ssn.type.Candidate
-	2,  // 11: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bic:type_name -> ssn.type.Candidate
-	2,  // 12: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bank_account_number:type_name -> ssn.type.Candidate
-	2,  // 13: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bank_registration_number:type_name -> ssn.type.Candidate
+	4,  // 0: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_name:type_name -> ssn.type.Candidate
+	4,  // 1: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_vat_number:type_name -> ssn.type.Candidate
+	4,  // 2: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_organisation_number:type_name -> ssn.type.Candidate
+	4,  // 3: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_country_code:type_name -> ssn.type.Candidate
+	4,  // 4: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.supplier_address:type_name -> ssn.type.Candidate
+	4,  // 5: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_name:type_name -> ssn.type.Candidate
+	4,  // 6: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_vat_number:type_name -> ssn.type.Candidate
+	4,  // 7: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_organisation_number:type_name -> ssn.type.Candidate
+	4,  // 8: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_country_code:type_name -> ssn.type.Candidate
+	4,  // 9: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.receiver_address:type_name -> ssn.type.Candidate
+	4,  // 10: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.iban:type_name -> ssn.type.Candidate
+	4,  // 11: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bic:type_name -> ssn.type.Candidate
+	4,  // 12: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bank_account_number:type_name -> ssn.type.Candidate
+	4,  // 13: ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest.bank_registration_number:type_name -> ssn.type.Candidate
 	0,  // 14: ssn.companylookup.v1.CompanyLookupService.ProcessInvoiceCompanyData:input_type -> ssn.companylookup.v1.ProcessInvoiceCompanyDataRequest
-	1,  // 15: ssn.companylookup.v1.CompanyLookupService.ProcessInvoiceCompanyData:output_type -> ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse
-	15, // [15:16] is the sub-list for method output_type
-	14, // [14:15] is the sub-list for method input_type
+	2,  // 15: ssn.companylookup.v1.CompanyLookupService.VerifySupplier:input_type -> ssn.companylookup.v1.VerifySupplierRequest
+	1,  // 16: ssn.companylookup.v1.CompanyLookupService.ProcessInvoiceCompanyData:output_type -> ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse
+	3,  // 17: ssn.companylookup.v1.CompanyLookupService.VerifySupplier:output_type -> ssn.companylookup.v1.VerifySupplierResponse
+	16, // [16:18] is the sub-list for method output_type
+	14, // [14:16] is the sub-list for method input_type
 	14, // [14:14] is the sub-list for extension type_name
 	14, // [14:14] is the sub-list for extension extendee
 	0,  // [0:14] is the sub-list for field type_name
@@ -430,6 +568,30 @@ func file_ssn_companylookup_v1_companylookup_proto_init() {
 				return nil
 			}
 		}
+		file_ssn_companylookup_v1_companylookup_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*VerifySupplierRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_ssn_companylookup_v1_companylookup_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*VerifySupplierResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -437,7 +599,7 @@ func file_ssn_companylookup_v1_companylookup_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_ssn_companylookup_v1_companylookup_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

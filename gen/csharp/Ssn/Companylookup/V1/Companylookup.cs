@@ -51,22 +51,30 @@ namespace Ssn.Companylookup.V1 {
             "GBAgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhZiYW5rUmVnaXN0cmF0aW9u",
             "TnVtYmVyEiMKDXByb2R1Y3RfdHlwZXMYESADKAlSDHByb2R1Y3RUeXBlcyJR",
             "CiFQcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9uc2USLAoSc3VwcGxp",
-            "ZXJfdmF0X3ZhbGlkGAEgASgIUhBzdXBwbGllclZhdFZhbGlkMqUBChRDb21w",
-            "YW55TG9va3VwU2VydmljZRKMAQoZUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0",
-            "YRI2LnNzbi5jb21wYW55bG9va3VwLnYxLlByb2Nlc3NJbnZvaWNlQ29tcGFu",
-            "eURhdGFSZXF1ZXN0Gjcuc3NuLmNvbXBhbnlsb29rdXAudjEuUHJvY2Vzc0lu",
-            "dm9pY2VDb21wYW55RGF0YVJlc3BvbnNlQu0BCh1haS52aXNtYS5zc24uY29t",
-            "cGFueWxvb2t1cC52MUISQ29tcGFueWxvb2t1cFByb3RvUAFaRmdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9jb21wYW55bG9va3Vw",
-            "L3YxO2NvbXBhbnlsb29rdXCiAgNTQ1iqAhRTc24uQ29tcGFueWxvb2t1cC5W",
-            "McoCFFNzblxDb21wYW55bG9va3VwXFYx4gIgU3NuXENvbXBhbnlsb29rdXBc",
-            "VjFcR1BCTWV0YWRhdGHqAhZTc246OkNvbXBhbnlsb29rdXA6OlYxYgZwcm90",
-            "bzM="));
+            "ZXJfdmF0X3ZhbGlkGAEgASgIUhBzdXBwbGllclZhdFZhbGlkIooBChVWZXJp",
+            "ZnlTdXBwbGllclJlcXVlc3QSIQoMY291bnRyeV9jb2RlGAEgASgJUgtjb3Vu",
+            "dHJ5Q29kZRIdCgp2YXRfbnVtYmVyGAIgASgJUgl2YXROdW1iZXISLwoTb3Jn",
+            "YW5pc2F0aW9uX251bWJlchgDIAEoCVISb3JnYW5pc2F0aW9uTnVtYmVyIjQK",
+            "FlZlcmlmeVN1cHBsaWVyUmVzcG9uc2USGgoIdmVyaWZpZWQYASABKAhSCHZl",
+            "cmlmaWVkMpICChRDb21wYW55TG9va3VwU2VydmljZRKMAQoZUHJvY2Vzc0lu",
+            "dm9pY2VDb21wYW55RGF0YRI2LnNzbi5jb21wYW55bG9va3VwLnYxLlByb2Nl",
+            "c3NJbnZvaWNlQ29tcGFueURhdGFSZXF1ZXN0Gjcuc3NuLmNvbXBhbnlsb29r",
+            "dXAudjEuUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0YVJlc3BvbnNlEmsKDlZl",
+            "cmlmeVN1cHBsaWVyEisuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
+            "cGxpZXJSZXF1ZXN0Giwuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
+            "cGxpZXJSZXNwb25zZULtAQodYWkudmlzbWEuc3NuLmNvbXBhbnlsb29rdXAu",
+            "djFCEkNvbXBhbnlsb29rdXBQcm90b1ABWkZnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vY29tcGFueWxvb2t1cC92MTtjb21wYW55",
+            "bG9va3VwogIDU0NYqgIUU3NuLkNvbXBhbnlsb29rdXAuVjHKAhRTc25cQ29t",
+            "cGFueWxvb2t1cFxWMeICIFNzblxDb21wYW55bG9va3VwXFYxXEdQQk1ldGFk",
+            "YXRh6gIWU3NuOjpDb21wYW55bG9va3VwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest.Parser, new[]{ "ProjectName", "TransactionId", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierCountryCode", "SupplierAddress", "ReceiverName", "ReceiverVatNumber", "ReceiverOrganisationNumber", "ReceiverCountryCode", "ReceiverAddress", "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", "ProductTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "SupplierVatValid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "SupplierVatValid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierRequest), global::Ssn.Companylookup.V1.VerifySupplierRequest.Parser, new[]{ "CountryCode", "VatNumber", "OrganisationNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierResponse), global::Ssn.Companylookup.V1.VerifySupplierResponse.Parser, new[]{ "Verified" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1182,6 +1190,488 @@ namespace Ssn.Companylookup.V1 {
             break;
           case 8: {
             SupplierVatValid = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Send the one identifier the caller intends to act on: a VAT number, or an
+  /// organisation number when there is no VAT number.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifySupplierRequest : pb::IMessage<VerifySupplierRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifySupplierRequest> _parser = new pb::MessageParser<VerifySupplierRequest>(() => new VerifySupplierRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifySupplierRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierRequest(VerifySupplierRequest other) : this() {
+      countryCode_ = other.countryCode_;
+      vatNumber_ = other.vatNumber_;
+      organisationNumber_ = other.organisationNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierRequest Clone() {
+      return new VerifySupplierRequest(this);
+    }
+
+    /// <summary>Field number for the "country_code" field.</summary>
+    public const int CountryCodeFieldNumber = 1;
+    private string countryCode_ = "";
+    /// <summary>
+    /// ISO 3166-1 alpha-2
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CountryCode {
+      get { return countryCode_; }
+      set {
+        countryCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vat_number" field.</summary>
+    public const int VatNumberFieldNumber = 2;
+    private string vatNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VatNumber {
+      get { return vatNumber_; }
+      set {
+        vatNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "organisation_number" field.</summary>
+    public const int OrganisationNumberFieldNumber = 3;
+    private string organisationNumber_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrganisationNumber {
+      get { return organisationNumber_; }
+      set {
+        organisationNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifySupplierRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifySupplierRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CountryCode != other.CountryCode) return false;
+      if (VatNumber != other.VatNumber) return false;
+      if (OrganisationNumber != other.OrganisationNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CountryCode.Length != 0) hash ^= CountryCode.GetHashCode();
+      if (VatNumber.Length != 0) hash ^= VatNumber.GetHashCode();
+      if (OrganisationNumber.Length != 0) hash ^= OrganisationNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CountryCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CountryCode);
+      }
+      if (VatNumber.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VatNumber);
+      }
+      if (OrganisationNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(OrganisationNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CountryCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CountryCode);
+      }
+      if (VatNumber.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VatNumber);
+      }
+      if (OrganisationNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(OrganisationNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CountryCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CountryCode);
+      }
+      if (VatNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VatNumber);
+      }
+      if (OrganisationNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrganisationNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifySupplierRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CountryCode.Length != 0) {
+        CountryCode = other.CountryCode;
+      }
+      if (other.VatNumber.Length != 0) {
+        VatNumber = other.VatNumber;
+      }
+      if (other.OrganisationNumber.Length != 0) {
+        OrganisationNumber = other.OrganisationNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CountryCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            VatNumber = input.ReadString();
+            break;
+          }
+          case 26: {
+            OrganisationNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CountryCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            VatNumber = input.ReadString();
+            break;
+          }
+          case 26: {
+            OrganisationNumber = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifySupplierResponse : pb::IMessage<VerifySupplierResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifySupplierResponse> _parser = new pb::MessageParser<VerifySupplierResponse>(() => new VerifySupplierResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifySupplierResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Companylookup.V1.CompanylookupReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierResponse(VerifySupplierResponse other) : this() {
+      verified_ = other.verified_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifySupplierResponse Clone() {
+      return new VerifySupplierResponse(this);
+    }
+
+    /// <summary>Field number for the "verified" field.</summary>
+    public const int VerifiedFieldNumber = 1;
+    private bool verified_;
+    /// <summary>
+    /// True only when a registry confirmed the identifier and the confirmation is
+    /// still within the freshness window. False means "no confirmation" — never
+    /// "refuted", and never a negative claim about the supplier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Verified {
+      get { return verified_; }
+      set {
+        verified_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifySupplierResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifySupplierResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Verified != other.Verified) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Verified != false) hash ^= Verified.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Verified != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Verified);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Verified != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Verified);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Verified != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifySupplierResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Verified != false) {
+        Verified = other.Verified;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Verified = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Verified = input.ReadBool();
             break;
           }
         }

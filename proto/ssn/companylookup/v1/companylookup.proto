@@ -12,6 +12,10 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;co
 // calls external registries — enrichment is fetched out of band by a job.
 service CompanyLookupService {
   rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
+
+  // VerifySupplier reports whether a registry has confirmed the supplier's
+  // identifier. Read-only.
+  rpc VerifySupplier(VerifySupplierRequest) returns (VerifySupplierResponse);
 }
 
 // The request is flat: each field is the top-1 smartscan candidate for the
@@ -45,4 +49,19 @@ message ProcessInvoiceCompanyDataResponse {
   // True only when the supplier company has been enriched and the registry
   // (VIES) confirmed the VAT number.
   bool supplier_vat_valid = 1;
+}
+
+// Send the one identifier the caller intends to act on: a VAT number, or an
+// organisation number when there is no VAT number.
+message VerifySupplierRequest {
+  string country_code = 1; // ISO 3166-1 alpha-2
+  string vat_number = 2;
+  string organisation_number = 3;
+}
+
+message VerifySupplierResponse {
+  // True only when a registry confirmed the identifier and the confirmation is
+  // still within the freshness window. False means "no confirmation" — never
+  // "refuted", and never a negative claim about the supplier.
+  bool verified = 1;
 }

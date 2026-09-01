@@ -133,3 +133,47 @@ export namespace ProcessInvoiceCompanyDataResponse {
   }
 }
 
+export class VerifySupplierRequest extends jspb.Message {
+  getCountryCode(): string;
+  setCountryCode(value: string): VerifySupplierRequest;
+
+  getVatNumber(): string;
+  setVatNumber(value: string): VerifySupplierRequest;
+
+  getOrganisationNumber(): string;
+  setOrganisationNumber(value: string): VerifySupplierRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VerifySupplierRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: VerifySupplierRequest): VerifySupplierRequest.AsObject;
+  static serializeBinaryToWriter(message: VerifySupplierRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VerifySupplierRequest;
+  static deserializeBinaryFromReader(message: VerifySupplierRequest, reader: jspb.BinaryReader): VerifySupplierRequest;
+}
+
+export namespace VerifySupplierRequest {
+  export type AsObject = {
+    countryCode: string,
+    vatNumber: string,
+    organisationNumber: string,
+  }
+}
+
+export class VerifySupplierResponse extends jspb.Message {
+  getVerified(): boolean;
+  setVerified(value: boolean): VerifySupplierResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VerifySupplierResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: VerifySupplierResponse): VerifySupplierResponse.AsObject;
+  static serializeBinaryToWriter(message: VerifySupplierResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VerifySupplierResponse;
+  static deserializeBinaryFromReader(message: VerifySupplierResponse, reader: jspb.BinaryReader): VerifySupplierResponse;
+}
+
+export namespace VerifySupplierResponse {
+  export type AsObject = {
+    verified: boolean,
+  }
+}
+

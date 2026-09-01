@@ -23,6 +23,11 @@ class CompanyLookupServiceStub(object):
                 request_serializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataRequest.SerializeToString,
                 response_deserializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataResponse.FromString,
                 _registered_method=True)
+        self.VerifySupplier = channel.unary_unary(
+                '/ssn.companylookup.v1.CompanyLookupService/VerifySupplier',
+                request_serializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierRequest.SerializeToString,
+                response_deserializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierResponse.FromString,
+                _registered_method=True)
 
 
 class CompanyLookupServiceServicer(object):
@@ -38,6 +43,14 @@ class CompanyLookupServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def VerifySupplier(self, request, context):
+        """VerifySupplier reports whether a registry has confirmed the supplier's
+        identifier. Read-only.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_CompanyLookupServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -45,6 +58,11 @@ def add_CompanyLookupServiceServicer_to_server(servicer, server):
                     servicer.ProcessInvoiceCompanyData,
                     request_deserializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataRequest.FromString,
                     response_serializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataResponse.SerializeToString,
+            ),
+            'VerifySupplier': grpc.unary_unary_rpc_method_handler(
+                    servicer.VerifySupplier,
+                    request_deserializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierRequest.FromString,
+                    response_serializer=ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -78,6 +96,33 @@ class CompanyLookupService(object):
             '/ssn.companylookup.v1.CompanyLookupService/ProcessInvoiceCompanyData',
             ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataRequest.SerializeToString,
             ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.ProcessInvoiceCompanyDataResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def VerifySupplier(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.companylookup.v1.CompanyLookupService/VerifySupplier',
+            ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierRequest.SerializeToString,
+            ssn_dot_companylookup_dot_v1_dot_companylookup__pb2.VerifySupplierResponse.FromString,
             options,
             channel_credentials,
             insecure,

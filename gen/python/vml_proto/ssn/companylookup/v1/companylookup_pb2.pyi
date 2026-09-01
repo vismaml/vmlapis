@@ -49,3 +49,19 @@ class ProcessInvoiceCompanyDataResponse(_message.Message):
     SUPPLIER_VAT_VALID_FIELD_NUMBER: _ClassVar[int]
     supplier_vat_valid: bool
     def __init__(self, supplier_vat_valid: bool = ...) -> None: ...
+
+class VerifySupplierRequest(_message.Message):
+    __slots__ = ("country_code", "vat_number", "organisation_number")
+    COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
+    VAT_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    ORGANISATION_NUMBER_FIELD_NUMBER: _ClassVar[int]
+    country_code: str
+    vat_number: str
+    organisation_number: str
+    def __init__(self, country_code: _Optional[str] = ..., vat_number: _Optional[str] = ..., organisation_number: _Optional[str] = ...) -> None: ...
+
+class VerifySupplierResponse(_message.Message):
+    __slots__ = ("verified",)
+    VERIFIED_FIELD_NUMBER: _ClassVar[int]
+    verified: bool
+    def __init__(self, verified: bool = ...) -> None: ...
