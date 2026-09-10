@@ -5,9 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * CompanyLookupService is an internal service called during invoice
- * post-processing. It records company/bank-account observations and returns
- * whether the supplier VAT number has been confirmed by a registry. It never
- * calls external registries — enrichment is fetched out of band by a job.
+ * post-processing. It records company/bank-account observations and reports
+ * whether a registry has confirmed a supplier. It never calls external
+ * registries — enrichment is fetched out of band by a job.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -145,9 +145,9 @@ public final class CompanyLookupServiceGrpc {
   /**
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public interface AsyncService {
@@ -175,9 +175,9 @@ public final class CompanyLookupServiceGrpc {
    * Base class for the server implementation of the service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public static abstract class CompanyLookupServiceImplBase
@@ -192,9 +192,9 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do asynchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public static final class CompanyLookupServiceStub
@@ -235,9 +235,9 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do synchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public static final class CompanyLookupServiceBlockingV2Stub
@@ -276,9 +276,9 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do limited synchronous rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public static final class CompanyLookupServiceBlockingStub
@@ -317,9 +317,9 @@ public final class CompanyLookupServiceGrpc {
    * A stub to allow clients to do ListenableFuture-style rpc calls to service CompanyLookupService.
    * <pre>
    * CompanyLookupService is an internal service called during invoice
-   * post-processing. It records company/bank-account observations and returns
-   * whether the supplier VAT number has been confirmed by a registry. It never
-   * calls external registries — enrichment is fetched out of band by a job.
+   * post-processing. It records company/bank-account observations and reports
+   * whether a registry has confirmed a supplier. It never calls external
+   * registries — enrichment is fetched out of band by a job.
    * </pre>
    */
   public static final class CompanyLookupServiceFutureStub

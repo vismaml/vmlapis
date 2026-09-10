@@ -83,9 +83,8 @@ public final class CompanylookupProto {
       "ccountNumber\022M\n\030bank_registration_number" +
       "\030\020 \001(\0132\023.ssn.type.CandidateR\026bankRegistr" +
       "ationNumber\022#\n\rproduct_types\030\021 \003(\tR\014prod" +
-      "uctTypes\"Q\n!ProcessInvoiceCompanyDataRes" +
-      "ponse\022,\n\022supplier_vat_valid\030\001 \001(\010R\020suppl" +
-      "ierVatValid\"\212\001\n\025VerifySupplierRequest\022!\n" +
+      "uctTypes\")\n!ProcessInvoiceCompanyDataRes" +
+      "ponseJ\004\010\001\020\002\"\212\001\n\025VerifySupplierRequest\022!\n" +
       "\014country_code\030\001 \001(\tR\013countryCode\022\035\n\nvat_" +
       "number\030\002 \001(\tR\tvatNumber\022/\n\023organisation_" +
       "number\030\003 \001(\tR\022organisationNumber\"4\n\026Veri" +
@@ -121,7 +120,7 @@ public final class CompanylookupProto {
     internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_companylookup_v1_ProcessInvoiceCompanyDataResponse_descriptor,
-        new java.lang.String[] { "SupplierVatValid", });
+        new java.lang.String[] { });
     internal_static_ssn_companylookup_v1_VerifySupplierRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_companylookup_v1_VerifySupplierRequest_fieldAccessorTable = new
