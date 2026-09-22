@@ -455,6 +455,11 @@ export class PredictResponse extends jspb.Message {
   clearReceiverVatNumberList(): PredictResponse;
   addReceiverVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getCompletableList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCompletableList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearCompletableList(): PredictResponse;
+  addCompletable(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictResponse.AsObject;
   static toObject(includeInstance: boolean, msg: PredictResponse): PredictResponse.AsObject;
@@ -506,6 +511,7 @@ export namespace PredictResponse {
     receiverCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     receiverNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    completableList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

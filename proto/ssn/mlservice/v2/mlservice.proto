@@ -120,6 +120,7 @@ message PredictResponse {
   repeated ssn.type.Candidate receiver_country_code = 39;
   repeated ssn.type.Candidate receiver_name = 40;
   repeated ssn.type.Candidate receiver_vat_number = 41;
+  repeated ssn.type.Candidate completable = 42;
 }
 
 message FeatureGenPredictRequest {
