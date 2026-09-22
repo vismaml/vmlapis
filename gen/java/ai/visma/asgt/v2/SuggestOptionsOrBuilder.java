@@ -66,4 +66,23 @@ public interface SuggestOptionsOrBuilder extends
    * @return The includeProductTypes.
    */
   boolean getIncludeProductTypes();
+
+  /**
+   * <pre>
+   * Tier determines which model serves the request
+   * </pre>
+   *
+   * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  int getTierValue();
+  /**
+   * <pre>
+   * Tier determines which model serves the request
+   * </pre>
+   *
+   * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+   * @return The tier.
+   */
+  ai.visma.asgt.type.Tier getTier();
 }

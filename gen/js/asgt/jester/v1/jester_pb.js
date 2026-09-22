@@ -31,6 +31,8 @@ var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 goog.object.extend(proto, asgt_type_sample_pb);
+var asgt_type_tier_pb = require('../../../asgt/type/tier_pb.js');
+goog.object.extend(proto, asgt_type_tier_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
@@ -390,7 +392,8 @@ proto.asgt.jester.v1.SuggestionOptions.toObject = function(includeInstance, msg)
   var f, obj = {
     suggestionLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
     minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    modelType: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    tier: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -439,6 +442,10 @@ proto.asgt.jester.v1.SuggestionOptions.deserializeBinaryFromReader = function(ms
       var value = /** @type {!proto.asgt.type.ModelType} */ (reader.readEnum());
       msg.setModelType(value);
       break;
+    case 4:
+      var value = /** @type {!proto.asgt.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -486,6 +493,13 @@ proto.asgt.jester.v1.SuggestionOptions.serializeBinaryToWriter = function(messag
   if (f !== 0.0) {
     writer.writeEnum(
       3,
+      f
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      4,
       f
     );
   }
@@ -543,6 +557,24 @@ proto.asgt.jester.v1.SuggestionOptions.prototype.getModelType = function() {
  */
 proto.asgt.jester.v1.SuggestionOptions.prototype.setModelType = function(value) {
   return jspb.Message.setProto3EnumField(this, 3, value);
+};
+
+
+/**
+ * optional asgt.type.Tier tier = 4;
+ * @return {!proto.asgt.type.Tier}
+ */
+proto.asgt.jester.v1.SuggestionOptions.prototype.getTier = function() {
+  return /** @type {!proto.asgt.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {!proto.asgt.type.Tier} value
+ * @return {!proto.asgt.jester.v1.SuggestionOptions} returns this
+ */
+proto.asgt.jester.v1.SuggestionOptions.prototype.setTier = function(value) {
+  return jspb.Message.setProto3EnumField(this, 4, value);
 };
 
 

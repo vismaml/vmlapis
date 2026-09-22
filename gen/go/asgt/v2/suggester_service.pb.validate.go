@@ -87,6 +87,17 @@ func (m *SuggestOptions) validate(all bool) error {
 
 	// no validation rules for IncludeProductTypes
 
+	if _, ok := asgttype.Tier_name[int32(m.GetTier())]; !ok {
+		err := SuggestOptionsValidationError{
+			field:  "Tier",
+			reason: "value must be one of the defined enum values",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
 	if len(errors) > 0 {
 		return SuggestOptionsMultiError(errors)
 	}

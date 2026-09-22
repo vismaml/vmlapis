@@ -26,6 +26,8 @@ var asgt_type_model_type_pb = require('../../asgt/type/model_type_pb.js')
 
 var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js')
 
+var asgt_type_tier_pb = require('../../asgt/type/tier_pb.js')
+
 var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js')
 
 var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js')

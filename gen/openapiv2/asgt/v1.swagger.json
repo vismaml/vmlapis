@@ -493,6 +493,14 @@
       ],
       "default": "UNKNOWN"
     },
+    "asgttypeTier": {
+      "type": "string",
+      "enum": [
+        "STANDARD",
+        "ULTRA"
+      ],
+      "default": "STANDARD"
+    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -926,6 +934,9 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        },
+        "tier": {
+          "$ref": "#/definitions/asgttypeTier"
         }
       }
     },
