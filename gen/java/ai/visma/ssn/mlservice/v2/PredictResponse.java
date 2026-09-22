@@ -72,6 +72,7 @@ private static final long serialVersionUID = 0L;
     receiverCountryCode_ = java.util.Collections.emptyList();
     receiverName_ = java.util.Collections.emptyList();
     receiverVatNumber_ = java.util.Collections.emptyList();
+    completable_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1788,6 +1789,77 @@ private static final long serialVersionUID = 0L;
     return receiverVatNumber_.get(index);
   }
 
+  public static final int COMPLETABLE_FIELD_NUMBER = 42;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> completable_;
+  /**
+   * <pre>
+   * Whether the document can be completed by some source: the premium model,
+   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+   * is the probability, and `confidence.level` is HIGH when completable.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getCompletableList() {
+    return completable_;
+  }
+  /**
+   * <pre>
+   * Whether the document can be completed by some source: the premium model,
+   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+   * is the probability, and `confidence.level` is HIGH when completable.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCompletableOrBuilderList() {
+    return completable_;
+  }
+  /**
+   * <pre>
+   * Whether the document can be completed by some source: the premium model,
+   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+   * is the probability, and `confidence.level` is HIGH when completable.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public int getCompletableCount() {
+    return completable_.size();
+  }
+  /**
+   * <pre>
+   * Whether the document can be completed by some source: the premium model,
+   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+   * is the probability, and `confidence.level` is HIGH when completable.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getCompletable(int index) {
+    return completable_.get(index);
+  }
+  /**
+   * <pre>
+   * Whether the document can be completed by some source: the premium model,
+   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+   * is the probability, and `confidence.level` is HIGH when completable.
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getCompletableOrBuilder(
+      int index) {
+    return completable_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1924,6 +1996,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < receiverVatNumber_.size(); i++) {
       output.writeMessage(41, receiverVatNumber_.get(i));
+    }
+    for (int i = 0; i < completable_.size(); i++) {
+      output.writeMessage(42, completable_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2098,6 +2173,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(41, receiverVatNumber_.get(i));
     }
+    for (int i = 0; i < completable_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(42, completable_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2195,6 +2274,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverNameList())) return false;
     if (!getReceiverVatNumberList()
         .equals(other.getReceiverVatNumberList())) return false;
+    if (!getCompletableList()
+        .equals(other.getCompletableList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2369,6 +2450,10 @@ private static final long serialVersionUID = 0L;
     if (getReceiverVatNumberCount() > 0) {
       hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getReceiverVatNumberList().hashCode();
+    }
+    if (getCompletableCount() > 0) {
+      hash = (37 * hash) + COMPLETABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getCompletableList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2793,6 +2878,13 @@ private static final long serialVersionUID = 0L;
         receiverVatNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000100);
+      if (completableBuilder_ == null) {
+        completable_ = java.util.Collections.emptyList();
+      } else {
+        completable_ = null;
+        completableBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000200);
       return this;
     }
 
@@ -3195,6 +3287,15 @@ private static final long serialVersionUID = 0L;
         result.receiverVatNumber_ = receiverVatNumber_;
       } else {
         result.receiverVatNumber_ = receiverVatNumberBuilder_.build();
+      }
+      if (completableBuilder_ == null) {
+        if (((bitField1_ & 0x00000200) != 0)) {
+          completable_ = java.util.Collections.unmodifiableList(completable_);
+          bitField1_ = (bitField1_ & ~0x00000200);
+        }
+        result.completable_ = completable_;
+      } else {
+        result.completable_ = completableBuilder_.build();
       }
     }
 
@@ -4284,6 +4385,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (completableBuilder_ == null) {
+        if (!other.completable_.isEmpty()) {
+          if (completable_.isEmpty()) {
+            completable_ = other.completable_;
+            bitField1_ = (bitField1_ & ~0x00000200);
+          } else {
+            ensureCompletableIsMutable();
+            completable_.addAll(other.completable_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.completable_.isEmpty()) {
+          if (completableBuilder_.isEmpty()) {
+            completableBuilder_.dispose();
+            completableBuilder_ = null;
+            completable_ = other.completable_;
+            bitField1_ = (bitField1_ & ~0x00000200);
+            completableBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getCompletableFieldBuilder() : null;
+          } else {
+            completableBuilder_.addAllMessages(other.completable_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4843,6 +4970,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 330
+            case 338: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (completableBuilder_ == null) {
+                ensureCompletableIsMutable();
+                completable_.add(m);
+              } else {
+                completableBuilder_.addMessage(m);
+              }
+              break;
+            } // case 338
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -14771,6 +14911,354 @@ private static final long serialVersionUID = 0L;
         receiverVatNumber_ = null;
       }
       return receiverVatNumberBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> completable_ =
+      java.util.Collections.emptyList();
+    private void ensureCompletableIsMutable() {
+      if (!((bitField1_ & 0x00000200) != 0)) {
+        completable_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(completable_);
+        bitField1_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> completableBuilder_;
+
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getCompletableList() {
+      if (completableBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(completable_);
+      } else {
+        return completableBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public int getCompletableCount() {
+      if (completableBuilder_ == null) {
+        return completable_.size();
+      } else {
+        return completableBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getCompletable(int index) {
+      if (completableBuilder_ == null) {
+        return completable_.get(index);
+      } else {
+        return completableBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder setCompletable(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.set(index, value);
+        onChanged();
+      } else {
+        completableBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder setCompletable(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(ai.visma.ssn.type.Candidate value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.add(value);
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.add(index, value);
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.add(builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder addAllCompletable(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, completable_);
+        onChanged();
+      } else {
+        completableBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder clearCompletable() {
+      if (completableBuilder_ == null) {
+        completable_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000200);
+        onChanged();
+      } else {
+        completableBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public Builder removeCompletable(int index) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.remove(index);
+        onChanged();
+      } else {
+        completableBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getCompletableBuilder(
+        int index) {
+      return getCompletableFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getCompletableOrBuilder(
+        int index) {
+      if (completableBuilder_ == null) {
+        return completable_.get(index);  } else {
+        return completableBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getCompletableOrBuilderList() {
+      if (completableBuilder_ != null) {
+        return completableBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(completable_);
+      }
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addCompletableBuilder() {
+      return getCompletableFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addCompletableBuilder(
+        int index) {
+      return getCompletableFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Whether the document can be completed by some source: the premium model,
+     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
+     * is the probability, and `confidence.level` is HIGH when completable.
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getCompletableBuilderList() {
+      return getCompletableFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getCompletableFieldBuilder() {
+      if (completableBuilder_ == null) {
+        completableBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                completable_,
+                ((bitField1_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        completable_ = null;
+      }
+      return completableBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.PredictResponse)
