@@ -76,6 +76,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERY_HIGH = 5;</code>
      */
     VERY_HIGH(5),
+    /**
+     * <code>ULTRA_HIGH = 6;</code>
+     */
+    ULTRA_HIGH(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -112,6 +116,10 @@ private static final long serialVersionUID = 0L;
      * <code>VERY_HIGH = 5;</code>
      */
     public static final int VERY_HIGH_VALUE = 5;
+    /**
+     * <code>ULTRA_HIGH = 6;</code>
+     */
+    public static final int ULTRA_HIGH_VALUE = 6;
 
 
     public final int getNumber() {
@@ -144,6 +152,7 @@ private static final long serialVersionUID = 0L;
         case 3: return MID;
         case 4: return HIGH;
         case 5: return VERY_HIGH;
+        case 6: return ULTRA_HIGH;
         default: return null;
       }
     }

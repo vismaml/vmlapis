@@ -249,7 +249,8 @@ proto.asgt.type.Confidence.Level = {
   LOW: 2,
   MID: 3,
   HIGH: 4,
-  VERY_HIGH: 5
+  VERY_HIGH: 5,
+  ULTRA_HIGH: 6
 };
 
 /**

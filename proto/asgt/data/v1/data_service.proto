@@ -126,4 +126,5 @@ message RegisterQueryStatsRequest {
   int32 returned_mid = 7;
   int32 returned_high = 8;
   int32 returned_very_high = 9;
+  int32 returned_ultra_high = 10;
 }

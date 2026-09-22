@@ -93,4 +93,10 @@ public interface RegisterQueryStatsRequestOrBuilder extends
    * @return The returnedVeryHigh.
    */
   int getReturnedVeryHigh();
+
+  /**
+   * <code>int32 returned_ultra_high = 10 [json_name = "returnedUltraHigh"];</code>
+   * @return The returnedUltraHigh.
+   */
+  int getReturnedUltraHigh();
 }

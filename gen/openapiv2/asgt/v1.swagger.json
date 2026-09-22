@@ -488,7 +488,8 @@
         "LOW",
         "MID",
         "HIGH",
-        "VERY_HIGH"
+        "VERY_HIGH",
+        "ULTRA_HIGH"
       ],
       "default": "UNKNOWN"
     },

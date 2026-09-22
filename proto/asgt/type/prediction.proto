@@ -16,6 +16,7 @@ message Confidence {
     MID = 3;
     HIGH = 4;
     VERY_HIGH = 5;
+    ULTRA_HIGH = 6;
   }
   // A bucketized representation of confidence, which is intended to give clients
   // highly stable results across model upgrades.
