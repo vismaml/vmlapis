@@ -56,26 +56,26 @@ public final class PredictionProto {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
       "\034gen_bq_schema/bq_field.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\"\301\001\n\nConfidence\0221\n\005" +
+      "otobuf/wrappers.proto\"\321\001\n\nConfidence\0221\n\005" +
       "level\030\001 \001(\0162\033.asgt.type.Confidence.Level" +
       "R\005level\0221\n\005value\030\002 \001(\0132\033.google.protobuf" +
-      ".FloatValueR\005value\"M\n\005Level\022\013\n\007UNKNOWN\020\000" +
+      ".FloatValueR\005value\"]\n\005Level\022\013\n\007UNKNOWN\020\000" +
       "\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH" +
-      "\020\004\022\r\n\tVERY_HIGH\020\005\"\370\002\n\nPrediction\0226\n\007targ" +
-      "ets\030\001 \003(\0132\034.asgt.type.Prediction.TargetR" +
-      "\007targets\0228\n\030unknown_token_percentage\030\002 \001" +
-      "(\002R\026unknownTokenPercentage\032\367\001\n\006Target\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022F\n\ncandidates\030\002 \003(\0132&." +
-      "asgt.type.Prediction.Target.CandidateR\nc" +
-      "andidates\0220\n\024unknown_target_class\030\003 \001(\010R" +
-      "\022unknownTargetClass\032_\n\tCandidate\022\033\n\005valu" +
-      "e\030\001 \001(\tB\005\352?\002\010\001R\005value\0225\n\nconfidence\030\002 \001(" +
-      "\0132\025.asgt.type.ConfidenceR\nconfidenceB\242\001\n" +
-      "\022ai.visma.asgt.typeB\017PredictionProtoP\001Z6" +
-      "github.com/e-conomic/vmlapis/gen/go/asgt" +
-      "/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\" +
-      "Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Typ" +
-      "eb\006proto3"
+      "\020\004\022\r\n\tVERY_HIGH\020\005\022\016\n\nULTRA_HIGH\020\006\"\370\002\n\nPr" +
+      "ediction\0226\n\007targets\030\001 \003(\0132\034.asgt.type.Pr" +
+      "ediction.TargetR\007targets\0228\n\030unknown_toke" +
+      "n_percentage\030\002 \001(\002R\026unknownTokenPercenta" +
+      "ge\032\367\001\n\006Target\022\022\n\004name\030\001 \001(\tR\004name\022F\n\ncan" +
+      "didates\030\002 \003(\0132&.asgt.type.Prediction.Tar" +
+      "get.CandidateR\ncandidates\0220\n\024unknown_tar" +
+      "get_class\030\003 \001(\010R\022unknownTargetClass\032_\n\tC" +
+      "andidate\022\033\n\005value\030\001 \001(\tB\005\352?\002\010\001R\005value\0225\n" +
+      "\nconfidence\030\002 \001(\0132\025.asgt.type.Confidence" +
+      "R\nconfidenceB\242\001\n\022ai.visma.asgt.typeB\017Pre" +
+      "dictionProtoP\001Z6github.com/e-conomic/vml" +
+      "apis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tA" +
+      "sgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMeta" +
+      "data\352\002\nAsgt::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

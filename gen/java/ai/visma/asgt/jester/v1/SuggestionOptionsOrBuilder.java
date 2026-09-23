@@ -36,4 +36,15 @@ public interface SuggestionOptionsOrBuilder extends
    * @return The modelType.
    */
   ai.visma.asgt.type.ModelType getModelType();
+
+  /**
+   * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  int getTierValue();
+  /**
+   * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+   * @return The tier.
+   */
+  ai.visma.asgt.type.Tier getTier();
 }

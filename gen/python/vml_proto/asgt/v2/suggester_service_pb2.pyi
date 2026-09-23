@@ -1,6 +1,7 @@
 from asgt.type import model_pb2 as _model_pb2
 from asgt.type import model_type_pb2 as _model_type_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
+from asgt.type import tier_pb2 as _tier_pb2
 from asgt.v2 import product_service_pb2 as _product_service_pb2
 from asgt.v2.type import data_pb2 as _data_pb2
 from google.api import annotations_pb2 as _annotations_pb2
@@ -14,16 +15,18 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class SuggestOptions(_message.Message):
-    __slots__ = ("suggest_limit", "min_confidence", "model_type", "include_product_types")
+    __slots__ = ("suggest_limit", "min_confidence", "model_type", "include_product_types", "tier")
     SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     INCLUDE_PRODUCT_TYPES_FIELD_NUMBER: _ClassVar[int]
+    TIER_FIELD_NUMBER: _ClassVar[int]
     suggest_limit: int
     min_confidence: _prediction_pb2.Confidence.Level
     model_type: _model_type_pb2.ModelType
     include_product_types: bool
-    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., include_product_types: bool = ...) -> None: ...
+    tier: _tier_pb2.Tier
+    def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., include_product_types: bool = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
 
 class SuggestRequest(_message.Message):
     __slots__ = ("dataset_name", "input", "options")

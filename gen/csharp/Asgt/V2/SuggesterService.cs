@@ -26,53 +26,55 @@ namespace Asgt.V2 {
           string.Concat(
             "Ch9hc2d0L3YyL3N1Z2dlc3Rlcl9zZXJ2aWNlLnByb3RvEgdhc2d0LnYyGhVh",
             "c2d0L3R5cGUvbW9kZWwucHJvdG8aGmFzZ3QvdHlwZS9tb2RlbF90eXBlLnBy",
-            "b3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxodYXNndC92Mi9wcm9k",
-            "dWN0X3NlcnZpY2UucHJvdG8aF2FzZ3QvdjIvdHlwZS9kYXRhLnByb3RvGhxn",
-            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGi5wcm90b2MtZ2VuLW9wZW5h",
-            "cGl2Mi9vcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhd2YWxpZGF0ZS92YWxp",
-            "ZGF0ZS5wcm90byKRAgoOU3VnZ2VzdE9wdGlvbnMSIwoNc3VnZ2VzdF9saW1p",
-            "dBgBIAEoBVIMc3VnZ2VzdExpbWl0EkwKDm1pbl9jb25maWRlbmNlGAIgASgO",
-            "MhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWxCCPpCBYIBAhABUg1taW5D",
-            "b25maWRlbmNlEj0KCm1vZGVsX3R5cGUYAyABKA4yFC5hc2d0LnR5cGUuTW9k",
-            "ZWxUeXBlQgj6QgWCAQIQAVIJbW9kZWxUeXBlEjIKFWluY2x1ZGVfcHJvZHVj",
-            "dF90eXBlcxgEIAEoCFITaW5jbHVkZVByb2R1Y3RUeXBlczoZkkEWMhR7InN1",
-            "Z2dlc3RfbGltaXQiOiAzfSK6AQoOU3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNl",
-            "dF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXow",
-            "LTlfLj4tXSokUgtkYXRhc2V0TmFtZRIoCgVpbnB1dBgCIAEoCzISLmFzZ3Qu",
-            "djIudHlwZS5EYXRhUgVpbnB1dBIxCgdvcHRpb25zGAMgASgLMhcuYXNndC52",
-            "Mi5TdWdnZXN0T3B0aW9uc1IHb3B0aW9ucyLKAQoPU3VnZ2VzdFJlc3BvbnNl",
-            "EjUKCnByZWRpY3Rpb24YASABKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblIK",
-            "cHJlZGljdGlvbhImCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbFIF",
-            "bW9kZWwSWAoYcHJvZHVjdF90eXBlX3N1Z2dlc3Rpb25zGAMgASgLMh4uYXNn",
-            "dC52Mi5Qcm9kdWN0VHlwZVN1Z2dlc3Rpb25SFnByb2R1Y3RUeXBlU3VnZ2Vz",
-            "dGlvbnMiwQEKE0JhdGNoU3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNldF9uYW1l",
-            "GAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4t",
-            "XSokUgtkYXRhc2V0TmFtZRIqCgZpbnB1dHMYAiADKAsyEi5hc2d0LnYyLnR5",
-            "cGUuRGF0YVIGaW5wdXRzEjEKB29wdGlvbnMYAyABKAsyFy5hc2d0LnYyLlN1",
-            "Z2dlc3RPcHRpb25zUgdvcHRpb25zItEBChRCYXRjaFN1Z2dlc3RSZXNwb25z",
-            "ZRI3CgtwcmVkaWN0aW9ucxgBIAMoCzIVLmFzZ3QudHlwZS5QcmVkaWN0aW9u",
-            "UgtwcmVkaWN0aW9ucxImCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2Rl",
-            "bFIFbW9kZWwSWAoYcHJvZHVjdF90eXBlX3N1Z2dlc3Rpb25zGAMgAygLMh4u",
-            "YXNndC52Mi5Qcm9kdWN0VHlwZVN1Z2dlc3Rpb25SFnByb2R1Y3RUeXBlU3Vn",
-            "Z2VzdGlvbnMyuwMKEFN1Z2dlc3RlclNlcnZpY2USbAoHU3VnZ2VzdBIXLmFz",
-            "Z3QudjIuU3VnZ2VzdFJlcXVlc3QaGC5hc2d0LnYyLlN1Z2dlc3RSZXNwb25z",
-            "ZSIugtPkkwIoIiMvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06c3VnZ2Vz",
-            "dDoBKhKAAQoMQmF0Y2hTdWdnZXN0EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RS",
-            "ZXF1ZXN0Gh0uYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXNwb25zZSIzgtPkkwIt",
-            "IigvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX06YmF0Y2hTdWdnZXN0OgEq",
-            "EosBChFNb2RlbEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0",
-            "UmVxdWVzdBodLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVzcG9uc2UiOYLT5JMC",
-            "MyIuL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L21vZGVsOmJhdGNoU3Vn",
-            "Z2VzdDoBKhookkElEiNNYWtlIHByZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRh",
-            "c2V0LkLQAQoQYWkudmlzbWEuYXNndC52MkIVU3VnZ2VzdGVyU2VydmljZVBy",
-            "b3RvUAFaK2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2Fz",
-            "Z3QvdjKiAgNBWFiqAgdBc2d0LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BC",
-            "TWV0YWRhdGHqAghBc2d0OjpWMpJBOhIRCgtBdXRvU3VnZ2VzdDICdjIqAQIy",
-            "EGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "b3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxoUYXNndC90eXBlL3Rp",
+            "ZXIucHJvdG8aHWFzZ3QvdjIvcHJvZHVjdF9zZXJ2aWNlLnByb3RvGhdhc2d0",
+            "L3YyL3R5cGUvZGF0YS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "cm90bxoucHJvdG9jLWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9hbm5vdGF0aW9u",
+            "cy5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8iwAIKDlN1Z2dlc3RP",
+            "cHRpb25zEiMKDXN1Z2dlc3RfbGltaXQYASABKAVSDHN1Z2dlc3RMaW1pdBJM",
+            "Cg5taW5fY29uZmlkZW5jZRgCIAEoDjIbLmFzZ3QudHlwZS5Db25maWRlbmNl",
+            "LkxldmVsQgj6QgWCAQIQAVINbWluQ29uZmlkZW5jZRI9Cgptb2RlbF90eXBl",
+            "GAMgASgOMhQuYXNndC50eXBlLk1vZGVsVHlwZUII+kIFggECEAFSCW1vZGVs",
+            "VHlwZRIyChVpbmNsdWRlX3Byb2R1Y3RfdHlwZXMYBCABKAhSE2luY2x1ZGVQ",
+            "cm9kdWN0VHlwZXMSLQoEdGllchgFIAEoDjIPLmFzZ3QudHlwZS5UaWVyQgj6",
+            "QgWCAQIQAVIEdGllcjoZkkEWMhR7InN1Z2dlc3RfbGltaXQiOiAzfSK6AQoO",
+            "U3VnZ2VzdFJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiA",
+            "AjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFt",
+            "ZRIoCgVpbnB1dBgCIAEoCzISLmFzZ3QudjIudHlwZS5EYXRhUgVpbnB1dBIx",
+            "CgdvcHRpb25zGAMgASgLMhcuYXNndC52Mi5TdWdnZXN0T3B0aW9uc1IHb3B0",
+            "aW9ucyLKAQoPU3VnZ2VzdFJlc3BvbnNlEjUKCnByZWRpY3Rpb24YASABKAsy",
+            "FS5hc2d0LnR5cGUuUHJlZGljdGlvblIKcHJlZGljdGlvbhImCgVtb2RlbBgC",
+            "IAEoCzIQLmFzZ3QudHlwZS5Nb2RlbFIFbW9kZWwSWAoYcHJvZHVjdF90eXBl",
+            "X3N1Z2dlc3Rpb25zGAMgASgLMh4uYXNndC52Mi5Qcm9kdWN0VHlwZVN1Z2dl",
+            "c3Rpb25SFnByb2R1Y3RUeXBlU3VnZ2VzdGlvbnMiwQEKE0JhdGNoU3VnZ2Vz",
+            "dFJlcXVlc3QSSwoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiAAjIeXltB",
+            "LVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokUgtkYXRhc2V0TmFtZRIqCgZp",
+            "bnB1dHMYAiADKAsyEi5hc2d0LnYyLnR5cGUuRGF0YVIGaW5wdXRzEjEKB29w",
+            "dGlvbnMYAyABKAsyFy5hc2d0LnYyLlN1Z2dlc3RPcHRpb25zUgdvcHRpb25z",
+            "ItEBChRCYXRjaFN1Z2dlc3RSZXNwb25zZRI3CgtwcmVkaWN0aW9ucxgBIAMo",
+            "CzIVLmFzZ3QudHlwZS5QcmVkaWN0aW9uUgtwcmVkaWN0aW9ucxImCgVtb2Rl",
+            "bBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbFIFbW9kZWwSWAoYcHJvZHVjdF90",
+            "eXBlX3N1Z2dlc3Rpb25zGAMgAygLMh4uYXNndC52Mi5Qcm9kdWN0VHlwZVN1",
+            "Z2dlc3Rpb25SFnByb2R1Y3RUeXBlU3VnZ2VzdGlvbnMyuwMKEFN1Z2dlc3Rl",
+            "clNlcnZpY2USbAoHU3VnZ2VzdBIXLmFzZ3QudjIuU3VnZ2VzdFJlcXVlc3Qa",
+            "GC5hc2d0LnYyLlN1Z2dlc3RSZXNwb25zZSIugtPkkwIoIiMvdjIvZGF0YXNl",
+            "dHMve2RhdGFzZXRfbmFtZX06c3VnZ2VzdDoBKhKAAQoMQmF0Y2hTdWdnZXN0",
+            "EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXF1ZXN0Gh0uYXNndC52Mi5CYXRj",
+            "aFN1Z2dlc3RSZXNwb25zZSIzgtPkkwItIigvdjIvZGF0YXNldHMve2RhdGFz",
+            "ZXRfbmFtZX06YmF0Y2hTdWdnZXN0OgEqEosBChFNb2RlbEJhdGNoU3VnZ2Vz",
+            "dBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVxdWVzdBodLmFzZ3QudjIuQmF0",
+            "Y2hTdWdnZXN0UmVzcG9uc2UiOYLT5JMCMyIuL3YyL2RhdGFzZXRzL3tkYXRh",
+            "c2V0X25hbWV9L21vZGVsOmJhdGNoU3VnZ2VzdDoBKhookkElEiNNYWtlIHBy",
+            "ZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRhc2V0LkLQAQoQYWkudmlzbWEuYXNn",
+            "dC52MkIVU3VnZ2VzdGVyU2VydmljZVByb3RvUAFaK2dpdGh1Yi5jb20vZS1j",
+            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjKiAgNBWFiqAgdBc2d0LlYy",
+            "ygIHQXNndFxWMuICE0FzZ3RcVjJcR1BCTWV0YWRhdGHqAghBc2d0OjpWMpJB",
+            "OhIRCgtBdXRvU3VnZ2VzdDICdjIqAQIyEGFwcGxpY2F0aW9uL2pzb246EGFw",
+            "cGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.V2.ProductServiceReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TierReflection.Descriptor, global::Asgt.V2.ProductServiceReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence", "ModelType", "IncludeProductTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestOptions), global::Asgt.V2.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence", "ModelType", "IncludeProductTypes", "Tier" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestRequest), global::Asgt.V2.SuggestRequest.Parser, new[]{ "DatasetName", "Input", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.SuggestResponse), global::Asgt.V2.SuggestResponse.Parser, new[]{ "Prediction", "Model", "ProductTypeSuggestions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2.BatchSuggestRequest), global::Asgt.V2.BatchSuggestRequest.Parser, new[]{ "DatasetName", "Inputs", "Options" }, null, null, null, null),
@@ -122,6 +124,7 @@ namespace Asgt.V2 {
       minConfidence_ = other.minConfidence_;
       modelType_ = other.modelType_;
       includeProductTypes_ = other.includeProductTypes_;
+      tier_ = other.tier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -191,6 +194,21 @@ namespace Asgt.V2 {
       }
     }
 
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 5;
+    private global::Asgt.Type.Tier tier_ = global::Asgt.Type.Tier.Standard;
+    /// <summary>
+    /// Tier determines which model serves the request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.Type.Tier Tier {
+      get { return tier_; }
+      set {
+        tier_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -210,6 +228,7 @@ namespace Asgt.V2 {
       if (MinConfidence != other.MinConfidence) return false;
       if (ModelType != other.ModelType) return false;
       if (IncludeProductTypes != other.IncludeProductTypes) return false;
+      if (Tier != other.Tier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -221,6 +240,7 @@ namespace Asgt.V2 {
       if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
       if (ModelType != global::Asgt.Type.ModelType.Default) hash ^= ModelType.GetHashCode();
       if (IncludeProductTypes != false) hash ^= IncludeProductTypes.GetHashCode();
+      if (Tier != global::Asgt.Type.Tier.Standard) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -255,6 +275,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(32);
         output.WriteBool(IncludeProductTypes);
       }
+      if (Tier != global::Asgt.Type.Tier.Standard) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Tier);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -281,6 +305,10 @@ namespace Asgt.V2 {
         output.WriteRawTag(32);
         output.WriteBool(IncludeProductTypes);
       }
+      if (Tier != global::Asgt.Type.Tier.Standard) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Tier);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -302,6 +330,9 @@ namespace Asgt.V2 {
       }
       if (IncludeProductTypes != false) {
         size += 1 + 1;
+      }
+      if (Tier != global::Asgt.Type.Tier.Standard) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -326,6 +357,9 @@ namespace Asgt.V2 {
       }
       if (other.IncludeProductTypes != false) {
         IncludeProductTypes = other.IncludeProductTypes;
+      }
+      if (other.Tier != global::Asgt.Type.Tier.Standard) {
+        Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -362,6 +396,10 @@ namespace Asgt.V2 {
             IncludeProductTypes = input.ReadBool();
             break;
           }
+          case 40: {
+            Tier = (global::Asgt.Type.Tier) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -395,6 +433,10 @@ namespace Asgt.V2 {
           }
           case 32: {
             IncludeProductTypes = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Tier = (global::Asgt.Type.Tier) input.ReadEnum();
             break;
           }
         }

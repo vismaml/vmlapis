@@ -488,9 +488,18 @@
         "LOW",
         "MID",
         "HIGH",
-        "VERY_HIGH"
+        "VERY_HIGH",
+        "ULTRA_HIGH"
       ],
       "default": "UNKNOWN"
+    },
+    "asgttypeTier": {
+      "type": "string",
+      "enum": [
+        "STANDARD",
+        "ULTRA"
+      ],
+      "default": "STANDARD"
     },
     "protobufAny": {
       "type": "object",
@@ -925,6 +934,9 @@
         },
         "modelType": {
           "$ref": "#/definitions/typeModelType"
+        },
+        "tier": {
+          "$ref": "#/definitions/asgttypeTier"
         }
       }
     },

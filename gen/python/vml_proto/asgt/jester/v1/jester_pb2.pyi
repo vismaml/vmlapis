@@ -3,6 +3,7 @@ from asgt.type import model_pb2 as _model_pb2
 from asgt.type import model_type_pb2 as _model_type_pb2
 from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.type import sample_pb2 as _sample_pb2
+from asgt.type import tier_pb2 as _tier_pb2
 from google.api import annotations_pb2 as _annotations_pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from google.protobuf.internal import containers as _containers
@@ -21,14 +22,16 @@ class SuggestionResponse(_message.Message):
     def __init__(self, predictions: _Optional[_Iterable[_Union[_prediction_pb2.Prediction, _Mapping]]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class SuggestionOptions(_message.Message):
-    __slots__ = ("suggestion_limit", "min_confidence", "model_type")
+    __slots__ = ("suggestion_limit", "min_confidence", "model_type", "tier")
     SUGGESTION_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
+    TIER_FIELD_NUMBER: _ClassVar[int]
     suggestion_limit: int
     min_confidence: _prediction_pb2.Confidence.Level
     model_type: _model_type_pb2.ModelType
-    def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ...) -> None: ...
+    tier: _tier_pb2.Tier
+    def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ..., model_type: _Optional[_Union[_model_type_pb2.ModelType, str]] = ..., tier: _Optional[_Union[_tier_pb2.Tier, str]] = ...) -> None: ...
 
 class SuggestionRequest(_message.Message):
     __slots__ = ("name", "type", "inputs", "options", "tags")

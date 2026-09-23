@@ -659,7 +659,8 @@
         "LOW",
         "MID",
         "HIGH",
-        "VERY_HIGH"
+        "VERY_HIGH",
+        "ULTRA_HIGH"
       ],
       "default": "UNKNOWN"
     },
@@ -1207,6 +1208,14 @@
       },
       "title": "Record mapping a target name to a value"
     },
+    "typeTier": {
+      "type": "string",
+      "enum": [
+        "STANDARD",
+        "ULTRA"
+      ],
+      "default": "STANDARD"
+    },
     "typeTraining": {
       "type": "object",
       "properties": {
@@ -1537,6 +1546,10 @@
         "includeProductTypes": {
           "type": "boolean",
           "title": "When true, the service will also call the ProductTypeService and include product type suggestions in the response"
+        },
+        "tier": {
+          "$ref": "#/definitions/typeTier",
+          "title": "Tier determines which model serves the request"
         }
       }
     },
