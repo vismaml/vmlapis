@@ -3081,11 +3081,6 @@ namespace Ssn.Mlservice.V2 {
     private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_completable_codec
         = pb::FieldCodec.ForMessage(338, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> completable_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
-    /// <summary>
-    /// Whether the document can be completed by some source: the premium model,
-    /// Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-    /// is the probability, and `confidence.level` is HIGH when completable.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Type.Candidate> Completable {

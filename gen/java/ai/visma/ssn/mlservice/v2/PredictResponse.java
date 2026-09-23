@@ -1793,12 +1793,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.Candidate> completable_;
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1806,12 +1800,6 @@ private static final long serialVersionUID = 0L;
     return completable_;
   }
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1820,12 +1808,6 @@ private static final long serialVersionUID = 0L;
     return completable_;
   }
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1833,12 +1815,6 @@ private static final long serialVersionUID = 0L;
     return completable_.size();
   }
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1846,12 +1822,6 @@ private static final long serialVersionUID = 0L;
     return completable_.get(index);
   }
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -14926,12 +14896,6 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> completableBuilder_;
 
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate> getCompletableList() {
@@ -14942,12 +14906,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public int getCompletableCount() {
@@ -14958,12 +14916,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.Candidate getCompletable(int index) {
@@ -14974,12 +14926,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder setCompletable(
@@ -14997,12 +14943,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder setCompletable(
@@ -15017,12 +14957,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder addCompletable(ai.visma.ssn.type.Candidate value) {
@@ -15039,12 +14973,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15062,12 +14990,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15082,12 +15004,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15102,12 +15018,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder addAllCompletable(
@@ -15123,12 +15033,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder clearCompletable() {
@@ -15142,12 +15046,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public Builder removeCompletable(int index) {
@@ -15161,12 +15059,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder getCompletableBuilder(
@@ -15174,12 +15066,6 @@ private static final long serialVersionUID = 0L;
       return getCompletableFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.CandidateOrBuilder getCompletableOrBuilder(
@@ -15190,12 +15076,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
@@ -15207,12 +15087,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addCompletableBuilder() {
@@ -15220,12 +15094,6 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.Candidate.Builder addCompletableBuilder(
@@ -15234,12 +15102,6 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Whether the document can be completed by some source: the premium model,
-     * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-     * is the probability, and `confidence.level` is HIGH when completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 

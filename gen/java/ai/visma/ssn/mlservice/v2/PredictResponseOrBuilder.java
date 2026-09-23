@@ -1014,54 +1014,24 @@ public interface PredictResponseOrBuilder extends
       int index);
 
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
       getCompletableList();
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   ai.visma.ssn.type.Candidate getCompletable(int index);
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   int getCompletableCount();
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getCompletableOrBuilderList();
   /**
-   * <pre>
-   * Whether the document can be completed by some source: the premium model,
-   * Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-   * is the probability, and `confidence.level` is HIGH when completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getCompletableOrBuilder(
