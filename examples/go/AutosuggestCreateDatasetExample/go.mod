@@ -4,7 +4,7 @@ go 1.26.2
 
 require (
 	github.com/e-conomic/vmlapis v1.6.2
-	google.golang.org/grpc v1.82.1
+	google.golang.org/grpc v1.82.2
 )
 
 require (

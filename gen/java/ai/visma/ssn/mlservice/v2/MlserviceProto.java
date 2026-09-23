@@ -167,7 +167,7 @@ public final class MlserviceProto {
       "\030( \001(\tR\021receiverVatNumber\"\032\n\022FeatureGenR" +
       "esponseJ\004\010\001\020\002\"G\n\016PredictRequest\022/\n\024top_n" +
       "_most_confident\030\002 \001(\rR\021topNMostConfident" +
-      "J\004\010\001\020\002\"\213\025\n\017PredictResponse\0222\n\norder_date" +
+      "J\004\010\001\020\002\"\302\025\n\017PredictResponse\0222\n\norder_date" +
       "\030\001 \003(\0132\023.ssn.type.CandidateR\torderDate\022=" +
       "\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Cand" +
       "idateR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132" +
@@ -234,57 +234,59 @@ public final class MlserviceProto {
       "R\023receiverCountryCode\0228\n\rreceiver_name\030(" +
       " \003(\0132\023.ssn.type.CandidateR\014receiverName\022" +
       "C\n\023receiver_vat_number\030) \003(\0132\023.ssn.type." +
-      "CandidateR\021receiverVatNumber\"\272\001\n\030Feature" +
-      "GenPredictRequest\022S\n\023feature_gen_request" +
-      "\030\001 \001(\0132#.ssn.mlservice.v2.FeatureGenRequ" +
-      "estR\021featureGenRequest\022I\n\017predict_reques" +
-      "t\030\002 \001(\0132 .ssn.mlservice.v2.PredictReques" +
-      "tR\016predictRequest\"o\n\024PurchaseLinesReques" +
-      "t\022A\n\017text_annotation\030\001 \001(\0132\030.ssn.type.Te" +
-      "xtAnnotationR\016textAnnotation\022\024\n\005image\030\002 " +
-      "\001(\014R\005image\"\251\001\n\025PurchaseLinesResponse\022F\n\016" +
-      "purchase_lines\030\001 \003(\0132\037.ssn.type.Purchase" +
-      "LineCandidateR\rpurchaseLines\022H\n\024purchase" +
-      "_lines_items\030\002 \003(\0132\026.ssn.type.PurchaseLi" +
-      "neR\022purchaseLinesItems\"\205\001\n\014DocQARequest\022" +
-      "A\n\017text_annotation\030\001 \001(\0132\030.ssn.type.Text" +
-      "AnnotationR\016textAnnotation\022\024\n\005image\030\002 \001(" +
-      "\014R\005image\022\034\n\tquestions\030\003 \003(\tR\tquestions\"D" +
-      "\n\rDocQAResponse\0223\n\007answers\030\001 \003(\0132\031.ssn.t" +
-      "ype.AnswerCandidateR\007answers\"\234\001\n\026VatDist" +
-      "ributionRequest\022A\n\017text_annotation\030\001 \001(\013" +
-      "2\030.ssn.type.TextAnnotationR\016textAnnotati" +
-      "on\022!\n\014country_code\030\003 \001(\tR\013countryCode\022\026\n" +
-      "\006images\030\004 \003(\014R\006imagesJ\004\010\002\020\003\"\316\001\n\027VatDistr" +
-      "ibutionResponse\022b\n\033vat_distribution_cand" +
-      "idates\030\001 \003(\0132\".ssn.type.VatDistributionC" +
-      "andidateR\031vatDistributionCandidates\022O\n\026v" +
-      "at_distribution_items\030\002 \003(\0132\031.ssn.type.V" +
-      "atDistributionR\024vatDistributionItems\"\234\001\n" +
-      "\025SmartscanUltraRequest\022k\n\033document_annot" +
-      "ator_response\030\001 \001(\0132+.ssn.annotator.v1.D" +
-      "ocumentAnnotatorResponseR\031documentAnnota" +
-      "torResponse\022\026\n\006images\030\002 \003(\014R\006images\"\315\001\n\026" +
-      "SmartscanUltraResponse\022k\n\033document_annot" +
-      "ator_response\030\001 \001(\0132+.ssn.annotator.v1.D" +
-      "ocumentAnnotatorResponseR\031documentAnnota" +
-      "torResponse\022F\n\016ultra_metadata\030\002 \001(\0132\037.ss" +
-      "n.mlservice.v2.UltraMetadataR\rultraMetad" +
-      "ata\"W\n\rUltraMetadata\022!\n\014total_tokens\030\001 \001" +
-      "(\005R\013totalTokens\022#\n\rprompt_tokens\030\002 \001(\005R\014" +
-      "promptTokens2\230\002\n\tMlService\022W\n\nFeatureGen" +
-      "\022#.ssn.mlservice.v2.FeatureGenRequest\032$." +
-      "ssn.mlservice.v2.FeatureGenResponse\022N\n\007P" +
-      "redict\022 .ssn.mlservice.v2.PredictRequest" +
-      "\032!.ssn.mlservice.v2.PredictResponse\022b\n\021F" +
-      "eatureGenPredict\022*.ssn.mlservice.v2.Feat" +
-      "ureGenPredictRequest\032!.ssn.mlservice.v2." +
-      "PredictResponseB\315\001\n\031ai.visma.ssn.mlservi" +
-      "ce.v2B\016MlserviceProtoP\001Z>github.com/e-co" +
-      "nomic/vmlapis/gen/go/ssn/mlservice/v2;ml" +
-      "service\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\M" +
-      "lservice\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetada" +
-      "ta\352\002\022Ssn::Mlservice::V2b\006proto3"
+      "CandidateR\021receiverVatNumber\0225\n\013completa" +
+      "ble\030* \003(\0132\023.ssn.type.CandidateR\013completa" +
+      "ble\"\272\001\n\030FeatureGenPredictRequest\022S\n\023feat" +
+      "ure_gen_request\030\001 \001(\0132#.ssn.mlservice.v2" +
+      ".FeatureGenRequestR\021featureGenRequest\022I\n" +
+      "\017predict_request\030\002 \001(\0132 .ssn.mlservice.v" +
+      "2.PredictRequestR\016predictRequest\"o\n\024Purc" +
+      "haseLinesRequest\022A\n\017text_annotation\030\001 \001(" +
+      "\0132\030.ssn.type.TextAnnotationR\016textAnnotat" +
+      "ion\022\024\n\005image\030\002 \001(\014R\005image\"\251\001\n\025PurchaseLi" +
+      "nesResponse\022F\n\016purchase_lines\030\001 \003(\0132\037.ss" +
+      "n.type.PurchaseLineCandidateR\rpurchaseLi" +
+      "nes\022H\n\024purchase_lines_items\030\002 \003(\0132\026.ssn." +
+      "type.PurchaseLineR\022purchaseLinesItems\"\205\001" +
+      "\n\014DocQARequest\022A\n\017text_annotation\030\001 \001(\0132" +
+      "\030.ssn.type.TextAnnotationR\016textAnnotatio" +
+      "n\022\024\n\005image\030\002 \001(\014R\005image\022\034\n\tquestions\030\003 \003" +
+      "(\tR\tquestions\"D\n\rDocQAResponse\0223\n\007answer" +
+      "s\030\001 \003(\0132\031.ssn.type.AnswerCandidateR\007answ" +
+      "ers\"\234\001\n\026VatDistributionRequest\022A\n\017text_a" +
+      "nnotation\030\001 \001(\0132\030.ssn.type.TextAnnotatio" +
+      "nR\016textAnnotation\022!\n\014country_code\030\003 \001(\tR" +
+      "\013countryCode\022\026\n\006images\030\004 \003(\014R\006imagesJ\004\010\002" +
+      "\020\003\"\316\001\n\027VatDistributionResponse\022b\n\033vat_di" +
+      "stribution_candidates\030\001 \003(\0132\".ssn.type.V" +
+      "atDistributionCandidateR\031vatDistribution" +
+      "Candidates\022O\n\026vat_distribution_items\030\002 \003" +
+      "(\0132\031.ssn.type.VatDistributionR\024vatDistri" +
+      "butionItems\"\234\001\n\025SmartscanUltraRequest\022k\n" +
+      "\033document_annotator_response\030\001 \001(\0132+.ssn" +
+      ".annotator.v1.DocumentAnnotatorResponseR" +
+      "\031documentAnnotatorResponse\022\026\n\006images\030\002 \003" +
+      "(\014R\006images\"\315\001\n\026SmartscanUltraResponse\022k\n" +
+      "\033document_annotator_response\030\001 \001(\0132+.ssn" +
+      ".annotator.v1.DocumentAnnotatorResponseR" +
+      "\031documentAnnotatorResponse\022F\n\016ultra_meta" +
+      "data\030\002 \001(\0132\037.ssn.mlservice.v2.UltraMetad" +
+      "ataR\rultraMetadata\"W\n\rUltraMetadata\022!\n\014t" +
+      "otal_tokens\030\001 \001(\005R\013totalTokens\022#\n\rprompt" +
+      "_tokens\030\002 \001(\005R\014promptTokens2\230\002\n\tMlServic" +
+      "e\022W\n\nFeatureGen\022#.ssn.mlservice.v2.Featu" +
+      "reGenRequest\032$.ssn.mlservice.v2.FeatureG" +
+      "enResponse\022N\n\007Predict\022 .ssn.mlservice.v2" +
+      ".PredictRequest\032!.ssn.mlservice.v2.Predi" +
+      "ctResponse\022b\n\021FeatureGenPredict\022*.ssn.ml" +
+      "service.v2.FeatureGenPredictRequest\032!.ss" +
+      "n.mlservice.v2.PredictResponseB\315\001\n\031ai.vi" +
+      "sma.ssn.mlservice.v2B\016MlserviceProtoP\001Z>" +
+      "github.com/e-conomic/vmlapis/gen/go/ssn/" +
+      "mlservice/v2;mlservice\242\002\003SMX\252\002\020Ssn.Mlser" +
+      "vice.V2\312\002\020Ssn\\Mlservice\\V2\342\002\034Ssn\\Mlservi" +
+      "ce\\V2\\GPBMetadata\352\002\022Ssn::Mlservice::V2b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -323,7 +325,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", "ReceiverOrderNumber", "OcrLineBePaymentId", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", "ReceiverOrderNumber", "OcrLineBePaymentId", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "Completable", });
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_fieldAccessorTable = new

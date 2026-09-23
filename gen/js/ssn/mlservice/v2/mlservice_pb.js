@@ -2191,7 +2191,7 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.setTopNMostConfident = function(
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41];
+proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
 
 
 
@@ -2305,6 +2305,8 @@ proto.ssn.mlservice.v2.PredictResponse.toObject = function(includeInstance, msg)
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    completableList: jspb.Message.toObjectList(msg.getCompletableList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
@@ -2546,6 +2548,11 @@ proto.ssn.mlservice.v2.PredictResponse.deserializeBinaryFromReader = function(ms
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 42:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCompletable(value);
       break;
     default:
       reader.skipField();
@@ -2900,6 +2907,14 @@ proto.ssn.mlservice.v2.PredictResponse.serializeBinaryToWriter = function(messag
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       41,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCompletableList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
@@ -4462,6 +4477,44 @@ proto.ssn.mlservice.v2.PredictResponse.prototype.addReceiverVatNumber = function
  */
 proto.ssn.mlservice.v2.PredictResponse.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate completable = 42;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getCompletableList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setCompletableList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addCompletable = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearCompletableList = function() {
+  return this.setCompletableList([]);
 };
 
 
