@@ -219,10 +219,7 @@ type PredictResponse struct {
 	ReceiverCountryCode         []*_type.Candidate     `protobuf:"bytes,39,rep,name=receiver_country_code,json=receiverCountryCode,proto3" json:"receiver_country_code,omitempty"`
 	ReceiverName                []*_type.Candidate     `protobuf:"bytes,40,rep,name=receiver_name,json=receiverName,proto3" json:"receiver_name,omitempty"`
 	ReceiverVatNumber           []*_type.Candidate     `protobuf:"bytes,41,rep,name=receiver_vat_number,json=receiverVatNumber,proto3" json:"receiver_vat_number,omitempty"`
-	// Whether the document can be completed by some source: the premium model,
-	// Ultra, or a human annotator. `value` is "true"/"false", `confidence.value`
-	// is the probability, and `confidence.level` is HIGH when completable.
-	Completable []*_type.Candidate `protobuf:"bytes,42,rep,name=completable,proto3" json:"completable,omitempty"`
+	Completable                 []*_type.Candidate     `protobuf:"bytes,42,rep,name=completable,proto3" json:"completable,omitempty"`
 }
 
 func (x *PredictResponse) Reset() {
