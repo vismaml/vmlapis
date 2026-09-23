@@ -33,6 +33,7 @@ private static final long serialVersionUID = 0L;
     args_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     question_ = "";
+    guidance_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -220,6 +221,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int GUIDANCE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object guidance_ = "";
+  /**
+   * <code>string guidance = 6 [json_name = "guidance"];</code>
+   * @return The guidance.
+   */
+  @java.lang.Override
+  public java.lang.String getGuidance() {
+    java.lang.Object ref = guidance_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      guidance_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string guidance = 6 [json_name = "guidance"];</code>
+   * @return The bytes for guidance.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getGuidanceBytes() {
+    java.lang.Object ref = guidance_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      guidance_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -248,6 +288,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(question_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 5, question_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(guidance_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, guidance_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -279,6 +322,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(question_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(5, question_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(guidance_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, guidance_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -303,6 +349,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getArgsList())) return false;
     if (!getQuestion()
         .equals(other.getQuestion())) return false;
+    if (!getGuidance()
+        .equals(other.getGuidance())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -326,6 +374,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + QUESTION_FIELD_NUMBER;
     hash = (53 * hash) + getQuestion().hashCode();
+    hash = (37 * hash) + GUIDANCE_FIELD_NUMBER;
+    hash = (53 * hash) + getGuidance().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -463,6 +513,7 @@ private static final long serialVersionUID = 0L;
       args_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       question_ = "";
+      guidance_ = "";
       return this;
     }
 
@@ -512,6 +563,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.question_ = question_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.guidance_ = guidance_;
+      }
     }
 
     @java.lang.Override
@@ -552,6 +606,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getQuestion().isEmpty()) {
         question_ = other.question_;
         bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getGuidance().isEmpty()) {
+        guidance_ = other.guidance_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -606,6 +665,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              guidance_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -999,6 +1063,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       question_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object guidance_ = "";
+    /**
+     * <code>string guidance = 6 [json_name = "guidance"];</code>
+     * @return The guidance.
+     */
+    public java.lang.String getGuidance() {
+      java.lang.Object ref = guidance_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        guidance_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string guidance = 6 [json_name = "guidance"];</code>
+     * @return The bytes for guidance.
+     */
+    public com.google.protobuf.ByteString
+        getGuidanceBytes() {
+      java.lang.Object ref = guidance_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        guidance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string guidance = 6 [json_name = "guidance"];</code>
+     * @param value The guidance to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGuidance(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      guidance_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string guidance = 6 [json_name = "guidance"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGuidance() {
+      guidance_ = getDefaultInstance().getGuidance();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string guidance = 6 [json_name = "guidance"];</code>
+     * @param value The bytes for guidance to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGuidanceBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      guidance_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

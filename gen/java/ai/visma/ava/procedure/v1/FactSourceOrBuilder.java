@@ -80,4 +80,16 @@ public interface FactSourceOrBuilder extends
    */
   com.google.protobuf.ByteString
       getQuestionBytes();
+
+  /**
+   * <code>string guidance = 6 [json_name = "guidance"];</code>
+   * @return The guidance.
+   */
+  java.lang.String getGuidance();
+  /**
+   * <code>string guidance = 6 [json_name = "guidance"];</code>
+   * @return The bytes for guidance.
+   */
+  com.google.protobuf.ByteString
+      getGuidanceBytes();
 }

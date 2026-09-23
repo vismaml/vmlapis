@@ -32,36 +32,37 @@ namespace Ava.Procedure.V1 {
             "RmFjdBISCgRuYW1lGAEgASgJUgRuYW1lEi4KBHR5cGUYAiABKA4yGi5hdmEu",
             "cHJvY2VkdXJlLnYxLkZhY3RUeXBlUgR0eXBlEhwKCXBlcm1pdHRlZBgDIAMo",
             "CVIJcGVybWl0dGVkEjYKB3NvdXJjZXMYBCADKAsyHC5hdmEucHJvY2VkdXJl",
-            "LnYxLkZhY3RTb3VyY2VSB3NvdXJjZXMimAEKCkZhY3RTb3VyY2USMAoEa2lu",
+            "LnYxLkZhY3RTb3VyY2VSB3NvdXJjZXMitAEKCkZhY3RTb3VyY2USMAoEa2lu",
             "ZBgBIAEoDjIcLmF2YS5wcm9jZWR1cmUudjEuU291cmNlS2luZFIEa2luZBIS",
             "CgRuYW1lGAIgASgJUgRuYW1lEhQKBWZpZWxkGAMgASgJUgVmaWVsZBISCgRh",
-            "cmdzGAQgAygJUgRhcmdzEhoKCHF1ZXN0aW9uGAUgASgJUghxdWVzdGlvbiKN",
-            "AQoEU3RlcBIXCgdzdGVwX2lkGAEgASgJUgZzdGVwSWQSGgoIcXVlc3Rpb24Y",
-            "AiABKAlSCHF1ZXN0aW9uEhoKCGd1aWRhbmNlGAMgASgJUghndWlkYW5jZRI0",
-            "CghicmFuY2hlcxgEIAMoCzIYLmF2YS5wcm9jZWR1cmUudjEuQnJhbmNoUghi",
-            "cmFuY2hlcyL1AQoGQnJhbmNoEhsKCWJyYW5jaF9pZBgBIAEoCVIIYnJhbmNo",
-            "SWQSFAoFbGFiZWwYAiABKAlSBWxhYmVsEhwKCWNyaXRlcmlvbhgDIAEoCVIJ",
-            "Y3JpdGVyaW9uEhIKBHdoZW4YBCABKAlSBHdoZW4SIQoMb3V0cHV0X3ZhbHVl",
-            "GAUgASgJUgtvdXRwdXRWYWx1ZRIgCgxuZXh0X3N0ZXBfaWQYBiABKAlSCm5l",
-            "eHRTdGVwSWQSIwoNaXNfZXNjYWxhdGlvbhgHIAEoCFIMaXNFc2NhbGF0aW9u",
-            "EhwKCXJhdGlvbmFsZRgIIAEoCVIJcmF0aW9uYWxlKnIKClNvdXJjZUtpbmQS",
-            "GwoXU09VUkNFX0tJTkRfVU5TUEVDSUZJRUQQABIUChBTT1VSQ0VfS0lORF9D",
-            "QVNFEAESFwoTU09VUkNFX0tJTkRfREVSSVZFRBACEhgKFFNPVVJDRV9LSU5E",
-            "X0lORkVSUkVEEAMqnwEKCEZhY3RUeXBlEhkKFUZBQ1RfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEhQKEEZBQ1RfVFlQRV9TVFJJTkcQARITCg9GQUNUX1RZUEVfRkxP",
-            "QVQQAhISCg5GQUNUX1RZUEVfREFURRADEhIKDkZBQ1RfVFlQRV9CT09MEAQS",
-            "EQoNRkFDVF9UWVBFX0lOVBAFEhIKDkZBQ1RfVFlQRV9FTlVNEAZCwwEKGWFp",
-            "LnZpc21hLmF2YS5wcm9jZWR1cmUudjFCDlByb2NlZHVyZVByb3RvUAFaNGdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2F2YS9wcm9jZWR1",
-            "cmUvdjGiAgNBUFiqAhBBdmEuUHJvY2VkdXJlLlYxygIQQXZhXFByb2NlZHVy",
-            "ZVxWMeICHEF2YVxQcm9jZWR1cmVcVjFcR1BCTWV0YWRhdGHqAhJBdmE6OlBy",
-            "b2NlZHVyZTo6VjFiBnByb3RvMw=="));
+            "cmdzGAQgAygJUgRhcmdzEhoKCHF1ZXN0aW9uGAUgASgJUghxdWVzdGlvbhIa",
+            "CghndWlkYW5jZRgGIAEoCVIIZ3VpZGFuY2UijQEKBFN0ZXASFwoHc3RlcF9p",
+            "ZBgBIAEoCVIGc3RlcElkEhoKCHF1ZXN0aW9uGAIgASgJUghxdWVzdGlvbhIa",
+            "CghndWlkYW5jZRgDIAEoCVIIZ3VpZGFuY2USNAoIYnJhbmNoZXMYBCADKAsy",
+            "GC5hdmEucHJvY2VkdXJlLnYxLkJyYW5jaFIIYnJhbmNoZXMi9QEKBkJyYW5j",
+            "aBIbCglicmFuY2hfaWQYASABKAlSCGJyYW5jaElkEhQKBWxhYmVsGAIgASgJ",
+            "UgVsYWJlbBIcCgljcml0ZXJpb24YAyABKAlSCWNyaXRlcmlvbhISCgR3aGVu",
+            "GAQgASgJUgR3aGVuEiEKDG91dHB1dF92YWx1ZRgFIAEoCVILb3V0cHV0VmFs",
+            "dWUSIAoMbmV4dF9zdGVwX2lkGAYgASgJUgpuZXh0U3RlcElkEiMKDWlzX2Vz",
+            "Y2FsYXRpb24YByABKAhSDGlzRXNjYWxhdGlvbhIcCglyYXRpb25hbGUYCCAB",
+            "KAlSCXJhdGlvbmFsZSpyCgpTb3VyY2VLaW5kEhsKF1NPVVJDRV9LSU5EX1VO",
+            "U1BFQ0lGSUVEEAASFAoQU09VUkNFX0tJTkRfQ0FTRRABEhcKE1NPVVJDRV9L",
+            "SU5EX0RFUklWRUQQAhIYChRTT1VSQ0VfS0lORF9JTkZFUlJFRBADKp8BCghG",
+            "YWN0VHlwZRIZChVGQUNUX1RZUEVfVU5TUEVDSUZJRUQQABIUChBGQUNUX1RZ",
+            "UEVfU1RSSU5HEAESEwoPRkFDVF9UWVBFX0ZMT0FUEAISEgoORkFDVF9UWVBF",
+            "X0RBVEUQAxISCg5GQUNUX1RZUEVfQk9PTBAEEhEKDUZBQ1RfVFlQRV9JTlQQ",
+            "BRISCg5GQUNUX1RZUEVfRU5VTRAGQsMBChlhaS52aXNtYS5hdmEucHJvY2Vk",
+            "dXJlLnYxQg5Qcm9jZWR1cmVQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9hdmEvcHJvY2VkdXJlL3YxogIDQVBYqgIQQXZh",
+            "LlByb2NlZHVyZS5WMcoCEEF2YVxQcm9jZWR1cmVcVjHiAhxBdmFcUHJvY2Vk",
+            "dXJlXFYxXEdQQk1ldGFkYXRh6gISQXZhOjpQcm9jZWR1cmU6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.Procedure.V1.SourceKind), typeof(global::Ava.Procedure.V1.FactType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Procedure), global::Ava.Procedure.V1.Procedure.Parser, new[]{ "Facts", "Produces", "RootStepId", "Steps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Fact), global::Ava.Procedure.V1.Fact.Parser, new[]{ "Name", "Type", "Permitted", "Sources" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.FactSource), global::Ava.Procedure.V1.FactSource.Parser, new[]{ "Kind", "Name", "Field", "Args", "Question" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.FactSource), global::Ava.Procedure.V1.FactSource.Parser, new[]{ "Kind", "Name", "Field", "Args", "Question", "Guidance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Step), global::Ava.Procedure.V1.Step.Parser, new[]{ "StepId", "Question", "Guidance", "Branches" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Branch), global::Ava.Procedure.V1.Branch.Parser, new[]{ "BranchId", "Label", "Criterion", "When", "OutputValue", "NextStepId", "IsEscalation", "Rationale" }, null, null, null, null)
           }));
@@ -704,6 +705,7 @@ namespace Ava.Procedure.V1 {
       field_ = other.field_;
       args_ = other.args_.Clone();
       question_ = other.question_;
+      guidance_ = other.guidance_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -772,6 +774,18 @@ namespace Ava.Procedure.V1 {
       }
     }
 
+    /// <summary>Field number for the "guidance" field.</summary>
+    public const int GuidanceFieldNumber = 6;
+    private string guidance_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Guidance {
+      get { return guidance_; }
+      set {
+        guidance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -792,6 +806,7 @@ namespace Ava.Procedure.V1 {
       if (Field != other.Field) return false;
       if(!args_.Equals(other.args_)) return false;
       if (Question != other.Question) return false;
+      if (Guidance != other.Guidance) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -804,6 +819,7 @@ namespace Ava.Procedure.V1 {
       if (Field.Length != 0) hash ^= Field.GetHashCode();
       hash ^= args_.GetHashCode();
       if (Question.Length != 0) hash ^= Question.GetHashCode();
+      if (Guidance.Length != 0) hash ^= Guidance.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -839,6 +855,10 @@ namespace Ava.Procedure.V1 {
         output.WriteRawTag(42);
         output.WriteString(Question);
       }
+      if (Guidance.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Guidance);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -866,6 +886,10 @@ namespace Ava.Procedure.V1 {
         output.WriteRawTag(42);
         output.WriteString(Question);
       }
+      if (Guidance.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Guidance);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -888,6 +912,9 @@ namespace Ava.Procedure.V1 {
       size += args_.CalculateSize(_repeated_args_codec);
       if (Question.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Question);
+      }
+      if (Guidance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Guidance);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -913,6 +940,9 @@ namespace Ava.Procedure.V1 {
       args_.Add(other.args_);
       if (other.Question.Length != 0) {
         Question = other.Question;
+      }
+      if (other.Guidance.Length != 0) {
+        Guidance = other.Guidance;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -953,6 +983,10 @@ namespace Ava.Procedure.V1 {
             Question = input.ReadString();
             break;
           }
+          case 50: {
+            Guidance = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -990,6 +1024,10 @@ namespace Ava.Procedure.V1 {
           }
           case 42: {
             Question = input.ReadString();
+            break;
+          }
+          case 50: {
+            Guidance = input.ReadString();
             break;
           }
         }
