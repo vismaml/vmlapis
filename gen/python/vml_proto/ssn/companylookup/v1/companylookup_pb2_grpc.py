@@ -7,9 +7,9 @@ from vml_proto.ssn.companylookup.v1 import companylookup_pb2 as ssn_dot_companyl
 
 class CompanyLookupServiceStub(object):
     """CompanyLookupService is an internal service called during invoice
-    post-processing. It records company/bank-account observations and returns
-    whether the supplier VAT number has been confirmed by a registry. It never
-    calls external registries — enrichment is fetched out of band by a job.
+    post-processing. It records company/bank-account observations and reports
+    whether a registry has confirmed a supplier. It never calls external
+    registries — enrichment is fetched out of band by a job.
     """
 
     def __init__(self, channel):
@@ -32,9 +32,9 @@ class CompanyLookupServiceStub(object):
 
 class CompanyLookupServiceServicer(object):
     """CompanyLookupService is an internal service called during invoice
-    post-processing. It records company/bank-account observations and returns
-    whether the supplier VAT number has been confirmed by a registry. It never
-    calls external registries — enrichment is fetched out of band by a job.
+    post-processing. It records company/bank-account observations and reports
+    whether a registry has confirmed a supplier. It never calls external
+    registries — enrichment is fetched out of band by a job.
     """
 
     def ProcessInvoiceCompanyData(self, request, context):
@@ -74,9 +74,9 @@ def add_CompanyLookupServiceServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class CompanyLookupService(object):
     """CompanyLookupService is an internal service called during invoice
-    post-processing. It records company/bank-account observations and returns
-    whether the supplier VAT number has been confirmed by a registry. It never
-    calls external registries — enrichment is fetched out of band by a job.
+    post-processing. It records company/bank-account observations and reports
+    whether a registry has confirmed a supplier. It never calls external
+    registries — enrichment is fetched out of band by a job.
     """
 
     @staticmethod

@@ -116,9 +116,6 @@ export namespace ProcessInvoiceCompanyDataRequest {
 }
 
 export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
-  getSupplierVatValid(): boolean;
-  setSupplierVatValid(value: boolean): ProcessInvoiceCompanyDataResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProcessInvoiceCompanyDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: ProcessInvoiceCompanyDataResponse): ProcessInvoiceCompanyDataResponse.AsObject;
@@ -129,7 +126,6 @@ export class ProcessInvoiceCompanyDataResponse extends jspb.Message {
 
 export namespace ProcessInvoiceCompanyDataResponse {
   export type AsObject = {
-    supplierVatValid: boolean,
   }
 }
 
