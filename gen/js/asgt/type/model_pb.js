@@ -125,7 +125,8 @@ proto.asgt.type.Model.toObject = function(includeInstance, msg) {
     datasetType: jspb.Message.getFieldWithDefault(msg, 9, ""),
     modelFilesList: jspb.Message.toObjectList(msg.getModelFilesList(),
     asgt_type_model_file_pb.ModelFile.toObject, includeInstance),
-    targetToConfidenceThresholdsMap: (f = msg.getTargetToConfidenceThresholdsMap()) ? f.toObject(includeInstance, proto.asgt.type.ConfidenceThresholds.toObject) : []
+    targetToConfidenceThresholdsMap: (f = msg.getTargetToConfidenceThresholdsMap()) ? f.toObject(includeInstance, proto.asgt.type.ConfidenceThresholds.toObject) : [],
+    targetToClassCountMap: (f = msg.getTargetToClassCountMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -201,6 +202,12 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       var value = msg.getTargetToConfidenceThresholdsMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.type.ConfidenceThresholds.deserializeBinaryFromReader, "", new proto.asgt.type.ConfidenceThresholds());
+         });
+      break;
+    case 13:
+      var value = msg.getTargetToClassCountMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readInt32, null, "", 0);
          });
       break;
     default:
@@ -294,6 +301,10 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
   f = message.getTargetToConfidenceThresholdsMap(true);
   if (f && f.getLength() > 0) {
     f.serializeBinary(12, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.type.ConfidenceThresholds.serializeBinaryToWriter);
+  }
+  f = message.getTargetToClassCountMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(13, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeInt32);
   }
 };
 
@@ -528,6 +539,29 @@ proto.asgt.type.Model.prototype.getTargetToConfidenceThresholdsMap = function(op
  */
 proto.asgt.type.Model.prototype.clearTargetToConfidenceThresholdsMap = function() {
   this.getTargetToConfidenceThresholdsMap().clear();
+  return this;
+};
+
+
+/**
+ * map<string, int32> target_to_class_count = 13;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,number>}
+ */
+proto.asgt.type.Model.prototype.getTargetToClassCountMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,number>} */ (
+      jspb.Message.getMapField(this, 13, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.asgt.type.Model} returns this
+ */
+proto.asgt.type.Model.prototype.clearTargetToClassCountMap = function() {
+  this.getTargetToClassCountMap().clear();
   return this;
 };
 
