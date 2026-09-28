@@ -65,6 +65,10 @@ namespace Ssn.Documentdataservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest> __Marshaller_ssn_documentdataservice_v1_DeleteAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse> __Marshaller_ssn_documentdataservice_v1_DeleteAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest> __Marshaller_ssn_documentdataservice_v1_SetForAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.SetForAnnotationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> __Marshaller_ssn_documentdataservice_v1_SetForAnnotationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse> __Method_GetDocumentData = new grpc::Method<global::Ssn.Documentdataservice.V1.GetDocumentDataRequest, global::Ssn.Documentdataservice.V1.GetDocumentDataResponse>(
@@ -105,6 +109,14 @@ namespace Ssn.Documentdataservice.V1 {
         "DeleteAnnotations",
         __Marshaller_ssn_documentdataservice_v1_DeleteAnnotationsRequest,
         __Marshaller_ssn_documentdataservice_v1_DeleteAnnotationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> __Method_SetForAnnotation = new grpc::Method<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetForAnnotation",
+        __Marshaller_ssn_documentdataservice_v1_SetForAnnotationRequest,
+        __Marshaller_ssn_documentdataservice_v1_SetForAnnotationResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -181,6 +193,22 @@ namespace Ssn.Documentdataservice.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse> DeleteAnnotations(global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// SetForAnnotation flags or unflags a document for the annotation tool.
+      /// While flagged, a customer DeleteDocument does not remove the document
+      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
+      /// days after the request, then the row deletion policy removes it. The
+      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> SetForAnnotation(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -490,6 +518,70 @@ namespace Ssn.Documentdataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAnnotations, null, options, request);
       }
+      /// <summary>
+      /// SetForAnnotation flags or unflags a document for the annotation tool.
+      /// While flagged, a customer DeleteDocument does not remove the document
+      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
+      /// days after the request, then the row deletion policy removes it. The
+      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.SetForAnnotationResponse SetForAnnotation(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetForAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetForAnnotation flags or unflags a document for the annotation tool.
+      /// While flagged, a customer DeleteDocument does not remove the document
+      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
+      /// days after the request, then the row deletion policy removes it. The
+      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ssn.Documentdataservice.V1.SetForAnnotationResponse SetForAnnotation(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetForAnnotation, null, options, request);
+      }
+      /// <summary>
+      /// SetForAnnotation flags or unflags a document for the annotation tool.
+      /// While flagged, a customer DeleteDocument does not remove the document
+      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
+      /// days after the request, then the row deletion policy removes it. The
+      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> SetForAnnotationAsync(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetForAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// SetForAnnotation flags or unflags a document for the annotation tool.
+      /// While flagged, a customer DeleteDocument does not remove the document
+      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
+      /// days after the request, then the row deletion policy removes it. The
+      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Documentdataservice.V1.SetForAnnotationResponse> SetForAnnotationAsync(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetForAnnotation, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentDataServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -508,7 +600,8 @@ namespace Ssn.Documentdataservice.V1 {
           .AddMethod(__Method_SetDocumentBlobs, serviceImpl.SetDocumentBlobs)
           .AddMethod(__Method_AddAnnotations, serviceImpl.AddAnnotations)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
-          .AddMethod(__Method_DeleteAnnotations, serviceImpl.DeleteAnnotations).Build();
+          .AddMethod(__Method_DeleteAnnotations, serviceImpl.DeleteAnnotations)
+          .AddMethod(__Method_SetForAnnotation, serviceImpl.SetForAnnotation).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -523,6 +616,7 @@ namespace Ssn.Documentdataservice.V1 {
       serviceBinder.AddMethod(__Method_AddAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.AddAnnotationsRequest, global::Ssn.Documentdataservice.V1.AddAnnotationsResponse>(serviceImpl.AddAnnotations));
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.DeleteDocumentRequest, global::Ssn.Documentdataservice.V1.DeleteDocumentResponse>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_DeleteAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest, global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse>(serviceImpl.DeleteAnnotations));
+      serviceBinder.AddMethod(__Method_SetForAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Documentdataservice.V1.SetForAnnotationRequest, global::Ssn.Documentdataservice.V1.SetForAnnotationResponse>(serviceImpl.SetForAnnotation));
     }
 
   }
