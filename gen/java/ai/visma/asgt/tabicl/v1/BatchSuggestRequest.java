@@ -37,6 +37,18 @@ private static final long serialVersionUID = 0L;
     return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+      int number) {
+    switch (number) {
+      case 5:
+        return internalGetTargetClassCounts();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -175,6 +187,83 @@ private static final long serialVersionUID = 0L;
     return suggestLimit_;
   }
 
+  public static final int TARGET_CLASS_COUNTS_FIELD_NUMBER = 5;
+  private static final class TargetClassCountsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Integer> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.INT32,
+                0);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Integer> targetClassCounts_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+  internalGetTargetClassCounts() {
+    if (targetClassCounts_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          TargetClassCountsDefaultEntryHolder.defaultEntry);
+    }
+    return targetClassCounts_;
+  }
+  public int getTargetClassCountsCount() {
+    return internalGetTargetClassCounts().getMap().size();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  @java.lang.Override
+  public boolean containsTargetClassCounts(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetTargetClassCounts().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getTargetClassCountsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Integer> getTargetClassCounts() {
+    return getTargetClassCountsMap();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Integer> getTargetClassCountsMap() {
+    return internalGetTargetClassCounts().getMap();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getTargetClassCountsOrDefault(
+      java.lang.String key,
+      int defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Integer> map =
+        internalGetTargetClassCounts().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getTargetClassCountsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Integer> map =
+        internalGetTargetClassCounts().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -201,6 +290,12 @@ private static final long serialVersionUID = 0L;
     if (suggestLimit_ != 0) {
       output.writeInt32(4, suggestLimit_);
     }
+    com.google.protobuf.GeneratedMessage
+      .serializeStringMapTo(
+        output,
+        internalGetTargetClassCounts(),
+        TargetClassCountsDefaultEntryHolder.defaultEntry,
+        5);
     getUnknownFields().writeTo(output);
   }
 
@@ -223,6 +318,16 @@ private static final long serialVersionUID = 0L;
     if (suggestLimit_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, suggestLimit_);
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+         : internalGetTargetClassCounts().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+      targetClassCounts__ = TargetClassCountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, targetClassCounts__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -247,6 +352,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getInputsList())) return false;
     if (getSuggestLimit()
         != other.getSuggestLimit()) return false;
+    if (!internalGetTargetClassCounts().equals(
+        other.internalGetTargetClassCounts())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -268,6 +375,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + SUGGEST_LIMIT_FIELD_NUMBER;
     hash = (53 * hash) + getSuggestLimit();
+    if (!internalGetTargetClassCounts().getMap().isEmpty()) {
+      hash = (37 * hash) + TARGET_CLASS_COUNTS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetTargetClassCounts().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -377,6 +488,28 @@ private static final long serialVersionUID = 0L;
       return ai.visma.asgt.tabicl.v1.TabiclServiceProto.internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetTargetClassCounts();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetMutableTargetClassCounts();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -409,6 +542,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       suggestLimit_ = 0;
+      internalGetMutableTargetClassCounts().clear();
       return this;
     }
 
@@ -464,6 +598,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.suggestLimit_ = suggestLimit_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.targetClassCounts_ = internalGetTargetClassCounts();
+        result.targetClassCounts_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -517,6 +655,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSuggestLimit() != 0) {
         setSuggestLimit(other.getSuggestLimit());
       }
+      internalGetMutableTargetClassCounts().mergeFrom(
+          other.internalGetTargetClassCounts());
+      bitField0_ |= 0x00000010;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -571,6 +712,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+              targetClassCounts__ = input.readMessage(
+                  TargetClassCountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableTargetClassCounts().getMutableMap().put(
+                  targetClassCounts__.getKey(), targetClassCounts__.getValue());
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1001,6 +1151,131 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       suggestLimit_ = 0;
       onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> targetClassCounts_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+        internalGetTargetClassCounts() {
+      if (targetClassCounts_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TargetClassCountsDefaultEntryHolder.defaultEntry);
+      }
+      return targetClassCounts_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+        internalGetMutableTargetClassCounts() {
+      if (targetClassCounts_ == null) {
+        targetClassCounts_ = com.google.protobuf.MapField.newMapField(
+            TargetClassCountsDefaultEntryHolder.defaultEntry);
+      }
+      if (!targetClassCounts_.isMutable()) {
+        targetClassCounts_ = targetClassCounts_.copy();
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return targetClassCounts_;
+    }
+    public int getTargetClassCountsCount() {
+      return internalGetTargetClassCounts().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public boolean containsTargetClassCounts(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTargetClassCounts().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTargetClassCountsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getTargetClassCounts() {
+      return getTargetClassCountsMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Integer> getTargetClassCountsMap() {
+      return internalGetTargetClassCounts().getMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getTargetClassCountsOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTargetClassCounts().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getTargetClassCountsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTargetClassCounts().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearTargetClassCounts() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      internalGetMutableTargetClassCounts().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    public Builder removeTargetClassCounts(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableTargetClassCounts().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer>
+        getMutableTargetClassCounts() {
+      bitField0_ |= 0x00000010;
+      return internalGetMutableTargetClassCounts().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    public Builder putTargetClassCounts(
+        java.lang.String key,
+        int value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableTargetClassCounts().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000010;
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+     */
+    public Builder putAllTargetClassCounts(
+        java.util.Map<java.lang.String, java.lang.Integer> values) {
+      internalGetMutableTargetClassCounts().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000010;
       return this;
     }
 
