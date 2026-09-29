@@ -74,7 +74,7 @@ class GetDocumentDataRequest(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., include_predictions: bool = ..., include_feedbacks: bool = ..., include_labels: bool = ..., environment: _Optional[str] = ...) -> None: ...
 
 class GetDocumentDataResponse(_message.Message):
-    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at", "requested_features", "updated_at", "tags")
+    __slots__ = ("feedback_id", "consumer", "file_url", "render_urls", "text_annotation_url", "fields", "expires_at", "requested_features", "updated_at", "tags", "for_annotation", "deletion_requested_at")
     FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     FILE_URL_FIELD_NUMBER: _ClassVar[int]
@@ -85,6 +85,8 @@ class GetDocumentDataResponse(_message.Message):
     REQUESTED_FEATURES_FIELD_NUMBER: _ClassVar[int]
     UPDATED_AT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    FOR_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
+    DELETION_REQUESTED_AT_FIELD_NUMBER: _ClassVar[int]
     feedback_id: str
     consumer: str
     file_url: str
@@ -95,7 +97,9 @@ class GetDocumentDataResponse(_message.Message):
     requested_features: _containers.RepeatedScalarFieldContainer[str]
     updated_at: _timestamp_pb2.Timestamp
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ..., updated_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    for_annotation: bool
+    deletion_requested_at: _timestamp_pb2.Timestamp
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., file_url: _Optional[str] = ..., render_urls: _Optional[_Iterable[str]] = ..., text_annotation_url: _Optional[_Union[_wrappers_pb2.StringValue, _Mapping]] = ..., fields: _Optional[_Iterable[_Union[InternalFieldAnnotation, _Mapping]]] = ..., expires_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., requested_features: _Optional[_Iterable[str]] = ..., updated_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., for_annotation: bool = ..., deletion_requested_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class SetDocumentBlobsRequest(_message.Message):
     __slots__ = ("feedback_id", "consumer", "file_uri", "render_uris", "ta_uri", "expires_at", "environment", "requested_features", "tags", "content", "ta_content", "render_contents")
@@ -172,5 +176,21 @@ class DeleteAnnotationsRequest(_message.Message):
     def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., feature: _Optional[str] = ..., source: _Optional[str] = ..., source_id: _Optional[str] = ...) -> None: ...
 
 class DeleteAnnotationsResponse(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
+
+class SetForAnnotationRequest(_message.Message):
+    __slots__ = ("feedback_id", "consumer", "environment", "for_annotation")
+    FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
+    CONSUMER_FIELD_NUMBER: _ClassVar[int]
+    ENVIRONMENT_FIELD_NUMBER: _ClassVar[int]
+    FOR_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
+    feedback_id: str
+    consumer: str
+    environment: str
+    for_annotation: bool
+    def __init__(self, feedback_id: _Optional[str] = ..., consumer: _Optional[str] = ..., environment: _Optional[str] = ..., for_annotation: bool = ...) -> None: ...
+
+class SetForAnnotationResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...

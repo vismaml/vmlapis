@@ -170,6 +170,37 @@ public final class DocumentDataServiceGrpc {
     return getDeleteAnnotationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest,
+      ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> getSetForAnnotationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetForAnnotation",
+      requestType = ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest.class,
+      responseType = ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest,
+      ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> getSetForAnnotationMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest, ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> getSetForAnnotationMethod;
+    if ((getSetForAnnotationMethod = DocumentDataServiceGrpc.getSetForAnnotationMethod) == null) {
+      synchronized (DocumentDataServiceGrpc.class) {
+        if ((getSetForAnnotationMethod = DocumentDataServiceGrpc.getSetForAnnotationMethod) == null) {
+          DocumentDataServiceGrpc.getSetForAnnotationMethod = getSetForAnnotationMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest, ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetForAnnotation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DocumentDataServiceMethodDescriptorSupplier("SetForAnnotation"))
+              .build();
+        }
+      }
+    }
+    return getSetForAnnotationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -291,6 +322,21 @@ public final class DocumentDataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAnnotationsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetForAnnotation flags or unflags a document for the annotation tool.
+     * While flagged, a customer DeleteDocument does not remove the document
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
+     * </pre>
+     */
+    default void setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetForAnnotationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -383,6 +429,22 @@ public final class DocumentDataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAnnotationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetForAnnotation flags or unflags a document for the annotation tool.
+     * While flagged, a customer DeleteDocument does not remove the document
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
+     * </pre>
+     */
+    public void setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -459,6 +521,21 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAnnotationsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * SetForAnnotation flags or unflags a document for the annotation tool.
+     * While flagged, a customer DeleteDocument does not remove the document
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -534,6 +611,21 @@ public final class DocumentDataServiceGrpc {
     public ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse deleteAnnotations(ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAnnotationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetForAnnotation flags or unflags a document for the annotation tool.
+     * While flagged, a customer DeleteDocument does not remove the document
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
+     * </pre>
+     */
+    public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
     }
   }
 
@@ -616,6 +708,22 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAnnotationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * SetForAnnotation flags or unflags a document for the annotation tool.
+     * While flagged, a customer DeleteDocument does not remove the document
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> setForAnnotation(
+        ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DOCUMENT_DATA = 0;
@@ -623,6 +731,7 @@ public final class DocumentDataServiceGrpc {
   private static final int METHODID_ADD_ANNOTATIONS = 2;
   private static final int METHODID_DELETE_DOCUMENT = 3;
   private static final int METHODID_DELETE_ANNOTATIONS = 4;
+  private static final int METHODID_SET_FOR_ANNOTATION = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -660,6 +769,10 @@ public final class DocumentDataServiceGrpc {
         case METHODID_DELETE_ANNOTATIONS:
           serviceImpl.deleteAnnotations((ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse>) responseObserver);
+          break;
+        case METHODID_SET_FOR_ANNOTATION:
+          serviceImpl.setForAnnotation((ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -714,6 +827,13 @@ public final class DocumentDataServiceGrpc {
               ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsRequest,
               ai.visma.ssn.documentdataservice.v1.DeleteAnnotationsResponse>(
                 service, METHODID_DELETE_ANNOTATIONS)))
+        .addMethod(
+          getSetForAnnotationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest,
+              ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>(
+                service, METHODID_SET_FOR_ANNOTATION)))
         .build();
   }
 
@@ -767,6 +887,7 @@ public final class DocumentDataServiceGrpc {
               .addMethod(getAddAnnotationsMethod())
               .addMethod(getDeleteDocumentMethod())
               .addMethod(getDeleteAnnotationsMethod())
+              .addMethod(getSetForAnnotationMethod())
               .build();
         }
       }
