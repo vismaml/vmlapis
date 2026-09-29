@@ -327,9 +327,10 @@ public final class DocumentDataServiceGrpc {
      * <pre>
      * SetForAnnotation flags or unflags a document for the annotation tool.
      * While flagged, a customer DeleteDocument does not remove the document
-     * immediately: DDS keeps it until the earlier of its own expires_at and 89
-     * days after the request, then the row deletion policy removes it. The
-     * customer-facing behaviour of DeleteDocument is unchanged.
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
      * </pre>
      */
     default void setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request,
@@ -433,9 +434,10 @@ public final class DocumentDataServiceGrpc {
      * <pre>
      * SetForAnnotation flags or unflags a document for the annotation tool.
      * While flagged, a customer DeleteDocument does not remove the document
-     * immediately: DDS keeps it until the earlier of its own expires_at and 89
-     * days after the request, then the row deletion policy removes it. The
-     * customer-facing behaviour of DeleteDocument is unchanged.
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
      * </pre>
      */
     public void setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request,
@@ -524,9 +526,10 @@ public final class DocumentDataServiceGrpc {
      * <pre>
      * SetForAnnotation flags or unflags a document for the annotation tool.
      * While flagged, a customer DeleteDocument does not remove the document
-     * immediately: DDS keeps it until the earlier of its own expires_at and 89
-     * days after the request, then the row deletion policy removes it. The
-     * customer-facing behaviour of DeleteDocument is unchanged.
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
      * </pre>
      */
     public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
@@ -614,9 +617,10 @@ public final class DocumentDataServiceGrpc {
      * <pre>
      * SetForAnnotation flags or unflags a document for the annotation tool.
      * While flagged, a customer DeleteDocument does not remove the document
-     * immediately: DDS keeps it until the earlier of its own expires_at and 89
-     * days after the request, then the row deletion policy removes it. The
-     * customer-facing behaviour of DeleteDocument is unchanged.
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
      * </pre>
      */
     public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
@@ -709,9 +713,10 @@ public final class DocumentDataServiceGrpc {
      * <pre>
      * SetForAnnotation flags or unflags a document for the annotation tool.
      * While flagged, a customer DeleteDocument does not remove the document
-     * immediately: DDS keeps it until the earlier of its own expires_at and 89
-     * days after the request, then the row deletion policy removes it. The
-     * customer-facing behaviour of DeleteDocument is unchanged.
+     * immediately: DDS defers the deletion for up to 90 days after the request
+     * (sooner if the document's own expires_at comes first) and the row
+     * deletion policy then removes it. The customer-facing behaviour of
+     * DeleteDocument is unchanged.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> setForAnnotation(

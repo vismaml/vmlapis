@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from ssn.documentdataservice.v1 import documentdataservice_pb2 as ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2
+from vml_proto.ssn.documentdataservice.v1 import documentdataservice_pb2 as ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2
 
 
 class DocumentDataServiceStub(object):
@@ -100,9 +100,10 @@ class DocumentDataServiceServicer(object):
     def SetForAnnotation(self, request, context):
         """SetForAnnotation flags or unflags a document for the annotation tool.
         While flagged, a customer DeleteDocument does not remove the document
-        immediately: DDS keeps it until the earlier of its own expires_at and 89
-        days after the request, then the row deletion policy removes it. The
-        customer-facing behaviour of DeleteDocument is unchanged.
+        immediately: DDS defers the deletion for up to 90 days after the request
+        (sooner if the document's own expires_at comes first) and the row
+        deletion policy then removes it. The customer-facing behaviour of
+        DeleteDocument is unchanged.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

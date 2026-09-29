@@ -174,7 +174,11 @@ private static final long serialVersionUID = 0L;
   private boolean forAnnotation_ = false;
   /**
    * <pre>
-   * true flags the document, false clears the flag.
+   * true flags the document, false clears the flag. Either value is accepted
+   * on a document whose deletion is already deferred (deletion_requested_at
+   * set): the deferred deadline is neither extended nor brought forward, and
+   * deletion_requested_at is kept. Clearing the flag does not trigger an
+   * earlier deletion; the document is removed by the deferred deadline.
    * </pre>
    *
    * <code>bool for_annotation = 4 [json_name = "forAnnotation"];</code>
@@ -790,7 +794,11 @@ private static final long serialVersionUID = 0L;
     private boolean forAnnotation_ ;
     /**
      * <pre>
-     * true flags the document, false clears the flag.
+     * true flags the document, false clears the flag. Either value is accepted
+     * on a document whose deletion is already deferred (deletion_requested_at
+     * set): the deferred deadline is neither extended nor brought forward, and
+     * deletion_requested_at is kept. Clearing the flag does not trigger an
+     * earlier deletion; the document is removed by the deferred deadline.
      * </pre>
      *
      * <code>bool for_annotation = 4 [json_name = "forAnnotation"];</code>
@@ -802,7 +810,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * true flags the document, false clears the flag.
+     * true flags the document, false clears the flag. Either value is accepted
+     * on a document whose deletion is already deferred (deletion_requested_at
+     * set): the deferred deadline is neither extended nor brought forward, and
+     * deletion_requested_at is kept. Clearing the flag does not trigger an
+     * earlier deletion; the document is removed by the deferred deadline.
      * </pre>
      *
      * <code>bool for_annotation = 4 [json_name = "forAnnotation"];</code>
@@ -818,7 +830,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * true flags the document, false clears the flag.
+     * true flags the document, false clears the flag. Either value is accepted
+     * on a document whose deletion is already deferred (deletion_requested_at
+     * set): the deferred deadline is neither extended nor brought forward, and
+     * deletion_requested_at is kept. Clearing the flag does not trigger an
+     * earlier deletion; the document is removed by the deferred deadline.
      * </pre>
      *
      * <code>bool for_annotation = 4 [json_name = "forAnnotation"];</code>

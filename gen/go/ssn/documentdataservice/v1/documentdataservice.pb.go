@@ -1093,7 +1093,11 @@ type SetForAnnotationRequest struct {
 	Consumer   string `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
 	// Target environment: "snbx", "stag", "prod".
 	Environment string `protobuf:"bytes,3,opt,name=environment,proto3" json:"environment,omitempty"`
-	// true flags the document, false clears the flag.
+	// true flags the document, false clears the flag. Either value is accepted
+	// on a document whose deletion is already deferred (deletion_requested_at
+	// set): the deferred deadline is neither extended nor brought forward, and
+	// deletion_requested_at is kept. Clearing the flag does not trigger an
+	// earlier deletion; the document is removed by the deferred deadline.
 	ForAnnotation bool `protobuf:"varint,4,opt,name=for_annotation,json=forAnnotation,proto3" json:"for_annotation,omitempty"`
 }
 

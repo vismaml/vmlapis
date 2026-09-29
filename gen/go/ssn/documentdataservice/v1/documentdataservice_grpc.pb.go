@@ -52,9 +52,10 @@ type DocumentDataServiceClient interface {
 	DeleteAnnotations(ctx context.Context, in *DeleteAnnotationsRequest, opts ...grpc.CallOption) (*DeleteAnnotationsResponse, error)
 	// SetForAnnotation flags or unflags a document for the annotation tool.
 	// While flagged, a customer DeleteDocument does not remove the document
-	// immediately: DDS keeps it until the earlier of its own expires_at and 89
-	// days after the request, then the row deletion policy removes it. The
-	// customer-facing behaviour of DeleteDocument is unchanged.
+	// immediately: DDS defers the deletion for up to 90 days after the request
+	// (sooner if the document's own expires_at comes first) and the row
+	// deletion policy then removes it. The customer-facing behaviour of
+	// DeleteDocument is unchanged.
 	SetForAnnotation(ctx context.Context, in *SetForAnnotationRequest, opts ...grpc.CallOption) (*SetForAnnotationResponse, error)
 }
 
@@ -145,9 +146,10 @@ type DocumentDataServiceServer interface {
 	DeleteAnnotations(context.Context, *DeleteAnnotationsRequest) (*DeleteAnnotationsResponse, error)
 	// SetForAnnotation flags or unflags a document for the annotation tool.
 	// While flagged, a customer DeleteDocument does not remove the document
-	// immediately: DDS keeps it until the earlier of its own expires_at and 89
-	// days after the request, then the row deletion policy removes it. The
-	// customer-facing behaviour of DeleteDocument is unchanged.
+	// immediately: DDS defers the deletion for up to 90 days after the request
+	// (sooner if the document's own expires_at comes first) and the row
+	// deletion policy then removes it. The customer-facing behaviour of
+	// DeleteDocument is unchanged.
 	SetForAnnotation(context.Context, *SetForAnnotationRequest) (*SetForAnnotationResponse, error)
 }
 

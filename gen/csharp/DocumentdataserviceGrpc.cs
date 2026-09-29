@@ -200,9 +200,10 @@ namespace Ssn.Documentdataservice.V1 {
       /// <summary>
       /// SetForAnnotation flags or unflags a document for the annotation tool.
       /// While flagged, a customer DeleteDocument does not remove the document
-      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
-      /// days after the request, then the row deletion policy removes it. The
-      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// immediately: DDS defers the deletion for up to 90 days after the request
+      /// (sooner if the document's own expires_at comes first) and the row
+      /// deletion policy then removes it. The customer-facing behaviour of
+      /// DeleteDocument is unchanged.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -521,9 +522,10 @@ namespace Ssn.Documentdataservice.V1 {
       /// <summary>
       /// SetForAnnotation flags or unflags a document for the annotation tool.
       /// While flagged, a customer DeleteDocument does not remove the document
-      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
-      /// days after the request, then the row deletion policy removes it. The
-      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// immediately: DDS defers the deletion for up to 90 days after the request
+      /// (sooner if the document's own expires_at comes first) and the row
+      /// deletion policy then removes it. The customer-facing behaviour of
+      /// DeleteDocument is unchanged.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -538,9 +540,10 @@ namespace Ssn.Documentdataservice.V1 {
       /// <summary>
       /// SetForAnnotation flags or unflags a document for the annotation tool.
       /// While flagged, a customer DeleteDocument does not remove the document
-      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
-      /// days after the request, then the row deletion policy removes it. The
-      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// immediately: DDS defers the deletion for up to 90 days after the request
+      /// (sooner if the document's own expires_at comes first) and the row
+      /// deletion policy then removes it. The customer-facing behaviour of
+      /// DeleteDocument is unchanged.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -553,9 +556,10 @@ namespace Ssn.Documentdataservice.V1 {
       /// <summary>
       /// SetForAnnotation flags or unflags a document for the annotation tool.
       /// While flagged, a customer DeleteDocument does not remove the document
-      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
-      /// days after the request, then the row deletion policy removes it. The
-      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// immediately: DDS defers the deletion for up to 90 days after the request
+      /// (sooner if the document's own expires_at comes first) and the row
+      /// deletion policy then removes it. The customer-facing behaviour of
+      /// DeleteDocument is unchanged.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -570,9 +574,10 @@ namespace Ssn.Documentdataservice.V1 {
       /// <summary>
       /// SetForAnnotation flags or unflags a document for the annotation tool.
       /// While flagged, a customer DeleteDocument does not remove the document
-      /// immediately: DDS keeps it until the earlier of its own expires_at and 89
-      /// days after the request, then the row deletion policy removes it. The
-      /// customer-facing behaviour of DeleteDocument is unchanged.
+      /// immediately: DDS defers the deletion for up to 90 days after the request
+      /// (sooner if the document's own expires_at comes first) and the row
+      /// deletion policy then removes it. The customer-facing behaviour of
+      /// DeleteDocument is unchanged.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

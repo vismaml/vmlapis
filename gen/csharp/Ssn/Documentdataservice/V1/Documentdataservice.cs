@@ -4397,7 +4397,11 @@ namespace Ssn.Documentdataservice.V1 {
     public const int ForAnnotationFieldNumber = 4;
     private bool forAnnotation_;
     /// <summary>
-    /// true flags the document, false clears the flag.
+    /// true flags the document, false clears the flag. Either value is accepted
+    /// on a document whose deletion is already deferred (deletion_requested_at
+    /// set): the deferred deadline is neither extended nor brought forward, and
+    /// deletion_requested_at is kept. Clearing the flag does not trigger an
+    /// earlier deletion; the document is removed by the deferred deadline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

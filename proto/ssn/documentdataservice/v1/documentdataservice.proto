@@ -122,9 +122,10 @@ service DocumentDataService {
 
   // SetForAnnotation flags or unflags a document for the annotation tool.
   // While flagged, a customer DeleteDocument does not remove the document
-  // immediately: DDS keeps it until the earlier of its own expires_at and 89
-  // days after the request, then the row deletion policy removes it. The
-  // customer-facing behaviour of DeleteDocument is unchanged.
+  // immediately: DDS defers the deletion for up to 90 days after the request
+  // (sooner if the document's own expires_at comes first) and the row
+  // deletion policy then removes it. The customer-facing behaviour of
+  // DeleteDocument is unchanged.
   rpc SetForAnnotation(SetForAnnotationRequest) returns (SetForAnnotationResponse) {
     option (google.api.http) = {
       put: "/v1/consumers/{consumer}/documents/{feedback_id}/for-annotation"
@@ -245,7 +246,11 @@ message SetForAnnotationRequest {
   string consumer = 2;
   // Target environment: "snbx", "stag", "prod".
   string environment = 3;
-  // true flags the document, false clears the flag.
+  // true flags the document, false clears the flag. Either value is accepted
+  // on a document whose deletion is already deferred (deletion_requested_at
+  // set): the deferred deadline is neither extended nor brought forward, and
+  // deletion_requested_at is kept. Clearing the flag does not trigger an
+  // earlier deletion; the document is removed by the deferred deadline.
   bool for_annotation = 4;
 }
 
