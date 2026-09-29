@@ -24,10 +24,10 @@ _sym_db = _symbol_database.Default()
 
 from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from vml_proto.gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
-from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
-from vml_proto.google.type import date_pb2 as google_dot_type_dot_date__pb2
+from google.type import date_pb2 as google_dot_type_dot_date__pb2
 from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
 from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 from vml_proto.ssn.type import tier_pb2 as ssn_dot_type_dot_tier__pb2
