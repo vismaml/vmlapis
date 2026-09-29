@@ -1,19 +1,15 @@
 #!/bin/bash
-# Prefix the imports in the generated Python modules with the vml_proto package.
-#
-# Portable across GNU sed (Linux CI) and BSD sed (macOS): `-i.bak` is accepted by
-# both, whereas a bare `-i` is GNU-only and BSD sed treats the script as the
-# backup suffix. `find` replaces bash 4's globstar, which macOS bash 3.2 lacks.
-set -euo pipefail
+shopt -s globstar
 
-find gen/python/vml_proto -name '*.py' -exec sed -i.bak \
-	-e 's/from asgt/from vml_proto.asgt/' \
-	-e 's/from ssn/from vml_proto.ssn/' \
-	-e 's/from validate/from vml_proto.validate/' \
-	-e 's/from gen_bq_schema/from vml_proto.gen_bq_schema/' \
-	-e 's/from google.api/from vml_proto.google.api/' \
-	-e 's/from google.type/from vml_proto.google.type/' \
-	-e 's/from protoc_gen_openapiv2.options/from vml_proto.protoc_gen_openapiv2.options/' \
-	{} +
-
-find gen/python/vml_proto -name '*.py.bak' -delete
+# replace for asgt modules
+sed -i 's/from asgt/from vml_proto.asgt/' gen/python/vml_proto/**/*.py
+# replace for ssn modules
+sed -i 's/from ssn/from vml_proto.ssn/' gen/python/vml_proto/**/*.py
+# replace for validate modules
+sed -i 's/from validate/from vml_proto.validate/' gen/python/vml_proto/**/*.py
+# replace for gen_bq_schema modules
+sed -i 's/from gen_bq_schema/from vml_proto.gen_bq_schema/' gen/python/vml_proto/**/*.py
+# replace for google modules
+sed -i 's/from google.api/from vml_proto.google.api/;s/from google.type/from vml_proto.google.type/' gen/python/vml_proto/**/*.py
+# replace for protoc_gen_openapiv2 modules
+sed -i 's/from protoc_gen_openapiv2.options/from vml_proto.protoc_gen_openapiv2.options/' gen/python/vml_proto/**/*.py
