@@ -300,4 +300,41 @@ public interface GetDocumentDataResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <pre>
+   * Flagged for the annotation tool; a customer DeleteDocument is deferred.
+   * </pre>
+   *
+   * <code>bool for_annotation = 11 [json_name = "forAnnotation"];</code>
+   * @return The forAnnotation.
+   */
+  boolean getForAnnotation();
+
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   * @return Whether the deletionRequestedAt field is set.
+   */
+  boolean hasDeletionRequestedAt();
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   * @return The deletionRequestedAt.
+   */
+  com.google.protobuf.Timestamp getDeletionRequestedAt();
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeletionRequestedAtOrBuilder();
 }
