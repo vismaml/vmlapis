@@ -70,6 +70,7 @@ private static final long serialVersionUID = 0L;
     checkInDate_ = java.util.Collections.emptyList();
     checkOutDate_ = java.util.Collections.emptyList();
     ksef_ = java.util.Collections.emptyList();
+    completable_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1848,6 +1849,47 @@ private static final long serialVersionUID = 0L;
     return ksef_.get(index);
   }
 
+  public static final int COMPLETABLE_FIELD_NUMBER = 44;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.ModelSpec> completable_;
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.ModelSpec> getCompletableList() {
+    return completable_;
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCompletableOrBuilderList() {
+    return completable_;
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public int getCompletableCount() {
+    return completable_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpec getCompletable(int index) {
+    return completable_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpecOrBuilder getCompletableOrBuilder(
+      int index) {
+    return completable_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1990,6 +2032,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ksef_.size(); i++) {
       output.writeMessage(43, ksef_.get(i));
+    }
+    for (int i = 0; i < completable_.size(); i++) {
+      output.writeMessage(44, completable_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2172,6 +2217,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, ksef_.get(i));
     }
+    for (int i = 0; i < completable_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(44, completable_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2273,6 +2322,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCheckOutDateList())) return false;
     if (!getKsefList()
         .equals(other.getKsefList())) return false;
+    if (!getCompletableList()
+        .equals(other.getCompletableList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2455,6 +2506,10 @@ private static final long serialVersionUID = 0L;
     if (getKsefCount() > 0) {
       hash = (37 * hash) + KSEF_FIELD_NUMBER;
       hash = (53 * hash) + getKsefList().hashCode();
+    }
+    if (getCompletableCount() > 0) {
+      hash = (37 * hash) + COMPLETABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getCompletableList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2889,6 +2944,13 @@ private static final long serialVersionUID = 0L;
         ksefBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000400);
+      if (completableBuilder_ == null) {
+        completable_ = java.util.Collections.emptyList();
+      } else {
+        completable_ = null;
+        completableBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000800);
       return this;
     }
 
@@ -3309,6 +3371,15 @@ private static final long serialVersionUID = 0L;
         result.ksef_ = ksef_;
       } else {
         result.ksef_ = ksefBuilder_.build();
+      }
+      if (completableBuilder_ == null) {
+        if (((bitField1_ & 0x00000800) != 0)) {
+          completable_ = java.util.Collections.unmodifiableList(completable_);
+          bitField1_ = (bitField1_ & ~0x00000800);
+        }
+        result.completable_ = completable_;
+      } else {
+        result.completable_ = completableBuilder_.build();
       }
     }
 
@@ -4450,6 +4521,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (completableBuilder_ == null) {
+        if (!other.completable_.isEmpty()) {
+          if (completable_.isEmpty()) {
+            completable_ = other.completable_;
+            bitField1_ = (bitField1_ & ~0x00000800);
+          } else {
+            ensureCompletableIsMutable();
+            completable_.addAll(other.completable_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.completable_.isEmpty()) {
+          if (completableBuilder_.isEmpty()) {
+            completableBuilder_.dispose();
+            completableBuilder_ = null;
+            completable_ = other.completable_;
+            bitField1_ = (bitField1_ & ~0x00000800);
+            completableBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getCompletableFieldBuilder() : null;
+          } else {
+            completableBuilder_.addAllMessages(other.completable_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -5035,6 +5132,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 346
+            case 354: {
+              ai.visma.ssn.type.ModelSpec m =
+                  input.readMessage(
+                      ai.visma.ssn.type.ModelSpec.parser(),
+                      extensionRegistry);
+              if (completableBuilder_ == null) {
+                ensureCompletableIsMutable();
+                completable_.add(m);
+              } else {
+                completableBuilder_.addMessage(m);
+              }
+              break;
+            } // case 354
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -15371,6 +15481,246 @@ private static final long serialVersionUID = 0L;
         ksef_ = null;
       }
       return ksefBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.ModelSpec> completable_ =
+      java.util.Collections.emptyList();
+    private void ensureCompletableIsMutable() {
+      if (!((bitField1_ & 0x00000800) != 0)) {
+        completable_ = new java.util.ArrayList<ai.visma.ssn.type.ModelSpec>(completable_);
+        bitField1_ |= 0x00000800;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> completableBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.ModelSpec> getCompletableList() {
+      if (completableBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(completable_);
+      } else {
+        return completableBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public int getCompletableCount() {
+      if (completableBuilder_ == null) {
+        return completable_.size();
+      } else {
+        return completableBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec getCompletable(int index) {
+      if (completableBuilder_ == null) {
+        return completable_.get(index);
+      } else {
+        return completableBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder setCompletable(
+        int index, ai.visma.ssn.type.ModelSpec value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.set(index, value);
+        onChanged();
+      } else {
+        completableBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder setCompletable(
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(ai.visma.ssn.type.ModelSpec value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.add(value);
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        int index, ai.visma.ssn.type.ModelSpec value) {
+      if (completableBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCompletableIsMutable();
+        completable_.add(index, value);
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.add(builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder addCompletable(
+        int index, ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        completableBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder addAllCompletable(
+        java.lang.Iterable<? extends ai.visma.ssn.type.ModelSpec> values) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, completable_);
+        onChanged();
+      } else {
+        completableBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder clearCompletable() {
+      if (completableBuilder_ == null) {
+        completable_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000800);
+        onChanged();
+      } else {
+        completableBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public Builder removeCompletable(int index) {
+      if (completableBuilder_ == null) {
+        ensureCompletableIsMutable();
+        completable_.remove(index);
+        onChanged();
+      } else {
+        completableBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder getCompletableBuilder(
+        int index) {
+      return getCompletableFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpecOrBuilder getCompletableOrBuilder(
+        int index) {
+      if (completableBuilder_ == null) {
+        return completable_.get(index);  } else {
+        return completableBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+         getCompletableOrBuilderList() {
+      if (completableBuilder_ != null) {
+        return completableBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(completable_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCompletableBuilder() {
+      return getCompletableFieldBuilder().addBuilder(
+          ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder addCompletableBuilder(
+        int index) {
+      return getCompletableFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.ModelSpec.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.ModelSpec.Builder> 
+         getCompletableBuilderList() {
+      return getCompletableFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 
+        getCompletableFieldBuilder() {
+      if (completableBuilder_ == null) {
+        completableBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder>(
+                completable_,
+                ((bitField1_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        completable_ = null;
+      }
+      return completableBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1.PredictionMetadata)

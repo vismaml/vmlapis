@@ -208,6 +208,9 @@ message PurchaseLine {
   ModelSpec model_metadata = 17;
   // Product type classification for the line
   repeated asgt.v2.ProductTypeCandidate product_type = 18;
+  // Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+  // "levy", "service_charge", "gratuity", "discount" or "deposit".
+  repeated Candidate kind = 19;
 }
 
 message VatDistribution {

@@ -2819,7 +2819,7 @@ proto.ssn.type.DocumentMetadata.prototype.setPageCount = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18];
+proto.ssn.type.PurchaseLine.repeatedFields_ = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19];
 
 
 
@@ -2885,7 +2885,9 @@ proto.ssn.type.PurchaseLine.toObject = function(includeInstance, msg) {
     proto.ssn.type.Candidate.toObject, includeInstance),
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
     productTypeList: jspb.Message.toObjectList(msg.getProductTypeList(),
-    asgt_v2_product_service_pb.ProductTypeCandidate.toObject, includeInstance)
+    asgt_v2_product_service_pb.ProductTypeCandidate.toObject, includeInstance),
+    kindList: jspb.Message.toObjectList(msg.getKindList(),
+    proto.ssn.type.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3010,6 +3012,11 @@ proto.ssn.type.PurchaseLine.deserializeBinaryFromReader = function(msg, reader) 
       var value = new asgt_v2_product_service_pb.ProductTypeCandidate;
       reader.readMessage(value,asgt_v2_product_service_pb.ProductTypeCandidate.deserializeBinaryFromReader);
       msg.addProductType(value);
+      break;
+    case 19:
+      var value = new proto.ssn.type.Candidate;
+      reader.readMessage(value,proto.ssn.type.Candidate.deserializeBinaryFromReader);
+      msg.addKind(value);
       break;
     default:
       reader.skipField();
@@ -3181,6 +3188,14 @@ proto.ssn.type.PurchaseLine.serializeBinaryToWriter = function(message, writer) 
       18,
       f,
       asgt_v2_product_service_pb.ProductTypeCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getKindList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      19,
+      f,
+      proto.ssn.type.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -3846,6 +3861,44 @@ proto.ssn.type.PurchaseLine.prototype.addProductType = function(opt_value, opt_i
  */
 proto.ssn.type.PurchaseLine.prototype.clearProductTypeList = function() {
   return this.setProductTypeList([]);
+};
+
+
+/**
+ * repeated Candidate kind = 19;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.type.PurchaseLine.prototype.getKindList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ssn.type.Candidate, 19));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+*/
+proto.ssn.type.PurchaseLine.prototype.setKindList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 19, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.type.PurchaseLine.prototype.addKind = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 19, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.type.PurchaseLine} returns this
+ */
+proto.ssn.type.PurchaseLine.prototype.clearKindList = function() {
+  return this.setKindList([]);
 };
 
 
