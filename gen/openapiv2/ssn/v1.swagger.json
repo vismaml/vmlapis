@@ -1298,6 +1298,14 @@
             "$ref": "#/definitions/v2ProductTypeCandidate"
           },
           "title": "Product type classification for the line"
+        },
+        "kind": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "description": "Kind classifies what the line charges for, e.g. \"item\", \"freight\", \"fee\",\n\"levy\", \"service_charge\", \"gratuity\", \"discount\" or \"deposit\"."
         }
       }
     },

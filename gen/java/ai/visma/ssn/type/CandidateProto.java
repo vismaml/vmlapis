@@ -142,7 +142,7 @@ public final class CandidateProto {
       "lSpecR\rmodelMetadata\022\031\n\010page_ref\030\004 \001(\rR\007" +
       "pageRef\022\031\n\010excl_vat\030\005 \001(\tR\007exclVat\022\031\n\010in" +
       "cl_vat\030\006 \001(\tR\007inclVat\"1\n\020DocumentMetadat" +
-      "a\022\035\n\npage_count\030\001 \001(\rR\tpageCount\"\344\007\n\014Pur" +
+      "a\022\035\n\npage_count\030\001 \001(\rR\tpageCount\"\215\010\n\014Pur" +
       "chaseLine\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\'\n\004" +
       "code\030\002 \003(\0132\023.ssn.type.CandidateR\004code\0225\n" +
       "\013description\030\003 \003(\0132\023.ssn.type.CandidateR" +
@@ -167,20 +167,21 @@ public final class CandidateProto {
       "type.CandidateR\tunitPrice\022:\n\016model_metad" +
       "ata\030\021 \001(\0132\023.ssn.type.ModelSpecR\rmodelMet" +
       "adata\022@\n\014product_type\030\022 \003(\0132\035.asgt.v2.Pr" +
-      "oductTypeCandidateR\013productType\"\305\002\n\017VatD" +
-      "istribution\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\0223" +
-      "\n\npercentage\030\002 \003(\0132\023.ssn.type.CandidateR" +
-      "\npercentage\0229\n\016total_incl_vat\030\003 \003(\0132\023.ss" +
-      "n.type.CandidateR\014totalInclVat\0229\n\016total_" +
-      "excl_vat\030\004 \003(\0132\023.ssn.type.CandidateR\014tot" +
-      "alExclVat\0220\n\ttotal_vat\030\005 \003(\0132\023.ssn.type." +
-      "CandidateR\010totalVat\022:\n\016model_metadata\030\006 " +
-      "\001(\0132\023.ssn.type.ModelSpecR\rmodelMetadataB" +
-      "\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001Z" +
-      "4github.com/e-conomic/vmlapis/gen/go/ssn" +
-      "/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Typ" +
-      "e\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006pr" +
-      "oto3"
+      "oductTypeCandidateR\013productType\022\'\n\004kind\030" +
+      "\023 \003(\0132\023.ssn.type.CandidateR\004kind\"\305\002\n\017Vat" +
+      "Distribution\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022" +
+      "3\n\npercentage\030\002 \003(\0132\023.ssn.type.Candidate" +
+      "R\npercentage\0229\n\016total_incl_vat\030\003 \003(\0132\023.s" +
+      "sn.type.CandidateR\014totalInclVat\0229\n\016total" +
+      "_excl_vat\030\004 \003(\0132\023.ssn.type.CandidateR\014to" +
+      "talExclVat\0220\n\ttotal_vat\030\005 \003(\0132\023.ssn.type" +
+      ".CandidateR\010totalVat\022:\n\016model_metadata\030\006" +
+      " \001(\0132\023.ssn.type.ModelSpecR\rmodelMetadata" +
+      "B\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001" +
+      "Z4github.com/e-conomic/vmlapis/gen/go/ss" +
+      "n/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Ty" +
+      "pe\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -248,7 +249,7 @@ public final class CandidateProto {
     internal_static_ssn_type_PurchaseLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLine_descriptor,
-        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", });
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", "Kind", });
     internal_static_ssn_type_VatDistribution_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_type_VatDistribution_fieldAccessorTable = new
