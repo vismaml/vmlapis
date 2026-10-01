@@ -1853,10 +1853,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.ModelSpec> completable_;
   /**
-   * <pre>
-   * Gate artifact name/version that produced PredictionConfidences.completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1864,10 +1860,6 @@ private static final long serialVersionUID = 0L;
     return completable_;
   }
   /**
-   * <pre>
-   * Gate artifact name/version that produced PredictionConfidences.completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1876,10 +1868,6 @@ private static final long serialVersionUID = 0L;
     return completable_;
   }
   /**
-   * <pre>
-   * Gate artifact name/version that produced PredictionConfidences.completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1887,10 +1875,6 @@ private static final long serialVersionUID = 0L;
     return completable_.size();
   }
   /**
-   * <pre>
-   * Gate artifact name/version that produced PredictionConfidences.completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -1898,10 +1882,6 @@ private static final long serialVersionUID = 0L;
     return completable_.get(index);
   }
   /**
-   * <pre>
-   * Gate artifact name/version that produced PredictionConfidences.completable.
-   * </pre>
-   *
    * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
    */
   @java.lang.Override
@@ -15516,10 +15496,6 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> completableBuilder_;
 
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public java.util.List<ai.visma.ssn.type.ModelSpec> getCompletableList() {
@@ -15530,10 +15506,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public int getCompletableCount() {
@@ -15544,10 +15516,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.ModelSpec getCompletable(int index) {
@@ -15558,10 +15526,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder setCompletable(
@@ -15579,10 +15543,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder setCompletable(
@@ -15597,10 +15557,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder addCompletable(ai.visma.ssn.type.ModelSpec value) {
@@ -15617,10 +15573,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15638,10 +15590,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15656,10 +15604,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder addCompletable(
@@ -15674,10 +15618,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder addAllCompletable(
@@ -15693,10 +15633,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder clearCompletable() {
@@ -15710,10 +15646,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public Builder removeCompletable(int index) {
@@ -15727,10 +15659,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder getCompletableBuilder(
@@ -15738,10 +15666,6 @@ private static final long serialVersionUID = 0L;
       return getCompletableFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.ModelSpecOrBuilder getCompletableOrBuilder(
@@ -15752,10 +15676,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
@@ -15767,10 +15687,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder addCompletableBuilder() {
@@ -15778,10 +15694,6 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.type.ModelSpec.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder addCompletableBuilder(
@@ -15790,10 +15702,6 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.type.ModelSpec.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Gate artifact name/version that produced PredictionConfidences.completable.
-     * </pre>
-     *
      * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
      */
     public java.util.List<ai.visma.ssn.type.ModelSpec.Builder> 

@@ -2853,7 +2853,7 @@
             "type": "number",
             "format": "float"
           },
-          "description": "Document-level completable gate: P(completable) carried over from\nssn.mlservice.v2.PredictResponse.completable. Deliberately absent from\nPredictionValues so the gate never becomes a DDS feature."
+          "description": "Completable gate probability, from mlservice PredictResponse.completable."
         }
       }
     },
@@ -3166,8 +3166,7 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeModelSpec"
-          },
-          "description": "Gate artifact name/version that produced PredictionConfidences.completable."
+          }
         }
       }
     },

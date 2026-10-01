@@ -1854,9 +1854,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.FloatValue> completable_;
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1867,9 +1865,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1881,9 +1877,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1894,9 +1888,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1907,9 +1899,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15527,9 +15517,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15543,9 +15531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15559,9 +15545,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15575,9 +15559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15598,9 +15580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15618,9 +15598,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15640,9 +15618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15663,9 +15639,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15683,9 +15657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15703,9 +15675,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15724,9 +15694,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15743,9 +15711,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15762,9 +15728,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15775,9 +15739,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15791,9 +15753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15808,9 +15768,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15821,9 +15779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -15835,9 +15791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Document-level completable gate: P(completable) carried over from
-     * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-     * PredictionValues so the gate never becomes a DDS feature.
+     * Completable gate probability, from mlservice PredictResponse.completable.
      * </pre>
      *
      * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>

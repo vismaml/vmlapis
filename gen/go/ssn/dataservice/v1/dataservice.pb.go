@@ -1023,9 +1023,7 @@ type PredictionConfidences struct {
 	CheckInDate                 []*wrapperspb.FloatValue `protobuf:"bytes,41,rep,name=check_in_date,json=checkInDate,proto3" json:"check_in_date,omitempty"`
 	CheckOutDate                []*wrapperspb.FloatValue `protobuf:"bytes,42,rep,name=check_out_date,json=checkOutDate,proto3" json:"check_out_date,omitempty"`
 	Ksef                        []*wrapperspb.FloatValue `protobuf:"bytes,43,rep,name=ksef,proto3" json:"ksef,omitempty"`
-	// Document-level completable gate: P(completable) carried over from
-	// ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-	// PredictionValues so the gate never becomes a DDS feature.
+	// Completable gate probability, from mlservice PredictResponse.completable.
 	Completable []*wrapperspb.FloatValue `protobuf:"bytes,44,rep,name=completable,proto3" json:"completable,omitempty"`
 }
 
@@ -1417,8 +1415,7 @@ type PredictionMetadata struct {
 	CheckInDate                 []*_type.ModelSpec `protobuf:"bytes,41,rep,name=check_in_date,json=checkInDate,proto3" json:"check_in_date,omitempty"`
 	CheckOutDate                []*_type.ModelSpec `protobuf:"bytes,42,rep,name=check_out_date,json=checkOutDate,proto3" json:"check_out_date,omitempty"`
 	Ksef                        []*_type.ModelSpec `protobuf:"bytes,43,rep,name=ksef,proto3" json:"ksef,omitempty"`
-	// Gate artifact name/version that produced PredictionConfidences.completable.
-	Completable []*_type.ModelSpec `protobuf:"bytes,44,rep,name=completable,proto3" json:"completable,omitempty"`
+	Completable                 []*_type.ModelSpec `protobuf:"bytes,44,rep,name=completable,proto3" json:"completable,omitempty"`
 }
 
 func (x *PredictionMetadata) Reset() {

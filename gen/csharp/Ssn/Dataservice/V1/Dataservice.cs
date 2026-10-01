@@ -5183,9 +5183,7 @@ namespace Ssn.Dataservice.V1 {
         = pb::FieldCodec.ForStructWrapper<float>(354);
     private readonly pbc::RepeatedField<float?> completable_ = new pbc::RepeatedField<float?>();
     /// <summary>
-    /// Document-level completable gate: P(completable) carried over from
-    /// ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-    /// PredictionValues so the gate never becomes a DDS feature.
+    /// Completable gate probability, from mlservice PredictResponse.completable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6492,9 +6490,6 @@ namespace Ssn.Dataservice.V1 {
     private static readonly pb::FieldCodec<global::Ssn.Type.ModelSpec> _repeated_completable_codec
         = pb::FieldCodec.ForMessage(354, global::Ssn.Type.ModelSpec.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.ModelSpec> completable_ = new pbc::RepeatedField<global::Ssn.Type.ModelSpec>();
-    /// <summary>
-    /// Gate artifact name/version that produced PredictionConfidences.completable.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Type.ModelSpec> Completable {

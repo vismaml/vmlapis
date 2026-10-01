@@ -1043,9 +1043,7 @@ public interface PredictionConfidencesOrBuilder extends
 
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1054,9 +1052,7 @@ public interface PredictionConfidencesOrBuilder extends
       getCompletableList();
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1064,9 +1060,7 @@ public interface PredictionConfidencesOrBuilder extends
   com.google.protobuf.FloatValue getCompletable(int index);
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1074,9 +1068,7 @@ public interface PredictionConfidencesOrBuilder extends
   int getCompletableCount();
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
@@ -1085,9 +1077,7 @@ public interface PredictionConfidencesOrBuilder extends
       getCompletableOrBuilderList();
   /**
    * <pre>
-   * Document-level completable gate: P(completable) carried over from
-   * ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
-   * PredictionValues so the gate never becomes a DDS feature.
+   * Completable gate probability, from mlservice PredictResponse.completable.
    * </pre>
    *
    * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
