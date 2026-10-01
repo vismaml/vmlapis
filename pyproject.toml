@@ -17,6 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
+    "googleapis-common-protos",
     "grpcio",
     "protobuf~=5.29.3",
     "types-protobuf~=5.29",
