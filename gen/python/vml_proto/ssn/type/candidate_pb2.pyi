@@ -164,7 +164,7 @@ class DocumentMetadata(_message.Message):
     def __init__(self, page_count: _Optional[int] = ...) -> None: ...
 
 class PurchaseLine(_message.Message):
-    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "product_type")
+    __slots__ = ("page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price", "model_metadata", "product_type", "kind")
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     CODE_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -183,6 +183,7 @@ class PurchaseLine(_message.Message):
     UNIT_PRICE_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
     PRODUCT_TYPE_FIELD_NUMBER: _ClassVar[int]
+    KIND_FIELD_NUMBER: _ClassVar[int]
     page_ref: int
     code: _containers.RepeatedCompositeFieldContainer[Candidate]
     description: _containers.RepeatedCompositeFieldContainer[Candidate]
@@ -201,7 +202,8 @@ class PurchaseLine(_message.Message):
     unit_price: _containers.RepeatedCompositeFieldContainer[Candidate]
     model_metadata: ModelSpec
     product_type: _containers.RepeatedCompositeFieldContainer[_product_service_pb2.ProductTypeCandidate]
-    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., product_type: _Optional[_Iterable[_Union[_product_service_pb2.ProductTypeCandidate, _Mapping]]] = ...) -> None: ...
+    kind: _containers.RepeatedCompositeFieldContainer[Candidate]
+    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., description: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., quantity: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., item_number: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_discount: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., percentage_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_incl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price_excl_vat: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., total: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., unit_price: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., product_type: _Optional[_Iterable[_Union[_product_service_pb2.ProductTypeCandidate, _Mapping]]] = ..., kind: _Optional[_Iterable[_Union[Candidate, _Mapping]]] = ...) -> None: ...
 
 class VatDistribution(_message.Message):
     __slots__ = ("page_ref", "percentage", "total_incl_vat", "total_excl_vat", "total_vat", "model_metadata")
