@@ -24,12 +24,12 @@ namespace Ssn.Type {
     static TierReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNzc24vdHlwZS90aWVyLnByb3RvEghzc24udHlwZSo5CgRUaWVyEgsKB0RF",
+            "ChNzc24vdHlwZS90aWVyLnByb3RvEghzc24udHlwZSpECgRUaWVyEgsKB0RF",
             "RkFVTFQQABIMCghTVEFOREFSRBABEgsKB1BSRU1JVU0QAhIJCgVVTFRSQRAD",
-            "QpUBChFhaS52aXNtYS5zc24udHlwZUIJVGllclByb3RvUAFaNGdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWi",
-            "AgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0",
-            "YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
+            "EgkKBUhVTUFOEARClQEKEWFpLnZpc21hLnNzbi50eXBlQglUaWVyUHJvdG9Q",
+            "AVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL3R5",
+            "cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygIIU3NuXFR5cGXiAhRTc25c",
+            "VHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Type.Tier), }, null, null));
@@ -46,6 +46,13 @@ namespace Ssn.Type {
     [pbr::OriginalName("STANDARD")] Standard = 1,
     [pbr::OriginalName("PREMIUM")] Premium = 2,
     [pbr::OriginalName("ULTRA")] Ultra = 3,
+    /// <summary>
+    /// Runs the ULTRA pipeline, then sends the document for human verification when
+    /// the document-gating model says a human can supply what the AI did not.
+    /// Priced separately: unlike the tiers above it can incur external human
+    /// annotation cost.
+    /// </summary>
+    [pbr::OriginalName("HUMAN")] Human = 4,
   }
 
   #endregion

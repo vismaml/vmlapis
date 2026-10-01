@@ -10,4 +10,9 @@ enum Tier {
   STANDARD = 1;
   PREMIUM = 2;
   ULTRA = 3;
+  // Runs the ULTRA pipeline, then sends the document for human verification when
+  // the document-gating model says a human can supply what the AI did not.
+  // Priced separately: unlike the tiers above it can incur external human
+  // annotation cost.
+  HUMAN = 4;
 }
