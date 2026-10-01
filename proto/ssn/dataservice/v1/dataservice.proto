@@ -210,6 +210,8 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue check_in_date = 41;
   repeated google.protobuf.FloatValue check_out_date = 42;
   repeated google.protobuf.FloatValue ksef = 43;
+  // Completable gate probability, from mlservice PredictResponse.completable.
+  repeated google.protobuf.FloatValue completable = 44;
 }
 
 message PredictionMetadata {
@@ -256,6 +258,7 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec check_in_date = 41;
   repeated ssn.type.ModelSpec check_out_date = 42;
   repeated ssn.type.ModelSpec ksef = 43;
+  repeated ssn.type.ModelSpec completable = 44;
 }
 
 message CreateDocumentRequest {

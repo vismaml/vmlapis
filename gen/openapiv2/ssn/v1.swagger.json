@@ -2854,6 +2854,14 @@
             "type": "number",
             "format": "float"
           }
+        },
+        "completable": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          },
+          "description": "Completable gate probability, from mlservice PredictResponse.completable."
         }
       }
     },
@@ -3155,6 +3163,13 @@
           }
         },
         "ksef": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "completable": {
           "type": "array",
           "items": {
             "type": "object",
