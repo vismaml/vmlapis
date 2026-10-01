@@ -750,4 +750,53 @@ public interface PurchaseLineOrBuilder extends
    */
   ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getProductTypeOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getKindList();
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  ai.visma.ssn.type.Candidate getKind(int index);
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  int getKindCount();
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getKindOrBuilderList();
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getKindOrBuilder(
+      int index);
 }
