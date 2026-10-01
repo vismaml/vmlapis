@@ -444,6 +444,11 @@ export class PurchaseLine extends jspb.Message {
   clearProductTypeList(): PurchaseLine;
   addProductType(value?: asgt_v2_product_service_pb.ProductTypeCandidate, index?: number): asgt_v2_product_service_pb.ProductTypeCandidate;
 
+  getKindList(): Array<Candidate>;
+  setKindList(value: Array<Candidate>): PurchaseLine;
+  clearKindList(): PurchaseLine;
+  addKind(value?: Candidate, index?: number): Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLine.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLine): PurchaseLine.AsObject;
@@ -472,6 +477,7 @@ export namespace PurchaseLine {
     unitPriceList: Array<Candidate.AsObject>,
     modelMetadata?: ModelSpec.AsObject,
     productTypeList: Array<asgt_v2_product_service_pb.ProductTypeCandidate.AsObject>,
+    kindList: Array<Candidate.AsObject>,
   }
 }
 
