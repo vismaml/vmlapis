@@ -6145,7 +6145,7 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearKsefList = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
 
 
 
@@ -6263,6 +6263,8 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     ksefList: jspb.Message.toObjectList(msg.getKsefList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    completableList: jspb.Message.toObjectList(msg.getCompletableList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -6514,6 +6516,11 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addKsef(value);
+      break;
+    case 44:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addCompletable(value);
       break;
     default:
       reader.skipField();
@@ -6884,6 +6891,14 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       43,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCompletableList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      44,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -8525,13 +8540,51 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearKsefList = functio
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue completable = 44;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getCompletableList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 44));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setCompletableList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 44, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addCompletable = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 44, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCompletableList = function() {
+  return this.setCompletableList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
 
 
 
@@ -8649,6 +8702,8 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     checkOutDateList: jspb.Message.toObjectList(msg.getCheckOutDateList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     ksefList: jspb.Message.toObjectList(msg.getKsefList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    completableList: jspb.Message.toObjectList(msg.getCompletableList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -8900,6 +8955,11 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addKsef(value);
+      break;
+    case 44:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addCompletable(value);
       break;
     default:
       reader.skipField();
@@ -9270,6 +9330,14 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       43,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCompletableList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      44,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -10908,6 +10976,44 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addKsef = function(opt_val
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearKsefList = function() {
   return this.setKsefList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec completable = 44;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCompletableList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 44));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCompletableList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 44, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCompletable = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 44, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCompletableList = function() {
+  return this.setCompletableList([]);
 };
 
 

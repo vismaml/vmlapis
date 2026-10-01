@@ -885,6 +885,11 @@ export class PredictionConfidences extends jspb.Message {
   clearKsefList(): PredictionConfidences;
   addKsef(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
+  getCompletableList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setCompletableList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearCompletableList(): PredictionConfidences;
+  addCompletable(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionConfidences): PredictionConfidences.AsObject;
@@ -938,6 +943,7 @@ export namespace PredictionConfidences {
     checkInDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     checkOutDateList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     ksefList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    completableList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
   }
 }
 
@@ -1157,6 +1163,11 @@ export class PredictionMetadata extends jspb.Message {
   clearKsefList(): PredictionMetadata;
   addKsef(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
+  getCompletableList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setCompletableList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearCompletableList(): PredictionMetadata;
+  addCompletable(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -1210,6 +1221,7 @@ export namespace PredictionMetadata {
     checkInDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     checkOutDateList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     ksefList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    completableList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 

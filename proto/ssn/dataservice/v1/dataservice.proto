@@ -210,6 +210,10 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue check_in_date = 41;
   repeated google.protobuf.FloatValue check_out_date = 42;
   repeated google.protobuf.FloatValue ksef = 43;
+  // Document-level completable gate: P(completable) carried over from
+  // ssn.mlservice.v2.PredictResponse.completable. Deliberately absent from
+  // PredictionValues so the gate never becomes a DDS feature.
+  repeated google.protobuf.FloatValue completable = 44;
 }
 
 message PredictionMetadata {
@@ -256,6 +260,8 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec check_in_date = 41;
   repeated ssn.type.ModelSpec check_out_date = 42;
   repeated ssn.type.ModelSpec ksef = 43;
+  // Gate artifact name/version that produced PredictionConfidences.completable.
+  repeated ssn.type.ModelSpec completable = 44;
 }
 
 message CreateDocumentRequest {
