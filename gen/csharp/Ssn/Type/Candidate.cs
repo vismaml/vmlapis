@@ -71,7 +71,7 @@ namespace Ssn.Type {
             "IAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghw",
             "YWdlX3JlZhgEIAEoDVIHcGFnZVJlZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhj",
             "bFZhdBIZCghpbmNsX3ZhdBgGIAEoCVIHaW5jbFZhdCIxChBEb2N1bWVudE1l",
-            "dGFkYXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudCLkBwoMUHVy",
+            "dGFkYXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudCKNCAoMUHVy",
             "Y2hhc2VMaW5lEhkKCHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEicKBGNvZGUY",
             "AiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGNvZGUSNQoLZGVzY3JpcHRp",
             "b24YAyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSC2Rlc2NyaXB0aW9uEi8K",
@@ -94,17 +94,18 @@ namespace Ssn.Type {
             "CXVuaXRQcmljZRI6Cg5tb2RlbF9tZXRhZGF0YRgRIAEoCzITLnNzbi50eXBl",
             "Lk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRJACgxwcm9kdWN0X3R5cGUYEiAD",
             "KAsyHS5hc2d0LnYyLlByb2R1Y3RUeXBlQ2FuZGlkYXRlUgtwcm9kdWN0VHlw",
-            "ZSLFAgoPVmF0RGlzdHJpYnV0aW9uEhkKCHBhZ2VfcmVmGAEgASgNUgdwYWdl",
-            "UmVmEjMKCnBlcmNlbnRhZ2UYAiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
-            "CnBlcmNlbnRhZ2USOQoOdG90YWxfaW5jbF92YXQYAyADKAsyEy5zc24udHlw",
-            "ZS5DYW5kaWRhdGVSDHRvdGFsSW5jbFZhdBI5Cg50b3RhbF9leGNsX3ZhdBgE",
-            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxFeGNsVmF0EjAKCXRv",
-            "dGFsX3ZhdBgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIIdG90YWxWYXQS",
-            "OgoObW9kZWxfbWV0YWRhdGEYBiABKAsyEy5zc24udHlwZS5Nb2RlbFNwZWNS",
-            "DW1vZGVsTWV0YWRhdGFCmgEKEWFpLnZpc21hLnNzbi50eXBlQg5DYW5kaWRh",
-            "dGVQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
-            "by9zc24vdHlwZTtzc250eXBlogIDU1RYqgIIU3NuLlR5cGXKAghTc25cVHlw",
-            "ZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh6gIJU3NuOjpUeXBlYgZwcm90bzM="));
+            "ZRInCgRraW5kGBMgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgRraW5kIsUC",
+            "Cg9WYXREaXN0cmlidXRpb24SGQoIcGFnZV9yZWYYASABKA1SB3BhZ2VSZWYS",
+            "MwoKcGVyY2VudGFnZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIKcGVy",
+            "Y2VudGFnZRI5Cg50b3RhbF9pbmNsX3ZhdBgDIAMoCzITLnNzbi50eXBlLkNh",
+            "bmRpZGF0ZVIMdG90YWxJbmNsVmF0EjkKDnRvdGFsX2V4Y2xfdmF0GAQgAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEV4Y2xWYXQSMAoJdG90YWxf",
+            "dmF0GAUgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgh0b3RhbFZhdBI6Cg5t",
+            "b2RlbF9tZXRhZGF0YRgGIAEoCzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9k",
+            "ZWxNZXRhZGF0YUKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVBy",
+            "b3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
+            "bi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIU",
+            "U3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.V2.ProductServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,7 +118,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLine), global::Ssn.Type.PurchaseLine.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata", "ProductType", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistribution), global::Ssn.Type.VatDistribution.Parser, new[]{ "PageRef", "Percentage", "TotalInclVat", "TotalExclVat", "TotalVat", "ModelMetadata" }, null, null, null, null)
           }));
     }
@@ -3652,6 +3653,7 @@ namespace Ssn.Type {
       unitPrice_ = other.unitPrice_.Clone();
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       productType_ = other.productType_.Clone();
+      kind_ = other.kind_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3916,6 +3918,21 @@ namespace Ssn.Type {
       get { return productType_; }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_kind_codec
+        = pb::FieldCodec.ForMessage(154, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> kind_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+    /// "levy", "service_charge", "gratuity", "discount" or "deposit".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Kind {
+      get { return kind_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3949,6 +3966,7 @@ namespace Ssn.Type {
       if(!unitPrice_.Equals(other.unitPrice_)) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       if(!productType_.Equals(other.productType_)) return false;
+      if(!kind_.Equals(other.kind_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3974,6 +3992,7 @@ namespace Ssn.Type {
       hash ^= unitPrice_.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       hash ^= productType_.GetHashCode();
+      hash ^= kind_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4016,6 +4035,7 @@ namespace Ssn.Type {
         output.WriteMessage(ModelMetadata);
       }
       productType_.WriteTo(output, _repeated_productType_codec);
+      kind_.WriteTo(output, _repeated_kind_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4050,6 +4070,7 @@ namespace Ssn.Type {
         output.WriteMessage(ModelMetadata);
       }
       productType_.WriteTo(ref output, _repeated_productType_codec);
+      kind_.WriteTo(ref output, _repeated_kind_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4082,6 +4103,7 @@ namespace Ssn.Type {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
       }
       size += productType_.CalculateSize(_repeated_productType_codec);
+      size += kind_.CalculateSize(_repeated_kind_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4119,6 +4141,7 @@ namespace Ssn.Type {
         ModelMetadata.MergeFrom(other.ModelMetadata);
       }
       productType_.Add(other.productType_);
+      kind_.Add(other.kind_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4213,6 +4236,10 @@ namespace Ssn.Type {
             productType_.AddEntriesFrom(input, _repeated_productType_codec);
             break;
           }
+          case 154: {
+            kind_.AddEntriesFrom(input, _repeated_kind_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4305,6 +4332,10 @@ namespace Ssn.Type {
           }
           case 146: {
             productType_.AddEntriesFrom(ref input, _repeated_productType_codec);
+            break;
+          }
+          case 154: {
+            kind_.AddEntriesFrom(ref input, _repeated_kind_codec);
             break;
           }
         }

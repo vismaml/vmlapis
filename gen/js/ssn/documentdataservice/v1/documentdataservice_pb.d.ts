@@ -202,6 +202,14 @@ export class GetDocumentDataResponse extends jspb.Message {
   clearTagsList(): GetDocumentDataResponse;
   addTags(value: string, index?: number): GetDocumentDataResponse;
 
+  getForAnnotation(): boolean;
+  setForAnnotation(value: boolean): GetDocumentDataResponse;
+
+  getDeletionRequestedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setDeletionRequestedAt(value?: google_protobuf_timestamp_pb.Timestamp): GetDocumentDataResponse;
+  hasDeletionRequestedAt(): boolean;
+  clearDeletionRequestedAt(): GetDocumentDataResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDocumentDataResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetDocumentDataResponse): GetDocumentDataResponse.AsObject;
@@ -222,6 +230,8 @@ export namespace GetDocumentDataResponse {
     requestedFeaturesList: Array<string>,
     updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     tagsList: Array<string>,
+    forAnnotation: boolean,
+    deletionRequestedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
   }
 }
 
@@ -445,6 +455,50 @@ export class DeleteAnnotationsResponse extends jspb.Message {
 }
 
 export namespace DeleteAnnotationsResponse {
+  export type AsObject = {
+  }
+}
+
+export class SetForAnnotationRequest extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): SetForAnnotationRequest;
+
+  getConsumer(): string;
+  setConsumer(value: string): SetForAnnotationRequest;
+
+  getEnvironment(): string;
+  setEnvironment(value: string): SetForAnnotationRequest;
+
+  getForAnnotation(): boolean;
+  setForAnnotation(value: boolean): SetForAnnotationRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SetForAnnotationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: SetForAnnotationRequest): SetForAnnotationRequest.AsObject;
+  static serializeBinaryToWriter(message: SetForAnnotationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetForAnnotationRequest;
+  static deserializeBinaryFromReader(message: SetForAnnotationRequest, reader: jspb.BinaryReader): SetForAnnotationRequest;
+}
+
+export namespace SetForAnnotationRequest {
+  export type AsObject = {
+    feedbackId: string,
+    consumer: string,
+    environment: string,
+    forAnnotation: boolean,
+  }
+}
+
+export class SetForAnnotationResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): SetForAnnotationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: SetForAnnotationResponse): SetForAnnotationResponse.AsObject;
+  static serializeBinaryToWriter(message: SetForAnnotationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): SetForAnnotationResponse;
+  static deserializeBinaryFromReader(message: SetForAnnotationResponse, reader: jspb.BinaryReader): SetForAnnotationResponse;
+}
+
+export namespace SetForAnnotationResponse {
   export type AsObject = {
   }
 }

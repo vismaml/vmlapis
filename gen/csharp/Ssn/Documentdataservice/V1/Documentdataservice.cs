@@ -54,7 +54,7 @@ namespace Ssn.Documentdataservice.V1 {
             "Y3Rpb25zGAMgASgIUhJpbmNsdWRlUHJlZGljdGlvbnMSKwoRaW5jbHVkZV9m",
             "ZWVkYmFja3MYBCABKAhSEGluY2x1ZGVGZWVkYmFja3MSJQoOaW5jbHVkZV9s",
             "YWJlbHMYBSABKAhSDWluY2x1ZGVMYWJlbHMSIAoLZW52aXJvbm1lbnQYBiAB",
-            "KAlSC2Vudmlyb25tZW50IuYDChdHZXREb2N1bWVudERhdGFSZXNwb25zZRIf",
+            "KAlSC2Vudmlyb25tZW50It0EChdHZXREb2N1bWVudERhdGFSZXNwb25zZRIf",
             "CgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgC",
             "IAEoCVIIY29uc3VtZXISGQoIZmlsZV91cmwYAyABKAlSB2ZpbGVVcmwSHwoL",
             "cmVuZGVyX3VybHMYBCADKAlSCnJlbmRlclVybHMSTAoTdGV4dF9hbm5vdGF0",
@@ -65,69 +65,81 @@ namespace Ssn.Documentdataservice.V1 {
             "bWVzdGFtcFIJZXhwaXJlc0F0Ei0KEnJlcXVlc3RlZF9mZWF0dXJlcxgIIAMo",
             "CVIRcmVxdWVzdGVkRmVhdHVyZXMSOQoKdXBkYXRlZF9hdBgJIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXVwZGF0ZWRBdBISCgR0YWdzGAog",
-            "AygJUgR0YWdzIucDChdTZXREb2N1bWVudEJsb2JzUmVxdWVzdBIfCgtmZWVk",
+            "AygJUgR0YWdzEiUKDmZvcl9hbm5vdGF0aW9uGAsgASgIUg1mb3JBbm5vdGF0",
+            "aW9uEk4KFWRlbGV0aW9uX3JlcXVlc3RlZF9hdBgMIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBSE2RlbGV0aW9uUmVxdWVzdGVkQXQi5wMKF1Nl",
+            "dERvY3VtZW50QmxvYnNSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpm",
+            "ZWVkYmFja0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchI3CghmaWxl",
+            "X3VyaRgDIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZVIHZmls",
+            "ZVVyaRIfCgtyZW5kZXJfdXJpcxgEIAMoCVIKcmVuZGVyVXJpcxIzCgZ0YV91",
+            "cmkYBSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWVSBXRhVXJp",
+            "EjkKCmV4cGlyZXNfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wUglleHBpcmVzQXQSIAoLZW52aXJvbm1lbnQYByABKAlSC2Vudmlyb25t",
+            "ZW50Ei0KEnJlcXVlc3RlZF9mZWF0dXJlcxgIIAMoCVIRcmVxdWVzdGVkRmVh",
+            "dHVyZXMSEgoEdGFncxgJIAMoCVIEdGFncxIYCgdjb250ZW50GAogASgMUgdj",
+            "b250ZW50Eh0KCnRhX2NvbnRlbnQYCyABKAxSCXRhQ29udGVudBInCg9yZW5k",
+            "ZXJfY29udGVudHMYDCADKAxSDnJlbmRlckNvbnRlbnRzIhoKGFNldERvY3Vt",
+            "ZW50QmxvYnNSZXNwb25zZSLNAQoVQWRkQW5ub3RhdGlvbnNSZXF1ZXN0Eh8K",
+            "C2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFja0lkEhoKCGNvbnN1bWVyGAIg",
+            "ASgJUghjb25zdW1lchJVCgthbm5vdGF0aW9ucxgDIAMoCzIzLnNzbi5kb2N1",
+            "bWVudGRhdGFzZXJ2aWNlLnYxLkludGVybmFsRmllbGRBbm5vdGF0aW9uUgth",
+            "bm5vdGF0aW9ucxIgCgtlbnZpcm9ubWVudBgEIAEoCVILZW52aXJvbm1lbnQi",
+            "GAoWQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJaChVEZWxldGVEb2N1bWVudFJl",
+            "cXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoIY29u",
+            "c3VtZXIYAiABKAlSCGNvbnN1bWVySgQIAxAEIhgKFkRlbGV0ZURvY3VtZW50",
+            "UmVzcG9uc2UirAEKGERlbGV0ZUFubm90YXRpb25zUmVxdWVzdBIfCgtmZWVk",
             "YmFja19pZBgBIAEoCVIKZmVlZGJhY2tJZBIaCghjb25zdW1lchgCIAEoCVII",
-            "Y29uc3VtZXISNwoIZmlsZV91cmkYAyABKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "U3RyaW5nVmFsdWVSB2ZpbGVVcmkSHwoLcmVuZGVyX3VyaXMYBCADKAlSCnJl",
-            "bmRlclVyaXMSMwoGdGFfdXJpGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cmluZ1ZhbHVlUgV0YVVyaRI5CgpleHBpcmVzX2F0GAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcFIJZXhwaXJlc0F0EiAKC2Vudmlyb25tZW50",
-            "GAcgASgJUgtlbnZpcm9ubWVudBItChJyZXF1ZXN0ZWRfZmVhdHVyZXMYCCAD",
-            "KAlSEXJlcXVlc3RlZEZlYXR1cmVzEhIKBHRhZ3MYCSADKAlSBHRhZ3MSGAoH",
-            "Y29udGVudBgKIAEoDFIHY29udGVudBIdCgp0YV9jb250ZW50GAsgASgMUgl0",
-            "YUNvbnRlbnQSJwoPcmVuZGVyX2NvbnRlbnRzGAwgAygMUg5yZW5kZXJDb250",
-            "ZW50cyIaChhTZXREb2N1bWVudEJsb2JzUmVzcG9uc2UizQEKFUFkZEFubm90",
-            "YXRpb25zUmVxdWVzdBIfCgtmZWVkYmFja19pZBgBIAEoCVIKZmVlZGJhY2tJ",
-            "ZBIaCghjb25zdW1lchgCIAEoCVIIY29uc3VtZXISVQoLYW5ub3RhdGlvbnMY",
-            "AyADKAsyMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5JbnRlcm5hbEZp",
-            "ZWxkQW5ub3RhdGlvblILYW5ub3RhdGlvbnMSIAoLZW52aXJvbm1lbnQYBCAB",
-            "KAlSC2Vudmlyb25tZW50IhgKFkFkZEFubm90YXRpb25zUmVzcG9uc2UiWgoV",
-            "RGVsZXRlRG9jdW1lbnRSZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpm",
-            "ZWVkYmFja0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lckoECAMQBCIY",
-            "ChZEZWxldGVEb2N1bWVudFJlc3BvbnNlIqwBChhEZWxldGVBbm5vdGF0aW9u",
-            "c1JlcXVlc3QSHwoLZmVlZGJhY2tfaWQYASABKAlSCmZlZWRiYWNrSWQSGgoI",
-            "Y29uc3VtZXIYAiABKAlSCGNvbnN1bWVyEhgKB2ZlYXR1cmUYBCABKAlSB2Zl",
-            "YXR1cmUSFgoGc291cmNlGAUgASgJUgZzb3VyY2USGwoJc291cmNlX2lkGAYg",
-            "ASgJUghzb3VyY2VJZEoECAMQBCIbChlEZWxldGVBbm5vdGF0aW9uc1Jlc3Bv",
-            "bnNlKo8BCg9DYW5kaWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9V",
-            "TlNQRUNJRklFRBAAEh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThAB",
-            "Eh0KGUNBTkRJREFURV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVf",
-            "U09VUkNFX0xBQkVMEAMyzwcKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dl",
-            "dERvY3VtZW50RGF0YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdl",
-            "dERvY3VtZW50RGF0YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2Vydmlj",
-            "ZS52MS5HZXREb2N1bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29u",
-            "c3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEK",
-            "EFNldERvY3VtZW50QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52",
-            "MS5TZXREb2N1bWVudEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFz",
-            "ZXJ2aWNlLnYxLlNldERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYv",
+            "Y29uc3VtZXISGAoHZmVhdHVyZRgEIAEoCVIHZmVhdHVyZRIWCgZzb3VyY2UY",
+            "BSABKAlSBnNvdXJjZRIbCglzb3VyY2VfaWQYBiABKAlSCHNvdXJjZUlkSgQI",
+            "AxAEIhsKGURlbGV0ZUFubm90YXRpb25zUmVzcG9uc2UinwEKF1NldEZvckFu",
+            "bm90YXRpb25SZXF1ZXN0Eh8KC2ZlZWRiYWNrX2lkGAEgASgJUgpmZWVkYmFj",
+            "a0lkEhoKCGNvbnN1bWVyGAIgASgJUghjb25zdW1lchIgCgtlbnZpcm9ubWVu",
+            "dBgDIAEoCVILZW52aXJvbm1lbnQSJQoOZm9yX2Fubm90YXRpb24YBCABKAhS",
+            "DWZvckFubm90YXRpb24iGgoYU2V0Rm9yQW5ub3RhdGlvblJlc3BvbnNlKo8B",
+            "Cg9DYW5kaWRhdGVTb3VyY2USIAocQ0FORElEQVRFX1NPVVJDRV9VTlNQRUNJ",
+            "RklFRBAAEh8KG0NBTkRJREFURV9TT1VSQ0VfUFJFRElDVElPThABEh0KGUNB",
+            "TkRJREFURV9TT1VSQ0VfRkVFREJBQ0sQAhIaChZDQU5ESURBVEVfU09VUkNF",
+            "X0xBQkVMEAMymwkKE0RvY3VtZW50RGF0YVNlcnZpY2UStAEKD0dldERvY3Vt",
+            "ZW50RGF0YRIyLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxLkdldERvY3Vt",
+            "ZW50RGF0YVJlcXVlc3QaMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5H",
+            "ZXREb2N1bWVudERhdGFSZXNwb25zZSI4gtPkkwIyEjAvdjEvY29uc3VtZXJz",
+            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SwAEKEFNldERv",
+            "Y3VtZW50QmxvYnMSMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52MS5TZXRE",
+            "b2N1bWVudEJsb2JzUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNl",
+            "LnYxLlNldERvY3VtZW50QmxvYnNSZXNwb25zZSJBgtPkkwI7GjYvdjEvY29u",
+            "c3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYmxv",
+            "YnM6ASoSwAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50ZGF0YXNl",
+            "cnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRvY3VtZW50",
+            "ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJHgtPkkwJB",
+            "IjwvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFj",
+            "a19pZH0vYW5ub3RhdGlvbnM6ASoSsQEKDkRlbGV0ZURvY3VtZW50EjEuc3Nu",
+            "LmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRSZXF1ZXN0",
+            "GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRS",
+            "ZXNwb25zZSI4gtPkkwIyKjAvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9j",
+            "dW1lbnRzL3tmZWVkYmFja19pZH0SxgEKEURlbGV0ZUFubm90YXRpb25zEjQu",
+            "c3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5ub3RhdGlvbnNS",
+            "ZXF1ZXN0GjUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5u",
+            "b3RhdGlvbnNSZXNwb25zZSJEgtPkkwI+KjwvdjEvY29uc3VtZXJzL3tjb25z",
+            "dW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlvbnMSyQEK",
+            "EFNldEZvckFubm90YXRpb24SMy5zc24uZG9jdW1lbnRkYXRhc2VydmljZS52",
+            "MS5TZXRGb3JBbm5vdGF0aW9uUmVxdWVzdBo0LnNzbi5kb2N1bWVudGRhdGFz",
+            "ZXJ2aWNlLnYxLlNldEZvckFubm90YXRpb25SZXNwb25zZSJKgtPkkwJEGj8v",
             "djEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19p",
-            "ZH0vYmxvYnM6ASoSwAEKDkFkZEFubm90YXRpb25zEjEuc3NuLmRvY3VtZW50",
-            "ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXF1ZXN0GjIuc3NuLmRv",
-            "Y3VtZW50ZGF0YXNlcnZpY2UudjEuQWRkQW5ub3RhdGlvbnNSZXNwb25zZSJH",
-            "gtPkkwJBIjwvdjEvY29uc3VtZXJzL3tjb25zdW1lcn0vZG9jdW1lbnRzL3tm",
-            "ZWVkYmFja19pZH0vYW5ub3RhdGlvbnM6ASoSsQEKDkRlbGV0ZURvY3VtZW50",
-            "EjEuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9jdW1lbnRS",
-            "ZXF1ZXN0GjIuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlRG9j",
-            "dW1lbnRSZXNwb25zZSI4gtPkkwIyKjAvdjEvY29uc3VtZXJzL3tjb25zdW1l",
-            "cn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0SxgEKEURlbGV0ZUFubm90YXRp",
-            "b25zEjQuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVsZXRlQW5ub3Rh",
-            "dGlvbnNSZXF1ZXN0GjUuc3NuLmRvY3VtZW50ZGF0YXNlcnZpY2UudjEuRGVs",
-            "ZXRlQW5ub3RhdGlvbnNSZXNwb25zZSJEgtPkkwI+KjwvdjEvY29uc3VtZXJz",
-            "L3tjb25zdW1lcn0vZG9jdW1lbnRzL3tmZWVkYmFja19pZH0vYW5ub3RhdGlv",
-            "bnNCnQIKI2FpLnZpc21hLnNzbi5kb2N1bWVudGRhdGFzZXJ2aWNlLnYxQhhE",
-            "b2N1bWVudGRhdGFzZXJ2aWNlUHJvdG9QAVpSZ2l0aHViLmNvbS9lLWNvbm9t",
-            "aWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RvY3VtZW50ZGF0YXNlcnZpY2UvdjE7",
-            "ZG9jdW1lbnRkYXRhc2VydmljZaICA1NEWKoCGlNzbi5Eb2N1bWVudGRhdGFz",
-            "ZXJ2aWNlLlYxygIaU3NuXERvY3VtZW50ZGF0YXNlcnZpY2VcVjHiAiZTc25c",
-            "RG9jdW1lbnRkYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCHFNzbjo6RG9j",
-            "dW1lbnRkYXRhc2VydmljZTo6VjFiBnByb3RvMw=="));
+            "ZH0vZm9yLWFubm90YXRpb246ASpCnQIKI2FpLnZpc21hLnNzbi5kb2N1bWVu",
+            "dGRhdGFzZXJ2aWNlLnYxQhhEb2N1bWVudGRhdGFzZXJ2aWNlUHJvdG9QAVpS",
+            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RvY3Vt",
+            "ZW50ZGF0YXNlcnZpY2UvdjE7ZG9jdW1lbnRkYXRhc2VydmljZaICA1NEWKoC",
+            "GlNzbi5Eb2N1bWVudGRhdGFzZXJ2aWNlLlYxygIaU3NuXERvY3VtZW50ZGF0",
+            "YXNlcnZpY2VcVjHiAiZTc25cRG9jdW1lbnRkYXRhc2VydmljZVxWMVxHUEJN",
+            "ZXRhZGF0YeoCHFNzbjo6RG9jdW1lbnRkYXRhc2VydmljZTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Documentdataservice.V1.CandidateSource), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalEntry), global::Ssn.Documentdataservice.V1.InternalEntry.Parser, new[]{ "Source", "SourceId", "CreatedAt", "CandidateId", "Candidate", "Line", "Distribution", "QrCodeData", "SwissQrBill", "Answer", "Address" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.InternalFieldAnnotation), global::Ssn.Documentdataservice.V1.InternalFieldAnnotation.Parser, new[]{ "Feature", "Entries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataRequest), global::Ssn.Documentdataservice.V1.GetDocumentDataRequest.Parser, new[]{ "FeedbackId", "Consumer", "IncludePredictions", "IncludeFeedbacks", "IncludeLabels", "Environment" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", "Tags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.GetDocumentDataResponse), global::Ssn.Documentdataservice.V1.GetDocumentDataResponse.Parser, new[]{ "FeedbackId", "Consumer", "FileUrl", "RenderUrls", "TextAnnotationUrl", "Fields", "ExpiresAt", "RequestedFeatures", "UpdatedAt", "Tags", "ForAnnotation", "DeletionRequestedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest), global::Ssn.Documentdataservice.V1.SetDocumentBlobsRequest.Parser, new[]{ "FeedbackId", "Consumer", "FileUri", "RenderUris", "TaUri", "ExpiresAt", "Environment", "RequestedFeatures", "Tags", "Content", "TaContent", "RenderContents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse), global::Ssn.Documentdataservice.V1.SetDocumentBlobsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.AddAnnotationsRequest), global::Ssn.Documentdataservice.V1.AddAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Annotations", "Environment" }, null, null, null, null),
@@ -135,7 +147,9 @@ namespace Ssn.Documentdataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteDocumentRequest), global::Ssn.Documentdataservice.V1.DeleteDocumentRequest.Parser, new[]{ "FeedbackId", "Consumer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteDocumentResponse), global::Ssn.Documentdataservice.V1.DeleteDocumentResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest), global::Ssn.Documentdataservice.V1.DeleteAnnotationsRequest.Parser, new[]{ "FeedbackId", "Consumer", "Feature", "Source", "SourceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse), global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse), global::Ssn.Documentdataservice.V1.DeleteAnnotationsResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetForAnnotationRequest), global::Ssn.Documentdataservice.V1.SetForAnnotationRequest.Parser, new[]{ "FeedbackId", "Consumer", "Environment", "ForAnnotation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Documentdataservice.V1.SetForAnnotationResponse), global::Ssn.Documentdataservice.V1.SetForAnnotationResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -1557,6 +1571,8 @@ namespace Ssn.Documentdataservice.V1 {
       requestedFeatures_ = other.requestedFeatures_.Clone();
       updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
       tags_ = other.tags_.Clone();
+      forAnnotation_ = other.forAnnotation_;
+      deletionRequestedAt_ = other.deletionRequestedAt_ != null ? other.deletionRequestedAt_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1708,6 +1724,36 @@ namespace Ssn.Documentdataservice.V1 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "for_annotation" field.</summary>
+    public const int ForAnnotationFieldNumber = 11;
+    private bool forAnnotation_;
+    /// <summary>
+    /// Flagged for the annotation tool; a customer DeleteDocument is deferred.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ForAnnotation {
+      get { return forAnnotation_; }
+      set {
+        forAnnotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deletion_requested_at" field.</summary>
+    public const int DeletionRequestedAtFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deletionRequestedAt_;
+    /// <summary>
+    /// Set when a customer DeleteDocument was deferred because of the flag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeletionRequestedAt {
+      get { return deletionRequestedAt_; }
+      set {
+        deletionRequestedAt_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1733,6 +1779,8 @@ namespace Ssn.Documentdataservice.V1 {
       if(!requestedFeatures_.Equals(other.requestedFeatures_)) return false;
       if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if (ForAnnotation != other.ForAnnotation) return false;
+      if (!object.Equals(DeletionRequestedAt, other.DeletionRequestedAt)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1750,6 +1798,8 @@ namespace Ssn.Documentdataservice.V1 {
       hash ^= requestedFeatures_.GetHashCode();
       if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
       hash ^= tags_.GetHashCode();
+      if (ForAnnotation != false) hash ^= ForAnnotation.GetHashCode();
+      if (deletionRequestedAt_ != null) hash ^= DeletionRequestedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1795,6 +1845,14 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteMessage(UpdatedAt);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
+      if (ForAnnotation != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ForAnnotation);
+      }
+      if (deletionRequestedAt_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DeletionRequestedAt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1832,6 +1890,14 @@ namespace Ssn.Documentdataservice.V1 {
         output.WriteMessage(UpdatedAt);
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (ForAnnotation != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ForAnnotation);
+      }
+      if (deletionRequestedAt_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DeletionRequestedAt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1864,6 +1930,12 @@ namespace Ssn.Documentdataservice.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
+      if (ForAnnotation != false) {
+        size += 1 + 1;
+      }
+      if (deletionRequestedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeletionRequestedAt);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1906,6 +1978,15 @@ namespace Ssn.Documentdataservice.V1 {
         UpdatedAt.MergeFrom(other.UpdatedAt);
       }
       tags_.Add(other.tags_);
+      if (other.ForAnnotation != false) {
+        ForAnnotation = other.ForAnnotation;
+      }
+      if (other.deletionRequestedAt_ != null) {
+        if (deletionRequestedAt_ == null) {
+          DeletionRequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeletionRequestedAt.MergeFrom(other.DeletionRequestedAt);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1974,6 +2055,17 @@ namespace Ssn.Documentdataservice.V1 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
+          case 88: {
+            ForAnnotation = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (deletionRequestedAt_ == null) {
+              DeletionRequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeletionRequestedAt);
+            break;
+          }
         }
       }
     #endif
@@ -2040,6 +2132,17 @@ namespace Ssn.Documentdataservice.V1 {
           }
           case 82: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 88: {
+            ForAnnotation = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (deletionRequestedAt_ == null) {
+              DeletionRequestedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeletionRequestedAt);
             break;
           }
         }
@@ -4155,6 +4258,486 @@ namespace Ssn.Documentdataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteAnnotationsResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetForAnnotationRequest : pb::IMessage<SetForAnnotationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetForAnnotationRequest> _parser = new pb::MessageParser<SetForAnnotationRequest>(() => new SetForAnnotationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetForAnnotationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationRequest(SetForAnnotationRequest other) : this() {
+      feedbackId_ = other.feedbackId_;
+      consumer_ = other.consumer_;
+      environment_ = other.environment_;
+      forAnnotation_ = other.forAnnotation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationRequest Clone() {
+      return new SetForAnnotationRequest(this);
+    }
+
+    /// <summary>Field number for the "feedback_id" field.</summary>
+    public const int FeedbackIdFieldNumber = 1;
+    private string feedbackId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeedbackId {
+      get { return feedbackId_; }
+      set {
+        feedbackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "consumer" field.</summary>
+    public const int ConsumerFieldNumber = 2;
+    private string consumer_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Consumer {
+      get { return consumer_; }
+      set {
+        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "environment" field.</summary>
+    public const int EnvironmentFieldNumber = 3;
+    private string environment_ = "";
+    /// <summary>
+    /// Target environment: "snbx", "stag", "prod".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Environment {
+      get { return environment_; }
+      set {
+        environment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "for_annotation" field.</summary>
+    public const int ForAnnotationFieldNumber = 4;
+    private bool forAnnotation_;
+    /// <summary>
+    /// true flags the document, false clears the flag. Either value is accepted
+    /// on a document whose deletion is already deferred (deletion_requested_at
+    /// set): the deferred deadline is neither extended nor brought forward, and
+    /// deletion_requested_at is kept. Clearing the flag does not trigger an
+    /// earlier deletion; the document is removed by the deferred deadline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ForAnnotation {
+      get { return forAnnotation_; }
+      set {
+        forAnnotation_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetForAnnotationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetForAnnotationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FeedbackId != other.FeedbackId) return false;
+      if (Consumer != other.Consumer) return false;
+      if (Environment != other.Environment) return false;
+      if (ForAnnotation != other.ForAnnotation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
+      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
+      if (Environment.Length != 0) hash ^= Environment.GetHashCode();
+      if (ForAnnotation != false) hash ^= ForAnnotation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FeedbackId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeedbackId);
+      }
+      if (Consumer.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Consumer);
+      }
+      if (Environment.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Environment);
+      }
+      if (ForAnnotation != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ForAnnotation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FeedbackId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeedbackId);
+      }
+      if (Consumer.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Consumer);
+      }
+      if (Environment.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Environment);
+      }
+      if (ForAnnotation != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ForAnnotation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FeedbackId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
+      }
+      if (Consumer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
+      }
+      if (Environment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Environment);
+      }
+      if (ForAnnotation != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetForAnnotationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FeedbackId.Length != 0) {
+        FeedbackId = other.FeedbackId;
+      }
+      if (other.Consumer.Length != 0) {
+        Consumer = other.Consumer;
+      }
+      if (other.Environment.Length != 0) {
+        Environment = other.Environment;
+      }
+      if (other.ForAnnotation != false) {
+        ForAnnotation = other.ForAnnotation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            Environment = input.ReadString();
+            break;
+          }
+          case 32: {
+            ForAnnotation = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            Environment = input.ReadString();
+            break;
+          }
+          case 32: {
+            ForAnnotation = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetForAnnotationResponse : pb::IMessage<SetForAnnotationResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetForAnnotationResponse> _parser = new pb::MessageParser<SetForAnnotationResponse>(() => new SetForAnnotationResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetForAnnotationResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Documentdataservice.V1.DocumentdataserviceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationResponse(SetForAnnotationResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetForAnnotationResponse Clone() {
+      return new SetForAnnotationResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetForAnnotationResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetForAnnotationResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetForAnnotationResponse other) {
       if (other == null) {
         return;
       }

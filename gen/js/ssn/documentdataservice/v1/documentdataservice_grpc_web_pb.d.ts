@@ -43,6 +43,13 @@ export class DocumentDataServiceClient {
                response: ssn_documentdataservice_v1_documentdataservice_pb.DeleteAnnotationsResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.DeleteAnnotationsResponse>;
 
+  setForAnnotation(
+    request: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
+
 }
 
 export class DocumentDataServicePromiseClient {
@@ -74,6 +81,11 @@ export class DocumentDataServicePromiseClient {
     request: ssn_documentdataservice_v1_documentdataservice_pb.DeleteAnnotationsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.DeleteAnnotationsResponse>;
+
+  setForAnnotation(
+    request: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
 
 }
 

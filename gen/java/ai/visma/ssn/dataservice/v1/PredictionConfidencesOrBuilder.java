@@ -1040,4 +1040,48 @@ public interface PredictionConfidencesOrBuilder extends
    */
   com.google.protobuf.FloatValueOrBuilder getKsefOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Completable gate probability, from mlservice PredictResponse.completable.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getCompletableList();
+  /**
+   * <pre>
+   * Completable gate probability, from mlservice PredictResponse.completable.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
+   */
+  com.google.protobuf.FloatValue getCompletable(int index);
+  /**
+   * <pre>
+   * Completable gate probability, from mlservice PredictResponse.completable.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
+   */
+  int getCompletableCount();
+  /**
+   * <pre>
+   * Completable gate probability, from mlservice PredictResponse.completable.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getCompletableOrBuilderList();
+  /**
+   * <pre>
+   * Completable gate probability, from mlservice PredictResponse.completable.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.FloatValue completable = 44 [json_name = "completable"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getCompletableOrBuilder(
+      int index);
 }

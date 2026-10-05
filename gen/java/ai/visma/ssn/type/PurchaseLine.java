@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
     total_ = java.util.Collections.emptyList();
     unitPrice_ = java.util.Collections.emptyList();
     productType_ = java.util.Collections.emptyList();
+    kind_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -1089,6 +1090,72 @@ private static final long serialVersionUID = 0L;
     return productType_.get(index);
   }
 
+  public static final int KIND_FIELD_NUMBER = 19;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> kind_;
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getKindList() {
+    return kind_;
+  }
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getKindOrBuilderList() {
+    return kind_;
+  }
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  @java.lang.Override
+  public int getKindCount() {
+    return kind_.size();
+  }
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getKind(int index) {
+    return kind_.get(index);
+  }
+  /**
+   * <pre>
+   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getKindOrBuilder(
+      int index) {
+    return kind_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1156,6 +1223,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < productType_.size(); i++) {
       output.writeMessage(18, productType_.get(i));
+    }
+    for (int i = 0; i < kind_.size(); i++) {
+      output.writeMessage(19, kind_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1238,6 +1308,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, productType_.get(i));
     }
+    for (int i = 0; i < kind_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, kind_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1292,6 +1366,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getProductTypeList()
         .equals(other.getProductTypeList())) return false;
+    if (!getKindList()
+        .equals(other.getKindList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1372,6 +1448,10 @@ private static final long serialVersionUID = 0L;
     if (getProductTypeCount() > 0) {
       hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getProductTypeList().hashCode();
+    }
+    if (getKindCount() > 0) {
+      hash = (37 * hash) + KIND_FIELD_NUMBER;
+      hash = (53 * hash) + getKindList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1520,6 +1600,7 @@ private static final long serialVersionUID = 0L;
         getUnitPriceFieldBuilder();
         getModelMetadataFieldBuilder();
         getProductTypeFieldBuilder();
+        getKindFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1644,6 +1725,13 @@ private static final long serialVersionUID = 0L;
         productTypeBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00020000);
+      if (kindBuilder_ == null) {
+        kind_ = java.util.Collections.emptyList();
+      } else {
+        kind_ = null;
+        kindBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00040000);
       return this;
     }
 
@@ -1820,6 +1908,15 @@ private static final long serialVersionUID = 0L;
         result.productType_ = productType_;
       } else {
         result.productType_ = productTypeBuilder_.build();
+      }
+      if (kindBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0)) {
+          kind_ = java.util.Collections.unmodifiableList(kind_);
+          bitField0_ = (bitField0_ & ~0x00040000);
+        }
+        result.kind_ = kind_;
+      } else {
+        result.kind_ = kindBuilder_.build();
       }
     }
 
@@ -2272,6 +2369,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (kindBuilder_ == null) {
+        if (!other.kind_.isEmpty()) {
+          if (kind_.isEmpty()) {
+            kind_ = other.kind_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+          } else {
+            ensureKindIsMutable();
+            kind_.addAll(other.kind_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.kind_.isEmpty()) {
+          if (kindBuilder_.isEmpty()) {
+            kindBuilder_.dispose();
+            kindBuilder_ = null;
+            kind_ = other.kind_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+            kindBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getKindFieldBuilder() : null;
+          } else {
+            kindBuilder_.addAllMessages(other.kind_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2518,6 +2641,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 146
+            case 154: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (kindBuilder_ == null) {
+                ensureKindIsMutable();
+                kind_.add(m);
+              } else {
+                kindBuilder_.addMessage(m);
+              }
+              break;
+            } // case 154
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7729,6 +7865,336 @@ private static final long serialVersionUID = 0L;
         productType_ = null;
       }
       return productTypeBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> kind_ =
+      java.util.Collections.emptyList();
+    private void ensureKindIsMutable() {
+      if (!((bitField0_ & 0x00040000) != 0)) {
+        kind_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(kind_);
+        bitField0_ |= 0x00040000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> kindBuilder_;
+
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getKindList() {
+      if (kindBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(kind_);
+      } else {
+        return kindBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public int getKindCount() {
+      if (kindBuilder_ == null) {
+        return kind_.size();
+      } else {
+        return kindBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getKind(int index) {
+      if (kindBuilder_ == null) {
+        return kind_.get(index);
+      } else {
+        return kindBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder setKind(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (kindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKindIsMutable();
+        kind_.set(index, value);
+        onChanged();
+      } else {
+        kindBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder setKind(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (kindBuilder_ == null) {
+        ensureKindIsMutable();
+        kind_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        kindBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder addKind(ai.visma.ssn.type.Candidate value) {
+      if (kindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKindIsMutable();
+        kind_.add(value);
+        onChanged();
+      } else {
+        kindBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder addKind(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (kindBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureKindIsMutable();
+        kind_.add(index, value);
+        onChanged();
+      } else {
+        kindBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder addKind(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (kindBuilder_ == null) {
+        ensureKindIsMutable();
+        kind_.add(builderForValue.build());
+        onChanged();
+      } else {
+        kindBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder addKind(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (kindBuilder_ == null) {
+        ensureKindIsMutable();
+        kind_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        kindBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder addAllKind(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (kindBuilder_ == null) {
+        ensureKindIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, kind_);
+        onChanged();
+      } else {
+        kindBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder clearKind() {
+      if (kindBuilder_ == null) {
+        kind_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+      } else {
+        kindBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public Builder removeKind(int index) {
+      if (kindBuilder_ == null) {
+        ensureKindIsMutable();
+        kind_.remove(index);
+        onChanged();
+      } else {
+        kindBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getKindBuilder(
+        int index) {
+      return getKindFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getKindOrBuilder(
+        int index) {
+      if (kindBuilder_ == null) {
+        return kind_.get(index);  } else {
+        return kindBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getKindOrBuilderList() {
+      if (kindBuilder_ != null) {
+        return kindBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(kind_);
+      }
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addKindBuilder() {
+      return getKindFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addKindBuilder(
+        int index) {
+      return getKindFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
+     * "levy", "service_charge", "gratuity", "discount" or "deposit".
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getKindBuilderList() {
+      return getKindFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getKindFieldBuilder() {
+      if (kindBuilder_ == null) {
+        kindBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                kind_,
+                ((bitField0_ & 0x00040000) != 0),
+                getParentForChildren(),
+                isClean());
+        kind_ = null;
+      }
+      return kindBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.type.PurchaseLine)

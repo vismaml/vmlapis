@@ -393,5 +393,66 @@ proto.ssn.documentdataservice.v1.DocumentDataServicePromiseClient.prototype.dele
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.documentdataservice.v1.SetForAnnotationRequest,
+ *   !proto.ssn.documentdataservice.v1.SetForAnnotationResponse>}
+ */
+const methodDescriptor_DocumentDataService_SetForAnnotation = new grpc.web.MethodDescriptor(
+  '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.documentdataservice.v1.SetForAnnotationRequest,
+  proto.ssn.documentdataservice.v1.SetForAnnotationResponse,
+  /**
+   * @param {!proto.ssn.documentdataservice.v1.SetForAnnotationRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.documentdataservice.v1.SetForAnnotationResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.documentdataservice.v1.SetForAnnotationRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.documentdataservice.v1.SetForAnnotationResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.documentdataservice.v1.SetForAnnotationResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.documentdataservice.v1.DocumentDataServiceClient.prototype.setForAnnotation =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentDataService_SetForAnnotation,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.documentdataservice.v1.SetForAnnotationRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.documentdataservice.v1.SetForAnnotationResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.documentdataservice.v1.DocumentDataServicePromiseClient.prototype.setForAnnotation =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentDataService_SetForAnnotation);
+};
+
+
 module.exports = proto.ssn.documentdataservice.v1;
 

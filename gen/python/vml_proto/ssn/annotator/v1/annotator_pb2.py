@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 from vml_proto.ssn.type import address_pb2 as ssn_dot_type_dot_address__pb2
 from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
