@@ -27,7 +27,7 @@ from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#asgt/tabicl/v1/tabicl_service.proto\x12\x0e\x61sgt.tabicl.v1\x1a\x14\x61sgt/type/data.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17validate/validate.proto\"\x9c\x03\n\x13\x42\x61tchSuggestRequest\x12*\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0b\x64\x61tasetName\x12,\n\rconsumer_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0c\x63onsumerName\x12\x34\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataB\x0b\xfa\x42\x08\x92\x01\x05\x08\x01\x10\x80\x02R\x06inputs\x12,\n\rsuggest_limit\x18\x04 \x01(\x05\x42\x07\xfa\x42\x04\x1a\x02 \x00R\x0csuggestLimit\x12\x80\x01\n\x13target_class_counts\x18\x05 \x03(\x0b\x32:.asgt.tabicl.v1.BatchSuggestRequest.TargetClassCountsEntryB\x14\xfa\x42\x11\x9a\x01\x0e\x08\x01\"\x04r\x02\x10\x01*\x04\x1a\x02 \x00R\x11targetClassCounts\x1a\x44\n\x16TargetClassCountsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x05R\x05value:\x02\x38\x01\"O\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\"Y\n\rExampleLogits\x12&\n\nexample_id\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\texampleId\x12 \n\x06logits\x18\x02 \x03(\x02\x42\x08\xfa\x42\x05\x92\x01\x02\x08\x01R\x06logits\"\x95\x01\n\x1d\x42\x61tchSuggestWithLogitsRequest\x12\x46\n\x08\x65xamples\x18\x01 \x03(\x0b\x32\x1d.asgt.tabicl.v1.ExampleLogitsB\x0b\xfa\x42\x08\x92\x01\x05\x08\x01\x10\x80\x04R\x08\x65xamples\x12,\n\rsuggest_limit\x18\x02 \x01(\x05\x42\x07\xfa\x42\x04\x1a\x02 \x00R\x0csuggestLimit2\xdd\x01\n\rTabiclService\x12[\n\x0c\x42\x61tchSuggest\x12#.asgt.tabicl.v1.BatchSuggestRequest\x1a$.asgt.tabicl.v1.BatchSuggestResponse\"\x00\x12o\n\x16\x42\x61tchSuggestWithLogits\x12-.asgt.tabicl.v1.BatchSuggestWithLogitsRequest\x1a$.asgt.tabicl.v1.BatchSuggestResponse\"\x00\x42;Z9github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabiclb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#asgt/tabicl/v1/tabicl_service.proto\x12\x0e\x61sgt.tabicl.v1\x1a\x14\x61sgt/type/data.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x17validate/validate.proto\"\x99\x03\n\x13\x42\x61tchSuggestRequest\x12*\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0b\x64\x61tasetName\x12,\n\rconsumer_name\x18\x02 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\x0c\x63onsumerName\x12\x34\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataB\x0b\xfa\x42\x08\x92\x01\x05\x08\x01\x10\x80\x02R\x06inputs\x12,\n\rsuggest_limit\x18\x04 \x01(\x05\x42\x07\xfa\x42\x04\x1a\x02 \x00R\x0csuggestLimit\x12~\n\x13target_class_counts\x18\x05 \x03(\x0b\x32:.asgt.tabicl.v1.BatchSuggestRequest.TargetClassCountsEntryB\x12\xfa\x42\x0f\x9a\x01\x0c\"\x04r\x02\x10\x01*\x04\x1a\x02 \x00R\x11targetClassCounts\x1a\x44\n\x16TargetClassCountsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x05R\x05value:\x02\x38\x01\"O\n\x14\x42\x61tchSuggestResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\"Y\n\rExampleLogits\x12&\n\nexample_id\x18\x01 \x01(\tB\x07\xfa\x42\x04r\x02\x10\x01R\texampleId\x12 \n\x06logits\x18\x02 \x03(\x02\x42\x08\xfa\x42\x05\x92\x01\x02\x08\x01R\x06logits\"\x95\x01\n\x1d\x42\x61tchSuggestWithLogitsRequest\x12\x46\n\x08\x65xamples\x18\x01 \x03(\x0b\x32\x1d.asgt.tabicl.v1.ExampleLogitsB\x0b\xfa\x42\x08\x92\x01\x05\x08\x01\x10\x80\x04R\x08\x65xamples\x12,\n\rsuggest_limit\x18\x02 \x01(\x05\x42\x07\xfa\x42\x04\x1a\x02 \x00R\x0csuggestLimit2\xdd\x01\n\rTabiclService\x12[\n\x0c\x42\x61tchSuggest\x12#.asgt.tabicl.v1.BatchSuggestRequest\x1a$.asgt.tabicl.v1.BatchSuggestResponse\"\x00\x12o\n\x16\x42\x61tchSuggestWithLogits\x12-.asgt.tabicl.v1.BatchSuggestWithLogitsRequest\x1a$.asgt.tabicl.v1.BatchSuggestResponse\"\x00\x42;Z9github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabiclb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -46,7 +46,7 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_BATCHSUGGESTREQUEST'].fields_by_name['suggest_limit']._loaded_options = None
   _globals['_BATCHSUGGESTREQUEST'].fields_by_name['suggest_limit']._serialized_options = b'\372B\004\032\002 \000'
   _globals['_BATCHSUGGESTREQUEST'].fields_by_name['target_class_counts']._loaded_options = None
-  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['target_class_counts']._serialized_options = b'\372B\021\232\001\016\010\001\"\004r\002\020\001*\004\032\002 \000'
+  _globals['_BATCHSUGGESTREQUEST'].fields_by_name['target_class_counts']._serialized_options = b'\372B\017\232\001\014\"\004r\002\020\001*\004\032\002 \000'
   _globals['_EXAMPLELOGITS'].fields_by_name['example_id']._loaded_options = None
   _globals['_EXAMPLELOGITS'].fields_by_name['example_id']._serialized_options = b'\372B\004r\002\020\001'
   _globals['_EXAMPLELOGITS'].fields_by_name['logits']._loaded_options = None
@@ -56,15 +56,15 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_BATCHSUGGESTWITHLOGITSREQUEST'].fields_by_name['suggest_limit']._loaded_options = None
   _globals['_BATCHSUGGESTWITHLOGITSREQUEST'].fields_by_name['suggest_limit']._serialized_options = b'\372B\004\032\002 \000'
   _globals['_BATCHSUGGESTREQUEST']._serialized_start=131
-  _globals['_BATCHSUGGESTREQUEST']._serialized_end=543
-  _globals['_BATCHSUGGESTREQUEST_TARGETCLASSCOUNTSENTRY']._serialized_start=475
-  _globals['_BATCHSUGGESTREQUEST_TARGETCLASSCOUNTSENTRY']._serialized_end=543
-  _globals['_BATCHSUGGESTRESPONSE']._serialized_start=545
-  _globals['_BATCHSUGGESTRESPONSE']._serialized_end=624
-  _globals['_EXAMPLELOGITS']._serialized_start=626
-  _globals['_EXAMPLELOGITS']._serialized_end=715
-  _globals['_BATCHSUGGESTWITHLOGITSREQUEST']._serialized_start=718
-  _globals['_BATCHSUGGESTWITHLOGITSREQUEST']._serialized_end=867
-  _globals['_TABICLSERVICE']._serialized_start=870
-  _globals['_TABICLSERVICE']._serialized_end=1091
+  _globals['_BATCHSUGGESTREQUEST']._serialized_end=540
+  _globals['_BATCHSUGGESTREQUEST_TARGETCLASSCOUNTSENTRY']._serialized_start=472
+  _globals['_BATCHSUGGESTREQUEST_TARGETCLASSCOUNTSENTRY']._serialized_end=540
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_start=542
+  _globals['_BATCHSUGGESTRESPONSE']._serialized_end=621
+  _globals['_EXAMPLELOGITS']._serialized_start=623
+  _globals['_EXAMPLELOGITS']._serialized_end=712
+  _globals['_BATCHSUGGESTWITHLOGITSREQUEST']._serialized_start=715
+  _globals['_BATCHSUGGESTWITHLOGITSREQUEST']._serialized_end=864
+  _globals['_TABICLSERVICE']._serialized_start=867
+  _globals['_TABICLSERVICE']._serialized_end=1088
 # @@protoc_insertion_point(module_scope)

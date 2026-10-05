@@ -135,17 +135,6 @@ func (m *BatchSuggestRequest) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
-	if len(m.GetTargetClassCounts()) < 1 {
-		err := BatchSuggestRequestValidationError{
-			field:  "TargetClassCounts",
-			reason: "value must contain at least 1 pair(s)",
-		}
-		if !all {
-			return err
-		}
-		errors = append(errors, err)
-	}
-
 	{
 		sorted_keys := make([]string, len(m.GetTargetClassCounts()))
 		i := 0
