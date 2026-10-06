@@ -201,37 +201,6 @@ public final class DocumentDataServiceGrpc {
     return getSetForAnnotationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest,
-      ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> getListDocumentsForAnnotationMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListDocumentsForAnnotation",
-      requestType = ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest.class,
-      responseType = ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest,
-      ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> getListDocumentsForAnnotationMethod() {
-    io.grpc.MethodDescriptor<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest, ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> getListDocumentsForAnnotationMethod;
-    if ((getListDocumentsForAnnotationMethod = DocumentDataServiceGrpc.getListDocumentsForAnnotationMethod) == null) {
-      synchronized (DocumentDataServiceGrpc.class) {
-        if ((getListDocumentsForAnnotationMethod = DocumentDataServiceGrpc.getListDocumentsForAnnotationMethod) == null) {
-          DocumentDataServiceGrpc.getListDocumentsForAnnotationMethod = getListDocumentsForAnnotationMethod =
-              io.grpc.MethodDescriptor.<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest, ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDocumentsForAnnotation"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DocumentDataServiceMethodDescriptorSupplier("ListDocumentsForAnnotation"))
-              .build();
-        }
-      }
-    }
-    return getListDocumentsForAnnotationMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -368,18 +337,6 @@ public final class DocumentDataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetForAnnotationMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * ListDocumentsForAnnotation returns one page of the documents flagged for
-     * the annotation tool, newest first. Expired documents are left out. Only
-     * non-personal document and index columns are returned.
-     * </pre>
-     */
-    default void listDocumentsForAnnotation(ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest request,
-        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDocumentsForAnnotationMethod(), responseObserver);
-    }
   }
 
   /**
@@ -488,19 +445,6 @@ public final class DocumentDataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * ListDocumentsForAnnotation returns one page of the documents flagged for
-     * the annotation tool, newest first. Expired documents are left out. Only
-     * non-personal document and index columns are returned.
-     * </pre>
-     */
-    public void listDocumentsForAnnotation(ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest request,
-        io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListDocumentsForAnnotationMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -592,18 +536,6 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * ListDocumentsForAnnotation returns one page of the documents flagged for
-     * the annotation tool, newest first. Expired documents are left out. Only
-     * non-personal document and index columns are returned.
-     * </pre>
-     */
-    public ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse listDocumentsForAnnotation(ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListDocumentsForAnnotationMethod(), getCallOptions(), request);
-    }
   }
 
   /**
@@ -694,18 +626,6 @@ public final class DocumentDataServiceGrpc {
     public ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse setForAnnotation(ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetForAnnotationMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListDocumentsForAnnotation returns one page of the documents flagged for
-     * the annotation tool, newest first. Expired documents are left out. Only
-     * non-personal document and index columns are returned.
-     * </pre>
-     */
-    public ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse listDocumentsForAnnotation(ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListDocumentsForAnnotationMethod(), getCallOptions(), request);
     }
   }
 
@@ -804,19 +724,6 @@ public final class DocumentDataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetForAnnotationMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * ListDocumentsForAnnotation returns one page of the documents flagged for
-     * the annotation tool, newest first. Expired documents are left out. Only
-     * non-personal document and index columns are returned.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse> listDocumentsForAnnotation(
-        ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListDocumentsForAnnotationMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET_DOCUMENT_DATA = 0;
@@ -825,7 +732,6 @@ public final class DocumentDataServiceGrpc {
   private static final int METHODID_DELETE_DOCUMENT = 3;
   private static final int METHODID_DELETE_ANNOTATIONS = 4;
   private static final int METHODID_SET_FOR_ANNOTATION = 5;
-  private static final int METHODID_LIST_DOCUMENTS_FOR_ANNOTATION = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -867,10 +773,6 @@ public final class DocumentDataServiceGrpc {
         case METHODID_SET_FOR_ANNOTATION:
           serviceImpl.setForAnnotation((ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>) responseObserver);
-          break;
-        case METHODID_LIST_DOCUMENTS_FOR_ANNOTATION:
-          serviceImpl.listDocumentsForAnnotation((ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest) request,
-              (io.grpc.stub.StreamObserver<ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -932,13 +834,6 @@ public final class DocumentDataServiceGrpc {
               ai.visma.ssn.documentdataservice.v1.SetForAnnotationRequest,
               ai.visma.ssn.documentdataservice.v1.SetForAnnotationResponse>(
                 service, METHODID_SET_FOR_ANNOTATION)))
-        .addMethod(
-          getListDocumentsForAnnotationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationRequest,
-              ai.visma.ssn.documentdataservice.v1.ListDocumentsForAnnotationResponse>(
-                service, METHODID_LIST_DOCUMENTS_FOR_ANNOTATION)))
         .build();
   }
 
@@ -993,7 +888,6 @@ public final class DocumentDataServiceGrpc {
               .addMethod(getDeleteDocumentMethod())
               .addMethod(getDeleteAnnotationsMethod())
               .addMethod(getSetForAnnotationMethod())
-              .addMethod(getListDocumentsForAnnotationMethod())
               .build();
         }
       }

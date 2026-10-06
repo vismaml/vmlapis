@@ -50,13 +50,6 @@ export class DocumentDataServiceClient {
                response: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
 
-  listDocumentsForAnnotation(
-    request: ssn_documentdataservice_v1_documentdataservice_pb.ListDocumentsForAnnotationRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.RpcError,
-               response: ssn_documentdataservice_v1_documentdataservice_pb.ListDocumentsForAnnotationResponse) => void
-  ): grpcWeb.ClientReadableStream<ssn_documentdataservice_v1_documentdataservice_pb.ListDocumentsForAnnotationResponse>;
-
 }
 
 export class DocumentDataServicePromiseClient {
@@ -93,11 +86,6 @@ export class DocumentDataServicePromiseClient {
     request: ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.SetForAnnotationResponse>;
-
-  listDocumentsForAnnotation(
-    request: ssn_documentdataservice_v1_documentdataservice_pb.ListDocumentsForAnnotationRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<ssn_documentdataservice_v1_documentdataservice_pb.ListDocumentsForAnnotationResponse>;
 
 }
 
