@@ -283,8 +283,9 @@ message DocumentForAnnotation {
   google.protobuf.Timestamp deletion_requested_at = 5;
   repeated string tags = 6;
   repeated string requested_features = 7;
+  repeated string features_present = 8;
 
-  google.protobuf.Int64Value page_count = 8;
-  google.protobuf.Int64Value purchase_lines_count = 9;
-  google.protobuf.Int64Value vat_distribution_count = 10;
+  google.protobuf.Int64Value page_count = 9;
+  google.protobuf.Int64Value purchase_lines_count = 10;
+  google.protobuf.Int64Value vat_distribution_count = 11;
 }
