@@ -132,6 +132,13 @@ service DocumentDataService {
       body: "*"
     };
   }
+
+  // ListDocumentsForAnnotation returns one page of the documents flagged for
+  // the annotation tool, newest first. Expired documents are left out. Only
+  // non-personal document and index columns are returned.
+  rpc ListDocumentsForAnnotation(ListDocumentsForAnnotationRequest) returns (ListDocumentsForAnnotationResponse) {
+    option (google.api.http) = {get: "/v1/for-annotation/documents"};
+  }
 }
 
 // ---- Request / Response messages ----
@@ -255,3 +262,50 @@ message SetForAnnotationRequest {
 }
 
 message SetForAnnotationResponse {}
+
+message ListDocumentsForAnnotationRequest {
+  // Target environment: "snbx", "stag", "prod".
+  string environment = 1;
+  // Optional. Substring match on consumer or feedback_id, at most 100 characters.
+  string query = 2;
+  // Optional. Only documents carrying this tag, at most 100 characters.
+  string tag = 3;
+  // Optional. Inclusive lower bound on created_at.
+  google.protobuf.Timestamp created_from = 4;
+  // Optional. Exclusive upper bound on created_at.
+  google.protobuf.Timestamp created_to = 5;
+  // 0-based page number; page * page_size must not exceed 100000.
+  int32 page = 6;
+  // One of 10, 25, 50, 100. 0 means 25.
+  int32 page_size = 7;
+}
+
+message ListDocumentsForAnnotationResponse {
+  repeated DocumentForAnnotation documents = 1;
+  // Number of documents matching the filters, across all pages.
+  int64 total = 2;
+}
+
+// DocumentForAnnotation is one listed document: columns of the document row
+// plus its document_index_entry. The index fields are absent when the
+// document has no index entry yet.
+message DocumentForAnnotation {
+  string feedback_id = 1;
+  string consumer = 2;
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp expires_at = 4;
+  // Set when a customer DeleteDocument was deferred because of the flag.
+  google.protobuf.Timestamp deletion_requested_at = 5;
+  repeated string tags = 6;
+  repeated string requested_features = 7;
+
+  google.protobuf.Int64Value page_count = 8;
+  google.protobuf.Int64Value purchase_lines_count = 9;
+  google.protobuf.Int64Value vat_distribution_count = 10;
+  google.protobuf.StringValue document_type = 11;
+  repeated string features_present = 12;
+  repeated string predicted_features = 13;
+  repeated string label_present = 14;
+  repeated string feedback_present = 15;
+  repeated string malformed_fields = 16;
+}
