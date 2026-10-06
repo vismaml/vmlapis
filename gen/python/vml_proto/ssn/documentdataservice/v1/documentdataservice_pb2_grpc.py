@@ -46,6 +46,11 @@ class DocumentDataServiceStub(object):
                 request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
                 _registered_method=True)
+        self.ListDocumentsForAnnotation = channel.unary_unary(
+                '/ssn.documentdataservice.v1.DocumentDataService/ListDocumentsForAnnotation',
+                request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationRequest.SerializeToString,
+                response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationResponse.FromString,
+                _registered_method=True)
 
 
 class DocumentDataServiceServicer(object):
@@ -109,6 +114,13 @@ class DocumentDataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ListDocumentsForAnnotation(self, request, context):
+        """ListDocumentsForAnnotation lists documents flagged for the annotation tool.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DocumentDataServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -141,6 +153,11 @@ def add_DocumentDataServiceServicer_to_server(servicer, server):
                     servicer.SetForAnnotation,
                     request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.FromString,
                     response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.SerializeToString,
+            ),
+            'ListDocumentsForAnnotation': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListDocumentsForAnnotation,
+                    request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationRequest.FromString,
+                    response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -307,6 +324,33 @@ class DocumentDataService(object):
             '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ListDocumentsForAnnotation(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.documentdataservice.v1.DocumentDataService/ListDocumentsForAnnotation',
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationRequest.SerializeToString,
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.ListDocumentsForAnnotationResponse.FromString,
             options,
             channel_credentials,
             insecure,
