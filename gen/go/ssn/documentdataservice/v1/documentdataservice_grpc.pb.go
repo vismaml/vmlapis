@@ -19,12 +19,13 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	DocumentDataService_GetDocumentData_FullMethodName   = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
-	DocumentDataService_SetDocumentBlobs_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
-	DocumentDataService_AddAnnotations_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
-	DocumentDataService_DeleteDocument_FullMethodName    = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
-	DocumentDataService_DeleteAnnotations_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations"
-	DocumentDataService_SetForAnnotation_FullMethodName  = "/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation"
+	DocumentDataService_GetDocumentData_FullMethodName            = "/ssn.documentdataservice.v1.DocumentDataService/GetDocumentData"
+	DocumentDataService_SetDocumentBlobs_FullMethodName           = "/ssn.documentdataservice.v1.DocumentDataService/SetDocumentBlobs"
+	DocumentDataService_AddAnnotations_FullMethodName             = "/ssn.documentdataservice.v1.DocumentDataService/AddAnnotations"
+	DocumentDataService_DeleteDocument_FullMethodName             = "/ssn.documentdataservice.v1.DocumentDataService/DeleteDocument"
+	DocumentDataService_DeleteAnnotations_FullMethodName          = "/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations"
+	DocumentDataService_SetForAnnotation_FullMethodName           = "/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation"
+	DocumentDataService_ListDocumentsForAnnotation_FullMethodName = "/ssn.documentdataservice.v1.DocumentDataService/ListDocumentsForAnnotation"
 )
 
 // DocumentDataServiceClient is the client API for DocumentDataService service.
@@ -57,6 +58,10 @@ type DocumentDataServiceClient interface {
 	// deletion policy then removes it. The customer-facing behaviour of
 	// DeleteDocument is unchanged.
 	SetForAnnotation(ctx context.Context, in *SetForAnnotationRequest, opts ...grpc.CallOption) (*SetForAnnotationResponse, error)
+	// ListDocumentsForAnnotation returns one page of the documents flagged for
+	// the annotation tool, newest first. Expired documents are left out. Only
+	// non-personal document and index columns are returned.
+	ListDocumentsForAnnotation(ctx context.Context, in *ListDocumentsForAnnotationRequest, opts ...grpc.CallOption) (*ListDocumentsForAnnotationResponse, error)
 }
 
 type documentDataServiceClient struct {
@@ -121,6 +126,15 @@ func (c *documentDataServiceClient) SetForAnnotation(ctx context.Context, in *Se
 	return out, nil
 }
 
+func (c *documentDataServiceClient) ListDocumentsForAnnotation(ctx context.Context, in *ListDocumentsForAnnotationRequest, opts ...grpc.CallOption) (*ListDocumentsForAnnotationResponse, error) {
+	out := new(ListDocumentsForAnnotationResponse)
+	err := c.cc.Invoke(ctx, DocumentDataService_ListDocumentsForAnnotation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DocumentDataServiceServer is the server API for DocumentDataService service.
 // All implementations should embed UnimplementedDocumentDataServiceServer
 // for forward compatibility
@@ -151,6 +165,10 @@ type DocumentDataServiceServer interface {
 	// deletion policy then removes it. The customer-facing behaviour of
 	// DeleteDocument is unchanged.
 	SetForAnnotation(context.Context, *SetForAnnotationRequest) (*SetForAnnotationResponse, error)
+	// ListDocumentsForAnnotation returns one page of the documents flagged for
+	// the annotation tool, newest first. Expired documents are left out. Only
+	// non-personal document and index columns are returned.
+	ListDocumentsForAnnotation(context.Context, *ListDocumentsForAnnotationRequest) (*ListDocumentsForAnnotationResponse, error)
 }
 
 // UnimplementedDocumentDataServiceServer should be embedded to have forward compatible implementations.
@@ -174,6 +192,9 @@ func (UnimplementedDocumentDataServiceServer) DeleteAnnotations(context.Context,
 }
 func (UnimplementedDocumentDataServiceServer) SetForAnnotation(context.Context, *SetForAnnotationRequest) (*SetForAnnotationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetForAnnotation not implemented")
+}
+func (UnimplementedDocumentDataServiceServer) ListDocumentsForAnnotation(context.Context, *ListDocumentsForAnnotationRequest) (*ListDocumentsForAnnotationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListDocumentsForAnnotation not implemented")
 }
 
 // UnsafeDocumentDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -295,6 +316,24 @@ func _DocumentDataService_SetForAnnotation_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DocumentDataService_ListDocumentsForAnnotation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListDocumentsForAnnotationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DocumentDataServiceServer).ListDocumentsForAnnotation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DocumentDataService_ListDocumentsForAnnotation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentDataServiceServer).ListDocumentsForAnnotation(ctx, req.(*ListDocumentsForAnnotationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DocumentDataService_ServiceDesc is the grpc.ServiceDesc for DocumentDataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -325,6 +364,10 @@ var DocumentDataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SetForAnnotation",
 			Handler:    _DocumentDataService_SetForAnnotation_Handler,
+		},
+		{
+			MethodName: "ListDocumentsForAnnotation",
+			Handler:    _DocumentDataService_ListDocumentsForAnnotation_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
