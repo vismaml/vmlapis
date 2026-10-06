@@ -280,12 +280,8 @@ message DocumentForAnnotation {
   string consumer = 2;
   google.protobuf.Timestamp created_at = 3;
   google.protobuf.Timestamp expires_at = 4;
-  google.protobuf.Timestamp deletion_requested_at = 5;
-  repeated string tags = 6;
-  repeated string requested_features = 7;
-  repeated string features_present = 8;
-
-  google.protobuf.Int64Value page_count = 9;
-  google.protobuf.Int64Value purchase_lines_count = 10;
-  google.protobuf.Int64Value vat_distribution_count = 11;
+  repeated string tags = 5;
+  repeated string features_present = 6;
+  google.protobuf.Int64Value purchase_lines_count = 7;
+  google.protobuf.Int64Value vat_distribution_count = 8;
 }
