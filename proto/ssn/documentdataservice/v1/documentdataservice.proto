@@ -262,7 +262,7 @@ message SetForAnnotationRequest {
 message SetForAnnotationResponse {}
 
 message ListDocumentsForAnnotationRequest {
-  string query = 1;
+  string search_text = 1;
   string tag = 2;
   google.protobuf.Timestamp created_from = 3;
   google.protobuf.Timestamp created_to = 4;
