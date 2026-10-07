@@ -132,6 +132,11 @@ service DocumentDataService {
       body: "*"
     };
   }
+
+  // ListDocumentsForAnnotation lists documents flagged for the annotation tool.
+  rpc ListDocumentsForAnnotation(ListDocumentsForAnnotationRequest) returns (ListDocumentsForAnnotationResponse) {
+    option (google.api.http) = {get: "/v1/for-annotation/documents"};
+  }
 }
 
 // ---- Request / Response messages ----
@@ -255,3 +260,28 @@ message SetForAnnotationRequest {
 }
 
 message SetForAnnotationResponse {}
+
+message ListDocumentsForAnnotationRequest {
+  string search_text = 1;
+  string tag = 2;
+  google.protobuf.Timestamp created_from = 3;
+  google.protobuf.Timestamp created_to = 4;
+  int32 page = 5;
+  int32 page_size = 6;
+}
+
+message ListDocumentsForAnnotationResponse {
+  repeated DocumentForAnnotation documents = 1;
+  int64 total = 2;
+}
+
+message DocumentForAnnotation {
+  string feedback_id = 1;
+  string consumer = 2;
+  google.protobuf.Timestamp created_at = 3;
+  google.protobuf.Timestamp expires_at = 4;
+  repeated string tags = 5;
+  repeated string features_present = 6;
+  google.protobuf.Int64Value purchase_lines_count = 7;
+  google.protobuf.Int64Value vat_distribution_count = 8;
+}

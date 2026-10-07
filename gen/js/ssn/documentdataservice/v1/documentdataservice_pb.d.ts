@@ -503,6 +503,130 @@ export namespace SetForAnnotationResponse {
   }
 }
 
+export class ListDocumentsForAnnotationRequest extends jspb.Message {
+  getSearchText(): string;
+  setSearchText(value: string): ListDocumentsForAnnotationRequest;
+
+  getTag(): string;
+  setTag(value: string): ListDocumentsForAnnotationRequest;
+
+  getCreatedFrom(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedFrom(value?: google_protobuf_timestamp_pb.Timestamp): ListDocumentsForAnnotationRequest;
+  hasCreatedFrom(): boolean;
+  clearCreatedFrom(): ListDocumentsForAnnotationRequest;
+
+  getCreatedTo(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedTo(value?: google_protobuf_timestamp_pb.Timestamp): ListDocumentsForAnnotationRequest;
+  hasCreatedTo(): boolean;
+  clearCreatedTo(): ListDocumentsForAnnotationRequest;
+
+  getPage(): number;
+  setPage(value: number): ListDocumentsForAnnotationRequest;
+
+  getPageSize(): number;
+  setPageSize(value: number): ListDocumentsForAnnotationRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListDocumentsForAnnotationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: ListDocumentsForAnnotationRequest): ListDocumentsForAnnotationRequest.AsObject;
+  static serializeBinaryToWriter(message: ListDocumentsForAnnotationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListDocumentsForAnnotationRequest;
+  static deserializeBinaryFromReader(message: ListDocumentsForAnnotationRequest, reader: jspb.BinaryReader): ListDocumentsForAnnotationRequest;
+}
+
+export namespace ListDocumentsForAnnotationRequest {
+  export type AsObject = {
+    searchText: string,
+    tag: string,
+    createdFrom?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    createdTo?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    page: number,
+    pageSize: number,
+  }
+}
+
+export class ListDocumentsForAnnotationResponse extends jspb.Message {
+  getDocumentsList(): Array<DocumentForAnnotation>;
+  setDocumentsList(value: Array<DocumentForAnnotation>): ListDocumentsForAnnotationResponse;
+  clearDocumentsList(): ListDocumentsForAnnotationResponse;
+  addDocuments(value?: DocumentForAnnotation, index?: number): DocumentForAnnotation;
+
+  getTotal(): number;
+  setTotal(value: number): ListDocumentsForAnnotationResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ListDocumentsForAnnotationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ListDocumentsForAnnotationResponse): ListDocumentsForAnnotationResponse.AsObject;
+  static serializeBinaryToWriter(message: ListDocumentsForAnnotationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ListDocumentsForAnnotationResponse;
+  static deserializeBinaryFromReader(message: ListDocumentsForAnnotationResponse, reader: jspb.BinaryReader): ListDocumentsForAnnotationResponse;
+}
+
+export namespace ListDocumentsForAnnotationResponse {
+  export type AsObject = {
+    documentsList: Array<DocumentForAnnotation.AsObject>,
+    total: number,
+  }
+}
+
+export class DocumentForAnnotation extends jspb.Message {
+  getFeedbackId(): string;
+  setFeedbackId(value: string): DocumentForAnnotation;
+
+  getConsumer(): string;
+  setConsumer(value: string): DocumentForAnnotation;
+
+  getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): DocumentForAnnotation;
+  hasCreatedAt(): boolean;
+  clearCreatedAt(): DocumentForAnnotation;
+
+  getExpiresAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setExpiresAt(value?: google_protobuf_timestamp_pb.Timestamp): DocumentForAnnotation;
+  hasExpiresAt(): boolean;
+  clearExpiresAt(): DocumentForAnnotation;
+
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): DocumentForAnnotation;
+  clearTagsList(): DocumentForAnnotation;
+  addTags(value: string, index?: number): DocumentForAnnotation;
+
+  getFeaturesPresentList(): Array<string>;
+  setFeaturesPresentList(value: Array<string>): DocumentForAnnotation;
+  clearFeaturesPresentList(): DocumentForAnnotation;
+  addFeaturesPresent(value: string, index?: number): DocumentForAnnotation;
+
+  getPurchaseLinesCount(): google_protobuf_wrappers_pb.Int64Value | undefined;
+  setPurchaseLinesCount(value?: google_protobuf_wrappers_pb.Int64Value): DocumentForAnnotation;
+  hasPurchaseLinesCount(): boolean;
+  clearPurchaseLinesCount(): DocumentForAnnotation;
+
+  getVatDistributionCount(): google_protobuf_wrappers_pb.Int64Value | undefined;
+  setVatDistributionCount(value?: google_protobuf_wrappers_pb.Int64Value): DocumentForAnnotation;
+  hasVatDistributionCount(): boolean;
+  clearVatDistributionCount(): DocumentForAnnotation;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentForAnnotation.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentForAnnotation): DocumentForAnnotation.AsObject;
+  static serializeBinaryToWriter(message: DocumentForAnnotation, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentForAnnotation;
+  static deserializeBinaryFromReader(message: DocumentForAnnotation, reader: jspb.BinaryReader): DocumentForAnnotation;
+}
+
+export namespace DocumentForAnnotation {
+  export type AsObject = {
+    feedbackId: string,
+    consumer: string,
+    createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    expiresAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    tagsList: Array<string>,
+    featuresPresentList: Array<string>,
+    purchaseLinesCount?: google_protobuf_wrappers_pb.Int64Value.AsObject,
+    vatDistributionCount?: google_protobuf_wrappers_pb.Int64Value.AsObject,
+  }
+}
+
 export enum CandidateSource { 
   CANDIDATE_SOURCE_UNSPECIFIED = 0,
   CANDIDATE_SOURCE_PREDICTION = 1,
