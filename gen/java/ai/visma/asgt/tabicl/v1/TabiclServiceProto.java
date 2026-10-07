@@ -31,6 +31,11 @@ public final class TabiclServiceProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_asgt_tabicl_v1_BatchSuggestRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -57,31 +62,36 @@ public final class TabiclServiceProto {
       "\n#asgt/tabicl/v1/tabicl_service.proto\022\016a" +
       "sgt.tabicl.v1\032\024asgt/type/data.proto\032\032asg" +
       "t/type/prediction.proto\032\027validate/valida" +
-      "te.proto\"\323\001\n\023BatchSuggestRequest\022*\n\014data" +
+      "te.proto\"\231\003\n\023BatchSuggestRequest\022*\n\014data" +
       "set_name\030\001 \001(\tB\007\372B\004r\002\020\001R\013datasetName\022,\n\r" +
       "consumer_name\030\002 \001(\tB\007\372B\004r\002\020\001R\014consumerNa" +
       "me\0224\n\006inputs\030\003 \003(\0132\017.asgt.type.DataB\013\372B\010" +
       "\222\001\005\010\001\020\200\002R\006inputs\022,\n\rsuggest_limit\030\004 \001(\005B" +
-      "\007\372B\004\032\002 \000R\014suggestLimit\"O\n\024BatchSuggestRe" +
-      "sponse\0227\n\013predictions\030\001 \003(\0132\025.asgt.type." +
-      "PredictionR\013predictions\"Y\n\rExampleLogits" +
-      "\022&\n\nexample_id\030\001 \001(\tB\007\372B\004r\002\020\001R\texampleId" +
-      "\022 \n\006logits\030\002 \003(\002B\010\372B\005\222\001\002\010\001R\006logits\"\225\001\n\035B" +
-      "atchSuggestWithLogitsRequest\022F\n\010examples" +
-      "\030\001 \003(\0132\035.asgt.tabicl.v1.ExampleLogitsB\013\372" +
-      "B\010\222\001\005\010\001\020\200\004R\010examples\022,\n\rsuggest_limit\030\002 " +
-      "\001(\005B\007\372B\004\032\002 \000R\014suggestLimit2\335\001\n\rTabiclSer" +
-      "vice\022[\n\014BatchSuggest\022#.asgt.tabicl.v1.Ba" +
-      "tchSuggestRequest\032$.asgt.tabicl.v1.Batch" +
-      "SuggestResponse\"\000\022o\n\026BatchSuggestWithLog" +
-      "its\022-.asgt.tabicl.v1.BatchSuggestWithLog" +
-      "itsRequest\032$.asgt.tabicl.v1.BatchSuggest" +
-      "Response\"\000B\302\001\n\027ai.visma.asgt.tabicl.v1B\022" +
-      "TabiclServiceProtoP\001Z9github.com/e-conom" +
-      "ic/vmlapis/gen/go/asgt/tabicl/v1;tabicl\242" +
-      "\002\003ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\V1\342" +
-      "\002\032Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::Tab" +
-      "icl::V1b\006proto3"
+      "\007\372B\004\032\002 \000R\014suggestLimit\022~\n\023target_class_c" +
+      "ounts\030\005 \003(\0132:.asgt.tabicl.v1.BatchSugges" +
+      "tRequest.TargetClassCountsEntryB\022\372B\017\232\001\014\"" +
+      "\004r\002\020\001*\004\032\002 \000R\021targetClassCounts\032D\n\026Target" +
+      "ClassCountsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
+      "lue\030\002 \001(\005R\005value:\0028\001\"O\n\024BatchSuggestResp" +
+      "onse\0227\n\013predictions\030\001 \003(\0132\025.asgt.type.Pr" +
+      "edictionR\013predictions\"Y\n\rExampleLogits\022&" +
+      "\n\nexample_id\030\001 \001(\tB\007\372B\004r\002\020\001R\texampleId\022 " +
+      "\n\006logits\030\002 \003(\002B\010\372B\005\222\001\002\010\001R\006logits\"\225\001\n\035Bat" +
+      "chSuggestWithLogitsRequest\022F\n\010examples\030\001" +
+      " \003(\0132\035.asgt.tabicl.v1.ExampleLogitsB\013\372B\010" +
+      "\222\001\005\010\001\020\200\004R\010examples\022,\n\rsuggest_limit\030\002 \001(" +
+      "\005B\007\372B\004\032\002 \000R\014suggestLimit2\335\001\n\rTabiclServi" +
+      "ce\022[\n\014BatchSuggest\022#.asgt.tabicl.v1.Batc" +
+      "hSuggestRequest\032$.asgt.tabicl.v1.BatchSu" +
+      "ggestResponse\"\000\022o\n\026BatchSuggestWithLogit" +
+      "s\022-.asgt.tabicl.v1.BatchSuggestWithLogit" +
+      "sRequest\032$.asgt.tabicl.v1.BatchSuggestRe" +
+      "sponse\"\000B\302\001\n\027ai.visma.asgt.tabicl.v1B\022Ta" +
+      "biclServiceProtoP\001Z9github.com/e-conomic" +
+      "/vmlapis/gen/go/asgt/tabicl/v1;tabicl\242\002\003" +
+      "ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\V1\342\002\032" +
+      "Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::Tabic" +
+      "l::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,7 +105,13 @@ public final class TabiclServiceProto {
     internal_static_asgt_tabicl_v1_BatchSuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "ConsumerName", "Inputs", "SuggestLimit", });
+        new java.lang.String[] { "DatasetName", "ConsumerName", "Inputs", "SuggestLimit", "TargetClassCounts", });
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_descriptor =
+      internal_static_asgt_tabicl_v1_BatchSuggestRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_tabicl_v1_BatchSuggestRequest_TargetClassCountsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable = new

@@ -146,4 +146,36 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue);
    */
   ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getTargetToClassCountCount();
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  boolean containsTargetToClassCount(
+      java.lang.String key);
+  /**
+   * Use {@link #getTargetToClassCountMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Integer>
+  getTargetToClassCount();
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Integer>
+  getTargetToClassCountMap();
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getTargetToClassCountOrDefault(
+      java.lang.String key,
+      int defaultValue);
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getTargetToClassCountOrThrow(
+      java.lang.String key);
 }

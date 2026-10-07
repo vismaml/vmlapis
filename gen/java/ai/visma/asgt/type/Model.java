@@ -45,6 +45,8 @@ private static final long serialVersionUID = 0L;
     switch (number) {
       case 12:
         return internalGetTargetToConfidenceThresholds();
+      case 13:
+        return internalGetTargetToClassCount();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -453,6 +455,83 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return map.get(key);
   }
 
+  public static final int TARGET_TO_CLASS_COUNT_FIELD_NUMBER = 13;
+  private static final class TargetToClassCountDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Integer> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                ai.visma.asgt.type.ModelProto.internal_static_asgt_type_Model_TargetToClassCountEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.INT32,
+                0);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Integer> targetToClassCount_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+  internalGetTargetToClassCount() {
+    if (targetToClassCount_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          TargetToClassCountDefaultEntryHolder.defaultEntry);
+    }
+    return targetToClassCount_;
+  }
+  public int getTargetToClassCountCount() {
+    return internalGetTargetToClassCount().getMap().size();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public boolean containsTargetToClassCount(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetTargetToClassCount().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getTargetToClassCountMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Integer> getTargetToClassCount() {
+    return getTargetToClassCountMap();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Integer> getTargetToClassCountMap() {
+    return internalGetTargetToClassCount().getMap();
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getTargetToClassCountOrDefault(
+      java.lang.String key,
+      int defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Integer> map =
+        internalGetTargetToClassCount().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getTargetToClassCountOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Integer> map =
+        internalGetTargetToClassCount().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -497,6 +576,12 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         internalGetTargetToConfidenceThresholds(),
         TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry,
         12);
+    com.google.protobuf.GeneratedMessage
+      .serializeStringMapTo(
+        output,
+        internalGetTargetToClassCount(),
+        TargetToClassCountDefaultEntryHolder.defaultEntry,
+        13);
     getUnknownFields().writeTo(output);
   }
 
@@ -547,6 +632,16 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, targetToConfidenceThresholds__);
     }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+         : internalGetTargetToClassCount().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+      targetToClassCount__ = TargetToClassCountDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, targetToClassCount__);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -582,6 +677,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         .equals(other.getModelFilesList())) return false;
     if (!internalGetTargetToConfidenceThresholds().equals(
         other.internalGetTargetToConfidenceThresholds())) return false;
+    if (!internalGetTargetToClassCount().equals(
+        other.internalGetTargetToClassCount())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -619,6 +716,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     if (!internalGetTargetToConfidenceThresholds().getMap().isEmpty()) {
       hash = (37 * hash) + TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetTargetToConfidenceThresholds().hashCode();
+    }
+    if (!internalGetTargetToClassCount().getMap().isEmpty()) {
+      hash = (37 * hash) + TARGET_TO_CLASS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetTargetToClassCount().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -735,6 +836,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       switch (number) {
         case 12:
           return internalGetTargetToConfidenceThresholds();
+        case 13:
+          return internalGetTargetToClassCount();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -746,6 +849,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       switch (number) {
         case 12:
           return internalGetMutableTargetToConfidenceThresholds();
+        case 13:
+          return internalGetMutableTargetToClassCount();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -806,6 +911,7 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
       bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableTargetToConfidenceThresholds().clear();
+      internalGetMutableTargetToClassCount().clear();
       return this;
     }
 
@@ -885,6 +991,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.targetToConfidenceThresholds_ = internalGetTargetToConfidenceThresholds().build(TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.targetToClassCount_ = internalGetTargetToClassCount();
+        result.targetToClassCount_.makeImmutable();
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -976,6 +1086,9 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       internalGetMutableTargetToConfidenceThresholds().mergeFrom(
           other.internalGetTargetToConfidenceThresholds());
       bitField0_ |= 0x00000100;
+      internalGetMutableTargetToClassCount().mergeFrom(
+          other.internalGetTargetToClassCount());
+      bitField0_ |= 0x00000200;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1069,6 +1182,15 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
               bitField0_ |= 0x00000100;
               break;
             } // case 98
+            case 106: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+              targetToClassCount__ = input.readMessage(
+                  TargetToClassCountDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableTargetToClassCount().getMutableMap().put(
+                  targetToClassCount__.getKey(), targetToClassCount__.getValue());
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2061,6 +2183,131 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         builderMap.put(key, entry);
       }
       return (ai.visma.asgt.type.ConfidenceThresholds.Builder) entry;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> targetToClassCount_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+        internalGetTargetToClassCount() {
+      if (targetToClassCount_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TargetToClassCountDefaultEntryHolder.defaultEntry);
+      }
+      return targetToClassCount_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+        internalGetMutableTargetToClassCount() {
+      if (targetToClassCount_ == null) {
+        targetToClassCount_ = com.google.protobuf.MapField.newMapField(
+            TargetToClassCountDefaultEntryHolder.defaultEntry);
+      }
+      if (!targetToClassCount_.isMutable()) {
+        targetToClassCount_ = targetToClassCount_.copy();
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return targetToClassCount_;
+    }
+    public int getTargetToClassCountCount() {
+      return internalGetTargetToClassCount().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public boolean containsTargetToClassCount(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTargetToClassCount().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTargetToClassCountMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getTargetToClassCount() {
+      return getTargetToClassCountMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Integer> getTargetToClassCountMap() {
+      return internalGetTargetToClassCount().getMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getTargetToClassCountOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTargetToClassCount().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getTargetToClassCountOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTargetToClassCount().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearTargetToClassCount() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      internalGetMutableTargetToClassCount().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder removeTargetToClassCount(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableTargetToClassCount().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer>
+        getMutableTargetToClassCount() {
+      bitField0_ |= 0x00000200;
+      return internalGetMutableTargetToClassCount().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder putTargetToClassCount(
+        java.lang.String key,
+        int value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableTargetToClassCount().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000200;
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder putAllTargetToClassCount(
+        java.util.Map<java.lang.String, java.lang.Integer> values) {
+      internalGetMutableTargetToClassCount().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000200;
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:asgt.type.Model)

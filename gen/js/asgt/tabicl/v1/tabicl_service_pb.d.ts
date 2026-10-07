@@ -20,6 +20,9 @@ export class BatchSuggestRequest extends jspb.Message {
   getSuggestLimit(): number;
   setSuggestLimit(value: number): BatchSuggestRequest;
 
+  getTargetClassCountsMap(): jspb.Map<string, number>;
+  clearTargetClassCountsMap(): BatchSuggestRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BatchSuggestRequest.AsObject;
   static toObject(includeInstance: boolean, msg: BatchSuggestRequest): BatchSuggestRequest.AsObject;
@@ -34,6 +37,7 @@ export namespace BatchSuggestRequest {
     consumerName: string,
     inputsList: Array<asgt_type_data_pb.Data.AsObject>,
     suggestLimit: number,
+    targetClassCountsMap: Array<[string, number]>,
   }
 }
 
