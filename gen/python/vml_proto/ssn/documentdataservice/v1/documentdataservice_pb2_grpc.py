@@ -41,6 +41,11 @@ class DocumentDataServiceStub(object):
                 request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.SerializeToString,
                 response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.FromString,
                 _registered_method=True)
+        self.SetForAnnotation = channel.unary_unary(
+                '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
+                request_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
+                response_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
+                _registered_method=True)
 
 
 class DocumentDataServiceServicer(object):
@@ -92,6 +97,18 @@ class DocumentDataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def SetForAnnotation(self, request, context):
+        """SetForAnnotation flags or unflags a document for the annotation tool.
+        While flagged, a customer DeleteDocument does not remove the document
+        immediately: DDS defers the deletion for up to 90 days after the request
+        (sooner if the document's own expires_at comes first) and the row
+        deletion policy then removes it. The customer-facing behaviour of
+        DeleteDocument is unchanged.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DocumentDataServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -119,6 +136,11 @@ def add_DocumentDataServiceServicer_to_server(servicer, server):
                     servicer.DeleteAnnotations,
                     request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.FromString,
                     response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.SerializeToString,
+            ),
+            'SetForAnnotation': grpc.unary_unary_rpc_method_handler(
+                    servicer.SetForAnnotation,
+                    request_deserializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.FromString,
+                    response_serializer=ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -258,6 +280,33 @@ class DocumentDataService(object):
             '/ssn.documentdataservice.v1.DocumentDataService/DeleteAnnotations',
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsRequest.SerializeToString,
             ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.DeleteAnnotationsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def SetForAnnotation(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.documentdataservice.v1.DocumentDataService/SetForAnnotation',
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationRequest.SerializeToString,
+            ssn_dot_documentdataservice_dot_v1_dot_documentdataservice__pb2.SetForAnnotationResponse.FromString,
             options,
             channel_credentials,
             insecure,

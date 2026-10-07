@@ -865,6 +865,13 @@
           "additionalProperties": {
             "$ref": "#/definitions/typeConfidenceThresholds"
           }
+        },
+        "targetToClassCount": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
         }
       }
     },

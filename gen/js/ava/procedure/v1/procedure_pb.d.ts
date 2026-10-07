@@ -88,6 +88,9 @@ export class FactSource extends jspb.Message {
   getQuestion(): string;
   setQuestion(value: string): FactSource;
 
+  getGuidance(): string;
+  setGuidance(value: string): FactSource;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FactSource.AsObject;
   static toObject(includeInstance: boolean, msg: FactSource): FactSource.AsObject;
@@ -103,6 +106,7 @@ export namespace FactSource {
     field: string,
     argsList: Array<string>,
     question: string,
+    guidance: string,
   }
 }
 

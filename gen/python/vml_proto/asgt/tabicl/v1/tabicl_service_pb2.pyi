@@ -9,16 +9,25 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class BatchSuggestRequest(_message.Message):
-    __slots__ = ("dataset_name", "consumer_name", "inputs", "suggest_limit")
+    __slots__ = ("dataset_name", "consumer_name", "inputs", "suggest_limit", "target_class_counts")
+    class TargetClassCountsEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: int
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[int] = ...) -> None: ...
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_NAME_FIELD_NUMBER: _ClassVar[int]
     INPUTS_FIELD_NUMBER: _ClassVar[int]
     SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
+    TARGET_CLASS_COUNTS_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     consumer_name: str
     inputs: _containers.RepeatedCompositeFieldContainer[_data_pb2.Data]
     suggest_limit: int
-    def __init__(self, dataset_name: _Optional[str] = ..., consumer_name: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., suggest_limit: _Optional[int] = ...) -> None: ...
+    target_class_counts: _containers.ScalarMap[str, int]
+    def __init__(self, dataset_name: _Optional[str] = ..., consumer_name: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., suggest_limit: _Optional[int] = ..., target_class_counts: _Optional[_Mapping[str, int]] = ...) -> None: ...
 
 class BatchSuggestResponse(_message.Message):
     __slots__ = ("predictions",)

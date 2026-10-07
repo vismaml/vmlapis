@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ava/procedure/v1/procedure.proto\x12\x10\x61va.procedure.v1\"\xa5\x01\n\tProcedure\x12,\n\x05\x66\x61\x63ts\x18\x01 \x03(\x0b\x32\x16.ava.procedure.v1.FactR\x05\x66\x61\x63ts\x12\x1a\n\x08produces\x18\x02 \x01(\tR\x08produces\x12 \n\x0croot_step_id\x18\x03 \x01(\tR\nrootStepId\x12,\n\x05steps\x18\x04 \x03(\x0b\x32\x16.ava.procedure.v1.StepR\x05steps\"\xa0\x01\n\x04\x46\x61\x63t\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12.\n\x04type\x18\x02 \x01(\x0e\x32\x1a.ava.procedure.v1.FactTypeR\x04type\x12\x1c\n\tpermitted\x18\x03 \x03(\tR\tpermitted\x12\x36\n\x07sources\x18\x04 \x03(\x0b\x32\x1c.ava.procedure.v1.FactSourceR\x07sources\"\x98\x01\n\nFactSource\x12\x30\n\x04kind\x18\x01 \x01(\x0e\x32\x1c.ava.procedure.v1.SourceKindR\x04kind\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n\x05\x66ield\x18\x03 \x01(\tR\x05\x66ield\x12\x12\n\x04\x61rgs\x18\x04 \x03(\tR\x04\x61rgs\x12\x1a\n\x08question\x18\x05 \x01(\tR\x08question\"\x8d\x01\n\x04Step\x12\x17\n\x07step_id\x18\x01 \x01(\tR\x06stepId\x12\x1a\n\x08question\x18\x02 \x01(\tR\x08question\x12\x1a\n\x08guidance\x18\x03 \x01(\tR\x08guidance\x12\x34\n\x08\x62ranches\x18\x04 \x03(\x0b\x32\x18.ava.procedure.v1.BranchR\x08\x62ranches\"\xf5\x01\n\x06\x42ranch\x12\x1b\n\tbranch_id\x18\x01 \x01(\tR\x08\x62ranchId\x12\x14\n\x05label\x18\x02 \x01(\tR\x05label\x12\x1c\n\tcriterion\x18\x03 \x01(\tR\tcriterion\x12\x12\n\x04when\x18\x04 \x01(\tR\x04when\x12!\n\x0coutput_value\x18\x05 \x01(\tR\x0boutputValue\x12 \n\x0cnext_step_id\x18\x06 \x01(\tR\nnextStepId\x12#\n\ris_escalation\x18\x07 \x01(\x08R\x0cisEscalation\x12\x1c\n\trationale\x18\x08 \x01(\tR\trationale*r\n\nSourceKind\x12\x1b\n\x17SOURCE_KIND_UNSPECIFIED\x10\x00\x12\x14\n\x10SOURCE_KIND_CASE\x10\x01\x12\x17\n\x13SOURCE_KIND_DERIVED\x10\x02\x12\x18\n\x14SOURCE_KIND_INFERRED\x10\x03*\x9f\x01\n\x08\x46\x61\x63tType\x12\x19\n\x15\x46\x41\x43T_TYPE_UNSPECIFIED\x10\x00\x12\x14\n\x10\x46\x41\x43T_TYPE_STRING\x10\x01\x12\x13\n\x0f\x46\x41\x43T_TYPE_FLOAT\x10\x02\x12\x12\n\x0e\x46\x41\x43T_TYPE_DATE\x10\x03\x12\x12\n\x0e\x46\x41\x43T_TYPE_BOOL\x10\x04\x12\x11\n\rFACT_TYPE_INT\x10\x05\x12\x12\n\x0e\x46\x41\x43T_TYPE_ENUM\x10\x06\x42\x36Z4github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n ava/procedure/v1/procedure.proto\x12\x10\x61va.procedure.v1\"\xa5\x01\n\tProcedure\x12,\n\x05\x66\x61\x63ts\x18\x01 \x03(\x0b\x32\x16.ava.procedure.v1.FactR\x05\x66\x61\x63ts\x12\x1a\n\x08produces\x18\x02 \x01(\tR\x08produces\x12 \n\x0croot_step_id\x18\x03 \x01(\tR\nrootStepId\x12,\n\x05steps\x18\x04 \x03(\x0b\x32\x16.ava.procedure.v1.StepR\x05steps\"\xa0\x01\n\x04\x46\x61\x63t\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12.\n\x04type\x18\x02 \x01(\x0e\x32\x1a.ava.procedure.v1.FactTypeR\x04type\x12\x1c\n\tpermitted\x18\x03 \x03(\tR\tpermitted\x12\x36\n\x07sources\x18\x04 \x03(\x0b\x32\x1c.ava.procedure.v1.FactSourceR\x07sources\"\xb4\x01\n\nFactSource\x12\x30\n\x04kind\x18\x01 \x01(\x0e\x32\x1c.ava.procedure.v1.SourceKindR\x04kind\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n\x05\x66ield\x18\x03 \x01(\tR\x05\x66ield\x12\x12\n\x04\x61rgs\x18\x04 \x03(\tR\x04\x61rgs\x12\x1a\n\x08question\x18\x05 \x01(\tR\x08question\x12\x1a\n\x08guidance\x18\x06 \x01(\tR\x08guidance\"\x8d\x01\n\x04Step\x12\x17\n\x07step_id\x18\x01 \x01(\tR\x06stepId\x12\x1a\n\x08question\x18\x02 \x01(\tR\x08question\x12\x1a\n\x08guidance\x18\x03 \x01(\tR\x08guidance\x12\x34\n\x08\x62ranches\x18\x04 \x03(\x0b\x32\x18.ava.procedure.v1.BranchR\x08\x62ranches\"\xf5\x01\n\x06\x42ranch\x12\x1b\n\tbranch_id\x18\x01 \x01(\tR\x08\x62ranchId\x12\x14\n\x05label\x18\x02 \x01(\tR\x05label\x12\x1c\n\tcriterion\x18\x03 \x01(\tR\tcriterion\x12\x12\n\x04when\x18\x04 \x01(\tR\x04when\x12!\n\x0coutput_value\x18\x05 \x01(\tR\x0boutputValue\x12 \n\x0cnext_step_id\x18\x06 \x01(\tR\nnextStepId\x12#\n\ris_escalation\x18\x07 \x01(\x08R\x0cisEscalation\x12\x1c\n\trationale\x18\x08 \x01(\tR\trationale*r\n\nSourceKind\x12\x1b\n\x17SOURCE_KIND_UNSPECIFIED\x10\x00\x12\x14\n\x10SOURCE_KIND_CASE\x10\x01\x12\x17\n\x13SOURCE_KIND_DERIVED\x10\x02\x12\x18\n\x14SOURCE_KIND_INFERRED\x10\x03*\x9f\x01\n\x08\x46\x61\x63tType\x12\x19\n\x15\x46\x41\x43T_TYPE_UNSPECIFIED\x10\x00\x12\x14\n\x10\x46\x41\x43T_TYPE_STRING\x10\x01\x12\x13\n\x0f\x46\x41\x43T_TYPE_FLOAT\x10\x02\x12\x12\n\x0e\x46\x41\x43T_TYPE_DATE\x10\x03\x12\x12\n\x0e\x46\x41\x43T_TYPE_BOOL\x10\x04\x12\x11\n\rFACT_TYPE_INT\x10\x05\x12\x12\n\x0e\x46\x41\x43T_TYPE_ENUM\x10\x06\x42\x36Z4github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,18 +32,18 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ava.procedure.v1.procedure_
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z4github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1'
-  _globals['_SOURCEKIND']._serialized_start=932
-  _globals['_SOURCEKIND']._serialized_end=1046
-  _globals['_FACTTYPE']._serialized_start=1049
-  _globals['_FACTTYPE']._serialized_end=1208
+  _globals['_SOURCEKIND']._serialized_start=960
+  _globals['_SOURCEKIND']._serialized_end=1074
+  _globals['_FACTTYPE']._serialized_start=1077
+  _globals['_FACTTYPE']._serialized_end=1236
   _globals['_PROCEDURE']._serialized_start=55
   _globals['_PROCEDURE']._serialized_end=220
   _globals['_FACT']._serialized_start=223
   _globals['_FACT']._serialized_end=383
   _globals['_FACTSOURCE']._serialized_start=386
-  _globals['_FACTSOURCE']._serialized_end=538
-  _globals['_STEP']._serialized_start=541
-  _globals['_STEP']._serialized_end=682
-  _globals['_BRANCH']._serialized_start=685
-  _globals['_BRANCH']._serialized_end=930
+  _globals['_FACTSOURCE']._serialized_end=566
+  _globals['_STEP']._serialized_start=569
+  _globals['_STEP']._serialized_end=710
+  _globals['_BRANCH']._serialized_start=713
+  _globals['_BRANCH']._serialized_end=958
 # @@protoc_insertion_point(module_scope)

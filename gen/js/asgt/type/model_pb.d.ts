@@ -41,6 +41,9 @@ export class Model extends jspb.Message {
   getTargetToConfidenceThresholdsMap(): jspb.Map<string, ConfidenceThresholds>;
   clearTargetToConfidenceThresholdsMap(): Model;
 
+  getTargetToClassCountMap(): jspb.Map<string, number>;
+  clearTargetToClassCountMap(): Model;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Model.AsObject;
   static toObject(includeInstance: boolean, msg: Model): Model.AsObject;
@@ -60,6 +63,7 @@ export namespace Model {
     datasetType: string,
     modelFilesList: Array<asgt_type_model_file_pb.ModelFile.AsObject>,
     targetToConfidenceThresholdsMap: Array<[string, ConfidenceThresholds.AsObject]>,
+    targetToClassCountMap: Array<[string, number]>,
   }
 
   export enum InputType { 

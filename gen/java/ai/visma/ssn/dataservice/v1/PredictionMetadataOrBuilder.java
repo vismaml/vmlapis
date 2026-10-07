@@ -1040,4 +1040,28 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getKsefOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.ModelSpec> 
+      getCompletableList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  ai.visma.ssn.type.ModelSpec getCompletable(int index);
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  int getCompletableCount();
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCompletableOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec completable = 44 [json_name = "completable"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getCompletableOrBuilder(
+      int index);
 }

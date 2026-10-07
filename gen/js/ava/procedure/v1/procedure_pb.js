@@ -718,7 +718,8 @@ proto.ava.procedure.v1.FactSource.toObject = function(includeInstance, msg) {
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     field: jspb.Message.getFieldWithDefault(msg, 3, ""),
     argsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    question: jspb.Message.getFieldWithDefault(msg, 5, "")
+    question: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    guidance: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -774,6 +775,10 @@ proto.ava.procedure.v1.FactSource.deserializeBinaryFromReader = function(msg, re
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.setQuestion(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setGuidance(value);
       break;
     default:
       reader.skipField();
@@ -836,6 +841,13 @@ proto.ava.procedure.v1.FactSource.serializeBinaryToWriter = function(message, wr
   if (f.length > 0) {
     writer.writeString(
       5,
+      f
+    );
+  }
+  f = message.getGuidance();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -948,6 +960,24 @@ proto.ava.procedure.v1.FactSource.prototype.getQuestion = function() {
  */
 proto.ava.procedure.v1.FactSource.prototype.setQuestion = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string guidance = 6;
+ * @return {string}
+ */
+proto.ava.procedure.v1.FactSource.prototype.getGuidance = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ava.procedure.v1.FactSource} returns this
+ */
+proto.ava.procedure.v1.FactSource.prototype.setGuidance = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

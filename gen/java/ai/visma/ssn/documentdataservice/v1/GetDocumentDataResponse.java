@@ -512,6 +512,59 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int FOR_ANNOTATION_FIELD_NUMBER = 11;
+  private boolean forAnnotation_ = false;
+  /**
+   * <pre>
+   * Flagged for the annotation tool; a customer DeleteDocument is deferred.
+   * </pre>
+   *
+   * <code>bool for_annotation = 11 [json_name = "forAnnotation"];</code>
+   * @return The forAnnotation.
+   */
+  @java.lang.Override
+  public boolean getForAnnotation() {
+    return forAnnotation_;
+  }
+
+  public static final int DELETION_REQUESTED_AT_FIELD_NUMBER = 12;
+  private com.google.protobuf.Timestamp deletionRequestedAt_;
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   * @return Whether the deletionRequestedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeletionRequestedAt() {
+    return ((bitField0_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   * @return The deletionRequestedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDeletionRequestedAt() {
+    return deletionRequestedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletionRequestedAt_;
+  }
+  /**
+   * <pre>
+   * Set when a customer DeleteDocument was deferred because of the flag.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDeletionRequestedAtOrBuilder() {
+    return deletionRequestedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletionRequestedAt_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -555,6 +608,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 10, tags_.getRaw(i));
+    }
+    if (forAnnotation_ != false) {
+      output.writeBool(11, forAnnotation_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      output.writeMessage(12, getDeletionRequestedAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -614,6 +673,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    if (forAnnotation_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, forAnnotation_);
+    }
+    if (((bitField0_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getDeletionRequestedAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -658,6 +725,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (getForAnnotation()
+        != other.getForAnnotation()) return false;
+    if (hasDeletionRequestedAt() != other.hasDeletionRequestedAt()) return false;
+    if (hasDeletionRequestedAt()) {
+      if (!getDeletionRequestedAt()
+          .equals(other.getDeletionRequestedAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -702,6 +776,13 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
+    }
+    hash = (37 * hash) + FOR_ANNOTATION_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getForAnnotation());
+    if (hasDeletionRequestedAt()) {
+      hash = (37 * hash) + DELETION_REQUESTED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeletionRequestedAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -837,6 +918,7 @@ private static final long serialVersionUID = 0L;
         getFieldsFieldBuilder();
         getExpiresAtFieldBuilder();
         getUpdatedAtFieldBuilder();
+        getDeletionRequestedAtFieldBuilder();
       }
     }
     @java.lang.Override
@@ -874,6 +956,12 @@ private static final long serialVersionUID = 0L;
       }
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      forAnnotation_ = false;
+      deletionRequestedAt_ = null;
+      if (deletionRequestedAtBuilder_ != null) {
+        deletionRequestedAtBuilder_.dispose();
+        deletionRequestedAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -959,6 +1047,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         tags_.makeImmutable();
         result.tags_ = tags_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.forAnnotation_ = forAnnotation_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.deletionRequestedAt_ = deletionRequestedAtBuilder_ == null
+            ? deletionRequestedAt_
+            : deletionRequestedAtBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1055,6 +1152,12 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getForAnnotation() != false) {
+        setForAnnotation(other.getForAnnotation());
+      }
+      if (other.hasDeletionRequestedAt()) {
+        mergeDeletionRequestedAt(other.getDeletionRequestedAt());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1148,6 +1251,18 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 82
+            case 88: {
+              forAnnotation_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 98: {
+              input.readMessage(
+                  getDeletionRequestedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2623,6 +2738,207 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000200;
       onChanged();
       return this;
+    }
+
+    private boolean forAnnotation_ ;
+    /**
+     * <pre>
+     * Flagged for the annotation tool; a customer DeleteDocument is deferred.
+     * </pre>
+     *
+     * <code>bool for_annotation = 11 [json_name = "forAnnotation"];</code>
+     * @return The forAnnotation.
+     */
+    @java.lang.Override
+    public boolean getForAnnotation() {
+      return forAnnotation_;
+    }
+    /**
+     * <pre>
+     * Flagged for the annotation tool; a customer DeleteDocument is deferred.
+     * </pre>
+     *
+     * <code>bool for_annotation = 11 [json_name = "forAnnotation"];</code>
+     * @param value The forAnnotation to set.
+     * @return This builder for chaining.
+     */
+    public Builder setForAnnotation(boolean value) {
+
+      forAnnotation_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flagged for the annotation tool; a customer DeleteDocument is deferred.
+     * </pre>
+     *
+     * <code>bool for_annotation = 11 [json_name = "forAnnotation"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearForAnnotation() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      forAnnotation_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp deletionRequestedAt_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deletionRequestedAtBuilder_;
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     * @return Whether the deletionRequestedAt field is set.
+     */
+    public boolean hasDeletionRequestedAt() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     * @return The deletionRequestedAt.
+     */
+    public com.google.protobuf.Timestamp getDeletionRequestedAt() {
+      if (deletionRequestedAtBuilder_ == null) {
+        return deletionRequestedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletionRequestedAt_;
+      } else {
+        return deletionRequestedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public Builder setDeletionRequestedAt(com.google.protobuf.Timestamp value) {
+      if (deletionRequestedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deletionRequestedAt_ = value;
+      } else {
+        deletionRequestedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public Builder setDeletionRequestedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (deletionRequestedAtBuilder_ == null) {
+        deletionRequestedAt_ = builderForValue.build();
+      } else {
+        deletionRequestedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public Builder mergeDeletionRequestedAt(com.google.protobuf.Timestamp value) {
+      if (deletionRequestedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          deletionRequestedAt_ != null &&
+          deletionRequestedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDeletionRequestedAtBuilder().mergeFrom(value);
+        } else {
+          deletionRequestedAt_ = value;
+        }
+      } else {
+        deletionRequestedAtBuilder_.mergeFrom(value);
+      }
+      if (deletionRequestedAt_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public Builder clearDeletionRequestedAt() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      deletionRequestedAt_ = null;
+      if (deletionRequestedAtBuilder_ != null) {
+        deletionRequestedAtBuilder_.dispose();
+        deletionRequestedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDeletionRequestedAtBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return getDeletionRequestedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeletionRequestedAtOrBuilder() {
+      if (deletionRequestedAtBuilder_ != null) {
+        return deletionRequestedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return deletionRequestedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : deletionRequestedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * Set when a customer DeleteDocument was deferred because of the flag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_requested_at = 12 [json_name = "deletionRequestedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDeletionRequestedAtFieldBuilder() {
+      if (deletionRequestedAtBuilder_ == null) {
+        deletionRequestedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDeletionRequestedAt(),
+                getParentForChildren(),
+                isClean());
+        deletionRequestedAt_ = null;
+      }
+      return deletionRequestedAtBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:ssn.documentdataservice.v1.GetDocumentDataResponse)

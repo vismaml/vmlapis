@@ -24,6 +24,7 @@ message FactSource {
   string field = 3;
   repeated string args = 4;
   string question = 5;
+  string guidance = 6;
 }
 
 enum SourceKind {

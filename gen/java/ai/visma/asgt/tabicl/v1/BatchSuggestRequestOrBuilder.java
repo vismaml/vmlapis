@@ -62,4 +62,36 @@ public interface BatchSuggestRequestOrBuilder extends
    * @return The suggestLimit.
    */
   int getSuggestLimit();
+
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  int getTargetClassCountsCount();
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  boolean containsTargetClassCounts(
+      java.lang.String key);
+  /**
+   * Use {@link #getTargetClassCountsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Integer>
+  getTargetClassCounts();
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Integer>
+  getTargetClassCountsMap();
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  int getTargetClassCountsOrDefault(
+      java.lang.String key,
+      int defaultValue);
+  /**
+   * <code>map&lt;string, int32&gt; target_class_counts = 5 [json_name = "targetClassCounts", (.validate.rules) = { ... }</code>
+   */
+  int getTargetClassCountsOrThrow(
+      java.lang.String key);
 }

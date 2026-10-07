@@ -1012,4 +1012,28 @@ public interface PredictResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getCompletableList();
+  /**
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  ai.visma.ssn.type.Candidate getCompletable(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  int getCompletableCount();
+  /**
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCompletableOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate completable = 42 [json_name = "completable"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getCompletableOrBuilder(
+      int index);
 }

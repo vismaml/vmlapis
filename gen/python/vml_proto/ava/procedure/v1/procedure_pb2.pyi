@@ -59,18 +59,20 @@ class Fact(_message.Message):
     def __init__(self, name: _Optional[str] = ..., type: _Optional[_Union[FactType, str]] = ..., permitted: _Optional[_Iterable[str]] = ..., sources: _Optional[_Iterable[_Union[FactSource, _Mapping]]] = ...) -> None: ...
 
 class FactSource(_message.Message):
-    __slots__ = ("kind", "name", "field", "args", "question")
+    __slots__ = ("kind", "name", "field", "args", "question", "guidance")
     KIND_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     FIELD_FIELD_NUMBER: _ClassVar[int]
     ARGS_FIELD_NUMBER: _ClassVar[int]
     QUESTION_FIELD_NUMBER: _ClassVar[int]
+    GUIDANCE_FIELD_NUMBER: _ClassVar[int]
     kind: SourceKind
     name: str
     field: str
     args: _containers.RepeatedScalarFieldContainer[str]
     question: str
-    def __init__(self, kind: _Optional[_Union[SourceKind, str]] = ..., name: _Optional[str] = ..., field: _Optional[str] = ..., args: _Optional[_Iterable[str]] = ..., question: _Optional[str] = ...) -> None: ...
+    guidance: str
+    def __init__(self, kind: _Optional[_Union[SourceKind, str]] = ..., name: _Optional[str] = ..., field: _Optional[str] = ..., args: _Optional[_Iterable[str]] = ..., question: _Optional[str] = ..., guidance: _Optional[str] = ...) -> None: ...
 
 class Step(_message.Message):
     __slots__ = ("step_id", "question", "guidance", "branches")

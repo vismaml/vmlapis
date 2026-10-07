@@ -12,7 +12,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Model(_message.Message):
-    __slots__ = ("version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type", "model_files", "target_to_confidence_thresholds")
+    __slots__ = ("version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type", "model_files", "target_to_confidence_thresholds", "target_to_class_count")
     class InputType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = ()
         FEATURE_TENSORS: _ClassVar[Model.InputType]
@@ -26,6 +26,13 @@ class Model(_message.Message):
         key: str
         value: ConfidenceThresholds
         def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[ConfidenceThresholds, _Mapping]] = ...) -> None: ...
+    class TargetToClassCountEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: int
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[int] = ...) -> None: ...
     VERSION_FIELD_NUMBER: _ClassVar[int]
     CREATED_AT_FIELD_NUMBER: _ClassVar[int]
     DATASET_SIZE_FIELD_NUMBER: _ClassVar[int]
@@ -35,6 +42,7 @@ class Model(_message.Message):
     DATASET_TYPE_FIELD_NUMBER: _ClassVar[int]
     MODEL_FILES_FIELD_NUMBER: _ClassVar[int]
     TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER: _ClassVar[int]
+    TARGET_TO_CLASS_COUNT_FIELD_NUMBER: _ClassVar[int]
     version: int
     created_at: _timestamp_pb2.Timestamp
     dataset_size: int
@@ -44,7 +52,8 @@ class Model(_message.Message):
     dataset_type: str
     model_files: _containers.RepeatedCompositeFieldContainer[_model_file_pb2.ModelFile]
     target_to_confidence_thresholds: _containers.MessageMap[str, ConfidenceThresholds]
-    def __init__(self, version: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., confidence_scores: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[Model.InputType, str]] = ..., dataset_type: _Optional[str] = ..., model_files: _Optional[_Iterable[_Union[_model_file_pb2.ModelFile, _Mapping]]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, ConfidenceThresholds]] = ...) -> None: ...
+    target_to_class_count: _containers.ScalarMap[str, int]
+    def __init__(self, version: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., confidence_scores: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[Model.InputType, str]] = ..., dataset_type: _Optional[str] = ..., model_files: _Optional[_Iterable[_Union[_model_file_pb2.ModelFile, _Mapping]]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, ConfidenceThresholds]] = ..., target_to_class_count: _Optional[_Mapping[str, int]] = ...) -> None: ...
 
 class ConfidenceThresholds(_message.Message):
     __slots__ = ("confidence_thresholds",)

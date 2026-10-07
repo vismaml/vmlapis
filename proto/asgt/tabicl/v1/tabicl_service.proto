@@ -23,6 +23,14 @@ message BatchSuggestRequest {
     max_items: 256
   }];
   int32 suggest_limit = 4 [(validate.rules).int32 = {gt: 0}];
+  map<string, int32> target_class_counts = 5 [(validate.rules).map = {
+    keys: {
+      string: {min_len: 1}
+    }
+    values: {
+      int32: {gt: 0}
+    }
+  }];
 }
 
 message BatchSuggestResponse {
