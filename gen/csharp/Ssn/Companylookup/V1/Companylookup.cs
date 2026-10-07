@@ -49,30 +49,29 @@ namespace Ssn.Companylookup.V1 {
             "a19hY2NvdW50X251bWJlchgPIAEoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIR",
             "YmFua0FjY291bnROdW1iZXISTQoYYmFua19yZWdpc3RyYXRpb25fbnVtYmVy",
             "GBAgASgLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhZiYW5rUmVnaXN0cmF0aW9u",
-            "TnVtYmVyEiMKDXByb2R1Y3RfdHlwZXMYESADKAlSDHByb2R1Y3RUeXBlcyJR",
-            "CiFQcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9uc2USLAoSc3VwcGxp",
-            "ZXJfdmF0X3ZhbGlkGAEgASgIUhBzdXBwbGllclZhdFZhbGlkIooBChVWZXJp",
-            "ZnlTdXBwbGllclJlcXVlc3QSIQoMY291bnRyeV9jb2RlGAEgASgJUgtjb3Vu",
-            "dHJ5Q29kZRIdCgp2YXRfbnVtYmVyGAIgASgJUgl2YXROdW1iZXISLwoTb3Jn",
-            "YW5pc2F0aW9uX251bWJlchgDIAEoCVISb3JnYW5pc2F0aW9uTnVtYmVyIjQK",
-            "FlZlcmlmeVN1cHBsaWVyUmVzcG9uc2USGgoIdmVyaWZpZWQYASABKAhSCHZl",
-            "cmlmaWVkMpICChRDb21wYW55TG9va3VwU2VydmljZRKMAQoZUHJvY2Vzc0lu",
-            "dm9pY2VDb21wYW55RGF0YRI2LnNzbi5jb21wYW55bG9va3VwLnYxLlByb2Nl",
-            "c3NJbnZvaWNlQ29tcGFueURhdGFSZXF1ZXN0Gjcuc3NuLmNvbXBhbnlsb29r",
-            "dXAudjEuUHJvY2Vzc0ludm9pY2VDb21wYW55RGF0YVJlc3BvbnNlEmsKDlZl",
-            "cmlmeVN1cHBsaWVyEisuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
-            "cGxpZXJSZXF1ZXN0Giwuc3NuLmNvbXBhbnlsb29rdXAudjEuVmVyaWZ5U3Vw",
-            "cGxpZXJSZXNwb25zZULtAQodYWkudmlzbWEuc3NuLmNvbXBhbnlsb29rdXAu",
-            "djFCEkNvbXBhbnlsb29rdXBQcm90b1ABWkZnaXRodWIuY29tL2UtY29ub21p",
-            "Yy92bWxhcGlzL2dlbi9nby9zc24vY29tcGFueWxvb2t1cC92MTtjb21wYW55",
-            "bG9va3VwogIDU0NYqgIUU3NuLkNvbXBhbnlsb29rdXAuVjHKAhRTc25cQ29t",
-            "cGFueWxvb2t1cFxWMeICIFNzblxDb21wYW55bG9va3VwXFYxXEdQQk1ldGFk",
-            "YXRh6gIWU3NuOjpDb21wYW55bG9va3VwOjpWMWIGcHJvdG8z"));
+            "TnVtYmVyEiMKDXByb2R1Y3RfdHlwZXMYESADKAlSDHByb2R1Y3RUeXBlcyIp",
+            "CiFQcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9uc2VKBAgBEAIiigEK",
+            "FVZlcmlmeVN1cHBsaWVyUmVxdWVzdBIhCgxjb3VudHJ5X2NvZGUYASABKAlS",
+            "C2NvdW50cnlDb2RlEh0KCnZhdF9udW1iZXIYAiABKAlSCXZhdE51bWJlchIv",
+            "ChNvcmdhbmlzYXRpb25fbnVtYmVyGAMgASgJUhJvcmdhbmlzYXRpb25OdW1i",
+            "ZXIiNAoWVmVyaWZ5U3VwcGxpZXJSZXNwb25zZRIaCgh2ZXJpZmllZBgBIAEo",
+            "CFIIdmVyaWZpZWQykgIKFENvbXBhbnlMb29rdXBTZXJ2aWNlEowBChlQcm9j",
+            "ZXNzSW52b2ljZUNvbXBhbnlEYXRhEjYuc3NuLmNvbXBhbnlsb29rdXAudjEu",
+            "UHJvY2Vzc0ludm9pY2VDb21wYW55RGF0YVJlcXVlc3QaNy5zc24uY29tcGFu",
+            "eWxvb2t1cC52MS5Qcm9jZXNzSW52b2ljZUNvbXBhbnlEYXRhUmVzcG9uc2US",
+            "awoOVmVyaWZ5U3VwcGxpZXISKy5zc24uY29tcGFueWxvb2t1cC52MS5WZXJp",
+            "ZnlTdXBwbGllclJlcXVlc3QaLC5zc24uY29tcGFueWxvb2t1cC52MS5WZXJp",
+            "ZnlTdXBwbGllclJlc3BvbnNlQu0BCh1haS52aXNtYS5zc24uY29tcGFueWxv",
+            "b2t1cC52MUISQ29tcGFueWxvb2t1cFByb3RvUAFaRmdpdGh1Yi5jb20vZS1j",
+            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9jb21wYW55bG9va3VwL3YxO2Nv",
+            "bXBhbnlsb29rdXCiAgNTQ1iqAhRTc24uQ29tcGFueWxvb2t1cC5WMcoCFFNz",
+            "blxDb21wYW55bG9va3VwXFYx4gIgU3NuXENvbXBhbnlsb29rdXBcVjFcR1BC",
+            "TWV0YWRhdGHqAhZTc246OkNvbXBhbnlsb29rdXA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataRequest.Parser, new[]{ "ProjectName", "TransactionId", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierCountryCode", "SupplierAddress", "ReceiverName", "ReceiverVatNumber", "ReceiverOrganisationNumber", "ReceiverCountryCode", "ReceiverAddress", "Iban", "Bic", "BankAccountNumber", "BankRegistrationNumber", "ProductTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, new[]{ "SupplierVatValid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse), global::Ssn.Companylookup.V1.ProcessInvoiceCompanyDataResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierRequest), global::Ssn.Companylookup.V1.VerifySupplierRequest.Parser, new[]{ "CountryCode", "VatNumber", "OrganisationNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Companylookup.V1.VerifySupplierResponse), global::Ssn.Companylookup.V1.VerifySupplierResponse.Parser, new[]{ "Verified" }, null, null, null, null)
           }));
@@ -1032,7 +1031,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProcessInvoiceCompanyDataResponse(ProcessInvoiceCompanyDataResponse other) : this() {
-      supplierVatValid_ = other.supplierVatValid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1040,22 +1038,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProcessInvoiceCompanyDataResponse Clone() {
       return new ProcessInvoiceCompanyDataResponse(this);
-    }
-
-    /// <summary>Field number for the "supplier_vat_valid" field.</summary>
-    public const int SupplierVatValidFieldNumber = 1;
-    private bool supplierVatValid_;
-    /// <summary>
-    /// True only when the supplier company has been enriched and the registry
-    /// (VIES) confirmed the VAT number.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool SupplierVatValid {
-      get { return supplierVatValid_; }
-      set {
-        supplierVatValid_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1073,7 +1055,6 @@ namespace Ssn.Companylookup.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SupplierVatValid != other.SupplierVatValid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1081,7 +1062,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SupplierVatValid != false) hash ^= SupplierVatValid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1100,10 +1080,6 @@ namespace Ssn.Companylookup.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SupplierVatValid != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(SupplierVatValid);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1114,10 +1090,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SupplierVatValid != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(SupplierVatValid);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1128,9 +1100,6 @@ namespace Ssn.Companylookup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SupplierVatValid != false) {
-        size += 1 + 1;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1142,9 +1111,6 @@ namespace Ssn.Companylookup.V1 {
     public void MergeFrom(ProcessInvoiceCompanyDataResponse other) {
       if (other == null) {
         return;
-      }
-      if (other.SupplierVatValid != false) {
-        SupplierVatValid = other.SupplierVatValid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1165,10 +1131,6 @@ namespace Ssn.Companylookup.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            SupplierVatValid = input.ReadBool();
-            break;
-          }
         }
       }
     #endif
@@ -1188,10 +1150,6 @@ namespace Ssn.Companylookup.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            SupplierVatValid = input.ReadBool();
-            break;
-          }
         }
       }
     }

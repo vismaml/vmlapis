@@ -7,9 +7,9 @@ import "ssn/type/candidate.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/companylookup/v1;companylookup";
 
 // CompanyLookupService is an internal service called during invoice
-// post-processing. It records company/bank-account observations and returns
-// whether the supplier VAT number has been confirmed by a registry. It never
-// calls external registries — enrichment is fetched out of band by a job.
+// post-processing. It records company/bank-account observations and reports
+// whether a registry has confirmed a supplier. It never calls external
+// registries — enrichment is fetched out of band by a job.
 service CompanyLookupService {
   rpc ProcessInvoiceCompanyData(ProcessInvoiceCompanyDataRequest) returns (ProcessInvoiceCompanyDataResponse);
 
@@ -46,9 +46,7 @@ message ProcessInvoiceCompanyDataRequest {
 }
 
 message ProcessInvoiceCompanyDataResponse {
-  // True only when the supplier company has been enriched and the registry
-  // (VIES) confirmed the VAT number.
-  bool supplier_vat_valid = 1;
+  reserved 1; // was supplier_vat_valid; superseded by VerifySupplier
 }
 
 // Send the one identifier the caller intends to act on: a VAT number, or an

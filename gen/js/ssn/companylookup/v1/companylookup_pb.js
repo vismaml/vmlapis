@@ -1073,7 +1073,7 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.toObject 
  */
 proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    supplierVatValid: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+
   };
 
   if (includeInstance) {
@@ -1110,10 +1110,6 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.deserializeBinaryFr
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setSupplierVatValid(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -1143,31 +1139,6 @@ proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.serialize
  */
 proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getSupplierVatValid();
-  if (f) {
-    writer.writeBool(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional bool supplier_vat_valid = 1;
- * @return {boolean}
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.getSupplierVatValid = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse} returns this
- */
-proto.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.prototype.setSupplierVatValid = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
 };
 
 

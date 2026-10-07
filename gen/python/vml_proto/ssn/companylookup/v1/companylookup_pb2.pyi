@@ -45,10 +45,8 @@ class ProcessInvoiceCompanyDataRequest(_message.Message):
     def __init__(self, project_name: _Optional[str] = ..., transaction_id: _Optional[str] = ..., supplier_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., supplier_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_name: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_vat_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_organisation_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_country_code: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., receiver_address: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., iban: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bic: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_account_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., bank_registration_number: _Optional[_Union[_candidate_pb2.Candidate, _Mapping]] = ..., product_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class ProcessInvoiceCompanyDataResponse(_message.Message):
-    __slots__ = ("supplier_vat_valid",)
-    SUPPLIER_VAT_VALID_FIELD_NUMBER: _ClassVar[int]
-    supplier_vat_valid: bool
-    def __init__(self, supplier_vat_valid: bool = ...) -> None: ...
+    __slots__ = ()
+    def __init__(self) -> None: ...
 
 class VerifySupplierRequest(_message.Message):
     __slots__ = ("country_code", "vat_number", "organisation_number")

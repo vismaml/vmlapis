@@ -42,22 +42,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.class, ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.Builder.class);
   }
 
-  public static final int SUPPLIER_VAT_VALID_FIELD_NUMBER = 1;
-  private boolean supplierVatValid_ = false;
-  /**
-   * <pre>
-   * True only when the supplier company has been enriched and the registry
-   * (VIES) confirmed the VAT number.
-   * </pre>
-   *
-   * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
-   * @return The supplierVatValid.
-   */
-  @java.lang.Override
-  public boolean getSupplierVatValid() {
-    return supplierVatValid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -72,9 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (supplierVatValid_ != false) {
-      output.writeBool(1, supplierVatValid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -84,10 +65,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (supplierVatValid_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, supplierVatValid_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -103,8 +80,6 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse other = (ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse) obj;
 
-    if (getSupplierVatValid()
-        != other.getSupplierVatValid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -116,9 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SUPPLIER_VAT_VALID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getSupplierVatValid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -249,8 +221,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      supplierVatValid_ = false;
       return this;
     }
 
@@ -277,16 +247,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse buildPartial() {
       ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse result = new ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.supplierVatValid_ = supplierVatValid_;
-      }
     }
 
     @java.lang.Override
@@ -301,9 +263,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse other) {
       if (other == ai.visma.ssn.companylookup.v1.ProcessInvoiceCompanyDataResponse.getDefaultInstance()) return this;
-      if (other.getSupplierVatValid() != false) {
-        setSupplierVatValid(other.getSupplierVatValid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -330,11 +289,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              supplierVatValid_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -348,54 +302,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private boolean supplierVatValid_ ;
-    /**
-     * <pre>
-     * True only when the supplier company has been enriched and the registry
-     * (VIES) confirmed the VAT number.
-     * </pre>
-     *
-     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
-     * @return The supplierVatValid.
-     */
-    @java.lang.Override
-    public boolean getSupplierVatValid() {
-      return supplierVatValid_;
-    }
-    /**
-     * <pre>
-     * True only when the supplier company has been enriched and the registry
-     * (VIES) confirmed the VAT number.
-     * </pre>
-     *
-     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
-     * @param value The supplierVatValid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSupplierVatValid(boolean value) {
-
-      supplierVatValid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * True only when the supplier company has been enriched and the registry
-     * (VIES) confirmed the VAT number.
-     * </pre>
-     *
-     * <code>bool supplier_vat_valid = 1 [json_name = "supplierVatValid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSupplierVatValid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      supplierVatValid_ = false;
-      onChanged();
       return this;
     }
 
