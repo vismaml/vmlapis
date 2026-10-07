@@ -227,6 +227,17 @@ private static final long serialVersionUID = 0L;
     return returnedVeryHigh_;
   }
 
+  public static final int RETURNED_ULTRA_HIGH_FIELD_NUMBER = 10;
+  private int returnedUltraHigh_ = 0;
+  /**
+   * <code>int32 returned_ultra_high = 10 [json_name = "returnedUltraHigh"];</code>
+   * @return The returnedUltraHigh.
+   */
+  @java.lang.Override
+  public int getReturnedUltraHigh() {
+    return returnedUltraHigh_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -267,6 +278,9 @@ private static final long serialVersionUID = 0L;
     }
     if (returnedVeryHigh_ != 0) {
       output.writeInt32(9, returnedVeryHigh_);
+    }
+    if (returnedUltraHigh_ != 0) {
+      output.writeInt32(10, returnedUltraHigh_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -315,6 +329,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(9, returnedVeryHigh_);
     }
+    if (returnedUltraHigh_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(10, returnedUltraHigh_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -348,6 +366,8 @@ private static final long serialVersionUID = 0L;
         != other.getReturnedHigh()) return false;
     if (getReturnedVeryHigh()
         != other.getReturnedVeryHigh()) return false;
+    if (getReturnedUltraHigh()
+        != other.getReturnedUltraHigh()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -379,6 +399,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getReturnedHigh();
     hash = (37 * hash) + RETURNED_VERY_HIGH_FIELD_NUMBER;
     hash = (53 * hash) + getReturnedVeryHigh();
+    hash = (37 * hash) + RETURNED_ULTRA_HIGH_FIELD_NUMBER;
+    hash = (53 * hash) + getReturnedUltraHigh();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -520,6 +542,7 @@ private static final long serialVersionUID = 0L;
       returnedMid_ = 0;
       returnedHigh_ = 0;
       returnedVeryHigh_ = 0;
+      returnedUltraHigh_ = 0;
       return this;
     }
 
@@ -581,6 +604,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.returnedVeryHigh_ = returnedVeryHigh_;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.returnedUltraHigh_ = returnedUltraHigh_;
+      }
     }
 
     @java.lang.Override
@@ -632,6 +658,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getReturnedVeryHigh() != 0) {
         setReturnedVeryHigh(other.getReturnedVeryHigh());
+      }
+      if (other.getReturnedUltraHigh() != 0) {
+        setReturnedUltraHigh(other.getReturnedUltraHigh());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -705,6 +734,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              returnedUltraHigh_ = input.readInt32();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1165,6 +1199,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearReturnedVeryHigh() {
       bitField0_ = (bitField0_ & ~0x00000100);
       returnedVeryHigh_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int returnedUltraHigh_ ;
+    /**
+     * <code>int32 returned_ultra_high = 10 [json_name = "returnedUltraHigh"];</code>
+     * @return The returnedUltraHigh.
+     */
+    @java.lang.Override
+    public int getReturnedUltraHigh() {
+      return returnedUltraHigh_;
+    }
+    /**
+     * <code>int32 returned_ultra_high = 10 [json_name = "returnedUltraHigh"];</code>
+     * @param value The returnedUltraHigh to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnedUltraHigh(int value) {
+
+      returnedUltraHigh_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 returned_ultra_high = 10 [json_name = "returnedUltraHigh"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnedUltraHigh() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      returnedUltraHigh_ = 0;
       onChanged();
       return this;
     }

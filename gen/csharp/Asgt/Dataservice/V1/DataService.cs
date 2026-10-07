@@ -59,39 +59,40 @@ namespace Asgt.Dataservice.V1 {
             "dHlwZS5SZXRlbnRpb25Qb2xpY3lSD3JldGVudGlvblBvbGljeSJnCg9HZXRJ",
             "bmZvUmVzcG9uc2USLAoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRh",
             "c2V0UgdkYXRhc2V0EiYKBW1vZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVs",
-            "UgVtb2RlbCLMAgoZUmVnaXN0ZXJRdWVyeVN0YXRzUmVxdWVzdBIYCgdkYXRh",
+            "UgVtb2RlbCL8AgoZUmVnaXN0ZXJRdWVyeVN0YXRzUmVxdWVzdBIYCgdkYXRh",
             "c2V0GAEgASgJUgdkYXRhc2V0Eh0KCm1vZGVsX3R5cGUYAiABKAlSCW1vZGVs",
             "VHlwZRIdCgpiYXRjaF9zaXplGAMgASgFUgliYXRjaFNpemUSEgoEdGFncxgE",
             "IAMoCVIEdGFncxIqChFyZXR1cm5lZF92ZXJ5X2xvdxgFIAEoBVIPcmV0dXJu",
             "ZWRWZXJ5TG93EiEKDHJldHVybmVkX2xvdxgGIAEoBVILcmV0dXJuZWRMb3cS",
             "IQoMcmV0dXJuZWRfbWlkGAcgASgFUgtyZXR1cm5lZE1pZBIjCg1yZXR1cm5l",
             "ZF9oaWdoGAggASgFUgxyZXR1cm5lZEhpZ2gSLAoScmV0dXJuZWRfdmVyeV9o",
-            "aWdoGAkgASgFUhByZXR1cm5lZFZlcnlIaWdoMusGCgtEYXRhU2VydmljZRJp",
-            "Cg1DcmVhdGVEYXRhc2V0EiIuYXNndC5kYXRhc2VydmljZS52MS5DcmVhdGVS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92MS97",
-            "dHlwZX06Y3JlYXRlOgEqEnEKCkFwcGVuZERhdGESJi5hc2d0LmRhdGFzZXJ2",
-            "aWNlLnYxLkFwcGVuZERhdGFSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IiOC0+STAh0iGC92MS97dHlwZX0ve25hbWV9OmFwcGVuZDoBKhJmCgpE",
-            "ZWxldGVEYXRhEiIuYXNndC5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92MS97dHlwZX06",
-            "ZGVsZXRlOgEqEnQKB0dldEluZm8SIy5hc2d0LmRhdGFzZXJ2aWNlLnYxLkdl",
-            "dEluZm9SZXF1ZXN0GiQuYXNndC5kYXRhc2VydmljZS52MS5HZXRJbmZvUmVz",
-            "cG9uc2UiHoLT5JMCGBIWL3YxL3t0eXBlfS97bmFtZX06aW5mbxJ3Cg1VcGRh",
-            "dGVEYXRhc2V0EikuYXNndC5kYXRhc2VydmljZS52MS5VcGRhdGVEYXRhc2V0",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdGhgvdjEv",
-            "e3R5cGV9L3tuYW1lfTp1cGRhdGU6ASoSXAoSUmVnaXN0ZXJRdWVyeVN0YXRz",
-            "Ei4uYXNndC5kYXRhc2VydmljZS52MS5SZWdpc3RlclF1ZXJ5U3RhdHNSZXF1",
-            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElgKE0NhbGxzUGVyTW9udGhN",
-            "ZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZp",
-            "Y2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEm8KEENhbGN1bGF0ZU1ldHJp",
-            "Y3MSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1bGF0ZU1ldHJpY3NSZXF1",
-            "ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRyaWNzUmVz",
-            "cG9uc2VC1QEKHGFpLnZpc21hLmFzZ3QuZGF0YXNlcnZpY2UudjFCEERhdGFT",
-            "ZXJ2aWNlUHJvdG9QAVo1Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vYXNndC9kYXRhL3YxO2RhdGGiAgNBRFiqAhNBc2d0LkRhdGFzZXJ2",
-            "aWNlLlYxygITQXNndFxEYXRhc2VydmljZVxWMeICH0FzZ3RcRGF0YXNlcnZp",
-            "Y2VcVjFcR1BCTWV0YWRhdGHqAhVBc2d0OjpEYXRhc2VydmljZTo6VjFiBnBy",
-            "b3RvMw=="));
+            "aWdoGAkgASgFUhByZXR1cm5lZFZlcnlIaWdoEi4KE3JldHVybmVkX3VsdHJh",
+            "X2hpZ2gYCiABKAVSEXJldHVybmVkVWx0cmFIaWdoMusGCgtEYXRhU2Vydmlj",
+            "ZRJpCg1DcmVhdGVEYXRhc2V0EiIuYXNndC5kYXRhc2VydmljZS52MS5DcmVh",
+            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92",
+            "MS97dHlwZX06Y3JlYXRlOgEqEnEKCkFwcGVuZERhdGESJi5hc2d0LmRhdGFz",
+            "ZXJ2aWNlLnYxLkFwcGVuZERhdGFSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5IiOC0+STAh0iGC92MS97dHlwZX0ve25hbWV9OmFwcGVuZDoBKhJm",
+            "CgpEZWxldGVEYXRhEiIuYXNndC5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92MS97dHlw",
+            "ZX06ZGVsZXRlOgEqEnQKB0dldEluZm8SIy5hc2d0LmRhdGFzZXJ2aWNlLnYx",
+            "LkdldEluZm9SZXF1ZXN0GiQuYXNndC5kYXRhc2VydmljZS52MS5HZXRJbmZv",
+            "UmVzcG9uc2UiHoLT5JMCGBIWL3YxL3t0eXBlfS97bmFtZX06aW5mbxJ3Cg1V",
+            "cGRhdGVEYXRhc2V0EikuYXNndC5kYXRhc2VydmljZS52MS5VcGRhdGVEYXRh",
+            "c2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdGhgv",
+            "djEve3R5cGV9L3tuYW1lfTp1cGRhdGU6ASoSXAoSUmVnaXN0ZXJRdWVyeVN0",
+            "YXRzEi4uYXNndC5kYXRhc2VydmljZS52MS5SZWdpc3RlclF1ZXJ5U3RhdHNS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElgKE0NhbGxzUGVyTW9u",
+            "dGhNZXRyaWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNl",
+            "cnZpY2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEm8KEENhbGN1bGF0ZU1l",
+            "dHJpY3MSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1bGF0ZU1ldHJpY3NS",
+            "ZXF1ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRyaWNz",
+            "UmVzcG9uc2VC1QEKHGFpLnZpc21hLmFzZ3QuZGF0YXNlcnZpY2UudjFCEERh",
+            "dGFTZXJ2aWNlUHJvdG9QAVo1Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vYXNndC9kYXRhL3YxO2RhdGGiAgNBRFiqAhNBc2d0LkRhdGFz",
+            "ZXJ2aWNlLlYxygITQXNndFxEYXRhc2VydmljZVxWMeICH0FzZ3RcRGF0YXNl",
+            "cnZpY2VcVjFcR1BCTWV0YWRhdGHqAhVBc2d0OjpEYXRhc2VydmljZTo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -103,7 +104,7 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags", "ReturnedVeryLow", "ReturnedLow", "ReturnedMid", "ReturnedHigh", "ReturnedVeryHigh" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags", "ReturnedVeryLow", "ReturnedLow", "ReturnedMid", "ReturnedHigh", "ReturnedVeryHigh", "ReturnedUltraHigh" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2753,6 +2754,7 @@ namespace Asgt.Dataservice.V1 {
       returnedMid_ = other.returnedMid_;
       returnedHigh_ = other.returnedHigh_;
       returnedVeryHigh_ = other.returnedVeryHigh_;
+      returnedUltraHigh_ = other.returnedUltraHigh_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2869,6 +2871,18 @@ namespace Asgt.Dataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "returned_ultra_high" field.</summary>
+    public const int ReturnedUltraHighFieldNumber = 10;
+    private int returnedUltraHigh_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ReturnedUltraHigh {
+      get { return returnedUltraHigh_; }
+      set {
+        returnedUltraHigh_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2893,6 +2907,7 @@ namespace Asgt.Dataservice.V1 {
       if (ReturnedMid != other.ReturnedMid) return false;
       if (ReturnedHigh != other.ReturnedHigh) return false;
       if (ReturnedVeryHigh != other.ReturnedVeryHigh) return false;
+      if (ReturnedUltraHigh != other.ReturnedUltraHigh) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2909,6 +2924,7 @@ namespace Asgt.Dataservice.V1 {
       if (ReturnedMid != 0) hash ^= ReturnedMid.GetHashCode();
       if (ReturnedHigh != 0) hash ^= ReturnedHigh.GetHashCode();
       if (ReturnedVeryHigh != 0) hash ^= ReturnedVeryHigh.GetHashCode();
+      if (ReturnedUltraHigh != 0) hash ^= ReturnedUltraHigh.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2960,6 +2976,10 @@ namespace Asgt.Dataservice.V1 {
         output.WriteRawTag(72);
         output.WriteInt32(ReturnedVeryHigh);
       }
+      if (ReturnedUltraHigh != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(ReturnedUltraHigh);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3003,6 +3023,10 @@ namespace Asgt.Dataservice.V1 {
         output.WriteRawTag(72);
         output.WriteInt32(ReturnedVeryHigh);
       }
+      if (ReturnedUltraHigh != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(ReturnedUltraHigh);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3037,6 +3061,9 @@ namespace Asgt.Dataservice.V1 {
       }
       if (ReturnedVeryHigh != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ReturnedVeryHigh);
+      }
+      if (ReturnedUltraHigh != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ReturnedUltraHigh);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3074,6 +3101,9 @@ namespace Asgt.Dataservice.V1 {
       }
       if (other.ReturnedVeryHigh != 0) {
         ReturnedVeryHigh = other.ReturnedVeryHigh;
+      }
+      if (other.ReturnedUltraHigh != 0) {
+        ReturnedUltraHigh = other.ReturnedUltraHigh;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3130,6 +3160,10 @@ namespace Asgt.Dataservice.V1 {
             ReturnedVeryHigh = input.ReadInt32();
             break;
           }
+          case 80: {
+            ReturnedUltraHigh = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -3183,6 +3217,10 @@ namespace Asgt.Dataservice.V1 {
           }
           case 72: {
             ReturnedVeryHigh = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            ReturnedUltraHigh = input.ReadInt32();
             break;
           }
         }

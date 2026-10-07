@@ -27,6 +27,8 @@ var asgt_type_model_type_pb = require('../../asgt/type/model_type_pb.js');
 goog.object.extend(proto, asgt_type_model_type_pb);
 var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
+var asgt_type_tier_pb = require('../../asgt/type/tier_pb.js');
+goog.object.extend(proto, asgt_type_tier_pb);
 var asgt_v2_product_service_pb = require('../../asgt/v2/product_service_pb.js');
 goog.object.extend(proto, asgt_v2_product_service_pb);
 var asgt_v2_type_data_pb = require('../../asgt/v2/type/data_pb.js');
@@ -182,7 +184,8 @@ proto.asgt.v2.SuggestOptions.toObject = function(includeInstance, msg) {
     suggestLimit: jspb.Message.getFieldWithDefault(msg, 1, 0),
     minConfidence: jspb.Message.getFieldWithDefault(msg, 2, 0),
     modelType: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    includeProductTypes: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
+    includeProductTypes: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    tier: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -234,6 +237,10 @@ proto.asgt.v2.SuggestOptions.deserializeBinaryFromReader = function(msg, reader)
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIncludeProductTypes(value);
+      break;
+    case 5:
+      var value = /** @type {!proto.asgt.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
       break;
     default:
       reader.skipField();
@@ -289,6 +296,13 @@ proto.asgt.v2.SuggestOptions.serializeBinaryToWriter = function(message, writer)
   if (f) {
     writer.writeBool(
       4,
+      f
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
       f
     );
   }
@@ -364,6 +378,24 @@ proto.asgt.v2.SuggestOptions.prototype.getIncludeProductTypes = function() {
  */
 proto.asgt.v2.SuggestOptions.prototype.setIncludeProductTypes = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional asgt.type.Tier tier = 5;
+ * @return {!proto.asgt.type.Tier}
+ */
+proto.asgt.v2.SuggestOptions.prototype.getTier = function() {
+  return /** @type {!proto.asgt.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.asgt.type.Tier} value
+ * @return {!proto.asgt.v2.SuggestOptions} returns this
+ */
+proto.asgt.v2.SuggestOptions.prototype.setTier = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 

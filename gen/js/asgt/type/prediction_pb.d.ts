@@ -34,6 +34,7 @@ export namespace Confidence {
     MID = 3,
     HIGH = 4,
     VERY_HIGH = 5,
+    ULTRA_HIGH = 6,
   }
 }
 

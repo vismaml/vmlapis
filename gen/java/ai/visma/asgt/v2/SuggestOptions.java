@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   private SuggestOptions() {
     minConfidence_ = 0;
     modelType_ = 0;
+    tier_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -126,6 +127,32 @@ private static final long serialVersionUID = 0L;
     return includeProductTypes_;
   }
 
+  public static final int TIER_FIELD_NUMBER = 5;
+  private int tier_ = 0;
+  /**
+   * <pre>
+   * Tier determines which model serves the request
+   * </pre>
+   *
+   * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  @java.lang.Override public int getTierValue() {
+    return tier_;
+  }
+  /**
+   * <pre>
+   * Tier determines which model serves the request
+   * </pre>
+   *
+   * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+   * @return The tier.
+   */
+  @java.lang.Override public ai.visma.asgt.type.Tier getTier() {
+    ai.visma.asgt.type.Tier result = ai.visma.asgt.type.Tier.forNumber(tier_);
+    return result == null ? ai.visma.asgt.type.Tier.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -152,6 +179,9 @@ private static final long serialVersionUID = 0L;
     if (includeProductTypes_ != false) {
       output.writeBool(4, includeProductTypes_);
     }
+    if (tier_ != ai.visma.asgt.type.Tier.STANDARD.getNumber()) {
+      output.writeEnum(5, tier_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -177,6 +207,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, includeProductTypes_);
     }
+    if (tier_ != ai.visma.asgt.type.Tier.STANDARD.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, tier_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -198,6 +232,7 @@ private static final long serialVersionUID = 0L;
     if (modelType_ != other.modelType_) return false;
     if (getIncludeProductTypes()
         != other.getIncludeProductTypes()) return false;
+    if (tier_ != other.tier_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -218,6 +253,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_PRODUCT_TYPES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeProductTypes());
+    hash = (37 * hash) + TIER_FIELD_NUMBER;
+    hash = (53 * hash) + tier_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -353,6 +390,7 @@ private static final long serialVersionUID = 0L;
       minConfidence_ = 0;
       modelType_ = 0;
       includeProductTypes_ = false;
+      tier_ = 0;
       return this;
     }
 
@@ -398,6 +436,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.includeProductTypes_ = includeProductTypes_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.tier_ = tier_;
+      }
     }
 
     @java.lang.Override
@@ -423,6 +464,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getIncludeProductTypes() != false) {
         setIncludeProductTypes(other.getIncludeProductTypes());
+      }
+      if (other.tier_ != 0) {
+        setTierValue(other.getTierValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -470,6 +514,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              tier_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -717,6 +766,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncludeProductTypes() {
       bitField0_ = (bitField0_ & ~0x00000008);
       includeProductTypes_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int tier_ = 0;
+    /**
+     * <pre>
+     * Tier determines which model serves the request
+     * </pre>
+     *
+     * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+     * @return The enum numeric value on the wire for tier.
+     */
+    @java.lang.Override public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <pre>
+     * Tier determines which model serves the request
+     * </pre>
+     *
+     * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+     * @param value The enum numeric value on the wire for tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierValue(int value) {
+      tier_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Tier determines which model serves the request
+     * </pre>
+     *
+     * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+     * @return The tier.
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.Tier getTier() {
+      ai.visma.asgt.type.Tier result = ai.visma.asgt.type.Tier.forNumber(tier_);
+      return result == null ? ai.visma.asgt.type.Tier.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Tier determines which model serves the request
+     * </pre>
+     *
+     * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+     * @param value The tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTier(ai.visma.asgt.type.Tier value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      tier_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Tier determines which model serves the request
+     * </pre>
+     *
+     * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTier() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      tier_ = 0;
       onChanged();
       return this;
     }

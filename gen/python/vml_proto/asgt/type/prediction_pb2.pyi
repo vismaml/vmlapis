@@ -18,12 +18,14 @@ class Confidence(_message.Message):
         MID: _ClassVar[Confidence.Level]
         HIGH: _ClassVar[Confidence.Level]
         VERY_HIGH: _ClassVar[Confidence.Level]
+        ULTRA_HIGH: _ClassVar[Confidence.Level]
     UNKNOWN: Confidence.Level
     VERY_LOW: Confidence.Level
     LOW: Confidence.Level
     MID: Confidence.Level
     HIGH: Confidence.Level
     VERY_HIGH: Confidence.Level
+    ULTRA_HIGH: Confidence.Level
     LEVEL_FIELD_NUMBER: _ClassVar[int]
     VALUE_FIELD_NUMBER: _ClassVar[int]
     level: Confidence.Level

@@ -2463,7 +2463,8 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.toObject = function(includeI
     returnedLow: jspb.Message.getFieldWithDefault(msg, 6, 0),
     returnedMid: jspb.Message.getFieldWithDefault(msg, 7, 0),
     returnedHigh: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    returnedVeryHigh: jspb.Message.getFieldWithDefault(msg, 9, 0)
+    returnedVeryHigh: jspb.Message.getFieldWithDefault(msg, 9, 0),
+    returnedUltraHigh: jspb.Message.getFieldWithDefault(msg, 10, 0)
   };
 
   if (includeInstance) {
@@ -2535,6 +2536,10 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.deserializeBinaryFromReader 
     case 9:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setReturnedVeryHigh(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setReturnedUltraHigh(value);
       break;
     default:
       reader.skipField();
@@ -2625,6 +2630,13 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.serializeBinaryToWriter = fu
   if (f !== 0) {
     writer.writeInt32(
       9,
+      f
+    );
+  }
+  f = message.getReturnedUltraHigh();
+  if (f !== 0) {
+    writer.writeInt32(
+      10,
       f
     );
   }
@@ -2809,6 +2821,24 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedVeryHig
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedVeryHigh = function(value) {
   return jspb.Message.setProto3IntField(this, 9, value);
+};
+
+
+/**
+ * optional int32 returned_ultra_high = 10;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedUltraHigh = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedUltraHigh = function(value) {
+  return jspb.Message.setProto3IntField(this, 10, value);
 };
 
 

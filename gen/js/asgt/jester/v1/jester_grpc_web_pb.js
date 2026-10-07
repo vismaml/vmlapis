@@ -30,6 +30,8 @@ var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js')
 
+var asgt_type_tier_pb = require('../../../asgt/type/tier_pb.js')
+
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')

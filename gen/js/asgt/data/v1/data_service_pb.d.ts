@@ -321,6 +321,9 @@ export class RegisterQueryStatsRequest extends jspb.Message {
   getReturnedVeryHigh(): number;
   setReturnedVeryHigh(value: number): RegisterQueryStatsRequest;
 
+  getReturnedUltraHigh(): number;
+  setReturnedUltraHigh(value: number): RegisterQueryStatsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterQueryStatsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterQueryStatsRequest): RegisterQueryStatsRequest.AsObject;
@@ -340,6 +343,7 @@ export namespace RegisterQueryStatsRequest {
     returnedMid: number,
     returnedHigh: number,
     returnedVeryHigh: number,
+    returnedUltraHigh: number,
   }
 }
 

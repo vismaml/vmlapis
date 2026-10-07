@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   private SuggestionOptions() {
     minConfidence_ = 0;
     modelType_ = 0;
+    tier_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -91,6 +92,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.asgt.type.ModelType.UNRECOGNIZED : result;
   }
 
+  public static final int TIER_FIELD_NUMBER = 4;
+  private int tier_ = 0;
+  /**
+   * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  @java.lang.Override public int getTierValue() {
+    return tier_;
+  }
+  /**
+   * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+   * @return The tier.
+   */
+  @java.lang.Override public ai.visma.asgt.type.Tier getTier() {
+    ai.visma.asgt.type.Tier result = ai.visma.asgt.type.Tier.forNumber(tier_);
+    return result == null ? ai.visma.asgt.type.Tier.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -114,6 +133,9 @@ private static final long serialVersionUID = 0L;
     if (modelType_ != ai.visma.asgt.type.ModelType.DEFAULT.getNumber()) {
       output.writeEnum(3, modelType_);
     }
+    if (tier_ != ai.visma.asgt.type.Tier.STANDARD.getNumber()) {
+      output.writeEnum(4, tier_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -135,6 +157,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, modelType_);
     }
+    if (tier_ != ai.visma.asgt.type.Tier.STANDARD.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, tier_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -154,6 +180,7 @@ private static final long serialVersionUID = 0L;
         != other.getSuggestionLimit()) return false;
     if (minConfidence_ != other.minConfidence_) return false;
     if (modelType_ != other.modelType_) return false;
+    if (tier_ != other.tier_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,6 +198,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + minConfidence_;
     hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + modelType_;
+    hash = (37 * hash) + TIER_FIELD_NUMBER;
+    hash = (53 * hash) + tier_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -305,6 +334,7 @@ private static final long serialVersionUID = 0L;
       suggestionLimit_ = 0;
       minConfidence_ = 0;
       modelType_ = 0;
+      tier_ = 0;
       return this;
     }
 
@@ -347,6 +377,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.modelType_ = modelType_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.tier_ = tier_;
+      }
     }
 
     @java.lang.Override
@@ -369,6 +402,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.modelType_ != 0) {
         setModelTypeValue(other.getModelTypeValue());
+      }
+      if (other.tier_ != 0) {
+        setTierValue(other.getTierValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -411,6 +447,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              tier_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -562,6 +603,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearModelType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       modelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int tier_ = 0;
+    /**
+     * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+     * @return The enum numeric value on the wire for tier.
+     */
+    @java.lang.Override public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+     * @param value The enum numeric value on the wire for tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTierValue(int value) {
+      tier_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+     * @return The tier.
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.Tier getTier() {
+      ai.visma.asgt.type.Tier result = ai.visma.asgt.type.Tier.forNumber(tier_);
+      return result == null ? ai.visma.asgt.type.Tier.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+     * @param value The tier to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTier(ai.visma.asgt.type.Tier value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      tier_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Tier tier = 4 [json_name = "tier"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTier() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      tier_ = 0;
       onChanged();
       return this;
     }
