@@ -1570,7 +1570,8 @@
         "DEFAULT",
         "STANDARD",
         "PREMIUM",
-        "ULTRA"
+        "ULTRA",
+        "HUMAN"
       ],
       "default": "DEFAULT",
       "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
