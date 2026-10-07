@@ -266,13 +266,15 @@ message ListDocumentsForAnnotationRequest {
   string tag = 2;
   google.protobuf.Timestamp created_from = 3;
   google.protobuf.Timestamp created_to = 4;
-  int32 page = 5;
-  int32 page_size = 6;
+  int32 page_size = 5;
+  // next_page_token of the previous response; empty for the first page.
+  string page_token = 6;
 }
 
 message ListDocumentsForAnnotationResponse {
   repeated DocumentForAnnotation documents = 1;
-  int64 total = 2;
+  // Empty when there are no more documents.
+  string next_page_token = 2;
 }
 
 message DocumentForAnnotation {
