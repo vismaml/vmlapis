@@ -59,7 +59,10 @@ message SuggestOptions {
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;
   // Not implemented yet.
-  asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
+  asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum = {
+    defined_only: true
+    not_in: [6]
+  }];
   // Model type requested
   asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
   // When true, the service will also call the ProductTypeService and include product type suggestions in the response
