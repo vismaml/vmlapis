@@ -63,6 +63,17 @@ func (m *SuggestOptions) validate(all bool) error {
 
 	// no validation rules for SuggestLimit
 
+	if _, ok := _SuggestOptions_MinConfidence_NotInLookup[m.GetMinConfidence()]; ok {
+		err := SuggestOptionsValidationError{
+			field:  "MinConfidence",
+			reason: "value must not be in list [ULTRA_HIGH]",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
 	if _, ok := asgttype.Confidence_Level_name[int32(m.GetMinConfidence())]; !ok {
 		err := SuggestOptionsValidationError{
 			field:  "MinConfidence",
@@ -175,6 +186,10 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SuggestOptionsValidationError{}
+
+var _SuggestOptions_MinConfidence_NotInLookup = map[asgttype.Confidence_Level]struct{}{
+	6: {},
+}
 
 // Validate checks the field values on SuggestRequest with the rules defined in
 // the proto definition for this message. If any rules are violated, the first

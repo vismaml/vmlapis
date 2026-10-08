@@ -10,6 +10,7 @@ import "asgt/type/sample.proto";
 import "asgt/type/tier.proto";
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
+import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
@@ -44,7 +45,9 @@ message SuggestionResponse {
 
 message SuggestionOptions {
   int32 suggestion_limit = 1;
-  asgt.type.Confidence.Level min_confidence = 2;
+  asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum = {
+    not_in: [6]
+  }];
   asgt.type.ModelType model_type = 3;
   asgt.type.Tier tier = 4;
 }

@@ -35,6 +35,8 @@ var asgt_type_tier_pb = require('../../../asgt/type/tier_pb.js')
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')
+
+var validate_validate_pb = require('../../../validate/validate_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.jester = {};
