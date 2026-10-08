@@ -16,12 +16,12 @@ public interface SuggestionOptionsOrBuilder extends
   int getSuggestionLimit();
 
   /**
-   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
    * @return The enum numeric value on the wire for minConfidence.
    */
   int getMinConfidenceValue();
   /**
-   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
    * @return The minConfidence.
    */
   ai.visma.asgt.type.Confidence.Level getMinConfidence();

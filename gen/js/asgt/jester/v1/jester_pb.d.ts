@@ -8,6 +8,7 @@ import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb'; // proto im
 import * as asgt_type_tier_pb from '../../../asgt/type/tier_pb'; // proto import: "asgt/type/tier.proto"
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
+import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
 export class SuggestionResponse extends jspb.Message {

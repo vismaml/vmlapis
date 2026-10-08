@@ -59,14 +59,14 @@ private static final long serialVersionUID = 0L;
   public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
   private int minConfidence_ = 0;
   /**
-   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
    * @return The enum numeric value on the wire for minConfidence.
    */
   @java.lang.Override public int getMinConfidenceValue() {
     return minConfidence_;
   }
   /**
-   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+   * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
    * @return The minConfidence.
    */
   @java.lang.Override public ai.visma.asgt.type.Confidence.Level getMinConfidence() {
@@ -503,14 +503,14 @@ private static final long serialVersionUID = 0L;
 
     private int minConfidence_ = 0;
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @param value The enum numeric value on the wire for minConfidence to set.
      * @return This builder for chaining.
      */
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return The minConfidence.
      */
     @java.lang.Override
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.type.Confidence.Level.UNRECOGNIZED : result;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @param value The minConfidence to set.
      * @return This builder for chaining.
      */
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearMinConfidence() {
