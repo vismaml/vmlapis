@@ -4,6 +4,7 @@ package asgt.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// Format of a trained model.
 enum ModelType {
   DEFAULT = 0;
   TENSORFLOW = 1;

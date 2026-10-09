@@ -50,9 +50,14 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
 };
 
 service SuggesterService {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Get suggestions from the model trained on a dataset."};
 
-  // Suggest target values for some input using a dataset, returning an empty result if no model exists.
+  // Suggest target values for one input.
+  //
+  // Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+  // highest confidence first, each with its confidence level.
+  // Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+  // sets no data structure or an option has an invalid value.
   rpc Suggest(SuggestRequest) returns (SuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}:suggest"
@@ -60,7 +65,12 @@ service SuggesterService {
     };
   }
 
-  // BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+  // Suggest target values for several inputs.
+  //
+  // Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+  // same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+  // predictions instead of 404. To get a 404 in that case, use
+  // POST /v2/datasets/{datasetName}/model:batchSuggest.
   rpc BatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}:batchSuggest"
@@ -68,8 +78,10 @@ service SuggesterService {
     };
   }
 
-  // Suggest target values for multiple inputs using the most recently trained model in a dataset.
-  // Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+  // Suggest target values for several inputs, or 404 without a model.
+  //
+  // Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+  // no trained model yet or doesn't exist.
   rpc ModelBatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{dataset_name}/model:batchSuggest"
@@ -78,54 +90,70 @@ service SuggesterService {
   }
 }
 
+// Options for the suggest endpoints. All of them are optional.
 message SuggestOptions {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{\"suggest_limit\": 3}"};
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{\"suggestLimit\": 3}"};
 
-  // Maximum number of suggestions to return per target
+  // Maximum number of candidates per target. The default is 10.
   int32 suggest_limit = 1;
-  // Not implemented yet.
+  // The confidence level you need. Candidates below it aren't removed, so filter on each
+  // candidate's confidence.level yourself. When a target's best candidate is below this level,
+  // the service tries to find a better answer and uses it if it reaches the level. The default
+  // is HIGH. ULTRA_HIGH isn't accepted.
   asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum = {
     defined_only: true
     not_in: [6]
   }];
-  // Model type requested
+  // [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+  // set it, it must be DEFAULT, TENSORFLOW or ONNX.
   asgt.type.ModelType model_type = 3 [(validate.rules).enum.defined_only = true];
-  // When true, the service will also call the ProductTypeService and include product type suggestions in the response
+  // When true, the response also has product type candidates for the text of each input. The
+  // default is false.
   bool include_product_types = 4;
-  // Tier determines which model serves the request
   asgt.type.Tier tier = 5 [(validate.rules).enum.defined_only = true];
 }
 
+// Request body for POST /v2/datasets/{datasetName}:suggest.
 message SuggestRequest {
-  // Name of the dataset to make prediction against
+  // Name of the dataset.
   string dataset_name = 1 [(validate.rules).string = {
     pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
-  }]; // text-no-spaces
-  // Input data to use for prediction
+  }];
   asgt.v2.type.Data input = 2;
   SuggestOptions options = 3;
 }
 
+// Suggestions for one input.
 message SuggestResponse {
   asgt.type.Prediction prediction = 1;
+  // The model that made the prediction. Only its version is filled in.
   asgt.type.Model model = 2;
+  // Product type candidates for the input's text, when includeProductTypes is true.
   ProductTypeSuggestion product_type_suggestions = 3;
 }
 
+// Request body for POST /v2/datasets/{datasetName}:batchSuggest and
+// POST /v2/datasets/{datasetName}/model:batchSuggest.
 message BatchSuggestRequest {
-  // Name of the dataset to make prediction against
+  // Name of the dataset.
   string dataset_name = 1 [(validate.rules).string = {
     pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
-  }]; // text-no-spaces
-  // Input data to use for prediction
+  }];
+  // The inputs to get suggestions for. Each one must set a data structure.
   repeated asgt.v2.type.Data inputs = 2;
   SuggestOptions options = 3;
 }
 
+// Suggestions for several inputs.
 message BatchSuggestResponse {
+  // One prediction per input, in the same order.
   repeated asgt.type.Prediction predictions = 1;
+  // The model that made the predictions. Only its version is filled in, and it's empty when the
+  // dataset has no model.
   asgt.type.Model model = 2;
+  // Product type candidates for each input's text, in the same order, when includeProductTypes
+  // is true.
   repeated ProductTypeSuggestion product_type_suggestions = 3;
 }

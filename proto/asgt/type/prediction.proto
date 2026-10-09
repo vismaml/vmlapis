@@ -7,34 +7,49 @@ import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
-// Common types
+// Confidence of a suggested value.
 message Confidence {
+  // Confidence level of a suggested value. Levels are set for each target from the model's
+  // evaluation, so they give more stable results across model upgrades than the score. Use them
+  // to decide whether to trust a suggestion.
   enum Level {
+    // No level.
     UNKNOWN = 0;
     VERY_LOW = 1;
     LOW = 2;
     MID = 3;
     HIGH = 4;
     VERY_HIGH = 5;
+    // Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms.
     ULTRA_HIGH = 6;
   }
-  // A bucketized representation of confidence, which is intended to give clients
-  // highly stable results across model upgrades.
   Level level = 1;
-  // The confidence value
+  // The confidence score. Higher means more likely, but use level to decide whether to trust
+  // a suggestion.
   google.protobuf.FloatValue value = 2;
 }
 
+// Suggestions for one input, with one entry per target.
 message Prediction {
+  // Suggestions for one target.
   message Target {
+    // A suggested value for a target.
     message Candidate {
+      // The suggested value.
       string value = 1 [(gen_bq_schema.bigquery).require = true];
       Confidence confidence = 2;
     }
+    // Name of the target.
     string name = 1;
+    // The suggested values, highest confidence first.
     repeated Candidate candidates = 2;
+    // Whether an example's value for this target is one the model wasn't trained on. The
+    // suggest endpoints don't fill it in.
     bool unknown_target_class = 3;
   }
+  // One entry per target of the model.
   repeated Target targets = 1;
+  // Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+  // fill it in.
   float unknown_token_percentage = 2;
 }

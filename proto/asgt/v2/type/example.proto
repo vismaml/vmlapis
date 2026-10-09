@@ -8,17 +8,19 @@ import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 
-// A pair of example data and example target values
+// An example to train on: input data and the target values it should give.
 message Example {
   asgt.v2.type.Data data = 1;
 
+  // The correct value for each target. At least one is required.
   repeated asgt.v2.type.TargetValue target_values = 2 [(validate.rules).repeated = {
     min_items: 1
     ignore_empty: false
   }];
 
-  // Not implemented yet.
-  // An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+  // [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+  // PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+  // returns 501. If you set it, it must be a UUID.
   string id = 3 [(validate.rules).string = {
     uuid: true
     ignore_empty: true

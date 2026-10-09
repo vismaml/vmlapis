@@ -10,24 +10,38 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// A trained model.
 message Model {
+  // How the model takes its input. The service uses it to run the model.
   enum InputType {
     FEATURE_TENSORS = 0;
     EXAMPLE_TENSOR = 1;
   }
   reserved 1 to 2, 11;
+  // Version number of the model.
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
+  // When the model was created.
   google.protobuf.Timestamp created_at = 4;
+  // Size of the dataset the model was trained on, in examples.
   int32 dataset_size = 5 [(gen_bq_schema.bigquery).ignore = true];
+  // Number of examples used for training.
   int32 training_size = 6 [(gen_bq_schema.bigquery).ignore = true];
+  // Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
   repeated asgt.type.TargetMetrics confidence_scores = 7 [(gen_bq_schema.bigquery).ignore = true];
   InputType input_type = 8;
+  // Type of the dataset the model was trained on: bank, scanned-invoice or
+  // electronic-invoice-line.
   string dataset_type = 9;
+  // Files of the trained model.
   repeated asgt.type.ModelFile model_files = 10 [(gen_bq_schema.bigquery).ignore = true];
+  // For each target, the confidence value at which each confidence level starts.
   map<string, ConfidenceThresholds> target_to_confidence_thresholds = 12 [(gen_bq_schema.bigquery).ignore = true];
+  // For each target, the number of classes, that is distinct values, it has.
   map<string, int32> target_to_class_count = 13 [(gen_bq_schema.bigquery).ignore = true];
 }
 
+// Confidence thresholds of one target.
 message ConfidenceThresholds {
+  // The confidence value at which each level starts.
   repeated asgt.type.Confidence confidence_thresholds = 2;
 }

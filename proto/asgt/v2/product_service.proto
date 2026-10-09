@@ -47,7 +47,10 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
 service ProductTypeService {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Suggest product types from text descriptions."};
 
-  // Suggest product types for a batch of text inputs.
+  // Suggest product types for a batch of texts.
+  //
+  // Returns one suggestion per text, in the same order, each with ranked product type
+  // candidates. Send 1 to 512 texts, none of them empty.
   rpc BatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/models/product-types:batchSuggest"
@@ -58,10 +61,14 @@ service ProductTypeService {
   // Internal cluster-only batch suggest for product types.
   rpc InternalBatchSuggest(ProductTypeBatchSuggestRequest) returns (ProductTypeBatchSuggestResponse) {}
 
-  // Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+  // Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
   rpc InternalBatchSuggestWithLogits(ProductTypeBatchSuggestRequest) returns (InternalProductTypeBatchSuggestResponse) {}
 
-  // Submit feedback for product type predictions.
+  // Send the correct product types for texts.
+  //
+  // Stores each text with its correct product type and the model's current candidates for it,
+  // to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+  // length, or if a category isn't a ProductType name.
   rpc Feedback(ProductTypeFeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v2/models/product-types:feedback"
@@ -70,8 +77,10 @@ service ProductTypeService {
   }
 }
 
+// Request body for POST /v2/models/product-types:batchSuggest.
 message ProductTypeBatchSuggestRequest {
-  // Text descriptions to classify into product types.
+  // Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+  // texts, none of them empty.
   repeated string texts = 1 [(validate.rules).repeated = {
     min_items: 1
     max_items: 512
@@ -81,31 +90,48 @@ message ProductTypeBatchSuggestRequest {
   }];
 }
 
+// Product type suggestions for a batch of texts.
 message ProductTypeBatchSuggestResponse {
+  // One suggestion per text, in the same order as the request.
   repeated ProductTypeSuggestion suggestions = 1;
 }
 
+// Response of an internal method that isn't available over HTTP.
 message InternalProductTypeBatchSuggestResponse {
+  // One suggestion per text, in the same order as the request.
   repeated ProductTypeSuggestion suggestions = 1;
+  // The model's raw scores for each text, in the same order.
   repeated ProductTypeLogits logits = 2;
 }
 
+// The model's raw scores for one text, one per class. Only returned by an internal method.
 message ProductTypeLogits {
+  // The scores.
   repeated float values = 1;
 }
 
+// Product type candidates for one text.
 message ProductTypeSuggestion {
   reserved 1; // reserved for potential ID for reference
+  // The candidates, ranked by the model.
   repeated ProductTypeCandidate candidates = 2;
 }
 
+// A product type candidate for a text.
 message ProductTypeCandidate {
+  // The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+  // label that has no product type.
   ProductType type = 1;
+  // The product type's name in words, such as "Accounting software".
   string label = 2;
+  // The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+  // trust it.
   float confidence = 3;
   ConfidenceLevel confidence_level = 4;
 }
 
+// The product types a text can be classified into. UNDEFINED isn't a product type: it's the
+// empty value.
 enum ProductType {
   UNDEFINED = 0;
   ACCOUNTING_AUDIT = 1;
@@ -184,13 +210,18 @@ enum ProductType {
   WEBSITE = 74;
 }
 
+// Request body for POST /v2/models/product-types:feedback.
 message ProductTypeFeedbackRequest {
+  // The texts, such as invoice lines or bank transaction descriptions. At least one is
+  // required.
   repeated string texts = 1 [(validate.rules).repeated = {
     min_items: 1
     items: {
       string: {min_len: 1}
     }
   }];
+  // The correct product type for each text, in the same order as texts, as a ProductType name
+  // such as ACCOUNTING_SOFTWARE.
   repeated string true_categories = 2 [(validate.rules).repeated = {
     min_items: 1
     items: {
@@ -199,6 +230,8 @@ message ProductTypeFeedbackRequest {
   }];
 }
 
+// Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the
+// model gave no level.
 enum ConfidenceLevel {
   UNKNOWN = 0;
   VERY_LOW = 1;

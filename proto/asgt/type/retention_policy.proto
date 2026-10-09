@@ -4,6 +4,9 @@ package asgt.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// How long examples are used for training.
 message RetentionPolicy {
+  // Number of days examples count for training. Older examples are left out of training. The
+  // default is 180, which also applies when you send 0.
   int64 max_days = 1;
 }

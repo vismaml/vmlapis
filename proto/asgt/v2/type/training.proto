@@ -7,26 +7,23 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 
+// A training of a dataset.
 message Training {
-  // Creation time of the training
+  // When the training was scheduled.
   google.protobuf.Timestamp created_at = 1;
+  // Always empty, because the listings only return active trainings. Use trainingStatus.
   string status = 2;
-  // Status of the training.
-  // SCHEDULED - Training is scheduled to be run in a specific time. This
-  // could be in between 1 minute or 24 hours depending on how recently the dataset
-  // was created
-  // PENDING - The training is ready to be picked up by a worker.
-  // RUNNING - The training is currently running.
-  // DONE - The training has completed successfully.
-  // FAILED - The training failed due to an error. See training status for
-  // more information.
+  // State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+  // a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
   string training_status = 3;
-  // Additional information about the training status.
+  // More about the state, such as why the training failed.
   string training_status_message = 4;
-  // Specifies when did the training finish.
+  // When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+  // failed trainings.
   google.protobuf.Timestamp finish_time = 5;
-  // Specifies dataset the training ran on.
+  // The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+  // fills it in.
   asgt.type.Dataset dataset = 6;
-  // Specifies when the training is scheduled.
+  // When the training is set to start.
   google.protobuf.Timestamp schedule_time = 7;
 }

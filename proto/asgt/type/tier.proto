@@ -4,7 +4,12 @@ package asgt.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// Service tier for suggestions. The v2 suggest endpoints use it, and the v1 API always runs as
+// STANDARD.
 enum Tier {
+  // The default.
   STANDARD = 0;
+  // Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH
+  // when the check agrees.
   ULTRA = 1;
 }

@@ -4,7 +4,10 @@ package asgt.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// A file of a trained model.
 message ModelFile {
+  // Name of the file.
   string name = 1;
+  // Contents of the file.
   bytes data = 2;
 }

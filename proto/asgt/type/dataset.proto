@@ -7,20 +7,32 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+// A dataset of examples that Autosuggest trains models on.
 message Dataset {
+  // Name of the project the dataset belongs to.
   string consumer = 1;
+  // Name of the dataset.
   string name = 2;
+  // Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+  // API, the first example you add sets it, and it's empty until then.
   string type = 3;
+  // Tags the dataset was created with.
   repeated string tags = 4;
+  // Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+  // empty for datasets created with the v2 API.
   repeated string targets = 5;
   reserved 6 to 8;
   asgt.type.RetentionPolicy retention_policy = 9;
 
+  // When the dataset was created, or created again after it was deleted.
   google.protobuf.Timestamp created_at = 10;
+  // [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
   google.protobuf.Timestamp updated_at = 11;
 
-  // Number of samples in the dataset reflecting added entries that meet the retention policy
+  // [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+  // retention window.
   int64 size = 12;
 
+  // When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
   google.protobuf.Timestamp truncated_at = 13;
 }

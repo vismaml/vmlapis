@@ -7,11 +7,12 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 
+// A model trained on a dataset.
 message Model {
-  // Creation time of the model
+  // When the model was created.
   google.protobuf.Timestamp created_at = 1;
-  // Specifies dataset the model belongs to.
+  // The dataset the model was trained on. Only its consumer, name and type are filled in.
   asgt.type.Dataset dataset = 2;
-  // Targets the model was trained on
+  // Names of the targets the model predicts.
   repeated string targets = 3;
 }

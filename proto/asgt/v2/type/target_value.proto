@@ -6,11 +6,14 @@ import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 
-// Record mapping a target name to a value
+// A target and its value in an example.
 message TargetValue {
+  // Name of the target, such as "account". Use letters, digits, ".", "_", ">" and "-",
+  // starting with a letter, digit or ".", up to 256 bytes.
   string name = 1 [(validate.rules).string = {
     pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }];
+  // The value for this target, such as "002".
   string value = 2;
 }
