@@ -1,7 +1,8 @@
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -11,7 +12,7 @@ class Http(_message.Message):
     FULLY_DECODE_RESERVED_EXPANSION_FIELD_NUMBER: _ClassVar[int]
     rules: _containers.RepeatedCompositeFieldContainer[HttpRule]
     fully_decode_reserved_expansion: bool
-    def __init__(self, rules: _Optional[_Iterable[_Union[HttpRule, _Mapping]]] = ..., fully_decode_reserved_expansion: bool = ...) -> None: ...
+    def __init__(self, rules: _Optional[_Iterable[_Union[HttpRule, _Mapping]]] = ..., fully_decode_reserved_expansion: _Optional[bool] = ...) -> None: ...
 
 class HttpRule(_message.Message):
     __slots__ = ("selector", "get", "put", "post", "delete", "patch", "custom", "body", "response_body", "additional_bindings")

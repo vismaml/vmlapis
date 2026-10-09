@@ -3,7 +3,8 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -36,7 +37,7 @@ class TextAnnotation(_message.Message):
         IS_PREFIX_FIELD_NUMBER: _ClassVar[int]
         type: TextAnnotation.DetectedBreak.BreakType
         is_prefix: bool
-        def __init__(self, type: _Optional[_Union[TextAnnotation.DetectedBreak.BreakType, str]] = ..., is_prefix: bool = ...) -> None: ...
+        def __init__(self, type: _Optional[_Union[TextAnnotation.DetectedBreak.BreakType, str]] = ..., is_prefix: _Optional[bool] = ...) -> None: ...
     class TextProperty(_message.Message):
         __slots__ = ("detected_languages", "detected_break")
         DETECTED_LANGUAGES_FIELD_NUMBER: _ClassVar[int]
