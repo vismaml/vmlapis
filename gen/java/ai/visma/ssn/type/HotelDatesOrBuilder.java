@@ -11,9 +11,7 @@ public interface HotelDatesOrBuilder extends
 
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -22,9 +20,7 @@ public interface HotelDatesOrBuilder extends
       getCheckInDateList();
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -32,9 +28,7 @@ public interface HotelDatesOrBuilder extends
   ai.visma.ssn.type.Candidate getCheckInDate(int index);
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -42,9 +36,7 @@ public interface HotelDatesOrBuilder extends
   int getCheckInDateCount();
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -53,9 +45,7 @@ public interface HotelDatesOrBuilder extends
       getCheckInDateOrBuilderList();
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -65,9 +55,7 @@ public interface HotelDatesOrBuilder extends
 
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -76,9 +64,7 @@ public interface HotelDatesOrBuilder extends
       getCheckOutDateList();
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -86,9 +72,7 @@ public interface HotelDatesOrBuilder extends
   ai.visma.ssn.type.Candidate getCheckOutDate(int index);
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -96,9 +80,7 @@ public interface HotelDatesOrBuilder extends
   int getCheckOutDateCount();
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -107,9 +89,7 @@ public interface HotelDatesOrBuilder extends
       getCheckOutDateOrBuilderList();
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>

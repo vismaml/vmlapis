@@ -6,6 +6,11 @@
 package ai.visma.ssn.annotator.v1;
 
 /**
+ * <pre>
+ * Response of POST /v1/document:annotate. Feature fields are only filled for the
+ * features you requested.
+ * </pre>
+ *
  * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
  */
 public final class DocumentAnnotatorResponse extends
@@ -103,73 +108,58 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> orderDate_;
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getOrderDateList() {
+  @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getOrderDateList() {
     return orderDate_;
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getOrderDateOrBuilderList() {
     return orderDate_;
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getOrderDateCount() {
+  @java.lang.Deprecated public int getOrderDateCount() {
     return orderDate_.size();
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getOrderDate(int index) {
+  @java.lang.Deprecated public ai.visma.ssn.type.Candidate getOrderDate(int index) {
     return orderDate_.get(index);
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
+  @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
       int index) {
     return orderDate_.get(index);
   }
@@ -179,9 +169,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> paymentDueDate_;
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -192,9 +180,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -206,9 +192,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -219,9 +203,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -232,9 +214,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -250,9 +230,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> currency_;
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -263,9 +241,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -277,9 +253,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -290,9 +264,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -303,9 +275,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -321,9 +291,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalVat_;
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -334,9 +302,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -348,9 +314,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -361,9 +325,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -374,9 +336,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -392,9 +352,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalInclVat_;
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -405,9 +363,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -419,9 +375,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -432,9 +386,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -445,9 +397,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -463,9 +413,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalExclVat_;
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -476,9 +424,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -490,9 +436,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -503,9 +447,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -516,9 +458,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -534,98 +474,63 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierCorporateId_;
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getSupplierCorporateIdList() {
+  @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getSupplierCorporateIdList() {
     return supplierCorporateId_;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getSupplierCorporateIdOrBuilderList() {
     return supplierCorporateId_;
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getSupplierCorporateIdCount() {
+  @java.lang.Deprecated public int getSupplierCorporateIdCount() {
     return supplierCorporateId_.size();
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getSupplierCorporateId(int index) {
+  @java.lang.Deprecated public ai.visma.ssn.type.Candidate getSupplierCorporateId(int index) {
     return supplierCorporateId_.get(index);
   }
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
+  @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
       int index) {
     return supplierCorporateId_.get(index);
   }
@@ -635,9 +540,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierCountryCode_;
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -648,9 +552,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -662,9 +565,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -675,9 +577,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -688,9 +589,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -706,8 +606,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> documentType_;
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -718,8 +617,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -731,8 +629,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -743,8 +640,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -755,8 +651,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -772,8 +667,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> paymentMethod_;
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -784,8 +678,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -797,8 +690,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -809,8 +701,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -821,8 +712,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -838,9 +728,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> creditCardLastFour_;
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -851,9 +739,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -865,9 +751,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -878,9 +762,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -891,9 +773,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -909,73 +789,58 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> invoiceNumber_;
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getInvoiceNumberList() {
+  @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getInvoiceNumberList() {
     return invoiceNumber_;
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getInvoiceNumberOrBuilderList() {
     return invoiceNumber_;
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getInvoiceNumberCount() {
+  @java.lang.Deprecated public int getInvoiceNumberCount() {
     return invoiceNumber_.size();
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getInvoiceNumber(int index) {
+  @java.lang.Deprecated public ai.visma.ssn.type.Candidate getInvoiceNumber(int index) {
     return invoiceNumber_.get(index);
   }
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
+  @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
       int index) {
     return invoiceNumber_.get(index);
   }
@@ -984,7 +849,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.TextAnnotation textAnnotation_;
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -996,7 +862,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -1008,7 +875,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -1023,7 +891,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineDkType_;
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -1034,7 +902,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -1046,7 +914,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -1057,7 +925,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -1068,7 +936,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -1084,7 +952,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineDkPaymentId_;
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -1095,7 +964,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -1107,7 +977,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -1118,7 +989,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -1129,7 +1001,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -1145,7 +1018,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineDkCreditorId_;
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -1156,7 +1030,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -1168,7 +1043,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -1179,7 +1055,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -1190,7 +1067,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -1206,7 +1084,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineSePaymentId_;
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -1217,7 +1095,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -1229,7 +1107,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -1240,7 +1118,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -1251,7 +1129,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -1267,7 +1145,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineSeBankgiroCreditorId_;
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -1278,7 +1157,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -1290,7 +1170,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -1301,7 +1182,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -1312,7 +1194,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -1328,7 +1211,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineSePlusgiroCreditorId_;
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -1339,7 +1223,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -1351,7 +1236,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -1362,7 +1248,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -1373,7 +1260,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -1389,7 +1277,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineNoPaymentId_;
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1400,7 +1289,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1412,7 +1302,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1423,7 +1314,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1434,7 +1326,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1450,7 +1343,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineFiPaymentId_;
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1461,7 +1355,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1473,7 +1368,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1484,7 +1380,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1495,7 +1392,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1511,7 +1409,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineNlPaymentId_;
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1522,7 +1421,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1534,7 +1434,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1545,7 +1446,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1556,7 +1458,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1572,6 +1475,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ocrLineBePaymentId_;
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1582,6 +1487,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1593,6 +1500,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1603,6 +1512,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1613,6 +1524,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1628,7 +1541,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * Return a string containing the text from the document
+   * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
    * </pre>
    *
    * <code>string text = 23 [json_name = "text"];</code>
@@ -1649,7 +1562,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Return a string containing the text from the document
+   * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
    * </pre>
    *
    * <code>string text = 23 [json_name = "text"];</code>
@@ -1675,8 +1588,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object feedbackId_ = "";
   /**
    * <pre>
-   * Feedback ID is used to correct made predictions through the
-   * Feedback API.
+   * The ID of this request. To correct the results, send it as `id` to
+   * POST /v1/feedback:create.
    * </pre>
    *
    * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -1697,8 +1610,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Feedback ID is used to correct made predictions through the
-   * Feedback API.
+   * The ID of this request. To correct the results, send it as `id` to
+   * POST /v1/feedback:create.
    * </pre>
    *
    * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -1724,9 +1637,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> iban_;
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1737,9 +1650,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1751,9 +1664,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1764,9 +1677,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1777,9 +1690,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1795,8 +1708,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.LineCandidate> lines_;
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1807,8 +1720,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1820,8 +1733,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1832,8 +1745,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1844,8 +1757,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1861,7 +1774,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object preview_ = "";
   /**
    * <pre>
-   * Base64 encoded PNG image  of the first page of PDF document sent in request
+   * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
    * </pre>
    *
    * <code>string preview = 27 [json_name = "preview"];</code>
@@ -1882,7 +1795,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Base64 encoded PNG image  of the first page of PDF document sent in request
+   * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
    * </pre>
    *
    * <code>string preview = 27 [json_name = "preview"];</code>
@@ -1908,7 +1821,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> bankAccountNumber_;
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1919,7 +1832,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1931,7 +1844,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1942,7 +1855,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1953,7 +1866,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1969,7 +1882,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> bankRegistrationNumber_;
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1980,7 +1894,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1992,7 +1907,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -2003,7 +1919,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -2014,7 +1931,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -2030,7 +1948,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> bic_;
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -2041,7 +1959,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -2053,7 +1971,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -2064,7 +1982,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -2075,7 +1993,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -2091,7 +2009,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> documentNumber_;
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -2102,7 +2020,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -2114,7 +2032,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -2125,7 +2043,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -2136,7 +2054,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -2152,7 +2070,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> documentDate_;
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -2163,7 +2082,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -2175,7 +2095,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -2186,7 +2107,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -2197,7 +2119,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -2213,7 +2136,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> orderNumber_;
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -2224,7 +2147,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -2236,7 +2159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -2247,7 +2170,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -2258,7 +2181,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -2274,7 +2197,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierName_;
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -2285,7 +2208,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -2297,7 +2220,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -2308,7 +2231,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -2319,7 +2242,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -2335,8 +2258,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierVatNumber_;
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -2347,8 +2269,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -2360,8 +2281,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -2372,8 +2292,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -2384,8 +2303,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -2401,8 +2319,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierOrganisationNumber_;
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -2413,8 +2331,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -2426,8 +2344,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -2438,8 +2356,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -2450,8 +2368,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -2467,8 +2385,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> supplierAddress_;
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -2479,8 +2397,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -2492,8 +2410,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -2504,8 +2422,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -2516,8 +2434,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -2533,8 +2451,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> customerNumber_;
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -2545,8 +2462,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -2558,8 +2474,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -2570,8 +2485,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -2582,8 +2496,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -2599,7 +2512,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> receiverOrderNumber_;
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -2610,7 +2523,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -2622,7 +2535,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -2633,7 +2546,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -2644,7 +2557,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -2660,7 +2573,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> receiverAddress_;
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -2671,7 +2585,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -2683,7 +2598,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -2694,7 +2610,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -2705,7 +2622,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -2721,7 +2639,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> receiverCountryCode_;
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -2732,7 +2650,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -2744,7 +2662,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -2755,7 +2673,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -2766,7 +2684,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -2782,7 +2700,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> receiverName_;
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -2793,7 +2711,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -2805,7 +2723,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -2816,7 +2734,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -2827,7 +2745,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -2843,7 +2761,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> receiverVatNumber_;
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2854,7 +2772,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2866,7 +2784,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2877,7 +2795,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2888,7 +2806,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2904,11 +2822,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLines_;
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2919,11 +2835,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2935,11 +2849,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2950,11 +2862,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2965,11 +2875,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2985,8 +2893,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.AnswerCandidate> answers_;
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2997,8 +2904,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3010,8 +2916,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3022,8 +2927,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3034,8 +2938,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3051,7 +2954,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PageText> pageTexts_;
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -3062,7 +2965,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -3074,7 +2977,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -3085,7 +2988,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -3096,7 +2999,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -3112,7 +3015,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistribution_;
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -3123,7 +3028,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -3135,7 +3042,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -3146,7 +3055,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -3157,7 +3068,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -3172,7 +3085,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.DocumentMetadata documentMetadata_;
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -3184,7 +3098,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -3196,7 +3111,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -3211,7 +3127,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> languageCode_;
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -3222,7 +3138,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -3234,7 +3150,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -3245,7 +3161,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -3256,7 +3172,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -3272,7 +3188,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_;
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -3283,7 +3199,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -3295,7 +3211,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -3306,7 +3222,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -3317,7 +3233,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -3333,7 +3249,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_;
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -3344,7 +3260,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -3356,7 +3272,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -3367,7 +3283,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -3378,7 +3294,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -3393,7 +3309,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.HotelDates hotelDates_;
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -3405,7 +3322,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -3417,7 +3335,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -3432,7 +3351,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesDetails_;
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -3443,7 +3363,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -3455,7 +3376,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -3466,7 +3388,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -3477,7 +3400,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -3493,7 +3417,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionDetails_;
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -3504,7 +3429,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -3516,7 +3442,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -3527,7 +3454,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -3538,7 +3466,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -3554,10 +3483,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredSupplierAddress_;
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -3568,10 +3496,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -3583,10 +3510,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -3597,10 +3523,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -3611,10 +3536,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -3630,10 +3554,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredReceiverAddress_;
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -3644,10 +3567,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -3659,10 +3581,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -3673,10 +3594,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -3687,10 +3607,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -3706,9 +3625,10 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> ksef_;
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -3719,9 +3639,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -3733,9 +3654,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -3746,9 +3668,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -3759,9 +3682,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -4673,6 +4597,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response of POST /v1/document:annotate. Feature fields are only filled for the
+   * features you requested.
+   * </pre>
+   *
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
    */
   public static final class Builder extends
@@ -7850,15 +7779,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getOrderDateList() {
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getOrderDateList() {
       if (orderDateBuilder_ == null) {
         return java.util.Collections.unmodifiableList(orderDate_);
       } else {
@@ -7867,15 +7793,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public int getOrderDateCount() {
+    @java.lang.Deprecated public int getOrderDateCount() {
       if (orderDateBuilder_ == null) {
         return orderDate_.size();
       } else {
@@ -7884,15 +7807,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate getOrderDate(int index) {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate getOrderDate(int index) {
       if (orderDateBuilder_ == null) {
         return orderDate_.get(index);
       } else {
@@ -7901,15 +7821,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder setOrderDate(
+    @java.lang.Deprecated public Builder setOrderDate(
         int index, ai.visma.ssn.type.Candidate value) {
       if (orderDateBuilder_ == null) {
         if (value == null) {
@@ -7925,15 +7842,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder setOrderDate(
+    @java.lang.Deprecated public Builder setOrderDate(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (orderDateBuilder_ == null) {
         ensureOrderDateIsMutable();
@@ -7946,15 +7860,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder addOrderDate(ai.visma.ssn.type.Candidate value) {
+    @java.lang.Deprecated public Builder addOrderDate(ai.visma.ssn.type.Candidate value) {
       if (orderDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7969,15 +7880,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder addOrderDate(
+    @java.lang.Deprecated public Builder addOrderDate(
         int index, ai.visma.ssn.type.Candidate value) {
       if (orderDateBuilder_ == null) {
         if (value == null) {
@@ -7993,15 +7901,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder addOrderDate(
+    @java.lang.Deprecated public Builder addOrderDate(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (orderDateBuilder_ == null) {
         ensureOrderDateIsMutable();
@@ -8014,15 +7919,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder addOrderDate(
+    @java.lang.Deprecated public Builder addOrderDate(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (orderDateBuilder_ == null) {
         ensureOrderDateIsMutable();
@@ -8035,15 +7937,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder addAllOrderDate(
+    @java.lang.Deprecated public Builder addAllOrderDate(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
       if (orderDateBuilder_ == null) {
         ensureOrderDateIsMutable();
@@ -8057,15 +7956,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder clearOrderDate() {
+    @java.lang.Deprecated public Builder clearOrderDate() {
       if (orderDateBuilder_ == null) {
         orderDate_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -8077,15 +7973,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public Builder removeOrderDate(int index) {
+    @java.lang.Deprecated public Builder removeOrderDate(int index) {
       if (orderDateBuilder_ == null) {
         ensureOrderDateIsMutable();
         orderDate_.remove(index);
@@ -8097,29 +7990,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getOrderDateBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder getOrderDateBuilder(
         int index) {
       return getOrderDateFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
         int index) {
       if (orderDateBuilder_ == null) {
         return orderDate_.get(index);  } else {
@@ -8128,15 +8015,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
          getOrderDateOrBuilderList() {
       if (orderDateBuilder_ != null) {
         return orderDateBuilder_.getMessageOrBuilderList();
@@ -8146,44 +8030,35 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addOrderDateBuilder() {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addOrderDateBuilder() {
       return getOrderDateFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addOrderDateBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addOrderDateBuilder(
         int index) {
       return getOrderDateFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_date instead.
-     * orderDate
-     * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * [DEPRECATED] Always empty. Use `documentDate` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+     * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
          getOrderDateBuilderList() {
       return getOrderDateFieldBuilder().getBuilderList();
     }
@@ -8216,9 +8091,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8232,9 +8105,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8248,9 +8119,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8264,9 +8133,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8287,9 +8154,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8307,9 +8172,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8329,9 +8192,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8352,9 +8213,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8372,9 +8231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8392,9 +8249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8413,9 +8268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8432,9 +8285,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8451,9 +8302,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8464,9 +8313,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8480,9 +8327,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8497,9 +8342,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8510,9 +8353,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8524,9 +8365,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentDueDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8564,9 +8403,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8580,9 +8417,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8596,9 +8431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8612,9 +8445,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8635,9 +8466,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8655,9 +8484,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8677,9 +8504,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8700,9 +8525,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8720,9 +8543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8740,9 +8561,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8761,9 +8580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8780,9 +8597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8799,9 +8614,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8812,9 +8625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8828,9 +8639,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8845,9 +8654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8858,9 +8665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8872,9 +8677,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * currency
-     * ISO 4217 string, ie. a 3-letter capitalized string
-     * Example: "NOK"
+     * Candidates for the currency, as an ISO 4217 code, for example "NOK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8912,9 +8715,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -8928,9 +8729,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -8944,9 +8743,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -8960,9 +8757,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -8983,9 +8778,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9003,9 +8796,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9025,9 +8816,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9048,9 +8837,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9068,9 +8855,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9088,9 +8873,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9109,9 +8892,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9128,9 +8909,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9147,9 +8926,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9160,9 +8937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9176,9 +8951,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9193,9 +8966,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9206,9 +8977,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9220,9 +8989,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -9260,9 +9027,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9276,9 +9041,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9292,9 +9055,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9308,9 +9069,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9331,9 +9090,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9351,9 +9108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9373,9 +9128,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9396,9 +9149,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9416,9 +9167,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9436,9 +9185,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9457,9 +9204,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9476,9 +9221,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9495,9 +9238,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9508,9 +9249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9524,9 +9263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9541,9 +9278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9554,9 +9289,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9568,9 +9301,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalInclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total including VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -9608,9 +9339,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9624,9 +9353,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9640,9 +9367,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9656,9 +9381,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9679,9 +9402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9699,9 +9420,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9721,9 +9440,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9744,9 +9461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9764,9 +9479,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9784,9 +9497,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9805,9 +9516,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9824,9 +9533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9843,9 +9550,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9856,9 +9561,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9872,9 +9575,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9889,9 +9590,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9902,9 +9601,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9916,9 +9613,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * totalExclVat
-     * A string that parses as a two-decimal number
-     * Example: "10.0" or "11.11"
+     * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -9956,20 +9651,13 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getSupplierCorporateIdList() {
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getSupplierCorporateIdList() {
       if (supplierCorporateIdBuilder_ == null) {
         return java.util.Collections.unmodifiableList(supplierCorporateId_);
       } else {
@@ -9978,20 +9666,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public int getSupplierCorporateIdCount() {
+    @java.lang.Deprecated public int getSupplierCorporateIdCount() {
       if (supplierCorporateIdBuilder_ == null) {
         return supplierCorporateId_.size();
       } else {
@@ -10000,20 +9681,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate getSupplierCorporateId(int index) {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate getSupplierCorporateId(int index) {
       if (supplierCorporateIdBuilder_ == null) {
         return supplierCorporateId_.get(index);
       } else {
@@ -10022,20 +9696,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder setSupplierCorporateId(
+    @java.lang.Deprecated public Builder setSupplierCorporateId(
         int index, ai.visma.ssn.type.Candidate value) {
       if (supplierCorporateIdBuilder_ == null) {
         if (value == null) {
@@ -10051,20 +9718,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder setSupplierCorporateId(
+    @java.lang.Deprecated public Builder setSupplierCorporateId(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (supplierCorporateIdBuilder_ == null) {
         ensureSupplierCorporateIdIsMutable();
@@ -10077,20 +9737,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder addSupplierCorporateId(ai.visma.ssn.type.Candidate value) {
+    @java.lang.Deprecated public Builder addSupplierCorporateId(ai.visma.ssn.type.Candidate value) {
       if (supplierCorporateIdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -10105,20 +9758,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder addSupplierCorporateId(
+    @java.lang.Deprecated public Builder addSupplierCorporateId(
         int index, ai.visma.ssn.type.Candidate value) {
       if (supplierCorporateIdBuilder_ == null) {
         if (value == null) {
@@ -10134,20 +9780,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder addSupplierCorporateId(
+    @java.lang.Deprecated public Builder addSupplierCorporateId(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (supplierCorporateIdBuilder_ == null) {
         ensureSupplierCorporateIdIsMutable();
@@ -10160,20 +9799,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder addSupplierCorporateId(
+    @java.lang.Deprecated public Builder addSupplierCorporateId(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (supplierCorporateIdBuilder_ == null) {
         ensureSupplierCorporateIdIsMutable();
@@ -10186,20 +9818,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder addAllSupplierCorporateId(
+    @java.lang.Deprecated public Builder addAllSupplierCorporateId(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
       if (supplierCorporateIdBuilder_ == null) {
         ensureSupplierCorporateIdIsMutable();
@@ -10213,20 +9838,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder clearSupplierCorporateId() {
+    @java.lang.Deprecated public Builder clearSupplierCorporateId() {
       if (supplierCorporateIdBuilder_ == null) {
         supplierCorporateId_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -10238,20 +9856,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public Builder removeSupplierCorporateId(int index) {
+    @java.lang.Deprecated public Builder removeSupplierCorporateId(int index) {
       if (supplierCorporateIdBuilder_ == null) {
         ensureSupplierCorporateIdIsMutable();
         supplierCorporateId_.remove(index);
@@ -10263,39 +9874,25 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getSupplierCorporateIdBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder getSupplierCorporateIdBuilder(
         int index) {
       return getSupplierCorporateIdFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       if (supplierCorporateIdBuilder_ == null) {
         return supplierCorporateId_.get(index);  } else {
@@ -10304,20 +9901,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
          getSupplierCorporateIdOrBuilderList() {
       if (supplierCorporateIdBuilder_ != null) {
         return supplierCorporateIdBuilder_.getMessageOrBuilderList();
@@ -10327,59 +9917,38 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addSupplierCorporateIdBuilder() {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addSupplierCorporateIdBuilder() {
       return getSupplierCorporateIdFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addSupplierCorporateIdBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addSupplierCorporateIdBuilder(
         int index) {
       return getSupplierCorporateIdFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED]
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-     * supplierCorporateId
-     * The company VAT number
-     * Example: "123456789B01" (for Dutch companies)
-     * or "12345678" (for Norwegian companies)
-     * Note: The field is repeated because multiple VAT numbers might exist.
-     * If you have the VAT number of you customer, you can use this information
-     * to find out which VAT number belongs to the supplier of the invoice.
+     * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+     * instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+     * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
          getSupplierCorporateIdBuilderList() {
       return getSupplierCorporateIdFieldBuilder().getBuilderList();
     }
@@ -10412,9 +9981,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10428,9 +9996,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10444,9 +10011,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10460,9 +10026,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10483,9 +10048,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10503,9 +10067,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10525,9 +10088,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10548,9 +10110,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10568,9 +10129,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10588,9 +10148,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10609,9 +10168,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10628,9 +10186,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10647,9 +10204,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10660,9 +10216,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10676,9 +10231,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10693,9 +10247,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10706,9 +10259,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10720,9 +10272,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * supplierCountryCode
-     * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-     * Example: "NO"
+     * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+     * "NO".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -10760,8 +10311,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10775,8 +10325,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10790,8 +10339,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10805,8 +10353,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10827,8 +10374,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10846,8 +10392,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10867,8 +10412,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10889,8 +10433,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10908,8 +10451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10927,8 +10469,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10947,8 +10488,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10965,8 +10505,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10983,8 +10522,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -10995,8 +10533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -11010,8 +10547,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -11026,8 +10562,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -11038,8 +10573,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -11051,8 +10585,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * documentType
-     * Either "Receipt" or "Invoice"
+     * Candidates for the document type, for example "Invoice" or "Receipt".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -11090,8 +10623,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11105,8 +10637,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11120,8 +10651,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11135,8 +10665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11157,8 +10686,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11176,8 +10704,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11197,8 +10724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11219,8 +10745,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11238,8 +10763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11257,8 +10781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11277,8 +10800,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11295,8 +10817,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11313,8 +10834,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11325,8 +10845,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11340,8 +10859,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11356,8 +10874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11368,8 +10885,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11381,8 +10897,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * paymentMethod
-     * Either "Cash" or "CreditCard"
+     * Candidates for the payment method, for example "Cash" or "CreditCard".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -11420,9 +10935,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11436,9 +10949,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11452,9 +10963,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11468,9 +10977,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11491,9 +10998,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11511,9 +11016,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11533,9 +11036,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11556,9 +11057,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11576,9 +11075,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11596,9 +11093,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11617,9 +11112,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11636,9 +11129,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11655,9 +11146,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11668,9 +11157,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11684,9 +11171,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11701,9 +11186,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11714,9 +11197,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11728,9 +11209,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * creditCardNumber
-     * Four digits
-     * Example: "0012"
+     * Candidates for the last four digits of the credit card, for example "0012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -11768,15 +11247,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getInvoiceNumberList() {
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate> getInvoiceNumberList() {
       if (invoiceNumberBuilder_ == null) {
         return java.util.Collections.unmodifiableList(invoiceNumber_);
       } else {
@@ -11785,15 +11261,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public int getInvoiceNumberCount() {
+    @java.lang.Deprecated public int getInvoiceNumberCount() {
       if (invoiceNumberBuilder_ == null) {
         return invoiceNumber_.size();
       } else {
@@ -11802,15 +11275,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate getInvoiceNumber(int index) {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate getInvoiceNumber(int index) {
       if (invoiceNumberBuilder_ == null) {
         return invoiceNumber_.get(index);
       } else {
@@ -11819,15 +11289,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder setInvoiceNumber(
+    @java.lang.Deprecated public Builder setInvoiceNumber(
         int index, ai.visma.ssn.type.Candidate value) {
       if (invoiceNumberBuilder_ == null) {
         if (value == null) {
@@ -11843,15 +11310,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder setInvoiceNumber(
+    @java.lang.Deprecated public Builder setInvoiceNumber(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (invoiceNumberBuilder_ == null) {
         ensureInvoiceNumberIsMutable();
@@ -11864,15 +11328,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder addInvoiceNumber(ai.visma.ssn.type.Candidate value) {
+    @java.lang.Deprecated public Builder addInvoiceNumber(ai.visma.ssn.type.Candidate value) {
       if (invoiceNumberBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -11887,15 +11348,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder addInvoiceNumber(
+    @java.lang.Deprecated public Builder addInvoiceNumber(
         int index, ai.visma.ssn.type.Candidate value) {
       if (invoiceNumberBuilder_ == null) {
         if (value == null) {
@@ -11911,15 +11369,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder addInvoiceNumber(
+    @java.lang.Deprecated public Builder addInvoiceNumber(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (invoiceNumberBuilder_ == null) {
         ensureInvoiceNumberIsMutable();
@@ -11932,15 +11387,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder addInvoiceNumber(
+    @java.lang.Deprecated public Builder addInvoiceNumber(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
       if (invoiceNumberBuilder_ == null) {
         ensureInvoiceNumberIsMutable();
@@ -11953,15 +11405,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder addAllInvoiceNumber(
+    @java.lang.Deprecated public Builder addAllInvoiceNumber(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
       if (invoiceNumberBuilder_ == null) {
         ensureInvoiceNumberIsMutable();
@@ -11975,15 +11424,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder clearInvoiceNumber() {
+    @java.lang.Deprecated public Builder clearInvoiceNumber() {
       if (invoiceNumberBuilder_ == null) {
         invoiceNumber_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -11995,15 +11441,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public Builder removeInvoiceNumber(int index) {
+    @java.lang.Deprecated public Builder removeInvoiceNumber(int index) {
       if (invoiceNumberBuilder_ == null) {
         ensureInvoiceNumberIsMutable();
         invoiceNumber_.remove(index);
@@ -12015,29 +11458,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getInvoiceNumberBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder getInvoiceNumberBuilder(
         int index) {
       return getInvoiceNumberFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       if (invoiceNumberBuilder_ == null) {
         return invoiceNumber_.get(index);  } else {
@@ -12046,15 +11483,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
          getInvoiceNumberOrBuilderList() {
       if (invoiceNumberBuilder_ != null) {
         return invoiceNumberBuilder_.getMessageOrBuilderList();
@@ -12064,44 +11498,35 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addInvoiceNumberBuilder() {
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addInvoiceNumberBuilder() {
       return getInvoiceNumberFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addInvoiceNumberBuilder(
+    @java.lang.Deprecated public ai.visma.ssn.type.Candidate.Builder addInvoiceNumberBuilder(
         int index) {
       return getInvoiceNumberFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
      * <pre>
-     * [DEPRECATED] Use document_number instead.
-     * invoiceNumber
-     * The supplier defined identifier of the invoice
-     * Example: "12345-A99"
+     * [DEPRECATED] Always empty. Use `documentNumber` instead.
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+     * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
          getInvoiceNumberBuilderList() {
       return getInvoiceNumberFieldBuilder().getBuilderList();
     }
@@ -12125,7 +11550,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.TextAnnotation, ai.visma.ssn.type.TextAnnotation.Builder, ai.visma.ssn.type.TextAnnotationOrBuilder> textAnnotationBuilder_;
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12136,7 +11562,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12151,7 +11578,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12171,7 +11599,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12189,7 +11618,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12214,7 +11644,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12231,7 +11662,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12243,7 +11675,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12258,7 +11691,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return text annotation
+     * The OCR output for the pages Smartscan read: the text and its structure from pages
+     * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -12291,7 +11725,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12305,7 +11739,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12319,7 +11753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12333,7 +11767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12354,7 +11788,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12372,7 +11806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12392,7 +11826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12413,7 +11847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12431,7 +11865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12449,7 +11883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12468,7 +11902,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12485,7 +11919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12502,7 +11936,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12513,7 +11947,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12527,7 +11961,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12542,7 +11976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12553,7 +11987,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12565,7 +11999,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "71"
+     * Candidates for the type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -12603,7 +12037,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12617,7 +12052,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12631,7 +12067,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12645,7 +12082,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12666,7 +12104,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12684,7 +12123,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12704,7 +12144,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12725,7 +12166,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12743,7 +12185,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12761,7 +12204,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12780,7 +12224,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12797,7 +12242,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12814,7 +12260,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12825,7 +12272,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12839,7 +12287,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12854,7 +12303,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12865,7 +12315,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12877,7 +12328,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "000002879094031"
+     * Candidates for the payment ID of a Danish payment line (FIK), for example
+     * "000002879094031".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -12915,7 +12367,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -12929,7 +12382,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -12943,7 +12397,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -12957,7 +12412,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -12978,7 +12434,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -12996,7 +12453,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13016,7 +12474,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13037,7 +12496,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13055,7 +12515,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13073,7 +12534,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13092,7 +12554,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13109,7 +12572,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13126,7 +12590,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13137,7 +12602,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13151,7 +12617,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13166,7 +12633,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13177,7 +12645,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13189,7 +12658,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "86570807"
+     * Candidates for the creditor ID of a Danish payment line (FIK), for example
+     * "86570807".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -13227,7 +12697,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13241,7 +12711,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13255,7 +12725,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13269,7 +12739,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13290,7 +12760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13308,7 +12778,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13328,7 +12798,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13349,7 +12819,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13367,7 +12837,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13385,7 +12855,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13404,7 +12874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13421,7 +12891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13438,7 +12908,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13449,7 +12919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13463,7 +12933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13478,7 +12948,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13489,7 +12959,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13501,7 +12971,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "050765098"
+     * Candidates for the payment ID of a Swedish payment line, for example "050765098".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -13539,7 +13009,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13553,7 +13024,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13567,7 +13039,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13581,7 +13054,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13602,7 +13076,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13620,7 +13095,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13640,7 +13116,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13661,7 +13138,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13679,7 +13157,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13697,7 +13176,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13716,7 +13196,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13733,7 +13214,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13750,7 +13232,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13761,7 +13244,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13775,7 +13259,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13790,7 +13275,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13801,7 +13287,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13813,7 +13300,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "2654507"
+     * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+     * "2654507".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -13851,7 +13339,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13865,7 +13354,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13879,7 +13369,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13893,7 +13384,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13914,7 +13406,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13932,7 +13425,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13952,7 +13446,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13973,7 +13468,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -13991,7 +13487,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14009,7 +13506,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14028,7 +13526,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14045,7 +13544,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14062,7 +13562,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14073,7 +13574,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14087,7 +13589,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14102,7 +13605,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14113,7 +13617,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14125,7 +13630,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "5000872"
+     * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+     * "5000872".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -14163,7 +13669,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14177,7 +13684,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14191,7 +13699,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14205,7 +13714,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14226,7 +13736,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14244,7 +13755,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14264,7 +13776,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14285,7 +13798,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14303,7 +13817,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14321,7 +13836,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14340,7 +13856,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14357,7 +13874,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14374,7 +13892,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14385,7 +13904,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14399,7 +13919,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14414,7 +13935,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14425,7 +13947,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14437,7 +13960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "12345678903"
+     * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+     * "12345678903".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -14475,7 +13999,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14489,7 +14014,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14503,7 +14029,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14517,7 +14044,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14538,7 +14066,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14556,7 +14085,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14576,7 +14106,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14597,7 +14128,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14615,7 +14147,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14633,7 +14166,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14652,7 +14186,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14669,7 +14204,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14686,7 +14222,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14697,7 +14234,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14711,7 +14249,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14726,7 +14265,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14737,7 +14277,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14749,7 +14290,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "0817937867870002"
+     * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+     * "0817937867870002".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -14787,7 +14329,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14801,7 +14344,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14815,7 +14359,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14829,7 +14374,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14850,7 +14396,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14868,7 +14415,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14888,7 +14436,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14909,7 +14458,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14927,7 +14477,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14945,7 +14496,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14964,7 +14516,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14981,7 +14534,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -14998,7 +14552,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15009,7 +14564,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15023,7 +14579,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15038,7 +14595,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15049,7 +14607,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15061,7 +14620,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * example: "00000159220010146012"
+     * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+     * example "00000159220010146012".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -15099,6 +14659,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15112,6 +14674,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15125,6 +14689,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15138,6 +14704,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15158,6 +14726,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15175,6 +14745,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15194,6 +14766,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15214,6 +14788,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15231,6 +14807,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15248,6 +14826,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15266,6 +14846,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15282,6 +14864,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15298,6 +14882,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15308,6 +14894,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15321,6 +14909,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15335,6 +14925,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15345,6 +14937,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15356,6 +14950,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+     * "+++123/1234/12345+++".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -15382,7 +14978,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * Return a string containing the text from the document
+     * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
      * </pre>
      *
      * <code>string text = 23 [json_name = "text"];</code>
@@ -15402,7 +14998,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return a string containing the text from the document
+     * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
      * </pre>
      *
      * <code>string text = 23 [json_name = "text"];</code>
@@ -15423,7 +15019,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return a string containing the text from the document
+     * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
      * </pre>
      *
      * <code>string text = 23 [json_name = "text"];</code>
@@ -15440,7 +15036,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return a string containing the text from the document
+     * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
      * </pre>
      *
      * <code>string text = 23 [json_name = "text"];</code>
@@ -15454,7 +15050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Return a string containing the text from the document
+     * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
      * </pre>
      *
      * <code>string text = 23 [json_name = "text"];</code>
@@ -15474,8 +15070,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object feedbackId_ = "";
     /**
      * <pre>
-     * Feedback ID is used to correct made predictions through the
-     * Feedback API.
+     * The ID of this request. To correct the results, send it as `id` to
+     * POST /v1/feedback:create.
      * </pre>
      *
      * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -15495,8 +15091,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feedback ID is used to correct made predictions through the
-     * Feedback API.
+     * The ID of this request. To correct the results, send it as `id` to
+     * POST /v1/feedback:create.
      * </pre>
      *
      * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -15517,8 +15113,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feedback ID is used to correct made predictions through the
-     * Feedback API.
+     * The ID of this request. To correct the results, send it as `id` to
+     * POST /v1/feedback:create.
      * </pre>
      *
      * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -15535,8 +15131,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feedback ID is used to correct made predictions through the
-     * Feedback API.
+     * The ID of this request. To correct the results, send it as `id` to
+     * POST /v1/feedback:create.
      * </pre>
      *
      * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -15550,8 +15146,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feedback ID is used to correct made predictions through the
-     * Feedback API.
+     * The ID of this request. To correct the results, send it as `id` to
+     * POST /v1/feedback:create.
      * </pre>
      *
      * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -15582,9 +15178,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15598,9 +15194,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15614,9 +15210,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15630,9 +15226,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15653,9 +15249,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15673,9 +15269,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15695,9 +15291,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15718,9 +15314,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15738,9 +15334,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15758,9 +15354,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15779,9 +15375,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15798,9 +15394,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15817,9 +15413,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15830,9 +15426,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15846,9 +15442,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15863,9 +15459,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15876,9 +15472,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15890,9 +15486,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The first two letters are a country code. The next two digits are
-     * check digits for the ISO 7064 Mod 97, 10 checksum
-     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+     * "NO8330001234567". The first two letters are a country code, and the next two
+     * digits are check digits (ISO 7064 Mod 97-10).
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -15930,8 +15526,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -15945,8 +15541,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -15960,8 +15556,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -15975,8 +15571,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -15997,8 +15593,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16016,8 +15612,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16037,8 +15633,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16059,8 +15655,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16078,8 +15674,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16097,8 +15693,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16117,8 +15713,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16135,8 +15731,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16153,8 +15749,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16165,8 +15761,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16180,8 +15776,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16196,8 +15792,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16208,8 +15804,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16221,8 +15817,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice lines represented in a form of text, amount and page reference
-     * to state on which page the line was found
+     * The lines of the document that hold an amount, with their text, amount and page.
+     * Returned for LINES.
      * </pre>
      *
      * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -16249,7 +15845,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object preview_ = "";
     /**
      * <pre>
-     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
      * </pre>
      *
      * <code>string preview = 27 [json_name = "preview"];</code>
@@ -16269,7 +15865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
      * </pre>
      *
      * <code>string preview = 27 [json_name = "preview"];</code>
@@ -16290,7 +15886,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
      * </pre>
      *
      * <code>string preview = 27 [json_name = "preview"];</code>
@@ -16307,7 +15903,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
      * </pre>
      *
      * <code>string preview = 27 [json_name = "preview"];</code>
@@ -16321,7 +15917,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
      * </pre>
      *
      * <code>string preview = 27 [json_name = "preview"];</code>
@@ -16352,7 +15948,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16366,7 +15962,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16380,7 +15976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16394,7 +15990,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16415,7 +16011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16433,7 +16029,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16453,7 +16049,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16474,7 +16070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16492,7 +16088,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16510,7 +16106,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16529,7 +16125,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16546,7 +16142,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16563,7 +16159,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16574,7 +16170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16588,7 +16184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16603,7 +16199,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16614,7 +16210,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16626,7 +16222,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank account number
+     * Candidates for the bank account number, in the format of its country.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -16664,7 +16260,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16678,7 +16275,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16692,7 +16290,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16706,7 +16305,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16727,7 +16327,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16745,7 +16346,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16765,7 +16367,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16786,7 +16389,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16804,7 +16408,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16822,7 +16427,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16841,7 +16447,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16858,7 +16465,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16875,7 +16483,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16886,7 +16495,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16900,7 +16510,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16915,7 +16526,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16926,7 +16538,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16938,7 +16551,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Country specific bank registration number
+     * Candidates for the bank registration number, in countries that use one, such as
+     * Denmark.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -16976,7 +16590,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -16990,7 +16604,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17004,7 +16618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17018,7 +16632,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17039,7 +16653,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17057,7 +16671,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17077,7 +16691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17098,7 +16712,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17116,7 +16730,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17134,7 +16748,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17153,7 +16767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17170,7 +16784,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17187,7 +16801,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17198,7 +16812,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17212,7 +16826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17227,7 +16841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17238,7 +16852,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17250,7 +16864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns business identifier code
+     * Candidates for the BIC (SWIFT code), for example "DABADKKK".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -17288,7 +16902,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17302,7 +16916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17316,7 +16930,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17330,7 +16944,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17351,7 +16965,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17369,7 +16983,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17389,7 +17003,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17410,7 +17024,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17428,7 +17042,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17446,7 +17060,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17465,7 +17079,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17482,7 +17096,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17499,7 +17113,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17510,7 +17124,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17524,7 +17138,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17539,7 +17153,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17550,7 +17164,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17562,7 +17176,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents identifier of the document
+     * Candidates for the number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -17600,7 +17214,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17614,7 +17229,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17628,7 +17244,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17642,7 +17259,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17663,7 +17281,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17681,7 +17300,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17701,7 +17321,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17722,7 +17343,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17740,7 +17362,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17758,7 +17381,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17777,7 +17401,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17794,7 +17419,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17811,7 +17437,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17822,7 +17449,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17836,7 +17464,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17851,7 +17480,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17862,7 +17492,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17874,7 +17505,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns document date
+     * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+     * "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -17912,7 +17544,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -17926,7 +17558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -17940,7 +17572,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -17954,7 +17586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -17975,7 +17607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -17993,7 +17625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18013,7 +17645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18034,7 +17666,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18052,7 +17684,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18070,7 +17702,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18089,7 +17721,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18106,7 +17738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18123,7 +17755,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18134,7 +17766,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18148,7 +17780,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18163,7 +17795,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18174,7 +17806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18186,7 +17818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represents the identifier that supplier assigned to the order
+     * Candidates for the order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -18224,7 +17856,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18238,7 +17870,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18252,7 +17884,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18266,7 +17898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18287,7 +17919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18305,7 +17937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18325,7 +17957,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18346,7 +17978,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18364,7 +17996,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18382,7 +18014,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18401,7 +18033,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18418,7 +18050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18435,7 +18067,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18446,7 +18078,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18460,7 +18092,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18475,7 +18107,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18486,7 +18118,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18498,7 +18130,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Returns supplier name
+     * Candidates for the supplier's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -18536,8 +18168,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18551,8 +18182,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18566,8 +18196,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18581,8 +18210,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18603,8 +18231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18622,8 +18249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18643,8 +18269,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18665,8 +18290,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18684,8 +18308,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18703,8 +18326,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18723,8 +18345,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18741,8 +18362,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18759,8 +18379,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18771,8 +18390,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18786,8 +18404,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18802,8 +18419,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18814,8 +18430,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18827,8 +18442,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier VAT number
+     * [EXPERIMENTAL] Candidates for the supplier's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -18866,8 +18480,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18881,8 +18495,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18896,8 +18510,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18911,8 +18525,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18933,8 +18547,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18952,8 +18566,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18973,8 +18587,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -18995,8 +18609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19014,8 +18628,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19033,8 +18647,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19053,8 +18667,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19071,8 +18685,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19089,8 +18703,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19101,8 +18715,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19116,8 +18730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19132,8 +18746,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19144,8 +18758,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19157,8 +18771,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns the business ID or organisation number of the supplier
+     * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+     * CVR number in Denmark or the KvK number in the Netherlands.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -19196,8 +18810,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19211,8 +18825,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19226,8 +18840,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19241,8 +18855,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19263,8 +18877,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19282,8 +18896,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19303,8 +18917,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19325,8 +18939,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19344,8 +18958,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19363,8 +18977,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19383,8 +18997,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19401,8 +19015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19419,8 +19033,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19431,8 +19045,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19446,8 +19060,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19462,8 +19076,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19474,8 +19088,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19487,8 +19101,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns supplier address
+     * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+     * See `structuredSupplierAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -19526,8 +19140,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19541,8 +19154,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19556,8 +19168,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19571,8 +19182,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19593,8 +19203,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19612,8 +19221,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19633,8 +19241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19655,8 +19262,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19674,8 +19280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19693,8 +19298,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19713,8 +19317,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19731,8 +19334,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19749,8 +19351,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19761,8 +19362,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19776,8 +19376,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19792,8 +19391,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19804,8 +19402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19817,8 +19414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * [EXPERIMENTAL]
-     * Returns customer identifier/number
+     * [EXPERIMENTAL] Candidates for the number that identifies the customer.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -19856,7 +19452,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19870,7 +19466,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19884,7 +19480,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19898,7 +19494,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19919,7 +19515,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19937,7 +19533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19957,7 +19553,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19978,7 +19574,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -19996,7 +19592,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20014,7 +19610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20033,7 +19629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20050,7 +19646,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20067,7 +19663,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20078,7 +19674,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20092,7 +19688,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20107,7 +19703,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20118,7 +19714,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20130,7 +19726,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of order number for receiver
+     * Candidates for the receiver's order number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -20168,7 +19764,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20182,7 +19779,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20196,7 +19794,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20210,7 +19809,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20231,7 +19831,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20249,7 +19850,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20269,7 +19871,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20290,7 +19893,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20308,7 +19912,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20326,7 +19931,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20345,7 +19951,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20362,7 +19969,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20379,7 +19987,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20390,7 +19999,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20404,7 +20014,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20419,7 +20030,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20430,7 +20042,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20442,7 +20055,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of address for receiver
+     * Candidates for the receiver's address, as written on the document. See
+     * `structuredReceiverAddress` for its parts.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -20480,7 +20094,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20494,7 +20108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20508,7 +20122,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20522,7 +20136,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20543,7 +20157,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20561,7 +20175,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20581,7 +20195,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20602,7 +20216,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20620,7 +20234,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20638,7 +20252,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20657,7 +20271,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20674,7 +20288,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20691,7 +20305,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20702,7 +20316,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20716,7 +20330,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20731,7 +20345,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20742,7 +20356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20754,7 +20368,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of country code for receiver
+     * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -20792,7 +20406,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20806,7 +20420,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20820,7 +20434,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20834,7 +20448,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20855,7 +20469,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20873,7 +20487,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20893,7 +20507,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20914,7 +20528,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20932,7 +20546,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20950,7 +20564,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20969,7 +20583,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -20986,7 +20600,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21003,7 +20617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21014,7 +20628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21028,7 +20642,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21043,7 +20657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21054,7 +20668,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21066,7 +20680,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of supplier name for receiver
+     * Candidates for the receiver's name.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -21104,7 +20718,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21118,7 +20732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21132,7 +20746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21146,7 +20760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21167,7 +20781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21185,7 +20799,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21205,7 +20819,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21226,7 +20840,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21244,7 +20858,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21262,7 +20876,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21281,7 +20895,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21298,7 +20912,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21315,7 +20929,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21326,7 +20940,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21340,7 +20954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21355,7 +20969,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21366,7 +20980,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21378,7 +20992,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Equivalent of VAT number for receiver
+     * Candidates for the receiver's VAT number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -21416,11 +21030,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21434,11 +21046,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21452,11 +21062,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21470,11 +21078,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21495,11 +21101,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21517,11 +21121,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21541,11 +21143,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21566,11 +21166,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21588,11 +21186,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21610,11 +21206,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21633,11 +21227,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21654,11 +21246,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21675,11 +21265,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21690,11 +21278,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21708,11 +21294,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21727,11 +21311,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21742,11 +21324,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21758,11 +21338,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list of candidates, where each
-     * candidate is a single purchase lines. Each purchase line may have page number,
-     * code, description, quantity, item number, unit, total discount, percentage discount,
-     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-     * unit price excl vat
+     * The purchase lines in the older format, with one value for each field. Use
+     * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -21800,8 +21378,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21815,8 +21392,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21830,8 +21406,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21845,8 +21420,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21867,8 +21441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21886,8 +21459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21907,8 +21479,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21929,8 +21500,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21948,8 +21518,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21967,8 +21536,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -21987,8 +21555,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22005,8 +21572,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22023,8 +21589,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22035,8 +21600,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22050,8 +21614,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22066,8 +21629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22078,8 +21640,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22091,8 +21652,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request about the document
-     * Each Answer is question and answer pair with page number and confidence
+     * The answers to the `questions` in the request, one per question for each page read.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -22130,7 +21690,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22144,7 +21704,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22158,7 +21718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22172,7 +21732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22193,7 +21753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22211,7 +21771,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22231,7 +21791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22252,7 +21812,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22270,7 +21830,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22288,7 +21848,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22307,7 +21867,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22324,7 +21884,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22341,7 +21901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22352,7 +21912,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22366,7 +21926,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22381,7 +21941,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22392,7 +21952,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22404,7 +21964,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The page texts of the document
+     * The text of each page read. Returned for PAGE_TEXTS.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -22442,7 +22002,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22456,7 +22018,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22470,7 +22034,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22484,7 +22050,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22505,7 +22073,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22523,7 +22093,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22543,7 +22115,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22564,7 +22138,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22582,7 +22158,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22600,7 +22178,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22619,7 +22199,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22636,7 +22218,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22653,7 +22237,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22664,7 +22250,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22678,7 +22266,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22693,7 +22283,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22704,7 +22296,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22716,7 +22310,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * The VAT levels in the older format, with one value for each field. Use
+     * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+     * VERIFIED results.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -22745,7 +22341,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.DocumentMetadata, ai.visma.ssn.type.DocumentMetadata.Builder, ai.visma.ssn.type.DocumentMetadataOrBuilder> documentMetadataBuilder_;
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22756,7 +22353,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22771,7 +22369,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22791,7 +22390,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22809,7 +22409,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22834,7 +22435,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22851,7 +22453,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22863,7 +22466,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22878,7 +22482,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Extra information about the document like number of pages
+     * Information about how the document was processed, such as the number of pages
+     * Smartscan read.
      * </pre>
      *
      * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -22911,7 +22516,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -22925,7 +22530,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -22939,7 +22544,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -22953,7 +22558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -22974,7 +22579,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -22992,7 +22597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23012,7 +22617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23033,7 +22638,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23051,7 +22656,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23069,7 +22674,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23088,7 +22693,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23105,7 +22710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23122,7 +22727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23133,7 +22738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23147,7 +22752,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23162,7 +22767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23173,7 +22778,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23185,7 +22790,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Information about the text language detected from OCR
+     * Candidates for the language of the document text, as a BCP-47 code such as "en".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -23223,7 +22828,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23237,7 +22842,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23251,7 +22856,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23265,7 +22870,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23286,7 +22891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23304,7 +22909,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23324,7 +22929,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23345,7 +22950,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23363,7 +22968,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23381,7 +22986,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23400,7 +23005,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23417,7 +23022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23434,7 +23039,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23445,7 +23050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23459,7 +23064,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23474,7 +23079,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23485,7 +23090,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23497,7 +23102,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * QR codes detected in the document
+     * The QR codes found on the pages read. Returned for QR_CODES.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -23535,7 +23140,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23549,7 +23154,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23563,7 +23168,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23577,7 +23182,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23598,7 +23203,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23616,7 +23221,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23636,7 +23241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23657,7 +23262,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23675,7 +23280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23693,7 +23298,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23712,7 +23317,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23729,7 +23334,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23746,7 +23351,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23757,7 +23362,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23771,7 +23376,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23786,7 +23391,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23797,7 +23402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23809,7 +23414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Swiss QR bills detected in the document
+     * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -23838,7 +23443,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.HotelDates, ai.visma.ssn.type.HotelDates.Builder, ai.visma.ssn.type.HotelDatesOrBuilder> hotelDatesBuilder_;
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23849,7 +23455,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23864,7 +23471,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23884,7 +23492,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23902,7 +23511,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23927,7 +23537,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23944,7 +23555,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23956,7 +23568,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -23971,7 +23584,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotelDates cntains check-in and check-out date candidates
+     * Check-in and check-out date candidates on documents related to accommodation, as
+     * YYYY-MM-DD. Returned for HOTEL_DATES.
      * </pre>
      *
      * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -24004,7 +23618,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24018,7 +23633,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24032,7 +23648,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24046,7 +23663,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24067,7 +23685,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24085,7 +23704,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24105,7 +23725,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24126,7 +23747,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24144,7 +23766,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24162,7 +23785,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24181,7 +23805,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24198,7 +23823,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24215,7 +23841,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24226,7 +23853,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24240,7 +23868,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24255,7 +23884,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24266,7 +23896,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24278,7 +23909,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * The purchase lines, with a list of candidates for each field. Returned for
+     * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -24316,7 +23948,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24330,7 +23963,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24344,7 +23978,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24358,7 +23993,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24379,7 +24015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24397,7 +24034,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24417,7 +24055,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24438,7 +24077,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24456,7 +24096,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24474,7 +24115,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24493,7 +24135,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24510,7 +24153,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24527,7 +24171,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24538,7 +24183,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24552,7 +24198,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24567,7 +24214,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24578,7 +24226,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24590,7 +24239,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * The VAT levels, with a list of candidates for each field. Returned for
+     * VAT_DISTRIBUTION.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -24628,10 +24278,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24645,10 +24294,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24662,10 +24310,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24679,10 +24326,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24703,10 +24349,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24724,10 +24369,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24747,10 +24391,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24771,10 +24414,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24792,10 +24434,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24813,10 +24454,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24835,10 +24475,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24855,10 +24494,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24875,10 +24513,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24889,10 +24526,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24906,10 +24542,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24924,10 +24559,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24938,10 +24572,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24953,10 +24586,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured supplier address, returned when VERIFIED feature is requested
-     * and supplier address is available. Parsed from the raw supplier address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in supplier_address.
+     * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+     * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -24994,10 +24626,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25011,10 +24642,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25028,10 +24658,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25045,10 +24674,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25069,10 +24697,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25090,10 +24717,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25113,10 +24739,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25137,10 +24762,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25158,10 +24782,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25179,10 +24802,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25201,10 +24823,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25221,10 +24842,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25241,10 +24861,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25255,10 +24874,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25272,10 +24890,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25290,10 +24907,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25304,10 +24920,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25319,10 +24934,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured receiver address, returned when VERIFIED feature is requested
-     * and receiver address is available. Parsed from the raw receiver address
-     * using the geo service. Each entry corresponds to the candidate at the
-     * same index in receiver_address.
+     * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+     * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+     * address can't be resolved.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -25360,9 +24974,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25376,9 +24991,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25392,9 +25008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25408,9 +25025,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25431,9 +25049,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25451,9 +25070,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25473,9 +25093,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25496,9 +25117,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25516,9 +25138,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25536,9 +25159,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25557,9 +25181,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25576,9 +25201,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25595,9 +25221,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25608,9 +25235,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25624,9 +25252,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25641,9 +25270,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25654,9 +25284,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -25668,9 +25299,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-     * via the QA/questions model. A reference number of up to 35 characters
-     * (alphanumeric, may contain hyphens).
+     * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+     * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+     * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+     * a valid checksum are returned.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>

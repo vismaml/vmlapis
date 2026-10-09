@@ -11,7 +11,7 @@ public interface SuggestOptionsOrBuilder extends
 
   /**
    * <pre>
-   * Maximum number of suggestions to return per target
+   * Maximum number of candidates per target. The default is 10.
    * </pre>
    *
    * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
@@ -21,7 +21,10 @@ public interface SuggestOptionsOrBuilder extends
 
   /**
    * <pre>
-   * Not implemented yet.
+   * The confidence level you need. Candidates below it aren't removed, so filter on each
+   * candidate's confidence.level yourself. When a target's best candidate is below this level,
+   * the service tries to find a better answer and uses it if it reaches the level. The default
+   * is HIGH. ULTRA_HIGH isn't accepted.
    * </pre>
    *
    * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -30,7 +33,10 @@ public interface SuggestOptionsOrBuilder extends
   int getMinConfidenceValue();
   /**
    * <pre>
-   * Not implemented yet.
+   * The confidence level you need. Candidates below it aren't removed, so filter on each
+   * candidate's confidence.level yourself. When a target's best candidate is below this level,
+   * the service tries to find a better answer and uses it if it reaches the level. The default
+   * is HIGH. ULTRA_HIGH isn't accepted.
    * </pre>
    *
    * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -40,7 +46,8 @@ public interface SuggestOptionsOrBuilder extends
 
   /**
    * <pre>
-   * Model type requested
+   * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+   * set it, it must be DEFAULT, TENSORFLOW or ONNX.
    * </pre>
    *
    * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -49,7 +56,8 @@ public interface SuggestOptionsOrBuilder extends
   int getModelTypeValue();
   /**
    * <pre>
-   * Model type requested
+   * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+   * set it, it must be DEFAULT, TENSORFLOW or ONNX.
    * </pre>
    *
    * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -59,7 +67,8 @@ public interface SuggestOptionsOrBuilder extends
 
   /**
    * <pre>
-   * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+   * When true, the response also has product type candidates for the text of each input. The
+   * default is false.
    * </pre>
    *
    * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
@@ -68,19 +77,11 @@ public interface SuggestOptionsOrBuilder extends
   boolean getIncludeProductTypes();
 
   /**
-   * <pre>
-   * Tier determines which model serves the request
-   * </pre>
-   *
    * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
    * @return The enum numeric value on the wire for tier.
    */
   int getTierValue();
   /**
-   * <pre>
-   * Tier determines which model serves the request
-   * </pre>
-   *
    * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
    * @return The tier.
    */

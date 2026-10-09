@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/models/product-types:feedback.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ProductTypeFeedbackRequest}
  */
 public final class ProductTypeFeedbackRequest extends
@@ -51,6 +55,11 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList texts_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @return A list containing the texts.
    */
@@ -59,6 +68,11 @@ private static final long serialVersionUID = 0L;
     return texts_;
   }
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @return The count of texts.
    */
@@ -66,6 +80,11 @@ private static final long serialVersionUID = 0L;
     return texts_.size();
   }
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @param index The index of the element to return.
    * @return The texts at the given index.
@@ -74,6 +93,11 @@ private static final long serialVersionUID = 0L;
     return texts_.get(index);
   }
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @param index The index of the value to return.
    * @return The bytes of the texts at the given index.
@@ -88,6 +112,11 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList trueCategories_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @return A list containing the trueCategories.
    */
@@ -96,6 +125,11 @@ private static final long serialVersionUID = 0L;
     return trueCategories_;
   }
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @return The count of trueCategories.
    */
@@ -103,6 +137,11 @@ private static final long serialVersionUID = 0L;
     return trueCategories_.size();
   }
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @param index The index of the element to return.
    * @return The trueCategories at the given index.
@@ -111,6 +150,11 @@ private static final long serialVersionUID = 0L;
     return trueCategories_.get(index);
   }
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @param index The index of the value to return.
    * @return The bytes of the trueCategories at the given index.
@@ -301,6 +345,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/models/product-types:feedback.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ProductTypeFeedbackRequest}
    */
   public static final class Builder extends
@@ -477,6 +525,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @return A list containing the texts.
      */
@@ -486,6 +539,11 @@ private static final long serialVersionUID = 0L;
       return texts_;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @return The count of texts.
      */
@@ -493,6 +551,11 @@ private static final long serialVersionUID = 0L;
       return texts_.size();
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The texts at the given index.
@@ -501,6 +564,11 @@ private static final long serialVersionUID = 0L;
       return texts_.get(index);
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the texts at the given index.
@@ -510,6 +578,11 @@ private static final long serialVersionUID = 0L;
       return texts_.getByteString(index);
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param index The index to set the value at.
      * @param value The texts to set.
@@ -525,6 +598,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param value The texts to add.
      * @return This builder for chaining.
@@ -539,6 +617,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param values The texts to add.
      * @return This builder for chaining.
@@ -553,6 +636,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -564,6 +652,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The texts, such as invoice lines or bank transaction descriptions. At least one is
+     * required.
+     * </pre>
+     *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
      * @param value The bytes of the texts to add.
      * @return This builder for chaining.
@@ -588,6 +681,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @return A list containing the trueCategories.
      */
@@ -597,6 +695,11 @@ private static final long serialVersionUID = 0L;
       return trueCategories_;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @return The count of trueCategories.
      */
@@ -604,6 +707,11 @@ private static final long serialVersionUID = 0L;
       return trueCategories_.size();
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The trueCategories at the given index.
@@ -612,6 +720,11 @@ private static final long serialVersionUID = 0L;
       return trueCategories_.get(index);
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the trueCategories at the given index.
@@ -621,6 +734,11 @@ private static final long serialVersionUID = 0L;
       return trueCategories_.getByteString(index);
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param index The index to set the value at.
      * @param value The trueCategories to set.
@@ -636,6 +754,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param value The trueCategories to add.
      * @return This builder for chaining.
@@ -650,6 +773,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param values The trueCategories to add.
      * @return This builder for chaining.
@@ -664,6 +792,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -675,6 +808,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct product type for each text, in the same order as texts, as a ProductType name
+     * such as ACCOUNTING_SOFTWARE.
+     * </pre>
+     *
      * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
      * @param value The bytes of the trueCategories to add.
      * @return This builder for chaining.

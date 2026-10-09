@@ -28,12 +28,24 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SuggesterServiceClient interface {
-	// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+	// Suggest target values for one input.
+	//
+	// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+	// highest confidence first, each with its confidence level.
+	// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+	// sets no data structure or an option has an invalid value.
 	Suggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
-	// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+	// Suggest target values for several inputs.
+	//
+	// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+	// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+	// predictions instead of 404. To get a 404 in that case, use
+	// POST /v2/datasets/{datasetName}/model:batchSuggest.
 	BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
-	// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-	// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+	// Suggest target values for several inputs, or 404 without a model.
+	//
+	// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+	// no trained model yet or doesn't exist.
 	ModelBatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
 }
 
@@ -76,12 +88,24 @@ func (c *suggesterServiceClient) ModelBatchSuggest(ctx context.Context, in *Batc
 // All implementations should embed UnimplementedSuggesterServiceServer
 // for forward compatibility
 type SuggesterServiceServer interface {
-	// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+	// Suggest target values for one input.
+	//
+	// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+	// highest confidence first, each with its confidence level.
+	// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+	// sets no data structure or an option has an invalid value.
 	Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
-	// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+	// Suggest target values for several inputs.
+	//
+	// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+	// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+	// predictions instead of 404. To get a 404 in that case, use
+	// POST /v2/datasets/{datasetName}/model:batchSuggest.
 	BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
-	// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-	// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+	// Suggest target values for several inputs, or 404 without a model.
+	//
+	// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+	// no trained model yet or doesn't exist.
 	ModelBatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
 }
 

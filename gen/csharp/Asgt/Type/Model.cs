@@ -66,6 +66,9 @@ namespace Asgt.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A trained model.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Model : pb::IMessage<Model>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -123,6 +126,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 3;
     private long version_;
+    /// <summary>
+    /// Version number of the model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Version {
@@ -135,6 +141,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "created_at" field.</summary>
     public const int CreatedAtFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    /// <summary>
+    /// When the model was created.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
@@ -147,6 +156,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "dataset_size" field.</summary>
     public const int DatasetSizeFieldNumber = 5;
     private int datasetSize_;
+    /// <summary>
+    /// Size of the dataset the model was trained on, in examples.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DatasetSize {
@@ -159,6 +171,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "training_size" field.</summary>
     public const int TrainingSizeFieldNumber = 6;
     private int trainingSize_;
+    /// <summary>
+    /// Number of examples used for training.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TrainingSize {
@@ -173,6 +188,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics> _repeated_confidenceScores_codec
         = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TargetMetrics.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
+    /// <summary>
+    /// Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> ConfidenceScores {
@@ -194,6 +212,10 @@ namespace Asgt.Type {
     /// <summary>Field number for the "dataset_type" field.</summary>
     public const int DatasetTypeFieldNumber = 9;
     private string datasetType_ = "";
+    /// <summary>
+    /// Type of the dataset the model was trained on: bank, scanned-invoice or
+    /// electronic-invoice-line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetType {
@@ -208,6 +230,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.ModelFile> _repeated_modelFiles_codec
         = pb::FieldCodec.ForMessage(82, global::Asgt.Type.ModelFile.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.ModelFile> modelFiles_ = new pbc::RepeatedField<global::Asgt.Type.ModelFile>();
+    /// <summary>
+    /// Files of the trained model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.ModelFile> ModelFiles {
@@ -219,6 +244,9 @@ namespace Asgt.Type {
     private static readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec _map_targetToConfidenceThresholds_codec
         = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.ConfidenceThresholds.Parser), 98);
     private readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> targetToConfidenceThresholds_ = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>();
+    /// <summary>
+    /// For each target, the confidence value at which each confidence level starts.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> TargetToConfidenceThresholds {
@@ -230,6 +258,9 @@ namespace Asgt.Type {
     private static readonly pbc::MapField<string, int>.Codec _map_targetToClassCount_codec
         = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 106);
     private readonly pbc::MapField<string, int> targetToClassCount_ = new pbc::MapField<string, int>();
+    /// <summary>
+    /// For each target, the number of classes, that is distinct values, it has.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, int> TargetToClassCount {
@@ -565,6 +596,9 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// How the model takes its input. The service uses it to run the model.
+      /// </summary>
       public enum InputType {
         [pbr::OriginalName("FEATURE_TENSORS")] FeatureTensors = 0,
         [pbr::OriginalName("EXAMPLE_TENSOR")] ExampleTensor = 1,
@@ -575,6 +609,9 @@ namespace Asgt.Type {
 
   }
 
+  /// <summary>
+  /// Confidence thresholds of one target.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfidenceThresholds : pb::IMessage<ConfidenceThresholds>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -625,6 +662,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.Confidence> _repeated_confidenceThresholds_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.Type.Confidence.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Confidence> confidenceThresholds_ = new pbc::RepeatedField<global::Asgt.Type.Confidence>();
+    /// <summary>
+    /// The confidence value at which each level starts.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Confidence> ConfidenceThresholds_ {

@@ -6,6 +6,10 @@
 package ai.visma.ssn.access.v1;
 
 /**
+ * <pre>
+ * A new valet key.
+ * </pre>
+ *
  * Protobuf type {@code ssn.access.v1.ValetKeyResponse}
  */
 public final class ValetKeyResponse extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object id_ = "";
   /**
    * <pre>
-   * Key for this key
+   * Unique ID of the key, also stored in the token as its `jti` claim.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -70,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Key for this key
+   * Unique ID of the key, also stored in the token as its `jti` claim.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -96,7 +100,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object token_ = "";
   /**
    * <pre>
-   * A JWT Token
+   * The valet key, a signed JSON Web Token (JWT). Send it as
+   * `Authorization: Bearer &lt;token&gt;`.
    * </pre>
    *
    * <code>string token = 2 [json_name = "token"];</code>
@@ -117,7 +122,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A JWT Token
+   * The valet key, a signed JSON Web Token (JWT). Send it as
+   * `Authorization: Bearer &lt;token&gt;`.
    * </pre>
    *
    * <code>string token = 2 [json_name = "token"];</code>
@@ -305,6 +311,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A new valet key.
+   * </pre>
+   *
    * Protobuf type {@code ssn.access.v1.ValetKeyResponse}
    */
   public static final class Builder extends
@@ -459,7 +469,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object id_ = "";
     /**
      * <pre>
-     * Key for this key
+     * Unique ID of the key, also stored in the token as its `jti` claim.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -479,7 +489,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for this key
+     * Unique ID of the key, also stored in the token as its `jti` claim.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -500,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for this key
+     * Unique ID of the key, also stored in the token as its `jti` claim.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -517,7 +527,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for this key
+     * Unique ID of the key, also stored in the token as its `jti` claim.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -531,7 +541,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for this key
+     * Unique ID of the key, also stored in the token as its `jti` claim.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -551,7 +561,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object token_ = "";
     /**
      * <pre>
-     * A JWT Token
+     * The valet key, a signed JSON Web Token (JWT). Send it as
+     * `Authorization: Bearer &lt;token&gt;`.
      * </pre>
      *
      * <code>string token = 2 [json_name = "token"];</code>
@@ -571,7 +582,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A JWT Token
+     * The valet key, a signed JSON Web Token (JWT). Send it as
+     * `Authorization: Bearer &lt;token&gt;`.
      * </pre>
      *
      * <code>string token = 2 [json_name = "token"];</code>
@@ -592,7 +604,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A JWT Token
+     * The valet key, a signed JSON Web Token (JWT). Send it as
+     * `Authorization: Bearer &lt;token&gt;`.
      * </pre>
      *
      * <code>string token = 2 [json_name = "token"];</code>
@@ -609,7 +622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A JWT Token
+     * The valet key, a signed JSON Web Token (JWT). Send it as
+     * `Authorization: Bearer &lt;token&gt;`.
      * </pre>
      *
      * <code>string token = 2 [json_name = "token"];</code>
@@ -623,7 +637,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A JWT Token
+     * The valet key, a signed JSON Web Token (JWT). Send it as
+     * `Authorization: Bearer &lt;token&gt;`.
      * </pre>
      *
      * <code>string token = 2 [json_name = "token"];</code>

@@ -8,6 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Ssn.Dataservice.V1 {
+  /// <summary>
+  /// Send feedback on Smartscan results, and delete it by tag.
+  /// </summary>
   public static partial class DataService
   {
     static readonly string __ServiceName = "ssn.dataservice.v1.DataService";
@@ -188,6 +191,26 @@ namespace Ssn.Dataservice.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Send the correct values for an annotated document.
+      ///
+      /// Send the values your user confirmed for a document you sent to
+      /// POST /v1/document:annotate, identified by the `feedbackId` from that
+      /// response. Feedback powers your quality metrics, and it's used to improve
+      /// the models. Send it once per document, within 90 days of the annotate
+      /// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+      /// A successful call returns an empty object.
+      ///
+      /// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+      /// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+      /// and 409 if feedback for the ID was already sent.
+      ///
+      /// For Smartscan Async transactions, send corrections with
+      /// PUT /v1/transactions/{id}/results instead.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Feedback(global::Ssn.Dataservice.V1.FeedbackRequest request, grpc::ServerCallContext context)
       {
@@ -206,6 +229,19 @@ namespace Ssn.Dataservice.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Delete feedback by tag.
+      ///
+      /// Deletes your project's feedback that has at least one of the given tags,
+      /// together with the document image and text stored with it. Only feedback
+      /// sent before this call is deleted. The call records the request and
+      /// returns an empty object right away; a daily job then deletes the data.
+      ///
+      /// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Delete(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::ServerCallContext context)
       {
@@ -347,21 +383,105 @@ namespace Ssn.Dataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_PrepareFeedback, null, options, request);
       }
+      /// <summary>
+      /// Send the correct values for an annotated document.
+      ///
+      /// Send the values your user confirmed for a document you sent to
+      /// POST /v1/document:annotate, identified by the `feedbackId` from that
+      /// response. Feedback powers your quality metrics, and it's used to improve
+      /// the models. Send it once per document, within 90 days of the annotate
+      /// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+      /// A successful call returns an empty object.
+      ///
+      /// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+      /// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+      /// and 409 if feedback for the ID was already sent.
+      ///
+      /// For Smartscan Async transactions, send corrections with
+      /// PUT /v1/transactions/{id}/results instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Feedback(global::Ssn.Dataservice.V1.FeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Feedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Send the correct values for an annotated document.
+      ///
+      /// Send the values your user confirmed for a document you sent to
+      /// POST /v1/document:annotate, identified by the `feedbackId` from that
+      /// response. Feedback powers your quality metrics, and it's used to improve
+      /// the models. Send it once per document, within 90 days of the annotate
+      /// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+      /// A successful call returns an empty object.
+      ///
+      /// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+      /// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+      /// and 409 if feedback for the ID was already sent.
+      ///
+      /// For Smartscan Async transactions, send corrections with
+      /// PUT /v1/transactions/{id}/results instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Feedback(global::Ssn.Dataservice.V1.FeedbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Feedback, null, options, request);
       }
+      /// <summary>
+      /// Send the correct values for an annotated document.
+      ///
+      /// Send the values your user confirmed for a document you sent to
+      /// POST /v1/document:annotate, identified by the `feedbackId` from that
+      /// response. Feedback powers your quality metrics, and it's used to improve
+      /// the models. Send it once per document, within 90 days of the annotate
+      /// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+      /// A successful call returns an empty object.
+      ///
+      /// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+      /// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+      /// and 409 if feedback for the ID was already sent.
+      ///
+      /// For Smartscan Async transactions, send corrections with
+      /// PUT /v1/transactions/{id}/results instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FeedbackAsync(global::Ssn.Dataservice.V1.FeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Send the correct values for an annotated document.
+      ///
+      /// Send the values your user confirmed for a document you sent to
+      /// POST /v1/document:annotate, identified by the `feedbackId` from that
+      /// response. Feedback powers your quality metrics, and it's used to improve
+      /// the models. Send it once per document, within 90 days of the annotate
+      /// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+      /// A successful call returns an empty object.
+      ///
+      /// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+      /// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+      /// and 409 if feedback for the ID was already sent.
+      ///
+      /// For Smartscan Async transactions, send corrections with
+      /// PUT /v1/transactions/{id}/results instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FeedbackAsync(global::Ssn.Dataservice.V1.FeedbackRequest request, grpc::CallOptions options)
       {
@@ -407,21 +527,77 @@ namespace Ssn.Dataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateMetricsV2, null, options, request);
       }
+      /// <summary>
+      /// Delete feedback by tag.
+      ///
+      /// Deletes your project's feedback that has at least one of the given tags,
+      /// together with the document image and text stored with it. Only feedback
+      /// sent before this call is deleted. The call records the request and
+      /// returns an empty object right away; a daily job then deletes the data.
+      ///
+      /// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Delete(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Delete(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete feedback by tag.
+      ///
+      /// Deletes your project's feedback that has at least one of the given tags,
+      /// together with the document image and text stored with it. Only feedback
+      /// sent before this call is deleted. The call records the request and
+      /// returns an empty object right away; a daily job then deletes the data.
+      ///
+      /// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Delete(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Delete, null, options, request);
       }
+      /// <summary>
+      /// Delete feedback by tag.
+      ///
+      /// Deletes your project's feedback that has at least one of the given tags,
+      /// together with the document image and text stored with it. Only feedback
+      /// sent before this call is deleted. The call records the request and
+      /// returns an empty object right away; a daily job then deletes the data.
+      ///
+      /// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAsync(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete feedback by tag.
+      ///
+      /// Deletes your project's feedback that has at least one of the given tags,
+      /// together with the document image and text stored with it. Only feedback
+      /// sent before this call is deleted. The call records the request and
+      /// returns an empty object right away; a daily job then deletes the data.
+      ///
+      /// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAsync(global::Ssn.Dataservice.V1.DeleteRequest request, grpc::CallOptions options)
       {

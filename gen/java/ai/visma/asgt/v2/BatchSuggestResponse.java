@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Suggestions for several inputs.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.BatchSuggestResponse}
  */
 public final class BatchSuggestResponse extends
@@ -49,6 +53,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.Prediction> predictions_;
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   @java.lang.Override
@@ -56,6 +64,10 @@ private static final long serialVersionUID = 0L;
     return predictions_;
   }
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   @java.lang.Override
@@ -64,6 +76,10 @@ private static final long serialVersionUID = 0L;
     return predictions_;
   }
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   @java.lang.Override
@@ -71,6 +87,10 @@ private static final long serialVersionUID = 0L;
     return predictions_.size();
   }
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   @java.lang.Override
@@ -78,6 +98,10 @@ private static final long serialVersionUID = 0L;
     return predictions_.get(index);
   }
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   @java.lang.Override
@@ -89,6 +113,11 @@ private static final long serialVersionUID = 0L;
   public static final int MODEL_FIELD_NUMBER = 2;
   private ai.visma.asgt.type.Model model_;
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return Whether the model field is set.
    */
@@ -97,6 +126,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return The model.
    */
@@ -105,6 +139,11 @@ private static final long serialVersionUID = 0L;
     return model_ == null ? ai.visma.asgt.type.Model.getDefaultInstance() : model_;
   }
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    */
   @java.lang.Override
@@ -116,6 +155,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> productTypeSuggestions_;
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -123,6 +167,11 @@ private static final long serialVersionUID = 0L;
     return productTypeSuggestions_;
   }
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -131,6 +180,11 @@ private static final long serialVersionUID = 0L;
     return productTypeSuggestions_;
   }
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -138,6 +192,11 @@ private static final long serialVersionUID = 0L;
     return productTypeSuggestions_.size();
   }
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -145,6 +204,11 @@ private static final long serialVersionUID = 0L;
     return productTypeSuggestions_.get(index);
   }
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -342,6 +406,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Suggestions for several inputs.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.BatchSuggestResponse}
    */
   public static final class Builder extends
@@ -623,6 +691,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.Prediction, ai.visma.asgt.type.Prediction.Builder, ai.visma.asgt.type.PredictionOrBuilder> predictionsBuilder_;
 
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Prediction> getPredictionsList() {
@@ -633,6 +705,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public int getPredictionsCount() {
@@ -643,6 +719,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public ai.visma.asgt.type.Prediction getPredictions(int index) {
@@ -653,6 +733,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder setPredictions(
@@ -670,6 +754,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder setPredictions(
@@ -684,6 +772,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder addPredictions(ai.visma.asgt.type.Prediction value) {
@@ -700,6 +792,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder addPredictions(
@@ -717,6 +813,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder addPredictions(
@@ -731,6 +831,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder addPredictions(
@@ -745,6 +849,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder addAllPredictions(
@@ -760,6 +868,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder clearPredictions() {
@@ -773,6 +885,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public Builder removePredictions(int index) {
@@ -786,6 +902,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public ai.visma.asgt.type.Prediction.Builder getPredictionsBuilder(
@@ -793,6 +913,10 @@ private static final long serialVersionUID = 0L;
       return getPredictionsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public ai.visma.asgt.type.PredictionOrBuilder getPredictionsOrBuilder(
@@ -803,6 +927,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.PredictionOrBuilder> 
@@ -814,6 +942,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public ai.visma.asgt.type.Prediction.Builder addPredictionsBuilder() {
@@ -821,6 +953,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.type.Prediction.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public ai.visma.asgt.type.Prediction.Builder addPredictionsBuilder(
@@ -829,6 +965,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.type.Prediction.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One prediction per input, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Prediction.Builder> 
@@ -854,6 +994,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.type.Model, ai.visma.asgt.type.Model.Builder, ai.visma.asgt.type.ModelOrBuilder> modelBuilder_;
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
@@ -861,6 +1006,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
@@ -872,6 +1022,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder setModel(ai.visma.asgt.type.Model value) {
@@ -888,6 +1043,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder setModel(
@@ -902,6 +1062,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder mergeModel(ai.visma.asgt.type.Model value) {
@@ -923,6 +1088,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder clearModel() {
@@ -936,6 +1106,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public ai.visma.asgt.type.Model.Builder getModelBuilder() {
@@ -944,6 +1119,11 @@ private static final long serialVersionUID = 0L;
       return getModelFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder() {
@@ -955,6 +1135,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model that made the predictions. Only its version is filled in, and it's empty when the
+     * dataset has no model.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -984,6 +1169,11 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> productTypeSuggestionsBuilder_;
 
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> getProductTypeSuggestionsList() {
@@ -994,6 +1184,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public int getProductTypeSuggestionsCount() {
@@ -1004,6 +1199,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index) {
@@ -1014,6 +1214,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder setProductTypeSuggestions(
@@ -1031,6 +1236,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder setProductTypeSuggestions(
@@ -1045,6 +1255,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder addProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
@@ -1061,6 +1276,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder addProductTypeSuggestions(
@@ -1078,6 +1298,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder addProductTypeSuggestions(
@@ -1092,6 +1317,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder addProductTypeSuggestions(
@@ -1106,6 +1336,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder addAllProductTypeSuggestions(
@@ -1121,6 +1356,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder clearProductTypeSuggestions() {
@@ -1134,6 +1374,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder removeProductTypeSuggestions(int index) {
@@ -1147,6 +1392,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder getProductTypeSuggestionsBuilder(
@@ -1154,6 +1404,11 @@ private static final long serialVersionUID = 0L;
       return getProductTypeSuggestionsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(
@@ -1164,6 +1419,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
@@ -1175,6 +1435,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addProductTypeSuggestionsBuilder() {
@@ -1182,6 +1447,11 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addProductTypeSuggestionsBuilder(
@@ -1190,6 +1460,11 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Product type candidates for each input's text, in the same order, when includeProductTypes
+     * is true.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion.Builder> 

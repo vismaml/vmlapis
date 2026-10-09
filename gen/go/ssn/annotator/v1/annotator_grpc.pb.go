@@ -27,7 +27,29 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type DocumentAnnotatorClient interface {
+	// Extract data from a document.
+	//
+	// Send the document, as base64 `content` or as a `source.httpUri` to download it
+	// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+	// fields. The results come back in the same call. For large documents, and for the
+	// ULTRA tier, use Smartscan Async.
+	//
+	// By default, most features return at most one candidate, and only with the
+	// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+	// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+	// without readable text returns an empty response.
+	//
+	// To correct the results, send the `feedbackId` from the response to
+	// POST /v1/feedback:create.
+	//
+	// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+	// read. Requests larger than 10 MiB are rejected.
 	AnnotateDocument(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error)
+	// [NOT IMPLEMENTED] Answer questions about a document.
+	//
+	// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+	// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+	// instead.
 	AnswerDocumentQuestion(ctx context.Context, in *DocumentQuestionRequest, opts ...grpc.CallOption) (*DocumentQuestionResponse, error)
 }
 
@@ -61,7 +83,29 @@ func (c *documentAnnotatorClient) AnswerDocumentQuestion(ctx context.Context, in
 // All implementations should embed UnimplementedDocumentAnnotatorServer
 // for forward compatibility
 type DocumentAnnotatorServer interface {
+	// Extract data from a document.
+	//
+	// Send the document, as base64 `content` or as a `source.httpUri` to download it
+	// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+	// fields. The results come back in the same call. For large documents, and for the
+	// ULTRA tier, use Smartscan Async.
+	//
+	// By default, most features return at most one candidate, and only with the
+	// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+	// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+	// without readable text returns an empty response.
+	//
+	// To correct the results, send the `feedbackId` from the response to
+	// POST /v1/feedback:create.
+	//
+	// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+	// read. Requests larger than 10 MiB are rejected.
 	AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error)
+	// [NOT IMPLEMENTED] Answer questions about a document.
+	//
+	// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+	// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+	// instead.
 	AnswerDocumentQuestion(context.Context, *DocumentQuestionRequest) (*DocumentQuestionResponse, error)
 }
 

@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Options for listing trainings.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.TrainingRequestOptions}
  */
 public final class TrainingRequestOptions extends
@@ -46,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private long limit_ = 0L;
   /**
    * <pre>
-   * The number of trainings to return. Ranges from 1 to 100.
+   * Number of trainings to return, from 1 to 100. The default is 10.
    * </pre>
    *
    * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
@@ -216,6 +220,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Options for listing trainings.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.TrainingRequestOptions}
    */
   public static final class Builder extends
@@ -354,7 +362,7 @@ private static final long serialVersionUID = 0L;
     private long limit_ ;
     /**
      * <pre>
-     * The number of trainings to return. Ranges from 1 to 100.
+     * Number of trainings to return, from 1 to 100. The default is 10.
      * </pre>
      *
      * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
@@ -366,7 +374,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of trainings to return. Ranges from 1 to 100.
+     * Number of trainings to return, from 1 to 100. The default is 10.
      * </pre>
      *
      * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>
@@ -382,7 +390,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of trainings to return. Ranges from 1 to 100.
+     * Number of trainings to return, from 1 to 100. The default is 10.
      * </pre>
      *
      * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>

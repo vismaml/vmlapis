@@ -10,23 +10,43 @@ public interface DeleteRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @return The count of tags.
    */
   int getTagsCount();
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.

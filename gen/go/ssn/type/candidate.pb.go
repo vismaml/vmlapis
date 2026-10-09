@@ -22,16 +22,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Confidence levels, from lowest to highest. The levels are designed to give
+// stable results across model upgrades.
 type Confidence_Level int32
 
 const (
+	// No level. As `minConfidence`, it means the default, HIGH.
 	Confidence_UNKNOWN   Confidence_Level = 0
 	Confidence_VERY_LOW  Confidence_Level = 1
 	Confidence_LOW       Confidence_Level = 2
 	Confidence_MID       Confidence_Level = 3
 	Confidence_HIGH      Confidence_Level = 4
 	Confidence_VERY_HIGH Confidence_Level = 5
-	Confidence_VERIFIED  Confidence_Level = 6
+	// The consistency checks of the VERIFIED feature confirmed or corrected the value.
+	Confidence_VERIFIED Confidence_Level = 6
 )
 
 // Enum value maps for Confidence_Level.
@@ -83,6 +87,7 @@ func (Confidence_Level) EnumDescriptor() ([]byte, []int) {
 	return file_ssn_type_candidate_proto_rawDescGZIP(), []int{0, 0}
 }
 
+// The kind of candidate. Not every candidate has one.
 type Candidate_Type int32
 
 const (
@@ -132,15 +137,14 @@ func (Candidate_Type) EnumDescriptor() ([]byte, []int) {
 	return file_ssn_type_candidate_proto_rawDescGZIP(), []int{1, 0}
 }
 
+// How confident Smartscan is in a candidate.
 type Confidence struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A bucketized representation of confidence, which is intended to give clients
-	// highly stable results across model upgrades.
 	Level Confidence_Level `protobuf:"varint,1,opt,name=level,proto3,enum=ssn.type.Confidence_Level" json:"level,omitempty"`
-	// The confidence value
+	// A confidence score. Most responses leave it out and return only the level.
 	Value *wrapperspb.FloatValue `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
@@ -190,47 +194,26 @@ func (x *Confidence) GetValue() *wrapperspb.FloatValue {
 	return nil
 }
 
+// A candidate value for a field, with its confidence and where it was found. In a
+// list of candidates, the most confident one comes first.
 type Candidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Normalized value 01-01-2019
+	// The normalized value, for example "2019-01-01" for a date. Each field of the
+	// response describes the format of its values.
 	Value string `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	// The text as found on the document "1. Jan"
-	// useful for overlays
-	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
-	// Confidence
-	Confidence *Confidence `protobuf:"bytes,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	// The bounding box for the block.
-	// The vertices are in the order of top-left, top-right, bottom-right,
-	// bottom-left. When a rotation of the bounding box is detected the rotation
-	// is represented as around the top-left corner as defined when the text is
-	// read in the 'natural' orientation.
-	// For example:
-	//
-	// * when the text is horizontal it might look like:
-	//
-	//	0----1
-	//	|    |
-	//	3----2
-	//
-	// * when it's rotated 180 degrees around the top-left corner it becomes:
-	//
-	//	      2----3
-	//	      |    |
-	//	      1----0
-	//
-	//	and the vertex order will still be (0, 1, 2, 3).
-	BoundingBox *BoundingPoly `protobuf:"bytes,4,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
-	// Indicate the type of the candidate
-	Type Candidate_Type `protobuf:"varint,5,opt,name=type,proto3,enum=ssn.type.Candidate_Type" json:"type,omitempty"`
-	// A reference to the page where the candidate was found.
-	// page_ref start from 1.
-	PageRef uint32 `protobuf:"varint,6,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// Model spec of the TensorFlow Serving model that predicted this candidate
+	// The text as written on the document, for example "1. Jan". Useful for overlays.
+	Text        string         `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
+	Confidence  *Confidence    `protobuf:"bytes,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
+	BoundingBox *BoundingPoly  `protobuf:"bytes,4,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	Type        Candidate_Type `protobuf:"varint,5,opt,name=type,proto3,enum=ssn.type.Candidate_Type" json:"type,omitempty"`
+	// The page the candidate was found on, starting at 1.
+	PageRef       uint32     `protobuf:"varint,6,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
 	ModelMetadata *ModelSpec `protobuf:"bytes,7,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
-	// Whether the candidate has been corrected by verification heuristics
+	// Only set on VERIFIED candidates: true when the consistency checks changed the
+	// value, and false when they confirmed it.
 	Corrected *wrapperspb.BoolValue `protobuf:"bytes,8,opt,name=corrected,proto3" json:"corrected,omitempty"`
 }
 
@@ -322,14 +305,15 @@ func (x *Candidate) GetCorrected() *wrapperspb.BoolValue {
 	return nil
 }
 
+// The model that produced a candidate.
 type ModelSpec struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The name of the TensorFlow Serving model
+	// The name of the model.
 	ModelName string `protobuf:"bytes,1,opt,name=model_name,json=modelName,proto3" json:"model_name,omitempty"`
-	// The version number of the TensorFlow Serving model
+	// The version of the model.
 	ModelVer *wrapperspb.Int64Value `protobuf:"bytes,2,opt,name=model_ver,json=modelVer,proto3" json:"model_ver,omitempty"`
 }
 
@@ -379,19 +363,17 @@ func (x *ModelSpec) GetModelVer() *wrapperspb.Int64Value {
 	return nil
 }
 
+// A line of the document that holds an amount, returned for the LINES feature.
 type LineCandidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Text of the line without the amount
-	// Example: "3 Dark and Stormy"
+	// The text of the line without the amount, for example "3 Dark and Stormy".
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	// Normalized amount (price) of the line
-	// Example: 300.0
+	// The amount (price) of the line, normalized, for example 300.0.
 	Amount float64 `protobuf:"fixed64,2,opt,name=amount,proto3" json:"amount,omitempty"`
-	// A reference to the page where the line was found.
-	// page_ref start from 1.
+	// The page the line was found on, starting at 1.
 	PageRef uint32 `protobuf:"varint,6,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
 }
 
@@ -448,47 +430,50 @@ func (x *LineCandidate) GetPageRef() uint32 {
 	return 0
 }
 
+// A purchase line in the older format, with a single value for each field. Use
+// PurchaseLine instead: it has candidates with confidence levels for each field.
 type PurchaseLineCandidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A reference to the page where the line was found.
-	// page_ref start from 1.
+	// The page the line was found on, starting at 1.
 	PageRef uint32 `protobuf:"varint,1,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// Code is an ID that supplier uses to identify the item
+	// The product code, product number or SKU that the supplier uses for the item.
 	Code string `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
-	// Description is a piece of text that describes the item
+	// The description of the line, typically the name of a product or the delivered service.
 	Description string `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
-	// Quantity is the number of items
+	// The quantity.
 	Quantity string `protobuf:"bytes,4,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	// ItemNumber is the number of the item
+	// The row number, position or ID of the line, if the document states one.
 	ItemNumber string `protobuf:"bytes,5,opt,name=item_number,json=itemNumber,proto3" json:"item_number,omitempty"`
-	// Unit is the unit of the item
+	// The unit of the quantity, for example "pieces", "kg" or "lb".
 	Unit string `protobuf:"bytes,6,opt,name=unit,proto3" json:"unit,omitempty"`
-	// Total discount is the total discount of the line
+	// The total discount of the line.
 	TotalDiscount string `protobuf:"bytes,7,opt,name=total_discount,json=totalDiscount,proto3" json:"total_discount,omitempty"`
-	// Percentage discount is the percentage discount of the line
+	// The discount rate of the line, as a percentage.
 	PercentageDiscount string `protobuf:"bytes,8,opt,name=percentage_discount,json=percentageDiscount,proto3" json:"percentage_discount,omitempty"`
-	// Total incl vat is the total price of the line including vat
+	// The line total including VAT.
 	TotalInclVat string `protobuf:"bytes,9,opt,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
-	// Total excl vat is the total price of the line excluding vat
+	// The line total excluding VAT.
 	TotalExclVat string `protobuf:"bytes,10,opt,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
-	// Total vat is the total vat of the line
+	// The VAT amount of the line.
 	TotalVat string `protobuf:"bytes,11,opt,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
-	// Percentage vat is the percentage vat of the line
+	// The VAT rate of the line, as a percentage, for example "25.0".
 	PercentageVat string `protobuf:"bytes,12,opt,name=percentage_vat,json=percentageVat,proto3" json:"percentage_vat,omitempty"`
-	// Unit price incl vat is the unit price of the line including vat
+	// The price of one unit, including VAT.
 	UnitPriceInclVat string `protobuf:"bytes,13,opt,name=unit_price_incl_vat,json=unitPriceInclVat,proto3" json:"unit_price_incl_vat,omitempty"`
-	// Unit price excl vat is the unit price of the line excluding vat
+	// The price of one unit, excluding VAT.
 	UnitPriceExclVat string `protobuf:"bytes,14,opt,name=unit_price_excl_vat,json=unitPriceExclVat,proto3" json:"unit_price_excl_vat,omitempty"`
-	// Total is the total price of the line (with/without vat)
+	// The line total as stated on the line, usually the rightmost amount. Documents
+	// often don't say whether it includes VAT.
 	Total string `protobuf:"bytes,17,opt,name=total,proto3" json:"total,omitempty"`
-	// Unit price is the unit price of the line (with/without vat)
-	UnitPrice string `protobuf:"bytes,18,opt,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
-	// Model metadata
+	// The price of one unit as stated on the line. Documents often don't say whether
+	// it includes VAT.
+	UnitPrice     string     `protobuf:"bytes,18,opt,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
 	ModelMetadata *ModelSpec `protobuf:"bytes,19,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
-	// Product type classification for the line
+	// The product type of the line in the older format. For product types, request
+	// PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
 	ProductType string `protobuf:"bytes,20,opt,name=product_type,json=productType,proto3" json:"product_type,omitempty"`
 }
 
@@ -650,20 +635,22 @@ func (x *PurchaseLineCandidate) GetProductType() string {
 	return ""
 }
 
+// An answer to one of the questions in the request.
 type AnswerCandidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Question asked in the request
+	// The question, as sent in the request.
 	Question string `protobuf:"bytes,1,opt,name=question,proto3" json:"question,omitempty"`
-	// Model prediction for the question
+	// The answer, as text.
 	Answer string `protobuf:"bytes,2,opt,name=answer,proto3" json:"answer,omitempty"`
-	// Confidence of the prediction
+	// [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
 	Confidence *Confidence `protobuf:"bytes,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	// Model metadata
+	// [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
 	ModelMetadata *ModelSpec `protobuf:"bytes,7,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
-	// A reference to the page where the candidate was found.
+	// The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+	// first and last page together (see `documentMetadata.pageCount`).
 	PageRef uint32 `protobuf:"varint,8,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
 }
 
@@ -734,14 +721,15 @@ func (x *AnswerCandidate) GetPageRef() uint32 {
 	return 0
 }
 
+// The text of one page, returned for the PAGE_TEXTS feature.
 type PageText struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A reference to the page where the text was found.
+	// The page, starting at 1.
 	PageRef uint32 `protobuf:"varint,1,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// The text content of the page
+	// The text of the page.
 	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
 }
 
@@ -791,22 +779,23 @@ func (x *PageText) GetText() string {
 	return ""
 }
 
+// A VAT level in the older format, with a single value for each field. Use
+// VatDistribution instead: it has candidates with confidence levels for each field.
 type VatDistributionCandidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The vat distribution candidate percentage
+	// The VAT rate, as a percentage with a dot as the decimal separator, for example "25.0".
 	Percentage string `protobuf:"bytes,1,opt,name=percentage,proto3" json:"percentage,omitempty"`
-	// The vat distribution candidate amount
-	Amount string `protobuf:"bytes,2,opt,name=amount,proto3" json:"amount,omitempty"`
-	// Model metadata
+	// The VAT amount at this rate, rounded to two decimals, for example "585.45".
+	Amount        string     `protobuf:"bytes,2,opt,name=amount,proto3" json:"amount,omitempty"`
 	ModelMetadata *ModelSpec `protobuf:"bytes,3,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
-	// A reference to the page where the candidate was found.
+	// The page the VAT level was found on, starting at 1.
 	PageRef uint32 `protobuf:"varint,4,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// The vat distribution candidate excl vat
+	// The amount excluding VAT that the VAT is based on, for example "2341.80".
 	ExclVat string `protobuf:"bytes,5,opt,name=excl_vat,json=exclVat,proto3" json:"excl_vat,omitempty"`
-	// The vat distribution candidate incl vat
+	// The amount including VAT at this rate, for example "2926.25".
 	InclVat string `protobuf:"bytes,6,opt,name=incl_vat,json=inclVat,proto3" json:"incl_vat,omitempty"`
 }
 
@@ -884,12 +873,17 @@ func (x *VatDistributionCandidate) GetInclVat() string {
 	return ""
 }
 
+// Information about how Smartscan processed the document.
 type DocumentMetadata struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Number of pages in the document
+	// The number of pages Smartscan read, not the number of pages in the document. It's
+	// 1 when the first and last page are read together, which is the case for field
+	// predictions. When you request a feature that is read page by page, such as
+	// PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+	// read, up to 5.
 	PageCount uint32 `protobuf:"varint,1,opt,name=page_count,json=pageCount,proto3" json:"page_count,omitempty"`
 }
 
@@ -932,50 +926,53 @@ func (x *DocumentMetadata) GetPageCount() uint32 {
 	return 0
 }
 
+// A purchase line, with a list of candidates for each field.
 type PurchaseLine struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A reference to the page where the line was found.
-	// page_ref start from 1.
+	// The page the line was found on, starting at 1.
 	PageRef uint32 `protobuf:"varint,1,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// Code is an ID that supplier uses to identify the item
+	// Candidates for the product code, product number or SKU that the supplier uses for
+	// the item.
 	Code []*Candidate `protobuf:"bytes,2,rep,name=code,proto3" json:"code,omitempty"`
-	// Description is a piece of text that describes the item
+	// Candidates for the description of the line, typically the name of a product or the
+	// delivered service.
 	Description []*Candidate `protobuf:"bytes,3,rep,name=description,proto3" json:"description,omitempty"`
-	// Quantity is the number of items
+	// Candidates for the quantity.
 	Quantity []*Candidate `protobuf:"bytes,4,rep,name=quantity,proto3" json:"quantity,omitempty"`
-	// ItemNumber is the number of the item
+	// Candidates for the row number, position or ID of the line, if the document states one.
 	ItemNumber []*Candidate `protobuf:"bytes,5,rep,name=item_number,json=itemNumber,proto3" json:"item_number,omitempty"`
-	// Unit is the unit of the item
+	// Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
 	Unit []*Candidate `protobuf:"bytes,6,rep,name=unit,proto3" json:"unit,omitempty"`
-	// Total discount is the total discount of the line
+	// Candidates for the total discount of the line.
 	TotalDiscount []*Candidate `protobuf:"bytes,7,rep,name=total_discount,json=totalDiscount,proto3" json:"total_discount,omitempty"`
-	// Percentage discount is the percentage discount of the line
+	// Candidates for the discount rate of the line, as a percentage.
 	PercentageDiscount []*Candidate `protobuf:"bytes,8,rep,name=percentage_discount,json=percentageDiscount,proto3" json:"percentage_discount,omitempty"`
-	// Total incl vat is the total price of the line including vat
+	// Candidates for the line total including VAT.
 	TotalInclVat []*Candidate `protobuf:"bytes,9,rep,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
-	// Total excl vat is the total price of the line excluding vat
+	// Candidates for the line total excluding VAT.
 	TotalExclVat []*Candidate `protobuf:"bytes,10,rep,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
-	// Total vat is the total vat of the line
+	// Candidates for the VAT amount of the line.
 	TotalVat []*Candidate `protobuf:"bytes,11,rep,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
-	// Percentage vat is the percentage vat of the line
+	// Candidates for the VAT rate of the line, as a percentage, for example "25.0".
 	PercentageVat []*Candidate `protobuf:"bytes,12,rep,name=percentage_vat,json=percentageVat,proto3" json:"percentage_vat,omitempty"`
-	// Unit price incl vat is the unit price of the line including vat
+	// Candidates for the price of one unit, including VAT.
 	UnitPriceInclVat []*Candidate `protobuf:"bytes,13,rep,name=unit_price_incl_vat,json=unitPriceInclVat,proto3" json:"unit_price_incl_vat,omitempty"`
-	// Unit price excl vat is the unit price of the line excluding vat
+	// Candidates for the price of one unit, excluding VAT.
 	UnitPriceExclVat []*Candidate `protobuf:"bytes,14,rep,name=unit_price_excl_vat,json=unitPriceExclVat,proto3" json:"unit_price_excl_vat,omitempty"`
-	// Total is the total price of the line (with/without vat)
+	// Candidates for the line total as stated on the line, usually the rightmost amount.
+	// Documents often don't say whether it includes VAT.
 	Total []*Candidate `protobuf:"bytes,15,rep,name=total,proto3" json:"total,omitempty"`
-	// Unit price is the unit price of the line (with/without vat)
-	UnitPrice []*Candidate `protobuf:"bytes,16,rep,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
-	// Model metadata
-	ModelMetadata *ModelSpec `protobuf:"bytes,17,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
-	// Product type classification for the line
+	// Candidates for the price of one unit as stated on the line. Documents often don't
+	// say whether it includes VAT.
+	UnitPrice     []*Candidate `protobuf:"bytes,16,rep,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
+	ModelMetadata *ModelSpec   `protobuf:"bytes,17,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
+	// Product type candidates for the line, classified from its description. Returned for
+	// the PRODUCT_TYPES feature.
 	ProductType []*v2.ProductTypeCandidate `protobuf:"bytes,18,rep,name=product_type,json=productType,proto3" json:"product_type,omitempty"`
-	// Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-	// "levy", "service_charge", "gratuity", "discount" or "deposit".
+	// Candidates for what the line charges for, for example "item", "freight" or "discount".
 	Kind []*Candidate `protobuf:"bytes,19,rep,name=kind,proto3" json:"kind,omitempty"`
 }
 
@@ -1144,23 +1141,24 @@ func (x *PurchaseLine) GetKind() []*Candidate {
 	return nil
 }
 
+// A VAT level, with a list of candidates for each field.
 type VatDistribution struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A reference to the page where the candidate was found.
+	// The page the VAT level was found on, starting at 1.
 	PageRef uint32 `protobuf:"varint,1,opt,name=page_ref,json=pageRef,proto3" json:"page_ref,omitempty"`
-	// The vat distribution candidate percentage
+	// Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+	// for example "25.0".
 	Percentage []*Candidate `protobuf:"bytes,2,rep,name=percentage,proto3" json:"percentage,omitempty"`
-	// The vat distribution candidate incl vat
+	// Candidates for the amount including VAT at this rate.
 	TotalInclVat []*Candidate `protobuf:"bytes,3,rep,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
-	// The vat distribution candidate excl vat
+	// Candidates for the amount excluding VAT that the VAT is based on.
 	TotalExclVat []*Candidate `protobuf:"bytes,4,rep,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
-	// The vat distribution candidate
-	TotalVat []*Candidate `protobuf:"bytes,5,rep,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
-	// Model metadata
-	ModelMetadata *ModelSpec `protobuf:"bytes,6,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
+	// Candidates for the VAT amount at this rate.
+	TotalVat      []*Candidate `protobuf:"bytes,5,rep,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
+	ModelMetadata *ModelSpec   `protobuf:"bytes,6,opt,name=model_metadata,json=modelMetadata,proto3" json:"model_metadata,omitempty"`
 }
 
 func (x *VatDistribution) Reset() {

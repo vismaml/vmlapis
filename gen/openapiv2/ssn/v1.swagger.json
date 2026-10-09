@@ -7,13 +7,16 @@
   },
   "tags": [
     {
-      "name": "DocumentAnnotator"
+      "name": "DocumentAnnotator",
+      "description": "Extract data from a document and get the results in the same call."
     },
     {
-      "name": "Access"
+      "name": "Access",
+      "description": "Create valet keys, short-lived tokens for web and mobile apps."
     },
     {
-      "name": "DataService"
+      "name": "DataService",
+      "description": "Send feedback on Smartscan results, and delete it by tag."
     }
   ],
   "schemes": [
@@ -28,6 +31,8 @@
   "paths": {
     "/v1/access/valetkey": {
       "post": {
+        "summary": "Create a valet key, a short-lived token for a web or mobile app.",
+        "description": "Call this from your backend with your project token, and give the\nreturned token to the app. The app sends it as\n`Authorization: Bearer \u003ctoken\u003e`, so your project token never has to be\nin an untrusted client. The key expires 8 hours after it's issued,\nunless you set `exp`.\n\nA valet key can call POST /v1/document:annotate and\nPOST /v1/feedback:create, the Smartscan Async endpoints that create a\ntransaction, get its status or results, and update its results, and the\nthree Autosuggest suggest endpoints and GET /v2/trainings. Every other\nendpoint in the API reference returns 403 for a valet key, and so does\nany call after the key expires. Keys can't be revoked.\n\nErrors: 400 if `exp` is more than 48 hours from now, and 403 if you call\nthis endpoint with a valet key or the demo token.",
         "operationId": "Access_GenerateValetKey",
         "responses": {
           "200": {
@@ -46,6 +51,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Options for a new valet key.",
             "in": "body",
             "required": true,
             "schema": {
@@ -60,6 +66,8 @@
     },
     "/v1/document:annotate": {
       "post": {
+        "summary": "Extract data from a document.",
+        "description": "Send the document, as base64 `content` or as a `source.httpUri` to download it\nfrom, and the `features` to extract. `DEFAULT` extracts a set of frequently used\nfields. The results come back in the same call. For large documents, and for the\nULTRA tier, use Smartscan Async.\n\nBy default, most features return at most one candidate, and only with the\nconfidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature\nto change this. Without a `tier`, the request is processed as PREMIUM. A document\nwithout readable text returns an empty response.\n\nTo correct the results, send the `feedbackId` from the response to\nPOST /v1/feedback:create.\n\nErrors: 400 when the document can't be downloaded from `source.httpUri` or can't be\nread. Requests larger than 10 MiB are rejected.",
         "operationId": "DocumentAnnotator_AnnotateDocument",
         "responses": {
           "200": {
@@ -78,6 +86,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body of POST /v1/document:annotate.",
             "in": "body",
             "required": true,
             "schema": {
@@ -92,6 +101,8 @@
     },
     "/v1/document:answerquestion": {
       "post": {
+        "summary": "[NOT IMPLEMENTED] Answer questions about a document.",
+        "description": "REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in\nthe `questions` field of POST /v1/document:annotate, or of an async transaction,\ninstead.",
         "operationId": "DocumentAnnotator_AnswerDocumentQuestion",
         "responses": {
           "200": {
@@ -110,6 +121,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body of POST /v1/document:answerquestion, which isn't implemented.",
             "in": "body",
             "required": true,
             "schema": {
@@ -124,6 +136,8 @@
     },
     "/v1/feedback:create": {
       "post": {
+        "summary": "Send the correct values for an annotated document.",
+        "description": "Send the values your user confirmed for a document you sent to\nPOST /v1/document:annotate, identified by the `feedbackId` from that\nresponse. Feedback powers your quality metrics, and it's used to improve\nthe models. Send it once per document, within 90 days of the annotate\ncall, and tag it so you can delete it later with POST /v1/feedback:delete.\nA successful call returns an empty object.\n\nErrors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,\n404 if the ID is unknown or the annotate call was more than 90 days ago,\nand 409 if feedback for the ID was already sent.\n\nFor Smartscan Async transactions, send corrections with\nPUT /v1/transactions/{id}/results instead.",
         "operationId": "DataService_Feedback",
         "responses": {
           "200": {
@@ -143,6 +157,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Feedback for one annotated document.",
             "in": "body",
             "required": true,
             "schema": {
@@ -157,6 +172,8 @@
     },
     "/v1/feedback:delete": {
       "post": {
+        "summary": "Delete feedback by tag.",
+        "description": "Deletes your project's feedback that has at least one of the given tags,\ntogether with the document image and text stored with it. Only feedback\nsent before this call is deleted. The call records the request and\nreturns an empty object right away; a daily job then deletes the data.\n\nErrors: 400 if no tag is given, and 403 if you call it with a valet key.",
         "operationId": "DataService_Delete",
         "responses": {
           "200": {
@@ -176,6 +193,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Tags of the feedback to delete.",
             "in": "body",
             "required": true,
             "schema": {
@@ -214,7 +232,8 @@
         "VERY_HIGH",
         "VERIFIED"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence levels, from lowest to highest. The levels are designed to give\nstable results across model upgrades.\n\n - UNKNOWN: No level. As `minConfidence`, it means the default, HIGH.\n - VERIFIED: The consistency checks of the VERIFIED feature confirmed or corrected the value."
     },
     "DetectedBreakBreakType": {
       "type": "string",
@@ -227,7 +246,7 @@
         "LINE_BREAK"
       ],
       "default": "UNKNOWN",
-      "description": "Enum to denote the type of break found. New line, space etc.\n\n - UNKNOWN: Unknown break label type.\n - SPACE: Regular space.\n - SURE_SPACE: Sure space (very wide).\n - EOL_SURE_SPACE: Line-wrapping break.\n - HYPHEN: End-line hyphen that is not present in text; does not co-occur with\n`SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.\n - LINE_BREAK: Line break that ends a paragraph."
+      "description": "Enum to denote the type of break found. New line, space etc.\n\n - UNKNOWN: Unknown break label type.\n - SPACE: Regular space.\n - SURE_SPACE: Sure space (very wide).\n - EOL_SURE_SPACE: Line-wrapping break.\n - HYPHEN: End-line hyphen that is not present in text; does not co-occur with\n`SPACE` or `LINE_BREAK`.\n - LINE_BREAK: Line break that ends a paragraph."
     },
     "TextAnnotationDetectedBreak": {
       "type": "object",
@@ -318,17 +337,18 @@
         "content": {
           "type": "string",
           "format": "byte",
-          "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
+          "description": "The bytes of the file, base64-encoded in JSON. If you send both `content` and\n`source`, `content` is used."
         },
         "source": {
-          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request.",
+          "description": "Where to download the document from, when you don't send `content`.",
           "allOf": [
             {
               "$ref": "#/definitions/v1DocumentSource"
             }
           ]
         }
-      }
+      },
+      "description": "A document to scan: a PDF or an image. Send either `content` or `source`."
     },
     "ssndataservicev1Document": {
       "type": "object",
@@ -384,14 +404,14 @@
       "properties": {
         "question": {
           "type": "string",
-          "title": "Question asked in the request"
+          "description": "The question, as sent in the request."
         },
         "answer": {
           "type": "string",
-          "title": "Model prediction for the question"
+          "description": "The answer, as text."
         },
         "confidence": {
-          "title": "Confidence of the prediction",
+          "description": "[NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.",
           "allOf": [
             {
               "$ref": "#/definitions/typeConfidence"
@@ -399,7 +419,7 @@
           ]
         },
         "modelMetadata": {
-          "title": "Model metadata",
+          "description": "[NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.",
           "allOf": [
             {
               "$ref": "#/definitions/typeModelSpec"
@@ -409,9 +429,10 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the answer comes from, starting at 1. It's 1 when Smartscan reads the\nfirst and last page together (see `documentMetadata.pageCount`)."
         }
-      }
+      },
+      "description": "An answer to one of the questions in the request."
     },
     "typeBlock": {
       "type": "object",
@@ -425,13 +446,7 @@
           ]
         },
         "boundingBox": {
-          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
-          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "paragraphs": {
           "type": "array",
@@ -439,7 +454,7 @@
             "type": "object",
             "$ref": "#/definitions/typeParagraph"
           },
-          "description": "List of paragraphs in this block (if this blocks is of type text)."
+          "description": "The paragraphs in the block, if it's a text block."
         },
         "blockType": {
           "description": "Detected block type (text, image etc) for this block.",
@@ -466,7 +481,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVertex"
           },
-          "description": "The bounding polygon vertices."
+          "description": "The four points, in pixel coordinates."
         },
         "normalizedVertices": {
           "type": "array",
@@ -474,65 +489,45 @@
             "type": "object",
             "$ref": "#/definitions/typeNormalizedVertex"
           },
-          "description": "The bounding polygon normalized vertices."
+          "description": "The same four points relative to the page size, from 0 to 1, so you can place an\noverlay without knowing the size of the image."
         }
       },
-      "description": "A bounding polygon for the detected image annotation."
+      "description": "A box on the page, for example around the text of a candidate. Its four points are\nordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,\nthe order follows the text as it's read in its natural orientation, so the first\npoint is always the top-left corner of the text."
     },
     "typeCandidate": {
       "type": "object",
       "properties": {
         "value": {
           "type": "string",
-          "title": "Normalized value 01-01-2019"
+          "description": "The normalized value, for example \"2019-01-01\" for a date. Each field of the\nresponse describes the format of its values."
         },
         "text": {
           "type": "string",
-          "title": "The text as found on the document \"1. Jan\"\nuseful for overlays"
+          "description": "The text as written on the document, for example \"1. Jan\". Useful for overlays."
         },
         "confidence": {
-          "title": "Confidence",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeConfidence"
-            }
-          ]
+          "$ref": "#/definitions/typeConfidence"
         },
         "boundingBox": {
-          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
-          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "type": {
-          "title": "Indicate the type of the candidate",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeCandidateType"
-            }
-          ]
+          "$ref": "#/definitions/typeCandidateType"
         },
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found.\npage_ref start from 1."
+          "description": "The page the candidate was found on, starting at 1."
         },
         "modelMetadata": {
-          "title": "Model spec of the TensorFlow Serving model that predicted this candidate",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "corrected": {
           "type": "boolean",
-          "title": "Whether the candidate has been corrected by verification heuristics"
+          "description": "Only set on VERIFIED candidates: true when the consistency checks changed the\nvalue, and false when they confirmed it."
         }
-      }
+      },
+      "description": "A candidate value for a field, with its confidence and where it was found. In a\nlist of candidates, the most confident one comes first."
     },
     "typeCandidateType": {
       "type": "string",
@@ -541,25 +536,22 @@
         "FIELD",
         "DOCUMENT"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "The kind of candidate. Not every candidate has one."
     },
     "typeConfidence": {
       "type": "object",
       "properties": {
         "level": {
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ConfidenceLevel"
-            }
-          ]
+          "$ref": "#/definitions/ConfidenceLevel"
         },
         "value": {
           "type": "number",
           "format": "float",
-          "title": "The confidence value"
+          "description": "A confidence score. Most responses leave it out and return only the level."
         }
-      }
+      },
+      "description": "How confident Smartscan is in a candidate."
     },
     "typeDate": {
       "type": "object",
@@ -589,9 +581,10 @@
         "pageCount": {
           "type": "integer",
           "format": "int64",
-          "title": "Number of pages in the document"
+          "description": "The number of pages Smartscan read, not the number of pages in the document. It's\n1 when the first and last page are read together, which is the case for field\npredictions. When you request a feature that is read page by page, such as\nPURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages\nread, up to 5."
         }
-      }
+      },
+      "description": "Information about how Smartscan processed the document."
     },
     "typeHotelDates": {
       "type": "object",
@@ -602,7 +595,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "checkInDate\nISO 8601 date, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
+          "description": "Candidates for the check-in date, as YYYY-MM-DD, for example \"2019-12-31\"."
         },
         "checkOutDate": {
           "type": "array",
@@ -610,42 +603,45 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "checkOutDate\nISO 8601 date, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
+          "description": "Candidates for the check-out date, as YYYY-MM-DD, for example \"2019-12-31\"."
         }
-      }
+      },
+      "description": "Check-in and check-out dates on a document related to accommodation, returned for the\nHOTEL_DATES feature."
     },
     "typeLineCandidate": {
       "type": "object",
       "properties": {
         "text": {
           "type": "string",
-          "title": "Text of the line without the amount\nExample: \"3 Dark and Stormy\""
+          "description": "The text of the line without the amount, for example \"3 Dark and Stormy\"."
         },
         "amount": {
           "type": "number",
           "format": "double",
-          "title": "Normalized amount (price) of the line\nExample: 300.0"
+          "description": "The amount (price) of the line, normalized, for example 300.0."
         },
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+          "description": "The page the line was found on, starting at 1."
         }
-      }
+      },
+      "description": "A line of the document that holds an amount, returned for the LINES feature."
     },
     "typeModelSpec": {
       "type": "object",
       "properties": {
         "modelName": {
           "type": "string",
-          "title": "The name of the TensorFlow Serving model"
+          "description": "The name of the model."
         },
         "modelVer": {
           "type": "string",
           "format": "int64",
-          "title": "The version number of the TensorFlow Serving model"
+          "description": "The version of the model."
         }
-      }
+      },
+      "description": "The model that produced a candidate."
     },
     "typeNormalizedVertex": {
       "type": "object",
@@ -653,15 +649,15 @@
         "x": {
           "type": "number",
           "format": "float",
-          "description": "X coordinate."
+          "description": "The x coordinate, relative to the page width."
         },
         "y": {
           "type": "number",
           "format": "float",
-          "description": "Y coordinate."
+          "description": "The y coordinate, relative to the page height."
         }
       },
-      "description": "A vertex represents a 2D point in the image.\nNOTE: the normalized vertex coordinates are relative to the original image\nand range from 0 to 1."
+      "description": "A point on the page, relative to the page size. Both coordinates range from 0 to 1."
     },
     "typePage": {
       "type": "object",
@@ -677,12 +673,12 @@
         "width": {
           "type": "integer",
           "format": "int32",
-          "description": "Page width. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+          "description": "The width of the page."
         },
         "height": {
           "type": "integer",
           "format": "int32",
-          "description": "Page height. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+          "description": "The height of the page."
         },
         "blocks": {
           "type": "array",
@@ -706,13 +702,14 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the text was found."
+          "description": "The page, starting at 1."
         },
         "text": {
           "type": "string",
-          "title": "The text content of the page"
+          "description": "The text of the page."
         }
-      }
+      },
+      "description": "The text of one page, returned for the PAGE_TEXTS feature."
     },
     "typeParagraph": {
       "type": "object",
@@ -726,12 +723,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the paragraph.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "words": {
           "type": "array",
@@ -755,7 +747,7 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+          "description": "The page the line was found on, starting at 1."
         },
         "code": {
           "type": "array",
@@ -763,7 +755,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Code is an ID that supplier uses to identify the item"
+          "description": "Candidates for the product code, product number or SKU that the supplier uses for\nthe item."
         },
         "description": {
           "type": "array",
@@ -771,7 +763,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Description is a piece of text that describes the item"
+          "description": "Candidates for the description of the line, typically the name of a product or the\ndelivered service."
         },
         "quantity": {
           "type": "array",
@@ -779,7 +771,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Quantity is the number of items"
+          "description": "Candidates for the quantity."
         },
         "itemNumber": {
           "type": "array",
@@ -787,7 +779,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "ItemNumber is the number of the item"
+          "description": "Candidates for the row number, position or ID of the line, if the document states one."
         },
         "unit": {
           "type": "array",
@@ -795,7 +787,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit is the unit of the item"
+          "description": "Candidates for the unit of the quantity, for example \"pieces\", \"kg\" or \"lb\"."
         },
         "totalDiscount": {
           "type": "array",
@@ -803,7 +795,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total discount is the total discount of the line"
+          "description": "Candidates for the total discount of the line."
         },
         "percentageDiscount": {
           "type": "array",
@@ -811,7 +803,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Percentage discount is the percentage discount of the line"
+          "description": "Candidates for the discount rate of the line, as a percentage."
         },
         "totalInclVat": {
           "type": "array",
@@ -819,7 +811,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total incl vat is the total price of the line including vat"
+          "description": "Candidates for the line total including VAT."
         },
         "totalExclVat": {
           "type": "array",
@@ -827,7 +819,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total excl vat is the total price of the line excluding vat"
+          "description": "Candidates for the line total excluding VAT."
         },
         "totalVat": {
           "type": "array",
@@ -835,7 +827,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total vat is the total vat of the line"
+          "description": "Candidates for the VAT amount of the line."
         },
         "percentageVat": {
           "type": "array",
@@ -843,7 +835,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Percentage vat is the percentage vat of the line"
+          "description": "Candidates for the VAT rate of the line, as a percentage, for example \"25.0\"."
         },
         "unitPriceInclVat": {
           "type": "array",
@@ -851,7 +843,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price incl vat is the unit price of the line including vat"
+          "description": "Candidates for the price of one unit, including VAT."
         },
         "unitPriceExclVat": {
           "type": "array",
@@ -859,7 +851,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price excl vat is the unit price of the line excluding vat"
+          "description": "Candidates for the price of one unit, excluding VAT."
         },
         "total": {
           "type": "array",
@@ -867,7 +859,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total is the total price of the line (with/without vat)"
+          "description": "Candidates for the line total as stated on the line, usually the rightmost amount.\nDocuments often don't say whether it includes VAT."
         },
         "unitPrice": {
           "type": "array",
@@ -875,15 +867,10 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price is the unit price of the line (with/without vat)"
+          "description": "Candidates for the price of one unit as stated on the line. Documents often don't\nsay whether it includes VAT."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "productType": {
           "type": "array",
@@ -891,7 +878,7 @@
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeCandidate"
           },
-          "title": "Product type classification for the line"
+          "description": "Product type candidates for the line, classified from its description. Returned for\nthe PRODUCT_TYPES feature."
         },
         "kind": {
           "type": "array",
@@ -899,9 +886,10 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "description": "Kind classifies what the line charges for, e.g. \"item\", \"freight\", \"fee\",\n\"levy\", \"service_charge\", \"gratuity\", \"discount\" or \"deposit\"."
+          "description": "Candidates for what the line charges for, for example \"item\", \"freight\" or \"discount\"."
         }
-      }
+      },
+      "description": "A purchase line, with a list of candidates for each field."
     },
     "typePurchaseLineCandidate": {
       "type": "object",
@@ -909,217 +897,255 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+          "description": "The page the line was found on, starting at 1."
         },
         "code": {
           "type": "string",
-          "title": "Code is an ID that supplier uses to identify the item"
+          "description": "The product code, product number or SKU that the supplier uses for the item."
         },
         "description": {
           "type": "string",
-          "title": "Description is a piece of text that describes the item"
+          "description": "The description of the line, typically the name of a product or the delivered service."
         },
         "quantity": {
           "type": "string",
-          "title": "Quantity is the number of items"
+          "description": "The quantity."
         },
         "itemNumber": {
           "type": "string",
-          "title": "ItemNumber is the number of the item"
+          "description": "The row number, position or ID of the line, if the document states one."
         },
         "unit": {
           "type": "string",
-          "title": "Unit is the unit of the item"
+          "description": "The unit of the quantity, for example \"pieces\", \"kg\" or \"lb\"."
         },
         "totalDiscount": {
           "type": "string",
-          "title": "Total discount is the total discount of the line"
+          "description": "The total discount of the line."
         },
         "percentageDiscount": {
           "type": "string",
-          "title": "Percentage discount is the percentage discount of the line"
+          "description": "The discount rate of the line, as a percentage."
         },
         "totalInclVat": {
           "type": "string",
-          "title": "Total incl vat is the total price of the line including vat"
+          "description": "The line total including VAT."
         },
         "totalExclVat": {
           "type": "string",
-          "title": "Total excl vat is the total price of the line excluding vat"
+          "description": "The line total excluding VAT."
         },
         "totalVat": {
           "type": "string",
-          "title": "Total vat is the total vat of the line"
+          "description": "The VAT amount of the line."
         },
         "percentageVat": {
           "type": "string",
-          "title": "Percentage vat is the percentage vat of the line"
+          "description": "The VAT rate of the line, as a percentage, for example \"25.0\"."
         },
         "unitPriceInclVat": {
           "type": "string",
-          "title": "Unit price incl vat is the unit price of the line including vat"
+          "description": "The price of one unit, including VAT."
         },
         "unitPriceExclVat": {
           "type": "string",
-          "title": "Unit price excl vat is the unit price of the line excluding vat"
+          "description": "The price of one unit, excluding VAT."
         },
         "total": {
           "type": "string",
-          "title": "Total is the total price of the line (with/without vat)"
+          "description": "The line total as stated on the line, usually the rightmost amount. Documents\noften don't say whether it includes VAT."
         },
         "unitPrice": {
           "type": "string",
-          "title": "Unit price is the unit price of the line (with/without vat)"
+          "description": "The price of one unit as stated on the line. Documents often don't say whether\nit includes VAT."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "productType": {
           "type": "string",
-          "title": "Product type classification for the line"
+          "description": "The product type of the line in the older format. For product types, request\nPRODUCT_TYPES and read `productType` in `purchaseLinesDetails`."
         }
-      }
+      },
+      "description": "A purchase line in the older format, with a single value for each field. Use\nPurchaseLine instead: it has candidates with confidence levels for each field."
     },
     "typeQrCodeData": {
       "type": "object",
       "properties": {
         "content": {
-          "type": "string"
+          "type": "string",
+          "description": "The decoded text of the QR code."
         }
-      }
+      },
+      "description": "A QR code found in the document, returned for the QR_CODES feature."
     },
     "typeStructuredAddress": {
       "type": "object",
       "properties": {
         "street": {
-          "type": "string"
+          "type": "string",
+          "description": "The street name, without the house number."
         },
         "postalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal or ZIP code."
         },
         "city": {
-          "type": "string"
+          "type": "string",
+          "description": "The city or town."
         },
         "country": {
-          "type": "string"
+          "type": "string",
+          "description": "The full country name."
         },
         "countryCode": {
           "type": "string",
-          "title": "ISO 3166-1 alpha-2"
+          "description": "The country, as an ISO 3166-1 alpha-2 code in capital letters, for example \"DK\"."
         }
-      }
+      },
+      "description": "An address split into its parts. All fields are empty when the address can't be resolved."
     },
     "typeSwissQrBill": {
       "type": "object",
       "properties": {
         "qrType": {
-          "type": "string"
+          "type": "string",
+          "description": "The QR type, always \"SPC\"."
         },
         "version": {
-          "type": "string"
+          "type": "string",
+          "description": "The version of the Swiss QR bill standard, always \"0200\"."
         },
         "codingType": {
-          "type": "string"
+          "type": "string",
+          "description": "The character encoding type, always \"1\"."
         },
         "account": {
-          "type": "string"
+          "type": "string",
+          "description": "The IBAN or QR-IBAN of the creditor."
         },
         "creditorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the creditor's address: \"S\" for structured or \"K\" for combined."
         },
         "creditorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the creditor."
         },
         "creditorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the creditor, or the first address line."
         },
         "creditorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the creditor, or the second address line."
         },
         "creditorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the creditor."
         },
         "creditorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the creditor."
         },
         "creditorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the creditor, as a two-letter code."
         },
         "ultimateCreditorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the ultimate creditor's address: \"S\" for structured or \"K\" for combined.\nEmpty when the bill names no ultimate creditor."
         },
         "ultimateCreditorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the ultimate creditor."
         },
         "ultimateCreditorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the ultimate creditor, or the first address line."
         },
         "ultimateCreditorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the ultimate creditor, or the second address line."
         },
         "ultimateCreditorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the ultimate creditor."
         },
         "ultimateCreditorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the ultimate creditor."
         },
         "ultimateCreditorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the ultimate creditor, as a two-letter code."
         },
         "amount": {
-          "type": "string"
+          "type": "string",
+          "description": "The amount to pay, for example \"1949.75\". Empty when the bill leaves the amount open."
         },
         "currency": {
-          "type": "string"
+          "type": "string",
+          "description": "The currency, \"CHF\" or \"EUR\"."
         },
         "ultimateDebtorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the ultimate debtor's address: \"S\" for structured or \"K\" for combined.\nEmpty when the bill names no ultimate debtor."
         },
         "ultimateDebtorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the ultimate debtor."
         },
         "ultimateDebtorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the ultimate debtor, or the first address line."
         },
         "ultimateDebtorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the ultimate debtor, or the second address line."
         },
         "ultimateDebtorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the ultimate debtor."
         },
         "ultimateDebtorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the ultimate debtor."
         },
         "ultimateDebtorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the ultimate debtor, as a two-letter code."
         },
         "paymentReferenceType": {
-          "type": "string"
+          "type": "string",
+          "description": "The reference type: \"QRR\" for a QR reference, \"SCOR\" for a creditor reference, or\n\"NON\" for no reference."
         },
         "paymentReference": {
-          "type": "string"
+          "type": "string",
+          "description": "The payment reference."
         },
         "unstructuredMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "Additional information for the payment, for example \"Order from 15.10.2020\"."
         },
         "trailer": {
-          "type": "string"
+          "type": "string",
+          "description": "The end of the payment data, always \"EPD\"."
         },
         "billingInformation": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Billing information isn't extracted yet, so this is always empty."
         },
         "av1Parameters": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is\nalways empty."
         },
         "av2Parameters": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is\nalways empty."
         }
-      }
+      },
+      "description": "A Swiss QR bill parsed from a QR code in the document, returned for the\nSWISS_QR_BILLS feature. Only QR codes that follow version 0200 of the Swiss QR bill\nstandard are returned. The fields hold the values of the QR code as they are."
     },
     "typeSymbol": {
       "type": "object",
@@ -1133,12 +1159,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the symbol.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertice order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "text": {
           "type": "string",
@@ -1161,14 +1182,14 @@
             "type": "object",
             "$ref": "#/definitions/typePage"
           },
-          "description": "List of pages detected by OCR."
+          "description": "The pages, in order."
         },
         "text": {
           "type": "string",
           "description": "UTF-8 text detected on the pages."
         }
       },
-      "description": "TextAnnotation contains a structured representation of OCR extracted text.\nThe hierarchy of an OCR extracted text structure is like this:\n    TextAnnotation -\u003e Page -\u003e Block -\u003e Paragraph -\u003e Word -\u003e Symbol\nEach structural component, starting from Page, may further have their own\nproperties. Properties describe detected languages, breaks etc.. Please refer\nto the\n[TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]\nmessage definition below for more detail."
+      "description": "The OCR output for a document: its text, and its structure from pages down to single\nsymbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page\ndown can have properties, such as the detected languages and breaks."
     },
     "typeTier": {
       "type": "string",
@@ -1180,7 +1201,7 @@
         "HUMAN"
       ],
       "default": "DEFAULT",
-      "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
+      "description": "The model tier that processes the document. When no tier is set, PREMIUM is used.\n\n - DEFAULT: No tier set. The document is processed as PREMIUM.\n - STANDARD: The older tier, kept for existing integrations. Use PREMIUM for new integrations.\n - PREMIUM: Our proprietary AI, and the tier used when no tier is set.\n - ULTRA: Combines our proprietary AI with reasoning LLMs for the highest available quality.\nOnly available through Smartscan Async. The synchronous API serves it as PREMIUM."
     },
     "typeVatDistribution": {
       "type": "object",
@@ -1188,7 +1209,7 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the VAT level was found on, starting at 1."
         },
         "percentage": {
           "type": "array",
@@ -1196,7 +1217,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate percentage"
+          "description": "Candidates for the VAT rate, as a percentage with a dot as the decimal separator,\nfor example \"25.0\"."
         },
         "totalInclVat": {
           "type": "array",
@@ -1204,7 +1225,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate incl vat"
+          "description": "Candidates for the amount including VAT at this rate."
         },
         "totalExclVat": {
           "type": "array",
@@ -1212,7 +1233,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate excl vat"
+          "description": "Candidates for the amount excluding VAT that the VAT is based on."
         },
         "totalVat": {
           "type": "array",
@@ -1220,51 +1241,43 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate"
+          "description": "Candidates for the VAT amount at this rate."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         }
-      }
+      },
+      "description": "A VAT level, with a list of candidates for each field."
     },
     "typeVatDistributionCandidate": {
       "type": "object",
       "properties": {
         "percentage": {
           "type": "string",
-          "title": "The vat distribution candidate percentage"
+          "description": "The VAT rate, as a percentage with a dot as the decimal separator, for example \"25.0\"."
         },
         "amount": {
           "type": "string",
-          "title": "The vat distribution candidate amount"
+          "description": "The VAT amount at this rate, rounded to two decimals, for example \"585.45\"."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the VAT level was found on, starting at 1."
         },
         "exclVat": {
           "type": "string",
-          "title": "The vat distribution candidate excl vat"
+          "description": "The amount excluding VAT that the VAT is based on, for example \"2341.80\"."
         },
         "inclVat": {
           "type": "string",
-          "title": "The vat distribution candidate incl vat"
+          "description": "The amount including VAT at this rate, for example \"2926.25\"."
         }
-      }
+      },
+      "description": "A VAT level in the older format, with a single value for each field. Use\nVatDistribution instead: it has candidates with confidence levels for each field."
     },
     "typeVertex": {
       "type": "object",
@@ -1272,15 +1285,15 @@
         "x": {
           "type": "integer",
           "format": "int32",
-          "description": "X coordinate."
+          "description": "The x coordinate."
         },
         "y": {
           "type": "integer",
           "format": "int32",
-          "description": "Y coordinate."
+          "description": "The y coordinate."
         }
       },
-      "description": "A vertex represents a 2D point in the image.\nNOTE: the vertex coordinates are in the same scale as the original image."
+      "description": "A point on the page, in pixel coordinates."
     },
     "typeWord": {
       "type": "object",
@@ -1294,12 +1307,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the word.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "symbols": {
           "type": "array",
@@ -1415,28 +1423,37 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Feedback with at least one of these tags is deleted. At least one tag is\nrequired."
         }
-      }
+      },
+      "description": "Tags of the feedback to delete."
     },
     "v1DocumentAnnotatorRequest": {
       "type": "object",
       "properties": {
         "document": {
-          "$ref": "#/definitions/ssnannotatorv1Document"
+          "description": "The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to\ndownload it from as `source.httpUri`.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ssnannotatorv1Document"
+            }
+          ]
         },
         "features": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/v1Feature"
-          }
+          },
+          "description": "The features to extract, for example `[{\"type\": \"DEFAULT\"}]`. Without features,\nnothing is extracted."
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Labels for the request, such as your customer's ID. They're stored with the\nrequest's usage statistics and don't change the results."
         },
         "tier": {
           "$ref": "#/definitions/typeTier"
@@ -1445,15 +1462,18 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "More labels for the request, stored with its usage statistics like `tags`. They\ndon't change the results."
         },
         "questions": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Questions about the document in plain language, for example \"What is the order\nreference?\". The answers come back in `answers`, one per question for each page\nread (see `documentMetadata.pageCount`). If answering takes longer than 10\nseconds, the call fails."
         }
-      }
+      },
+      "description": "Request body of POST /v1/document:annotate."
     },
     "v1DocumentAnnotatorResponse": {
       "type": "object",
@@ -1464,7 +1484,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[DEPRECATED] Use document_date instead.\norderDate\nISO 8601 date string, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
+          "description": "[DEPRECATED] Always empty. Use `documentDate` instead."
         },
         "paymentDueDate": {
           "type": "array",
@@ -1472,7 +1492,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "paymentDueDate\nISO 8601 date, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
+          "description": "Candidates for the date the payment is due, as YYYY-MM-DD, for example \"2019-12-31\"."
         },
         "currency": {
           "type": "array",
@@ -1480,7 +1500,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "currency\nISO 4217 string, ie. a 3-letter capitalized string\nExample: \"NOK\""
+          "description": "Candidates for the currency, as an ISO 4217 code, for example \"NOK\"."
         },
         "totalVat": {
           "type": "array",
@@ -1488,7 +1508,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "totalVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
+          "description": "Candidates for the total VAT, as an absolute amount, for example \"11.11\"."
         },
         "totalInclVat": {
           "type": "array",
@@ -1496,7 +1516,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "totalInclVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
+          "description": "Candidates for the total including VAT, as an absolute amount, for example \"11.11\"."
         },
         "totalExclVat": {
           "type": "array",
@@ -1504,7 +1524,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "totalExclVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
+          "description": "Candidates for the total excluding VAT, as an absolute amount, for example \"11.11\"."
         },
         "supplierCorporateId": {
           "type": "array",
@@ -1512,7 +1532,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "description": "[DEPRECATED]\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\nsupplierCorporateId\nThe company VAT number\nExample: \"123456789B01\" (for Dutch companies)\nor \"12345678\" (for Norwegian companies)\nNote: The field is repeated because multiple VAT numbers might exist.\nIf you have the VAT number of you customer, you can use this information\nto find out which VAT number belongs to the supplier of the invoice."
+          "description": "[DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`\ninstead."
         },
         "supplierCountryCode": {
           "type": "array",
@@ -1520,7 +1540,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "supplierCountryCode\nISO 3166-1 alpha-2 string, ei. a two-letter capitalized string\nExample: \"NO\""
+          "description": "Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example\n\"NO\"."
         },
         "documentType": {
           "type": "array",
@@ -1528,7 +1548,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "documentType\nEither \"Receipt\" or \"Invoice\""
+          "description": "Candidates for the document type, for example \"Invoice\" or \"Receipt\"."
         },
         "paymentMethod": {
           "type": "array",
@@ -1536,7 +1556,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "paymentMethod\nEither \"Cash\" or \"CreditCard\""
+          "description": "Candidates for the payment method, for example \"Cash\" or \"CreditCard\"."
         },
         "creditCardLastFour": {
           "type": "array",
@@ -1544,7 +1564,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "creditCardNumber\nFour digits\nExample: \"0012\""
+          "description": "Candidates for the last four digits of the credit card, for example \"0012\"."
         },
         "invoiceNumber": {
           "type": "array",
@@ -1552,10 +1572,10 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[DEPRECATED] Use document_number instead.\ninvoiceNumber\nThe supplier defined identifier of the invoice\nExample: \"12345-A99\""
+          "description": "[DEPRECATED] Always empty. Use `documentNumber` instead."
         },
         "textAnnotation": {
-          "title": "Return text annotation",
+          "description": "The OCR output for the pages Smartscan read: the text and its structure from pages\ndown to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.",
           "allOf": [
             {
               "$ref": "#/definitions/typeTextAnnotation"
@@ -1568,7 +1588,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"71\""
+          "description": "Candidates for the type field of a Danish payment line (FIK)."
         },
         "ocrLineDkPaymentId": {
           "type": "array",
@@ -1576,7 +1596,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"000002879094031\""
+          "description": "Candidates for the payment ID of a Danish payment line (FIK), for example\n\"000002879094031\"."
         },
         "ocrLineDkCreditorId": {
           "type": "array",
@@ -1584,7 +1604,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"86570807\""
+          "description": "Candidates for the creditor ID of a Danish payment line (FIK), for example\n\"86570807\"."
         },
         "ocrLineSePaymentId": {
           "type": "array",
@@ -1592,7 +1612,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"050765098\""
+          "description": "Candidates for the payment ID of a Swedish payment line, for example \"050765098\"."
         },
         "ocrLineSeBankgiroCreditorId": {
           "type": "array",
@@ -1600,7 +1620,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"2654507\""
+          "description": "Candidates for the Bankgiro creditor ID of a Swedish payment line, for example\n\"2654507\"."
         },
         "ocrLineSePlusgiroCreditorId": {
           "type": "array",
@@ -1608,7 +1628,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"5000872\""
+          "description": "Candidates for the Plusgiro creditor ID of a Swedish payment line, for example\n\"5000872\"."
         },
         "ocrLineNoPaymentId": {
           "type": "array",
@@ -1616,7 +1636,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"12345678903\""
+          "description": "Candidates for the payment ID (KID) of a Norwegian payment line, for example\n\"12345678903\"."
         },
         "ocrLineFiPaymentId": {
           "type": "array",
@@ -1624,7 +1644,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"0817937867870002\""
+          "description": "Candidates for the payment ID (viitenumero) of a Finnish payment line, for example\n\"0817937867870002\"."
         },
         "ocrLineNlPaymentId": {
           "type": "array",
@@ -1632,22 +1652,23 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "example: \"00000159220010146012\""
+          "description": "Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for\nexample \"00000159220010146012\"."
         },
         "ocrLineBePaymentId": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
-          }
+          },
+          "description": "Candidates for the payment ID (OGM) of a Belgian payment line, for example\n\"+++123/1234/12345+++\"."
         },
         "text": {
           "type": "string",
-          "title": "Return a string containing the text from the document"
+          "description": "The text of the pages Smartscan read, as UTF-8. Returned for TEXT."
         },
         "feedbackId": {
           "type": "string",
-          "description": "Feedback ID is used to correct made predictions through the\nFeedback API."
+          "description": "The ID of this request. To correct the results, send it as `id` to\nPOST /v1/feedback:create."
         },
         "iban": {
           "type": "array",
@@ -1655,7 +1676,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The first two letters are a country code. The next two digits are\ncheck digits for the ISO 7064 Mod 97, 10 checksum\nexample: \"DK50 0040 0440 1162 43\", \"NO8330001234567\""
+          "description": "Candidates for the IBAN, for example \"DK50 0040 0440 1162 43\" or\n\"NO8330001234567\". The first two letters are a country code, and the next two\ndigits are check digits (ISO 7064 Mod 97-10)."
         },
         "lines": {
           "type": "array",
@@ -1663,11 +1684,11 @@
             "type": "object",
             "$ref": "#/definitions/typeLineCandidate"
           },
-          "title": "Invoice lines represented in a form of text, amount and page reference\nto state on which page the line was found"
+          "description": "The lines of the document that hold an amount, with their text, amount and page.\nReturned for LINES."
         },
         "preview": {
           "type": "string",
-          "title": "Base64 encoded PNG image  of the first page of PDF document sent in request"
+          "description": "A base64-encoded image of the first page that holds text. Returned for PREVIEW."
         },
         "bankAccountNumber": {
           "type": "array",
@@ -1675,7 +1696,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Country specific bank account number"
+          "description": "Candidates for the bank account number, in the format of its country."
         },
         "bankRegistrationNumber": {
           "type": "array",
@@ -1683,7 +1704,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Country specific bank registration number"
+          "description": "Candidates for the bank registration number, in countries that use one, such as\nDenmark."
         },
         "bic": {
           "type": "array",
@@ -1691,7 +1712,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Returns business identifier code"
+          "description": "Candidates for the BIC (SWIFT code), for example \"DABADKKK\"."
         },
         "documentNumber": {
           "type": "array",
@@ -1699,7 +1720,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Represents identifier of the document"
+          "description": "Candidates for the number that identifies the document, such as the invoice number."
         },
         "documentDate": {
           "type": "array",
@@ -1707,7 +1728,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Returns document date"
+          "description": "Candidates for the date the document was issued, as YYYY-MM-DD, for example\n\"2019-12-31\"."
         },
         "orderNumber": {
           "type": "array",
@@ -1715,7 +1736,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Represents the identifier that supplier assigned to the order"
+          "description": "Candidates for the order number."
         },
         "supplierName": {
           "type": "array",
@@ -1723,7 +1744,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Returns supplier name"
+          "description": "Candidates for the supplier's name."
         },
         "supplierVatNumber": {
           "type": "array",
@@ -1731,7 +1752,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[EXPERIMENTAL]\nReturns supplier VAT number"
+          "description": "[EXPERIMENTAL] Candidates for the supplier's VAT number."
         },
         "supplierOrganisationNumber": {
           "type": "array",
@@ -1739,7 +1760,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[EXPERIMENTAL]\nReturns the business ID or organisation number of the supplier"
+          "description": "[EXPERIMENTAL] Candidates for the supplier's national company ID, such as the\nCVR number in Denmark or the KvK number in the Netherlands."
         },
         "supplierAddress": {
           "type": "array",
@@ -1747,7 +1768,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[EXPERIMENTAL]\nReturns supplier address"
+          "description": "[EXPERIMENTAL] Candidates for the supplier's address, as written on the document.\nSee `structuredSupplierAddress` for its parts."
         },
         "customerNumber": {
           "type": "array",
@@ -1755,7 +1776,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "[EXPERIMENTAL]\nReturns customer identifier/number"
+          "description": "[EXPERIMENTAL] Candidates for the number that identifies the customer."
         },
         "receiverOrderNumber": {
           "type": "array",
@@ -1763,7 +1784,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Equivalent of order number for receiver"
+          "description": "Candidates for the receiver's order number."
         },
         "receiverAddress": {
           "type": "array",
@@ -1771,7 +1792,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Equivalent of address for receiver"
+          "description": "Candidates for the receiver's address, as written on the document. See\n`structuredReceiverAddress` for its parts."
         },
         "receiverCountryCode": {
           "type": "array",
@@ -1779,7 +1800,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Equivalent of country code for receiver"
+          "description": "Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code."
         },
         "receiverName": {
           "type": "array",
@@ -1787,7 +1808,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Equivalent of supplier name for receiver"
+          "description": "Candidates for the receiver's name."
         },
         "receiverVatNumber": {
           "type": "array",
@@ -1795,7 +1816,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Equivalent of VAT number for receiver"
+          "description": "Candidates for the receiver's VAT number."
         },
         "purchaseLines": {
           "type": "array",
@@ -1803,7 +1824,7 @@
             "type": "object",
             "$ref": "#/definitions/typePurchaseLineCandidate"
           },
-          "title": "Purchase lines for the document. This is a list of candidates, where each\ncandidate is a single purchase lines. Each purchase line may have page number,\ncode, description, quantity, item number, unit, total discount, percentage discount,\ntotal incl vat, total excl vat, total vat, percentage vat, unit price incl vat,\nunit price excl vat"
+          "description": "The purchase lines in the older format, with one value for each field. Use\n`purchaseLinesDetails` instead: it has candidates with confidence levels, and\nVERIFIED results."
         },
         "answers": {
           "type": "array",
@@ -1811,7 +1832,7 @@
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
           },
-          "title": "Answer Candidates for the questions asked in th request about the document\nEach Answer is question and answer pair with page number and confidence"
+          "description": "The answers to the `questions` in the request, one per question for each page read."
         },
         "pageTexts": {
           "type": "array",
@@ -1819,7 +1840,7 @@
             "type": "object",
             "$ref": "#/definitions/typePageText"
           },
-          "title": "The page texts of the document"
+          "description": "The text of each page read. Returned for PAGE_TEXTS."
         },
         "vatDistribution": {
           "type": "array",
@@ -1827,10 +1848,10 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
           },
-          "title": "Vat levels for the document, each vat level has vat level percentage and vat level amount"
+          "description": "The VAT levels in the older format, with one value for each field. Use\n`vatDistributionDetails` instead: it has candidates with confidence levels, and\nVERIFIED results."
         },
         "documentMetadata": {
-          "title": "Extra information about the document like number of pages",
+          "description": "Information about how the document was processed, such as the number of pages\nSmartscan read.",
           "allOf": [
             {
               "$ref": "#/definitions/typeDocumentMetadata"
@@ -1843,7 +1864,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Information about the text language detected from OCR"
+          "description": "Candidates for the language of the document text, as a BCP-47 code such as \"en\"."
         },
         "qrCodes": {
           "type": "array",
@@ -1851,7 +1872,7 @@
             "type": "object",
             "$ref": "#/definitions/typeQrCodeData"
           },
-          "title": "QR codes detected in the document"
+          "description": "The QR codes found on the pages read. Returned for QR_CODES."
         },
         "swissQrBills": {
           "type": "array",
@@ -1859,10 +1880,10 @@
             "type": "object",
             "$ref": "#/definitions/typeSwissQrBill"
           },
-          "title": "Swiss QR bills detected in the document"
+          "description": "The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS."
         },
         "hotelDates": {
-          "title": "The hotelDates cntains check-in and check-out date candidates",
+          "description": "Check-in and check-out date candidates on documents related to accommodation, as\nYYYY-MM-DD. Returned for HOTEL_DATES.",
           "allOf": [
             {
               "$ref": "#/definitions/typeHotelDates"
@@ -1875,7 +1896,7 @@
             "type": "object",
             "$ref": "#/definitions/typePurchaseLine"
           },
-          "description": "Purchase lines for the document. This is a list where each field is a candidate."
+          "description": "The purchase lines, with a list of candidates for each field. Returned for\nPURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages."
         },
         "vatDistributionDetails": {
           "type": "array",
@@ -1883,7 +1904,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistribution"
           },
-          "description": "VAT distribution for the document. This is a list where each field is a candidate."
+          "description": "The VAT levels, with a list of candidates for each field. Returned for\nVAT_DISTRIBUTION."
         },
         "structuredSupplierAddress": {
           "type": "array",
@@ -1891,7 +1912,7 @@
             "type": "object",
             "$ref": "#/definitions/typeStructuredAddress"
           },
-          "description": "Structured supplier address, returned when VERIFIED feature is requested\nand supplier address is available. Parsed from the raw supplier address\nusing the geo service. Each entry corresponds to the candidate at the\nsame index in supplier_address."
+          "description": "The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry\nbelongs to the `supplierAddress` candidate at the same index, and is empty when that\naddress can't be resolved."
         },
         "structuredReceiverAddress": {
           "type": "array",
@@ -1899,7 +1920,7 @@
             "type": "object",
             "$ref": "#/definitions/typeStructuredAddress"
           },
-          "description": "Structured receiver address, returned when VERIFIED feature is requested\nand receiver address is available. Parsed from the raw receiver address\nusing the geo service. Each entry corresponds to the candidate at the\nsame index in receiver_address."
+          "description": "The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry\nbelongs to the `receiverAddress` candidate at the same index, and is empty when that\naddress can't be resolved."
         },
         "ksef": {
           "type": "array",
@@ -1907,23 +1928,31 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "description": "Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted\nvia the QA/questions model. A reference number of up to 35 characters\n(alphanumeric, may contain hyphens)."
+          "description": "Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35\ncharacters made of the seller's 10-digit NIP, an 8-digit date, a 12-character\ntechnical part and a 2-character checksum, separated by hyphens. Only numbers with\na valid checksum are returned."
         }
-      }
+      },
+      "description": "Response of POST /v1/document:annotate. Feature fields are only filled for the\nfeatures you requested."
     },
     "v1DocumentQuestionRequest": {
       "type": "object",
       "properties": {
         "document": {
-          "$ref": "#/definitions/ssnannotatorv1Document"
+          "description": "The document to ask about.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ssnannotatorv1Document"
+            }
+          ]
         },
         "questions": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Questions about the document, in plain language."
         }
-      }
+      },
+      "description": "Request body of POST /v1/document:answerquestion, which isn't implemented."
     },
     "v1DocumentQuestionResponse": {
       "type": "object",
@@ -1935,17 +1964,18 @@
             "$ref": "#/definitions/typeAnswerCandidate"
           }
         }
-      }
+      },
+      "description": "Response of POST /v1/document:answerquestion, which isn't implemented."
     },
     "v1DocumentSource": {
       "type": "object",
       "properties": {
         "httpUri": {
           "type": "string",
-          "description": "1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from\n   HTTP/HTTPS URLs, We cannot guarantee that the request will be\n   completed. Your request may fail if the specified host denies the\n   request (e.g. due to request throttling or DOS prevention).",
-          "title": "The URI of the source document. Can be either:"
+          "description": "A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,\nanswer with HTTP 200 and a Content-Length header, and send at most 10 MiB.\nPOST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10\nseconds. When the download fails, the call returns 400."
         }
-      }
+      },
+      "description": "A location to download a document from."
     },
     "v1Feature": {
       "type": "object",
@@ -1956,17 +1986,18 @@
         "maxResults": {
           "type": "integer",
           "format": "int32",
-          "description": "Maximum number of results of this type. Does not apply to\n`TEXT_ANNOTATION` or `DOCUMENT_TYPE`."
+          "description": "The maximum number of candidates to return for this feature. Defaults to 1. It\ndoesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,\nSWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as\nTEXT."
         },
         "minConfidence": {
-          "title": "The minimum confidence for predictions that the caller wants returned",
+          "description": "The lowest confidence level to return candidates for. Defaults to HIGH. The levels\nfrom lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It\napplies to the same features as `maxResults`, except LANGUAGE_CODE, which returns\ncandidates of any level.",
           "allOf": [
             {
               "$ref": "#/definitions/ConfidenceLevel"
             }
           ]
         }
-      }
+      },
+      "description": "A feature to extract, with optional limits on its candidates."
     },
     "v1FeatureType": {
       "type": "string",
@@ -2027,7 +2058,7 @@
         "KSEF"
       ],
       "default": "DEFAULT",
-      "description": " - DEFAULT: Run default feature set:\nPAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,\nSUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,\nDOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number\n - PURCHASE_LINES: Purchase Lines\n - PAGE_TEXTS: Page texts\n - VAT_DISTRIBUTION: VAT distribution\n - LANGUAGE_CODE: Langauge code\n - QR_CODES: QR code\n - SWISS_QR_BILLS: Swiss QR bill\n - VERIFIED: Series of automated verifications and consistency checks\non the document.\n - HOTEL_DATES: Hotel dates including check-in and check-out dates\n - PRODUCT_TYPES: Product type classification for purchase lines\n - KSEF: Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.\nExtracted via the QA/questions model."
+      "description": "The features Smartscan can extract. Each feature's results come back in the\nresponse field of the same name, in camelCase, unless noted otherwise.\n\n - DEFAULT: A set of frequently used fields: PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT,\nTOTAL_INCL_VAT, TOTAL_EXCL_VAT, SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE,\nPAYMENT_METHOD, CREDIT_CARD_LAST_FOUR, DOCUMENT_NUMBER, DOCUMENT_DATE and\nSUPPLIER_ORGANISATION_NUMBER. Its `maxResults` and `minConfidence` apply to each\nof them, unless you also request that feature on its own.\n - TEXT_ANNOTATION: The full OCR output for the pages Smartscan read.\n - ORDER_DATE: [DEPRECATED] No longer returns anything. Use DOCUMENT_DATE instead.\n - PAYMENT_DUE_DATE: The date the payment is due.\n - CURRENCY: The currency, as a three-letter code.\n - TOTAL_VAT: The total VAT of the document.\n - TOTAL_INCL_VAT: The total of the document including VAT.\n - TOTAL_EXCL_VAT: The total of the document excluding VAT.\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] No longer returns anything. Use SUPPLIER_ORGANISATION_NUMBER or\nSUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: The supplier's country, as a two-letter code.\n - DOCUMENT_TYPE: The type of document, for example an invoice or a receipt.\n - PAYMENT_METHOD: How the document was paid, for example in cash or by credit card.\n - CREDIT_CARD_LAST_FOUR: The last four digits of the credit card used for the payment.\n - INVOICE_NUMBER: [DEPRECATED] No longer returns anything. Use DOCUMENT_NUMBER instead.\n - OCR_LINE_DK_TYPE: The type field of a Danish payment line (FIK).\n - OCR_LINE_DK_PAYMENT_ID: The payment ID of a Danish payment line (FIK).\n - OCR_LINE_DK_CREDITOR_ID: The creditor ID of a Danish payment line (FIK account number).\n - OCR_LINE_SE_PAYMENT_ID: The payment ID of a Swedish payment line.\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: The Bankgiro creditor ID of a Swedish payment line.\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: The Plusgiro creditor ID of a Swedish payment line.\n - OCR_LINE_NO_PAYMENT_ID: The payment ID (KID) of a Norwegian payment line.\n - OCR_LINE_FI_PAYMENT_ID: The payment ID (viitenumero) of a Finnish payment line.\n - OCR_LINE_NL_PAYMENT_ID: The payment ID (betalingskenmerk) of a Dutch payment line.\n - OCR_LINE_BE_PAYMENT_ID: The payment ID (OGM) of a Belgian payment line.\n - TEXT: The text of the pages Smartscan read.\n - IBAN: The IBAN.\n - LINES: The lines of the document that hold an amount.\n - PREVIEW: A base64-encoded image of the first page that holds text.\n - BANK_ACCOUNT_NUMBER: The bank account number.\n - BANK_REGISTRATION_NUMBER: The bank registration number, in countries that use one, such as Denmark.\n - BIC: The BIC (SWIFT code).\n - DOCUMENT_NUMBER: The number that identifies the document, such as the invoice number.\n - DOCUMENT_DATE: The date the document was issued.\n - ORDER_NUMBER: The order number.\n - SUPPLIER_NAME: The supplier's name.\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] The supplier's VAT number.\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] The supplier's national company ID, such as the CVR number in Denmark.\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] The supplier's address. Also returns `structuredSupplierAddress`.\n - CUSTOMER_NUMBER: [EXPERIMENTAL] The number that identifies the customer.\n - RECEIVER_ORDER_NUMBER: The receiver's order number.\n - RECEIVER_ADDRESS: The receiver's address. Also returns `structuredReceiverAddress`.\n - RECEIVER_COUNTRY_CODE: The receiver's country, as a two-letter code.\n - RECEIVER_NAME: The receiver's name.\n - RECEIVER_VAT_NUMBER: The receiver's VAT number.\n - PURCHASE_LINES: The line items, in `purchaseLinesDetails` and, in the older format, in\n`purchaseLines`. Read from the first 5 pages.\n - PAGE_TEXTS: The text of each page. Read from the first 5 pages.\n - VAT_DISTRIBUTION: The VAT levels and their amounts, in `vatDistributionDetails` and, in the older\nformat, in `vatDistribution`. Read from the first and last page.\n - LANGUAGE_CODE: The language of the document text. Returned regardless of `minConfidence`.\n - QR_CODES: The decoded text of QR codes. Read from the first 5 pages.\n - SWISS_QR_BILLS: Swiss QR bills found in QR codes. Read from the first 5 pages.\n - VERIFIED: Runs consistency checks on the extracted values. Candidates that the checks\nconfirm or correct get the confidence level VERIFIED. Also requests\nDOCUMENT_DATE, DOCUMENT_NUMBER, DOCUMENT_TYPE, PAYMENT_DUE_DATE, PAYMENT_METHOD,\nCURRENCY, CREDIT_CARD_LAST_FOUR, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,\nSUPPLIER_COUNTRY_CODE, RECEIVER_COUNTRY_CODE, SUPPLIER_ADDRESS, RECEIVER_ADDRESS,\nPURCHASE_LINES and VAT_DISTRIBUTION. Verified line and VAT values are in\n`purchaseLinesDetails` and `vatDistributionDetails`.\n - HOTEL_DATES: The check-in and check-out dates on documents related to accommodation.\n - PRODUCT_TYPES: A product type for each purchase line, in `productType` of\n`purchaseLinesDetails`. Also requests PURCHASE_LINES.\n - KSEF: The Polish KSeF (Krajowy System e-Faktur) e-invoice number."
     },
     "v1FeedbackMetrics": {
       "type": "object",
@@ -2083,7 +2114,8 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "description": "The `feedbackId` from the annotate response for the document. Required."
         },
         "trueValues": {
           "$ref": "#/definitions/v1TrueValues"
@@ -2092,9 +2124,11 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Labels to store with the feedback, for example your customer's ID. To\ndelete the feedback later, call POST /v1/feedback:delete with one of\nthem. Tags sent with the annotate request aren't copied to the feedback."
         }
-      }
+      },
+      "description": "Feedback for one annotated document."
     },
     "v1PredictionConfidences": {
       "type": "object",
@@ -3039,185 +3073,254 @@
       "properties": {
         "totalInclVat": {
           "type": "number",
-          "format": "double"
+          "format": "double",
+          "description": "Total including VAT, as a number."
         },
         "totalVat": {
           "type": "number",
-          "format": "double"
+          "format": "double",
+          "description": "Total VAT, as a number."
         },
         "totalExclVat": {
           "type": "number",
-          "format": "double"
+          "format": "double",
+          "description": "Total excluding VAT, as a number."
         },
         "orderDate": {
-          "$ref": "#/definitions/typeDate"
+          "description": "[DEPRECATED] Send `documentDate` instead.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeDate"
+            }
+          ]
         },
         "paymentDueDate": {
-          "$ref": "#/definitions/typeDate"
+          "description": "Last day for the payment, as an object with year, month and day. The day\nmust be 1 to 31 and the month 1 to 12, or the call returns 400.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeDate"
+            }
+          ]
         },
         "documentType": {
-          "type": "string"
+          "type": "string",
+          "description": "Document type, using the values the annotate response returns, for\nexample \"Invoice\"."
         },
         "currency": {
-          "type": "string"
+          "type": "string",
+          "description": "Three-letter ISO 4217 currency code, for example \"DKK\"."
         },
         "creditCardLastFour": {
-          "type": "string"
+          "type": "string",
+          "description": "Last four digits of the card used for payment, for example \"2345\"."
         },
         "paymentMethod": {
-          "type": "string"
+          "type": "string",
+          "description": "Payment method, using the values the annotate response returns: \"Cash\",\n\"CreditCard\" or \"BankTransfer\"."
         },
         "ocrLineDkType": {
-          "type": "string"
+          "type": "string",
+          "description": "Type field of a Danish FIK payment line."
         },
         "ocrLineDkPaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Payment reference of a Danish FIK payment line."
         },
         "ocrLineDkCreditorId": {
-          "type": "string"
+          "type": "string",
+          "description": "Creditor account number of a Danish FIK payment line."
         },
         "ocrLineSePaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Swedish payment reference."
         },
         "ocrLineSeBankgiroCreditorId": {
-          "type": "string"
+          "type": "string",
+          "description": "Swedish Bankgiro number of the creditor."
         },
         "ocrLineSePlusgiroCreditorId": {
-          "type": "string"
+          "type": "string",
+          "description": "Swedish PlusGiro number of the creditor."
         },
         "ocrLineNoPaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Norwegian payment reference (KID)."
         },
         "ocrLineFiPaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Finnish payment reference (viitenumero)."
         },
         "ocrLineNlPaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Dutch payment reference (betalingskenmerk)."
         },
         "supplierCorporateId": {
-          "type": "string"
+          "type": "string",
+          "description": "[DEPRECATED] Send `supplierOrganisationNumber` instead."
         },
         "supplierCountryCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for\nexample \"DK\"."
         },
         "invoiceNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "[DEPRECATED] Send `documentNumber` instead."
         },
         "iban": {
-          "type": "string"
+          "type": "string",
+          "description": "IBAN."
         },
         "orderReference": {
-          "type": "string"
+          "type": "string",
+          "description": "Order reference on the document. No Smartscan feature extracts it."
         },
         "bankAccountNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Bank account number."
         },
         "bankRegistrationNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Bank registration number, in countries that use one, such as Denmark."
         },
         "supplierName": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the supplier."
         },
         "bic": {
-          "type": "string"
+          "type": "string",
+          "description": "BIC code."
         },
         "documentNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Number that identifies the document, such as the invoice number."
         },
         "documentDate": {
-          "$ref": "#/definitions/typeDate"
+          "description": "Date the document was issued, as an object with year, month and day. The\nday must be 1 to 31 and the month 1 to 12, or the call returns 400.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeDate"
+            }
+          ]
         },
         "orderNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Order number, if the document shows one."
         },
         "supplierVatNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "VAT number of the supplier."
         },
         "supplierOrganisationNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "National company ID of the supplier, such as the CVR number in Denmark or\nthe KvK number in the Netherlands."
         },
         "supplierAddress": {
-          "type": "string"
+          "type": "string",
+          "description": "Address of the supplier."
         },
         "customerNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Number that identifies the customer."
         },
         "receiverOrderNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "Receiver's order number."
         },
         "ocrLineBePaymentId": {
-          "type": "string"
+          "type": "string",
+          "description": "Belgian structured payment reference (OGM), for example\n\"+++123/1234/12345+++\"."
         },
         "receiverAddress": {
-          "type": "string"
+          "type": "string",
+          "description": "Address of the receiver."
         },
         "receiverCountryCode": {
-          "type": "string"
+          "type": "string",
+          "description": "Receiver's country, as a two-letter ISO 3166-1 alpha-2 code."
         },
         "receiverName": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the receiver."
         },
         "receiverVatNumber": {
-          "type": "string"
+          "type": "string",
+          "description": "VAT number of the receiver."
         },
         "purchaseLines": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typePurchaseLineCandidate"
-          }
+          },
+          "description": "Purchase lines, in the same format as `purchaseLines` in the annotate\nresponse."
         },
         "answers": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
-          }
+          },
+          "description": "Answers to the questions asked in the annotate request, in the same\nformat as `answers` in the annotate response."
         },
         "vatDistribution": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
-          }
+          },
+          "description": "VAT levels, in the same format as `vatDistribution` in the annotate\nresponse."
         },
         "checkInDate": {
-          "$ref": "#/definitions/typeDate"
+          "description": "Check-in date on an accommodation document, as an object with year,\nmonth and day.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeDate"
+            }
+          ]
         },
         "checkOutDate": {
-          "$ref": "#/definitions/typeDate"
+          "description": "Check-out date on an accommodation document, as an object with year,\nmonth and day.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/typeDate"
+            }
+          ]
         },
         "ksef": {
-          "type": "string"
+          "type": "string",
+          "description": "Polish KSeF e-invoicing identifier."
         }
-      }
+      },
+      "description": "The correct values for a document, as your user confirmed them. Send the\nfinal value of each field your user reviewed, whether they kept the\nsuggestion or changed it. Field names match the annotate response."
     },
     "v1ValetKeyRequest": {
       "type": "object",
       "properties": {
         "sub": {
           "type": "string",
-          "title": "Principal / Data Subject, ie. user id\nhttps://tools.ietf.org/html/rfc7519#section-4.1.2"
+          "description": "Optional. Who the key is for, for example your user's ID. It's stored in\nthe token as its subject (the `sub` claim)."
         },
         "exp": {
           "type": "string",
           "format": "int64",
-          "title": "Timestamp for when this key expires\nDefault 8 hours from now, max 48h\nhttps://tools.ietf.org/html/rfc7519#section-4.1.4"
+          "description": "When the key expires, as a Unix timestamp in seconds. At most 48 hours\nfrom now. Defaults to 8 hours after the key is issued."
         }
-      }
+      },
+      "description": "Options for a new valet key."
     },
     "v1ValetKeyResponse": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "title": "Key for this key"
+          "description": "Unique ID of the key, also stored in the token as its `jti` claim."
         },
         "token": {
           "type": "string",
-          "title": "A JWT Token"
+          "description": "The valet key, a signed JSON Web Token (JWT). Send it as\n`Authorization: Bearer \u003ctoken\u003e`."
         }
-      }
+      },
+      "description": "A new valet key."
     },
     "v2ConfidenceLevel": {
       "type": "string",
@@ -3229,7 +3332,8 @@
         "HIGH",
         "VERY_HIGH"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the\nmodel gave no level."
     },
     "v2ProductType": {
       "type": "string",
@@ -3310,25 +3414,34 @@
         "WATER_WASTE",
         "WEBSITE"
       ],
-      "default": "UNDEFINED"
+      "default": "UNDEFINED",
+      "description": "The product types a text can be classified into. UNDEFINED isn't a product type: it's the\nempty value."
     },
     "v2ProductTypeCandidate": {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/v2ProductType"
+          "description": "The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a\nlabel that has no product type.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v2ProductType"
+            }
+          ]
         },
         "label": {
-          "type": "string"
+          "type": "string",
+          "description": "The product type's name in words, such as \"Accounting software\"."
         },
         "confidence": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "The model's confidence score for this candidate. Use confidenceLevel to decide whether to\ntrust it."
         },
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel"
         }
-      }
+      },
+      "description": "A product type candidate for a text."
     }
   },
   "securityDefinitions": {

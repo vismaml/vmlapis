@@ -7,7 +7,7 @@ package ai.visma.asgt.type;
 
 /**
  * <pre>
- * Common types
+ * Confidence of a suggested value.
  * </pre>
  *
  * Protobuf type {@code asgt.type.Confidence}
@@ -48,11 +48,21 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * Confidence level of a suggested value. Levels are set for each target from the model's
+   * evaluation, so they give more stable results across model upgrades than the score. Use them
+   * to decide whether to trust a suggestion.
+   * </pre>
+   *
    * Protobuf enum {@code asgt.type.Confidence.Level}
    */
   public enum Level
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * No level.
+     * </pre>
+     *
      * <code>UNKNOWN = 0;</code>
      */
     UNKNOWN(0),
@@ -77,6 +87,10 @@ private static final long serialVersionUID = 0L;
      */
     VERY_HIGH(5),
     /**
+     * <pre>
+     * Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms.
+     * </pre>
+     *
      * <code>ULTRA_HIGH = 6;</code>
      */
     ULTRA_HIGH(6),
@@ -93,6 +107,10 @@ private static final long serialVersionUID = 0L;
         Level.class.getName());
     }
     /**
+     * <pre>
+     * No level.
+     * </pre>
+     *
      * <code>UNKNOWN = 0;</code>
      */
     public static final int UNKNOWN_VALUE = 0;
@@ -117,6 +135,10 @@ private static final long serialVersionUID = 0L;
      */
     public static final int VERY_HIGH_VALUE = 5;
     /**
+     * <pre>
+     * Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms.
+     * </pre>
+     *
      * <code>ULTRA_HIGH = 6;</code>
      */
     public static final int ULTRA_HIGH_VALUE = 6;
@@ -213,11 +235,6 @@ private static final long serialVersionUID = 0L;
   public static final int LEVEL_FIELD_NUMBER = 1;
   private int level_ = 0;
   /**
-   * <pre>
-   * A bucketized representation of confidence, which is intended to give clients
-   * highly stable results across model upgrades.
-   * </pre>
-   *
    * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
    * @return The enum numeric value on the wire for level.
    */
@@ -225,11 +242,6 @@ private static final long serialVersionUID = 0L;
     return level_;
   }
   /**
-   * <pre>
-   * A bucketized representation of confidence, which is intended to give clients
-   * highly stable results across model upgrades.
-   * </pre>
-   *
    * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
    * @return The level.
    */
@@ -242,7 +254,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FloatValue value_;
   /**
    * <pre>
-   * The confidence value
+   * The confidence score. Higher means more likely, but use level to decide whether to trust
+   * a suggestion.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -254,7 +267,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The confidence value
+   * The confidence score. Higher means more likely, but use level to decide whether to trust
+   * a suggestion.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -266,7 +280,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The confidence value
+   * The confidence score. Higher means more likely, but use level to decide whether to trust
+   * a suggestion.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -450,7 +465,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Common types
+   * Confidence of a suggested value.
    * </pre>
    *
    * Protobuf type {@code asgt.type.Confidence}
@@ -619,11 +634,6 @@ private static final long serialVersionUID = 0L;
 
     private int level_ = 0;
     /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
      * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The enum numeric value on the wire for level.
      */
@@ -631,11 +641,6 @@ private static final long serialVersionUID = 0L;
       return level_;
     }
     /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
      * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @param value The enum numeric value on the wire for level to set.
      * @return This builder for chaining.
@@ -647,11 +652,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
      * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return The level.
      */
@@ -661,11 +661,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.type.Confidence.Level.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
      * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @param value The level to set.
      * @return This builder for chaining.
@@ -680,11 +675,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
      * <code>.asgt.type.Confidence.Level level = 1 [json_name = "level"];</code>
      * @return This builder for chaining.
      */
@@ -700,7 +690,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -711,7 +702,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -726,7 +718,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -746,7 +739,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -764,7 +758,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -789,7 +784,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -806,7 +802,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -818,7 +815,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -833,7 +831,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The confidence value
+     * The confidence score. Higher means more likely, but use level to decide whether to trust
+     * a suggestion.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>

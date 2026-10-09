@@ -6,6 +6,11 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * The product types a text can be classified into. UNDEFINED isn't a product type: it's the
+ * empty value.
+ * </pre>
+ *
  * Protobuf enum {@code asgt.v2.ProductType}
  */
 public enum ProductType

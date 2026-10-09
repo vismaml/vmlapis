@@ -11,7 +11,7 @@ public interface AnswerCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Question asked in the request
+   * The question, as sent in the request.
    * </pre>
    *
    * <code>string question = 1 [json_name = "question"];</code>
@@ -20,7 +20,7 @@ public interface AnswerCandidateOrBuilder extends
   java.lang.String getQuestion();
   /**
    * <pre>
-   * Question asked in the request
+   * The question, as sent in the request.
    * </pre>
    *
    * <code>string question = 1 [json_name = "question"];</code>
@@ -31,7 +31,7 @@ public interface AnswerCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Model prediction for the question
+   * The answer, as text.
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -40,7 +40,7 @@ public interface AnswerCandidateOrBuilder extends
   java.lang.String getAnswer();
   /**
    * <pre>
-   * Model prediction for the question
+   * The answer, as text.
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -51,7 +51,7 @@ public interface AnswerCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -60,7 +60,7 @@ public interface AnswerCandidateOrBuilder extends
   boolean hasConfidence();
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -69,7 +69,7 @@ public interface AnswerCandidateOrBuilder extends
   ai.visma.ssn.type.Confidence getConfidence();
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -78,7 +78,7 @@ public interface AnswerCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -87,7 +87,7 @@ public interface AnswerCandidateOrBuilder extends
   boolean hasModelMetadata();
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -96,7 +96,7 @@ public interface AnswerCandidateOrBuilder extends
   ai.visma.ssn.type.ModelSpec getModelMetadata();
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -105,7 +105,8 @@ public interface AnswerCandidateOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
+   * The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+   * first and last page together (see `documentMetadata.pageCount`).
    * </pre>
    *
    * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>

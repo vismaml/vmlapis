@@ -22,15 +22,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Confidence level of a suggested value. Levels are set for each target from the model's
+// evaluation, so they give more stable results across model upgrades than the score. Use them
+// to decide whether to trust a suggestion.
 type Confidence_Level int32
 
 const (
-	Confidence_UNKNOWN    Confidence_Level = 0
-	Confidence_VERY_LOW   Confidence_Level = 1
-	Confidence_LOW        Confidence_Level = 2
-	Confidence_MID        Confidence_Level = 3
-	Confidence_HIGH       Confidence_Level = 4
-	Confidence_VERY_HIGH  Confidence_Level = 5
+	// No level.
+	Confidence_UNKNOWN   Confidence_Level = 0
+	Confidence_VERY_LOW  Confidence_Level = 1
+	Confidence_LOW       Confidence_Level = 2
+	Confidence_MID       Confidence_Level = 3
+	Confidence_HIGH      Confidence_Level = 4
+	Confidence_VERY_HIGH Confidence_Level = 5
+	// Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms.
 	Confidence_ULTRA_HIGH Confidence_Level = 6
 )
 
@@ -83,16 +88,15 @@ func (Confidence_Level) EnumDescriptor() ([]byte, []int) {
 	return file_asgt_type_prediction_proto_rawDescGZIP(), []int{0, 0}
 }
 
-// Common types
+// Confidence of a suggested value.
 type Confidence struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// A bucketized representation of confidence, which is intended to give clients
-	// highly stable results across model upgrades.
 	Level Confidence_Level `protobuf:"varint,1,opt,name=level,proto3,enum=asgt.type.Confidence_Level" json:"level,omitempty"`
-	// The confidence value
+	// The confidence score. Higher means more likely, but use level to decide whether to trust
+	// a suggestion.
 	Value *wrapperspb.FloatValue `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
@@ -142,13 +146,17 @@ func (x *Confidence) GetValue() *wrapperspb.FloatValue {
 	return nil
 }
 
+// Suggestions for one input, with one entry per target.
 type Prediction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Targets                []*Prediction_Target `protobuf:"bytes,1,rep,name=targets,proto3" json:"targets,omitempty"`
-	UnknownTokenPercentage float32              `protobuf:"fixed32,2,opt,name=unknown_token_percentage,json=unknownTokenPercentage,proto3" json:"unknown_token_percentage,omitempty"`
+	// One entry per target of the model.
+	Targets []*Prediction_Target `protobuf:"bytes,1,rep,name=targets,proto3" json:"targets,omitempty"`
+	// Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+	// fill it in.
+	UnknownTokenPercentage float32 `protobuf:"fixed32,2,opt,name=unknown_token_percentage,json=unknownTokenPercentage,proto3" json:"unknown_token_percentage,omitempty"`
 }
 
 func (x *Prediction) Reset() {
@@ -197,14 +205,19 @@ func (x *Prediction) GetUnknownTokenPercentage() float32 {
 	return 0
 }
 
+// Suggestions for one target.
 type Prediction_Target struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name               string                         `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Candidates         []*Prediction_Target_Candidate `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`
-	UnknownTargetClass bool                           `protobuf:"varint,3,opt,name=unknown_target_class,json=unknownTargetClass,proto3" json:"unknown_target_class,omitempty"`
+	// Name of the target.
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	// The suggested values, highest confidence first.
+	Candidates []*Prediction_Target_Candidate `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`
+	// Whether an example's value for this target is one the model wasn't trained on. The
+	// suggest endpoints don't fill it in.
+	UnknownTargetClass bool `protobuf:"varint,3,opt,name=unknown_target_class,json=unknownTargetClass,proto3" json:"unknown_target_class,omitempty"`
 }
 
 func (x *Prediction_Target) Reset() {
@@ -260,11 +273,13 @@ func (x *Prediction_Target) GetUnknownTargetClass() bool {
 	return false
 }
 
+// A suggested value for a target.
 type Prediction_Target_Candidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The suggested value.
 	Value      string      `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
 	Confidence *Confidence `protobuf:"bytes,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
 }

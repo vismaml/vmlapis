@@ -9,6 +9,7 @@ package dataservice
 import (
 	_ "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema"
 	_type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
+	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	date "google.golang.org/genproto/googleapis/type/date"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -161,57 +162,118 @@ func (x *Document) GetDocumentText() string {
 	return ""
 }
 
+// The correct values for a document, as your user confirmed them. Send the
+// final value of each field your user reviewed, whether they kept the
+// suggestion or changed it. Field names match the annotate response.
 type TrueValues struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TotalInclVat                *wrapperspb.DoubleValue           `protobuf:"bytes,1,opt,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
-	TotalVat                    *wrapperspb.DoubleValue           `protobuf:"bytes,2,opt,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
-	TotalExclVat                *wrapperspb.DoubleValue           `protobuf:"bytes,3,opt,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
-	OrderDate                   *date.Date                        `protobuf:"bytes,4,opt,name=order_date,json=orderDate,proto3" json:"order_date,omitempty"`
-	PaymentDueDate              *date.Date                        `protobuf:"bytes,5,opt,name=payment_due_date,json=paymentDueDate,proto3" json:"payment_due_date,omitempty"`
-	DocumentType                *wrapperspb.StringValue           `protobuf:"bytes,6,opt,name=document_type,json=documentType,proto3" json:"document_type,omitempty"`
-	Currency                    *wrapperspb.StringValue           `protobuf:"bytes,7,opt,name=currency,proto3" json:"currency,omitempty"`
-	CreditCardLastFour          *wrapperspb.StringValue           `protobuf:"bytes,8,opt,name=credit_card_last_four,json=creditCardLastFour,proto3" json:"credit_card_last_four,omitempty"`
-	PaymentMethod               *wrapperspb.StringValue           `protobuf:"bytes,9,opt,name=payment_method,json=paymentMethod,proto3" json:"payment_method,omitempty"`
-	OcrLineDkType               *wrapperspb.StringValue           `protobuf:"bytes,10,opt,name=ocr_line_dk_type,json=ocrLineDkType,proto3" json:"ocr_line_dk_type,omitempty"`
-	OcrLineDkPaymentId          *wrapperspb.StringValue           `protobuf:"bytes,11,opt,name=ocr_line_dk_payment_id,json=ocrLineDkPaymentId,proto3" json:"ocr_line_dk_payment_id,omitempty"`
-	OcrLineDkCreditorId         *wrapperspb.StringValue           `protobuf:"bytes,12,opt,name=ocr_line_dk_creditor_id,json=ocrLineDkCreditorId,proto3" json:"ocr_line_dk_creditor_id,omitempty"`
-	OcrLineSePaymentId          *wrapperspb.StringValue           `protobuf:"bytes,13,opt,name=ocr_line_se_payment_id,json=ocrLineSePaymentId,proto3" json:"ocr_line_se_payment_id,omitempty"`
-	OcrLineSeBankgiroCreditorId *wrapperspb.StringValue           `protobuf:"bytes,14,opt,name=ocr_line_se_bankgiro_creditor_id,json=ocrLineSeBankgiroCreditorId,proto3" json:"ocr_line_se_bankgiro_creditor_id,omitempty"`
-	OcrLineSePlusgiroCreditorId *wrapperspb.StringValue           `protobuf:"bytes,15,opt,name=ocr_line_se_plusgiro_creditor_id,json=ocrLineSePlusgiroCreditorId,proto3" json:"ocr_line_se_plusgiro_creditor_id,omitempty"`
-	OcrLineNoPaymentId          *wrapperspb.StringValue           `protobuf:"bytes,16,opt,name=ocr_line_no_payment_id,json=ocrLineNoPaymentId,proto3" json:"ocr_line_no_payment_id,omitempty"`
-	OcrLineFiPaymentId          *wrapperspb.StringValue           `protobuf:"bytes,17,opt,name=ocr_line_fi_payment_id,json=ocrLineFiPaymentId,proto3" json:"ocr_line_fi_payment_id,omitempty"`
-	OcrLineNlPaymentId          *wrapperspb.StringValue           `protobuf:"bytes,18,opt,name=ocr_line_nl_payment_id,json=ocrLineNlPaymentId,proto3" json:"ocr_line_nl_payment_id,omitempty"`
-	SupplierCorporateId         *wrapperspb.StringValue           `protobuf:"bytes,19,opt,name=supplier_corporate_id,json=supplierCorporateId,proto3" json:"supplier_corporate_id,omitempty"`
-	SupplierCountryCode         *wrapperspb.StringValue           `protobuf:"bytes,20,opt,name=supplier_country_code,json=supplierCountryCode,proto3" json:"supplier_country_code,omitempty"`
-	InvoiceNumber               *wrapperspb.StringValue           `protobuf:"bytes,21,opt,name=invoice_number,json=invoiceNumber,proto3" json:"invoice_number,omitempty"`
-	Iban                        *wrapperspb.StringValue           `protobuf:"bytes,22,opt,name=iban,proto3" json:"iban,omitempty"`
-	OrderReference              *wrapperspb.StringValue           `protobuf:"bytes,23,opt,name=order_reference,json=orderReference,proto3" json:"order_reference,omitempty"`
-	BankAccountNumber           *wrapperspb.StringValue           `protobuf:"bytes,24,opt,name=bank_account_number,json=bankAccountNumber,proto3" json:"bank_account_number,omitempty"`
-	BankRegistrationNumber      *wrapperspb.StringValue           `protobuf:"bytes,25,opt,name=bank_registration_number,json=bankRegistrationNumber,proto3" json:"bank_registration_number,omitempty"`
-	SupplierName                *wrapperspb.StringValue           `protobuf:"bytes,26,opt,name=supplier_name,json=supplierName,proto3" json:"supplier_name,omitempty"`
-	Bic                         *wrapperspb.StringValue           `protobuf:"bytes,27,opt,name=bic,proto3" json:"bic,omitempty"`
-	DocumentNumber              *wrapperspb.StringValue           `protobuf:"bytes,28,opt,name=document_number,json=documentNumber,proto3" json:"document_number,omitempty"`
-	DocumentDate                *date.Date                        `protobuf:"bytes,29,opt,name=document_date,json=documentDate,proto3" json:"document_date,omitempty"`
-	OrderNumber                 *wrapperspb.StringValue           `protobuf:"bytes,30,opt,name=order_number,json=orderNumber,proto3" json:"order_number,omitempty"`
-	SupplierVatNumber           *wrapperspb.StringValue           `protobuf:"bytes,31,opt,name=supplier_vat_number,json=supplierVatNumber,proto3" json:"supplier_vat_number,omitempty"`
-	SupplierOrganisationNumber  *wrapperspb.StringValue           `protobuf:"bytes,32,opt,name=supplier_organisation_number,json=supplierOrganisationNumber,proto3" json:"supplier_organisation_number,omitempty"`
-	SupplierAddress             *wrapperspb.StringValue           `protobuf:"bytes,33,opt,name=supplier_address,json=supplierAddress,proto3" json:"supplier_address,omitempty"`
-	CustomerNumber              *wrapperspb.StringValue           `protobuf:"bytes,34,opt,name=customer_number,json=customerNumber,proto3" json:"customer_number,omitempty"`
-	ReceiverOrderNumber         *wrapperspb.StringValue           `protobuf:"bytes,35,opt,name=receiver_order_number,json=receiverOrderNumber,proto3" json:"receiver_order_number,omitempty"`
-	OcrLineBePaymentId          *wrapperspb.StringValue           `protobuf:"bytes,36,opt,name=ocr_line_be_payment_id,json=ocrLineBePaymentId,proto3" json:"ocr_line_be_payment_id,omitempty"`
-	ReceiverAddress             *wrapperspb.StringValue           `protobuf:"bytes,37,opt,name=receiver_address,json=receiverAddress,proto3" json:"receiver_address,omitempty"`
-	ReceiverCountryCode         *wrapperspb.StringValue           `protobuf:"bytes,38,opt,name=receiver_country_code,json=receiverCountryCode,proto3" json:"receiver_country_code,omitempty"`
-	ReceiverName                *wrapperspb.StringValue           `protobuf:"bytes,39,opt,name=receiver_name,json=receiverName,proto3" json:"receiver_name,omitempty"`
-	ReceiverVatNumber           *wrapperspb.StringValue           `protobuf:"bytes,40,opt,name=receiver_vat_number,json=receiverVatNumber,proto3" json:"receiver_vat_number,omitempty"`
-	PurchaseLines               []*_type.PurchaseLineCandidate    `protobuf:"bytes,41,rep,name=purchase_lines,json=purchaseLines,proto3" json:"purchase_lines,omitempty"`
-	Answers                     []*_type.AnswerCandidate          `protobuf:"bytes,42,rep,name=answers,proto3" json:"answers,omitempty"`
-	VatDistribution             []*_type.VatDistributionCandidate `protobuf:"bytes,43,rep,name=vat_distribution,json=vatDistribution,proto3" json:"vat_distribution,omitempty"`
-	CheckInDate                 *date.Date                        `protobuf:"bytes,44,opt,name=check_in_date,json=checkInDate,proto3" json:"check_in_date,omitempty"`
-	CheckOutDate                *date.Date                        `protobuf:"bytes,45,opt,name=check_out_date,json=checkOutDate,proto3" json:"check_out_date,omitempty"`
-	Ksef                        *wrapperspb.StringValue           `protobuf:"bytes,46,opt,name=ksef,proto3" json:"ksef,omitempty"`
+	// Total including VAT, as a number.
+	TotalInclVat *wrapperspb.DoubleValue `protobuf:"bytes,1,opt,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
+	// Total VAT, as a number.
+	TotalVat *wrapperspb.DoubleValue `protobuf:"bytes,2,opt,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
+	// Total excluding VAT, as a number.
+	TotalExclVat *wrapperspb.DoubleValue `protobuf:"bytes,3,opt,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
+	// [DEPRECATED] Send `documentDate` instead.
+	OrderDate *date.Date `protobuf:"bytes,4,opt,name=order_date,json=orderDate,proto3" json:"order_date,omitempty"`
+	// Last day for the payment, as an object with year, month and day. The day
+	// must be 1 to 31 and the month 1 to 12, or the call returns 400.
+	PaymentDueDate *date.Date `protobuf:"bytes,5,opt,name=payment_due_date,json=paymentDueDate,proto3" json:"payment_due_date,omitempty"`
+	// Document type, using the values the annotate response returns, for
+	// example "Invoice".
+	DocumentType *wrapperspb.StringValue `protobuf:"bytes,6,opt,name=document_type,json=documentType,proto3" json:"document_type,omitempty"`
+	// Three-letter ISO 4217 currency code, for example "DKK".
+	Currency *wrapperspb.StringValue `protobuf:"bytes,7,opt,name=currency,proto3" json:"currency,omitempty"`
+	// Last four digits of the card used for payment, for example "2345".
+	CreditCardLastFour *wrapperspb.StringValue `protobuf:"bytes,8,opt,name=credit_card_last_four,json=creditCardLastFour,proto3" json:"credit_card_last_four,omitempty"`
+	// Payment method, using the values the annotate response returns: "Cash",
+	// "CreditCard" or "BankTransfer".
+	PaymentMethod *wrapperspb.StringValue `protobuf:"bytes,9,opt,name=payment_method,json=paymentMethod,proto3" json:"payment_method,omitempty"`
+	// Type field of a Danish FIK payment line.
+	OcrLineDkType *wrapperspb.StringValue `protobuf:"bytes,10,opt,name=ocr_line_dk_type,json=ocrLineDkType,proto3" json:"ocr_line_dk_type,omitempty"`
+	// Payment reference of a Danish FIK payment line.
+	OcrLineDkPaymentId *wrapperspb.StringValue `protobuf:"bytes,11,opt,name=ocr_line_dk_payment_id,json=ocrLineDkPaymentId,proto3" json:"ocr_line_dk_payment_id,omitempty"`
+	// Creditor account number of a Danish FIK payment line.
+	OcrLineDkCreditorId *wrapperspb.StringValue `protobuf:"bytes,12,opt,name=ocr_line_dk_creditor_id,json=ocrLineDkCreditorId,proto3" json:"ocr_line_dk_creditor_id,omitempty"`
+	// Swedish payment reference.
+	OcrLineSePaymentId *wrapperspb.StringValue `protobuf:"bytes,13,opt,name=ocr_line_se_payment_id,json=ocrLineSePaymentId,proto3" json:"ocr_line_se_payment_id,omitempty"`
+	// Swedish Bankgiro number of the creditor.
+	OcrLineSeBankgiroCreditorId *wrapperspb.StringValue `protobuf:"bytes,14,opt,name=ocr_line_se_bankgiro_creditor_id,json=ocrLineSeBankgiroCreditorId,proto3" json:"ocr_line_se_bankgiro_creditor_id,omitempty"`
+	// Swedish PlusGiro number of the creditor.
+	OcrLineSePlusgiroCreditorId *wrapperspb.StringValue `protobuf:"bytes,15,opt,name=ocr_line_se_plusgiro_creditor_id,json=ocrLineSePlusgiroCreditorId,proto3" json:"ocr_line_se_plusgiro_creditor_id,omitempty"`
+	// Norwegian payment reference (KID).
+	OcrLineNoPaymentId *wrapperspb.StringValue `protobuf:"bytes,16,opt,name=ocr_line_no_payment_id,json=ocrLineNoPaymentId,proto3" json:"ocr_line_no_payment_id,omitempty"`
+	// Finnish payment reference (viitenumero).
+	OcrLineFiPaymentId *wrapperspb.StringValue `protobuf:"bytes,17,opt,name=ocr_line_fi_payment_id,json=ocrLineFiPaymentId,proto3" json:"ocr_line_fi_payment_id,omitempty"`
+	// Dutch payment reference (betalingskenmerk).
+	OcrLineNlPaymentId *wrapperspb.StringValue `protobuf:"bytes,18,opt,name=ocr_line_nl_payment_id,json=ocrLineNlPaymentId,proto3" json:"ocr_line_nl_payment_id,omitempty"`
+	// [DEPRECATED] Send `supplierOrganisationNumber` instead.
+	SupplierCorporateId *wrapperspb.StringValue `protobuf:"bytes,19,opt,name=supplier_corporate_id,json=supplierCorporateId,proto3" json:"supplier_corporate_id,omitempty"`
+	// Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+	// example "DK".
+	SupplierCountryCode *wrapperspb.StringValue `protobuf:"bytes,20,opt,name=supplier_country_code,json=supplierCountryCode,proto3" json:"supplier_country_code,omitempty"`
+	// [DEPRECATED] Send `documentNumber` instead.
+	InvoiceNumber *wrapperspb.StringValue `protobuf:"bytes,21,opt,name=invoice_number,json=invoiceNumber,proto3" json:"invoice_number,omitempty"`
+	// IBAN.
+	Iban *wrapperspb.StringValue `protobuf:"bytes,22,opt,name=iban,proto3" json:"iban,omitempty"`
+	// Order reference on the document. No Smartscan feature extracts it.
+	OrderReference *wrapperspb.StringValue `protobuf:"bytes,23,opt,name=order_reference,json=orderReference,proto3" json:"order_reference,omitempty"`
+	// Bank account number.
+	BankAccountNumber *wrapperspb.StringValue `protobuf:"bytes,24,opt,name=bank_account_number,json=bankAccountNumber,proto3" json:"bank_account_number,omitempty"`
+	// Bank registration number, in countries that use one, such as Denmark.
+	BankRegistrationNumber *wrapperspb.StringValue `protobuf:"bytes,25,opt,name=bank_registration_number,json=bankRegistrationNumber,proto3" json:"bank_registration_number,omitempty"`
+	// Name of the supplier.
+	SupplierName *wrapperspb.StringValue `protobuf:"bytes,26,opt,name=supplier_name,json=supplierName,proto3" json:"supplier_name,omitempty"`
+	// BIC code.
+	Bic *wrapperspb.StringValue `protobuf:"bytes,27,opt,name=bic,proto3" json:"bic,omitempty"`
+	// Number that identifies the document, such as the invoice number.
+	DocumentNumber *wrapperspb.StringValue `protobuf:"bytes,28,opt,name=document_number,json=documentNumber,proto3" json:"document_number,omitempty"`
+	// Date the document was issued, as an object with year, month and day. The
+	// day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+	DocumentDate *date.Date `protobuf:"bytes,29,opt,name=document_date,json=documentDate,proto3" json:"document_date,omitempty"`
+	// Order number, if the document shows one.
+	OrderNumber *wrapperspb.StringValue `protobuf:"bytes,30,opt,name=order_number,json=orderNumber,proto3" json:"order_number,omitempty"`
+	// VAT number of the supplier.
+	SupplierVatNumber *wrapperspb.StringValue `protobuf:"bytes,31,opt,name=supplier_vat_number,json=supplierVatNumber,proto3" json:"supplier_vat_number,omitempty"`
+	// National company ID of the supplier, such as the CVR number in Denmark or
+	// the KvK number in the Netherlands.
+	SupplierOrganisationNumber *wrapperspb.StringValue `protobuf:"bytes,32,opt,name=supplier_organisation_number,json=supplierOrganisationNumber,proto3" json:"supplier_organisation_number,omitempty"`
+	// Address of the supplier.
+	SupplierAddress *wrapperspb.StringValue `protobuf:"bytes,33,opt,name=supplier_address,json=supplierAddress,proto3" json:"supplier_address,omitempty"`
+	// Number that identifies the customer.
+	CustomerNumber *wrapperspb.StringValue `protobuf:"bytes,34,opt,name=customer_number,json=customerNumber,proto3" json:"customer_number,omitempty"`
+	// Receiver's order number.
+	ReceiverOrderNumber *wrapperspb.StringValue `protobuf:"bytes,35,opt,name=receiver_order_number,json=receiverOrderNumber,proto3" json:"receiver_order_number,omitempty"`
+	// Belgian structured payment reference (OGM), for example
+	// "+++123/1234/12345+++".
+	OcrLineBePaymentId *wrapperspb.StringValue `protobuf:"bytes,36,opt,name=ocr_line_be_payment_id,json=ocrLineBePaymentId,proto3" json:"ocr_line_be_payment_id,omitempty"`
+	// Address of the receiver.
+	ReceiverAddress *wrapperspb.StringValue `protobuf:"bytes,37,opt,name=receiver_address,json=receiverAddress,proto3" json:"receiver_address,omitempty"`
+	// Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+	ReceiverCountryCode *wrapperspb.StringValue `protobuf:"bytes,38,opt,name=receiver_country_code,json=receiverCountryCode,proto3" json:"receiver_country_code,omitempty"`
+	// Name of the receiver.
+	ReceiverName *wrapperspb.StringValue `protobuf:"bytes,39,opt,name=receiver_name,json=receiverName,proto3" json:"receiver_name,omitempty"`
+	// VAT number of the receiver.
+	ReceiverVatNumber *wrapperspb.StringValue `protobuf:"bytes,40,opt,name=receiver_vat_number,json=receiverVatNumber,proto3" json:"receiver_vat_number,omitempty"`
+	// Purchase lines, in the same format as `purchaseLines` in the annotate
+	// response.
+	PurchaseLines []*_type.PurchaseLineCandidate `protobuf:"bytes,41,rep,name=purchase_lines,json=purchaseLines,proto3" json:"purchase_lines,omitempty"`
+	// Answers to the questions asked in the annotate request, in the same
+	// format as `answers` in the annotate response.
+	Answers []*_type.AnswerCandidate `protobuf:"bytes,42,rep,name=answers,proto3" json:"answers,omitempty"`
+	// VAT levels, in the same format as `vatDistribution` in the annotate
+	// response.
+	VatDistribution []*_type.VatDistributionCandidate `protobuf:"bytes,43,rep,name=vat_distribution,json=vatDistribution,proto3" json:"vat_distribution,omitempty"`
+	// Check-in date on an accommodation document, as an object with year,
+	// month and day.
+	CheckInDate *date.Date `protobuf:"bytes,44,opt,name=check_in_date,json=checkInDate,proto3" json:"check_in_date,omitempty"`
+	// Check-out date on an accommodation document, as an object with year,
+	// month and day.
+	CheckOutDate *date.Date `protobuf:"bytes,45,opt,name=check_out_date,json=checkOutDate,proto3" json:"check_out_date,omitempty"`
+	// Polish KSeF e-invoicing identifier.
+	Ksef *wrapperspb.StringValue `protobuf:"bytes,46,opt,name=ksef,proto3" json:"ksef,omitempty"`
 }
 
 func (x *TrueValues) Reset() {
@@ -2128,14 +2190,19 @@ func (x *PrepareFeedbackRequest) GetReturned() []*Returned {
 	return nil
 }
 
+// Feedback for one annotated document.
 type FeedbackRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The `feedbackId` from the annotate response for the document. Required.
 	Id         string      `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	TrueValues *TrueValues `protobuf:"bytes,2,opt,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
-	Tags       []string    `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
+	// Labels to store with the feedback, for example your customer's ID. To
+	// delete the feedback later, call POST /v1/feedback:delete with one of
+	// them. Tags sent with the annotate request aren't copied to the feedback.
+	Tags []string `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
 }
 
 func (x *FeedbackRequest) Reset() {
@@ -2428,11 +2495,14 @@ func (x *Correctness) GetSupport() int32 {
 	return 0
 }
 
+// Tags of the feedback to delete.
 type DeleteRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Feedback with at least one of these tags is deleted. At least one tag is
+	// required.
 	Tags []string `protobuf:"bytes,1,rep,name=tags,proto3" json:"tags,omitempty"`
 }
 
@@ -2823,7 +2893,10 @@ var file_ssn_dataservice_v1_dataservice_proto_rawDesc = []byte{
 	0x6f, 0x1a, 0x1e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
 	0x75, 0x66, 0x2f, 0x77, 0x72, 0x61, 0x70, 0x70, 0x65, 0x72, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x1a, 0x16, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x74, 0x79, 0x70, 0x65, 0x2f, 0x64,
-	0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x73, 0x73, 0x6e, 0x2f, 0x74,
+	0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x2d, 0x67, 0x65, 0x6e, 0x2d, 0x6f, 0x70, 0x65, 0x6e, 0x61, 0x70, 0x69, 0x76, 0x32, 0x2f,
+	0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x73, 0x73, 0x6e, 0x2f, 0x74,
 	0x79, 0x70, 0x65, 0x2f, 0x63, 0x61, 0x6e, 0x64, 0x69, 0x64, 0x61, 0x74, 0x65, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x1a, 0x1e, 0x73, 0x73, 0x6e, 0x2f, 0x74, 0x79, 0x70, 0x65, 0x2f, 0x74, 0x65,
 	0x78, 0x74, 0x5f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72,
@@ -3847,7 +3920,7 @@ var file_ssn_dataservice_v1_dataservice_proto_rawDesc = []byte{
 	0x74, 0x6e, 0x65, 0x73, 0x73, 0x18, 0x04, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x73, 0x73,
 	0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31,
 	0x2e, 0x43, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74, 0x6e, 0x65, 0x73, 0x73, 0x52, 0x10, 0x66, 0x69,
-	0x65, 0x6c, 0x64, 0x43, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74, 0x6e, 0x65, 0x73, 0x73, 0x32, 0x8f,
+	0x65, 0x6c, 0x64, 0x43, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74, 0x6e, 0x65, 0x73, 0x73, 0x32, 0xcf,
 	0x08, 0x0a, 0x0b, 0x44, 0x61, 0x74, 0x61, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x67,
 	0x0a, 0x0e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x44, 0x6f, 0x63, 0x75, 0x6d, 0x65, 0x6e, 0x74,
 	0x12, 0x29, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69,
@@ -3913,6 +3986,10 @@ var file_ssn_dataservice_v1_dataservice_proto_rawDesc = []byte{
 	0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31, 0x2e,
 	0x41, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73,
 	0x73, 0x4d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x1a, 0x3e, 0x92, 0x41, 0x3b, 0x12, 0x39, 0x53, 0x65, 0x6e, 0x64, 0x20, 0x66, 0x65, 0x65, 0x64,
+	0x62, 0x61, 0x63, 0x6b, 0x20, 0x6f, 0x6e, 0x20, 0x53, 0x6d, 0x61, 0x72, 0x74, 0x73, 0x63, 0x61,
+	0x6e, 0x20, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x2c, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x64,
+	0x65, 0x6c, 0x65, 0x74, 0x65, 0x20, 0x69, 0x74, 0x20, 0x62, 0x79, 0x20, 0x74, 0x61, 0x67, 0x2e,
 	0x42, 0xdd, 0x01, 0x0a, 0x1b, 0x61, 0x69, 0x2e, 0x76, 0x69, 0x73, 0x6d, 0x61, 0x2e, 0x73, 0x73,
 	0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x31,
 	0x42, 0x10, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f,

@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request for DELETE /v2/datasets/{datasetName}/examples.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.TruncateDatasetRequest}
  */
 public final class TruncateDatasetRequest extends
@@ -48,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object datasetName_ = "";
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -69,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -247,6 +251,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request for DELETE /v2/datasets/{datasetName}/examples.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.TruncateDatasetRequest}
    */
   public static final class Builder extends
@@ -387,7 +395,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object datasetName_ = "";
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -407,7 +415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -428,7 +436,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -445,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -459,7 +467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>

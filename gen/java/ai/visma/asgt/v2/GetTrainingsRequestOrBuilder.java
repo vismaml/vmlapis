@@ -10,16 +10,28 @@ public interface GetTrainingsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    * @return Whether the options field is set.
    */
   boolean hasOptions();
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    * @return The options.
    */
   ai.visma.asgt.v2.TrainingRequestOptions getOptions();
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    */
   ai.visma.asgt.v2.TrainingRequestOptionsOrBuilder getOptionsOrBuilder();

@@ -21,16 +21,18 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// A pair of example data and example target values
+// An example to train on: input data and the target values it should give.
 type Example struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Data         *Data          `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+	Data *Data `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+	// The correct value for each target. At least one is required.
 	TargetValues []*TargetValue `protobuf:"bytes,2,rep,name=target_values,json=targetValues,proto3" json:"target_values,omitempty"`
-	// Not implemented yet.
-	// An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+	// [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+	// PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+	// returns 501. If you set it, it must be a UUID.
 	Id string `protobuf:"bytes,3,opt,name=id,proto3" json:"id,omitempty"`
 }
 

@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * How long examples are used for training.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.RetentionPolicy}
  */
 public final class RetentionPolicy extends
@@ -45,6 +49,11 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_DAYS_FIELD_NUMBER = 1;
   private long maxDays_ = 0L;
   /**
+   * <pre>
+   * Number of days examples count for training. Older examples are left out of training. The
+   * default is 180, which also applies when you send 0.
+   * </pre>
+   *
    * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
    * @return The maxDays.
    */
@@ -212,6 +221,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * How long examples are used for training.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.RetentionPolicy}
    */
   public static final class Builder extends
@@ -349,6 +362,11 @@ private static final long serialVersionUID = 0L;
 
     private long maxDays_ ;
     /**
+     * <pre>
+     * Number of days examples count for training. Older examples are left out of training. The
+     * default is 180, which also applies when you send 0.
+     * </pre>
+     *
      * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @return The maxDays.
      */
@@ -357,6 +375,11 @@ private static final long serialVersionUID = 0L;
       return maxDays_;
     }
     /**
+     * <pre>
+     * Number of days examples count for training. Older examples are left out of training. The
+     * default is 180, which also applies when you send 0.
+     * </pre>
+     *
      * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @param value The maxDays to set.
      * @return This builder for chaining.
@@ -369,6 +392,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number of days examples count for training. Older examples are left out of training. The
+     * default is 180, which also applies when you send 0.
+     * </pre>
+     *
      * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @return This builder for chaining.
      */

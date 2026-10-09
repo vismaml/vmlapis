@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * An address split into its parts. All fields are empty when the address can't be resolved.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.StructuredAddress}
  */
 public final class StructuredAddress extends
@@ -51,6 +55,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object street_ = "";
   /**
+   * <pre>
+   * The street name, without the house number.
+   * </pre>
+   *
    * <code>string street = 1 [json_name = "street"];</code>
    * @return The street.
    */
@@ -68,6 +76,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The street name, without the house number.
+   * </pre>
+   *
    * <code>string street = 1 [json_name = "street"];</code>
    * @return The bytes for street.
    */
@@ -90,6 +102,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object postalCode_ = "";
   /**
+   * <pre>
+   * The postal or ZIP code.
+   * </pre>
+   *
    * <code>string postal_code = 2 [json_name = "postalCode"];</code>
    * @return The postalCode.
    */
@@ -107,6 +123,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The postal or ZIP code.
+   * </pre>
+   *
    * <code>string postal_code = 2 [json_name = "postalCode"];</code>
    * @return The bytes for postalCode.
    */
@@ -129,6 +149,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object city_ = "";
   /**
+   * <pre>
+   * The city or town.
+   * </pre>
+   *
    * <code>string city = 3 [json_name = "city"];</code>
    * @return The city.
    */
@@ -146,6 +170,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The city or town.
+   * </pre>
+   *
    * <code>string city = 3 [json_name = "city"];</code>
    * @return The bytes for city.
    */
@@ -168,6 +196,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object country_ = "";
   /**
+   * <pre>
+   * The full country name.
+   * </pre>
+   *
    * <code>string country = 4 [json_name = "country"];</code>
    * @return The country.
    */
@@ -185,6 +217,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The full country name.
+   * </pre>
+   *
    * <code>string country = 4 [json_name = "country"];</code>
    * @return The bytes for country.
    */
@@ -208,7 +244,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * ISO 3166-1 alpha-2
+   * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
    * </pre>
    *
    * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -229,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ISO 3166-1 alpha-2
+   * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
    * </pre>
    *
    * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -447,6 +483,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An address split into its parts. All fields are empty when the address can't be resolved.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.StructuredAddress}
    */
   public static final class Builder extends
@@ -642,6 +682,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object street_ = "";
     /**
+     * <pre>
+     * The street name, without the house number.
+     * </pre>
+     *
      * <code>string street = 1 [json_name = "street"];</code>
      * @return The street.
      */
@@ -658,6 +702,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The street name, without the house number.
+     * </pre>
+     *
      * <code>string street = 1 [json_name = "street"];</code>
      * @return The bytes for street.
      */
@@ -675,6 +723,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The street name, without the house number.
+     * </pre>
+     *
      * <code>string street = 1 [json_name = "street"];</code>
      * @param value The street to set.
      * @return This builder for chaining.
@@ -688,6 +740,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The street name, without the house number.
+     * </pre>
+     *
      * <code>string street = 1 [json_name = "street"];</code>
      * @return This builder for chaining.
      */
@@ -698,6 +754,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The street name, without the house number.
+     * </pre>
+     *
      * <code>string street = 1 [json_name = "street"];</code>
      * @param value The bytes for street to set.
      * @return This builder for chaining.
@@ -714,6 +774,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object postalCode_ = "";
     /**
+     * <pre>
+     * The postal or ZIP code.
+     * </pre>
+     *
      * <code>string postal_code = 2 [json_name = "postalCode"];</code>
      * @return The postalCode.
      */
@@ -730,6 +794,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The postal or ZIP code.
+     * </pre>
+     *
      * <code>string postal_code = 2 [json_name = "postalCode"];</code>
      * @return The bytes for postalCode.
      */
@@ -747,6 +815,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The postal or ZIP code.
+     * </pre>
+     *
      * <code>string postal_code = 2 [json_name = "postalCode"];</code>
      * @param value The postalCode to set.
      * @return This builder for chaining.
@@ -760,6 +832,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The postal or ZIP code.
+     * </pre>
+     *
      * <code>string postal_code = 2 [json_name = "postalCode"];</code>
      * @return This builder for chaining.
      */
@@ -770,6 +846,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The postal or ZIP code.
+     * </pre>
+     *
      * <code>string postal_code = 2 [json_name = "postalCode"];</code>
      * @param value The bytes for postalCode to set.
      * @return This builder for chaining.
@@ -786,6 +866,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object city_ = "";
     /**
+     * <pre>
+     * The city or town.
+     * </pre>
+     *
      * <code>string city = 3 [json_name = "city"];</code>
      * @return The city.
      */
@@ -802,6 +886,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The city or town.
+     * </pre>
+     *
      * <code>string city = 3 [json_name = "city"];</code>
      * @return The bytes for city.
      */
@@ -819,6 +907,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The city or town.
+     * </pre>
+     *
      * <code>string city = 3 [json_name = "city"];</code>
      * @param value The city to set.
      * @return This builder for chaining.
@@ -832,6 +924,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The city or town.
+     * </pre>
+     *
      * <code>string city = 3 [json_name = "city"];</code>
      * @return This builder for chaining.
      */
@@ -842,6 +938,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The city or town.
+     * </pre>
+     *
      * <code>string city = 3 [json_name = "city"];</code>
      * @param value The bytes for city to set.
      * @return This builder for chaining.
@@ -858,6 +958,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object country_ = "";
     /**
+     * <pre>
+     * The full country name.
+     * </pre>
+     *
      * <code>string country = 4 [json_name = "country"];</code>
      * @return The country.
      */
@@ -874,6 +978,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The full country name.
+     * </pre>
+     *
      * <code>string country = 4 [json_name = "country"];</code>
      * @return The bytes for country.
      */
@@ -891,6 +999,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The full country name.
+     * </pre>
+     *
      * <code>string country = 4 [json_name = "country"];</code>
      * @param value The country to set.
      * @return This builder for chaining.
@@ -904,6 +1016,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The full country name.
+     * </pre>
+     *
      * <code>string country = 4 [json_name = "country"];</code>
      * @return This builder for chaining.
      */
@@ -914,6 +1030,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The full country name.
+     * </pre>
+     *
      * <code>string country = 4 [json_name = "country"];</code>
      * @param value The bytes for country to set.
      * @return This builder for chaining.
@@ -931,7 +1051,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * ISO 3166-1 alpha-2
+     * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
      * </pre>
      *
      * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -951,7 +1071,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ISO 3166-1 alpha-2
+     * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
      * </pre>
      *
      * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -972,7 +1092,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ISO 3166-1 alpha-2
+     * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
      * </pre>
      *
      * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -989,7 +1109,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ISO 3166-1 alpha-2
+     * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
      * </pre>
      *
      * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -1003,7 +1123,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ISO 3166-1 alpha-2
+     * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
      * </pre>
      *
      * <code>string country_code = 5 [json_name = "countryCode"];</code>

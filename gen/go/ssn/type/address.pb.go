@@ -20,16 +20,22 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// An address split into its parts. All fields are empty when the address can't be resolved.
 type StructuredAddress struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Street      string `protobuf:"bytes,1,opt,name=street,proto3" json:"street,omitempty"`
-	PostalCode  string `protobuf:"bytes,2,opt,name=postal_code,json=postalCode,proto3" json:"postal_code,omitempty"`
-	City        string `protobuf:"bytes,3,opt,name=city,proto3" json:"city,omitempty"`
-	Country     string `protobuf:"bytes,4,opt,name=country,proto3" json:"country,omitempty"`
-	CountryCode string `protobuf:"bytes,5,opt,name=country_code,json=countryCode,proto3" json:"country_code,omitempty"` // ISO 3166-1 alpha-2
+	// The street name, without the house number.
+	Street string `protobuf:"bytes,1,opt,name=street,proto3" json:"street,omitempty"`
+	// The postal or ZIP code.
+	PostalCode string `protobuf:"bytes,2,opt,name=postal_code,json=postalCode,proto3" json:"postal_code,omitempty"`
+	// The city or town.
+	City string `protobuf:"bytes,3,opt,name=city,proto3" json:"city,omitempty"`
+	// The full country name.
+	Country string `protobuf:"bytes,4,opt,name=country,proto3" json:"country,omitempty"`
+	// The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
+	CountryCode string `protobuf:"bytes,5,opt,name=country_code,json=countryCode,proto3" json:"country_code,omitempty"`
 }
 
 func (x *StructuredAddress) Reset() {

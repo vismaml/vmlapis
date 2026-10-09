@@ -7,7 +7,7 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * Used in bank requests.
+ * A bank transaction. Use it for bank datasets.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.Transaction}
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * Text of the bank transaction.
+   * Text of the bank transaction, such as its statement text.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text of the bank transaction.
+   * Text of the bank transaction, such as its statement text.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Used in bank requests.
+   * A bank transaction. Use it for bank datasets.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.Transaction}
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * Text of the bank transaction.
+     * Text of the bank transaction, such as its statement text.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the bank transaction.
+     * Text of the bank transaction, such as its statement text.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the bank transaction.
+     * Text of the bank transaction, such as its statement text.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the bank transaction.
+     * Text of the bank transaction, such as its statement text.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the bank transaction.
+     * Text of the bank transaction, such as its statement text.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>

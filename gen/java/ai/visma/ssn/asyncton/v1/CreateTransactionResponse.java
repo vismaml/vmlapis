@@ -6,6 +6,10 @@
 package ai.visma.ssn.asyncton.v1;
 
 /**
+ * <pre>
+ * Response to creating a transaction.
+ * </pre>
+ *
  * Protobuf type {@code ssn.asyncton.v1.CreateTransactionResponse}
  */
 public final class CreateTransactionResponse extends
@@ -48,6 +52,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID. Use it to get the status and results, to send feedback and to
+   * delete the transaction.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -65,6 +74,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID. Use it to get the status and results, to send feedback and to
+   * delete the transaction.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -88,8 +102,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customId_ = "";
   /**
    * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
+   * The custom ID from the request, if you set one.
    * </pre>
    *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -110,8 +123,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
+   * The custom ID from the request, if you set one.
    * </pre>
    *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -299,6 +311,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response to creating a transaction.
+   * </pre>
+   *
    * Protobuf type {@code ssn.asyncton.v1.CreateTransactionResponse}
    */
   public static final class Builder extends
@@ -452,6 +468,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID. Use it to get the status and results, to send feedback and to
+     * delete the transaction.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -468,6 +489,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID. Use it to get the status and results, to send feedback and to
+     * delete the transaction.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -485,6 +511,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID. Use it to get the status and results, to send feedback and to
+     * delete the transaction.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -498,6 +529,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID. Use it to get the status and results, to send feedback and to
+     * delete the transaction.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -508,6 +544,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID. Use it to get the status and results, to send feedback and to
+     * delete the transaction.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -525,8 +566,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customId_ = "";
     /**
      * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
+     * The custom ID from the request, if you set one.
      * </pre>
      *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -546,8 +586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
+     * The custom ID from the request, if you set one.
      * </pre>
      *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -568,8 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
+     * The custom ID from the request, if you set one.
      * </pre>
      *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -586,8 +624,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
+     * The custom ID from the request, if you set one.
      * </pre>
      *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -601,8 +638,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
+     * The custom ID from the request, if you set one.
      * </pre>
      *
      * <code>string custom_id = 2 [json_name = "customId"];</code>

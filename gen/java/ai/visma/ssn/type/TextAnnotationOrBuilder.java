@@ -11,7 +11,7 @@ public interface TextAnnotationOrBuilder extends
 
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -20,7 +20,7 @@ public interface TextAnnotationOrBuilder extends
       getPagesList();
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -28,7 +28,7 @@ public interface TextAnnotationOrBuilder extends
   ai.visma.ssn.type.Page getPages(int index);
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -36,7 +36,7 @@ public interface TextAnnotationOrBuilder extends
   int getPagesCount();
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -45,7 +45,7 @@ public interface TextAnnotationOrBuilder extends
       getPagesOrBuilderList();
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>

@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/datasets/{datasetName}/examples:batchCreate.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.BatchCreateExampleRequest}
  */
 public final class BatchCreateExampleRequest extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object datasetName_ = "";
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -70,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -95,6 +99,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.type.Example> examples_;
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   @java.lang.Override
@@ -102,6 +110,10 @@ private static final long serialVersionUID = 0L;
     return examples_;
   }
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   @java.lang.Override
@@ -110,6 +122,10 @@ private static final long serialVersionUID = 0L;
     return examples_;
   }
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   @java.lang.Override
@@ -117,6 +133,10 @@ private static final long serialVersionUID = 0L;
     return examples_.size();
   }
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   @java.lang.Override
@@ -124,6 +144,10 @@ private static final long serialVersionUID = 0L;
     return examples_.get(index);
   }
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   @java.lang.Override
@@ -302,6 +326,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/datasets/{datasetName}/examples:batchCreate.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.BatchCreateExampleRequest}
    */
   public static final class Builder extends
@@ -501,7 +529,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object datasetName_ = "";
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -521,7 +549,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -542,7 +570,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -559,7 +587,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -573,7 +601,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -603,6 +631,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.type.Example, ai.visma.asgt.v2.type.Example.Builder, ai.visma.asgt.v2.type.ExampleOrBuilder> examplesBuilder_;
 
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Example> getExamplesList() {
@@ -613,6 +645,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public int getExamplesCount() {
@@ -623,6 +659,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public ai.visma.asgt.v2.type.Example getExamples(int index) {
@@ -633,6 +673,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder setExamples(
@@ -650,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder setExamples(
@@ -664,6 +712,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder addExamples(ai.visma.asgt.v2.type.Example value) {
@@ -680,6 +732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder addExamples(
@@ -697,6 +753,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder addExamples(
@@ -711,6 +771,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder addExamples(
@@ -725,6 +789,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder addAllExamples(
@@ -740,6 +808,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder clearExamples() {
@@ -753,6 +825,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public Builder removeExamples(int index) {
@@ -766,6 +842,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public ai.visma.asgt.v2.type.Example.Builder getExamplesBuilder(
@@ -773,6 +853,10 @@ private static final long serialVersionUID = 0L;
       return getExamplesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public ai.visma.asgt.v2.type.ExampleOrBuilder getExamplesOrBuilder(
@@ -783,6 +867,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.type.ExampleOrBuilder> 
@@ -794,6 +882,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public ai.visma.asgt.v2.type.Example.Builder addExamplesBuilder() {
@@ -801,6 +893,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.type.Example.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public ai.visma.asgt.v2.type.Example.Builder addExamplesBuilder(
@@ -809,6 +905,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.type.Example.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The examples to add. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Example.Builder> 

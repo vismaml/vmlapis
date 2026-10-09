@@ -11,7 +11,8 @@ public interface CandidateOrBuilder extends
 
   /**
    * <pre>
-   * Normalized value 01-01-2019
+   * The normalized value, for example "2019-01-01" for a date. Each field of the
+   * response describes the format of its values.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -20,7 +21,8 @@ public interface CandidateOrBuilder extends
   java.lang.String getValue();
   /**
    * <pre>
-   * Normalized value 01-01-2019
+   * The normalized value, for example "2019-01-01" for a date. Each field of the
+   * response describes the format of its values.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -31,8 +33,7 @@ public interface CandidateOrBuilder extends
 
   /**
    * <pre>
-   * The text as found on the document "1. Jan"
-   * useful for overlays
+   * The text as written on the document, for example "1. Jan". Useful for overlays.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -41,8 +42,7 @@ public interface CandidateOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * The text as found on the document "1. Jan"
-   * useful for overlays
+   * The text as written on the document, for example "1. Jan". Useful for overlays.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -52,130 +52,41 @@ public interface CandidateOrBuilder extends
       getTextBytes();
 
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    * @return Whether the confidence field is set.
    */
   boolean hasConfidence();
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */
   ai.visma.ssn.type.Confidence getConfidence();
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    */
   ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder();
 
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    * @return Whether the boundingBox field is set.
    */
   boolean hasBoundingBox();
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    * @return The boundingBox.
    */
   ai.visma.ssn.type.BoundingPoly getBoundingBox();
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    */
   ai.visma.ssn.type.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
   /**
-   * <pre>
-   * Indicate the type of the candidate
-   * </pre>
-   *
    * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
-   * <pre>
-   * Indicate the type of the candidate
-   * </pre>
-   *
    * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
    * @return The type.
    */
@@ -183,8 +94,7 @@ public interface CandidateOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
-   * page_ref start from 1.
+   * The page the candidate was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -193,35 +103,24 @@ public interface CandidateOrBuilder extends
   int getPageRef();
 
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -230,7 +129,8 @@ public interface CandidateOrBuilder extends
   boolean hasCorrected();
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -239,7 +139,8 @@ public interface CandidateOrBuilder extends
   com.google.protobuf.BoolValue getCorrected();
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>

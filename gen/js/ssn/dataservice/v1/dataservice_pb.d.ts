@@ -6,6 +6,7 @@ import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 import * as google_type_date_pb from '../../../google/type/date_pb'; // proto import: "google/type/date.proto"
+import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb'; // proto import: "ssn/type/tier.proto"

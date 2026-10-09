@@ -66,7 +66,7 @@ public final class SuggesterServiceProto {
       "_service.proto\032\027asgt/v2/type/data.proto\032" +
       "\034google/api/annotations.proto\032.protoc-ge" +
       "n-openapiv2/options/annotations.proto\032\027v" +
-      "alidate/validate.proto\"\302\002\n\016SuggestOption" +
+      "alidate/validate.proto\"\301\002\n\016SuggestOption" +
       "s\022#\n\rsuggest_limit\030\001 \001(\005R\014suggestLimit\022N" +
       "\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Confi" +
       "dence.LevelB\n\372B\007\202\001\004\020\001 \006R\rminConfidence\022=" +
@@ -74,64 +74,65 @@ public final class SuggesterServiceProto {
       "B\010\372B\005\202\001\002\020\001R\tmodelType\0222\n\025include_product" +
       "_types\030\004 \001(\010R\023includeProductTypes\022-\n\004tie" +
       "r\030\005 \001(\0162\017.asgt.type.TierB\010\372B\005\202\001\002\020\001R\004tier" +
-      ":\031\222A\0262\024{\"suggest_limit\": 3}\"\272\001\n\016SuggestR" +
-      "equest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036" +
-      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetN" +
-      "ame\022(\n\005input\030\002 \001(\0132\022.asgt.v2.type.DataR\005" +
-      "input\0221\n\007options\030\003 \001(\0132\027.asgt.v2.Suggest" +
-      "OptionsR\007options\"\312\001\n\017SuggestResponse\0225\n\n" +
-      "prediction\030\001 \001(\0132\025.asgt.type.PredictionR" +
-      "\nprediction\022&\n\005model\030\002 \001(\0132\020.asgt.type.M" +
-      "odelR\005model\022X\n\030product_type_suggestions\030" +
-      "\003 \001(\0132\036.asgt.v2.ProductTypeSuggestionR\026p" +
-      "roductTypeSuggestions\"\301\001\n\023BatchSuggestRe" +
+      ":\030\222A\0252\023{\"suggestLimit\": 3}\"\272\001\n\016SuggestRe" +
       "quest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^" +
       "[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNa" +
-      "me\022*\n\006inputs\030\002 \003(\0132\022.asgt.v2.type.DataR\006" +
-      "inputs\0221\n\007options\030\003 \001(\0132\027.asgt.v2.Sugges" +
-      "tOptionsR\007options\"\321\001\n\024BatchSuggestRespon" +
-      "se\0227\n\013predictions\030\001 \003(\0132\025.asgt.type.Pred" +
-      "ictionR\013predictions\022&\n\005model\030\002 \001(\0132\020.asg" +
-      "t.type.ModelR\005model\022X\n\030product_type_sugg" +
-      "estions\030\003 \003(\0132\036.asgt.v2.ProductTypeSugge" +
-      "stionR\026productTypeSuggestions2\273\003\n\020Sugges" +
-      "terService\022l\n\007Suggest\022\027.asgt.v2.SuggestR" +
-      "equest\032\030.asgt.v2.SuggestResponse\".\202\323\344\223\002(" +
-      "\"#/v2/datasets/{dataset_name}:suggest:\001*" +
-      "\022\200\001\n\014BatchSuggest\022\034.asgt.v2.BatchSuggest" +
-      "Request\032\035.asgt.v2.BatchSuggestResponse\"3" +
-      "\202\323\344\223\002-\"(/v2/datasets/{dataset_name}:batc" +
-      "hSuggest:\001*\022\213\001\n\021ModelBatchSuggest\022\034.asgt" +
-      ".v2.BatchSuggestRequest\032\035.asgt.v2.BatchS" +
-      "uggestResponse\"9\202\323\344\223\0023\"./v2/datasets/{da" +
-      "taset_name}/model:batchSuggest:\001*\032(\222A%\022#" +
-      "Make predictions against a dataset.B\200\010\n\020" +
-      "ai.visma.asgt.v2B\025SuggesterServiceProtoP" +
-      "\001Z+github.com/e-conomic/vmlapis/gen/go/a" +
-      "sgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\" +
-      "V2\\GPBMetadata\352\002\010Asgt::V2\222A\351\006\022\331\005\n\013Autosu" +
-      "ggest\022\305\005Autosuggest is the process autom" +
-      "ation toolkit for ERPs, designed for tra" +
-      "nsaction workflows. Upload examples to a" +
-      " dataset, and Autosuggest trains models " +
-      "that suggest target values for new input" +
-      "s.\n\n**Hosts:** `api.prod.asgt.visma.ai` " +
-      "for production and `api.stag.asgt.visma." +
-      "ai` for staging.\n\n**Authentication:** se" +
-      "nd your project token as `Authorization:" +
-      " Bearer <token>`. See [Authentication](h" +
-      "ttps://docs.vml.visma.ai/authentication/" +
-      ").\n\n**Errors:** a failed call returns an" +
-      " HTTP error status with a JSON body that" +
-      " holds `code`, `message` and `details`.\n" +
-      "\n**Guides:** [Autosuggest v2](https://do" +
-      "cs.vml.visma.ai/autosuggest-v2/getting-s" +
-      "tarted/) and [limits and rate limits](ht" +
-      "tps://docs.vml.visma.ai/rate-limit/).2\002v" +
-      "2*\001\0022\020application/json:\020application/json" +
-      "ZR\nP\n\nBearerAuth\022B\010\002\022-Your project token" +
-      ", sent as `Bearer <token>`.\032\rAuthorizati" +
-      "on \002b\020\n\016\n\nBearerAuth\022\000b\006proto3"
+      "me\022(\n\005input\030\002 \001(\0132\022.asgt.v2.type.DataR\005i" +
+      "nput\0221\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestO" +
+      "ptionsR\007options\"\312\001\n\017SuggestResponse\0225\n\np" +
+      "rediction\030\001 \001(\0132\025.asgt.type.PredictionR\n" +
+      "prediction\022&\n\005model\030\002 \001(\0132\020.asgt.type.Mo" +
+      "delR\005model\022X\n\030product_type_suggestions\030\003" +
+      " \001(\0132\036.asgt.v2.ProductTypeSuggestionR\026pr" +
+      "oductTypeSuggestions\"\301\001\n\023BatchSuggestReq" +
+      "uest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[" +
+      "A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNam" +
+      "e\022*\n\006inputs\030\002 \003(\0132\022.asgt.v2.type.DataR\006i" +
+      "nputs\0221\n\007options\030\003 \001(\0132\027.asgt.v2.Suggest" +
+      "OptionsR\007options\"\321\001\n\024BatchSuggestRespons" +
+      "e\0227\n\013predictions\030\001 \003(\0132\025.asgt.type.Predi" +
+      "ctionR\013predictions\022&\n\005model\030\002 \001(\0132\020.asgt" +
+      ".type.ModelR\005model\022X\n\030product_type_sugge" +
+      "stions\030\003 \003(\0132\036.asgt.v2.ProductTypeSugges" +
+      "tionR\026productTypeSuggestions2\314\003\n\020Suggest" +
+      "erService\022l\n\007Suggest\022\027.asgt.v2.SuggestRe" +
+      "quest\032\030.asgt.v2.SuggestResponse\".\202\323\344\223\002(\"" +
+      "#/v2/datasets/{dataset_name}:suggest:\001*\022" +
+      "\200\001\n\014BatchSuggest\022\034.asgt.v2.BatchSuggestR" +
+      "equest\032\035.asgt.v2.BatchSuggestResponse\"3\202" +
+      "\323\344\223\002-\"(/v2/datasets/{dataset_name}:batch" +
+      "Suggest:\001*\022\213\001\n\021ModelBatchSuggest\022\034.asgt." +
+      "v2.BatchSuggestRequest\032\035.asgt.v2.BatchSu" +
+      "ggestResponse\"9\202\323\344\223\0023\"./v2/datasets/{dat" +
+      "aset_name}/model:batchSuggest:\001*\0329\222A6\0224G" +
+      "et suggestions from the model trained on" +
+      " a dataset.B\200\010\n\020ai.visma.asgt.v2B\025Sugges" +
+      "terServiceProtoP\001Z+github.com/e-conomic/" +
+      "vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002" +
+      "\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V" +
+      "2\222A\351\006\022\331\005\n\013Autosuggest\022\305\005Autosuggest is t" +
+      "he process automation toolkit for ERPs, " +
+      "designed for transaction workflows. Uplo" +
+      "ad examples to a dataset, and Autosugges" +
+      "t trains models that suggest target valu" +
+      "es for new inputs.\n\n**Hosts:** `api.prod" +
+      ".asgt.visma.ai` for production and `api." +
+      "stag.asgt.visma.ai` for staging.\n\n**Auth" +
+      "entication:** send your project token as" +
+      " `Authorization: Bearer <token>`. See [A" +
+      "uthentication](https://docs.vml.visma.ai" +
+      "/authentication/).\n\n**Errors:** a failed" +
+      " call returns an HTTP error status with " +
+      "a JSON body that holds `code`, `message`" +
+      " and `details`.\n\n**Guides:** [Autosugges" +
+      "t v2](https://docs.vml.visma.ai/autosugg" +
+      "est-v2/getting-started/) and [limits and" +
+      " rate limits](https://docs.vml.visma.ai/" +
+      "rate-limit/).2\002v2*\001\0022\020application/json:\020" +
+      "application/jsonZR\nP\n\nBearerAuth\022B\010\002\022-Yo" +
+      "ur project token, sent as `Bearer <token" +
+      ">`.\032\rAuthorization \002b\020\n\016\n\nBearerAuth\022\000b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

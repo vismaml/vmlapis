@@ -11,7 +11,7 @@ public interface VatDistributionCandidateOrBuilder extends
 
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * The VAT rate, as a percentage with a dot as the decimal separator, for example "25.0".
    * </pre>
    *
    * <code>string percentage = 1 [json_name = "percentage"];</code>
@@ -20,7 +20,7 @@ public interface VatDistributionCandidateOrBuilder extends
   java.lang.String getPercentage();
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * The VAT rate, as a percentage with a dot as the decimal separator, for example "25.0".
    * </pre>
    *
    * <code>string percentage = 1 [json_name = "percentage"];</code>
@@ -31,7 +31,7 @@ public interface VatDistributionCandidateOrBuilder extends
 
   /**
    * <pre>
-   * The vat distribution candidate amount
+   * The VAT amount at this rate, rounded to two decimals, for example "585.45".
    * </pre>
    *
    * <code>string amount = 2 [json_name = "amount"];</code>
@@ -40,7 +40,7 @@ public interface VatDistributionCandidateOrBuilder extends
   java.lang.String getAmount();
   /**
    * <pre>
-   * The vat distribution candidate amount
+   * The VAT amount at this rate, rounded to two decimals, for example "585.45".
    * </pre>
    *
    * <code>string amount = 2 [json_name = "amount"];</code>
@@ -50,35 +50,23 @@ public interface VatDistributionCandidateOrBuilder extends
       getAmountBytes();
 
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
+   * The page the VAT level was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
@@ -88,7 +76,7 @@ public interface VatDistributionCandidateOrBuilder extends
 
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * The amount excluding VAT that the VAT is based on, for example "2341.80".
    * </pre>
    *
    * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
@@ -97,7 +85,7 @@ public interface VatDistributionCandidateOrBuilder extends
   java.lang.String getExclVat();
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * The amount excluding VAT that the VAT is based on, for example "2341.80".
    * </pre>
    *
    * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
@@ -108,7 +96,7 @@ public interface VatDistributionCandidateOrBuilder extends
 
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * The amount including VAT at this rate, for example "2926.25".
    * </pre>
    *
    * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
@@ -117,7 +105,7 @@ public interface VatDistributionCandidateOrBuilder extends
   java.lang.String getInclVat();
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * The amount including VAT at this rate, for example "2926.25".
    * </pre>
    *
    * <code>string incl_vat = 6 [json_name = "inclVat"];</code>

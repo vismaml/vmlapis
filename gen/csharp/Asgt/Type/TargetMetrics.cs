@@ -68,6 +68,9 @@ namespace Asgt.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// Evaluation metrics of a model for one target.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetMetrics : pb::IMessage<TargetMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -128,6 +131,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "target" field.</summary>
     public const int TargetFieldNumber = 1;
     private string target_ = "";
+    /// <summary>
+    /// Name of the target.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Target {
@@ -142,6 +148,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics.Types.Metric> _repeated_metrics_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetMetrics.Types.Metric.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric> metrics_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric>();
+    /// <summary>
+    /// Results at different confidence thresholds.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric> Metrics {
@@ -154,7 +163,7 @@ namespace Asgt.Type {
 
     private float entropy_;
     /// <summary>
-    /// entropy of the dataset
+    /// Entropy of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,7 +193,7 @@ namespace Asgt.Type {
 
     private int numberOfClasses_;
     /// <summary>
-    /// number of classes in the dataset
+    /// Number of classes in the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -214,7 +223,7 @@ namespace Asgt.Type {
 
     private float avgSamplePerClass_;
     /// <summary>
-    /// average samples per class
+    /// Average number of examples per class.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -244,7 +253,7 @@ namespace Asgt.Type {
 
     private float inconsistentLabelRatio_;
     /// <summary>
-    /// ratio of inconsistent labels
+    /// Ratio of inconsistent labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -274,7 +283,7 @@ namespace Asgt.Type {
 
     private float avgLabelsPerInconsistentSample_;
     /// <summary>
-    /// average labels per inconsistent sample
+    /// Average number of labels per inconsistent example.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -304,7 +313,7 @@ namespace Asgt.Type {
 
     private float percentSamplesNotInTargetVocab_;
     /// <summary>
-    /// percentage of samples not in target vocabulary
+    /// Percentage of examples whose value isn't in the target's vocabulary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -334,7 +343,7 @@ namespace Asgt.Type {
 
     private float jsDivergenceClasses_;
     /// <summary>
-    /// Jensen-Shannon divergence for classes
+    /// Jensen-Shannon divergence of the classes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -364,7 +373,7 @@ namespace Asgt.Type {
 
     private int targetTrainSize_;
     /// <summary>
-    /// number of training samples with a label for this target
+    /// Number of training examples with a value for this target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -394,7 +403,7 @@ namespace Asgt.Type {
 
     private int targetTestSize_;
     /// <summary>
-    /// number of test/validation samples with a label for this target
+    /// Number of test or validation examples with a value for this target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -792,6 +801,9 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Evaluation results at one confidence threshold.
+      /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metric : pb::IMessage<Metric>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -850,6 +862,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "precision" field.</summary>
         public const int PrecisionFieldNumber = 1;
         private float precision_;
+        /// <summary>
+        /// Precision of the answers at this threshold: the share of them that were correct.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Precision {
@@ -862,6 +877,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "confidence" field.</summary>
         public const int ConfidenceFieldNumber = 2;
         private float confidence_;
+        /// <summary>
+        /// The confidence threshold these results apply to.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Confidence {
@@ -874,6 +892,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "answer_rate" field.</summary>
         public const int AnswerRateFieldNumber = 3;
         private float answerRate_;
+        /// <summary>
+        /// Share of the evaluation examples that got an answer at this threshold.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float AnswerRate {
@@ -886,6 +907,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "true_positive" field.</summary>
         public const int TruePositiveFieldNumber = 4;
         private int truePositive_;
+        /// <summary>
+        /// Number of true positives.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int TruePositive {
@@ -898,6 +922,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "true_negative" field.</summary>
         public const int TrueNegativeFieldNumber = 5;
         private int trueNegative_;
+        /// <summary>
+        /// Number of true negatives.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int TrueNegative {
@@ -910,6 +937,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "false_positive" field.</summary>
         public const int FalsePositiveFieldNumber = 6;
         private int falsePositive_;
+        /// <summary>
+        /// Number of false positives.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int FalsePositive {
@@ -922,6 +952,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "false_negative" field.</summary>
         public const int FalseNegativeFieldNumber = 7;
         private int falseNegative_;
+        /// <summary>
+        /// Number of false negatives.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int FalseNegative {
@@ -935,7 +968,7 @@ namespace Asgt.Type {
         public const int MccFieldNumber = 8;
         private float mcc_;
         /// <summary>
-        /// Matthews correlation coefficient
+        /// Matthews correlation coefficient.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -949,6 +982,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "accuracy" field.</summary>
         public const int AccuracyFieldNumber = 9;
         private float accuracy_;
+        /// <summary>
+        /// Accuracy.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Accuracy {
@@ -961,6 +997,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "balanced_accuracy" field.</summary>
         public const int BalancedAccuracyFieldNumber = 10;
         private float balancedAccuracy_;
+        /// <summary>
+        /// Balanced accuracy.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float BalancedAccuracy {
@@ -974,7 +1013,7 @@ namespace Asgt.Type {
         public const int PrecisionBoundEpsilonFieldNumber = 12;
         private float precisionBoundEpsilon_;
         /// <summary>
-        /// precision bound epsilon values
+        /// Epsilon of the precision bound.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

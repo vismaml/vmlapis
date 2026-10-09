@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * A VAT level, with a list of candidates for each field.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.VatDistribution}
  */
 public final class VatDistribution extends
@@ -51,7 +55,7 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
+   * The page the VAT level was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -67,7 +71,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> percentage_;
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+   * for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -78,7 +83,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+   * for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -90,7 +96,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+   * for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -101,7 +108,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+   * for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -112,7 +120,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate percentage
+   * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+   * for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -128,7 +137,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalInclVat_;
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * Candidates for the amount including VAT at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -139,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * Candidates for the amount including VAT at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -151,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * Candidates for the amount including VAT at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -162,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * Candidates for the amount including VAT at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -173,7 +182,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate incl vat
+   * Candidates for the amount including VAT at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -189,7 +198,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalExclVat_;
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * Candidates for the amount excluding VAT that the VAT is based on.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -200,7 +209,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * Candidates for the amount excluding VAT that the VAT is based on.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -212,7 +221,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * Candidates for the amount excluding VAT that the VAT is based on.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -223,7 +232,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * Candidates for the amount excluding VAT that the VAT is based on.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -234,7 +243,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate excl vat
+   * Candidates for the amount excluding VAT that the VAT is based on.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -250,7 +259,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> totalVat_;
   /**
    * <pre>
-   * The vat distribution candidate
+   * Candidates for the VAT amount at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -261,7 +270,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate
+   * Candidates for the VAT amount at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -273,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate
+   * Candidates for the VAT amount at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -284,7 +293,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate
+   * Candidates for the VAT amount at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -295,7 +304,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The vat distribution candidate
+   * Candidates for the VAT amount at this rate.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -309,10 +318,6 @@ private static final long serialVersionUID = 0L;
   public static final int MODEL_METADATA_FIELD_NUMBER = 6;
   private ai.visma.ssn.type.ModelSpec modelMetadata_;
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
@@ -321,10 +326,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
@@ -333,10 +334,6 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
    */
   @java.lang.Override
@@ -570,6 +567,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A VAT level, with a list of candidates for each field.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.VatDistribution}
    */
   public static final class Builder extends
@@ -965,7 +966,7 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the VAT level was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -977,7 +978,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the VAT level was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -993,7 +994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the VAT level was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -1020,7 +1021,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1034,7 +1036,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1048,7 +1051,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1062,7 +1066,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1083,7 +1088,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1101,7 +1107,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1121,7 +1128,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1142,7 +1150,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1160,7 +1169,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1178,7 +1188,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1197,7 +1208,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1214,7 +1226,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1231,7 +1244,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1242,7 +1256,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1256,7 +1271,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1271,7 +1287,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1282,7 +1299,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1294,7 +1312,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate percentage
+     * Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+     * for example "25.0".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate percentage = 2 [json_name = "percentage"];</code>
@@ -1332,7 +1351,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1346,7 +1365,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1360,7 +1379,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1374,7 +1393,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1395,7 +1414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1413,7 +1432,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1433,7 +1452,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1454,7 +1473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1472,7 +1491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1490,7 +1509,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1509,7 +1528,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1526,7 +1545,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1543,7 +1562,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1554,7 +1573,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1568,7 +1587,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1583,7 +1602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1594,7 +1613,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1606,7 +1625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate incl vat
+     * Candidates for the amount including VAT at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_incl_vat = 3 [json_name = "totalInclVat"];</code>
@@ -1644,7 +1663,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1658,7 +1677,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1672,7 +1691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1686,7 +1705,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1707,7 +1726,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1725,7 +1744,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1745,7 +1764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1766,7 +1785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1784,7 +1803,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1802,7 +1821,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1821,7 +1840,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1838,7 +1857,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1855,7 +1874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1866,7 +1885,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1880,7 +1899,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1895,7 +1914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1906,7 +1925,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1918,7 +1937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate excl vat
+     * Candidates for the amount excluding VAT that the VAT is based on.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_excl_vat = 4 [json_name = "totalExclVat"];</code>
@@ -1956,7 +1975,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -1970,7 +1989,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -1984,7 +2003,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -1998,7 +2017,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2019,7 +2038,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2037,7 +2056,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2057,7 +2076,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2078,7 +2097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2096,7 +2115,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2114,7 +2133,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2133,7 +2152,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2150,7 +2169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2167,7 +2186,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2178,7 +2197,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2192,7 +2211,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2207,7 +2226,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2218,7 +2237,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2230,7 +2249,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The vat distribution candidate
+     * Candidates for the VAT amount at this rate.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate total_vat = 5 [json_name = "totalVat"];</code>
@@ -2258,10 +2277,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> modelMetadataBuilder_;
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
@@ -2269,10 +2284,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
@@ -2284,10 +2295,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -2304,10 +2311,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(
@@ -2322,10 +2325,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public Builder mergeModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -2347,10 +2346,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public Builder clearModelMetadata() {
@@ -2364,10 +2359,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder getModelMetadataBuilder() {
@@ -2376,10 +2367,6 @@ private static final long serialVersionUID = 0L;
       return getModelMetadataFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -2391,10 +2378,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 6 [json_name = "modelMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

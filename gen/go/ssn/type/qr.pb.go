@@ -20,11 +20,13 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// A QR code found in the document, returned for the QR_CODES feature.
 type QrCodeData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The decoded text of the QR code.
 	Content string `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
 }
 
@@ -67,45 +69,87 @@ func (x *QrCodeData) GetContent() string {
 	return ""
 }
 
+// A Swiss QR bill parsed from a QR code in the document, returned for the
+// SWISS_QR_BILLS feature. Only QR codes that follow version 0200 of the Swiss QR bill
+// standard are returned. The fields hold the values of the QR code as they are.
 type SwissQrBill struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	QrType                            string `protobuf:"bytes,1,opt,name=qr_type,json=qrType,proto3" json:"qr_type,omitempty"`
-	Version                           string `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
-	CodingType                        string `protobuf:"bytes,3,opt,name=coding_type,json=codingType,proto3" json:"coding_type,omitempty"`
-	Account                           string `protobuf:"bytes,4,opt,name=account,proto3" json:"account,omitempty"`
-	CreditorAddressType               string `protobuf:"bytes,5,opt,name=creditor_address_type,json=creditorAddressType,proto3" json:"creditor_address_type,omitempty"`
-	CreditorName                      string `protobuf:"bytes,6,opt,name=creditor_name,json=creditorName,proto3" json:"creditor_name,omitempty"`
-	CreditorAddressLine_1             string `protobuf:"bytes,7,opt,name=creditor_address_line_1,json=creditorAddressLine1,proto3" json:"creditor_address_line_1,omitempty"`
-	CreditorAddressLine_2             string `protobuf:"bytes,8,opt,name=creditor_address_line_2,json=creditorAddressLine2,proto3" json:"creditor_address_line_2,omitempty"`
-	CreditorAddressPostalCode         string `protobuf:"bytes,9,opt,name=creditor_address_postal_code,json=creditorAddressPostalCode,proto3" json:"creditor_address_postal_code,omitempty"`
-	CreditorAddressCity               string `protobuf:"bytes,10,opt,name=creditor_address_city,json=creditorAddressCity,proto3" json:"creditor_address_city,omitempty"`
-	CreditorAddressCountry            string `protobuf:"bytes,11,opt,name=creditor_address_country,json=creditorAddressCountry,proto3" json:"creditor_address_country,omitempty"`
-	UltimateCreditorAddressType       string `protobuf:"bytes,12,opt,name=ultimate_creditor_address_type,json=ultimateCreditorAddressType,proto3" json:"ultimate_creditor_address_type,omitempty"`
-	UltimateCreditorName              string `protobuf:"bytes,13,opt,name=ultimate_creditor_name,json=ultimateCreditorName,proto3" json:"ultimate_creditor_name,omitempty"`
-	UltimateCreditorAddressLine_1     string `protobuf:"bytes,14,opt,name=ultimate_creditor_address_line_1,json=ultimateCreditorAddressLine1,proto3" json:"ultimate_creditor_address_line_1,omitempty"`
-	UltimateCreditorAddressLine_2     string `protobuf:"bytes,15,opt,name=ultimate_creditor_address_line_2,json=ultimateCreditorAddressLine2,proto3" json:"ultimate_creditor_address_line_2,omitempty"`
+	// The QR type, always "SPC".
+	QrType string `protobuf:"bytes,1,opt,name=qr_type,json=qrType,proto3" json:"qr_type,omitempty"`
+	// The version of the Swiss QR bill standard, always "0200".
+	Version string `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
+	// The character encoding type, always "1".
+	CodingType string `protobuf:"bytes,3,opt,name=coding_type,json=codingType,proto3" json:"coding_type,omitempty"`
+	// The IBAN or QR-IBAN of the creditor.
+	Account string `protobuf:"bytes,4,opt,name=account,proto3" json:"account,omitempty"`
+	// The format of the creditor's address: "S" for structured or "K" for combined.
+	CreditorAddressType string `protobuf:"bytes,5,opt,name=creditor_address_type,json=creditorAddressType,proto3" json:"creditor_address_type,omitempty"`
+	// The name of the creditor.
+	CreditorName string `protobuf:"bytes,6,opt,name=creditor_name,json=creditorName,proto3" json:"creditor_name,omitempty"`
+	// The street or P.O. box of the creditor, or the first address line.
+	CreditorAddressLine_1 string `protobuf:"bytes,7,opt,name=creditor_address_line_1,json=creditorAddressLine1,proto3" json:"creditor_address_line_1,omitempty"`
+	// The building number of the creditor, or the second address line.
+	CreditorAddressLine_2 string `protobuf:"bytes,8,opt,name=creditor_address_line_2,json=creditorAddressLine2,proto3" json:"creditor_address_line_2,omitempty"`
+	// The postal code of the creditor.
+	CreditorAddressPostalCode string `protobuf:"bytes,9,opt,name=creditor_address_postal_code,json=creditorAddressPostalCode,proto3" json:"creditor_address_postal_code,omitempty"`
+	// The town of the creditor.
+	CreditorAddressCity string `protobuf:"bytes,10,opt,name=creditor_address_city,json=creditorAddressCity,proto3" json:"creditor_address_city,omitempty"`
+	// The country of the creditor, as a two-letter code.
+	CreditorAddressCountry string `protobuf:"bytes,11,opt,name=creditor_address_country,json=creditorAddressCountry,proto3" json:"creditor_address_country,omitempty"`
+	// The format of the ultimate creditor's address: "S" for structured or "K" for combined.
+	// Empty when the bill names no ultimate creditor.
+	UltimateCreditorAddressType string `protobuf:"bytes,12,opt,name=ultimate_creditor_address_type,json=ultimateCreditorAddressType,proto3" json:"ultimate_creditor_address_type,omitempty"`
+	// The name of the ultimate creditor.
+	UltimateCreditorName string `protobuf:"bytes,13,opt,name=ultimate_creditor_name,json=ultimateCreditorName,proto3" json:"ultimate_creditor_name,omitempty"`
+	// The street or P.O. box of the ultimate creditor, or the first address line.
+	UltimateCreditorAddressLine_1 string `protobuf:"bytes,14,opt,name=ultimate_creditor_address_line_1,json=ultimateCreditorAddressLine1,proto3" json:"ultimate_creditor_address_line_1,omitempty"`
+	// The building number of the ultimate creditor, or the second address line.
+	UltimateCreditorAddressLine_2 string `protobuf:"bytes,15,opt,name=ultimate_creditor_address_line_2,json=ultimateCreditorAddressLine2,proto3" json:"ultimate_creditor_address_line_2,omitempty"`
+	// The postal code of the ultimate creditor.
 	UltimateCreditorAddressPostalCode string `protobuf:"bytes,16,opt,name=ultimate_creditor_address_postal_code,json=ultimateCreditorAddressPostalCode,proto3" json:"ultimate_creditor_address_postal_code,omitempty"`
-	UltimateCreditorAddressCity       string `protobuf:"bytes,17,opt,name=ultimate_creditor_address_city,json=ultimateCreditorAddressCity,proto3" json:"ultimate_creditor_address_city,omitempty"`
-	UltimateCreditorAddressCountry    string `protobuf:"bytes,18,opt,name=ultimate_creditor_address_country,json=ultimateCreditorAddressCountry,proto3" json:"ultimate_creditor_address_country,omitempty"`
-	Amount                            string `protobuf:"bytes,19,opt,name=amount,proto3" json:"amount,omitempty"`
-	Currency                          string `protobuf:"bytes,20,opt,name=currency,proto3" json:"currency,omitempty"`
-	UltimateDebtorAddressType         string `protobuf:"bytes,21,opt,name=ultimate_debtor_address_type,json=ultimateDebtorAddressType,proto3" json:"ultimate_debtor_address_type,omitempty"`
-	UltimateDebtorName                string `protobuf:"bytes,22,opt,name=ultimate_debtor_name,json=ultimateDebtorName,proto3" json:"ultimate_debtor_name,omitempty"`
-	UltimateDebtorAddressLine_1       string `protobuf:"bytes,23,opt,name=ultimate_debtor_address_line_1,json=ultimateDebtorAddressLine1,proto3" json:"ultimate_debtor_address_line_1,omitempty"`
-	UltimateDebtorAddressLine_2       string `protobuf:"bytes,24,opt,name=ultimate_debtor_address_line_2,json=ultimateDebtorAddressLine2,proto3" json:"ultimate_debtor_address_line_2,omitempty"`
-	UltimateDebtorAddressPostalCode   string `protobuf:"bytes,25,opt,name=ultimate_debtor_address_postal_code,json=ultimateDebtorAddressPostalCode,proto3" json:"ultimate_debtor_address_postal_code,omitempty"`
-	UltimateDebtorAddressCity         string `protobuf:"bytes,26,opt,name=ultimate_debtor_address_city,json=ultimateDebtorAddressCity,proto3" json:"ultimate_debtor_address_city,omitempty"`
-	UltimateDebtorAddressCountry      string `protobuf:"bytes,27,opt,name=ultimate_debtor_address_country,json=ultimateDebtorAddressCountry,proto3" json:"ultimate_debtor_address_country,omitempty"`
-	PaymentReferenceType              string `protobuf:"bytes,28,opt,name=payment_reference_type,json=paymentReferenceType,proto3" json:"payment_reference_type,omitempty"`
-	PaymentReference                  string `protobuf:"bytes,29,opt,name=payment_reference,json=paymentReference,proto3" json:"payment_reference,omitempty"`
-	UnstructuredMessage               string `protobuf:"bytes,30,opt,name=unstructured_message,json=unstructuredMessage,proto3" json:"unstructured_message,omitempty"`
-	Trailer                           string `protobuf:"bytes,31,opt,name=trailer,proto3" json:"trailer,omitempty"`
-	BillingInformation                string `protobuf:"bytes,32,opt,name=billing_information,json=billingInformation,proto3" json:"billing_information,omitempty"`
-	Av1Parameters                     string `protobuf:"bytes,33,opt,name=av1_parameters,json=av1Parameters,proto3" json:"av1_parameters,omitempty"`
-	Av2Parameters                     string `protobuf:"bytes,34,opt,name=av2_parameters,json=av2Parameters,proto3" json:"av2_parameters,omitempty"`
+	// The town of the ultimate creditor.
+	UltimateCreditorAddressCity string `protobuf:"bytes,17,opt,name=ultimate_creditor_address_city,json=ultimateCreditorAddressCity,proto3" json:"ultimate_creditor_address_city,omitempty"`
+	// The country of the ultimate creditor, as a two-letter code.
+	UltimateCreditorAddressCountry string `protobuf:"bytes,18,opt,name=ultimate_creditor_address_country,json=ultimateCreditorAddressCountry,proto3" json:"ultimate_creditor_address_country,omitempty"`
+	// The amount to pay, for example "1949.75". Empty when the bill leaves the amount open.
+	Amount string `protobuf:"bytes,19,opt,name=amount,proto3" json:"amount,omitempty"`
+	// The currency, "CHF" or "EUR".
+	Currency string `protobuf:"bytes,20,opt,name=currency,proto3" json:"currency,omitempty"`
+	// The format of the ultimate debtor's address: "S" for structured or "K" for combined.
+	// Empty when the bill names no ultimate debtor.
+	UltimateDebtorAddressType string `protobuf:"bytes,21,opt,name=ultimate_debtor_address_type,json=ultimateDebtorAddressType,proto3" json:"ultimate_debtor_address_type,omitempty"`
+	// The name of the ultimate debtor.
+	UltimateDebtorName string `protobuf:"bytes,22,opt,name=ultimate_debtor_name,json=ultimateDebtorName,proto3" json:"ultimate_debtor_name,omitempty"`
+	// The street or P.O. box of the ultimate debtor, or the first address line.
+	UltimateDebtorAddressLine_1 string `protobuf:"bytes,23,opt,name=ultimate_debtor_address_line_1,json=ultimateDebtorAddressLine1,proto3" json:"ultimate_debtor_address_line_1,omitempty"`
+	// The building number of the ultimate debtor, or the second address line.
+	UltimateDebtorAddressLine_2 string `protobuf:"bytes,24,opt,name=ultimate_debtor_address_line_2,json=ultimateDebtorAddressLine2,proto3" json:"ultimate_debtor_address_line_2,omitempty"`
+	// The postal code of the ultimate debtor.
+	UltimateDebtorAddressPostalCode string `protobuf:"bytes,25,opt,name=ultimate_debtor_address_postal_code,json=ultimateDebtorAddressPostalCode,proto3" json:"ultimate_debtor_address_postal_code,omitempty"`
+	// The town of the ultimate debtor.
+	UltimateDebtorAddressCity string `protobuf:"bytes,26,opt,name=ultimate_debtor_address_city,json=ultimateDebtorAddressCity,proto3" json:"ultimate_debtor_address_city,omitempty"`
+	// The country of the ultimate debtor, as a two-letter code.
+	UltimateDebtorAddressCountry string `protobuf:"bytes,27,opt,name=ultimate_debtor_address_country,json=ultimateDebtorAddressCountry,proto3" json:"ultimate_debtor_address_country,omitempty"`
+	// The reference type: "QRR" for a QR reference, "SCOR" for a creditor reference, or
+	// "NON" for no reference.
+	PaymentReferenceType string `protobuf:"bytes,28,opt,name=payment_reference_type,json=paymentReferenceType,proto3" json:"payment_reference_type,omitempty"`
+	// The payment reference.
+	PaymentReference string `protobuf:"bytes,29,opt,name=payment_reference,json=paymentReference,proto3" json:"payment_reference,omitempty"`
+	// Additional information for the payment, for example "Order from 15.10.2020".
+	UnstructuredMessage string `protobuf:"bytes,30,opt,name=unstructured_message,json=unstructuredMessage,proto3" json:"unstructured_message,omitempty"`
+	// The end of the payment data, always "EPD".
+	Trailer string `protobuf:"bytes,31,opt,name=trailer,proto3" json:"trailer,omitempty"`
+	// [NOT IMPLEMENTED] Billing information isn't extracted yet, so this is always empty.
+	BillingInformation string `protobuf:"bytes,32,opt,name=billing_information,json=billingInformation,proto3" json:"billing_information,omitempty"`
+	// [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+	// always empty.
+	Av1Parameters string `protobuf:"bytes,33,opt,name=av1_parameters,json=av1Parameters,proto3" json:"av1_parameters,omitempty"`
+	// [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+	// always empty.
+	Av2Parameters string `protobuf:"bytes,34,opt,name=av2_parameters,json=av2Parameters,proto3" json:"av2_parameters,omitempty"`
 }
 
 func (x *SwissQrBill) Reset() {

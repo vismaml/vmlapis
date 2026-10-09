@@ -7,7 +7,9 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * Used in electronic-invoice-line requests.
+ * One line of an electronic invoice, with the details of its invoice. Send each line as its
+ * own example and repeat the invoice details in each one. Use it for electronic-invoice-line
+ * datasets.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.InvoiceLine}
@@ -56,7 +58,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object itemId_ = "";
   /**
    * <pre>
-   * Id of the product (item).
+   * ID of the item, such as a global product ID.
    * </pre>
    *
    * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -77,7 +79,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Id of the product (item).
+   * ID of the item, such as a global product ID.
    * </pre>
    *
    * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -103,7 +105,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * Text of the invoice line.
+   * Text of the line, such as the item's description or name.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -124,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text of the invoice line.
+   * Text of the line, such as the item's description or name.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -148,6 +150,10 @@ private static final long serialVersionUID = 0L;
   public static final int ISSUE_DATE_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp issueDate_;
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    * @return Whether the issueDate field is set.
    */
@@ -156,6 +162,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    * @return The issueDate.
    */
@@ -164,6 +174,10 @@ private static final long serialVersionUID = 0L;
     return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
   }
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    */
   @java.lang.Override
@@ -174,10 +188,6 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_FIELD_NUMBER = 4;
   private ai.visma.asgt.v2.type.Supplier supplier_;
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    * @return Whether the supplier field is set.
    */
@@ -186,10 +196,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    * @return The supplier.
    */
@@ -198,10 +204,6 @@ private static final long serialVersionUID = 0L;
     return supplier_ == null ? ai.visma.asgt.v2.type.Supplier.getDefaultInstance() : supplier_;
   }
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    */
   @java.lang.Override
@@ -214,7 +216,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customerRef_ = "";
   /**
    * <pre>
-   * reference to the customer.
+   * Reference to the invoice's recipient, such as the customer's name.
    * </pre>
    *
    * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -235,7 +237,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * reference to the customer.
+   * Reference to the invoice's recipient, such as the customer's name.
    * </pre>
    *
    * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -261,7 +263,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object currency_ = "";
   /**
    * <pre>
-   * Name of the currency as a string.
+   * Currency of the invoice, as text.
    * </pre>
    *
    * <code>string currency = 6 [json_name = "currency"];</code>
@@ -282,7 +284,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the currency as a string.
+   * Currency of the invoice, as text.
    * </pre>
    *
    * <code>string currency = 6 [json_name = "currency"];</code>
@@ -551,7 +553,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Used in electronic-invoice-line requests.
+   * One line of an electronic invoice, with the details of its invoice. Send each line as its
+   * own example and repeat the invoice details in each one. Use it for electronic-invoice-line
+   * datasets.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.InvoiceLine}
@@ -799,7 +803,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object itemId_ = "";
     /**
      * <pre>
-     * Id of the product (item).
+     * ID of the item, such as a global product ID.
      * </pre>
      *
      * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -819,7 +823,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the product (item).
+     * ID of the item, such as a global product ID.
      * </pre>
      *
      * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -840,7 +844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the product (item).
+     * ID of the item, such as a global product ID.
      * </pre>
      *
      * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -857,7 +861,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the product (item).
+     * ID of the item, such as a global product ID.
      * </pre>
      *
      * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -871,7 +875,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the product (item).
+     * ID of the item, such as a global product ID.
      * </pre>
      *
      * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -891,7 +895,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * Text of the invoice line.
+     * Text of the line, such as the item's description or name.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -911,7 +915,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the invoice line.
+     * Text of the line, such as the item's description or name.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -932,7 +936,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the invoice line.
+     * Text of the line, such as the item's description or name.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -949,7 +953,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the invoice line.
+     * Text of the line, such as the item's description or name.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -963,7 +967,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the invoice line.
+     * Text of the line, such as the item's description or name.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -984,6 +988,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return Whether the issueDate field is set.
      */
@@ -991,6 +999,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      * @return The issueDate.
      */
@@ -1002,6 +1014,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public Builder setIssueDate(com.google.protobuf.Timestamp value) {
@@ -1018,6 +1034,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public Builder setIssueDate(
@@ -1032,6 +1052,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
@@ -1053,6 +1077,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public Builder clearIssueDate() {
@@ -1066,6 +1094,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
@@ -1074,6 +1106,10 @@ private static final long serialVersionUID = 0L;
       return getIssueDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
@@ -1085,6 +1121,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1105,10 +1145,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.type.Supplier, ai.visma.asgt.v2.type.Supplier.Builder, ai.visma.asgt.v2.type.SupplierOrBuilder> supplierBuilder_;
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return Whether the supplier field is set.
      */
@@ -1116,10 +1152,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      * @return The supplier.
      */
@@ -1131,10 +1163,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public Builder setSupplier(ai.visma.asgt.v2.type.Supplier value) {
@@ -1151,10 +1179,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public Builder setSupplier(
@@ -1169,10 +1193,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public Builder mergeSupplier(ai.visma.asgt.v2.type.Supplier value) {
@@ -1194,10 +1214,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public Builder clearSupplier() {
@@ -1211,10 +1227,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public ai.visma.asgt.v2.type.Supplier.Builder getSupplierBuilder() {
@@ -1223,10 +1235,6 @@ private static final long serialVersionUID = 0L;
       return getSupplierFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     public ai.visma.asgt.v2.type.SupplierOrBuilder getSupplierOrBuilder() {
@@ -1238,10 +1246,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Supplier of the invoice.
-     * </pre>
-     *
      * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1261,7 +1265,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerRef_ = "";
     /**
      * <pre>
-     * reference to the customer.
+     * Reference to the invoice's recipient, such as the customer's name.
      * </pre>
      *
      * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -1281,7 +1285,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * reference to the customer.
+     * Reference to the invoice's recipient, such as the customer's name.
      * </pre>
      *
      * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -1302,7 +1306,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * reference to the customer.
+     * Reference to the invoice's recipient, such as the customer's name.
      * </pre>
      *
      * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -1319,7 +1323,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * reference to the customer.
+     * Reference to the invoice's recipient, such as the customer's name.
      * </pre>
      *
      * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -1333,7 +1337,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * reference to the customer.
+     * Reference to the invoice's recipient, such as the customer's name.
      * </pre>
      *
      * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -1353,7 +1357,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object currency_ = "";
     /**
      * <pre>
-     * Name of the currency as a string.
+     * Currency of the invoice, as text.
      * </pre>
      *
      * <code>string currency = 6 [json_name = "currency"];</code>
@@ -1373,7 +1377,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the currency as a string.
+     * Currency of the invoice, as text.
      * </pre>
      *
      * <code>string currency = 6 [json_name = "currency"];</code>
@@ -1394,7 +1398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the currency as a string.
+     * Currency of the invoice, as text.
      * </pre>
      *
      * <code>string currency = 6 [json_name = "currency"];</code>
@@ -1411,7 +1415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the currency as a string.
+     * Currency of the invoice, as text.
      * </pre>
      *
      * <code>string currency = 6 [json_name = "currency"];</code>
@@ -1425,7 +1429,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the currency as a string.
+     * Currency of the invoice, as text.
      * </pre>
      *
      * <code>string currency = 6 [json_name = "currency"];</code>

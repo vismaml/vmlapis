@@ -25,24 +25,44 @@ public interface ExampleOrBuilder extends
   ai.visma.asgt.v2.type.DataOrBuilder getDataOrBuilder();
 
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   java.util.List<ai.visma.asgt.v2.type.TargetValue> 
       getTargetValuesList();
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   ai.visma.asgt.v2.type.TargetValue getTargetValues(int index);
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   int getTargetValuesCount();
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.type.TargetValueOrBuilder> 
       getTargetValuesOrBuilderList();
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   ai.visma.asgt.v2.type.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -50,8 +70,9 @@ public interface ExampleOrBuilder extends
 
   /**
    * <pre>
-   * Not implemented yet.
-   * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+   * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+   * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+   * returns 501. If you set it, it must be a UUID.
    * </pre>
    *
    * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -60,8 +81,9 @@ public interface ExampleOrBuilder extends
   java.lang.String getId();
   /**
    * <pre>
-   * Not implemented yet.
-   * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+   * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+   * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+   * returns 501. If you set it, it must be a UUID.
    * </pre>
    *
    * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>

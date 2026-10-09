@@ -44,6 +44,9 @@ namespace Asgt.V2.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A model trained on a dataset.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Model : pb::IMessage<Model>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -95,7 +98,7 @@ namespace Asgt.V2.Type {
     public const int CreatedAtFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     /// <summary>
-    /// Creation time of the model
+    /// When the model was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +113,7 @@ namespace Asgt.V2.Type {
     public const int DatasetFieldNumber = 2;
     private global::Asgt.Type.Dataset dataset_;
     /// <summary>
-    /// Specifies dataset the model belongs to.
+    /// The dataset the model was trained on. Only its consumer, name and type are filled in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,7 +130,7 @@ namespace Asgt.V2.Type {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Targets the model was trained on
+    /// Names of the targets the model predicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

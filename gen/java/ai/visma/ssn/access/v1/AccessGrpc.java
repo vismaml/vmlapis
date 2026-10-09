@@ -3,6 +3,9 @@ package ai.visma.ssn.access.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Issue valet keys: short-lived tokens for web and mobile apps.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.70.0)",
@@ -106,10 +109,29 @@ public final class AccessGrpc {
   }
 
   /**
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Create a valet key, a short-lived token for a web or mobile app.
+     * Call this from your backend with your project token, and give the
+     * returned token to the app. The app sends it as
+     * `Authorization: Bearer &lt;token&gt;`, so your project token never has to be
+     * in an untrusted client. The key expires 8 hours after it's issued,
+     * unless you set `exp`.
+     * A valet key can call POST /v1/document:annotate and
+     * POST /v1/feedback:create, the Smartscan Async endpoints that create a
+     * transaction, get its status or results, and update its results, and the
+     * three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+     * endpoint in the API reference returns 403 for a valet key, and so does
+     * any call after the key expires. Keys can't be revoked.
+     * Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+     * this endpoint with a valet key or the demo token.
+     * </pre>
      */
     default void generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.access.v1.ValetKeyResponse> responseObserver) {
@@ -119,6 +141,9 @@ public final class AccessGrpc {
 
   /**
    * Base class for the server implementation of the service Access.
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public static abstract class AccessImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -130,6 +155,9 @@ public final class AccessGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Access.
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public static final class AccessStub
       extends io.grpc.stub.AbstractAsyncStub<AccessStub> {
@@ -145,6 +173,22 @@ public final class AccessGrpc {
     }
 
     /**
+     * <pre>
+     * Create a valet key, a short-lived token for a web or mobile app.
+     * Call this from your backend with your project token, and give the
+     * returned token to the app. The app sends it as
+     * `Authorization: Bearer &lt;token&gt;`, so your project token never has to be
+     * in an untrusted client. The key expires 8 hours after it's issued,
+     * unless you set `exp`.
+     * A valet key can call POST /v1/document:annotate and
+     * POST /v1/feedback:create, the Smartscan Async endpoints that create a
+     * transaction, get its status or results, and update its results, and the
+     * three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+     * endpoint in the API reference returns 403 for a valet key, and so does
+     * any call after the key expires. Keys can't be revoked.
+     * Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+     * this endpoint with a valet key or the demo token.
+     * </pre>
      */
     public void generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.access.v1.ValetKeyResponse> responseObserver) {
@@ -155,6 +199,9 @@ public final class AccessGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Access.
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public static final class AccessBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<AccessBlockingV2Stub> {
@@ -170,6 +217,22 @@ public final class AccessGrpc {
     }
 
     /**
+     * <pre>
+     * Create a valet key, a short-lived token for a web or mobile app.
+     * Call this from your backend with your project token, and give the
+     * returned token to the app. The app sends it as
+     * `Authorization: Bearer &lt;token&gt;`, so your project token never has to be
+     * in an untrusted client. The key expires 8 hours after it's issued,
+     * unless you set `exp`.
+     * A valet key can call POST /v1/document:annotate and
+     * POST /v1/feedback:create, the Smartscan Async endpoints that create a
+     * transaction, get its status or results, and update its results, and the
+     * three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+     * endpoint in the API reference returns 403 for a valet key, and so does
+     * any call after the key expires. Keys can't be revoked.
+     * Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+     * this endpoint with a valet key or the demo token.
+     * </pre>
      */
     public ai.visma.ssn.access.v1.ValetKeyResponse generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -179,6 +242,9 @@ public final class AccessGrpc {
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service Access.
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public static final class AccessBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AccessBlockingStub> {
@@ -194,6 +260,22 @@ public final class AccessGrpc {
     }
 
     /**
+     * <pre>
+     * Create a valet key, a short-lived token for a web or mobile app.
+     * Call this from your backend with your project token, and give the
+     * returned token to the app. The app sends it as
+     * `Authorization: Bearer &lt;token&gt;`, so your project token never has to be
+     * in an untrusted client. The key expires 8 hours after it's issued,
+     * unless you set `exp`.
+     * A valet key can call POST /v1/document:annotate and
+     * POST /v1/feedback:create, the Smartscan Async endpoints that create a
+     * transaction, get its status or results, and update its results, and the
+     * three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+     * endpoint in the API reference returns 403 for a valet key, and so does
+     * any call after the key expires. Keys can't be revoked.
+     * Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+     * this endpoint with a valet key or the demo token.
+     * </pre>
      */
     public ai.visma.ssn.access.v1.ValetKeyResponse generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -203,6 +285,9 @@ public final class AccessGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Access.
+   * <pre>
+   * Issue valet keys: short-lived tokens for web and mobile apps.
+   * </pre>
    */
   public static final class AccessFutureStub
       extends io.grpc.stub.AbstractFutureStub<AccessFutureStub> {
@@ -218,6 +303,22 @@ public final class AccessGrpc {
     }
 
     /**
+     * <pre>
+     * Create a valet key, a short-lived token for a web or mobile app.
+     * Call this from your backend with your project token, and give the
+     * returned token to the app. The app sends it as
+     * `Authorization: Bearer &lt;token&gt;`, so your project token never has to be
+     * in an untrusted client. The key expires 8 hours after it's issued,
+     * unless you set `exp`.
+     * A valet key can call POST /v1/document:annotate and
+     * POST /v1/feedback:create, the Smartscan Async endpoints that create a
+     * transaction, get its status or results, and update its results, and the
+     * three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+     * endpoint in the API reference returns 403 for a valet key, and so does
+     * any call after the key expires. Keys can't be revoked.
+     * Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+     * this endpoint with a valet key or the demo token.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.access.v1.ValetKeyResponse> generateValetKey(
         ai.visma.ssn.access.v1.ValetKeyRequest request) {

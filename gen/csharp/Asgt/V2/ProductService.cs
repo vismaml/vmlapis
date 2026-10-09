@@ -130,6 +130,10 @@ namespace Asgt.V2 {
 
   }
   #region Enums
+  /// <summary>
+  /// The product types a text can be classified into. UNDEFINED isn't a product type: it's the
+  /// empty value.
+  /// </summary>
   public enum ProductType {
     [pbr::OriginalName("UNDEFINED")] Undefined = 0,
     [pbr::OriginalName("ACCOUNTING_AUDIT")] AccountingAudit = 1,
@@ -208,6 +212,10 @@ namespace Asgt.V2 {
     [pbr::OriginalName("WEBSITE")] Website = 74,
   }
 
+  /// <summary>
+  /// Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the
+  /// model gave no level.
+  /// </summary>
   public enum ConfidenceLevel {
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
     [pbr::OriginalName("VERY_LOW")] VeryLow = 1,
@@ -220,6 +228,9 @@ namespace Asgt.V2 {
   #endregion
 
   #region Messages
+  /// <summary>
+  /// Request body for POST /v2/models/product-types:batchSuggest.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeBatchSuggestRequest : pb::IMessage<ProductTypeBatchSuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -271,7 +282,8 @@ namespace Asgt.V2 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> texts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Text descriptions to classify into product types.
+    /// Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+    /// texts, none of them empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -410,6 +422,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Product type suggestions for a batch of texts.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeBatchSuggestResponse : pb::IMessage<ProductTypeBatchSuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -460,6 +475,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeSuggestion> _repeated_suggestions_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.ProductTypeSuggestion.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> suggestions_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion>();
+    /// <summary>
+    /// One suggestion per text, in the same order as the request.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> Suggestions {
@@ -597,6 +615,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Response of an internal method that isn't available over HTTP.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InternalProductTypeBatchSuggestResponse : pb::IMessage<InternalProductTypeBatchSuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -648,6 +669,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeSuggestion> _repeated_suggestions_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.ProductTypeSuggestion.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> suggestions_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion>();
+    /// <summary>
+    /// One suggestion per text, in the same order as the request.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> Suggestions {
@@ -659,6 +683,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeLogits> _repeated_logits_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.V2.ProductTypeLogits.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeLogits> logits_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeLogits>();
+    /// <summary>
+    /// The model's raw scores for each text, in the same order.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeLogits> Logits {
@@ -810,6 +837,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// The model's raw scores for one text, one per class. Only returned by an internal method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeLogits : pb::IMessage<ProductTypeLogits>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -860,6 +890,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<float> _repeated_values_codec
         = pb::FieldCodec.ForFloat(10);
     private readonly pbc::RepeatedField<float> values_ = new pbc::RepeatedField<float>();
+    /// <summary>
+    /// The scores.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<float> Values {
@@ -999,6 +1032,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Product type candidates for one text.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeSuggestion : pb::IMessage<ProductTypeSuggestion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1049,6 +1085,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeCandidate> _repeated_candidates_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.V2.ProductTypeCandidate.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate> candidates_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate>();
+    /// <summary>
+    /// The candidates, ranked by the model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate> Candidates {
@@ -1186,6 +1225,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// A product type candidate for a text.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeCandidate : pb::IMessage<ProductTypeCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1237,6 +1279,10 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
     private global::Asgt.V2.ProductType type_ = global::Asgt.V2.ProductType.Undefined;
+    /// <summary>
+    /// The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+    /// label that has no product type.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.ProductType Type {
@@ -1249,6 +1295,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 2;
     private string label_ = "";
+    /// <summary>
+    /// The product type's name in words, such as "Accounting software".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
@@ -1261,6 +1310,10 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "confidence" field.</summary>
     public const int ConfidenceFieldNumber = 3;
     private float confidence_;
+    /// <summary>
+    /// The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+    /// trust it.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
@@ -1495,6 +1548,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/models/product-types:feedback.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductTypeFeedbackRequest : pb::IMessage<ProductTypeFeedbackRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1546,6 +1602,10 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<string> _repeated_texts_codec
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> texts_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The texts, such as invoice lines or bank transaction descriptions. At least one is
+    /// required.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Texts {
@@ -1557,6 +1617,10 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<string> _repeated_trueCategories_codec
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> trueCategories_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The correct product type for each text, in the same order as texts, as a ProductType name
+    /// such as ACCOUNTING_SOFTWARE.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> TrueCategories {

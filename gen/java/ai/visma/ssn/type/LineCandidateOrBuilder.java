@@ -11,8 +11,7 @@ public interface LineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Text of the line without the amount
-   * Example: "3 Dark and Stormy"
+   * The text of the line without the amount, for example "3 Dark and Stormy".
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -21,8 +20,7 @@ public interface LineCandidateOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Text of the line without the amount
-   * Example: "3 Dark and Stormy"
+   * The text of the line without the amount, for example "3 Dark and Stormy".
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -33,8 +31,7 @@ public interface LineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Normalized amount (price) of the line
-   * Example: 300.0
+   * The amount (price) of the line, normalized, for example 300.0.
    * </pre>
    *
    * <code>double amount = 2 [json_name = "amount"];</code>
@@ -44,8 +41,7 @@ public interface LineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the line was found.
-   * page_ref start from 1.
+   * The page the line was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>

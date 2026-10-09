@@ -43,6 +43,10 @@ namespace Ssn.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// Check-in and check-out dates on a document related to accommodation, returned for the
+  /// HOTEL_DATES feature.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HotelDates : pb::IMessage<HotelDates>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -95,9 +99,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> checkInDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// checkInDate
-    /// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-    /// Example: "2019-12-31"
+    /// Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,9 +113,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> checkOutDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// checkOutDate
-    /// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-    /// Example: "2019-12-31"
+    /// Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

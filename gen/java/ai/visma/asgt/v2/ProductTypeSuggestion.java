@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Product type candidates for one text.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ProductTypeSuggestion}
  */
 public final class ProductTypeSuggestion extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> candidates_;
   /**
+   * <pre>
+   * The candidates, ranked by the model.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return candidates_;
   }
   /**
+   * <pre>
+   * The candidates, ranked by the model.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return candidates_;
   }
   /**
+   * <pre>
+   * The candidates, ranked by the model.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
@@ -69,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return candidates_.size();
   }
   /**
+   * <pre>
+   * The candidates, ranked by the model.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
@@ -76,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return candidates_.get(index);
   }
   /**
+   * <pre>
+   * The candidates, ranked by the model.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
@@ -244,6 +268,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Product type candidates for one text.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ProductTypeSuggestion}
    */
   public static final class Builder extends
@@ -439,6 +467,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.ProductTypeCandidate, ai.visma.asgt.v2.ProductTypeCandidate.Builder, ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> candidatesBuilder_;
 
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate> getCandidatesList() {
@@ -449,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public int getCandidatesCount() {
@@ -459,6 +495,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate getCandidates(int index) {
@@ -469,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder setCandidates(
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder setCandidates(
@@ -500,6 +548,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(ai.visma.asgt.v2.ProductTypeCandidate value) {
@@ -516,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
@@ -533,6 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
@@ -547,6 +607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addCandidates(
@@ -561,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder addAllCandidates(
@@ -576,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder clearCandidates() {
@@ -589,6 +661,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public Builder removeCandidates(int index) {
@@ -602,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder getCandidatesBuilder(
@@ -609,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return getCandidatesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidateOrBuilder getCandidatesOrBuilder(
@@ -619,6 +703,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.ProductTypeCandidateOrBuilder> 
@@ -630,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder addCandidatesBuilder() {
@@ -637,6 +729,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeCandidate.Builder addCandidatesBuilder(
@@ -645,6 +741,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.ProductTypeCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The candidates, ranked by the model.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeCandidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeCandidate.Builder> 

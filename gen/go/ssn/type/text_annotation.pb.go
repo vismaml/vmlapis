@@ -48,7 +48,7 @@ const (
 	// Line-wrapping break.
 	TextAnnotation_DetectedBreak_EOL_SURE_SPACE TextAnnotation_DetectedBreak_BreakType = 3
 	// End-line hyphen that is not present in text; does not co-occur with
-	// `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+	// `SPACE` or `LINE_BREAK`.
 	TextAnnotation_DetectedBreak_HYPHEN TextAnnotation_DetectedBreak_BreakType = 4
 	// Line break that ends a paragraph.
 	TextAnnotation_DetectedBreak_LINE_BREAK TextAnnotation_DetectedBreak_BreakType = 5
@@ -166,22 +166,15 @@ func (Block_BlockType) EnumDescriptor() ([]byte, []int) {
 	return file_ssn_type_text_annotation_proto_rawDescGZIP(), []int{2, 0}
 }
 
-// TextAnnotation contains a structured representation of OCR extracted text.
-// The hierarchy of an OCR extracted text structure is like this:
-//
-//	TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-//
-// Each structural component, starting from Page, may further have their own
-// properties. Properties describe detected languages, breaks etc.. Please refer
-// to the
-// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
-// message definition below for more detail.
+// The OCR output for a document: its text, and its structure from pages down to single
+// symbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page
+// down can have properties, such as the detected languages and breaks.
 type TextAnnotation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// List of pages detected by OCR.
+	// The pages, in order.
 	Pages []*Page `protobuf:"bytes,1,rep,name=pages,proto3" json:"pages,omitempty"`
 	// UTF-8 text detected on the pages.
 	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
@@ -241,11 +234,9 @@ type Page struct {
 
 	// Additional information detected on the page.
 	Property *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
-	// Page width. For PDFs the unit is points. For images (including
-	// TIFFs) the unit is pixels.
+	// The width of the page.
 	Width int32 `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`
-	// Page height. For PDFs the unit is points. For images (including
-	// TIFFs) the unit is pixels.
+	// The height of the page.
 	Height int32 `protobuf:"varint,3,opt,name=height,proto3" json:"height,omitempty"`
 	// List of blocks of text, images etc on this page.
 	Blocks []*Block `protobuf:"bytes,4,rep,name=blocks,proto3" json:"blocks,omitempty"`
@@ -327,29 +318,9 @@ type Block struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Additional information detected for the block.
-	Property *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
-	// The bounding box for the block.
-	// The vertices are in the order of top-left, top-right, bottom-right,
-	// bottom-left. When a rotation of the bounding box is detected the rotation
-	// is represented as around the top-left corner as defined when the text is
-	// read in the 'natural' orientation.
-	// For example:
-	//
-	// * when the text is horizontal it might look like:
-	//
-	//	0----1
-	//	|    |
-	//	3----2
-	//
-	// * when it's rotated 180 degrees around the top-left corner it becomes:
-	//
-	//	      2----3
-	//	      |    |
-	//	      1----0
-	//
-	//	and the vertex order will still be (0, 1, 2, 3).
-	BoundingBox *BoundingPoly `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
-	// List of paragraphs in this block (if this blocks is of type text).
+	Property    *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
+	BoundingBox *BoundingPoly                `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	// The paragraphs in the block, if it's a text block.
 	Paragraphs []*Paragraph `protobuf:"bytes,3,rep,name=paragraphs,proto3" json:"paragraphs,omitempty"`
 	// Detected block type (text, image etc) for this block.
 	BlockType Block_BlockType `protobuf:"varint,4,opt,name=block_type,json=blockType,proto3,enum=ssn.type.Block_BlockType" json:"block_type,omitempty"`
@@ -431,23 +402,8 @@ type Paragraph struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Additional information detected for the paragraph.
-	Property *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
-	// The bounding box for the paragraph.
-	// The vertices are in the order of top-left, top-right, bottom-right,
-	// bottom-left. When a rotation of the bounding box is detected the rotation
-	// is represented as around the top-left corner as defined when the text is
-	// read in the 'natural' orientation.
-	// For example:
-	//   - when the text is horizontal it might look like:
-	//     0----1
-	//     |    |
-	//     3----2
-	//   - when it's rotated 180 degrees around the top-left corner it becomes:
-	//     2----3
-	//     |    |
-	//     1----0
-	//     and the vertex order will still be (0, 1, 2, 3).
-	BoundingBox *BoundingPoly `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	Property    *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
+	BoundingBox *BoundingPoly                `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
 	// List of words in this paragraph.
 	Words []*Word `protobuf:"bytes,3,rep,name=words,proto3" json:"words,omitempty"`
 	// Confidence of the OCR results for the paragraph. Range [0, 1].
@@ -521,23 +477,8 @@ type Word struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Additional information detected for the word.
-	Property *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
-	// The bounding box for the word.
-	// The vertices are in the order of top-left, top-right, bottom-right,
-	// bottom-left. When a rotation of the bounding box is detected the rotation
-	// is represented as around the top-left corner as defined when the text is
-	// read in the 'natural' orientation.
-	// For example:
-	//   - when the text is horizontal it might look like:
-	//     0----1
-	//     |    |
-	//     3----2
-	//   - when it's rotated 180 degrees around the top-left corner it becomes:
-	//     2----3
-	//     |    |
-	//     1----0
-	//     and the vertex order will still be (0, 1, 2, 3).
-	BoundingBox *BoundingPoly `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	Property    *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
+	BoundingBox *BoundingPoly                `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
 	// List of symbols in the word.
 	// The order of the symbols follows the natural reading order.
 	Symbols []*Symbol `protobuf:"bytes,3,rep,name=symbols,proto3" json:"symbols,omitempty"`
@@ -612,23 +553,8 @@ type Symbol struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Additional information detected for the symbol.
-	Property *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
-	// The bounding box for the symbol.
-	// The vertices are in the order of top-left, top-right, bottom-right,
-	// bottom-left. When a rotation of the bounding box is detected the rotation
-	// is represented as around the top-left corner as defined when the text is
-	// read in the 'natural' orientation.
-	// For example:
-	//   - when the text is horizontal it might look like:
-	//     0----1
-	//     |    |
-	//     3----2
-	//   - when it's rotated 180 degrees around the top-left corner it becomes:
-	//     2----3
-	//     |    |
-	//     1----0
-	//     and the vertice order will still be (0, 1, 2, 3).
-	BoundingBox *BoundingPoly `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	Property    *TextAnnotation_TextProperty `protobuf:"bytes,1,opt,name=property,proto3" json:"property,omitempty"`
+	BoundingBox *BoundingPoly                `protobuf:"bytes,2,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
 	// The actual UTF-8 representation of the symbol.
 	Text string `protobuf:"bytes,3,opt,name=text,proto3" json:"text,omitempty"`
 	// Confidence of the OCR results for the symbol. Range [0, 1].

@@ -6,6 +6,10 @@
 package ai.visma.ssn.asyncton.v1;
 
 /**
+ * <pre>
+ * The status of a transaction.
+ * </pre>
+ *
  * Protobuf type {@code ssn.asyncton.v1.GetTransactionStatusResponse}
  */
 public final class GetTransactionStatusResponse extends
@@ -50,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -90,8 +102,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object status_ = "";
   /**
    * <pre>
-   * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-   * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+   * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+   * features failed while others succeeded, and the results hold the ones that succeeded.
+   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -112,8 +126,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-   * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+   * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+   * features failed while others succeeded, and the results hold the ones that succeeded.
+   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -139,7 +155,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object errorMessage_ = "";
   /**
    * <pre>
-   * Only populated when status == "FAILED" or status == "PARTIAL"
+   * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+   * feature has failed, so always when the status is PARTIAL or FAILED.
    * </pre>
    *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -160,7 +177,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Only populated when status == "FAILED" or status == "PARTIAL"
+   * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+   * feature has failed, so always when the status is PARTIAL or FAILED.
    * </pre>
    *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -186,7 +204,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customId_ = "";
   /**
    * <pre>
-   * maybe a timestamp on different status would be nice here
+   * The custom ID, if one was set when the transaction was created. Left out when
+   * errorMessage is set.
    * </pre>
    *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -207,7 +226,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * maybe a timestamp on different status would be nice here
+   * The custom ID, if one was set when the transaction was created. Left out when
+   * errorMessage is set.
    * </pre>
    *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -415,6 +435,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The status of a transaction.
+   * </pre>
+   *
    * Protobuf type {@code ssn.asyncton.v1.GetTransactionStatusResponse}
    */
   public static final class Builder extends
@@ -596,6 +620,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -612,6 +640,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -629,6 +661,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -642,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -652,6 +692,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -669,8 +713,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object status_ = "";
     /**
      * <pre>
-     * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-     * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+     * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+     * features failed while others succeeded, and the results hold the ones that succeeded.
+     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -690,8 +736,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-     * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+     * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+     * features failed while others succeeded, and the results hold the ones that succeeded.
+     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -712,8 +760,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-     * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+     * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+     * features failed while others succeeded, and the results hold the ones that succeeded.
+     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -730,8 +780,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-     * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+     * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+     * features failed while others succeeded, and the results hold the ones that succeeded.
+     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -745,8 +797,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-     * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+     * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+     * features failed while others succeeded, and the results hold the ones that succeeded.
+     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -766,7 +820,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object errorMessage_ = "";
     /**
      * <pre>
-     * Only populated when status == "FAILED" or status == "PARTIAL"
+     * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+     * feature has failed, so always when the status is PARTIAL or FAILED.
      * </pre>
      *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -786,7 +841,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Only populated when status == "FAILED" or status == "PARTIAL"
+     * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+     * feature has failed, so always when the status is PARTIAL or FAILED.
      * </pre>
      *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -807,7 +863,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Only populated when status == "FAILED" or status == "PARTIAL"
+     * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+     * feature has failed, so always when the status is PARTIAL or FAILED.
      * </pre>
      *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -824,7 +881,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Only populated when status == "FAILED" or status == "PARTIAL"
+     * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+     * feature has failed, so always when the status is PARTIAL or FAILED.
      * </pre>
      *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -838,7 +896,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Only populated when status == "FAILED" or status == "PARTIAL"
+     * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+     * feature has failed, so always when the status is PARTIAL or FAILED.
      * </pre>
      *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -858,7 +917,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customId_ = "";
     /**
      * <pre>
-     * maybe a timestamp on different status would be nice here
+     * The custom ID, if one was set when the transaction was created. Left out when
+     * errorMessage is set.
      * </pre>
      *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -878,7 +938,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * maybe a timestamp on different status would be nice here
+     * The custom ID, if one was set when the transaction was created. Left out when
+     * errorMessage is set.
      * </pre>
      *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -899,7 +960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * maybe a timestamp on different status would be nice here
+     * The custom ID, if one was set when the transaction was created. Left out when
+     * errorMessage is set.
      * </pre>
      *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -916,7 +978,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * maybe a timestamp on different status would be nice here
+     * The custom ID, if one was set when the transaction was created. Left out when
+     * errorMessage is set.
      * </pre>
      *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -930,7 +993,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * maybe a timestamp on different status would be nice here
+     * The custom ID, if one was set when the transaction was created. Left out when
+     * errorMessage is set.
      * </pre>
      *
      * <code>string custom_id = 4 [json_name = "customId"];</code>

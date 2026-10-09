@@ -8,6 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Ssn.Access.V1 {
+  /// <summary>
+  /// Issue valet keys: short-lived tokens for web and mobile apps.
+  /// </summary>
   public static partial class Access
   {
     static readonly string __ServiceName = "ssn.access.v1.Access";
@@ -68,6 +71,28 @@ namespace Ssn.Access.V1 {
     [grpc::BindServiceMethod(typeof(Access), "BindService")]
     public abstract partial class AccessBase
     {
+      /// <summary>
+      /// Create a valet key, a short-lived token for a web or mobile app.
+      ///
+      /// Call this from your backend with your project token, and give the
+      /// returned token to the app. The app sends it as
+      /// `Authorization: Bearer &lt;token>`, so your project token never has to be
+      /// in an untrusted client. The key expires 8 hours after it's issued,
+      /// unless you set `exp`.
+      ///
+      /// A valet key can call POST /v1/document:annotate and
+      /// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+      /// transaction, get its status or results, and update its results, and the
+      /// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+      /// endpoint in the API reference returns 403 for a valet key, and so does
+      /// any call after the key expires. Keys can't be revoked.
+      ///
+      /// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+      /// this endpoint with a valet key or the demo token.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Access.V1.ValetKeyResponse> GenerateValetKey(global::Ssn.Access.V1.ValetKeyRequest request, grpc::ServerCallContext context)
       {
@@ -103,21 +128,113 @@ namespace Ssn.Access.V1 {
       {
       }
 
+      /// <summary>
+      /// Create a valet key, a short-lived token for a web or mobile app.
+      ///
+      /// Call this from your backend with your project token, and give the
+      /// returned token to the app. The app sends it as
+      /// `Authorization: Bearer &lt;token>`, so your project token never has to be
+      /// in an untrusted client. The key expires 8 hours after it's issued,
+      /// unless you set `exp`.
+      ///
+      /// A valet key can call POST /v1/document:annotate and
+      /// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+      /// transaction, get its status or results, and update its results, and the
+      /// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+      /// endpoint in the API reference returns 403 for a valet key, and so does
+      /// any call after the key expires. Keys can't be revoked.
+      ///
+      /// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+      /// this endpoint with a valet key or the demo token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Access.V1.ValetKeyResponse GenerateValetKey(global::Ssn.Access.V1.ValetKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateValetKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Create a valet key, a short-lived token for a web or mobile app.
+      ///
+      /// Call this from your backend with your project token, and give the
+      /// returned token to the app. The app sends it as
+      /// `Authorization: Bearer &lt;token>`, so your project token never has to be
+      /// in an untrusted client. The key expires 8 hours after it's issued,
+      /// unless you set `exp`.
+      ///
+      /// A valet key can call POST /v1/document:annotate and
+      /// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+      /// transaction, get its status or results, and update its results, and the
+      /// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+      /// endpoint in the API reference returns 403 for a valet key, and so does
+      /// any call after the key expires. Keys can't be revoked.
+      ///
+      /// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+      /// this endpoint with a valet key or the demo token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Access.V1.ValetKeyResponse GenerateValetKey(global::Ssn.Access.V1.ValetKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateValetKey, null, options, request);
       }
+      /// <summary>
+      /// Create a valet key, a short-lived token for a web or mobile app.
+      ///
+      /// Call this from your backend with your project token, and give the
+      /// returned token to the app. The app sends it as
+      /// `Authorization: Bearer &lt;token>`, so your project token never has to be
+      /// in an untrusted client. The key expires 8 hours after it's issued,
+      /// unless you set `exp`.
+      ///
+      /// A valet key can call POST /v1/document:annotate and
+      /// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+      /// transaction, get its status or results, and update its results, and the
+      /// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+      /// endpoint in the API reference returns 403 for a valet key, and so does
+      /// any call after the key expires. Keys can't be revoked.
+      ///
+      /// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+      /// this endpoint with a valet key or the demo token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Access.V1.ValetKeyResponse> GenerateValetKeyAsync(global::Ssn.Access.V1.ValetKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateValetKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Create a valet key, a short-lived token for a web or mobile app.
+      ///
+      /// Call this from your backend with your project token, and give the
+      /// returned token to the app. The app sends it as
+      /// `Authorization: Bearer &lt;token>`, so your project token never has to be
+      /// in an untrusted client. The key expires 8 hours after it's issued,
+      /// unless you set `exp`.
+      ///
+      /// A valet key can call POST /v1/document:annotate and
+      /// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+      /// transaction, get its status or results, and update its results, and the
+      /// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+      /// endpoint in the API reference returns 403 for a valet key, and so does
+      /// any call after the key expires. Keys can't be revoked.
+      ///
+      /// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+      /// this endpoint with a valet key or the demo token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Access.V1.ValetKeyResponse> GenerateValetKeyAsync(global::Ssn.Access.V1.ValetKeyRequest request, grpc::CallOptions options)
       {

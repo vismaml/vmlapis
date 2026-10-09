@@ -7,8 +7,9 @@ from vml_proto.ssn.asyncton.v1 import asyncton_pb2 as ssn_dot_asyncton_dot_v1_do
 
 
 class TransactionServiceStub(object):
-    """api.{{env}}.ssn.visma.ai
-    transaction = example (receipt, document, scanned invoice text, etc.)
+    """Process documents asynchronously. Create a transaction for a document, poll its status,
+    then fetch its results. You can also send corrected results as feedback, and delete
+    transactions by transaction ID, custom ID or tag.
     """
 
     def __init__(self, channel):
@@ -50,42 +51,106 @@ class TransactionServiceStub(object):
 
 
 class TransactionServiceServicer(object):
-    """api.{{env}}.ssn.visma.ai
-    transaction = example (receipt, document, scanned invoice text, etc.)
+    """Process documents asynchronously. Create a transaction for a document, poll its status,
+    then fetch its results. You can also send corrected results as feedback, and delete
+    transactions by transaction ID, custom ID or tag.
     """
 
     def CreateTransaction(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Create a transaction.
+
+        Submits a document for processing and returns right away with the transaction ID, plus
+        your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+        DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+
+        Returns 400 when the document or the features are missing, when a feature name is
+        unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+        custom ID is already used in your project.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTransactionResults(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Get the results of a transaction.
+
+        Returns the extracted data once processing has finished. Refer to the transaction by
+        its ID in the path, or call GET /v1/transactions/results with the customId query
+        parameter.
+
+        An existing transaction always returns 200, whatever its status. While it's CREATED or
+        RUNNING, the response holds only id and customId. When it FAILED, the response holds
+        errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+        of the features that succeeded, and errorMessage.
+
+        The candidates of field features are filtered. By default you get at most one candidate
+        per feature, and only at confidence level HIGH or above. Set minConfidence and
+        maxResults to get more.
+
+        Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+        transaction ID nor a custom ID is given.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTransactionStatus(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Get the status of a transaction.
+
+        Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+        and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+        its ID in the path, or call GET /v1/transactions/status with the customId query
+        parameter.
+
+        Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+        transaction ID nor a custom ID is given.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteTransaction(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Delete a transaction.
+
+        Deletes the transaction with its document, results and feedback. Refer to the
+        transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+        query parameter.
+
+        Deletion runs in the background. A 200 response means the request was accepted, and the
+        data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+
+        Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+        transaction ID nor a custom ID is given.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteTag(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Delete all transactions with a tag.
+
+        Deletes every transaction in your project that was created with this tag, with its
+        document, results and feedback. Deletion runs in the background, as with
+        DELETE /v1/transactions/{id}.
+
+        Returns 404 when no transaction in your project has the tag.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateTransactionResults(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Send corrected results for a transaction.
+
+        [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+        so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+
+        Saves your corrected annotations as feedback, for improving the models. Send them once
+        the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+        (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+
+        Returns 404 when the transaction doesn't exist in your project.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -132,8 +197,9 @@ def add_TransactionServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class TransactionService(object):
-    """api.{{env}}.ssn.visma.ai
-    transaction = example (receipt, document, scanned invoice text, etc.)
+    """Process documents asynchronously. Create a transaction for a document, poll its status,
+    then fetch its results. You can also send corrected results as feedback, and delete
+    transactions by transaction ID, custom ID or tag.
     """
 
     @staticmethod

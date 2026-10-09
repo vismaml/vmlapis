@@ -32,6 +32,8 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 
 var google_type_date_pb = require('../../../google/type/date_pb.js')
 
+var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')
+
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')

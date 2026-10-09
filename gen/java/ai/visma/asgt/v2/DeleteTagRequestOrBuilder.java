@@ -11,7 +11,8 @@ public interface DeleteTagRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+   * or ".", up to 256 bytes, so tags with spaces can't be used here.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -20,7 +21,8 @@ public interface DeleteTagRequestOrBuilder extends
   java.lang.String getTagName();
   /**
    * <pre>
-   * text-no-spaces
+   * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+   * or ".", up to 256 bytes, so tags with spaces can't be used here.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>

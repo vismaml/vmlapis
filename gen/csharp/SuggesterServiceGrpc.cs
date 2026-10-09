@@ -89,7 +89,12 @@ namespace Asgt.V2 {
     public abstract partial class SuggesterServiceBase
     {
       /// <summary>
-      /// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for one input.
+      ///
+      /// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+      /// highest confidence first, each with its confidence level.
+      /// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+      /// sets no data structure or an option has an invalid value.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -101,7 +106,12 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for several inputs.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+      /// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+      /// predictions instead of 404. To get a 404 in that case, use
+      /// POST /v2/datasets/{datasetName}/model:batchSuggest.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -113,8 +123,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-      /// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+      /// Suggest target values for several inputs, or 404 without a model.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+      /// no trained model yet or doesn't exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +167,12 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for one input.
+      ///
+      /// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+      /// highest confidence first, each with its confidence level.
+      /// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+      /// sets no data structure or an option has an invalid value.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -168,7 +185,12 @@ namespace Asgt.V2 {
         return Suggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for one input.
+      ///
+      /// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+      /// highest confidence first, each with its confidence level.
+      /// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+      /// sets no data structure or an option has an invalid value.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -179,7 +201,12 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_Suggest, null, options, request);
       }
       /// <summary>
-      /// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for one input.
+      ///
+      /// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+      /// highest confidence first, each with its confidence level.
+      /// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+      /// sets no data structure or an option has an invalid value.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -192,7 +219,12 @@ namespace Asgt.V2 {
         return SuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest target values for some input using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for one input.
+      ///
+      /// Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+      /// highest confidence first, each with its confidence level.
+      /// Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+      /// sets no data structure or an option has an invalid value.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -203,7 +235,12 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_Suggest, null, options, request);
       }
       /// <summary>
-      /// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for several inputs.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+      /// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+      /// predictions instead of 404. To get a 404 in that case, use
+      /// POST /v2/datasets/{datasetName}/model:batchSuggest.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -216,7 +253,12 @@ namespace Asgt.V2 {
         return BatchSuggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for several inputs.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+      /// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+      /// predictions instead of 404. To get a 404 in that case, use
+      /// POST /v2/datasets/{datasetName}/model:batchSuggest.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -227,7 +269,12 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchSuggest, null, options, request);
       }
       /// <summary>
-      /// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for several inputs.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+      /// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+      /// predictions instead of 404. To get a 404 in that case, use
+      /// POST /v2/datasets/{datasetName}/model:batchSuggest.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -240,7 +287,12 @@ namespace Asgt.V2 {
         return BatchSuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+      /// Suggest target values for several inputs.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+      /// same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+      /// predictions instead of 404. To get a 404 in that case, use
+      /// POST /v2/datasets/{datasetName}/model:batchSuggest.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -251,8 +303,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchSuggest, null, options, request);
       }
       /// <summary>
-      /// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-      /// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+      /// Suggest target values for several inputs, or 404 without a model.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+      /// no trained model yet or doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -265,8 +319,10 @@ namespace Asgt.V2 {
         return ModelBatchSuggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-      /// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+      /// Suggest target values for several inputs, or 404 without a model.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+      /// no trained model yet or doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -277,8 +333,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ModelBatchSuggest, null, options, request);
       }
       /// <summary>
-      /// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-      /// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+      /// Suggest target values for several inputs, or 404 without a model.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+      /// no trained model yet or doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -291,8 +349,10 @@ namespace Asgt.V2 {
         return ModelBatchSuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest target values for multiple inputs using the most recently trained model in a dataset.
-      /// Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+      /// Suggest target values for several inputs, or 404 without a model.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+      /// no trained model yet or doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

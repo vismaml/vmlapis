@@ -7,7 +7,7 @@ package ai.visma.ssn.asyncton.v1;
 
 /**
  * <pre>
- * --- delete: "/v1/transactions/{id}" ---
+ * Identifies the transaction to delete.
  * </pre>
  *
  * Protobuf type {@code ssn.asyncton.v1.DeleteTransactionRequest}
@@ -52,6 +52,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -69,6 +74,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -91,6 +101,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to DELETE /v1/transactions.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -108,6 +123,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to DELETE /v1/transactions.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -294,7 +314,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- delete: "/v1/transactions/{id}" ---
+   * Identifies the transaction to delete.
    * </pre>
    *
    * Protobuf type {@code ssn.asyncton.v1.DeleteTransactionRequest}
@@ -450,6 +470,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -466,6 +491,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -483,6 +513,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -496,6 +531,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -506,6 +546,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -522,6 +567,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to DELETE /v1/transactions.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -538,6 +588,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to DELETE /v1/transactions.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -555,6 +610,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to DELETE /v1/transactions.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -568,6 +628,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to DELETE /v1/transactions.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -578,6 +643,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to DELETE /v1/transactions.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.

@@ -6,7 +6,8 @@ from vml_proto.ssn.access.v1 import access_pb2 as ssn_dot_access_dot_v1_dot_acce
 
 
 class AccessStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Issue valet keys: short-lived tokens for web and mobile apps.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -22,10 +23,28 @@ class AccessStub(object):
 
 
 class AccessServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Issue valet keys: short-lived tokens for web and mobile apps.
+    """
 
     def GenerateValetKey(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Create a valet key, a short-lived token for a web or mobile app.
+
+        Call this from your backend with your project token, and give the
+        returned token to the app. The app sends it as
+        `Authorization: Bearer <token>`, so your project token never has to be
+        in an untrusted client. The key expires 8 hours after it's issued,
+        unless you set `exp`.
+
+        A valet key can call POST /v1/document:annotate and
+        POST /v1/feedback:create, the Smartscan Async endpoints that create a
+        transaction, get its status or results, and update its results, and the
+        three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+        endpoint in the API reference returns 403 for a valet key, and so does
+        any call after the key expires. Keys can't be revoked.
+
+        Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+        this endpoint with a valet key or the demo token.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -47,7 +66,8 @@ def add_AccessServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Access(object):
-    """Missing associated documentation comment in .proto file."""
+    """Issue valet keys: short-lived tokens for web and mobile apps.
+    """
 
     @staticmethod
     def GenerateValetKey(request,

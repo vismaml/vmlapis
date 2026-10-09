@@ -26,21 +26,30 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// --- post: "/v1/transactions" ---
+// Request body for creating a transaction.
 type CreateTransactionRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// we could have an ID here, in case they wanted to provide their own
+	// The document to process. Send the file Base64-encoded in content, or a URL in
+	// source.httpUri for the service to download. When both are set, content is used.
 	Document *v1.Document `protobuf:"bytes,1,opt,name=document,proto3" json:"document,omitempty"`
-	// Let's enforce the tags
+	// Labels for the transaction. To delete every transaction with a tag, call
+	// DELETE /v1/tags/{tagName}.
 	Tags []string `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	// e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
-	Features []string   `protobuf:"bytes,3,rep,name=features,proto3" json:"features,omitempty"`
+	// The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+	// case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+	// An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+	// on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
+	Features []string `protobuf:"bytes,3,rep,name=features,proto3" json:"features,omitempty"`
+	// Your own ID for the transaction, to get its status and results, or delete it, without
+	// keeping the transaction ID. It must be unique in your project: reusing one returns
+	// 409 Conflict until that transaction has been deleted.
 	CustomId string     `protobuf:"bytes,4,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 	Tier     _type.Tier `protobuf:"varint,5,opt,name=tier,proto3,enum=ssn.type.Tier" json:"tier,omitempty"`
-	// Questions to ask about the document
+	// Questions to ask about the document. The answers come back in the QA annotation, in
+	// answerCandidates. Setting questions turns on the QA feature.
 	Questions []string `protobuf:"bytes,6,rep,name=questions,proto3" json:"questions,omitempty"`
 }
 
@@ -118,12 +127,16 @@ func (x *CreateTransactionRequest) GetQuestions() []string {
 	return nil
 }
 
+// Response to creating a transaction.
 type CreateTransactionResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The transaction ID. Use it to get the status and results, to send feedback and to
+	// delete the transaction.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The custom ID from the request, if you set one.
 	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
@@ -173,18 +186,25 @@ func (x *CreateTransactionResponse) GetCustomId() string {
 	return ""
 }
 
-// --- get: "/v1/transactions/{id}/results" ---
+// Identifies the transaction whose results to get, and filters the candidates.
 type GetTransactionResultsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The transaction ID, as returned when the transaction was created. Takes precedence over
+	// customId when both are set.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The custom ID you set when creating the transaction. Used only when no transaction ID
+	// is given, so send it to GET /v1/transactions/results.
 	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
-	// GetTransactionResultsRequest message can potentially have a list of features to filter the response
-	// e.g. repeated string features like in CreateTransactionRequest
+	// The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+	// out, and so is a field feature with no candidate left. Applies to field features such as
+	// TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+	// codes or text.
 	MinConfidence _type.Confidence_Level `protobuf:"varint,3,opt,name=min_confidence,json=minConfidence,proto3,enum=ssn.type.Confidence_Level" json:"min_confidence,omitempty"`
-	MaxResults    int32                  `protobuf:"varint,4,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
+	// The maximum number of candidates per field feature. Defaults to 1.
+	MaxResults int32 `protobuf:"varint,4,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
 }
 
 func (x *GetTransactionResultsRequest) Reset() {
@@ -247,17 +267,24 @@ func (x *GetTransactionResultsRequest) GetMaxResults() int32 {
 	return 0
 }
 
+// The results of a transaction.
 type GetTransactionResultsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The transaction ID.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	// map: FEATURE NAME --> SSN CANDIDATES
-	// empty when processing is still running
-	Annotations  []*Annotation `protobuf:"bytes,2,rep,name=annotations,proto3" json:"annotations,omitempty"`
-	ErrorMessage string        `protobuf:"bytes,3,opt,name=error_message,json=errorMessage,proto3" json:"error_message,omitempty"`
-	CustomId     string        `protobuf:"bytes,4,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
+	// The results, one entry per feature that produced any. Empty while the transaction is
+	// CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+	// out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+	// purchase lines and the VERIFIED confidence level to candidates.
+	Annotations []*Annotation `protobuf:"bytes,2,rep,name=annotations,proto3" json:"annotations,omitempty"`
+	// Describes a feature that failed, for example "image too large". Set when the transaction
+	// is FAILED or PARTIAL.
+	ErrorMessage string `protobuf:"bytes,3,opt,name=error_message,json=errorMessage,proto3" json:"error_message,omitempty"`
+	// The custom ID, if one was set when the transaction was created.
+	CustomId string `protobuf:"bytes,4,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
 func (x *GetTransactionResultsResponse) Reset() {
@@ -320,25 +347,49 @@ func (x *GetTransactionResultsResponse) GetCustomId() string {
 	return ""
 }
 
+// The results of one feature. Only the fields that belong to the feature are set.
 type Annotation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Feature                   string                            `protobuf:"bytes,1,opt,name=feature,proto3" json:"feature,omitempty"`                                                                        // feature name e.g. "TOTAL_INCL_VAT"
-	Candidates                []*_type.Candidate                `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`                                                                  // ssn candidates
-	PurchaseLineCandidates    []*_type.PurchaseLineCandidate    `protobuf:"bytes,3,rep,name=purchase_line_candidates,json=purchaseLineCandidates,proto3" json:"purchase_line_candidates,omitempty"`          // purchase line candidates (old format)
-	AnswerCandidates          []*_type.AnswerCandidate          `protobuf:"bytes,4,rep,name=answer_candidates,json=answerCandidates,proto3" json:"answer_candidates,omitempty"`                              // qa candidates
-	TextAnnotation            *_type.TextAnnotation             `protobuf:"bytes,5,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`                                    // text annotation
-	PageTexts                 []*_type.PageText                 `protobuf:"bytes,6,rep,name=page_texts,json=pageTexts,proto3" json:"page_texts,omitempty"`                                                   // page texts
-	VatDistributionCandidates []*_type.VatDistributionCandidate `protobuf:"bytes,7,rep,name=vat_distribution_candidates,json=vatDistributionCandidates,proto3" json:"vat_distribution_candidates,omitempty"` // vat distribution candidates (old format)
-	QrCodes                   []*_type.QrCodeData               `protobuf:"bytes,8,rep,name=qr_codes,json=qrCodes,proto3" json:"qr_codes,omitempty"`                                                         // qr codes detected in document
-	SwissQrBills              []*_type.SwissQrBill              `protobuf:"bytes,9,rep,name=swiss_qr_bills,json=swissQrBills,proto3" json:"swiss_qr_bills,omitempty"`                                        // swiss qr bills detected in document
-	// Purchase lines for the document. This is a list where each field is a candidate.
+	// The feature these results belong to, for example TOTAL_INCL_VAT.
+	Feature string `protobuf:"bytes,1,opt,name=feature,proto3" json:"feature,omitempty"`
+	// Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+	// them, at or above minConfidence, without their confidence value. corrected is only set at
+	// the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
+	Candidates []*_type.Candidate `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`
+	// [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+	// single string, the value of the first candidate in purchaseLinesDetails. Kept for
+	// existing integrations. New fields, such as productType, are only added to
+	// purchaseLinesDetails, so use that instead.
+	PurchaseLineCandidates []*_type.PurchaseLineCandidate `protobuf:"bytes,3,rep,name=purchase_line_candidates,json=purchaseLineCandidates,proto3" json:"purchase_line_candidates,omitempty"`
+	// Answers to the questions sent with the transaction, for the QA feature.
+	AnswerCandidates []*_type.AnswerCandidate `protobuf:"bytes,4,rep,name=answer_candidates,json=answerCandidates,proto3" json:"answer_candidates,omitempty"`
+	// The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+	// pages broken down into blocks, paragraphs, words and symbols with their positions.
+	TextAnnotation *_type.TextAnnotation `protobuf:"bytes,5,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
+	// The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
+	PageTexts []*_type.PageText `protobuf:"bytes,6,rep,name=page_texts,json=pageTexts,proto3" json:"page_texts,omitempty"`
+	// [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+	// percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+	// totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+	// integrations, so use vatDistributionDetails instead.
+	VatDistributionCandidates []*_type.VatDistributionCandidate `protobuf:"bytes,7,rep,name=vat_distribution_candidates,json=vatDistributionCandidates,proto3" json:"vat_distribution_candidates,omitempty"`
+	// QR codes found in the document, for the QR_CODES feature.
+	QrCodes []*_type.QrCodeData `protobuf:"bytes,8,rep,name=qr_codes,json=qrCodes,proto3" json:"qr_codes,omitempty"`
+	// Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
+	SwissQrBills []*_type.SwissQrBill `protobuf:"bytes,9,rep,name=swiss_qr_bills,json=swissQrBills,proto3" json:"swiss_qr_bills,omitempty"`
+	// Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+	// each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+	// each line also holds productType suggestions.
 	PurchaseLinesDetails []*_type.PurchaseLine `protobuf:"bytes,12,rep,name=purchase_lines_details,json=purchaseLinesDetails,proto3" json:"purchase_lines_details,omitempty"`
-	// VAT distribution for the document. This is a list where each field is a candidate.
+	// VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+	// a list of candidates with their confidence levels. The candidates come without
+	// confidence values, bounding boxes or model metadata.
 	VatDistributionDetails []*_type.VatDistribution `protobuf:"bytes,13,rep,name=vat_distribution_details,json=vatDistributionDetails,proto3" json:"vat_distribution_details,omitempty"`
-	// Structured address, parsed from the raw address using the geo service.
+	// The address split into street, postal code, city, country and country code, for the
+	// SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
 	StructuredAddress []*_type.StructuredAddress `protobuf:"bytes,14,rep,name=structured_address,json=structuredAddress,proto3" json:"structured_address,omitempty"`
 }
 
@@ -458,13 +509,17 @@ func (x *Annotation) GetStructuredAddress() []*_type.StructuredAddress {
 	return nil
 }
 
-// --- get: "/v1/transactions/{id}/status" ---
+// Identifies the transaction whose status to get.
 type GetTransactionStatusRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The transaction ID, as returned when the transaction was created. Takes precedence over
+	// customId when both are set.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The custom ID you set when creating the transaction. Used only when no transaction ID
+	// is given, so send it to GET /v1/transactions/status.
 	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
@@ -514,18 +569,24 @@ func (x *GetTransactionStatusRequest) GetCustomId() string {
 	return ""
 }
 
+// The status of a transaction.
 type GetTransactionStatusResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The transaction ID.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	// e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-	// "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+	// The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+	// processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+	// features failed while others succeeded, and the results hold the ones that succeeded.
+	// FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
 	Status string `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
-	// Only populated when status == "FAILED" or status == "PARTIAL"
+	// Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+	// feature has failed, so always when the status is PARTIAL or FAILED.
 	ErrorMessage string `protobuf:"bytes,3,opt,name=error_message,json=errorMessage,proto3" json:"error_message,omitempty"`
-	// maybe a timestamp on different status would be nice here
+	// The custom ID, if one was set when the transaction was created. Left out when
+	// errorMessage is set.
 	CustomId string `protobuf:"bytes,4,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
@@ -589,13 +650,17 @@ func (x *GetTransactionStatusResponse) GetCustomId() string {
 	return ""
 }
 
-// --- delete: "/v1/transactions/{id}" ---
+// Identifies the transaction to delete.
 type DeleteTransactionRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The transaction ID, as returned when the transaction was created. Takes precedence over
+	// customId when both are set.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The custom ID you set when creating the transaction. Used only when no transaction ID
+	// is given, so send it to DELETE /v1/transactions.
 	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
@@ -645,13 +710,15 @@ func (x *DeleteTransactionRequest) GetCustomId() string {
 	return ""
 }
 
-// --- delete: "/v1/tags/{tag_name}" ---
+// Identifies the tag whose transactions to delete.
 type DeleteTagRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TagName string `protobuf:"bytes,1,opt,name=tag_name,json=tagName,proto3" json:"tag_name,omitempty"` // text-no-spaces
+	// The tag, as set in tags when the transactions were created. URL-encode it if it holds
+	// characters that aren't allowed in a URL path.
+	TagName string `protobuf:"bytes,1,opt,name=tag_name,json=tagName,proto3" json:"tag_name,omitempty"`
 }
 
 func (x *DeleteTagRequest) Reset() {
@@ -693,14 +760,21 @@ func (x *DeleteTagRequest) GetTagName() string {
 	return ""
 }
 
-// --- put: "/v1/transactions/{id}/results" ---
+// Request for sending corrected results.
 type UpdateTransactionResultsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id          string        `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	CustomId    string        `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
+	// The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+	// PUT /v1/transactions/results ignores the request body, so it returns success but saves
+	// nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
+	// Your corrected results, in the same format as the annotations returned by
+	// GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+	// before.
 	Annotations []*Annotation `protobuf:"bytes,3,rep,name=annotations,proto3" json:"annotations,omitempty"`
 }
 
@@ -757,12 +831,15 @@ func (x *UpdateTransactionResultsRequest) GetAnnotations() []*Annotation {
 	return nil
 }
 
+// Response to sending corrected results.
 type UpdateTransactionResultsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The transaction ID.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The custom ID, if one was set when the transaction was created.
 	CustomId string `protobuf:"bytes,2,opt,name=custom_id,json=customId,proto3" json:"custom_id,omitempty"`
 }
 
@@ -967,7 +1044,7 @@ var file_ssn_asyncton_v1_asyncton_proto_rawDesc = []byte{
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x1b, 0x0a, 0x09, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x5f,
 	0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x49, 0x64, 0x32, 0xca, 0x07, 0x0a, 0x12, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69,
+	0x49, 0x64, 0x32, 0xaa, 0x08, 0x0a, 0x12, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69,
 	0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x87, 0x01, 0x0a, 0x11, 0x43, 0x72,
 	0x65, 0x61, 0x74, 0x65, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12,
 	0x29, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x61, 0x73, 0x79, 0x6e, 0x63, 0x74, 0x6f, 0x6e, 0x2e, 0x76,
@@ -1027,7 +1104,13 @@ var file_ssn_asyncton_v1_asyncton_proto_rawDesc = []byte{
 	0x3e, 0x3a, 0x01, 0x2a, 0x5a, 0x1a, 0x1a, 0x18, 0x2f, 0x76, 0x31, 0x2f, 0x74, 0x72, 0x61, 0x6e,
 	0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73,
 	0x1a, 0x1d, 0x2f, 0x76, 0x31, 0x2f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x73, 0x2f, 0x7b, 0x69, 0x64, 0x7d, 0x2f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x42,
+	0x6e, 0x73, 0x2f, 0x7b, 0x69, 0x64, 0x7d, 0x2f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x1a,
+	0x5e, 0x92, 0x41, 0x5b, 0x12, 0x59, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x20, 0x74, 0x72, 0x61,
+	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2c, 0x20, 0x70, 0x6f, 0x6c, 0x6c, 0x20,
+	0x74, 0x68, 0x65, 0x69, 0x72, 0x20, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x2c, 0x20, 0x66, 0x65,
+	0x74, 0x63, 0x68, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x63, 0x6f, 0x72, 0x72, 0x65, 0x63, 0x74, 0x20,
+	0x74, 0x68, 0x65, 0x69, 0x72, 0x20, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x2c, 0x20, 0x61,
+	0x6e, 0x64, 0x20, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x20, 0x74, 0x68, 0x65, 0x6d, 0x2e, 0x42,
 	0x9c, 0x09, 0x92, 0x41, 0xd0, 0x07, 0x12, 0xc0, 0x06, 0x0a, 0x0f, 0x53, 0x6d, 0x61, 0x72, 0x74,
 	0x73, 0x63, 0x61, 0x6e, 0x20, 0x41, 0x73, 0x79, 0x6e, 0x63, 0x12, 0xa8, 0x06, 0x53, 0x6d, 0x61,
 	0x72, 0x74, 0x73, 0x63, 0x61, 0x6e, 0x20, 0x41, 0x73, 0x79, 0x6e, 0x63, 0x20, 0x6c, 0x65, 0x74,

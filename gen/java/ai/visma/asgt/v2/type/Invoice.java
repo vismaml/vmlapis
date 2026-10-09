@@ -7,7 +7,7 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * Used in scanned-invoice requests.
+ * A scanned invoice or receipt, as text. Use it for scanned-invoice datasets.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.Invoice}
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * Invoice text from the SmartScan product.
+   * Text of the document, such as its OCR text or other text you have on record.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Invoice text from the SmartScan product.
+   * Text of the document, such as its OCR text or other text you have on record.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Used in scanned-invoice requests.
+   * A scanned invoice or receipt, as text. Use it for scanned-invoice datasets.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.Invoice}
@@ -395,7 +395,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * Invoice text from the SmartScan product.
+     * Text of the document, such as its OCR text or other text you have on record.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice text from the SmartScan product.
+     * Text of the document, such as its OCR text or other text you have on record.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice text from the SmartScan product.
+     * Text of the document, such as its OCR text or other text you have on record.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice text from the SmartScan product.
+     * Text of the document, such as its OCR text or other text you have on record.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Invoice text from the SmartScan product.
+     * Text of the document, such as its OCR text or other text you have on record.
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>

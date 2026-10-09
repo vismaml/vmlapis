@@ -8,11 +8,11 @@
   "tags": [
     {
       "name": "SuggesterService",
-      "description": "Make predictions against a dataset."
+      "description": "Get suggestions from the model trained on a dataset."
     },
     {
       "name": "DatasetService",
-      "description": "Manage datasets and examples used for training AutoSuggest models."
+      "description": "Manage datasets and the examples Autosuggest trains on."
     }
   ],
   "schemes": [
@@ -27,7 +27,8 @@
   "paths": {
     "/v2/datasets": {
       "post": {
-        "summary": "Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled\nuntil CreateExample or BatchCreateExample is called after the creation of the dataset.",
+        "summary": "Create a dataset.",
+        "description": "The dataset starts empty. The first example you add sets its type, and adding examples\nschedules a training, so no model exists until you add examples and the training is done.\nReturns 409 if a dataset with this name already exists. You can reuse the name of a deleted\ndataset, but the new dataset keeps the deleted one's tags and retention policy.\nReturns 400 if the name or a tag doesn't match the allowed format.",
         "operationId": "DatasetService_CreateDataset",
         "responses": {
           "200": {
@@ -47,6 +48,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body for POST /v2/datasets.",
             "in": "body",
             "required": true,
             "schema": {
@@ -61,7 +63,8 @@
     },
     "/v2/datasets/{datasetName}": {
       "get": {
-        "summary": "Get the basic information about a dataset.",
+        "summary": "Get a dataset.",
+        "description": "Returns the dataset's name, type, tags, retention policy and timestamps.\nReturns 404 if the dataset doesn't exist or has been deleted.",
         "operationId": "DatasetService_GetDataset",
         "responses": {
           "200": {
@@ -80,7 +83,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -91,7 +94,8 @@
         ]
       },
       "delete": {
-        "summary": "Delete a dataset with the specified name.",
+        "summary": "Delete a dataset.",
+        "description": "Deletes the dataset and its examples, and returns the deleted dataset. The call returns as\nsoon as the deletion is accepted, and the examples are removed shortly afterwards.\nReturns 404 if the dataset doesn't exist or is already deleted.",
         "operationId": "DatasetService_DeleteDataset",
         "responses": {
           "200": {
@@ -110,7 +114,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -121,7 +125,8 @@
         ]
       },
       "put": {
-        "summary": "Not implemented yet.\nCreates a new dataset. If a dataset with such name already exsits, it will be updated with the\nprovided data.",
+        "summary": "[NOT IMPLEMENTED] Create or update a dataset.",
+        "description": "Returns 501. Create datasets with POST /v2/datasets.",
         "operationId": "DatasetService_CreateOrUpdateDataset",
         "responses": {
           "200": {
@@ -141,7 +146,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -154,7 +159,8 @@
     },
     "/v2/datasets/{datasetName}/examples": {
       "delete": {
-        "summary": "Truncate a dataset. Use this operation to remove examples in a dataset used for future training without\nremoving existing models.",
+        "summary": "Remove a dataset's examples, but keep its models.",
+        "description": "Future trainings only use examples added after this call, and the existing models stay\navailable for suggestions. Returns 404 if the dataset doesn't exist.",
         "operationId": "DatasetService_TruncateDataset",
         "responses": {
           "200": {
@@ -174,7 +180,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -185,7 +191,8 @@
         ]
       },
       "post": {
-        "summary": "Uploads a new single example.",
+        "summary": "Add an example to a dataset.",
+        "description": "The first example sets the dataset's type, and every later example must use the same data\nstructure. Adding examples schedules a training: about a minute later while the dataset is\nless than an hour old, otherwise 24 hours later in production and within minutes on staging.\nExamples added while a training is scheduled or running are picked up by the next training.\nReturns 404 if the dataset doesn't exist, and 400 if the example has no target values or a\nfield has the wrong format.",
         "operationId": "DatasetService_CreateExample",
         "responses": {
           "200": {
@@ -205,7 +212,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -226,7 +233,8 @@
     },
     "/v2/datasets/{datasetName}/examples/{example.id}": {
       "put": {
-        "summary": "Not implemented yet.\nUploads or updates a new single example.\nIf the specified example already exists, the example\nis updated with the provided values according to provided ID.",
+        "summary": "[NOT IMPLEMENTED] Add or update an example.",
+        "description": "Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.",
         "operationId": "DatasetService_CreateOrUpdateExample",
         "responses": {
           "200": {
@@ -246,14 +254,14 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "example.id",
-            "description": "Not implemented yet.\nAn optional id to provide individual corrections to examples, for example when a user updates their initial feedback.",
+            "description": "[NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that\nPUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint\nreturns 501. If you set it, it must be a UUID.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -274,7 +282,8 @@
     },
     "/v2/datasets/{datasetName}/examples:batchCreate": {
       "post": {
-        "summary": "Upload multiple examples at once. This matches the behavior of the v1 API's append operation.",
+        "summary": "Add several examples to a dataset.",
+        "description": "Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one\ntraining. Returns 400 if the list of examples is empty.",
         "operationId": "DatasetService_BatchCreateExample",
         "responses": {
           "200": {
@@ -294,7 +303,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -315,7 +324,8 @@
     },
     "/v2/datasets/{datasetName}/model:batchSuggest": {
       "post": {
-        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset.\nReturns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.",
+        "summary": "Suggest target values for several inputs, or 404 without a model.",
+        "description": "Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has\nno trained model yet or doesn't exist.",
         "operationId": "SuggesterService_ModelBatchSuggest",
         "responses": {
           "200": {
@@ -334,7 +344,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -355,7 +365,8 @@
     },
     "/v2/datasets/{datasetName}/models": {
       "get": {
-        "summary": "Get the specified number of the most recent dataset's trained models.\nNumber of requested models has to be larger than 0 but no larger than 100.",
+        "summary": "List a dataset's models.",
+        "description": "Returns the most recent models, newest first. Set how many with options.limit, from 1 to\n100. The default is 10. Returns 404 if the dataset doesn't exist.",
         "operationId": "DatasetService_GetDatasetModels",
         "responses": {
           "200": {
@@ -374,14 +385,14 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "options.limit",
-            "description": "The number of models to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
+            "description": "Number of models to return, from 1 to 100. The default is 10.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -395,7 +406,8 @@
     },
     "/v2/datasets/{datasetName}/trainings": {
       "get": {
-        "summary": "Get the specified number of the most recent dataset's trainings.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
+        "summary": "List a dataset's trainings.",
+        "description": "Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to\n100. The default is 10. Returns 404 if the dataset doesn't exist.",
         "operationId": "DatasetService_GetDatasetTrainings",
         "responses": {
           "200": {
@@ -414,14 +426,14 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "text-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "options.limit",
-            "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
+            "description": "Number of trainings to return, from 1 to 100. The default is 10.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -435,7 +447,8 @@
     },
     "/v2/datasets/{datasetName}:batchSuggest": {
       "post": {
-        "summary": "BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.",
+        "summary": "Suggest target values for several inputs.",
+        "description": "Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the\nsame order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no\npredictions instead of 404. To get a 404 in that case, use\nPOST /v2/datasets/{datasetName}/model:batchSuggest.",
         "operationId": "SuggesterService_BatchSuggest",
         "responses": {
           "200": {
@@ -454,7 +467,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -475,7 +488,8 @@
     },
     "/v2/datasets/{datasetName}:suggest": {
       "post": {
-        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists.",
+        "summary": "Suggest target values for one input.",
+        "description": "Uses the dataset's current model. Each target returns up to suggestLimit candidates,\nhighest confidence first, each with its confidence level.\nReturns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input\nsets no data structure or an option has an invalid value.",
         "operationId": "SuggesterService_Suggest",
         "responses": {
           "200": {
@@ -494,7 +508,7 @@
         "parameters": [
           {
             "name": "datasetName",
-            "description": "Name of the dataset to make prediction against\n\ntext-no-spaces",
+            "description": "Name of the dataset.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -515,7 +529,8 @@
     },
     "/v2/tags/{tagName}": {
       "delete": {
-        "summary": "Delete all datasets (and their examples) containing the specified tag.\nThe datasets' names are not considered in this request - only the tag names is.",
+        "summary": "Delete all datasets with a tag.",
+        "description": "Deletes every one of your datasets that has the tag, with their examples. Dataset names\ndon't matter, only the tag. The examples are removed shortly after the call returns.\nReturns 200 even if no dataset has the tag.",
         "operationId": "DatasetService_DeleteTag",
         "responses": {
           "200": {
@@ -535,7 +550,7 @@
         "parameters": [
           {
             "name": "tagName",
-            "description": "text-no-spaces",
+            "description": "The tag. It must use letters, digits, \".\", \"_\", \"\u003e\" and \"-\", starting with a letter, digit\nor \".\", up to 256 bytes, so tags with spaces can't be used here.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -548,7 +563,8 @@
     },
     "/v2/trainings": {
       "get": {
-        "summary": "Get the specified number of the most recent trainings accross all consumer's datasets.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
+        "summary": "List the trainings of all your datasets.",
+        "description": "Returns the most recent trainings across your datasets, newest first, each with its\ndataset. Set how many with options.limit, from 1 to 100. The default is 10.",
         "operationId": "DatasetService_GetTrainings",
         "responses": {
           "200": {
@@ -567,7 +583,7 @@
         "parameters": [
           {
             "name": "options.limit",
-            "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
+            "description": "Number of trainings to return, from 1 to 100. The default is 10.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -592,7 +608,8 @@
         "VERY_HIGH",
         "ULTRA_HIGH"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence level of a suggested value. Levels are set for each target from the model's\nevaluation, so they give more stable results across model upgrades than the score. Use them\nto decide whether to trust a suggestion.\n\n - UNKNOWN: No level.\n - ULTRA_HIGH: Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms."
     },
     "DatasetServiceBatchCreateExampleBody": {
       "type": "object",
@@ -602,9 +619,11 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeExample"
-          }
+          },
+          "description": "The examples to add. At least one is required."
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets/{datasetName}/examples:batchCreate."
     },
     "DatasetServiceCreateExampleBody": {
       "type": "object",
@@ -612,7 +631,8 @@
         "example": {
           "$ref": "#/definitions/typeExample"
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets/{datasetName}/examples."
     },
     "DatasetServiceCreateOrUpdateExampleBody": {
       "type": "object",
@@ -628,12 +648,14 @@
               "items": {
                 "type": "object",
                 "$ref": "#/definitions/typeTargetValue"
-              }
+              },
+              "description": "The correct value for each target. At least one is required."
             }
           },
-          "title": "A pair of example data and example target values"
+          "description": "An example to train on: input data and the target values it should give."
         }
-      }
+      },
+      "description": "Request for PUT /v2/datasets/{datasetName}/examples/{example.id}, which isn't implemented."
     },
     "ModelInputType": {
       "type": "string",
@@ -641,25 +663,30 @@
         "FEATURE_TENSORS",
         "EXAMPLE_TENSOR"
       ],
-      "default": "FEATURE_TENSORS"
+      "default": "FEATURE_TENSORS",
+      "description": "How the model takes its input. The service uses it to run the model."
     },
     "PredictionTarget": {
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the target."
         },
         "candidates": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/TargetCandidate"
-          }
+          },
+          "description": "The suggested values, highest confidence first."
         },
         "unknownTargetClass": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Whether an example's value for this target is one the model wasn't trained on. The\nsuggest endpoints don't fill it in."
         }
-      }
+      },
+      "description": "Suggestions for one target."
     },
     "SuggesterServiceBatchSuggestBody": {
       "type": "object",
@@ -670,12 +697,13 @@
             "type": "object",
             "$ref": "#/definitions/typeData"
           },
-          "title": "Input data to use for prediction"
+          "description": "The inputs to get suggestions for. Each one must set a data structure."
         },
         "options": {
           "$ref": "#/definitions/v2SuggestOptions"
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets/{datasetName}:batchSuggest and\nPOST /v2/datasets/{datasetName}/model:batchSuggest."
     },
     "SuggesterServiceModelBatchSuggestBody": {
       "type": "object",
@@ -686,144 +714,163 @@
             "type": "object",
             "$ref": "#/definitions/typeData"
           },
-          "title": "Input data to use for prediction"
+          "description": "The inputs to get suggestions for. Each one must set a data structure."
         },
         "options": {
           "$ref": "#/definitions/v2SuggestOptions"
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets/{datasetName}:batchSuggest and\nPOST /v2/datasets/{datasetName}/model:batchSuggest."
     },
     "SuggesterServiceSuggestBody": {
       "type": "object",
       "properties": {
         "input": {
-          "title": "Input data to use for prediction",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeData"
-            }
-          ]
+          "$ref": "#/definitions/typeData"
         },
         "options": {
           "$ref": "#/definitions/v2SuggestOptions"
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets/{datasetName}:suggest."
     },
     "TargetCandidate": {
       "type": "object",
       "properties": {
         "value": {
-          "type": "string"
+          "type": "string",
+          "description": "The suggested value."
         },
         "confidence": {
           "$ref": "#/definitions/typeConfidence"
         }
-      }
+      },
+      "description": "A suggested value for a target."
     },
     "TargetMetricsMetric": {
       "type": "object",
       "properties": {
         "precision": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "Precision of the answers at this threshold: the share of them that were correct."
         },
         "confidence": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "The confidence threshold these results apply to."
         },
         "answerRate": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "Share of the evaluation examples that got an answer at this threshold."
         },
         "truePositive": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Number of true positives."
         },
         "trueNegative": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Number of true negatives."
         },
         "falsePositive": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Number of false positives."
         },
         "falseNegative": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Number of false negatives."
         },
         "mcc": {
           "type": "number",
           "format": "float",
-          "title": "Matthews correlation coefficient"
+          "description": "Matthews correlation coefficient."
         },
         "accuracy": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "Accuracy."
         },
         "balancedAccuracy": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "Balanced accuracy."
         },
         "precisionBoundEpsilon": {
           "type": "number",
           "format": "float",
-          "title": "precision bound epsilon values"
+          "description": "Epsilon of the precision bound."
         }
-      }
+      },
+      "description": "Evaluation results at one confidence threshold."
     },
     "asgttypeModel": {
       "type": "object",
       "properties": {
         "version": {
           "type": "string",
-          "format": "int64"
+          "format": "int64",
+          "description": "Version number of the model."
         },
         "createdAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "When the model was created."
         },
         "datasetSize": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Size of the dataset the model was trained on, in examples."
         },
         "trainingSize": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Number of examples used for training."
         },
         "confidenceScores": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeTargetMetrics"
-          }
+          },
+          "description": "Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available."
         },
         "inputType": {
           "$ref": "#/definitions/ModelInputType"
         },
         "datasetType": {
-          "type": "string"
+          "type": "string",
+          "description": "Type of the dataset the model was trained on: bank, scanned-invoice or\nelectronic-invoice-line."
         },
         "modelFiles": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeModelFile"
-          }
+          },
+          "description": "Files of the trained model."
         },
         "targetToConfidenceThresholds": {
           "type": "object",
           "additionalProperties": {
             "$ref": "#/definitions/typeConfidenceThresholds"
-          }
+          },
+          "description": "For each target, the confidence value at which each confidence level starts."
         },
         "targetToClassCount": {
           "type": "object",
           "additionalProperties": {
             "type": "integer",
             "format": "int32"
-          }
+          },
+          "description": "For each target, the number of classes, that is distinct values, it has."
         }
-      }
+      },
+      "description": "A trained model."
     },
     "asgtv2typeModel": {
       "type": "object",
@@ -831,10 +878,10 @@
         "createdAt": {
           "type": "string",
           "format": "date-time",
-          "title": "Creation time of the model"
+          "description": "When the model was created."
         },
         "dataset": {
-          "description": "Specifies dataset the model belongs to.",
+          "description": "The dataset the model was trained on. Only its consumer, name and type are filled in.",
           "allOf": [
             {
               "$ref": "#/definitions/typeDataset"
@@ -846,9 +893,10 @@
           "items": {
             "type": "string"
           },
-          "title": "Targets the model was trained on"
+          "description": "Names of the targets the model predicts."
         }
-      }
+      },
+      "description": "A model trained on a dataset."
     },
     "protobufAny": {
       "type": "object",
@@ -882,20 +930,15 @@
       "type": "object",
       "properties": {
         "level": {
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ConfidenceLevel"
-            }
-          ]
+          "$ref": "#/definitions/ConfidenceLevel"
         },
         "value": {
           "type": "number",
           "format": "float",
-          "title": "The confidence value"
+          "description": "The confidence score. Higher means more likely, but use level to decide whether to trust\na suggestion."
         }
       },
-      "title": "Common types"
+      "description": "Confidence of a suggested value."
     },
     "typeConfidenceThresholds": {
       "type": "object",
@@ -905,85 +948,81 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeConfidence"
-          }
+          },
+          "description": "The confidence value at which each level starts."
         }
-      }
+      },
+      "description": "Confidence thresholds of one target."
     },
     "typeData": {
       "type": "object",
       "properties": {
         "transaction": {
-          "title": "Transaction-level information; at this time used only with bank transactions",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeTransaction"
-            }
-          ]
+          "$ref": "#/definitions/typeTransaction"
         },
         "invoice": {
-          "title": "Invoice-level information for e-invoices and scanned invoices and receipts",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeInvoice"
-            }
-          ]
+          "$ref": "#/definitions/typeInvoice"
         },
         "invoiceLine": {
-          "title": "Line-level information for e-invoices; use one sample per invoice line",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeInvoiceLine"
-            }
-          ]
+          "$ref": "#/definitions/typeInvoiceLine"
         }
       },
-      "description": "Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine\nstructures can be used at a time."
+      "description": "Input data for an example or a suggestion. Set exactly one of transaction, invoice or\ninvoiceLine. The first example in a dataset sets its type, bank, scanned-invoice or\nelectronic-invoice-line, and every later example and suggest input must use the same\nstructure."
     },
     "typeDataset": {
       "type": "object",
       "properties": {
         "consumer": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the project the dataset belongs to."
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the dataset."
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "description": "Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2\nAPI, the first example you add sets it, and it's empty until then."
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Tags the dataset was created with."
         },
         "targets": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Names of the dataset's targets, as given when a dataset is created with the v1 API. It's\nempty for datasets created with the v2 API."
         },
         "retentionPolicy": {
           "$ref": "#/definitions/typeRetentionPolicy"
         },
         "createdAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "When the dataset was created, or created again after it was deleted."
         },
         "updatedAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "[NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z."
         },
         "size": {
           "type": "string",
           "format": "int64",
-          "title": "Number of samples in the dataset reflecting added entries that meet the retention policy"
+          "description": "[NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the\nretention window."
         },
         "truncatedAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was."
         }
-      }
+      },
+      "description": "A dataset of examples that Autosuggest trains models on."
     },
     "typeExample": {
       "type": "object",
@@ -996,55 +1035,52 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeTargetValue"
-          }
+          },
+          "description": "The correct value for each target. At least one is required."
         },
         "id": {
           "type": "string",
-          "description": "Not implemented yet.\nAn optional id to provide individual corrections to examples, for example when a user updates their initial feedback."
+          "description": "[NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that\nPUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint\nreturns 501. If you set it, it must be a UUID."
         }
       },
-      "title": "A pair of example data and example target values"
+      "description": "An example to train on: input data and the target values it should give."
     },
     "typeInvoice": {
       "type": "object",
       "properties": {
         "text": {
           "type": "string",
-          "description": "Invoice text from the SmartScan product."
+          "description": "Text of the document, such as its OCR text or other text you have on record."
         }
       },
-      "description": "Used in scanned-invoice requests."
+      "description": "A scanned invoice or receipt, as text. Use it for scanned-invoice datasets."
     },
     "typeInvoiceLine": {
       "type": "object",
       "properties": {
         "itemId": {
           "type": "string",
-          "description": "Id of the product (item)."
+          "description": "ID of the item, such as a global product ID."
         },
         "text": {
           "type": "string",
-          "description": "Text of the invoice line."
+          "description": "Text of the line, such as the item's description or name."
         },
         "issueDate": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Issue date of the invoice, as an RFC 3339 timestamp such as \"2026-04-15T12:32:55Z\"."
         },
         "supplier": {
-          "description": "Supplier of the invoice.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeSupplier"
-            }
-          ]
+          "$ref": "#/definitions/typeSupplier"
         },
         "customerRef": {
           "type": "string",
-          "description": "reference to the customer."
+          "description": "Reference to the invoice's recipient, such as the customer's name."
         },
         "currency": {
           "type": "string",
-          "description": "Name of the currency as a string."
+          "description": "Currency of the invoice, as text."
         },
         "amount": {
           "type": "number",
@@ -1052,19 +1088,22 @@
           "description": "Amount of the invoice line."
         }
       },
-      "description": "Used in electronic-invoice-line requests."
+      "description": "One line of an electronic invoice, with the details of its invoice. Send each line as its\nown example and repeat the invoice details in each one. Use it for electronic-invoice-line\ndatasets."
     },
     "typeModelFile": {
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the file."
         },
         "data": {
           "type": "string",
-          "format": "byte"
+          "format": "byte",
+          "description": "Contents of the file."
         }
-      }
+      },
+      "description": "A file of a trained model."
     },
     "typeModelType": {
       "type": "string",
@@ -1073,7 +1112,8 @@
         "TENSORFLOW",
         "ONNX"
       ],
-      "default": "DEFAULT"
+      "default": "DEFAULT",
+      "description": "Format of a trained model."
     },
     "typePrediction": {
       "type": "object",
@@ -1083,29 +1123,34 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/PredictionTarget"
-          }
+          },
+          "description": "One entry per target of the model."
         },
         "unknownTokenPercentage": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't\nfill it in."
         }
-      }
+      },
+      "description": "Suggestions for one input, with one entry per target."
     },
     "typeRetentionPolicy": {
       "type": "object",
       "properties": {
         "maxDays": {
           "type": "string",
-          "format": "int64"
+          "format": "int64",
+          "description": "Number of days examples count for training. Older examples are left out of training. The\ndefault is 180, which also applies when you send 0."
         }
-      }
+      },
+      "description": "How long examples are used for training."
     },
     "typeSupplier": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Id of the supplier; not nullable."
+          "description": "Your own ID for the supplier. Letters and digits only, up to 64 bytes."
         },
         "name": {
           "type": "string",
@@ -1113,81 +1158,87 @@
         },
         "globalId": {
           "type": "string",
-          "description": "Global ID of the supplier."
+          "description": "Global ID of the supplier, such as its VAT number."
         }
-      }
+      },
+      "description": "The supplier of an invoice."
     },
     "typeTargetMetrics": {
       "type": "object",
       "properties": {
         "target": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the target."
         },
         "metrics": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
-          }
+          },
+          "description": "Results at different confidence thresholds."
         },
         "entropy": {
           "type": "number",
           "format": "float",
-          "title": "entropy of the dataset"
+          "description": "Entropy of the dataset."
         },
         "numberOfClasses": {
           "type": "integer",
           "format": "int32",
-          "title": "number of classes in the dataset"
+          "description": "Number of classes in the dataset."
         },
         "avgSamplePerClass": {
           "type": "number",
           "format": "float",
-          "title": "average samples per class"
+          "description": "Average number of examples per class."
         },
         "inconsistentLabelRatio": {
           "type": "number",
           "format": "float",
-          "title": "ratio of inconsistent labels"
+          "description": "Ratio of inconsistent labels."
         },
         "avgLabelsPerInconsistentSample": {
           "type": "number",
           "format": "float",
-          "title": "average labels per inconsistent sample"
+          "description": "Average number of labels per inconsistent example."
         },
         "percentSamplesNotInTargetVocab": {
           "type": "number",
           "format": "float",
-          "title": "percentage of samples not in target vocabulary"
+          "description": "Percentage of examples whose value isn't in the target's vocabulary."
         },
         "jsDivergenceClasses": {
           "type": "number",
           "format": "float",
-          "title": "Jensen-Shannon divergence for classes"
+          "description": "Jensen-Shannon divergence of the classes."
         },
         "targetTrainSize": {
           "type": "integer",
           "format": "int32",
-          "title": "number of training samples with a label for this target"
+          "description": "Number of training examples with a value for this target."
         },
         "targetTestSize": {
           "type": "integer",
           "format": "int32",
-          "title": "number of test/validation samples with a label for this target"
+          "description": "Number of test or validation examples with a value for this target."
         }
-      }
+      },
+      "description": "Evaluation metrics of a model for one target."
     },
     "typeTargetValue": {
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the target, such as \"account\". Use letters, digits, \".\", \"_\", \"\u003e\" and \"-\",\nstarting with a letter, digit or \".\", up to 256 bytes."
         },
         "value": {
-          "type": "string"
+          "type": "string",
+          "description": "The value for this target, such as \"002\"."
         }
       },
-      "title": "Record mapping a target name to a value"
+      "description": "A target and its value in an example."
     },
     "typeTier": {
       "type": "string",
@@ -1195,7 +1246,8 @@
         "STANDARD",
         "ULTRA"
       ],
-      "default": "STANDARD"
+      "default": "STANDARD",
+      "description": "Service tier for suggestions. The v2 suggest endpoints use it, and the v1 API always runs as\nSTANDARD.\n\n - STANDARD: The default.\n - ULTRA: Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH\nwhen the check agrees."
     },
     "typeTraining": {
       "type": "object",
@@ -1203,26 +1255,27 @@
         "createdAt": {
           "type": "string",
           "format": "date-time",
-          "title": "Creation time of the training"
+          "description": "When the training was scheduled."
         },
         "status": {
-          "type": "string"
+          "type": "string",
+          "description": "Always empty, because the listings only return active trainings. Use trainingStatus."
         },
         "trainingStatus": {
           "type": "string",
-          "description": "Status of the training.\nSCHEDULED - Training is scheduled to be run in a specific time. This\ncould be in between 1 minute or 24 hours depending on how recently the dataset\nwas created\nPENDING - The training is ready to be picked up by a worker.\nRUNNING - The training is currently running.\nDONE - The training has completed successfully.\nFAILED - The training failed due to an error. See training status for\nmore information."
+          "description": "State of the training. It's SCHEDULED until its start time and PENDING once it's handed to\na worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs."
         },
         "trainingStatusMessage": {
           "type": "string",
-          "description": "Additional information about the training status."
+          "description": "More about the state, such as why the training failed."
         },
         "finishTime": {
           "type": "string",
           "format": "date-time",
-          "description": "Specifies when did the training finish."
+          "description": "When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for\nfailed trainings."
         },
         "dataset": {
-          "description": "Specifies dataset the training ran on.",
+          "description": "The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings\nfills it in.",
           "allOf": [
             {
               "$ref": "#/definitions/typeDataset"
@@ -1232,16 +1285,17 @@
         "scheduleTime": {
           "type": "string",
           "format": "date-time",
-          "description": "Specifies when the training is scheduled."
+          "description": "When the training is set to start."
         }
-      }
+      },
+      "description": "A training of a dataset."
     },
     "typeTransaction": {
       "type": "object",
       "properties": {
         "text": {
           "type": "string",
-          "description": "Text of the bank transaction."
+          "description": "Text of the bank transaction, such as its statement text."
         },
         "amount": {
           "type": "number",
@@ -1249,7 +1303,7 @@
           "description": "Amount of the transaction."
         }
       },
-      "description": "Used in bank requests."
+      "description": "A bank transaction. Use it for bank datasets."
     },
     "v2BatchSuggestResponse": {
       "type": "object",
@@ -1259,19 +1313,27 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typePrediction"
-          }
+          },
+          "description": "One prediction per input, in the same order."
         },
         "model": {
-          "$ref": "#/definitions/asgttypeModel"
+          "description": "The model that made the predictions. Only its version is filled in, and it's empty when the\ndataset has no model.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/asgttypeModel"
+            }
+          ]
         },
         "productTypeSuggestions": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeSuggestion"
-          }
+          },
+          "description": "Product type candidates for each input's text, in the same order, when includeProductTypes\nis true."
         }
-      }
+      },
+      "description": "Suggestions for several inputs."
     },
     "v2ConfidenceLevel": {
       "type": "string",
@@ -1283,26 +1345,28 @@
         "HIGH",
         "VERY_HIGH"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the\nmodel gave no level."
     },
     "v2CreateDatasetRequest": {
       "type": "object",
       "properties": {
         "datasetName": {
           "type": "string",
-          "title": "text-no-spaces"
+          "description": "Name of the new dataset. Use letters, digits, \".\", \"_\", \"\u003e\" and \"-\", starting with a\nletter, digit or \".\", up to 256 bytes."
         },
         "tags": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "title": "text-no-spaces"
+          "description": "Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag\nlater with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, \"_\", \".\",\n\"\u003e\" and \"-\", up to 64 bytes, and tags must be unique. Only tags without spaces can be used\nto delete datasets."
         },
         "retentionPolicy": {
           "$ref": "#/definitions/typeRetentionPolicy"
         }
-      }
+      },
+      "description": "Request body for POST /v2/datasets."
     },
     "v2ModelRequestOptions": {
       "type": "object",
@@ -1310,9 +1374,10 @@
         "limit": {
           "type": "string",
           "format": "int64",
-          "description": "The number of models to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)"
+          "description": "Number of models to return, from 1 to 100. The default is 10."
         }
-      }
+      },
+      "description": "Options for listing models."
     },
     "v2ModelsResponse": {
       "type": "object",
@@ -1322,9 +1387,11 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/asgtv2typeModel"
-          }
+          },
+          "description": "The models, newest first."
         }
-      }
+      },
+      "description": "A list of models."
     },
     "v2ProductType": {
       "type": "string",
@@ -1405,25 +1472,34 @@
         "WATER_WASTE",
         "WEBSITE"
       ],
-      "default": "UNDEFINED"
+      "default": "UNDEFINED",
+      "description": "The product types a text can be classified into. UNDEFINED isn't a product type: it's the\nempty value."
     },
     "v2ProductTypeCandidate": {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/v2ProductType"
+          "description": "The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a\nlabel that has no product type.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v2ProductType"
+            }
+          ]
         },
         "label": {
-          "type": "string"
+          "type": "string",
+          "description": "The product type's name in words, such as \"Accounting software\"."
         },
         "confidence": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "The model's confidence score for this candidate. Use confidenceLevel to decide whether to\ntrust it."
         },
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel"
         }
-      }
+      },
+      "description": "A product type candidate for a text."
     },
     "v2ProductTypeSuggestion": {
       "type": "object",
@@ -1433,23 +1509,25 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeCandidate"
-          }
+          },
+          "description": "The candidates, ranked by the model."
         }
-      }
+      },
+      "description": "Product type candidates for one text."
     },
     "v2SuggestOptions": {
       "type": "object",
       "example": {
-        "suggest_limit": 3
+        "suggestLimit": 3
       },
       "properties": {
         "suggestLimit": {
           "type": "integer",
           "format": "int32",
-          "title": "Maximum number of suggestions to return per target"
+          "description": "Maximum number of candidates per target. The default is 10."
         },
         "minConfidence": {
-          "description": "Not implemented yet.",
+          "description": "The confidence level you need. Candidates below it aren't removed, so filter on each\ncandidate's confidence.level yourself. When a target's best candidate is below this level,\nthe service tries to find a better answer and uses it if it reaches the level. The default\nis HIGH. ULTRA_HIGH isn't accepted.",
           "allOf": [
             {
               "$ref": "#/definitions/ConfidenceLevel"
@@ -1457,7 +1535,7 @@
           ]
         },
         "modelType": {
-          "title": "Model type requested",
+          "description": "[NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you\nset it, it must be DEFAULT, TENSORFLOW or ONNX.",
           "allOf": [
             {
               "$ref": "#/definitions/typeModelType"
@@ -1466,17 +1544,13 @@
         },
         "includeProductTypes": {
           "type": "boolean",
-          "title": "When true, the service will also call the ProductTypeService and include product type suggestions in the response"
+          "description": "When true, the response also has product type candidates for the text of each input. The\ndefault is false."
         },
         "tier": {
-          "title": "Tier determines which model serves the request",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeTier"
-            }
-          ]
+          "$ref": "#/definitions/typeTier"
         }
-      }
+      },
+      "description": "Options for the suggest endpoints. All of them are optional."
     },
     "v2SuggestResponse": {
       "type": "object",
@@ -1485,12 +1559,23 @@
           "$ref": "#/definitions/typePrediction"
         },
         "model": {
-          "$ref": "#/definitions/asgttypeModel"
+          "description": "The model that made the prediction. Only its version is filled in.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/asgttypeModel"
+            }
+          ]
         },
         "productTypeSuggestions": {
-          "$ref": "#/definitions/v2ProductTypeSuggestion"
+          "description": "Product type candidates for the input's text, when includeProductTypes is true.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v2ProductTypeSuggestion"
+            }
+          ]
         }
-      }
+      },
+      "description": "Suggestions for one input."
     },
     "v2TrainingRequestOptions": {
       "type": "object",
@@ -1498,9 +1583,10 @@
         "limit": {
           "type": "string",
           "format": "int64",
-          "description": "The number of trainings to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)"
+          "description": "Number of trainings to return, from 1 to 100. The default is 10."
         }
-      }
+      },
+      "description": "Options for listing trainings."
     },
     "v2TrainingsResponse": {
       "type": "object",
@@ -1510,9 +1596,11 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeTraining"
-          }
+          },
+          "description": "The trainings, newest first."
         }
-      }
+      },
+      "description": "A list of trainings."
     }
   },
   "securityDefinitions": {

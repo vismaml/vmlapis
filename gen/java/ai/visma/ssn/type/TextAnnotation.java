@@ -7,14 +7,9 @@ package ai.visma.ssn.type;
 
 /**
  * <pre>
- * TextAnnotation contains a structured representation of OCR extracted text.
- * The hierarchy of an OCR extracted text structure is like this:
- * TextAnnotation -&gt; Page -&gt; Block -&gt; Paragraph -&gt; Word -&gt; Symbol
- * Each structural component, starting from Page, may further have their own
- * properties. Properties describe detected languages, breaks etc.. Please refer
- * to the
- * [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
- * message definition below for more detail.
+ * The OCR output for a document: its text, and its structure from pages down to single
+ * symbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page
+ * down can have properties, such as the detected languages and breaks.
  * </pre>
  *
  * Protobuf type {@code ssn.type.TextAnnotation}
@@ -840,7 +835,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * End-line hyphen that is not present in text; does not co-occur with
-       * `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+       * `SPACE` or `LINE_BREAK`.
        * </pre>
        *
        * <code>HYPHEN = 4;</code>
@@ -901,7 +896,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * End-line hyphen that is not present in text; does not co-occur with
-       * `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+       * `SPACE` or `LINE_BREAK`.
        * </pre>
        *
        * <code>HYPHEN = 4;</code>
@@ -2666,7 +2661,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Page> pages_;
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -2677,7 +2672,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -2689,7 +2684,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -2700,7 +2695,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -2711,7 +2706,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of pages detected by OCR.
+   * The pages, in order.
    * </pre>
    *
    * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -2940,14 +2935,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TextAnnotation contains a structured representation of OCR extracted text.
-   * The hierarchy of an OCR extracted text structure is like this:
-   * TextAnnotation -&gt; Page -&gt; Block -&gt; Paragraph -&gt; Word -&gt; Symbol
-   * Each structural component, starting from Page, may further have their own
-   * properties. Properties describe detected languages, breaks etc.. Please refer
-   * to the
-   * [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
-   * message definition below for more detail.
+   * The OCR output for a document: its text, and its structure from pages down to single
+   * symbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page
+   * down can have properties, such as the detected languages and breaks.
    * </pre>
    *
    * Protobuf type {@code ssn.type.TextAnnotation}
@@ -3160,7 +3150,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3174,7 +3164,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3188,7 +3178,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3202,7 +3192,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3223,7 +3213,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3241,7 +3231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3261,7 +3251,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3282,7 +3272,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3300,7 +3290,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3318,7 +3308,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3337,7 +3327,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3354,7 +3344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3371,7 +3361,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3382,7 +3372,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3396,7 +3386,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3411,7 +3401,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3422,7 +3412,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>
@@ -3434,7 +3424,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of pages detected by OCR.
+     * The pages, in order.
      * </pre>
      *
      * <code>repeated .ssn.type.Page pages = 1 [json_name = "pages"];</code>

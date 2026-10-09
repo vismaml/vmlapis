@@ -6,6 +6,10 @@
 package ai.visma.ssn.annotator.v1;
 
 /**
+ * <pre>
+ * A location to download a document from.
+ * </pre>
+ *
  * Protobuf type {@code ssn.annotator.v1.DocumentSource}
  */
 public final class DocumentSource extends
@@ -48,12 +52,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object httpUri_ = "";
   /**
    * <pre>
-   * The URI of the source document. Can be either:
-   *
-   * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-   * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-   * completed. Your request may fail if the specified host denies the
-   * request (e.g. due to request throttling or DOS prevention).
+   * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+   * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+   * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+   * seconds. When the download fails, the call returns 400.
    * </pre>
    *
    * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -74,12 +76,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The URI of the source document. Can be either:
-   *
-   * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-   * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-   * completed. Your request may fail if the specified host denies the
-   * request (e.g. due to request throttling or DOS prevention).
+   * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+   * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+   * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+   * seconds. When the download fails, the call returns 400.
    * </pre>
    *
    * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -257,6 +257,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A location to download a document from.
+   * </pre>
+   *
    * Protobuf type {@code ssn.annotator.v1.DocumentSource}
    */
   public static final class Builder extends
@@ -397,12 +401,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object httpUri_ = "";
     /**
      * <pre>
-     * The URI of the source document. Can be either:
-     *
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     * completed. Your request may fail if the specified host denies the
-     * request (e.g. due to request throttling or DOS prevention).
+     * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+     * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+     * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+     * seconds. When the download fails, the call returns 400.
      * </pre>
      *
      * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -422,12 +424,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URI of the source document. Can be either:
-     *
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     * completed. Your request may fail if the specified host denies the
-     * request (e.g. due to request throttling or DOS prevention).
+     * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+     * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+     * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+     * seconds. When the download fails, the call returns 400.
      * </pre>
      *
      * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -448,12 +448,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URI of the source document. Can be either:
-     *
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     * completed. Your request may fail if the specified host denies the
-     * request (e.g. due to request throttling or DOS prevention).
+     * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+     * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+     * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+     * seconds. When the download fails, the call returns 400.
      * </pre>
      *
      * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -470,12 +468,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URI of the source document. Can be either:
-     *
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     * completed. Your request may fail if the specified host denies the
-     * request (e.g. due to request throttling or DOS prevention).
+     * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+     * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+     * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+     * seconds. When the download fails, the call returns 400.
      * </pre>
      *
      * <code>string http_uri = 1 [json_name = "httpUri"];</code>
@@ -489,12 +485,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URI of the source document. Can be either:
-     *
-     * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-     * HTTP/HTTPS URLs, We cannot guarantee that the request will be
-     * completed. Your request may fail if the specified host denies the
-     * request (e.g. due to request throttling or DOS prevention).
+     * A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+     * answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+     * POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+     * seconds. When the download fails, the call returns 400.
      * </pre>
      *
      * <code>string http_uri = 1 [json_name = "httpUri"];</code>

@@ -10,11 +10,21 @@ public interface TargetValueOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+   * starting with a letter, digit or ".", up to 256 bytes.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+   * starting with a letter, digit or ".", up to 256 bytes.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
    * @return The bytes for name.
    */
@@ -22,11 +32,19 @@ public interface TargetValueOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * The value for this target, such as "002".
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
+   * <pre>
+   * The value for this target, such as "002".
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The bytes for value.
    */

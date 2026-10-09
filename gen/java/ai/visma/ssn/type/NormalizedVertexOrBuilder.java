@@ -11,7 +11,7 @@ public interface NormalizedVertexOrBuilder extends
 
   /**
    * <pre>
-   * X coordinate.
+   * The x coordinate, relative to the page width.
    * </pre>
    *
    * <code>float x = 1 [json_name = "x"];</code>
@@ -21,7 +21,7 @@ public interface NormalizedVertexOrBuilder extends
 
   /**
    * <pre>
-   * Y coordinate.
+   * The y coordinate, relative to the page height.
    * </pre>
    *
    * <code>float y = 2 [json_name = "y"];</code>

@@ -11,8 +11,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the line was found.
-   * page_ref start from 1.
+   * The page the line was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -22,7 +21,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * The product code, product number or SKU that the supplier uses for the item.
    * </pre>
    *
    * <code>string code = 2 [json_name = "code"];</code>
@@ -31,7 +30,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getCode();
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * The product code, product number or SKU that the supplier uses for the item.
    * </pre>
    *
    * <code>string code = 2 [json_name = "code"];</code>
@@ -42,7 +41,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * The description of the line, typically the name of a product or the delivered service.
    * </pre>
    *
    * <code>string description = 3 [json_name = "description"];</code>
@@ -51,7 +50,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getDescription();
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * The description of the line, typically the name of a product or the delivered service.
    * </pre>
    *
    * <code>string description = 3 [json_name = "description"];</code>
@@ -62,7 +61,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Quantity is the number of items
+   * The quantity.
    * </pre>
    *
    * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -71,7 +70,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getQuantity();
   /**
    * <pre>
-   * Quantity is the number of items
+   * The quantity.
    * </pre>
    *
    * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -82,7 +81,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * The row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -91,7 +90,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getItemNumber();
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * The row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -102,7 +101,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Unit is the unit of the item
+   * The unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>string unit = 6 [json_name = "unit"];</code>
@@ -111,7 +110,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getUnit();
   /**
    * <pre>
-   * Unit is the unit of the item
+   * The unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>string unit = 6 [json_name = "unit"];</code>
@@ -122,7 +121,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * The total discount of the line.
    * </pre>
    *
    * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -131,7 +130,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getTotalDiscount();
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * The total discount of the line.
    * </pre>
    *
    * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -142,7 +141,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * The discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -151,7 +150,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getPercentageDiscount();
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * The discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -162,7 +161,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * The line total including VAT.
    * </pre>
    *
    * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -171,7 +170,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getTotalInclVat();
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * The line total including VAT.
    * </pre>
    *
    * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -182,7 +181,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * The line total excluding VAT.
    * </pre>
    *
    * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -191,7 +190,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getTotalExclVat();
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * The line total excluding VAT.
    * </pre>
    *
    * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -202,7 +201,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * The VAT amount of the line.
    * </pre>
    *
    * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -211,7 +210,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getTotalVat();
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * The VAT amount of the line.
    * </pre>
    *
    * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -222,7 +221,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * The VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -231,7 +230,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getPercentageVat();
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * The VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -242,7 +241,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * The price of one unit, including VAT.
    * </pre>
    *
    * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -251,7 +250,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getUnitPriceInclVat();
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * The price of one unit, including VAT.
    * </pre>
    *
    * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -262,7 +261,7 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * The price of one unit, excluding VAT.
    * </pre>
    *
    * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -271,7 +270,7 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getUnitPriceExclVat();
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * The price of one unit, excluding VAT.
    * </pre>
    *
    * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -282,7 +281,8 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * The line total as stated on the line, usually the rightmost amount. Documents
+   * often don't say whether it includes VAT.
    * </pre>
    *
    * <code>string total = 17 [json_name = "total"];</code>
@@ -291,7 +291,8 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getTotal();
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * The line total as stated on the line, usually the rightmost amount. Documents
+   * often don't say whether it includes VAT.
    * </pre>
    *
    * <code>string total = 17 [json_name = "total"];</code>
@@ -302,7 +303,8 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * The price of one unit as stated on the line. Documents often don't say whether
+   * it includes VAT.
    * </pre>
    *
    * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -311,7 +313,8 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getUnitPrice();
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * The price of one unit as stated on the line. Documents often don't say whether
+   * it includes VAT.
    * </pre>
    *
    * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -321,35 +324,24 @@ public interface PurchaseLineCandidateOrBuilder extends
       getUnitPriceBytes();
 
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 
   /**
    * <pre>
-   * Product type classification for the line
+   * The product type of the line in the older format. For product types, request
+   * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
    * </pre>
    *
    * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -358,7 +350,8 @@ public interface PurchaseLineCandidateOrBuilder extends
   java.lang.String getProductType();
   /**
    * <pre>
-   * Product type classification for the line
+   * The product type of the line in the older format. For product types, request
+   * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
    * </pre>
    *
    * <code>string product_type = 20 [json_name = "productType"];</code>

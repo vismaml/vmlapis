@@ -11,7 +11,7 @@ public interface CreateOrUpdateDatasetRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface CreateOrUpdateDatasetRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>

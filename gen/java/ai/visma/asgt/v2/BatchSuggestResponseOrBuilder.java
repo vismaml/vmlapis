@@ -10,63 +10,123 @@ public interface BatchSuggestResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   java.util.List<ai.visma.asgt.type.Prediction> 
       getPredictionsList();
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   ai.visma.asgt.type.Prediction getPredictions(int index);
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   int getPredictionsCount();
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   java.util.List<? extends ai.visma.asgt.type.PredictionOrBuilder> 
       getPredictionsOrBuilderList();
   /**
+   * <pre>
+   * One prediction per input, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
    */
   ai.visma.asgt.type.PredictionOrBuilder getPredictionsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return Whether the model field is set.
    */
   boolean hasModel();
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return The model.
    */
   ai.visma.asgt.type.Model getModel();
   /**
+   * <pre>
+   * The model that made the predictions. Only its version is filled in, and it's empty when the
+   * dataset has no model.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    */
   ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder();
 
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> 
       getProductTypeSuggestionsList();
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestion getProductTypeSuggestions(int index);
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   int getProductTypeSuggestionsCount();
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
       getProductTypeSuggestionsOrBuilderList();
   /**
+   * <pre>
+   * Product type candidates for each input's text, in the same order, when includeProductTypes
+   * is true.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder(

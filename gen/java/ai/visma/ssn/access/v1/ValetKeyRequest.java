@@ -6,6 +6,10 @@
 package ai.visma.ssn.access.v1;
 
 /**
+ * <pre>
+ * Options for a new valet key.
+ * </pre>
+ *
  * Protobuf type {@code ssn.access.v1.ValetKeyRequest}
  */
 public final class ValetKeyRequest extends
@@ -48,8 +52,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object sub_ = "";
   /**
    * <pre>
-   * Principal / Data Subject, ie. user id
-   * https://tools.ietf.org/html/rfc7519#section-4.1.2
+   * Optional. Who the key is for, for example your user's ID. It's stored in
+   * the token as its subject (the `sub` claim).
    * </pre>
    *
    * <code>string sub = 1 [json_name = "sub"];</code>
@@ -70,8 +74,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Principal / Data Subject, ie. user id
-   * https://tools.ietf.org/html/rfc7519#section-4.1.2
+   * Optional. Who the key is for, for example your user's ID. It's stored in
+   * the token as its subject (the `sub` claim).
    * </pre>
    *
    * <code>string sub = 1 [json_name = "sub"];</code>
@@ -96,9 +100,8 @@ private static final long serialVersionUID = 0L;
   private long exp_ = 0L;
   /**
    * <pre>
-   * Timestamp for when this key expires
-   * Default 8 hours from now, max 48h
-   * https://tools.ietf.org/html/rfc7519#section-4.1.4
+   * When the key expires, as a Unix timestamp in seconds. At most 48 hours
+   * from now. Defaults to 8 hours after the key is issued.
    * </pre>
    *
    * <code>int64 exp = 2 [json_name = "exp"];</code>
@@ -278,6 +281,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Options for a new valet key.
+   * </pre>
+   *
    * Protobuf type {@code ssn.access.v1.ValetKeyRequest}
    */
   public static final class Builder extends
@@ -430,8 +437,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object sub_ = "";
     /**
      * <pre>
-     * Principal / Data Subject, ie. user id
-     * https://tools.ietf.org/html/rfc7519#section-4.1.2
+     * Optional. Who the key is for, for example your user's ID. It's stored in
+     * the token as its subject (the `sub` claim).
      * </pre>
      *
      * <code>string sub = 1 [json_name = "sub"];</code>
@@ -451,8 +458,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Principal / Data Subject, ie. user id
-     * https://tools.ietf.org/html/rfc7519#section-4.1.2
+     * Optional. Who the key is for, for example your user's ID. It's stored in
+     * the token as its subject (the `sub` claim).
      * </pre>
      *
      * <code>string sub = 1 [json_name = "sub"];</code>
@@ -473,8 +480,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Principal / Data Subject, ie. user id
-     * https://tools.ietf.org/html/rfc7519#section-4.1.2
+     * Optional. Who the key is for, for example your user's ID. It's stored in
+     * the token as its subject (the `sub` claim).
      * </pre>
      *
      * <code>string sub = 1 [json_name = "sub"];</code>
@@ -491,8 +498,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Principal / Data Subject, ie. user id
-     * https://tools.ietf.org/html/rfc7519#section-4.1.2
+     * Optional. Who the key is for, for example your user's ID. It's stored in
+     * the token as its subject (the `sub` claim).
      * </pre>
      *
      * <code>string sub = 1 [json_name = "sub"];</code>
@@ -506,8 +513,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Principal / Data Subject, ie. user id
-     * https://tools.ietf.org/html/rfc7519#section-4.1.2
+     * Optional. Who the key is for, for example your user's ID. It's stored in
+     * the token as its subject (the `sub` claim).
      * </pre>
      *
      * <code>string sub = 1 [json_name = "sub"];</code>
@@ -527,9 +534,8 @@ private static final long serialVersionUID = 0L;
     private long exp_ ;
     /**
      * <pre>
-     * Timestamp for when this key expires
-     * Default 8 hours from now, max 48h
-     * https://tools.ietf.org/html/rfc7519#section-4.1.4
+     * When the key expires, as a Unix timestamp in seconds. At most 48 hours
+     * from now. Defaults to 8 hours after the key is issued.
      * </pre>
      *
      * <code>int64 exp = 2 [json_name = "exp"];</code>
@@ -541,9 +547,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Timestamp for when this key expires
-     * Default 8 hours from now, max 48h
-     * https://tools.ietf.org/html/rfc7519#section-4.1.4
+     * When the key expires, as a Unix timestamp in seconds. At most 48 hours
+     * from now. Defaults to 8 hours after the key is issued.
      * </pre>
      *
      * <code>int64 exp = 2 [json_name = "exp"];</code>
@@ -559,9 +564,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Timestamp for when this key expires
-     * Default 8 hours from now, max 48h
-     * https://tools.ietf.org/html/rfc7519#section-4.1.4
+     * When the key expires, as a Unix timestamp in seconds. At most 48 hours
+     * from now. Defaults to 8 hours after the key is issued.
      * </pre>
      *
      * <code>int64 exp = 2 [json_name = "exp"];</code>

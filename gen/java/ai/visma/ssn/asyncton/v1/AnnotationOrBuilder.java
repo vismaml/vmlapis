@@ -11,7 +11,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * feature name e.g. "TOTAL_INCL_VAT"
+   * The feature these results belong to, for example TOTAL_INCL_VAT.
    * </pre>
    *
    * <code>string feature = 1 [json_name = "feature"];</code>
@@ -20,7 +20,7 @@ public interface AnnotationOrBuilder extends
   java.lang.String getFeature();
   /**
    * <pre>
-   * feature name e.g. "TOTAL_INCL_VAT"
+   * The feature these results belong to, for example TOTAL_INCL_VAT.
    * </pre>
    *
    * <code>string feature = 1 [json_name = "feature"];</code>
@@ -31,7 +31,9 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -40,7 +42,9 @@ public interface AnnotationOrBuilder extends
       getCandidatesList();
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -48,7 +52,9 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.Candidate getCandidates(int index);
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -56,7 +62,9 @@ public interface AnnotationOrBuilder extends
   int getCandidatesCount();
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -65,7 +73,9 @@ public interface AnnotationOrBuilder extends
       getCandidatesOrBuilderList();
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -75,7 +85,10 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -84,7 +97,10 @@ public interface AnnotationOrBuilder extends
       getPurchaseLineCandidatesList();
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -92,7 +108,10 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index);
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -100,7 +119,10 @@ public interface AnnotationOrBuilder extends
   int getPurchaseLineCandidatesCount();
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -109,7 +131,10 @@ public interface AnnotationOrBuilder extends
       getPurchaseLineCandidatesOrBuilderList();
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -119,7 +144,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -128,7 +153,7 @@ public interface AnnotationOrBuilder extends
       getAnswerCandidatesList();
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -136,7 +161,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.AnswerCandidate getAnswerCandidates(int index);
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -144,7 +169,7 @@ public interface AnnotationOrBuilder extends
   int getAnswerCandidatesCount();
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -153,7 +178,7 @@ public interface AnnotationOrBuilder extends
       getAnswerCandidatesOrBuilderList();
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -163,7 +188,8 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -172,7 +198,8 @@ public interface AnnotationOrBuilder extends
   boolean hasTextAnnotation();
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -181,7 +208,8 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.TextAnnotation getTextAnnotation();
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -190,7 +218,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -199,7 +227,7 @@ public interface AnnotationOrBuilder extends
       getPageTextsList();
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -207,7 +235,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.PageText getPageTexts(int index);
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -215,7 +243,7 @@ public interface AnnotationOrBuilder extends
   int getPageTextsCount();
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -224,7 +252,7 @@ public interface AnnotationOrBuilder extends
       getPageTextsOrBuilderList();
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -234,7 +262,10 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -243,7 +274,10 @@ public interface AnnotationOrBuilder extends
       getVatDistributionCandidatesList();
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -251,7 +285,10 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -259,7 +296,10 @@ public interface AnnotationOrBuilder extends
   int getVatDistributionCandidatesCount();
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -268,7 +308,10 @@ public interface AnnotationOrBuilder extends
       getVatDistributionCandidatesOrBuilderList();
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -278,7 +321,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -287,7 +330,7 @@ public interface AnnotationOrBuilder extends
       getQrCodesList();
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -295,7 +338,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.QrCodeData getQrCodes(int index);
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -303,7 +346,7 @@ public interface AnnotationOrBuilder extends
   int getQrCodesCount();
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -312,7 +355,7 @@ public interface AnnotationOrBuilder extends
       getQrCodesOrBuilderList();
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -322,7 +365,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -331,7 +374,7 @@ public interface AnnotationOrBuilder extends
       getSwissQrBillsList();
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -339,7 +382,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index);
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -347,7 +390,7 @@ public interface AnnotationOrBuilder extends
   int getSwissQrBillsCount();
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -356,7 +399,7 @@ public interface AnnotationOrBuilder extends
       getSwissQrBillsOrBuilderList();
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -366,7 +409,9 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -375,7 +420,9 @@ public interface AnnotationOrBuilder extends
       getPurchaseLinesDetailsList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -383,7 +430,9 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.PurchaseLine getPurchaseLinesDetails(int index);
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -391,7 +440,9 @@ public interface AnnotationOrBuilder extends
   int getPurchaseLinesDetailsCount();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -400,7 +451,9 @@ public interface AnnotationOrBuilder extends
       getPurchaseLinesDetailsOrBuilderList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -410,7 +463,9 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -419,7 +474,9 @@ public interface AnnotationOrBuilder extends
       getVatDistributionDetailsList();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -427,7 +484,9 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index);
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -435,7 +494,9 @@ public interface AnnotationOrBuilder extends
   int getVatDistributionDetailsCount();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -444,7 +505,9 @@ public interface AnnotationOrBuilder extends
       getVatDistributionDetailsOrBuilderList();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -454,7 +517,8 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -463,7 +527,8 @@ public interface AnnotationOrBuilder extends
       getStructuredAddressList();
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -471,7 +536,8 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.type.StructuredAddress getStructuredAddress(int index);
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -479,7 +545,8 @@ public interface AnnotationOrBuilder extends
   int getStructuredAddressCount();
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -488,7 +555,8 @@ public interface AnnotationOrBuilder extends
       getStructuredAddressOrBuilderList();
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>

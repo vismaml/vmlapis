@@ -7,8 +7,10 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
- * structures can be used at a time.
+ * Input data for an example or a suggestion. Set exactly one of transaction, invoice or
+ * invoiceLine. The first example in a dataset sets its type, bank, scanned-invoice or
+ * electronic-invoice-line, and every later example and suggest input must use the same
+ * structure.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.Data}
@@ -93,10 +95,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int TRANSACTION_FIELD_NUMBER = 1;
   /**
-   * <pre>
-   * Transaction-level information; at this time used only with bank transactions
-   * </pre>
-   *
    * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
    * @return Whether the transaction field is set.
    */
@@ -105,10 +103,6 @@ private static final long serialVersionUID = 0L;
     return dataStructureCase_ == 1;
   }
   /**
-   * <pre>
-   * Transaction-level information; at this time used only with bank transactions
-   * </pre>
-   *
    * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
    * @return The transaction.
    */
@@ -120,10 +114,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.asgt.v2.type.Transaction.getDefaultInstance();
   }
   /**
-   * <pre>
-   * Transaction-level information; at this time used only with bank transactions
-   * </pre>
-   *
    * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
    */
   @java.lang.Override
@@ -136,10 +126,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int INVOICE_FIELD_NUMBER = 2;
   /**
-   * <pre>
-   * Invoice-level information for e-invoices and scanned invoices and receipts
-   * </pre>
-   *
    * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
@@ -148,10 +134,6 @@ private static final long serialVersionUID = 0L;
     return dataStructureCase_ == 2;
   }
   /**
-   * <pre>
-   * Invoice-level information for e-invoices and scanned invoices and receipts
-   * </pre>
-   *
    * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return The invoice.
    */
@@ -163,10 +145,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.asgt.v2.type.Invoice.getDefaultInstance();
   }
   /**
-   * <pre>
-   * Invoice-level information for e-invoices and scanned invoices and receipts
-   * </pre>
-   *
    * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
    */
   @java.lang.Override
@@ -179,10 +157,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int INVOICE_LINE_FIELD_NUMBER = 3;
   /**
-   * <pre>
-   * Line-level information for e-invoices; use one sample per invoice line
-   * </pre>
-   *
    * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
    * @return Whether the invoiceLine field is set.
    */
@@ -191,10 +165,6 @@ private static final long serialVersionUID = 0L;
     return dataStructureCase_ == 3;
   }
   /**
-   * <pre>
-   * Line-level information for e-invoices; use one sample per invoice line
-   * </pre>
-   *
    * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
    * @return The invoiceLine.
    */
@@ -206,10 +176,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.asgt.v2.type.InvoiceLine.getDefaultInstance();
   }
   /**
-   * <pre>
-   * Line-level information for e-invoices; use one sample per invoice line
-   * </pre>
-   *
    * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
    */
   @java.lang.Override
@@ -422,8 +388,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
-   * structures can be used at a time.
+   * Input data for an example or a suggestion. Set exactly one of transaction, invoice or
+   * invoiceLine. The first example in a dataset sets its type, bank, scanned-invoice or
+   * electronic-invoice-line, and every later example and suggest input must use the same
+   * structure.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.Data}
@@ -634,10 +602,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.type.Transaction, ai.visma.asgt.v2.type.Transaction.Builder, ai.visma.asgt.v2.type.TransactionOrBuilder> transactionBuilder_;
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return Whether the transaction field is set.
      */
@@ -646,10 +610,6 @@ private static final long serialVersionUID = 0L;
       return dataStructureCase_ == 1;
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      * @return The transaction.
      */
@@ -668,10 +628,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     public Builder setTransaction(ai.visma.asgt.v2.type.Transaction value) {
@@ -688,10 +644,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     public Builder setTransaction(
@@ -706,10 +658,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     public Builder mergeTransaction(ai.visma.asgt.v2.type.Transaction value) {
@@ -733,10 +681,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     public Builder clearTransaction() {
@@ -756,20 +700,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     public ai.visma.asgt.v2.type.Transaction.Builder getTransactionBuilder() {
       return getTransactionFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     @java.lang.Override
@@ -784,10 +720,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Transaction-level information; at this time used only with bank transactions
-     * </pre>
-     *
      * <code>.asgt.v2.type.Transaction transaction = 1 [json_name = "transaction"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -812,10 +744,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.type.Invoice, ai.visma.asgt.v2.type.Invoice.Builder, ai.visma.asgt.v2.type.InvoiceOrBuilder> invoiceBuilder_;
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
@@ -824,10 +752,6 @@ private static final long serialVersionUID = 0L;
       return dataStructureCase_ == 2;
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
@@ -846,10 +770,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder setInvoice(ai.visma.asgt.v2.type.Invoice value) {
@@ -866,10 +786,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder setInvoice(
@@ -884,10 +800,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder mergeInvoice(ai.visma.asgt.v2.type.Invoice value) {
@@ -911,10 +823,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder clearInvoice() {
@@ -934,20 +842,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public ai.visma.asgt.v2.type.Invoice.Builder getInvoiceBuilder() {
       return getInvoiceFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     @java.lang.Override
@@ -962,10 +862,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Invoice-level information for e-invoices and scanned invoices and receipts
-     * </pre>
-     *
      * <code>.asgt.v2.type.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -990,10 +886,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.type.InvoiceLine, ai.visma.asgt.v2.type.InvoiceLine.Builder, ai.visma.asgt.v2.type.InvoiceLineOrBuilder> invoiceLineBuilder_;
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return Whether the invoiceLine field is set.
      */
@@ -1002,10 +894,6 @@ private static final long serialVersionUID = 0L;
       return dataStructureCase_ == 3;
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      * @return The invoiceLine.
      */
@@ -1024,10 +912,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     public Builder setInvoiceLine(ai.visma.asgt.v2.type.InvoiceLine value) {
@@ -1044,10 +928,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     public Builder setInvoiceLine(
@@ -1062,10 +942,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     public Builder mergeInvoiceLine(ai.visma.asgt.v2.type.InvoiceLine value) {
@@ -1089,10 +965,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     public Builder clearInvoiceLine() {
@@ -1112,20 +984,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     public ai.visma.asgt.v2.type.InvoiceLine.Builder getInvoiceLineBuilder() {
       return getInvoiceLineFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     @java.lang.Override
@@ -1140,10 +1004,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Line-level information for e-invoices; use one sample per invoice line
-     * </pre>
-     *
      * <code>.asgt.v2.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

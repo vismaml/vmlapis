@@ -10,11 +10,19 @@ public interface UpdateTransactionResultsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -22,11 +30,23 @@ public interface UpdateTransactionResultsRequestOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+   * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+   * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
   java.lang.String getCustomId();
   /**
+   * <pre>
+   * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+   * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+   * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -34,24 +54,54 @@ public interface UpdateTransactionResultsRequestOrBuilder extends
       getCustomIdBytes();
 
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   java.util.List<ai.visma.ssn.asyncton.v1.Annotation> 
       getAnnotationsList();
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   ai.visma.ssn.asyncton.v1.Annotation getAnnotations(int index);
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   int getAnnotationsCount();
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
       getAnnotationsOrBuilderList();
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getAnnotationsOrBuilder(

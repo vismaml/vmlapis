@@ -7,7 +7,10 @@ package ai.visma.ssn.type;
 
 /**
  * <pre>
- * A bounding polygon for the detected image annotation.
+ * A box on the page, for example around the text of a candidate. Its four points are
+ * ordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,
+ * the order follows the text as it's read in its natural orientation, so the first
+ * point is always the top-left corner of the text.
  * </pre>
  *
  * Protobuf type {@code ssn.type.BoundingPoly}
@@ -53,7 +56,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Vertex> vertices_;
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -64,7 +67,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -76,7 +79,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -87,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -98,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -114,7 +117,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.NormalizedVertex> normalizedVertices_;
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -125,7 +129,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -137,7 +142,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -148,7 +154,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -159,7 +166,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -344,7 +352,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A bounding polygon for the detected image annotation.
+   * A box on the page, for example around the text of a candidate. Its four points are
+   * ordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,
+   * the order follows the text as it's read in its natural orientation, so the first
+   * point is always the top-left corner of the text.
    * </pre>
    *
    * Protobuf type {@code ssn.type.BoundingPoly}
@@ -598,7 +609,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -612,7 +623,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -626,7 +637,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -640,7 +651,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -661,7 +672,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -679,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -699,7 +710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -720,7 +731,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -738,7 +749,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -756,7 +767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -775,7 +786,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -792,7 +803,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -809,7 +820,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -820,7 +831,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -834,7 +845,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -849,7 +860,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -860,7 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -872,7 +883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon vertices.
+     * The four points, in pixel coordinates.
      * </pre>
      *
      * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -910,7 +921,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -924,7 +936,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -938,7 +951,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -952,7 +966,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -973,7 +988,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -991,7 +1007,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1011,7 +1028,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1032,7 +1050,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1050,7 +1069,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1068,7 +1088,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1087,7 +1108,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1104,7 +1126,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1121,7 +1144,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1132,7 +1156,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1146,7 +1171,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1161,7 +1187,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1172,7 +1199,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -1184,7 +1212,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The bounding polygon normalized vertices.
+     * The same four points relative to the page size, from 0 to 1, so you can place an
+     * overlay without knowing the size of the image.
      * </pre>
      *
      * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>

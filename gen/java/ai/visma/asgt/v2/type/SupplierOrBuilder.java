@@ -11,7 +11,7 @@ public interface SupplierOrBuilder extends
 
   /**
    * <pre>
-   * Id of the supplier; not nullable.
+   * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface SupplierOrBuilder extends
   java.lang.String getId();
   /**
    * <pre>
-   * Id of the supplier; not nullable.
+   * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -51,7 +51,7 @@ public interface SupplierOrBuilder extends
 
   /**
    * <pre>
-   * Global ID of the supplier.
+   * Global ID of the supplier, such as its VAT number.
    * </pre>
    *
    * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -60,7 +60,7 @@ public interface SupplierOrBuilder extends
   java.lang.String getGlobalId();
   /**
    * <pre>
-   * Global ID of the supplier.
+   * Global ID of the supplier, such as its VAT number.
    * </pre>
    *
    * <code>string global_id = 3 [json_name = "globalId"];</code>

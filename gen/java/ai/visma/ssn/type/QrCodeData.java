@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * A QR code found in the document, returned for the QR_CODES feature.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.QrCodeData}
  */
 public final class QrCodeData extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object content_ = "";
   /**
+   * <pre>
+   * The decoded text of the QR code.
+   * </pre>
+   *
    * <code>string content = 1 [json_name = "content"];</code>
    * @return The content.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The decoded text of the QR code.
+   * </pre>
+   *
    * <code>string content = 1 [json_name = "content"];</code>
    * @return The bytes for content.
    */
@@ -239,6 +251,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A QR code found in the document, returned for the QR_CODES feature.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.QrCodeData}
    */
   public static final class Builder extends
@@ -378,6 +394,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object content_ = "";
     /**
+     * <pre>
+     * The decoded text of the QR code.
+     * </pre>
+     *
      * <code>string content = 1 [json_name = "content"];</code>
      * @return The content.
      */
@@ -394,6 +414,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The decoded text of the QR code.
+     * </pre>
+     *
      * <code>string content = 1 [json_name = "content"];</code>
      * @return The bytes for content.
      */
@@ -411,6 +435,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The decoded text of the QR code.
+     * </pre>
+     *
      * <code>string content = 1 [json_name = "content"];</code>
      * @param value The content to set.
      * @return This builder for chaining.
@@ -424,6 +452,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The decoded text of the QR code.
+     * </pre>
+     *
      * <code>string content = 1 [json_name = "content"];</code>
      * @return This builder for chaining.
      */
@@ -434,6 +466,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The decoded text of the QR code.
+     * </pre>
+     *
      * <code>string content = 1 [json_name = "content"];</code>
      * @param value The bytes for content to set.
      * @return This builder for chaining.

@@ -41,7 +41,10 @@ class ProductTypeServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def BatchSuggest(self, request, context):
-        """Suggest product types for a batch of text inputs.
+        """Suggest product types for a batch of texts.
+
+        Returns one suggestion per text, in the same order, each with ranked product type
+        candidates. Send 1 to 512 texts, none of them empty.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -55,14 +58,18 @@ class ProductTypeServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def InternalBatchSuggestWithLogits(self, request, context):
-        """Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+        """Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Feedback(self, request, context):
-        """Submit feedback for product type predictions.
+        """Send the correct product types for texts.
+
+        Stores each text with its correct product type and the model's current candidates for it,
+        to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+        length, or if a category isn't a ProductType name.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

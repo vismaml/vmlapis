@@ -6,6 +6,11 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/datasets/{datasetName}:batchSuggest and
+ * POST /v2/datasets/{datasetName}/model:batchSuggest.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.BatchSuggestRequest}
  */
 public final class BatchSuggestRequest extends
@@ -50,7 +55,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object datasetName_ = "";
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -71,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -97,7 +102,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.asgt.v2.type.Data> inputs_;
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -108,7 +113,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -120,7 +125,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -131,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -142,7 +147,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -365,6 +370,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/datasets/{datasetName}:batchSuggest and
+   * POST /v2/datasets/{datasetName}/model:batchSuggest.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.BatchSuggestRequest}
    */
   public static final class Builder extends
@@ -594,7 +604,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object datasetName_ = "";
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -614,7 +624,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -635,7 +645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -652,7 +662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -666,7 +676,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -697,7 +707,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -711,7 +721,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -725,7 +735,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -739,7 +749,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -760,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -778,7 +788,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -798,7 +808,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -819,7 +829,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -837,7 +847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -855,7 +865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -874,7 +884,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -891,7 +901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -908,7 +918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -919,7 +929,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -933,7 +943,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -948,7 +958,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -959,7 +969,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -971,7 +981,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Input data to use for prediction
+     * The inputs to get suggestions for. Each one must set a data structure.
      * </pre>
      *
      * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>

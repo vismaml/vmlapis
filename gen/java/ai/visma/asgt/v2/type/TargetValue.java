@@ -7,7 +7,7 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * Record mapping a target name to a value
+ * A target and its value in an example.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.TargetValue}
@@ -52,6 +52,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+   * starting with a letter, digit or ".", up to 256 bytes.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
    * @return The name.
    */
@@ -69,6 +74,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+   * starting with a letter, digit or ".", up to 256 bytes.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
    * @return The bytes for name.
    */
@@ -91,6 +101,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
+   * <pre>
+   * The value for this target, such as "002".
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The value.
    */
@@ -108,6 +122,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The value for this target, such as "002".
+   * </pre>
+   *
    * <code>string value = 2 [json_name = "value"];</code>
    * @return The bytes for value.
    */
@@ -294,7 +312,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Record mapping a target name to a value
+   * A target and its value in an example.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.TargetValue}
@@ -450,6 +468,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+     * starting with a letter, digit or ".", up to 256 bytes.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The name.
      */
@@ -466,6 +489,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+     * starting with a letter, digit or ".", up to 256 bytes.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
@@ -483,6 +511,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+     * starting with a letter, digit or ".", up to 256 bytes.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -496,6 +529,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+     * starting with a letter, digit or ".", up to 256 bytes.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -506,6 +544,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the target, such as "account". Use letters, digits, ".", "_", "&gt;" and "-",
+     * starting with a letter, digit or ".", up to 256 bytes.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name", (.validate.rules) = { ... }</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -522,6 +565,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object value_ = "";
     /**
+     * <pre>
+     * The value for this target, such as "002".
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
      */
@@ -538,6 +585,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The value for this target, such as "002".
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The bytes for value.
      */
@@ -555,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The value for this target, such as "002".
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
@@ -568,6 +623,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value for this target, such as "002".
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
@@ -578,6 +637,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value for this target, such as "002".
+     * </pre>
+     *
      * <code>string value = 2 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.

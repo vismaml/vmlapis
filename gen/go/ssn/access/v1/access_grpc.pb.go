@@ -26,6 +26,23 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AccessClient interface {
+	// Create a valet key, a short-lived token for a web or mobile app.
+	//
+	// Call this from your backend with your project token, and give the
+	// returned token to the app. The app sends it as
+	// `Authorization: Bearer <token>`, so your project token never has to be
+	// in an untrusted client. The key expires 8 hours after it's issued,
+	// unless you set `exp`.
+	//
+	// A valet key can call POST /v1/document:annotate and
+	// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+	// transaction, get its status or results, and update its results, and the
+	// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+	// endpoint in the API reference returns 403 for a valet key, and so does
+	// any call after the key expires. Keys can't be revoked.
+	//
+	// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+	// this endpoint with a valet key or the demo token.
 	GenerateValetKey(ctx context.Context, in *ValetKeyRequest, opts ...grpc.CallOption) (*ValetKeyResponse, error)
 }
 
@@ -50,6 +67,23 @@ func (c *accessClient) GenerateValetKey(ctx context.Context, in *ValetKeyRequest
 // All implementations should embed UnimplementedAccessServer
 // for forward compatibility
 type AccessServer interface {
+	// Create a valet key, a short-lived token for a web or mobile app.
+	//
+	// Call this from your backend with your project token, and give the
+	// returned token to the app. The app sends it as
+	// `Authorization: Bearer <token>`, so your project token never has to be
+	// in an untrusted client. The key expires 8 hours after it's issued,
+	// unless you set `exp`.
+	//
+	// A valet key can call POST /v1/document:annotate and
+	// POST /v1/feedback:create, the Smartscan Async endpoints that create a
+	// transaction, get its status or results, and update its results, and the
+	// three Autosuggest suggest endpoints and GET /v2/trainings. Every other
+	// endpoint in the API reference returns 403 for a valet key, and so does
+	// any call after the key expires. Keys can't be revoked.
+	//
+	// Errors: 400 if `exp` is more than 48 hours from now, and 403 if you call
+	// this endpoint with a valet key or the demo token.
 	GenerateValetKey(context.Context, *ValetKeyRequest) (*ValetKeyResponse, error)
 }
 

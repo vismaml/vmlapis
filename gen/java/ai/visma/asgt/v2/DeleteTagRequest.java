@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request for DELETE /v2/tags/{tagName}.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.DeleteTagRequest}
  */
 public final class DeleteTagRequest extends
@@ -48,7 +52,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object tagName_ = "";
   /**
    * <pre>
-   * text-no-spaces
+   * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+   * or ".", up to 256 bytes, so tags with spaces can't be used here.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -69,7 +74,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+   * or ".", up to 256 bytes, so tags with spaces can't be used here.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -247,6 +253,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request for DELETE /v2/tags/{tagName}.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.DeleteTagRequest}
    */
   public static final class Builder extends
@@ -387,7 +397,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object tagName_ = "";
     /**
      * <pre>
-     * text-no-spaces
+     * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+     * or ".", up to 256 bytes, so tags with spaces can't be used here.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -407,7 +418,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+     * or ".", up to 256 bytes, so tags with spaces can't be used here.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -428,7 +440,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+     * or ".", up to 256 bytes, so tags with spaces can't be used here.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -445,7 +458,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+     * or ".", up to 256 bytes, so tags with spaces can't be used here.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -459,7 +473,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag. It must use letters, digits, ".", "_", "&gt;" and "-", starting with a letter, digit
+     * or ".", up to 256 bytes, so tags with spaces can't be used here.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>

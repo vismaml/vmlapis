@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/models/product-types:batchSuggest.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ProductTypeBatchSuggestRequest}
  */
 public final class ProductTypeBatchSuggestRequest extends
@@ -50,7 +54,8 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -62,7 +67,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -73,7 +79,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -85,7 +92,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -261,6 +269,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/models/product-types:batchSuggest.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ProductTypeBatchSuggestRequest}
    */
   public static final class Builder extends
@@ -416,7 +428,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -429,7 +442,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -440,7 +454,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -452,7 +467,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -465,7 +481,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -484,7 +501,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -502,7 +520,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -520,7 +539,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -535,7 +555,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text descriptions to classify into product types.
+     * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+     * texts, none of them empty.
      * </pre>
      *
      * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>

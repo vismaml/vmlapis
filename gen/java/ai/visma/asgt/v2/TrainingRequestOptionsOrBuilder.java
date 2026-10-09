@@ -11,7 +11,7 @@ public interface TrainingRequestOptionsOrBuilder extends
 
   /**
    * <pre>
-   * The number of trainings to return. Ranges from 1 to 100.
+   * Number of trainings to return, from 1 to 100. The default is 10.
    * </pre>
    *
    * <code>int64 limit = 1 [json_name = "limit", (.validate.rules) = { ... }</code>

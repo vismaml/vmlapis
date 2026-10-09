@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/datasets/{datasetName}:suggest.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.SuggestRequest}
  */
 public final class SuggestRequest extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object datasetName_ = "";
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -70,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -94,10 +98,6 @@ private static final long serialVersionUID = 0L;
   public static final int INPUT_FIELD_NUMBER = 2;
   private ai.visma.asgt.v2.type.Data input_;
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    * @return Whether the input field is set.
    */
@@ -106,10 +106,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    * @return The input.
    */
@@ -118,10 +114,6 @@ private static final long serialVersionUID = 0L;
     return input_ == null ? ai.visma.asgt.v2.type.Data.getDefaultInstance() : input_;
   }
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    */
   @java.lang.Override
@@ -344,6 +336,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/datasets/{datasetName}:suggest.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.SuggestRequest}
    */
   public static final class Builder extends
@@ -535,7 +531,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object datasetName_ = "";
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -555,7 +551,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -576,7 +572,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -593,7 +589,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -607,7 +603,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the dataset to make prediction against
+     * Name of the dataset.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -628,10 +624,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.type.Data, ai.visma.asgt.v2.type.Data.Builder, ai.visma.asgt.v2.type.DataOrBuilder> inputBuilder_;
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return Whether the input field is set.
      */
@@ -639,10 +631,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      * @return The input.
      */
@@ -654,10 +642,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public Builder setInput(ai.visma.asgt.v2.type.Data value) {
@@ -674,10 +658,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public Builder setInput(
@@ -692,10 +672,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public Builder mergeInput(ai.visma.asgt.v2.type.Data value) {
@@ -717,10 +693,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public Builder clearInput() {
@@ -734,10 +706,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public ai.visma.asgt.v2.type.Data.Builder getInputBuilder() {
@@ -746,10 +714,6 @@ private static final long serialVersionUID = 0L;
       return getInputFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     public ai.visma.asgt.v2.type.DataOrBuilder getInputOrBuilder() {
@@ -761,10 +725,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Input data to use for prediction
-     * </pre>
-     *
      * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

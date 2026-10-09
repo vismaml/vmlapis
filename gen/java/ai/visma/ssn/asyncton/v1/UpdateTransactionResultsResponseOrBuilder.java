@@ -10,11 +10,19 @@ public interface UpdateTransactionResultsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -22,11 +30,19 @@ public interface UpdateTransactionResultsResponseOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
   java.lang.String getCustomId();
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */

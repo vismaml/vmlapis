@@ -11,8 +11,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the line was found.
-   * page_ref start from 1.
+   * The page the line was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -22,7 +21,8 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * Candidates for the product code, product number or SKU that the supplier uses for
+   * the item.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate code = 2 [json_name = "code"];</code>
@@ -31,7 +31,8 @@ public interface PurchaseLineOrBuilder extends
       getCodeList();
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * Candidates for the product code, product number or SKU that the supplier uses for
+   * the item.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate code = 2 [json_name = "code"];</code>
@@ -39,7 +40,8 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getCode(int index);
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * Candidates for the product code, product number or SKU that the supplier uses for
+   * the item.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate code = 2 [json_name = "code"];</code>
@@ -47,7 +49,8 @@ public interface PurchaseLineOrBuilder extends
   int getCodeCount();
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * Candidates for the product code, product number or SKU that the supplier uses for
+   * the item.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate code = 2 [json_name = "code"];</code>
@@ -56,7 +59,8 @@ public interface PurchaseLineOrBuilder extends
       getCodeOrBuilderList();
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * Candidates for the product code, product number or SKU that the supplier uses for
+   * the item.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate code = 2 [json_name = "code"];</code>
@@ -66,7 +70,8 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * Candidates for the description of the line, typically the name of a product or the
+   * delivered service.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate description = 3 [json_name = "description"];</code>
@@ -75,7 +80,8 @@ public interface PurchaseLineOrBuilder extends
       getDescriptionList();
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * Candidates for the description of the line, typically the name of a product or the
+   * delivered service.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate description = 3 [json_name = "description"];</code>
@@ -83,7 +89,8 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getDescription(int index);
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * Candidates for the description of the line, typically the name of a product or the
+   * delivered service.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate description = 3 [json_name = "description"];</code>
@@ -91,7 +98,8 @@ public interface PurchaseLineOrBuilder extends
   int getDescriptionCount();
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * Candidates for the description of the line, typically the name of a product or the
+   * delivered service.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate description = 3 [json_name = "description"];</code>
@@ -100,7 +108,8 @@ public interface PurchaseLineOrBuilder extends
       getDescriptionOrBuilderList();
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * Candidates for the description of the line, typically the name of a product or the
+   * delivered service.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate description = 3 [json_name = "description"];</code>
@@ -110,7 +119,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Quantity is the number of items
+   * Candidates for the quantity.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate quantity = 4 [json_name = "quantity"];</code>
@@ -119,7 +128,7 @@ public interface PurchaseLineOrBuilder extends
       getQuantityList();
   /**
    * <pre>
-   * Quantity is the number of items
+   * Candidates for the quantity.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate quantity = 4 [json_name = "quantity"];</code>
@@ -127,7 +136,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getQuantity(int index);
   /**
    * <pre>
-   * Quantity is the number of items
+   * Candidates for the quantity.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate quantity = 4 [json_name = "quantity"];</code>
@@ -135,7 +144,7 @@ public interface PurchaseLineOrBuilder extends
   int getQuantityCount();
   /**
    * <pre>
-   * Quantity is the number of items
+   * Candidates for the quantity.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate quantity = 4 [json_name = "quantity"];</code>
@@ -144,7 +153,7 @@ public interface PurchaseLineOrBuilder extends
       getQuantityOrBuilderList();
   /**
    * <pre>
-   * Quantity is the number of items
+   * Candidates for the quantity.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate quantity = 4 [json_name = "quantity"];</code>
@@ -154,7 +163,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * Candidates for the row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate item_number = 5 [json_name = "itemNumber"];</code>
@@ -163,7 +172,7 @@ public interface PurchaseLineOrBuilder extends
       getItemNumberList();
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * Candidates for the row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate item_number = 5 [json_name = "itemNumber"];</code>
@@ -171,7 +180,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getItemNumber(int index);
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * Candidates for the row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate item_number = 5 [json_name = "itemNumber"];</code>
@@ -179,7 +188,7 @@ public interface PurchaseLineOrBuilder extends
   int getItemNumberCount();
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * Candidates for the row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate item_number = 5 [json_name = "itemNumber"];</code>
@@ -188,7 +197,7 @@ public interface PurchaseLineOrBuilder extends
       getItemNumberOrBuilderList();
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * Candidates for the row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate item_number = 5 [json_name = "itemNumber"];</code>
@@ -198,7 +207,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Unit is the unit of the item
+   * Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit = 6 [json_name = "unit"];</code>
@@ -207,7 +216,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitList();
   /**
    * <pre>
-   * Unit is the unit of the item
+   * Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit = 6 [json_name = "unit"];</code>
@@ -215,7 +224,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getUnit(int index);
   /**
    * <pre>
-   * Unit is the unit of the item
+   * Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit = 6 [json_name = "unit"];</code>
@@ -223,7 +232,7 @@ public interface PurchaseLineOrBuilder extends
   int getUnitCount();
   /**
    * <pre>
-   * Unit is the unit of the item
+   * Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit = 6 [json_name = "unit"];</code>
@@ -232,7 +241,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitOrBuilderList();
   /**
    * <pre>
-   * Unit is the unit of the item
+   * Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit = 6 [json_name = "unit"];</code>
@@ -242,7 +251,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * Candidates for the total discount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -251,7 +260,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalDiscountList();
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * Candidates for the total discount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -259,7 +268,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalDiscount(int index);
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * Candidates for the total discount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -267,7 +276,7 @@ public interface PurchaseLineOrBuilder extends
   int getTotalDiscountCount();
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * Candidates for the total discount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -276,7 +285,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalDiscountOrBuilderList();
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * Candidates for the total discount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -286,7 +295,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * Candidates for the discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -295,7 +304,7 @@ public interface PurchaseLineOrBuilder extends
       getPercentageDiscountList();
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * Candidates for the discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -303,7 +312,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getPercentageDiscount(int index);
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * Candidates for the discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -311,7 +320,7 @@ public interface PurchaseLineOrBuilder extends
   int getPercentageDiscountCount();
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * Candidates for the discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -320,7 +329,7 @@ public interface PurchaseLineOrBuilder extends
       getPercentageDiscountOrBuilderList();
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * Candidates for the discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -330,7 +339,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * Candidates for the line total including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -339,7 +348,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalInclVatList();
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * Candidates for the line total including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -347,7 +356,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalInclVat(int index);
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * Candidates for the line total including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -355,7 +364,7 @@ public interface PurchaseLineOrBuilder extends
   int getTotalInclVatCount();
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * Candidates for the line total including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -364,7 +373,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalInclVatOrBuilderList();
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * Candidates for the line total including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -374,7 +383,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * Candidates for the line total excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -383,7 +392,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalExclVatList();
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * Candidates for the line total excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -391,7 +400,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalExclVat(int index);
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * Candidates for the line total excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -399,7 +408,7 @@ public interface PurchaseLineOrBuilder extends
   int getTotalExclVatCount();
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * Candidates for the line total excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -408,7 +417,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalExclVatOrBuilderList();
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * Candidates for the line total excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -418,7 +427,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * Candidates for the VAT amount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 11 [json_name = "totalVat"];</code>
@@ -427,7 +436,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalVatList();
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * Candidates for the VAT amount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 11 [json_name = "totalVat"];</code>
@@ -435,7 +444,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalVat(int index);
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * Candidates for the VAT amount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 11 [json_name = "totalVat"];</code>
@@ -443,7 +452,7 @@ public interface PurchaseLineOrBuilder extends
   int getTotalVatCount();
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * Candidates for the VAT amount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 11 [json_name = "totalVat"];</code>
@@ -452,7 +461,7 @@ public interface PurchaseLineOrBuilder extends
       getTotalVatOrBuilderList();
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * Candidates for the VAT amount of the line.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 11 [json_name = "totalVat"];</code>
@@ -462,7 +471,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * Candidates for the VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -471,7 +480,7 @@ public interface PurchaseLineOrBuilder extends
       getPercentageVatList();
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * Candidates for the VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -479,7 +488,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getPercentageVat(int index);
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * Candidates for the VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -487,7 +496,7 @@ public interface PurchaseLineOrBuilder extends
   int getPercentageVatCount();
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * Candidates for the VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -496,7 +505,7 @@ public interface PurchaseLineOrBuilder extends
       getPercentageVatOrBuilderList();
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * Candidates for the VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -506,7 +515,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * Candidates for the price of one unit, including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -515,7 +524,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceInclVatList();
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * Candidates for the price of one unit, including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -523,7 +532,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getUnitPriceInclVat(int index);
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * Candidates for the price of one unit, including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -531,7 +540,7 @@ public interface PurchaseLineOrBuilder extends
   int getUnitPriceInclVatCount();
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * Candidates for the price of one unit, including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -540,7 +549,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceInclVatOrBuilderList();
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * Candidates for the price of one unit, including VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -550,7 +559,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * Candidates for the price of one unit, excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -559,7 +568,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceExclVatList();
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * Candidates for the price of one unit, excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -567,7 +576,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getUnitPriceExclVat(int index);
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * Candidates for the price of one unit, excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -575,7 +584,7 @@ public interface PurchaseLineOrBuilder extends
   int getUnitPriceExclVatCount();
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * Candidates for the price of one unit, excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -584,7 +593,7 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceExclVatOrBuilderList();
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * Candidates for the price of one unit, excluding VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -594,7 +603,8 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * Candidates for the line total as stated on the line, usually the rightmost amount.
+   * Documents often don't say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
@@ -603,7 +613,8 @@ public interface PurchaseLineOrBuilder extends
       getTotalList();
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * Candidates for the line total as stated on the line, usually the rightmost amount.
+   * Documents often don't say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
@@ -611,7 +622,8 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getTotal(int index);
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * Candidates for the line total as stated on the line, usually the rightmost amount.
+   * Documents often don't say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
@@ -619,7 +631,8 @@ public interface PurchaseLineOrBuilder extends
   int getTotalCount();
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * Candidates for the line total as stated on the line, usually the rightmost amount.
+   * Documents often don't say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
@@ -628,7 +641,8 @@ public interface PurchaseLineOrBuilder extends
       getTotalOrBuilderList();
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * Candidates for the line total as stated on the line, usually the rightmost amount.
+   * Documents often don't say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total = 15 [json_name = "total"];</code>
@@ -638,7 +652,8 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * Candidates for the price of one unit as stated on the line. Documents often don't
+   * say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
@@ -647,7 +662,8 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceList();
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * Candidates for the price of one unit as stated on the line. Documents often don't
+   * say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
@@ -655,7 +671,8 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getUnitPrice(int index);
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * Candidates for the price of one unit as stated on the line. Documents often don't
+   * say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
@@ -663,7 +680,8 @@ public interface PurchaseLineOrBuilder extends
   int getUnitPriceCount();
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * Candidates for the price of one unit as stated on the line. Documents often don't
+   * say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
@@ -672,7 +690,8 @@ public interface PurchaseLineOrBuilder extends
       getUnitPriceOrBuilderList();
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * Candidates for the price of one unit as stated on the line. Documents often don't
+   * say whether it includes VAT.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate unit_price = 16 [json_name = "unitPrice"];</code>
@@ -681,35 +700,24 @@ public interface PurchaseLineOrBuilder extends
       int index);
 
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
   boolean hasModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
   ai.visma.ssn.type.ModelSpec getModelMetadata();
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 17 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 
   /**
    * <pre>
-   * Product type classification for the line
+   * Product type candidates for the line, classified from its description. Returned for
+   * the PRODUCT_TYPES feature.
    * </pre>
    *
    * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
@@ -718,7 +726,8 @@ public interface PurchaseLineOrBuilder extends
       getProductTypeList();
   /**
    * <pre>
-   * Product type classification for the line
+   * Product type candidates for the line, classified from its description. Returned for
+   * the PRODUCT_TYPES feature.
    * </pre>
    *
    * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
@@ -726,7 +735,8 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.asgt.v2.ProductTypeCandidate getProductType(int index);
   /**
    * <pre>
-   * Product type classification for the line
+   * Product type candidates for the line, classified from its description. Returned for
+   * the PRODUCT_TYPES feature.
    * </pre>
    *
    * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
@@ -734,7 +744,8 @@ public interface PurchaseLineOrBuilder extends
   int getProductTypeCount();
   /**
    * <pre>
-   * Product type classification for the line
+   * Product type candidates for the line, classified from its description. Returned for
+   * the PRODUCT_TYPES feature.
    * </pre>
    *
    * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
@@ -743,7 +754,8 @@ public interface PurchaseLineOrBuilder extends
       getProductTypeOrBuilderList();
   /**
    * <pre>
-   * Product type classification for the line
+   * Product type candidates for the line, classified from its description. Returned for
+   * the PRODUCT_TYPES feature.
    * </pre>
    *
    * <code>repeated .asgt.v2.ProductTypeCandidate product_type = 18 [json_name = "productType"];</code>
@@ -753,8 +765,7 @@ public interface PurchaseLineOrBuilder extends
 
   /**
    * <pre>
-   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * Candidates for what the line charges for, for example "item", "freight" or "discount".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
@@ -763,8 +774,7 @@ public interface PurchaseLineOrBuilder extends
       getKindList();
   /**
    * <pre>
-   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * Candidates for what the line charges for, for example "item", "freight" or "discount".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
@@ -772,8 +782,7 @@ public interface PurchaseLineOrBuilder extends
   ai.visma.ssn.type.Candidate getKind(int index);
   /**
    * <pre>
-   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * Candidates for what the line charges for, for example "item", "freight" or "discount".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
@@ -781,8 +790,7 @@ public interface PurchaseLineOrBuilder extends
   int getKindCount();
   /**
    * <pre>
-   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * Candidates for what the line charges for, for example "item", "freight" or "discount".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>
@@ -791,8 +799,7 @@ public interface PurchaseLineOrBuilder extends
       getKindOrBuilderList();
   /**
    * <pre>
-   * Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-   * "levy", "service_charge", "gratuity", "discount" or "deposit".
+   * Candidates for what the line charges for, for example "item", "freight" or "discount".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate kind = 19 [json_name = "kind"];</code>

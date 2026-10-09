@@ -10,22 +10,40 @@ public interface ProductTypeCandidateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+   * label that has no product type.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
+   * <pre>
+   * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+   * label that has no product type.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
    * @return The type.
    */
   ai.visma.asgt.v2.ProductType getType();
 
   /**
+   * <pre>
+   * The product type's name in words, such as "Accounting software".
+   * </pre>
+   *
    * <code>string label = 2 [json_name = "label"];</code>
    * @return The label.
    */
   java.lang.String getLabel();
   /**
+   * <pre>
+   * The product type's name in words, such as "Accounting software".
+   * </pre>
+   *
    * <code>string label = 2 [json_name = "label"];</code>
    * @return The bytes for label.
    */
@@ -33,6 +51,11 @@ public interface ProductTypeCandidateOrBuilder extends
       getLabelBytes();
 
   /**
+   * <pre>
+   * The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+   * trust it.
+   * </pre>
+   *
    * <code>float confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */

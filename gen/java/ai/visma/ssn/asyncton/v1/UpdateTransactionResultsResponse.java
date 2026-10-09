@@ -6,6 +6,10 @@
 package ai.visma.ssn.asyncton.v1;
 
 /**
+ * <pre>
+ * Response to sending corrected results.
+ * </pre>
+ *
  * Protobuf type {@code ssn.asyncton.v1.UpdateTransactionResultsResponse}
  */
 public final class UpdateTransactionResultsResponse extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -65,6 +73,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -87,6 +99,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -104,6 +120,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -289,6 +309,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response to sending corrected results.
+   * </pre>
+   *
    * Protobuf type {@code ssn.asyncton.v1.UpdateTransactionResultsResponse}
    */
   public static final class Builder extends
@@ -442,6 +466,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -458,6 +486,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -475,6 +507,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -488,6 +524,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -498,6 +538,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -514,6 +558,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -530,6 +578,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -547,6 +599,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -560,6 +616,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -570,6 +630,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.

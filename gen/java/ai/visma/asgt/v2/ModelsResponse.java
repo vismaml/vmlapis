@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * A list of models.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ModelsResponse}
  */
 public final class ModelsResponse extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.type.Model> models_;
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   @java.lang.Override
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return models_;
   }
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   @java.lang.Override
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return models_;
   }
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   @java.lang.Override
@@ -69,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return models_.size();
   }
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   @java.lang.Override
@@ -76,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return models_.get(index);
   }
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   @java.lang.Override
@@ -244,6 +268,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A list of models.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ModelsResponse}
    */
   public static final class Builder extends
@@ -439,6 +467,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.type.Model, ai.visma.asgt.v2.type.Model.Builder, ai.visma.asgt.v2.type.ModelOrBuilder> modelsBuilder_;
 
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Model> getModelsList() {
@@ -449,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public int getModelsCount() {
@@ -459,6 +495,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public ai.visma.asgt.v2.type.Model getModels(int index) {
@@ -469,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder setModels(
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder setModels(
@@ -500,6 +548,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder addModels(ai.visma.asgt.v2.type.Model value) {
@@ -516,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder addModels(
@@ -533,6 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder addModels(
@@ -547,6 +607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder addModels(
@@ -561,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder addAllModels(
@@ -576,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder clearModels() {
@@ -589,6 +661,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public Builder removeModels(int index) {
@@ -602,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public ai.visma.asgt.v2.type.Model.Builder getModelsBuilder(
@@ -609,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return getModelsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public ai.visma.asgt.v2.type.ModelOrBuilder getModelsOrBuilder(
@@ -619,6 +703,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.type.ModelOrBuilder> 
@@ -630,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public ai.visma.asgt.v2.type.Model.Builder addModelsBuilder() {
@@ -637,6 +729,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.type.Model.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public ai.visma.asgt.v2.type.Model.Builder addModelsBuilder(
@@ -645,6 +741,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.type.Model.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The models, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Model.Builder> 

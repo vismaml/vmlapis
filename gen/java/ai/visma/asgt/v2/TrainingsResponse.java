@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * A list of trainings.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.TrainingsResponse}
  */
 public final class TrainingsResponse extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.type.Training> trainings_;
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   @java.lang.Override
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return trainings_;
   }
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   @java.lang.Override
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return trainings_;
   }
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   @java.lang.Override
@@ -69,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return trainings_.size();
   }
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   @java.lang.Override
@@ -76,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return trainings_.get(index);
   }
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   @java.lang.Override
@@ -244,6 +268,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A list of trainings.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.TrainingsResponse}
    */
   public static final class Builder extends
@@ -439,6 +467,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.type.Training, ai.visma.asgt.v2.type.Training.Builder, ai.visma.asgt.v2.type.TrainingOrBuilder> trainingsBuilder_;
 
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Training> getTrainingsList() {
@@ -449,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public int getTrainingsCount() {
@@ -459,6 +495,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public ai.visma.asgt.v2.type.Training getTrainings(int index) {
@@ -469,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder setTrainings(
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder setTrainings(
@@ -500,6 +548,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder addTrainings(ai.visma.asgt.v2.type.Training value) {
@@ -516,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder addTrainings(
@@ -533,6 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder addTrainings(
@@ -547,6 +607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder addTrainings(
@@ -561,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder addAllTrainings(
@@ -576,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder clearTrainings() {
@@ -589,6 +661,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public Builder removeTrainings(int index) {
@@ -602,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public ai.visma.asgt.v2.type.Training.Builder getTrainingsBuilder(
@@ -609,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return getTrainingsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public ai.visma.asgt.v2.type.TrainingOrBuilder getTrainingsOrBuilder(
@@ -619,6 +703,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.type.TrainingOrBuilder> 
@@ -630,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public ai.visma.asgt.v2.type.Training.Builder addTrainingsBuilder() {
@@ -637,6 +729,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.type.Training.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public ai.visma.asgt.v2.type.Training.Builder addTrainingsBuilder(
@@ -645,6 +741,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.type.Training.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The trainings, newest first.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.Training.Builder> 

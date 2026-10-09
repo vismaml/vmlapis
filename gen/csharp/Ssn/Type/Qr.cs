@@ -81,6 +81,9 @@ namespace Ssn.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A QR code found in the document, returned for the QR_CODES feature.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QrCodeData : pb::IMessage<QrCodeData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -129,6 +132,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 1;
     private string content_ = "";
+    /// <summary>
+    /// The decoded text of the QR code.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
@@ -279,6 +285,11 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A Swiss QR bill parsed from a QR code in the document, returned for the
+  /// SWISS_QR_BILLS feature. Only QR codes that follow version 0200 of the Swiss QR bill
+  /// standard are returned. The fields hold the values of the QR code as they are.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SwissQrBill : pb::IMessage<SwissQrBill>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -360,6 +371,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "qr_type" field.</summary>
     public const int QrTypeFieldNumber = 1;
     private string qrType_ = "";
+    /// <summary>
+    /// The QR type, always "SPC".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QrType {
@@ -372,6 +386,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 2;
     private string version_ = "";
+    /// <summary>
+    /// The version of the Swiss QR bill standard, always "0200".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
@@ -384,6 +401,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "coding_type" field.</summary>
     public const int CodingTypeFieldNumber = 3;
     private string codingType_ = "";
+    /// <summary>
+    /// The character encoding type, always "1".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CodingType {
@@ -396,6 +416,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "account" field.</summary>
     public const int AccountFieldNumber = 4;
     private string account_ = "";
+    /// <summary>
+    /// The IBAN or QR-IBAN of the creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Account {
@@ -408,6 +431,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_type" field.</summary>
     public const int CreditorAddressTypeFieldNumber = 5;
     private string creditorAddressType_ = "";
+    /// <summary>
+    /// The format of the creditor's address: "S" for structured or "K" for combined.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressType {
@@ -420,6 +446,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_name" field.</summary>
     public const int CreditorNameFieldNumber = 6;
     private string creditorName_ = "";
+    /// <summary>
+    /// The name of the creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorName {
@@ -432,6 +461,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_line_1" field.</summary>
     public const int CreditorAddressLine1FieldNumber = 7;
     private string creditorAddressLine1_ = "";
+    /// <summary>
+    /// The street or P.O. box of the creditor, or the first address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressLine1 {
@@ -444,6 +476,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_line_2" field.</summary>
     public const int CreditorAddressLine2FieldNumber = 8;
     private string creditorAddressLine2_ = "";
+    /// <summary>
+    /// The building number of the creditor, or the second address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressLine2 {
@@ -456,6 +491,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_postal_code" field.</summary>
     public const int CreditorAddressPostalCodeFieldNumber = 9;
     private string creditorAddressPostalCode_ = "";
+    /// <summary>
+    /// The postal code of the creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressPostalCode {
@@ -468,6 +506,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_city" field.</summary>
     public const int CreditorAddressCityFieldNumber = 10;
     private string creditorAddressCity_ = "";
+    /// <summary>
+    /// The town of the creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressCity {
@@ -480,6 +521,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "creditor_address_country" field.</summary>
     public const int CreditorAddressCountryFieldNumber = 11;
     private string creditorAddressCountry_ = "";
+    /// <summary>
+    /// The country of the creditor, as a two-letter code.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreditorAddressCountry {
@@ -492,6 +536,10 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_type" field.</summary>
     public const int UltimateCreditorAddressTypeFieldNumber = 12;
     private string ultimateCreditorAddressType_ = "";
+    /// <summary>
+    /// The format of the ultimate creditor's address: "S" for structured or "K" for combined.
+    /// Empty when the bill names no ultimate creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressType {
@@ -504,6 +552,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_name" field.</summary>
     public const int UltimateCreditorNameFieldNumber = 13;
     private string ultimateCreditorName_ = "";
+    /// <summary>
+    /// The name of the ultimate creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorName {
@@ -516,6 +567,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_line_1" field.</summary>
     public const int UltimateCreditorAddressLine1FieldNumber = 14;
     private string ultimateCreditorAddressLine1_ = "";
+    /// <summary>
+    /// The street or P.O. box of the ultimate creditor, or the first address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressLine1 {
@@ -528,6 +582,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_line_2" field.</summary>
     public const int UltimateCreditorAddressLine2FieldNumber = 15;
     private string ultimateCreditorAddressLine2_ = "";
+    /// <summary>
+    /// The building number of the ultimate creditor, or the second address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressLine2 {
@@ -540,6 +597,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_postal_code" field.</summary>
     public const int UltimateCreditorAddressPostalCodeFieldNumber = 16;
     private string ultimateCreditorAddressPostalCode_ = "";
+    /// <summary>
+    /// The postal code of the ultimate creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressPostalCode {
@@ -552,6 +612,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_city" field.</summary>
     public const int UltimateCreditorAddressCityFieldNumber = 17;
     private string ultimateCreditorAddressCity_ = "";
+    /// <summary>
+    /// The town of the ultimate creditor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressCity {
@@ -564,6 +627,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_creditor_address_country" field.</summary>
     public const int UltimateCreditorAddressCountryFieldNumber = 18;
     private string ultimateCreditorAddressCountry_ = "";
+    /// <summary>
+    /// The country of the ultimate creditor, as a two-letter code.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateCreditorAddressCountry {
@@ -576,6 +642,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 19;
     private string amount_ = "";
+    /// <summary>
+    /// The amount to pay, for example "1949.75". Empty when the bill leaves the amount open.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Amount {
@@ -588,6 +657,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "currency" field.</summary>
     public const int CurrencyFieldNumber = 20;
     private string currency_ = "";
+    /// <summary>
+    /// The currency, "CHF" or "EUR".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Currency {
@@ -600,6 +672,10 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_type" field.</summary>
     public const int UltimateDebtorAddressTypeFieldNumber = 21;
     private string ultimateDebtorAddressType_ = "";
+    /// <summary>
+    /// The format of the ultimate debtor's address: "S" for structured or "K" for combined.
+    /// Empty when the bill names no ultimate debtor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressType {
@@ -612,6 +688,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_name" field.</summary>
     public const int UltimateDebtorNameFieldNumber = 22;
     private string ultimateDebtorName_ = "";
+    /// <summary>
+    /// The name of the ultimate debtor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorName {
@@ -624,6 +703,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_line_1" field.</summary>
     public const int UltimateDebtorAddressLine1FieldNumber = 23;
     private string ultimateDebtorAddressLine1_ = "";
+    /// <summary>
+    /// The street or P.O. box of the ultimate debtor, or the first address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressLine1 {
@@ -636,6 +718,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_line_2" field.</summary>
     public const int UltimateDebtorAddressLine2FieldNumber = 24;
     private string ultimateDebtorAddressLine2_ = "";
+    /// <summary>
+    /// The building number of the ultimate debtor, or the second address line.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressLine2 {
@@ -648,6 +733,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_postal_code" field.</summary>
     public const int UltimateDebtorAddressPostalCodeFieldNumber = 25;
     private string ultimateDebtorAddressPostalCode_ = "";
+    /// <summary>
+    /// The postal code of the ultimate debtor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressPostalCode {
@@ -660,6 +748,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_city" field.</summary>
     public const int UltimateDebtorAddressCityFieldNumber = 26;
     private string ultimateDebtorAddressCity_ = "";
+    /// <summary>
+    /// The town of the ultimate debtor.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressCity {
@@ -672,6 +763,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "ultimate_debtor_address_country" field.</summary>
     public const int UltimateDebtorAddressCountryFieldNumber = 27;
     private string ultimateDebtorAddressCountry_ = "";
+    /// <summary>
+    /// The country of the ultimate debtor, as a two-letter code.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UltimateDebtorAddressCountry {
@@ -684,6 +778,10 @@ namespace Ssn.Type {
     /// <summary>Field number for the "payment_reference_type" field.</summary>
     public const int PaymentReferenceTypeFieldNumber = 28;
     private string paymentReferenceType_ = "";
+    /// <summary>
+    /// The reference type: "QRR" for a QR reference, "SCOR" for a creditor reference, or
+    /// "NON" for no reference.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PaymentReferenceType {
@@ -696,6 +794,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "payment_reference" field.</summary>
     public const int PaymentReferenceFieldNumber = 29;
     private string paymentReference_ = "";
+    /// <summary>
+    /// The payment reference.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PaymentReference {
@@ -708,6 +809,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "unstructured_message" field.</summary>
     public const int UnstructuredMessageFieldNumber = 30;
     private string unstructuredMessage_ = "";
+    /// <summary>
+    /// Additional information for the payment, for example "Order from 15.10.2020".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UnstructuredMessage {
@@ -720,6 +824,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "trailer" field.</summary>
     public const int TrailerFieldNumber = 31;
     private string trailer_ = "";
+    /// <summary>
+    /// The end of the payment data, always "EPD".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Trailer {
@@ -732,6 +839,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "billing_information" field.</summary>
     public const int BillingInformationFieldNumber = 32;
     private string billingInformation_ = "";
+    /// <summary>
+    /// [NOT IMPLEMENTED] Billing information isn't extracted yet, so this is always empty.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BillingInformation {
@@ -744,6 +854,10 @@ namespace Ssn.Type {
     /// <summary>Field number for the "av1_parameters" field.</summary>
     public const int Av1ParametersFieldNumber = 33;
     private string av1Parameters_ = "";
+    /// <summary>
+    /// [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+    /// always empty.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Av1Parameters {
@@ -756,6 +870,10 @@ namespace Ssn.Type {
     /// <summary>Field number for the "av2_parameters" field.</summary>
     public const int Av2ParametersFieldNumber = 34;
     private string av2Parameters_ = "";
+    /// <summary>
+    /// [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+    /// always empty.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Av2Parameters {

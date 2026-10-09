@@ -11,7 +11,7 @@ public interface ModelOrBuilder extends
 
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -20,7 +20,7 @@ public interface ModelOrBuilder extends
   boolean hasCreatedAt();
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -29,7 +29,7 @@ public interface ModelOrBuilder extends
   com.google.protobuf.Timestamp getCreatedAt();
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -38,7 +38,7 @@ public interface ModelOrBuilder extends
 
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -47,7 +47,7 @@ public interface ModelOrBuilder extends
   boolean hasDataset();
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -56,7 +56,7 @@ public interface ModelOrBuilder extends
   ai.visma.asgt.type.Dataset getDataset();
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -65,7 +65,7 @@ public interface ModelOrBuilder extends
 
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -75,7 +75,7 @@ public interface ModelOrBuilder extends
       getTargetsList();
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -84,7 +84,7 @@ public interface ModelOrBuilder extends
   int getTargetsCount();
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -94,7 +94,7 @@ public interface ModelOrBuilder extends
   java.lang.String getTargets(int index);
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>

@@ -11,7 +11,7 @@ public interface GetDatasetModelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface GetDatasetModelsRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -30,16 +30,28 @@ public interface GetDatasetModelsRequestOrBuilder extends
       getDatasetNameBytes();
 
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.ModelRequestOptions options = 2 [json_name = "options"];</code>
    * @return Whether the options field is set.
    */
   boolean hasOptions();
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.ModelRequestOptions options = 2 [json_name = "options"];</code>
    * @return The options.
    */
   ai.visma.asgt.v2.ModelRequestOptions getOptions();
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.ModelRequestOptions options = 2 [json_name = "options"];</code>
    */
   ai.visma.asgt.v2.ModelRequestOptionsOrBuilder getOptionsOrBuilder();

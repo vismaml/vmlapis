@@ -23,7 +23,8 @@
   "paths": {
     "/v2/models/product-types:batchSuggest": {
       "post": {
-        "summary": "Suggest product types for a batch of text inputs.",
+        "summary": "Suggest product types for a batch of texts.",
+        "description": "Returns one suggestion per text, in the same order, each with ranked product type\ncandidates. Send 1 to 512 texts, none of them empty.",
         "operationId": "ProductTypeService_BatchSuggest",
         "responses": {
           "200": {
@@ -42,6 +43,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body for POST /v2/models/product-types:batchSuggest.",
             "in": "body",
             "required": true,
             "schema": {
@@ -56,7 +58,8 @@
     },
     "/v2/models/product-types:feedback": {
       "post": {
-        "summary": "Submit feedback for product type predictions.",
+        "summary": "Send the correct product types for texts.",
+        "description": "Stores each text with its correct product type and the model's current candidates for it,\nto evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in\nlength, or if a category isn't a ProductType name.",
         "operationId": "ProductTypeService_Feedback",
         "responses": {
           "200": {
@@ -76,6 +79,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body for POST /v2/models/product-types:feedback.",
             "in": "body",
             "required": true,
             "schema": {
@@ -128,7 +132,8 @@
         "HIGH",
         "VERY_HIGH"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the\nmodel gave no level."
     },
     "v2InternalProductTypeBatchSuggestResponse": {
       "type": "object",
@@ -138,16 +143,19 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeSuggestion"
-          }
+          },
+          "description": "One suggestion per text, in the same order as the request."
         },
         "logits": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeLogits"
-          }
+          },
+          "description": "The model's raw scores for each text, in the same order."
         }
-      }
+      },
+      "description": "Response of an internal method that isn't available over HTTP."
     },
     "v2ProductType": {
       "type": "string",
@@ -228,7 +236,8 @@
         "WATER_WASTE",
         "WEBSITE"
       ],
-      "default": "UNDEFINED"
+      "default": "UNDEFINED",
+      "description": "The product types a text can be classified into. UNDEFINED isn't a product type: it's the\nempty value."
     },
     "v2ProductTypeBatchSuggestRequest": {
       "type": "object",
@@ -238,9 +247,10 @@
           "items": {
             "type": "string"
           },
-          "description": "Text descriptions to classify into product types."
+          "description": "Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512\ntexts, none of them empty."
         }
-      }
+      },
+      "description": "Request body for POST /v2/models/product-types:batchSuggest."
     },
     "v2ProductTypeBatchSuggestResponse": {
       "type": "object",
@@ -250,27 +260,37 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeSuggestion"
-          }
+          },
+          "description": "One suggestion per text, in the same order as the request."
         }
-      }
+      },
+      "description": "Product type suggestions for a batch of texts."
     },
     "v2ProductTypeCandidate": {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/v2ProductType"
+          "description": "The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a\nlabel that has no product type.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v2ProductType"
+            }
+          ]
         },
         "label": {
-          "type": "string"
+          "type": "string",
+          "description": "The product type's name in words, such as \"Accounting software\"."
         },
         "confidence": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "The model's confidence score for this candidate. Use confidenceLevel to decide whether to\ntrust it."
         },
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel"
         }
-      }
+      },
+      "description": "A product type candidate for a text."
     },
     "v2ProductTypeFeedbackRequest": {
       "type": "object",
@@ -279,15 +299,18 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "The texts, such as invoice lines or bank transaction descriptions. At least one is\nrequired."
         },
         "trueCategories": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "The correct product type for each text, in the same order as texts, as a ProductType name\nsuch as ACCOUNTING_SOFTWARE."
         }
-      }
+      },
+      "description": "Request body for POST /v2/models/product-types:feedback."
     },
     "v2ProductTypeLogits": {
       "type": "object",
@@ -297,9 +320,11 @@
           "items": {
             "type": "number",
             "format": "float"
-          }
+          },
+          "description": "The scores."
         }
-      }
+      },
+      "description": "The model's raw scores for one text, one per class. Only returned by an internal method."
     },
     "v2ProductTypeSuggestion": {
       "type": "object",
@@ -309,9 +334,11 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeCandidate"
-          }
+          },
+          "description": "The candidates, ranked by the model."
         }
-      }
+      },
+      "description": "Product type candidates for one text."
     }
   },
   "securityDefinitions": {

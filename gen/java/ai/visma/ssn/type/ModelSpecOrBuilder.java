@@ -11,7 +11,7 @@ public interface ModelSpecOrBuilder extends
 
   /**
    * <pre>
-   * The name of the TensorFlow Serving model
+   * The name of the model.
    * </pre>
    *
    * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -20,7 +20,7 @@ public interface ModelSpecOrBuilder extends
   java.lang.String getModelName();
   /**
    * <pre>
-   * The name of the TensorFlow Serving model
+   * The name of the model.
    * </pre>
    *
    * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -31,7 +31,7 @@ public interface ModelSpecOrBuilder extends
 
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -40,7 +40,7 @@ public interface ModelSpecOrBuilder extends
   boolean hasModelVer();
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -49,7 +49,7 @@ public interface ModelSpecOrBuilder extends
   com.google.protobuf.Int64Value getModelVer();
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>

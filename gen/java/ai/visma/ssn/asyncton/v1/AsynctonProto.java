@@ -149,7 +149,7 @@ public final class AsynctonProto {
       "R\010customId\022=\n\013annotations\030\003 \003(\0132\033.ssn.as" +
       "yncton.v1.AnnotationR\013annotations\"O\n Upd" +
       "ateTransactionResultsResponse\022\016\n\002id\030\001 \001(" +
-      "\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId2\312\007\n\022T" +
+      "\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId2\252\010\n\022T" +
       "ransactionService\022\207\001\n\021CreateTransaction\022" +
       ").ssn.asyncton.v1.CreateTransactionReque" +
       "st\032*.ssn.asyncton.v1.CreateTransactionRe" +
@@ -174,36 +174,39 @@ public final class AsynctonProto {
       "equest\0321.ssn.asyncton.v1.UpdateTransacti" +
       "onResultsResponse\"D\202\323\344\223\002>\032\035/v1/transacti" +
       "ons/{id}/results:\001*Z\032\032\030/v1/transactions/" +
-      "resultsB\234\t\n\030ai.visma.ssn.asyncton.v1B\rAs" +
-      "ynctonProtoP\001Z?github.com/e-conomic/vmla" +
-      "pis/gen/go/ssn/asyncton/v1;transaction\242\002" +
-      "\003SAX\252\002\017Ssn.Asyncton.V1\312\002\017Ssn\\Asyncton\\V1" +
-      "\342\002\033Ssn\\Asyncton\\V1\\GPBMetadata\352\002\021Ssn::As" +
-      "yncton::V1\222A\320\007\022\300\006\n\017Smartscan Async\022\250\006Sma" +
-      "rtscan Async lets you submit a document " +
-      "for processing and fetch the results lat" +
-      "er. It suits large documents, and it\'s t" +
-      "he only way to use the ULTRA tier. Creat" +
-      "e a transaction, poll its status, then f" +
-      "etch the results.\n\n**Hosts:** `api.prod." +
-      "ssn.visma.ai` for production and `api.st" +
-      "ag.ssn.visma.ai` for staging.\n\n**Authent" +
-      "ication:** send your project token as `A" +
-      "uthorization: Bearer <token>`. See [Auth" +
-      "entication](https://docs.vml.visma.ai/au" +
-      "thentication/).\n\n**Errors:** a failed ca" +
-      "ll returns an HTTP error status with a J" +
-      "SON body that holds `code`, `message` an" +
-      "d `details`.\n\n**Guides:** [Smartscan Asy" +
-      "nc](https://docs.vml.visma.ai/smartscan-" +
-      "async/getting-started/), the [feature li" +
-      "st](https://docs.vml.visma.ai/smartscan-" +
-      "async/features/) and [limits and rate li" +
-      "mits](https://docs.vml.visma.ai/rate-lim" +
-      "it/).2\002v1*\001\0022\020application/json:\020applicat" +
-      "ion/jsonZR\nP\n\nBearerAuth\022B\010\002\022-Your proje" +
-      "ct token, sent as `Bearer <token>`.\032\rAut" +
-      "horization \002b\020\n\016\n\nBearerAuth\022\000b\006proto3"
+      "results\032^\222A[\022YCreate transactions, poll " +
+      "their status, fetch and correct their re" +
+      "sults, and delete them.B\234\t\n\030ai.visma.ssn" +
+      ".asyncton.v1B\rAsynctonProtoP\001Z?github.co" +
+      "m/e-conomic/vmlapis/gen/go/ssn/asyncton/" +
+      "v1;transaction\242\002\003SAX\252\002\017Ssn.Asyncton.V1\312\002" +
+      "\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\GPBMe" +
+      "tadata\352\002\021Ssn::Asyncton::V1\222A\320\007\022\300\006\n\017Smart" +
+      "scan Async\022\250\006Smartscan Async lets you su" +
+      "bmit a document for processing and fetch" +
+      " the results later. It suits large docum" +
+      "ents, and it\'s the only way to use the U" +
+      "LTRA tier. Create a transaction, poll it" +
+      "s status, then fetch the results.\n\n**Hos" +
+      "ts:** `api.prod.ssn.visma.ai` for produc" +
+      "tion and `api.stag.ssn.visma.ai` for sta" +
+      "ging.\n\n**Authentication:** send your pro" +
+      "ject token as `Authorization: Bearer <to" +
+      "ken>`. See [Authentication](https://docs" +
+      ".vml.visma.ai/authentication/).\n\n**Error" +
+      "s:** a failed call returns an HTTP error" +
+      " status with a JSON body that holds `cod" +
+      "e`, `message` and `details`.\n\n**Guides:*" +
+      "* [Smartscan Async](https://docs.vml.vis" +
+      "ma.ai/smartscan-async/getting-started/)," +
+      " the [feature list](https://docs.vml.vis" +
+      "ma.ai/smartscan-async/features/) and [li" +
+      "mits and rate limits](https://docs.vml.v" +
+      "isma.ai/rate-limit/).2\002v1*\001\0022\020applicatio" +
+      "n/json:\020application/jsonZR\nP\n\nBearerAuth" +
+      "\022B\010\002\022-Your project token, sent as `Beare" +
+      "r <token>`.\032\rAuthorization \002b\020\n\016\n\nBearer" +
+      "Auth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -300,6 +303,7 @@ public final class AsynctonProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Swagger);
+    registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Tag);
     registry.add(ai.visma.validate.ValidateProto.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

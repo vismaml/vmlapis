@@ -6,6 +6,11 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * Check-in and check-out dates on a document related to accommodation, returned for the
+ * HOTEL_DATES feature.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.HotelDates}
  */
 public final class HotelDates extends
@@ -49,9 +54,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> checkInDate_;
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -62,9 +65,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -76,9 +77,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -89,9 +88,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -102,9 +99,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkInDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -120,9 +115,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> checkOutDate_;
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -133,9 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -147,9 +138,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -160,9 +149,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -173,9 +160,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * checkOutDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -359,6 +344,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Check-in and check-out dates on a document related to accommodation, returned for the
+   * HOTEL_DATES feature.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.HotelDates}
    */
   public static final class Builder extends
@@ -610,9 +600,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -626,9 +614,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -642,9 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -658,9 +642,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -681,9 +663,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -701,9 +681,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -723,9 +701,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -746,9 +722,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -766,9 +740,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -786,9 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -807,9 +777,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -826,9 +794,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -845,9 +811,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -858,9 +822,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -874,9 +836,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -891,9 +851,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -904,9 +862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -918,9 +874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkInDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_in_date = 1 [json_name = "checkInDate"];</code>
@@ -958,9 +912,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -974,9 +926,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -990,9 +940,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1006,9 +954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1029,9 +975,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1049,9 +993,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1071,9 +1013,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1094,9 +1034,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1114,9 +1052,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1134,9 +1070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1155,9 +1089,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1174,9 +1106,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1193,9 +1123,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1206,9 +1134,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1222,9 +1148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1239,9 +1163,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1252,9 +1174,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>
@@ -1266,9 +1186,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * checkOutDate
-     * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-     * Example: "2019-12-31"
+     * Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate check_out_date = 2 [json_name = "checkOutDate"];</code>

@@ -11,9 +11,8 @@ public interface DocumentOrBuilder extends
 
   /**
    * <pre>
-   * Document content, represented as a stream of bytes.
-   * Note: As with all `bytes` fields, protobuffers use a pure binary
-   * representation, whereas JSON representations use base64.
+   * The bytes of the file, base64-encoded in JSON. If you send both `content` and
+   * `source`, `content` is used.
    * </pre>
    *
    * <code>bytes content = 1 [json_name = "content"];</code>
@@ -23,9 +22,7 @@ public interface DocumentOrBuilder extends
 
   /**
    * <pre>
-   * Google Cloud Storage image location, or publicly-accessible image
-   * URL. If both `content` and `source` are provided for a document, `content`
-   * takes precedence and is used to perform the scan request.
+   * Where to download the document from, when you don't send `content`.
    * </pre>
    *
    * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
@@ -34,9 +31,7 @@ public interface DocumentOrBuilder extends
   boolean hasSource();
   /**
    * <pre>
-   * Google Cloud Storage image location, or publicly-accessible image
-   * URL. If both `content` and `source` are provided for a document, `content`
-   * takes precedence and is used to perform the scan request.
+   * Where to download the document from, when you don't send `content`.
    * </pre>
    *
    * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
@@ -45,9 +40,7 @@ public interface DocumentOrBuilder extends
   ai.visma.ssn.annotator.v1.DocumentSource getSource();
   /**
    * <pre>
-   * Google Cloud Storage image location, or publicly-accessible image
-   * URL. If both `content` and `source` are provided for a document, `content`
-   * takes precedence and is used to perform the scan request.
+   * Where to download the document from, when you don't send `content`.
    * </pre>
    *
    * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>

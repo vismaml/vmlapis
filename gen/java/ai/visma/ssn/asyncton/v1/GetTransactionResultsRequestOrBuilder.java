@@ -10,11 +10,21 @@ public interface GetTransactionResultsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -22,11 +32,21 @@ public interface GetTransactionResultsRequestOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to GET /v1/transactions/results.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
   java.lang.String getCustomId();
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to GET /v1/transactions/results.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -35,8 +55,10 @@ public interface GetTransactionResultsRequestOrBuilder extends
 
   /**
    * <pre>
-   * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-   * e.g. repeated string features like in CreateTransactionRequest
+   * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+   * out, and so is a field feature with no candidate left. Applies to field features such as
+   * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+   * codes or text.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -45,8 +67,10 @@ public interface GetTransactionResultsRequestOrBuilder extends
   int getMinConfidenceValue();
   /**
    * <pre>
-   * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-   * e.g. repeated string features like in CreateTransactionRequest
+   * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+   * out, and so is a field feature with no candidate left. Applies to field features such as
+   * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+   * codes or text.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -55,6 +79,10 @@ public interface GetTransactionResultsRequestOrBuilder extends
   ai.visma.ssn.type.Confidence.Level getMinConfidence();
 
   /**
+   * <pre>
+   * The maximum number of candidates per field feature. Defaults to 1.
+   * </pre>
+   *
    * <code>int32 max_results = 4 [json_name = "maxResults"];</code>
    * @return The maxResults.
    */

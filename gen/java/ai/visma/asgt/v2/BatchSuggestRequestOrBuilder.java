@@ -11,7 +11,7 @@ public interface BatchSuggestRequestOrBuilder extends
 
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface BatchSuggestRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -31,7 +31,7 @@ public interface BatchSuggestRequestOrBuilder extends
 
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -40,7 +40,7 @@ public interface BatchSuggestRequestOrBuilder extends
       getInputsList();
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -48,7 +48,7 @@ public interface BatchSuggestRequestOrBuilder extends
   ai.visma.asgt.v2.type.Data getInputs(int index);
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -56,7 +56,7 @@ public interface BatchSuggestRequestOrBuilder extends
   int getInputsCount();
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>
@@ -65,7 +65,7 @@ public interface BatchSuggestRequestOrBuilder extends
       getInputsOrBuilderList();
   /**
    * <pre>
-   * Input data to use for prediction
+   * The inputs to get suggestions for. Each one must set a data structure.
    * </pre>
    *
    * <code>repeated .asgt.v2.type.Data inputs = 2 [json_name = "inputs"];</code>

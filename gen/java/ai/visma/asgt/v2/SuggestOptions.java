@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Options for the suggest endpoints. All of them are optional.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.SuggestOptions}
  */
 public final class SuggestOptions extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private int suggestLimit_ = 0;
   /**
    * <pre>
-   * Maximum number of suggestions to return per target
+   * Maximum number of candidates per target. The default is 10.
    * </pre>
    *
    * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
@@ -64,7 +68,10 @@ private static final long serialVersionUID = 0L;
   private int minConfidence_ = 0;
   /**
    * <pre>
-   * Not implemented yet.
+   * The confidence level you need. Candidates below it aren't removed, so filter on each
+   * candidate's confidence.level yourself. When a target's best candidate is below this level,
+   * the service tries to find a better answer and uses it if it reaches the level. The default
+   * is HIGH. ULTRA_HIGH isn't accepted.
    * </pre>
    *
    * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -75,7 +82,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Not implemented yet.
+   * The confidence level you need. Candidates below it aren't removed, so filter on each
+   * candidate's confidence.level yourself. When a target's best candidate is below this level,
+   * the service tries to find a better answer and uses it if it reaches the level. The default
+   * is HIGH. ULTRA_HIGH isn't accepted.
    * </pre>
    *
    * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -90,7 +100,8 @@ private static final long serialVersionUID = 0L;
   private int modelType_ = 0;
   /**
    * <pre>
-   * Model type requested
+   * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+   * set it, it must be DEFAULT, TENSORFLOW or ONNX.
    * </pre>
    *
    * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -101,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Model type requested
+   * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+   * set it, it must be DEFAULT, TENSORFLOW or ONNX.
    * </pre>
    *
    * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -116,7 +128,8 @@ private static final long serialVersionUID = 0L;
   private boolean includeProductTypes_ = false;
   /**
    * <pre>
-   * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+   * When true, the response also has product type candidates for the text of each input. The
+   * default is false.
    * </pre>
    *
    * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
@@ -130,10 +143,6 @@ private static final long serialVersionUID = 0L;
   public static final int TIER_FIELD_NUMBER = 5;
   private int tier_ = 0;
   /**
-   * <pre>
-   * Tier determines which model serves the request
-   * </pre>
-   *
    * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
    * @return The enum numeric value on the wire for tier.
    */
@@ -141,10 +150,6 @@ private static final long serialVersionUID = 0L;
     return tier_;
   }
   /**
-   * <pre>
-   * Tier determines which model serves the request
-   * </pre>
-   *
    * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
    * @return The tier.
    */
@@ -353,6 +358,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Options for the suggest endpoints. All of them are optional.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.SuggestOptions}
    */
   public static final class Builder extends
@@ -539,7 +548,7 @@ private static final long serialVersionUID = 0L;
     private int suggestLimit_ ;
     /**
      * <pre>
-     * Maximum number of suggestions to return per target
+     * Maximum number of candidates per target. The default is 10.
      * </pre>
      *
      * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
@@ -551,7 +560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum number of suggestions to return per target
+     * Maximum number of candidates per target. The default is 10.
      * </pre>
      *
      * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
@@ -567,7 +576,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum number of suggestions to return per target
+     * Maximum number of candidates per target. The default is 10.
      * </pre>
      *
      * <code>int32 suggest_limit = 1 [json_name = "suggestLimit"];</code>
@@ -583,7 +592,10 @@ private static final long serialVersionUID = 0L;
     private int minConfidence_ = 0;
     /**
      * <pre>
-     * Not implemented yet.
+     * The confidence level you need. Candidates below it aren't removed, so filter on each
+     * candidate's confidence.level yourself. When a target's best candidate is below this level,
+     * the service tries to find a better answer and uses it if it reaches the level. The default
+     * is HIGH. ULTRA_HIGH isn't accepted.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -594,7 +606,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
+     * The confidence level you need. Candidates below it aren't removed, so filter on each
+     * candidate's confidence.level yourself. When a target's best candidate is below this level,
+     * the service tries to find a better answer and uses it if it reaches the level. The default
+     * is HIGH. ULTRA_HIGH isn't accepted.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -609,7 +624,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
+     * The confidence level you need. Candidates below it aren't removed, so filter on each
+     * candidate's confidence.level yourself. When a target's best candidate is below this level,
+     * the service tries to find a better answer and uses it if it reaches the level. The default
+     * is HIGH. ULTRA_HIGH isn't accepted.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -622,7 +640,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
+     * The confidence level you need. Candidates below it aren't removed, so filter on each
+     * candidate's confidence.level yourself. When a target's best candidate is below this level,
+     * the service tries to find a better answer and uses it if it reaches the level. The default
+     * is HIGH. ULTRA_HIGH isn't accepted.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -640,7 +661,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
+     * The confidence level you need. Candidates below it aren't removed, so filter on each
+     * candidate's confidence.level yourself. When a target's best candidate is below this level,
+     * the service tries to find a better answer and uses it if it reaches the level. The default
+     * is HIGH. ULTRA_HIGH isn't accepted.
      * </pre>
      *
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence", (.validate.rules) = { ... }</code>
@@ -656,7 +680,8 @@ private static final long serialVersionUID = 0L;
     private int modelType_ = 0;
     /**
      * <pre>
-     * Model type requested
+     * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+     * set it, it must be DEFAULT, TENSORFLOW or ONNX.
      * </pre>
      *
      * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -667,7 +692,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model type requested
+     * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+     * set it, it must be DEFAULT, TENSORFLOW or ONNX.
      * </pre>
      *
      * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -682,7 +708,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model type requested
+     * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+     * set it, it must be DEFAULT, TENSORFLOW or ONNX.
      * </pre>
      *
      * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -695,7 +722,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model type requested
+     * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+     * set it, it must be DEFAULT, TENSORFLOW or ONNX.
      * </pre>
      *
      * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -713,7 +741,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model type requested
+     * [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+     * set it, it must be DEFAULT, TENSORFLOW or ONNX.
      * </pre>
      *
      * <code>.asgt.type.ModelType model_type = 3 [json_name = "modelType", (.validate.rules) = { ... }</code>
@@ -729,7 +758,8 @@ private static final long serialVersionUID = 0L;
     private boolean includeProductTypes_ ;
     /**
      * <pre>
-     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * When true, the response also has product type candidates for the text of each input. The
+     * default is false.
      * </pre>
      *
      * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
@@ -741,7 +771,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * When true, the response also has product type candidates for the text of each input. The
+     * default is false.
      * </pre>
      *
      * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
@@ -757,7 +788,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * When true, the service will also call the ProductTypeService and include product type suggestions in the response
+     * When true, the response also has product type candidates for the text of each input. The
+     * default is false.
      * </pre>
      *
      * <code>bool include_product_types = 4 [json_name = "includeProductTypes"];</code>
@@ -772,10 +804,6 @@ private static final long serialVersionUID = 0L;
 
     private int tier_ = 0;
     /**
-     * <pre>
-     * Tier determines which model serves the request
-     * </pre>
-     *
      * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
      * @return The enum numeric value on the wire for tier.
      */
@@ -783,10 +811,6 @@ private static final long serialVersionUID = 0L;
       return tier_;
     }
     /**
-     * <pre>
-     * Tier determines which model serves the request
-     * </pre>
-     *
      * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
      * @param value The enum numeric value on the wire for tier to set.
      * @return This builder for chaining.
@@ -798,10 +822,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Tier determines which model serves the request
-     * </pre>
-     *
      * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
      * @return The tier.
      */
@@ -811,10 +831,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.type.Tier.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * Tier determines which model serves the request
-     * </pre>
-     *
      * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
      * @param value The tier to set.
      * @return This builder for chaining.
@@ -829,10 +845,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Tier determines which model serves the request
-     * </pre>
-     *
      * <code>.asgt.type.Tier tier = 5 [json_name = "tier", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */

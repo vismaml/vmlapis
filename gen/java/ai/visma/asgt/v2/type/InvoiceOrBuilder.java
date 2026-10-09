@@ -11,7 +11,7 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Invoice text from the SmartScan product.
+   * Text of the document, such as its OCR text or other text you have on record.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -20,7 +20,7 @@ public interface InvoiceOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Invoice text from the SmartScan product.
+   * Text of the document, such as its OCR text or other text you have on record.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>

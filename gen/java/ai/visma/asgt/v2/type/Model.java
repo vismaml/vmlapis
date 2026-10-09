@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2.type;
 
 /**
+ * <pre>
+ * A model trained on a dataset.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.type.Model}
  */
 public final class Model extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp createdAt_;
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -61,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -73,7 +77,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Creation time of the model
+   * When the model was created.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -87,7 +91,7 @@ private static final long serialVersionUID = 0L;
   private ai.visma.asgt.type.Dataset dataset_;
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -99,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -111,7 +115,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies dataset the model belongs to.
+   * The dataset the model was trained on. Only its consumer, name and type are filled in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -127,7 +131,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -139,7 +143,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -150,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -162,7 +166,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Targets the model was trained on
+   * Names of the targets the model predicts.
    * </pre>
    *
    * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -370,6 +374,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A model trained on a dataset.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.Model}
    */
   public static final class Builder extends
@@ -571,7 +579,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -582,7 +590,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -597,7 +605,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -617,7 +625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -635,7 +643,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -660,7 +668,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -677,7 +685,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -689,7 +697,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -704,7 +712,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the model
+     * When the model was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -728,7 +736,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.Dataset, ai.visma.asgt.type.Dataset.Builder, ai.visma.asgt.type.DatasetOrBuilder> datasetBuilder_;
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -739,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -754,7 +762,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -774,7 +782,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -792,7 +800,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -817,7 +825,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -834,7 +842,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -846,7 +854,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -861,7 +869,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the model belongs to.
+     * The dataset the model was trained on. Only its consumer, name and type are filled in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 2 [json_name = "dataset"];</code>
@@ -890,7 +898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -903,7 +911,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -914,7 +922,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -926,7 +934,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -939,7 +947,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -958,7 +966,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -976,7 +984,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -994,7 +1002,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>
@@ -1009,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Targets the model was trained on
+     * Names of the targets the model predicts.
      * </pre>
      *
      * <code>repeated string targets = 3 [json_name = "targets"];</code>

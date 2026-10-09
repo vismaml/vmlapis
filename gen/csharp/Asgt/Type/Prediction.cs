@@ -56,7 +56,7 @@ namespace Asgt.Type {
   }
   #region Messages
   /// <summary>
-  /// Common types
+  /// Confidence of a suggested value.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Confidence : pb::IMessage<Confidence>
@@ -107,10 +107,6 @@ namespace Asgt.Type {
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private global::Asgt.Type.Confidence.Types.Level level_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
-    /// <summary>
-    /// A bucketized representation of confidence, which is intended to give clients
-    /// highly stable results across model upgrades.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Confidence.Types.Level Level {
@@ -125,7 +121,8 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<float?> _single_value_codec = pb::FieldCodec.ForStructWrapper<float>(18);
     private float? value_;
     /// <summary>
-    /// The confidence value
+    /// The confidence score. Higher means more likely, but use level to decide whether to trust
+    /// a suggestion.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -311,13 +308,24 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Confidence level of a suggested value. Levels are set for each target from the model's
+      /// evaluation, so they give more stable results across model upgrades than the score. Use them
+      /// to decide whether to trust a suggestion.
+      /// </summary>
       public enum Level {
+        /// <summary>
+        /// No level.
+        /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         [pbr::OriginalName("VERY_LOW")] VeryLow = 1,
         [pbr::OriginalName("LOW")] Low = 2,
         [pbr::OriginalName("MID")] Mid = 3,
         [pbr::OriginalName("HIGH")] High = 4,
         [pbr::OriginalName("VERY_HIGH")] VeryHigh = 5,
+        /// <summary>
+        /// Only returned with the ULTRA tier, for a VERY_HIGH answer that a second check confirms.
+        /// </summary>
         [pbr::OriginalName("ULTRA_HIGH")] UltraHigh = 6,
       }
 
@@ -326,6 +334,9 @@ namespace Asgt.Type {
 
   }
 
+  /// <summary>
+  /// Suggestions for one input, with one entry per target.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Prediction : pb::IMessage<Prediction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -377,6 +388,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.Prediction.Types.Target> _repeated_targets_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Prediction.Types.Target.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target> targets_ = new pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target>();
+    /// <summary>
+    /// One entry per target of the model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target> Targets {
@@ -386,6 +400,10 @@ namespace Asgt.Type {
     /// <summary>Field number for the "unknown_token_percentage" field.</summary>
     public const int UnknownTokenPercentageFieldNumber = 2;
     private float unknownTokenPercentage_;
+    /// <summary>
+    /// Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+    /// fill it in.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float UnknownTokenPercentage {
@@ -553,6 +571,9 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Suggestions for one target.
+      /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Target : pb::IMessage<Target>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -603,6 +624,9 @@ namespace Asgt.Type {
         /// <summary>Field number for the "name" field.</summary>
         public const int NameFieldNumber = 1;
         private string name_ = "";
+        /// <summary>
+        /// Name of the target.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
@@ -617,6 +641,9 @@ namespace Asgt.Type {
         private static readonly pb::FieldCodec<global::Asgt.Type.Prediction.Types.Target.Types.Candidate> _repeated_candidates_codec
             = pb::FieldCodec.ForMessage(18, global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser);
         private readonly pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target.Types.Candidate> candidates_ = new pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target.Types.Candidate>();
+        /// <summary>
+        /// The suggested values, highest confidence first.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Asgt.Type.Prediction.Types.Target.Types.Candidate> Candidates {
@@ -626,6 +653,10 @@ namespace Asgt.Type {
         /// <summary>Field number for the "unknown_target_class" field.</summary>
         public const int UnknownTargetClassFieldNumber = 3;
         private bool unknownTargetClass_;
+        /// <summary>
+        /// Whether an example's value for this target is one the model wasn't trained on. The
+        /// suggest endpoints don't fill it in.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool UnknownTargetClass {
@@ -817,6 +848,9 @@ namespace Asgt.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// A suggested value for a target.
+          /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Candidate : pb::IMessage<Candidate>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -866,6 +900,9 @@ namespace Asgt.Type {
             /// <summary>Field number for the "value" field.</summary>
             public const int ValueFieldNumber = 1;
             private string value_ = "";
+            /// <summary>
+            /// The suggested value.
+            /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Value {

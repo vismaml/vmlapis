@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * A product type candidate for a text.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ProductTypeCandidate}
  */
 public final class ProductTypeCandidate extends
@@ -48,6 +52,11 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_ = 0;
   /**
+   * <pre>
+   * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+   * label that has no product type.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
@@ -55,6 +64,11 @@ private static final long serialVersionUID = 0L;
     return type_;
   }
   /**
+   * <pre>
+   * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+   * label that has no product type.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
    * @return The type.
    */
@@ -67,6 +81,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object label_ = "";
   /**
+   * <pre>
+   * The product type's name in words, such as "Accounting software".
+   * </pre>
+   *
    * <code>string label = 2 [json_name = "label"];</code>
    * @return The label.
    */
@@ -84,6 +102,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The product type's name in words, such as "Accounting software".
+   * </pre>
+   *
    * <code>string label = 2 [json_name = "label"];</code>
    * @return The bytes for label.
    */
@@ -105,6 +127,11 @@ private static final long serialVersionUID = 0L;
   public static final int CONFIDENCE_FIELD_NUMBER = 3;
   private float confidence_ = 0F;
   /**
+   * <pre>
+   * The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+   * trust it.
+   * </pre>
+   *
    * <code>float confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */
@@ -321,6 +348,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A product type candidate for a text.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ProductTypeCandidate}
    */
   public static final class Builder extends
@@ -496,6 +527,11 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     * <pre>
+     * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+     * label that has no product type.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -503,6 +539,11 @@ private static final long serialVersionUID = 0L;
       return type_;
     }
     /**
+     * <pre>
+     * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+     * label that has no product type.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
@@ -514,6 +555,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+     * label that has no product type.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
      * @return The type.
      */
@@ -523,6 +569,11 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.asgt.v2.ProductType.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+     * label that has no product type.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -537,6 +588,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+     * label that has no product type.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductType type = 1 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
@@ -549,6 +605,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object label_ = "";
     /**
+     * <pre>
+     * The product type's name in words, such as "Accounting software".
+     * </pre>
+     *
      * <code>string label = 2 [json_name = "label"];</code>
      * @return The label.
      */
@@ -565,6 +625,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The product type's name in words, such as "Accounting software".
+     * </pre>
+     *
      * <code>string label = 2 [json_name = "label"];</code>
      * @return The bytes for label.
      */
@@ -582,6 +646,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The product type's name in words, such as "Accounting software".
+     * </pre>
+     *
      * <code>string label = 2 [json_name = "label"];</code>
      * @param value The label to set.
      * @return This builder for chaining.
@@ -595,6 +663,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The product type's name in words, such as "Accounting software".
+     * </pre>
+     *
      * <code>string label = 2 [json_name = "label"];</code>
      * @return This builder for chaining.
      */
@@ -605,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The product type's name in words, such as "Accounting software".
+     * </pre>
+     *
      * <code>string label = 2 [json_name = "label"];</code>
      * @param value The bytes for label to set.
      * @return This builder for chaining.
@@ -621,6 +697,11 @@ private static final long serialVersionUID = 0L;
 
     private float confidence_ ;
     /**
+     * <pre>
+     * The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+     * trust it.
+     * </pre>
+     *
      * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
@@ -629,6 +710,11 @@ private static final long serialVersionUID = 0L;
       return confidence_;
     }
     /**
+     * <pre>
+     * The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+     * trust it.
+     * </pre>
+     *
      * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @param value The confidence to set.
      * @return This builder for chaining.
@@ -641,6 +727,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+     * trust it.
+     * </pre>
+     *
      * <code>float confidence = 3 [json_name = "confidence"];</code>
      * @return This builder for chaining.
      */

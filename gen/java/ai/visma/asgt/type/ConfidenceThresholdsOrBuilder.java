@@ -10,24 +10,44 @@ public interface ConfidenceThresholdsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   java.util.List<ai.visma.asgt.type.Confidence> 
       getConfidenceThresholdsList();
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   ai.visma.asgt.type.Confidence getConfidenceThresholds(int index);
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   int getConfidenceThresholdsCount();
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
       getConfidenceThresholdsOrBuilderList();
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(

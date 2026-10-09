@@ -20,22 +20,34 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Evaluation metrics of a model for one target.
 type TargetMetrics struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Target                         string                  `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
-	Metrics                        []*TargetMetrics_Metric `protobuf:"bytes,2,rep,name=metrics,proto3" json:"metrics,omitempty"`
-	Entropy                        *float32                `protobuf:"fixed32,6,opt,name=entropy,proto3,oneof" json:"entropy,omitempty"`                                                                                              // entropy of the dataset
-	NumberOfClasses                *int32                  `protobuf:"varint,7,opt,name=number_of_classes,json=numberOfClasses,proto3,oneof" json:"number_of_classes,omitempty"`                                                      // number of classes in the dataset
-	AvgSamplePerClass              *float32                `protobuf:"fixed32,8,opt,name=avg_sample_per_class,json=avgSamplePerClass,proto3,oneof" json:"avg_sample_per_class,omitempty"`                                             // average samples per class
-	InconsistentLabelRatio         *float32                `protobuf:"fixed32,9,opt,name=inconsistent_label_ratio,json=inconsistentLabelRatio,proto3,oneof" json:"inconsistent_label_ratio,omitempty"`                                // ratio of inconsistent labels
-	AvgLabelsPerInconsistentSample *float32                `protobuf:"fixed32,10,opt,name=avg_labels_per_inconsistent_sample,json=avgLabelsPerInconsistentSample,proto3,oneof" json:"avg_labels_per_inconsistent_sample,omitempty"`   // average labels per inconsistent sample
-	PercentSamplesNotInTargetVocab *float32                `protobuf:"fixed32,11,opt,name=percent_samples_not_in_target_vocab,json=percentSamplesNotInTargetVocab,proto3,oneof" json:"percent_samples_not_in_target_vocab,omitempty"` // percentage of samples not in target vocabulary
-	JsDivergenceClasses            *float32                `protobuf:"fixed32,12,opt,name=js_divergence_classes,json=jsDivergenceClasses,proto3,oneof" json:"js_divergence_classes,omitempty"`                                        // Jensen-Shannon divergence for classes
-	TargetTrainSize                *int32                  `protobuf:"varint,13,opt,name=target_train_size,json=targetTrainSize,proto3,oneof" json:"target_train_size,omitempty"`                                                     // number of training samples with a label for this target
-	TargetTestSize                 *int32                  `protobuf:"varint,14,opt,name=target_test_size,json=targetTestSize,proto3,oneof" json:"target_test_size,omitempty"`                                                        // number of test/validation samples with a label for this target
+	// Name of the target.
+	Target string `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
+	// Results at different confidence thresholds.
+	Metrics []*TargetMetrics_Metric `protobuf:"bytes,2,rep,name=metrics,proto3" json:"metrics,omitempty"`
+	// Entropy of the dataset.
+	Entropy *float32 `protobuf:"fixed32,6,opt,name=entropy,proto3,oneof" json:"entropy,omitempty"`
+	// Number of classes in the dataset.
+	NumberOfClasses *int32 `protobuf:"varint,7,opt,name=number_of_classes,json=numberOfClasses,proto3,oneof" json:"number_of_classes,omitempty"`
+	// Average number of examples per class.
+	AvgSamplePerClass *float32 `protobuf:"fixed32,8,opt,name=avg_sample_per_class,json=avgSamplePerClass,proto3,oneof" json:"avg_sample_per_class,omitempty"`
+	// Ratio of inconsistent labels.
+	InconsistentLabelRatio *float32 `protobuf:"fixed32,9,opt,name=inconsistent_label_ratio,json=inconsistentLabelRatio,proto3,oneof" json:"inconsistent_label_ratio,omitempty"`
+	// Average number of labels per inconsistent example.
+	AvgLabelsPerInconsistentSample *float32 `protobuf:"fixed32,10,opt,name=avg_labels_per_inconsistent_sample,json=avgLabelsPerInconsistentSample,proto3,oneof" json:"avg_labels_per_inconsistent_sample,omitempty"`
+	// Percentage of examples whose value isn't in the target's vocabulary.
+	PercentSamplesNotInTargetVocab *float32 `protobuf:"fixed32,11,opt,name=percent_samples_not_in_target_vocab,json=percentSamplesNotInTargetVocab,proto3,oneof" json:"percent_samples_not_in_target_vocab,omitempty"`
+	// Jensen-Shannon divergence of the classes.
+	JsDivergenceClasses *float32 `protobuf:"fixed32,12,opt,name=js_divergence_classes,json=jsDivergenceClasses,proto3,oneof" json:"js_divergence_classes,omitempty"`
+	// Number of training examples with a value for this target.
+	TargetTrainSize *int32 `protobuf:"varint,13,opt,name=target_train_size,json=targetTrainSize,proto3,oneof" json:"target_train_size,omitempty"`
+	// Number of test or validation examples with a value for this target.
+	TargetTestSize *int32 `protobuf:"varint,14,opt,name=target_test_size,json=targetTestSize,proto3,oneof" json:"target_test_size,omitempty"`
 }
 
 func (x *TargetMetrics) Reset() {
@@ -147,23 +159,34 @@ func (x *TargetMetrics) GetTargetTestSize() int32 {
 	return 0
 }
 
+// Evaluation results at one confidence threshold.
 type TargetMetrics_Metric struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Precision     float32 `protobuf:"fixed32,1,opt,name=precision,proto3" json:"precision,omitempty"`
-	Confidence    float32 `protobuf:"fixed32,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	AnswerRate    float32 `protobuf:"fixed32,3,opt,name=answer_rate,json=answerRate,proto3" json:"answer_rate,omitempty"`
-	TruePositive  int32   `protobuf:"varint,4,opt,name=true_positive,json=truePositive,proto3" json:"true_positive,omitempty"`
-	TrueNegative  int32   `protobuf:"varint,5,opt,name=true_negative,json=trueNegative,proto3" json:"true_negative,omitempty"`
-	FalsePositive int32   `protobuf:"varint,6,opt,name=false_positive,json=falsePositive,proto3" json:"false_positive,omitempty"`
-	FalseNegative int32   `protobuf:"varint,7,opt,name=false_negative,json=falseNegative,proto3" json:"false_negative,omitempty"`
-	// Matthews correlation coefficient
-	Mcc                   float32 `protobuf:"fixed32,8,opt,name=mcc,proto3" json:"mcc,omitempty"`
-	Accuracy              float32 `protobuf:"fixed32,9,opt,name=accuracy,proto3" json:"accuracy,omitempty"`
-	BalancedAccuracy      float32 `protobuf:"fixed32,10,opt,name=balanced_accuracy,json=balancedAccuracy,proto3" json:"balanced_accuracy,omitempty"`
-	PrecisionBoundEpsilon float32 `protobuf:"fixed32,12,opt,name=precision_bound_epsilon,json=precisionBoundEpsilon,proto3" json:"precision_bound_epsilon,omitempty"` // precision bound epsilon values
+	// Precision of the answers at this threshold: the share of them that were correct.
+	Precision float32 `protobuf:"fixed32,1,opt,name=precision,proto3" json:"precision,omitempty"`
+	// The confidence threshold these results apply to.
+	Confidence float32 `protobuf:"fixed32,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
+	// Share of the evaluation examples that got an answer at this threshold.
+	AnswerRate float32 `protobuf:"fixed32,3,opt,name=answer_rate,json=answerRate,proto3" json:"answer_rate,omitempty"`
+	// Number of true positives.
+	TruePositive int32 `protobuf:"varint,4,opt,name=true_positive,json=truePositive,proto3" json:"true_positive,omitempty"`
+	// Number of true negatives.
+	TrueNegative int32 `protobuf:"varint,5,opt,name=true_negative,json=trueNegative,proto3" json:"true_negative,omitempty"`
+	// Number of false positives.
+	FalsePositive int32 `protobuf:"varint,6,opt,name=false_positive,json=falsePositive,proto3" json:"false_positive,omitempty"`
+	// Number of false negatives.
+	FalseNegative int32 `protobuf:"varint,7,opt,name=false_negative,json=falseNegative,proto3" json:"false_negative,omitempty"`
+	// Matthews correlation coefficient.
+	Mcc float32 `protobuf:"fixed32,8,opt,name=mcc,proto3" json:"mcc,omitempty"`
+	// Accuracy.
+	Accuracy float32 `protobuf:"fixed32,9,opt,name=accuracy,proto3" json:"accuracy,omitempty"`
+	// Balanced accuracy.
+	BalancedAccuracy float32 `protobuf:"fixed32,10,opt,name=balanced_accuracy,json=balancedAccuracy,proto3" json:"balanced_accuracy,omitempty"`
+	// Epsilon of the precision bound.
+	PrecisionBoundEpsilon float32 `protobuf:"fixed32,12,opt,name=precision_bound_epsilon,json=precisionBoundEpsilon,proto3" json:"precision_bound_epsilon,omitempty"`
 }
 
 func (x *TargetMetrics_Metric) Reset() {

@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * The model's raw scores for one text, one per class. Only returned by an internal method.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.ProductTypeLogits}
  */
 public final class ProductTypeLogits extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.FloatList values_ =
       emptyFloatList();
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @return A list containing the values.
    */
@@ -57,6 +65,10 @@ private static final long serialVersionUID = 0L;
     return values_;
   }
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @return The count of values.
    */
@@ -64,6 +76,10 @@ private static final long serialVersionUID = 0L;
     return values_.size();
   }
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @param index The index of the element to return.
    * @return The values at the given index.
@@ -245,6 +261,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The model's raw scores for one text, one per class. Only returned by an internal method.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.ProductTypeLogits}
    */
   public static final class Builder extends
@@ -415,6 +435,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @return A list containing the values.
      */
@@ -424,6 +448,10 @@ private static final long serialVersionUID = 0L;
       return values_;
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @return The count of values.
      */
@@ -431,6 +459,10 @@ private static final long serialVersionUID = 0L;
       return values_.size();
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @param index The index of the element to return.
      * @return The values at the given index.
@@ -439,6 +471,10 @@ private static final long serialVersionUID = 0L;
       return values_.getFloat(index);
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @param index The index to set the value at.
      * @param value The values to set.
@@ -454,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @param value The values to add.
      * @return This builder for chaining.
@@ -467,6 +507,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @param values The values to add.
      * @return This builder for chaining.
@@ -481,6 +525,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The scores.
+     * </pre>
+     *
      * <code>repeated float values = 1 [json_name = "values"];</code>
      * @return This builder for chaining.
      */

@@ -38,8 +38,19 @@ namespace Asgt.Type {
 
   }
   #region Enums
+  /// <summary>
+  /// Service tier for suggestions. The v2 suggest endpoints use it, and the v1 API always runs as
+  /// STANDARD.
+  /// </summary>
   public enum Tier {
+    /// <summary>
+    /// The default.
+    /// </summary>
     [pbr::OriginalName("STANDARD")] Standard = 0,
+    /// <summary>
+    /// Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH
+    /// when the check agrees.
+    /// </summary>
     [pbr::OriginalName("ULTRA")] Ultra = 1,
   }
 

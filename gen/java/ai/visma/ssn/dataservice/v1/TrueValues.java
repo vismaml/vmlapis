@@ -6,6 +6,12 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
+ * <pre>
+ * The correct values for a document, as your user confirmed them. Send the
+ * final value of each field your user reviewed, whether they kept the
+ * suggestion or changed it. Field names match the annotate response.
+ * </pre>
+ *
  * Protobuf type {@code ssn.dataservice.v1.TrueValues}
  */
 public final class TrueValues extends
@@ -50,6 +56,10 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
   private com.google.protobuf.DoubleValue totalInclVat_;
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    * @return Whether the totalInclVat field is set.
    */
@@ -58,6 +68,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    * @return The totalInclVat.
    */
@@ -66,6 +80,10 @@ private static final long serialVersionUID = 0L;
     return totalInclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalInclVat_;
   }
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    */
   @java.lang.Override
@@ -76,6 +94,10 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_VAT_FIELD_NUMBER = 2;
   private com.google.protobuf.DoubleValue totalVat_;
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    * @return Whether the totalVat field is set.
    */
@@ -84,6 +106,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    * @return The totalVat.
    */
@@ -92,6 +118,10 @@ private static final long serialVersionUID = 0L;
     return totalVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalVat_;
   }
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    */
   @java.lang.Override
@@ -102,6 +132,10 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
   private com.google.protobuf.DoubleValue totalExclVat_;
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    * @return Whether the totalExclVat field is set.
    */
@@ -110,6 +144,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    * @return The totalExclVat.
    */
@@ -118,6 +156,10 @@ private static final long serialVersionUID = 0L;
     return totalExclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalExclVat_;
   }
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    */
   @java.lang.Override
@@ -128,6 +170,10 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_DATE_FIELD_NUMBER = 4;
   private com.google.type.Date orderDate_;
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the orderDate field is set.
    */
@@ -136,6 +182,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The orderDate.
    */
@@ -144,6 +194,10 @@ private static final long serialVersionUID = 0L;
     return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -154,6 +208,11 @@ private static final long serialVersionUID = 0L;
   public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
   private com.google.type.Date paymentDueDate_;
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the paymentDueDate field is set.
    */
@@ -162,6 +221,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000010) != 0);
   }
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The paymentDueDate.
    */
@@ -170,6 +234,11 @@ private static final long serialVersionUID = 0L;
     return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
   }
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -180,6 +249,11 @@ private static final long serialVersionUID = 0L;
   public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
   private com.google.protobuf.StringValue documentType_;
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    * @return Whether the documentType field is set.
    */
@@ -188,6 +262,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000020) != 0);
   }
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    * @return The documentType.
    */
@@ -196,6 +275,11 @@ private static final long serialVersionUID = 0L;
     return documentType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentType_;
   }
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    */
   @java.lang.Override
@@ -206,6 +290,10 @@ private static final long serialVersionUID = 0L;
   public static final int CURRENCY_FIELD_NUMBER = 7;
   private com.google.protobuf.StringValue currency_;
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    * @return Whether the currency field is set.
    */
@@ -214,6 +302,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000040) != 0);
   }
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    * @return The currency.
    */
@@ -222,6 +314,10 @@ private static final long serialVersionUID = 0L;
     return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
   }
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    */
   @java.lang.Override
@@ -232,6 +328,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
   private com.google.protobuf.StringValue creditCardLastFour_;
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    * @return Whether the creditCardLastFour field is set.
    */
@@ -240,6 +340,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000080) != 0);
   }
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    * @return The creditCardLastFour.
    */
@@ -248,6 +352,10 @@ private static final long serialVersionUID = 0L;
     return creditCardLastFour_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
   }
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    */
   @java.lang.Override
@@ -258,6 +366,11 @@ private static final long serialVersionUID = 0L;
   public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
   private com.google.protobuf.StringValue paymentMethod_;
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    * @return Whether the paymentMethod field is set.
    */
@@ -266,6 +379,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000100) != 0);
   }
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    * @return The paymentMethod.
    */
@@ -274,6 +392,11 @@ private static final long serialVersionUID = 0L;
     return paymentMethod_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentMethod_;
   }
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    */
   @java.lang.Override
@@ -284,6 +407,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
   private com.google.protobuf.StringValue ocrLineDkType_;
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    * @return Whether the ocrLineDkType field is set.
    */
@@ -292,6 +419,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000200) != 0);
   }
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    * @return The ocrLineDkType.
    */
@@ -300,6 +431,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineDkType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkType_;
   }
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    */
   @java.lang.Override
@@ -310,6 +445,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
   private com.google.protobuf.StringValue ocrLineDkPaymentId_;
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    * @return Whether the ocrLineDkPaymentId field is set.
    */
@@ -318,6 +457,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000400) != 0);
   }
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    * @return The ocrLineDkPaymentId.
    */
@@ -326,6 +469,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineDkPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkPaymentId_;
   }
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    */
   @java.lang.Override
@@ -336,6 +483,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
   private com.google.protobuf.StringValue ocrLineDkCreditorId_;
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    * @return Whether the ocrLineDkCreditorId field is set.
    */
@@ -344,6 +495,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000800) != 0);
   }
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    * @return The ocrLineDkCreditorId.
    */
@@ -352,6 +507,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineDkCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkCreditorId_;
   }
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    */
   @java.lang.Override
@@ -362,6 +521,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
   private com.google.protobuf.StringValue ocrLineSePaymentId_;
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    * @return Whether the ocrLineSePaymentId field is set.
    */
@@ -370,6 +533,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00001000) != 0);
   }
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    * @return The ocrLineSePaymentId.
    */
@@ -378,6 +545,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineSePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePaymentId_;
   }
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    */
   @java.lang.Override
@@ -388,6 +559,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
   private com.google.protobuf.StringValue ocrLineSeBankgiroCreditorId_;
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    * @return Whether the ocrLineSeBankgiroCreditorId field is set.
    */
@@ -396,6 +571,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00002000) != 0);
   }
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    * @return The ocrLineSeBankgiroCreditorId.
    */
@@ -404,6 +583,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineSeBankgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSeBankgiroCreditorId_;
   }
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    */
   @java.lang.Override
@@ -414,6 +597,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
   private com.google.protobuf.StringValue ocrLineSePlusgiroCreditorId_;
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    * @return Whether the ocrLineSePlusgiroCreditorId field is set.
    */
@@ -422,6 +609,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00004000) != 0);
   }
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    * @return The ocrLineSePlusgiroCreditorId.
    */
@@ -430,6 +621,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineSePlusgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePlusgiroCreditorId_;
   }
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    */
   @java.lang.Override
@@ -440,6 +635,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
   private com.google.protobuf.StringValue ocrLineNoPaymentId_;
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    * @return Whether the ocrLineNoPaymentId field is set.
    */
@@ -448,6 +647,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00008000) != 0);
   }
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    * @return The ocrLineNoPaymentId.
    */
@@ -456,6 +659,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineNoPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNoPaymentId_;
   }
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    */
   @java.lang.Override
@@ -466,6 +673,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
   private com.google.protobuf.StringValue ocrLineFiPaymentId_;
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    * @return Whether the ocrLineFiPaymentId field is set.
    */
@@ -474,6 +685,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00010000) != 0);
   }
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    * @return The ocrLineFiPaymentId.
    */
@@ -482,6 +697,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineFiPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineFiPaymentId_;
   }
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    */
   @java.lang.Override
@@ -492,6 +711,10 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
   private com.google.protobuf.StringValue ocrLineNlPaymentId_;
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    * @return Whether the ocrLineNlPaymentId field is set.
    */
@@ -500,6 +723,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00020000) != 0);
   }
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    * @return The ocrLineNlPaymentId.
    */
@@ -508,6 +735,10 @@ private static final long serialVersionUID = 0L;
     return ocrLineNlPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNlPaymentId_;
   }
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    */
   @java.lang.Override
@@ -518,6 +749,10 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
   private com.google.protobuf.StringValue supplierCorporateId_;
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    * @return Whether the supplierCorporateId field is set.
    */
@@ -526,6 +761,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00040000) != 0);
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    * @return The supplierCorporateId.
    */
@@ -534,6 +773,10 @@ private static final long serialVersionUID = 0L;
     return supplierCorporateId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCorporateId_;
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    */
   @java.lang.Override
@@ -544,6 +787,11 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
   private com.google.protobuf.StringValue supplierCountryCode_;
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    * @return Whether the supplierCountryCode field is set.
    */
@@ -552,6 +800,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00080000) != 0);
   }
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    * @return The supplierCountryCode.
    */
@@ -560,6 +813,11 @@ private static final long serialVersionUID = 0L;
     return supplierCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCountryCode_;
   }
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    */
   @java.lang.Override
@@ -570,6 +828,10 @@ private static final long serialVersionUID = 0L;
   public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
   private com.google.protobuf.StringValue invoiceNumber_;
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    * @return Whether the invoiceNumber field is set.
    */
@@ -578,6 +840,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00100000) != 0);
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    * @return The invoiceNumber.
    */
@@ -586,6 +852,10 @@ private static final long serialVersionUID = 0L;
     return invoiceNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : invoiceNumber_;
   }
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    */
   @java.lang.Override
@@ -596,6 +866,10 @@ private static final long serialVersionUID = 0L;
   public static final int IBAN_FIELD_NUMBER = 22;
   private com.google.protobuf.StringValue iban_;
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    * @return Whether the iban field is set.
    */
@@ -604,6 +878,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00200000) != 0);
   }
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    * @return The iban.
    */
@@ -612,6 +890,10 @@ private static final long serialVersionUID = 0L;
     return iban_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : iban_;
   }
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    */
   @java.lang.Override
@@ -622,6 +904,10 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_REFERENCE_FIELD_NUMBER = 23;
   private com.google.protobuf.StringValue orderReference_;
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    * @return Whether the orderReference field is set.
    */
@@ -630,6 +916,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00400000) != 0);
   }
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    * @return The orderReference.
    */
@@ -638,6 +928,10 @@ private static final long serialVersionUID = 0L;
     return orderReference_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderReference_;
   }
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    */
   @java.lang.Override
@@ -648,6 +942,10 @@ private static final long serialVersionUID = 0L;
   public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
   private com.google.protobuf.StringValue bankAccountNumber_;
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    * @return Whether the bankAccountNumber field is set.
    */
@@ -656,6 +954,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00800000) != 0);
   }
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    * @return The bankAccountNumber.
    */
@@ -664,6 +966,10 @@ private static final long serialVersionUID = 0L;
     return bankAccountNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankAccountNumber_;
   }
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    */
   @java.lang.Override
@@ -674,6 +980,10 @@ private static final long serialVersionUID = 0L;
   public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
   private com.google.protobuf.StringValue bankRegistrationNumber_;
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    * @return Whether the bankRegistrationNumber field is set.
    */
@@ -682,6 +992,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x01000000) != 0);
   }
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    * @return The bankRegistrationNumber.
    */
@@ -690,6 +1004,10 @@ private static final long serialVersionUID = 0L;
     return bankRegistrationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankRegistrationNumber_;
   }
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    */
   @java.lang.Override
@@ -700,6 +1018,10 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
   private com.google.protobuf.StringValue supplierName_;
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    * @return Whether the supplierName field is set.
    */
@@ -708,6 +1030,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x02000000) != 0);
   }
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    * @return The supplierName.
    */
@@ -716,6 +1042,10 @@ private static final long serialVersionUID = 0L;
     return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
   }
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    */
   @java.lang.Override
@@ -726,6 +1056,10 @@ private static final long serialVersionUID = 0L;
   public static final int BIC_FIELD_NUMBER = 27;
   private com.google.protobuf.StringValue bic_;
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    * @return Whether the bic field is set.
    */
@@ -734,6 +1068,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x04000000) != 0);
   }
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    * @return The bic.
    */
@@ -742,6 +1080,10 @@ private static final long serialVersionUID = 0L;
     return bic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bic_;
   }
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    */
   @java.lang.Override
@@ -752,6 +1094,10 @@ private static final long serialVersionUID = 0L;
   public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
   private com.google.protobuf.StringValue documentNumber_;
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    * @return Whether the documentNumber field is set.
    */
@@ -760,6 +1106,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x08000000) != 0);
   }
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    * @return The documentNumber.
    */
@@ -768,6 +1118,10 @@ private static final long serialVersionUID = 0L;
     return documentNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentNumber_;
   }
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    */
   @java.lang.Override
@@ -778,6 +1132,11 @@ private static final long serialVersionUID = 0L;
   public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
   private com.google.type.Date documentDate_;
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the documentDate field is set.
    */
@@ -786,6 +1145,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x10000000) != 0);
   }
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The documentDate.
    */
@@ -794,6 +1158,11 @@ private static final long serialVersionUID = 0L;
     return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
   }
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -804,6 +1173,10 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
   private com.google.protobuf.StringValue orderNumber_;
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    * @return Whether the orderNumber field is set.
    */
@@ -812,6 +1185,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x20000000) != 0);
   }
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    * @return The orderNumber.
    */
@@ -820,6 +1197,10 @@ private static final long serialVersionUID = 0L;
     return orderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderNumber_;
   }
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    */
   @java.lang.Override
@@ -830,6 +1211,10 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
   private com.google.protobuf.StringValue supplierVatNumber_;
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    * @return Whether the supplierVatNumber field is set.
    */
@@ -838,6 +1223,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x40000000) != 0);
   }
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    * @return The supplierVatNumber.
    */
@@ -846,6 +1235,10 @@ private static final long serialVersionUID = 0L;
     return supplierVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierVatNumber_;
   }
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    */
   @java.lang.Override
@@ -856,6 +1249,11 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
   private com.google.protobuf.StringValue supplierOrganisationNumber_;
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    * @return Whether the supplierOrganisationNumber field is set.
    */
@@ -864,6 +1262,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x80000000) != 0);
   }
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    * @return The supplierOrganisationNumber.
    */
@@ -872,6 +1275,11 @@ private static final long serialVersionUID = 0L;
     return supplierOrganisationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierOrganisationNumber_;
   }
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    */
   @java.lang.Override
@@ -882,6 +1290,10 @@ private static final long serialVersionUID = 0L;
   public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
   private com.google.protobuf.StringValue supplierAddress_;
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    * @return Whether the supplierAddress field is set.
    */
@@ -890,6 +1302,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    * @return The supplierAddress.
    */
@@ -898,6 +1314,10 @@ private static final long serialVersionUID = 0L;
     return supplierAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
   }
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    */
   @java.lang.Override
@@ -908,6 +1328,10 @@ private static final long serialVersionUID = 0L;
   public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
   private com.google.protobuf.StringValue customerNumber_;
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    * @return Whether the customerNumber field is set.
    */
@@ -916,6 +1340,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000002) != 0);
   }
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    * @return The customerNumber.
    */
@@ -924,6 +1352,10 @@ private static final long serialVersionUID = 0L;
     return customerNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
   }
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    */
   @java.lang.Override
@@ -934,6 +1366,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_ORDER_NUMBER_FIELD_NUMBER = 35;
   private com.google.protobuf.StringValue receiverOrderNumber_;
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    * @return Whether the receiverOrderNumber field is set.
    */
@@ -942,6 +1378,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000004) != 0);
   }
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    * @return The receiverOrderNumber.
    */
@@ -950,6 +1390,10 @@ private static final long serialVersionUID = 0L;
     return receiverOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverOrderNumber_;
   }
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    */
   @java.lang.Override
@@ -960,6 +1404,11 @@ private static final long serialVersionUID = 0L;
   public static final int OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER = 36;
   private com.google.protobuf.StringValue ocrLineBePaymentId_;
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    * @return Whether the ocrLineBePaymentId field is set.
    */
@@ -968,6 +1417,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000008) != 0);
   }
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    * @return The ocrLineBePaymentId.
    */
@@ -976,6 +1430,11 @@ private static final long serialVersionUID = 0L;
     return ocrLineBePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineBePaymentId_;
   }
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    */
   @java.lang.Override
@@ -986,6 +1445,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_ADDRESS_FIELD_NUMBER = 37;
   private com.google.protobuf.StringValue receiverAddress_;
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    * @return Whether the receiverAddress field is set.
    */
@@ -994,6 +1457,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000010) != 0);
   }
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    * @return The receiverAddress.
    */
@@ -1002,6 +1469,10 @@ private static final long serialVersionUID = 0L;
     return receiverAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverAddress_;
   }
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    */
   @java.lang.Override
@@ -1012,6 +1483,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_COUNTRY_CODE_FIELD_NUMBER = 38;
   private com.google.protobuf.StringValue receiverCountryCode_;
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    * @return Whether the receiverCountryCode field is set.
    */
@@ -1020,6 +1495,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000020) != 0);
   }
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    * @return The receiverCountryCode.
    */
@@ -1028,6 +1507,10 @@ private static final long serialVersionUID = 0L;
     return receiverCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverCountryCode_;
   }
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    */
   @java.lang.Override
@@ -1038,6 +1521,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_NAME_FIELD_NUMBER = 39;
   private com.google.protobuf.StringValue receiverName_;
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    * @return Whether the receiverName field is set.
    */
@@ -1046,6 +1533,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000040) != 0);
   }
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    * @return The receiverName.
    */
@@ -1054,6 +1545,10 @@ private static final long serialVersionUID = 0L;
     return receiverName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverName_;
   }
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    */
   @java.lang.Override
@@ -1064,6 +1559,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_VAT_NUMBER_FIELD_NUMBER = 40;
   private com.google.protobuf.StringValue receiverVatNumber_;
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    * @return Whether the receiverVatNumber field is set.
    */
@@ -1072,6 +1571,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000080) != 0);
   }
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    * @return The receiverVatNumber.
    */
@@ -1080,6 +1583,10 @@ private static final long serialVersionUID = 0L;
     return receiverVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverVatNumber_;
   }
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    */
   @java.lang.Override
@@ -1091,6 +1598,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLines_;
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   @java.lang.Override
@@ -1098,6 +1610,11 @@ private static final long serialVersionUID = 0L;
     return purchaseLines_;
   }
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   @java.lang.Override
@@ -1106,6 +1623,11 @@ private static final long serialVersionUID = 0L;
     return purchaseLines_;
   }
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   @java.lang.Override
@@ -1113,6 +1635,11 @@ private static final long serialVersionUID = 0L;
     return purchaseLines_.size();
   }
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   @java.lang.Override
@@ -1120,6 +1647,11 @@ private static final long serialVersionUID = 0L;
     return purchaseLines_.get(index);
   }
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   @java.lang.Override
@@ -1132,6 +1664,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.AnswerCandidate> answers_;
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   @java.lang.Override
@@ -1139,6 +1676,11 @@ private static final long serialVersionUID = 0L;
     return answers_;
   }
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   @java.lang.Override
@@ -1147,6 +1689,11 @@ private static final long serialVersionUID = 0L;
     return answers_;
   }
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   @java.lang.Override
@@ -1154,6 +1701,11 @@ private static final long serialVersionUID = 0L;
     return answers_.size();
   }
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   @java.lang.Override
@@ -1161,6 +1713,11 @@ private static final long serialVersionUID = 0L;
     return answers_.get(index);
   }
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   @java.lang.Override
@@ -1173,6 +1730,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistribution_;
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
@@ -1180,6 +1742,11 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_;
   }
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
@@ -1188,6 +1755,11 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_;
   }
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
@@ -1195,6 +1767,11 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_.size();
   }
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
@@ -1202,6 +1779,11 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_.get(index);
   }
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
@@ -1213,6 +1795,11 @@ private static final long serialVersionUID = 0L;
   public static final int CHECK_IN_DATE_FIELD_NUMBER = 44;
   private com.google.type.Date checkInDate_;
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the checkInDate field is set.
    */
@@ -1221,6 +1808,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000100) != 0);
   }
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The checkInDate.
    */
@@ -1229,6 +1821,11 @@ private static final long serialVersionUID = 0L;
     return checkInDate_ == null ? com.google.type.Date.getDefaultInstance() : checkInDate_;
   }
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -1239,6 +1836,11 @@ private static final long serialVersionUID = 0L;
   public static final int CHECK_OUT_DATE_FIELD_NUMBER = 45;
   private com.google.type.Date checkOutDate_;
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the checkOutDate field is set.
    */
@@ -1247,6 +1849,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000200) != 0);
   }
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The checkOutDate.
    */
@@ -1255,6 +1862,11 @@ private static final long serialVersionUID = 0L;
     return checkOutDate_ == null ? com.google.type.Date.getDefaultInstance() : checkOutDate_;
   }
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -1265,6 +1877,10 @@ private static final long serialVersionUID = 0L;
   public static final int KSEF_FIELD_NUMBER = 46;
   private com.google.protobuf.StringValue ksef_;
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    * @return Whether the ksef field is set.
    */
@@ -1273,6 +1889,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField1_ & 0x00000400) != 0);
   }
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    * @return The ksef.
    */
@@ -1281,6 +1901,10 @@ private static final long serialVersionUID = 0L;
     return ksef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ksef_;
   }
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    */
   @java.lang.Override
@@ -2162,6 +2786,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The correct values for a document, as your user confirmed them. Send the
+   * final value of each field your user reviewed, whether they kept the
+   * suggestion or changed it. Field names match the annotate response.
+   * </pre>
+   *
    * Protobuf type {@code ssn.dataservice.v1.TrueValues}
    */
   public static final class Builder extends
@@ -3423,6 +4053,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalInclVatBuilder_;
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      * @return Whether the totalInclVat field is set.
      */
@@ -3430,6 +4064,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      * @return The totalInclVat.
      */
@@ -3441,6 +4079,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public Builder setTotalInclVat(com.google.protobuf.DoubleValue value) {
@@ -3457,6 +4099,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public Builder setTotalInclVat(
@@ -3471,6 +4117,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public Builder mergeTotalInclVat(com.google.protobuf.DoubleValue value) {
@@ -3492,6 +4142,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public Builder clearTotalInclVat() {
@@ -3505,6 +4159,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public com.google.protobuf.DoubleValue.Builder getTotalInclVatBuilder() {
@@ -3513,6 +4171,10 @@ private static final long serialVersionUID = 0L;
       return getTotalInclVatFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder() {
@@ -3524,6 +4186,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total including VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -3544,6 +4210,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalVatBuilder_;
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      * @return Whether the totalVat field is set.
      */
@@ -3551,6 +4221,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      * @return The totalVat.
      */
@@ -3562,6 +4236,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public Builder setTotalVat(com.google.protobuf.DoubleValue value) {
@@ -3578,6 +4256,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public Builder setTotalVat(
@@ -3592,6 +4274,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public Builder mergeTotalVat(com.google.protobuf.DoubleValue value) {
@@ -3613,6 +4299,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public Builder clearTotalVat() {
@@ -3626,6 +4316,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public com.google.protobuf.DoubleValue.Builder getTotalVatBuilder() {
@@ -3634,6 +4328,10 @@ private static final long serialVersionUID = 0L;
       return getTotalVatFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder() {
@@ -3645,6 +4343,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -3665,6 +4367,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalExclVatBuilder_;
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      * @return Whether the totalExclVat field is set.
      */
@@ -3672,6 +4378,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      * @return The totalExclVat.
      */
@@ -3683,6 +4393,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public Builder setTotalExclVat(com.google.protobuf.DoubleValue value) {
@@ -3699,6 +4413,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public Builder setTotalExclVat(
@@ -3713,6 +4431,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public Builder mergeTotalExclVat(com.google.protobuf.DoubleValue value) {
@@ -3734,6 +4456,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public Builder clearTotalExclVat() {
@@ -3747,6 +4473,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public com.google.protobuf.DoubleValue.Builder getTotalExclVatBuilder() {
@@ -3755,6 +4485,10 @@ private static final long serialVersionUID = 0L;
       return getTotalExclVatFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder() {
@@ -3766,6 +4500,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Total excluding VAT, as a number.
+     * </pre>
+     *
      * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -3786,6 +4524,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return Whether the orderDate field is set.
      */
@@ -3793,6 +4535,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The orderDate.
      */
@@ -3804,6 +4550,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setOrderDate(com.google.type.Date value) {
@@ -3820,6 +4570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setOrderDate(
@@ -3834,6 +4588,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder mergeOrderDate(com.google.type.Date value) {
@@ -3855,6 +4613,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearOrderDate() {
@@ -3868,6 +4630,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date.Builder getOrderDateBuilder() {
@@ -3876,6 +4642,10 @@ private static final long serialVersionUID = 0L;
       return getOrderDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
@@ -3887,6 +4657,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentDate` instead.
+     * </pre>
+     *
      * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -3907,6 +4681,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return Whether the paymentDueDate field is set.
      */
@@ -3914,6 +4693,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The paymentDueDate.
      */
@@ -3925,6 +4709,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setPaymentDueDate(com.google.type.Date value) {
@@ -3941,6 +4730,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setPaymentDueDate(
@@ -3955,6 +4749,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder mergePaymentDueDate(com.google.type.Date value) {
@@ -3976,6 +4775,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearPaymentDueDate() {
@@ -3989,6 +4793,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date.Builder getPaymentDueDateBuilder() {
@@ -3997,6 +4806,11 @@ private static final long serialVersionUID = 0L;
       return getPaymentDueDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
@@ -4008,6 +4822,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last day for the payment, as an object with year, month and day. The day
+     * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4028,6 +4847,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentTypeBuilder_;
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      * @return Whether the documentType field is set.
      */
@@ -4035,6 +4859,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      * @return The documentType.
      */
@@ -4046,6 +4875,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public Builder setDocumentType(com.google.protobuf.StringValue value) {
@@ -4062,6 +4896,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public Builder setDocumentType(
@@ -4076,6 +4915,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public Builder mergeDocumentType(com.google.protobuf.StringValue value) {
@@ -4097,6 +4941,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public Builder clearDocumentType() {
@@ -4110,6 +4959,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDocumentTypeBuilder() {
@@ -4118,6 +4972,11 @@ private static final long serialVersionUID = 0L;
       return getDocumentTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder() {
@@ -4129,6 +4988,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Document type, using the values the annotate response returns, for
+     * example "Invoice".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4149,6 +5013,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      * @return Whether the currency field is set.
      */
@@ -4156,6 +5024,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      * @return The currency.
      */
@@ -4167,6 +5039,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public Builder setCurrency(com.google.protobuf.StringValue value) {
@@ -4183,6 +5059,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public Builder setCurrency(
@@ -4197,6 +5077,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public Builder mergeCurrency(com.google.protobuf.StringValue value) {
@@ -4218,6 +5102,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public Builder clearCurrency() {
@@ -4231,6 +5119,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
@@ -4239,6 +5131,10 @@ private static final long serialVersionUID = 0L;
       return getCurrencyFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
@@ -4250,6 +5146,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Three-letter ISO 4217 currency code, for example "DKK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4270,6 +5170,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCardLastFourBuilder_;
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      * @return Whether the creditCardLastFour field is set.
      */
@@ -4277,6 +5181,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      * @return The creditCardLastFour.
      */
@@ -4288,6 +5196,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public Builder setCreditCardLastFour(com.google.protobuf.StringValue value) {
@@ -4304,6 +5216,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public Builder setCreditCardLastFour(
@@ -4318,6 +5234,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public Builder mergeCreditCardLastFour(com.google.protobuf.StringValue value) {
@@ -4339,6 +5259,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public Builder clearCreditCardLastFour() {
@@ -4352,6 +5276,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public com.google.protobuf.StringValue.Builder getCreditCardLastFourBuilder() {
@@ -4360,6 +5288,10 @@ private static final long serialVersionUID = 0L;
       return getCreditCardLastFourFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder() {
@@ -4371,6 +5303,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last four digits of the card used for payment, for example "2345".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4391,6 +5327,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentMethodBuilder_;
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      * @return Whether the paymentMethod field is set.
      */
@@ -4398,6 +5339,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      * @return The paymentMethod.
      */
@@ -4409,6 +5355,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public Builder setPaymentMethod(com.google.protobuf.StringValue value) {
@@ -4425,6 +5376,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public Builder setPaymentMethod(
@@ -4439,6 +5395,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public Builder mergePaymentMethod(com.google.protobuf.StringValue value) {
@@ -4460,6 +5421,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public Builder clearPaymentMethod() {
@@ -4473,6 +5439,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentMethodBuilder() {
@@ -4481,6 +5452,11 @@ private static final long serialVersionUID = 0L;
       return getPaymentMethodFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder() {
@@ -4492,6 +5468,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Payment method, using the values the annotate response returns: "Cash",
+     * "CreditCard" or "BankTransfer".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4512,6 +5493,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkTypeBuilder_;
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      * @return Whether the ocrLineDkType field is set.
      */
@@ -4519,6 +5504,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      * @return The ocrLineDkType.
      */
@@ -4530,6 +5519,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public Builder setOcrLineDkType(com.google.protobuf.StringValue value) {
@@ -4546,6 +5539,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public Builder setOcrLineDkType(
@@ -4560,6 +5557,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public Builder mergeOcrLineDkType(com.google.protobuf.StringValue value) {
@@ -4581,6 +5582,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public Builder clearOcrLineDkType() {
@@ -4594,6 +5599,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineDkTypeBuilder() {
@@ -4602,6 +5611,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineDkTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder() {
@@ -4613,6 +5626,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type field of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4633,6 +5650,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkPaymentIdBuilder_;
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      * @return Whether the ocrLineDkPaymentId field is set.
      */
@@ -4640,6 +5661,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      * @return The ocrLineDkPaymentId.
      */
@@ -4651,6 +5676,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public Builder setOcrLineDkPaymentId(com.google.protobuf.StringValue value) {
@@ -4667,6 +5696,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public Builder setOcrLineDkPaymentId(
@@ -4681,6 +5714,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public Builder mergeOcrLineDkPaymentId(com.google.protobuf.StringValue value) {
@@ -4702,6 +5739,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public Builder clearOcrLineDkPaymentId() {
@@ -4715,6 +5756,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineDkPaymentIdBuilder() {
@@ -4723,6 +5768,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineDkPaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder() {
@@ -4734,6 +5783,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Payment reference of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4754,6 +5807,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkCreditorIdBuilder_;
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      * @return Whether the ocrLineDkCreditorId field is set.
      */
@@ -4761,6 +5818,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000800) != 0);
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      * @return The ocrLineDkCreditorId.
      */
@@ -4772,6 +5833,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public Builder setOcrLineDkCreditorId(com.google.protobuf.StringValue value) {
@@ -4788,6 +5853,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public Builder setOcrLineDkCreditorId(
@@ -4802,6 +5871,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public Builder mergeOcrLineDkCreditorId(com.google.protobuf.StringValue value) {
@@ -4823,6 +5896,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public Builder clearOcrLineDkCreditorId() {
@@ -4836,6 +5913,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineDkCreditorIdBuilder() {
@@ -4844,6 +5925,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineDkCreditorIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder() {
@@ -4855,6 +5940,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Creditor account number of a Danish FIK payment line.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4875,6 +5964,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePaymentIdBuilder_;
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      * @return Whether the ocrLineSePaymentId field is set.
      */
@@ -4882,6 +5975,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00001000) != 0);
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      * @return The ocrLineSePaymentId.
      */
@@ -4893,6 +5990,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public Builder setOcrLineSePaymentId(com.google.protobuf.StringValue value) {
@@ -4909,6 +6010,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public Builder setOcrLineSePaymentId(
@@ -4923,6 +6028,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public Builder mergeOcrLineSePaymentId(com.google.protobuf.StringValue value) {
@@ -4944,6 +6053,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public Builder clearOcrLineSePaymentId() {
@@ -4957,6 +6070,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineSePaymentIdBuilder() {
@@ -4965,6 +6082,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineSePaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder() {
@@ -4976,6 +6097,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish payment reference.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -4996,6 +6121,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      * @return Whether the ocrLineSeBankgiroCreditorId field is set.
      */
@@ -5003,6 +6132,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00002000) != 0);
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      * @return The ocrLineSeBankgiroCreditorId.
      */
@@ -5014,6 +6147,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public Builder setOcrLineSeBankgiroCreditorId(com.google.protobuf.StringValue value) {
@@ -5030,6 +6167,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public Builder setOcrLineSeBankgiroCreditorId(
@@ -5044,6 +6185,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public Builder mergeOcrLineSeBankgiroCreditorId(com.google.protobuf.StringValue value) {
@@ -5065,6 +6210,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public Builder clearOcrLineSeBankgiroCreditorId() {
@@ -5078,6 +6227,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineSeBankgiroCreditorIdBuilder() {
@@ -5086,6 +6239,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder() {
@@ -5097,6 +6254,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish Bankgiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5117,6 +6278,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      * @return Whether the ocrLineSePlusgiroCreditorId field is set.
      */
@@ -5124,6 +6289,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00004000) != 0);
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      * @return The ocrLineSePlusgiroCreditorId.
      */
@@ -5135,6 +6304,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public Builder setOcrLineSePlusgiroCreditorId(com.google.protobuf.StringValue value) {
@@ -5151,6 +6324,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public Builder setOcrLineSePlusgiroCreditorId(
@@ -5165,6 +6342,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public Builder mergeOcrLineSePlusgiroCreditorId(com.google.protobuf.StringValue value) {
@@ -5186,6 +6367,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public Builder clearOcrLineSePlusgiroCreditorId() {
@@ -5199,6 +6384,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineSePlusgiroCreditorIdBuilder() {
@@ -5207,6 +6396,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder() {
@@ -5218,6 +6411,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Swedish PlusGiro number of the creditor.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5238,6 +6435,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNoPaymentIdBuilder_;
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      * @return Whether the ocrLineNoPaymentId field is set.
      */
@@ -5245,6 +6446,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00008000) != 0);
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      * @return The ocrLineNoPaymentId.
      */
@@ -5256,6 +6461,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public Builder setOcrLineNoPaymentId(com.google.protobuf.StringValue value) {
@@ -5272,6 +6481,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public Builder setOcrLineNoPaymentId(
@@ -5286,6 +6499,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public Builder mergeOcrLineNoPaymentId(com.google.protobuf.StringValue value) {
@@ -5307,6 +6524,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public Builder clearOcrLineNoPaymentId() {
@@ -5320,6 +6541,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineNoPaymentIdBuilder() {
@@ -5328,6 +6553,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineNoPaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder() {
@@ -5339,6 +6568,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Norwegian payment reference (KID).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5359,6 +6592,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineFiPaymentIdBuilder_;
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      * @return Whether the ocrLineFiPaymentId field is set.
      */
@@ -5366,6 +6603,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00010000) != 0);
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      * @return The ocrLineFiPaymentId.
      */
@@ -5377,6 +6618,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public Builder setOcrLineFiPaymentId(com.google.protobuf.StringValue value) {
@@ -5393,6 +6638,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public Builder setOcrLineFiPaymentId(
@@ -5407,6 +6656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public Builder mergeOcrLineFiPaymentId(com.google.protobuf.StringValue value) {
@@ -5428,6 +6681,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public Builder clearOcrLineFiPaymentId() {
@@ -5441,6 +6698,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineFiPaymentIdBuilder() {
@@ -5449,6 +6710,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineFiPaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder() {
@@ -5460,6 +6725,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Finnish payment reference (viitenumero).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5480,6 +6749,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNlPaymentIdBuilder_;
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      * @return Whether the ocrLineNlPaymentId field is set.
      */
@@ -5487,6 +6760,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00020000) != 0);
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      * @return The ocrLineNlPaymentId.
      */
@@ -5498,6 +6775,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public Builder setOcrLineNlPaymentId(com.google.protobuf.StringValue value) {
@@ -5514,6 +6795,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public Builder setOcrLineNlPaymentId(
@@ -5528,6 +6813,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public Builder mergeOcrLineNlPaymentId(com.google.protobuf.StringValue value) {
@@ -5549,6 +6838,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public Builder clearOcrLineNlPaymentId() {
@@ -5562,6 +6855,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineNlPaymentIdBuilder() {
@@ -5570,6 +6867,10 @@ private static final long serialVersionUID = 0L;
       return getOcrLineNlPaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder() {
@@ -5581,6 +6882,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Dutch payment reference (betalingskenmerk).
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5601,6 +6906,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCorporateIdBuilder_;
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      * @return Whether the supplierCorporateId field is set.
      */
@@ -5608,6 +6917,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00040000) != 0);
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      * @return The supplierCorporateId.
      */
@@ -5619,6 +6932,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public Builder setSupplierCorporateId(com.google.protobuf.StringValue value) {
@@ -5635,6 +6952,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public Builder setSupplierCorporateId(
@@ -5649,6 +6970,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public Builder mergeSupplierCorporateId(com.google.protobuf.StringValue value) {
@@ -5670,6 +6995,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public Builder clearSupplierCorporateId() {
@@ -5683,6 +7012,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierCorporateIdBuilder() {
@@ -5691,6 +7024,10 @@ private static final long serialVersionUID = 0L;
       return getSupplierCorporateIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder() {
@@ -5702,6 +7039,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5722,6 +7063,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCountryCodeBuilder_;
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      * @return Whether the supplierCountryCode field is set.
      */
@@ -5729,6 +7075,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00080000) != 0);
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      * @return The supplierCountryCode.
      */
@@ -5740,6 +7091,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public Builder setSupplierCountryCode(com.google.protobuf.StringValue value) {
@@ -5756,6 +7112,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public Builder setSupplierCountryCode(
@@ -5770,6 +7131,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public Builder mergeSupplierCountryCode(com.google.protobuf.StringValue value) {
@@ -5791,6 +7157,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public Builder clearSupplierCountryCode() {
@@ -5804,6 +7175,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierCountryCodeBuilder() {
@@ -5812,6 +7188,11 @@ private static final long serialVersionUID = 0L;
       return getSupplierCountryCodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder() {
@@ -5823,6 +7204,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+     * example "DK".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5843,6 +7229,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> invoiceNumberBuilder_;
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      * @return Whether the invoiceNumber field is set.
      */
@@ -5850,6 +7240,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00100000) != 0);
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      * @return The invoiceNumber.
      */
@@ -5861,6 +7255,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public Builder setInvoiceNumber(com.google.protobuf.StringValue value) {
@@ -5877,6 +7275,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public Builder setInvoiceNumber(
@@ -5891,6 +7293,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public Builder mergeInvoiceNumber(com.google.protobuf.StringValue value) {
@@ -5912,6 +7318,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public Builder clearInvoiceNumber() {
@@ -5925,6 +7335,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getInvoiceNumberBuilder() {
@@ -5933,6 +7347,10 @@ private static final long serialVersionUID = 0L;
       return getInvoiceNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder() {
@@ -5944,6 +7362,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [DEPRECATED] Send `documentNumber` instead.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -5964,6 +7386,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ibanBuilder_;
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      * @return Whether the iban field is set.
      */
@@ -5971,6 +7397,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00200000) != 0);
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      * @return The iban.
      */
@@ -5982,6 +7412,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public Builder setIban(com.google.protobuf.StringValue value) {
@@ -5998,6 +7432,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public Builder setIban(
@@ -6012,6 +7450,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public Builder mergeIban(com.google.protobuf.StringValue value) {
@@ -6033,6 +7475,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public Builder clearIban() {
@@ -6046,6 +7492,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public com.google.protobuf.StringValue.Builder getIbanBuilder() {
@@ -6054,6 +7504,10 @@ private static final long serialVersionUID = 0L;
       return getIbanFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getIbanOrBuilder() {
@@ -6065,6 +7519,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * IBAN.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6085,6 +7543,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> orderReferenceBuilder_;
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      * @return Whether the orderReference field is set.
      */
@@ -6092,6 +7554,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00400000) != 0);
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      * @return The orderReference.
      */
@@ -6103,6 +7569,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public Builder setOrderReference(com.google.protobuf.StringValue value) {
@@ -6119,6 +7589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public Builder setOrderReference(
@@ -6133,6 +7607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public Builder mergeOrderReference(com.google.protobuf.StringValue value) {
@@ -6154,6 +7632,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public Builder clearOrderReference() {
@@ -6167,6 +7649,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOrderReferenceBuilder() {
@@ -6175,6 +7661,10 @@ private static final long serialVersionUID = 0L;
       return getOrderReferenceFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOrderReferenceOrBuilder() {
@@ -6186,6 +7676,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Order reference on the document. No Smartscan feature extracts it.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6206,6 +7700,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bankAccountNumberBuilder_;
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      * @return Whether the bankAccountNumber field is set.
      */
@@ -6213,6 +7711,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00800000) != 0);
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      * @return The bankAccountNumber.
      */
@@ -6224,6 +7726,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public Builder setBankAccountNumber(com.google.protobuf.StringValue value) {
@@ -6240,6 +7746,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public Builder setBankAccountNumber(
@@ -6254,6 +7764,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public Builder mergeBankAccountNumber(com.google.protobuf.StringValue value) {
@@ -6275,6 +7789,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public Builder clearBankAccountNumber() {
@@ -6288,6 +7806,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getBankAccountNumberBuilder() {
@@ -6296,6 +7818,10 @@ private static final long serialVersionUID = 0L;
       return getBankAccountNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBankAccountNumberOrBuilder() {
@@ -6307,6 +7833,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Bank account number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6327,6 +7857,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bankRegistrationNumberBuilder_;
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      * @return Whether the bankRegistrationNumber field is set.
      */
@@ -6334,6 +7868,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x01000000) != 0);
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      * @return The bankRegistrationNumber.
      */
@@ -6345,6 +7883,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public Builder setBankRegistrationNumber(com.google.protobuf.StringValue value) {
@@ -6361,6 +7903,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public Builder setBankRegistrationNumber(
@@ -6375,6 +7921,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public Builder mergeBankRegistrationNumber(com.google.protobuf.StringValue value) {
@@ -6396,6 +7946,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public Builder clearBankRegistrationNumber() {
@@ -6409,6 +7963,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getBankRegistrationNumberBuilder() {
@@ -6417,6 +7975,10 @@ private static final long serialVersionUID = 0L;
       return getBankRegistrationNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder() {
@@ -6428,6 +7990,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Bank registration number, in countries that use one, such as Denmark.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6448,6 +8014,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierNameBuilder_;
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      * @return Whether the supplierName field is set.
      */
@@ -6455,6 +8025,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x02000000) != 0);
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      * @return The supplierName.
      */
@@ -6466,6 +8040,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public Builder setSupplierName(com.google.protobuf.StringValue value) {
@@ -6482,6 +8060,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public Builder setSupplierName(
@@ -6496,6 +8078,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public Builder mergeSupplierName(com.google.protobuf.StringValue value) {
@@ -6517,6 +8103,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public Builder clearSupplierName() {
@@ -6530,6 +8120,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierNameBuilder() {
@@ -6538,6 +8132,10 @@ private static final long serialVersionUID = 0L;
       return getSupplierNameFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
@@ -6549,6 +8147,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6569,6 +8171,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> bicBuilder_;
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      * @return Whether the bic field is set.
      */
@@ -6576,6 +8182,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x04000000) != 0);
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      * @return The bic.
      */
@@ -6587,6 +8197,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public Builder setBic(com.google.protobuf.StringValue value) {
@@ -6603,6 +8217,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public Builder setBic(
@@ -6617,6 +8235,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public Builder mergeBic(com.google.protobuf.StringValue value) {
@@ -6638,6 +8260,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public Builder clearBic() {
@@ -6651,6 +8277,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public com.google.protobuf.StringValue.Builder getBicBuilder() {
@@ -6659,6 +8289,10 @@ private static final long serialVersionUID = 0L;
       return getBicFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBicOrBuilder() {
@@ -6670,6 +8304,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * BIC code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6690,6 +8328,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentNumberBuilder_;
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      * @return Whether the documentNumber field is set.
      */
@@ -6697,6 +8339,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x08000000) != 0);
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      * @return The documentNumber.
      */
@@ -6708,6 +8354,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public Builder setDocumentNumber(com.google.protobuf.StringValue value) {
@@ -6724,6 +8374,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public Builder setDocumentNumber(
@@ -6738,6 +8392,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public Builder mergeDocumentNumber(com.google.protobuf.StringValue value) {
@@ -6759,6 +8417,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public Builder clearDocumentNumber() {
@@ -6772,6 +8434,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDocumentNumberBuilder() {
@@ -6780,6 +8446,10 @@ private static final long serialVersionUID = 0L;
       return getDocumentNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder() {
@@ -6791,6 +8461,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Number that identifies the document, such as the invoice number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6811,6 +8485,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> documentDateBuilder_;
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return Whether the documentDate field is set.
      */
@@ -6818,6 +8497,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x10000000) != 0);
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The documentDate.
      */
@@ -6829,6 +8513,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setDocumentDate(com.google.type.Date value) {
@@ -6845,6 +8534,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setDocumentDate(
@@ -6859,6 +8553,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder mergeDocumentDate(com.google.type.Date value) {
@@ -6880,6 +8579,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearDocumentDate() {
@@ -6893,6 +8597,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date.Builder getDocumentDateBuilder() {
@@ -6901,6 +8610,11 @@ private static final long serialVersionUID = 0L;
       return getDocumentDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
@@ -6912,6 +8626,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Date the document was issued, as an object with year, month and day. The
+     * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+     * </pre>
+     *
      * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -6932,6 +8651,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> orderNumberBuilder_;
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      * @return Whether the orderNumber field is set.
      */
@@ -6939,6 +8662,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x20000000) != 0);
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      * @return The orderNumber.
      */
@@ -6950,6 +8677,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public Builder setOrderNumber(com.google.protobuf.StringValue value) {
@@ -6966,6 +8697,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public Builder setOrderNumber(
@@ -6980,6 +8715,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public Builder mergeOrderNumber(com.google.protobuf.StringValue value) {
@@ -7001,6 +8740,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public Builder clearOrderNumber() {
@@ -7014,6 +8757,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOrderNumberBuilder() {
@@ -7022,6 +8769,10 @@ private static final long serialVersionUID = 0L;
       return getOrderNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder() {
@@ -7033,6 +8784,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Order number, if the document shows one.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7053,6 +8808,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierVatNumberBuilder_;
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      * @return Whether the supplierVatNumber field is set.
      */
@@ -7060,6 +8819,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x40000000) != 0);
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      * @return The supplierVatNumber.
      */
@@ -7071,6 +8834,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public Builder setSupplierVatNumber(com.google.protobuf.StringValue value) {
@@ -7087,6 +8854,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public Builder setSupplierVatNumber(
@@ -7101,6 +8872,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public Builder mergeSupplierVatNumber(com.google.protobuf.StringValue value) {
@@ -7122,6 +8897,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public Builder clearSupplierVatNumber() {
@@ -7135,6 +8914,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierVatNumberBuilder() {
@@ -7143,6 +8926,10 @@ private static final long serialVersionUID = 0L;
       return getSupplierVatNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder() {
@@ -7154,6 +8941,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT number of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7174,6 +8965,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierOrganisationNumberBuilder_;
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      * @return Whether the supplierOrganisationNumber field is set.
      */
@@ -7181,6 +8977,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x80000000) != 0);
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      * @return The supplierOrganisationNumber.
      */
@@ -7192,6 +8993,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public Builder setSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
@@ -7208,6 +9014,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public Builder setSupplierOrganisationNumber(
@@ -7222,6 +9033,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public Builder mergeSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
@@ -7243,6 +9059,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public Builder clearSupplierOrganisationNumber() {
@@ -7256,6 +9077,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierOrganisationNumberBuilder() {
@@ -7264,6 +9090,11 @@ private static final long serialVersionUID = 0L;
       return getSupplierOrganisationNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder() {
@@ -7275,6 +9106,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * National company ID of the supplier, such as the CVR number in Denmark or
+     * the KvK number in the Netherlands.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7295,6 +9131,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierAddressBuilder_;
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      * @return Whether the supplierAddress field is set.
      */
@@ -7302,6 +9142,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      * @return The supplierAddress.
      */
@@ -7313,6 +9157,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public Builder setSupplierAddress(com.google.protobuf.StringValue value) {
@@ -7329,6 +9177,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public Builder setSupplierAddress(
@@ -7343,6 +9195,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public Builder mergeSupplierAddress(com.google.protobuf.StringValue value) {
@@ -7364,6 +9220,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public Builder clearSupplierAddress() {
@@ -7377,6 +9237,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public com.google.protobuf.StringValue.Builder getSupplierAddressBuilder() {
@@ -7385,6 +9249,10 @@ private static final long serialVersionUID = 0L;
       return getSupplierAddressFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder() {
@@ -7396,6 +9264,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Address of the supplier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7416,6 +9288,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerNumberBuilder_;
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      * @return Whether the customerNumber field is set.
      */
@@ -7423,6 +9299,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      * @return The customerNumber.
      */
@@ -7434,6 +9314,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public Builder setCustomerNumber(com.google.protobuf.StringValue value) {
@@ -7450,6 +9334,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public Builder setCustomerNumber(
@@ -7464,6 +9352,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public Builder mergeCustomerNumber(com.google.protobuf.StringValue value) {
@@ -7485,6 +9377,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public Builder clearCustomerNumber() {
@@ -7498,6 +9394,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getCustomerNumberBuilder() {
@@ -7506,6 +9406,10 @@ private static final long serialVersionUID = 0L;
       return getCustomerNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder() {
@@ -7517,6 +9421,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Number that identifies the customer.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7537,6 +9445,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverOrderNumberBuilder_;
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      * @return Whether the receiverOrderNumber field is set.
      */
@@ -7544,6 +9456,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      * @return The receiverOrderNumber.
      */
@@ -7555,6 +9471,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public Builder setReceiverOrderNumber(com.google.protobuf.StringValue value) {
@@ -7571,6 +9491,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public Builder setReceiverOrderNumber(
@@ -7585,6 +9509,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public Builder mergeReceiverOrderNumber(com.google.protobuf.StringValue value) {
@@ -7606,6 +9534,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public Builder clearReceiverOrderNumber() {
@@ -7619,6 +9551,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getReceiverOrderNumberBuilder() {
@@ -7627,6 +9563,10 @@ private static final long serialVersionUID = 0L;
       return getReceiverOrderNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder() {
@@ -7638,6 +9578,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Receiver's order number.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7658,6 +9602,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineBePaymentIdBuilder_;
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      * @return Whether the ocrLineBePaymentId field is set.
      */
@@ -7665,6 +9614,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      * @return The ocrLineBePaymentId.
      */
@@ -7676,6 +9630,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public Builder setOcrLineBePaymentId(com.google.protobuf.StringValue value) {
@@ -7692,6 +9651,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public Builder setOcrLineBePaymentId(
@@ -7706,6 +9670,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public Builder mergeOcrLineBePaymentId(com.google.protobuf.StringValue value) {
@@ -7727,6 +9696,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public Builder clearOcrLineBePaymentId() {
@@ -7740,6 +9714,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOcrLineBePaymentIdBuilder() {
@@ -7748,6 +9727,11 @@ private static final long serialVersionUID = 0L;
       return getOcrLineBePaymentIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder() {
@@ -7759,6 +9743,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Belgian structured payment reference (OGM), for example
+     * "+++123/1234/12345+++".
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7779,6 +9768,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverAddressBuilder_;
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      * @return Whether the receiverAddress field is set.
      */
@@ -7786,6 +9779,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      * @return The receiverAddress.
      */
@@ -7797,6 +9794,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public Builder setReceiverAddress(com.google.protobuf.StringValue value) {
@@ -7813,6 +9814,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public Builder setReceiverAddress(
@@ -7827,6 +9832,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public Builder mergeReceiverAddress(com.google.protobuf.StringValue value) {
@@ -7848,6 +9857,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public Builder clearReceiverAddress() {
@@ -7861,6 +9874,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public com.google.protobuf.StringValue.Builder getReceiverAddressBuilder() {
@@ -7869,6 +9886,10 @@ private static final long serialVersionUID = 0L;
       return getReceiverAddressFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder() {
@@ -7880,6 +9901,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Address of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -7900,6 +9925,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverCountryCodeBuilder_;
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      * @return Whether the receiverCountryCode field is set.
      */
@@ -7907,6 +9936,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      * @return The receiverCountryCode.
      */
@@ -7918,6 +9951,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public Builder setReceiverCountryCode(com.google.protobuf.StringValue value) {
@@ -7934,6 +9971,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public Builder setReceiverCountryCode(
@@ -7948,6 +9989,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public Builder mergeReceiverCountryCode(com.google.protobuf.StringValue value) {
@@ -7969,6 +10014,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public Builder clearReceiverCountryCode() {
@@ -7982,6 +10031,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public com.google.protobuf.StringValue.Builder getReceiverCountryCodeBuilder() {
@@ -7990,6 +10043,10 @@ private static final long serialVersionUID = 0L;
       return getReceiverCountryCodeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder() {
@@ -8001,6 +10058,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -8021,6 +10082,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverNameBuilder_;
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      * @return Whether the receiverName field is set.
      */
@@ -8028,6 +10093,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      * @return The receiverName.
      */
@@ -8039,6 +10108,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public Builder setReceiverName(com.google.protobuf.StringValue value) {
@@ -8055,6 +10128,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public Builder setReceiverName(
@@ -8069,6 +10146,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public Builder mergeReceiverName(com.google.protobuf.StringValue value) {
@@ -8090,6 +10171,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public Builder clearReceiverName() {
@@ -8103,6 +10188,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public com.google.protobuf.StringValue.Builder getReceiverNameBuilder() {
@@ -8111,6 +10200,10 @@ private static final long serialVersionUID = 0L;
       return getReceiverNameFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder() {
@@ -8122,6 +10215,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -8142,6 +10239,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverVatNumberBuilder_;
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      * @return Whether the receiverVatNumber field is set.
      */
@@ -8149,6 +10250,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      * @return The receiverVatNumber.
      */
@@ -8160,6 +10265,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public Builder setReceiverVatNumber(com.google.protobuf.StringValue value) {
@@ -8176,6 +10285,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public Builder setReceiverVatNumber(
@@ -8190,6 +10303,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public Builder mergeReceiverVatNumber(com.google.protobuf.StringValue value) {
@@ -8211,6 +10328,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public Builder clearReceiverVatNumber() {
@@ -8224,6 +10345,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getReceiverVatNumberBuilder() {
@@ -8232,6 +10357,10 @@ private static final long serialVersionUID = 0L;
       return getReceiverVatNumberFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder() {
@@ -8243,6 +10372,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT number of the receiver.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -8272,6 +10405,11 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> purchaseLinesBuilder_;
 
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLinesList() {
@@ -8282,6 +10420,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public int getPurchaseLinesCount() {
@@ -8292,6 +10435,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index) {
@@ -8302,6 +10450,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder setPurchaseLines(
@@ -8319,6 +10472,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder setPurchaseLines(
@@ -8333,6 +10491,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder addPurchaseLines(ai.visma.ssn.type.PurchaseLineCandidate value) {
@@ -8349,6 +10512,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder addPurchaseLines(
@@ -8366,6 +10534,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder addPurchaseLines(
@@ -8380,6 +10553,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder addPurchaseLines(
@@ -8394,6 +10572,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder addAllPurchaseLines(
@@ -8409,6 +10592,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder clearPurchaseLines() {
@@ -8422,6 +10610,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public Builder removePurchaseLines(int index) {
@@ -8435,6 +10628,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public ai.visma.ssn.type.PurchaseLineCandidate.Builder getPurchaseLinesBuilder(
@@ -8442,6 +10640,11 @@ private static final long serialVersionUID = 0L;
       return getPurchaseLinesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
@@ -8452,6 +10655,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
@@ -8463,6 +10671,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLinesBuilder() {
@@ -8470,6 +10683,11 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLinesBuilder(
@@ -8478,6 +10696,11 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Purchase lines, in the same format as `purchaseLines` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
      */
     public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate.Builder> 
@@ -8512,6 +10735,11 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.AnswerCandidate, ai.visma.ssn.type.AnswerCandidate.Builder, ai.visma.ssn.type.AnswerCandidateOrBuilder> answersBuilder_;
 
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public java.util.List<ai.visma.ssn.type.AnswerCandidate> getAnswersList() {
@@ -8522,6 +10750,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public int getAnswersCount() {
@@ -8532,6 +10765,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public ai.visma.ssn.type.AnswerCandidate getAnswers(int index) {
@@ -8542,6 +10780,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder setAnswers(
@@ -8559,6 +10802,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder setAnswers(
@@ -8573,6 +10821,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder addAnswers(ai.visma.ssn.type.AnswerCandidate value) {
@@ -8589,6 +10842,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder addAnswers(
@@ -8606,6 +10864,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder addAnswers(
@@ -8620,6 +10883,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder addAnswers(
@@ -8634,6 +10902,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder addAllAnswers(
@@ -8649,6 +10922,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder clearAnswers() {
@@ -8662,6 +10940,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public Builder removeAnswers(int index) {
@@ -8675,6 +10958,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public ai.visma.ssn.type.AnswerCandidate.Builder getAnswersBuilder(
@@ -8682,6 +10970,11 @@ private static final long serialVersionUID = 0L;
       return getAnswersFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
@@ -8692,6 +10985,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
@@ -8703,6 +11001,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public ai.visma.ssn.type.AnswerCandidate.Builder addAnswersBuilder() {
@@ -8710,6 +11013,11 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.type.AnswerCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public ai.visma.ssn.type.AnswerCandidate.Builder addAnswersBuilder(
@@ -8718,6 +11026,11 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.type.AnswerCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Answers to the questions asked in the annotate request, in the same
+     * format as `answers` in the annotate response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
      */
     public java.util.List<ai.visma.ssn.type.AnswerCandidate.Builder> 
@@ -8752,6 +11065,11 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> vatDistributionBuilder_;
 
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionList() {
@@ -8762,6 +11080,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public int getVatDistributionCount() {
@@ -8772,6 +11095,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index) {
@@ -8782,6 +11110,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder setVatDistribution(
@@ -8799,6 +11132,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder setVatDistribution(
@@ -8813,6 +11151,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder addVatDistribution(ai.visma.ssn.type.VatDistributionCandidate value) {
@@ -8829,6 +11172,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder addVatDistribution(
@@ -8846,6 +11194,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder addVatDistribution(
@@ -8860,6 +11213,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder addVatDistribution(
@@ -8874,6 +11232,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder addAllVatDistribution(
@@ -8889,6 +11252,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder clearVatDistribution() {
@@ -8902,6 +11270,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public Builder removeVatDistribution(int index) {
@@ -8915,6 +11288,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public ai.visma.ssn.type.VatDistributionCandidate.Builder getVatDistributionBuilder(
@@ -8922,6 +11300,11 @@ private static final long serialVersionUID = 0L;
       return getVatDistributionFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
@@ -8932,6 +11315,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
@@ -8943,6 +11331,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionBuilder() {
@@ -8950,6 +11343,11 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionBuilder(
@@ -8958,6 +11356,11 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
     }
     /**
+     * <pre>
+     * VAT levels, in the same format as `vatDistribution` in the annotate
+     * response.
+     * </pre>
+     *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
      */
     public java.util.List<ai.visma.ssn.type.VatDistributionCandidate.Builder> 
@@ -8983,6 +11386,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkInDateBuilder_;
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return Whether the checkInDate field is set.
      */
@@ -8990,6 +11398,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00000800) != 0);
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The checkInDate.
      */
@@ -9001,6 +11414,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setCheckInDate(com.google.type.Date value) {
@@ -9017,6 +11435,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setCheckInDate(
@@ -9031,6 +11454,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder mergeCheckInDate(com.google.type.Date value) {
@@ -9052,6 +11480,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearCheckInDate() {
@@ -9065,6 +11498,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date.Builder getCheckInDateBuilder() {
@@ -9073,6 +11511,11 @@ private static final long serialVersionUID = 0L;
       return getCheckInDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getCheckInDateOrBuilder() {
@@ -9084,6 +11527,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Check-in date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -9104,6 +11552,11 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> checkOutDateBuilder_;
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return Whether the checkOutDate field is set.
      */
@@ -9111,6 +11564,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00001000) != 0);
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The checkOutDate.
      */
@@ -9122,6 +11580,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setCheckOutDate(com.google.type.Date value) {
@@ -9138,6 +11601,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setCheckOutDate(
@@ -9152,6 +11620,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder mergeCheckOutDate(com.google.type.Date value) {
@@ -9173,6 +11646,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearCheckOutDate() {
@@ -9186,6 +11664,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date.Builder getCheckOutDateBuilder() {
@@ -9194,6 +11677,11 @@ private static final long serialVersionUID = 0L;
       return getCheckOutDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getCheckOutDateOrBuilder() {
@@ -9205,6 +11693,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Check-out date on an accommodation document, as an object with year,
+     * month and day.
+     * </pre>
+     *
      * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -9225,6 +11718,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ksefBuilder_;
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      * @return Whether the ksef field is set.
      */
@@ -9232,6 +11729,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField1_ & 0x00002000) != 0);
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      * @return The ksef.
      */
@@ -9243,6 +11744,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public Builder setKsef(com.google.protobuf.StringValue value) {
@@ -9259,6 +11764,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public Builder setKsef(
@@ -9273,6 +11782,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public Builder mergeKsef(com.google.protobuf.StringValue value) {
@@ -9294,6 +11807,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public Builder clearKsef() {
@@ -9307,6 +11824,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public com.google.protobuf.StringValue.Builder getKsefBuilder() {
@@ -9315,6 +11836,10 @@ private static final long serialVersionUID = 0L;
       return getKsefFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getKsefOrBuilder() {
@@ -9326,6 +11851,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Polish KSeF e-invoicing identifier.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

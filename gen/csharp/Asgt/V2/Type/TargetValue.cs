@@ -44,7 +44,7 @@ namespace Asgt.V2.Type {
   }
   #region Messages
   /// <summary>
-  /// Record mapping a target name to a value
+  /// A target and its value in an example.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetValue : pb::IMessage<TargetValue>
@@ -95,6 +95,10 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    /// Name of the target, such as "account". Use letters, digits, ".", "_", ">" and "-",
+    /// starting with a letter, digit or ".", up to 256 bytes.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
@@ -107,6 +111,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     private string value_ = "";
+    /// <summary>
+    /// The value for this target, such as "002".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {

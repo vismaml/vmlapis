@@ -11,8 +11,8 @@ public interface ValetKeyRequestOrBuilder extends
 
   /**
    * <pre>
-   * Principal / Data Subject, ie. user id
-   * https://tools.ietf.org/html/rfc7519#section-4.1.2
+   * Optional. Who the key is for, for example your user's ID. It's stored in
+   * the token as its subject (the `sub` claim).
    * </pre>
    *
    * <code>string sub = 1 [json_name = "sub"];</code>
@@ -21,8 +21,8 @@ public interface ValetKeyRequestOrBuilder extends
   java.lang.String getSub();
   /**
    * <pre>
-   * Principal / Data Subject, ie. user id
-   * https://tools.ietf.org/html/rfc7519#section-4.1.2
+   * Optional. Who the key is for, for example your user's ID. It's stored in
+   * the token as its subject (the `sub` claim).
    * </pre>
    *
    * <code>string sub = 1 [json_name = "sub"];</code>
@@ -33,9 +33,8 @@ public interface ValetKeyRequestOrBuilder extends
 
   /**
    * <pre>
-   * Timestamp for when this key expires
-   * Default 8 hours from now, max 48h
-   * https://tools.ietf.org/html/rfc7519#section-4.1.4
+   * When the key expires, as a Unix timestamp in seconds. At most 48 hours
+   * from now. Defaults to 8 hours after the key is issued.
    * </pre>
    *
    * <code>int64 exp = 2 [json_name = "exp"];</code>

@@ -23,9 +23,10 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"5\n\x0fValetKeyRequest\x12\x10\n\x03sub\x18\x01 \x01(\tR\x03sub\x12\x10\n\x03\x65xp\x18\x02 \x01(\x03R\x03\x65xp\"8\n\x10ValetKeyResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05token\x18\x02 \x01(\tR\x05token2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B:Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;accessb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"5\n\x0fValetKeyRequest\x12\x10\n\x03sub\x18\x01 \x01(\tR\x03sub\x12\x10\n\x03\x65xp\x18\x02 \x01(\x03R\x03\x65xp\"8\n\x10ValetKeyResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05token\x18\x02 \x01(\tR\x05token2\xc2\x01\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*\x1a\x43\x92\x41@\x12>Create valet keys, short-lived tokens for web and mobile apps.B:Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;accessb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,12 +34,14 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ssn.access.v1.access_pb2', 
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access'
+  _globals['_ACCESS']._loaded_options = None
+  _globals['_ACCESS']._serialized_options = b'\222A@\022>Create valet keys, short-lived tokens for web and mobile apps.'
   _globals['_ACCESS'].methods_by_name['GenerateValetKey']._loaded_options = None
   _globals['_ACCESS'].methods_by_name['GenerateValetKey']._serialized_options = b'\202\323\344\223\002\030\"\023/v1/access/valetkey:\001*'
-  _globals['_VALETKEYREQUEST']._serialized_start=75
-  _globals['_VALETKEYREQUEST']._serialized_end=128
-  _globals['_VALETKEYRESPONSE']._serialized_start=130
-  _globals['_VALETKEYRESPONSE']._serialized_end=186
-  _globals['_ACCESS']._serialized_start=188
-  _globals['_ACCESS']._serialized_end=313
+  _globals['_VALETKEYREQUEST']._serialized_start=123
+  _globals['_VALETKEYREQUEST']._serialized_end=176
+  _globals['_VALETKEYRESPONSE']._serialized_start=178
+  _globals['_VALETKEYRESPONSE']._serialized_end=234
+  _globals['_ACCESS']._serialized_start=237
+  _globals['_ACCESS']._serialized_end=431
 # @@protoc_insertion_point(module_scope)

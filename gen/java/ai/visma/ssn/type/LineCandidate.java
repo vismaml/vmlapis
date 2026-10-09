@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * A line of the document that holds an amount, returned for the LINES feature.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.LineCandidate}
  */
 public final class LineCandidate extends
@@ -48,8 +52,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * Text of the line without the amount
-   * Example: "3 Dark and Stormy"
+   * The text of the line without the amount, for example "3 Dark and Stormy".
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -70,8 +73,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text of the line without the amount
-   * Example: "3 Dark and Stormy"
+   * The text of the line without the amount, for example "3 Dark and Stormy".
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -96,8 +98,7 @@ private static final long serialVersionUID = 0L;
   private double amount_ = 0D;
   /**
    * <pre>
-   * Normalized amount (price) of the line
-   * Example: 300.0
+   * The amount (price) of the line, normalized, for example 300.0.
    * </pre>
    *
    * <code>double amount = 2 [json_name = "amount"];</code>
@@ -112,8 +113,7 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the line was found.
-   * page_ref start from 1.
+   * The page the line was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -305,6 +305,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A line of the document that holds an amount, returned for the LINES feature.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.LineCandidate}
    */
   public static final class Builder extends
@@ -469,8 +473,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * Text of the line without the amount
-     * Example: "3 Dark and Stormy"
+     * The text of the line without the amount, for example "3 Dark and Stormy".
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -490,8 +493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the line without the amount
-     * Example: "3 Dark and Stormy"
+     * The text of the line without the amount, for example "3 Dark and Stormy".
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -512,8 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the line without the amount
-     * Example: "3 Dark and Stormy"
+     * The text of the line without the amount, for example "3 Dark and Stormy".
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -530,8 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the line without the amount
-     * Example: "3 Dark and Stormy"
+     * The text of the line without the amount, for example "3 Dark and Stormy".
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -545,8 +545,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text of the line without the amount
-     * Example: "3 Dark and Stormy"
+     * The text of the line without the amount, for example "3 Dark and Stormy".
      * </pre>
      *
      * <code>string text = 1 [json_name = "text"];</code>
@@ -566,8 +565,7 @@ private static final long serialVersionUID = 0L;
     private double amount_ ;
     /**
      * <pre>
-     * Normalized amount (price) of the line
-     * Example: 300.0
+     * The amount (price) of the line, normalized, for example 300.0.
      * </pre>
      *
      * <code>double amount = 2 [json_name = "amount"];</code>
@@ -579,8 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized amount (price) of the line
-     * Example: 300.0
+     * The amount (price) of the line, normalized, for example 300.0.
      * </pre>
      *
      * <code>double amount = 2 [json_name = "amount"];</code>
@@ -596,8 +593,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized amount (price) of the line
-     * Example: 300.0
+     * The amount (price) of the line, normalized, for example 300.0.
      * </pre>
      *
      * <code>double amount = 2 [json_name = "amount"];</code>
@@ -613,8 +609,7 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -626,8 +621,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -643,8 +637,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>

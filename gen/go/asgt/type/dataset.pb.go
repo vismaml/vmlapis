@@ -21,21 +21,33 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// A dataset of examples that Autosuggest trains models on.
 type Dataset struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Consumer        string                 `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	Name            string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Type            string                 `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
-	Tags            []string               `protobuf:"bytes,4,rep,name=tags,proto3" json:"tags,omitempty"`
-	Targets         []string               `protobuf:"bytes,5,rep,name=targets,proto3" json:"targets,omitempty"`
-	RetentionPolicy *RetentionPolicy       `protobuf:"bytes,9,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
-	CreatedAt       *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	UpdatedAt       *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
-	// Number of samples in the dataset reflecting added entries that meet the retention policy
-	Size        int64                  `protobuf:"varint,12,opt,name=size,proto3" json:"size,omitempty"`
+	// Name of the project the dataset belongs to.
+	Consumer string `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
+	// Name of the dataset.
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	// Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+	// API, the first example you add sets it, and it's empty until then.
+	Type string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
+	// Tags the dataset was created with.
+	Tags []string `protobuf:"bytes,4,rep,name=tags,proto3" json:"tags,omitempty"`
+	// Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+	// empty for datasets created with the v2 API.
+	Targets         []string         `protobuf:"bytes,5,rep,name=targets,proto3" json:"targets,omitempty"`
+	RetentionPolicy *RetentionPolicy `protobuf:"bytes,9,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
+	// When the dataset was created, or created again after it was deleted.
+	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	// [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+	UpdatedAt *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
+	// [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+	// retention window.
+	Size int64 `protobuf:"varint,12,opt,name=size,proto3" json:"size,omitempty"`
+	// When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
 	TruncatedAt *timestamppb.Timestamp `protobuf:"bytes,13,opt,name=truncated_at,json=truncatedAt,proto3" json:"truncated_at,omitempty"`
 }
 

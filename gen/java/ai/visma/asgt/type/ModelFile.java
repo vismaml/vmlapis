@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * A file of a trained model.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.ModelFile}
  */
 public final class ModelFile extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * Name of the file.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
@@ -65,6 +73,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the file.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -86,6 +98,10 @@ private static final long serialVersionUID = 0L;
   public static final int DATA_FIELD_NUMBER = 2;
   private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
   /**
+   * <pre>
+   * Contents of the file.
+   * </pre>
+   *
    * <code>bytes data = 2 [json_name = "data"];</code>
    * @return The data.
    */
@@ -262,6 +278,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A file of a trained model.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.ModelFile}
    */
   public static final class Builder extends
@@ -413,6 +433,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
@@ -429,6 +453,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -446,6 +474,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -459,6 +491,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -469,6 +505,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the file.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -485,6 +525,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
     /**
+     * <pre>
+     * Contents of the file.
+     * </pre>
+     *
      * <code>bytes data = 2 [json_name = "data"];</code>
      * @return The data.
      */
@@ -493,6 +537,10 @@ private static final long serialVersionUID = 0L;
       return data_;
     }
     /**
+     * <pre>
+     * Contents of the file.
+     * </pre>
+     *
      * <code>bytes data = 2 [json_name = "data"];</code>
      * @param value The data to set.
      * @return This builder for chaining.
@@ -505,6 +553,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contents of the file.
+     * </pre>
+     *
      * <code>bytes data = 2 [json_name = "data"];</code>
      * @return This builder for chaining.
      */

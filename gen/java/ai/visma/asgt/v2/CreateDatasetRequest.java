@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request body for POST /v2/datasets.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.CreateDatasetRequest}
  */
 public final class CreateDatasetRequest extends
@@ -51,7 +55,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object datasetName_ = "";
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+   * letter, digit or ".", up to 256 bytes.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -72,7 +77,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+   * letter, digit or ".", up to 256 bytes.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -99,7 +105,10 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -111,7 +120,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -122,7 +134,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -134,7 +149,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -362,6 +380,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body for POST /v2/datasets.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.CreateDatasetRequest}
    */
   public static final class Builder extends
@@ -553,7 +575,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object datasetName_ = "";
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+     * letter, digit or ".", up to 256 bytes.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -573,7 +596,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+     * letter, digit or ".", up to 256 bytes.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -594,7 +618,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+     * letter, digit or ".", up to 256 bytes.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -611,7 +636,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+     * letter, digit or ".", up to 256 bytes.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -625,7 +651,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+     * letter, digit or ".", up to 256 bytes.
      * </pre>
      *
      * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -652,7 +679,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -665,7 +695,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -676,7 +709,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -688,7 +724,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -701,7 +740,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -720,7 +762,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -738,7 +783,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -756,7 +804,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -771,7 +822,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+     * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+     * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+     * to delete datasets.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>

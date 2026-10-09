@@ -60,7 +60,7 @@ namespace Asgt.V2.Type {
   }
   #region Messages
   /// <summary>
-  /// Used in scanned-invoice requests.
+  /// A scanned invoice or receipt, as text. Use it for scanned-invoice datasets.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Invoice : pb::IMessage<Invoice>
@@ -111,7 +111,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Invoice text from the SmartScan product.
+    /// Text of the document, such as its OCR text or other text you have on record.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -264,7 +264,7 @@ namespace Asgt.V2.Type {
   }
 
   /// <summary>
-  /// Used in bank requests.
+  /// A bank transaction. Use it for bank datasets.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Transaction : pb::IMessage<Transaction>
@@ -316,7 +316,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Text of the bank transaction.
+    /// Text of the bank transaction, such as its statement text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -508,7 +508,9 @@ namespace Asgt.V2.Type {
   }
 
   /// <summary>
-  /// Used in electronic-invoice-line requests.
+  /// One line of an electronic invoice, with the details of its invoice. Send each line as its
+  /// own example and repeat the invoice details in each one. Use it for electronic-invoice-line
+  /// datasets.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InvoiceLine : pb::IMessage<InvoiceLine>
@@ -565,7 +567,7 @@ namespace Asgt.V2.Type {
     public const int ItemIdFieldNumber = 1;
     private string itemId_ = "";
     /// <summary>
-    /// Id of the product (item).
+    /// ID of the item, such as a global product ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -580,7 +582,7 @@ namespace Asgt.V2.Type {
     public const int TextFieldNumber = 2;
     private string text_ = "";
     /// <summary>
-    /// Text of the invoice line.
+    /// Text of the line, such as the item's description or name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -594,6 +596,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "issue_date" field.</summary>
     public const int IssueDateFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp issueDate_;
+    /// <summary>
+    /// Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp IssueDate {
@@ -606,9 +611,6 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "supplier" field.</summary>
     public const int SupplierFieldNumber = 4;
     private global::Asgt.V2.Type.Supplier supplier_;
-    /// <summary>
-    /// Supplier of the invoice.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.Type.Supplier Supplier {
@@ -622,7 +624,7 @@ namespace Asgt.V2.Type {
     public const int CustomerRefFieldNumber = 5;
     private string customerRef_ = "";
     /// <summary>
-    /// reference to the customer.
+    /// Reference to the invoice's recipient, such as the customer's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -637,7 +639,7 @@ namespace Asgt.V2.Type {
     public const int CurrencyFieldNumber = 6;
     private string currency_ = "";
     /// <summary>
-    /// Name of the currency as a string.
+    /// Currency of the invoice, as text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -966,6 +968,9 @@ namespace Asgt.V2.Type {
 
   }
 
+  /// <summary>
+  /// The supplier of an invoice.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Supplier : pb::IMessage<Supplier>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1017,7 +1022,7 @@ namespace Asgt.V2.Type {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Id of the supplier; not nullable.
+    /// Your own ID for the supplier. Letters and digits only, up to 64 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1047,7 +1052,7 @@ namespace Asgt.V2.Type {
     public const int GlobalIdFieldNumber = 3;
     private string globalId_ = "";
     /// <summary>
-    /// Global ID of the supplier.
+    /// Global ID of the supplier, such as its VAT number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1248,8 +1253,10 @@ namespace Asgt.V2.Type {
   }
 
   /// <summary>
-  /// Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
-  /// structures can be used at a time.
+  /// Input data for an example or a suggestion. Set exactly one of transaction, invoice or
+  /// invoiceLine. The first example in a dataset sets its type, bank, scanned-invoice or
+  /// electronic-invoice-line, and every later example and suggest input must use the same
+  /// structure.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Data : pb::IMessage<Data>
@@ -1309,9 +1316,6 @@ namespace Asgt.V2.Type {
 
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
-    /// <summary>
-    /// Transaction-level information; at this time used only with bank transactions
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.Type.Transaction Transaction {
@@ -1324,9 +1328,6 @@ namespace Asgt.V2.Type {
 
     /// <summary>Field number for the "invoice" field.</summary>
     public const int InvoiceFieldNumber = 2;
-    /// <summary>
-    /// Invoice-level information for e-invoices and scanned invoices and receipts
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.Type.Invoice Invoice {
@@ -1339,9 +1340,6 @@ namespace Asgt.V2.Type {
 
     /// <summary>Field number for the "invoice_line" field.</summary>
     public const int InvoiceLineFieldNumber = 3;
-    /// <summary>
-    /// Line-level information for e-invoices; use one sample per invoice line
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.Type.InvoiceLine InvoiceLine {

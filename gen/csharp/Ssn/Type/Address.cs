@@ -42,6 +42,9 @@ namespace Ssn.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// An address split into its parts. All fields are empty when the address can't be resolved.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructuredAddress : pb::IMessage<StructuredAddress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -94,6 +97,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "street" field.</summary>
     public const int StreetFieldNumber = 1;
     private string street_ = "";
+    /// <summary>
+    /// The street name, without the house number.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Street {
@@ -106,6 +112,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "postal_code" field.</summary>
     public const int PostalCodeFieldNumber = 2;
     private string postalCode_ = "";
+    /// <summary>
+    /// The postal or ZIP code.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PostalCode {
@@ -118,6 +127,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "city" field.</summary>
     public const int CityFieldNumber = 3;
     private string city_ = "";
+    /// <summary>
+    /// The city or town.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string City {
@@ -130,6 +142,9 @@ namespace Ssn.Type {
     /// <summary>Field number for the "country" field.</summary>
     public const int CountryFieldNumber = 4;
     private string country_ = "";
+    /// <summary>
+    /// The full country name.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Country {
@@ -143,7 +158,7 @@ namespace Ssn.Type {
     public const int CountryCodeFieldNumber = 5;
     private string countryCode_ = "";
     /// <summary>
-    /// ISO 3166-1 alpha-2
+    /// The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -6,6 +6,10 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
+ * <pre>
+ * Tags of the feedback to delete.
+ * </pre>
+ *
  * Protobuf type {@code ssn.dataservice.v1.DeleteRequest}
  */
 public final class DeleteRequest extends
@@ -49,6 +53,11 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList tags_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
@@ -57,6 +66,11 @@ private static final long serialVersionUID = 0L;
     return tags_;
   }
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @return The count of tags.
    */
@@ -64,6 +78,11 @@ private static final long serialVersionUID = 0L;
     return tags_.size();
   }
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
@@ -72,6 +91,11 @@ private static final long serialVersionUID = 0L;
     return tags_.get(index);
   }
   /**
+   * <pre>
+   * Feedback with at least one of these tags is deleted. At least one tag is
+   * required.
+   * </pre>
+   *
    * <code>repeated string tags = 1 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.
@@ -245,6 +269,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Tags of the feedback to delete.
+   * </pre>
+   *
    * Protobuf type {@code ssn.dataservice.v1.DeleteRequest}
    */
   public static final class Builder extends
@@ -399,6 +427,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
@@ -408,6 +441,11 @@ private static final long serialVersionUID = 0L;
       return tags_;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @return The count of tags.
      */
@@ -415,6 +453,11 @@ private static final long serialVersionUID = 0L;
       return tags_.size();
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
@@ -423,6 +466,11 @@ private static final long serialVersionUID = 0L;
       return tags_.get(index);
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
@@ -432,6 +480,11 @@ private static final long serialVersionUID = 0L;
       return tags_.getByteString(index);
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param index The index to set the value at.
      * @param value The tags to set.
@@ -447,6 +500,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param value The tags to add.
      * @return This builder for chaining.
@@ -461,6 +519,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param values The tags to add.
      * @return This builder for chaining.
@@ -475,6 +538,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @return This builder for chaining.
      */
@@ -486,6 +554,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Feedback with at least one of these tags is deleted. At least one tag is
+     * required.
+     * </pre>
+     *
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
      * @param value The bytes of the tags to add.
      * @return This builder for chaining.

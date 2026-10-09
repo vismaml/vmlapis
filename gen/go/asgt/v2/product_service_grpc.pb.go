@@ -30,13 +30,20 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ProductTypeServiceClient interface {
-	// Suggest product types for a batch of text inputs.
+	// Suggest product types for a batch of texts.
+	//
+	// Returns one suggestion per text, in the same order, each with ranked product type
+	// candidates. Send 1 to 512 texts, none of them empty.
 	BatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*ProductTypeBatchSuggestResponse, error)
-	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
 	InternalBatchSuggestWithLogits(ctx context.Context, in *ProductTypeBatchSuggestRequest, opts ...grpc.CallOption) (*InternalProductTypeBatchSuggestResponse, error)
-	// Submit feedback for product type predictions.
+	// Send the correct product types for texts.
+	//
+	// Stores each text with its correct product type and the model's current candidates for it,
+	// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+	// length, or if a category isn't a ProductType name.
 	Feedback(ctx context.Context, in *ProductTypeFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
@@ -88,13 +95,20 @@ func (c *productTypeServiceClient) Feedback(ctx context.Context, in *ProductType
 // All implementations should embed UnimplementedProductTypeServiceServer
 // for forward compatibility
 type ProductTypeServiceServer interface {
-	// Suggest product types for a batch of text inputs.
+	// Suggest product types for a batch of texts.
+	//
+	// Returns one suggestion per text, in the same order, each with ranked product type
+	// candidates. Send 1 to 512 texts, none of them empty.
 	BatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
 	// Internal cluster-only batch suggest for product types.
 	InternalBatchSuggest(context.Context, *ProductTypeBatchSuggestRequest) (*ProductTypeBatchSuggestResponse, error)
-	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+	// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
 	InternalBatchSuggestWithLogits(context.Context, *ProductTypeBatchSuggestRequest) (*InternalProductTypeBatchSuggestResponse, error)
-	// Submit feedback for product type predictions.
+	// Send the correct product types for texts.
+	//
+	// Stores each text with its correct product type and the model's current candidates for it,
+	// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+	// length, or if a category isn't a ProductType name.
 	Feedback(context.Context, *ProductTypeFeedbackRequest) (*emptypb.Empty, error)
 }
 

@@ -11,7 +11,8 @@ public interface ProductTypeBatchSuggestRequestOrBuilder extends
 
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -21,7 +22,8 @@ public interface ProductTypeBatchSuggestRequestOrBuilder extends
       getTextsList();
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -30,7 +32,8 @@ public interface ProductTypeBatchSuggestRequestOrBuilder extends
   int getTextsCount();
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
@@ -40,7 +43,8 @@ public interface ProductTypeBatchSuggestRequestOrBuilder extends
   java.lang.String getTexts(int index);
   /**
    * <pre>
-   * Text descriptions to classify into product types.
+   * Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+   * texts, none of them empty.
    * </pre>
    *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>

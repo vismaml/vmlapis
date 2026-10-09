@@ -6,6 +6,10 @@
 package ai.visma.ssn.dataservice.v1;
 
 /**
+ * <pre>
+ * Feedback for one annotated document.
+ * </pre>
+ *
  * Protobuf type {@code ssn.dataservice.v1.FeedbackRequest}
  */
 public final class FeedbackRequest extends
@@ -50,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The `feedbackId` from the annotate response for the document. Required.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The `feedbackId` from the annotate response for the document. Required.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -116,6 +128,12 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList tags_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
@@ -124,6 +142,12 @@ private static final long serialVersionUID = 0L;
     return tags_;
   }
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return The count of tags.
    */
@@ -131,6 +155,12 @@ private static final long serialVersionUID = 0L;
     return tags_.size();
   }
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
@@ -139,6 +169,12 @@ private static final long serialVersionUID = 0L;
     return tags_.get(index);
   }
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.
@@ -338,6 +374,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Feedback for one annotated document.
+   * </pre>
+   *
    * Protobuf type {@code ssn.dataservice.v1.FeedbackRequest}
    */
   public static final class Builder extends
@@ -528,6 +568,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The `feedbackId` from the annotate response for the document. Required.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -544,6 +588,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The `feedbackId` from the annotate response for the document. Required.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -561,6 +609,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The `feedbackId` from the annotate response for the document. Required.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -574,6 +626,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The `feedbackId` from the annotate response for the document. Required.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -584,6 +640,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The `feedbackId` from the annotate response for the document. Required.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -728,6 +788,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000004;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
@@ -737,6 +803,12 @@ private static final long serialVersionUID = 0L;
       return tags_;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return The count of tags.
      */
@@ -744,6 +816,12 @@ private static final long serialVersionUID = 0L;
       return tags_.size();
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
@@ -752,6 +830,12 @@ private static final long serialVersionUID = 0L;
       return tags_.get(index);
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
@@ -761,6 +845,12 @@ private static final long serialVersionUID = 0L;
       return tags_.getByteString(index);
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param index The index to set the value at.
      * @param value The tags to set.
@@ -776,6 +866,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param value The tags to add.
      * @return This builder for chaining.
@@ -790,6 +886,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param values The tags to add.
      * @return This builder for chaining.
@@ -804,6 +906,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @return This builder for chaining.
      */
@@ -815,6 +923,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Labels to store with the feedback, for example your customer's ID. To
+     * delete the feedback later, call POST /v1/feedback:delete with one of
+     * them. Tags sent with the annotate request aren't copied to the feedback.
+     * </pre>
+     *
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
      * @param value The bytes of the tags to add.
      * @return This builder for chaining.

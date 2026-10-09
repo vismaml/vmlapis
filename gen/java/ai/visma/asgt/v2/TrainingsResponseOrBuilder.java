@@ -10,24 +10,44 @@ public interface TrainingsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   java.util.List<ai.visma.asgt.v2.type.Training> 
       getTrainingsList();
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   ai.visma.asgt.v2.type.Training getTrainings(int index);
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   int getTrainingsCount();
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.type.TrainingOrBuilder> 
       getTrainingsOrBuilderList();
   /**
+   * <pre>
+   * The trainings, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
    */
   ai.visma.asgt.v2.type.TrainingOrBuilder getTrainingsOrBuilder(

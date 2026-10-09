@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * Confidence thresholds of one target.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.ConfidenceThresholds}
  */
 public final class ConfidenceThresholds extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.Confidence> confidenceThresholds_;
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   @java.lang.Override
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return confidenceThresholds_;
   }
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   @java.lang.Override
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return confidenceThresholds_;
   }
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   @java.lang.Override
@@ -69,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return confidenceThresholds_.size();
   }
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   @java.lang.Override
@@ -76,6 +96,10 @@ private static final long serialVersionUID = 0L;
     return confidenceThresholds_.get(index);
   }
   /**
+   * <pre>
+   * The confidence value at which each level starts.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
    */
   @java.lang.Override
@@ -244,6 +268,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Confidence thresholds of one target.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.ConfidenceThresholds}
    */
   public static final class Builder extends
@@ -439,6 +467,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> confidenceThresholdsBuilder_;
 
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Confidence> getConfidenceThresholdsList() {
@@ -449,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public int getConfidenceThresholdsCount() {
@@ -459,6 +495,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public ai.visma.asgt.type.Confidence getConfidenceThresholds(int index) {
@@ -469,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder setConfidenceThresholds(
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder setConfidenceThresholds(
@@ -500,6 +548,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder addConfidenceThresholds(ai.visma.asgt.type.Confidence value) {
@@ -516,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder addConfidenceThresholds(
@@ -533,6 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder addConfidenceThresholds(
@@ -547,6 +607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder addConfidenceThresholds(
@@ -561,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder addAllConfidenceThresholds(
@@ -576,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder clearConfidenceThresholds() {
@@ -589,6 +661,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public Builder removeConfidenceThresholds(int index) {
@@ -602,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public ai.visma.asgt.type.Confidence.Builder getConfidenceThresholdsBuilder(
@@ -609,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return getConfidenceThresholdsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
@@ -619,6 +703,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
@@ -630,6 +718,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public ai.visma.asgt.type.Confidence.Builder addConfidenceThresholdsBuilder() {
@@ -637,6 +729,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.type.Confidence.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public ai.visma.asgt.type.Confidence.Builder addConfidenceThresholdsBuilder(
@@ -645,6 +741,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.type.Confidence.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The confidence value at which each level starts.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Confidence confidence_thresholds = 2 [json_name = "confidenceThresholds"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Confidence.Builder> 

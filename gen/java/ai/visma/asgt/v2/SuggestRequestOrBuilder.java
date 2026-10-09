@@ -11,7 +11,7 @@ public interface SuggestRequestOrBuilder extends
 
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface SuggestRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * Name of the dataset to make prediction against
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -30,28 +30,16 @@ public interface SuggestRequestOrBuilder extends
       getDatasetNameBytes();
 
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    * @return Whether the input field is set.
    */
   boolean hasInput();
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    * @return The input.
    */
   ai.visma.asgt.v2.type.Data getInput();
   /**
-   * <pre>
-   * Input data to use for prediction
-   * </pre>
-   *
    * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
    */
   ai.visma.asgt.v2.type.DataOrBuilder getInputOrBuilder();

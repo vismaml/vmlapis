@@ -10,24 +10,44 @@ public interface ProductTypeBatchSuggestResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> 
       getSuggestionsList();
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestion getSuggestions(int index);
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   int getSuggestionsCount();
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
       getSuggestionsOrBuilderList();
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getSuggestionsOrBuilder(

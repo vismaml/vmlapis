@@ -10,11 +10,19 @@ public interface FeedbackRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The `feedbackId` from the annotate response for the document. Required.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The `feedbackId` from the annotate response for the document. Required.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -37,23 +45,47 @@ public interface FeedbackRequestOrBuilder extends
   ai.visma.ssn.dataservice.v1.TrueValuesOrBuilder getTrueValuesOrBuilder();
 
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return The count of tags.
    */
   int getTagsCount();
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
+   * <pre>
+   * Labels to store with the feedback, for example your customer's ID. To
+   * delete the feedback later, call POST /v1/feedback:delete with one of
+   * them. Tags sent with the annotate request aren't copied to the feedback.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.

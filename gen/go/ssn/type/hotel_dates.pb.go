@@ -20,18 +20,16 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Check-in and check-out dates on a document related to accommodation, returned for the
+// HOTEL_DATES feature.
 type HotelDates struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// checkInDate
-	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-	// Example: "2019-12-31"
+	// Candidates for the check-in date, as YYYY-MM-DD, for example "2019-12-31".
 	CheckInDate []*Candidate `protobuf:"bytes,1,rep,name=check_in_date,json=checkInDate,proto3" json:"check_in_date,omitempty"`
-	// checkOutDate
-	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-	// Example: "2019-12-31"
+	// Candidates for the check-out date, as YYYY-MM-DD, for example "2019-12-31".
 	CheckOutDate []*Candidate `protobuf:"bytes,2,rep,name=check_out_date,json=checkOutDate,proto3" json:"check_out_date,omitempty"`
 }
 

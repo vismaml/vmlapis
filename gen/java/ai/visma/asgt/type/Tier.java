@@ -6,15 +6,29 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * Service tier for suggestions. The v2 suggest endpoints use it, and the v1 API always runs as
+ * STANDARD.
+ * </pre>
+ *
  * Protobuf enum {@code asgt.type.Tier}
  */
 public enum Tier
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * The default.
+   * </pre>
+   *
    * <code>STANDARD = 0;</code>
    */
   STANDARD(0),
   /**
+   * <pre>
+   * Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH
+   * when the check agrees.
+   * </pre>
+   *
    * <code>ULTRA = 1;</code>
    */
   ULTRA(1),
@@ -31,10 +45,19 @@ public enum Tier
       Tier.class.getName());
   }
   /**
+   * <pre>
+   * The default.
+   * </pre>
+   *
    * <code>STANDARD = 0;</code>
    */
   public static final int STANDARD_VALUE = 0;
   /**
+   * <pre>
+   * Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH
+   * when the check agrees.
+   * </pre>
+   *
    * <code>ULTRA = 1;</code>
    */
   public static final int ULTRA_VALUE = 1;

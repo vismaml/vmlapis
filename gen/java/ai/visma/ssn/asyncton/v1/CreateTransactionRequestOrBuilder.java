@@ -11,7 +11,8 @@ public interface CreateTransactionRequestOrBuilder extends
 
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -20,7 +21,8 @@ public interface CreateTransactionRequestOrBuilder extends
   boolean hasDocument();
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -29,7 +31,8 @@ public interface CreateTransactionRequestOrBuilder extends
   ai.visma.ssn.annotator.v1.Document getDocument();
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -38,7 +41,8 @@ public interface CreateTransactionRequestOrBuilder extends
 
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -48,7 +52,8 @@ public interface CreateTransactionRequestOrBuilder extends
       getTagsList();
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -57,7 +62,8 @@ public interface CreateTransactionRequestOrBuilder extends
   int getTagsCount();
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -67,7 +73,8 @@ public interface CreateTransactionRequestOrBuilder extends
   java.lang.String getTags(int index);
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -79,7 +86,10 @@ public interface CreateTransactionRequestOrBuilder extends
 
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -89,7 +99,10 @@ public interface CreateTransactionRequestOrBuilder extends
       getFeaturesList();
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -98,7 +111,10 @@ public interface CreateTransactionRequestOrBuilder extends
   int getFeaturesCount();
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -108,7 +124,10 @@ public interface CreateTransactionRequestOrBuilder extends
   java.lang.String getFeatures(int index);
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -119,11 +138,23 @@ public interface CreateTransactionRequestOrBuilder extends
       getFeaturesBytes(int index);
 
   /**
+   * <pre>
+   * Your own ID for the transaction, to get its status and results, or delete it, without
+   * keeping the transaction ID. It must be unique in your project: reusing one returns
+   * 409 Conflict until that transaction has been deleted.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The customId.
    */
   java.lang.String getCustomId();
   /**
+   * <pre>
+   * Your own ID for the transaction, to get its status and results, or delete it, without
+   * keeping the transaction ID. It must be unique in your project: reusing one returns
+   * 409 Conflict until that transaction has been deleted.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -143,7 +174,8 @@ public interface CreateTransactionRequestOrBuilder extends
 
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -153,7 +185,8 @@ public interface CreateTransactionRequestOrBuilder extends
       getQuestionsList();
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -162,7 +195,8 @@ public interface CreateTransactionRequestOrBuilder extends
   int getQuestionsCount();
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -172,7 +206,8 @@ public interface CreateTransactionRequestOrBuilder extends
   java.lang.String getQuestions(int index);
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>

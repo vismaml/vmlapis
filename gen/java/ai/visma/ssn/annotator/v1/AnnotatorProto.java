@@ -115,149 +115,151 @@ public final class AnnotatorProto {
       "(\0132\031.ssn.annotator.v1.FeatureR\010features\022" +
       "\022\n\004tags\030\003 \003(\tR\004tags\022\"\n\004tier\030\004 \001(\0162\016.ssn." +
       "type.TierR\004tier\022\032\n\010segments\030\005 \003(\tR\010segme" +
-      "nts\022\034\n\tquestions\030\006 \003(\tR\tquestions\"\235\035\n\031Do" +
-      "cumentAnnotatorResponse\0222\n\norder_date\030\001 " +
-      "\003(\0132\023.ssn.type.CandidateR\torderDate\022=\n\020p" +
-      "ayment_due_date\030\002 \003(\0132\023.ssn.type.Candida" +
-      "teR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023.s" +
-      "sn.type.CandidateR\010currency\0220\n\ttotal_vat" +
-      "\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVat\0229\n" +
-      "\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candida" +
-      "teR\014totalInclVat\0229\n\016total_excl_vat\030\006 \003(\013" +
-      "2\023.ssn.type.CandidateR\014totalExclVat\022G\n\025s" +
-      "upplier_corporate_id\030\007 \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\023supplierCorporateId\022G\n\025supplier" +
-      "_country_code\030\010 \003(\0132\023.ssn.type.Candidate" +
-      "R\023supplierCountryCode\0228\n\rdocument_type\030\t" +
-      " \003(\0132\023.ssn.type.CandidateR\014documentType\022" +
-      ":\n\016payment_method\030\n \003(\0132\023.ssn.type.Candi" +
-      "dateR\rpaymentMethod\022F\n\025credit_card_last_" +
-      "four\030\013 \003(\0132\023.ssn.type.CandidateR\022creditC" +
-      "ardLastFour\022:\n\016invoice_number\030\014 \003(\0132\023.ss" +
-      "n.type.CandidateR\rinvoiceNumber\022A\n\017text_" +
-      "annotation\030\r \001(\0132\030.ssn.type.TextAnnotati" +
-      "onR\016textAnnotation\022<\n\020ocr_line_dk_type\030\016" +
-      " \003(\0132\023.ssn.type.CandidateR\rocrLineDkType" +
-      "\022G\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\022ocrLineDkPaymentId\022I\n\027ocr" +
-      "_line_dk_creditor_id\030\020 \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\023ocrLineDkCreditorId\022G\n\026ocr_line" +
-      "_se_payment_id\030\021 \003(\0132\023.ssn.type.Candidat" +
-      "eR\022ocrLineSePaymentId\022Z\n ocr_line_se_ban" +
-      "kgiro_creditor_id\030\022 \003(\0132\023.ssn.type.Candi" +
-      "dateR\033ocrLineSeBankgiroCreditorId\022Z\n ocr" +
-      "_line_se_plusgiro_creditor_id\030\023 \003(\0132\023.ss" +
-      "n.type.CandidateR\033ocrLineSePlusgiroCredi" +
-      "torId\022G\n\026ocr_line_no_payment_id\030\024 \003(\0132\023." +
-      "ssn.type.CandidateR\022ocrLineNoPaymentId\022G" +
-      "\n\026ocr_line_fi_payment_id\030\025 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\022ocrLineFiPaymentId\022G\n\026ocr_l" +
-      "ine_nl_payment_id\030\026 \003(\0132\023.ssn.type.Candi" +
-      "dateR\022ocrLineNlPaymentId\022G\n\026ocr_line_be_" +
-      "payment_id\030( \003(\0132\023.ssn.type.CandidateR\022o" +
-      "crLineBePaymentId\022\022\n\004text\030\027 \001(\tR\004text\022\037\n" +
-      "\013feedback_id\030\030 \001(\tR\nfeedbackId\022\'\n\004iban\030\031" +
-      " \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005lines" +
-      "\030\032 \003(\0132\027.ssn.type.LineCandidateR\005lines\022\030" +
-      "\n\007preview\030\033 \001(\tR\007preview\022C\n\023bank_account" +
-      "_number\030\034 \003(\0132\023.ssn.type.CandidateR\021bank" +
-      "AccountNumber\022M\n\030bank_registration_numbe" +
-      "r\030\035 \003(\0132\023.ssn.type.CandidateR\026bankRegist" +
-      "rationNumber\022%\n\003bic\030\036 \003(\0132\023.ssn.type.Can" +
-      "didateR\003bic\022<\n\017document_number\030\037 \003(\0132\023.s" +
-      "sn.type.CandidateR\016documentNumber\0228\n\rdoc" +
-      "ument_date\030  \003(\0132\023.ssn.type.CandidateR\014d" +
-      "ocumentDate\0226\n\014order_number\030! \003(\0132\023.ssn." +
-      "type.CandidateR\013orderNumber\0228\n\rsupplier_" +
-      "name\030\" \003(\0132\023.ssn.type.CandidateR\014supplie" +
-      "rName\022C\n\023supplier_vat_number\030# \003(\0132\023.ssn" +
-      ".type.CandidateR\021supplierVatNumber\022U\n\034su" +
-      "pplier_organisation_number\030$ \003(\0132\023.ssn.t" +
-      "ype.CandidateR\032supplierOrganisationNumbe" +
-      "r\022>\n\020supplier_address\030% \003(\0132\023.ssn.type.C" +
-      "andidateR\017supplierAddress\022<\n\017customer_nu" +
-      "mber\030& \003(\0132\023.ssn.type.CandidateR\016custome" +
-      "rNumber\022G\n\025receiver_order_number\030\' \003(\0132\023" +
-      ".ssn.type.CandidateR\023receiverOrderNumber" +
-      "\022>\n\020receiver_address\030) \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\017receiverAddress\022G\n\025receiver_cou" +
-      "ntry_code\030* \003(\0132\023.ssn.type.CandidateR\023re" +
-      "ceiverCountryCode\0228\n\rreceiver_name\030+ \003(\013" +
-      "2\023.ssn.type.CandidateR\014receiverName\022C\n\023r" +
-      "eceiver_vat_number\030, \003(\0132\023.ssn.type.Cand" +
-      "idateR\021receiverVatNumber\022F\n\016purchase_lin" +
-      "es\030- \003(\0132\037.ssn.type.PurchaseLineCandidat" +
-      "eR\rpurchaseLines\0223\n\007answers\030. \003(\0132\031.ssn." +
-      "type.AnswerCandidateR\007answers\0221\n\npage_te" +
-      "xts\030/ \003(\0132\022.ssn.type.PageTextR\tpageTexts" +
-      "\022M\n\020vat_distribution\0300 \003(\0132\".ssn.type.Va" +
-      "tDistributionCandidateR\017vatDistribution\022" +
-      "G\n\021document_metadata\0301 \001(\0132\032.ssn.type.Do" +
-      "cumentMetadataR\020documentMetadata\0228\n\rlang" +
-      "uage_code\0302 \003(\0132\023.ssn.type.CandidateR\014la" +
-      "nguageCode\022/\n\010qr_codes\0303 \003(\0132\024.ssn.type." +
-      "QrCodeDataR\007qrCodes\022;\n\016swiss_qr_bills\0304 " +
-      "\003(\0132\025.ssn.type.SwissQrBillR\014swissQrBills" +
-      "\0225\n\013hotel_dates\0305 \001(\0132\024.ssn.type.HotelDa" +
-      "tesR\nhotelDates\022L\n\026purchase_lines_detail" +
-      "s\0308 \003(\0132\026.ssn.type.PurchaseLineR\024purchas" +
-      "eLinesDetails\022S\n\030vat_distribution_detail" +
-      "s\0309 \003(\0132\031.ssn.type.VatDistributionR\026vatD" +
-      "istributionDetails\022[\n\033structured_supplie" +
-      "r_address\030: \003(\0132\033.ssn.type.StructuredAdd" +
-      "ressR\031structuredSupplierAddress\022[\n\033struc" +
-      "tured_receiver_address\030; \003(\0132\033.ssn.type." +
-      "StructuredAddressR\031structuredReceiverAdd" +
-      "ress\022\'\n\004ksef\030< \003(\0132\023.ssn.type.CandidateR" +
-      "\004ksefJ\004\0106\0207J\004\0107\0208\"^\n\010Document\022\030\n\007content" +
-      "\030\001 \001(\014R\007content\0228\n\006source\030\002 \001(\0132 .ssn.an" +
-      "notator.v1.DocumentSourceR\006source\"+\n\016Doc" +
-      "umentSource\022\031\n\010http_uri\030\001 \001(\tR\007httpUri\"o" +
-      "\n\027DocumentQuestionRequest\0226\n\010document\030\001 " +
-      "\001(\0132\032.ssn.annotator.v1.DocumentR\010documen" +
-      "t\022\034\n\tquestions\030\002 \003(\tR\tquestions\"U\n\030Docum" +
-      "entQuestionResponse\0223\n\007answers\030\002 \003(\0132\031.s" +
-      "sn.type.AnswerCandidateR\007answersJ\004\010\001\020\0022\275" +
-      "\002\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocumen" +
-      "t\022*.ssn.annotator.v1.DocumentAnnotatorRe" +
-      "quest\032+.ssn.annotator.v1.DocumentAnnotat" +
-      "orResponse\" \202\323\344\223\002\032\"\025/v1/document:annotat" +
-      "e:\001*\022\227\001\n\026AnswerDocumentQuestion\022).ssn.an" +
-      "notator.v1.DocumentQuestionRequest\032*.ssn" +
-      ".annotator.v1.DocumentQuestionResponse\"&" +
-      "\202\323\344\223\002 \"\033/v1/document:answerquestion:\001*B\334" +
-      "\t\n\031ai.visma.ssn.annotator.v1B\016AnnotatorP" +
-      "rotoP\001Z>github.com/e-conomic/vmlapis/gen" +
-      "/go/ssn/annotator/v1;annotator\242\002\003SAX\252\002\020S" +
-      "sn.Annotator.V1\312\002\020Ssn\\Annotator\\V1\342\002\034Ssn" +
-      "\\Annotator\\V1\\GPBMetadata\352\002\022Ssn::Annotat" +
-      "or::V1\222A\213\010\022\373\006\n\tSmartscan\022\351\006Smartscan ext" +
-      "racts data from unstructured documents s" +
-      "uch as invoices and receipts, and return" +
-      "s the results in the same call. This ref" +
-      "erence also covers feedback and valet ke" +
-      "ys. Async transactions have their own re" +
-      "ference, under [Smartscan Async](https:/" +
-      "/docs.vml.visma.ai/smartscan-async/getti" +
-      "ng-started/).\n\n**Hosts:** `api.prod.ssn." +
-      "visma.ai` for production and `api.stag.s" +
-      "sn.visma.ai` for staging.\n\n**Authenticat" +
-      "ion:** send your project token as `Autho" +
-      "rization: Bearer <token>`. Mobile and we" +
-      "b clients can use a short-lived valet ke" +
-      "y instead. See [Authentication](https://" +
-      "docs.vml.visma.ai/authentication/).\n\n**E" +
-      "rrors:** a failed call returns an HTTP e" +
-      "rror status with a JSON body that holds " +
-      "`code`, `message` and `details`.\n\n**Guid" +
-      "es:** [Smartscan](https://docs.vml.visma" +
-      ".ai/smartscan/getting-started/) and [lim" +
-      "its and rate limits](https://docs.vml.vi" +
-      "sma.ai/rate-limit/).2\002v1*\001\0022\020application" +
-      "/json:\020application/jsonZR\nP\n\nBearerAuth\022" +
-      "B\010\002\022-Your project token, sent as `Bearer" +
-      " <token>`.\032\rAuthorization \002b\020\n\016\n\nBearerA" +
-      "uth\022\000b\006proto3"
+      "nts\022\034\n\tquestions\030\006 \003(\tR\tquestions\"\251\035\n\031Do" +
+      "cumentAnnotatorResponse\0226\n\norder_date\030\001 " +
+      "\003(\0132\023.ssn.type.CandidateB\002\030\001R\torderDate\022" +
+      "=\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Can" +
+      "didateR\016paymentDueDate\022/\n\010currency\030\003 \003(\013" +
+      "2\023.ssn.type.CandidateR\010currency\0220\n\ttotal" +
+      "_vat\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVa" +
+      "t\0229\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Can" +
+      "didateR\014totalInclVat\0229\n\016total_excl_vat\030\006" +
+      " \003(\0132\023.ssn.type.CandidateR\014totalExclVat\022" +
+      "K\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.typ" +
+      "e.CandidateB\002\030\001R\023supplierCorporateId\022G\n\025" +
+      "supplier_country_code\030\010 \003(\0132\023.ssn.type.C" +
+      "andidateR\023supplierCountryCode\0228\n\rdocumen" +
+      "t_type\030\t \003(\0132\023.ssn.type.CandidateR\014docum" +
+      "entType\022:\n\016payment_method\030\n \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\rpaymentMethod\022F\n\025credit_ca" +
+      "rd_last_four\030\013 \003(\0132\023.ssn.type.CandidateR" +
+      "\022creditCardLastFour\022>\n\016invoice_number\030\014 " +
+      "\003(\0132\023.ssn.type.CandidateB\002\030\001R\rinvoiceNum" +
+      "ber\022A\n\017text_annotation\030\r \001(\0132\030.ssn.type." +
+      "TextAnnotationR\016textAnnotation\022<\n\020ocr_li" +
+      "ne_dk_type\030\016 \003(\0132\023.ssn.type.CandidateR\ro" +
+      "crLineDkType\022G\n\026ocr_line_dk_payment_id\030\017" +
+      " \003(\0132\023.ssn.type.CandidateR\022ocrLineDkPaym" +
+      "entId\022I\n\027ocr_line_dk_creditor_id\030\020 \003(\0132\023" +
+      ".ssn.type.CandidateR\023ocrLineDkCreditorId" +
+      "\022G\n\026ocr_line_se_payment_id\030\021 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\022ocrLineSePaymentId\022Z\n ocr" +
+      "_line_se_bankgiro_creditor_id\030\022 \003(\0132\023.ss" +
+      "n.type.CandidateR\033ocrLineSeBankgiroCredi" +
+      "torId\022Z\n ocr_line_se_plusgiro_creditor_i" +
+      "d\030\023 \003(\0132\023.ssn.type.CandidateR\033ocrLineSeP" +
+      "lusgiroCreditorId\022G\n\026ocr_line_no_payment" +
+      "_id\030\024 \003(\0132\023.ssn.type.CandidateR\022ocrLineN" +
+      "oPaymentId\022G\n\026ocr_line_fi_payment_id\030\025 \003" +
+      "(\0132\023.ssn.type.CandidateR\022ocrLineFiPaymen" +
+      "tId\022G\n\026ocr_line_nl_payment_id\030\026 \003(\0132\023.ss" +
+      "n.type.CandidateR\022ocrLineNlPaymentId\022G\n\026" +
+      "ocr_line_be_payment_id\030( \003(\0132\023.ssn.type." +
+      "CandidateR\022ocrLineBePaymentId\022\022\n\004text\030\027 " +
+      "\001(\tR\004text\022\037\n\013feedback_id\030\030 \001(\tR\nfeedback" +
+      "Id\022\'\n\004iban\030\031 \003(\0132\023.ssn.type.CandidateR\004i" +
+      "ban\022-\n\005lines\030\032 \003(\0132\027.ssn.type.LineCandid" +
+      "ateR\005lines\022\030\n\007preview\030\033 \001(\tR\007preview\022C\n\023" +
+      "bank_account_number\030\034 \003(\0132\023.ssn.type.Can" +
+      "didateR\021bankAccountNumber\022M\n\030bank_regist" +
+      "ration_number\030\035 \003(\0132\023.ssn.type.Candidate" +
+      "R\026bankRegistrationNumber\022%\n\003bic\030\036 \003(\0132\023." +
+      "ssn.type.CandidateR\003bic\022<\n\017document_numb" +
+      "er\030\037 \003(\0132\023.ssn.type.CandidateR\016documentN" +
+      "umber\0228\n\rdocument_date\030  \003(\0132\023.ssn.type." +
+      "CandidateR\014documentDate\0226\n\014order_number\030" +
+      "! \003(\0132\023.ssn.type.CandidateR\013orderNumber\022" +
+      "8\n\rsupplier_name\030\" \003(\0132\023.ssn.type.Candid" +
+      "ateR\014supplierName\022C\n\023supplier_vat_number" +
+      "\030# \003(\0132\023.ssn.type.CandidateR\021supplierVat" +
+      "Number\022U\n\034supplier_organisation_number\030$" +
+      " \003(\0132\023.ssn.type.CandidateR\032supplierOrgan" +
+      "isationNumber\022>\n\020supplier_address\030% \003(\0132" +
+      "\023.ssn.type.CandidateR\017supplierAddress\022<\n" +
+      "\017customer_number\030& \003(\0132\023.ssn.type.Candid" +
+      "ateR\016customerNumber\022G\n\025receiver_order_nu" +
+      "mber\030\' \003(\0132\023.ssn.type.CandidateR\023receive" +
+      "rOrderNumber\022>\n\020receiver_address\030) \003(\0132\023" +
+      ".ssn.type.CandidateR\017receiverAddress\022G\n\025" +
+      "receiver_country_code\030* \003(\0132\023.ssn.type.C" +
+      "andidateR\023receiverCountryCode\0228\n\rreceive" +
+      "r_name\030+ \003(\0132\023.ssn.type.CandidateR\014recei" +
+      "verName\022C\n\023receiver_vat_number\030, \003(\0132\023.s" +
+      "sn.type.CandidateR\021receiverVatNumber\022F\n\016" +
+      "purchase_lines\030- \003(\0132\037.ssn.type.Purchase" +
+      "LineCandidateR\rpurchaseLines\0223\n\007answers\030" +
+      ". \003(\0132\031.ssn.type.AnswerCandidateR\007answer" +
+      "s\0221\n\npage_texts\030/ \003(\0132\022.ssn.type.PageTex" +
+      "tR\tpageTexts\022M\n\020vat_distribution\0300 \003(\0132\"" +
+      ".ssn.type.VatDistributionCandidateR\017vatD" +
+      "istribution\022G\n\021document_metadata\0301 \001(\0132\032" +
+      ".ssn.type.DocumentMetadataR\020documentMeta" +
+      "data\0228\n\rlanguage_code\0302 \003(\0132\023.ssn.type.C" +
+      "andidateR\014languageCode\022/\n\010qr_codes\0303 \003(\013" +
+      "2\024.ssn.type.QrCodeDataR\007qrCodes\022;\n\016swiss" +
+      "_qr_bills\0304 \003(\0132\025.ssn.type.SwissQrBillR\014" +
+      "swissQrBills\0225\n\013hotel_dates\0305 \001(\0132\024.ssn." +
+      "type.HotelDatesR\nhotelDates\022L\n\026purchase_" +
+      "lines_details\0308 \003(\0132\026.ssn.type.PurchaseL" +
+      "ineR\024purchaseLinesDetails\022S\n\030vat_distrib" +
+      "ution_details\0309 \003(\0132\031.ssn.type.VatDistri" +
+      "butionR\026vatDistributionDetails\022[\n\033struct" +
+      "ured_supplier_address\030: \003(\0132\033.ssn.type.S" +
+      "tructuredAddressR\031structuredSupplierAddr" +
+      "ess\022[\n\033structured_receiver_address\030; \003(\013" +
+      "2\033.ssn.type.StructuredAddressR\031structure" +
+      "dReceiverAddress\022\'\n\004ksef\030< \003(\0132\023.ssn.typ" +
+      "e.CandidateR\004ksefJ\004\0106\0207J\004\0107\0208\"^\n\010Documen" +
+      "t\022\030\n\007content\030\001 \001(\014R\007content\0228\n\006source\030\002 " +
+      "\001(\0132 .ssn.annotator.v1.DocumentSourceR\006s" +
+      "ource\"+\n\016DocumentSource\022\031\n\010http_uri\030\001 \001(" +
+      "\tR\007httpUri\"o\n\027DocumentQuestionRequest\0226\n" +
+      "\010document\030\001 \001(\0132\032.ssn.annotator.v1.Docum" +
+      "entR\010document\022\034\n\tquestions\030\002 \003(\tR\tquesti" +
+      "ons\"U\n\030DocumentQuestionResponse\0223\n\007answe" +
+      "rs\030\002 \003(\0132\031.ssn.type.AnswerCandidateR\007ans" +
+      "wersJ\004\010\001\020\0022\206\003\n\021DocumentAnnotator\022\215\001\n\020Ann" +
+      "otateDocument\022*.ssn.annotator.v1.Documen" +
+      "tAnnotatorRequest\032+.ssn.annotator.v1.Doc" +
+      "umentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docu" +
+      "ment:annotate:\001*\022\227\001\n\026AnswerDocumentQuest" +
+      "ion\022).ssn.annotator.v1.DocumentQuestionR" +
+      "equest\032*.ssn.annotator.v1.DocumentQuesti" +
+      "onResponse\"&\202\323\344\223\002 \"\033/v1/document:answerq" +
+      "uestion:\001*\032G\222AD\022BExtract data from a doc" +
+      "ument and get the results in the same ca" +
+      "ll.B\334\t\n\031ai.visma.ssn.annotator.v1B\016Annot" +
+      "atorProtoP\001Z>github.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/annotator/v1;annotator\242\002\003SA" +
+      "X\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\Annotator\\V1\342" +
+      "\002\034Ssn\\Annotator\\V1\\GPBMetadata\352\002\022Ssn::An" +
+      "notator::V1\222A\213\010\022\373\006\n\tSmartscan\022\351\006Smartsca" +
+      "n extracts data from unstructured docume" +
+      "nts such as invoices and receipts, and r" +
+      "eturns the results in the same call. Thi" +
+      "s reference also covers feedback and val" +
+      "et keys. Async transactions have their o" +
+      "wn reference, under [Smartscan Async](ht" +
+      "tps://docs.vml.visma.ai/smartscan-async/" +
+      "getting-started/).\n\n**Hosts:** `api.prod" +
+      ".ssn.visma.ai` for production and `api.s" +
+      "tag.ssn.visma.ai` for staging.\n\n**Authen" +
+      "tication:** send your project token as `" +
+      "Authorization: Bearer <token>`. Mobile a" +
+      "nd web clients can use a short-lived val" +
+      "et key instead. See [Authentication](htt" +
+      "ps://docs.vml.visma.ai/authentication/)." +
+      "\n\n**Errors:** a failed call returns an H" +
+      "TTP error status with a JSON body that h" +
+      "olds `code`, `message` and `details`.\n\n*" +
+      "*Guides:** [Smartscan](https://docs.vml." +
+      "visma.ai/smartscan/getting-started/) and" +
+      " [limits and rate limits](https://docs.v" +
+      "ml.visma.ai/rate-limit/).2\002v1*\001\0022\020applic" +
+      "ation/json:\020application/jsonZR\nP\n\nBearer" +
+      "Auth\022B\010\002\022-Your project token, sent as `B" +
+      "earer <token>`.\032\rAuthorization \002b\020\n\016\n\nBe" +
+      "arerAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -326,6 +328,7 @@ public final class AnnotatorProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Swagger);
+    registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Tag);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
   }

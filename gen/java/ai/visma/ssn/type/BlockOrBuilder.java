@@ -37,92 +37,23 @@ public interface BlockOrBuilder extends
   ai.visma.ssn.type.TextAnnotation.TextPropertyOrBuilder getPropertyOrBuilder();
 
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    * @return Whether the boundingBox field is set.
    */
   boolean hasBoundingBox();
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    * @return The boundingBox.
    */
   ai.visma.ssn.type.BoundingPoly getBoundingBox();
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    */
   ai.visma.ssn.type.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
 
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -131,7 +62,7 @@ public interface BlockOrBuilder extends
       getParagraphsList();
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -139,7 +70,7 @@ public interface BlockOrBuilder extends
   ai.visma.ssn.type.Paragraph getParagraphs(int index);
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -147,7 +78,7 @@ public interface BlockOrBuilder extends
   int getParagraphsCount();
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -156,7 +87,7 @@ public interface BlockOrBuilder extends
       getParagraphsOrBuilderList();
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>

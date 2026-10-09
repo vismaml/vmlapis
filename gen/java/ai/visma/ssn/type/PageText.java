@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * The text of one page, returned for the PAGE_TEXTS feature.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.PageText}
  */
 public final class PageText extends
@@ -47,7 +51,7 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the text was found.
+   * The page, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -63,7 +67,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * The text content of the page
+   * The text of the page.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -84,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text content of the page
+   * The text of the page.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -273,6 +277,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The text of one page, returned for the PAGE_TEXTS feature.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.PageText}
    */
   public static final class Builder extends
@@ -425,7 +433,7 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the text was found.
+     * The page, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -437,7 +445,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the text was found.
+     * The page, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -453,7 +461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the text was found.
+     * The page, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -469,7 +477,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * The text content of the page
+     * The text of the page.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -489,7 +497,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text content of the page
+     * The text of the page.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -510,7 +518,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text content of the page
+     * The text of the page.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -527,7 +535,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text content of the page
+     * The text of the page.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -541,7 +549,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text content of the page
+     * The text of the page.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>

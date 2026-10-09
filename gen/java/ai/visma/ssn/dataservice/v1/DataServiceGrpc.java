@@ -3,6 +3,9 @@ package ai.visma.ssn.dataservice.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Send feedback on Smartscan results, and delete it by tag.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.70.0)",
@@ -385,6 +388,9 @@ public final class DataServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public interface AsyncService {
 
@@ -413,6 +419,20 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send the correct values for an annotated document.
+     * Send the values your user confirmed for a document you sent to
+     * POST /v1/document:annotate, identified by the `feedbackId` from that
+     * response. Feedback powers your quality metrics, and it's used to improve
+     * the models. Send it once per document, within 90 days of the annotate
+     * call, and tag it so you can delete it later with POST /v1/feedback:delete.
+     * A successful call returns an empty object.
+     * Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+     * 404 if the ID is unknown or the annotate call was more than 90 days ago,
+     * and 409 if feedback for the ID was already sent.
+     * For Smartscan Async transactions, send corrections with
+     * PUT /v1/transactions/{id}/results instead.
+     * </pre>
      */
     default void feedback(ai.visma.ssn.dataservice.v1.FeedbackRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -434,6 +454,14 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete feedback by tag.
+     * Deletes your project's feedback that has at least one of the given tags,
+     * together with the document image and text stored with it. Only feedback
+     * sent before this call is deleted. The call records the request and
+     * returns an empty object right away; a daily job then deletes the data.
+     * Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+     * </pre>
      */
     default void delete(ai.visma.ssn.dataservice.v1.DeleteRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -464,6 +492,9 @@ public final class DataServiceGrpc {
 
   /**
    * Base class for the server implementation of the service DataService.
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public static abstract class DataServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -475,6 +506,9 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service DataService.
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public static final class DataServiceStub
       extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
@@ -517,6 +551,20 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send the correct values for an annotated document.
+     * Send the values your user confirmed for a document you sent to
+     * POST /v1/document:annotate, identified by the `feedbackId` from that
+     * response. Feedback powers your quality metrics, and it's used to improve
+     * the models. Send it once per document, within 90 days of the annotate
+     * call, and tag it so you can delete it later with POST /v1/feedback:delete.
+     * A successful call returns an empty object.
+     * Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+     * 404 if the ID is unknown or the annotate call was more than 90 days ago,
+     * and 409 if feedback for the ID was already sent.
+     * For Smartscan Async transactions, send corrections with
+     * PUT /v1/transactions/{id}/results instead.
+     * </pre>
      */
     public void feedback(ai.visma.ssn.dataservice.v1.FeedbackRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -541,6 +589,14 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete feedback by tag.
+     * Deletes your project's feedback that has at least one of the given tags,
+     * together with the document image and text stored with it. Only feedback
+     * sent before this call is deleted. The call records the request and
+     * returns an empty object right away; a daily job then deletes the data.
+     * Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+     * </pre>
      */
     public void delete(ai.visma.ssn.dataservice.v1.DeleteRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -575,6 +631,9 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataService.
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public static final class DataServiceBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingV2Stub> {
@@ -614,6 +673,20 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send the correct values for an annotated document.
+     * Send the values your user confirmed for a document you sent to
+     * POST /v1/document:annotate, identified by the `feedbackId` from that
+     * response. Feedback powers your quality metrics, and it's used to improve
+     * the models. Send it once per document, within 90 days of the annotate
+     * call, and tag it so you can delete it later with POST /v1/feedback:delete.
+     * A successful call returns an empty object.
+     * Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+     * 404 if the ID is unknown or the annotate call was more than 90 days ago,
+     * and 409 if feedback for the ID was already sent.
+     * For Smartscan Async transactions, send corrections with
+     * PUT /v1/transactions/{id}/results instead.
+     * </pre>
      */
     public com.google.protobuf.Empty feedback(ai.visma.ssn.dataservice.v1.FeedbackRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -635,6 +708,14 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete feedback by tag.
+     * Deletes your project's feedback that has at least one of the given tags,
+     * together with the document image and text stored with it. Only feedback
+     * sent before this call is deleted. The call records the request and
+     * returns an empty object right away; a daily job then deletes the data.
+     * Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+     * </pre>
      */
     public com.google.protobuf.Empty delete(ai.visma.ssn.dataservice.v1.DeleteRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -665,6 +746,9 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service DataService.
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public static final class DataServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
@@ -704,6 +788,20 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send the correct values for an annotated document.
+     * Send the values your user confirmed for a document you sent to
+     * POST /v1/document:annotate, identified by the `feedbackId` from that
+     * response. Feedback powers your quality metrics, and it's used to improve
+     * the models. Send it once per document, within 90 days of the annotate
+     * call, and tag it so you can delete it later with POST /v1/feedback:delete.
+     * A successful call returns an empty object.
+     * Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+     * 404 if the ID is unknown or the annotate call was more than 90 days ago,
+     * and 409 if feedback for the ID was already sent.
+     * For Smartscan Async transactions, send corrections with
+     * PUT /v1/transactions/{id}/results instead.
+     * </pre>
      */
     public com.google.protobuf.Empty feedback(ai.visma.ssn.dataservice.v1.FeedbackRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -725,6 +823,14 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete feedback by tag.
+     * Deletes your project's feedback that has at least one of the given tags,
+     * together with the document image and text stored with it. Only feedback
+     * sent before this call is deleted. The call records the request and
+     * returns an empty object right away; a daily job then deletes the data.
+     * Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+     * </pre>
      */
     public com.google.protobuf.Empty delete(ai.visma.ssn.dataservice.v1.DeleteRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -755,6 +861,9 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service DataService.
+   * <pre>
+   * Send feedback on Smartscan results, and delete it by tag.
+   * </pre>
    */
   public static final class DataServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
@@ -797,6 +906,20 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send the correct values for an annotated document.
+     * Send the values your user confirmed for a document you sent to
+     * POST /v1/document:annotate, identified by the `feedbackId` from that
+     * response. Feedback powers your quality metrics, and it's used to improve
+     * the models. Send it once per document, within 90 days of the annotate
+     * call, and tag it so you can delete it later with POST /v1/feedback:delete.
+     * A successful call returns an empty object.
+     * Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+     * 404 if the ID is unknown or the annotate call was more than 90 days ago,
+     * and 409 if feedback for the ID was already sent.
+     * For Smartscan Async transactions, send corrections with
+     * PUT /v1/transactions/{id}/results instead.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> feedback(
         ai.visma.ssn.dataservice.v1.FeedbackRequest request) {
@@ -821,6 +944,14 @@ public final class DataServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete feedback by tag.
+     * Deletes your project's feedback that has at least one of the given tags,
+     * together with the document image and text stored with it. Only feedback
+     * sent before this call is deleted. The call records the request and
+     * returns an empty object right away; a daily job then deletes the data.
+     * Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
         ai.visma.ssn.dataservice.v1.DeleteRequest request) {

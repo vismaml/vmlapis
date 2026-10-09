@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Suggestions for one input.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.SuggestResponse}
  */
 public final class SuggestResponse extends
@@ -72,6 +76,10 @@ private static final long serialVersionUID = 0L;
   public static final int MODEL_FIELD_NUMBER = 2;
   private ai.visma.asgt.type.Model model_;
   /**
+   * <pre>
+   * The model that made the prediction. Only its version is filled in.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return Whether the model field is set.
    */
@@ -80,6 +88,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
+   * <pre>
+   * The model that made the prediction. Only its version is filled in.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    * @return The model.
    */
@@ -88,6 +100,10 @@ private static final long serialVersionUID = 0L;
     return model_ == null ? ai.visma.asgt.type.Model.getDefaultInstance() : model_;
   }
   /**
+   * <pre>
+   * The model that made the prediction. Only its version is filled in.
+   * </pre>
+   *
    * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
    */
   @java.lang.Override
@@ -98,6 +114,10 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_TYPE_SUGGESTIONS_FIELD_NUMBER = 3;
   private ai.visma.asgt.v2.ProductTypeSuggestion productTypeSuggestions_;
   /**
+   * <pre>
+   * Product type candidates for the input's text, when includeProductTypes is true.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    * @return Whether the productTypeSuggestions field is set.
    */
@@ -106,6 +126,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
+   * <pre>
+   * Product type candidates for the input's text, when includeProductTypes is true.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    * @return The productTypeSuggestions.
    */
@@ -114,6 +138,10 @@ private static final long serialVersionUID = 0L;
     return productTypeSuggestions_ == null ? ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance() : productTypeSuggestions_;
   }
   /**
+   * <pre>
+   * Product type candidates for the input's text, when includeProductTypes is true.
+   * </pre>
+   *
    * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
    */
   @java.lang.Override
@@ -316,6 +344,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Suggestions for one input.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.SuggestResponse}
    */
   public static final class Builder extends
@@ -637,6 +669,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.type.Model, ai.visma.asgt.type.Model.Builder, ai.visma.asgt.type.ModelOrBuilder> modelBuilder_;
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return Whether the model field is set.
      */
@@ -644,6 +680,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      * @return The model.
      */
@@ -655,6 +695,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder setModel(ai.visma.asgt.type.Model value) {
@@ -671,6 +715,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder setModel(
@@ -685,6 +733,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder mergeModel(ai.visma.asgt.type.Model value) {
@@ -706,6 +758,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public Builder clearModel() {
@@ -719,6 +775,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public ai.visma.asgt.type.Model.Builder getModelBuilder() {
@@ -727,6 +787,10 @@ private static final long serialVersionUID = 0L;
       return getModelFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     public ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder() {
@@ -738,6 +802,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model that made the prediction. Only its version is filled in.
+     * </pre>
+     *
      * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -758,6 +826,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> productTypeSuggestionsBuilder_;
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      * @return Whether the productTypeSuggestions field is set.
      */
@@ -765,6 +837,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      * @return The productTypeSuggestions.
      */
@@ -776,6 +852,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder setProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
@@ -792,6 +872,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder setProductTypeSuggestions(
@@ -806,6 +890,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder mergeProductTypeSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
@@ -827,6 +915,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public Builder clearProductTypeSuggestions() {
@@ -840,6 +932,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder getProductTypeSuggestionsBuilder() {
@@ -848,6 +944,10 @@ private static final long serialVersionUID = 0L;
       return getProductTypeSuggestionsFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getProductTypeSuggestionsOrBuilder() {
@@ -859,6 +959,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Product type candidates for the input's text, when includeProductTypes is true.
+     * </pre>
+     *
      * <code>.asgt.v2.ProductTypeSuggestion product_type_suggestions = 3 [json_name = "productTypeSuggestions"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * Format of a trained model.
+ * </pre>
+ *
  * Protobuf enum {@code asgt.type.ModelType}
  */
 public enum ModelType

@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * Evaluation metrics of a model for one target.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.TargetMetrics}
  */
 public final class TargetMetrics extends
@@ -49,42 +53,70 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Precision of the answers at this threshold: the share of them that were correct.
+     * </pre>
+     *
      * <code>float precision = 1 [json_name = "precision"];</code>
      * @return The precision.
      */
     float getPrecision();
 
     /**
+     * <pre>
+     * The confidence threshold these results apply to.
+     * </pre>
+     *
      * <code>float confidence = 2 [json_name = "confidence"];</code>
      * @return The confidence.
      */
     float getConfidence();
 
     /**
+     * <pre>
+     * Share of the evaluation examples that got an answer at this threshold.
+     * </pre>
+     *
      * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
      * @return The answerRate.
      */
     float getAnswerRate();
 
     /**
+     * <pre>
+     * Number of true positives.
+     * </pre>
+     *
      * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
      * @return The truePositive.
      */
     int getTruePositive();
 
     /**
+     * <pre>
+     * Number of true negatives.
+     * </pre>
+     *
      * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
      * @return The trueNegative.
      */
     int getTrueNegative();
 
     /**
+     * <pre>
+     * Number of false positives.
+     * </pre>
+     *
      * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
      * @return The falsePositive.
      */
     int getFalsePositive();
 
     /**
+     * <pre>
+     * Number of false negatives.
+     * </pre>
+     *
      * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
      * @return The falseNegative.
      */
@@ -92,7 +124,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Matthews correlation coefficient
+     * Matthews correlation coefficient.
      * </pre>
      *
      * <code>float mcc = 8 [json_name = "mcc"];</code>
@@ -101,12 +133,20 @@ private static final long serialVersionUID = 0L;
     float getMcc();
 
     /**
+     * <pre>
+     * Accuracy.
+     * </pre>
+     *
      * <code>float accuracy = 9 [json_name = "accuracy"];</code>
      * @return The accuracy.
      */
     float getAccuracy();
 
     /**
+     * <pre>
+     * Balanced accuracy.
+     * </pre>
+     *
      * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
      * @return The balancedAccuracy.
      */
@@ -114,7 +154,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * precision bound epsilon values
+     * Epsilon of the precision bound.
      * </pre>
      *
      * <code>float precision_bound_epsilon = 12 [json_name = "precisionBoundEpsilon"];</code>
@@ -123,6 +163,10 @@ private static final long serialVersionUID = 0L;
     float getPrecisionBoundEpsilon();
   }
   /**
+   * <pre>
+   * Evaluation results at one confidence threshold.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.TargetMetrics.Metric}
    */
   public static final class Metric extends
@@ -162,6 +206,10 @@ private static final long serialVersionUID = 0L;
     public static final int PRECISION_FIELD_NUMBER = 1;
     private float precision_ = 0F;
     /**
+     * <pre>
+     * Precision of the answers at this threshold: the share of them that were correct.
+     * </pre>
+     *
      * <code>float precision = 1 [json_name = "precision"];</code>
      * @return The precision.
      */
@@ -173,6 +221,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONFIDENCE_FIELD_NUMBER = 2;
     private float confidence_ = 0F;
     /**
+     * <pre>
+     * The confidence threshold these results apply to.
+     * </pre>
+     *
      * <code>float confidence = 2 [json_name = "confidence"];</code>
      * @return The confidence.
      */
@@ -184,6 +236,10 @@ private static final long serialVersionUID = 0L;
     public static final int ANSWER_RATE_FIELD_NUMBER = 3;
     private float answerRate_ = 0F;
     /**
+     * <pre>
+     * Share of the evaluation examples that got an answer at this threshold.
+     * </pre>
+     *
      * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
      * @return The answerRate.
      */
@@ -195,6 +251,10 @@ private static final long serialVersionUID = 0L;
     public static final int TRUE_POSITIVE_FIELD_NUMBER = 4;
     private int truePositive_ = 0;
     /**
+     * <pre>
+     * Number of true positives.
+     * </pre>
+     *
      * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
      * @return The truePositive.
      */
@@ -206,6 +266,10 @@ private static final long serialVersionUID = 0L;
     public static final int TRUE_NEGATIVE_FIELD_NUMBER = 5;
     private int trueNegative_ = 0;
     /**
+     * <pre>
+     * Number of true negatives.
+     * </pre>
+     *
      * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
      * @return The trueNegative.
      */
@@ -217,6 +281,10 @@ private static final long serialVersionUID = 0L;
     public static final int FALSE_POSITIVE_FIELD_NUMBER = 6;
     private int falsePositive_ = 0;
     /**
+     * <pre>
+     * Number of false positives.
+     * </pre>
+     *
      * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
      * @return The falsePositive.
      */
@@ -228,6 +296,10 @@ private static final long serialVersionUID = 0L;
     public static final int FALSE_NEGATIVE_FIELD_NUMBER = 7;
     private int falseNegative_ = 0;
     /**
+     * <pre>
+     * Number of false negatives.
+     * </pre>
+     *
      * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
      * @return The falseNegative.
      */
@@ -240,7 +312,7 @@ private static final long serialVersionUID = 0L;
     private float mcc_ = 0F;
     /**
      * <pre>
-     * Matthews correlation coefficient
+     * Matthews correlation coefficient.
      * </pre>
      *
      * <code>float mcc = 8 [json_name = "mcc"];</code>
@@ -254,6 +326,10 @@ private static final long serialVersionUID = 0L;
     public static final int ACCURACY_FIELD_NUMBER = 9;
     private float accuracy_ = 0F;
     /**
+     * <pre>
+     * Accuracy.
+     * </pre>
+     *
      * <code>float accuracy = 9 [json_name = "accuracy"];</code>
      * @return The accuracy.
      */
@@ -265,6 +341,10 @@ private static final long serialVersionUID = 0L;
     public static final int BALANCED_ACCURACY_FIELD_NUMBER = 10;
     private float balancedAccuracy_ = 0F;
     /**
+     * <pre>
+     * Balanced accuracy.
+     * </pre>
+     *
      * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
      * @return The balancedAccuracy.
      */
@@ -277,7 +357,7 @@ private static final long serialVersionUID = 0L;
     private float precisionBoundEpsilon_ = 0F;
     /**
      * <pre>
-     * precision bound epsilon values
+     * Epsilon of the precision bound.
      * </pre>
      *
      * <code>float precision_bound_epsilon = 12 [json_name = "precisionBoundEpsilon"];</code>
@@ -570,6 +650,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Evaluation results at one confidence threshold.
+     * </pre>
+     *
      * Protobuf type {@code asgt.type.TargetMetrics.Metric}
      */
     public static final class Builder extends
@@ -827,6 +911,10 @@ private static final long serialVersionUID = 0L;
 
       private float precision_ ;
       /**
+       * <pre>
+       * Precision of the answers at this threshold: the share of them that were correct.
+       * </pre>
+       *
        * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
        */
@@ -835,6 +923,10 @@ private static final long serialVersionUID = 0L;
         return precision_;
       }
       /**
+       * <pre>
+       * Precision of the answers at this threshold: the share of them that were correct.
+       * </pre>
+       *
        * <code>float precision = 1 [json_name = "precision"];</code>
        * @param value The precision to set.
        * @return This builder for chaining.
@@ -847,6 +939,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Precision of the answers at this threshold: the share of them that were correct.
+       * </pre>
+       *
        * <code>float precision = 1 [json_name = "precision"];</code>
        * @return This builder for chaining.
        */
@@ -859,6 +955,10 @@ private static final long serialVersionUID = 0L;
 
       private float confidence_ ;
       /**
+       * <pre>
+       * The confidence threshold these results apply to.
+       * </pre>
+       *
        * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
        */
@@ -867,6 +967,10 @@ private static final long serialVersionUID = 0L;
         return confidence_;
       }
       /**
+       * <pre>
+       * The confidence threshold these results apply to.
+       * </pre>
+       *
        * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @param value The confidence to set.
        * @return This builder for chaining.
@@ -879,6 +983,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The confidence threshold these results apply to.
+       * </pre>
+       *
        * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return This builder for chaining.
        */
@@ -891,6 +999,10 @@ private static final long serialVersionUID = 0L;
 
       private float answerRate_ ;
       /**
+       * <pre>
+       * Share of the evaluation examples that got an answer at this threshold.
+       * </pre>
+       *
        * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
        */
@@ -899,6 +1011,10 @@ private static final long serialVersionUID = 0L;
         return answerRate_;
       }
       /**
+       * <pre>
+       * Share of the evaluation examples that got an answer at this threshold.
+       * </pre>
+       *
        * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @param value The answerRate to set.
        * @return This builder for chaining.
@@ -911,6 +1027,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Share of the evaluation examples that got an answer at this threshold.
+       * </pre>
+       *
        * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return This builder for chaining.
        */
@@ -923,6 +1043,10 @@ private static final long serialVersionUID = 0L;
 
       private int truePositive_ ;
       /**
+       * <pre>
+       * Number of true positives.
+       * </pre>
+       *
        * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
        * @return The truePositive.
        */
@@ -931,6 +1055,10 @@ private static final long serialVersionUID = 0L;
         return truePositive_;
       }
       /**
+       * <pre>
+       * Number of true positives.
+       * </pre>
+       *
        * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
        * @param value The truePositive to set.
        * @return This builder for chaining.
@@ -943,6 +1071,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Number of true positives.
+       * </pre>
+       *
        * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
        * @return This builder for chaining.
        */
@@ -955,6 +1087,10 @@ private static final long serialVersionUID = 0L;
 
       private int trueNegative_ ;
       /**
+       * <pre>
+       * Number of true negatives.
+       * </pre>
+       *
        * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
        * @return The trueNegative.
        */
@@ -963,6 +1099,10 @@ private static final long serialVersionUID = 0L;
         return trueNegative_;
       }
       /**
+       * <pre>
+       * Number of true negatives.
+       * </pre>
+       *
        * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
        * @param value The trueNegative to set.
        * @return This builder for chaining.
@@ -975,6 +1115,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Number of true negatives.
+       * </pre>
+       *
        * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
        * @return This builder for chaining.
        */
@@ -987,6 +1131,10 @@ private static final long serialVersionUID = 0L;
 
       private int falsePositive_ ;
       /**
+       * <pre>
+       * Number of false positives.
+       * </pre>
+       *
        * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
        * @return The falsePositive.
        */
@@ -995,6 +1143,10 @@ private static final long serialVersionUID = 0L;
         return falsePositive_;
       }
       /**
+       * <pre>
+       * Number of false positives.
+       * </pre>
+       *
        * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
        * @param value The falsePositive to set.
        * @return This builder for chaining.
@@ -1007,6 +1159,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Number of false positives.
+       * </pre>
+       *
        * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
        * @return This builder for chaining.
        */
@@ -1019,6 +1175,10 @@ private static final long serialVersionUID = 0L;
 
       private int falseNegative_ ;
       /**
+       * <pre>
+       * Number of false negatives.
+       * </pre>
+       *
        * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
        * @return The falseNegative.
        */
@@ -1027,6 +1187,10 @@ private static final long serialVersionUID = 0L;
         return falseNegative_;
       }
       /**
+       * <pre>
+       * Number of false negatives.
+       * </pre>
+       *
        * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
        * @param value The falseNegative to set.
        * @return This builder for chaining.
@@ -1039,6 +1203,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Number of false negatives.
+       * </pre>
+       *
        * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
        * @return This builder for chaining.
        */
@@ -1052,7 +1220,7 @@ private static final long serialVersionUID = 0L;
       private float mcc_ ;
       /**
        * <pre>
-       * Matthews correlation coefficient
+       * Matthews correlation coefficient.
        * </pre>
        *
        * <code>float mcc = 8 [json_name = "mcc"];</code>
@@ -1064,7 +1232,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Matthews correlation coefficient
+       * Matthews correlation coefficient.
        * </pre>
        *
        * <code>float mcc = 8 [json_name = "mcc"];</code>
@@ -1080,7 +1248,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Matthews correlation coefficient
+       * Matthews correlation coefficient.
        * </pre>
        *
        * <code>float mcc = 8 [json_name = "mcc"];</code>
@@ -1095,6 +1263,10 @@ private static final long serialVersionUID = 0L;
 
       private float accuracy_ ;
       /**
+       * <pre>
+       * Accuracy.
+       * </pre>
+       *
        * <code>float accuracy = 9 [json_name = "accuracy"];</code>
        * @return The accuracy.
        */
@@ -1103,6 +1275,10 @@ private static final long serialVersionUID = 0L;
         return accuracy_;
       }
       /**
+       * <pre>
+       * Accuracy.
+       * </pre>
+       *
        * <code>float accuracy = 9 [json_name = "accuracy"];</code>
        * @param value The accuracy to set.
        * @return This builder for chaining.
@@ -1115,6 +1291,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Accuracy.
+       * </pre>
+       *
        * <code>float accuracy = 9 [json_name = "accuracy"];</code>
        * @return This builder for chaining.
        */
@@ -1127,6 +1307,10 @@ private static final long serialVersionUID = 0L;
 
       private float balancedAccuracy_ ;
       /**
+       * <pre>
+       * Balanced accuracy.
+       * </pre>
+       *
        * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
        * @return The balancedAccuracy.
        */
@@ -1135,6 +1319,10 @@ private static final long serialVersionUID = 0L;
         return balancedAccuracy_;
       }
       /**
+       * <pre>
+       * Balanced accuracy.
+       * </pre>
+       *
        * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
        * @param value The balancedAccuracy to set.
        * @return This builder for chaining.
@@ -1147,6 +1335,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Balanced accuracy.
+       * </pre>
+       *
        * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
        * @return This builder for chaining.
        */
@@ -1160,7 +1352,7 @@ private static final long serialVersionUID = 0L;
       private float precisionBoundEpsilon_ ;
       /**
        * <pre>
-       * precision bound epsilon values
+       * Epsilon of the precision bound.
        * </pre>
        *
        * <code>float precision_bound_epsilon = 12 [json_name = "precisionBoundEpsilon"];</code>
@@ -1172,7 +1364,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * precision bound epsilon values
+       * Epsilon of the precision bound.
        * </pre>
        *
        * <code>float precision_bound_epsilon = 12 [json_name = "precisionBoundEpsilon"];</code>
@@ -1188,7 +1380,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * precision bound epsilon values
+       * Epsilon of the precision bound.
        * </pre>
        *
        * <code>float precision_bound_epsilon = 12 [json_name = "precisionBoundEpsilon"];</code>
@@ -1257,6 +1449,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object target_ = "";
   /**
+   * <pre>
+   * Name of the target.
+   * </pre>
+   *
    * <code>string target = 1 [json_name = "target"];</code>
    * @return The target.
    */
@@ -1274,6 +1470,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the target.
+   * </pre>
+   *
    * <code>string target = 1 [json_name = "target"];</code>
    * @return The bytes for target.
    */
@@ -1296,6 +1496,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.TargetMetrics.Metric> metrics_;
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   @java.lang.Override
@@ -1303,6 +1507,10 @@ private static final long serialVersionUID = 0L;
     return metrics_;
   }
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   @java.lang.Override
@@ -1311,6 +1519,10 @@ private static final long serialVersionUID = 0L;
     return metrics_;
   }
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   @java.lang.Override
@@ -1318,6 +1530,10 @@ private static final long serialVersionUID = 0L;
     return metrics_.size();
   }
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   @java.lang.Override
@@ -1325,6 +1541,10 @@ private static final long serialVersionUID = 0L;
     return metrics_.get(index);
   }
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   @java.lang.Override
@@ -1337,7 +1557,7 @@ private static final long serialVersionUID = 0L;
   private float entropy_ = 0F;
   /**
    * <pre>
-   * entropy of the dataset
+   * Entropy of the dataset.
    * </pre>
    *
    * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -1349,7 +1569,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * entropy of the dataset
+   * Entropy of the dataset.
    * </pre>
    *
    * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -1364,7 +1584,7 @@ private static final long serialVersionUID = 0L;
   private int numberOfClasses_ = 0;
   /**
    * <pre>
-   * number of classes in the dataset
+   * Number of classes in the dataset.
    * </pre>
    *
    * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -1376,7 +1596,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * number of classes in the dataset
+   * Number of classes in the dataset.
    * </pre>
    *
    * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -1391,7 +1611,7 @@ private static final long serialVersionUID = 0L;
   private float avgSamplePerClass_ = 0F;
   /**
    * <pre>
-   * average samples per class
+   * Average number of examples per class.
    * </pre>
    *
    * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -1403,7 +1623,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * average samples per class
+   * Average number of examples per class.
    * </pre>
    *
    * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -1418,7 +1638,7 @@ private static final long serialVersionUID = 0L;
   private float inconsistentLabelRatio_ = 0F;
   /**
    * <pre>
-   * ratio of inconsistent labels
+   * Ratio of inconsistent labels.
    * </pre>
    *
    * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -1430,7 +1650,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ratio of inconsistent labels
+   * Ratio of inconsistent labels.
    * </pre>
    *
    * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -1445,7 +1665,7 @@ private static final long serialVersionUID = 0L;
   private float avgLabelsPerInconsistentSample_ = 0F;
   /**
    * <pre>
-   * average labels per inconsistent sample
+   * Average number of labels per inconsistent example.
    * </pre>
    *
    * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -1457,7 +1677,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * average labels per inconsistent sample
+   * Average number of labels per inconsistent example.
    * </pre>
    *
    * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -1472,7 +1692,7 @@ private static final long serialVersionUID = 0L;
   private float percentSamplesNotInTargetVocab_ = 0F;
   /**
    * <pre>
-   * percentage of samples not in target vocabulary
+   * Percentage of examples whose value isn't in the target's vocabulary.
    * </pre>
    *
    * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -1484,7 +1704,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * percentage of samples not in target vocabulary
+   * Percentage of examples whose value isn't in the target's vocabulary.
    * </pre>
    *
    * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -1499,7 +1719,7 @@ private static final long serialVersionUID = 0L;
   private float jsDivergenceClasses_ = 0F;
   /**
    * <pre>
-   * Jensen-Shannon divergence for classes
+   * Jensen-Shannon divergence of the classes.
    * </pre>
    *
    * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -1511,7 +1731,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Jensen-Shannon divergence for classes
+   * Jensen-Shannon divergence of the classes.
    * </pre>
    *
    * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -1526,7 +1746,7 @@ private static final long serialVersionUID = 0L;
   private int targetTrainSize_ = 0;
   /**
    * <pre>
-   * number of training samples with a label for this target
+   * Number of training examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -1538,7 +1758,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * number of training samples with a label for this target
+   * Number of training examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -1553,7 +1773,7 @@ private static final long serialVersionUID = 0L;
   private int targetTestSize_ = 0;
   /**
    * <pre>
-   * number of test/validation samples with a label for this target
+   * Number of test or validation examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -1565,7 +1785,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * number of test/validation samples with a label for this target
+   * Number of test or validation examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -1902,6 +2122,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Evaluation metrics of a model for one target.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.TargetMetrics}
    */
   public static final class Builder extends
@@ -2219,6 +2443,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object target_ = "";
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
      */
@@ -2235,6 +2463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string target = 1 [json_name = "target"];</code>
      * @return The bytes for target.
      */
@@ -2252,6 +2484,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string target = 1 [json_name = "target"];</code>
      * @param value The target to set.
      * @return This builder for chaining.
@@ -2265,6 +2501,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string target = 1 [json_name = "target"];</code>
      * @return This builder for chaining.
      */
@@ -2275,6 +2515,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string target = 1 [json_name = "target"];</code>
      * @param value The bytes for target to set.
      * @return This builder for chaining.
@@ -2302,6 +2546,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.TargetMetrics.Metric, ai.visma.asgt.type.TargetMetrics.Metric.Builder, ai.visma.asgt.type.TargetMetrics.MetricOrBuilder> metricsBuilder_;
 
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public java.util.List<ai.visma.asgt.type.TargetMetrics.Metric> getMetricsList() {
@@ -2312,6 +2560,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public int getMetricsCount() {
@@ -2322,6 +2574,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Metric getMetrics(int index) {
@@ -2332,6 +2588,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder setMetrics(
@@ -2349,6 +2609,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder setMetrics(
@@ -2363,6 +2627,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder addMetrics(ai.visma.asgt.type.TargetMetrics.Metric value) {
@@ -2379,6 +2647,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder addMetrics(
@@ -2396,6 +2668,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder addMetrics(
@@ -2410,6 +2686,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder addMetrics(
@@ -2424,6 +2704,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder addAllMetrics(
@@ -2439,6 +2723,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder clearMetrics() {
@@ -2452,6 +2740,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public Builder removeMetrics(int index) {
@@ -2465,6 +2757,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Metric.Builder getMetricsBuilder(
@@ -2472,6 +2768,10 @@ private static final long serialVersionUID = 0L;
       return getMetricsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public ai.visma.asgt.type.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
@@ -2482,6 +2782,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.TargetMetrics.MetricOrBuilder> 
@@ -2493,6 +2797,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Metric.Builder addMetricsBuilder() {
@@ -2500,6 +2808,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.type.TargetMetrics.Metric.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Metric.Builder addMetricsBuilder(
@@ -2508,6 +2820,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.type.TargetMetrics.Metric.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Results at different confidence thresholds.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
      */
     public java.util.List<ai.visma.asgt.type.TargetMetrics.Metric.Builder> 
@@ -2532,7 +2848,7 @@ private static final long serialVersionUID = 0L;
     private float entropy_ ;
     /**
      * <pre>
-     * entropy of the dataset
+     * Entropy of the dataset.
      * </pre>
      *
      * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -2544,7 +2860,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * entropy of the dataset
+     * Entropy of the dataset.
      * </pre>
      *
      * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -2556,7 +2872,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * entropy of the dataset
+     * Entropy of the dataset.
      * </pre>
      *
      * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -2572,7 +2888,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * entropy of the dataset
+     * Entropy of the dataset.
      * </pre>
      *
      * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -2588,7 +2904,7 @@ private static final long serialVersionUID = 0L;
     private int numberOfClasses_ ;
     /**
      * <pre>
-     * number of classes in the dataset
+     * Number of classes in the dataset.
      * </pre>
      *
      * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -2600,7 +2916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of classes in the dataset
+     * Number of classes in the dataset.
      * </pre>
      *
      * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -2612,7 +2928,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of classes in the dataset
+     * Number of classes in the dataset.
      * </pre>
      *
      * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -2628,7 +2944,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of classes in the dataset
+     * Number of classes in the dataset.
      * </pre>
      *
      * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -2644,7 +2960,7 @@ private static final long serialVersionUID = 0L;
     private float avgSamplePerClass_ ;
     /**
      * <pre>
-     * average samples per class
+     * Average number of examples per class.
      * </pre>
      *
      * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -2656,7 +2972,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average samples per class
+     * Average number of examples per class.
      * </pre>
      *
      * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -2668,7 +2984,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average samples per class
+     * Average number of examples per class.
      * </pre>
      *
      * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -2684,7 +3000,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average samples per class
+     * Average number of examples per class.
      * </pre>
      *
      * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -2700,7 +3016,7 @@ private static final long serialVersionUID = 0L;
     private float inconsistentLabelRatio_ ;
     /**
      * <pre>
-     * ratio of inconsistent labels
+     * Ratio of inconsistent labels.
      * </pre>
      *
      * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -2712,7 +3028,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ratio of inconsistent labels
+     * Ratio of inconsistent labels.
      * </pre>
      *
      * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -2724,7 +3040,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ratio of inconsistent labels
+     * Ratio of inconsistent labels.
      * </pre>
      *
      * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -2740,7 +3056,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ratio of inconsistent labels
+     * Ratio of inconsistent labels.
      * </pre>
      *
      * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -2756,7 +3072,7 @@ private static final long serialVersionUID = 0L;
     private float avgLabelsPerInconsistentSample_ ;
     /**
      * <pre>
-     * average labels per inconsistent sample
+     * Average number of labels per inconsistent example.
      * </pre>
      *
      * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -2768,7 +3084,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average labels per inconsistent sample
+     * Average number of labels per inconsistent example.
      * </pre>
      *
      * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -2780,7 +3096,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average labels per inconsistent sample
+     * Average number of labels per inconsistent example.
      * </pre>
      *
      * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -2796,7 +3112,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * average labels per inconsistent sample
+     * Average number of labels per inconsistent example.
      * </pre>
      *
      * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -2812,7 +3128,7 @@ private static final long serialVersionUID = 0L;
     private float percentSamplesNotInTargetVocab_ ;
     /**
      * <pre>
-     * percentage of samples not in target vocabulary
+     * Percentage of examples whose value isn't in the target's vocabulary.
      * </pre>
      *
      * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -2824,7 +3140,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * percentage of samples not in target vocabulary
+     * Percentage of examples whose value isn't in the target's vocabulary.
      * </pre>
      *
      * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -2836,7 +3152,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * percentage of samples not in target vocabulary
+     * Percentage of examples whose value isn't in the target's vocabulary.
      * </pre>
      *
      * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -2852,7 +3168,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * percentage of samples not in target vocabulary
+     * Percentage of examples whose value isn't in the target's vocabulary.
      * </pre>
      *
      * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -2868,7 +3184,7 @@ private static final long serialVersionUID = 0L;
     private float jsDivergenceClasses_ ;
     /**
      * <pre>
-     * Jensen-Shannon divergence for classes
+     * Jensen-Shannon divergence of the classes.
      * </pre>
      *
      * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -2880,7 +3196,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Jensen-Shannon divergence for classes
+     * Jensen-Shannon divergence of the classes.
      * </pre>
      *
      * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -2892,7 +3208,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Jensen-Shannon divergence for classes
+     * Jensen-Shannon divergence of the classes.
      * </pre>
      *
      * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -2908,7 +3224,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Jensen-Shannon divergence for classes
+     * Jensen-Shannon divergence of the classes.
      * </pre>
      *
      * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -2924,7 +3240,7 @@ private static final long serialVersionUID = 0L;
     private int targetTrainSize_ ;
     /**
      * <pre>
-     * number of training samples with a label for this target
+     * Number of training examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -2936,7 +3252,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of training samples with a label for this target
+     * Number of training examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -2948,7 +3264,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of training samples with a label for this target
+     * Number of training examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -2964,7 +3280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of training samples with a label for this target
+     * Number of training examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -2980,7 +3296,7 @@ private static final long serialVersionUID = 0L;
     private int targetTestSize_ ;
     /**
      * <pre>
-     * number of test/validation samples with a label for this target
+     * Number of test or validation examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -2992,7 +3308,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of test/validation samples with a label for this target
+     * Number of test or validation examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -3004,7 +3320,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of test/validation samples with a label for this target
+     * Number of test or validation examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -3020,7 +3336,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * number of test/validation samples with a label for this target
+     * Number of test or validation examples with a value for this target.
      * </pre>
      *
      * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>

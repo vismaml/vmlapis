@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * The model that produced a candidate.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.ModelSpec}
  */
 public final class ModelSpec extends
@@ -49,7 +53,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object modelName_ = "";
   /**
    * <pre>
-   * The name of the TensorFlow Serving model
+   * The name of the model.
    * </pre>
    *
    * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -70,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name of the TensorFlow Serving model
+   * The name of the model.
    * </pre>
    *
    * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -95,7 +99,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value modelVer_;
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -107,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -119,7 +123,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The version number of the TensorFlow Serving model
+   * The version of the model.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -302,6 +306,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The model that produced a candidate.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.ModelSpec}
    */
   public static final class Builder extends
@@ -471,7 +479,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object modelName_ = "";
     /**
      * <pre>
-     * The name of the TensorFlow Serving model
+     * The name of the model.
      * </pre>
      *
      * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -491,7 +499,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the TensorFlow Serving model
+     * The name of the model.
      * </pre>
      *
      * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -512,7 +520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the TensorFlow Serving model
+     * The name of the model.
      * </pre>
      *
      * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -529,7 +537,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the TensorFlow Serving model
+     * The name of the model.
      * </pre>
      *
      * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -543,7 +551,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the TensorFlow Serving model
+     * The name of the model.
      * </pre>
      *
      * <code>string model_name = 1 [json_name = "modelName"];</code>
@@ -565,7 +573,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> modelVerBuilder_;
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -576,7 +584,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -591,7 +599,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -611,7 +619,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -629,7 +637,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -654,7 +662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -671,7 +679,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -683,7 +691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
@@ -698,7 +706,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model
+     * The version of the model.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>

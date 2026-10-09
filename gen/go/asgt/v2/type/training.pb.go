@@ -22,31 +22,28 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// A training of a dataset.
 type Training struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Creation time of the training
+	// When the training was scheduled.
 	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	Status    string                 `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
-	// Status of the training.
-	// SCHEDULED - Training is scheduled to be run in a specific time. This
-	// could be in between 1 minute or 24 hours depending on how recently the dataset
-	// was created
-	// PENDING - The training is ready to be picked up by a worker.
-	// RUNNING - The training is currently running.
-	// DONE - The training has completed successfully.
-	// FAILED - The training failed due to an error. See training status for
-	// more information.
+	// Always empty, because the listings only return active trainings. Use trainingStatus.
+	Status string `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
+	// State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+	// a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
 	TrainingStatus string `protobuf:"bytes,3,opt,name=training_status,json=trainingStatus,proto3" json:"training_status,omitempty"`
-	// Additional information about the training status.
+	// More about the state, such as why the training failed.
 	TrainingStatusMessage string `protobuf:"bytes,4,opt,name=training_status_message,json=trainingStatusMessage,proto3" json:"training_status_message,omitempty"`
-	// Specifies when did the training finish.
+	// When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+	// failed trainings.
 	FinishTime *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=finish_time,json=finishTime,proto3" json:"finish_time,omitempty"`
-	// Specifies dataset the training ran on.
+	// The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+	// fills it in.
 	Dataset *_type.Dataset `protobuf:"bytes,6,opt,name=dataset,proto3" json:"dataset,omitempty"`
-	// Specifies when the training is scheduled.
+	// When the training is set to start.
 	ScheduleTime *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=schedule_time,json=scheduleTime,proto3" json:"schedule_time,omitempty"`
 }
 

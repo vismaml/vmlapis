@@ -10,11 +10,19 @@ public interface ModelFileOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Name of the file.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * Name of the file.
+   * </pre>
+   *
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -22,6 +30,10 @@ public interface ModelFileOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * Contents of the file.
+   * </pre>
+   *
    * <code>bytes data = 2 [json_name = "data"];</code>
    * @return The data.
    */

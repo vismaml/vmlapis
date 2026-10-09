@@ -22,8 +22,10 @@ public interface FeatureOrBuilder extends
 
   /**
    * <pre>
-   * Maximum number of results of this type. Does not apply to
-   * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+   * The maximum number of candidates to return for this feature. Defaults to 1. It
+   * doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+   * SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+   * TEXT.
    * </pre>
    *
    * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
@@ -33,7 +35,10 @@ public interface FeatureOrBuilder extends
 
   /**
    * <pre>
-   * The minimum confidence for predictions that the caller wants returned
+   * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+   * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+   * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+   * candidates of any level.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -42,7 +47,10 @@ public interface FeatureOrBuilder extends
   int getMinConfidenceValue();
   /**
    * <pre>
-   * The minimum confidence for predictions that the caller wants returned
+   * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+   * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+   * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+   * candidates of any level.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>

@@ -10,62 +10,122 @@ public interface DocumentAnnotatorRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to
+   * download it from as `source.httpUri`.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return Whether the document field is set.
    */
   boolean hasDocument();
   /**
+   * <pre>
+   * The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to
+   * download it from as `source.httpUri`.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return The document.
    */
   ai.visma.ssn.annotator.v1.Document getDocument();
   /**
+   * <pre>
+   * The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to
+   * download it from as `source.httpUri`.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    */
   ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder();
 
   /**
+   * <pre>
+   * The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+   * nothing is extracted.
+   * </pre>
+   *
    * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
    */
   java.util.List<ai.visma.ssn.annotator.v1.Feature> 
       getFeaturesList();
   /**
+   * <pre>
+   * The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+   * nothing is extracted.
+   * </pre>
+   *
    * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
    */
   ai.visma.ssn.annotator.v1.Feature getFeatures(int index);
   /**
+   * <pre>
+   * The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+   * nothing is extracted.
+   * </pre>
+   *
    * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
    */
   int getFeaturesCount();
   /**
+   * <pre>
+   * The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+   * nothing is extracted.
+   * </pre>
+   *
    * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
    */
   java.util.List<? extends ai.visma.ssn.annotator.v1.FeatureOrBuilder> 
       getFeaturesOrBuilderList();
   /**
+   * <pre>
+   * The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+   * nothing is extracted.
+   * </pre>
+   *
    * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
    */
   ai.visma.ssn.annotator.v1.FeatureOrBuilder getFeaturesOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Labels for the request, such as your customer's ID. They're stored with the
+   * request's usage statistics and don't change the results.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
   /**
+   * <pre>
+   * Labels for the request, such as your customer's ID. They're stored with the
+   * request's usage statistics and don't change the results.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @return The count of tags.
    */
   int getTagsCount();
   /**
+   * <pre>
+   * Labels for the request, such as your customer's ID. They're stored with the
+   * request's usage statistics and don't change the results.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
+   * <pre>
+   * Labels for the request, such as your customer's ID. They're stored with the
+   * request's usage statistics and don't change the results.
+   * </pre>
+   *
    * <code>repeated string tags = 3 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.
@@ -85,23 +145,43 @@ public interface DocumentAnnotatorRequestOrBuilder extends
   ai.visma.ssn.type.Tier getTier();
 
   /**
+   * <pre>
+   * More labels for the request, stored with its usage statistics like `tags`. They
+   * don't change the results.
+   * </pre>
+   *
    * <code>repeated string segments = 5 [json_name = "segments"];</code>
    * @return A list containing the segments.
    */
   java.util.List<java.lang.String>
       getSegmentsList();
   /**
+   * <pre>
+   * More labels for the request, stored with its usage statistics like `tags`. They
+   * don't change the results.
+   * </pre>
+   *
    * <code>repeated string segments = 5 [json_name = "segments"];</code>
    * @return The count of segments.
    */
   int getSegmentsCount();
   /**
+   * <pre>
+   * More labels for the request, stored with its usage statistics like `tags`. They
+   * don't change the results.
+   * </pre>
+   *
    * <code>repeated string segments = 5 [json_name = "segments"];</code>
    * @param index The index of the element to return.
    * @return The segments at the given index.
    */
   java.lang.String getSegments(int index);
   /**
+   * <pre>
+   * More labels for the request, stored with its usage statistics like `tags`. They
+   * don't change the results.
+   * </pre>
+   *
    * <code>repeated string segments = 5 [json_name = "segments"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the segments at the given index.
@@ -110,23 +190,51 @@ public interface DocumentAnnotatorRequestOrBuilder extends
       getSegmentsBytes(int index);
 
   /**
+   * <pre>
+   * Questions about the document in plain language, for example "What is the order
+   * reference?". The answers come back in `answers`, one per question for each page
+   * read (see `documentMetadata.pageCount`). If answering takes longer than 10
+   * seconds, the call fails.
+   * </pre>
+   *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
    * @return A list containing the questions.
    */
   java.util.List<java.lang.String>
       getQuestionsList();
   /**
+   * <pre>
+   * Questions about the document in plain language, for example "What is the order
+   * reference?". The answers come back in `answers`, one per question for each page
+   * read (see `documentMetadata.pageCount`). If answering takes longer than 10
+   * seconds, the call fails.
+   * </pre>
+   *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
    * @return The count of questions.
    */
   int getQuestionsCount();
   /**
+   * <pre>
+   * Questions about the document in plain language, for example "What is the order
+   * reference?". The answers come back in `answers`, one per question for each page
+   * read (see `documentMetadata.pageCount`). If answering takes longer than 10
+   * seconds, the call fails.
+   * </pre>
+   *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
    * @param index The index of the element to return.
    * @return The questions at the given index.
    */
   java.lang.String getQuestions(int index);
   /**
+   * <pre>
+   * Questions about the document in plain language, for example "What is the order
+   * reference?". The answers come back in `answers`, one per question for each page
+   * read (see `documentMetadata.pageCount`). If answering takes longer than 10
+   * seconds, the call fails.
+   * </pre>
+   *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the questions at the given index.

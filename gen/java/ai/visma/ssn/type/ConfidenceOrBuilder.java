@@ -10,21 +10,11 @@ public interface ConfidenceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * A bucketized representation of confidence, which is intended to give clients
-   * highly stable results across model upgrades.
-   * </pre>
-   *
    * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
    * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
-   * <pre>
-   * A bucketized representation of confidence, which is intended to give clients
-   * highly stable results across model upgrades.
-   * </pre>
-   *
    * <code>.ssn.type.Confidence.Level level = 1 [json_name = "level"];</code>
    * @return The level.
    */
@@ -32,7 +22,7 @@ public interface ConfidenceOrBuilder extends
 
   /**
    * <pre>
-   * The confidence value
+   * A confidence score. Most responses leave it out and return only the level.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -41,7 +31,7 @@ public interface ConfidenceOrBuilder extends
   boolean hasValue();
   /**
    * <pre>
-   * The confidence value
+   * A confidence score. Most responses leave it out and return only the level.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
@@ -50,7 +40,7 @@ public interface ConfidenceOrBuilder extends
   com.google.protobuf.FloatValue getValue();
   /**
    * <pre>
-   * The confidence value
+   * A confidence score. Most responses leave it out and return only the level.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>

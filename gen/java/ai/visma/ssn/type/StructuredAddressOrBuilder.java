@@ -10,11 +10,19 @@ public interface StructuredAddressOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The street name, without the house number.
+   * </pre>
+   *
    * <code>string street = 1 [json_name = "street"];</code>
    * @return The street.
    */
   java.lang.String getStreet();
   /**
+   * <pre>
+   * The street name, without the house number.
+   * </pre>
+   *
    * <code>string street = 1 [json_name = "street"];</code>
    * @return The bytes for street.
    */
@@ -22,11 +30,19 @@ public interface StructuredAddressOrBuilder extends
       getStreetBytes();
 
   /**
+   * <pre>
+   * The postal or ZIP code.
+   * </pre>
+   *
    * <code>string postal_code = 2 [json_name = "postalCode"];</code>
    * @return The postalCode.
    */
   java.lang.String getPostalCode();
   /**
+   * <pre>
+   * The postal or ZIP code.
+   * </pre>
+   *
    * <code>string postal_code = 2 [json_name = "postalCode"];</code>
    * @return The bytes for postalCode.
    */
@@ -34,11 +50,19 @@ public interface StructuredAddressOrBuilder extends
       getPostalCodeBytes();
 
   /**
+   * <pre>
+   * The city or town.
+   * </pre>
+   *
    * <code>string city = 3 [json_name = "city"];</code>
    * @return The city.
    */
   java.lang.String getCity();
   /**
+   * <pre>
+   * The city or town.
+   * </pre>
+   *
    * <code>string city = 3 [json_name = "city"];</code>
    * @return The bytes for city.
    */
@@ -46,11 +70,19 @@ public interface StructuredAddressOrBuilder extends
       getCityBytes();
 
   /**
+   * <pre>
+   * The full country name.
+   * </pre>
+   *
    * <code>string country = 4 [json_name = "country"];</code>
    * @return The country.
    */
   java.lang.String getCountry();
   /**
+   * <pre>
+   * The full country name.
+   * </pre>
+   *
    * <code>string country = 4 [json_name = "country"];</code>
    * @return The bytes for country.
    */
@@ -59,7 +91,7 @@ public interface StructuredAddressOrBuilder extends
 
   /**
    * <pre>
-   * ISO 3166-1 alpha-2
+   * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
    * </pre>
    *
    * <code>string country_code = 5 [json_name = "countryCode"];</code>
@@ -68,7 +100,7 @@ public interface StructuredAddressOrBuilder extends
   java.lang.String getCountryCode();
   /**
    * <pre>
-   * ISO 3166-1 alpha-2
+   * The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
    * </pre>
    *
    * <code>string country_code = 5 [json_name = "countryCode"];</code>

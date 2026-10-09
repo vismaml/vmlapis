@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2.type;
 
 /**
+ * <pre>
+ * The supplier of an invoice.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.type.Supplier}
  */
 public final class Supplier extends
@@ -50,7 +54,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object id_ = "";
   /**
    * <pre>
-   * Id of the supplier; not nullable.
+   * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -71,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Id of the supplier; not nullable.
+   * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -144,7 +148,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object globalId_ = "";
   /**
    * <pre>
-   * Global ID of the supplier.
+   * Global ID of the supplier, such as its VAT number.
    * </pre>
    *
    * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -165,7 +169,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Global ID of the supplier.
+   * Global ID of the supplier, such as its VAT number.
    * </pre>
    *
    * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -363,6 +367,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The supplier of an invoice.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.Supplier}
    */
   public static final class Builder extends
@@ -531,7 +539,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object id_ = "";
     /**
      * <pre>
-     * Id of the supplier; not nullable.
+     * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -551,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the supplier; not nullable.
+     * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -572,7 +580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the supplier; not nullable.
+     * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -589,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the supplier; not nullable.
+     * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -603,7 +611,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the supplier; not nullable.
+     * Your own ID for the supplier. Letters and digits only, up to 64 bytes.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -715,7 +723,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object globalId_ = "";
     /**
      * <pre>
-     * Global ID of the supplier.
+     * Global ID of the supplier, such as its VAT number.
      * </pre>
      *
      * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -735,7 +743,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Global ID of the supplier.
+     * Global ID of the supplier, such as its VAT number.
      * </pre>
      *
      * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -756,7 +764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Global ID of the supplier.
+     * Global ID of the supplier, such as its VAT number.
      * </pre>
      *
      * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -773,7 +781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Global ID of the supplier.
+     * Global ID of the supplier, such as its VAT number.
      * </pre>
      *
      * <code>string global_id = 3 [json_name = "globalId"];</code>
@@ -787,7 +795,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Global ID of the supplier.
+     * Global ID of the supplier, such as its VAT number.
      * </pre>
      *
      * <code>string global_id = 3 [json_name = "globalId"];</code>

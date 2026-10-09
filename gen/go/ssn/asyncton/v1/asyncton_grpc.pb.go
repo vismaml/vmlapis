@@ -32,11 +32,74 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TransactionServiceClient interface {
+	// Create a transaction.
+	//
+	// Submits a document for processing and returns right away with the transaction ID, plus
+	// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+	// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+	//
+	// Returns 400 when the document or the features are missing, when a feature name is
+	// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+	// custom ID is already used in your project.
 	CreateTransaction(ctx context.Context, in *CreateTransactionRequest, opts ...grpc.CallOption) (*CreateTransactionResponse, error)
+	// Get the results of a transaction.
+	//
+	// Returns the extracted data once processing has finished. Refer to the transaction by
+	// its ID in the path, or call GET /v1/transactions/results with the customId query
+	// parameter.
+	//
+	// An existing transaction always returns 200, whatever its status. While it's CREATED or
+	// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+	// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+	// of the features that succeeded, and errorMessage.
+	//
+	// The candidates of field features are filtered. By default you get at most one candidate
+	// per feature, and only at confidence level HIGH or above. Set minConfidence and
+	// maxResults to get more.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	GetTransactionResults(ctx context.Context, in *GetTransactionResultsRequest, opts ...grpc.CallOption) (*GetTransactionResultsResponse, error)
+	// Get the status of a transaction.
+	//
+	// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+	// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+	// its ID in the path, or call GET /v1/transactions/status with the customId query
+	// parameter.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	GetTransactionStatus(ctx context.Context, in *GetTransactionStatusRequest, opts ...grpc.CallOption) (*GetTransactionStatusResponse, error)
+	// Delete a transaction.
+	//
+	// Deletes the transaction with its document, results and feedback. Refer to the
+	// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+	// query parameter.
+	//
+	// Deletion runs in the background. A 200 response means the request was accepted, and the
+	// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	DeleteTransaction(ctx context.Context, in *DeleteTransactionRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	// Delete all transactions with a tag.
+	//
+	// Deletes every transaction in your project that was created with this tag, with its
+	// document, results and feedback. Deletion runs in the background, as with
+	// DELETE /v1/transactions/{id}.
+	//
+	// Returns 404 when no transaction in your project has the tag.
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	// Send corrected results for a transaction.
+	//
+	// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+	// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+	//
+	// Saves your corrected annotations as feedback, for improving the models. Send them once
+	// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+	// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+	//
+	// Returns 404 when the transaction doesn't exist in your project.
 	UpdateTransactionResults(ctx context.Context, in *UpdateTransactionResultsRequest, opts ...grpc.CallOption) (*UpdateTransactionResultsResponse, error)
 }
 
@@ -106,11 +169,74 @@ func (c *transactionServiceClient) UpdateTransactionResults(ctx context.Context,
 // All implementations should embed UnimplementedTransactionServiceServer
 // for forward compatibility
 type TransactionServiceServer interface {
+	// Create a transaction.
+	//
+	// Submits a document for processing and returns right away with the transaction ID, plus
+	// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+	// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+	//
+	// Returns 400 when the document or the features are missing, when a feature name is
+	// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+	// custom ID is already used in your project.
 	CreateTransaction(context.Context, *CreateTransactionRequest) (*CreateTransactionResponse, error)
+	// Get the results of a transaction.
+	//
+	// Returns the extracted data once processing has finished. Refer to the transaction by
+	// its ID in the path, or call GET /v1/transactions/results with the customId query
+	// parameter.
+	//
+	// An existing transaction always returns 200, whatever its status. While it's CREATED or
+	// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+	// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+	// of the features that succeeded, and errorMessage.
+	//
+	// The candidates of field features are filtered. By default you get at most one candidate
+	// per feature, and only at confidence level HIGH or above. Set minConfidence and
+	// maxResults to get more.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	GetTransactionResults(context.Context, *GetTransactionResultsRequest) (*GetTransactionResultsResponse, error)
+	// Get the status of a transaction.
+	//
+	// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+	// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+	// its ID in the path, or call GET /v1/transactions/status with the customId query
+	// parameter.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	GetTransactionStatus(context.Context, *GetTransactionStatusRequest) (*GetTransactionStatusResponse, error)
+	// Delete a transaction.
+	//
+	// Deletes the transaction with its document, results and feedback. Refer to the
+	// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+	// query parameter.
+	//
+	// Deletion runs in the background. A 200 response means the request was accepted, and the
+	// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+	//
+	// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+	// transaction ID nor a custom ID is given.
 	DeleteTransaction(context.Context, *DeleteTransactionRequest) (*emptypb.Empty, error)
+	// Delete all transactions with a tag.
+	//
+	// Deletes every transaction in your project that was created with this tag, with its
+	// document, results and feedback. Deletion runs in the background, as with
+	// DELETE /v1/transactions/{id}.
+	//
+	// Returns 404 when no transaction in your project has the tag.
 	DeleteTag(context.Context, *DeleteTagRequest) (*emptypb.Empty, error)
+	// Send corrected results for a transaction.
+	//
+	// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+	// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+	//
+	// Saves your corrected annotations as feedback, for improving the models. Send them once
+	// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+	// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+	//
+	// Returns 404 when the transaction doesn't exist in your project.
 	UpdateTransactionResults(context.Context, *UpdateTransactionResultsRequest) (*UpdateTransactionResultsResponse, error)
 }
 

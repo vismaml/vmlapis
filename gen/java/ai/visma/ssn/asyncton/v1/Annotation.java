@@ -6,6 +6,10 @@
 package ai.visma.ssn.asyncton.v1;
 
 /**
+ * <pre>
+ * The results of one feature. Only the fields that belong to the feature are set.
+ * </pre>
+ *
  * Protobuf type {@code ssn.asyncton.v1.Annotation}
  */
 public final class Annotation extends
@@ -59,7 +63,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object feature_ = "";
   /**
    * <pre>
-   * feature name e.g. "TOTAL_INCL_VAT"
+   * The feature these results belong to, for example TOTAL_INCL_VAT.
    * </pre>
    *
    * <code>string feature = 1 [json_name = "feature"];</code>
@@ -80,7 +84,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * feature name e.g. "TOTAL_INCL_VAT"
+   * The feature these results belong to, for example TOTAL_INCL_VAT.
    * </pre>
    *
    * <code>string feature = 1 [json_name = "feature"];</code>
@@ -106,7 +110,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Candidate> candidates_;
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -117,7 +123,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -129,7 +137,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -140,7 +150,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -151,7 +163,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ssn candidates
+   * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+   * them, at or above minConfidence, without their confidence value. corrected is only set at
+   * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -167,7 +181,10 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidates_;
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -178,7 +195,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -190,7 +210,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -201,7 +224,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -212,7 +238,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * purchase line candidates (old format)
+   * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+   * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+   * existing integrations. New fields, such as productType, are only added to
+   * purchaseLinesDetails, so use that instead.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -228,7 +257,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.AnswerCandidate> answerCandidates_;
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -239,7 +268,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -251,7 +280,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -262,7 +291,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -273,7 +302,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qa candidates
+   * Answers to the questions sent with the transaction, for the QA feature.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -288,7 +317,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.TextAnnotation textAnnotation_;
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -300,7 +330,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -312,7 +343,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text annotation
+   * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+   * pages broken down into blocks, paragraphs, words and symbols with their positions.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -327,7 +359,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PageText> pageTexts_;
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -338,7 +370,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -350,7 +382,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -361,7 +393,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -372,7 +404,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * page texts
+   * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -388,7 +420,10 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_;
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -399,7 +434,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -411,7 +449,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -422,7 +463,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -433,7 +477,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * vat distribution candidates (old format)
+   * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+   * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+   * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+   * integrations, so use vatDistributionDetails instead.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -449,7 +496,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.QrCodeData> qrCodes_;
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -460,7 +507,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -472,7 +519,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -483,7 +530,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -494,7 +541,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * qr codes detected in document
+   * QR codes found in the document, for the QR_CODES feature.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -510,7 +557,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.SwissQrBill> swissQrBills_;
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -521,7 +568,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -533,7 +580,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -544,7 +591,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -555,7 +602,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * swiss qr bills detected in document
+   * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -571,7 +618,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.PurchaseLine> purchaseLinesDetails_;
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -582,7 +631,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -594,7 +645,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -605,7 +658,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -616,7 +671,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+   * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+   * each line also holds productType suggestions.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -632,7 +689,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.VatDistribution> vatDistributionDetails_;
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -643,7 +702,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -655,7 +716,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -666,7 +729,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -677,7 +742,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+   * a list of candidates with their confidence levels. The candidates come without
+   * confidence values, bounding boxes or model metadata.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -693,7 +760,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.StructuredAddress> structuredAddress_;
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -704,7 +772,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -716,7 +785,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -727,7 +797,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -738,7 +809,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured address, parsed from the raw address using the geo service.
+   * The address split into street, postal code, city, country and country code, for the
+   * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -1052,6 +1124,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The results of one feature. Only the fields that belong to the feature are set.
+   * </pre>
+   *
    * Protobuf type {@code ssn.asyncton.v1.Annotation}
    */
   public static final class Builder extends
@@ -1785,7 +1861,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object feature_ = "";
     /**
      * <pre>
-     * feature name e.g. "TOTAL_INCL_VAT"
+     * The feature these results belong to, for example TOTAL_INCL_VAT.
      * </pre>
      *
      * <code>string feature = 1 [json_name = "feature"];</code>
@@ -1805,7 +1881,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * feature name e.g. "TOTAL_INCL_VAT"
+     * The feature these results belong to, for example TOTAL_INCL_VAT.
      * </pre>
      *
      * <code>string feature = 1 [json_name = "feature"];</code>
@@ -1826,7 +1902,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * feature name e.g. "TOTAL_INCL_VAT"
+     * The feature these results belong to, for example TOTAL_INCL_VAT.
      * </pre>
      *
      * <code>string feature = 1 [json_name = "feature"];</code>
@@ -1843,7 +1919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * feature name e.g. "TOTAL_INCL_VAT"
+     * The feature these results belong to, for example TOTAL_INCL_VAT.
      * </pre>
      *
      * <code>string feature = 1 [json_name = "feature"];</code>
@@ -1857,7 +1933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * feature name e.g. "TOTAL_INCL_VAT"
+     * The feature these results belong to, for example TOTAL_INCL_VAT.
      * </pre>
      *
      * <code>string feature = 1 [json_name = "feature"];</code>
@@ -1888,7 +1964,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1902,7 +1980,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1916,7 +1996,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1930,7 +2012,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1951,7 +2035,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1969,7 +2055,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -1989,7 +2077,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2010,7 +2100,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2028,7 +2120,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2046,7 +2140,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2065,7 +2161,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2082,7 +2180,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2099,7 +2199,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2110,7 +2212,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2124,7 +2228,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2139,7 +2245,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2150,7 +2258,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2162,7 +2272,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ssn candidates
+     * Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+     * them, at or above minConfidence, without their confidence value. corrected is only set at
+     * the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
      * </pre>
      *
      * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2200,7 +2312,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2214,7 +2329,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2228,7 +2346,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2242,7 +2363,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2263,7 +2387,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2281,7 +2408,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2301,7 +2431,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2322,7 +2455,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2340,7 +2476,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2358,7 +2497,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2377,7 +2519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2394,7 +2539,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2411,7 +2559,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2422,7 +2573,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2436,7 +2590,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2451,7 +2608,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2462,7 +2622,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2474,7 +2637,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * purchase line candidates (old format)
+     * [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+     * single string, the value of the first candidate in purchaseLinesDetails. Kept for
+     * existing integrations. New fields, such as productType, are only added to
+     * purchaseLinesDetails, so use that instead.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
@@ -2512,7 +2678,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2526,7 +2692,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2540,7 +2706,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2554,7 +2720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2575,7 +2741,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2593,7 +2759,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2613,7 +2779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2634,7 +2800,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2652,7 +2818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2670,7 +2836,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2689,7 +2855,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2706,7 +2872,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2723,7 +2889,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2734,7 +2900,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2748,7 +2914,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2763,7 +2929,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2774,7 +2940,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2786,7 +2952,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qa candidates
+     * Answers to the questions sent with the transaction, for the QA feature.
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
@@ -2815,7 +2981,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.TextAnnotation, ai.visma.ssn.type.TextAnnotation.Builder, ai.visma.ssn.type.TextAnnotationOrBuilder> textAnnotationBuilder_;
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2826,7 +2993,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2841,7 +3009,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2861,7 +3030,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2879,7 +3049,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2904,7 +3075,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2921,7 +3093,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2933,7 +3106,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2948,7 +3122,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text annotation
+     * The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+     * pages broken down into blocks, paragraphs, words and symbols with their positions.
      * </pre>
      *
      * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
@@ -2981,7 +3156,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -2995,7 +3170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3009,7 +3184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3023,7 +3198,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3044,7 +3219,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3062,7 +3237,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3082,7 +3257,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3103,7 +3278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3121,7 +3296,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3139,7 +3314,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3158,7 +3333,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3175,7 +3350,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3192,7 +3367,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3203,7 +3378,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3217,7 +3392,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3232,7 +3407,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3243,7 +3418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3255,7 +3430,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * page texts
+     * The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
      * </pre>
      *
      * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
@@ -3293,7 +3468,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3307,7 +3485,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3321,7 +3502,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3335,7 +3519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3356,7 +3543,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3374,7 +3564,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3394,7 +3587,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3415,7 +3611,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3433,7 +3632,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3451,7 +3653,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3470,7 +3675,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3487,7 +3695,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3504,7 +3715,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3515,7 +3729,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3529,7 +3746,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3544,7 +3764,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3555,7 +3778,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3567,7 +3793,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * vat distribution candidates (old format)
+     * [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+     * percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+     * totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+     * integrations, so use vatDistributionDetails instead.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 7 [json_name = "vatDistributionCandidates"];</code>
@@ -3605,7 +3834,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3619,7 +3848,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3633,7 +3862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3647,7 +3876,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3668,7 +3897,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3686,7 +3915,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3706,7 +3935,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3727,7 +3956,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3745,7 +3974,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3763,7 +3992,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3782,7 +4011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3799,7 +4028,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3816,7 +4045,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3827,7 +4056,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3841,7 +4070,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3856,7 +4085,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3867,7 +4096,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3879,7 +4108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * qr codes detected in document
+     * QR codes found in the document, for the QR_CODES feature.
      * </pre>
      *
      * <code>repeated .ssn.type.QrCodeData qr_codes = 8 [json_name = "qrCodes"];</code>
@@ -3917,7 +4146,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -3931,7 +4160,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -3945,7 +4174,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -3959,7 +4188,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -3980,7 +4209,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -3998,7 +4227,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4018,7 +4247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4039,7 +4268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4057,7 +4286,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4075,7 +4304,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4094,7 +4323,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4111,7 +4340,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4128,7 +4357,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4139,7 +4368,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4153,7 +4382,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4168,7 +4397,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4179,7 +4408,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4191,7 +4420,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * swiss qr bills detected in document
+     * Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
      * </pre>
      *
      * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 9 [json_name = "swissQrBills"];</code>
@@ -4229,7 +4458,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4243,7 +4474,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4257,7 +4490,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4271,7 +4506,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4292,7 +4529,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4310,7 +4549,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4330,7 +4571,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4351,7 +4594,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4369,7 +4614,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4387,7 +4634,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4406,7 +4655,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4423,7 +4674,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4440,7 +4693,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4451,7 +4706,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4465,7 +4722,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4480,7 +4739,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4491,7 +4752,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4503,7 +4766,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Purchase lines for the document. This is a list where each field is a candidate.
+     * Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+     * each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+     * each line also holds productType suggestions.
      * </pre>
      *
      * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 12 [json_name = "purchaseLinesDetails"];</code>
@@ -4541,7 +4806,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4555,7 +4822,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4569,7 +4838,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4583,7 +4854,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4604,7 +4877,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4622,7 +4897,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4642,7 +4919,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4663,7 +4942,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4681,7 +4962,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4699,7 +4982,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4718,7 +5003,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4735,7 +5022,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4752,7 +5041,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4763,7 +5054,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4777,7 +5070,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4792,7 +5087,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4803,7 +5100,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4815,7 +5114,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * VAT distribution for the document. This is a list where each field is a candidate.
+     * VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+     * a list of candidates with their confidence levels. The candidates come without
+     * confidence values, bounding boxes or model metadata.
      * </pre>
      *
      * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 13 [json_name = "vatDistributionDetails"];</code>
@@ -4853,7 +5154,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4867,7 +5169,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4881,7 +5184,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4895,7 +5199,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4916,7 +5221,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4934,7 +5240,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4954,7 +5261,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4975,7 +5283,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -4993,7 +5302,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5011,7 +5321,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5030,7 +5341,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5047,7 +5359,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5064,7 +5377,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5075,7 +5389,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5089,7 +5404,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5104,7 +5420,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5115,7 +5432,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>
@@ -5127,7 +5445,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured address, parsed from the raw address using the geo service.
+     * The address split into street, postal code, city, country and country code, for the
+     * SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
      * </pre>
      *
      * <code>repeated .ssn.type.StructuredAddress structured_address = 14 [json_name = "structuredAddress"];</code>

@@ -47,8 +47,7 @@ namespace Ssn.Type {
   }
   #region Messages
   /// <summary>
-  /// A vertex represents a 2D point in the image.
-  /// NOTE: the vertex coordinates are in the same scale as the original image.
+  /// A point on the page, in pixel coordinates.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vertex : pb::IMessage<Vertex>
@@ -100,7 +99,7 @@ namespace Ssn.Type {
     public const int XFieldNumber = 1;
     private int x_;
     /// <summary>
-    /// X coordinate.
+    /// The x coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +114,7 @@ namespace Ssn.Type {
     public const int YFieldNumber = 2;
     private int y_;
     /// <summary>
-    /// Y coordinate.
+    /// The y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -292,9 +291,7 @@ namespace Ssn.Type {
   }
 
   /// <summary>
-  /// A vertex represents a 2D point in the image.
-  /// NOTE: the normalized vertex coordinates are relative to the original image
-  /// and range from 0 to 1.
+  /// A point on the page, relative to the page size. Both coordinates range from 0 to 1.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
@@ -346,7 +343,7 @@ namespace Ssn.Type {
     public const int XFieldNumber = 1;
     private float x_;
     /// <summary>
-    /// X coordinate.
+    /// The x coordinate, relative to the page width.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -361,7 +358,7 @@ namespace Ssn.Type {
     public const int YFieldNumber = 2;
     private float y_;
     /// <summary>
-    /// Y coordinate.
+    /// The y coordinate, relative to the page height.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -538,7 +535,10 @@ namespace Ssn.Type {
   }
 
   /// <summary>
-  /// A bounding polygon for the detected image annotation.
+  /// A box on the page, for example around the text of a candidate. Its four points are
+  /// ordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,
+  /// the order follows the text as it's read in its natural orientation, so the first
+  /// point is always the top-left corner of the text.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly>
@@ -592,7 +592,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Vertex.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Vertex> vertices_ = new pbc::RepeatedField<global::Ssn.Type.Vertex>();
     /// <summary>
-    /// The bounding polygon vertices.
+    /// The four points, in pixel coordinates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -606,7 +606,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.NormalizedVertex.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.NormalizedVertex> normalizedVertices_ = new pbc::RepeatedField<global::Ssn.Type.NormalizedVertex>();
     /// <summary>
-    /// The bounding polygon normalized vertices.
+    /// The same four points relative to the page size, from 0 to 1, so you can place an
+    /// overlay without knowing the size of the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

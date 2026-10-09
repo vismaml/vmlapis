@@ -10,6 +10,11 @@ public interface RetentionPolicyOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Number of days examples count for training. Older examples are left out of training. The
+   * default is 180, which also applies when you send 0.
+   * </pre>
+   *
    * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
    * @return The maxDays.
    */

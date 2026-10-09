@@ -20,11 +20,16 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Service tier for suggestions. The v2 suggest endpoints use it, and the v1 API always runs as
+// STANDARD.
 type Tier int32
 
 const (
+	// The default.
 	Tier_STANDARD Tier = 0
-	Tier_ULTRA    Tier = 1
+	// Also has a second model check each VERY_HIGH answer, and returns the answer as ULTRA_HIGH
+	// when the check agrees.
+	Tier_ULTRA Tier = 1
 )
 
 // Enum value maps for Tier.

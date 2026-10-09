@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * Information about how Smartscan processed the document.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.DocumentMetadata}
  */
 public final class DocumentMetadata extends
@@ -46,7 +50,11 @@ private static final long serialVersionUID = 0L;
   private int pageCount_ = 0;
   /**
    * <pre>
-   * Number of pages in the document
+   * The number of pages Smartscan read, not the number of pages in the document. It's
+   * 1 when the first and last page are read together, which is the case for field
+   * predictions. When you request a feature that is read page by page, such as
+   * PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+   * read, up to 5.
    * </pre>
    *
    * <code>uint32 page_count = 1 [json_name = "pageCount"];</code>
@@ -215,6 +223,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Information about how Smartscan processed the document.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.DocumentMetadata}
    */
   public static final class Builder extends
@@ -353,7 +365,11 @@ private static final long serialVersionUID = 0L;
     private int pageCount_ ;
     /**
      * <pre>
-     * Number of pages in the document
+     * The number of pages Smartscan read, not the number of pages in the document. It's
+     * 1 when the first and last page are read together, which is the case for field
+     * predictions. When you request a feature that is read page by page, such as
+     * PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+     * read, up to 5.
      * </pre>
      *
      * <code>uint32 page_count = 1 [json_name = "pageCount"];</code>
@@ -365,7 +381,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of pages in the document
+     * The number of pages Smartscan read, not the number of pages in the document. It's
+     * 1 when the first and last page are read together, which is the case for field
+     * predictions. When you request a feature that is read page by page, such as
+     * PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+     * read, up to 5.
      * </pre>
      *
      * <code>uint32 page_count = 1 [json_name = "pageCount"];</code>
@@ -381,7 +401,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of pages in the document
+     * The number of pages Smartscan read, not the number of pages in the document. It's
+     * 1 when the first and last page are read together, which is the case for field
+     * predictions. When you request a feature that is read page by page, such as
+     * PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+     * read, up to 5.
      * </pre>
      *
      * <code>uint32 page_count = 1 [json_name = "pageCount"];</code>

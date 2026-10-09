@@ -90,8 +90,7 @@ private static final long serialVersionUID = 0L;
   private int width_ = 0;
   /**
    * <pre>
-   * Page width. For PDFs the unit is points. For images (including
-   * TIFFs) the unit is pixels.
+   * The width of the page.
    * </pre>
    *
    * <code>int32 width = 2 [json_name = "width"];</code>
@@ -106,8 +105,7 @@ private static final long serialVersionUID = 0L;
   private int height_ = 0;
   /**
    * <pre>
-   * Page height. For PDFs the unit is points. For images (including
-   * TIFFs) the unit is pixels.
+   * The height of the page.
    * </pre>
    *
    * <code>int32 height = 3 [json_name = "height"];</code>
@@ -817,8 +815,7 @@ private static final long serialVersionUID = 0L;
     private int width_ ;
     /**
      * <pre>
-     * Page width. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The width of the page.
      * </pre>
      *
      * <code>int32 width = 2 [json_name = "width"];</code>
@@ -830,8 +827,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page width. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The width of the page.
      * </pre>
      *
      * <code>int32 width = 2 [json_name = "width"];</code>
@@ -847,8 +843,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page width. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The width of the page.
      * </pre>
      *
      * <code>int32 width = 2 [json_name = "width"];</code>
@@ -864,8 +859,7 @@ private static final long serialVersionUID = 0L;
     private int height_ ;
     /**
      * <pre>
-     * Page height. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The height of the page.
      * </pre>
      *
      * <code>int32 height = 3 [json_name = "height"];</code>
@@ -877,8 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page height. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The height of the page.
      * </pre>
      *
      * <code>int32 height = 3 [json_name = "height"];</code>
@@ -894,8 +887,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Page height. For PDFs the unit is points. For images (including
-     * TIFFs) the unit is pixels.
+     * The height of the page.
      * </pre>
      *
      * <code>int32 height = 3 [json_name = "height"];</code>

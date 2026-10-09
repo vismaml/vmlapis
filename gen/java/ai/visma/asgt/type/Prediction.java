@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * Suggestions for one input, with one entry per target.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.Prediction}
  */
 public final class Prediction extends
@@ -48,11 +52,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -60,36 +72,65 @@ private static final long serialVersionUID = 0L;
         getNameBytes();
 
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     java.util.List<ai.visma.asgt.type.Prediction.Target.Candidate> 
         getCandidatesList();
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     ai.visma.asgt.type.Prediction.Target.Candidate getCandidates(int index);
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     int getCandidatesCount();
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     java.util.List<? extends ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder> 
         getCandidatesOrBuilderList();
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Whether an example's value for this target is one the model wasn't trained on. The
+     * suggest endpoints don't fill it in.
+     * </pre>
+     *
      * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
      * @return The unknownTargetClass.
      */
     boolean getUnknownTargetClass();
   }
   /**
+   * <pre>
+   * Suggestions for one target.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.Prediction.Target}
    */
   public static final class Target extends
@@ -133,11 +174,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * The suggested value.
+       * </pre>
+       *
        * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The value.
        */
       java.lang.String getValue();
       /**
+       * <pre>
+       * The suggested value.
+       * </pre>
+       *
        * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for value.
        */
@@ -160,6 +209,10 @@ private static final long serialVersionUID = 0L;
       ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceOrBuilder();
     }
     /**
+     * <pre>
+     * A suggested value for a target.
+     * </pre>
+     *
      * Protobuf type {@code asgt.type.Prediction.Target.Candidate}
      */
     public static final class Candidate extends
@@ -202,6 +255,10 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("serial")
       private volatile java.lang.Object value_ = "";
       /**
+       * <pre>
+       * The suggested value.
+       * </pre>
+       *
        * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The value.
        */
@@ -219,6 +276,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested value.
+       * </pre>
+       *
        * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
        * @return The bytes for value.
        */
@@ -436,6 +497,10 @@ private static final long serialVersionUID = 0L;
         return builder;
       }
       /**
+       * <pre>
+       * A suggested value for a target.
+       * </pre>
+       *
        * Protobuf type {@code asgt.type.Prediction.Target.Candidate}
        */
       public static final class Builder extends
@@ -604,6 +669,10 @@ private static final long serialVersionUID = 0L;
 
         private java.lang.Object value_ = "";
         /**
+         * <pre>
+         * The suggested value.
+         * </pre>
+         *
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
          */
@@ -620,6 +689,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * The suggested value.
+         * </pre>
+         *
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The bytes for value.
          */
@@ -637,6 +710,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         /**
+         * <pre>
+         * The suggested value.
+         * </pre>
+         *
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @param value The value to set.
          * @return This builder for chaining.
@@ -650,6 +727,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * The suggested value.
+         * </pre>
+         *
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return This builder for chaining.
          */
@@ -660,6 +741,10 @@ private static final long serialVersionUID = 0L;
           return this;
         }
         /**
+         * <pre>
+         * The suggested value.
+         * </pre>
+         *
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @param value The bytes for value to set.
          * @return This builder for chaining.
@@ -850,6 +935,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
@@ -867,6 +956,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the target.
+     * </pre>
+     *
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -889,6 +982,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<ai.visma.asgt.type.Prediction.Target.Candidate> candidates_;
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     @java.lang.Override
@@ -896,6 +993,10 @@ private static final long serialVersionUID = 0L;
       return candidates_;
     }
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     @java.lang.Override
@@ -904,6 +1005,10 @@ private static final long serialVersionUID = 0L;
       return candidates_;
     }
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     @java.lang.Override
@@ -911,6 +1016,10 @@ private static final long serialVersionUID = 0L;
       return candidates_.size();
     }
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     @java.lang.Override
@@ -918,6 +1027,10 @@ private static final long serialVersionUID = 0L;
       return candidates_.get(index);
     }
     /**
+     * <pre>
+     * The suggested values, highest confidence first.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     @java.lang.Override
@@ -929,6 +1042,11 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_TARGET_CLASS_FIELD_NUMBER = 3;
     private boolean unknownTargetClass_ = false;
     /**
+     * <pre>
+     * Whether an example's value for this target is one the model wasn't trained on. The
+     * suggest endpoints don't fill it in.
+     * </pre>
+     *
      * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
      * @return The unknownTargetClass.
      */
@@ -1119,6 +1237,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Suggestions for one target.
+     * </pre>
+     *
      * Protobuf type {@code asgt.type.Prediction.Target}
      */
     public static final class Builder extends
@@ -1329,6 +1451,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the target.
+       * </pre>
+       *
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
@@ -1345,6 +1471,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Name of the target.
+       * </pre>
+       *
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
@@ -1362,6 +1492,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Name of the target.
+       * </pre>
+       *
        * <code>string name = 1 [json_name = "name"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1375,6 +1509,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Name of the target.
+       * </pre>
+       *
        * <code>string name = 1 [json_name = "name"];</code>
        * @return This builder for chaining.
        */
@@ -1385,6 +1523,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Name of the target.
+       * </pre>
+       *
        * <code>string name = 1 [json_name = "name"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1412,6 +1554,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.type.Prediction.Target.Candidate, ai.visma.asgt.type.Prediction.Target.Candidate.Builder, ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder> candidatesBuilder_;
 
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public java.util.List<ai.visma.asgt.type.Prediction.Target.Candidate> getCandidatesList() {
@@ -1422,6 +1568,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public int getCandidatesCount() {
@@ -1432,6 +1582,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public ai.visma.asgt.type.Prediction.Target.Candidate getCandidates(int index) {
@@ -1442,6 +1596,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder setCandidates(
@@ -1459,6 +1617,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder setCandidates(
@@ -1473,6 +1635,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(ai.visma.asgt.type.Prediction.Target.Candidate value) {
@@ -1489,6 +1655,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
@@ -1506,6 +1676,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
@@ -1520,6 +1694,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder addCandidates(
@@ -1534,6 +1712,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder addAllCandidates(
@@ -1549,6 +1731,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder clearCandidates() {
@@ -1562,6 +1748,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public Builder removeCandidates(int index) {
@@ -1575,6 +1765,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public ai.visma.asgt.type.Prediction.Target.Candidate.Builder getCandidatesBuilder(
@@ -1582,6 +1776,10 @@ private static final long serialVersionUID = 0L;
         return getCandidatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
@@ -1592,6 +1790,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public java.util.List<? extends ai.visma.asgt.type.Prediction.Target.CandidateOrBuilder> 
@@ -1603,6 +1805,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public ai.visma.asgt.type.Prediction.Target.Candidate.Builder addCandidatesBuilder() {
@@ -1610,6 +1816,10 @@ private static final long serialVersionUID = 0L;
             ai.visma.asgt.type.Prediction.Target.Candidate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public ai.visma.asgt.type.Prediction.Target.Candidate.Builder addCandidatesBuilder(
@@ -1618,6 +1828,10 @@ private static final long serialVersionUID = 0L;
             index, ai.visma.asgt.type.Prediction.Target.Candidate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The suggested values, highest confidence first.
+       * </pre>
+       *
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
        */
       public java.util.List<ai.visma.asgt.type.Prediction.Target.Candidate.Builder> 
@@ -1641,6 +1855,11 @@ private static final long serialVersionUID = 0L;
 
       private boolean unknownTargetClass_ ;
       /**
+       * <pre>
+       * Whether an example's value for this target is one the model wasn't trained on. The
+       * suggest endpoints don't fill it in.
+       * </pre>
+       *
        * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
        * @return The unknownTargetClass.
        */
@@ -1649,6 +1868,11 @@ private static final long serialVersionUID = 0L;
         return unknownTargetClass_;
       }
       /**
+       * <pre>
+       * Whether an example's value for this target is one the model wasn't trained on. The
+       * suggest endpoints don't fill it in.
+       * </pre>
+       *
        * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
        * @param value The unknownTargetClass to set.
        * @return This builder for chaining.
@@ -1661,6 +1885,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Whether an example's value for this target is one the model wasn't trained on. The
+       * suggest endpoints don't fill it in.
+       * </pre>
+       *
        * <code>bool unknown_target_class = 3 [json_name = "unknownTargetClass"];</code>
        * @return This builder for chaining.
        */
@@ -1726,6 +1955,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.Prediction.Target> targets_;
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   @java.lang.Override
@@ -1733,6 +1966,10 @@ private static final long serialVersionUID = 0L;
     return targets_;
   }
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   @java.lang.Override
@@ -1741,6 +1978,10 @@ private static final long serialVersionUID = 0L;
     return targets_;
   }
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   @java.lang.Override
@@ -1748,6 +1989,10 @@ private static final long serialVersionUID = 0L;
     return targets_.size();
   }
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   @java.lang.Override
@@ -1755,6 +2000,10 @@ private static final long serialVersionUID = 0L;
     return targets_.get(index);
   }
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   @java.lang.Override
@@ -1766,6 +2015,11 @@ private static final long serialVersionUID = 0L;
   public static final int UNKNOWN_TOKEN_PERCENTAGE_FIELD_NUMBER = 2;
   private float unknownTokenPercentage_ = 0F;
   /**
+   * <pre>
+   * Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+   * fill it in.
+   * </pre>
+   *
    * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
    * @return The unknownTokenPercentage.
    */
@@ -1947,6 +2201,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Suggestions for one input, with one entry per target.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.Prediction}
    */
   public static final class Builder extends
@@ -2154,6 +2412,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.Prediction.Target, ai.visma.asgt.type.Prediction.Target.Builder, ai.visma.asgt.type.Prediction.TargetOrBuilder> targetsBuilder_;
 
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Prediction.Target> getTargetsList() {
@@ -2164,6 +2426,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public int getTargetsCount() {
@@ -2174,6 +2440,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public ai.visma.asgt.type.Prediction.Target getTargets(int index) {
@@ -2184,6 +2454,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder setTargets(
@@ -2201,6 +2475,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder setTargets(
@@ -2215,6 +2493,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder addTargets(ai.visma.asgt.type.Prediction.Target value) {
@@ -2231,6 +2513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder addTargets(
@@ -2248,6 +2534,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder addTargets(
@@ -2262,6 +2552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder addTargets(
@@ -2276,6 +2570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder addAllTargets(
@@ -2291,6 +2589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder clearTargets() {
@@ -2304,6 +2606,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public Builder removeTargets(int index) {
@@ -2317,6 +2623,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public ai.visma.asgt.type.Prediction.Target.Builder getTargetsBuilder(
@@ -2324,6 +2634,10 @@ private static final long serialVersionUID = 0L;
       return getTargetsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public ai.visma.asgt.type.Prediction.TargetOrBuilder getTargetsOrBuilder(
@@ -2334,6 +2648,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.Prediction.TargetOrBuilder> 
@@ -2345,6 +2663,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public ai.visma.asgt.type.Prediction.Target.Builder addTargetsBuilder() {
@@ -2352,6 +2674,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.type.Prediction.Target.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public ai.visma.asgt.type.Prediction.Target.Builder addTargetsBuilder(
@@ -2360,6 +2686,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.type.Prediction.Target.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One entry per target of the model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
      */
     public java.util.List<ai.visma.asgt.type.Prediction.Target.Builder> 
@@ -2383,6 +2713,11 @@ private static final long serialVersionUID = 0L;
 
     private float unknownTokenPercentage_ ;
     /**
+     * <pre>
+     * Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+     * fill it in.
+     * </pre>
+     *
      * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
      * @return The unknownTokenPercentage.
      */
@@ -2391,6 +2726,11 @@ private static final long serialVersionUID = 0L;
       return unknownTokenPercentage_;
     }
     /**
+     * <pre>
+     * Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+     * fill it in.
+     * </pre>
+     *
      * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
      * @param value The unknownTokenPercentage to set.
      * @return This builder for chaining.
@@ -2403,6 +2743,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+     * fill it in.
+     * </pre>
+     *
      * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
      * @return This builder for chaining.
      */

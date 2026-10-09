@@ -295,29 +295,6 @@ private static final long serialVersionUID = 0L;
   public static final int BOUNDING_BOX_FIELD_NUMBER = 2;
   private ai.visma.ssn.type.BoundingPoly boundingBox_;
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    * @return Whether the boundingBox field is set.
    */
@@ -326,29 +303,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    * @return The boundingBox.
    */
@@ -357,29 +311,6 @@ private static final long serialVersionUID = 0L;
     return boundingBox_ == null ? ai.visma.ssn.type.BoundingPoly.getDefaultInstance() : boundingBox_;
   }
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
    */
   @java.lang.Override
@@ -392,7 +323,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.Paragraph> paragraphs_;
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -403,7 +334,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -415,7 +346,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -426,7 +357,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -437,7 +368,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of paragraphs in this block (if this blocks is of type text).
+   * The paragraphs in the block, if it's a text block.
    * </pre>
    *
    * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1127,29 +1058,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.BoundingPoly, ai.visma.ssn.type.BoundingPoly.Builder, ai.visma.ssn.type.BoundingPolyOrBuilder> boundingBoxBuilder_;
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
@@ -1157,29 +1065,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
@@ -1191,29 +1076,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public Builder setBoundingBox(ai.visma.ssn.type.BoundingPoly value) {
@@ -1230,29 +1092,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public Builder setBoundingBox(
@@ -1267,29 +1106,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public Builder mergeBoundingBox(ai.visma.ssn.type.BoundingPoly value) {
@@ -1311,29 +1127,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public Builder clearBoundingBox() {
@@ -1347,29 +1140,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public ai.visma.ssn.type.BoundingPoly.Builder getBoundingBoxBuilder() {
@@ -1378,29 +1148,6 @@ private static final long serialVersionUID = 0L;
       return getBoundingBoxFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     public ai.visma.ssn.type.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -1412,29 +1159,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 2 [json_name = "boundingBox"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1465,7 +1189,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1479,7 +1203,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1493,7 +1217,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1507,7 +1231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1528,7 +1252,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1546,7 +1270,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1566,7 +1290,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1587,7 +1311,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1605,7 +1329,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1623,7 +1347,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1642,7 +1366,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1659,7 +1383,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1676,7 +1400,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1687,7 +1411,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1701,7 +1425,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1716,7 +1440,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1727,7 +1451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>
@@ -1739,7 +1463,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of paragraphs in this block (if this blocks is of type text).
+     * The paragraphs in the block, if it's a text block.
      * </pre>
      *
      * <code>repeated .ssn.type.Paragraph paragraphs = 3 [json_name = "paragraphs"];</code>

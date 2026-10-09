@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2.type;
 
 /**
+ * <pre>
+ * A training of a dataset.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.type.Training}
  */
 public final class Training extends
@@ -50,7 +54,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp createdAt_;
   /**
    * <pre>
-   * Creation time of the training
+   * When the training was scheduled.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -62,7 +66,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Creation time of the training
+   * When the training was scheduled.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -74,7 +78,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Creation time of the training
+   * When the training was scheduled.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -88,6 +92,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object status_ = "";
   /**
+   * <pre>
+   * Always empty, because the listings only return active trainings. Use trainingStatus.
+   * </pre>
+   *
    * <code>string status = 2 [json_name = "status"];</code>
    * @return The status.
    */
@@ -105,6 +113,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Always empty, because the listings only return active trainings. Use trainingStatus.
+   * </pre>
+   *
    * <code>string status = 2 [json_name = "status"];</code>
    * @return The bytes for status.
    */
@@ -128,15 +140,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object trainingStatus_ = "";
   /**
    * <pre>
-   * Status of the training.
-   * SCHEDULED - Training is scheduled to be run in a specific time. This
-   * could be in between 1 minute or 24 hours depending on how recently the dataset
-   * was created
-   * PENDING - The training is ready to be picked up by a worker.
-   * RUNNING - The training is currently running.
-   * DONE - The training has completed successfully.
-   * FAILED - The training failed due to an error. See training status for
-   * more information.
+   * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+   * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
    * </pre>
    *
    * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -157,15 +162,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Status of the training.
-   * SCHEDULED - Training is scheduled to be run in a specific time. This
-   * could be in between 1 minute or 24 hours depending on how recently the dataset
-   * was created
-   * PENDING - The training is ready to be picked up by a worker.
-   * RUNNING - The training is currently running.
-   * DONE - The training has completed successfully.
-   * FAILED - The training failed due to an error. See training status for
-   * more information.
+   * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+   * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
    * </pre>
    *
    * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -191,7 +189,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object trainingStatusMessage_ = "";
   /**
    * <pre>
-   * Additional information about the training status.
+   * More about the state, such as why the training failed.
    * </pre>
    *
    * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -212,7 +210,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Additional information about the training status.
+   * More about the state, such as why the training failed.
    * </pre>
    *
    * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -237,7 +235,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp finishTime_;
   /**
    * <pre>
-   * Specifies when did the training finish.
+   * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+   * failed trainings.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -249,7 +248,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies when did the training finish.
+   * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+   * failed trainings.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -261,7 +261,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies when did the training finish.
+   * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+   * failed trainings.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -275,7 +276,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.asgt.type.Dataset dataset_;
   /**
    * <pre>
-   * Specifies dataset the training ran on.
+   * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+   * fills it in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -287,7 +289,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies dataset the training ran on.
+   * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+   * fills it in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -299,7 +302,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies dataset the training ran on.
+   * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+   * fills it in.
    * </pre>
    *
    * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -313,7 +317,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp scheduleTime_;
   /**
    * <pre>
-   * Specifies when the training is scheduled.
+   * When the training is set to start.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -325,7 +329,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies when the training is scheduled.
+   * When the training is set to start.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -337,7 +341,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies when the training is scheduled.
+   * When the training is set to start.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -588,6 +592,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A training of a dataset.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.type.Training}
    */
   public static final class Builder extends
@@ -853,7 +861,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -864,7 +872,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -879,7 +887,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -899,7 +907,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -917,7 +925,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -942,7 +950,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -959,7 +967,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -971,7 +979,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -986,7 +994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Creation time of the training
+     * When the training was scheduled.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
@@ -1007,6 +1015,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object status_ = "";
     /**
+     * <pre>
+     * Always empty, because the listings only return active trainings. Use trainingStatus.
+     * </pre>
+     *
      * <code>string status = 2 [json_name = "status"];</code>
      * @return The status.
      */
@@ -1023,6 +1035,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Always empty, because the listings only return active trainings. Use trainingStatus.
+     * </pre>
+     *
      * <code>string status = 2 [json_name = "status"];</code>
      * @return The bytes for status.
      */
@@ -1040,6 +1056,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Always empty, because the listings only return active trainings. Use trainingStatus.
+     * </pre>
+     *
      * <code>string status = 2 [json_name = "status"];</code>
      * @param value The status to set.
      * @return This builder for chaining.
@@ -1053,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Always empty, because the listings only return active trainings. Use trainingStatus.
+     * </pre>
+     *
      * <code>string status = 2 [json_name = "status"];</code>
      * @return This builder for chaining.
      */
@@ -1063,6 +1087,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Always empty, because the listings only return active trainings. Use trainingStatus.
+     * </pre>
+     *
      * <code>string status = 2 [json_name = "status"];</code>
      * @param value The bytes for status to set.
      * @return This builder for chaining.
@@ -1080,15 +1108,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object trainingStatus_ = "";
     /**
      * <pre>
-     * Status of the training.
-     * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 24 hours depending on how recently the dataset
-     * was created
-     * PENDING - The training is ready to be picked up by a worker.
-     * RUNNING - The training is currently running.
-     * DONE - The training has completed successfully.
-     * FAILED - The training failed due to an error. See training status for
-     * more information.
+     * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+     * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
      * </pre>
      *
      * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -1108,15 +1129,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the training.
-     * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 24 hours depending on how recently the dataset
-     * was created
-     * PENDING - The training is ready to be picked up by a worker.
-     * RUNNING - The training is currently running.
-     * DONE - The training has completed successfully.
-     * FAILED - The training failed due to an error. See training status for
-     * more information.
+     * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+     * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
      * </pre>
      *
      * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -1137,15 +1151,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the training.
-     * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 24 hours depending on how recently the dataset
-     * was created
-     * PENDING - The training is ready to be picked up by a worker.
-     * RUNNING - The training is currently running.
-     * DONE - The training has completed successfully.
-     * FAILED - The training failed due to an error. See training status for
-     * more information.
+     * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+     * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
      * </pre>
      *
      * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -1162,15 +1169,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the training.
-     * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 24 hours depending on how recently the dataset
-     * was created
-     * PENDING - The training is ready to be picked up by a worker.
-     * RUNNING - The training is currently running.
-     * DONE - The training has completed successfully.
-     * FAILED - The training failed due to an error. See training status for
-     * more information.
+     * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+     * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
      * </pre>
      *
      * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -1184,15 +1184,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the training.
-     * SCHEDULED - Training is scheduled to be run in a specific time. This
-     * could be in between 1 minute or 24 hours depending on how recently the dataset
-     * was created
-     * PENDING - The training is ready to be picked up by a worker.
-     * RUNNING - The training is currently running.
-     * DONE - The training has completed successfully.
-     * FAILED - The training failed due to an error. See training status for
-     * more information.
+     * State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+     * a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
      * </pre>
      *
      * <code>string training_status = 3 [json_name = "trainingStatus"];</code>
@@ -1212,7 +1205,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object trainingStatusMessage_ = "";
     /**
      * <pre>
-     * Additional information about the training status.
+     * More about the state, such as why the training failed.
      * </pre>
      *
      * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -1232,7 +1225,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Additional information about the training status.
+     * More about the state, such as why the training failed.
      * </pre>
      *
      * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -1253,7 +1246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Additional information about the training status.
+     * More about the state, such as why the training failed.
      * </pre>
      *
      * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -1270,7 +1263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Additional information about the training status.
+     * More about the state, such as why the training failed.
      * </pre>
      *
      * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -1284,7 +1277,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Additional information about the training status.
+     * More about the state, such as why the training failed.
      * </pre>
      *
      * <code>string training_status_message = 4 [json_name = "trainingStatusMessage"];</code>
@@ -1306,7 +1299,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1317,7 +1311,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1332,7 +1327,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1352,7 +1348,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1370,7 +1367,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1395,7 +1393,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1412,7 +1411,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1424,7 +1424,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1439,7 +1440,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when did the training finish.
+     * When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+     * failed trainings.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
@@ -1463,7 +1465,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.type.Dataset, ai.visma.asgt.type.Dataset.Builder, ai.visma.asgt.type.DatasetOrBuilder> datasetBuilder_;
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1474,7 +1477,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1489,7 +1493,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1509,7 +1514,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1527,7 +1533,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1552,7 +1559,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1569,7 +1577,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1581,7 +1590,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1596,7 +1606,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies dataset the training ran on.
+     * The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+     * fills it in.
      * </pre>
      *
      * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
@@ -1620,7 +1631,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> scheduleTimeBuilder_;
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1631,7 +1642,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1646,7 +1657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1666,7 +1677,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1684,7 +1695,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1709,7 +1720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1726,7 +1737,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1738,7 +1749,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
@@ -1753,7 +1764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies when the training is scheduled.
+     * When the training is set to start.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>

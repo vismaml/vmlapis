@@ -30,65 +30,66 @@ namespace Asgt.V2 {
             "ZXIucHJvdG8aHWFzZ3QvdjIvcHJvZHVjdF9zZXJ2aWNlLnByb3RvGhdhc2d0",
             "L3YyL3R5cGUvZGF0YS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90bxoucHJvdG9jLWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9hbm5vdGF0aW9u",
-            "cy5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8iwgIKDlN1Z2dlc3RP",
+            "cy5wcm90bxoXdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8iwQIKDlN1Z2dlc3RP",
             "cHRpb25zEiMKDXN1Z2dlc3RfbGltaXQYASABKAVSDHN1Z2dlc3RMaW1pdBJO",
             "Cg5taW5fY29uZmlkZW5jZRgCIAEoDjIbLmFzZ3QudHlwZS5Db25maWRlbmNl",
             "LkxldmVsQgr6QgeCAQQQASAGUg1taW5Db25maWRlbmNlEj0KCm1vZGVsX3R5",
             "cGUYAyABKA4yFC5hc2d0LnR5cGUuTW9kZWxUeXBlQgj6QgWCAQIQAVIJbW9k",
             "ZWxUeXBlEjIKFWluY2x1ZGVfcHJvZHVjdF90eXBlcxgEIAEoCFITaW5jbHVk",
             "ZVByb2R1Y3RUeXBlcxItCgR0aWVyGAUgASgOMg8uYXNndC50eXBlLlRpZXJC",
-            "CPpCBYIBAhABUgR0aWVyOhmSQRYyFHsic3VnZ2VzdF9saW1pdCI6IDN9IroB",
-            "Cg5TdWdnZXN0UmVxdWVzdBJLCgxkYXRhc2V0X25hbWUYASABKAlCKPpCJXIj",
-            "KIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiRSC2RhdGFzZXRO",
-            "YW1lEigKBWlucHV0GAIgASgLMhIuYXNndC52Mi50eXBlLkRhdGFSBWlucHV0",
-            "EjEKB29wdGlvbnMYAyABKAsyFy5hc2d0LnYyLlN1Z2dlc3RPcHRpb25zUgdv",
-            "cHRpb25zIsoBCg9TdWdnZXN0UmVzcG9uc2USNQoKcHJlZGljdGlvbhgBIAEo",
-            "CzIVLmFzZ3QudHlwZS5QcmVkaWN0aW9uUgpwcmVkaWN0aW9uEiYKBW1vZGVs",
-            "GAIgASgLMhAuYXNndC50eXBlLk1vZGVsUgVtb2RlbBJYChhwcm9kdWN0X3R5",
-            "cGVfc3VnZ2VzdGlvbnMYAyABKAsyHi5hc2d0LnYyLlByb2R1Y3RUeXBlU3Vn",
-            "Z2VzdGlvblIWcHJvZHVjdFR5cGVTdWdnZXN0aW9ucyLBAQoTQmF0Y2hTdWdn",
-            "ZXN0UmVxdWVzdBJLCgxkYXRhc2V0X25hbWUYASABKAlCKPpCJXIjKIACMh5e",
-            "W0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiRSC2RhdGFzZXROYW1lEioK",
-            "BmlucHV0cxgCIAMoCzISLmFzZ3QudjIudHlwZS5EYXRhUgZpbnB1dHMSMQoH",
-            "b3B0aW9ucxgDIAEoCzIXLmFzZ3QudjIuU3VnZ2VzdE9wdGlvbnNSB29wdGlv",
-            "bnMi0QEKFEJhdGNoU3VnZ2VzdFJlc3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEg",
-            "AygLMhUuYXNndC50eXBlLlByZWRpY3Rpb25SC3ByZWRpY3Rpb25zEiYKBW1v",
-            "ZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVsUgVtb2RlbBJYChhwcm9kdWN0",
-            "X3R5cGVfc3VnZ2VzdGlvbnMYAyADKAsyHi5hc2d0LnYyLlByb2R1Y3RUeXBl",
-            "U3VnZ2VzdGlvblIWcHJvZHVjdFR5cGVTdWdnZXN0aW9uczK7AwoQU3VnZ2Vz",
-            "dGVyU2VydmljZRJsCgdTdWdnZXN0EhcuYXNndC52Mi5TdWdnZXN0UmVxdWVz",
-            "dBoYLmFzZ3QudjIuU3VnZ2VzdFJlc3BvbnNlIi6C0+STAigiIy92Mi9kYXRh",
-            "c2V0cy97ZGF0YXNldF9uYW1lfTpzdWdnZXN0OgEqEoABCgxCYXRjaFN1Z2dl",
+            "CPpCBYIBAhABUgR0aWVyOhiSQRUyE3sic3VnZ2VzdExpbWl0IjogM30iugEK",
+            "DlN1Z2dlc3RSZXF1ZXN0EksKDGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIlciMo",
+            "gAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJFILZGF0YXNldE5h",
+            "bWUSKAoFaW5wdXQYAiABKAsyEi5hc2d0LnYyLnR5cGUuRGF0YVIFaW5wdXQS",
+            "MQoHb3B0aW9ucxgDIAEoCzIXLmFzZ3QudjIuU3VnZ2VzdE9wdGlvbnNSB29w",
+            "dGlvbnMiygEKD1N1Z2dlc3RSZXNwb25zZRI1CgpwcmVkaWN0aW9uGAEgASgL",
+            "MhUuYXNndC50eXBlLlByZWRpY3Rpb25SCnByZWRpY3Rpb24SJgoFbW9kZWwY",
+            "AiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsElgKGHByb2R1Y3RfdHlw",
+            "ZV9zdWdnZXN0aW9ucxgDIAEoCzIeLmFzZ3QudjIuUHJvZHVjdFR5cGVTdWdn",
+            "ZXN0aW9uUhZwcm9kdWN0VHlwZVN1Z2dlc3Rpb25zIsEBChNCYXRjaFN1Z2dl",
+            "c3RSZXF1ZXN0EksKDGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5b",
+            "QS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJFILZGF0YXNldE5hbWUSKgoG",
+            "aW5wdXRzGAIgAygLMhIuYXNndC52Mi50eXBlLkRhdGFSBmlucHV0cxIxCgdv",
+            "cHRpb25zGAMgASgLMhcuYXNndC52Mi5TdWdnZXN0T3B0aW9uc1IHb3B0aW9u",
+            "cyLRAQoUQmF0Y2hTdWdnZXN0UmVzcG9uc2USNwoLcHJlZGljdGlvbnMYASAD",
+            "KAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvblILcHJlZGljdGlvbnMSJgoFbW9k",
+            "ZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsElgKGHByb2R1Y3Rf",
+            "dHlwZV9zdWdnZXN0aW9ucxgDIAMoCzIeLmFzZ3QudjIuUHJvZHVjdFR5cGVT",
+            "dWdnZXN0aW9uUhZwcm9kdWN0VHlwZVN1Z2dlc3Rpb25zMswDChBTdWdnZXN0",
+            "ZXJTZXJ2aWNlEmwKB1N1Z2dlc3QSFy5hc2d0LnYyLlN1Z2dlc3RSZXF1ZXN0",
+            "GhguYXNndC52Mi5TdWdnZXN0UmVzcG9uc2UiLoLT5JMCKCIjL3YyL2RhdGFz",
+            "ZXRzL3tkYXRhc2V0X25hbWV9OnN1Z2dlc3Q6ASoSgAEKDEJhdGNoU3VnZ2Vz",
+            "dBIcLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVxdWVzdBodLmFzZ3QudjIuQmF0",
+            "Y2hTdWdnZXN0UmVzcG9uc2UiM4LT5JMCLSIoL3YyL2RhdGFzZXRzL3tkYXRh",
+            "c2V0X25hbWV9OmJhdGNoU3VnZ2VzdDoBKhKLAQoRTW9kZWxCYXRjaFN1Z2dl",
             "c3QSHC5hc2d0LnYyLkJhdGNoU3VnZ2VzdFJlcXVlc3QaHS5hc2d0LnYyLkJh",
-            "dGNoU3VnZ2VzdFJlc3BvbnNlIjOC0+STAi0iKC92Mi9kYXRhc2V0cy97ZGF0",
-            "YXNldF9uYW1lfTpiYXRjaFN1Z2dlc3Q6ASoSiwEKEU1vZGVsQmF0Y2hTdWdn",
-            "ZXN0EhwuYXNndC52Mi5CYXRjaFN1Z2dlc3RSZXF1ZXN0Gh0uYXNndC52Mi5C",
-            "YXRjaFN1Z2dlc3RSZXNwb25zZSI5gtPkkwIzIi4vdjIvZGF0YXNldHMve2Rh",
-            "dGFzZXRfbmFtZX0vbW9kZWw6YmF0Y2hTdWdnZXN0OgEqGiiSQSUSI01ha2Ug",
-            "cHJlZGljdGlvbnMgYWdhaW5zdCBhIGRhdGFzZXQuQoAIChBhaS52aXNtYS5h",
-            "c2d0LnYyQhVTdWdnZXN0ZXJTZXJ2aWNlUHJvdG9QAVorZ2l0aHViLmNvbS9l",
-            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC92MqICA0FYWKoCB0FzZ3Qu",
-            "VjLKAgdBc2d0XFYy4gITQXNndFxWMlxHUEJNZXRhZGF0YeoCCEFzZ3Q6OlYy",
-            "kkHpBhLZBQoLQXV0b3N1Z2dlc3QSxQVBdXRvc3VnZ2VzdCBpcyB0aGUgcHJv",
-            "Y2VzcyBhdXRvbWF0aW9uIHRvb2xraXQgZm9yIEVSUHMsIGRlc2lnbmVkIGZv",
-            "ciB0cmFuc2FjdGlvbiB3b3JrZmxvd3MuIFVwbG9hZCBleGFtcGxlcyB0byBh",
-            "IGRhdGFzZXQsIGFuZCBBdXRvc3VnZ2VzdCB0cmFpbnMgbW9kZWxzIHRoYXQg",
-            "c3VnZ2VzdCB0YXJnZXQgdmFsdWVzIGZvciBuZXcgaW5wdXRzLgoKKipIb3N0",
-            "czoqKiBgYXBpLnByb2QuYXNndC52aXNtYS5haWAgZm9yIHByb2R1Y3Rpb24g",
-            "YW5kIGBhcGkuc3RhZy5hc2d0LnZpc21hLmFpYCBmb3Igc3RhZ2luZy4KCioq",
-            "QXV0aGVudGljYXRpb246Kiogc2VuZCB5b3VyIHByb2plY3QgdG9rZW4gYXMg",
-            "YEF1dGhvcml6YXRpb246IEJlYXJlciA8dG9rZW4+YC4gU2VlIFtBdXRoZW50",
-            "aWNhdGlvbl0oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9hdXRoZW50aWNh",
-            "dGlvbi8pLgoKKipFcnJvcnM6KiogYSBmYWlsZWQgY2FsbCByZXR1cm5zIGFu",
-            "IEhUVFAgZXJyb3Igc3RhdHVzIHdpdGggYSBKU09OIGJvZHkgdGhhdCBob2xk",
-            "cyBgY29kZWAsIGBtZXNzYWdlYCBhbmQgYGRldGFpbHNgLgoKKipHdWlkZXM6",
-            "KiogW0F1dG9zdWdnZXN0IHYyXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFp",
-            "L2F1dG9zdWdnZXN0LXYyL2dldHRpbmctc3RhcnRlZC8pIGFuZCBbbGltaXRz",
-            "IGFuZCByYXRlIGxpbWl0c10oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9y",
-            "YXRlLWxpbWl0LykuMgJ2MioBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGlj",
-            "YXRpb24vanNvblpSClAKCkJlYXJlckF1dGgSQggCEi1Zb3VyIHByb2plY3Qg",
-            "dG9rZW4sIHNlbnQgYXMgYEJlYXJlciA8dG9rZW4+YC4aDUF1dGhvcml6YXRp",
-            "b24gAmIQCg4KCkJlYXJlckF1dGgSAGIGcHJvdG8z"));
+            "dGNoU3VnZ2VzdFJlc3BvbnNlIjmC0+STAjMiLi92Mi9kYXRhc2V0cy97ZGF0",
+            "YXNldF9uYW1lfS9tb2RlbDpiYXRjaFN1Z2dlc3Q6ASoaOZJBNhI0R2V0IHN1",
+            "Z2dlc3Rpb25zIGZyb20gdGhlIG1vZGVsIHRyYWluZWQgb24gYSBkYXRhc2V0",
+            "LkKACAoQYWkudmlzbWEuYXNndC52MkIVU3VnZ2VzdGVyU2VydmljZVByb3Rv",
+            "UAFaK2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3Qv",
+            "djKiAgNBWFiqAgdBc2d0LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BCTWV0",
+            "YWRhdGHqAghBc2d0OjpWMpJB6QYS2QUKC0F1dG9zdWdnZXN0EsUFQXV0b3N1",
+            "Z2dlc3QgaXMgdGhlIHByb2Nlc3MgYXV0b21hdGlvbiB0b29sa2l0IGZvciBF",
+            "UlBzLCBkZXNpZ25lZCBmb3IgdHJhbnNhY3Rpb24gd29ya2Zsb3dzLiBVcGxv",
+            "YWQgZXhhbXBsZXMgdG8gYSBkYXRhc2V0LCBhbmQgQXV0b3N1Z2dlc3QgdHJh",
+            "aW5zIG1vZGVscyB0aGF0IHN1Z2dlc3QgdGFyZ2V0IHZhbHVlcyBmb3IgbmV3",
+            "IGlucHV0cy4KCioqSG9zdHM6KiogYGFwaS5wcm9kLmFzZ3QudmlzbWEuYWlg",
+            "IGZvciBwcm9kdWN0aW9uIGFuZCBgYXBpLnN0YWcuYXNndC52aXNtYS5haWAg",
+            "Zm9yIHN0YWdpbmcuCgoqKkF1dGhlbnRpY2F0aW9uOioqIHNlbmQgeW91ciBw",
+            "cm9qZWN0IHRva2VuIGFzIGBBdXRob3JpemF0aW9uOiBCZWFyZXIgPHRva2Vu",
+            "PmAuIFNlZSBbQXV0aGVudGljYXRpb25dKGh0dHBzOi8vZG9jcy52bWwudmlz",
+            "bWEuYWkvYXV0aGVudGljYXRpb24vKS4KCioqRXJyb3JzOioqIGEgZmFpbGVk",
+            "IGNhbGwgcmV0dXJucyBhbiBIVFRQIGVycm9yIHN0YXR1cyB3aXRoIGEgSlNP",
+            "TiBib2R5IHRoYXQgaG9sZHMgYGNvZGVgLCBgbWVzc2FnZWAgYW5kIGBkZXRh",
+            "aWxzYC4KCioqR3VpZGVzOioqIFtBdXRvc3VnZ2VzdCB2Ml0oaHR0cHM6Ly9k",
+            "b2NzLnZtbC52aXNtYS5haS9hdXRvc3VnZ2VzdC12Mi9nZXR0aW5nLXN0YXJ0",
+            "ZWQvKSBhbmQgW2xpbWl0cyBhbmQgcmF0ZSBsaW1pdHNdKGh0dHBzOi8vZG9j",
+            "cy52bWwudmlzbWEuYWkvcmF0ZS1saW1pdC8pLjICdjIqAQIyEGFwcGxpY2F0",
+            "aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25aUgpQCgpCZWFyZXJBdXRoEkII",
+            "AhItWW91ciBwcm9qZWN0IHRva2VuLCBzZW50IGFzIGBCZWFyZXIgPHRva2Vu",
+            "PmAuGg1BdXRob3JpemF0aW9uIAJiEAoOCgpCZWFyZXJBdXRoEgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelTypeReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TierReflection.Descriptor, global::Asgt.V2.ProductServiceReflection.Descriptor, global::Asgt.V2.Type.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -103,6 +104,9 @@ namespace Asgt.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// Options for the suggest endpoints. All of them are optional.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestOptions : pb::IMessage<SuggestOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -156,7 +160,7 @@ namespace Asgt.V2 {
     public const int SuggestLimitFieldNumber = 1;
     private int suggestLimit_;
     /// <summary>
-    /// Maximum number of suggestions to return per target
+    /// Maximum number of candidates per target. The default is 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -171,7 +175,10 @@ namespace Asgt.V2 {
     public const int MinConfidenceFieldNumber = 2;
     private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
     /// <summary>
-    /// Not implemented yet.
+    /// The confidence level you need. Candidates below it aren't removed, so filter on each
+    /// candidate's confidence.level yourself. When a target's best candidate is below this level,
+    /// the service tries to find a better answer and uses it if it reaches the level. The default
+    /// is HIGH. ULTRA_HIGH isn't accepted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +193,8 @@ namespace Asgt.V2 {
     public const int ModelTypeFieldNumber = 3;
     private global::Asgt.Type.ModelType modelType_ = global::Asgt.Type.ModelType.Default;
     /// <summary>
-    /// Model type requested
+    /// [NOT IMPLEMENTED] Ignored: suggestions always come from the dataset's current model. If you
+    /// set it, it must be DEFAULT, TENSORFLOW or ONNX.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -201,7 +209,8 @@ namespace Asgt.V2 {
     public const int IncludeProductTypesFieldNumber = 4;
     private bool includeProductTypes_;
     /// <summary>
-    /// When true, the service will also call the ProductTypeService and include product type suggestions in the response
+    /// When true, the response also has product type candidates for the text of each input. The
+    /// default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,9 +224,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 5;
     private global::Asgt.Type.Tier tier_ = global::Asgt.Type.Tier.Standard;
-    /// <summary>
-    /// Tier determines which model serves the request
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Tier Tier {
@@ -464,6 +470,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/datasets/{datasetName}:suggest.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestRequest : pb::IMessage<SuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -515,7 +524,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// Name of the dataset to make prediction against
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -529,9 +538,6 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "input" field.</summary>
     public const int InputFieldNumber = 2;
     private global::Asgt.V2.Type.Data input_;
-    /// <summary>
-    /// Input data to use for prediction
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.Type.Data Input {
@@ -760,6 +766,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Suggestions for one input.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestResponse : pb::IMessage<SuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -822,6 +831,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 2;
     private global::Asgt.Type.Model model_;
+    /// <summary>
+    /// The model that made the prediction. Only its version is filled in.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Model Model {
@@ -834,6 +846,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "product_type_suggestions" field.</summary>
     public const int ProductTypeSuggestionsFieldNumber = 3;
     private global::Asgt.V2.ProductTypeSuggestion productTypeSuggestions_;
+    /// <summary>
+    /// Product type candidates for the input's text, when includeProductTypes is true.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.ProductTypeSuggestion ProductTypeSuggestions {
@@ -1059,6 +1074,10 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/datasets/{datasetName}:batchSuggest and
+  /// POST /v2/datasets/{datasetName}/model:batchSuggest.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSuggestRequest : pb::IMessage<BatchSuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1110,7 +1129,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// Name of the dataset to make prediction against
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1127,7 +1146,7 @@ namespace Asgt.V2 {
         = pb::FieldCodec.ForMessage(18, global::Asgt.V2.Type.Data.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.Type.Data> inputs_ = new pbc::RepeatedField<global::Asgt.V2.Type.Data>();
     /// <summary>
-    /// Input data to use for prediction
+    /// The inputs to get suggestions for. Each one must set a data structure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1335,6 +1354,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Suggestions for several inputs.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSuggestResponse : pb::IMessage<BatchSuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1387,6 +1409,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Prediction.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
+    /// <summary>
+    /// One prediction per input, in the same order.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
@@ -1396,6 +1421,10 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 2;
     private global::Asgt.Type.Model model_;
+    /// <summary>
+    /// The model that made the predictions. Only its version is filled in, and it's empty when the
+    /// dataset has no model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.Type.Model Model {
@@ -1410,6 +1439,10 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.ProductTypeSuggestion> _repeated_productTypeSuggestions_codec
         = pb::FieldCodec.ForMessage(26, global::Asgt.V2.ProductTypeSuggestion.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> productTypeSuggestions_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion>();
+    /// <summary>
+    /// Product type candidates for each input's text, in the same order, when includeProductTypes
+    /// is true.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.ProductTypeSuggestion> ProductTypeSuggestions {

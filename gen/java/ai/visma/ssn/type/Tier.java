@@ -6,27 +6,44 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * The model tier that processes the document. When no tier is set, PREMIUM is used.
+ * </pre>
+ *
  * Protobuf enum {@code ssn.type.Tier}
  */
 public enum Tier
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * Use the default tier. Defaults to the STANDARD option or account default, if set.
+   * No tier set. The document is processed as PREMIUM.
    * </pre>
    *
    * <code>DEFAULT = 0;</code>
    */
   DEFAULT(0),
   /**
+   * <pre>
+   * The older tier, kept for existing integrations. Use PREMIUM for new integrations.
+   * </pre>
+   *
    * <code>STANDARD = 1;</code>
    */
   STANDARD(1),
   /**
+   * <pre>
+   * Our proprietary AI, and the tier used when no tier is set.
+   * </pre>
+   *
    * <code>PREMIUM = 2;</code>
    */
   PREMIUM(2),
   /**
+   * <pre>
+   * Combines our proprietary AI with reasoning LLMs for the highest available quality.
+   * Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
+   * </pre>
+   *
    * <code>ULTRA = 3;</code>
    */
   ULTRA(3),
@@ -48,21 +65,34 @@ public enum Tier
   }
   /**
    * <pre>
-   * Use the default tier. Defaults to the STANDARD option or account default, if set.
+   * No tier set. The document is processed as PREMIUM.
    * </pre>
    *
    * <code>DEFAULT = 0;</code>
    */
   public static final int DEFAULT_VALUE = 0;
   /**
+   * <pre>
+   * The older tier, kept for existing integrations. Use PREMIUM for new integrations.
+   * </pre>
+   *
    * <code>STANDARD = 1;</code>
    */
   public static final int STANDARD_VALUE = 1;
   /**
+   * <pre>
+   * Our proprietary AI, and the tier used when no tier is set.
+   * </pre>
+   *
    * <code>PREMIUM = 2;</code>
    */
   public static final int PREMIUM_VALUE = 2;
   /**
+   * <pre>
+   * Combines our proprietary AI with reasoning LLMs for the highest available quality.
+   * Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
+   * </pre>
+   *
    * <code>ULTRA = 3;</code>
    */
   public static final int ULTRA_VALUE = 3;

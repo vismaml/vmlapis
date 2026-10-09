@@ -10,16 +10,28 @@ public interface ProductTypeLogitsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @return A list containing the values.
    */
   java.util.List<java.lang.Float> getValuesList();
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @return The count of values.
    */
   int getValuesCount();
   /**
+   * <pre>
+   * The scores.
+   * </pre>
+   *
    * <code>repeated float values = 1 [json_name = "values"];</code>
    * @param index The index of the element to return.
    * @return The values at the given index.

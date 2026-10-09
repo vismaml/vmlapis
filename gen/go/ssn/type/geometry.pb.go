@@ -35,16 +35,15 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// A vertex represents a 2D point in the image.
-// NOTE: the vertex coordinates are in the same scale as the original image.
+// A point on the page, in pixel coordinates.
 type Vertex struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// X coordinate.
+	// The x coordinate.
 	X int32 `protobuf:"varint,1,opt,name=x,proto3" json:"x,omitempty"`
-	// Y coordinate.
+	// The y coordinate.
 	Y int32 `protobuf:"varint,2,opt,name=y,proto3" json:"y,omitempty"`
 }
 
@@ -94,17 +93,15 @@ func (x *Vertex) GetY() int32 {
 	return 0
 }
 
-// A vertex represents a 2D point in the image.
-// NOTE: the normalized vertex coordinates are relative to the original image
-// and range from 0 to 1.
+// A point on the page, relative to the page size. Both coordinates range from 0 to 1.
 type NormalizedVertex struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// X coordinate.
+	// The x coordinate, relative to the page width.
 	X float32 `protobuf:"fixed32,1,opt,name=x,proto3" json:"x,omitempty"`
-	// Y coordinate.
+	// The y coordinate, relative to the page height.
 	Y float32 `protobuf:"fixed32,2,opt,name=y,proto3" json:"y,omitempty"`
 }
 
@@ -154,15 +151,19 @@ func (x *NormalizedVertex) GetY() float32 {
 	return 0
 }
 
-// A bounding polygon for the detected image annotation.
+// A box on the page, for example around the text of a candidate. Its four points are
+// ordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,
+// the order follows the text as it's read in its natural orientation, so the first
+// point is always the top-left corner of the text.
 type BoundingPoly struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The bounding polygon vertices.
+	// The four points, in pixel coordinates.
 	Vertices []*Vertex `protobuf:"bytes,1,rep,name=vertices,proto3" json:"vertices,omitempty"`
-	// The bounding polygon normalized vertices.
+	// The same four points relative to the page size, from 0 to 1, so you can place an
+	// overlay without knowing the size of the image.
 	NormalizedVertices []*NormalizedVertex `protobuf:"bytes,2,rep,name=normalized_vertices,json=normalizedVertices,proto3" json:"normalized_vertices,omitempty"`
 }
 

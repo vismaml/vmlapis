@@ -10,23 +10,43 @@ public interface ProductTypeFeedbackRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @return A list containing the texts.
    */
   java.util.List<java.lang.String>
       getTextsList();
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @return The count of texts.
    */
   int getTextsCount();
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @param index The index of the element to return.
    * @return The texts at the given index.
    */
   java.lang.String getTexts(int index);
   /**
+   * <pre>
+   * The texts, such as invoice lines or bank transaction descriptions. At least one is
+   * required.
+   * </pre>
+   *
    * <code>repeated string texts = 1 [json_name = "texts", (.validate.rules) = { ... }</code>
    * @param index The index of the value to return.
    * @return The bytes of the texts at the given index.
@@ -35,23 +55,43 @@ public interface ProductTypeFeedbackRequestOrBuilder extends
       getTextsBytes(int index);
 
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @return A list containing the trueCategories.
    */
   java.util.List<java.lang.String>
       getTrueCategoriesList();
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @return The count of trueCategories.
    */
   int getTrueCategoriesCount();
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @param index The index of the element to return.
    * @return The trueCategories at the given index.
    */
   java.lang.String getTrueCategories(int index);
   /**
+   * <pre>
+   * The correct product type for each text, in the same order as texts, as a ProductType name
+   * such as ACCOUNTING_SOFTWARE.
+   * </pre>
+   *
    * <code>repeated string true_categories = 2 [json_name = "trueCategories", (.validate.rules) = { ... }</code>
    * @param index The index of the value to return.
    * @return The bytes of the trueCategories at the given index.

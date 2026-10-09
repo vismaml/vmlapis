@@ -7,7 +7,7 @@ package ai.visma.ssn.asyncton.v1;
 
 /**
  * <pre>
- * --- get: "/v1/transactions/{id}/results" ---
+ * Identifies the transaction whose results to get, and filters the candidates.
  * </pre>
  *
  * Protobuf type {@code ssn.asyncton.v1.GetTransactionResultsRequest}
@@ -53,6 +53,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -70,6 +75,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -92,6 +102,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to GET /v1/transactions/results.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -109,6 +124,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to GET /v1/transactions/results.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -131,8 +151,10 @@ private static final long serialVersionUID = 0L;
   private int minConfidence_ = 0;
   /**
    * <pre>
-   * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-   * e.g. repeated string features like in CreateTransactionRequest
+   * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+   * out, and so is a field feature with no candidate left. Applies to field features such as
+   * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+   * codes or text.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -143,8 +165,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-   * e.g. repeated string features like in CreateTransactionRequest
+   * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+   * out, and so is a field feature with no candidate left. Applies to field features such as
+   * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+   * codes or text.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -158,6 +182,10 @@ private static final long serialVersionUID = 0L;
   public static final int MAX_RESULTS_FIELD_NUMBER = 4;
   private int maxResults_ = 0;
   /**
+   * <pre>
+   * The maximum number of candidates per field feature. Defaults to 1.
+   * </pre>
+   *
    * <code>int32 max_results = 4 [json_name = "maxResults"];</code>
    * @return The maxResults.
    */
@@ -355,7 +383,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- get: "/v1/transactions/{id}/results" ---
+   * Identifies the transaction whose results to get, and filters the candidates.
    * </pre>
    *
    * Protobuf type {@code ssn.asyncton.v1.GetTransactionResultsRequest}
@@ -535,6 +563,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -551,6 +584,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -568,6 +606,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -581,6 +624,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -591,6 +639,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID, as returned when the transaction was created. Takes precedence over
+     * customId when both are set.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -607,6 +660,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to GET /v1/transactions/results.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -623,6 +681,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to GET /v1/transactions/results.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -640,6 +703,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to GET /v1/transactions/results.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -653,6 +721,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to GET /v1/transactions/results.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -663,6 +736,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID you set when creating the transaction. Used only when no transaction ID
+     * is given, so send it to GET /v1/transactions/results.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.
@@ -680,8 +758,10 @@ private static final long serialVersionUID = 0L;
     private int minConfidence_ = 0;
     /**
      * <pre>
-     * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-     * e.g. repeated string features like in CreateTransactionRequest
+     * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+     * out, and so is a field feature with no candidate left. Applies to field features such as
+     * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+     * codes or text.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -692,8 +772,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-     * e.g. repeated string features like in CreateTransactionRequest
+     * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+     * out, and so is a field feature with no candidate left. Applies to field features such as
+     * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+     * codes or text.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -708,8 +790,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-     * e.g. repeated string features like in CreateTransactionRequest
+     * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+     * out, and so is a field feature with no candidate left. Applies to field features such as
+     * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+     * codes or text.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -722,8 +806,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-     * e.g. repeated string features like in CreateTransactionRequest
+     * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+     * out, and so is a field feature with no candidate left. Applies to field features such as
+     * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+     * codes or text.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -741,8 +827,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * GetTransactionResultsRequest message can potentially have a list of features to filter the response
-     * e.g. repeated string features like in CreateTransactionRequest
+     * The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+     * out, and so is a field feature with no candidate left. Applies to field features such as
+     * TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+     * codes or text.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -757,6 +845,10 @@ private static final long serialVersionUID = 0L;
 
     private int maxResults_ ;
     /**
+     * <pre>
+     * The maximum number of candidates per field feature. Defaults to 1.
+     * </pre>
+     *
      * <code>int32 max_results = 4 [json_name = "maxResults"];</code>
      * @return The maxResults.
      */
@@ -765,6 +857,10 @@ private static final long serialVersionUID = 0L;
       return maxResults_;
     }
     /**
+     * <pre>
+     * The maximum number of candidates per field feature. Defaults to 1.
+     * </pre>
+     *
      * <code>int32 max_results = 4 [json_name = "maxResults"];</code>
      * @param value The maxResults to set.
      * @return This builder for chaining.
@@ -777,6 +873,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The maximum number of candidates per field feature. Defaults to 1.
+     * </pre>
+     *
      * <code>int32 max_results = 4 [json_name = "maxResults"];</code>
      * @return This builder for chaining.
      */

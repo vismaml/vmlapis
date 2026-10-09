@@ -38,13 +38,26 @@ namespace Ssn.Type {
 
   }
   #region Enums
+  /// <summary>
+  /// The model tier that processes the document. When no tier is set, PREMIUM is used.
+  /// </summary>
   public enum Tier {
     /// <summary>
-    /// Use the default tier. Defaults to the STANDARD option or account default, if set.
+    /// No tier set. The document is processed as PREMIUM.
     /// </summary>
     [pbr::OriginalName("DEFAULT")] Default = 0,
+    /// <summary>
+    /// The older tier, kept for existing integrations. Use PREMIUM for new integrations.
+    /// </summary>
     [pbr::OriginalName("STANDARD")] Standard = 1,
+    /// <summary>
+    /// Our proprietary AI, and the tier used when no tier is set.
+    /// </summary>
     [pbr::OriginalName("PREMIUM")] Premium = 2,
+    /// <summary>
+    /// Combines our proprietary AI with reasoning LLMs for the highest available quality.
+    /// Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
+    /// </summary>
     [pbr::OriginalName("ULTRA")] Ultra = 3,
     [pbr::OriginalName("HUMAN")] Human = 4,
   }

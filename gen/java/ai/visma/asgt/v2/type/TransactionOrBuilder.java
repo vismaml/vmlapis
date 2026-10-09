@@ -11,7 +11,7 @@ public interface TransactionOrBuilder extends
 
   /**
    * <pre>
-   * Text of the bank transaction.
+   * Text of the bank transaction, such as its statement text.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -20,7 +20,7 @@ public interface TransactionOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Text of the bank transaction.
+   * Text of the bank transaction, such as its statement text.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>

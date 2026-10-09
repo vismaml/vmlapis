@@ -50,6 +50,9 @@ namespace Asgt.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A dataset of examples that Autosuggest trains models on.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -107,6 +110,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "consumer" field.</summary>
     public const int ConsumerFieldNumber = 1;
     private string consumer_ = "";
+    /// <summary>
+    /// Name of the project the dataset belongs to.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Consumer {
@@ -119,6 +125,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
+    /// <summary>
+    /// Name of the dataset.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
@@ -131,6 +140,10 @@ namespace Asgt.Type {
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 3;
     private string type_ = "";
+    /// <summary>
+    /// Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+    /// API, the first example you add sets it, and it's empty until then.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Type {
@@ -145,6 +158,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<string> _repeated_tags_codec
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Tags the dataset was created with.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
@@ -156,6 +172,10 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<string> _repeated_targets_codec
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+    /// empty for datasets created with the v2 API.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Targets {
@@ -177,6 +197,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "created_at" field.</summary>
     public const int CreatedAtFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    /// <summary>
+    /// When the dataset was created, or created again after it was deleted.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
@@ -189,6 +212,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "updated_at" field.</summary>
     public const int UpdatedAtFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updatedAt_;
+    /// <summary>
+    /// [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdatedAt {
@@ -202,7 +228,8 @@ namespace Asgt.Type {
     public const int SizeFieldNumber = 12;
     private long size_;
     /// <summary>
-    /// Number of samples in the dataset reflecting added entries that meet the retention policy
+    /// [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+    /// retention window.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -216,6 +243,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "truncated_at" field.</summary>
     public const int TruncatedAtFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp truncatedAt_;
+    /// <summary>
+    /// When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TruncatedAt {

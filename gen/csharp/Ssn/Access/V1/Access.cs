@@ -25,19 +25,21 @@ namespace Ssn.Access.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpzc24vYWNjZXNzL3YxL2FjY2Vzcy5wcm90bxINc3NuLmFjY2Vzcy52MRoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byI1Cg9WYWxldEtleVJlcXVl",
-            "c3QSEAoDc3ViGAEgASgJUgNzdWISEAoDZXhwGAIgASgDUgNleHAiOAoQVmFs",
-            "ZXRLZXlSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFAoFdG9rZW4YAiABKAlS",
-            "BXRva2VuMn0KBkFjY2VzcxJzChBHZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFj",
-            "Y2Vzcy52MS5WYWxldEtleVJlcXVlc3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0",
-            "S2V5UmVzcG9uc2UiHoLT5JMCGCITL3YxL2FjY2Vzcy92YWxldGtleToBKkK1",
-            "AQoWYWkudmlzbWEuc3NuLmFjY2Vzcy52MUILQWNjZXNzUHJvdG9QAVo4Z2l0",
-            "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2FjY2Vzcy92",
-            "MTthY2Nlc3OiAgNTQViqAg1Tc24uQWNjZXNzLlYxygINU3NuXEFjY2Vzc1xW",
-            "MeICGVNzblxBY2Nlc3NcVjFcR1BCTWV0YWRhdGHqAg9Tc246OkFjY2Vzczo6",
-            "VjFiBnByb3RvMw=="));
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoucHJvdG9jLWdlbi1vcGVu",
+            "YXBpdjIvb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90byI1Cg9WYWxldEtleVJl",
+            "cXVlc3QSEAoDc3ViGAEgASgJUgNzdWISEAoDZXhwGAIgASgDUgNleHAiOAoQ",
+            "VmFsZXRLZXlSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFAoFdG9rZW4YAiAB",
+            "KAlSBXRva2VuMsIBCgZBY2Nlc3MScwoQR2VuZXJhdGVWYWxldEtleRIeLnNz",
+            "bi5hY2Nlc3MudjEuVmFsZXRLZXlSZXF1ZXN0Gh8uc3NuLmFjY2Vzcy52MS5W",
+            "YWxldEtleVJlc3BvbnNlIh6C0+STAhgiEy92MS9hY2Nlc3MvdmFsZXRrZXk6",
+            "ASoaQ5JBQBI+Q3JlYXRlIHZhbGV0IGtleXMsIHNob3J0LWxpdmVkIHRva2Vu",
+            "cyBmb3Igd2ViIGFuZCBtb2JpbGUgYXBwcy5CtQEKFmFpLnZpc21hLnNzbi5h",
+            "Y2Nlc3MudjFCC0FjY2Vzc1Byb3RvUAFaOGdpdGh1Yi5jb20vZS1jb25vbWlj",
+            "L3ZtbGFwaXMvZ2VuL2dvL3Nzbi9hY2Nlc3MvdjE7YWNjZXNzogIDU0FYqgIN",
+            "U3NuLkFjY2Vzcy5WMcoCDVNzblxBY2Nlc3NcVjHiAhlTc25cQWNjZXNzXFYx",
+            "XEdQQk1ldGFkYXRh6gIPU3NuOjpBY2Nlc3M6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyRequest), global::Ssn.Access.V1.ValetKeyRequest.Parser, new[]{ "Sub", "Exp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyResponse), global::Ssn.Access.V1.ValetKeyResponse.Parser, new[]{ "Id", "Token" }, null, null, null, null)
@@ -47,6 +49,9 @@ namespace Ssn.Access.V1 {
 
   }
   #region Messages
+  /// <summary>
+  /// Options for a new valet key.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValetKeyRequest : pb::IMessage<ValetKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -97,8 +102,8 @@ namespace Ssn.Access.V1 {
     public const int SubFieldNumber = 1;
     private string sub_ = "";
     /// <summary>
-    /// Principal / Data Subject, ie. user id
-    /// https://tools.ietf.org/html/rfc7519#section-4.1.2
+    /// Optional. Who the key is for, for example your user's ID. It's stored in
+    /// the token as its subject (the `sub` claim).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,9 +118,8 @@ namespace Ssn.Access.V1 {
     public const int ExpFieldNumber = 2;
     private long exp_;
     /// <summary>
-    /// Timestamp for when this key expires
-    /// Default 8 hours from now, max 48h
-    /// https://tools.ietf.org/html/rfc7519#section-4.1.4
+    /// When the key expires, as a Unix timestamp in seconds. At most 48 hours
+    /// from now. Defaults to 8 hours after the key is issued.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,6 +295,9 @@ namespace Ssn.Access.V1 {
 
   }
 
+  /// <summary>
+  /// A new valet key.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValetKeyResponse : pb::IMessage<ValetKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -341,7 +348,7 @@ namespace Ssn.Access.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Key for this key
+    /// Unique ID of the key, also stored in the token as its `jti` claim.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -356,7 +363,8 @@ namespace Ssn.Access.V1 {
     public const int TokenFieldNumber = 2;
     private string token_ = "";
     /// <summary>
-    /// A JWT Token
+    /// The valet key, a signed JSON Web Token (JWT). Send it as
+    /// `Authorization: Bearer &lt;token>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

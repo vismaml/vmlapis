@@ -6,6 +6,11 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * A purchase line in the older format, with a single value for each field. Use
+ * PurchaseLine instead: it has candidates with confidence levels for each field.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.PurchaseLineCandidate}
  */
 public final class PurchaseLineCandidate extends
@@ -63,8 +68,7 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the line was found.
-   * page_ref start from 1.
+   * The page the line was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -80,7 +84,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object code_ = "";
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * The product code, product number or SKU that the supplier uses for the item.
    * </pre>
    *
    * <code>string code = 2 [json_name = "code"];</code>
@@ -101,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code is an ID that supplier uses to identify the item
+   * The product code, product number or SKU that the supplier uses for the item.
    * </pre>
    *
    * <code>string code = 2 [json_name = "code"];</code>
@@ -127,7 +131,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object description_ = "";
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * The description of the line, typically the name of a product or the delivered service.
    * </pre>
    *
    * <code>string description = 3 [json_name = "description"];</code>
@@ -148,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Description is a piece of text that describes the item
+   * The description of the line, typically the name of a product or the delivered service.
    * </pre>
    *
    * <code>string description = 3 [json_name = "description"];</code>
@@ -174,7 +178,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object quantity_ = "";
   /**
    * <pre>
-   * Quantity is the number of items
+   * The quantity.
    * </pre>
    *
    * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -195,7 +199,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Quantity is the number of items
+   * The quantity.
    * </pre>
    *
    * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -221,7 +225,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object itemNumber_ = "";
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * The row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -242,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ItemNumber is the number of the item
+   * The row number, position or ID of the line, if the document states one.
    * </pre>
    *
    * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -268,7 +272,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object unit_ = "";
   /**
    * <pre>
-   * Unit is the unit of the item
+   * The unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>string unit = 6 [json_name = "unit"];</code>
@@ -289,7 +293,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit is the unit of the item
+   * The unit of the quantity, for example "pieces", "kg" or "lb".
    * </pre>
    *
    * <code>string unit = 6 [json_name = "unit"];</code>
@@ -315,7 +319,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object totalDiscount_ = "";
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * The total discount of the line.
    * </pre>
    *
    * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -336,7 +340,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Total discount is the total discount of the line
+   * The total discount of the line.
    * </pre>
    *
    * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -362,7 +366,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object percentageDiscount_ = "";
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * The discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -383,7 +387,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Percentage discount is the percentage discount of the line
+   * The discount rate of the line, as a percentage.
    * </pre>
    *
    * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -409,7 +413,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object totalInclVat_ = "";
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * The line total including VAT.
    * </pre>
    *
    * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -430,7 +434,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Total incl vat is the total price of the line including vat
+   * The line total including VAT.
    * </pre>
    *
    * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -456,7 +460,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object totalExclVat_ = "";
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * The line total excluding VAT.
    * </pre>
    *
    * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -477,7 +481,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Total excl vat is the total price of the line excluding vat
+   * The line total excluding VAT.
    * </pre>
    *
    * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -503,7 +507,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object totalVat_ = "";
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * The VAT amount of the line.
    * </pre>
    *
    * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -524,7 +528,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Total vat is the total vat of the line
+   * The VAT amount of the line.
    * </pre>
    *
    * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -550,7 +554,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object percentageVat_ = "";
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * The VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -571,7 +575,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Percentage vat is the percentage vat of the line
+   * The VAT rate of the line, as a percentage, for example "25.0".
    * </pre>
    *
    * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -597,7 +601,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object unitPriceInclVat_ = "";
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * The price of one unit, including VAT.
    * </pre>
    *
    * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -618,7 +622,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit price incl vat is the unit price of the line including vat
+   * The price of one unit, including VAT.
    * </pre>
    *
    * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -644,7 +648,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object unitPriceExclVat_ = "";
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * The price of one unit, excluding VAT.
    * </pre>
    *
    * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -665,7 +669,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit price excl vat is the unit price of the line excluding vat
+   * The price of one unit, excluding VAT.
    * </pre>
    *
    * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -691,7 +695,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object total_ = "";
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * The line total as stated on the line, usually the rightmost amount. Documents
+   * often don't say whether it includes VAT.
    * </pre>
    *
    * <code>string total = 17 [json_name = "total"];</code>
@@ -712,7 +717,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Total is the total price of the line (with/without vat)
+   * The line total as stated on the line, usually the rightmost amount. Documents
+   * often don't say whether it includes VAT.
    * </pre>
    *
    * <code>string total = 17 [json_name = "total"];</code>
@@ -738,7 +744,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object unitPrice_ = "";
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * The price of one unit as stated on the line. Documents often don't say whether
+   * it includes VAT.
    * </pre>
    *
    * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -759,7 +766,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit price is the unit price of the line (with/without vat)
+   * The price of one unit as stated on the line. Documents often don't say whether
+   * it includes VAT.
    * </pre>
    *
    * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -783,10 +791,6 @@ private static final long serialVersionUID = 0L;
   public static final int MODEL_METADATA_FIELD_NUMBER = 19;
   private ai.visma.ssn.type.ModelSpec modelMetadata_;
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
@@ -795,10 +799,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
@@ -807,10 +807,6 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
   /**
-   * <pre>
-   * Model metadata
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
    */
   @java.lang.Override
@@ -823,7 +819,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object productType_ = "";
   /**
    * <pre>
-   * Product type classification for the line
+   * The product type of the line in the older format. For product types, request
+   * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
    * </pre>
    *
    * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -844,7 +841,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Product type classification for the line
+   * The product type of the line in the older format. For product types, request
+   * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
    * </pre>
    *
    * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -1199,6 +1197,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A purchase line in the older format, with a single value for each field. Use
+   * PurchaseLine instead: it has candidates with confidence levels for each field.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.PurchaseLineCandidate}
    */
   public static final class Builder extends
@@ -1590,8 +1593,7 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -1603,8 +1605,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -1620,8 +1621,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the line was found.
-     * page_ref start from 1.
+     * The page the line was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -1637,7 +1637,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object code_ = "";
     /**
      * <pre>
-     * Code is an ID that supplier uses to identify the item
+     * The product code, product number or SKU that the supplier uses for the item.
      * </pre>
      *
      * <code>string code = 2 [json_name = "code"];</code>
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code is an ID that supplier uses to identify the item
+     * The product code, product number or SKU that the supplier uses for the item.
      * </pre>
      *
      * <code>string code = 2 [json_name = "code"];</code>
@@ -1678,7 +1678,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code is an ID that supplier uses to identify the item
+     * The product code, product number or SKU that the supplier uses for the item.
      * </pre>
      *
      * <code>string code = 2 [json_name = "code"];</code>
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code is an ID that supplier uses to identify the item
+     * The product code, product number or SKU that the supplier uses for the item.
      * </pre>
      *
      * <code>string code = 2 [json_name = "code"];</code>
@@ -1709,7 +1709,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code is an ID that supplier uses to identify the item
+     * The product code, product number or SKU that the supplier uses for the item.
      * </pre>
      *
      * <code>string code = 2 [json_name = "code"];</code>
@@ -1729,7 +1729,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object description_ = "";
     /**
      * <pre>
-     * Description is a piece of text that describes the item
+     * The description of the line, typically the name of a product or the delivered service.
      * </pre>
      *
      * <code>string description = 3 [json_name = "description"];</code>
@@ -1749,7 +1749,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description is a piece of text that describes the item
+     * The description of the line, typically the name of a product or the delivered service.
      * </pre>
      *
      * <code>string description = 3 [json_name = "description"];</code>
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description is a piece of text that describes the item
+     * The description of the line, typically the name of a product or the delivered service.
      * </pre>
      *
      * <code>string description = 3 [json_name = "description"];</code>
@@ -1787,7 +1787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description is a piece of text that describes the item
+     * The description of the line, typically the name of a product or the delivered service.
      * </pre>
      *
      * <code>string description = 3 [json_name = "description"];</code>
@@ -1801,7 +1801,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description is a piece of text that describes the item
+     * The description of the line, typically the name of a product or the delivered service.
      * </pre>
      *
      * <code>string description = 3 [json_name = "description"];</code>
@@ -1821,7 +1821,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object quantity_ = "";
     /**
      * <pre>
-     * Quantity is the number of items
+     * The quantity.
      * </pre>
      *
      * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -1841,7 +1841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Quantity is the number of items
+     * The quantity.
      * </pre>
      *
      * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Quantity is the number of items
+     * The quantity.
      * </pre>
      *
      * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -1879,7 +1879,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Quantity is the number of items
+     * The quantity.
      * </pre>
      *
      * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -1893,7 +1893,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Quantity is the number of items
+     * The quantity.
      * </pre>
      *
      * <code>string quantity = 4 [json_name = "quantity"];</code>
@@ -1913,7 +1913,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object itemNumber_ = "";
     /**
      * <pre>
-     * ItemNumber is the number of the item
+     * The row number, position or ID of the line, if the document states one.
      * </pre>
      *
      * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -1933,7 +1933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ItemNumber is the number of the item
+     * The row number, position or ID of the line, if the document states one.
      * </pre>
      *
      * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -1954,7 +1954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ItemNumber is the number of the item
+     * The row number, position or ID of the line, if the document states one.
      * </pre>
      *
      * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -1971,7 +1971,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ItemNumber is the number of the item
+     * The row number, position or ID of the line, if the document states one.
      * </pre>
      *
      * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -1985,7 +1985,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ItemNumber is the number of the item
+     * The row number, position or ID of the line, if the document states one.
      * </pre>
      *
      * <code>string item_number = 5 [json_name = "itemNumber"];</code>
@@ -2005,7 +2005,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object unit_ = "";
     /**
      * <pre>
-     * Unit is the unit of the item
+     * The unit of the quantity, for example "pieces", "kg" or "lb".
      * </pre>
      *
      * <code>string unit = 6 [json_name = "unit"];</code>
@@ -2025,7 +2025,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit is the unit of the item
+     * The unit of the quantity, for example "pieces", "kg" or "lb".
      * </pre>
      *
      * <code>string unit = 6 [json_name = "unit"];</code>
@@ -2046,7 +2046,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit is the unit of the item
+     * The unit of the quantity, for example "pieces", "kg" or "lb".
      * </pre>
      *
      * <code>string unit = 6 [json_name = "unit"];</code>
@@ -2063,7 +2063,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit is the unit of the item
+     * The unit of the quantity, for example "pieces", "kg" or "lb".
      * </pre>
      *
      * <code>string unit = 6 [json_name = "unit"];</code>
@@ -2077,7 +2077,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit is the unit of the item
+     * The unit of the quantity, for example "pieces", "kg" or "lb".
      * </pre>
      *
      * <code>string unit = 6 [json_name = "unit"];</code>
@@ -2097,7 +2097,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object totalDiscount_ = "";
     /**
      * <pre>
-     * Total discount is the total discount of the line
+     * The total discount of the line.
      * </pre>
      *
      * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -2117,7 +2117,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total discount is the total discount of the line
+     * The total discount of the line.
      * </pre>
      *
      * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -2138,7 +2138,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total discount is the total discount of the line
+     * The total discount of the line.
      * </pre>
      *
      * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -2155,7 +2155,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total discount is the total discount of the line
+     * The total discount of the line.
      * </pre>
      *
      * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -2169,7 +2169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total discount is the total discount of the line
+     * The total discount of the line.
      * </pre>
      *
      * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
@@ -2189,7 +2189,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object percentageDiscount_ = "";
     /**
      * <pre>
-     * Percentage discount is the percentage discount of the line
+     * The discount rate of the line, as a percentage.
      * </pre>
      *
      * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -2209,7 +2209,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage discount is the percentage discount of the line
+     * The discount rate of the line, as a percentage.
      * </pre>
      *
      * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -2230,7 +2230,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage discount is the percentage discount of the line
+     * The discount rate of the line, as a percentage.
      * </pre>
      *
      * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -2247,7 +2247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage discount is the percentage discount of the line
+     * The discount rate of the line, as a percentage.
      * </pre>
      *
      * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -2261,7 +2261,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage discount is the percentage discount of the line
+     * The discount rate of the line, as a percentage.
      * </pre>
      *
      * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
@@ -2281,7 +2281,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object totalInclVat_ = "";
     /**
      * <pre>
-     * Total incl vat is the total price of the line including vat
+     * The line total including VAT.
      * </pre>
      *
      * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -2301,7 +2301,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total incl vat is the total price of the line including vat
+     * The line total including VAT.
      * </pre>
      *
      * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -2322,7 +2322,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total incl vat is the total price of the line including vat
+     * The line total including VAT.
      * </pre>
      *
      * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -2339,7 +2339,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total incl vat is the total price of the line including vat
+     * The line total including VAT.
      * </pre>
      *
      * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -2353,7 +2353,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total incl vat is the total price of the line including vat
+     * The line total including VAT.
      * </pre>
      *
      * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
@@ -2373,7 +2373,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object totalExclVat_ = "";
     /**
      * <pre>
-     * Total excl vat is the total price of the line excluding vat
+     * The line total excluding VAT.
      * </pre>
      *
      * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -2393,7 +2393,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total excl vat is the total price of the line excluding vat
+     * The line total excluding VAT.
      * </pre>
      *
      * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -2414,7 +2414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total excl vat is the total price of the line excluding vat
+     * The line total excluding VAT.
      * </pre>
      *
      * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -2431,7 +2431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total excl vat is the total price of the line excluding vat
+     * The line total excluding VAT.
      * </pre>
      *
      * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -2445,7 +2445,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total excl vat is the total price of the line excluding vat
+     * The line total excluding VAT.
      * </pre>
      *
      * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
@@ -2465,7 +2465,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object totalVat_ = "";
     /**
      * <pre>
-     * Total vat is the total vat of the line
+     * The VAT amount of the line.
      * </pre>
      *
      * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -2485,7 +2485,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total vat is the total vat of the line
+     * The VAT amount of the line.
      * </pre>
      *
      * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -2506,7 +2506,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total vat is the total vat of the line
+     * The VAT amount of the line.
      * </pre>
      *
      * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -2523,7 +2523,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total vat is the total vat of the line
+     * The VAT amount of the line.
      * </pre>
      *
      * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -2537,7 +2537,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total vat is the total vat of the line
+     * The VAT amount of the line.
      * </pre>
      *
      * <code>string total_vat = 11 [json_name = "totalVat"];</code>
@@ -2557,7 +2557,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object percentageVat_ = "";
     /**
      * <pre>
-     * Percentage vat is the percentage vat of the line
+     * The VAT rate of the line, as a percentage, for example "25.0".
      * </pre>
      *
      * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -2577,7 +2577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage vat is the percentage vat of the line
+     * The VAT rate of the line, as a percentage, for example "25.0".
      * </pre>
      *
      * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -2598,7 +2598,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage vat is the percentage vat of the line
+     * The VAT rate of the line, as a percentage, for example "25.0".
      * </pre>
      *
      * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -2615,7 +2615,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage vat is the percentage vat of the line
+     * The VAT rate of the line, as a percentage, for example "25.0".
      * </pre>
      *
      * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -2629,7 +2629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Percentage vat is the percentage vat of the line
+     * The VAT rate of the line, as a percentage, for example "25.0".
      * </pre>
      *
      * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
@@ -2649,7 +2649,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object unitPriceInclVat_ = "";
     /**
      * <pre>
-     * Unit price incl vat is the unit price of the line including vat
+     * The price of one unit, including VAT.
      * </pre>
      *
      * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -2669,7 +2669,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price incl vat is the unit price of the line including vat
+     * The price of one unit, including VAT.
      * </pre>
      *
      * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -2690,7 +2690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price incl vat is the unit price of the line including vat
+     * The price of one unit, including VAT.
      * </pre>
      *
      * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -2707,7 +2707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price incl vat is the unit price of the line including vat
+     * The price of one unit, including VAT.
      * </pre>
      *
      * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -2721,7 +2721,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price incl vat is the unit price of the line including vat
+     * The price of one unit, including VAT.
      * </pre>
      *
      * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
@@ -2741,7 +2741,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object unitPriceExclVat_ = "";
     /**
      * <pre>
-     * Unit price excl vat is the unit price of the line excluding vat
+     * The price of one unit, excluding VAT.
      * </pre>
      *
      * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -2761,7 +2761,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price excl vat is the unit price of the line excluding vat
+     * The price of one unit, excluding VAT.
      * </pre>
      *
      * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -2782,7 +2782,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price excl vat is the unit price of the line excluding vat
+     * The price of one unit, excluding VAT.
      * </pre>
      *
      * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -2799,7 +2799,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price excl vat is the unit price of the line excluding vat
+     * The price of one unit, excluding VAT.
      * </pre>
      *
      * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -2813,7 +2813,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price excl vat is the unit price of the line excluding vat
+     * The price of one unit, excluding VAT.
      * </pre>
      *
      * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
@@ -2833,7 +2833,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object total_ = "";
     /**
      * <pre>
-     * Total is the total price of the line (with/without vat)
+     * The line total as stated on the line, usually the rightmost amount. Documents
+     * often don't say whether it includes VAT.
      * </pre>
      *
      * <code>string total = 17 [json_name = "total"];</code>
@@ -2853,7 +2854,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total is the total price of the line (with/without vat)
+     * The line total as stated on the line, usually the rightmost amount. Documents
+     * often don't say whether it includes VAT.
      * </pre>
      *
      * <code>string total = 17 [json_name = "total"];</code>
@@ -2874,7 +2876,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total is the total price of the line (with/without vat)
+     * The line total as stated on the line, usually the rightmost amount. Documents
+     * often don't say whether it includes VAT.
      * </pre>
      *
      * <code>string total = 17 [json_name = "total"];</code>
@@ -2891,7 +2894,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total is the total price of the line (with/without vat)
+     * The line total as stated on the line, usually the rightmost amount. Documents
+     * often don't say whether it includes VAT.
      * </pre>
      *
      * <code>string total = 17 [json_name = "total"];</code>
@@ -2905,7 +2909,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Total is the total price of the line (with/without vat)
+     * The line total as stated on the line, usually the rightmost amount. Documents
+     * often don't say whether it includes VAT.
      * </pre>
      *
      * <code>string total = 17 [json_name = "total"];</code>
@@ -2925,7 +2930,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object unitPrice_ = "";
     /**
      * <pre>
-     * Unit price is the unit price of the line (with/without vat)
+     * The price of one unit as stated on the line. Documents often don't say whether
+     * it includes VAT.
      * </pre>
      *
      * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -2945,7 +2951,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price is the unit price of the line (with/without vat)
+     * The price of one unit as stated on the line. Documents often don't say whether
+     * it includes VAT.
      * </pre>
      *
      * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -2966,7 +2973,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price is the unit price of the line (with/without vat)
+     * The price of one unit as stated on the line. Documents often don't say whether
+     * it includes VAT.
      * </pre>
      *
      * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -2983,7 +2991,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price is the unit price of the line (with/without vat)
+     * The price of one unit as stated on the line. Documents often don't say whether
+     * it includes VAT.
      * </pre>
      *
      * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -2997,7 +3006,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit price is the unit price of the line (with/without vat)
+     * The price of one unit as stated on the line. Documents often don't say whether
+     * it includes VAT.
      * </pre>
      *
      * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
@@ -3018,10 +3028,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> modelMetadataBuilder_;
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
@@ -3029,10 +3035,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00010000) != 0);
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
@@ -3044,10 +3046,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -3064,10 +3062,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(
@@ -3082,10 +3076,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public Builder mergeModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -3107,10 +3097,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public Builder clearModelMetadata() {
@@ -3124,10 +3110,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder getModelMetadataBuilder() {
@@ -3136,10 +3118,6 @@ private static final long serialVersionUID = 0L;
       return getModelMetadataFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -3151,10 +3129,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model metadata
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -3174,7 +3148,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object productType_ = "";
     /**
      * <pre>
-     * Product type classification for the line
+     * The product type of the line in the older format. For product types, request
+     * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
      * </pre>
      *
      * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -3194,7 +3169,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Product type classification for the line
+     * The product type of the line in the older format. For product types, request
+     * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
      * </pre>
      *
      * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -3215,7 +3191,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Product type classification for the line
+     * The product type of the line in the older format. For product types, request
+     * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
      * </pre>
      *
      * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -3232,7 +3209,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Product type classification for the line
+     * The product type of the line in the older format. For product types, request
+     * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
      * </pre>
      *
      * <code>string product_type = 20 [json_name = "productType"];</code>
@@ -3246,7 +3224,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Product type classification for the line
+     * The product type of the line in the older format. For product types, request
+     * PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
      * </pre>
      *
      * <code>string product_type = 20 [json_name = "productType"];</code>

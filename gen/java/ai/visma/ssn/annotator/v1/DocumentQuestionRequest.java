@@ -6,6 +6,10 @@
 package ai.visma.ssn.annotator.v1;
 
 /**
+ * <pre>
+ * Request body of POST /v1/document:answerquestion, which isn't implemented.
+ * </pre>
+ *
  * Protobuf type {@code ssn.annotator.v1.DocumentQuestionRequest}
  */
 public final class DocumentQuestionRequest extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   public static final int DOCUMENT_FIELD_NUMBER = 1;
   private ai.visma.ssn.annotator.v1.Document document_;
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return Whether the document field is set.
    */
@@ -56,6 +64,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return The document.
    */
@@ -64,6 +76,10 @@ private static final long serialVersionUID = 0L;
     return document_ == null ? ai.visma.ssn.annotator.v1.Document.getDefaultInstance() : document_;
   }
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList questions_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @return A list containing the questions.
    */
@@ -84,6 +104,10 @@ private static final long serialVersionUID = 0L;
     return questions_;
   }
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @return The count of questions.
    */
@@ -91,6 +115,10 @@ private static final long serialVersionUID = 0L;
     return questions_.size();
   }
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the element to return.
    * @return The questions at the given index.
@@ -99,6 +127,10 @@ private static final long serialVersionUID = 0L;
     return questions_.get(index);
   }
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the questions at the given index.
@@ -288,6 +320,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request body of POST /v1/document:answerquestion, which isn't implemented.
+   * </pre>
+   *
    * Protobuf type {@code ssn.annotator.v1.DocumentQuestionRequest}
    */
   public static final class Builder extends
@@ -466,6 +502,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.annotator.v1.Document, ai.visma.ssn.annotator.v1.Document.Builder, ai.visma.ssn.annotator.v1.DocumentOrBuilder> documentBuilder_;
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return Whether the document field is set.
      */
@@ -473,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      * @return The document.
      */
@@ -484,6 +528,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public Builder setDocument(ai.visma.ssn.annotator.v1.Document value) {
@@ -500,6 +548,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public Builder setDocument(
@@ -514,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public Builder mergeDocument(ai.visma.ssn.annotator.v1.Document value) {
@@ -535,6 +591,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public Builder clearDocument() {
@@ -548,6 +608,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public ai.visma.ssn.annotator.v1.Document.Builder getDocumentBuilder() {
@@ -556,6 +620,10 @@ private static final long serialVersionUID = 0L;
       return getDocumentFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     public ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder() {
@@ -567,6 +635,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The document to ask about.
+     * </pre>
+     *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -592,6 +664,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @return A list containing the questions.
      */
@@ -601,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return questions_;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @return The count of questions.
      */
@@ -608,6 +688,10 @@ private static final long serialVersionUID = 0L;
       return questions_.size();
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param index The index of the element to return.
      * @return The questions at the given index.
@@ -616,6 +700,10 @@ private static final long serialVersionUID = 0L;
       return questions_.get(index);
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the questions at the given index.
@@ -625,6 +713,10 @@ private static final long serialVersionUID = 0L;
       return questions_.getByteString(index);
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param index The index to set the value at.
      * @param value The questions to set.
@@ -640,6 +732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param value The questions to add.
      * @return This builder for chaining.
@@ -654,6 +750,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param values The questions to add.
      * @return This builder for chaining.
@@ -668,6 +768,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @return This builder for chaining.
      */
@@ -679,6 +783,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Questions about the document, in plain language.
+     * </pre>
+     *
      * <code>repeated string questions = 2 [json_name = "questions"];</code>
      * @param value The bytes of the questions to add.
      * @return This builder for chaining.

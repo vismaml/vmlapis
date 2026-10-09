@@ -10,11 +10,19 @@ public interface DatasetOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Name of the project the dataset belongs to.
+   * </pre>
+   *
    * <code>string consumer = 1 [json_name = "consumer"];</code>
    * @return The consumer.
    */
   java.lang.String getConsumer();
   /**
+   * <pre>
+   * Name of the project the dataset belongs to.
+   * </pre>
+   *
    * <code>string consumer = 1 [json_name = "consumer"];</code>
    * @return The bytes for consumer.
    */
@@ -22,11 +30,19 @@ public interface DatasetOrBuilder extends
       getConsumerBytes();
 
   /**
+   * <pre>
+   * Name of the dataset.
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * Name of the dataset.
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -34,11 +50,21 @@ public interface DatasetOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+   * API, the first example you add sets it, and it's empty until then.
+   * </pre>
+   *
    * <code>string type = 3 [json_name = "type"];</code>
    * @return The type.
    */
   java.lang.String getType();
   /**
+   * <pre>
+   * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+   * API, the first example you add sets it, and it's empty until then.
+   * </pre>
+   *
    * <code>string type = 3 [json_name = "type"];</code>
    * @return The bytes for type.
    */
@@ -46,23 +72,39 @@ public interface DatasetOrBuilder extends
       getTypeBytes();
 
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @return The count of tags.
    */
   int getTagsCount();
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.
@@ -71,23 +113,43 @@ public interface DatasetOrBuilder extends
       getTagsBytes(int index);
 
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @return A list containing the targets.
    */
   java.util.List<java.lang.String>
       getTargetsList();
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @return The count of targets.
    */
   int getTargetsCount();
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @param index The index of the element to return.
    * @return The targets at the given index.
    */
   java.lang.String getTargets(int index);
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the targets at the given index.
@@ -111,38 +173,63 @@ public interface DatasetOrBuilder extends
   ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
 
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    * @return Whether the createdAt field is set.
    */
   boolean hasCreatedAt();
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    * @return The createdAt.
    */
   com.google.protobuf.Timestamp getCreatedAt();
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    * @return Whether the updatedAt field is set.
    */
   boolean hasUpdatedAt();
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    * @return The updatedAt.
    */
   com.google.protobuf.Timestamp getUpdatedAt();
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
   /**
    * <pre>
-   * Number of samples in the dataset reflecting added entries that meet the retention policy
+   * [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+   * retention window.
    * </pre>
    *
    * <code>int64 size = 12 [json_name = "size"];</code>
@@ -151,16 +238,28 @@ public interface DatasetOrBuilder extends
   long getSize();
 
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    * @return Whether the truncatedAt field is set.
    */
   boolean hasTruncatedAt();
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    * @return The truncatedAt.
    */
   com.google.protobuf.Timestamp getTruncatedAt();
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder();

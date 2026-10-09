@@ -6,6 +6,10 @@
 package ai.visma.ssn.annotator.v1;
 
 /**
+ * <pre>
+ * Response of POST /v1/document:answerquestion, which isn't implemented.
+ * </pre>
+ *
  * Protobuf type {@code ssn.annotator.v1.DocumentQuestionResponse}
  */
 public final class DocumentQuestionResponse extends
@@ -244,6 +248,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response of POST /v1/document:answerquestion, which isn't implemented.
+   * </pre>
+   *
    * Protobuf type {@code ssn.annotator.v1.DocumentQuestionResponse}
    */
   public static final class Builder extends

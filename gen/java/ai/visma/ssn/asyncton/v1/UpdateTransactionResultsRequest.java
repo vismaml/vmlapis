@@ -7,7 +7,7 @@ package ai.visma.ssn.asyncton.v1;
 
 /**
  * <pre>
- * --- put: "/v1/transactions/{id}/results" ---
+ * Request for sending corrected results.
  * </pre>
  *
  * Protobuf type {@code ssn.asyncton.v1.UpdateTransactionResultsRequest}
@@ -53,6 +53,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -70,6 +74,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -92,6 +100,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+   * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+   * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -109,6 +123,12 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+   * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+   * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -131,6 +151,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> annotations_;
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   @java.lang.Override
@@ -138,6 +164,12 @@ private static final long serialVersionUID = 0L;
     return annotations_;
   }
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   @java.lang.Override
@@ -146,6 +178,12 @@ private static final long serialVersionUID = 0L;
     return annotations_;
   }
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   @java.lang.Override
@@ -153,6 +191,12 @@ private static final long serialVersionUID = 0L;
     return annotations_.size();
   }
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   @java.lang.Override
@@ -160,6 +204,12 @@ private static final long serialVersionUID = 0L;
     return annotations_.get(index);
   }
   /**
+   * <pre>
+   * Your corrected results, in the same format as the annotations returned by
+   * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+   * before.
+   * </pre>
+   *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
    */
   @java.lang.Override
@@ -349,7 +399,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- put: "/v1/transactions/{id}/results" ---
+   * Request for sending corrected results.
    * </pre>
    *
    * Protobuf type {@code ssn.asyncton.v1.UpdateTransactionResultsRequest}
@@ -564,6 +614,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -580,6 +634,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -597,6 +655,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -610,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -620,6 +686,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -636,6 +706,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+     * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+     * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -652,6 +728,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+     * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+     * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -669,6 +751,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+     * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+     * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -682,6 +770,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+     * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+     * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -692,6 +786,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+     * PUT /v1/transactions/results ignores the request body, so it returns success but saves
+     * nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+     * </pre>
+     *
      * <code>string custom_id = 2 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.
@@ -719,6 +819,12 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.asyncton.v1.Annotation, ai.visma.ssn.asyncton.v1.Annotation.Builder, ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> annotationsBuilder_;
 
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public java.util.List<ai.visma.ssn.asyncton.v1.Annotation> getAnnotationsList() {
@@ -729,6 +835,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public int getAnnotationsCount() {
@@ -739,6 +851,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation getAnnotations(int index) {
@@ -749,6 +867,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder setAnnotations(
@@ -766,6 +890,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder setAnnotations(
@@ -780,6 +910,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder addAnnotations(ai.visma.ssn.asyncton.v1.Annotation value) {
@@ -796,6 +932,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder addAnnotations(
@@ -813,6 +955,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder addAnnotations(
@@ -827,6 +975,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder addAnnotations(
@@ -841,6 +995,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder addAllAnnotations(
@@ -856,6 +1016,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder clearAnnotations() {
@@ -869,6 +1035,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public Builder removeAnnotations(int index) {
@@ -882,6 +1054,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder getAnnotationsBuilder(
@@ -889,6 +1067,12 @@ private static final long serialVersionUID = 0L;
       return getAnnotationsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public ai.visma.ssn.asyncton.v1.AnnotationOrBuilder getAnnotationsOrBuilder(
@@ -899,6 +1083,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.asyncton.v1.AnnotationOrBuilder> 
@@ -910,6 +1100,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder addAnnotationsBuilder() {
@@ -917,6 +1113,12 @@ private static final long serialVersionUID = 0L;
           ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public ai.visma.ssn.asyncton.v1.Annotation.Builder addAnnotationsBuilder(
@@ -925,6 +1127,12 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ssn.asyncton.v1.Annotation.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Your corrected results, in the same format as the annotations returned by
+     * GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+     * before.
+     * </pre>
+     *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 3 [json_name = "annotations"];</code>
      */
     public java.util.List<ai.visma.ssn.asyncton.v1.Annotation.Builder> 

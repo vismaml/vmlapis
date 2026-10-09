@@ -10,11 +10,19 @@ public interface TargetMetricsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Name of the target.
+   * </pre>
+   *
    * <code>string target = 1 [json_name = "target"];</code>
    * @return The target.
    */
   java.lang.String getTarget();
   /**
+   * <pre>
+   * Name of the target.
+   * </pre>
+   *
    * <code>string target = 1 [json_name = "target"];</code>
    * @return The bytes for target.
    */
@@ -22,24 +30,44 @@ public interface TargetMetricsOrBuilder extends
       getTargetBytes();
 
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   java.util.List<ai.visma.asgt.type.TargetMetrics.Metric> 
       getMetricsList();
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   ai.visma.asgt.type.TargetMetrics.Metric getMetrics(int index);
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   int getMetricsCount();
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   java.util.List<? extends ai.visma.asgt.type.TargetMetrics.MetricOrBuilder> 
       getMetricsOrBuilderList();
   /**
+   * <pre>
+   * Results at different confidence thresholds.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
    */
   ai.visma.asgt.type.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
@@ -47,7 +75,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * entropy of the dataset
+   * Entropy of the dataset.
    * </pre>
    *
    * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -56,7 +84,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasEntropy();
   /**
    * <pre>
-   * entropy of the dataset
+   * Entropy of the dataset.
    * </pre>
    *
    * <code>optional float entropy = 6 [json_name = "entropy"];</code>
@@ -66,7 +94,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * number of classes in the dataset
+   * Number of classes in the dataset.
    * </pre>
    *
    * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -75,7 +103,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasNumberOfClasses();
   /**
    * <pre>
-   * number of classes in the dataset
+   * Number of classes in the dataset.
    * </pre>
    *
    * <code>optional int32 number_of_classes = 7 [json_name = "numberOfClasses"];</code>
@@ -85,7 +113,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * average samples per class
+   * Average number of examples per class.
    * </pre>
    *
    * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -94,7 +122,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasAvgSamplePerClass();
   /**
    * <pre>
-   * average samples per class
+   * Average number of examples per class.
    * </pre>
    *
    * <code>optional float avg_sample_per_class = 8 [json_name = "avgSamplePerClass"];</code>
@@ -104,7 +132,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * ratio of inconsistent labels
+   * Ratio of inconsistent labels.
    * </pre>
    *
    * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -113,7 +141,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasInconsistentLabelRatio();
   /**
    * <pre>
-   * ratio of inconsistent labels
+   * Ratio of inconsistent labels.
    * </pre>
    *
    * <code>optional float inconsistent_label_ratio = 9 [json_name = "inconsistentLabelRatio"];</code>
@@ -123,7 +151,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * average labels per inconsistent sample
+   * Average number of labels per inconsistent example.
    * </pre>
    *
    * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -132,7 +160,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasAvgLabelsPerInconsistentSample();
   /**
    * <pre>
-   * average labels per inconsistent sample
+   * Average number of labels per inconsistent example.
    * </pre>
    *
    * <code>optional float avg_labels_per_inconsistent_sample = 10 [json_name = "avgLabelsPerInconsistentSample"];</code>
@@ -142,7 +170,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * percentage of samples not in target vocabulary
+   * Percentage of examples whose value isn't in the target's vocabulary.
    * </pre>
    *
    * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -151,7 +179,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasPercentSamplesNotInTargetVocab();
   /**
    * <pre>
-   * percentage of samples not in target vocabulary
+   * Percentage of examples whose value isn't in the target's vocabulary.
    * </pre>
    *
    * <code>optional float percent_samples_not_in_target_vocab = 11 [json_name = "percentSamplesNotInTargetVocab"];</code>
@@ -161,7 +189,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Jensen-Shannon divergence for classes
+   * Jensen-Shannon divergence of the classes.
    * </pre>
    *
    * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -170,7 +198,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasJsDivergenceClasses();
   /**
    * <pre>
-   * Jensen-Shannon divergence for classes
+   * Jensen-Shannon divergence of the classes.
    * </pre>
    *
    * <code>optional float js_divergence_classes = 12 [json_name = "jsDivergenceClasses"];</code>
@@ -180,7 +208,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * number of training samples with a label for this target
+   * Number of training examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -189,7 +217,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasTargetTrainSize();
   /**
    * <pre>
-   * number of training samples with a label for this target
+   * Number of training examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_train_size = 13 [json_name = "targetTrainSize"];</code>
@@ -199,7 +227,7 @@ public interface TargetMetricsOrBuilder extends
 
   /**
    * <pre>
-   * number of test/validation samples with a label for this target
+   * Number of test or validation examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>
@@ -208,7 +236,7 @@ public interface TargetMetricsOrBuilder extends
   boolean hasTargetTestSize();
   /**
    * <pre>
-   * number of test/validation samples with a label for this target
+   * Number of test or validation examples with a value for this target.
    * </pre>
    *
    * <code>optional int32 target_test_size = 14 [json_name = "targetTestSize"];</code>

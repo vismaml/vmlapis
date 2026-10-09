@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * A dataset of examples that Autosuggest trains models on.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.Dataset}
  */
 public final class Dataset extends
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object consumer_ = "";
   /**
+   * <pre>
+   * Name of the project the dataset belongs to.
+   * </pre>
+   *
    * <code>string consumer = 1 [json_name = "consumer"];</code>
    * @return The consumer.
    */
@@ -71,6 +79,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the project the dataset belongs to.
+   * </pre>
+   *
    * <code>string consumer = 1 [json_name = "consumer"];</code>
    * @return The bytes for consumer.
    */
@@ -93,6 +105,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * Name of the dataset.
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
@@ -110,6 +126,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the dataset.
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -132,6 +152,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object type_ = "";
   /**
+   * <pre>
+   * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+   * API, the first example you add sets it, and it's empty until then.
+   * </pre>
+   *
    * <code>string type = 3 [json_name = "type"];</code>
    * @return The type.
    */
@@ -149,6 +174,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+   * API, the first example you add sets it, and it's empty until then.
+   * </pre>
+   *
    * <code>string type = 3 [json_name = "type"];</code>
    * @return The bytes for type.
    */
@@ -172,6 +202,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList tags_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @return A list containing the tags.
    */
@@ -180,6 +214,10 @@ private static final long serialVersionUID = 0L;
     return tags_;
   }
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @return The count of tags.
    */
@@ -187,6 +225,10 @@ private static final long serialVersionUID = 0L;
     return tags_.size();
   }
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @param index The index of the element to return.
    * @return The tags at the given index.
@@ -195,6 +237,10 @@ private static final long serialVersionUID = 0L;
     return tags_.get(index);
   }
   /**
+   * <pre>
+   * Tags the dataset was created with.
+   * </pre>
+   *
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the tags at the given index.
@@ -209,6 +255,11 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList targets_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @return A list containing the targets.
    */
@@ -217,6 +268,11 @@ private static final long serialVersionUID = 0L;
     return targets_;
   }
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @return The count of targets.
    */
@@ -224,6 +280,11 @@ private static final long serialVersionUID = 0L;
     return targets_.size();
   }
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @param index The index of the element to return.
    * @return The targets at the given index.
@@ -232,6 +293,11 @@ private static final long serialVersionUID = 0L;
     return targets_.get(index);
   }
   /**
+   * <pre>
+   * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+   * empty for datasets created with the v2 API.
+   * </pre>
+   *
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the targets at the given index.
@@ -270,6 +336,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATED_AT_FIELD_NUMBER = 10;
   private com.google.protobuf.Timestamp createdAt_;
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    * @return Whether the createdAt field is set.
    */
@@ -278,6 +348,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    * @return The createdAt.
    */
@@ -286,6 +360,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
   }
   /**
+   * <pre>
+   * When the dataset was created, or created again after it was deleted.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
    */
   @java.lang.Override
@@ -296,6 +374,10 @@ private static final long serialVersionUID = 0L;
   public static final int UPDATED_AT_FIELD_NUMBER = 11;
   private com.google.protobuf.Timestamp updatedAt_;
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    * @return Whether the updatedAt field is set.
    */
@@ -304,6 +386,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    * @return The updatedAt.
    */
@@ -312,6 +398,10 @@ private static final long serialVersionUID = 0L;
     return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
   }
   /**
+   * <pre>
+   * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
    */
   @java.lang.Override
@@ -323,7 +413,8 @@ private static final long serialVersionUID = 0L;
   private long size_ = 0L;
   /**
    * <pre>
-   * Number of samples in the dataset reflecting added entries that meet the retention policy
+   * [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+   * retention window.
    * </pre>
    *
    * <code>int64 size = 12 [json_name = "size"];</code>
@@ -337,6 +428,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRUNCATED_AT_FIELD_NUMBER = 13;
   private com.google.protobuf.Timestamp truncatedAt_;
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    * @return Whether the truncatedAt field is set.
    */
@@ -345,6 +440,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000008) != 0);
   }
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    * @return The truncatedAt.
    */
@@ -353,6 +452,10 @@ private static final long serialVersionUID = 0L;
     return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
   }
   /**
+   * <pre>
+   * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
    */
   @java.lang.Override
@@ -647,6 +750,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A dataset of examples that Autosuggest trains models on.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.Dataset}
    */
   public static final class Builder extends
@@ -965,6 +1072,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object consumer_ = "";
     /**
+     * <pre>
+     * Name of the project the dataset belongs to.
+     * </pre>
+     *
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The consumer.
      */
@@ -981,6 +1092,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the project the dataset belongs to.
+     * </pre>
+     *
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The bytes for consumer.
      */
@@ -998,6 +1113,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the project the dataset belongs to.
+     * </pre>
+     *
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @param value The consumer to set.
      * @return This builder for chaining.
@@ -1011,6 +1130,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the project the dataset belongs to.
+     * </pre>
+     *
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return This builder for chaining.
      */
@@ -1021,6 +1144,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the project the dataset belongs to.
+     * </pre>
+     *
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @param value The bytes for consumer to set.
      * @return This builder for chaining.
@@ -1037,6 +1164,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * Name of the dataset.
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
@@ -1053,6 +1184,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the dataset.
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -1070,6 +1205,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the dataset.
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -1083,6 +1222,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the dataset.
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -1093,6 +1236,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the dataset.
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -1109,6 +1256,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object type_ = "";
     /**
+     * <pre>
+     * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+     * API, the first example you add sets it, and it's empty until then.
+     * </pre>
+     *
      * <code>string type = 3 [json_name = "type"];</code>
      * @return The type.
      */
@@ -1125,6 +1277,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+     * API, the first example you add sets it, and it's empty until then.
+     * </pre>
+     *
      * <code>string type = 3 [json_name = "type"];</code>
      * @return The bytes for type.
      */
@@ -1142,6 +1299,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+     * API, the first example you add sets it, and it's empty until then.
+     * </pre>
+     *
      * <code>string type = 3 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -1155,6 +1317,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+     * API, the first example you add sets it, and it's empty until then.
+     * </pre>
+     *
      * <code>string type = 3 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
@@ -1165,6 +1332,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of data in the dataset: bank, scanned-invoice or electronic-invoice-line. With the v2
+     * API, the first example you add sets it, and it's empty until then.
+     * </pre>
+     *
      * <code>string type = 3 [json_name = "type"];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
@@ -1188,6 +1360,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
@@ -1197,6 +1373,10 @@ private static final long serialVersionUID = 0L;
       return tags_;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return The count of tags.
      */
@@ -1204,6 +1384,10 @@ private static final long serialVersionUID = 0L;
       return tags_.size();
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
@@ -1212,6 +1396,10 @@ private static final long serialVersionUID = 0L;
       return tags_.get(index);
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
@@ -1221,6 +1409,10 @@ private static final long serialVersionUID = 0L;
       return tags_.getByteString(index);
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param index The index to set the value at.
      * @param value The tags to set.
@@ -1236,6 +1428,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param value The tags to add.
      * @return This builder for chaining.
@@ -1250,6 +1446,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param values The tags to add.
      * @return This builder for chaining.
@@ -1264,6 +1464,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @return This builder for chaining.
      */
@@ -1275,6 +1479,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Tags the dataset was created with.
+     * </pre>
+     *
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
      * @param value The bytes of the tags to add.
      * @return This builder for chaining.
@@ -1299,6 +1507,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return A list containing the targets.
      */
@@ -1308,6 +1521,11 @@ private static final long serialVersionUID = 0L;
       return targets_;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return The count of targets.
      */
@@ -1315,6 +1533,11 @@ private static final long serialVersionUID = 0L;
       return targets_.size();
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
@@ -1323,6 +1546,11 @@ private static final long serialVersionUID = 0L;
       return targets_.get(index);
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
@@ -1332,6 +1560,11 @@ private static final long serialVersionUID = 0L;
       return targets_.getByteString(index);
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param index The index to set the value at.
      * @param value The targets to set.
@@ -1347,6 +1580,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param value The targets to add.
      * @return This builder for chaining.
@@ -1361,6 +1599,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param values The targets to add.
      * @return This builder for chaining.
@@ -1375,6 +1618,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @return This builder for chaining.
      */
@@ -1386,6 +1634,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Names of the dataset's targets, as given when a dataset is created with the v1 API. It's
+     * empty for datasets created with the v2 API.
+     * </pre>
+     *
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
      * @param value The bytes of the targets to add.
      * @return This builder for chaining.
@@ -1526,6 +1779,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
@@ -1533,6 +1790,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
@@ -1544,6 +1805,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1560,6 +1825,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(
@@ -1574,6 +1843,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1595,6 +1868,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public Builder clearCreatedAt() {
@@ -1608,6 +1885,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1616,6 +1897,10 @@ private static final long serialVersionUID = 0L;
       return getCreatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1627,6 +1912,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the dataset was created, or created again after it was deleted.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1647,6 +1936,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return Whether the updatedAt field is set.
      */
@@ -1654,6 +1947,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      * @return The updatedAt.
      */
@@ -1665,6 +1962,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1681,6 +1982,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public Builder setUpdatedAt(
@@ -1695,6 +2000,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1716,6 +2025,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public Builder clearUpdatedAt() {
@@ -1729,6 +2042,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -1737,6 +2054,10 @@ private static final long serialVersionUID = 0L;
       return getUpdatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -1748,6 +2069,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Not kept up to date, so it's normally 0001-01-01T00:00:00Z.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1767,7 +2092,8 @@ private static final long serialVersionUID = 0L;
     private long size_ ;
     /**
      * <pre>
-     * Number of samples in the dataset reflecting added entries that meet the retention policy
+     * [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+     * retention window.
      * </pre>
      *
      * <code>int64 size = 12 [json_name = "size"];</code>
@@ -1779,7 +2105,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of samples in the dataset reflecting added entries that meet the retention policy
+     * [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+     * retention window.
      * </pre>
      *
      * <code>int64 size = 12 [json_name = "size"];</code>
@@ -1795,7 +2122,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Number of samples in the dataset reflecting added entries that meet the retention policy
+     * [NOT IMPLEMENTED] Always empty. It's meant to be the number of examples within the
+     * retention window.
      * </pre>
      *
      * <code>int64 size = 12 [json_name = "size"];</code>
@@ -1812,6 +2140,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> truncatedAtBuilder_;
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return Whether the truncatedAt field is set.
      */
@@ -1819,6 +2151,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      * @return The truncatedAt.
      */
@@ -1830,6 +2166,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public Builder setTruncatedAt(com.google.protobuf.Timestamp value) {
@@ -1846,6 +2186,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public Builder setTruncatedAt(
@@ -1860,6 +2204,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public Builder mergeTruncatedAt(com.google.protobuf.Timestamp value) {
@@ -1881,6 +2229,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public Builder clearTruncatedAt() {
@@ -1894,6 +2246,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getTruncatedAtBuilder() {
@@ -1902,6 +2258,10 @@ private static final long serialVersionUID = 0L;
       return getTruncatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
@@ -1913,6 +2273,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the dataset was last truncated. It's 0001-01-01T00:00:00Z if it never was.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

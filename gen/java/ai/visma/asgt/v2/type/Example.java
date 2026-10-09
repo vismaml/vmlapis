@@ -7,7 +7,7 @@ package ai.visma.asgt.v2.type;
 
 /**
  * <pre>
- * A pair of example data and example target values
+ * An example to train on: input data and the target values it should give.
  * </pre>
  *
  * Protobuf type {@code asgt.v2.type.Example}
@@ -79,6 +79,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.type.TargetValue> targetValues_;
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   @java.lang.Override
@@ -86,6 +90,10 @@ private static final long serialVersionUID = 0L;
     return targetValues_;
   }
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   @java.lang.Override
@@ -94,6 +102,10 @@ private static final long serialVersionUID = 0L;
     return targetValues_;
   }
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   @java.lang.Override
@@ -101,6 +113,10 @@ private static final long serialVersionUID = 0L;
     return targetValues_.size();
   }
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   @java.lang.Override
@@ -108,6 +124,10 @@ private static final long serialVersionUID = 0L;
     return targetValues_.get(index);
   }
   /**
+   * <pre>
+   * The correct value for each target. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
    */
   @java.lang.Override
@@ -121,8 +141,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object id_ = "";
   /**
    * <pre>
-   * Not implemented yet.
-   * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+   * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+   * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+   * returns 501. If you set it, it must be a UUID.
    * </pre>
    *
    * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -143,8 +164,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Not implemented yet.
-   * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+   * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+   * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+   * returns 501. If you set it, it must be a UUID.
    * </pre>
    *
    * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -352,7 +374,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A pair of example data and example target values
+   * An example to train on: input data and the target values it should give.
    * </pre>
    *
    * Protobuf type {@code asgt.v2.type.Example}
@@ -715,6 +737,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.type.TargetValue, ai.visma.asgt.v2.type.TargetValue.Builder, ai.visma.asgt.v2.type.TargetValueOrBuilder> targetValuesBuilder_;
 
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.TargetValue> getTargetValuesList() {
@@ -725,6 +751,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public int getTargetValuesCount() {
@@ -735,6 +765,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public ai.visma.asgt.v2.type.TargetValue getTargetValues(int index) {
@@ -745,6 +779,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder setTargetValues(
@@ -762,6 +800,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder setTargetValues(
@@ -776,6 +818,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder addTargetValues(ai.visma.asgt.v2.type.TargetValue value) {
@@ -792,6 +838,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder addTargetValues(
@@ -809,6 +859,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder addTargetValues(
@@ -823,6 +877,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder addTargetValues(
@@ -837,6 +895,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder addAllTargetValues(
@@ -852,6 +914,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder clearTargetValues() {
@@ -865,6 +931,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public Builder removeTargetValues(int index) {
@@ -878,6 +948,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public ai.visma.asgt.v2.type.TargetValue.Builder getTargetValuesBuilder(
@@ -885,6 +959,10 @@ private static final long serialVersionUID = 0L;
       return getTargetValuesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public ai.visma.asgt.v2.type.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -895,6 +973,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.type.TargetValueOrBuilder> 
@@ -906,6 +988,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public ai.visma.asgt.v2.type.TargetValue.Builder addTargetValuesBuilder() {
@@ -913,6 +999,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.type.TargetValue.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public ai.visma.asgt.v2.type.TargetValue.Builder addTargetValuesBuilder(
@@ -921,6 +1011,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.type.TargetValue.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The correct value for each target. At least one is required.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.type.TargetValue target_values = 2 [json_name = "targetValues", (.validate.rules) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.v2.type.TargetValue.Builder> 
@@ -945,8 +1039,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object id_ = "";
     /**
      * <pre>
-     * Not implemented yet.
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+     * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+     * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+     * returns 501. If you set it, it must be a UUID.
      * </pre>
      *
      * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -966,8 +1061,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+     * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+     * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+     * returns 501. If you set it, it must be a UUID.
      * </pre>
      *
      * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -988,8 +1084,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+     * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+     * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+     * returns 501. If you set it, it must be a UUID.
      * </pre>
      *
      * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -1006,8 +1103,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+     * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+     * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+     * returns 501. If you set it, it must be a UUID.
      * </pre>
      *
      * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>
@@ -1021,8 +1119,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Not implemented yet.
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+     * [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+     * PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+     * returns 501. If you set it, it must be a UUID.
      * </pre>
      *
      * <code>string id = 3 [json_name = "id", (.validate.rules) = { ... }</code>

@@ -72,7 +72,7 @@ namespace Asgt.V2 {
             "aW9uc1IHb3B0aW9ucyJJChFUcmFpbmluZ3NSZXNwb25zZRI0Cgl0cmFpbmlu",
             "Z3MYASADKAsyFi5hc2d0LnYyLnR5cGUuVHJhaW5pbmdSCXRyYWluaW5ncyI9",
             "Cg5Nb2RlbHNSZXNwb25zZRIrCgZtb2RlbHMYASADKAsyEy5hc2d0LnYyLnR5",
-            "cGUuTW9kZWxSBm1vZGVsczLeCwoORGF0YXNldFNlcnZpY2USYQoKR2V0RGF0",
+            "cGUuTW9kZWxSBm1vZGVsczLTCwoORGF0YXNldFNlcnZpY2USYQoKR2V0RGF0",
             "YXNldBIaLmFzZ3QudjIuR2V0RGF0YXNldFJlcXVlc3QaEi5hc2d0LnR5cGUu",
             "RGF0YXNldCIjgtPkkwIdEhsvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFtZX0S",
             "XwoNQ3JlYXRlRGF0YXNldBIdLmFzZ3QudjIuQ3JlYXRlRGF0YXNldFJlcXVl",
@@ -104,12 +104,12 @@ namespace Asgt.V2 {
             "c2UiKoLT5JMCJBIiL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L21vZGVs",
             "cxJfCgxHZXRUcmFpbmluZ3MSHC5hc2d0LnYyLkdldFRyYWluaW5nc1JlcXVl",
             "c3QaGi5hc2d0LnYyLlRyYWluaW5nc1Jlc3BvbnNlIhWC0+STAg8SDS92Mi90",
-            "cmFpbmluZ3MaR5JBRBJCTWFuYWdlIGRhdGFzZXRzIGFuZCBleGFtcGxlcyB1",
-            "c2VkIGZvciB0cmFpbmluZyBBdXRvU3VnZ2VzdCBtb2RlbHMuQpEBChBhaS52",
-            "aXNtYS5hc2d0LnYyQhNEYXRhc2V0U2VydmljZVByb3RvUAFaK2dpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjKiAgNBWFiqAgdB",
-            "c2d0LlYyygIHQXNndFxWMuICE0FzZ3RcVjJcR1BCTWV0YWRhdGHqAghBc2d0",
-            "OjpWMmIGcHJvdG8z"));
+            "cmFpbmluZ3MaPJJBORI3TWFuYWdlIGRhdGFzZXRzIGFuZCB0aGUgZXhhbXBs",
+            "ZXMgQXV0b3N1Z2dlc3QgdHJhaW5zIG9uLkKRAQoQYWkudmlzbWEuYXNndC52",
+            "MkITRGF0YXNldFNlcnZpY2VQcm90b1ABWitnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9hc2d0L3YyogIDQVhYqgIHQXNndC5WMsoCB0Fz",
+            "Z3RcVjLiAhNBc2d0XFYyXEdQQk1ldGFkYXRh6gIIQXNndDo6VjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.V2.Type.ExampleReflection.Descriptor, global::Asgt.V2.Type.ModelReflection.Descriptor, global::Asgt.V2.Type.TrainingReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,6 +135,9 @@ namespace Asgt.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// Request for GET /v2/datasets/{datasetName}.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetRequest : pb::IMessage<GetDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -184,7 +187,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -336,6 +339,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/datasets.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDatasetRequest : pb::IMessage<CreateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -387,7 +393,8 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the new dataset. Use letters, digits, ".", "_", ">" and "-", starting with a
+    /// letter, digit or ".", up to 256 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -404,7 +411,10 @@ namespace Asgt.V2 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// text-no-spaces
+    /// Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+    /// later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+    /// ">" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+    /// to delete datasets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -612,6 +622,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for PUT /v2/datasets/{datasetName}, which isn't implemented.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateOrUpdateDatasetRequest : pb::IMessage<CreateOrUpdateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -661,7 +674,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -813,6 +826,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for DELETE /v2/datasets/{datasetName}.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDatasetRequest : pb::IMessage<DeleteDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -862,7 +878,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1014,6 +1030,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for DELETE /v2/tags/{tagName}.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTagRequest : pb::IMessage<DeleteTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1063,7 +1082,8 @@ namespace Asgt.V2 {
     public const int TagNameFieldNumber = 1;
     private string tagName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// The tag. It must use letters, digits, ".", "_", ">" and "-", starting with a letter, digit
+    /// or ".", up to 256 bytes, so tags with spaces can't be used here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1215,6 +1235,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/datasets/{datasetName}/examples.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateExampleRequest : pb::IMessage<CreateExampleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1265,7 +1288,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1462,6 +1485,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for PUT /v2/datasets/{datasetName}/examples/{example.id}, which isn't implemented.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateOrUpdateExampleRequest : pb::IMessage<CreateOrUpdateExampleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1512,7 +1538,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1709,6 +1735,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request body for POST /v2/datasets/{datasetName}/examples:batchCreate.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateExampleRequest : pb::IMessage<BatchCreateExampleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1759,7 +1788,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1775,6 +1804,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.Type.Example> _repeated_examples_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.V2.Type.Example.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.Type.Example> examples_ = new pbc::RepeatedField<global::Asgt.V2.Type.Example>();
+    /// <summary>
+    /// The examples to add. At least one is required.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.Type.Example> Examples {
@@ -1936,6 +1968,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for DELETE /v2/datasets/{datasetName}/examples.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TruncateDatasetRequest : pb::IMessage<TruncateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1985,7 +2020,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2137,6 +2172,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Options for listing trainings.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrainingRequestOptions : pb::IMessage<TrainingRequestOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2186,7 +2224,7 @@ namespace Asgt.V2 {
     public const int LimitFieldNumber = 1;
     private long limit_;
     /// <summary>
-    /// The number of trainings to return. Ranges from 1 to 100.
+    /// Number of trainings to return, from 1 to 100. The default is 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2338,6 +2376,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Options for listing models.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelRequestOptions : pb::IMessage<ModelRequestOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2387,7 +2428,7 @@ namespace Asgt.V2 {
     public const int LimitFieldNumber = 1;
     private long limit_;
     /// <summary>
-    /// The number of models to return. Ranges from 1 to 100.
+    /// Number of models to return, from 1 to 100. The default is 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2539,6 +2580,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for GET /v2/datasets/{datasetName}/trainings.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetTrainingsRequest : pb::IMessage<GetDatasetTrainingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2589,7 +2633,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2603,6 +2647,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 2;
     private global::Asgt.V2.TrainingRequestOptions options_;
+    /// <summary>
+    /// Listing options, sent as query parameters such as options.limit.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.TrainingRequestOptions Options {
@@ -2786,6 +2833,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for GET /v2/datasets/{datasetName}/models.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetModelsRequest : pb::IMessage<GetDatasetModelsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2836,7 +2886,7 @@ namespace Asgt.V2 {
     public const int DatasetNameFieldNumber = 1;
     private string datasetName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// Name of the dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2850,6 +2900,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 2;
     private global::Asgt.V2.ModelRequestOptions options_;
+    /// <summary>
+    /// Listing options, sent as query parameters such as options.limit.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.ModelRequestOptions Options {
@@ -3033,6 +3086,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// Request for GET /v2/trainings.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTrainingsRequest : pb::IMessage<GetTrainingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3081,6 +3137,9 @@ namespace Asgt.V2 {
     /// <summary>Field number for the "options" field.</summary>
     public const int OptionsFieldNumber = 1;
     private global::Asgt.V2.TrainingRequestOptions options_;
+    /// <summary>
+    /// Listing options, sent as query parameters such as options.limit.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Asgt.V2.TrainingRequestOptions Options {
@@ -3240,6 +3299,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// A list of trainings.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrainingsResponse : pb::IMessage<TrainingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3290,6 +3352,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.Type.Training> _repeated_trainings_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.Type.Training.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.Type.Training> trainings_ = new pbc::RepeatedField<global::Asgt.V2.Type.Training>();
+    /// <summary>
+    /// The trainings, newest first.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.Type.Training> Trainings {
@@ -3427,6 +3492,9 @@ namespace Asgt.V2 {
 
   }
 
+  /// <summary>
+  /// A list of models.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelsResponse : pb::IMessage<ModelsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3477,6 +3545,9 @@ namespace Asgt.V2 {
     private static readonly pb::FieldCodec<global::Asgt.V2.Type.Model> _repeated_models_codec
         = pb::FieldCodec.ForMessage(10, global::Asgt.V2.Type.Model.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.Type.Model> models_ = new pbc::RepeatedField<global::Asgt.V2.Type.Model>();
+    /// <summary>
+    /// The models, newest first.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.Type.Model> Models {

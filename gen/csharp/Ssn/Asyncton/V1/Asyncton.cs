@@ -78,7 +78,7 @@ namespace Ssn.Asyncton.V1 {
             "bm5vdGF0aW9ucxgDIAMoCzIbLnNzbi5hc3luY3Rvbi52MS5Bbm5vdGF0aW9u",
             "Ugthbm5vdGF0aW9ucyJPCiBVcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNSZXNw",
             "b25zZRIOCgJpZBgBIAEoCVICaWQSGwoJY3VzdG9tX2lkGAIgASgJUghjdXN0",
-            "b21JZDLKBwoSVHJhbnNhY3Rpb25TZXJ2aWNlEocBChFDcmVhdGVUcmFuc2Fj",
+            "b21JZDKqCAoSVHJhbnNhY3Rpb25TZXJ2aWNlEocBChFDcmVhdGVUcmFuc2Fj",
             "dGlvbhIpLnNzbi5hc3luY3Rvbi52MS5DcmVhdGVUcmFuc2FjdGlvblJlcXVl",
             "c3QaKi5zc24uYXN5bmN0b24udjEuQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25z",
             "ZSIbgtPkkwIVIhAvdjEvdHJhbnNhY3Rpb25zOgEqErkBChVHZXRUcmFuc2Fj",
@@ -99,34 +99,36 @@ namespace Ssn.Asyncton.V1 {
             "c24uYXN5bmN0b24udjEuVXBkYXRlVHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVz",
             "dBoxLnNzbi5hc3luY3Rvbi52MS5VcGRhdGVUcmFuc2FjdGlvblJlc3VsdHNS",
             "ZXNwb25zZSJEgtPkkwI+Gh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVzdWx0",
-            "czoBKloaGhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHNCnAkKGGFpLnZpc21h",
-            "LnNzbi5hc3luY3Rvbi52MUINQXN5bmN0b25Qcm90b1ABWj9naXRodWIuY29t",
-            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmN0b24vdjE7dHJh",
-            "bnNhY3Rpb26iAgNTQViqAg9Tc24uQXN5bmN0b24uVjHKAg9Tc25cQXN5bmN0",
-            "b25cVjHiAhtTc25cQXN5bmN0b25cVjFcR1BCTWV0YWRhdGHqAhFTc246OkFz",
-            "eW5jdG9uOjpWMZJB0AcSwAYKD1NtYXJ0c2NhbiBBc3luYxKoBlNtYXJ0c2Nh",
-            "biBBc3luYyBsZXRzIHlvdSBzdWJtaXQgYSBkb2N1bWVudCBmb3IgcHJvY2Vz",
-            "c2luZyBhbmQgZmV0Y2ggdGhlIHJlc3VsdHMgbGF0ZXIuIEl0IHN1aXRzIGxh",
-            "cmdlIGRvY3VtZW50cywgYW5kIGl0J3MgdGhlIG9ubHkgd2F5IHRvIHVzZSB0",
-            "aGUgVUxUUkEgdGllci4gQ3JlYXRlIGEgdHJhbnNhY3Rpb24sIHBvbGwgaXRz",
-            "IHN0YXR1cywgdGhlbiBmZXRjaCB0aGUgcmVzdWx0cy4KCioqSG9zdHM6Kiog",
-            "YGFwaS5wcm9kLnNzbi52aXNtYS5haWAgZm9yIHByb2R1Y3Rpb24gYW5kIGBh",
-            "cGkuc3RhZy5zc24udmlzbWEuYWlgIGZvciBzdGFnaW5nLgoKKipBdXRoZW50",
-            "aWNhdGlvbjoqKiBzZW5kIHlvdXIgcHJvamVjdCB0b2tlbiBhcyBgQXV0aG9y",
-            "aXphdGlvbjogQmVhcmVyIDx0b2tlbj5gLiBTZWUgW0F1dGhlbnRpY2F0aW9u",
-            "XShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL2F1dGhlbnRpY2F0aW9uLyku",
-            "CgoqKkVycm9yczoqKiBhIGZhaWxlZCBjYWxsIHJldHVybnMgYW4gSFRUUCBl",
-            "cnJvciBzdGF0dXMgd2l0aCBhIEpTT04gYm9keSB0aGF0IGhvbGRzIGBjb2Rl",
-            "YCwgYG1lc3NhZ2VgIGFuZCBgZGV0YWlsc2AuCgoqKkd1aWRlczoqKiBbU21h",
-            "cnRzY2FuIEFzeW5jXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL3NtYXJ0",
-            "c2Nhbi1hc3luYy9nZXR0aW5nLXN0YXJ0ZWQvKSwgdGhlIFtmZWF0dXJlIGxp",
-            "c3RdKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRzY2FuLWFzeW5j",
-            "L2ZlYXR1cmVzLykgYW5kIFtsaW1pdHMgYW5kIHJhdGUgbGltaXRzXShodHRw",
-            "czovL2RvY3Mudm1sLnZpc21hLmFpL3JhdGUtbGltaXQvKS4yAnYxKgECMhBh",
-            "cHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uWlIKUAoKQmVhcmVy",
-            "QXV0aBJCCAISLVlvdXIgcHJvamVjdCB0b2tlbiwgc2VudCBhcyBgQmVhcmVy",
-            "IDx0b2tlbj5gLhoNQXV0aG9yaXphdGlvbiACYhAKDgoKQmVhcmVyQXV0aBIA",
-            "YgZwcm90bzM="));
+            "czoBKloaGhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHMaXpJBWxJZQ3JlYXRl",
+            "IHRyYW5zYWN0aW9ucywgcG9sbCB0aGVpciBzdGF0dXMsIGZldGNoIGFuZCBj",
+            "b3JyZWN0IHRoZWlyIHJlc3VsdHMsIGFuZCBkZWxldGUgdGhlbS5CnAkKGGFp",
+            "LnZpc21hLnNzbi5hc3luY3Rvbi52MUINQXN5bmN0b25Qcm90b1ABWj9naXRo",
+            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmN0b24v",
+            "djE7dHJhbnNhY3Rpb26iAgNTQViqAg9Tc24uQXN5bmN0b24uVjHKAg9Tc25c",
+            "QXN5bmN0b25cVjHiAhtTc25cQXN5bmN0b25cVjFcR1BCTWV0YWRhdGHqAhFT",
+            "c246OkFzeW5jdG9uOjpWMZJB0AcSwAYKD1NtYXJ0c2NhbiBBc3luYxKoBlNt",
+            "YXJ0c2NhbiBBc3luYyBsZXRzIHlvdSBzdWJtaXQgYSBkb2N1bWVudCBmb3Ig",
+            "cHJvY2Vzc2luZyBhbmQgZmV0Y2ggdGhlIHJlc3VsdHMgbGF0ZXIuIEl0IHN1",
+            "aXRzIGxhcmdlIGRvY3VtZW50cywgYW5kIGl0J3MgdGhlIG9ubHkgd2F5IHRv",
+            "IHVzZSB0aGUgVUxUUkEgdGllci4gQ3JlYXRlIGEgdHJhbnNhY3Rpb24sIHBv",
+            "bGwgaXRzIHN0YXR1cywgdGhlbiBmZXRjaCB0aGUgcmVzdWx0cy4KCioqSG9z",
+            "dHM6KiogYGFwaS5wcm9kLnNzbi52aXNtYS5haWAgZm9yIHByb2R1Y3Rpb24g",
+            "YW5kIGBhcGkuc3RhZy5zc24udmlzbWEuYWlgIGZvciBzdGFnaW5nLgoKKipB",
+            "dXRoZW50aWNhdGlvbjoqKiBzZW5kIHlvdXIgcHJvamVjdCB0b2tlbiBhcyBg",
+            "QXV0aG9yaXphdGlvbjogQmVhcmVyIDx0b2tlbj5gLiBTZWUgW0F1dGhlbnRp",
+            "Y2F0aW9uXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL2F1dGhlbnRpY2F0",
+            "aW9uLykuCgoqKkVycm9yczoqKiBhIGZhaWxlZCBjYWxsIHJldHVybnMgYW4g",
+            "SFRUUCBlcnJvciBzdGF0dXMgd2l0aCBhIEpTT04gYm9keSB0aGF0IGhvbGRz",
+            "IGBjb2RlYCwgYG1lc3NhZ2VgIGFuZCBgZGV0YWlsc2AuCgoqKkd1aWRlczoq",
+            "KiBbU21hcnRzY2FuIEFzeW5jXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFp",
+            "L3NtYXJ0c2Nhbi1hc3luYy9nZXR0aW5nLXN0YXJ0ZWQvKSwgdGhlIFtmZWF0",
+            "dXJlIGxpc3RdKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRzY2Fu",
+            "LWFzeW5jL2ZlYXR1cmVzLykgYW5kIFtsaW1pdHMgYW5kIHJhdGUgbGltaXRz",
+            "XShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL3JhdGUtbGltaXQvKS4yAnYx",
+            "KgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uWlIKUAoK",
+            "QmVhcmVyQXV0aBJCCAISLVlvdXIgcHJvamVjdCB0b2tlbiwgc2VudCBhcyBg",
+            "QmVhcmVyIDx0b2tlbj5gLhoNQXV0aG9yaXphdGlvbiACYhAKDgoKQmVhcmVy",
+            "QXV0aBIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +150,7 @@ namespace Ssn.Asyncton.V1 {
   }
   #region Messages
   /// <summary>
-  /// --- post: "/v1/transactions" ---
+  /// Request body for creating a transaction.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransactionRequest : pb::IMessage<CreateTransactionRequest>
@@ -204,7 +206,8 @@ namespace Ssn.Asyncton.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Ssn.Annotator.V1.Document document_;
     /// <summary>
-    /// we could have an ID here, in case they wanted to provide their own
+    /// The document to process. Send the file Base64-encoded in content, or a URL in
+    /// source.httpUri for the service to download. When both are set, content is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -221,7 +224,8 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Let's enforce the tags
+    /// Labels for the transaction. To delete every transaction with a tag, call
+    /// DELETE /v1/tags/{tagName}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -235,7 +239,10 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> features_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+    /// The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+    /// case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+    /// An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+    /// on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -246,6 +253,11 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 4;
     private string customId_ = "";
+    /// <summary>
+    /// Your own ID for the transaction, to get its status and results, or delete it, without
+    /// keeping the transaction ID. It must be unique in your project: reusing one returns
+    /// 409 Conflict until that transaction has been deleted.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -273,7 +285,8 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> questions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Questions to ask about the document
+    /// Questions to ask about the document. The answers come back in the QA annotation, in
+    /// answerCandidates. Setting questions turns on the QA feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -521,6 +534,9 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  /// <summary>
+  /// Response to creating a transaction.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransactionResponse : pb::IMessage<CreateTransactionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -570,6 +586,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID. Use it to get the status and results, to send feedback and to
+    /// delete the transaction.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -583,8 +603,7 @@ namespace Ssn.Asyncton.V1 {
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
     /// <summary>
-    /// CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-    /// but I think I'm more prone to separate them in /results endpoint
+    /// The custom ID from the request, if you set one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -761,7 +780,7 @@ namespace Ssn.Asyncton.V1 {
   }
 
   /// <summary>
-  /// --- get: "/v1/transactions/{id}/results" ---
+  /// Identifies the transaction whose results to get, and filters the candidates.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionResultsRequest : pb::IMessage<GetTransactionResultsRequest>
@@ -814,6 +833,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID, as returned when the transaction was created. Takes precedence over
+    /// customId when both are set.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -826,6 +849,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
+    /// <summary>
+    /// The custom ID you set when creating the transaction. Used only when no transaction ID
+    /// is given, so send it to GET /v1/transactions/results.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -839,8 +866,10 @@ namespace Ssn.Asyncton.V1 {
     public const int MinConfidenceFieldNumber = 3;
     private global::Ssn.Type.Confidence.Types.Level minConfidence_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
     /// <summary>
-    /// GetTransactionResultsRequest message can potentially have a list of features to filter the response
-    /// e.g. repeated string features like in CreateTransactionRequest
+    /// The lowest confidence level to return. Defaults to HIGH. Candidates below it are left
+    /// out, and so is a field feature with no candidate left. Applies to field features such as
+    /// TOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR
+    /// codes or text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -854,6 +883,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "max_results" field.</summary>
     public const int MaxResultsFieldNumber = 4;
     private int maxResults_;
+    /// <summary>
+    /// The maximum number of candidates per field feature. Defaults to 1.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxResults {
@@ -1076,6 +1108,9 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  /// <summary>
+  /// The results of a transaction.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionResultsResponse : pb::IMessage<GetTransactionResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1127,6 +1162,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -1142,8 +1180,10 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Asyncton.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> annotations_ = new pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation>();
     /// <summary>
-    /// map: FEATURE NAME --> SSN CANDIDATES
-    /// empty when processing is still running
+    /// The results, one entry per feature that produced any. Empty while the transaction is
+    /// CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+    /// out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+    /// purchase lines and the VERIFIED confidence level to candidates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1154,6 +1194,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "error_message" field.</summary>
     public const int ErrorMessageFieldNumber = 3;
     private string errorMessage_ = "";
+    /// <summary>
+    /// Describes a feature that failed, for example "image too large". Set when the transaction
+    /// is FAILED or PARTIAL.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorMessage {
@@ -1166,6 +1210,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 4;
     private string customId_ = "";
+    /// <summary>
+    /// The custom ID, if one was set when the transaction was created.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -1378,6 +1425,9 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  /// <summary>
+  /// The results of one feature. Only the fields that belong to the feature are set.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Annotation : pb::IMessage<Annotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1438,7 +1488,7 @@ namespace Ssn.Asyncton.V1 {
     public const int FeatureFieldNumber = 1;
     private string feature_ = "";
     /// <summary>
-    /// feature name e.g. "TOTAL_INCL_VAT"
+    /// The feature these results belong to, for example TOTAL_INCL_VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1455,7 +1505,9 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> candidates_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// ssn candidates
+    /// Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of
+    /// them, at or above minConfidence, without their confidence value. corrected is only set at
+    /// the VERIFIED level. For KSEF, the one candidate holds the KSeF number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1469,7 +1521,10 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.PurchaseLineCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> purchaseLineCandidates_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate>();
     /// <summary>
-    /// purchase line candidates (old format)
+    /// [DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a
+    /// single string, the value of the first candidate in purchaseLinesDetails. Kept for
+    /// existing integrations. New fields, such as productType, are only added to
+    /// purchaseLinesDetails, so use that instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1483,7 +1538,7 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(34, global::Ssn.Type.AnswerCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.AnswerCandidate> answerCandidates_ = new pbc::RepeatedField<global::Ssn.Type.AnswerCandidate>();
     /// <summary>
-    /// qa candidates
+    /// Answers to the questions sent with the transaction, for the QA feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1495,7 +1550,8 @@ namespace Ssn.Asyncton.V1 {
     public const int TextAnnotationFieldNumber = 5;
     private global::Ssn.Type.TextAnnotation textAnnotation_;
     /// <summary>
-    /// text annotation
+    /// The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the
+    /// pages broken down into blocks, paragraphs, words and symbols with their positions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1512,7 +1568,7 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(50, global::Ssn.Type.PageText.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PageText> pageTexts_ = new pbc::RepeatedField<global::Ssn.Type.PageText>();
     /// <summary>
-    /// page texts
+    /// The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1526,7 +1582,10 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(58, global::Ssn.Type.VatDistributionCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> vatDistributionCandidates_ = new pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate>();
     /// <summary>
-    /// vat distribution candidates (old format)
+    /// [DEPRECATED] VAT distribution in the simple form, each field holding a single string.
+    /// percentage, amount, exclVat and inclVat hold the first candidate's value of percentage,
+    /// totalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing
+    /// integrations, so use vatDistributionDetails instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1540,7 +1599,7 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(66, global::Ssn.Type.QrCodeData.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.QrCodeData> qrCodes_ = new pbc::RepeatedField<global::Ssn.Type.QrCodeData>();
     /// <summary>
-    /// qr codes detected in document
+    /// QR codes found in the document, for the QR_CODES feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1554,7 +1613,7 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(74, global::Ssn.Type.SwissQrBill.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.SwissQrBill> swissQrBills_ = new pbc::RepeatedField<global::Ssn.Type.SwissQrBill>();
     /// <summary>
-    /// swiss qr bills detected in document
+    /// Swiss QR bills found in the document, for the SWISS_QR_BILLS feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1568,7 +1627,9 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(98, global::Ssn.Type.PurchaseLine.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLine> purchaseLinesDetails_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLine>();
     /// <summary>
-    /// Purchase lines for the document. This is a list where each field is a candidate.
+    /// Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,
+    /// each field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,
+    /// each line also holds productType suggestions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1582,7 +1643,9 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(106, global::Ssn.Type.VatDistribution.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionDetails_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
     /// <summary>
-    /// VAT distribution for the document. This is a list where each field is a candidate.
+    /// VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds
+    /// a list of candidates with their confidence levels. The candidates come without
+    /// confidence values, bounding boxes or model metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1596,7 +1659,8 @@ namespace Ssn.Asyncton.V1 {
         = pb::FieldCodec.ForMessage(114, global::Ssn.Type.StructuredAddress.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.StructuredAddress> structuredAddress_ = new pbc::RepeatedField<global::Ssn.Type.StructuredAddress>();
     /// <summary>
-    /// Structured address, parsed from the raw address using the geo service.
+    /// The address split into street, postal code, city, country and country code, for the
+    /// SUPPLIER_ADDRESS and RECEIVER_ADDRESS features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1919,7 +1983,7 @@ namespace Ssn.Asyncton.V1 {
   }
 
   /// <summary>
-  /// --- get: "/v1/transactions/{id}/status" ---
+  /// Identifies the transaction whose status to get.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionStatusRequest : pb::IMessage<GetTransactionStatusRequest>
@@ -1970,6 +2034,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID, as returned when the transaction was created. Takes precedence over
+    /// customId when both are set.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -1982,6 +2050,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
+    /// <summary>
+    /// The custom ID you set when creating the transaction. Used only when no transaction ID
+    /// is given, so send it to GET /v1/transactions/status.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -2156,6 +2228,9 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  /// <summary>
+  /// The status of a transaction.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionStatusResponse : pb::IMessage<GetTransactionStatusResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2207,6 +2282,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -2220,8 +2298,10 @@ namespace Ssn.Asyncton.V1 {
     public const int StatusFieldNumber = 2;
     private string status_ = "";
     /// <summary>
-    /// e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-    /// "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+    /// The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+    /// processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+    /// features failed while others succeeded, and the results hold the ones that succeeded.
+    /// FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2236,7 +2316,8 @@ namespace Ssn.Asyncton.V1 {
     public const int ErrorMessageFieldNumber = 3;
     private string errorMessage_ = "";
     /// <summary>
-    /// Only populated when status == "FAILED" or status == "PARTIAL"
+    /// Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+    /// feature has failed, so always when the status is PARTIAL or FAILED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2251,7 +2332,8 @@ namespace Ssn.Asyncton.V1 {
     public const int CustomIdFieldNumber = 4;
     private string customId_ = "";
     /// <summary>
-    /// maybe a timestamp on different status would be nice here
+    /// The custom ID, if one was set when the transaction was created. Left out when
+    /// errorMessage is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2476,7 +2558,7 @@ namespace Ssn.Asyncton.V1 {
   }
 
   /// <summary>
-  /// --- delete: "/v1/transactions/{id}" ---
+  /// Identifies the transaction to delete.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTransactionRequest : pb::IMessage<DeleteTransactionRequest>
@@ -2527,6 +2609,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID, as returned when the transaction was created. Takes precedence over
+    /// customId when both are set.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -2539,6 +2625,10 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
+    /// <summary>
+    /// The custom ID you set when creating the transaction. Used only when no transaction ID
+    /// is given, so send it to DELETE /v1/transactions.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -2714,7 +2804,7 @@ namespace Ssn.Asyncton.V1 {
   }
 
   /// <summary>
-  /// --- delete: "/v1/tags/{tag_name}" ---
+  /// Identifies the tag whose transactions to delete.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTagRequest : pb::IMessage<DeleteTagRequest>
@@ -2765,7 +2855,8 @@ namespace Ssn.Asyncton.V1 {
     public const int TagNameFieldNumber = 1;
     private string tagName_ = "";
     /// <summary>
-    /// text-no-spaces
+    /// The tag, as set in tags when the transactions were created. URL-encode it if it holds
+    /// characters that aren't allowed in a URL path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2918,7 +3009,7 @@ namespace Ssn.Asyncton.V1 {
   }
 
   /// <summary>
-  /// --- put: "/v1/transactions/{id}/results" ---
+  /// Request for sending corrected results.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTransactionResultsRequest : pb::IMessage<UpdateTransactionResultsRequest>
@@ -2970,6 +3061,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -2982,6 +3076,11 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
+    /// <summary>
+    /// [NOT WORKING] Identifying the transaction by custom ID doesn't work here.
+    /// PUT /v1/transactions/results ignores the request body, so it returns success but saves
+    /// nothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {
@@ -2996,6 +3095,11 @@ namespace Ssn.Asyncton.V1 {
     private static readonly pb::FieldCodec<global::Ssn.Asyncton.V1.Annotation> _repeated_annotations_codec
         = pb::FieldCodec.ForMessage(26, global::Ssn.Asyncton.V1.Annotation.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> annotations_ = new pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation>();
+    /// <summary>
+    /// Your corrected results, in the same format as the annotations returned by
+    /// GET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent
+    /// before.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Asyncton.V1.Annotation> Annotations {
@@ -3181,6 +3285,9 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  /// <summary>
+  /// Response to sending corrected results.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTransactionResultsResponse : pb::IMessage<UpdateTransactionResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3230,6 +3337,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The transaction ID.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -3242,6 +3352,9 @@ namespace Ssn.Asyncton.V1 {
     /// <summary>Field number for the "custom_id" field.</summary>
     public const int CustomIdFieldNumber = 2;
     private string customId_ = "";
+    /// <summary>
+    /// The custom ID, if one was set when the transaction was created.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomId {

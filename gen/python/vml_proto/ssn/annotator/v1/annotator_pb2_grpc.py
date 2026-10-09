@@ -6,7 +6,8 @@ from vml_proto.ssn.annotator.v1 import annotator_pb2 as ssn_dot_annotator_dot_v1
 
 
 class DocumentAnnotatorStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Extract data from documents and get the results in the same call.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -27,16 +28,39 @@ class DocumentAnnotatorStub(object):
 
 
 class DocumentAnnotatorServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Extract data from documents and get the results in the same call.
+    """
 
     def AnnotateDocument(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Extract data from a document.
+
+        Send the document, as base64 `content` or as a `source.httpUri` to download it
+        from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+        fields. The results come back in the same call. For large documents, and for the
+        ULTRA tier, use Smartscan Async.
+
+        By default, most features return at most one candidate, and only with the
+        confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+        to change this. Without a `tier`, the request is processed as PREMIUM. A document
+        without readable text returns an empty response.
+
+        To correct the results, send the `feedbackId` from the response to
+        POST /v1/feedback:create.
+
+        Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+        read. Requests larger than 10 MiB are rejected.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def AnswerDocumentQuestion(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """[NOT IMPLEMENTED] Answer questions about a document.
+
+        REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+        the `questions` field of POST /v1/document:annotate, or of an async transaction,
+        instead.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -63,7 +87,8 @@ def add_DocumentAnnotatorServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class DocumentAnnotator(object):
-    """Missing associated documentation comment in .proto file."""
+    """Extract data from documents and get the results in the same call.
+    """
 
     @staticmethod
     def AnnotateDocument(request,

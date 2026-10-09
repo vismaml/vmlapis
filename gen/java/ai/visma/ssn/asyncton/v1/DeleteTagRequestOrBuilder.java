@@ -11,7 +11,8 @@ public interface DeleteTagRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+   * characters that aren't allowed in a URL path.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -20,7 +21,8 @@ public interface DeleteTagRequestOrBuilder extends
   java.lang.String getTagName();
   /**
    * <pre>
-   * text-no-spaces
+   * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+   * characters that aren't allowed in a URL path.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>

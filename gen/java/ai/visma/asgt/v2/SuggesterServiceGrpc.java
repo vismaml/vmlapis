@@ -173,7 +173,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * Suggest target values for one input.
+     * Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+     * highest confidence first, each with its confidence level.
+     * Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+     * sets no data structure or an option has an invalid value.
      * </pre>
      */
     default void suggest(ai.visma.asgt.v2.SuggestRequest request,
@@ -183,7 +187,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * Suggest target values for several inputs.
+     * Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+     * same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+     * predictions instead of 404. To get a 404 in that case, use
+     * POST /v2/datasets/{datasetName}/model:batchSuggest.
      * </pre>
      */
     default void batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
@@ -193,8 +201,9 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
-     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * Suggest target values for several inputs, or 404 without a model.
+     * Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+     * no trained model yet or doesn't exist.
      * </pre>
      */
     default void modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
@@ -232,7 +241,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * Suggest target values for one input.
+     * Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+     * highest confidence first, each with its confidence level.
+     * Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+     * sets no data structure or an option has an invalid value.
      * </pre>
      */
     public void suggest(ai.visma.asgt.v2.SuggestRequest request,
@@ -243,7 +256,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * Suggest target values for several inputs.
+     * Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+     * same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+     * predictions instead of 404. To get a 404 in that case, use
+     * POST /v2/datasets/{datasetName}/model:batchSuggest.
      * </pre>
      */
     public void batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
@@ -254,8 +271,9 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
-     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * Suggest target values for several inputs, or 404 without a model.
+     * Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+     * no trained model yet or doesn't exist.
      * </pre>
      */
     public void modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
@@ -283,7 +301,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * Suggest target values for one input.
+     * Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+     * highest confidence first, each with its confidence level.
+     * Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+     * sets no data structure or an option has an invalid value.
      * </pre>
      */
     public ai.visma.asgt.v2.SuggestResponse suggest(ai.visma.asgt.v2.SuggestRequest request) {
@@ -293,7 +315,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * Suggest target values for several inputs.
+     * Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+     * same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+     * predictions instead of 404. To get a 404 in that case, use
+     * POST /v2/datasets/{datasetName}/model:batchSuggest.
      * </pre>
      */
     public ai.visma.asgt.v2.BatchSuggestResponse batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
@@ -303,8 +329,9 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
-     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * Suggest target values for several inputs, or 404 without a model.
+     * Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+     * no trained model yet or doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.BatchSuggestResponse modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
@@ -331,7 +358,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * Suggest target values for one input.
+     * Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+     * highest confidence first, each with its confidence level.
+     * Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+     * sets no data structure or an option has an invalid value.
      * </pre>
      */
     public ai.visma.asgt.v2.SuggestResponse suggest(ai.visma.asgt.v2.SuggestRequest request) {
@@ -341,7 +372,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * Suggest target values for several inputs.
+     * Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+     * same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+     * predictions instead of 404. To get a 404 in that case, use
+     * POST /v2/datasets/{datasetName}/model:batchSuggest.
      * </pre>
      */
     public ai.visma.asgt.v2.BatchSuggestResponse batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
@@ -351,8 +386,9 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
-     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * Suggest target values for several inputs, or 404 without a model.
+     * Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+     * no trained model yet or doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.BatchSuggestResponse modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
@@ -379,7 +415,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * Suggest target values for one input.
+     * Uses the dataset's current model. Each target returns up to suggestLimit candidates,
+     * highest confidence first, each with its confidence level.
+     * Returns 404 if the dataset has no trained model yet or doesn't exist, and 400 if the input
+     * sets no data structure or an option has an invalid value.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.SuggestResponse> suggest(
@@ -390,7 +430,11 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * Suggest target values for several inputs.
+     * Works like POST /v2/datasets/{datasetName}:suggest, with one prediction per input, in the
+     * same order. If the dataset has no trained model yet or doesn't exist, it returns 200 with no
+     * predictions instead of 404. To get a 404 in that case, use
+     * POST /v2/datasets/{datasetName}/model:batchSuggest.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.BatchSuggestResponse> batchSuggest(
@@ -401,8 +445,9 @@ public final class SuggesterServiceGrpc {
 
     /**
      * <pre>
-     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
-     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * Suggest target values for several inputs, or 404 without a model.
+     * Works like POST /v2/datasets/{datasetName}:batchSuggest, but returns 404 if the dataset has
+     * no trained model yet or doesn't exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.BatchSuggestResponse> modelBatchSuggest(

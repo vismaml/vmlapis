@@ -7,8 +7,7 @@ package ai.visma.ssn.type;
 
 /**
  * <pre>
- * A vertex represents a 2D point in the image.
- * NOTE: the vertex coordinates are in the same scale as the original image.
+ * A point on the page, in pixel coordinates.
  * </pre>
  *
  * Protobuf type {@code ssn.type.Vertex}
@@ -51,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private int x_ = 0;
   /**
    * <pre>
-   * X coordinate.
+   * The x coordinate.
    * </pre>
    *
    * <code>int32 x = 1 [json_name = "x"];</code>
@@ -66,7 +65,7 @@ private static final long serialVersionUID = 0L;
   private int y_ = 0;
   /**
    * <pre>
-   * Y coordinate.
+   * The y coordinate.
    * </pre>
    *
    * <code>int32 y = 2 [json_name = "y"];</code>
@@ -247,8 +246,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A vertex represents a 2D point in the image.
-   * NOTE: the vertex coordinates are in the same scale as the original image.
+   * A point on the page, in pixel coordinates.
    * </pre>
    *
    * Protobuf type {@code ssn.type.Vertex}
@@ -401,7 +399,7 @@ private static final long serialVersionUID = 0L;
     private int x_ ;
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate.
      * </pre>
      *
      * <code>int32 x = 1 [json_name = "x"];</code>
@@ -413,7 +411,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate.
      * </pre>
      *
      * <code>int32 x = 1 [json_name = "x"];</code>
@@ -429,7 +427,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate.
      * </pre>
      *
      * <code>int32 x = 1 [json_name = "x"];</code>
@@ -445,7 +443,7 @@ private static final long serialVersionUID = 0L;
     private int y_ ;
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate.
      * </pre>
      *
      * <code>int32 y = 2 [json_name = "y"];</code>
@@ -457,7 +455,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate.
      * </pre>
      *
      * <code>int32 y = 2 [json_name = "y"];</code>
@@ -473,7 +471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate.
      * </pre>
      *
      * <code>int32 y = 2 [json_name = "y"];</code>

@@ -6,6 +6,10 @@
 package ai.visma.asgt.type;
 
 /**
+ * <pre>
+ * A trained model.
+ * </pre>
+ *
  * Protobuf type {@code asgt.type.Model}
  */
 public final class Model extends
@@ -61,6 +65,10 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * How the model takes its input. The service uses it to run the model.
+   * </pre>
+   *
    * Protobuf enum {@code asgt.type.Model.InputType}
    */
   public enum InputType
@@ -181,6 +189,10 @@ private static final long serialVersionUID = 0L;
   public static final int VERSION_FIELD_NUMBER = 3;
   private long version_ = 0L;
   /**
+   * <pre>
+   * Version number of the model.
+   * </pre>
+   *
    * <code>int64 version = 3 [json_name = "version", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The version.
    */
@@ -192,6 +204,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATED_AT_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp createdAt_;
   /**
+   * <pre>
+   * When the model was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
    * @return Whether the createdAt field is set.
    */
@@ -200,6 +216,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * When the model was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
    * @return The createdAt.
    */
@@ -208,6 +228,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
   }
   /**
+   * <pre>
+   * When the model was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
    */
   @java.lang.Override
@@ -218,6 +242,10 @@ private static final long serialVersionUID = 0L;
   public static final int DATASET_SIZE_FIELD_NUMBER = 5;
   private int datasetSize_ = 0;
   /**
+   * <pre>
+   * Size of the dataset the model was trained on, in examples.
+   * </pre>
+   *
    * <code>int32 dataset_size = 5 [json_name = "datasetSize", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The datasetSize.
    */
@@ -229,6 +257,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRAINING_SIZE_FIELD_NUMBER = 6;
   private int trainingSize_ = 0;
   /**
+   * <pre>
+   * Number of examples used for training.
+   * </pre>
+   *
    * <code>int32 training_size = 6 [json_name = "trainingSize", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The trainingSize.
    */
@@ -241,6 +273,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.TargetMetrics> confidenceScores_;
   /**
+   * <pre>
+   * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -248,6 +284,10 @@ private static final long serialVersionUID = 0L;
     return confidenceScores_;
   }
   /**
+   * <pre>
+   * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -256,6 +296,10 @@ private static final long serialVersionUID = 0L;
     return confidenceScores_;
   }
   /**
+   * <pre>
+   * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -263,6 +307,10 @@ private static final long serialVersionUID = 0L;
     return confidenceScores_.size();
   }
   /**
+   * <pre>
+   * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -270,6 +318,10 @@ private static final long serialVersionUID = 0L;
     return confidenceScores_.get(index);
   }
   /**
+   * <pre>
+   * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+   * </pre>
+   *
    * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -300,6 +352,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object datasetType_ = "";
   /**
+   * <pre>
+   * Type of the dataset the model was trained on: bank, scanned-invoice or
+   * electronic-invoice-line.
+   * </pre>
+   *
    * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
    * @return The datasetType.
    */
@@ -317,6 +374,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Type of the dataset the model was trained on: bank, scanned-invoice or
+   * electronic-invoice-line.
+   * </pre>
+   *
    * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
    * @return The bytes for datasetType.
    */
@@ -339,6 +401,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.type.ModelFile> modelFiles_;
   /**
+   * <pre>
+   * Files of the trained model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -346,6 +412,10 @@ private static final long serialVersionUID = 0L;
     return modelFiles_;
   }
   /**
+   * <pre>
+   * Files of the trained model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -354,6 +424,10 @@ private static final long serialVersionUID = 0L;
     return modelFiles_;
   }
   /**
+   * <pre>
+   * Files of the trained model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -361,6 +435,10 @@ private static final long serialVersionUID = 0L;
     return modelFiles_.size();
   }
   /**
+   * <pre>
+   * Files of the trained model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -368,6 +446,10 @@ private static final long serialVersionUID = 0L;
     return modelFiles_.get(index);
   }
   /**
+   * <pre>
+   * Files of the trained model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -403,6 +485,10 @@ private static final long serialVersionUID = 0L;
     return internalGetTargetToConfidenceThresholds().getMap().size();
   }
   /**
+   * <pre>
+   * For each target, the confidence value at which each confidence level starts.
+   * </pre>
+   *
    * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -420,6 +506,10 @@ private static final long serialVersionUID = 0L;
     return getTargetToConfidenceThresholdsMap();
   }
   /**
+   * <pre>
+   * For each target, the confidence value at which each confidence level starts.
+   * </pre>
+   *
    * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -427,6 +517,10 @@ private static final long serialVersionUID = 0L;
     return internalGetTargetToConfidenceThresholds().getMap();
   }
   /**
+   * <pre>
+   * For each target, the confidence value at which each confidence level starts.
+   * </pre>
+   *
    * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -441,6 +535,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * For each target, the confidence value at which each confidence level starts.
+   * </pre>
+   *
    * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -482,6 +580,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return internalGetTargetToClassCount().getMap().size();
   }
   /**
+   * <pre>
+   * For each target, the number of classes, that is distinct values, it has.
+   * </pre>
+   *
    * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -499,6 +601,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return getTargetToClassCountMap();
   }
   /**
+   * <pre>
+   * For each target, the number of classes, that is distinct values, it has.
+   * </pre>
+   *
    * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -506,6 +612,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return internalGetTargetToClassCount().getMap();
   }
   /**
+   * <pre>
+   * For each target, the number of classes, that is distinct values, it has.
+   * </pre>
+   *
    * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -518,6 +628,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * For each target, the number of classes, that is distinct values, it has.
+   * </pre>
+   *
    * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   @java.lang.Override
@@ -819,6 +933,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   * A trained model.
+   * </pre>
+   *
    * Protobuf type {@code asgt.type.Model}
    */
   public static final class Builder extends
@@ -1210,6 +1328,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
 
     private long version_ ;
     /**
+     * <pre>
+     * Version number of the model.
+     * </pre>
+     *
      * <code>int64 version = 3 [json_name = "version", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The version.
      */
@@ -1218,6 +1340,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return version_;
     }
     /**
+     * <pre>
+     * Version number of the model.
+     * </pre>
+     *
      * <code>int64 version = 3 [json_name = "version", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param value The version to set.
      * @return This builder for chaining.
@@ -1230,6 +1356,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Version number of the model.
+     * </pre>
+     *
      * <code>int64 version = 3 [json_name = "version", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -1244,6 +1374,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      * @return Whether the createdAt field is set.
      */
@@ -1251,6 +1385,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      * @return The createdAt.
      */
@@ -1262,6 +1400,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1278,6 +1420,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public Builder setCreatedAt(
@@ -1292,6 +1438,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1313,6 +1463,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public Builder clearCreatedAt() {
@@ -1326,6 +1480,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1334,6 +1492,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return getCreatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1345,6 +1507,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * When the model was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1363,6 +1529,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
 
     private int datasetSize_ ;
     /**
+     * <pre>
+     * Size of the dataset the model was trained on, in examples.
+     * </pre>
+     *
      * <code>int32 dataset_size = 5 [json_name = "datasetSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetSize.
      */
@@ -1371,6 +1541,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return datasetSize_;
     }
     /**
+     * <pre>
+     * Size of the dataset the model was trained on, in examples.
+     * </pre>
+     *
      * <code>int32 dataset_size = 5 [json_name = "datasetSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param value The datasetSize to set.
      * @return This builder for chaining.
@@ -1383,6 +1557,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Size of the dataset the model was trained on, in examples.
+     * </pre>
+     *
      * <code>int32 dataset_size = 5 [json_name = "datasetSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -1395,6 +1573,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
 
     private int trainingSize_ ;
     /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
      * <code>int32 training_size = 6 [json_name = "trainingSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The trainingSize.
      */
@@ -1403,6 +1585,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return trainingSize_;
     }
     /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
      * <code>int32 training_size = 6 [json_name = "trainingSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @param value The trainingSize to set.
      * @return This builder for chaining.
@@ -1415,6 +1601,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Number of examples used for training.
+     * </pre>
+     *
      * <code>int32 training_size = 6 [json_name = "trainingSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return This builder for chaining.
      */
@@ -1438,6 +1628,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         ai.visma.asgt.type.TargetMetrics, ai.visma.asgt.type.TargetMetrics.Builder, ai.visma.asgt.type.TargetMetricsOrBuilder> confidenceScoresBuilder_;
 
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.type.TargetMetrics> getConfidenceScoresList() {
@@ -1448,6 +1642,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getConfidenceScoresCount() {
@@ -1458,6 +1656,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.TargetMetrics getConfidenceScores(int index) {
@@ -1468,6 +1670,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setConfidenceScores(
@@ -1485,6 +1691,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setConfidenceScores(
@@ -1499,6 +1709,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addConfidenceScores(ai.visma.asgt.type.TargetMetrics value) {
@@ -1515,6 +1729,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addConfidenceScores(
@@ -1532,6 +1750,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addConfidenceScores(
@@ -1546,6 +1768,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addConfidenceScores(
@@ -1560,6 +1786,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addAllConfidenceScores(
@@ -1575,6 +1805,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearConfidenceScores() {
@@ -1588,6 +1822,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder removeConfidenceScores(int index) {
@@ -1601,6 +1839,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Builder getConfidenceScoresBuilder(
@@ -1608,6 +1850,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return getConfidenceScoresFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
@@ -1618,6 +1864,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.TargetMetricsOrBuilder> 
@@ -1629,6 +1879,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Builder addConfidenceScoresBuilder() {
@@ -1636,6 +1890,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           ai.visma.asgt.type.TargetMetrics.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.TargetMetrics.Builder addConfidenceScoresBuilder(
@@ -1644,6 +1902,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           index, ai.visma.asgt.type.TargetMetrics.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+     * </pre>
+     *
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.type.TargetMetrics.Builder> 
@@ -1720,6 +1982,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
 
     private java.lang.Object datasetType_ = "";
     /**
+     * <pre>
+     * Type of the dataset the model was trained on: bank, scanned-invoice or
+     * electronic-invoice-line.
+     * </pre>
+     *
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @return The datasetType.
      */
@@ -1736,6 +2003,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Type of the dataset the model was trained on: bank, scanned-invoice or
+     * electronic-invoice-line.
+     * </pre>
+     *
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @return The bytes for datasetType.
      */
@@ -1753,6 +2025,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Type of the dataset the model was trained on: bank, scanned-invoice or
+     * electronic-invoice-line.
+     * </pre>
+     *
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @param value The datasetType to set.
      * @return This builder for chaining.
@@ -1766,6 +2043,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Type of the dataset the model was trained on: bank, scanned-invoice or
+     * electronic-invoice-line.
+     * </pre>
+     *
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @return This builder for chaining.
      */
@@ -1776,6 +2058,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Type of the dataset the model was trained on: bank, scanned-invoice or
+     * electronic-invoice-line.
+     * </pre>
+     *
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @param value The bytes for datasetType to set.
      * @return This builder for chaining.
@@ -1803,6 +2090,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         ai.visma.asgt.type.ModelFile, ai.visma.asgt.type.ModelFile.Builder, ai.visma.asgt.type.ModelFileOrBuilder> modelFilesBuilder_;
 
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.type.ModelFile> getModelFilesList() {
@@ -1813,6 +2104,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getModelFilesCount() {
@@ -1823,6 +2118,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ModelFile getModelFiles(int index) {
@@ -1833,6 +2132,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setModelFiles(
@@ -1850,6 +2153,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder setModelFiles(
@@ -1864,6 +2171,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addModelFiles(ai.visma.asgt.type.ModelFile value) {
@@ -1880,6 +2191,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addModelFiles(
@@ -1897,6 +2212,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addModelFiles(
@@ -1911,6 +2230,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addModelFiles(
@@ -1925,6 +2248,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder addAllModelFiles(
@@ -1940,6 +2267,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder clearModelFiles() {
@@ -1953,6 +2284,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder removeModelFiles(int index) {
@@ -1966,6 +2301,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ModelFile.Builder getModelFilesBuilder(
@@ -1973,6 +2312,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return getModelFilesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ModelFileOrBuilder getModelFilesOrBuilder(
@@ -1983,6 +2326,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<? extends ai.visma.asgt.type.ModelFileOrBuilder> 
@@ -1994,6 +2341,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ModelFile.Builder addModelFilesBuilder() {
@@ -2001,6 +2352,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           ai.visma.asgt.type.ModelFile.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ModelFile.Builder addModelFilesBuilder(
@@ -2009,6 +2364,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           index, ai.visma.asgt.type.ModelFile.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Files of the trained model.
+     * </pre>
+     *
      * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<ai.visma.asgt.type.ModelFile.Builder> 
@@ -2066,6 +2425,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetTargetToConfidenceThresholds().ensureBuilderMap().size();
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2083,6 +2446,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return getTargetToConfidenceThresholdsMap();
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2090,6 +2457,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetTargetToConfidenceThresholds().getImmutableMap();
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2103,6 +2474,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return map.containsKey(key) ? targetToConfidenceThresholdsConverter.build(map.get(key)) : defaultValue;
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2121,6 +2496,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder removeTargetToConfidenceThresholds(
@@ -2140,6 +2519,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetMutableTargetToConfidenceThresholds().ensureMessageMap();
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder putTargetToConfidenceThresholds(
@@ -2153,6 +2536,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder putAllTargetToConfidenceThresholds(
@@ -2168,6 +2555,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * For each target, the confidence value at which each confidence level starts.
+     * </pre>
+     *
      * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 12 [json_name = "targetToConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ai.visma.asgt.type.ConfidenceThresholds.Builder putTargetToConfidenceThresholdsBuilderIfAbsent(
@@ -2212,6 +2603,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetTargetToClassCount().getMap().size();
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2229,6 +2624,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return getTargetToClassCountMap();
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2236,6 +2635,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetTargetToClassCount().getMap();
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2248,6 +2651,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     @java.lang.Override
@@ -2268,6 +2675,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder removeTargetToClassCount(
@@ -2287,6 +2698,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return internalGetMutableTargetToClassCount().getMutableMap();
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder putTargetToClassCount(
@@ -2300,6 +2715,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * For each target, the number of classes, that is distinct values, it has.
+     * </pre>
+     *
      * <code>map&lt;string, int32&gt; target_to_class_count = 13 [json_name = "targetToClassCount", (.gen_bq_schema.bigquery) = { ... }</code>
      */
     public Builder putAllTargetToClassCount(

@@ -10,38 +10,66 @@ public interface DocumentQuestionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return Whether the document field is set.
    */
   boolean hasDocument();
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    * @return The document.
    */
   ai.visma.ssn.annotator.v1.Document getDocument();
   /**
+   * <pre>
+   * The document to ask about.
+   * </pre>
+   *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
    */
   ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder();
 
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @return A list containing the questions.
    */
   java.util.List<java.lang.String>
       getQuestionsList();
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @return The count of questions.
    */
   int getQuestionsCount();
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the element to return.
    * @return The questions at the given index.
    */
   java.lang.String getQuestions(int index);
   /**
+   * <pre>
+   * Questions about the document, in plain language.
+   * </pre>
+   *
    * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the questions at the given index.

@@ -22,16 +22,17 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// A model trained on a dataset.
 type Model struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Creation time of the model
+	// When the model was created.
 	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	// Specifies dataset the model belongs to.
+	// The dataset the model was trained on. Only its consumer, name and type are filled in.
 	Dataset *_type.Dataset `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
-	// Targets the model was trained on
+	// Names of the targets the model predicts.
 	Targets []string `protobuf:"bytes,3,rep,name=targets,proto3" json:"targets,omitempty"`
 }
 

@@ -3,6 +3,9 @@ package ai.visma.ssn.annotator.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Extract data from documents and get the results in the same call.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.70.0)",
@@ -137,10 +140,28 @@ public final class DocumentAnnotatorGrpc {
   }
 
   /**
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Extract data from a document.
+     * Send the document, as base64 `content` or as a `source.httpUri` to download it
+     * from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+     * fields. The results come back in the same call. For large documents, and for the
+     * ULTRA tier, use Smartscan Async.
+     * By default, most features return at most one candidate, and only with the
+     * confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+     * to change this. Without a `tier`, the request is processed as PREMIUM. A document
+     * without readable text returns an empty response.
+     * To correct the results, send the `feedbackId` from the response to
+     * POST /v1/feedback:create.
+     * Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+     * read. Requests larger than 10 MiB are rejected.
+     * </pre>
      */
     default void annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> responseObserver) {
@@ -148,6 +169,12 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Answer questions about a document.
+     * REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+     * the `questions` field of POST /v1/document:annotate, or of an async transaction,
+     * instead.
+     * </pre>
      */
     default void answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentQuestionResponse> responseObserver) {
@@ -157,6 +184,9 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * Base class for the server implementation of the service DocumentAnnotator.
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public static abstract class DocumentAnnotatorImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -168,6 +198,9 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service DocumentAnnotator.
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public static final class DocumentAnnotatorStub
       extends io.grpc.stub.AbstractAsyncStub<DocumentAnnotatorStub> {
@@ -183,6 +216,21 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * Extract data from a document.
+     * Send the document, as base64 `content` or as a `source.httpUri` to download it
+     * from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+     * fields. The results come back in the same call. For large documents, and for the
+     * ULTRA tier, use Smartscan Async.
+     * By default, most features return at most one candidate, and only with the
+     * confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+     * to change this. Without a `tier`, the request is processed as PREMIUM. A document
+     * without readable text returns an empty response.
+     * To correct the results, send the `feedbackId` from the response to
+     * POST /v1/feedback:create.
+     * Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+     * read. Requests larger than 10 MiB are rejected.
+     * </pre>
      */
     public void annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> responseObserver) {
@@ -191,6 +239,12 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Answer questions about a document.
+     * REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+     * the `questions` field of POST /v1/document:annotate, or of an async transaction,
+     * instead.
+     * </pre>
      */
     public void answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentQuestionResponse> responseObserver) {
@@ -201,6 +255,9 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DocumentAnnotator.
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public static final class DocumentAnnotatorBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingV2Stub> {
@@ -216,6 +273,21 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * Extract data from a document.
+     * Send the document, as base64 `content` or as a `source.httpUri` to download it
+     * from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+     * fields. The results come back in the same call. For large documents, and for the
+     * ULTRA tier, use Smartscan Async.
+     * By default, most features return at most one candidate, and only with the
+     * confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+     * to change this. Without a `tier`, the request is processed as PREMIUM. A document
+     * without readable text returns an empty response.
+     * To correct the results, send the `feedbackId` from the response to
+     * POST /v1/feedback:create.
+     * Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+     * read. Requests larger than 10 MiB are rejected.
+     * </pre>
      */
     public ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -223,6 +295,12 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Answer questions about a document.
+     * REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+     * the `questions` field of POST /v1/document:annotate, or of an async transaction,
+     * instead.
+     * </pre>
      */
     public ai.visma.ssn.annotator.v1.DocumentQuestionResponse answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -232,6 +310,9 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service DocumentAnnotator.
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public static final class DocumentAnnotatorBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingStub> {
@@ -247,6 +328,21 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * Extract data from a document.
+     * Send the document, as base64 `content` or as a `source.httpUri` to download it
+     * from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+     * fields. The results come back in the same call. For large documents, and for the
+     * ULTRA tier, use Smartscan Async.
+     * By default, most features return at most one candidate, and only with the
+     * confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+     * to change this. Without a `tier`, the request is processed as PREMIUM. A document
+     * without readable text returns an empty response.
+     * To correct the results, send the `feedbackId` from the response to
+     * POST /v1/feedback:create.
+     * Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+     * read. Requests larger than 10 MiB are rejected.
+     * </pre>
      */
     public ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -254,6 +350,12 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Answer questions about a document.
+     * REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+     * the `questions` field of POST /v1/document:annotate, or of an async transaction,
+     * instead.
+     * </pre>
      */
     public ai.visma.ssn.annotator.v1.DocumentQuestionResponse answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -263,6 +365,9 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service DocumentAnnotator.
+   * <pre>
+   * Extract data from documents and get the results in the same call.
+   * </pre>
    */
   public static final class DocumentAnnotatorFutureStub
       extends io.grpc.stub.AbstractFutureStub<DocumentAnnotatorFutureStub> {
@@ -278,6 +383,21 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * Extract data from a document.
+     * Send the document, as base64 `content` or as a `source.httpUri` to download it
+     * from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+     * fields. The results come back in the same call. For large documents, and for the
+     * ULTRA tier, use Smartscan Async.
+     * By default, most features return at most one candidate, and only with the
+     * confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+     * to change this. Without a `tier`, the request is processed as PREMIUM. A document
+     * without readable text returns an empty response.
+     * To correct the results, send the `feedbackId` from the response to
+     * POST /v1/feedback:create.
+     * Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+     * read. Requests larger than 10 MiB are rejected.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> annotateDocument(
         ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
@@ -286,6 +406,12 @@ public final class DocumentAnnotatorGrpc {
     }
 
     /**
+     * <pre>
+     * [NOT IMPLEMENTED] Answer questions about a document.
+     * REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+     * the `questions` field of POST /v1/document:annotate, or of an async transaction,
+     * instead.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.annotator.v1.DocumentQuestionResponse> answerDocumentQuestion(
         ai.visma.ssn.annotator.v1.DocumentQuestionRequest request) {

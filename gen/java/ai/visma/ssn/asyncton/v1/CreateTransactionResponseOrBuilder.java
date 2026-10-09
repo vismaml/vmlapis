@@ -10,11 +10,21 @@ public interface CreateTransactionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID. Use it to get the status and results, to send feedback and to
+   * delete the transaction.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID. Use it to get the status and results, to send feedback and to
+   * delete the transaction.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -23,8 +33,7 @@ public interface CreateTransactionResponseOrBuilder extends
 
   /**
    * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
+   * The custom ID from the request, if you set one.
    * </pre>
    *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
@@ -33,8 +42,7 @@ public interface CreateTransactionResponseOrBuilder extends
   java.lang.String getCustomId();
   /**
    * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
+   * The custom ID from the request, if you set one.
    * </pre>
    *
    * <code>string custom_id = 2 [json_name = "customId"];</code>

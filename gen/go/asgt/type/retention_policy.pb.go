@@ -20,11 +20,14 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// How long examples are used for training.
 type RetentionPolicy struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Number of days examples count for training. Older examples are left out of training. The
+	// default is 180, which also applies when you send 0.
 	MaxDays int64 `protobuf:"varint,1,opt,name=max_days,json=maxDays,proto3" json:"max_days,omitempty"`
 }
 

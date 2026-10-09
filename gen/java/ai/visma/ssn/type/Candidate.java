@@ -6,6 +6,11 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * A candidate value for a field, with its confidence and where it was found. In a
+ * list of candidates, the most confident one comes first.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.Candidate}
  */
 public final class Candidate extends
@@ -46,6 +51,10 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * The kind of candidate. Not every candidate has one.
+   * </pre>
+   *
    * Protobuf enum {@code ssn.type.Candidate.Type}
    */
   public enum Type
@@ -177,7 +186,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object value_ = "";
   /**
    * <pre>
-   * Normalized value 01-01-2019
+   * The normalized value, for example "2019-01-01" for a date. Each field of the
+   * response describes the format of its values.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -198,7 +208,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Normalized value 01-01-2019
+   * The normalized value, for example "2019-01-01" for a date. Each field of the
+   * response describes the format of its values.
    * </pre>
    *
    * <code>string value = 1 [json_name = "value"];</code>
@@ -224,8 +235,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object text_ = "";
   /**
    * <pre>
-   * The text as found on the document "1. Jan"
-   * useful for overlays
+   * The text as written on the document, for example "1. Jan". Useful for overlays.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -246,8 +256,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The text as found on the document "1. Jan"
-   * useful for overlays
+   * The text as written on the document, for example "1. Jan". Useful for overlays.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -271,10 +280,6 @@ private static final long serialVersionUID = 0L;
   public static final int CONFIDENCE_FIELD_NUMBER = 3;
   private ai.visma.ssn.type.Confidence confidence_;
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    * @return Whether the confidence field is set.
    */
@@ -283,10 +288,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    * @return The confidence.
    */
@@ -295,10 +296,6 @@ private static final long serialVersionUID = 0L;
     return confidence_ == null ? ai.visma.ssn.type.Confidence.getDefaultInstance() : confidence_;
   }
   /**
-   * <pre>
-   * Confidence
-   * </pre>
-   *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
    */
   @java.lang.Override
@@ -309,29 +306,6 @@ private static final long serialVersionUID = 0L;
   public static final int BOUNDING_BOX_FIELD_NUMBER = 4;
   private ai.visma.ssn.type.BoundingPoly boundingBox_;
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    * @return Whether the boundingBox field is set.
    */
@@ -340,29 +314,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    * @return The boundingBox.
    */
@@ -371,29 +322,6 @@ private static final long serialVersionUID = 0L;
     return boundingBox_ == null ? ai.visma.ssn.type.BoundingPoly.getDefaultInstance() : boundingBox_;
   }
   /**
-   * <pre>
-   * The bounding box for the block.
-   * The vertices are in the order of top-left, top-right, bottom-right,
-   * bottom-left. When a rotation of the bounding box is detected the rotation
-   * is represented as around the top-left corner as defined when the text is
-   * read in the 'natural' orientation.
-   * For example:
-   *
-   * * when the text is horizontal it might look like:
-   *
-   * 0----1
-   * |    |
-   * 3----2
-   *
-   * * when it's rotated 180 degrees around the top-left corner it becomes:
-   *
-   * 2----3
-   * |    |
-   * 1----0
-   *
-   * and the vertex order will still be (0, 1, 2, 3).
-   * </pre>
-   *
    * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
    */
   @java.lang.Override
@@ -404,10 +332,6 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 5;
   private int type_ = 0;
   /**
-   * <pre>
-   * Indicate the type of the candidate
-   * </pre>
-   *
    * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
@@ -415,10 +339,6 @@ private static final long serialVersionUID = 0L;
     return type_;
   }
   /**
-   * <pre>
-   * Indicate the type of the candidate
-   * </pre>
-   *
    * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
    * @return The type.
    */
@@ -431,8 +351,7 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
-   * page_ref start from 1.
+   * The page the candidate was found on, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -446,10 +365,6 @@ private static final long serialVersionUID = 0L;
   public static final int MODEL_METADATA_FIELD_NUMBER = 7;
   private ai.visma.ssn.type.ModelSpec modelMetadata_;
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    * @return Whether the modelMetadata field is set.
    */
@@ -458,10 +373,6 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    * @return The modelMetadata.
    */
@@ -470,10 +381,6 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
   /**
-   * <pre>
-   * Model spec of the TensorFlow Serving model that predicted this candidate
-   * </pre>
-   *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    */
   @java.lang.Override
@@ -485,7 +392,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue corrected_;
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -497,7 +405,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -509,7 +418,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the candidate has been corrected by verification heuristics
+   * Only set on VERIFIED candidates: true when the consistency checks changed the
+   * value, and false when they confirmed it.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -771,6 +681,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A candidate value for a field, with its confidence and where it was found. In a
+   * list of candidates, the most confident one comes first.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.Candidate}
    */
   public static final class Builder extends
@@ -1044,7 +959,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object value_ = "";
     /**
      * <pre>
-     * Normalized value 01-01-2019
+     * The normalized value, for example "2019-01-01" for a date. Each field of the
+     * response describes the format of its values.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -1064,7 +980,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized value 01-01-2019
+     * The normalized value, for example "2019-01-01" for a date. Each field of the
+     * response describes the format of its values.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -1085,7 +1002,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized value 01-01-2019
+     * The normalized value, for example "2019-01-01" for a date. Each field of the
+     * response describes the format of its values.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -1102,7 +1020,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized value 01-01-2019
+     * The normalized value, for example "2019-01-01" for a date. Each field of the
+     * response describes the format of its values.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -1116,7 +1035,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Normalized value 01-01-2019
+     * The normalized value, for example "2019-01-01" for a date. Each field of the
+     * response describes the format of its values.
      * </pre>
      *
      * <code>string value = 1 [json_name = "value"];</code>
@@ -1136,8 +1056,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object text_ = "";
     /**
      * <pre>
-     * The text as found on the document "1. Jan"
-     * useful for overlays
+     * The text as written on the document, for example "1. Jan". Useful for overlays.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1157,8 +1076,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text as found on the document "1. Jan"
-     * useful for overlays
+     * The text as written on the document, for example "1. Jan". Useful for overlays.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1179,8 +1097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text as found on the document "1. Jan"
-     * useful for overlays
+     * The text as written on the document, for example "1. Jan". Useful for overlays.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1197,8 +1114,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text as found on the document "1. Jan"
-     * useful for overlays
+     * The text as written on the document, for example "1. Jan". Useful for overlays.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1212,8 +1128,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The text as found on the document "1. Jan"
-     * useful for overlays
+     * The text as written on the document, for example "1. Jan". Useful for overlays.
      * </pre>
      *
      * <code>string text = 2 [json_name = "text"];</code>
@@ -1234,10 +1149,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> confidenceBuilder_;
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return Whether the confidence field is set.
      */
@@ -1245,10 +1156,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      * @return The confidence.
      */
@@ -1260,10 +1167,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public Builder setConfidence(ai.visma.ssn.type.Confidence value) {
@@ -1280,10 +1183,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public Builder setConfidence(
@@ -1298,10 +1197,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public Builder mergeConfidence(ai.visma.ssn.type.Confidence value) {
@@ -1323,10 +1218,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public Builder clearConfidence() {
@@ -1340,10 +1231,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public ai.visma.ssn.type.Confidence.Builder getConfidenceBuilder() {
@@ -1352,10 +1239,6 @@ private static final long serialVersionUID = 0L;
       return getConfidenceFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     public ai.visma.ssn.type.ConfidenceOrBuilder getConfidenceOrBuilder() {
@@ -1367,10 +1250,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Confidence
-     * </pre>
-     *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1391,29 +1270,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.BoundingPoly, ai.visma.ssn.type.BoundingPoly.Builder, ai.visma.ssn.type.BoundingPolyOrBuilder> boundingBoxBuilder_;
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return Whether the boundingBox field is set.
      */
@@ -1421,29 +1277,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      * @return The boundingBox.
      */
@@ -1455,29 +1288,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public Builder setBoundingBox(ai.visma.ssn.type.BoundingPoly value) {
@@ -1494,29 +1304,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public Builder setBoundingBox(
@@ -1531,29 +1318,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public Builder mergeBoundingBox(ai.visma.ssn.type.BoundingPoly value) {
@@ -1575,29 +1339,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public Builder clearBoundingBox() {
@@ -1611,29 +1352,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public ai.visma.ssn.type.BoundingPoly.Builder getBoundingBoxBuilder() {
@@ -1642,29 +1360,6 @@ private static final long serialVersionUID = 0L;
       return getBoundingBoxFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     public ai.visma.ssn.type.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
@@ -1676,29 +1371,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * The bounding box for the block.
-     * The vertices are in the order of top-left, top-right, bottom-right,
-     * bottom-left. When a rotation of the bounding box is detected the rotation
-     * is represented as around the top-left corner as defined when the text is
-     * read in the 'natural' orientation.
-     * For example:
-     *
-     * * when the text is horizontal it might look like:
-     *
-     * 0----1
-     * |    |
-     * 3----2
-     *
-     * * when it's rotated 180 degrees around the top-left corner it becomes:
-     *
-     * 2----3
-     * |    |
-     * 1----0
-     *
-     * and the vertex order will still be (0, 1, 2, 3).
-     * </pre>
-     *
      * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1717,10 +1389,6 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
-     * <pre>
-     * Indicate the type of the candidate
-     * </pre>
-     *
      * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -1728,10 +1396,6 @@ private static final long serialVersionUID = 0L;
       return type_;
     }
     /**
-     * <pre>
-     * Indicate the type of the candidate
-     * </pre>
-     *
      * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
@@ -1743,10 +1407,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Indicate the type of the candidate
-     * </pre>
-     *
      * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return The type.
      */
@@ -1756,10 +1416,6 @@ private static final long serialVersionUID = 0L;
       return result == null ? ai.visma.ssn.type.Candidate.Type.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * Indicate the type of the candidate
-     * </pre>
-     *
      * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -1774,10 +1430,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Indicate the type of the candidate
-     * </pre>
-     *
      * <code>.ssn.type.Candidate.Type type = 5 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
@@ -1791,8 +1443,7 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
-     * page_ref start from 1.
+     * The page the candidate was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -1804,8 +1455,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
-     * page_ref start from 1.
+     * The page the candidate was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -1821,8 +1471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
-     * page_ref start from 1.
+     * The page the candidate was found on, starting at 1.
      * </pre>
      *
      * <code>uint32 page_ref = 6 [json_name = "pageRef"];</code>
@@ -1839,10 +1488,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> modelMetadataBuilder_;
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return Whether the modelMetadata field is set.
      */
@@ -1850,10 +1495,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      * @return The modelMetadata.
      */
@@ -1865,10 +1506,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -1885,10 +1522,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public Builder setModelMetadata(
@@ -1903,10 +1536,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public Builder mergeModelMetadata(ai.visma.ssn.type.ModelSpec value) {
@@ -1928,10 +1557,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public Builder clearModelMetadata() {
@@ -1945,10 +1570,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpec.Builder getModelMetadataBuilder() {
@@ -1957,10 +1578,6 @@ private static final long serialVersionUID = 0L;
       return getModelMetadataFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
@@ -1972,10 +1589,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Model spec of the TensorFlow Serving model that predicted this candidate
-     * </pre>
-     *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
@@ -1997,7 +1610,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> correctedBuilder_;
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2008,7 +1622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2023,7 +1638,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2043,7 +1659,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2061,7 +1678,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2086,7 +1704,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2103,7 +1722,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2115,7 +1735,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>
@@ -2130,7 +1751,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the candidate has been corrected by verification heuristics
+     * Only set on VERIFIED candidates: true when the consistency checks changed the
+     * value, and false when they confirmed it.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue corrected = 8 [json_name = "corrected"];</code>

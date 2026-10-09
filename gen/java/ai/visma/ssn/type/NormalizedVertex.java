@@ -7,9 +7,7 @@ package ai.visma.ssn.type;
 
 /**
  * <pre>
- * A vertex represents a 2D point in the image.
- * NOTE: the normalized vertex coordinates are relative to the original image
- * and range from 0 to 1.
+ * A point on the page, relative to the page size. Both coordinates range from 0 to 1.
  * </pre>
  *
  * Protobuf type {@code ssn.type.NormalizedVertex}
@@ -52,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private float x_ = 0F;
   /**
    * <pre>
-   * X coordinate.
+   * The x coordinate, relative to the page width.
    * </pre>
    *
    * <code>float x = 1 [json_name = "x"];</code>
@@ -67,7 +65,7 @@ private static final long serialVersionUID = 0L;
   private float y_ = 0F;
   /**
    * <pre>
-   * Y coordinate.
+   * The y coordinate, relative to the page height.
    * </pre>
    *
    * <code>float y = 2 [json_name = "y"];</code>
@@ -252,9 +250,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A vertex represents a 2D point in the image.
-   * NOTE: the normalized vertex coordinates are relative to the original image
-   * and range from 0 to 1.
+   * A point on the page, relative to the page size. Both coordinates range from 0 to 1.
    * </pre>
    *
    * Protobuf type {@code ssn.type.NormalizedVertex}
@@ -407,7 +403,7 @@ private static final long serialVersionUID = 0L;
     private float x_ ;
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate, relative to the page width.
      * </pre>
      *
      * <code>float x = 1 [json_name = "x"];</code>
@@ -419,7 +415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate, relative to the page width.
      * </pre>
      *
      * <code>float x = 1 [json_name = "x"];</code>
@@ -435,7 +431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * X coordinate.
+     * The x coordinate, relative to the page width.
      * </pre>
      *
      * <code>float x = 1 [json_name = "x"];</code>
@@ -451,7 +447,7 @@ private static final long serialVersionUID = 0L;
     private float y_ ;
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate, relative to the page height.
      * </pre>
      *
      * <code>float y = 2 [json_name = "y"];</code>
@@ -463,7 +459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate, relative to the page height.
      * </pre>
      *
      * <code>float y = 2 [json_name = "y"];</code>
@@ -479,7 +475,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Y coordinate.
+     * The y coordinate, relative to the page height.
      * </pre>
      *
      * <code>float y = 2 [json_name = "y"];</code>

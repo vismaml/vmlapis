@@ -10,11 +10,19 @@ public interface QrCodeDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The decoded text of the QR code.
+   * </pre>
+   *
    * <code>string content = 1 [json_name = "content"];</code>
    * @return The content.
    */
   java.lang.String getContent();
   /**
+   * <pre>
+   * The decoded text of the QR code.
+   * </pre>
+   *
    * <code>string content = 1 [json_name = "content"];</code>
    * @return The bytes for content.
    */

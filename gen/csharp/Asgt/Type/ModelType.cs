@@ -38,6 +38,9 @@ namespace Asgt.Type {
 
   }
   #region Enums
+  /// <summary>
+  /// Format of a trained model.
+  /// </summary>
   public enum ModelType {
     [pbr::OriginalName("DEFAULT")] Default = 0,
     [pbr::OriginalName("TENSORFLOW")] Tensorflow = 1,

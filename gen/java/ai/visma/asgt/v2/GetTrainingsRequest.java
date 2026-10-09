@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Request for GET /v2/trainings.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.GetTrainingsRequest}
  */
 public final class GetTrainingsRequest extends
@@ -46,6 +50,10 @@ private static final long serialVersionUID = 0L;
   public static final int OPTIONS_FIELD_NUMBER = 1;
   private ai.visma.asgt.v2.TrainingRequestOptions options_;
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    * @return Whether the options field is set.
    */
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    * @return The options.
    */
@@ -62,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return options_ == null ? ai.visma.asgt.v2.TrainingRequestOptions.getDefaultInstance() : options_;
   }
   /**
+   * <pre>
+   * Listing options, sent as query parameters such as options.limit.
+   * </pre>
+   *
    * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
    */
   @java.lang.Override
@@ -232,6 +248,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request for GET /v2/trainings.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.GetTrainingsRequest}
    */
   public static final class Builder extends
@@ -388,6 +408,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilder<
         ai.visma.asgt.v2.TrainingRequestOptions, ai.visma.asgt.v2.TrainingRequestOptions.Builder, ai.visma.asgt.v2.TrainingRequestOptionsOrBuilder> optionsBuilder_;
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return Whether the options field is set.
      */
@@ -395,6 +419,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      * @return The options.
      */
@@ -406,6 +434,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public Builder setOptions(ai.visma.asgt.v2.TrainingRequestOptions value) {
@@ -422,6 +454,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public Builder setOptions(
@@ -436,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public Builder mergeOptions(ai.visma.asgt.v2.TrainingRequestOptions value) {
@@ -457,6 +497,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public Builder clearOptions() {
@@ -470,6 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public ai.visma.asgt.v2.TrainingRequestOptions.Builder getOptionsBuilder() {
@@ -478,6 +526,10 @@ private static final long serialVersionUID = 0L;
       return getOptionsFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     public ai.visma.asgt.v2.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
@@ -489,6 +541,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Listing options, sent as query parameters such as options.limit.
+     * </pre>
+     *
      * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<

@@ -4,6 +4,7 @@ from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import empty_pb2 as _empty_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
 from google.type import date_pb2 as _date_pb2
+from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from ssn.type import candidate_pb2 as _candidate_pb2
 from ssn.type import text_annotation_pb2 as _text_annotation_pb2
 from ssn.type import tier_pb2 as _tier_pb2

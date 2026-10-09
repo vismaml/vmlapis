@@ -7,7 +7,7 @@ package ai.visma.ssn.asyncton.v1;
 
 /**
  * <pre>
- * --- delete: "/v1/tags/{tag_name}" ---
+ * Identifies the tag whose transactions to delete.
  * </pre>
  *
  * Protobuf type {@code ssn.asyncton.v1.DeleteTagRequest}
@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object tagName_ = "";
   /**
    * <pre>
-   * text-no-spaces
+   * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+   * characters that aren't allowed in a URL path.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -73,7 +74,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * text-no-spaces
+   * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+   * characters that aren't allowed in a URL path.
    * </pre>
    *
    * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -252,7 +254,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- delete: "/v1/tags/{tag_name}" ---
+   * Identifies the tag whose transactions to delete.
    * </pre>
    *
    * Protobuf type {@code ssn.asyncton.v1.DeleteTagRequest}
@@ -395,7 +397,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object tagName_ = "";
     /**
      * <pre>
-     * text-no-spaces
+     * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+     * characters that aren't allowed in a URL path.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -415,7 +418,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+     * characters that aren't allowed in a URL path.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -436,7 +440,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+     * characters that aren't allowed in a URL path.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -453,7 +458,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+     * characters that aren't allowed in a URL path.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
@@ -467,7 +473,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * text-no-spaces
+     * The tag, as set in tags when the transactions were created. URL-encode it if it holds
+     * characters that aren't allowed in a URL path.
      * </pre>
      *
      * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>

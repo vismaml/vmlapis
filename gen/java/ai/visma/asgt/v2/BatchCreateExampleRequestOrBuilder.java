@@ -11,7 +11,7 @@ public interface BatchCreateExampleRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +20,7 @@ public interface BatchCreateExampleRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the dataset.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -30,24 +30,44 @@ public interface BatchCreateExampleRequestOrBuilder extends
       getDatasetNameBytes();
 
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   java.util.List<ai.visma.asgt.v2.type.Example> 
       getExamplesList();
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   ai.visma.asgt.v2.type.Example getExamples(int index);
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   int getExamplesCount();
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.type.ExampleOrBuilder> 
       getExamplesOrBuilderList();
   /**
+   * <pre>
+   * The examples to add. At least one is required.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
    */
   ai.visma.asgt.v2.type.ExampleOrBuilder getExamplesOrBuilder(

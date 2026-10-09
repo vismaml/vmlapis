@@ -204,7 +204,9 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Suggest product types for a batch of text inputs.
+     * Suggest product types for a batch of texts.
+     * Returns one suggestion per text, in the same order, each with ranked product type
+     * candidates. Send 1 to 512 texts, none of them empty.
      * </pre>
      */
     default void batchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
@@ -224,7 +226,7 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
      * </pre>
      */
     default void internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
@@ -234,7 +236,10 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Submit feedback for product type predictions.
+     * Send the correct product types for texts.
+     * Stores each text with its correct product type and the model's current candidates for it,
+     * to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+     * length, or if a category isn't a ProductType name.
      * </pre>
      */
     default void feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request,
@@ -272,7 +277,9 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Suggest product types for a batch of text inputs.
+     * Suggest product types for a batch of texts.
+     * Returns one suggestion per text, in the same order, each with ranked product type
+     * candidates. Send 1 to 512 texts, none of them empty.
      * </pre>
      */
     public void batchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
@@ -294,7 +301,7 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
      * </pre>
      */
     public void internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request,
@@ -305,7 +312,10 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Submit feedback for product type predictions.
+     * Send the correct product types for texts.
+     * Stores each text with its correct product type and the model's current candidates for it,
+     * to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+     * length, or if a category isn't a ProductType name.
      * </pre>
      */
     public void feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request,
@@ -333,7 +343,9 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Suggest product types for a batch of text inputs.
+     * Suggest product types for a batch of texts.
+     * Returns one suggestion per text, in the same order, each with ranked product type
+     * candidates. Send 1 to 512 texts, none of them empty.
      * </pre>
      */
     public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse batchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
@@ -353,7 +365,7 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
      * </pre>
      */
     public ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
@@ -363,7 +375,10 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Submit feedback for product type predictions.
+     * Send the correct product types for texts.
+     * Stores each text with its correct product type and the model's current candidates for it,
+     * to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+     * length, or if a category isn't a ProductType name.
      * </pre>
      */
     public com.google.protobuf.Empty feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request) {
@@ -390,7 +405,9 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Suggest product types for a batch of text inputs.
+     * Suggest product types for a batch of texts.
+     * Returns one suggestion per text, in the same order, each with ranked product type
+     * candidates. Send 1 to 512 texts, none of them empty.
      * </pre>
      */
     public ai.visma.asgt.v2.ProductTypeBatchSuggestResponse batchSuggest(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
@@ -410,7 +427,7 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
      * </pre>
      */
     public ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse internalBatchSuggestWithLogits(ai.visma.asgt.v2.ProductTypeBatchSuggestRequest request) {
@@ -420,7 +437,10 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Submit feedback for product type predictions.
+     * Send the correct product types for texts.
+     * Stores each text with its correct product type and the model's current candidates for it,
+     * to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+     * length, or if a category isn't a ProductType name.
      * </pre>
      */
     public com.google.protobuf.Empty feedback(ai.visma.asgt.v2.ProductTypeFeedbackRequest request) {
@@ -447,7 +467,9 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Suggest product types for a batch of text inputs.
+     * Suggest product types for a batch of texts.
+     * Returns one suggestion per text, in the same order, each with ranked product type
+     * candidates. Send 1 to 512 texts, none of them empty.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.ProductTypeBatchSuggestResponse> batchSuggest(
@@ -469,7 +491,7 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+     * Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.InternalProductTypeBatchSuggestResponse> internalBatchSuggestWithLogits(
@@ -480,7 +502,10 @@ public final class ProductTypeServiceGrpc {
 
     /**
      * <pre>
-     * Submit feedback for product type predictions.
+     * Send the correct product types for texts.
+     * Stores each text with its correct product type and the model's current candidates for it,
+     * to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+     * length, or if a category isn't a ProductType name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> feedback(

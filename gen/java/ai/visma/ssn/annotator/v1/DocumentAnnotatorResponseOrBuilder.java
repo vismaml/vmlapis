@@ -11,68 +11,51 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
+  @java.lang.Deprecated java.util.List<ai.visma.ssn.type.Candidate> 
       getOrderDateList();
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
-  ai.visma.ssn.type.Candidate getOrderDate(int index);
+  @java.lang.Deprecated ai.visma.ssn.type.Candidate getOrderDate(int index);
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
-  int getOrderDateCount();
+  @java.lang.Deprecated int getOrderDateCount();
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getOrderDateOrBuilderList();
   /**
    * <pre>
-   * [DEPRECATED] Use document_date instead.
-   * orderDate
-   * ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * [DEPRECATED] Always empty. Use `documentDate` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
+   * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate", deprecated = true];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
+  @java.lang.Deprecated ai.visma.ssn.type.CandidateOrBuilder getOrderDateOrBuilder(
       int index);
 
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -81,9 +64,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPaymentDueDateList();
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -91,9 +72,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getPaymentDueDate(int index);
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -101,9 +80,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getPaymentDueDateCount();
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -112,9 +89,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPaymentDueDateOrBuilderList();
   /**
    * <pre>
-   * paymentDueDate
-   * ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-   * Example: "2019-12-31"
+   * Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -124,9 +99,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -135,9 +108,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCurrencyList();
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -145,9 +116,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getCurrency(int index);
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -155,9 +124,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getCurrencyCount();
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -166,9 +133,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCurrencyOrBuilderList();
   /**
    * <pre>
-   * currency
-   * ISO 4217 string, ie. a 3-letter capitalized string
-   * Example: "NOK"
+   * Candidates for the currency, as an ISO 4217 code, for example "NOK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -178,9 +143,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -189,9 +152,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalVatList();
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -199,9 +160,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalVat(int index);
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -209,9 +168,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getTotalVatCount();
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -220,9 +177,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalVatOrBuilderList();
   /**
    * <pre>
-   * totalVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -232,9 +187,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -243,9 +196,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalInclVatList();
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -253,9 +204,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalInclVat(int index);
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -263,9 +212,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getTotalInclVatCount();
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -274,9 +221,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalInclVatOrBuilderList();
   /**
    * <pre>
-   * totalInclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total including VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -286,9 +231,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -297,9 +240,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalExclVatList();
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -307,9 +248,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getTotalExclVat(int index);
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -317,9 +256,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getTotalExclVatCount();
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -328,9 +265,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getTotalExclVatOrBuilderList();
   /**
    * <pre>
-   * totalExclVat
-   * A string that parses as a two-decimal number
-   * Example: "10.0" or "11.11"
+   * Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -340,93 +275,57 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
+  @java.lang.Deprecated java.util.List<ai.visma.ssn.type.Candidate> 
       getSupplierCorporateIdList();
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
-  ai.visma.ssn.type.Candidate getSupplierCorporateId(int index);
+  @java.lang.Deprecated ai.visma.ssn.type.Candidate getSupplierCorporateId(int index);
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
-  int getSupplierCorporateIdCount();
+  @java.lang.Deprecated int getSupplierCorporateIdCount();
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getSupplierCorporateIdOrBuilderList();
   /**
    * <pre>
-   * [DEPRECATED]
-   * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-   * supplierCorporateId
-   * The company VAT number
-   * Example: "123456789B01" (for Dutch companies)
-   * or "12345678" (for Norwegian companies)
-   * Note: The field is repeated because multiple VAT numbers might exist.
-   * If you have the VAT number of you customer, you can use this information
-   * to find out which VAT number belongs to the supplier of the invoice.
+   * [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+   * instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
+   * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId", deprecated = true];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
+  @java.lang.Deprecated ai.visma.ssn.type.CandidateOrBuilder getSupplierCorporateIdOrBuilder(
       int index);
 
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -435,9 +334,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierCountryCodeList();
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -445,9 +343,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getSupplierCountryCode(int index);
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -455,9 +352,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSupplierCountryCodeCount();
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -466,9 +362,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierCountryCodeOrBuilderList();
   /**
    * <pre>
-   * supplierCountryCode
-   * ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-   * Example: "NO"
+   * Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+   * "NO".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -478,8 +373,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -488,8 +382,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentTypeList();
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -497,8 +390,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getDocumentType(int index);
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -506,8 +398,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getDocumentTypeCount();
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -516,8 +407,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentTypeOrBuilderList();
   /**
    * <pre>
-   * documentType
-   * Either "Receipt" or "Invoice"
+   * Candidates for the document type, for example "Invoice" or "Receipt".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -527,8 +417,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -537,8 +426,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPaymentMethodList();
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -546,8 +434,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getPaymentMethod(int index);
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -555,8 +442,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getPaymentMethodCount();
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -565,8 +451,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPaymentMethodOrBuilderList();
   /**
    * <pre>
-   * paymentMethod
-   * Either "Cash" or "CreditCard"
+   * Candidates for the payment method, for example "Cash" or "CreditCard".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -576,9 +461,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -587,9 +470,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCreditCardLastFourList();
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -597,9 +478,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getCreditCardLastFour(int index);
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -607,9 +486,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getCreditCardLastFourCount();
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -618,9 +495,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCreditCardLastFourOrBuilderList();
   /**
    * <pre>
-   * creditCardNumber
-   * Four digits
-   * Example: "0012"
+   * Candidates for the last four digits of the credit card, for example "0012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate credit_card_last_four = 11 [json_name = "creditCardLastFour"];</code>
@@ -630,66 +505,52 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
+  @java.lang.Deprecated java.util.List<ai.visma.ssn.type.Candidate> 
       getInvoiceNumberList();
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
-  ai.visma.ssn.type.Candidate getInvoiceNumber(int index);
+  @java.lang.Deprecated ai.visma.ssn.type.Candidate getInvoiceNumber(int index);
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
-  int getInvoiceNumberCount();
+  @java.lang.Deprecated int getInvoiceNumberCount();
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
       getInvoiceNumberOrBuilderList();
   /**
    * <pre>
-   * [DEPRECATED] Use document_number instead.
-   * invoiceNumber
-   * The supplier defined identifier of the invoice
-   * Example: "12345-A99"
+   * [DEPRECATED] Always empty. Use `documentNumber` instead.
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
+   * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber", deprecated = true];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
+  @java.lang.Deprecated ai.visma.ssn.type.CandidateOrBuilder getInvoiceNumberOrBuilder(
       int index);
 
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -698,7 +559,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   boolean hasTextAnnotation();
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -707,7 +569,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.TextAnnotation getTextAnnotation();
   /**
    * <pre>
-   * Return text annotation
+   * The OCR output for the pages Smartscan read: the text and its structure from pages
+   * down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
    * </pre>
    *
    * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
@@ -716,7 +579,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -725,7 +588,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkTypeList();
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -733,7 +596,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineDkType(int index);
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -741,7 +604,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineDkTypeCount();
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -750,7 +613,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkTypeOrBuilderList();
   /**
    * <pre>
-   * example: "71"
+   * Candidates for the type field of a Danish payment line (FIK).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 14 [json_name = "ocrLineDkType"];</code>
@@ -760,7 +623,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -769,7 +633,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkPaymentIdList();
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -777,7 +642,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineDkPaymentId(int index);
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -785,7 +651,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineDkPaymentIdCount();
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -794,7 +661,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkPaymentIdOrBuilderList();
   /**
    * <pre>
-   * example: "000002879094031"
+   * Candidates for the payment ID of a Danish payment line (FIK), for example
+   * "000002879094031".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 15 [json_name = "ocrLineDkPaymentId"];</code>
@@ -804,7 +672,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -813,7 +682,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkCreditorIdList();
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -821,7 +691,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineDkCreditorId(int index);
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -829,7 +700,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineDkCreditorIdCount();
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -838,7 +710,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineDkCreditorIdOrBuilderList();
   /**
    * <pre>
-   * example: "86570807"
+   * Candidates for the creditor ID of a Danish payment line (FIK), for example
+   * "86570807".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 16 [json_name = "ocrLineDkCreditorId"];</code>
@@ -848,7 +721,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -857,7 +730,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSePaymentIdList();
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -865,7 +738,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineSePaymentId(int index);
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -873,7 +746,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineSePaymentIdCount();
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -882,7 +755,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSePaymentIdOrBuilderList();
   /**
    * <pre>
-   * example: "050765098"
+   * Candidates for the payment ID of a Swedish payment line, for example "050765098".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 17 [json_name = "ocrLineSePaymentId"];</code>
@@ -892,7 +765,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -901,7 +775,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSeBankgiroCreditorIdList();
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -909,7 +784,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineSeBankgiroCreditorId(int index);
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -917,7 +793,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineSeBankgiroCreditorIdCount();
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -926,7 +803,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSeBankgiroCreditorIdOrBuilderList();
   /**
    * <pre>
-   * example: "2654507"
+   * Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+   * "2654507".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -936,7 +814,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -945,7 +824,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSePlusgiroCreditorIdList();
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -953,7 +833,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineSePlusgiroCreditorId(int index);
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -961,7 +842,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineSePlusgiroCreditorIdCount();
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -970,7 +852,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineSePlusgiroCreditorIdOrBuilderList();
   /**
    * <pre>
-   * example: "5000872"
+   * Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+   * "5000872".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -980,7 +863,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -989,7 +873,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineNoPaymentIdList();
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -997,7 +882,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineNoPaymentId(int index);
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1005,7 +891,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineNoPaymentIdCount();
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1014,7 +901,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineNoPaymentIdOrBuilderList();
   /**
    * <pre>
-   * example: "12345678903"
+   * Candidates for the payment ID (KID) of a Norwegian payment line, for example
+   * "12345678903".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 20 [json_name = "ocrLineNoPaymentId"];</code>
@@ -1024,7 +912,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1033,7 +922,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineFiPaymentIdList();
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1041,7 +931,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineFiPaymentId(int index);
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1049,7 +940,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineFiPaymentIdCount();
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1058,7 +950,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineFiPaymentIdOrBuilderList();
   /**
    * <pre>
-   * example: "0817937867870002"
+   * Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+   * "0817937867870002".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 21 [json_name = "ocrLineFiPaymentId"];</code>
@@ -1068,7 +961,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1077,7 +971,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineNlPaymentIdList();
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1085,7 +980,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineNlPaymentId(int index);
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1093,7 +989,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineNlPaymentIdCount();
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1102,7 +999,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineNlPaymentIdOrBuilderList();
   /**
    * <pre>
-   * example: "00000159220010146012"
+   * Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+   * example "00000159220010146012".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 22 [json_name = "ocrLineNlPaymentId"];</code>
@@ -1112,6 +1010,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1120,6 +1020,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineBePaymentIdList();
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1127,6 +1029,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOcrLineBePaymentId(int index);
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1134,6 +1038,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOcrLineBePaymentIdCount();
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1142,6 +1048,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOcrLineBePaymentIdOrBuilderList();
   /**
    * <pre>
+   * Candidates for the payment ID (OGM) of a Belgian payment line, for example
+   * "+++123/1234/12345+++".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
@@ -1151,7 +1059,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Return a string containing the text from the document
+   * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
    * </pre>
    *
    * <code>string text = 23 [json_name = "text"];</code>
@@ -1160,7 +1068,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Return a string containing the text from the document
+   * The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
    * </pre>
    *
    * <code>string text = 23 [json_name = "text"];</code>
@@ -1171,8 +1079,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Feedback ID is used to correct made predictions through the
-   * Feedback API.
+   * The ID of this request. To correct the results, send it as `id` to
+   * POST /v1/feedback:create.
    * </pre>
    *
    * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -1181,8 +1089,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   java.lang.String getFeedbackId();
   /**
    * <pre>
-   * Feedback ID is used to correct made predictions through the
-   * Feedback API.
+   * The ID of this request. To correct the results, send it as `id` to
+   * POST /v1/feedback:create.
    * </pre>
    *
    * <code>string feedback_id = 24 [json_name = "feedbackId"];</code>
@@ -1193,9 +1101,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1204,9 +1112,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getIbanList();
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1214,9 +1122,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getIban(int index);
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1224,9 +1132,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getIbanCount();
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1235,9 +1143,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getIbanOrBuilderList();
   /**
    * <pre>
-   * The first two letters are a country code. The next two digits are
-   * check digits for the ISO 7064 Mod 97, 10 checksum
-   * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+   * Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+   * "NO8330001234567". The first two letters are a country code, and the next two
+   * digits are check digits (ISO 7064 Mod 97-10).
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate iban = 25 [json_name = "iban"];</code>
@@ -1247,8 +1155,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1257,8 +1165,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getLinesList();
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1266,8 +1174,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.LineCandidate getLines(int index);
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1275,8 +1183,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getLinesCount();
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1285,8 +1193,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getLinesOrBuilderList();
   /**
    * <pre>
-   * Invoice lines represented in a form of text, amount and page reference
-   * to state on which page the line was found
+   * The lines of the document that hold an amount, with their text, amount and page.
+   * Returned for LINES.
    * </pre>
    *
    * <code>repeated .ssn.type.LineCandidate lines = 26 [json_name = "lines"];</code>
@@ -1296,7 +1204,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Base64 encoded PNG image  of the first page of PDF document sent in request
+   * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
    * </pre>
    *
    * <code>string preview = 27 [json_name = "preview"];</code>
@@ -1305,7 +1213,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   java.lang.String getPreview();
   /**
    * <pre>
-   * Base64 encoded PNG image  of the first page of PDF document sent in request
+   * A base64-encoded image of the first page that holds text. Returned for PREVIEW.
    * </pre>
    *
    * <code>string preview = 27 [json_name = "preview"];</code>
@@ -1316,7 +1224,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1325,7 +1233,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBankAccountNumberList();
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1333,7 +1241,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getBankAccountNumber(int index);
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1341,7 +1249,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getBankAccountNumberCount();
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1350,7 +1258,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBankAccountNumberOrBuilderList();
   /**
    * <pre>
-   * Country specific bank account number
+   * Candidates for the bank account number, in the format of its country.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_account_number = 28 [json_name = "bankAccountNumber"];</code>
@@ -1360,7 +1268,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1369,7 +1278,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBankRegistrationNumberList();
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1377,7 +1287,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getBankRegistrationNumber(int index);
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1385,7 +1296,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getBankRegistrationNumberCount();
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1394,7 +1306,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBankRegistrationNumberOrBuilderList();
   /**
    * <pre>
-   * Country specific bank registration number
+   * Candidates for the bank registration number, in countries that use one, such as
+   * Denmark.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bank_registration_number = 29 [json_name = "bankRegistrationNumber"];</code>
@@ -1404,7 +1317,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -1413,7 +1326,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBicList();
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -1421,7 +1334,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getBic(int index);
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -1429,7 +1342,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getBicCount();
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -1438,7 +1351,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getBicOrBuilderList();
   /**
    * <pre>
-   * Returns business identifier code
+   * Candidates for the BIC (SWIFT code), for example "DABADKKK".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate bic = 30 [json_name = "bic"];</code>
@@ -1448,7 +1361,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -1457,7 +1370,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentNumberList();
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -1465,7 +1378,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getDocumentNumber(int index);
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -1473,7 +1386,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getDocumentNumberCount();
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -1482,7 +1395,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentNumberOrBuilderList();
   /**
    * <pre>
-   * Represents identifier of the document
+   * Candidates for the number that identifies the document, such as the invoice number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_number = 31 [json_name = "documentNumber"];</code>
@@ -1492,7 +1405,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -1501,7 +1415,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentDateList();
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -1509,7 +1424,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getDocumentDate(int index);
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -1517,7 +1433,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getDocumentDateCount();
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -1526,7 +1443,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getDocumentDateOrBuilderList();
   /**
    * <pre>
-   * Returns document date
+   * Candidates for the date the document was issued, as YYYY-MM-DD, for example
+   * "2019-12-31".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate document_date = 32 [json_name = "documentDate"];</code>
@@ -1536,7 +1454,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -1545,7 +1463,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOrderNumberList();
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -1553,7 +1471,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getOrderNumber(int index);
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -1561,7 +1479,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getOrderNumberCount();
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -1570,7 +1488,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getOrderNumberOrBuilderList();
   /**
    * <pre>
-   * Represents the identifier that supplier assigned to the order
+   * Candidates for the order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate order_number = 33 [json_name = "orderNumber"];</code>
@@ -1580,7 +1498,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -1589,7 +1507,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierNameList();
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -1597,7 +1515,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getSupplierName(int index);
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -1605,7 +1523,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSupplierNameCount();
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -1614,7 +1532,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierNameOrBuilderList();
   /**
    * <pre>
-   * Returns supplier name
+   * Candidates for the supplier's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_name = 34 [json_name = "supplierName"];</code>
@@ -1624,8 +1542,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -1634,8 +1551,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierVatNumberList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -1643,8 +1559,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getSupplierVatNumber(int index);
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -1652,8 +1567,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSupplierVatNumberCount();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -1662,8 +1576,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierVatNumberOrBuilderList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier VAT number
+   * [EXPERIMENTAL] Candidates for the supplier's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_vat_number = 35 [json_name = "supplierVatNumber"];</code>
@@ -1673,8 +1586,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -1683,8 +1596,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierOrganisationNumberList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -1692,8 +1605,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getSupplierOrganisationNumber(int index);
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -1701,8 +1614,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSupplierOrganisationNumberCount();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -1711,8 +1624,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierOrganisationNumberOrBuilderList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns the business ID or organisation number of the supplier
+   * [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+   * CVR number in Denmark or the KvK number in the Netherlands.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_organisation_number = 36 [json_name = "supplierOrganisationNumber"];</code>
@@ -1722,8 +1635,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -1732,8 +1645,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierAddressList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -1741,8 +1654,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getSupplierAddress(int index);
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -1750,8 +1663,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSupplierAddressCount();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -1760,8 +1673,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSupplierAddressOrBuilderList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns supplier address
+   * [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+   * See `structuredSupplierAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate supplier_address = 37 [json_name = "supplierAddress"];</code>
@@ -1771,8 +1684,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -1781,8 +1693,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCustomerNumberList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -1790,8 +1701,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getCustomerNumber(int index);
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -1799,8 +1709,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getCustomerNumberCount();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -1809,8 +1718,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getCustomerNumberOrBuilderList();
   /**
    * <pre>
-   * [EXPERIMENTAL]
-   * Returns customer identifier/number
+   * [EXPERIMENTAL] Candidates for the number that identifies the customer.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
@@ -1820,7 +1728,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -1829,7 +1737,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverOrderNumberList();
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -1837,7 +1745,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getReceiverOrderNumber(int index);
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -1845,7 +1753,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getReceiverOrderNumberCount();
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -1854,7 +1762,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverOrderNumberOrBuilderList();
   /**
    * <pre>
-   * Equivalent of order number for receiver
+   * Candidates for the receiver's order number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
@@ -1864,7 +1772,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -1873,7 +1782,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverAddressList();
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -1881,7 +1791,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getReceiverAddress(int index);
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -1889,7 +1800,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getReceiverAddressCount();
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -1898,7 +1810,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverAddressOrBuilderList();
   /**
    * <pre>
-   * Equivalent of address for receiver
+   * Candidates for the receiver's address, as written on the document. See
+   * `structuredReceiverAddress` for its parts.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
@@ -1908,7 +1821,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -1917,7 +1830,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverCountryCodeList();
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -1925,7 +1838,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getReceiverCountryCode(int index);
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -1933,7 +1846,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getReceiverCountryCodeCount();
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -1942,7 +1855,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverCountryCodeOrBuilderList();
   /**
    * <pre>
-   * Equivalent of country code for receiver
+   * Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
@@ -1952,7 +1865,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -1961,7 +1874,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverNameList();
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -1969,7 +1882,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getReceiverName(int index);
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -1977,7 +1890,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getReceiverNameCount();
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -1986,7 +1899,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverNameOrBuilderList();
   /**
    * <pre>
-   * Equivalent of supplier name for receiver
+   * Candidates for the receiver's name.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
@@ -1996,7 +1909,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2005,7 +1918,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverVatNumberList();
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2013,7 +1926,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getReceiverVatNumber(int index);
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2021,7 +1934,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getReceiverVatNumberCount();
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2030,7 +1943,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getReceiverVatNumberOrBuilderList();
   /**
    * <pre>
-   * Equivalent of VAT number for receiver
+   * Candidates for the receiver's VAT number.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
@@ -2040,11 +1953,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2053,11 +1964,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPurchaseLinesList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2065,11 +1974,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index);
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2077,11 +1984,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getPurchaseLinesCount();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2090,11 +1995,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPurchaseLinesOrBuilderList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list of candidates, where each
-   * candidate is a single purchase lines. Each purchase line may have page number,
-   * code, description, quantity, item number, unit, total discount, percentage discount,
-   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-   * unit price excl vat
+   * The purchase lines in the older format, with one value for each field. Use
+   * `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
@@ -2104,8 +2007,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2114,8 +2016,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getAnswersList();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2123,8 +2024,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2132,8 +2032,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getAnswersCount();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2142,8 +2041,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getAnswersOrBuilderList();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request about the document
-   * Each Answer is question and answer pair with page number and confidence
+   * The answers to the `questions` in the request, one per question for each page read.
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2153,7 +2051,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -2162,7 +2060,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPageTextsList();
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -2170,7 +2068,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.PageText getPageTexts(int index);
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -2178,7 +2076,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getPageTextsCount();
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -2187,7 +2085,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPageTextsOrBuilderList();
   /**
    * <pre>
-   * The page texts of the document
+   * The text of each page read. Returned for PAGE_TEXTS.
    * </pre>
    *
    * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
@@ -2197,7 +2095,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -2206,7 +2106,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getVatDistributionList();
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -2214,7 +2116,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index);
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -2222,7 +2126,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getVatDistributionCount();
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -2231,7 +2137,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getVatDistributionOrBuilderList();
   /**
    * <pre>
-   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * The VAT levels in the older format, with one value for each field. Use
+   * `vatDistributionDetails` instead: it has candidates with confidence levels, and
+   * VERIFIED results.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
@@ -2241,7 +2149,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -2250,7 +2159,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   boolean hasDocumentMetadata();
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -2259,7 +2169,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.DocumentMetadata getDocumentMetadata();
   /**
    * <pre>
-   * Extra information about the document like number of pages
+   * Information about how the document was processed, such as the number of pages
+   * Smartscan read.
    * </pre>
    *
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
@@ -2268,7 +2179,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -2277,7 +2188,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getLanguageCodeList();
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -2285,7 +2196,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getLanguageCode(int index);
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -2293,7 +2204,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getLanguageCodeCount();
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -2302,7 +2213,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getLanguageCodeOrBuilderList();
   /**
    * <pre>
-   * Information about the text language detected from OCR
+   * Candidates for the language of the document text, as a BCP-47 code such as "en".
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
@@ -2312,7 +2223,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -2321,7 +2232,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getQrCodesList();
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -2329,7 +2240,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.QrCodeData getQrCodes(int index);
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -2337,7 +2248,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getQrCodesCount();
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -2346,7 +2257,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getQrCodesOrBuilderList();
   /**
    * <pre>
-   * QR codes detected in the document
+   * The QR codes found on the pages read. Returned for QR_CODES.
    * </pre>
    *
    * <code>repeated .ssn.type.QrCodeData qr_codes = 51 [json_name = "qrCodes"];</code>
@@ -2356,7 +2267,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -2365,7 +2276,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSwissQrBillsList();
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -2373,7 +2284,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.SwissQrBill getSwissQrBills(int index);
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -2381,7 +2292,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getSwissQrBillsCount();
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -2390,7 +2301,7 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getSwissQrBillsOrBuilderList();
   /**
    * <pre>
-   * Swiss QR bills detected in the document
+   * The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
    * </pre>
    *
    * <code>repeated .ssn.type.SwissQrBill swiss_qr_bills = 52 [json_name = "swissQrBills"];</code>
@@ -2400,7 +2311,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -2409,7 +2321,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   boolean hasHotelDates();
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -2418,7 +2331,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.HotelDates getHotelDates();
   /**
    * <pre>
-   * The hotelDates cntains check-in and check-out date candidates
+   * Check-in and check-out date candidates on documents related to accommodation, as
+   * YYYY-MM-DD. Returned for HOTEL_DATES.
    * </pre>
    *
    * <code>.ssn.type.HotelDates hotel_dates = 53 [json_name = "hotelDates"];</code>
@@ -2427,7 +2341,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -2436,7 +2351,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPurchaseLinesDetailsList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -2444,7 +2360,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.PurchaseLine getPurchaseLinesDetails(int index);
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -2452,7 +2369,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getPurchaseLinesDetailsCount();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -2461,7 +2379,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getPurchaseLinesDetailsOrBuilderList();
   /**
    * <pre>
-   * Purchase lines for the document. This is a list where each field is a candidate.
+   * The purchase lines, with a list of candidates for each field. Returned for
+   * PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
    * </pre>
    *
    * <code>repeated .ssn.type.PurchaseLine purchase_lines_details = 56 [json_name = "purchaseLinesDetails"];</code>
@@ -2471,7 +2390,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -2480,7 +2400,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getVatDistributionDetailsList();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -2488,7 +2409,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.VatDistribution getVatDistributionDetails(int index);
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -2496,7 +2418,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getVatDistributionDetailsCount();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -2505,7 +2428,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getVatDistributionDetailsOrBuilderList();
   /**
    * <pre>
-   * VAT distribution for the document. This is a list where each field is a candidate.
+   * The VAT levels, with a list of candidates for each field. Returned for
+   * VAT_DISTRIBUTION.
    * </pre>
    *
    * <code>repeated .ssn.type.VatDistribution vat_distribution_details = 57 [json_name = "vatDistributionDetails"];</code>
@@ -2515,10 +2439,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -2527,10 +2450,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getStructuredSupplierAddressList();
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -2538,10 +2460,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.StructuredAddress getStructuredSupplierAddress(int index);
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -2549,10 +2470,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getStructuredSupplierAddressCount();
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -2561,10 +2481,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getStructuredSupplierAddressOrBuilderList();
   /**
    * <pre>
-   * Structured supplier address, returned when VERIFIED feature is requested
-   * and supplier address is available. Parsed from the raw supplier address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in supplier_address.
+   * The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+   * belongs to the `supplierAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_supplier_address = 58 [json_name = "structuredSupplierAddress"];</code>
@@ -2574,10 +2493,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -2586,10 +2504,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getStructuredReceiverAddressList();
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -2597,10 +2514,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.StructuredAddress getStructuredReceiverAddress(int index);
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -2608,10 +2524,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getStructuredReceiverAddressCount();
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -2620,10 +2535,9 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getStructuredReceiverAddressOrBuilderList();
   /**
    * <pre>
-   * Structured receiver address, returned when VERIFIED feature is requested
-   * and receiver address is available. Parsed from the raw receiver address
-   * using the geo service. Each entry corresponds to the candidate at the
-   * same index in receiver_address.
+   * The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+   * belongs to the `receiverAddress` candidate at the same index, and is empty when that
+   * address can't be resolved.
    * </pre>
    *
    * <code>repeated .ssn.type.StructuredAddress structured_receiver_address = 59 [json_name = "structuredReceiverAddress"];</code>
@@ -2633,9 +2547,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -2644,9 +2559,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getKsefList();
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -2654,9 +2570,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.Candidate getKsef(int index);
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -2664,9 +2581,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getKsefCount();
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>
@@ -2675,9 +2593,10 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getKsefOrBuilderList();
   /**
    * <pre>
-   * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-   * via the QA/questions model. A reference number of up to 35 characters
-   * (alphanumeric, may contain hyphens).
+   * Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+   * characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+   * technical part and a 2-character checksum, separated by hyphens. Only numbers with
+   * a valid checksum are returned.
    * </pre>
    *
    * <code>repeated .ssn.type.Candidate ksef = 60 [json_name = "ksef"];</code>

@@ -11,7 +11,7 @@ public interface InvoiceLineOrBuilder extends
 
   /**
    * <pre>
-   * Id of the product (item).
+   * ID of the item, such as a global product ID.
    * </pre>
    *
    * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -20,7 +20,7 @@ public interface InvoiceLineOrBuilder extends
   java.lang.String getItemId();
   /**
    * <pre>
-   * Id of the product (item).
+   * ID of the item, such as a global product ID.
    * </pre>
    *
    * <code>string item_id = 1 [json_name = "itemId"];</code>
@@ -31,7 +31,7 @@ public interface InvoiceLineOrBuilder extends
 
   /**
    * <pre>
-   * Text of the invoice line.
+   * Text of the line, such as the item's description or name.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -40,7 +40,7 @@ public interface InvoiceLineOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Text of the invoice line.
+   * Text of the line, such as the item's description or name.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -50,50 +50,50 @@ public interface InvoiceLineOrBuilder extends
       getTextBytes();
 
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    * @return Whether the issueDate field is set.
    */
   boolean hasIssueDate();
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    * @return The issueDate.
    */
   com.google.protobuf.Timestamp getIssueDate();
   /**
+   * <pre>
+   * Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp issue_date = 3 [json_name = "issueDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
 
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    * @return Whether the supplier field is set.
    */
   boolean hasSupplier();
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    * @return The supplier.
    */
   ai.visma.asgt.v2.type.Supplier getSupplier();
   /**
-   * <pre>
-   * Supplier of the invoice.
-   * </pre>
-   *
    * <code>.asgt.v2.type.Supplier supplier = 4 [json_name = "supplier"];</code>
    */
   ai.visma.asgt.v2.type.SupplierOrBuilder getSupplierOrBuilder();
 
   /**
    * <pre>
-   * reference to the customer.
+   * Reference to the invoice's recipient, such as the customer's name.
    * </pre>
    *
    * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -102,7 +102,7 @@ public interface InvoiceLineOrBuilder extends
   java.lang.String getCustomerRef();
   /**
    * <pre>
-   * reference to the customer.
+   * Reference to the invoice's recipient, such as the customer's name.
    * </pre>
    *
    * <code>string customer_ref = 5 [json_name = "customerRef"];</code>
@@ -113,7 +113,7 @@ public interface InvoiceLineOrBuilder extends
 
   /**
    * <pre>
-   * Name of the currency as a string.
+   * Currency of the invoice, as text.
    * </pre>
    *
    * <code>string currency = 6 [json_name = "currency"];</code>
@@ -122,7 +122,7 @@ public interface InvoiceLineOrBuilder extends
   java.lang.String getCurrency();
   /**
    * <pre>
-   * Name of the currency as a string.
+   * Currency of the invoice, as text.
    * </pre>
    *
    * <code>string currency = 6 [json_name = "currency"];</code>

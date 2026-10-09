@@ -86,14 +86,9 @@ namespace Ssn.Type {
   }
   #region Messages
   /// <summary>
-  /// TextAnnotation contains a structured representation of OCR extracted text.
-  /// The hierarchy of an OCR extracted text structure is like this:
-  ///     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-  /// Each structural component, starting from Page, may further have their own
-  /// properties. Properties describe detected languages, breaks etc.. Please refer
-  /// to the
-  /// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
-  /// message definition below for more detail.
+  /// The OCR output for a document: its text, and its structure from pages down to single
+  /// symbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page
+  /// down can have properties, such as the detected languages and breaks.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation>
@@ -147,7 +142,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Page.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Page> pages_ = new pbc::RepeatedField<global::Ssn.Type.Page>();
     /// <summary>
-    /// List of pages detected by OCR.
+    /// The pages, in order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -843,7 +838,7 @@ namespace Ssn.Type {
             [pbr::OriginalName("EOL_SURE_SPACE")] EolSureSpace = 3,
             /// <summary>
             /// End-line hyphen that is not present in text; does not co-occur with
-            /// `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+            /// `SPACE` or `LINE_BREAK`.
             /// </summary>
             [pbr::OriginalName("HYPHEN")] Hyphen = 4,
             /// <summary>
@@ -1175,8 +1170,7 @@ namespace Ssn.Type {
     public const int WidthFieldNumber = 2;
     private int width_;
     /// <summary>
-    /// Page width. For PDFs the unit is points. For images (including
-    /// TIFFs) the unit is pixels.
+    /// The width of the page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1191,8 +1185,7 @@ namespace Ssn.Type {
     public const int HeightFieldNumber = 3;
     private int height_;
     /// <summary>
-    /// Page height. For PDFs the unit is points. For images (including
-    /// TIFFs) the unit is pixels.
+    /// The height of the page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1538,28 +1531,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 2;
     private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the block.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///
-    /// * when the text is horizontal it might look like:
-    ///
-    ///         0----1
-    ///         |    |
-    ///         3----2
-    ///
-    /// * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///
-    ///         2----3
-    ///         |    |
-    ///         1----0
-    ///
-    ///   and the vertex order will still be (0, 1, 2, 3).
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {
@@ -1575,7 +1546,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Paragraph.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Paragraph> paragraphs_ = new pbc::RepeatedField<global::Ssn.Type.Paragraph>();
     /// <summary>
-    /// List of paragraphs in this block (if this blocks is of type text).
+    /// The paragraphs in the block, if it's a text block.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1965,23 +1936,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 2;
     private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the paragraph.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///   * when the text is horizontal it might look like:
-    ///      0----1
-    ///      |    |
-    ///      3----2
-    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///      2----3
-    ///      |    |
-    ///      1----0
-    ///   and the vertex order will still be (0, 1, 2, 3).
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {
@@ -2310,23 +2264,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 2;
     private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the word.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///   * when the text is horizontal it might look like:
-    ///      0----1
-    ///      |    |
-    ///      3----2
-    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///      2----3
-    ///      |    |
-    ///      1----0
-    ///   and the vertex order will still be (0, 1, 2, 3).
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {
@@ -2656,23 +2593,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 2;
     private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the symbol.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///   * when the text is horizontal it might look like:
-    ///      0----1
-    ///      |    |
-    ///      3----2
-    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///      2----3
-    ///      |    |
-    ///      1----0
-    ///   and the vertice order will still be (0, 1, 2, 3).
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {

@@ -10,11 +10,19 @@ public interface GetTransactionStatusResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -23,8 +31,10 @@ public interface GetTransactionStatusResponseOrBuilder extends
 
   /**
    * <pre>
-   * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-   * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+   * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+   * features failed while others succeeded, and the results hold the ones that succeeded.
+   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -33,8 +43,10 @@ public interface GetTransactionStatusResponseOrBuilder extends
   java.lang.String getStatus();
   /**
    * <pre>
-   * e.g. "RUNNING", "SUCCESSFUL", "PARTIAL", "FAILED"
-   * "PARTIAL" is when some features failed - e.g. SSN succeeded but purchase lines failed
+   * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
+   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
+   * features failed while others succeeded, and the results hold the ones that succeeded.
+   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -45,7 +57,8 @@ public interface GetTransactionStatusResponseOrBuilder extends
 
   /**
    * <pre>
-   * Only populated when status == "FAILED" or status == "PARTIAL"
+   * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+   * feature has failed, so always when the status is PARTIAL or FAILED.
    * </pre>
    *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -54,7 +67,8 @@ public interface GetTransactionStatusResponseOrBuilder extends
   java.lang.String getErrorMessage();
   /**
    * <pre>
-   * Only populated when status == "FAILED" or status == "PARTIAL"
+   * Describes a feature that failed, for example "failed to process pdf". Set as soon as any
+   * feature has failed, so always when the status is PARTIAL or FAILED.
    * </pre>
    *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
@@ -65,7 +79,8 @@ public interface GetTransactionStatusResponseOrBuilder extends
 
   /**
    * <pre>
-   * maybe a timestamp on different status would be nice here
+   * The custom ID, if one was set when the transaction was created. Left out when
+   * errorMessage is set.
    * </pre>
    *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
@@ -74,7 +89,8 @@ public interface GetTransactionStatusResponseOrBuilder extends
   java.lang.String getCustomId();
   /**
    * <pre>
-   * maybe a timestamp on different status would be nice here
+   * The custom ID, if one was set when the transaction was created. Left out when
+   * errorMessage is set.
    * </pre>
    *
    * <code>string custom_id = 4 [json_name = "customId"];</code>

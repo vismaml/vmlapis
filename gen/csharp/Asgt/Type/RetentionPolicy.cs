@@ -40,6 +40,9 @@ namespace Asgt.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// How long examples are used for training.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetentionPolicy : pb::IMessage<RetentionPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -88,6 +91,10 @@ namespace Asgt.Type {
     /// <summary>Field number for the "max_days" field.</summary>
     public const int MaxDaysFieldNumber = 1;
     private long maxDays_;
+    /// <summary>
+    /// Number of days examples count for training. Older examples are left out of training. The
+    /// default is 180, which also applies when you send 0.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxDays {

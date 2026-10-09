@@ -11,7 +11,7 @@ public interface VertexOrBuilder extends
 
   /**
    * <pre>
-   * X coordinate.
+   * The x coordinate.
    * </pre>
    *
    * <code>int32 x = 1 [json_name = "x"];</code>
@@ -21,7 +21,7 @@ public interface VertexOrBuilder extends
 
   /**
    * <pre>
-   * Y coordinate.
+   * The y coordinate.
    * </pre>
    *
    * <code>int32 y = 2 [json_name = "y"];</code>

@@ -10,718 +10,1336 @@ public interface TrueValuesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    * @return Whether the totalInclVat field is set.
    */
   boolean hasTotalInclVat();
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    * @return The totalInclVat.
    */
   com.google.protobuf.DoubleValue getTotalInclVat();
   /**
+   * <pre>
+   * Total including VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder();
 
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    * @return Whether the totalVat field is set.
    */
   boolean hasTotalVat();
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    * @return The totalVat.
    */
   com.google.protobuf.DoubleValue getTotalVat();
   /**
+   * <pre>
+   * Total VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder();
 
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    * @return Whether the totalExclVat field is set.
    */
   boolean hasTotalExclVat();
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    * @return The totalExclVat.
    */
   com.google.protobuf.DoubleValue getTotalExclVat();
   /**
+   * <pre>
+   * Total excluding VAT, as a number.
+   * </pre>
+   *
    * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder();
 
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the orderDate field is set.
    */
   boolean hasOrderDate();
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The orderDate.
    */
   com.google.type.Date getOrderDate();
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentDate` instead.
+   * </pre>
+   *
    * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getOrderDateOrBuilder();
 
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the paymentDueDate field is set.
    */
   boolean hasPaymentDueDate();
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The paymentDueDate.
    */
   com.google.type.Date getPaymentDueDate();
   /**
+   * <pre>
+   * Last day for the payment, as an object with year, month and day. The day
+   * must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getPaymentDueDateOrBuilder();
 
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    * @return Whether the documentType field is set.
    */
   boolean hasDocumentType();
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    * @return The documentType.
    */
   com.google.protobuf.StringValue getDocumentType();
   /**
+   * <pre>
+   * Document type, using the values the annotate response returns, for
+   * example "Invoice".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder();
 
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    * @return Whether the currency field is set.
    */
   boolean hasCurrency();
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    * @return The currency.
    */
   com.google.protobuf.StringValue getCurrency();
   /**
+   * <pre>
+   * Three-letter ISO 4217 currency code, for example "DKK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
 
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    * @return Whether the creditCardLastFour field is set.
    */
   boolean hasCreditCardLastFour();
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    * @return The creditCardLastFour.
    */
   com.google.protobuf.StringValue getCreditCardLastFour();
   /**
+   * <pre>
+   * Last four digits of the card used for payment, for example "2345".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder();
 
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    * @return Whether the paymentMethod field is set.
    */
   boolean hasPaymentMethod();
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    * @return The paymentMethod.
    */
   com.google.protobuf.StringValue getPaymentMethod();
   /**
+   * <pre>
+   * Payment method, using the values the annotate response returns: "Cash",
+   * "CreditCard" or "BankTransfer".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder();
 
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    * @return Whether the ocrLineDkType field is set.
    */
   boolean hasOcrLineDkType();
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    * @return The ocrLineDkType.
    */
   com.google.protobuf.StringValue getOcrLineDkType();
   /**
+   * <pre>
+   * Type field of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder();
 
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    * @return Whether the ocrLineDkPaymentId field is set.
    */
   boolean hasOcrLineDkPaymentId();
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    * @return The ocrLineDkPaymentId.
    */
   com.google.protobuf.StringValue getOcrLineDkPaymentId();
   /**
+   * <pre>
+   * Payment reference of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    * @return Whether the ocrLineDkCreditorId field is set.
    */
   boolean hasOcrLineDkCreditorId();
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    * @return The ocrLineDkCreditorId.
    */
   com.google.protobuf.StringValue getOcrLineDkCreditorId();
   /**
+   * <pre>
+   * Creditor account number of a Danish FIK payment line.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder();
 
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    * @return Whether the ocrLineSePaymentId field is set.
    */
   boolean hasOcrLineSePaymentId();
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    * @return The ocrLineSePaymentId.
    */
   com.google.protobuf.StringValue getOcrLineSePaymentId();
   /**
+   * <pre>
+   * Swedish payment reference.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    * @return Whether the ocrLineSeBankgiroCreditorId field is set.
    */
   boolean hasOcrLineSeBankgiroCreditorId();
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    * @return The ocrLineSeBankgiroCreditorId.
    */
   com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId();
   /**
+   * <pre>
+   * Swedish Bankgiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder();
 
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    * @return Whether the ocrLineSePlusgiroCreditorId field is set.
    */
   boolean hasOcrLineSePlusgiroCreditorId();
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    * @return The ocrLineSePlusgiroCreditorId.
    */
   com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId();
   /**
+   * <pre>
+   * Swedish PlusGiro number of the creditor.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder();
 
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    * @return Whether the ocrLineNoPaymentId field is set.
    */
   boolean hasOcrLineNoPaymentId();
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    * @return The ocrLineNoPaymentId.
    */
   com.google.protobuf.StringValue getOcrLineNoPaymentId();
   /**
+   * <pre>
+   * Norwegian payment reference (KID).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    * @return Whether the ocrLineFiPaymentId field is set.
    */
   boolean hasOcrLineFiPaymentId();
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    * @return The ocrLineFiPaymentId.
    */
   com.google.protobuf.StringValue getOcrLineFiPaymentId();
   /**
+   * <pre>
+   * Finnish payment reference (viitenumero).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    * @return Whether the ocrLineNlPaymentId field is set.
    */
   boolean hasOcrLineNlPaymentId();
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    * @return The ocrLineNlPaymentId.
    */
   com.google.protobuf.StringValue getOcrLineNlPaymentId();
   /**
+   * <pre>
+   * Dutch payment reference (betalingskenmerk).
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    * @return Whether the supplierCorporateId field is set.
    */
   boolean hasSupplierCorporateId();
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    * @return The supplierCorporateId.
    */
   com.google.protobuf.StringValue getSupplierCorporateId();
   /**
+   * <pre>
+   * [DEPRECATED] Send `supplierOrganisationNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder();
 
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    * @return Whether the supplierCountryCode field is set.
    */
   boolean hasSupplierCountryCode();
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    * @return The supplierCountryCode.
    */
   com.google.protobuf.StringValue getSupplierCountryCode();
   /**
+   * <pre>
+   * Supplier's country, as a two-letter ISO 3166-1 alpha-2 code, for
+   * example "DK".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder();
 
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    * @return Whether the invoiceNumber field is set.
    */
   boolean hasInvoiceNumber();
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    * @return The invoiceNumber.
    */
   com.google.protobuf.StringValue getInvoiceNumber();
   /**
+   * <pre>
+   * [DEPRECATED] Send `documentNumber` instead.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder();
 
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    * @return Whether the iban field is set.
    */
   boolean hasIban();
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    * @return The iban.
    */
   com.google.protobuf.StringValue getIban();
   /**
+   * <pre>
+   * IBAN.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getIbanOrBuilder();
 
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    * @return Whether the orderReference field is set.
    */
   boolean hasOrderReference();
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    * @return The orderReference.
    */
   com.google.protobuf.StringValue getOrderReference();
   /**
+   * <pre>
+   * Order reference on the document. No Smartscan feature extracts it.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOrderReferenceOrBuilder();
 
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    * @return Whether the bankAccountNumber field is set.
    */
   boolean hasBankAccountNumber();
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    * @return The bankAccountNumber.
    */
   com.google.protobuf.StringValue getBankAccountNumber();
   /**
+   * <pre>
+   * Bank account number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getBankAccountNumberOrBuilder();
 
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    * @return Whether the bankRegistrationNumber field is set.
    */
   boolean hasBankRegistrationNumber();
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    * @return The bankRegistrationNumber.
    */
   com.google.protobuf.StringValue getBankRegistrationNumber();
   /**
+   * <pre>
+   * Bank registration number, in countries that use one, such as Denmark.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder();
 
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    * @return Whether the supplierName field is set.
    */
   boolean hasSupplierName();
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    * @return The supplierName.
    */
   com.google.protobuf.StringValue getSupplierName();
   /**
+   * <pre>
+   * Name of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder();
 
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    * @return Whether the bic field is set.
    */
   boolean hasBic();
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    * @return The bic.
    */
   com.google.protobuf.StringValue getBic();
   /**
+   * <pre>
+   * BIC code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getBicOrBuilder();
 
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    * @return Whether the documentNumber field is set.
    */
   boolean hasDocumentNumber();
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    * @return The documentNumber.
    */
   com.google.protobuf.StringValue getDocumentNumber();
   /**
+   * <pre>
+   * Number that identifies the document, such as the invoice number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder();
 
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the documentDate field is set.
    */
   boolean hasDocumentDate();
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The documentDate.
    */
   com.google.type.Date getDocumentDate();
   /**
+   * <pre>
+   * Date the document was issued, as an object with year, month and day. The
+   * day must be 1 to 31 and the month 1 to 12, or the call returns 400.
+   * </pre>
+   *
    * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getDocumentDateOrBuilder();
 
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    * @return Whether the orderNumber field is set.
    */
   boolean hasOrderNumber();
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    * @return The orderNumber.
    */
   com.google.protobuf.StringValue getOrderNumber();
   /**
+   * <pre>
+   * Order number, if the document shows one.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder();
 
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    * @return Whether the supplierVatNumber field is set.
    */
   boolean hasSupplierVatNumber();
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    * @return The supplierVatNumber.
    */
   com.google.protobuf.StringValue getSupplierVatNumber();
   /**
+   * <pre>
+   * VAT number of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder();
 
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    * @return Whether the supplierOrganisationNumber field is set.
    */
   boolean hasSupplierOrganisationNumber();
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    * @return The supplierOrganisationNumber.
    */
   com.google.protobuf.StringValue getSupplierOrganisationNumber();
   /**
+   * <pre>
+   * National company ID of the supplier, such as the CVR number in Denmark or
+   * the KvK number in the Netherlands.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder();
 
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    * @return Whether the supplierAddress field is set.
    */
   boolean hasSupplierAddress();
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    * @return The supplierAddress.
    */
   com.google.protobuf.StringValue getSupplierAddress();
   /**
+   * <pre>
+   * Address of the supplier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder();
 
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    * @return Whether the customerNumber field is set.
    */
   boolean hasCustomerNumber();
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    * @return The customerNumber.
    */
   com.google.protobuf.StringValue getCustomerNumber();
   /**
+   * <pre>
+   * Number that identifies the customer.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder();
 
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    * @return Whether the receiverOrderNumber field is set.
    */
   boolean hasReceiverOrderNumber();
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    * @return The receiverOrderNumber.
    */
   com.google.protobuf.StringValue getReceiverOrderNumber();
   /**
+   * <pre>
+   * Receiver's order number.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder();
 
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    * @return Whether the ocrLineBePaymentId field is set.
    */
   boolean hasOcrLineBePaymentId();
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    * @return The ocrLineBePaymentId.
    */
   com.google.protobuf.StringValue getOcrLineBePaymentId();
   /**
+   * <pre>
+   * Belgian structured payment reference (OGM), for example
+   * "+++123/1234/12345+++".
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder();
 
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    * @return Whether the receiverAddress field is set.
    */
   boolean hasReceiverAddress();
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    * @return The receiverAddress.
    */
   com.google.protobuf.StringValue getReceiverAddress();
   /**
+   * <pre>
+   * Address of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder();
 
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    * @return Whether the receiverCountryCode field is set.
    */
   boolean hasReceiverCountryCode();
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    * @return The receiverCountryCode.
    */
   com.google.protobuf.StringValue getReceiverCountryCode();
   /**
+   * <pre>
+   * Receiver's country, as a two-letter ISO 3166-1 alpha-2 code.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder();
 
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    * @return Whether the receiverName field is set.
    */
   boolean hasReceiverName();
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    * @return The receiverName.
    */
   com.google.protobuf.StringValue getReceiverName();
   /**
+   * <pre>
+   * Name of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder();
 
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    * @return Whether the receiverVatNumber field is set.
    */
   boolean hasReceiverVatNumber();
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    * @return The receiverVatNumber.
    */
   com.google.protobuf.StringValue getReceiverVatNumber();
   /**
+   * <pre>
+   * VAT number of the receiver.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder();
 
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> 
       getPurchaseLinesList();
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index);
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   int getPurchaseLinesCount();
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
       getPurchaseLinesOrBuilderList();
   /**
+   * <pre>
+   * Purchase lines, in the same format as `purchaseLines` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
    */
   ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   java.util.List<ai.visma.ssn.type.AnswerCandidate> 
       getAnswersList();
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   int getAnswersCount();
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
       getAnswersOrBuilderList();
   /**
+   * <pre>
+   * Answers to the questions asked in the annotate request, in the same
+   * format as `answers` in the annotate response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
    */
   ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
       getVatDistributionList();
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index);
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   int getVatDistributionCount();
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
       getVatDistributionOrBuilderList();
   /**
+   * <pre>
+   * VAT levels, in the same format as `vatDistribution` in the annotate
+   * response.
+   * </pre>
+   *
    * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
    */
   ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the checkInDate field is set.
    */
   boolean hasCheckInDate();
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The checkInDate.
    */
   com.google.type.Date getCheckInDate();
   /**
+   * <pre>
+   * Check-in date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_in_date = 44 [json_name = "checkInDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getCheckInDateOrBuilder();
 
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return Whether the checkOutDate field is set.
    */
   boolean hasCheckOutDate();
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    * @return The checkOutDate.
    */
   com.google.type.Date getCheckOutDate();
   /**
+   * <pre>
+   * Check-out date on an accommodation document, as an object with year,
+   * month and day.
+   * </pre>
+   *
    * <code>.google.type.Date check_out_date = 45 [json_name = "checkOutDate", (.gen_bq_schema.bigquery) = { ... }</code>
    */
   com.google.type.DateOrBuilder getCheckOutDateOrBuilder();
 
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    * @return Whether the ksef field is set.
    */
   boolean hasKsef();
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    * @return The ksef.
    */
   com.google.protobuf.StringValue getKsef();
   /**
+   * <pre>
+   * Polish KSeF e-invoicing identifier.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue ksef = 46 [json_name = "ksef"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getKsefOrBuilder();

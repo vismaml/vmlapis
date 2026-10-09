@@ -6,6 +6,11 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the
+ * model gave no level.
+ * </pre>
+ *
  * Protobuf enum {@code asgt.v2.ConfidenceLevel}
  */
 public enum ConfidenceLevel

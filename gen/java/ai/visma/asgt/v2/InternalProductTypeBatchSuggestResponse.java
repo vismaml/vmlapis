@@ -6,6 +6,10 @@
 package ai.visma.asgt.v2;
 
 /**
+ * <pre>
+ * Response of an internal method that isn't available over HTTP.
+ * </pre>
+ *
  * Protobuf type {@code asgt.v2.InternalProductTypeBatchSuggestResponse}
  */
 public final class InternalProductTypeBatchSuggestResponse extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> suggestions_;
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   @java.lang.Override
@@ -55,6 +63,10 @@ private static final long serialVersionUID = 0L;
     return suggestions_;
   }
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   @java.lang.Override
@@ -63,6 +75,10 @@ private static final long serialVersionUID = 0L;
     return suggestions_;
   }
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   @java.lang.Override
@@ -70,6 +86,10 @@ private static final long serialVersionUID = 0L;
     return suggestions_.size();
   }
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   @java.lang.Override
@@ -77,6 +97,10 @@ private static final long serialVersionUID = 0L;
     return suggestions_.get(index);
   }
   /**
+   * <pre>
+   * One suggestion per text, in the same order as the request.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
    */
   @java.lang.Override
@@ -89,6 +113,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.asgt.v2.ProductTypeLogits> logits_;
   /**
+   * <pre>
+   * The model's raw scores for each text, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
    */
   @java.lang.Override
@@ -96,6 +124,10 @@ private static final long serialVersionUID = 0L;
     return logits_;
   }
   /**
+   * <pre>
+   * The model's raw scores for each text, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
    */
   @java.lang.Override
@@ -104,6 +136,10 @@ private static final long serialVersionUID = 0L;
     return logits_;
   }
   /**
+   * <pre>
+   * The model's raw scores for each text, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
    */
   @java.lang.Override
@@ -111,6 +147,10 @@ private static final long serialVersionUID = 0L;
     return logits_.size();
   }
   /**
+   * <pre>
+   * The model's raw scores for each text, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
    */
   @java.lang.Override
@@ -118,6 +158,10 @@ private static final long serialVersionUID = 0L;
     return logits_.get(index);
   }
   /**
+   * <pre>
+   * The model's raw scores for each text, in the same order.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
    */
   @java.lang.Override
@@ -299,6 +343,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response of an internal method that isn't available over HTTP.
+   * </pre>
+   *
    * Protobuf type {@code asgt.v2.InternalProductTypeBatchSuggestResponse}
    */
   public static final class Builder extends
@@ -549,6 +597,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.ProductTypeSuggestion, ai.visma.asgt.v2.ProductTypeSuggestion.Builder, ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> suggestionsBuilder_;
 
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion> getSuggestionsList() {
@@ -559,6 +611,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public int getSuggestionsCount() {
@@ -569,6 +625,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion getSuggestions(int index) {
@@ -579,6 +639,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder setSuggestions(
@@ -596,6 +660,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder setSuggestions(
@@ -610,6 +678,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder addSuggestions(ai.visma.asgt.v2.ProductTypeSuggestion value) {
@@ -626,6 +698,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder addSuggestions(
@@ -643,6 +719,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder addSuggestions(
@@ -657,6 +737,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder addSuggestions(
@@ -671,6 +755,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder addAllSuggestions(
@@ -686,6 +774,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder clearSuggestions() {
@@ -699,6 +791,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public Builder removeSuggestions(int index) {
@@ -712,6 +808,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder getSuggestionsBuilder(
@@ -719,6 +819,10 @@ private static final long serialVersionUID = 0L;
       return getSuggestionsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder getSuggestionsOrBuilder(
@@ -729,6 +833,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.ProductTypeSuggestionOrBuilder> 
@@ -740,6 +848,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addSuggestionsBuilder() {
@@ -747,6 +859,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeSuggestion.Builder addSuggestionsBuilder(
@@ -755,6 +871,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.ProductTypeSuggestion.getDefaultInstance());
     }
     /**
+     * <pre>
+     * One suggestion per text, in the same order as the request.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeSuggestion suggestions = 1 [json_name = "suggestions"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeSuggestion.Builder> 
@@ -789,6 +909,10 @@ private static final long serialVersionUID = 0L;
         ai.visma.asgt.v2.ProductTypeLogits, ai.visma.asgt.v2.ProductTypeLogits.Builder, ai.visma.asgt.v2.ProductTypeLogitsOrBuilder> logitsBuilder_;
 
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeLogits> getLogitsList() {
@@ -799,6 +923,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public int getLogitsCount() {
@@ -809,6 +937,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeLogits getLogits(int index) {
@@ -819,6 +951,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder setLogits(
@@ -836,6 +972,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder setLogits(
@@ -850,6 +990,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder addLogits(ai.visma.asgt.v2.ProductTypeLogits value) {
@@ -866,6 +1010,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder addLogits(
@@ -883,6 +1031,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder addLogits(
@@ -897,6 +1049,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder addLogits(
@@ -911,6 +1067,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder addAllLogits(
@@ -926,6 +1086,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder clearLogits() {
@@ -939,6 +1103,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public Builder removeLogits(int index) {
@@ -952,6 +1120,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeLogits.Builder getLogitsBuilder(
@@ -959,6 +1131,10 @@ private static final long serialVersionUID = 0L;
       return getLogitsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeLogitsOrBuilder getLogitsOrBuilder(
@@ -969,6 +1145,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public java.util.List<? extends ai.visma.asgt.v2.ProductTypeLogitsOrBuilder> 
@@ -980,6 +1160,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeLogits.Builder addLogitsBuilder() {
@@ -987,6 +1171,10 @@ private static final long serialVersionUID = 0L;
           ai.visma.asgt.v2.ProductTypeLogits.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public ai.visma.asgt.v2.ProductTypeLogits.Builder addLogitsBuilder(
@@ -995,6 +1183,10 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.asgt.v2.ProductTypeLogits.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The model's raw scores for each text, in the same order.
+     * </pre>
+     *
      * <code>repeated .asgt.v2.ProductTypeLogits logits = 2 [json_name = "logits"];</code>
      */
     public java.util.List<ai.visma.asgt.v2.ProductTypeLogits.Builder> 

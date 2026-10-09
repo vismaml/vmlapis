@@ -10,11 +10,21 @@ public interface DeleteTransactionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The transaction ID, as returned when the transaction was created. Takes precedence over
+   * customId when both are set.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -22,11 +32,21 @@ public interface DeleteTransactionRequestOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to DELETE /v1/transactions.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The customId.
    */
   java.lang.String getCustomId();
   /**
+   * <pre>
+   * The custom ID you set when creating the transaction. Used only when no transaction ID
+   * is given, so send it to DELETE /v1/transactions.
+   * </pre>
+   *
    * <code>string custom_id = 2 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */

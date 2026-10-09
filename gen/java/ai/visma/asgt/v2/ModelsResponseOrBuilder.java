@@ -10,24 +10,44 @@ public interface ModelsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   java.util.List<ai.visma.asgt.v2.type.Model> 
       getModelsList();
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   ai.visma.asgt.v2.type.Model getModels(int index);
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   int getModelsCount();
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   java.util.List<? extends ai.visma.asgt.v2.type.ModelOrBuilder> 
       getModelsOrBuilderList();
   /**
+   * <pre>
+   * The models, newest first.
+   * </pre>
+   *
    * <code>repeated .asgt.v2.type.Model models = 1 [json_name = "models"];</code>
    */
   ai.visma.asgt.v2.type.ModelOrBuilder getModelsOrBuilder(

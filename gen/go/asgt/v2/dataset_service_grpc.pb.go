@@ -39,40 +39,72 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type DatasetServiceClient interface {
-	// Get the basic information about a dataset.
+	// Get a dataset.
+	//
+	// Returns the dataset's name, type, tags, retention policy and timestamps.
+	// Returns 404 if the dataset doesn't exist or has been deleted.
 	GetDataset(ctx context.Context, in *GetDatasetRequest, opts ...grpc.CallOption) (*_type.Dataset, error)
-	// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+	// Create a dataset.
+	//
+	// The dataset starts empty. The first example you add sets its type, and adding examples
+	// schedules a training, so no model exists until you add examples and the training is done.
+	// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+	// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+	// Returns 400 if the name or a tag doesn't match the allowed format.
 	CreateDataset(ctx context.Context, in *CreateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Not implemented yet.
-	// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-	// provided data.
+	// [NOT IMPLEMENTED] Create or update a dataset.
+	//
+	// Returns 501. Create datasets with POST /v2/datasets.
 	CreateOrUpdateDataset(ctx context.Context, in *CreateOrUpdateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Delete a dataset with the specified name.
+	// Delete a dataset.
+	//
+	// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+	// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+	// Returns 404 if the dataset doesn't exist or is already deleted.
 	DeleteDataset(ctx context.Context, in *DeleteDatasetRequest, opts ...grpc.CallOption) (*_type.Dataset, error)
-	// Delete all datasets (and their examples) containing the specified tag.
-	// The datasets' names are not considered in this request - only the tag names is.
+	// Delete all datasets with a tag.
+	//
+	// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+	// don't matter, only the tag. The examples are removed shortly after the call returns.
+	// Returns 200 even if no dataset has the tag.
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Uploads a new single example.
+	// Add an example to a dataset.
+	//
+	// The first example sets the dataset's type, and every later example must use the same data
+	// structure. Adding examples schedules a training: about a minute later while the dataset is
+	// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+	// Examples added while a training is scheduled or running are picked up by the next training.
+	// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+	// field has the wrong format.
 	CreateExample(ctx context.Context, in *CreateExampleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Not implemented yet.
-	// Uploads or updates a new single example.
-	// If the specified example already exists, the example
-	// is updated with the provided values according to provided ID.
+	// [NOT IMPLEMENTED] Add or update an example.
+	//
+	// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
 	CreateOrUpdateExample(ctx context.Context, in *CreateOrUpdateExampleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+	// Add several examples to a dataset.
+	//
+	// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+	// training. Returns 400 if the list of examples is empty.
 	BatchCreateExample(ctx context.Context, in *BatchCreateExampleRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-	// removing existing models.
+	// Remove a dataset's examples, but keep its models.
+	//
+	// Future trainings only use examples added after this call, and the existing models stay
+	// available for suggestions. Returns 404 if the dataset doesn't exist.
 	TruncateDataset(ctx context.Context, in *TruncateDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	// Get the specified number of the most recent dataset's trainings.
-	// Number of requested trainings has to be larger than 0 but no larger than 100.
+	// List a dataset's trainings.
+	//
+	// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+	// 100. The default is 10. Returns 404 if the dataset doesn't exist.
 	GetDatasetTrainings(ctx context.Context, in *GetDatasetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
-	// Get the specified number of the most recent dataset's trained models.
-	// Number of requested models has to be larger than 0 but no larger than 100.
+	// List a dataset's models.
+	//
+	// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+	// 100. The default is 10. Returns 404 if the dataset doesn't exist.
 	GetDatasetModels(ctx context.Context, in *GetDatasetModelsRequest, opts ...grpc.CallOption) (*ModelsResponse, error)
-	// Get the specified number of the most recent trainings accross all consumer's datasets.
-	// Number of requested trainings has to be larger than 0 but no larger than 100.
+	// List the trainings of all your datasets.
+	//
+	// Returns the most recent trainings across your datasets, newest first, each with its
+	// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
 	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
 }
 
@@ -196,40 +228,72 @@ func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTraining
 // All implementations should embed UnimplementedDatasetServiceServer
 // for forward compatibility
 type DatasetServiceServer interface {
-	// Get the basic information about a dataset.
+	// Get a dataset.
+	//
+	// Returns the dataset's name, type, tags, retention policy and timestamps.
+	// Returns 404 if the dataset doesn't exist or has been deleted.
 	GetDataset(context.Context, *GetDatasetRequest) (*_type.Dataset, error)
-	// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-	// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+	// Create a dataset.
+	//
+	// The dataset starts empty. The first example you add sets its type, and adding examples
+	// schedules a training, so no model exists until you add examples and the training is done.
+	// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+	// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+	// Returns 400 if the name or a tag doesn't match the allowed format.
 	CreateDataset(context.Context, *CreateDatasetRequest) (*emptypb.Empty, error)
-	// Not implemented yet.
-	// Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-	// provided data.
+	// [NOT IMPLEMENTED] Create or update a dataset.
+	//
+	// Returns 501. Create datasets with POST /v2/datasets.
 	CreateOrUpdateDataset(context.Context, *CreateOrUpdateDatasetRequest) (*emptypb.Empty, error)
-	// Delete a dataset with the specified name.
+	// Delete a dataset.
+	//
+	// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+	// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+	// Returns 404 if the dataset doesn't exist or is already deleted.
 	DeleteDataset(context.Context, *DeleteDatasetRequest) (*_type.Dataset, error)
-	// Delete all datasets (and their examples) containing the specified tag.
-	// The datasets' names are not considered in this request - only the tag names is.
+	// Delete all datasets with a tag.
+	//
+	// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+	// don't matter, only the tag. The examples are removed shortly after the call returns.
+	// Returns 200 even if no dataset has the tag.
 	DeleteTag(context.Context, *DeleteTagRequest) (*emptypb.Empty, error)
-	// Uploads a new single example.
+	// Add an example to a dataset.
+	//
+	// The first example sets the dataset's type, and every later example must use the same data
+	// structure. Adding examples schedules a training: about a minute later while the dataset is
+	// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+	// Examples added while a training is scheduled or running are picked up by the next training.
+	// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+	// field has the wrong format.
 	CreateExample(context.Context, *CreateExampleRequest) (*emptypb.Empty, error)
-	// Not implemented yet.
-	// Uploads or updates a new single example.
-	// If the specified example already exists, the example
-	// is updated with the provided values according to provided ID.
+	// [NOT IMPLEMENTED] Add or update an example.
+	//
+	// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
 	CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*emptypb.Empty, error)
-	// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+	// Add several examples to a dataset.
+	//
+	// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+	// training. Returns 400 if the list of examples is empty.
 	BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*emptypb.Empty, error)
-	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-	// removing existing models.
+	// Remove a dataset's examples, but keep its models.
+	//
+	// Future trainings only use examples added after this call, and the existing models stay
+	// available for suggestions. Returns 404 if the dataset doesn't exist.
 	TruncateDataset(context.Context, *TruncateDatasetRequest) (*emptypb.Empty, error)
-	// Get the specified number of the most recent dataset's trainings.
-	// Number of requested trainings has to be larger than 0 but no larger than 100.
+	// List a dataset's trainings.
+	//
+	// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+	// 100. The default is 10. Returns 404 if the dataset doesn't exist.
 	GetDatasetTrainings(context.Context, *GetDatasetTrainingsRequest) (*TrainingsResponse, error)
-	// Get the specified number of the most recent dataset's trained models.
-	// Number of requested models has to be larger than 0 but no larger than 100.
+	// List a dataset's models.
+	//
+	// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+	// 100. The default is 10. Returns 404 if the dataset doesn't exist.
 	GetDatasetModels(context.Context, *GetDatasetModelsRequest) (*ModelsResponse, error)
-	// Get the specified number of the most recent trainings accross all consumer's datasets.
-	// Number of requested trainings has to be larger than 0 but no larger than 100.
+	// List the trainings of all your datasets.
+	//
+	// Returns the most recent trainings across your datasets, newest first, each with its
+	// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
 	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
 }
 

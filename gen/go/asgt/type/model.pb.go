@@ -22,6 +22,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// How the model takes its input. The service uses it to run the model.
 type Model_InputType int32
 
 const (
@@ -68,21 +69,32 @@ func (Model_InputType) EnumDescriptor() ([]byte, []int) {
 	return file_asgt_type_model_proto_rawDescGZIP(), []int{0, 0}
 }
 
+// A trained model.
 type Model struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Version                      int64                            `protobuf:"varint,3,opt,name=version,proto3" json:"version,omitempty"`
-	CreatedAt                    *timestamppb.Timestamp           `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	DatasetSize                  int32                            `protobuf:"varint,5,opt,name=dataset_size,json=datasetSize,proto3" json:"dataset_size,omitempty"`
-	TrainingSize                 int32                            `protobuf:"varint,6,opt,name=training_size,json=trainingSize,proto3" json:"training_size,omitempty"`
-	ConfidenceScores             []*TargetMetrics                 `protobuf:"bytes,7,rep,name=confidence_scores,json=confidenceScores,proto3" json:"confidence_scores,omitempty"`
-	InputType                    Model_InputType                  `protobuf:"varint,8,opt,name=input_type,json=inputType,proto3,enum=asgt.type.Model_InputType" json:"input_type,omitempty"`
-	DatasetType                  string                           `protobuf:"bytes,9,opt,name=dataset_type,json=datasetType,proto3" json:"dataset_type,omitempty"`
-	ModelFiles                   []*ModelFile                     `protobuf:"bytes,10,rep,name=model_files,json=modelFiles,proto3" json:"model_files,omitempty"`
+	// Version number of the model.
+	Version int64 `protobuf:"varint,3,opt,name=version,proto3" json:"version,omitempty"`
+	// When the model was created.
+	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	// Size of the dataset the model was trained on, in examples.
+	DatasetSize int32 `protobuf:"varint,5,opt,name=dataset_size,json=datasetSize,proto3" json:"dataset_size,omitempty"`
+	// Number of examples used for training.
+	TrainingSize int32 `protobuf:"varint,6,opt,name=training_size,json=trainingSize,proto3" json:"training_size,omitempty"`
+	// Evaluation metrics for each target, at precisions of 0.8, 0.9 and 0.95 where available.
+	ConfidenceScores []*TargetMetrics `protobuf:"bytes,7,rep,name=confidence_scores,json=confidenceScores,proto3" json:"confidence_scores,omitempty"`
+	InputType        Model_InputType  `protobuf:"varint,8,opt,name=input_type,json=inputType,proto3,enum=asgt.type.Model_InputType" json:"input_type,omitempty"`
+	// Type of the dataset the model was trained on: bank, scanned-invoice or
+	// electronic-invoice-line.
+	DatasetType string `protobuf:"bytes,9,opt,name=dataset_type,json=datasetType,proto3" json:"dataset_type,omitempty"`
+	// Files of the trained model.
+	ModelFiles []*ModelFile `protobuf:"bytes,10,rep,name=model_files,json=modelFiles,proto3" json:"model_files,omitempty"`
+	// For each target, the confidence value at which each confidence level starts.
 	TargetToConfidenceThresholds map[string]*ConfidenceThresholds `protobuf:"bytes,12,rep,name=target_to_confidence_thresholds,json=targetToConfidenceThresholds,proto3" json:"target_to_confidence_thresholds,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	TargetToClassCount           map[string]int32                 `protobuf:"bytes,13,rep,name=target_to_class_count,json=targetToClassCount,proto3" json:"target_to_class_count,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// For each target, the number of classes, that is distinct values, it has.
+	TargetToClassCount map[string]int32 `protobuf:"bytes,13,rep,name=target_to_class_count,json=targetToClassCount,proto3" json:"target_to_class_count,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 }
 
 func (x *Model) Reset() {
@@ -187,11 +199,13 @@ func (x *Model) GetTargetToClassCount() map[string]int32 {
 	return nil
 }
 
+// Confidence thresholds of one target.
 type ConfidenceThresholds struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The confidence value at which each level starts.
 	ConfidenceThresholds []*Confidence `protobuf:"bytes,2,rep,name=confidence_thresholds,json=confidenceThresholds,proto3" json:"confidence_thresholds,omitempty"`
 }
 

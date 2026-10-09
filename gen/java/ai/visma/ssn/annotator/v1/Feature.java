@@ -6,6 +6,10 @@
 package ai.visma.ssn.annotator.v1;
 
 /**
+ * <pre>
+ * A feature to extract, with optional limits on its candidates.
+ * </pre>
+ *
  * Protobuf type {@code ssn.annotator.v1.Feature}
  */
 public final class Feature extends
@@ -45,16 +49,22 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * The features Smartscan can extract. Each feature's results come back in the
+   * response field of the same name, in camelCase, unless noted otherwise.
+   * </pre>
+   *
    * Protobuf enum {@code ssn.annotator.v1.Feature.Type}
    */
   public enum Type
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
-     * Run default feature set:
-     * PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
-     * SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
-     * DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
+     * A set of frequently used fields: PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT,
+     * TOTAL_INCL_VAT, TOTAL_EXCL_VAT, SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE,
+     * PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR, DOCUMENT_NUMBER, DOCUMENT_DATE and
+     * SUPPLIER_ORGANISATION_NUMBER. Its `maxResults` and `minConfidence` apply to each
+     * of them, unless you also request that feature on its own.
      * </pre>
      *
      * <code>DEFAULT = 0;</code>
@@ -62,7 +72,7 @@ private static final long serialVersionUID = 0L;
     DEFAULT(0),
     /**
      * <pre>
-     * Return text annotation
+     * The full OCR output for the pages Smartscan read.
      * </pre>
      *
      * <code>TEXT_ANNOTATION = 1;</code>
@@ -70,7 +80,7 @@ private static final long serialVersionUID = 0L;
     TEXT_ANNOTATION(1),
     /**
      * <pre>
-     * [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
+     * [DEPRECATED] No longer returns anything. Use DOCUMENT_DATE instead.
      * </pre>
      *
      * <code>ORDER_DATE = 2 [deprecated = true];</code>
@@ -79,7 +89,7 @@ private static final long serialVersionUID = 0L;
     ORDER_DATE(2),
     /**
      * <pre>
-     * Run due date detection
+     * The date the payment is due.
      * </pre>
      *
      * <code>PAYMENT_DUE_DATE = 3;</code>
@@ -87,7 +97,7 @@ private static final long serialVersionUID = 0L;
     PAYMENT_DUE_DATE(3),
     /**
      * <pre>
-     * Run currency detection
+     * The currency, as a three-letter code.
      * </pre>
      *
      * <code>CURRENCY = 4;</code>
@@ -95,7 +105,7 @@ private static final long serialVersionUID = 0L;
     CURRENCY(4),
     /**
      * <pre>
-     * Run total vat detection
+     * The total VAT of the document.
      * </pre>
      *
      * <code>TOTAL_VAT = 5;</code>
@@ -103,7 +113,7 @@ private static final long serialVersionUID = 0L;
     TOTAL_VAT(5),
     /**
      * <pre>
-     * Run total incl vat detection
+     * The total of the document including VAT.
      * </pre>
      *
      * <code>TOTAL_INCL_VAT = 6;</code>
@@ -111,7 +121,7 @@ private static final long serialVersionUID = 0L;
     TOTAL_INCL_VAT(6),
     /**
      * <pre>
-     * Run total excl vat detection
+     * The total of the document excluding VAT.
      * </pre>
      *
      * <code>TOTAL_EXCL_VAT = 7;</code>
@@ -119,8 +129,8 @@ private static final long serialVersionUID = 0L;
     TOTAL_EXCL_VAT(7),
     /**
      * <pre>
-     * [DEPRECATED] Run supplier corporate id detection.
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * [DEPRECATED] No longer returns anything. Use SUPPLIER_ORGANISATION_NUMBER or
+     * SUPPLIER_VAT_NUMBER instead.
      * </pre>
      *
      * <code>SUPPLIER_CORPORATE_ID = 8 [deprecated = true];</code>
@@ -129,7 +139,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_CORPORATE_ID(8),
     /**
      * <pre>
-     * Run country code detection
+     * The supplier's country, as a two-letter code.
      * </pre>
      *
      * <code>SUPPLIER_COUNTRY_CODE = 9;</code>
@@ -137,7 +147,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_COUNTRY_CODE(9),
     /**
      * <pre>
-     * Run document type detection
+     * The type of document, for example an invoice or a receipt.
      * </pre>
      *
      * <code>DOCUMENT_TYPE = 10;</code>
@@ -145,7 +155,7 @@ private static final long serialVersionUID = 0L;
     DOCUMENT_TYPE(10),
     /**
      * <pre>
-     * Run pyment method detection
+     * How the document was paid, for example in cash or by credit card.
      * </pre>
      *
      * <code>PAYMENT_METHOD = 11;</code>
@@ -153,7 +163,7 @@ private static final long serialVersionUID = 0L;
     PAYMENT_METHOD(11),
     /**
      * <pre>
-     * Run credit card number detection
+     * The last four digits of the credit card used for the payment.
      * </pre>
      *
      * <code>CREDIT_CARD_LAST_FOUR = 12;</code>
@@ -161,7 +171,7 @@ private static final long serialVersionUID = 0L;
     CREDIT_CARD_LAST_FOUR(12),
     /**
      * <pre>
-     * [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
+     * [DEPRECATED] No longer returns anything. Use DOCUMENT_NUMBER instead.
      * </pre>
      *
      * <code>INVOICE_NUMBER = 13 [deprecated = true];</code>
@@ -170,7 +180,7 @@ private static final long serialVersionUID = 0L;
     INVOICE_NUMBER(13),
     /**
      * <pre>
-     * Run danish ocr line detection, for the type
+     * The type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>OCR_LINE_DK_TYPE = 14;</code>
@@ -178,7 +188,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_DK_TYPE(14),
     /**
      * <pre>
-     * Run danish ocr line detection, for the payment id
+     * The payment ID of a Danish payment line (FIK).
      * </pre>
      *
      * <code>OCR_LINE_DK_PAYMENT_ID = 15;</code>
@@ -186,7 +196,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_DK_PAYMENT_ID(15),
     /**
      * <pre>
-     * Run danish ocr line detection, for the creditor id
+     * The creditor ID of a Danish payment line (FIK account number).
      * </pre>
      *
      * <code>OCR_LINE_DK_CREDITOR_ID = 16;</code>
@@ -194,7 +204,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_DK_CREDITOR_ID(16),
     /**
      * <pre>
-     * Run swedish ocr line detection for the payment id
+     * The payment ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_PAYMENT_ID = 17;</code>
@@ -202,7 +212,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_SE_PAYMENT_ID(17),
     /**
      * <pre>
-     * Run swedish ocr line detection for the bankgiro creditor id
+     * The Bankgiro creditor ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_BANKGIRO_CREDITOR_ID = 18;</code>
@@ -210,7 +220,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_SE_BANKGIRO_CREDITOR_ID(18),
     /**
      * <pre>
-     * Run swedish ocr line detection for the plusgiro creditor id
+     * The Plusgiro creditor ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_PLUSGIRO_CREDITOR_ID = 19;</code>
@@ -218,7 +228,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_SE_PLUSGIRO_CREDITOR_ID(19),
     /**
      * <pre>
-     * Run norwegian ocr line detection or the payment id
+     * The payment ID (KID) of a Norwegian payment line.
      * </pre>
      *
      * <code>OCR_LINE_NO_PAYMENT_ID = 20;</code>
@@ -226,7 +236,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_NO_PAYMENT_ID(20),
     /**
      * <pre>
-     * Run finish ocr line detection or the payment id
+     * The payment ID (viitenumero) of a Finnish payment line.
      * </pre>
      *
      * <code>OCR_LINE_FI_PAYMENT_ID = 21;</code>
@@ -234,7 +244,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_FI_PAYMENT_ID(21),
     /**
      * <pre>
-     * Run dutch ocr line detection for the payment id
+     * The payment ID (betalingskenmerk) of a Dutch payment line.
      * </pre>
      *
      * <code>OCR_LINE_NL_PAYMENT_ID = 22;</code>
@@ -242,7 +252,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_NL_PAYMENT_ID(22),
     /**
      * <pre>
-     * Run belgian ocr line detection for the payment id
+     * The payment ID (OGM) of a Belgian payment line.
      * </pre>
      *
      * <code>OCR_LINE_BE_PAYMENT_ID = 39;</code>
@@ -250,7 +260,7 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_BE_PAYMENT_ID(39),
     /**
      * <pre>
-     * Return document text
+     * The text of the pages Smartscan read.
      * </pre>
      *
      * <code>TEXT = 23;</code>
@@ -258,7 +268,7 @@ private static final long serialVersionUID = 0L;
     TEXT(23),
     /**
      * <pre>
-     * Run IBAN detection
+     * The IBAN.
      * </pre>
      *
      * <code>IBAN = 24;</code>
@@ -266,7 +276,7 @@ private static final long serialVersionUID = 0L;
     IBAN(24),
     /**
      * <pre>
-     * Run LINES detection
+     * The lines of the document that hold an amount.
      * </pre>
      *
      * <code>LINES = 25;</code>
@@ -274,7 +284,7 @@ private static final long serialVersionUID = 0L;
     LINES(25),
     /**
      * <pre>
-     * Run first page of PDF to PNG conversion
+     * A base64-encoded image of the first page that holds text.
      * </pre>
      *
      * <code>PREVIEW = 26;</code>
@@ -282,7 +292,7 @@ private static final long serialVersionUID = 0L;
     PREVIEW(26),
     /**
      * <pre>
-     * Run bank account number detection
+     * The bank account number.
      * </pre>
      *
      * <code>BANK_ACCOUNT_NUMBER = 27;</code>
@@ -290,7 +300,7 @@ private static final long serialVersionUID = 0L;
     BANK_ACCOUNT_NUMBER(27),
     /**
      * <pre>
-     * Run bank registration number detection
+     * The bank registration number, in countries that use one, such as Denmark.
      * </pre>
      *
      * <code>BANK_REGISTRATION_NUMBER = 28;</code>
@@ -298,7 +308,7 @@ private static final long serialVersionUID = 0L;
     BANK_REGISTRATION_NUMBER(28),
     /**
      * <pre>
-     * Run business identifier code detection
+     * The BIC (SWIFT code).
      * </pre>
      *
      * <code>BIC = 29;</code>
@@ -306,7 +316,7 @@ private static final long serialVersionUID = 0L;
     BIC(29),
     /**
      * <pre>
-     * Run document number detection
+     * The number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>DOCUMENT_NUMBER = 30;</code>
@@ -314,7 +324,7 @@ private static final long serialVersionUID = 0L;
     DOCUMENT_NUMBER(30),
     /**
      * <pre>
-     * Run document date detection
+     * The date the document was issued.
      * </pre>
      *
      * <code>DOCUMENT_DATE = 31;</code>
@@ -322,7 +332,7 @@ private static final long serialVersionUID = 0L;
     DOCUMENT_DATE(31),
     /**
      * <pre>
-     * Run order number detection
+     * The order number.
      * </pre>
      *
      * <code>ORDER_NUMBER = 32;</code>
@@ -330,7 +340,7 @@ private static final long serialVersionUID = 0L;
     ORDER_NUMBER(32),
     /**
      * <pre>
-     * Run supplier name detection
+     * The supplier's name.
      * </pre>
      *
      * <code>SUPPLIER_NAME = 33;</code>
@@ -338,7 +348,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_NAME(33),
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier VAT detection
+     * [EXPERIMENTAL] The supplier's VAT number.
      * </pre>
      *
      * <code>SUPPLIER_VAT_NUMBER = 34;</code>
@@ -346,7 +356,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_VAT_NUMBER(34),
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier organisation number detection
+     * [EXPERIMENTAL] The supplier's national company ID, such as the CVR number in Denmark.
      * </pre>
      *
      * <code>SUPPLIER_ORGANISATION_NUMBER = 35;</code>
@@ -354,7 +364,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_ORGANISATION_NUMBER(35),
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier address detection
+     * [EXPERIMENTAL] The supplier's address. Also returns `structuredSupplierAddress`.
      * </pre>
      *
      * <code>SUPPLIER_ADDRESS = 36;</code>
@@ -362,7 +372,7 @@ private static final long serialVersionUID = 0L;
     SUPPLIER_ADDRESS(36),
     /**
      * <pre>
-     * [EXPERIMENTAL] Run customer identifier detection
+     * [EXPERIMENTAL] The number that identifies the customer.
      * </pre>
      *
      * <code>CUSTOMER_NUMBER = 37;</code>
@@ -370,7 +380,7 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_NUMBER(37),
     /**
      * <pre>
-     * Receiver order number
+     * The receiver's order number.
      * </pre>
      *
      * <code>RECEIVER_ORDER_NUMBER = 38;</code>
@@ -378,7 +388,7 @@ private static final long serialVersionUID = 0L;
     RECEIVER_ORDER_NUMBER(38),
     /**
      * <pre>
-     * Receiver address
+     * The receiver's address. Also returns `structuredReceiverAddress`.
      * </pre>
      *
      * <code>RECEIVER_ADDRESS = 40;</code>
@@ -386,7 +396,7 @@ private static final long serialVersionUID = 0L;
     RECEIVER_ADDRESS(40),
     /**
      * <pre>
-     * Receiver country code
+     * The receiver's country, as a two-letter code.
      * </pre>
      *
      * <code>RECEIVER_COUNTRY_CODE = 41;</code>
@@ -394,7 +404,7 @@ private static final long serialVersionUID = 0L;
     RECEIVER_COUNTRY_CODE(41),
     /**
      * <pre>
-     * Receiver name
+     * The receiver's name.
      * </pre>
      *
      * <code>RECEIVER_NAME = 42;</code>
@@ -402,7 +412,7 @@ private static final long serialVersionUID = 0L;
     RECEIVER_NAME(42),
     /**
      * <pre>
-     * Receiver VAT number
+     * The receiver's VAT number.
      * </pre>
      *
      * <code>RECEIVER_VAT_NUMBER = 43;</code>
@@ -410,7 +420,8 @@ private static final long serialVersionUID = 0L;
     RECEIVER_VAT_NUMBER(43),
     /**
      * <pre>
-     * Purchase Lines
+     * The line items, in `purchaseLinesDetails` and, in the older format, in
+     * `purchaseLines`. Read from the first 5 pages.
      * </pre>
      *
      * <code>PURCHASE_LINES = 44;</code>
@@ -418,7 +429,7 @@ private static final long serialVersionUID = 0L;
     PURCHASE_LINES(44),
     /**
      * <pre>
-     * Page texts
+     * The text of each page. Read from the first 5 pages.
      * </pre>
      *
      * <code>PAGE_TEXTS = 45;</code>
@@ -426,7 +437,8 @@ private static final long serialVersionUID = 0L;
     PAGE_TEXTS(45),
     /**
      * <pre>
-     * VAT distribution
+     * The VAT levels and their amounts, in `vatDistributionDetails` and, in the older
+     * format, in `vatDistribution`. Read from the first and last page.
      * </pre>
      *
      * <code>VAT_DISTRIBUTION = 46;</code>
@@ -434,7 +446,7 @@ private static final long serialVersionUID = 0L;
     VAT_DISTRIBUTION(46),
     /**
      * <pre>
-     * Langauge code
+     * The language of the document text. Returned regardless of `minConfidence`.
      * </pre>
      *
      * <code>LANGUAGE_CODE = 47;</code>
@@ -442,7 +454,7 @@ private static final long serialVersionUID = 0L;
     LANGUAGE_CODE(47),
     /**
      * <pre>
-     * QR code
+     * The decoded text of QR codes. Read from the first 5 pages.
      * </pre>
      *
      * <code>QR_CODES = 48;</code>
@@ -450,7 +462,7 @@ private static final long serialVersionUID = 0L;
     QR_CODES(48),
     /**
      * <pre>
-     * Swiss QR bill
+     * Swiss QR bills found in QR codes. Read from the first 5 pages.
      * </pre>
      *
      * <code>SWISS_QR_BILLS = 49;</code>
@@ -458,8 +470,13 @@ private static final long serialVersionUID = 0L;
     SWISS_QR_BILLS(49),
     /**
      * <pre>
-     * Series of automated verifications and consistency checks
-     * on the document.
+     * Runs consistency checks on the extracted values. Candidates that the checks
+     * confirm or correct get the confidence level VERIFIED. Also requests
+     * DOCUMENT_DATE, DOCUMENT_NUMBER, DOCUMENT_TYPE, PAYMENT_DUE_DATE, PAYMENT_METHOD,
+     * CURRENCY, CREDIT_CARD_LAST_FOUR, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+     * SUPPLIER_COUNTRY_CODE, RECEIVER_COUNTRY_CODE, SUPPLIER_ADDRESS, RECEIVER_ADDRESS,
+     * PURCHASE_LINES and VAT_DISTRIBUTION. Verified line and VAT values are in
+     * `purchaseLinesDetails` and `vatDistributionDetails`.
      * </pre>
      *
      * <code>VERIFIED = 50;</code>
@@ -467,7 +484,7 @@ private static final long serialVersionUID = 0L;
     VERIFIED(50),
     /**
      * <pre>
-     * Hotel dates including check-in and check-out dates
+     * The check-in and check-out dates on documents related to accommodation.
      * </pre>
      *
      * <code>HOTEL_DATES = 51;</code>
@@ -475,7 +492,8 @@ private static final long serialVersionUID = 0L;
     HOTEL_DATES(51),
     /**
      * <pre>
-     * Product type classification for purchase lines
+     * A product type for each purchase line, in `productType` of
+     * `purchaseLinesDetails`. Also requests PURCHASE_LINES.
      * </pre>
      *
      * <code>PRODUCT_TYPES = 52;</code>
@@ -483,8 +501,7 @@ private static final long serialVersionUID = 0L;
     PRODUCT_TYPES(52),
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
-     * Extracted via the QA/questions model.
+     * The Polish KSeF (Krajowy System e-Faktur) e-invoice number.
      * </pre>
      *
      * <code>KSEF = 53;</code>
@@ -504,10 +521,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Run default feature set:
-     * PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
-     * SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
-     * DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
+     * A set of frequently used fields: PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT,
+     * TOTAL_INCL_VAT, TOTAL_EXCL_VAT, SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE,
+     * PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR, DOCUMENT_NUMBER, DOCUMENT_DATE and
+     * SUPPLIER_ORGANISATION_NUMBER. Its `maxResults` and `minConfidence` apply to each
+     * of them, unless you also request that feature on its own.
      * </pre>
      *
      * <code>DEFAULT = 0;</code>
@@ -515,7 +533,7 @@ private static final long serialVersionUID = 0L;
     public static final int DEFAULT_VALUE = 0;
     /**
      * <pre>
-     * Return text annotation
+     * The full OCR output for the pages Smartscan read.
      * </pre>
      *
      * <code>TEXT_ANNOTATION = 1;</code>
@@ -523,7 +541,7 @@ private static final long serialVersionUID = 0L;
     public static final int TEXT_ANNOTATION_VALUE = 1;
     /**
      * <pre>
-     * [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
+     * [DEPRECATED] No longer returns anything. Use DOCUMENT_DATE instead.
      * </pre>
      *
      * <code>ORDER_DATE = 2 [deprecated = true];</code>
@@ -531,7 +549,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Deprecated public static final int ORDER_DATE_VALUE = 2;
     /**
      * <pre>
-     * Run due date detection
+     * The date the payment is due.
      * </pre>
      *
      * <code>PAYMENT_DUE_DATE = 3;</code>
@@ -539,7 +557,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAYMENT_DUE_DATE_VALUE = 3;
     /**
      * <pre>
-     * Run currency detection
+     * The currency, as a three-letter code.
      * </pre>
      *
      * <code>CURRENCY = 4;</code>
@@ -547,7 +565,7 @@ private static final long serialVersionUID = 0L;
     public static final int CURRENCY_VALUE = 4;
     /**
      * <pre>
-     * Run total vat detection
+     * The total VAT of the document.
      * </pre>
      *
      * <code>TOTAL_VAT = 5;</code>
@@ -555,7 +573,7 @@ private static final long serialVersionUID = 0L;
     public static final int TOTAL_VAT_VALUE = 5;
     /**
      * <pre>
-     * Run total incl vat detection
+     * The total of the document including VAT.
      * </pre>
      *
      * <code>TOTAL_INCL_VAT = 6;</code>
@@ -563,7 +581,7 @@ private static final long serialVersionUID = 0L;
     public static final int TOTAL_INCL_VAT_VALUE = 6;
     /**
      * <pre>
-     * Run total excl vat detection
+     * The total of the document excluding VAT.
      * </pre>
      *
      * <code>TOTAL_EXCL_VAT = 7;</code>
@@ -571,8 +589,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOTAL_EXCL_VAT_VALUE = 7;
     /**
      * <pre>
-     * [DEPRECATED] Run supplier corporate id detection.
-     * Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+     * [DEPRECATED] No longer returns anything. Use SUPPLIER_ORGANISATION_NUMBER or
+     * SUPPLIER_VAT_NUMBER instead.
      * </pre>
      *
      * <code>SUPPLIER_CORPORATE_ID = 8 [deprecated = true];</code>
@@ -580,7 +598,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Deprecated public static final int SUPPLIER_CORPORATE_ID_VALUE = 8;
     /**
      * <pre>
-     * Run country code detection
+     * The supplier's country, as a two-letter code.
      * </pre>
      *
      * <code>SUPPLIER_COUNTRY_CODE = 9;</code>
@@ -588,7 +606,7 @@ private static final long serialVersionUID = 0L;
     public static final int SUPPLIER_COUNTRY_CODE_VALUE = 9;
     /**
      * <pre>
-     * Run document type detection
+     * The type of document, for example an invoice or a receipt.
      * </pre>
      *
      * <code>DOCUMENT_TYPE = 10;</code>
@@ -596,7 +614,7 @@ private static final long serialVersionUID = 0L;
     public static final int DOCUMENT_TYPE_VALUE = 10;
     /**
      * <pre>
-     * Run pyment method detection
+     * How the document was paid, for example in cash or by credit card.
      * </pre>
      *
      * <code>PAYMENT_METHOD = 11;</code>
@@ -604,7 +622,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAYMENT_METHOD_VALUE = 11;
     /**
      * <pre>
-     * Run credit card number detection
+     * The last four digits of the credit card used for the payment.
      * </pre>
      *
      * <code>CREDIT_CARD_LAST_FOUR = 12;</code>
@@ -612,7 +630,7 @@ private static final long serialVersionUID = 0L;
     public static final int CREDIT_CARD_LAST_FOUR_VALUE = 12;
     /**
      * <pre>
-     * [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
+     * [DEPRECATED] No longer returns anything. Use DOCUMENT_NUMBER instead.
      * </pre>
      *
      * <code>INVOICE_NUMBER = 13 [deprecated = true];</code>
@@ -620,7 +638,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Deprecated public static final int INVOICE_NUMBER_VALUE = 13;
     /**
      * <pre>
-     * Run danish ocr line detection, for the type
+     * The type field of a Danish payment line (FIK).
      * </pre>
      *
      * <code>OCR_LINE_DK_TYPE = 14;</code>
@@ -628,7 +646,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_DK_TYPE_VALUE = 14;
     /**
      * <pre>
-     * Run danish ocr line detection, for the payment id
+     * The payment ID of a Danish payment line (FIK).
      * </pre>
      *
      * <code>OCR_LINE_DK_PAYMENT_ID = 15;</code>
@@ -636,7 +654,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_DK_PAYMENT_ID_VALUE = 15;
     /**
      * <pre>
-     * Run danish ocr line detection, for the creditor id
+     * The creditor ID of a Danish payment line (FIK account number).
      * </pre>
      *
      * <code>OCR_LINE_DK_CREDITOR_ID = 16;</code>
@@ -644,7 +662,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_DK_CREDITOR_ID_VALUE = 16;
     /**
      * <pre>
-     * Run swedish ocr line detection for the payment id
+     * The payment ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_PAYMENT_ID = 17;</code>
@@ -652,7 +670,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_SE_PAYMENT_ID_VALUE = 17;
     /**
      * <pre>
-     * Run swedish ocr line detection for the bankgiro creditor id
+     * The Bankgiro creditor ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_BANKGIRO_CREDITOR_ID = 18;</code>
@@ -660,7 +678,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_VALUE = 18;
     /**
      * <pre>
-     * Run swedish ocr line detection for the plusgiro creditor id
+     * The Plusgiro creditor ID of a Swedish payment line.
      * </pre>
      *
      * <code>OCR_LINE_SE_PLUSGIRO_CREDITOR_ID = 19;</code>
@@ -668,7 +686,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_VALUE = 19;
     /**
      * <pre>
-     * Run norwegian ocr line detection or the payment id
+     * The payment ID (KID) of a Norwegian payment line.
      * </pre>
      *
      * <code>OCR_LINE_NO_PAYMENT_ID = 20;</code>
@@ -676,7 +694,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_NO_PAYMENT_ID_VALUE = 20;
     /**
      * <pre>
-     * Run finish ocr line detection or the payment id
+     * The payment ID (viitenumero) of a Finnish payment line.
      * </pre>
      *
      * <code>OCR_LINE_FI_PAYMENT_ID = 21;</code>
@@ -684,7 +702,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_FI_PAYMENT_ID_VALUE = 21;
     /**
      * <pre>
-     * Run dutch ocr line detection for the payment id
+     * The payment ID (betalingskenmerk) of a Dutch payment line.
      * </pre>
      *
      * <code>OCR_LINE_NL_PAYMENT_ID = 22;</code>
@@ -692,7 +710,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_NL_PAYMENT_ID_VALUE = 22;
     /**
      * <pre>
-     * Run belgian ocr line detection for the payment id
+     * The payment ID (OGM) of a Belgian payment line.
      * </pre>
      *
      * <code>OCR_LINE_BE_PAYMENT_ID = 39;</code>
@@ -700,7 +718,7 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_BE_PAYMENT_ID_VALUE = 39;
     /**
      * <pre>
-     * Return document text
+     * The text of the pages Smartscan read.
      * </pre>
      *
      * <code>TEXT = 23;</code>
@@ -708,7 +726,7 @@ private static final long serialVersionUID = 0L;
     public static final int TEXT_VALUE = 23;
     /**
      * <pre>
-     * Run IBAN detection
+     * The IBAN.
      * </pre>
      *
      * <code>IBAN = 24;</code>
@@ -716,7 +734,7 @@ private static final long serialVersionUID = 0L;
     public static final int IBAN_VALUE = 24;
     /**
      * <pre>
-     * Run LINES detection
+     * The lines of the document that hold an amount.
      * </pre>
      *
      * <code>LINES = 25;</code>
@@ -724,7 +742,7 @@ private static final long serialVersionUID = 0L;
     public static final int LINES_VALUE = 25;
     /**
      * <pre>
-     * Run first page of PDF to PNG conversion
+     * A base64-encoded image of the first page that holds text.
      * </pre>
      *
      * <code>PREVIEW = 26;</code>
@@ -732,7 +750,7 @@ private static final long serialVersionUID = 0L;
     public static final int PREVIEW_VALUE = 26;
     /**
      * <pre>
-     * Run bank account number detection
+     * The bank account number.
      * </pre>
      *
      * <code>BANK_ACCOUNT_NUMBER = 27;</code>
@@ -740,7 +758,7 @@ private static final long serialVersionUID = 0L;
     public static final int BANK_ACCOUNT_NUMBER_VALUE = 27;
     /**
      * <pre>
-     * Run bank registration number detection
+     * The bank registration number, in countries that use one, such as Denmark.
      * </pre>
      *
      * <code>BANK_REGISTRATION_NUMBER = 28;</code>
@@ -748,7 +766,7 @@ private static final long serialVersionUID = 0L;
     public static final int BANK_REGISTRATION_NUMBER_VALUE = 28;
     /**
      * <pre>
-     * Run business identifier code detection
+     * The BIC (SWIFT code).
      * </pre>
      *
      * <code>BIC = 29;</code>
@@ -756,7 +774,7 @@ private static final long serialVersionUID = 0L;
     public static final int BIC_VALUE = 29;
     /**
      * <pre>
-     * Run document number detection
+     * The number that identifies the document, such as the invoice number.
      * </pre>
      *
      * <code>DOCUMENT_NUMBER = 30;</code>
@@ -764,7 +782,7 @@ private static final long serialVersionUID = 0L;
     public static final int DOCUMENT_NUMBER_VALUE = 30;
     /**
      * <pre>
-     * Run document date detection
+     * The date the document was issued.
      * </pre>
      *
      * <code>DOCUMENT_DATE = 31;</code>
@@ -772,7 +790,7 @@ private static final long serialVersionUID = 0L;
     public static final int DOCUMENT_DATE_VALUE = 31;
     /**
      * <pre>
-     * Run order number detection
+     * The order number.
      * </pre>
      *
      * <code>ORDER_NUMBER = 32;</code>
@@ -780,7 +798,7 @@ private static final long serialVersionUID = 0L;
     public static final int ORDER_NUMBER_VALUE = 32;
     /**
      * <pre>
-     * Run supplier name detection
+     * The supplier's name.
      * </pre>
      *
      * <code>SUPPLIER_NAME = 33;</code>
@@ -788,7 +806,7 @@ private static final long serialVersionUID = 0L;
     public static final int SUPPLIER_NAME_VALUE = 33;
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier VAT detection
+     * [EXPERIMENTAL] The supplier's VAT number.
      * </pre>
      *
      * <code>SUPPLIER_VAT_NUMBER = 34;</code>
@@ -796,7 +814,7 @@ private static final long serialVersionUID = 0L;
     public static final int SUPPLIER_VAT_NUMBER_VALUE = 34;
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier organisation number detection
+     * [EXPERIMENTAL] The supplier's national company ID, such as the CVR number in Denmark.
      * </pre>
      *
      * <code>SUPPLIER_ORGANISATION_NUMBER = 35;</code>
@@ -804,7 +822,7 @@ private static final long serialVersionUID = 0L;
     public static final int SUPPLIER_ORGANISATION_NUMBER_VALUE = 35;
     /**
      * <pre>
-     * [EXPERIMENTAL] Run supplier address detection
+     * [EXPERIMENTAL] The supplier's address. Also returns `structuredSupplierAddress`.
      * </pre>
      *
      * <code>SUPPLIER_ADDRESS = 36;</code>
@@ -812,7 +830,7 @@ private static final long serialVersionUID = 0L;
     public static final int SUPPLIER_ADDRESS_VALUE = 36;
     /**
      * <pre>
-     * [EXPERIMENTAL] Run customer identifier detection
+     * [EXPERIMENTAL] The number that identifies the customer.
      * </pre>
      *
      * <code>CUSTOMER_NUMBER = 37;</code>
@@ -820,7 +838,7 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_NUMBER_VALUE = 37;
     /**
      * <pre>
-     * Receiver order number
+     * The receiver's order number.
      * </pre>
      *
      * <code>RECEIVER_ORDER_NUMBER = 38;</code>
@@ -828,7 +846,7 @@ private static final long serialVersionUID = 0L;
     public static final int RECEIVER_ORDER_NUMBER_VALUE = 38;
     /**
      * <pre>
-     * Receiver address
+     * The receiver's address. Also returns `structuredReceiverAddress`.
      * </pre>
      *
      * <code>RECEIVER_ADDRESS = 40;</code>
@@ -836,7 +854,7 @@ private static final long serialVersionUID = 0L;
     public static final int RECEIVER_ADDRESS_VALUE = 40;
     /**
      * <pre>
-     * Receiver country code
+     * The receiver's country, as a two-letter code.
      * </pre>
      *
      * <code>RECEIVER_COUNTRY_CODE = 41;</code>
@@ -844,7 +862,7 @@ private static final long serialVersionUID = 0L;
     public static final int RECEIVER_COUNTRY_CODE_VALUE = 41;
     /**
      * <pre>
-     * Receiver name
+     * The receiver's name.
      * </pre>
      *
      * <code>RECEIVER_NAME = 42;</code>
@@ -852,7 +870,7 @@ private static final long serialVersionUID = 0L;
     public static final int RECEIVER_NAME_VALUE = 42;
     /**
      * <pre>
-     * Receiver VAT number
+     * The receiver's VAT number.
      * </pre>
      *
      * <code>RECEIVER_VAT_NUMBER = 43;</code>
@@ -860,7 +878,8 @@ private static final long serialVersionUID = 0L;
     public static final int RECEIVER_VAT_NUMBER_VALUE = 43;
     /**
      * <pre>
-     * Purchase Lines
+     * The line items, in `purchaseLinesDetails` and, in the older format, in
+     * `purchaseLines`. Read from the first 5 pages.
      * </pre>
      *
      * <code>PURCHASE_LINES = 44;</code>
@@ -868,7 +887,7 @@ private static final long serialVersionUID = 0L;
     public static final int PURCHASE_LINES_VALUE = 44;
     /**
      * <pre>
-     * Page texts
+     * The text of each page. Read from the first 5 pages.
      * </pre>
      *
      * <code>PAGE_TEXTS = 45;</code>
@@ -876,7 +895,8 @@ private static final long serialVersionUID = 0L;
     public static final int PAGE_TEXTS_VALUE = 45;
     /**
      * <pre>
-     * VAT distribution
+     * The VAT levels and their amounts, in `vatDistributionDetails` and, in the older
+     * format, in `vatDistribution`. Read from the first and last page.
      * </pre>
      *
      * <code>VAT_DISTRIBUTION = 46;</code>
@@ -884,7 +904,7 @@ private static final long serialVersionUID = 0L;
     public static final int VAT_DISTRIBUTION_VALUE = 46;
     /**
      * <pre>
-     * Langauge code
+     * The language of the document text. Returned regardless of `minConfidence`.
      * </pre>
      *
      * <code>LANGUAGE_CODE = 47;</code>
@@ -892,7 +912,7 @@ private static final long serialVersionUID = 0L;
     public static final int LANGUAGE_CODE_VALUE = 47;
     /**
      * <pre>
-     * QR code
+     * The decoded text of QR codes. Read from the first 5 pages.
      * </pre>
      *
      * <code>QR_CODES = 48;</code>
@@ -900,7 +920,7 @@ private static final long serialVersionUID = 0L;
     public static final int QR_CODES_VALUE = 48;
     /**
      * <pre>
-     * Swiss QR bill
+     * Swiss QR bills found in QR codes. Read from the first 5 pages.
      * </pre>
      *
      * <code>SWISS_QR_BILLS = 49;</code>
@@ -908,8 +928,13 @@ private static final long serialVersionUID = 0L;
     public static final int SWISS_QR_BILLS_VALUE = 49;
     /**
      * <pre>
-     * Series of automated verifications and consistency checks
-     * on the document.
+     * Runs consistency checks on the extracted values. Candidates that the checks
+     * confirm or correct get the confidence level VERIFIED. Also requests
+     * DOCUMENT_DATE, DOCUMENT_NUMBER, DOCUMENT_TYPE, PAYMENT_DUE_DATE, PAYMENT_METHOD,
+     * CURRENCY, CREDIT_CARD_LAST_FOUR, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+     * SUPPLIER_COUNTRY_CODE, RECEIVER_COUNTRY_CODE, SUPPLIER_ADDRESS, RECEIVER_ADDRESS,
+     * PURCHASE_LINES and VAT_DISTRIBUTION. Verified line and VAT values are in
+     * `purchaseLinesDetails` and `vatDistributionDetails`.
      * </pre>
      *
      * <code>VERIFIED = 50;</code>
@@ -917,7 +942,7 @@ private static final long serialVersionUID = 0L;
     public static final int VERIFIED_VALUE = 50;
     /**
      * <pre>
-     * Hotel dates including check-in and check-out dates
+     * The check-in and check-out dates on documents related to accommodation.
      * </pre>
      *
      * <code>HOTEL_DATES = 51;</code>
@@ -925,7 +950,8 @@ private static final long serialVersionUID = 0L;
     public static final int HOTEL_DATES_VALUE = 51;
     /**
      * <pre>
-     * Product type classification for purchase lines
+     * A product type for each purchase line, in `productType` of
+     * `purchaseLinesDetails`. Also requests PURCHASE_LINES.
      * </pre>
      *
      * <code>PRODUCT_TYPES = 52;</code>
@@ -933,8 +959,7 @@ private static final long serialVersionUID = 0L;
     public static final int PRODUCT_TYPES_VALUE = 52;
     /**
      * <pre>
-     * Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
-     * Extracted via the QA/questions model.
+     * The Polish KSeF (Krajowy System e-Faktur) e-invoice number.
      * </pre>
      *
      * <code>KSEF = 53;</code>
@@ -1098,8 +1123,10 @@ private static final long serialVersionUID = 0L;
   private int maxResults_ = 0;
   /**
    * <pre>
-   * Maximum number of results of this type. Does not apply to
-   * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+   * The maximum number of candidates to return for this feature. Defaults to 1. It
+   * doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+   * SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+   * TEXT.
    * </pre>
    *
    * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
@@ -1114,7 +1141,10 @@ private static final long serialVersionUID = 0L;
   private int minConfidence_ = 0;
   /**
    * <pre>
-   * The minimum confidence for predictions that the caller wants returned
+   * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+   * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+   * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+   * candidates of any level.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1125,7 +1155,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The minimum confidence for predictions that the caller wants returned
+   * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+   * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+   * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+   * candidates of any level.
    * </pre>
    *
    * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1314,6 +1347,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A feature to extract, with optional limits on its candidates.
+   * </pre>
+   *
    * Protobuf type {@code ssn.annotator.v1.Feature}
    */
   public static final class Builder extends
@@ -1529,8 +1566,10 @@ private static final long serialVersionUID = 0L;
     private int maxResults_ ;
     /**
      * <pre>
-     * Maximum number of results of this type. Does not apply to
-     * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+     * The maximum number of candidates to return for this feature. Defaults to 1. It
+     * doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+     * SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+     * TEXT.
      * </pre>
      *
      * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
@@ -1542,8 +1581,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum number of results of this type. Does not apply to
-     * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+     * The maximum number of candidates to return for this feature. Defaults to 1. It
+     * doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+     * SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+     * TEXT.
      * </pre>
      *
      * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
@@ -1559,8 +1600,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum number of results of this type. Does not apply to
-     * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+     * The maximum number of candidates to return for this feature. Defaults to 1. It
+     * doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+     * SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+     * TEXT.
      * </pre>
      *
      * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
@@ -1576,7 +1619,10 @@ private static final long serialVersionUID = 0L;
     private int minConfidence_ = 0;
     /**
      * <pre>
-     * The minimum confidence for predictions that the caller wants returned
+     * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+     * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+     * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+     * candidates of any level.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1587,7 +1633,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The minimum confidence for predictions that the caller wants returned
+     * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+     * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+     * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+     * candidates of any level.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1602,7 +1651,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The minimum confidence for predictions that the caller wants returned
+     * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+     * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+     * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+     * candidates of any level.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1615,7 +1667,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The minimum confidence for predictions that the caller wants returned
+     * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+     * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+     * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+     * candidates of any level.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>
@@ -1633,7 +1688,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The minimum confidence for predictions that the caller wants returned
+     * The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+     * from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+     * applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+     * candidates of any level.
      * </pre>
      *
      * <code>.ssn.type.Confidence.Level min_confidence = 3 [json_name = "minConfidence"];</code>

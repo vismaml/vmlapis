@@ -65,133 +65,135 @@ namespace Ssn.Annotator.V1 {
             "YXR1cmVzGAIgAygLMhkuc3NuLmFubm90YXRvci52MS5GZWF0dXJlUghmZWF0",
             "dXJlcxISCgR0YWdzGAMgAygJUgR0YWdzEiIKBHRpZXIYBCABKA4yDi5zc24u",
             "dHlwZS5UaWVyUgR0aWVyEhoKCHNlZ21lbnRzGAUgAygJUghzZWdtZW50cxIc",
-            "CglxdWVzdGlvbnMYBiADKAlSCXF1ZXN0aW9ucyKdHQoZRG9jdW1lbnRBbm5v",
-            "dGF0b3JSZXNwb25zZRIyCgpvcmRlcl9kYXRlGAEgAygLMhMuc3NuLnR5cGUu",
-            "Q2FuZGlkYXRlUglvcmRlckRhdGUSPQoQcGF5bWVudF9kdWVfZGF0ZRgCIAMo",
-            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIOcGF5bWVudER1ZURhdGUSLwoIY3Vy",
-            "cmVuY3kYAyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCGN1cnJlbmN5EjAK",
-            "CXRvdGFsX3ZhdBgEIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIIdG90YWxW",
-            "YXQSOQoOdG90YWxfaW5jbF92YXQYBSADKAsyEy5zc24udHlwZS5DYW5kaWRh",
-            "dGVSDHRvdGFsSW5jbFZhdBI5Cg50b3RhbF9leGNsX3ZhdBgGIAMoCzITLnNz",
-            "bi50eXBlLkNhbmRpZGF0ZVIMdG90YWxFeGNsVmF0EkcKFXN1cHBsaWVyX2Nv",
-            "cnBvcmF0ZV9pZBgHIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVITc3VwcGxp",
-            "ZXJDb3Jwb3JhdGVJZBJHChVzdXBwbGllcl9jb3VudHJ5X2NvZGUYCCADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGVSE3N1cHBsaWVyQ291bnRyeUNvZGUSOAoN",
-            "ZG9jdW1lbnRfdHlwZRgJIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMZG9j",
-            "dW1lbnRUeXBlEjoKDnBheW1lbnRfbWV0aG9kGAogAygLMhMuc3NuLnR5cGUu",
-            "Q2FuZGlkYXRlUg1wYXltZW50TWV0aG9kEkYKFWNyZWRpdF9jYXJkX2xhc3Rf",
-            "Zm91chgLIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVISY3JlZGl0Q2FyZExh",
-            "c3RGb3VyEjoKDmludm9pY2VfbnVtYmVyGAwgAygLMhMuc3NuLnR5cGUuQ2Fu",
-            "ZGlkYXRlUg1pbnZvaWNlTnVtYmVyEkEKD3RleHRfYW5ub3RhdGlvbhgNIAEo",
-            "CzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uUg50ZXh0QW5ub3RhdGlvbhI8",
-            "ChBvY3JfbGluZV9ka190eXBlGA4gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
-            "Ug1vY3JMaW5lRGtUeXBlEkcKFm9jcl9saW5lX2RrX3BheW1lbnRfaWQYDyAD",
-            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVEa1BheW1lbnRJZBJJ",
-            "ChdvY3JfbGluZV9ka19jcmVkaXRvcl9pZBgQIAMoCzITLnNzbi50eXBlLkNh",
-            "bmRpZGF0ZVITb2NyTGluZURrQ3JlZGl0b3JJZBJHChZvY3JfbGluZV9zZV9w",
-            "YXltZW50X2lkGBEgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhJvY3JMaW5l",
-            "U2VQYXltZW50SWQSWgogb2NyX2xpbmVfc2VfYmFua2dpcm9fY3JlZGl0b3Jf",
-            "aWQYEiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSG29jckxpbmVTZUJhbmtn",
-            "aXJvQ3JlZGl0b3JJZBJaCiBvY3JfbGluZV9zZV9wbHVzZ2lyb19jcmVkaXRv",
-            "cl9pZBgTIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIbb2NyTGluZVNlUGx1",
-            "c2dpcm9DcmVkaXRvcklkEkcKFm9jcl9saW5lX25vX3BheW1lbnRfaWQYFCAD",
-            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVOb1BheW1lbnRJZBJH",
-            "ChZvY3JfbGluZV9maV9wYXltZW50X2lkGBUgAygLMhMuc3NuLnR5cGUuQ2Fu",
-            "ZGlkYXRlUhJvY3JMaW5lRmlQYXltZW50SWQSRwoWb2NyX2xpbmVfbmxfcGF5",
-            "bWVudF9pZBgWIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVISb2NyTGluZU5s",
-            "UGF5bWVudElkEkcKFm9jcl9saW5lX2JlX3BheW1lbnRfaWQYKCADKAsyEy5z",
-            "c24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVCZVBheW1lbnRJZBISCgR0ZXh0",
-            "GBcgASgJUgR0ZXh0Eh8KC2ZlZWRiYWNrX2lkGBggASgJUgpmZWVkYmFja0lk",
-            "EicKBGliYW4YGSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGliYW4SLQoF",
-            "bGluZXMYGiADKAsyFy5zc24udHlwZS5MaW5lQ2FuZGlkYXRlUgVsaW5lcxIY",
-            "CgdwcmV2aWV3GBsgASgJUgdwcmV2aWV3EkMKE2JhbmtfYWNjb3VudF9udW1i",
-            "ZXIYHCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEWJhbmtBY2NvdW50TnVt",
-            "YmVyEk0KGGJhbmtfcmVnaXN0cmF0aW9uX251bWJlchgdIAMoCzITLnNzbi50",
-            "eXBlLkNhbmRpZGF0ZVIWYmFua1JlZ2lzdHJhdGlvbk51bWJlchIlCgNiaWMY",
-            "HiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSA2JpYxI8Cg9kb2N1bWVudF9u",
-            "dW1iZXIYHyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDmRvY3VtZW50TnVt",
-            "YmVyEjgKDWRvY3VtZW50X2RhdGUYICADKAsyEy5zc24udHlwZS5DYW5kaWRh",
-            "dGVSDGRvY3VtZW50RGF0ZRI2CgxvcmRlcl9udW1iZXIYISADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSC29yZGVyTnVtYmVyEjgKDXN1cHBsaWVyX25hbWUY",
-            "IiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHN1cHBsaWVyTmFtZRJDChNz",
-            "dXBwbGllcl92YXRfbnVtYmVyGCMgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
-            "UhFzdXBwbGllclZhdE51bWJlchJVChxzdXBwbGllcl9vcmdhbmlzYXRpb25f",
-            "bnVtYmVyGCQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhpzdXBwbGllck9y",
-            "Z2FuaXNhdGlvbk51bWJlchI+ChBzdXBwbGllcl9hZGRyZXNzGCUgAygLMhMu",
-            "c3NuLnR5cGUuQ2FuZGlkYXRlUg9zdXBwbGllckFkZHJlc3MSPAoPY3VzdG9t",
-            "ZXJfbnVtYmVyGCYgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg5jdXN0b21l",
-            "ck51bWJlchJHChVyZWNlaXZlcl9vcmRlcl9udW1iZXIYJyADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSE3JlY2VpdmVyT3JkZXJOdW1iZXISPgoQcmVjZWl2",
-            "ZXJfYWRkcmVzcxgpIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIPcmVjZWl2",
-            "ZXJBZGRyZXNzEkcKFXJlY2VpdmVyX2NvdW50cnlfY29kZRgqIAMoCzITLnNz",
-            "bi50eXBlLkNhbmRpZGF0ZVITcmVjZWl2ZXJDb3VudHJ5Q29kZRI4Cg1yZWNl",
-            "aXZlcl9uYW1lGCsgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgxyZWNlaXZl",
-            "ck5hbWUSQwoTcmVjZWl2ZXJfdmF0X251bWJlchgsIAMoCzITLnNzbi50eXBl",
-            "LkNhbmRpZGF0ZVIRcmVjZWl2ZXJWYXROdW1iZXISRgoOcHVyY2hhc2VfbGlu",
-            "ZXMYLSADKAsyHy5zc24udHlwZS5QdXJjaGFzZUxpbmVDYW5kaWRhdGVSDXB1",
-            "cmNoYXNlTGluZXMSMwoHYW5zd2VycxguIAMoCzIZLnNzbi50eXBlLkFuc3dl",
-            "ckNhbmRpZGF0ZVIHYW5zd2VycxIxCgpwYWdlX3RleHRzGC8gAygLMhIuc3Nu",
-            "LnR5cGUuUGFnZVRleHRSCXBhZ2VUZXh0cxJNChB2YXRfZGlzdHJpYnV0aW9u",
-            "GDAgAygLMiIuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uQ2FuZGlkYXRlUg92",
-            "YXREaXN0cmlidXRpb24SRwoRZG9jdW1lbnRfbWV0YWRhdGEYMSABKAsyGi5z",
-            "c24udHlwZS5Eb2N1bWVudE1ldGFkYXRhUhBkb2N1bWVudE1ldGFkYXRhEjgK",
-            "DWxhbmd1YWdlX2NvZGUYMiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDGxh",
-            "bmd1YWdlQ29kZRIvCghxcl9jb2RlcxgzIAMoCzIULnNzbi50eXBlLlFyQ29k",
-            "ZURhdGFSB3FyQ29kZXMSOwoOc3dpc3NfcXJfYmlsbHMYNCADKAsyFS5zc24u",
-            "dHlwZS5Td2lzc1FyQmlsbFIMc3dpc3NRckJpbGxzEjUKC2hvdGVsX2RhdGVz",
-            "GDUgASgLMhQuc3NuLnR5cGUuSG90ZWxEYXRlc1IKaG90ZWxEYXRlcxJMChZw",
-            "dXJjaGFzZV9saW5lc19kZXRhaWxzGDggAygLMhYuc3NuLnR5cGUuUHVyY2hh",
-            "c2VMaW5lUhRwdXJjaGFzZUxpbmVzRGV0YWlscxJTChh2YXRfZGlzdHJpYnV0",
-            "aW9uX2RldGFpbHMYOSADKAsyGS5zc24udHlwZS5WYXREaXN0cmlidXRpb25S",
-            "FnZhdERpc3RyaWJ1dGlvbkRldGFpbHMSWwobc3RydWN0dXJlZF9zdXBwbGll",
-            "cl9hZGRyZXNzGDogAygLMhsuc3NuLnR5cGUuU3RydWN0dXJlZEFkZHJlc3NS",
-            "GXN0cnVjdHVyZWRTdXBwbGllckFkZHJlc3MSWwobc3RydWN0dXJlZF9yZWNl",
-            "aXZlcl9hZGRyZXNzGDsgAygLMhsuc3NuLnR5cGUuU3RydWN0dXJlZEFkZHJl",
-            "c3NSGXN0cnVjdHVyZWRSZWNlaXZlckFkZHJlc3MSJwoEa3NlZhg8IAMoCzIT",
-            "LnNzbi50eXBlLkNhbmRpZGF0ZVIEa3NlZkoECDYQN0oECDcQOCJeCghEb2N1",
-            "bWVudBIYCgdjb250ZW50GAEgASgMUgdjb250ZW50EjgKBnNvdXJjZRgCIAEo",
-            "CzIgLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRTb3VyY2VSBnNvdXJjZSIr",
-            "Cg5Eb2N1bWVudFNvdXJjZRIZCghodHRwX3VyaRgBIAEoCVIHaHR0cFVyaSJv",
-            "ChdEb2N1bWVudFF1ZXN0aW9uUmVxdWVzdBI2Cghkb2N1bWVudBgBIAEoCzIa",
-            "LnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRSCGRvY3VtZW50EhwKCXF1ZXN0",
-            "aW9ucxgCIAMoCVIJcXVlc3Rpb25zIlUKGERvY3VtZW50UXVlc3Rpb25SZXNw",
-            "b25zZRIzCgdhbnN3ZXJzGAIgAygLMhkuc3NuLnR5cGUuQW5zd2VyQ2FuZGlk",
-            "YXRlUgdhbnN3ZXJzSgQIARACMr0CChFEb2N1bWVudEFubm90YXRvchKNAQoQ",
-            "QW5ub3RhdGVEb2N1bWVudBIqLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRB",
-            "bm5vdGF0b3JSZXF1ZXN0Gisuc3NuLmFubm90YXRvci52MS5Eb2N1bWVudEFu",
-            "bm90YXRvclJlc3BvbnNlIiCC0+STAhoiFS92MS9kb2N1bWVudDphbm5vdGF0",
-            "ZToBKhKXAQoWQW5zd2VyRG9jdW1lbnRRdWVzdGlvbhIpLnNzbi5hbm5vdGF0",
-            "b3IudjEuRG9jdW1lbnRRdWVzdGlvblJlcXVlc3QaKi5zc24uYW5ub3RhdG9y",
-            "LnYxLkRvY3VtZW50UXVlc3Rpb25SZXNwb25zZSImgtPkkwIgIhsvdjEvZG9j",
-            "dW1lbnQ6YW5zd2VycXVlc3Rpb246ASpC3AkKGWFpLnZpc21hLnNzbi5hbm5v",
-            "dGF0b3IudjFCDkFubm90YXRvclByb3RvUAFaPmdpdGh1Yi5jb20vZS1jb25v",
-            "bWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9hbm5vdGF0b3IvdjE7YW5ub3RhdG9y",
-            "ogIDU0FYqgIQU3NuLkFubm90YXRvci5WMcoCEFNzblxBbm5vdGF0b3JcVjHi",
-            "AhxTc25cQW5ub3RhdG9yXFYxXEdQQk1ldGFkYXRh6gISU3NuOjpBbm5vdGF0",
-            "b3I6OlYxkkGLCBL7BgoJU21hcnRzY2FuEukGU21hcnRzY2FuIGV4dHJhY3Rz",
-            "IGRhdGEgZnJvbSB1bnN0cnVjdHVyZWQgZG9jdW1lbnRzIHN1Y2ggYXMgaW52",
-            "b2ljZXMgYW5kIHJlY2VpcHRzLCBhbmQgcmV0dXJucyB0aGUgcmVzdWx0cyBp",
-            "biB0aGUgc2FtZSBjYWxsLiBUaGlzIHJlZmVyZW5jZSBhbHNvIGNvdmVycyBm",
-            "ZWVkYmFjayBhbmQgdmFsZXQga2V5cy4gQXN5bmMgdHJhbnNhY3Rpb25zIGhh",
-            "dmUgdGhlaXIgb3duIHJlZmVyZW5jZSwgdW5kZXIgW1NtYXJ0c2NhbiBBc3lu",
-            "Y10oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9zbWFydHNjYW4tYXN5bmMv",
-            "Z2V0dGluZy1zdGFydGVkLykuCgoqKkhvc3RzOioqIGBhcGkucHJvZC5zc24u",
-            "dmlzbWEuYWlgIGZvciBwcm9kdWN0aW9uIGFuZCBgYXBpLnN0YWcuc3NuLnZp",
-            "c21hLmFpYCBmb3Igc3RhZ2luZy4KCioqQXV0aGVudGljYXRpb246Kiogc2Vu",
-            "ZCB5b3VyIHByb2plY3QgdG9rZW4gYXMgYEF1dGhvcml6YXRpb246IEJlYXJl",
-            "ciA8dG9rZW4+YC4gTW9iaWxlIGFuZCB3ZWIgY2xpZW50cyBjYW4gdXNlIGEg",
-            "c2hvcnQtbGl2ZWQgdmFsZXQga2V5IGluc3RlYWQuIFNlZSBbQXV0aGVudGlj",
-            "YXRpb25dKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvYXV0aGVudGljYXRp",
-            "b24vKS4KCioqRXJyb3JzOioqIGEgZmFpbGVkIGNhbGwgcmV0dXJucyBhbiBI",
-            "VFRQIGVycm9yIHN0YXR1cyB3aXRoIGEgSlNPTiBib2R5IHRoYXQgaG9sZHMg",
-            "YGNvZGVgLCBgbWVzc2FnZWAgYW5kIGBkZXRhaWxzYC4KCioqR3VpZGVzOioq",
-            "IFtTbWFydHNjYW5dKGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRz",
-            "Y2FuL2dldHRpbmctc3RhcnRlZC8pIGFuZCBbbGltaXRzIGFuZCByYXRlIGxp",
-            "bWl0c10oaHR0cHM6Ly9kb2NzLnZtbC52aXNtYS5haS9yYXRlLWxpbWl0Lyku",
-            "MgJ2MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvblpS",
-            "ClAKCkJlYXJlckF1dGgSQggCEi1Zb3VyIHByb2plY3QgdG9rZW4sIHNlbnQg",
-            "YXMgYEJlYXJlciA8dG9rZW4+YC4aDUF1dGhvcml6YXRpb24gAmIQCg4KCkJl",
-            "YXJlckF1dGgSAGIGcHJvdG8z"));
+            "CglxdWVzdGlvbnMYBiADKAlSCXF1ZXN0aW9ucyKpHQoZRG9jdW1lbnRBbm5v",
+            "dGF0b3JSZXNwb25zZRI2CgpvcmRlcl9kYXRlGAEgAygLMhMuc3NuLnR5cGUu",
+            "Q2FuZGlkYXRlQgIYAVIJb3JkZXJEYXRlEj0KEHBheW1lbnRfZHVlX2RhdGUY",
+            "AiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDnBheW1lbnREdWVEYXRlEi8K",
+            "CGN1cnJlbmN5GAMgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUghjdXJyZW5j",
+            "eRIwCgl0b3RhbF92YXQYBCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCHRv",
+            "dGFsVmF0EjkKDnRvdGFsX2luY2xfdmF0GAUgAygLMhMuc3NuLnR5cGUuQ2Fu",
+            "ZGlkYXRlUgx0b3RhbEluY2xWYXQSOQoOdG90YWxfZXhjbF92YXQYBiADKAsy",
+            "Ey5zc24udHlwZS5DYW5kaWRhdGVSDHRvdGFsRXhjbFZhdBJLChVzdXBwbGll",
+            "cl9jb3Jwb3JhdGVfaWQYByADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVCAhgB",
+            "UhNzdXBwbGllckNvcnBvcmF0ZUlkEkcKFXN1cHBsaWVyX2NvdW50cnlfY29k",
+            "ZRgIIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVITc3VwcGxpZXJDb3VudHJ5",
+            "Q29kZRI4Cg1kb2N1bWVudF90eXBlGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUgxkb2N1bWVudFR5cGUSOgoOcGF5bWVudF9tZXRob2QYCiADKAsyEy5z",
+            "c24udHlwZS5DYW5kaWRhdGVSDXBheW1lbnRNZXRob2QSRgoVY3JlZGl0X2Nh",
+            "cmRfbGFzdF9mb3VyGAsgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhJjcmVk",
+            "aXRDYXJkTGFzdEZvdXISPgoOaW52b2ljZV9udW1iZXIYDCADKAsyEy5zc24u",
+            "dHlwZS5DYW5kaWRhdGVCAhgBUg1pbnZvaWNlTnVtYmVyEkEKD3RleHRfYW5u",
+            "b3RhdGlvbhgNIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uUg50ZXh0",
+            "QW5ub3RhdGlvbhI8ChBvY3JfbGluZV9ka190eXBlGA4gAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlUg1vY3JMaW5lRGtUeXBlEkcKFm9jcl9saW5lX2RrX3Bh",
+            "eW1lbnRfaWQYDyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVE",
+            "a1BheW1lbnRJZBJJChdvY3JfbGluZV9ka19jcmVkaXRvcl9pZBgQIAMoCzIT",
+            "LnNzbi50eXBlLkNhbmRpZGF0ZVITb2NyTGluZURrQ3JlZGl0b3JJZBJHChZv",
+            "Y3JfbGluZV9zZV9wYXltZW50X2lkGBEgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUhJvY3JMaW5lU2VQYXltZW50SWQSWgogb2NyX2xpbmVfc2VfYmFua2dp",
+            "cm9fY3JlZGl0b3JfaWQYEiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSG29j",
+            "ckxpbmVTZUJhbmtnaXJvQ3JlZGl0b3JJZBJaCiBvY3JfbGluZV9zZV9wbHVz",
+            "Z2lyb19jcmVkaXRvcl9pZBgTIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIb",
+            "b2NyTGluZVNlUGx1c2dpcm9DcmVkaXRvcklkEkcKFm9jcl9saW5lX25vX3Bh",
+            "eW1lbnRfaWQYFCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVO",
+            "b1BheW1lbnRJZBJHChZvY3JfbGluZV9maV9wYXltZW50X2lkGBUgAygLMhMu",
+            "c3NuLnR5cGUuQ2FuZGlkYXRlUhJvY3JMaW5lRmlQYXltZW50SWQSRwoWb2Ny",
+            "X2xpbmVfbmxfcGF5bWVudF9pZBgWIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0",
+            "ZVISb2NyTGluZU5sUGF5bWVudElkEkcKFm9jcl9saW5lX2JlX3BheW1lbnRf",
+            "aWQYKCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVCZVBheW1l",
+            "bnRJZBISCgR0ZXh0GBcgASgJUgR0ZXh0Eh8KC2ZlZWRiYWNrX2lkGBggASgJ",
+            "UgpmZWVkYmFja0lkEicKBGliYW4YGSADKAsyEy5zc24udHlwZS5DYW5kaWRh",
+            "dGVSBGliYW4SLQoFbGluZXMYGiADKAsyFy5zc24udHlwZS5MaW5lQ2FuZGlk",
+            "YXRlUgVsaW5lcxIYCgdwcmV2aWV3GBsgASgJUgdwcmV2aWV3EkMKE2Jhbmtf",
+            "YWNjb3VudF9udW1iZXIYHCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEWJh",
+            "bmtBY2NvdW50TnVtYmVyEk0KGGJhbmtfcmVnaXN0cmF0aW9uX251bWJlchgd",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIWYmFua1JlZ2lzdHJhdGlvbk51",
+            "bWJlchIlCgNiaWMYHiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSA2JpYxI8",
+            "Cg9kb2N1bWVudF9udW1iZXIYHyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
+            "DmRvY3VtZW50TnVtYmVyEjgKDWRvY3VtZW50X2RhdGUYICADKAsyEy5zc24u",
+            "dHlwZS5DYW5kaWRhdGVSDGRvY3VtZW50RGF0ZRI2CgxvcmRlcl9udW1iZXIY",
+            "ISADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSC29yZGVyTnVtYmVyEjgKDXN1",
+            "cHBsaWVyX25hbWUYIiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHN1cHBs",
+            "aWVyTmFtZRJDChNzdXBwbGllcl92YXRfbnVtYmVyGCMgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlUhFzdXBwbGllclZhdE51bWJlchJVChxzdXBwbGllcl9v",
+            "cmdhbmlzYXRpb25fbnVtYmVyGCQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
+            "UhpzdXBwbGllck9yZ2FuaXNhdGlvbk51bWJlchI+ChBzdXBwbGllcl9hZGRy",
+            "ZXNzGCUgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg9zdXBwbGllckFkZHJl",
+            "c3MSPAoPY3VzdG9tZXJfbnVtYmVyGCYgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUg5jdXN0b21lck51bWJlchJHChVyZWNlaXZlcl9vcmRlcl9udW1iZXIY",
+            "JyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSE3JlY2VpdmVyT3JkZXJOdW1i",
+            "ZXISPgoQcmVjZWl2ZXJfYWRkcmVzcxgpIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZVIPcmVjZWl2ZXJBZGRyZXNzEkcKFXJlY2VpdmVyX2NvdW50cnlfY29k",
+            "ZRgqIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVITcmVjZWl2ZXJDb3VudHJ5",
+            "Q29kZRI4Cg1yZWNlaXZlcl9uYW1lGCsgAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUgxyZWNlaXZlck5hbWUSQwoTcmVjZWl2ZXJfdmF0X251bWJlchgsIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIRcmVjZWl2ZXJWYXROdW1iZXISRgoO",
+            "cHVyY2hhc2VfbGluZXMYLSADKAsyHy5zc24udHlwZS5QdXJjaGFzZUxpbmVD",
+            "YW5kaWRhdGVSDXB1cmNoYXNlTGluZXMSMwoHYW5zd2VycxguIAMoCzIZLnNz",
+            "bi50eXBlLkFuc3dlckNhbmRpZGF0ZVIHYW5zd2VycxIxCgpwYWdlX3RleHRz",
+            "GC8gAygLMhIuc3NuLnR5cGUuUGFnZVRleHRSCXBhZ2VUZXh0cxJNChB2YXRf",
+            "ZGlzdHJpYnV0aW9uGDAgAygLMiIuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9u",
+            "Q2FuZGlkYXRlUg92YXREaXN0cmlidXRpb24SRwoRZG9jdW1lbnRfbWV0YWRh",
+            "dGEYMSABKAsyGi5zc24udHlwZS5Eb2N1bWVudE1ldGFkYXRhUhBkb2N1bWVu",
+            "dE1ldGFkYXRhEjgKDWxhbmd1YWdlX2NvZGUYMiADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSDGxhbmd1YWdlQ29kZRIvCghxcl9jb2RlcxgzIAMoCzIULnNz",
+            "bi50eXBlLlFyQ29kZURhdGFSB3FyQ29kZXMSOwoOc3dpc3NfcXJfYmlsbHMY",
+            "NCADKAsyFS5zc24udHlwZS5Td2lzc1FyQmlsbFIMc3dpc3NRckJpbGxzEjUK",
+            "C2hvdGVsX2RhdGVzGDUgASgLMhQuc3NuLnR5cGUuSG90ZWxEYXRlc1IKaG90",
+            "ZWxEYXRlcxJMChZwdXJjaGFzZV9saW5lc19kZXRhaWxzGDggAygLMhYuc3Nu",
+            "LnR5cGUuUHVyY2hhc2VMaW5lUhRwdXJjaGFzZUxpbmVzRGV0YWlscxJTChh2",
+            "YXRfZGlzdHJpYnV0aW9uX2RldGFpbHMYOSADKAsyGS5zc24udHlwZS5WYXRE",
+            "aXN0cmlidXRpb25SFnZhdERpc3RyaWJ1dGlvbkRldGFpbHMSWwobc3RydWN0",
+            "dXJlZF9zdXBwbGllcl9hZGRyZXNzGDogAygLMhsuc3NuLnR5cGUuU3RydWN0",
+            "dXJlZEFkZHJlc3NSGXN0cnVjdHVyZWRTdXBwbGllckFkZHJlc3MSWwobc3Ry",
+            "dWN0dXJlZF9yZWNlaXZlcl9hZGRyZXNzGDsgAygLMhsuc3NuLnR5cGUuU3Ry",
+            "dWN0dXJlZEFkZHJlc3NSGXN0cnVjdHVyZWRSZWNlaXZlckFkZHJlc3MSJwoE",
+            "a3NlZhg8IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIEa3NlZkoECDYQN0oE",
+            "CDcQOCJeCghEb2N1bWVudBIYCgdjb250ZW50GAEgASgMUgdjb250ZW50EjgK",
+            "BnNvdXJjZRgCIAEoCzIgLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRTb3Vy",
+            "Y2VSBnNvdXJjZSIrCg5Eb2N1bWVudFNvdXJjZRIZCghodHRwX3VyaRgBIAEo",
+            "CVIHaHR0cFVyaSJvChdEb2N1bWVudFF1ZXN0aW9uUmVxdWVzdBI2Cghkb2N1",
+            "bWVudBgBIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRSCGRvY3Vt",
+            "ZW50EhwKCXF1ZXN0aW9ucxgCIAMoCVIJcXVlc3Rpb25zIlUKGERvY3VtZW50",
+            "UXVlc3Rpb25SZXNwb25zZRIzCgdhbnN3ZXJzGAIgAygLMhkuc3NuLnR5cGUu",
+            "QW5zd2VyQ2FuZGlkYXRlUgdhbnN3ZXJzSgQIARACMoYDChFEb2N1bWVudEFu",
+            "bm90YXRvchKNAQoQQW5ub3RhdGVEb2N1bWVudBIqLnNzbi5hbm5vdGF0b3Iu",
+            "djEuRG9jdW1lbnRBbm5vdGF0b3JSZXF1ZXN0Gisuc3NuLmFubm90YXRvci52",
+            "MS5Eb2N1bWVudEFubm90YXRvclJlc3BvbnNlIiCC0+STAhoiFS92MS9kb2N1",
+            "bWVudDphbm5vdGF0ZToBKhKXAQoWQW5zd2VyRG9jdW1lbnRRdWVzdGlvbhIp",
+            "LnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRRdWVzdGlvblJlcXVlc3QaKi5z",
+            "c24uYW5ub3RhdG9yLnYxLkRvY3VtZW50UXVlc3Rpb25SZXNwb25zZSImgtPk",
+            "kwIgIhsvdjEvZG9jdW1lbnQ6YW5zd2VycXVlc3Rpb246ASoaR5JBRBJCRXh0",
+            "cmFjdCBkYXRhIGZyb20gYSBkb2N1bWVudCBhbmQgZ2V0IHRoZSByZXN1bHRz",
+            "IGluIHRoZSBzYW1lIGNhbGwuQtwJChlhaS52aXNtYS5zc24uYW5ub3RhdG9y",
+            "LnYxQg5Bbm5vdGF0b3JQcm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92",
+            "bWxhcGlzL2dlbi9nby9zc24vYW5ub3RhdG9yL3YxO2Fubm90YXRvcqICA1NB",
+            "WKoCEFNzbi5Bbm5vdGF0b3IuVjHKAhBTc25cQW5ub3RhdG9yXFYx4gIcU3Nu",
+            "XEFubm90YXRvclxWMVxHUEJNZXRhZGF0YeoCElNzbjo6QW5ub3RhdG9yOjpW",
+            "MZJBiwgS+wYKCVNtYXJ0c2NhbhLpBlNtYXJ0c2NhbiBleHRyYWN0cyBkYXRh",
+            "IGZyb20gdW5zdHJ1Y3R1cmVkIGRvY3VtZW50cyBzdWNoIGFzIGludm9pY2Vz",
+            "IGFuZCByZWNlaXB0cywgYW5kIHJldHVybnMgdGhlIHJlc3VsdHMgaW4gdGhl",
+            "IHNhbWUgY2FsbC4gVGhpcyByZWZlcmVuY2UgYWxzbyBjb3ZlcnMgZmVlZGJh",
+            "Y2sgYW5kIHZhbGV0IGtleXMuIEFzeW5jIHRyYW5zYWN0aW9ucyBoYXZlIHRo",
+            "ZWlyIG93biByZWZlcmVuY2UsIHVuZGVyIFtTbWFydHNjYW4gQXN5bmNdKGh0",
+            "dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvc21hcnRzY2FuLWFzeW5jL2dldHRp",
+            "bmctc3RhcnRlZC8pLgoKKipIb3N0czoqKiBgYXBpLnByb2Quc3NuLnZpc21h",
+            "LmFpYCBmb3IgcHJvZHVjdGlvbiBhbmQgYGFwaS5zdGFnLnNzbi52aXNtYS5h",
+            "aWAgZm9yIHN0YWdpbmcuCgoqKkF1dGhlbnRpY2F0aW9uOioqIHNlbmQgeW91",
+            "ciBwcm9qZWN0IHRva2VuIGFzIGBBdXRob3JpemF0aW9uOiBCZWFyZXIgPHRv",
+            "a2VuPmAuIE1vYmlsZSBhbmQgd2ViIGNsaWVudHMgY2FuIHVzZSBhIHNob3J0",
+            "LWxpdmVkIHZhbGV0IGtleSBpbnN0ZWFkLiBTZWUgW0F1dGhlbnRpY2F0aW9u",
+            "XShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL2F1dGhlbnRpY2F0aW9uLyku",
+            "CgoqKkVycm9yczoqKiBhIGZhaWxlZCBjYWxsIHJldHVybnMgYW4gSFRUUCBl",
+            "cnJvciBzdGF0dXMgd2l0aCBhIEpTT04gYm9keSB0aGF0IGhvbGRzIGBjb2Rl",
+            "YCwgYG1lc3NhZ2VgIGFuZCBgZGV0YWlsc2AuCgoqKkd1aWRlczoqKiBbU21h",
+            "cnRzY2FuXShodHRwczovL2RvY3Mudm1sLnZpc21hLmFpL3NtYXJ0c2Nhbi9n",
+            "ZXR0aW5nLXN0YXJ0ZWQvKSBhbmQgW2xpbWl0cyBhbmQgcmF0ZSBsaW1pdHNd",
+            "KGh0dHBzOi8vZG9jcy52bWwudmlzbWEuYWkvcmF0ZS1saW1pdC8pLjICdjEq",
+            "AQIyEGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25aUgpQCgpC",
+            "ZWFyZXJBdXRoEkIIAhItWW91ciBwcm9qZWN0IHRva2VuLCBzZW50IGFzIGBC",
+            "ZWFyZXIgPHRva2VuPmAuGg1BdXRob3JpemF0aW9uIAJiEAoOCgpCZWFyZXJB",
+            "dXRoEgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.AddressReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.HotelDatesReflection.Descriptor, global::Ssn.Type.QrReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -208,6 +210,9 @@ namespace Ssn.Annotator.V1 {
 
   }
   #region Messages
+  /// <summary>
+  /// A feature to extract, with optional limits on its candidates.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -271,8 +276,10 @@ namespace Ssn.Annotator.V1 {
     public const int MaxResultsFieldNumber = 2;
     private int maxResults_;
     /// <summary>
-    /// Maximum number of results of this type. Does not apply to
-    /// `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+    /// The maximum number of candidates to return for this feature. Defaults to 1. It
+    /// doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+    /// SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+    /// TEXT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -287,7 +294,10 @@ namespace Ssn.Annotator.V1 {
     public const int MinConfidenceFieldNumber = 3;
     private global::Ssn.Type.Confidence.Types.Level minConfidence_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
     /// <summary>
-    /// The minimum confidence for predictions that the caller wants returned
+    /// The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+    /// from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+    /// applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+    /// candidates of any level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -490,230 +500,242 @@ namespace Ssn.Annotator.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The features Smartscan can extract. Each feature's results come back in the
+      /// response field of the same name, in camelCase, unless noted otherwise.
+      /// </summary>
       public enum Type {
         /// <summary>
-        /// Run default feature set:
-        /// PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
-        /// SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
-        /// DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
+        /// A set of frequently used fields: PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT,
+        /// TOTAL_INCL_VAT, TOTAL_EXCL_VAT, SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE,
+        /// PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR, DOCUMENT_NUMBER, DOCUMENT_DATE and
+        /// SUPPLIER_ORGANISATION_NUMBER. Its `maxResults` and `minConfidence` apply to each
+        /// of them, unless you also request that feature on its own.
         /// </summary>
         [pbr::OriginalName("DEFAULT")] Default = 0,
         /// <summary>
-        /// Return text annotation
+        /// The full OCR output for the pages Smartscan read.
         /// </summary>
         [pbr::OriginalName("TEXT_ANNOTATION")] TextAnnotation = 1,
         /// <summary>
-        /// [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
+        /// [DEPRECATED] No longer returns anything. Use DOCUMENT_DATE instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("ORDER_DATE")] OrderDate = 2,
         /// <summary>
-        /// Run due date detection
+        /// The date the payment is due.
         /// </summary>
         [pbr::OriginalName("PAYMENT_DUE_DATE")] PaymentDueDate = 3,
         /// <summary>
-        /// Run currency detection
+        /// The currency, as a three-letter code.
         /// </summary>
         [pbr::OriginalName("CURRENCY")] Currency = 4,
         /// <summary>
-        /// Run total vat detection
+        /// The total VAT of the document.
         /// </summary>
         [pbr::OriginalName("TOTAL_VAT")] TotalVat = 5,
         /// <summary>
-        /// Run total incl vat detection
+        /// The total of the document including VAT.
         /// </summary>
         [pbr::OriginalName("TOTAL_INCL_VAT")] TotalInclVat = 6,
         /// <summary>
-        /// Run total excl vat detection
+        /// The total of the document excluding VAT.
         /// </summary>
         [pbr::OriginalName("TOTAL_EXCL_VAT")] TotalExclVat = 7,
         /// <summary>
-        /// [DEPRECATED] Run supplier corporate id detection.
-        /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+        /// [DEPRECATED] No longer returns anything. Use SUPPLIER_ORGANISATION_NUMBER or
+        /// SUPPLIER_VAT_NUMBER instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SUPPLIER_CORPORATE_ID")] SupplierCorporateId = 8,
         /// <summary>
-        /// Run country code detection
+        /// The supplier's country, as a two-letter code.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_COUNTRY_CODE")] SupplierCountryCode = 9,
         /// <summary>
-        /// Run document type detection
+        /// The type of document, for example an invoice or a receipt.
         /// </summary>
         [pbr::OriginalName("DOCUMENT_TYPE")] DocumentType = 10,
         /// <summary>
-        /// Run pyment method detection
+        /// How the document was paid, for example in cash or by credit card.
         /// </summary>
         [pbr::OriginalName("PAYMENT_METHOD")] PaymentMethod = 11,
         /// <summary>
-        /// Run credit card number detection
+        /// The last four digits of the credit card used for the payment.
         /// </summary>
         [pbr::OriginalName("CREDIT_CARD_LAST_FOUR")] CreditCardLastFour = 12,
         /// <summary>
-        /// [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
+        /// [DEPRECATED] No longer returns anything. Use DOCUMENT_NUMBER instead.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [pbr::OriginalName("INVOICE_NUMBER")] InvoiceNumber = 13,
         /// <summary>
-        /// Run danish ocr line detection, for the type
+        /// The type field of a Danish payment line (FIK).
         /// </summary>
         [pbr::OriginalName("OCR_LINE_DK_TYPE")] OcrLineDkType = 14,
         /// <summary>
-        /// Run danish ocr line detection, for the payment id
+        /// The payment ID of a Danish payment line (FIK).
         /// </summary>
         [pbr::OriginalName("OCR_LINE_DK_PAYMENT_ID")] OcrLineDkPaymentId = 15,
         /// <summary>
-        /// Run danish ocr line detection, for the creditor id
+        /// The creditor ID of a Danish payment line (FIK account number).
         /// </summary>
         [pbr::OriginalName("OCR_LINE_DK_CREDITOR_ID")] OcrLineDkCreditorId = 16,
         /// <summary>
-        /// Run swedish ocr line detection for the payment id
+        /// The payment ID of a Swedish payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_SE_PAYMENT_ID")] OcrLineSePaymentId = 17,
         /// <summary>
-        /// Run swedish ocr line detection for the bankgiro creditor id
+        /// The Bankgiro creditor ID of a Swedish payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_SE_BANKGIRO_CREDITOR_ID")] OcrLineSeBankgiroCreditorId = 18,
         /// <summary>
-        /// Run swedish ocr line detection for the plusgiro creditor id
+        /// The Plusgiro creditor ID of a Swedish payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_SE_PLUSGIRO_CREDITOR_ID")] OcrLineSePlusgiroCreditorId = 19,
         /// <summary>
-        /// Run norwegian ocr line detection or the payment id
+        /// The payment ID (KID) of a Norwegian payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_NO_PAYMENT_ID")] OcrLineNoPaymentId = 20,
         /// <summary>
-        /// Run finish ocr line detection or the payment id
+        /// The payment ID (viitenumero) of a Finnish payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_FI_PAYMENT_ID")] OcrLineFiPaymentId = 21,
         /// <summary>
-        /// Run dutch ocr line detection for the payment id
+        /// The payment ID (betalingskenmerk) of a Dutch payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_NL_PAYMENT_ID")] OcrLineNlPaymentId = 22,
         /// <summary>
-        /// Run belgian ocr line detection for the payment id
+        /// The payment ID (OGM) of a Belgian payment line.
         /// </summary>
         [pbr::OriginalName("OCR_LINE_BE_PAYMENT_ID")] OcrLineBePaymentId = 39,
         /// <summary>
-        /// Return document text
+        /// The text of the pages Smartscan read.
         /// </summary>
         [pbr::OriginalName("TEXT")] Text = 23,
         /// <summary>
-        /// Run IBAN detection
+        /// The IBAN.
         /// </summary>
         [pbr::OriginalName("IBAN")] Iban = 24,
         /// <summary>
-        /// Run LINES detection
+        /// The lines of the document that hold an amount.
         /// </summary>
         [pbr::OriginalName("LINES")] Lines = 25,
         /// <summary>
-        /// Run first page of PDF to PNG conversion
+        /// A base64-encoded image of the first page that holds text.
         /// </summary>
         [pbr::OriginalName("PREVIEW")] Preview = 26,
         /// <summary>
-        /// Run bank account number detection
+        /// The bank account number.
         /// </summary>
         [pbr::OriginalName("BANK_ACCOUNT_NUMBER")] BankAccountNumber = 27,
         /// <summary>
-        /// Run bank registration number detection
+        /// The bank registration number, in countries that use one, such as Denmark.
         /// </summary>
         [pbr::OriginalName("BANK_REGISTRATION_NUMBER")] BankRegistrationNumber = 28,
         /// <summary>
-        /// Run business identifier code detection
+        /// The BIC (SWIFT code).
         /// </summary>
         [pbr::OriginalName("BIC")] Bic = 29,
         /// <summary>
-        /// Run document number detection
+        /// The number that identifies the document, such as the invoice number.
         /// </summary>
         [pbr::OriginalName("DOCUMENT_NUMBER")] DocumentNumber = 30,
         /// <summary>
-        /// Run document date detection
+        /// The date the document was issued.
         /// </summary>
         [pbr::OriginalName("DOCUMENT_DATE")] DocumentDate = 31,
         /// <summary>
-        /// Run order number detection
+        /// The order number.
         /// </summary>
         [pbr::OriginalName("ORDER_NUMBER")] OrderNumber = 32,
         /// <summary>
-        /// Run supplier name detection
+        /// The supplier's name.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_NAME")] SupplierName = 33,
         /// <summary>
-        /// [EXPERIMENTAL] Run supplier VAT detection
+        /// [EXPERIMENTAL] The supplier's VAT number.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_VAT_NUMBER")] SupplierVatNumber = 34,
         /// <summary>
-        /// [EXPERIMENTAL] Run supplier organisation number detection
+        /// [EXPERIMENTAL] The supplier's national company ID, such as the CVR number in Denmark.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_ORGANISATION_NUMBER")] SupplierOrganisationNumber = 35,
         /// <summary>
-        /// [EXPERIMENTAL] Run supplier address detection
+        /// [EXPERIMENTAL] The supplier's address. Also returns `structuredSupplierAddress`.
         /// </summary>
         [pbr::OriginalName("SUPPLIER_ADDRESS")] SupplierAddress = 36,
         /// <summary>
-        /// [EXPERIMENTAL] Run customer identifier detection
+        /// [EXPERIMENTAL] The number that identifies the customer.
         /// </summary>
         [pbr::OriginalName("CUSTOMER_NUMBER")] CustomerNumber = 37,
         /// <summary>
-        /// Receiver order number
+        /// The receiver's order number.
         /// </summary>
         [pbr::OriginalName("RECEIVER_ORDER_NUMBER")] ReceiverOrderNumber = 38,
         /// <summary>
-        /// Receiver address
+        /// The receiver's address. Also returns `structuredReceiverAddress`.
         /// </summary>
         [pbr::OriginalName("RECEIVER_ADDRESS")] ReceiverAddress = 40,
         /// <summary>
-        /// Receiver country code
+        /// The receiver's country, as a two-letter code.
         /// </summary>
         [pbr::OriginalName("RECEIVER_COUNTRY_CODE")] ReceiverCountryCode = 41,
         /// <summary>
-        /// Receiver name
+        /// The receiver's name.
         /// </summary>
         [pbr::OriginalName("RECEIVER_NAME")] ReceiverName = 42,
         /// <summary>
-        /// Receiver VAT number
+        /// The receiver's VAT number.
         /// </summary>
         [pbr::OriginalName("RECEIVER_VAT_NUMBER")] ReceiverVatNumber = 43,
         /// <summary>
-        /// Purchase Lines
+        /// The line items, in `purchaseLinesDetails` and, in the older format, in
+        /// `purchaseLines`. Read from the first 5 pages.
         /// </summary>
         [pbr::OriginalName("PURCHASE_LINES")] PurchaseLines = 44,
         /// <summary>
-        /// Page texts
+        /// The text of each page. Read from the first 5 pages.
         /// </summary>
         [pbr::OriginalName("PAGE_TEXTS")] PageTexts = 45,
         /// <summary>
-        /// VAT distribution
+        /// The VAT levels and their amounts, in `vatDistributionDetails` and, in the older
+        /// format, in `vatDistribution`. Read from the first and last page.
         /// </summary>
         [pbr::OriginalName("VAT_DISTRIBUTION")] VatDistribution = 46,
         /// <summary>
-        /// Langauge code
+        /// The language of the document text. Returned regardless of `minConfidence`.
         /// </summary>
         [pbr::OriginalName("LANGUAGE_CODE")] LanguageCode = 47,
         /// <summary>
-        /// QR code
+        /// The decoded text of QR codes. Read from the first 5 pages.
         /// </summary>
         [pbr::OriginalName("QR_CODES")] QrCodes = 48,
         /// <summary>
-        /// Swiss QR bill
+        /// Swiss QR bills found in QR codes. Read from the first 5 pages.
         /// </summary>
         [pbr::OriginalName("SWISS_QR_BILLS")] SwissQrBills = 49,
         /// <summary>
-        /// Series of automated verifications and consistency checks
-        /// on the document.
+        /// Runs consistency checks on the extracted values. Candidates that the checks
+        /// confirm or correct get the confidence level VERIFIED. Also requests
+        /// DOCUMENT_DATE, DOCUMENT_NUMBER, DOCUMENT_TYPE, PAYMENT_DUE_DATE, PAYMENT_METHOD,
+        /// CURRENCY, CREDIT_CARD_LAST_FOUR, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+        /// SUPPLIER_COUNTRY_CODE, RECEIVER_COUNTRY_CODE, SUPPLIER_ADDRESS, RECEIVER_ADDRESS,
+        /// PURCHASE_LINES and VAT_DISTRIBUTION. Verified line and VAT values are in
+        /// `purchaseLinesDetails` and `vatDistributionDetails`.
         /// </summary>
         [pbr::OriginalName("VERIFIED")] Verified = 50,
         /// <summary>
-        /// Hotel dates including check-in and check-out dates
+        /// The check-in and check-out dates on documents related to accommodation.
         /// </summary>
         [pbr::OriginalName("HOTEL_DATES")] HotelDates = 51,
         /// <summary>
-        /// Product type classification for purchase lines
+        /// A product type for each purchase line, in `productType` of
+        /// `purchaseLinesDetails`. Also requests PURCHASE_LINES.
         /// </summary>
         [pbr::OriginalName("PRODUCT_TYPES")] ProductTypes = 52,
         /// <summary>
-        /// Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
-        /// Extracted via the QA/questions model.
+        /// The Polish KSeF (Krajowy System e-Faktur) e-invoice number.
         /// </summary>
         [pbr::OriginalName("KSEF")] Ksef = 53,
       }
@@ -723,6 +745,9 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// Request body of POST /v1/document:annotate.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentAnnotatorRequest : pb::IMessage<DocumentAnnotatorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -776,6 +801,10 @@ namespace Ssn.Annotator.V1 {
     /// <summary>Field number for the "document" field.</summary>
     public const int DocumentFieldNumber = 1;
     private global::Ssn.Annotator.V1.Document document_;
+    /// <summary>
+    /// The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to
+    /// download it from as `source.httpUri`.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Annotator.V1.Document Document {
@@ -790,6 +819,10 @@ namespace Ssn.Annotator.V1 {
     private static readonly pb::FieldCodec<global::Ssn.Annotator.V1.Feature> _repeated_features_codec
         = pb::FieldCodec.ForMessage(18, global::Ssn.Annotator.V1.Feature.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Annotator.V1.Feature> features_ = new pbc::RepeatedField<global::Ssn.Annotator.V1.Feature>();
+    /// <summary>
+    /// The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+    /// nothing is extracted.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Annotator.V1.Feature> Features {
@@ -801,6 +834,10 @@ namespace Ssn.Annotator.V1 {
     private static readonly pb::FieldCodec<string> _repeated_tags_codec
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Labels for the request, such as your customer's ID. They're stored with the
+    /// request's usage statistics and don't change the results.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
@@ -824,6 +861,10 @@ namespace Ssn.Annotator.V1 {
     private static readonly pb::FieldCodec<string> _repeated_segments_codec
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> segments_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// More labels for the request, stored with its usage statistics like `tags`. They
+    /// don't change the results.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Segments {
@@ -835,6 +876,12 @@ namespace Ssn.Annotator.V1 {
     private static readonly pb::FieldCodec<string> _repeated_questions_codec
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> questions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Questions about the document in plain language, for example "What is the order
+    /// reference?". The answers come back in `answers`, one per question for each page
+    /// read (see `documentMetadata.pageCount`). If answering takes longer than 10
+    /// seconds, the call fails.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Questions {
@@ -1071,6 +1118,10 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// Response of POST /v1/document:annotate. Feature fields are only filled for the
+  /// features you requested.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentAnnotatorResponse : pb::IMessage<DocumentAnnotatorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1179,11 +1230,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> orderDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [DEPRECATED] Use document_date instead.
-    /// orderDate
-    /// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-    /// Example: "2019-12-31"
+    /// [DEPRECATED] Always empty. Use `documentDate` instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Type.Candidate> OrderDate {
@@ -1196,9 +1245,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> paymentDueDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// paymentDueDate
-    /// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-    /// Example: "2019-12-31"
+    /// Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1212,9 +1259,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> currency_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// currency
-    /// ISO 4217 string, ie. a 3-letter capitalized string
-    /// Example: "NOK"
+    /// Candidates for the currency, as an ISO 4217 code, for example "NOK".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1228,9 +1273,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(34, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// totalVat
-    /// A string that parses as a two-decimal number
-    /// Example: "10.0" or "11.11"
+    /// Candidates for the total VAT, as an absolute amount, for example "11.11".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1244,9 +1287,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// totalInclVat
-    /// A string that parses as a two-decimal number
-    /// Example: "10.0" or "11.11"
+    /// Candidates for the total including VAT, as an absolute amount, for example "11.11".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1260,9 +1301,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(50, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// totalExclVat
-    /// A string that parses as a two-decimal number
-    /// Example: "10.0" or "11.11"
+    /// Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1276,16 +1315,10 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(58, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierCorporateId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [DEPRECATED]
-    /// Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-    /// supplierCorporateId
-    /// The company VAT number
-    /// Example: "123456789B01" (for Dutch companies)
-    /// or "12345678" (for Norwegian companies)
-    /// Note: The field is repeated because multiple VAT numbers might exist.
-    /// If you have the VAT number of you customer, you can use this information
-    /// to find out which VAT number belongs to the supplier of the invoice.
+    /// [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+    /// instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Type.Candidate> SupplierCorporateId {
@@ -1298,9 +1331,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(66, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierCountryCode_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// supplierCountryCode
-    /// ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-    /// Example: "NO"
+    /// Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+    /// "NO".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1314,8 +1346,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(74, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> documentType_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// documentType
-    /// Either "Receipt" or "Invoice"
+    /// Candidates for the document type, for example "Invoice" or "Receipt".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1329,8 +1360,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(82, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> paymentMethod_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// paymentMethod
-    /// Either "Cash" or "CreditCard"
+    /// Candidates for the payment method, for example "Cash" or "CreditCard".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1344,9 +1374,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(90, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> creditCardLastFour_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// creditCardNumber
-    /// Four digits
-    /// Example: "0012"
+    /// Candidates for the last four digits of the credit card, for example "0012".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1360,11 +1388,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(98, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> invoiceNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [DEPRECATED] Use document_number instead.
-    /// invoiceNumber
-    /// The supplier defined identifier of the invoice
-    /// Example: "12345-A99"
+    /// [DEPRECATED] Always empty. Use `documentNumber` instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Ssn.Type.Candidate> InvoiceNumber {
@@ -1375,7 +1401,8 @@ namespace Ssn.Annotator.V1 {
     public const int TextAnnotationFieldNumber = 13;
     private global::Ssn.Type.TextAnnotation textAnnotation_;
     /// <summary>
-    /// Return text annotation
+    /// The OCR output for the pages Smartscan read: the text and its structure from pages
+    /// down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1392,7 +1419,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(114, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineDkType_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "71"
+    /// Candidates for the type field of a Danish payment line (FIK).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1406,7 +1433,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(122, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineDkPaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "000002879094031"
+    /// Candidates for the payment ID of a Danish payment line (FIK), for example
+    /// "000002879094031".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1420,7 +1448,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(130, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineDkCreditorId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    ///example: "86570807"
+    /// Candidates for the creditor ID of a Danish payment line (FIK), for example
+    /// "86570807".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1434,7 +1463,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(138, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineSePaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "050765098"
+    /// Candidates for the payment ID of a Swedish payment line, for example "050765098".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1448,7 +1477,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(146, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineSeBankgiroCreditorId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "2654507"
+    /// Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+    /// "2654507".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1462,7 +1492,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(154, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineSePlusgiroCreditorId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "5000872"
+    /// Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+    /// "5000872".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1476,7 +1507,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(162, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineNoPaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "12345678903"
+    /// Candidates for the payment ID (KID) of a Norwegian payment line, for example
+    /// "12345678903".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1490,7 +1522,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(170, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineFiPaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "0817937867870002"
+    /// Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+    /// "0817937867870002".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1504,7 +1537,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(178, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineNlPaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// example: "00000159220010146012"
+    /// Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+    /// example "00000159220010146012".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1518,6 +1552,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(322, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineBePaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
+    /// Candidates for the payment ID (OGM) of a Belgian payment line, for example
+    /// "+++123/1234/12345+++".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1529,7 +1565,7 @@ namespace Ssn.Annotator.V1 {
     public const int TextFieldNumber = 23;
     private string text_ = "";
     /// <summary>
-    /// Return a string containing the text from the document
+    /// The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1544,8 +1580,8 @@ namespace Ssn.Annotator.V1 {
     public const int FeedbackIdFieldNumber = 24;
     private string feedbackId_ = "";
     /// <summary>
-    /// Feedback ID is used to correct made predictions through the
-    /// Feedback API.
+    /// The ID of this request. To correct the results, send it as `id` to
+    /// POST /v1/feedback:create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1562,9 +1598,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(202, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> iban_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// The first two letters are a country code. The next two digits are
-    /// check digits for the ISO 7064 Mod 97, 10 checksum
-    /// example: "DK50 0040 0440 1162 43", "NO8330001234567"
+    /// Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+    /// "NO8330001234567". The first two letters are a country code, and the next two
+    /// digits are check digits (ISO 7064 Mod 97-10).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1578,8 +1614,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(210, global::Ssn.Type.LineCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.LineCandidate> lines_ = new pbc::RepeatedField<global::Ssn.Type.LineCandidate>();
     /// <summary>
-    /// Invoice lines represented in a form of text, amount and page reference
-    /// to state on which page the line was found
+    /// The lines of the document that hold an amount, with their text, amount and page.
+    /// Returned for LINES.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1591,7 +1627,7 @@ namespace Ssn.Annotator.V1 {
     public const int PreviewFieldNumber = 27;
     private string preview_ = "";
     /// <summary>
-    /// Base64 encoded PNG image  of the first page of PDF document sent in request
+    /// A base64-encoded image of the first page that holds text. Returned for PREVIEW.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1608,7 +1644,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(226, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bankAccountNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Country specific bank account number
+    /// Candidates for the bank account number, in the format of its country.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1622,7 +1658,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(234, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bankRegistrationNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Country specific bank registration number
+    /// Candidates for the bank registration number, in countries that use one, such as
+    /// Denmark.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1636,7 +1673,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(242, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> bic_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Returns business identifier code
+    /// Candidates for the BIC (SWIFT code), for example "DABADKKK".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1650,7 +1687,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(250, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> documentNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Represents identifier of the document
+    /// Candidates for the number that identifies the document, such as the invoice number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1664,7 +1701,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(258, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> documentDate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Returns document date
+    /// Candidates for the date the document was issued, as YYYY-MM-DD, for example
+    /// "2019-12-31".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1678,7 +1716,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(266, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> orderNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Represents the identifier that supplier assigned to the order
+    /// Candidates for the order number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1692,7 +1730,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(274, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Returns supplier name
+    /// Candidates for the supplier's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1706,8 +1744,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(282, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierVatNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [EXPERIMENTAL]
-    /// Returns supplier VAT number
+    /// [EXPERIMENTAL] Candidates for the supplier's VAT number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1721,8 +1758,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(290, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierOrganisationNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [EXPERIMENTAL]
-    /// Returns the business ID or organisation number of the supplier
+    /// [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+    /// CVR number in Denmark or the KvK number in the Netherlands.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1736,8 +1773,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(298, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> supplierAddress_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [EXPERIMENTAL]
-    /// Returns supplier address
+    /// [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+    /// See `structuredSupplierAddress` for its parts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1751,8 +1788,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(306, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> customerNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// [EXPERIMENTAL]
-    /// Returns customer identifier/number
+    /// [EXPERIMENTAL] Candidates for the number that identifies the customer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1766,7 +1802,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(314, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverOrderNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Equivalent of order number for receiver
+    /// Candidates for the receiver's order number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1780,7 +1816,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(330, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverAddress_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Equivalent of address for receiver
+    /// Candidates for the receiver's address, as written on the document. See
+    /// `structuredReceiverAddress` for its parts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1794,7 +1831,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(338, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverCountryCode_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Equivalent of country code for receiver
+    /// Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1808,7 +1845,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(346, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Equivalent of supplier name for receiver
+    /// Candidates for the receiver's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1822,7 +1859,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(354, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverVatNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Equivalent of VAT number for receiver
+    /// Candidates for the receiver's VAT number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1836,11 +1873,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(362, global::Ssn.Type.PurchaseLineCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> purchaseLines_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate>();
     /// <summary>
-    /// Purchase lines for the document. This is a list of candidates, where each
-    /// candidate is a single purchase lines. Each purchase line may have page number,
-    /// code, description, quantity, item number, unit, total discount, percentage discount,
-    /// total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-    /// unit price excl vat
+    /// The purchase lines in the older format, with one value for each field. Use
+    /// `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+    /// VERIFIED results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1854,8 +1889,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(370, global::Ssn.Type.AnswerCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.AnswerCandidate> answers_ = new pbc::RepeatedField<global::Ssn.Type.AnswerCandidate>();
     /// <summary>
-    /// Answer Candidates for the questions asked in th request about the document
-    /// Each Answer is question and answer pair with page number and confidence
+    /// The answers to the `questions` in the request, one per question for each page read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1869,7 +1903,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(378, global::Ssn.Type.PageText.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PageText> pageTexts_ = new pbc::RepeatedField<global::Ssn.Type.PageText>();
     /// <summary>
-    /// The page texts of the document
+    /// The text of each page read. Returned for PAGE_TEXTS.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1883,7 +1917,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(386, global::Ssn.Type.VatDistributionCandidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> vatDistribution_ = new pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate>();
     /// <summary>
-    /// Vat levels for the document, each vat level has vat level percentage and vat level amount
+    /// The VAT levels in the older format, with one value for each field. Use
+    /// `vatDistributionDetails` instead: it has candidates with confidence levels, and
+    /// VERIFIED results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1895,7 +1931,8 @@ namespace Ssn.Annotator.V1 {
     public const int DocumentMetadataFieldNumber = 49;
     private global::Ssn.Type.DocumentMetadata documentMetadata_;
     /// <summary>
-    /// Extra information about the document like number of pages
+    /// Information about how the document was processed, such as the number of pages
+    /// Smartscan read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1912,7 +1949,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(402, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> languageCode_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Information about the text language detected from OCR
+    /// Candidates for the language of the document text, as a BCP-47 code such as "en".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1926,7 +1963,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(410, global::Ssn.Type.QrCodeData.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.QrCodeData> qrCodes_ = new pbc::RepeatedField<global::Ssn.Type.QrCodeData>();
     /// <summary>
-    /// QR codes detected in the document
+    /// The QR codes found on the pages read. Returned for QR_CODES.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1940,7 +1977,7 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(418, global::Ssn.Type.SwissQrBill.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.SwissQrBill> swissQrBills_ = new pbc::RepeatedField<global::Ssn.Type.SwissQrBill>();
     /// <summary>
-    /// Swiss QR bills detected in the document
+    /// The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1952,7 +1989,8 @@ namespace Ssn.Annotator.V1 {
     public const int HotelDatesFieldNumber = 53;
     private global::Ssn.Type.HotelDates hotelDates_;
     /// <summary>
-    /// The hotelDates cntains check-in and check-out date candidates
+    /// Check-in and check-out date candidates on documents related to accommodation, as
+    /// YYYY-MM-DD. Returned for HOTEL_DATES.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1969,7 +2007,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(450, global::Ssn.Type.PurchaseLine.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLine> purchaseLinesDetails_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLine>();
     /// <summary>
-    /// Purchase lines for the document. This is a list where each field is a candidate.
+    /// The purchase lines, with a list of candidates for each field. Returned for
+    /// PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1983,7 +2022,8 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(458, global::Ssn.Type.VatDistribution.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.VatDistribution> vatDistributionDetails_ = new pbc::RepeatedField<global::Ssn.Type.VatDistribution>();
     /// <summary>
-    /// VAT distribution for the document. This is a list where each field is a candidate.
+    /// The VAT levels, with a list of candidates for each field. Returned for
+    /// VAT_DISTRIBUTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1997,10 +2037,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(466, global::Ssn.Type.StructuredAddress.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.StructuredAddress> structuredSupplierAddress_ = new pbc::RepeatedField<global::Ssn.Type.StructuredAddress>();
     /// <summary>
-    /// Structured supplier address, returned when VERIFIED feature is requested
-    /// and supplier address is available. Parsed from the raw supplier address
-    /// using the geo service. Each entry corresponds to the candidate at the
-    /// same index in supplier_address.
+    /// The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+    /// belongs to the `supplierAddress` candidate at the same index, and is empty when that
+    /// address can't be resolved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2014,10 +2053,9 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(474, global::Ssn.Type.StructuredAddress.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.StructuredAddress> structuredReceiverAddress_ = new pbc::RepeatedField<global::Ssn.Type.StructuredAddress>();
     /// <summary>
-    /// Structured receiver address, returned when VERIFIED feature is requested
-    /// and receiver address is available. Parsed from the raw receiver address
-    /// using the geo service. Each entry corresponds to the candidate at the
-    /// same index in receiver_address.
+    /// The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+    /// belongs to the `receiverAddress` candidate at the same index, and is empty when that
+    /// address can't be resolved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2031,9 +2069,10 @@ namespace Ssn.Annotator.V1 {
         = pb::FieldCodec.ForMessage(482, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ksef_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-    /// via the QA/questions model. A reference number of up to 35 characters
-    /// (alphanumeric, may contain hyphens).
+    /// Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+    /// characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+    /// technical part and a 2-character checksum, separated by hyphens. Only numbers with
+    /// a valid checksum are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3057,6 +3096,9 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// A document to scan: a PDF or an image. Send either `content` or `source`.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Document : pb::IMessage<Document>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3107,9 +3149,8 @@ namespace Ssn.Annotator.V1 {
     public const int ContentFieldNumber = 1;
     private pb::ByteString content_ = pb::ByteString.Empty;
     /// <summary>
-    /// Document content, represented as a stream of bytes.
-    /// Note: As with all `bytes` fields, protobuffers use a pure binary
-    /// representation, whereas JSON representations use base64.
+    /// The bytes of the file, base64-encoded in JSON. If you send both `content` and
+    /// `source`, `content` is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3124,9 +3165,7 @@ namespace Ssn.Annotator.V1 {
     public const int SourceFieldNumber = 2;
     private global::Ssn.Annotator.V1.DocumentSource source_;
     /// <summary>
-    /// Google Cloud Storage image location, or publicly-accessible image
-    /// URL. If both `content` and `source` are provided for a document, `content`
-    /// takes precedence and is used to perform the scan request.
+    /// Where to download the document from, when you don't send `content`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3311,6 +3350,9 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// A location to download a document from.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentSource : pb::IMessage<DocumentSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3360,12 +3402,10 @@ namespace Ssn.Annotator.V1 {
     public const int HttpUriFieldNumber = 1;
     private string httpUri_ = "";
     /// <summary>
-    /// The URI of the source document. Can be either:
-    ///
-    /// 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-    ///    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-    ///    completed. Your request may fail if the specified host denies the
-    ///    request (e.g. due to request throttling or DOS prevention).
+    /// A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+    /// answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+    /// POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+    /// seconds. When the download fails, the call returns 400.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3517,6 +3557,9 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// Request body of POST /v1/document:answerquestion, which isn't implemented.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentQuestionRequest : pb::IMessage<DocumentQuestionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3566,6 +3609,9 @@ namespace Ssn.Annotator.V1 {
     /// <summary>Field number for the "document" field.</summary>
     public const int DocumentFieldNumber = 1;
     private global::Ssn.Annotator.V1.Document document_;
+    /// <summary>
+    /// The document to ask about.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Annotator.V1.Document Document {
@@ -3580,6 +3626,9 @@ namespace Ssn.Annotator.V1 {
     private static readonly pb::FieldCodec<string> _repeated_questions_codec
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> questions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Questions about the document, in plain language.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Questions {
@@ -3750,6 +3799,9 @@ namespace Ssn.Annotator.V1 {
 
   }
 
+  /// <summary>
+  /// Response of POST /v1/document:answerquestion, which isn't implemented.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentQuestionResponse : pb::IMessage<DocumentQuestionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

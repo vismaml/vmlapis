@@ -24,6 +24,8 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// The product types a text can be classified into. UNDEFINED isn't a product type: it's the
+// empty value.
 type ProductType int32
 
 const (
@@ -289,6 +291,8 @@ func (ProductType) EnumDescriptor() ([]byte, []int) {
 	return file_asgt_v2_product_service_proto_rawDescGZIP(), []int{0}
 }
 
+// Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the
+// model gave no level.
 type ConfidenceLevel int32
 
 const (
@@ -347,12 +351,14 @@ func (ConfidenceLevel) EnumDescriptor() ([]byte, []int) {
 	return file_asgt_v2_product_service_proto_rawDescGZIP(), []int{1}
 }
 
+// Request body for POST /v2/models/product-types:batchSuggest.
 type ProductTypeBatchSuggestRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Text descriptions to classify into product types.
+	// Texts to classify, such as invoice lines or bank transaction descriptions. Send 1 to 512
+	// texts, none of them empty.
 	Texts []string `protobuf:"bytes,1,rep,name=texts,proto3" json:"texts,omitempty"`
 }
 
@@ -395,11 +401,13 @@ func (x *ProductTypeBatchSuggestRequest) GetTexts() []string {
 	return nil
 }
 
+// Product type suggestions for a batch of texts.
 type ProductTypeBatchSuggestResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// One suggestion per text, in the same order as the request.
 	Suggestions []*ProductTypeSuggestion `protobuf:"bytes,1,rep,name=suggestions,proto3" json:"suggestions,omitempty"`
 }
 
@@ -442,13 +450,16 @@ func (x *ProductTypeBatchSuggestResponse) GetSuggestions() []*ProductTypeSuggest
 	return nil
 }
 
+// Response of an internal method that isn't available over HTTP.
 type InternalProductTypeBatchSuggestResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// One suggestion per text, in the same order as the request.
 	Suggestions []*ProductTypeSuggestion `protobuf:"bytes,1,rep,name=suggestions,proto3" json:"suggestions,omitempty"`
-	Logits      []*ProductTypeLogits     `protobuf:"bytes,2,rep,name=logits,proto3" json:"logits,omitempty"`
+	// The model's raw scores for each text, in the same order.
+	Logits []*ProductTypeLogits `protobuf:"bytes,2,rep,name=logits,proto3" json:"logits,omitempty"`
 }
 
 func (x *InternalProductTypeBatchSuggestResponse) Reset() {
@@ -497,11 +508,13 @@ func (x *InternalProductTypeBatchSuggestResponse) GetLogits() []*ProductTypeLogi
 	return nil
 }
 
+// The model's raw scores for one text, one per class. Only returned by an internal method.
 type ProductTypeLogits struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The scores.
 	Values []float32 `protobuf:"fixed32,1,rep,packed,name=values,proto3" json:"values,omitempty"`
 }
 
@@ -544,11 +557,13 @@ func (x *ProductTypeLogits) GetValues() []float32 {
 	return nil
 }
 
+// Product type candidates for one text.
 type ProductTypeSuggestion struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The candidates, ranked by the model.
 	Candidates []*ProductTypeCandidate `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`
 }
 
@@ -591,13 +606,19 @@ func (x *ProductTypeSuggestion) GetCandidates() []*ProductTypeCandidate {
 	return nil
 }
 
+// A product type candidate for a text.
 type ProductTypeCandidate struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type            ProductType     `protobuf:"varint,1,opt,name=type,proto3,enum=asgt.v2.ProductType" json:"type,omitempty"`
-	Label           string          `protobuf:"bytes,2,opt,name=label,proto3" json:"label,omitempty"`
+	// The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a
+	// label that has no product type.
+	Type ProductType `protobuf:"varint,1,opt,name=type,proto3,enum=asgt.v2.ProductType" json:"type,omitempty"`
+	// The product type's name in words, such as "Accounting software".
+	Label string `protobuf:"bytes,2,opt,name=label,proto3" json:"label,omitempty"`
+	// The model's confidence score for this candidate. Use confidenceLevel to decide whether to
+	// trust it.
 	Confidence      float32         `protobuf:"fixed32,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
 	ConfidenceLevel ConfidenceLevel `protobuf:"varint,4,opt,name=confidence_level,json=confidenceLevel,proto3,enum=asgt.v2.ConfidenceLevel" json:"confidence_level,omitempty"`
 }
@@ -662,12 +683,17 @@ func (x *ProductTypeCandidate) GetConfidenceLevel() ConfidenceLevel {
 	return ConfidenceLevel_UNKNOWN
 }
 
+// Request body for POST /v2/models/product-types:feedback.
 type ProductTypeFeedbackRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Texts          []string `protobuf:"bytes,1,rep,name=texts,proto3" json:"texts,omitempty"`
+	// The texts, such as invoice lines or bank transaction descriptions. At least one is
+	// required.
+	Texts []string `protobuf:"bytes,1,rep,name=texts,proto3" json:"texts,omitempty"`
+	// The correct product type for each text, in the same order as texts, as a ProductType name
+	// such as ACCOUNTING_SOFTWARE.
 	TrueCategories []string `protobuf:"bytes,2,rep,name=true_categories,json=trueCategories,proto3" json:"true_categories,omitempty"`
 }
 

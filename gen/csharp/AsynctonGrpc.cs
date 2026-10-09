@@ -9,8 +9,9 @@ using grpc = global::Grpc.Core;
 
 namespace Ssn.Asyncton.V1 {
   /// <summary>
-  /// api.{{env}}.ssn.visma.ai
-  /// transaction = example (receipt, document, scanned invoice text, etc.)
+  /// Process documents asynchronously. Create a transaction for a document, poll its status,
+  /// then fetch its results. You can also send corrected results as feedback, and delete
+  /// transactions by transaction ID, custom ID or tag.
   /// </summary>
   public static partial class TransactionService
   {
@@ -130,36 +131,129 @@ namespace Ssn.Asyncton.V1 {
     [grpc::BindServiceMethod(typeof(TransactionService), "BindService")]
     public abstract partial class TransactionServiceBase
     {
+      /// <summary>
+      /// Create a transaction.
+      ///
+      /// Submits a document for processing and returns right away with the transaction ID, plus
+      /// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+      /// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+      ///
+      /// Returns 400 when the document or the features are missing, when a feature name is
+      /// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+      /// custom ID is already used in your project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Get the results of a transaction.
+      ///
+      /// Returns the extracted data once processing has finished. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/results with the customId query
+      /// parameter.
+      ///
+      /// An existing transaction always returns 200, whatever its status. While it's CREATED or
+      /// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+      /// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+      /// of the features that succeeded, and errorMessage.
+      ///
+      /// The candidates of field features are filtered. By default you get at most one candidate
+      /// per feature, and only at confidence level HIGH or above. Set minConfidence and
+      /// maxResults to get more.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.GetTransactionResultsResponse> GetTransactionResults(global::Ssn.Asyncton.V1.GetTransactionResultsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Get the status of a transaction.
+      ///
+      /// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+      /// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/status with the customId query
+      /// parameter.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.GetTransactionStatusResponse> GetTransactionStatus(global::Ssn.Asyncton.V1.GetTransactionStatusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Delete a transaction.
+      ///
+      /// Deletes the transaction with its document, results and feedback. Refer to the
+      /// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+      /// query parameter.
+      ///
+      /// Deletion runs in the background. A 200 response means the request was accepted, and the
+      /// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransaction(global::Ssn.Asyncton.V1.DeleteTransactionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Delete all transactions with a tag.
+      ///
+      /// Deletes every transaction in your project that was created with this tag, with its
+      /// document, results and feedback. Deletion runs in the background, as with
+      /// DELETE /v1/transactions/{id}.
+      ///
+      /// Returns 404 when no transaction in your project has the tag.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTag(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Send corrected results for a transaction.
+      ///
+      /// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+      /// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+      ///
+      /// Saves your corrected annotations as feedback, for improving the models. Send them once
+      /// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+      /// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::ServerCallContext context)
       {
@@ -195,121 +289,517 @@ namespace Ssn.Asyncton.V1 {
       {
       }
 
+      /// <summary>
+      /// Create a transaction.
+      ///
+      /// Submits a document for processing and returns right away with the transaction ID, plus
+      /// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+      /// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+      ///
+      /// Returns 400 when the document or the features are missing, when a feature name is
+      /// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+      /// custom ID is already used in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.CreateTransactionResponse CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Create a transaction.
+      ///
+      /// Submits a document for processing and returns right away with the transaction ID, plus
+      /// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+      /// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+      ///
+      /// Returns 400 when the document or the features are missing, when a feature name is
+      /// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+      /// custom ID is already used in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.CreateTransactionResponse CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTransaction, null, options, request);
       }
+      /// <summary>
+      /// Create a transaction.
+      ///
+      /// Submits a document for processing and returns right away with the transaction ID, plus
+      /// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+      /// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+      ///
+      /// Returns 400 when the document or the features are missing, when a feature name is
+      /// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+      /// custom ID is already used in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransactionAsync(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Create a transaction.
+      ///
+      /// Submits a document for processing and returns right away with the transaction ID, plus
+      /// your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+      /// DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+      ///
+      /// Returns 400 when the document or the features are missing, when a feature name is
+      /// unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+      /// custom ID is already used in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransactionAsync(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTransaction, null, options, request);
       }
+      /// <summary>
+      /// Get the results of a transaction.
+      ///
+      /// Returns the extracted data once processing has finished. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/results with the customId query
+      /// parameter.
+      ///
+      /// An existing transaction always returns 200, whatever its status. While it's CREATED or
+      /// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+      /// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+      /// of the features that succeeded, and errorMessage.
+      ///
+      /// The candidates of field features are filtered. By default you get at most one candidate
+      /// per feature, and only at confidence level HIGH or above. Set minConfidence and
+      /// maxResults to get more.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.GetTransactionResultsResponse GetTransactionResults(global::Ssn.Asyncton.V1.GetTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransactionResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Get the results of a transaction.
+      ///
+      /// Returns the extracted data once processing has finished. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/results with the customId query
+      /// parameter.
+      ///
+      /// An existing transaction always returns 200, whatever its status. While it's CREATED or
+      /// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+      /// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+      /// of the features that succeeded, and errorMessage.
+      ///
+      /// The candidates of field features are filtered. By default you get at most one candidate
+      /// per feature, and only at confidence level HIGH or above. Set minConfidence and
+      /// maxResults to get more.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.GetTransactionResultsResponse GetTransactionResults(global::Ssn.Asyncton.V1.GetTransactionResultsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransactionResults, null, options, request);
       }
+      /// <summary>
+      /// Get the results of a transaction.
+      ///
+      /// Returns the extracted data once processing has finished. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/results with the customId query
+      /// parameter.
+      ///
+      /// An existing transaction always returns 200, whatever its status. While it's CREATED or
+      /// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+      /// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+      /// of the features that succeeded, and errorMessage.
+      ///
+      /// The candidates of field features are filtered. By default you get at most one candidate
+      /// per feature, and only at confidence level HIGH or above. Set minConfidence and
+      /// maxResults to get more.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.GetTransactionResultsResponse> GetTransactionResultsAsync(global::Ssn.Asyncton.V1.GetTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransactionResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Get the results of a transaction.
+      ///
+      /// Returns the extracted data once processing has finished. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/results with the customId query
+      /// parameter.
+      ///
+      /// An existing transaction always returns 200, whatever its status. While it's CREATED or
+      /// RUNNING, the response holds only id and customId. When it FAILED, the response holds
+      /// errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+      /// of the features that succeeded, and errorMessage.
+      ///
+      /// The candidates of field features are filtered. By default you get at most one candidate
+      /// per feature, and only at confidence level HIGH or above. Set minConfidence and
+      /// maxResults to get more.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.GetTransactionResultsResponse> GetTransactionResultsAsync(global::Ssn.Asyncton.V1.GetTransactionResultsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransactionResults, null, options, request);
       }
+      /// <summary>
+      /// Get the status of a transaction.
+      ///
+      /// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+      /// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/status with the customId query
+      /// parameter.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.GetTransactionStatusResponse GetTransactionStatus(global::Ssn.Asyncton.V1.GetTransactionStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransactionStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Get the status of a transaction.
+      ///
+      /// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+      /// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/status with the customId query
+      /// parameter.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.GetTransactionStatusResponse GetTransactionStatus(global::Ssn.Asyncton.V1.GetTransactionStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransactionStatus, null, options, request);
       }
+      /// <summary>
+      /// Get the status of a transaction.
+      ///
+      /// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+      /// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/status with the customId query
+      /// parameter.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.GetTransactionStatusResponse> GetTransactionStatusAsync(global::Ssn.Asyncton.V1.GetTransactionStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransactionStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Get the status of a transaction.
+      ///
+      /// Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+      /// and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+      /// its ID in the path, or call GET /v1/transactions/status with the customId query
+      /// parameter.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.GetTransactionStatusResponse> GetTransactionStatusAsync(global::Ssn.Asyncton.V1.GetTransactionStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransactionStatus, null, options, request);
       }
+      /// <summary>
+      /// Delete a transaction.
+      ///
+      /// Deletes the transaction with its document, results and feedback. Refer to the
+      /// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+      /// query parameter.
+      ///
+      /// Deletion runs in the background. A 200 response means the request was accepted, and the
+      /// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransaction(global::Ssn.Asyncton.V1.DeleteTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete a transaction.
+      ///
+      /// Deletes the transaction with its document, results and feedback. Refer to the
+      /// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+      /// query parameter.
+      ///
+      /// Deletion runs in the background. A 200 response means the request was accepted, and the
+      /// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransaction(global::Ssn.Asyncton.V1.DeleteTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTransaction, null, options, request);
       }
+      /// <summary>
+      /// Delete a transaction.
+      ///
+      /// Deletes the transaction with its document, results and feedback. Refer to the
+      /// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+      /// query parameter.
+      ///
+      /// Deletion runs in the background. A 200 response means the request was accepted, and the
+      /// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransactionAsync(global::Ssn.Asyncton.V1.DeleteTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete a transaction.
+      ///
+      /// Deletes the transaction with its document, results and feedback. Refer to the
+      /// transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+      /// query parameter.
+      ///
+      /// Deletion runs in the background. A 200 response means the request was accepted, and the
+      /// data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+      /// transaction ID nor a custom ID is given.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransactionAsync(global::Ssn.Asyncton.V1.DeleteTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTransaction, null, options, request);
       }
+      /// <summary>
+      /// Delete all transactions with a tag.
+      ///
+      /// Deletes every transaction in your project that was created with this tag, with its
+      /// document, results and feedback. Deletion runs in the background, as with
+      /// DELETE /v1/transactions/{id}.
+      ///
+      /// Returns 404 when no transaction in your project has the tag.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete all transactions with a tag.
+      ///
+      /// Deletes every transaction in your project that was created with this tag, with its
+      /// document, results and feedback. Deletion runs in the background, as with
+      /// DELETE /v1/transactions/{id}.
+      ///
+      /// Returns 404 when no transaction in your project has the tag.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTag, null, options, request);
       }
+      /// <summary>
+      /// Delete all transactions with a tag.
+      ///
+      /// Deletes every transaction in your project that was created with this tag, with its
+      /// document, results and feedback. Deletion runs in the background, as with
+      /// DELETE /v1/transactions/{id}.
+      ///
+      /// Returns 404 when no transaction in your project has the tag.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Delete all transactions with a tag.
+      ///
+      /// Deletes every transaction in your project that was created with this tag, with its
+      /// document, results and feedback. Deletion runs in the background, as with
+      /// DELETE /v1/transactions/{id}.
+      ///
+      /// Returns 404 when no transaction in your project has the tag.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Ssn.Asyncton.V1.DeleteTagRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
       }
+      /// <summary>
+      /// Send corrected results for a transaction.
+      ///
+      /// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+      /// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+      ///
+      /// Saves your corrected annotations as feedback, for improving the models. Send them once
+      /// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+      /// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransactionResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Send corrected results for a transaction.
+      ///
+      /// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+      /// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+      ///
+      /// Saves your corrected annotations as feedback, for improving the models. Send them once
+      /// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+      /// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse UpdateTransactionResults(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTransactionResults, null, options, request);
       }
+      /// <summary>
+      /// Send corrected results for a transaction.
+      ///
+      /// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+      /// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+      ///
+      /// Saves your corrected annotations as feedback, for improving the models. Send them once
+      /// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+      /// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransactionResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Send corrected results for a transaction.
+      ///
+      /// [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+      /// so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+      ///
+      /// Saves your corrected annotations as feedback, for improving the models. Send them once
+      /// the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+      /// (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+      ///
+      /// Returns 404 when the transaction doesn't exist in your project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.UpdateTransactionResultsResponse> UpdateTransactionResultsAsync(global::Ssn.Asyncton.V1.UpdateTransactionResultsRequest request, grpc::CallOptions options)
       {

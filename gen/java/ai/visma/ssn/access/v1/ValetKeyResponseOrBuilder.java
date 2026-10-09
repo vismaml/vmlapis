@@ -11,7 +11,7 @@ public interface ValetKeyResponseOrBuilder extends
 
   /**
    * <pre>
-   * Key for this key
+   * Unique ID of the key, also stored in the token as its `jti` claim.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -20,7 +20,7 @@ public interface ValetKeyResponseOrBuilder extends
   java.lang.String getId();
   /**
    * <pre>
-   * Key for this key
+   * Unique ID of the key, also stored in the token as its `jti` claim.
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -31,7 +31,8 @@ public interface ValetKeyResponseOrBuilder extends
 
   /**
    * <pre>
-   * A JWT Token
+   * The valet key, a signed JSON Web Token (JWT). Send it as
+   * `Authorization: Bearer &lt;token&gt;`.
    * </pre>
    *
    * <code>string token = 2 [json_name = "token"];</code>
@@ -40,7 +41,8 @@ public interface ValetKeyResponseOrBuilder extends
   java.lang.String getToken();
   /**
    * <pre>
-   * A JWT Token
+   * The valet key, a signed JSON Web Token (JWT). Send it as
+   * `Authorization: Bearer &lt;token&gt;`.
    * </pre>
    *
    * <code>string token = 2 [json_name = "token"];</code>

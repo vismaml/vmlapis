@@ -6,6 +6,10 @@
 package ai.visma.ssn.asyncton.v1;
 
 /**
+ * <pre>
+ * The results of a transaction.
+ * </pre>
+ *
  * Protobuf type {@code ssn.asyncton.v1.GetTransactionResultsResponse}
  */
 public final class GetTransactionResultsResponse extends
@@ -50,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The transaction ID.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -90,8 +102,10 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.asyncton.v1.Annotation> annotations_;
   /**
    * <pre>
-   * map: FEATURE NAME --&gt; SSN CANDIDATES
-   * empty when processing is still running
+   * The results, one entry per feature that produced any. Empty while the transaction is
+   * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+   * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+   * purchase lines and the VERIFIED confidence level to candidates.
    * </pre>
    *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -102,8 +116,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * map: FEATURE NAME --&gt; SSN CANDIDATES
-   * empty when processing is still running
+   * The results, one entry per feature that produced any. Empty while the transaction is
+   * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+   * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+   * purchase lines and the VERIFIED confidence level to candidates.
    * </pre>
    *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -115,8 +131,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * map: FEATURE NAME --&gt; SSN CANDIDATES
-   * empty when processing is still running
+   * The results, one entry per feature that produced any. Empty while the transaction is
+   * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+   * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+   * purchase lines and the VERIFIED confidence level to candidates.
    * </pre>
    *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -127,8 +145,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * map: FEATURE NAME --&gt; SSN CANDIDATES
-   * empty when processing is still running
+   * The results, one entry per feature that produced any. Empty while the transaction is
+   * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+   * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+   * purchase lines and the VERIFIED confidence level to candidates.
    * </pre>
    *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -139,8 +159,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * map: FEATURE NAME --&gt; SSN CANDIDATES
-   * empty when processing is still running
+   * The results, one entry per feature that produced any. Empty while the transaction is
+   * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+   * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+   * purchase lines and the VERIFIED confidence level to candidates.
    * </pre>
    *
    * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -155,6 +177,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object errorMessage_ = "";
   /**
+   * <pre>
+   * Describes a feature that failed, for example "image too large". Set when the transaction
+   * is FAILED or PARTIAL.
+   * </pre>
+   *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
    * @return The errorMessage.
    */
@@ -172,6 +199,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Describes a feature that failed, for example "image too large". Set when the transaction
+   * is FAILED or PARTIAL.
+   * </pre>
+   *
    * <code>string error_message = 3 [json_name = "errorMessage"];</code>
    * @return The bytes for errorMessage.
    */
@@ -194,6 +226,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -211,6 +247,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The custom ID, if one was set when the transaction was created.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -419,6 +459,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The results of a transaction.
+   * </pre>
+   *
    * Protobuf type {@code ssn.asyncton.v1.GetTransactionResultsResponse}
    */
   public static final class Builder extends
@@ -645,6 +689,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -661,6 +709,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -678,6 +730,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -691,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -701,6 +761,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The transaction ID.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -729,8 +793,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -744,8 +810,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -759,8 +827,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -774,8 +844,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -796,8 +868,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -815,8 +889,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -836,8 +912,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -858,8 +936,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -877,8 +957,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -896,8 +978,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -916,8 +1000,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -934,8 +1020,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -952,8 +1040,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -964,8 +1054,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -979,8 +1071,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -995,8 +1089,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -1007,8 +1103,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -1020,8 +1118,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * map: FEATURE NAME --&gt; SSN CANDIDATES
-     * empty when processing is still running
+     * The results, one entry per feature that produced any. Empty while the transaction is
+     * CREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left
+     * out. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the
+     * purchase lines and the VERIFIED confidence level to candidates.
      * </pre>
      *
      * <code>repeated .ssn.asyncton.v1.Annotation annotations = 2 [json_name = "annotations"];</code>
@@ -1047,6 +1147,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object errorMessage_ = "";
     /**
+     * <pre>
+     * Describes a feature that failed, for example "image too large". Set when the transaction
+     * is FAILED or PARTIAL.
+     * </pre>
+     *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
      * @return The errorMessage.
      */
@@ -1063,6 +1168,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Describes a feature that failed, for example "image too large". Set when the transaction
+     * is FAILED or PARTIAL.
+     * </pre>
+     *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
      * @return The bytes for errorMessage.
      */
@@ -1080,6 +1190,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Describes a feature that failed, for example "image too large". Set when the transaction
+     * is FAILED or PARTIAL.
+     * </pre>
+     *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
      * @param value The errorMessage to set.
      * @return This builder for chaining.
@@ -1093,6 +1208,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Describes a feature that failed, for example "image too large". Set when the transaction
+     * is FAILED or PARTIAL.
+     * </pre>
+     *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
      * @return This builder for chaining.
      */
@@ -1103,6 +1223,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Describes a feature that failed, for example "image too large". Set when the transaction
+     * is FAILED or PARTIAL.
+     * </pre>
+     *
      * <code>string error_message = 3 [json_name = "errorMessage"];</code>
      * @param value The bytes for errorMessage to set.
      * @return This builder for chaining.
@@ -1119,6 +1244,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -1135,6 +1264,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -1152,6 +1285,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -1165,6 +1302,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -1175,6 +1316,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The custom ID, if one was set when the transaction was created.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.

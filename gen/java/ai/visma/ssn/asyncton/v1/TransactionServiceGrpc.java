@@ -4,8 +4,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * api.{{env}}.ssn.visma.ai
- * transaction = example (receipt, document, scanned invoice text, etc.)
+ * Process documents asynchronously. Create a transaction for a document, poll its status,
+ * then fetch its results. You can also send corrected results as feedback, and delete
+ * transactions by transaction ID, custom ID or tag.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -266,13 +267,23 @@ public final class TransactionServiceGrpc {
 
   /**
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Create a transaction.
+     * Submits a document for processing and returns right away with the transaction ID, plus
+     * your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+     * DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+     * Returns 400 when the document or the features are missing, when a feature name is
+     * unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+     * custom ID is already used in your project.
+     * </pre>
      */
     default void createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> responseObserver) {
@@ -280,6 +291,21 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the results of a transaction.
+     * Returns the extracted data once processing has finished. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/results with the customId query
+     * parameter.
+     * An existing transaction always returns 200, whatever its status. While it's CREATED or
+     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+     * of the features that succeeded, and errorMessage.
+     * The candidates of field features are filtered. By default you get at most one candidate
+     * per feature, and only at confidence level HIGH or above. Set minConfidence and
+     * maxResults to get more.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     default void getTransactionResults(ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse> responseObserver) {
@@ -287,6 +313,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the status of a transaction.
+     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/status with the customId query
+     * parameter.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     default void getTransactionStatus(ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse> responseObserver) {
@@ -294,6 +329,16 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a transaction.
+     * Deletes the transaction with its document, results and feedback. Refer to the
+     * transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+     * query parameter.
+     * Deletion runs in the background. A 200 response means the request was accepted, and the
+     * data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     default void deleteTransaction(ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -301,6 +346,13 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete all transactions with a tag.
+     * Deletes every transaction in your project that was created with this tag, with its
+     * document, results and feedback. Deletion runs in the background, as with
+     * DELETE /v1/transactions/{id}.
+     * Returns 404 when no transaction in your project has the tag.
+     * </pre>
      */
     default void deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -308,6 +360,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send corrected results for a transaction.
+     * [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+     * so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+     * Saves your corrected annotations as feedback, for improving the models. Send them once
+     * the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+     * (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+     * Returns 404 when the transaction doesn't exist in your project.
+     * </pre>
      */
     default void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
@@ -318,8 +379,9 @@ public final class TransactionServiceGrpc {
   /**
    * Base class for the server implementation of the service TransactionService.
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public static abstract class TransactionServiceImplBase
@@ -333,8 +395,9 @@ public final class TransactionServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service TransactionService.
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public static final class TransactionServiceStub
@@ -351,6 +414,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a transaction.
+     * Submits a document for processing and returns right away with the transaction ID, plus
+     * your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+     * DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+     * Returns 400 when the document or the features are missing, when a feature name is
+     * unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+     * custom ID is already used in your project.
+     * </pre>
      */
     public void createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> responseObserver) {
@@ -359,6 +431,21 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the results of a transaction.
+     * Returns the extracted data once processing has finished. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/results with the customId query
+     * parameter.
+     * An existing transaction always returns 200, whatever its status. While it's CREATED or
+     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+     * of the features that succeeded, and errorMessage.
+     * The candidates of field features are filtered. By default you get at most one candidate
+     * per feature, and only at confidence level HIGH or above. Set minConfidence and
+     * maxResults to get more.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public void getTransactionResults(ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse> responseObserver) {
@@ -367,6 +454,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the status of a transaction.
+     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/status with the customId query
+     * parameter.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public void getTransactionStatus(ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse> responseObserver) {
@@ -375,6 +471,16 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a transaction.
+     * Deletes the transaction with its document, results and feedback. Refer to the
+     * transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+     * query parameter.
+     * Deletion runs in the background. A 200 response means the request was accepted, and the
+     * data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public void deleteTransaction(ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -383,6 +489,13 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete all transactions with a tag.
+     * Deletes every transaction in your project that was created with this tag, with its
+     * document, results and feedback. Deletion runs in the background, as with
+     * DELETE /v1/transactions/{id}.
+     * Returns 404 when no transaction in your project has the tag.
+     * </pre>
      */
     public void deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -391,6 +504,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send corrected results for a transaction.
+     * [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+     * so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+     * Saves your corrected annotations as feedback, for improving the models. Send them once
+     * the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+     * (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+     * Returns 404 when the transaction doesn't exist in your project.
+     * </pre>
      */
     public void updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> responseObserver) {
@@ -402,8 +524,9 @@ public final class TransactionServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service TransactionService.
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public static final class TransactionServiceBlockingV2Stub
@@ -420,6 +543,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a transaction.
+     * Submits a document for processing and returns right away with the transaction ID, plus
+     * your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+     * DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+     * Returns 400 when the document or the features are missing, when a feature name is
+     * unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+     * custom ID is already used in your project.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.CreateTransactionResponse createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -427,6 +559,21 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the results of a transaction.
+     * Returns the extracted data once processing has finished. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/results with the customId query
+     * parameter.
+     * An existing transaction always returns 200, whatever its status. While it's CREATED or
+     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+     * of the features that succeeded, and errorMessage.
+     * The candidates of field features are filtered. By default you get at most one candidate
+     * per feature, and only at confidence level HIGH or above. Set minConfidence and
+     * maxResults to get more.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse getTransactionResults(ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -434,6 +581,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the status of a transaction.
+     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/status with the customId query
+     * parameter.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse getTransactionStatus(ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -441,6 +597,16 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a transaction.
+     * Deletes the transaction with its document, results and feedback. Refer to the
+     * transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+     * query parameter.
+     * Deletion runs in the background. A 200 response means the request was accepted, and the
+     * data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTransaction(ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -448,6 +614,13 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete all transactions with a tag.
+     * Deletes every transaction in your project that was created with this tag, with its
+     * document, results and feedback. Deletion runs in the background, as with
+     * DELETE /v1/transactions/{id}.
+     * Returns 404 when no transaction in your project has the tag.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -455,6 +628,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send corrected results for a transaction.
+     * [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+     * so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+     * Saves your corrected annotations as feedback, for improving the models. Send them once
+     * the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+     * (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+     * Returns 404 when the transaction doesn't exist in your project.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -465,8 +647,9 @@ public final class TransactionServiceGrpc {
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service TransactionService.
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public static final class TransactionServiceBlockingStub
@@ -483,6 +666,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a transaction.
+     * Submits a document for processing and returns right away with the transaction ID, plus
+     * your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+     * DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+     * Returns 400 when the document or the features are missing, when a feature name is
+     * unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+     * custom ID is already used in your project.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.CreateTransactionResponse createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -490,6 +682,21 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the results of a transaction.
+     * Returns the extracted data once processing has finished. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/results with the customId query
+     * parameter.
+     * An existing transaction always returns 200, whatever its status. While it's CREATED or
+     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+     * of the features that succeeded, and errorMessage.
+     * The candidates of field features are filtered. By default you get at most one candidate
+     * per feature, and only at confidence level HIGH or above. Set minConfidence and
+     * maxResults to get more.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse getTransactionResults(ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -497,6 +704,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the status of a transaction.
+     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/status with the customId query
+     * parameter.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse getTransactionStatus(ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -504,6 +720,16 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a transaction.
+     * Deletes the transaction with its document, results and feedback. Refer to the
+     * transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+     * query parameter.
+     * Deletion runs in the background. A 200 response means the request was accepted, and the
+     * data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTransaction(ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -511,6 +737,13 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete all transactions with a tag.
+     * Deletes every transaction in your project that was created with this tag, with its
+     * document, results and feedback. Deletion runs in the background, as with
+     * DELETE /v1/transactions/{id}.
+     * Returns 404 when no transaction in your project has the tag.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -518,6 +751,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send corrected results for a transaction.
+     * [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+     * so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+     * Saves your corrected annotations as feedback, for improving the models. Send them once
+     * the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+     * (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+     * Returns 404 when the transaction doesn't exist in your project.
+     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse updateTransactionResults(ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -528,8 +770,9 @@ public final class TransactionServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service TransactionService.
    * <pre>
-   * api.{{env}}.ssn.visma.ai
-   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * Process documents asynchronously. Create a transaction for a document, poll its status,
+   * then fetch its results. You can also send corrected results as feedback, and delete
+   * transactions by transaction ID, custom ID or tag.
    * </pre>
    */
   public static final class TransactionServiceFutureStub
@@ -546,6 +789,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create a transaction.
+     * Submits a document for processing and returns right away with the transaction ID, plus
+     * your custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is
+     * DONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.
+     * Returns 400 when the document or the features are missing, when a feature name is
+     * unknown, or when the document can't be downloaded from its URL. Returns 409 when the
+     * custom ID is already used in your project.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> createTransaction(
         ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
@@ -554,6 +806,21 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the results of a transaction.
+     * Returns the extracted data once processing has finished. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/results with the customId query
+     * parameter.
+     * An existing transaction always returns 200, whatever its status. While it's CREATED or
+     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
+     * of the features that succeeded, and errorMessage.
+     * The candidates of field features are filtered. By default you get at most one candidate
+     * per feature, and only at confidence level HIGH or above. Set minConfidence and
+     * maxResults to get more.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse> getTransactionResults(
         ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request) {
@@ -562,6 +829,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get the status of a transaction.
+     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
+     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
+     * its ID in the path, or call GET /v1/transactions/status with the customId query
+     * parameter.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse> getTransactionStatus(
         ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request) {
@@ -570,6 +846,16 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete a transaction.
+     * Deletes the transaction with its document, results and feedback. Refer to the
+     * transaction by its ID in the path, or call DELETE /v1/transactions with the customId
+     * query parameter.
+     * Deletion runs in the background. A 200 response means the request was accepted, and the
+     * data is removed shortly afterwards. Once it's removed, the custom ID can be used again.
+     * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
+     * transaction ID nor a custom ID is given.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTransaction(
         ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request) {
@@ -578,6 +864,13 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete all transactions with a tag.
+     * Deletes every transaction in your project that was created with this tag, with its
+     * document, results and feedback. Deletion runs in the background, as with
+     * DELETE /v1/transactions/{id}.
+     * Returns 404 when no transaction in your project has the tag.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTag(
         ai.visma.ssn.asyncton.v1.DeleteTagRequest request) {
@@ -586,6 +879,15 @@ public final class TransactionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Send corrected results for a transaction.
+     * [NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,
+     * so it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.
+     * Saves your corrected annotations as feedback, for improving the models. Send them once
+     * the transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400
+     * (FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.
+     * Returns 404 when the transaction doesn't exist in your project.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.UpdateTransactionResultsResponse> updateTransactionResults(
         ai.visma.ssn.asyncton.v1.UpdateTransactionResultsRequest request) {

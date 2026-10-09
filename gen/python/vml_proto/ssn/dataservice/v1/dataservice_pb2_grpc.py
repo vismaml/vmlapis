@@ -7,7 +7,8 @@ from vml_proto.ssn.dataservice.v1 import dataservice_pb2 as ssn_dot_dataservice_
 
 
 class DataServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Send feedback on Smartscan results, and delete it by tag.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -68,7 +69,8 @@ class DataServiceStub(object):
 
 
 class DataServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Send feedback on Smartscan results, and delete it by tag.
+    """
 
     def CreateDocument(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -90,7 +92,22 @@ class DataServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Feedback(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Send the correct values for an annotated document.
+
+        Send the values your user confirmed for a document you sent to
+        POST /v1/document:annotate, identified by the `feedbackId` from that
+        response. Feedback powers your quality metrics, and it's used to improve
+        the models. Send it once per document, within 90 days of the annotate
+        call, and tag it so you can delete it later with POST /v1/feedback:delete.
+        A successful call returns an empty object.
+
+        Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+        404 if the ID is unknown or the annotate call was more than 90 days ago,
+        and 409 if feedback for the ID was already sent.
+
+        For Smartscan Async transactions, send corrections with
+        PUT /v1/transactions/{id}/results instead.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -108,7 +125,15 @@ class DataServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Delete(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+        """Delete feedback by tag.
+
+        Deletes your project's feedback that has at least one of the given tags,
+        together with the document image and text stored with it. Only feedback
+        sent before this call is deleted. The call records the request and
+        returns an empty object right away; a daily job then deletes the data.
+
+        Errors: 400 if no tag is given, and 403 if you call it with a valet key.
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -193,7 +218,8 @@ def add_DataServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class DataService(object):
-    """Missing associated documentation comment in .proto file."""
+    """Send feedback on Smartscan results, and delete it by tag.
+    """
 
     @staticmethod
     def CreateDocument(request,

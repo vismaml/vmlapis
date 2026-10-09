@@ -8,6 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Ssn.Annotator.V1 {
+  /// <summary>
+  /// Extract data from documents and get the results in the same call.
+  /// </summary>
   public static partial class DocumentAnnotator
   {
     static readonly string __ServiceName = "ssn.annotator.v1.DocumentAnnotator";
@@ -80,12 +83,44 @@ namespace Ssn.Annotator.V1 {
     [grpc::BindServiceMethod(typeof(DocumentAnnotator), "BindService")]
     public abstract partial class DocumentAnnotatorBase
     {
+      /// <summary>
+      /// Extract data from a document.
+      ///
+      /// Send the document, as base64 `content` or as a `source.httpUri` to download it
+      /// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+      /// fields. The results come back in the same call. For large documents, and for the
+      /// ULTRA tier, use Smartscan Async.
+      ///
+      /// By default, most features return at most one candidate, and only with the
+      /// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+      /// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+      /// without readable text returns an empty response.
+      ///
+      /// To correct the results, send the `feedbackId` from the response to
+      /// POST /v1/feedback:create.
+      ///
+      /// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+      /// read. Requests larger than 10 MiB are rejected.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Annotator.V1.DocumentAnnotatorResponse> AnnotateDocument(global::Ssn.Annotator.V1.DocumentAnnotatorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// [NOT IMPLEMENTED] Answer questions about a document.
+      ///
+      /// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+      /// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Annotator.V1.DocumentQuestionResponse> AnswerDocumentQuestion(global::Ssn.Annotator.V1.DocumentQuestionRequest request, grpc::ServerCallContext context)
       {
@@ -121,41 +156,177 @@ namespace Ssn.Annotator.V1 {
       {
       }
 
+      /// <summary>
+      /// Extract data from a document.
+      ///
+      /// Send the document, as base64 `content` or as a `source.httpUri` to download it
+      /// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+      /// fields. The results come back in the same call. For large documents, and for the
+      /// ULTRA tier, use Smartscan Async.
+      ///
+      /// By default, most features return at most one candidate, and only with the
+      /// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+      /// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+      /// without readable text returns an empty response.
+      ///
+      /// To correct the results, send the `feedbackId` from the response to
+      /// POST /v1/feedback:create.
+      ///
+      /// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+      /// read. Requests larger than 10 MiB are rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Annotator.V1.DocumentAnnotatorResponse AnnotateDocument(global::Ssn.Annotator.V1.DocumentAnnotatorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Extract data from a document.
+      ///
+      /// Send the document, as base64 `content` or as a `source.httpUri` to download it
+      /// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+      /// fields. The results come back in the same call. For large documents, and for the
+      /// ULTRA tier, use Smartscan Async.
+      ///
+      /// By default, most features return at most one candidate, and only with the
+      /// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+      /// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+      /// without readable text returns an empty response.
+      ///
+      /// To correct the results, send the `feedbackId` from the response to
+      /// POST /v1/feedback:create.
+      ///
+      /// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+      /// read. Requests larger than 10 MiB are rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Annotator.V1.DocumentAnnotatorResponse AnnotateDocument(global::Ssn.Annotator.V1.DocumentAnnotatorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateDocument, null, options, request);
       }
+      /// <summary>
+      /// Extract data from a document.
+      ///
+      /// Send the document, as base64 `content` or as a `source.httpUri` to download it
+      /// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+      /// fields. The results come back in the same call. For large documents, and for the
+      /// ULTRA tier, use Smartscan Async.
+      ///
+      /// By default, most features return at most one candidate, and only with the
+      /// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+      /// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+      /// without readable text returns an empty response.
+      ///
+      /// To correct the results, send the `feedbackId` from the response to
+      /// POST /v1/feedback:create.
+      ///
+      /// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+      /// read. Requests larger than 10 MiB are rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.DocumentAnnotatorResponse> AnnotateDocumentAsync(global::Ssn.Annotator.V1.DocumentAnnotatorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// Extract data from a document.
+      ///
+      /// Send the document, as base64 `content` or as a `source.httpUri` to download it
+      /// from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+      /// fields. The results come back in the same call. For large documents, and for the
+      /// ULTRA tier, use Smartscan Async.
+      ///
+      /// By default, most features return at most one candidate, and only with the
+      /// confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+      /// to change this. Without a `tier`, the request is processed as PREMIUM. A document
+      /// without readable text returns an empty response.
+      ///
+      /// To correct the results, send the `feedbackId` from the response to
+      /// POST /v1/feedback:create.
+      ///
+      /// Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+      /// read. Requests larger than 10 MiB are rejected.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.DocumentAnnotatorResponse> AnnotateDocumentAsync(global::Ssn.Annotator.V1.DocumentAnnotatorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnnotateDocument, null, options, request);
       }
+      /// <summary>
+      /// [NOT IMPLEMENTED] Answer questions about a document.
+      ///
+      /// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+      /// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Annotator.V1.DocumentQuestionResponse AnswerDocumentQuestion(global::Ssn.Annotator.V1.DocumentQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnswerDocumentQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// [NOT IMPLEMENTED] Answer questions about a document.
+      ///
+      /// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+      /// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Annotator.V1.DocumentQuestionResponse AnswerDocumentQuestion(global::Ssn.Annotator.V1.DocumentQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnswerDocumentQuestion, null, options, request);
       }
+      /// <summary>
+      /// [NOT IMPLEMENTED] Answer questions about a document.
+      ///
+      /// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+      /// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.DocumentQuestionResponse> AnswerDocumentQuestionAsync(global::Ssn.Annotator.V1.DocumentQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnswerDocumentQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
+      /// <summary>
+      /// [NOT IMPLEMENTED] Answer questions about a document.
+      ///
+      /// REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+      /// the `questions` field of POST /v1/document:annotate, or of an async transaction,
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Annotator.V1.DocumentQuestionResponse> AnswerDocumentQuestionAsync(global::Ssn.Annotator.V1.DocumentQuestionRequest request, grpc::CallOptions options)
       {

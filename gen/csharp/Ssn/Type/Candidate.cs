@@ -126,6 +126,9 @@ namespace Ssn.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// How confident Smartscan is in a candidate.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Confidence : pb::IMessage<Confidence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -175,10 +178,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private global::Ssn.Type.Confidence.Types.Level level_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
-    /// <summary>
-    /// A bucketized representation of confidence, which is intended to give clients
-    /// highly stable results across model upgrades.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Confidence.Types.Level Level {
@@ -193,7 +192,7 @@ namespace Ssn.Type {
     private static readonly pb::FieldCodec<float?> _single_value_codec = pb::FieldCodec.ForStructWrapper<float>(18);
     private float? value_;
     /// <summary>
-    /// The confidence value
+    /// A confidence score. Most responses leave it out and return only the level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -379,13 +378,23 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Confidence levels, from lowest to highest. The levels are designed to give
+      /// stable results across model upgrades.
+      /// </summary>
       public enum Level {
+        /// <summary>
+        /// No level. As `minConfidence`, it means the default, HIGH.
+        /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         [pbr::OriginalName("VERY_LOW")] VeryLow = 1,
         [pbr::OriginalName("LOW")] Low = 2,
         [pbr::OriginalName("MID")] Mid = 3,
         [pbr::OriginalName("HIGH")] High = 4,
         [pbr::OriginalName("VERY_HIGH")] VeryHigh = 5,
+        /// <summary>
+        /// The consistency checks of the VERIFIED feature confirmed or corrected the value.
+        /// </summary>
         [pbr::OriginalName("VERIFIED")] Verified = 6,
       }
 
@@ -394,6 +403,10 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A candidate value for a field, with its confidence and where it was found. In a
+  /// list of candidates, the most confident one comes first.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Candidate : pb::IMessage<Candidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -450,7 +463,8 @@ namespace Ssn.Type {
     public const int ValueFieldNumber = 1;
     private string value_ = "";
     /// <summary>
-    /// Normalized value 01-01-2019
+    /// The normalized value, for example "2019-01-01" for a date. Each field of the
+    /// response describes the format of its values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -465,8 +479,7 @@ namespace Ssn.Type {
     public const int TextFieldNumber = 2;
     private string text_ = "";
     /// <summary>
-    /// The text as found on the document "1. Jan"
-    /// useful for overlays
+    /// The text as written on the document, for example "1. Jan". Useful for overlays.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -480,9 +493,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "confidence" field.</summary>
     public const int ConfidenceFieldNumber = 3;
     private global::Ssn.Type.Confidence confidence_;
-    /// <summary>
-    /// Confidence
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Confidence Confidence {
@@ -495,28 +505,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 4;
     private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the block.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///
-    /// * when the text is horizontal it might look like:
-    ///
-    ///         0----1
-    ///         |    |
-    ///         3----2
-    ///
-    /// * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///
-    ///         2----3
-    ///         |    |
-    ///         1----0
-    ///
-    ///   and the vertex order will still be (0, 1, 2, 3).
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.BoundingPoly BoundingBox {
@@ -529,9 +517,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
     private global::Ssn.Type.Candidate.Types.Type type_ = global::Ssn.Type.Candidate.Types.Type.Unknown;
-    /// <summary>
-    /// Indicate the type of the candidate
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.Candidate.Types.Type Type {
@@ -545,8 +530,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 6;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the candidate was found.
-    /// page_ref start from 1.
+    /// The page the candidate was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -560,9 +544,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "model_metadata" field.</summary>
     public const int ModelMetadataFieldNumber = 7;
     private global::Ssn.Type.ModelSpec modelMetadata_;
-    /// <summary>
-    /// Model spec of the TensorFlow Serving model that predicted this candidate
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {
@@ -577,7 +558,8 @@ namespace Ssn.Type {
     private static readonly pb::FieldCodec<bool?> _single_corrected_codec = pb::FieldCodec.ForStructWrapper<bool>(66);
     private bool? corrected_;
     /// <summary>
-    /// Whether the candidate has been corrected by verification heuristics
+    /// Only set on VERIFIED candidates: true when the consistency checks changed the
+    /// value, and false when they confirmed it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -934,6 +916,9 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The kind of candidate. Not every candidate has one.
+      /// </summary>
       public enum Type {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         [pbr::OriginalName("FIELD")] Field = 1,
@@ -945,6 +930,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// The model that produced a candidate.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelSpec : pb::IMessage<ModelSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -995,7 +983,7 @@ namespace Ssn.Type {
     public const int ModelNameFieldNumber = 1;
     private string modelName_ = "";
     /// <summary>
-    /// The name of the TensorFlow Serving model
+    /// The name of the model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1011,7 +999,7 @@ namespace Ssn.Type {
     private static readonly pb::FieldCodec<long?> _single_modelVer_codec = pb::FieldCodec.ForStructWrapper<long>(18);
     private long? modelVer_;
     /// <summary>
-    /// The version number of the TensorFlow Serving model
+    /// The version of the model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1194,6 +1182,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A line of the document that holds an amount, returned for the LINES feature.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LineCandidate : pb::IMessage<LineCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1245,8 +1236,7 @@ namespace Ssn.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Text of the line without the amount
-    /// Example: "3 Dark and Stormy"
+    /// The text of the line without the amount, for example "3 Dark and Stormy".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1261,8 +1251,7 @@ namespace Ssn.Type {
     public const int AmountFieldNumber = 2;
     private double amount_;
     /// <summary>
-    /// Normalized amount (price) of the line
-    /// Example: 300.0
+    /// The amount (price) of the line, normalized, for example 300.0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1277,8 +1266,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 6;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the line was found.
-    /// page_ref start from 1.
+    /// The page the line was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1478,6 +1466,10 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A purchase line in the older format, with a single value for each field. Use
+  /// PurchaseLine instead: it has candidates with confidence levels for each field.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurchaseLineCandidate : pb::IMessage<PurchaseLineCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1544,8 +1536,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 1;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the line was found.
-    /// page_ref start from 1.
+    /// The page the line was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1560,7 +1551,7 @@ namespace Ssn.Type {
     public const int CodeFieldNumber = 2;
     private string code_ = "";
     /// <summary>
-    /// Code is an ID that supplier uses to identify the item
+    /// The product code, product number or SKU that the supplier uses for the item.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1575,7 +1566,7 @@ namespace Ssn.Type {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    /// Description is a piece of text that describes the item
+    /// The description of the line, typically the name of a product or the delivered service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1590,7 +1581,7 @@ namespace Ssn.Type {
     public const int QuantityFieldNumber = 4;
     private string quantity_ = "";
     /// <summary>
-    /// Quantity is the number of items
+    /// The quantity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1605,7 +1596,7 @@ namespace Ssn.Type {
     public const int ItemNumberFieldNumber = 5;
     private string itemNumber_ = "";
     /// <summary>
-    /// ItemNumber is the number of the item
+    /// The row number, position or ID of the line, if the document states one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1620,7 +1611,7 @@ namespace Ssn.Type {
     public const int UnitFieldNumber = 6;
     private string unit_ = "";
     /// <summary>
-    /// Unit is the unit of the item
+    /// The unit of the quantity, for example "pieces", "kg" or "lb".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1635,7 +1626,7 @@ namespace Ssn.Type {
     public const int TotalDiscountFieldNumber = 7;
     private string totalDiscount_ = "";
     /// <summary>
-    /// Total discount is the total discount of the line
+    /// The total discount of the line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1650,7 +1641,7 @@ namespace Ssn.Type {
     public const int PercentageDiscountFieldNumber = 8;
     private string percentageDiscount_ = "";
     /// <summary>
-    /// Percentage discount is the percentage discount of the line
+    /// The discount rate of the line, as a percentage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1665,7 +1656,7 @@ namespace Ssn.Type {
     public const int TotalInclVatFieldNumber = 9;
     private string totalInclVat_ = "";
     /// <summary>
-    /// Total incl vat is the total price of the line including vat
+    /// The line total including VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1680,7 +1671,7 @@ namespace Ssn.Type {
     public const int TotalExclVatFieldNumber = 10;
     private string totalExclVat_ = "";
     /// <summary>
-    /// Total excl vat is the total price of the line excluding vat
+    /// The line total excluding VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1695,7 +1686,7 @@ namespace Ssn.Type {
     public const int TotalVatFieldNumber = 11;
     private string totalVat_ = "";
     /// <summary>
-    /// Total vat is the total vat of the line
+    /// The VAT amount of the line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1710,7 +1701,7 @@ namespace Ssn.Type {
     public const int PercentageVatFieldNumber = 12;
     private string percentageVat_ = "";
     /// <summary>
-    /// Percentage vat is the percentage vat of the line
+    /// The VAT rate of the line, as a percentage, for example "25.0".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1725,7 +1716,7 @@ namespace Ssn.Type {
     public const int UnitPriceInclVatFieldNumber = 13;
     private string unitPriceInclVat_ = "";
     /// <summary>
-    /// Unit price incl vat is the unit price of the line including vat
+    /// The price of one unit, including VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1740,7 +1731,7 @@ namespace Ssn.Type {
     public const int UnitPriceExclVatFieldNumber = 14;
     private string unitPriceExclVat_ = "";
     /// <summary>
-    /// Unit price excl vat is the unit price of the line excluding vat
+    /// The price of one unit, excluding VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1755,7 +1746,8 @@ namespace Ssn.Type {
     public const int TotalFieldNumber = 17;
     private string total_ = "";
     /// <summary>
-    /// Total is the total price of the line (with/without vat)
+    /// The line total as stated on the line, usually the rightmost amount. Documents
+    /// often don't say whether it includes VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1770,7 +1762,8 @@ namespace Ssn.Type {
     public const int UnitPriceFieldNumber = 18;
     private string unitPrice_ = "";
     /// <summary>
-    /// Unit price is the unit price of the line (with/without vat)
+    /// The price of one unit as stated on the line. Documents often don't say whether
+    /// it includes VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1784,9 +1777,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "model_metadata" field.</summary>
     public const int ModelMetadataFieldNumber = 19;
     private global::Ssn.Type.ModelSpec modelMetadata_;
-    /// <summary>
-    /// Model metadata
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {
@@ -1800,7 +1790,8 @@ namespace Ssn.Type {
     public const int ProductTypeFieldNumber = 20;
     private string productType_ = "";
     /// <summary>
-    /// Product type classification for the line
+    /// The product type of the line in the older format. For product types, request
+    /// PRODUCT_TYPES and read `productType` in `purchaseLinesDetails`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2369,6 +2360,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// An answer to one of the questions in the request.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnswerCandidate : pb::IMessage<AnswerCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2422,7 +2416,7 @@ namespace Ssn.Type {
     public const int QuestionFieldNumber = 1;
     private string question_ = "";
     /// <summary>
-    /// Question asked in the request
+    /// The question, as sent in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2437,7 +2431,7 @@ namespace Ssn.Type {
     public const int AnswerFieldNumber = 2;
     private string answer_ = "";
     /// <summary>
-    /// Model prediction for the question
+    /// The answer, as text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2452,7 +2446,7 @@ namespace Ssn.Type {
     public const int ConfidenceFieldNumber = 3;
     private global::Ssn.Type.Confidence confidence_;
     /// <summary>
-    /// Confidence of the prediction
+    /// [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2467,7 +2461,7 @@ namespace Ssn.Type {
     public const int ModelMetadataFieldNumber = 7;
     private global::Ssn.Type.ModelSpec modelMetadata_;
     /// <summary>
-    /// Model metadata
+    /// [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2482,7 +2476,8 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 8;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the candidate was found.
+    /// The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+    /// first and last page together (see `documentMetadata.pageCount`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2748,6 +2743,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// The text of one page, returned for the PAGE_TEXTS feature.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PageText : pb::IMessage<PageText>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2798,7 +2796,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 1;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the text was found.
+    /// The page, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2813,7 +2811,7 @@ namespace Ssn.Type {
     public const int TextFieldNumber = 2;
     private string text_ = "";
     /// <summary>
-    /// The text content of the page
+    /// The text of the page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2989,6 +2987,10 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A VAT level in the older format, with a single value for each field. Use
+  /// VatDistribution instead: it has candidates with confidence levels for each field.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VatDistributionCandidate : pb::IMessage<VatDistributionCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3043,7 +3045,7 @@ namespace Ssn.Type {
     public const int PercentageFieldNumber = 1;
     private string percentage_ = "";
     /// <summary>
-    /// The vat distribution candidate percentage
+    /// The VAT rate, as a percentage with a dot as the decimal separator, for example "25.0".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3058,7 +3060,7 @@ namespace Ssn.Type {
     public const int AmountFieldNumber = 2;
     private string amount_ = "";
     /// <summary>
-    /// The vat distribution candidate amount
+    /// The VAT amount at this rate, rounded to two decimals, for example "585.45".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3072,9 +3074,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "model_metadata" field.</summary>
     public const int ModelMetadataFieldNumber = 3;
     private global::Ssn.Type.ModelSpec modelMetadata_;
-    /// <summary>
-    /// Model metadata
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {
@@ -3088,7 +3087,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 4;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the candidate was found.
+    /// The page the VAT level was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3103,7 +3102,7 @@ namespace Ssn.Type {
     public const int ExclVatFieldNumber = 5;
     private string exclVat_ = "";
     /// <summary>
-    /// The vat distribution candidate excl vat
+    /// The amount excluding VAT that the VAT is based on, for example "2341.80".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3118,7 +3117,7 @@ namespace Ssn.Type {
     public const int InclVatFieldNumber = 6;
     private string inclVat_ = "";
     /// <summary>
-    /// The vat distribution candidate incl vat
+    /// The amount including VAT at this rate, for example "2926.25".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3399,6 +3398,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// Information about how Smartscan processed the document.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentMetadata : pb::IMessage<DocumentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3448,7 +3450,11 @@ namespace Ssn.Type {
     public const int PageCountFieldNumber = 1;
     private uint pageCount_;
     /// <summary>
-    /// Number of pages in the document
+    /// The number of pages Smartscan read, not the number of pages in the document. It's
+    /// 1 when the first and last page are read together, which is the case for field
+    /// predictions. When you request a feature that is read page by page, such as
+    /// PURCHASE_LINES, PAGE_TEXTS, QR_CODES or SWISS_QR_BILLS, it's the number of pages
+    /// read, up to 5.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3600,6 +3606,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A purchase line, with a list of candidates for each field.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurchaseLine : pb::IMessage<PurchaseLine>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3667,8 +3676,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 1;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the line was found.
-    /// page_ref start from 1.
+    /// The page the line was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3685,7 +3693,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> code_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Code is an ID that supplier uses to identify the item
+    /// Candidates for the product code, product number or SKU that the supplier uses for
+    /// the item.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3699,7 +3708,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> description_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Description is a piece of text that describes the item
+    /// Candidates for the description of the line, typically the name of a product or the
+    /// delivered service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3713,7 +3723,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(34, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> quantity_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Quantity is the number of items
+    /// Candidates for the quantity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3727,7 +3737,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> itemNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// ItemNumber is the number of the item
+    /// Candidates for the row number, position or ID of the line, if the document states one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3741,7 +3751,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(50, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unit_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Unit is the unit of the item
+    /// Candidates for the unit of the quantity, for example "pieces", "kg" or "lb".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3755,7 +3765,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(58, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Total discount is the total discount of the line
+    /// Candidates for the total discount of the line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3769,7 +3779,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(66, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentageDiscount_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Percentage discount is the percentage discount of the line
+    /// Candidates for the discount rate of the line, as a percentage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3783,7 +3793,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(74, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Total incl vat is the total price of the line including vat
+    /// Candidates for the line total including VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3797,7 +3807,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(82, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Total excl vat is the total price of the line excluding vat
+    /// Candidates for the line total excluding VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3811,7 +3821,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(90, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Total vat is the total vat of the line
+    /// Candidates for the VAT amount of the line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3825,7 +3835,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(98, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentageVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Percentage vat is the percentage vat of the line
+    /// Candidates for the VAT rate of the line, as a percentage, for example "25.0".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3839,7 +3849,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(106, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPriceInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Unit price incl vat is the unit price of the line including vat
+    /// Candidates for the price of one unit, including VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3853,7 +3863,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(114, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPriceExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Unit price excl vat is the unit price of the line excluding vat
+    /// Candidates for the price of one unit, excluding VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3867,7 +3877,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(122, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> total_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Total is the total price of the line (with/without vat)
+    /// Candidates for the line total as stated on the line, usually the rightmost amount.
+    /// Documents often don't say whether it includes VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3881,7 +3892,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(130, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> unitPrice_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Unit price is the unit price of the line (with/without vat)
+    /// Candidates for the price of one unit as stated on the line. Documents often don't
+    /// say whether it includes VAT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3892,9 +3904,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "model_metadata" field.</summary>
     public const int ModelMetadataFieldNumber = 17;
     private global::Ssn.Type.ModelSpec modelMetadata_;
-    /// <summary>
-    /// Model metadata
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {
@@ -3910,7 +3919,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(146, global::Asgt.V2.ProductTypeCandidate.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate> productType_ = new pbc::RepeatedField<global::Asgt.V2.ProductTypeCandidate>();
     /// <summary>
-    /// Product type classification for the line
+    /// Product type candidates for the line, classified from its description. Returned for
+    /// the PRODUCT_TYPES feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3924,8 +3934,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(154, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> kind_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// Kind classifies what the line charges for, e.g. "item", "freight", "fee",
-    /// "levy", "service_charge", "gratuity", "discount" or "deposit".
+    /// Candidates for what the line charges for, for example "item", "freight" or "discount".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4345,6 +4354,9 @@ namespace Ssn.Type {
 
   }
 
+  /// <summary>
+  /// A VAT level, with a list of candidates for each field.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VatDistribution : pb::IMessage<VatDistribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4399,7 +4411,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 1;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the candidate was found.
+    /// The page the VAT level was found on, starting at 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4416,7 +4428,8 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> percentage_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// The vat distribution candidate percentage
+    /// Candidates for the VAT rate, as a percentage with a dot as the decimal separator,
+    /// for example "25.0".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4430,7 +4443,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalInclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// The vat distribution candidate incl vat
+    /// Candidates for the amount including VAT at this rate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4444,7 +4457,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(34, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalExclVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// The vat distribution candidate excl vat
+    /// Candidates for the amount excluding VAT that the VAT is based on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4458,7 +4471,7 @@ namespace Ssn.Type {
         = pb::FieldCodec.ForMessage(42, global::Ssn.Type.Candidate.Parser);
     private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> totalVat_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
-    /// The vat distribution candidate
+    /// Candidates for the VAT amount at this rate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4469,9 +4482,6 @@ namespace Ssn.Type {
     /// <summary>Field number for the "model_metadata" field.</summary>
     public const int ModelMetadataFieldNumber = 6;
     private global::Ssn.Type.ModelSpec modelMetadata_;
-    /// <summary>
-    /// Model metadata
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ssn.Type.ModelSpec ModelMetadata {

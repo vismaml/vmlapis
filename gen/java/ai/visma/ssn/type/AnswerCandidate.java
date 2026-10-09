@@ -6,6 +6,10 @@
 package ai.visma.ssn.type;
 
 /**
+ * <pre>
+ * An answer to one of the questions in the request.
+ * </pre>
+ *
  * Protobuf type {@code ssn.type.AnswerCandidate}
  */
 public final class AnswerCandidate extends
@@ -50,7 +54,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object question_ = "";
   /**
    * <pre>
-   * Question asked in the request
+   * The question, as sent in the request.
    * </pre>
    *
    * <code>string question = 1 [json_name = "question"];</code>
@@ -71,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Question asked in the request
+   * The question, as sent in the request.
    * </pre>
    *
    * <code>string question = 1 [json_name = "question"];</code>
@@ -97,7 +101,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object answer_ = "";
   /**
    * <pre>
-   * Model prediction for the question
+   * The answer, as text.
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -118,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Model prediction for the question
+   * The answer, as text.
    * </pre>
    *
    * <code>string answer = 2 [json_name = "answer"];</code>
@@ -143,7 +147,7 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.Confidence confidence_;
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -155,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -167,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Confidence of the prediction
+   * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -181,7 +185,7 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.type.ModelSpec modelMetadata_;
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -193,7 +197,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -205,7 +209,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Model metadata
+   * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
    * </pre>
    *
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -219,7 +223,8 @@ private static final long serialVersionUID = 0L;
   private int pageRef_ = 0;
   /**
    * <pre>
-   * A reference to the page where the candidate was found.
+   * The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+   * first and last page together (see `documentMetadata.pageCount`).
    * </pre>
    *
    * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>
@@ -440,6 +445,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An answer to one of the questions in the request.
+   * </pre>
+   *
    * Protobuf type {@code ssn.type.AnswerCandidate}
    */
   public static final class Builder extends
@@ -657,7 +666,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object question_ = "";
     /**
      * <pre>
-     * Question asked in the request
+     * The question, as sent in the request.
      * </pre>
      *
      * <code>string question = 1 [json_name = "question"];</code>
@@ -677,7 +686,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Question asked in the request
+     * The question, as sent in the request.
      * </pre>
      *
      * <code>string question = 1 [json_name = "question"];</code>
@@ -698,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Question asked in the request
+     * The question, as sent in the request.
      * </pre>
      *
      * <code>string question = 1 [json_name = "question"];</code>
@@ -715,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Question asked in the request
+     * The question, as sent in the request.
      * </pre>
      *
      * <code>string question = 1 [json_name = "question"];</code>
@@ -729,7 +738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Question asked in the request
+     * The question, as sent in the request.
      * </pre>
      *
      * <code>string question = 1 [json_name = "question"];</code>
@@ -749,7 +758,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object answer_ = "";
     /**
      * <pre>
-     * Model prediction for the question
+     * The answer, as text.
      * </pre>
      *
      * <code>string answer = 2 [json_name = "answer"];</code>
@@ -769,7 +778,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model prediction for the question
+     * The answer, as text.
      * </pre>
      *
      * <code>string answer = 2 [json_name = "answer"];</code>
@@ -790,7 +799,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model prediction for the question
+     * The answer, as text.
      * </pre>
      *
      * <code>string answer = 2 [json_name = "answer"];</code>
@@ -807,7 +816,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model prediction for the question
+     * The answer, as text.
      * </pre>
      *
      * <code>string answer = 2 [json_name = "answer"];</code>
@@ -821,7 +830,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model prediction for the question
+     * The answer, as text.
      * </pre>
      *
      * <code>string answer = 2 [json_name = "answer"];</code>
@@ -843,7 +852,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.Confidence, ai.visma.ssn.type.Confidence.Builder, ai.visma.ssn.type.ConfidenceOrBuilder> confidenceBuilder_;
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -854,7 +863,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -869,7 +878,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -889,7 +898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -907,7 +916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -932,7 +941,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -949,7 +958,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -961,7 +970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -976,7 +985,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Confidence of the prediction
+     * [NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
@@ -1000,7 +1009,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> modelMetadataBuilder_;
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1011,7 +1020,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1026,7 +1035,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1046,7 +1055,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1064,7 +1073,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1089,7 +1098,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1106,7 +1115,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1118,7 +1127,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1133,7 +1142,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model metadata
+     * [NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.
      * </pre>
      *
      * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
@@ -1155,7 +1164,8 @@ private static final long serialVersionUID = 0L;
     private int pageRef_ ;
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+     * first and last page together (see `documentMetadata.pageCount`).
      * </pre>
      *
      * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>
@@ -1167,7 +1177,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+     * first and last page together (see `documentMetadata.pageCount`).
      * </pre>
      *
      * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>
@@ -1183,7 +1194,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A reference to the page where the candidate was found.
+     * The page the answer comes from, starting at 1. It's 1 when Smartscan reads the
+     * first and last page together (see `documentMetadata.pageCount`).
      * </pre>
      *
      * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>

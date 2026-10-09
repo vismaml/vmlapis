@@ -40,6 +40,9 @@ namespace Asgt.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A file of a trained model.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelFile : pb::IMessage<ModelFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -89,6 +92,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    /// Name of the file.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
@@ -101,6 +107,9 @@ namespace Asgt.Type {
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 2;
     private pb::ByteString data_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Contents of the file.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Data {

@@ -7,7 +7,8 @@
   },
   "tags": [
     {
-      "name": "TransactionService"
+      "name": "TransactionService",
+      "description": "Create transactions, poll their status, fetch and correct their results, and delete them."
     }
   ],
   "schemes": [
@@ -22,6 +23,8 @@
   "paths": {
     "/v1/tags/{tagName}": {
       "delete": {
+        "summary": "Delete all transactions with a tag.",
+        "description": "Deletes every transaction in your project that was created with this tag, with its\ndocument, results and feedback. Deletion runs in the background, as with\nDELETE /v1/transactions/{id}.\n\nReturns 404 when no transaction in your project has the tag.",
         "operationId": "TransactionService_DeleteTag",
         "responses": {
           "200": {
@@ -41,7 +44,7 @@
         "parameters": [
           {
             "name": "tagName",
-            "description": "text-no-spaces",
+            "description": "The tag, as set in tags when the transactions were created. URL-encode it if it holds\ncharacters that aren't allowed in a URL path.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -54,6 +57,8 @@
     },
     "/v1/transactions": {
       "delete": {
+        "summary": "Delete a transaction.",
+        "description": "Deletes the transaction with its document, results and feedback. Refer to the\ntransaction by its ID in the path, or call DELETE /v1/transactions with the customId\nquery parameter.\n\nDeletion runs in the background. A 200 response means the request was accepted, and the\ndata is removed shortly afterwards. Once it's removed, the custom ID can be used again.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_DeleteTransaction2",
         "responses": {
           "200": {
@@ -73,12 +78,14 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to DELETE /v1/transactions.",
             "in": "query",
             "required": false,
             "type": "string"
@@ -89,6 +96,8 @@
         ]
       },
       "post": {
+        "summary": "Create a transaction.",
+        "description": "Submits a document for processing and returns right away with the transaction ID, plus\nyour custom ID if you set one. Poll GET /v1/transactions/{id}/status until the status is\nDONE, PARTIAL or FAILED, then fetch the results with GET /v1/transactions/{id}/results.\n\nReturns 400 when the document or the features are missing, when a feature name is\nunknown, or when the document can't be downloaded from its URL. Returns 409 when the\ncustom ID is already used in your project.",
         "operationId": "TransactionService_CreateTransaction",
         "responses": {
           "200": {
@@ -107,6 +116,7 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Request body for creating a transaction.",
             "in": "body",
             "required": true,
             "schema": {
@@ -121,6 +131,8 @@
     },
     "/v1/transactions/results": {
       "get": {
+        "summary": "Get the results of a transaction.",
+        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionResults2",
         "responses": {
           "200": {
@@ -139,19 +151,21 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to GET /v1/transactions/results.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "minConfidence",
-            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "description": "The lowest confidence level to return. Defaults to HIGH. Candidates below it are left\nout, and so is a field feature with no candidate left. Applies to field features such as\nTOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR\ncodes or text.\n\n - UNKNOWN: No level. As `minConfidence`, it means the default, HIGH.\n - VERIFIED: The consistency checks of the VERIFIED feature confirmed or corrected the value.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -168,6 +182,7 @@
           },
           {
             "name": "maxResults",
+            "description": "The maximum number of candidates per field feature. Defaults to 1.",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -179,6 +194,8 @@
         ]
       },
       "put": {
+        "summary": "Send corrected results for a transaction.",
+        "description": "[NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,\nso it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.\n\nSaves your corrected annotations as feedback, for improving the models. Send them once\nthe transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400\n(FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.\n\nReturns 404 when the transaction doesn't exist in your project.",
         "operationId": "TransactionService_UpdateTransactionResults2",
         "responses": {
           "200": {
@@ -197,12 +214,14 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "[NOT WORKING] Identifying the transaction by custom ID doesn't work here.\nPUT /v1/transactions/results ignores the request body, so it returns success but saves\nnothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides.",
             "in": "query",
             "required": false,
             "type": "string"
@@ -215,6 +234,8 @@
     },
     "/v1/transactions/status": {
       "get": {
+        "summary": "Get the status of a transaction.",
+        "description": "Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL\nand FAILED are final, so stop polling and fetch the results. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/status with the customId query\nparameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionStatus2",
         "responses": {
           "200": {
@@ -233,12 +254,14 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to GET /v1/transactions/status.",
             "in": "query",
             "required": false,
             "type": "string"
@@ -251,6 +274,8 @@
     },
     "/v1/transactions/{id}": {
       "delete": {
+        "summary": "Delete a transaction.",
+        "description": "Deletes the transaction with its document, results and feedback. Refer to the\ntransaction by its ID in the path, or call DELETE /v1/transactions with the customId\nquery parameter.\n\nDeletion runs in the background. A 200 response means the request was accepted, and the\ndata is removed shortly afterwards. Once it's removed, the custom ID can be used again.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_DeleteTransaction",
         "responses": {
           "200": {
@@ -270,12 +295,14 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to DELETE /v1/transactions.",
             "in": "query",
             "required": false,
             "type": "string"
@@ -288,6 +315,8 @@
     },
     "/v1/transactions/{id}/results": {
       "get": {
+        "summary": "Get the results of a transaction.",
+        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionResults",
         "responses": {
           "200": {
@@ -306,19 +335,21 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to GET /v1/transactions/results.",
             "in": "query",
             "required": false,
             "type": "string"
           },
           {
             "name": "minConfidence",
-            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "description": "The lowest confidence level to return. Defaults to HIGH. Candidates below it are left\nout, and so is a field feature with no candidate left. Applies to field features such as\nTOTAL_INCL_VAT and IBAN, but not to KSEF, purchase lines, VAT distribution, answers, QR\ncodes or text.\n\n - UNKNOWN: No level. As `minConfidence`, it means the default, HIGH.\n - VERIFIED: The consistency checks of the VERIFIED feature confirmed or corrected the value.",
             "in": "query",
             "required": false,
             "type": "string",
@@ -335,6 +366,7 @@
           },
           {
             "name": "maxResults",
+            "description": "The maximum number of candidates per field feature. Defaults to 1.",
             "in": "query",
             "required": false,
             "type": "integer",
@@ -346,6 +378,8 @@
         ]
       },
       "put": {
+        "summary": "Send corrected results for a transaction.",
+        "description": "[NOT WORKING] The custom ID form, PUT /v1/transactions/results, ignores the request body,\nso it returns success but saves nothing. Use PUT /v1/transactions/{id}/results.\n\nSaves your corrected annotations as feedback, for improving the models. Send them once\nthe transaction is DONE or PARTIAL. Before that, or after it FAILED, the call returns 400\n(FAILED_PRECONDITION). Each call with annotations replaces the feedback sent before.\n\nReturns 404 when the transaction doesn't exist in your project.",
         "operationId": "TransactionService_UpdateTransactionResults",
         "responses": {
           "200": {
@@ -364,6 +398,7 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID. Send it in the path, with PUT /v1/transactions/{id}/results.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -384,6 +419,8 @@
     },
     "/v1/transactions/{id}/status": {
       "get": {
+        "summary": "Get the status of a transaction.",
+        "description": "Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL\nand FAILED are final, so stop polling and fetch the results. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/status with the customId query\nparameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionStatus",
         "responses": {
           "200": {
@@ -402,12 +439,14 @@
         "parameters": [
           {
             "name": "id",
+            "description": "The transaction ID, as returned when the transaction was created. Takes precedence over\ncustomId when both are set.",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
             "name": "customId",
+            "description": "The custom ID you set when creating the transaction. Used only when no transaction ID\nis given, so send it to GET /v1/transactions/status.",
             "in": "query",
             "required": false,
             "type": "string"
@@ -444,7 +483,8 @@
         "VERY_HIGH",
         "VERIFIED"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence levels, from lowest to highest. The levels are designed to give\nstable results across model upgrades.\n\n - UNKNOWN: No level. As `minConfidence`, it means the default, HIGH.\n - VERIFIED: The consistency checks of the VERIFIED feature confirmed or corrected the value."
     },
     "DetectedBreakBreakType": {
       "type": "string",
@@ -457,7 +497,7 @@
         "LINE_BREAK"
       ],
       "default": "UNKNOWN",
-      "description": "Enum to denote the type of break found. New line, space etc.\n\n - UNKNOWN: Unknown break label type.\n - SPACE: Regular space.\n - SURE_SPACE: Sure space (very wide).\n - EOL_SURE_SPACE: Line-wrapping break.\n - HYPHEN: End-line hyphen that is not present in text; does not co-occur with\n`SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.\n - LINE_BREAK: Line break that ends a paragraph."
+      "description": "Enum to denote the type of break found. New line, space etc.\n\n - UNKNOWN: Unknown break label type.\n - SPACE: Regular space.\n - SURE_SPACE: Sure space (very wide).\n - EOL_SURE_SPACE: Line-wrapping break.\n - HYPHEN: End-line hyphen that is not present in text; does not co-occur with\n`SPACE` or `LINE_BREAK`.\n - LINE_BREAK: Line break that ends a paragraph."
     },
     "TextAnnotationDetectedBreak": {
       "type": "object",
@@ -518,24 +558,26 @@
       "type": "object",
       "properties": {
         "customId": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT WORKING] Identifying the transaction by custom ID doesn't work here.\nPUT /v1/transactions/results ignores the request body, so it returns success but saves\nnothing. Use PUT /v1/transactions/{id}/results, where the ID in the path decides."
         },
         "annotations": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/asynctonv1Annotation"
-          }
+          },
+          "description": "Your corrected results, in the same format as the annotations returned by\nGET /v1/transactions/{id}/results. Each call with annotations replaces the feedback sent\nbefore."
         }
       },
-      "title": "--- put: \"/v1/transactions/{id}/results\" ---"
+      "description": "Request for sending corrected results."
     },
     "asynctonv1Annotation": {
       "type": "object",
       "properties": {
         "feature": {
           "type": "string",
-          "title": "feature name e.g. \"TOTAL_INCL_VAT\""
+          "description": "The feature these results belong to, for example TOTAL_INCL_VAT."
         },
         "candidates": {
           "type": "array",
@@ -543,7 +585,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "ssn candidates"
+          "description": "Candidates for a field feature, such as TOTAL_INCL_VAT or IBAN: at most maxResults of\nthem, at or above minConfidence, without their confidence value. corrected is only set at\nthe VERIFIED level. For KSEF, the one candidate holds the KSeF number."
         },
         "purchaseLineCandidates": {
           "type": "array",
@@ -551,7 +593,7 @@
             "type": "object",
             "$ref": "#/definitions/typePurchaseLineCandidate"
           },
-          "title": "purchase line candidates (old format)"
+          "description": "[DEPRECATED] Purchase lines in the simple form: one entry per line, each field holding a\nsingle string, the value of the first candidate in purchaseLinesDetails. Kept for\nexisting integrations. New fields, such as productType, are only added to\npurchaseLinesDetails, so use that instead."
         },
         "answerCandidates": {
           "type": "array",
@@ -559,10 +601,10 @@
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
           },
-          "title": "qa candidates"
+          "description": "Answers to the questions sent with the transaction, for the QA feature."
         },
         "textAnnotation": {
-          "title": "text annotation",
+          "description": "The document's text and layout, for the TEXT_ANNOTATION feature: the full text, and the\npages broken down into blocks, paragraphs, words and symbols with their positions.",
           "allOf": [
             {
               "$ref": "#/definitions/typeTextAnnotation"
@@ -575,7 +617,7 @@
             "type": "object",
             "$ref": "#/definitions/typePageText"
           },
-          "title": "page texts"
+          "description": "The plain text of each page, for the PAGE_TEXTS feature. pageRef numbers the pages from 1."
         },
         "vatDistributionCandidates": {
           "type": "array",
@@ -583,7 +625,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
           },
-          "title": "vat distribution candidates (old format)"
+          "description": "[DEPRECATED] VAT distribution in the simple form, each field holding a single string.\npercentage, amount, exclVat and inclVat hold the first candidate's value of percentage,\ntotalVat, totalExclVat and totalInclVat in vatDistributionDetails. Kept for existing\nintegrations, so use vatDistributionDetails instead."
         },
         "qrCodes": {
           "type": "array",
@@ -591,7 +633,7 @@
             "type": "object",
             "$ref": "#/definitions/typeQrCodeData"
           },
-          "title": "qr codes detected in document"
+          "description": "QR codes found in the document, for the QR_CODES feature."
         },
         "swissQrBills": {
           "type": "array",
@@ -599,7 +641,7 @@
             "type": "object",
             "$ref": "#/definitions/typeSwissQrBill"
           },
-          "title": "swiss qr bills detected in document"
+          "description": "Swiss QR bills found in the document, for the SWISS_QR_BILLS feature."
         },
         "purchaseLinesDetails": {
           "type": "array",
@@ -607,7 +649,7 @@
             "type": "object",
             "$ref": "#/definitions/typePurchaseLine"
           },
-          "description": "Purchase lines for the document. This is a list where each field is a candidate."
+          "description": "Purchase lines in the detailed form, for the PURCHASE_LINES feature: one entry per line,\neach field holding a list of candidates with their confidence levels. With PRODUCT_TYPES,\neach line also holds productType suggestions."
         },
         "vatDistributionDetails": {
           "type": "array",
@@ -615,7 +657,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVatDistribution"
           },
-          "description": "VAT distribution for the document. This is a list where each field is a candidate."
+          "description": "VAT distribution in the detailed form, for the VAT_DISTRIBUTION feature: each field holds\na list of candidates with their confidence levels. The candidates come without\nconfidence values, bounding boxes or model metadata."
         },
         "structuredAddress": {
           "type": "array",
@@ -623,9 +665,10 @@
             "type": "object",
             "$ref": "#/definitions/typeStructuredAddress"
           },
-          "description": "Structured address, parsed from the raw address using the geo service."
+          "description": "The address split into street, postal code, city, country and country code, for the\nSUPPLIER_ADDRESS and RECEIVER_ADDRESS features."
         }
-      }
+      },
+      "description": "The results of one feature. Only the fields that belong to the feature are set."
     },
     "protobufAny": {
       "type": "object",
@@ -660,14 +703,14 @@
       "properties": {
         "question": {
           "type": "string",
-          "title": "Question asked in the request"
+          "description": "The question, as sent in the request."
         },
         "answer": {
           "type": "string",
-          "title": "Model prediction for the question"
+          "description": "The answer, as text."
         },
         "confidence": {
-          "title": "Confidence of the prediction",
+          "description": "[NOT IMPLEMENTED] Answers don't have a confidence yet, so this is always empty.",
           "allOf": [
             {
               "$ref": "#/definitions/typeConfidence"
@@ -675,7 +718,7 @@
           ]
         },
         "modelMetadata": {
-          "title": "Model metadata",
+          "description": "[NOT IMPLEMENTED] Answers don't name a model yet, so this is always empty.",
           "allOf": [
             {
               "$ref": "#/definitions/typeModelSpec"
@@ -685,9 +728,10 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the answer comes from, starting at 1. It's 1 when Smartscan reads the\nfirst and last page together (see `documentMetadata.pageCount`)."
         }
-      }
+      },
+      "description": "An answer to one of the questions in the request."
     },
     "typeBlock": {
       "type": "object",
@@ -701,13 +745,7 @@
           ]
         },
         "boundingBox": {
-          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
-          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "paragraphs": {
           "type": "array",
@@ -715,7 +753,7 @@
             "type": "object",
             "$ref": "#/definitions/typeParagraph"
           },
-          "description": "List of paragraphs in this block (if this blocks is of type text)."
+          "description": "The paragraphs in the block, if it's a text block."
         },
         "blockType": {
           "description": "Detected block type (text, image etc) for this block.",
@@ -742,7 +780,7 @@
             "type": "object",
             "$ref": "#/definitions/typeVertex"
           },
-          "description": "The bounding polygon vertices."
+          "description": "The four points, in pixel coordinates."
         },
         "normalizedVertices": {
           "type": "array",
@@ -750,65 +788,45 @@
             "type": "object",
             "$ref": "#/definitions/typeNormalizedVertex"
           },
-          "description": "The bounding polygon normalized vertices."
+          "description": "The same four points relative to the page size, from 0 to 1, so you can place an\noverlay without knowing the size of the image."
         }
       },
-      "description": "A bounding polygon for the detected image annotation."
+      "description": "A box on the page, for example around the text of a candidate. Its four points are\nordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,\nthe order follows the text as it's read in its natural orientation, so the first\npoint is always the top-left corner of the text."
     },
     "typeCandidate": {
       "type": "object",
       "properties": {
         "value": {
           "type": "string",
-          "title": "Normalized value 01-01-2019"
+          "description": "The normalized value, for example \"2019-01-01\" for a date. Each field of the\nresponse describes the format of its values."
         },
         "text": {
           "type": "string",
-          "title": "The text as found on the document \"1. Jan\"\nuseful for overlays"
+          "description": "The text as written on the document, for example \"1. Jan\". Useful for overlays."
         },
         "confidence": {
-          "title": "Confidence",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeConfidence"
-            }
-          ]
+          "$ref": "#/definitions/typeConfidence"
         },
         "boundingBox": {
-          "description": "* when the text is horizontal it might look like:\n\n        0----1\n        |    |\n        3----2\n\n* when it's rotated 180 degrees around the top-left corner it becomes:\n\n        2----3\n        |    |\n        1----0\n\n  and the vertex order will still be (0, 1, 2, 3).",
-          "title": "The bounding box for the block.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "type": {
-          "title": "Indicate the type of the candidate",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeCandidateType"
-            }
-          ]
+          "$ref": "#/definitions/typeCandidateType"
         },
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found.\npage_ref start from 1."
+          "description": "The page the candidate was found on, starting at 1."
         },
         "modelMetadata": {
-          "title": "Model spec of the TensorFlow Serving model that predicted this candidate",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "corrected": {
           "type": "boolean",
-          "title": "Whether the candidate has been corrected by verification heuristics"
+          "description": "Only set on VERIFIED candidates: true when the consistency checks changed the\nvalue, and false when they confirmed it."
         }
-      }
+      },
+      "description": "A candidate value for a field, with its confidence and where it was found. In a\nlist of candidates, the most confident one comes first."
     },
     "typeCandidateType": {
       "type": "string",
@@ -817,39 +835,37 @@
         "FIELD",
         "DOCUMENT"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "The kind of candidate. Not every candidate has one."
     },
     "typeConfidence": {
       "type": "object",
       "properties": {
         "level": {
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ConfidenceLevel"
-            }
-          ]
+          "$ref": "#/definitions/ConfidenceLevel"
         },
         "value": {
           "type": "number",
           "format": "float",
-          "title": "The confidence value"
+          "description": "A confidence score. Most responses leave it out and return only the level."
         }
-      }
+      },
+      "description": "How confident Smartscan is in a candidate."
     },
     "typeModelSpec": {
       "type": "object",
       "properties": {
         "modelName": {
           "type": "string",
-          "title": "The name of the TensorFlow Serving model"
+          "description": "The name of the model."
         },
         "modelVer": {
           "type": "string",
           "format": "int64",
-          "title": "The version number of the TensorFlow Serving model"
+          "description": "The version of the model."
         }
-      }
+      },
+      "description": "The model that produced a candidate."
     },
     "typeNormalizedVertex": {
       "type": "object",
@@ -857,15 +873,15 @@
         "x": {
           "type": "number",
           "format": "float",
-          "description": "X coordinate."
+          "description": "The x coordinate, relative to the page width."
         },
         "y": {
           "type": "number",
           "format": "float",
-          "description": "Y coordinate."
+          "description": "The y coordinate, relative to the page height."
         }
       },
-      "description": "A vertex represents a 2D point in the image.\nNOTE: the normalized vertex coordinates are relative to the original image\nand range from 0 to 1."
+      "description": "A point on the page, relative to the page size. Both coordinates range from 0 to 1."
     },
     "typePage": {
       "type": "object",
@@ -881,12 +897,12 @@
         "width": {
           "type": "integer",
           "format": "int32",
-          "description": "Page width. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+          "description": "The width of the page."
         },
         "height": {
           "type": "integer",
           "format": "int32",
-          "description": "Page height. For PDFs the unit is points. For images (including\nTIFFs) the unit is pixels."
+          "description": "The height of the page."
         },
         "blocks": {
           "type": "array",
@@ -910,13 +926,14 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the text was found."
+          "description": "The page, starting at 1."
         },
         "text": {
           "type": "string",
-          "title": "The text content of the page"
+          "description": "The text of the page."
         }
-      }
+      },
+      "description": "The text of one page, returned for the PAGE_TEXTS feature."
     },
     "typeParagraph": {
       "type": "object",
@@ -930,12 +947,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the paragraph.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "words": {
           "type": "array",
@@ -959,7 +971,7 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+          "description": "The page the line was found on, starting at 1."
         },
         "code": {
           "type": "array",
@@ -967,7 +979,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Code is an ID that supplier uses to identify the item"
+          "description": "Candidates for the product code, product number or SKU that the supplier uses for\nthe item."
         },
         "description": {
           "type": "array",
@@ -975,7 +987,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Description is a piece of text that describes the item"
+          "description": "Candidates for the description of the line, typically the name of a product or the\ndelivered service."
         },
         "quantity": {
           "type": "array",
@@ -983,7 +995,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Quantity is the number of items"
+          "description": "Candidates for the quantity."
         },
         "itemNumber": {
           "type": "array",
@@ -991,7 +1003,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "ItemNumber is the number of the item"
+          "description": "Candidates for the row number, position or ID of the line, if the document states one."
         },
         "unit": {
           "type": "array",
@@ -999,7 +1011,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit is the unit of the item"
+          "description": "Candidates for the unit of the quantity, for example \"pieces\", \"kg\" or \"lb\"."
         },
         "totalDiscount": {
           "type": "array",
@@ -1007,7 +1019,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total discount is the total discount of the line"
+          "description": "Candidates for the total discount of the line."
         },
         "percentageDiscount": {
           "type": "array",
@@ -1015,7 +1027,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Percentage discount is the percentage discount of the line"
+          "description": "Candidates for the discount rate of the line, as a percentage."
         },
         "totalInclVat": {
           "type": "array",
@@ -1023,7 +1035,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total incl vat is the total price of the line including vat"
+          "description": "Candidates for the line total including VAT."
         },
         "totalExclVat": {
           "type": "array",
@@ -1031,7 +1043,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total excl vat is the total price of the line excluding vat"
+          "description": "Candidates for the line total excluding VAT."
         },
         "totalVat": {
           "type": "array",
@@ -1039,7 +1051,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total vat is the total vat of the line"
+          "description": "Candidates for the VAT amount of the line."
         },
         "percentageVat": {
           "type": "array",
@@ -1047,7 +1059,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Percentage vat is the percentage vat of the line"
+          "description": "Candidates for the VAT rate of the line, as a percentage, for example \"25.0\"."
         },
         "unitPriceInclVat": {
           "type": "array",
@@ -1055,7 +1067,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price incl vat is the unit price of the line including vat"
+          "description": "Candidates for the price of one unit, including VAT."
         },
         "unitPriceExclVat": {
           "type": "array",
@@ -1063,7 +1075,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price excl vat is the unit price of the line excluding vat"
+          "description": "Candidates for the price of one unit, excluding VAT."
         },
         "total": {
           "type": "array",
@@ -1071,7 +1083,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Total is the total price of the line (with/without vat)"
+          "description": "Candidates for the line total as stated on the line, usually the rightmost amount.\nDocuments often don't say whether it includes VAT."
         },
         "unitPrice": {
           "type": "array",
@@ -1079,15 +1091,10 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "Unit price is the unit price of the line (with/without vat)"
+          "description": "Candidates for the price of one unit as stated on the line. Documents often don't\nsay whether it includes VAT."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "productType": {
           "type": "array",
@@ -1095,7 +1102,7 @@
             "type": "object",
             "$ref": "#/definitions/v2ProductTypeCandidate"
           },
-          "title": "Product type classification for the line"
+          "description": "Product type candidates for the line, classified from its description. Returned for\nthe PRODUCT_TYPES feature."
         },
         "kind": {
           "type": "array",
@@ -1103,9 +1110,10 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "description": "Kind classifies what the line charges for, e.g. \"item\", \"freight\", \"fee\",\n\"levy\", \"service_charge\", \"gratuity\", \"discount\" or \"deposit\"."
+          "description": "Candidates for what the line charges for, for example \"item\", \"freight\" or \"discount\"."
         }
-      }
+      },
+      "description": "A purchase line, with a list of candidates for each field."
     },
     "typePurchaseLineCandidate": {
       "type": "object",
@@ -1113,217 +1121,255 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the line was found.\npage_ref start from 1."
+          "description": "The page the line was found on, starting at 1."
         },
         "code": {
           "type": "string",
-          "title": "Code is an ID that supplier uses to identify the item"
+          "description": "The product code, product number or SKU that the supplier uses for the item."
         },
         "description": {
           "type": "string",
-          "title": "Description is a piece of text that describes the item"
+          "description": "The description of the line, typically the name of a product or the delivered service."
         },
         "quantity": {
           "type": "string",
-          "title": "Quantity is the number of items"
+          "description": "The quantity."
         },
         "itemNumber": {
           "type": "string",
-          "title": "ItemNumber is the number of the item"
+          "description": "The row number, position or ID of the line, if the document states one."
         },
         "unit": {
           "type": "string",
-          "title": "Unit is the unit of the item"
+          "description": "The unit of the quantity, for example \"pieces\", \"kg\" or \"lb\"."
         },
         "totalDiscount": {
           "type": "string",
-          "title": "Total discount is the total discount of the line"
+          "description": "The total discount of the line."
         },
         "percentageDiscount": {
           "type": "string",
-          "title": "Percentage discount is the percentage discount of the line"
+          "description": "The discount rate of the line, as a percentage."
         },
         "totalInclVat": {
           "type": "string",
-          "title": "Total incl vat is the total price of the line including vat"
+          "description": "The line total including VAT."
         },
         "totalExclVat": {
           "type": "string",
-          "title": "Total excl vat is the total price of the line excluding vat"
+          "description": "The line total excluding VAT."
         },
         "totalVat": {
           "type": "string",
-          "title": "Total vat is the total vat of the line"
+          "description": "The VAT amount of the line."
         },
         "percentageVat": {
           "type": "string",
-          "title": "Percentage vat is the percentage vat of the line"
+          "description": "The VAT rate of the line, as a percentage, for example \"25.0\"."
         },
         "unitPriceInclVat": {
           "type": "string",
-          "title": "Unit price incl vat is the unit price of the line including vat"
+          "description": "The price of one unit, including VAT."
         },
         "unitPriceExclVat": {
           "type": "string",
-          "title": "Unit price excl vat is the unit price of the line excluding vat"
+          "description": "The price of one unit, excluding VAT."
         },
         "total": {
           "type": "string",
-          "title": "Total is the total price of the line (with/without vat)"
+          "description": "The line total as stated on the line, usually the rightmost amount. Documents\noften don't say whether it includes VAT."
         },
         "unitPrice": {
           "type": "string",
-          "title": "Unit price is the unit price of the line (with/without vat)"
+          "description": "The price of one unit as stated on the line. Documents often don't say whether\nit includes VAT."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "productType": {
           "type": "string",
-          "title": "Product type classification for the line"
+          "description": "The product type of the line in the older format. For product types, request\nPRODUCT_TYPES and read `productType` in `purchaseLinesDetails`."
         }
-      }
+      },
+      "description": "A purchase line in the older format, with a single value for each field. Use\nPurchaseLine instead: it has candidates with confidence levels for each field."
     },
     "typeQrCodeData": {
       "type": "object",
       "properties": {
         "content": {
-          "type": "string"
+          "type": "string",
+          "description": "The decoded text of the QR code."
         }
-      }
+      },
+      "description": "A QR code found in the document, returned for the QR_CODES feature."
     },
     "typeStructuredAddress": {
       "type": "object",
       "properties": {
         "street": {
-          "type": "string"
+          "type": "string",
+          "description": "The street name, without the house number."
         },
         "postalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal or ZIP code."
         },
         "city": {
-          "type": "string"
+          "type": "string",
+          "description": "The city or town."
         },
         "country": {
-          "type": "string"
+          "type": "string",
+          "description": "The full country name."
         },
         "countryCode": {
           "type": "string",
-          "title": "ISO 3166-1 alpha-2"
+          "description": "The country, as an ISO 3166-1 alpha-2 code in capital letters, for example \"DK\"."
         }
-      }
+      },
+      "description": "An address split into its parts. All fields are empty when the address can't be resolved."
     },
     "typeSwissQrBill": {
       "type": "object",
       "properties": {
         "qrType": {
-          "type": "string"
+          "type": "string",
+          "description": "The QR type, always \"SPC\"."
         },
         "version": {
-          "type": "string"
+          "type": "string",
+          "description": "The version of the Swiss QR bill standard, always \"0200\"."
         },
         "codingType": {
-          "type": "string"
+          "type": "string",
+          "description": "The character encoding type, always \"1\"."
         },
         "account": {
-          "type": "string"
+          "type": "string",
+          "description": "The IBAN or QR-IBAN of the creditor."
         },
         "creditorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the creditor's address: \"S\" for structured or \"K\" for combined."
         },
         "creditorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the creditor."
         },
         "creditorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the creditor, or the first address line."
         },
         "creditorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the creditor, or the second address line."
         },
         "creditorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the creditor."
         },
         "creditorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the creditor."
         },
         "creditorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the creditor, as a two-letter code."
         },
         "ultimateCreditorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the ultimate creditor's address: \"S\" for structured or \"K\" for combined.\nEmpty when the bill names no ultimate creditor."
         },
         "ultimateCreditorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the ultimate creditor."
         },
         "ultimateCreditorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the ultimate creditor, or the first address line."
         },
         "ultimateCreditorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the ultimate creditor, or the second address line."
         },
         "ultimateCreditorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the ultimate creditor."
         },
         "ultimateCreditorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the ultimate creditor."
         },
         "ultimateCreditorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the ultimate creditor, as a two-letter code."
         },
         "amount": {
-          "type": "string"
+          "type": "string",
+          "description": "The amount to pay, for example \"1949.75\". Empty when the bill leaves the amount open."
         },
         "currency": {
-          "type": "string"
+          "type": "string",
+          "description": "The currency, \"CHF\" or \"EUR\"."
         },
         "ultimateDebtorAddressType": {
-          "type": "string"
+          "type": "string",
+          "description": "The format of the ultimate debtor's address: \"S\" for structured or \"K\" for combined.\nEmpty when the bill names no ultimate debtor."
         },
         "ultimateDebtorName": {
-          "type": "string"
+          "type": "string",
+          "description": "The name of the ultimate debtor."
         },
         "ultimateDebtorAddressLine1": {
-          "type": "string"
+          "type": "string",
+          "description": "The street or P.O. box of the ultimate debtor, or the first address line."
         },
         "ultimateDebtorAddressLine2": {
-          "type": "string"
+          "type": "string",
+          "description": "The building number of the ultimate debtor, or the second address line."
         },
         "ultimateDebtorAddressPostalCode": {
-          "type": "string"
+          "type": "string",
+          "description": "The postal code of the ultimate debtor."
         },
         "ultimateDebtorAddressCity": {
-          "type": "string"
+          "type": "string",
+          "description": "The town of the ultimate debtor."
         },
         "ultimateDebtorAddressCountry": {
-          "type": "string"
+          "type": "string",
+          "description": "The country of the ultimate debtor, as a two-letter code."
         },
         "paymentReferenceType": {
-          "type": "string"
+          "type": "string",
+          "description": "The reference type: \"QRR\" for a QR reference, \"SCOR\" for a creditor reference, or\n\"NON\" for no reference."
         },
         "paymentReference": {
-          "type": "string"
+          "type": "string",
+          "description": "The payment reference."
         },
         "unstructuredMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "Additional information for the payment, for example \"Order from 15.10.2020\"."
         },
         "trailer": {
-          "type": "string"
+          "type": "string",
+          "description": "The end of the payment data, always \"EPD\"."
         },
         "billingInformation": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Billing information isn't extracted yet, so this is always empty."
         },
         "av1Parameters": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is\nalways empty."
         },
         "av2Parameters": {
-          "type": "string"
+          "type": "string",
+          "description": "[NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is\nalways empty."
         }
-      }
+      },
+      "description": "A Swiss QR bill parsed from a QR code in the document, returned for the\nSWISS_QR_BILLS feature. Only QR codes that follow version 0200 of the Swiss QR bill\nstandard are returned. The fields hold the values of the QR code as they are."
     },
     "typeSymbol": {
       "type": "object",
@@ -1337,12 +1383,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the symbol.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertice order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "text": {
           "type": "string",
@@ -1365,14 +1406,14 @@
             "type": "object",
             "$ref": "#/definitions/typePage"
           },
-          "description": "List of pages detected by OCR."
+          "description": "The pages, in order."
         },
         "text": {
           "type": "string",
           "description": "UTF-8 text detected on the pages."
         }
       },
-      "description": "TextAnnotation contains a structured representation of OCR extracted text.\nThe hierarchy of an OCR extracted text structure is like this:\n    TextAnnotation -\u003e Page -\u003e Block -\u003e Paragraph -\u003e Word -\u003e Symbol\nEach structural component, starting from Page, may further have their own\nproperties. Properties describe detected languages, breaks etc.. Please refer\nto the\n[TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]\nmessage definition below for more detail."
+      "description": "The OCR output for a document: its text, and its structure from pages down to single\nsymbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page\ndown can have properties, such as the detected languages and breaks."
     },
     "typeTier": {
       "type": "string",
@@ -1384,7 +1425,7 @@
         "HUMAN"
       ],
       "default": "DEFAULT",
-      "description": " - DEFAULT: Use the default tier. Defaults to the STANDARD option or account default, if set."
+      "description": "The model tier that processes the document. When no tier is set, PREMIUM is used.\n\n - DEFAULT: No tier set. The document is processed as PREMIUM.\n - STANDARD: The older tier, kept for existing integrations. Use PREMIUM for new integrations.\n - PREMIUM: Our proprietary AI, and the tier used when no tier is set.\n - ULTRA: Combines our proprietary AI with reasoning LLMs for the highest available quality.\nOnly available through Smartscan Async. The synchronous API serves it as PREMIUM."
     },
     "typeVatDistribution": {
       "type": "object",
@@ -1392,7 +1433,7 @@
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the VAT level was found on, starting at 1."
         },
         "percentage": {
           "type": "array",
@@ -1400,7 +1441,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate percentage"
+          "description": "Candidates for the VAT rate, as a percentage with a dot as the decimal separator,\nfor example \"25.0\"."
         },
         "totalInclVat": {
           "type": "array",
@@ -1408,7 +1449,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate incl vat"
+          "description": "Candidates for the amount including VAT at this rate."
         },
         "totalExclVat": {
           "type": "array",
@@ -1416,7 +1457,7 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate excl vat"
+          "description": "Candidates for the amount excluding VAT that the VAT is based on."
         },
         "totalVat": {
           "type": "array",
@@ -1424,51 +1465,43 @@
             "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
-          "title": "The vat distribution candidate"
+          "description": "Candidates for the VAT amount at this rate."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         }
-      }
+      },
+      "description": "A VAT level, with a list of candidates for each field."
     },
     "typeVatDistributionCandidate": {
       "type": "object",
       "properties": {
         "percentage": {
           "type": "string",
-          "title": "The vat distribution candidate percentage"
+          "description": "The VAT rate, as a percentage with a dot as the decimal separator, for example \"25.0\"."
         },
         "amount": {
           "type": "string",
-          "title": "The vat distribution candidate amount"
+          "description": "The VAT amount at this rate, rounded to two decimals, for example \"585.45\"."
         },
         "modelMetadata": {
-          "title": "Model metadata",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeModelSpec"
-            }
-          ]
+          "$ref": "#/definitions/typeModelSpec"
         },
         "pageRef": {
           "type": "integer",
           "format": "int64",
-          "description": "A reference to the page where the candidate was found."
+          "description": "The page the VAT level was found on, starting at 1."
         },
         "exclVat": {
           "type": "string",
-          "title": "The vat distribution candidate excl vat"
+          "description": "The amount excluding VAT that the VAT is based on, for example \"2341.80\"."
         },
         "inclVat": {
           "type": "string",
-          "title": "The vat distribution candidate incl vat"
+          "description": "The amount including VAT at this rate, for example \"2926.25\"."
         }
-      }
+      },
+      "description": "A VAT level in the older format, with a single value for each field. Use\nVatDistribution instead: it has candidates with confidence levels for each field."
     },
     "typeVertex": {
       "type": "object",
@@ -1476,15 +1509,15 @@
         "x": {
           "type": "integer",
           "format": "int32",
-          "description": "X coordinate."
+          "description": "The x coordinate."
         },
         "y": {
           "type": "integer",
           "format": "int32",
-          "description": "Y coordinate."
+          "description": "The y coordinate."
         }
       },
-      "description": "A vertex represents a 2D point in the image.\nNOTE: the vertex coordinates are in the same scale as the original image."
+      "description": "A point on the page, in pixel coordinates."
     },
     "typeWord": {
       "type": "object",
@@ -1498,12 +1531,7 @@
           ]
         },
         "boundingBox": {
-          "description": "The bounding box for the word.\nThe vertices are in the order of top-left, top-right, bottom-right,\nbottom-left. When a rotation of the bounding box is detected the rotation\nis represented as around the top-left corner as defined when the text is\nread in the 'natural' orientation.\nFor example:\n  * when the text is horizontal it might look like:\n     0----1\n     |    |\n     3----2\n  * when it's rotated 180 degrees around the top-left corner it becomes:\n     2----3\n     |    |\n     1----0\n  and the vertex order will still be (0, 1, 2, 3).",
-          "allOf": [
-            {
-              "$ref": "#/definitions/typeBoundingPoly"
-            }
-          ]
+          "$ref": "#/definitions/typeBoundingPoly"
         },
         "symbols": {
           "type": "array",
@@ -1525,7 +1553,7 @@
       "type": "object",
       "properties": {
         "document": {
-          "title": "we could have an ID here, in case they wanted to provide their own",
+          "description": "The document to process. Send the file Base64-encoded in content, or a URL in\nsource.httpUri for the service to download. When both are set, content is used.",
           "allOf": [
             {
               "$ref": "#/definitions/v1Document"
@@ -1537,17 +1565,18 @@
           "items": {
             "type": "string"
           },
-          "title": "Let's enforce the tags"
+          "description": "Labels for the transaction. To delete every transaction with a tag, call\nDELETE /v1/tags/{tagName}."
         },
         "features": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "title": "e.g. \"TOTAL_INCL_VAT\", \"PURCHASE_LINES\""
+          "description": "The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are\ncase-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).\nAn unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns\non PURCHASE_LINES, and VERIFIED turns on the features it verifies."
         },
         "customId": {
-          "type": "string"
+          "type": "string",
+          "description": "Your own ID for the transaction, to get its status and results, or delete it, without\nkeeping the transaction ID. It must be unique in your project: reusing one returns\n409 Conflict until that transaction has been deleted."
         },
         "tier": {
           "$ref": "#/definitions/typeTier"
@@ -1557,22 +1586,24 @@
           "items": {
             "type": "string"
           },
-          "title": "Questions to ask about the document"
+          "description": "Questions to ask about the document. The answers come back in the QA annotation, in\nanswerCandidates. Setting questions turns on the QA feature."
         }
       },
-      "title": "--- post: \"/v1/transactions\" ---"
+      "description": "Request body for creating a transaction."
     },
     "v1CreateTransactionResponse": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "description": "The transaction ID. Use it to get the status and results, to send feedback and to\ndelete the transaction."
         },
         "customId": {
           "type": "string",
-          "title": "CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)\n but I think I'm more prone to separate them in /results endpoint"
+          "description": "The custom ID from the request, if you set one."
         }
-      }
+      },
+      "description": "Response to creating a transaction."
     },
     "v1Document": {
       "type": "object",
@@ -1580,33 +1611,35 @@
         "content": {
           "type": "string",
           "format": "byte",
-          "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
+          "description": "The bytes of the file, base64-encoded in JSON. If you send both `content` and\n`source`, `content` is used."
         },
         "source": {
-          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request.",
+          "description": "Where to download the document from, when you don't send `content`.",
           "allOf": [
             {
               "$ref": "#/definitions/v1DocumentSource"
             }
           ]
         }
-      }
+      },
+      "description": "A document to scan: a PDF or an image. Send either `content` or `source`."
     },
     "v1DocumentSource": {
       "type": "object",
       "properties": {
         "httpUri": {
           "type": "string",
-          "description": "1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from\n   HTTP/HTTPS URLs, We cannot guarantee that the request will be\n   completed. Your request may fail if the specified host denies the\n   request (e.g. due to request throttling or DOS prevention).",
-          "title": "The URI of the source document. Can be either:"
+          "description": "A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,\nanswer with HTTP 200 and a Content-Length header, and send at most 10 MiB.\nPOST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10\nseconds. When the download fails, the call returns 400."
         }
-      }
+      },
+      "description": "A location to download a document from."
     },
     "v1GetTransactionResultsResponse": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "description": "The transaction ID."
         },
         "annotations": {
           "type": "array",
@@ -1614,46 +1647,54 @@
             "type": "object",
             "$ref": "#/definitions/asynctonv1Annotation"
           },
-          "title": "map: FEATURE NAME --\u003e SSN CANDIDATES\nempty when processing is still running"
+          "description": "The results, one entry per feature that produced any. Empty while the transaction is\nCREATED or RUNNING, and when it FAILED. Features that failed or found nothing are left\nout. PRODUCT_TYPES and VERIFIED have no entry of their own: they add productType to the\npurchase lines and the VERIFIED confidence level to candidates."
         },
         "errorMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "Describes a feature that failed, for example \"image too large\". Set when the transaction\nis FAILED or PARTIAL."
         },
         "customId": {
-          "type": "string"
+          "type": "string",
+          "description": "The custom ID, if one was set when the transaction was created."
         }
-      }
+      },
+      "description": "The results of a transaction."
     },
     "v1GetTransactionStatusResponse": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "description": "The transaction ID."
         },
         "status": {
           "type": "string",
-          "title": "e.g. \"RUNNING\", \"SUCCESSFUL\", \"PARTIAL\", \"FAILED\"\n\"PARTIAL\" is when some features failed - e.g. SSN succeeded but purchase lines failed"
+          "description": "The processing status. CREATED: accepted and waiting to be processed. RUNNING: being\nprocessed. DONE: every requested feature finished. PARTIAL: processing finished, but some\nfeatures failed while others succeeded, and the results hold the ones that succeeded.\nFAILED: every feature failed. DONE, PARTIAL and FAILED are final."
         },
         "errorMessage": {
           "type": "string",
-          "title": "Only populated when status == \"FAILED\" or status == \"PARTIAL\""
+          "description": "Describes a feature that failed, for example \"failed to process pdf\". Set as soon as any\nfeature has failed, so always when the status is PARTIAL or FAILED."
         },
         "customId": {
           "type": "string",
-          "title": "maybe a timestamp on different status would be nice here"
+          "description": "The custom ID, if one was set when the transaction was created. Left out when\nerrorMessage is set."
         }
-      }
+      },
+      "description": "The status of a transaction."
     },
     "v1UpdateTransactionResultsResponse": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "description": "The transaction ID."
         },
         "customId": {
-          "type": "string"
+          "type": "string",
+          "description": "The custom ID, if one was set when the transaction was created."
         }
-      }
+      },
+      "description": "Response to sending corrected results."
     },
     "v2ConfidenceLevel": {
       "type": "string",
@@ -1665,7 +1706,8 @@
         "HIGH",
         "VERY_HIGH"
       ],
-      "default": "UNKNOWN"
+      "default": "UNKNOWN",
+      "description": "Confidence level of a product type candidate, from VERY_LOW to VERY_HIGH. UNKNOWN means the\nmodel gave no level."
     },
     "v2ProductType": {
       "type": "string",
@@ -1746,25 +1788,34 @@
         "WATER_WASTE",
         "WEBSITE"
       ],
-      "default": "UNDEFINED"
+      "default": "UNDEFINED",
+      "description": "The product types a text can be classified into. UNDEFINED isn't a product type: it's the\nempty value."
     },
     "v2ProductTypeCandidate": {
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/v2ProductType"
+          "description": "The product type, such as ACCOUNTING_SOFTWARE. It's left out when the model returns a\nlabel that has no product type.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/v2ProductType"
+            }
+          ]
         },
         "label": {
-          "type": "string"
+          "type": "string",
+          "description": "The product type's name in words, such as \"Accounting software\"."
         },
         "confidence": {
           "type": "number",
-          "format": "float"
+          "format": "float",
+          "description": "The model's confidence score for this candidate. Use confidenceLevel to decide whether to\ntrust it."
         },
         "confidenceLevel": {
           "$ref": "#/definitions/v2ConfidenceLevel"
         }
-      }
+      },
+      "description": "A product type candidate for a text."
     }
   },
   "securityDefinitions": {

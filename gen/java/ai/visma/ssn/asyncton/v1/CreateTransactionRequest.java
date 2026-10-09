@@ -7,7 +7,7 @@ package ai.visma.ssn.asyncton.v1;
 
 /**
  * <pre>
- * --- post: "/v1/transactions" ---
+ * Request body for creating a transaction.
  * </pre>
  *
  * Protobuf type {@code ssn.asyncton.v1.CreateTransactionRequest}
@@ -59,7 +59,8 @@ private static final long serialVersionUID = 0L;
   private ai.visma.ssn.annotator.v1.Document document_;
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -71,7 +72,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -83,7 +85,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * we could have an ID here, in case they wanted to provide their own
+   * The document to process. Send the file Base64-encoded in content, or a URL in
+   * source.httpUri for the service to download. When both are set, content is used.
    * </pre>
    *
    * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -99,7 +102,8 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -111,7 +115,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -122,7 +127,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -134,7 +140,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Let's enforce the tags
+   * Labels for the transaction. To delete every transaction with a tag, call
+   * DELETE /v1/tags/{tagName}.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -152,7 +159,10 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -164,7 +174,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -175,7 +188,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -187,7 +203,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+   * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+   * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+   * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+   * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
    * </pre>
    *
    * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -203,6 +222,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object customId_ = "";
   /**
+   * <pre>
+   * Your own ID for the transaction, to get its status and results, or delete it, without
+   * keeping the transaction ID. It must be unique in your project: reusing one returns
+   * 409 Conflict until that transaction has been deleted.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The customId.
    */
@@ -220,6 +245,12 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Your own ID for the transaction, to get its status and results, or delete it, without
+   * keeping the transaction ID. It must be unique in your project: reusing one returns
+   * 409 Conflict until that transaction has been deleted.
+   * </pre>
+   *
    * <code>string custom_id = 4 [json_name = "customId"];</code>
    * @return The bytes for customId.
    */
@@ -262,7 +293,8 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -274,7 +306,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -285,7 +318,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -297,7 +331,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Questions to ask about the document
+   * Questions to ask about the document. The answers come back in the QA annotation, in
+   * answerCandidates. Setting questions turns on the QA feature.
    * </pre>
    *
    * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -544,7 +579,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- post: "/v1/transactions" ---
+   * Request body for creating a transaction.
    * </pre>
    *
    * Protobuf type {@code ssn.asyncton.v1.CreateTransactionRequest}
@@ -796,7 +831,8 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.annotator.v1.Document, ai.visma.ssn.annotator.v1.Document.Builder, ai.visma.ssn.annotator.v1.DocumentOrBuilder> documentBuilder_;
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -807,7 +843,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -822,7 +859,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -842,7 +880,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -860,7 +899,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -885,7 +925,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -902,7 +943,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -914,7 +956,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -929,7 +972,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * we could have an ID here, in case they wanted to provide their own
+     * The document to process. Send the file Base64-encoded in content, or a URL in
+     * source.httpUri for the service to download. When both are set, content is used.
      * </pre>
      *
      * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -958,7 +1002,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -971,7 +1016,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -982,7 +1028,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -994,7 +1041,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1007,7 +1055,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1026,7 +1075,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1044,7 +1094,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1062,7 +1113,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1077,7 +1129,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Let's enforce the tags
+     * Labels for the transaction. To delete every transaction with a tag, call
+     * DELETE /v1/tags/{tagName}.
      * </pre>
      *
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
@@ -1105,7 +1158,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1118,7 +1174,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1129,7 +1188,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1141,7 +1203,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1154,7 +1219,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1173,7 +1241,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1191,7 +1262,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1209,7 +1283,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1224,7 +1301,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
+     * The features to extract, for example TOTAL_INCL_VAT or PURCHASE_LINES. Names are
+     * case-sensitive; see the [feature list](https://docs.vml.visma.ai/smartscan-async/features/).
+     * An unknown name returns 400. Required unless questions are set. PRODUCT_TYPES also turns
+     * on PURCHASE_LINES, and VERIFIED turns on the features it verifies.
      * </pre>
      *
      * <code>repeated string features = 3 [json_name = "features"];</code>
@@ -1244,6 +1324,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object customId_ = "";
     /**
+     * <pre>
+     * Your own ID for the transaction, to get its status and results, or delete it, without
+     * keeping the transaction ID. It must be unique in your project: reusing one returns
+     * 409 Conflict until that transaction has been deleted.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return The customId.
      */
@@ -1260,6 +1346,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your own ID for the transaction, to get its status and results, or delete it, without
+     * keeping the transaction ID. It must be unique in your project: reusing one returns
+     * 409 Conflict until that transaction has been deleted.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return The bytes for customId.
      */
@@ -1277,6 +1369,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Your own ID for the transaction, to get its status and results, or delete it, without
+     * keeping the transaction ID. It must be unique in your project: reusing one returns
+     * 409 Conflict until that transaction has been deleted.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @param value The customId to set.
      * @return This builder for chaining.
@@ -1290,6 +1388,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your own ID for the transaction, to get its status and results, or delete it, without
+     * keeping the transaction ID. It must be unique in your project: reusing one returns
+     * 409 Conflict until that transaction has been deleted.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
@@ -1300,6 +1404,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Your own ID for the transaction, to get its status and results, or delete it, without
+     * keeping the transaction ID. It must be unique in your project: reusing one returns
+     * 409 Conflict until that transaction has been deleted.
+     * </pre>
+     *
      * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @param value The bytes for customId to set.
      * @return This builder for chaining.
@@ -1377,7 +1487,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1390,7 +1501,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1401,7 +1513,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1413,7 +1526,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1426,7 +1540,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1445,7 +1560,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1463,7 +1579,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1481,7 +1598,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>
@@ -1496,7 +1614,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Questions to ask about the document
+     * Questions to ask about the document. The answers come back in the QA annotation, in
+     * answerCandidates. Setting questions turns on the QA feature.
      * </pre>
      *
      * <code>repeated string questions = 6 [json_name = "questions"];</code>

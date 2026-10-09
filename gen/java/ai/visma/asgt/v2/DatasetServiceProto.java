@@ -168,7 +168,7 @@ public final class DatasetServiceProto {
       "\n\021TrainingsResponse\0224\n\ttrainings\030\001 \003(\0132\026" +
       ".asgt.v2.type.TrainingR\ttrainings\"=\n\016Mod" +
       "elsResponse\022+\n\006models\030\001 \003(\0132\023.asgt.v2.ty" +
-      "pe.ModelR\006models2\336\013\n\016DatasetService\022a\n\nG" +
+      "pe.ModelR\006models2\323\013\n\016DatasetService\022a\n\nG" +
       "etDataset\022\032.asgt.v2.GetDatasetRequest\032\022." +
       "asgt.type.Dataset\"#\202\323\344\223\002\035\022\033/v2/datasets/" +
       "{dataset_name}\022_\n\rCreateDataset\022\035.asgt.v" +
@@ -204,12 +204,12 @@ public final class DatasetServiceProto {
       "/datasets/{dataset_name}/models\022_\n\014GetTr" +
       "ainings\022\034.asgt.v2.GetTrainingsRequest\032\032." +
       "asgt.v2.TrainingsResponse\"\025\202\323\344\223\002\017\022\r/v2/t" +
-      "rainings\032G\222AD\022BManage datasets and examp" +
-      "les used for training AutoSuggest models" +
-      ".B\221\001\n\020ai.visma.asgt.v2B\023DatasetServicePr" +
-      "otoP\001Z+github.com/e-conomic/vmlapis/gen/" +
-      "go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023A" +
-      "sgt\\V2\\GPBMetadata\352\002\010Asgt::V2b\006proto3"
+      "rainings\032<\222A9\0227Manage datasets and the e" +
+      "xamples Autosuggest trains on.B\221\001\n\020ai.vi" +
+      "sma.asgt.v2B\023DatasetServiceProtoP\001Z+gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/asgt/v2\242" +
+      "\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBM" +
+      "etadata\352\002\010Asgt::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

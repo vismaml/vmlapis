@@ -11,7 +11,7 @@ public interface BoundingPolyOrBuilder extends
 
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -20,7 +20,7 @@ public interface BoundingPolyOrBuilder extends
       getVerticesList();
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -28,7 +28,7 @@ public interface BoundingPolyOrBuilder extends
   ai.visma.ssn.type.Vertex getVertices(int index);
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -36,7 +36,7 @@ public interface BoundingPolyOrBuilder extends
   int getVerticesCount();
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -45,7 +45,7 @@ public interface BoundingPolyOrBuilder extends
       getVerticesOrBuilderList();
   /**
    * <pre>
-   * The bounding polygon vertices.
+   * The four points, in pixel coordinates.
    * </pre>
    *
    * <code>repeated .ssn.type.Vertex vertices = 1 [json_name = "vertices"];</code>
@@ -55,7 +55,8 @@ public interface BoundingPolyOrBuilder extends
 
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -64,7 +65,8 @@ public interface BoundingPolyOrBuilder extends
       getNormalizedVerticesList();
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -72,7 +74,8 @@ public interface BoundingPolyOrBuilder extends
   ai.visma.ssn.type.NormalizedVertex getNormalizedVertices(int index);
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -80,7 +83,8 @@ public interface BoundingPolyOrBuilder extends
   int getNormalizedVerticesCount();
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>
@@ -89,7 +93,8 @@ public interface BoundingPolyOrBuilder extends
       getNormalizedVerticesOrBuilderList();
   /**
    * <pre>
-   * The bounding polygon normalized vertices.
+   * The same four points relative to the page size, from 0 to 1, so you can place an
+   * overlay without knowing the size of the image.
    * </pre>
    *
    * <code>repeated .ssn.type.NormalizedVertex normalized_vertices = 2 [json_name = "normalizedVertices"];</code>

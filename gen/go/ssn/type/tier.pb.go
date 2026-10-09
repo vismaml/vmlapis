@@ -20,15 +20,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// The model tier that processes the document. When no tier is set, PREMIUM is used.
 type Tier int32
 
 const (
-	// Use the default tier. Defaults to the STANDARD option or account default, if set.
-	Tier_DEFAULT  Tier = 0
+	// No tier set. The document is processed as PREMIUM.
+	Tier_DEFAULT Tier = 0
+	// The older tier, kept for existing integrations. Use PREMIUM for new integrations.
 	Tier_STANDARD Tier = 1
-	Tier_PREMIUM  Tier = 2
-	Tier_ULTRA    Tier = 3
-	Tier_HUMAN    Tier = 4
+	// Our proprietary AI, and the tier used when no tier is set.
+	Tier_PREMIUM Tier = 2
+	// Combines our proprietary AI with reasoning LLMs for the highest available quality.
+	// Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
+	Tier_ULTRA Tier = 3
+	Tier_HUMAN Tier = 4
 )
 
 // Enum value maps for Tier.

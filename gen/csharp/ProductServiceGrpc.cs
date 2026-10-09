@@ -99,7 +99,10 @@ namespace Asgt.V2 {
     public abstract partial class ProductTypeServiceBase
     {
       /// <summary>
-      /// Suggest product types for a batch of text inputs.
+      /// Suggest product types for a batch of texts.
+      ///
+      /// Returns one suggestion per text, in the same order, each with ranked product type
+      /// candidates. Send 1 to 512 texts, none of them empty.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -123,7 +126,7 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -135,7 +138,11 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Submit feedback for product type predictions.
+      /// Send the correct product types for texts.
+      ///
+      /// Stores each text with its correct product type and the model's current candidates for it,
+      /// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+      /// length, or if a category isn't a ProductType name.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -176,7 +183,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Suggest product types for a batch of text inputs.
+      /// Suggest product types for a batch of texts.
+      ///
+      /// Returns one suggestion per text, in the same order, each with ranked product type
+      /// candidates. Send 1 to 512 texts, none of them empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +199,10 @@ namespace Asgt.V2 {
         return BatchSuggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest product types for a batch of text inputs.
+      /// Suggest product types for a batch of texts.
+      ///
+      /// Returns one suggestion per text, in the same order, each with ranked product type
+      /// candidates. Send 1 to 512 texts, none of them empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +213,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchSuggest, null, options, request);
       }
       /// <summary>
-      /// Suggest product types for a batch of text inputs.
+      /// Suggest product types for a batch of texts.
+      ///
+      /// Returns one suggestion per text, in the same order, each with ranked product type
+      /// candidates. Send 1 to 512 texts, none of them empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +229,10 @@ namespace Asgt.V2 {
         return BatchSuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Suggest product types for a batch of text inputs.
+      /// Suggest product types for a batch of texts.
+      ///
+      /// Returns one suggestion per text, in the same order, each with ranked product type
+      /// candidates. Send 1 to 512 texts, none of them empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -272,7 +291,7 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_InternalBatchSuggest, null, options, request);
       }
       /// <summary>
-      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -285,7 +304,7 @@ namespace Asgt.V2 {
         return InternalBatchSuggestWithLogits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -296,7 +315,7 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_InternalBatchSuggestWithLogits, null, options, request);
       }
       /// <summary>
-      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,7 +328,7 @@ namespace Asgt.V2 {
         return InternalBatchSuggestWithLogitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits
+      /// Internal cluster-only batch suggest that additionally returns the raw per-class model logits.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -320,7 +339,11 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_InternalBatchSuggestWithLogits, null, options, request);
       }
       /// <summary>
-      /// Submit feedback for product type predictions.
+      /// Send the correct product types for texts.
+      ///
+      /// Stores each text with its correct product type and the model's current candidates for it,
+      /// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+      /// length, or if a category isn't a ProductType name.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -333,7 +356,11 @@ namespace Asgt.V2 {
         return Feedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Submit feedback for product type predictions.
+      /// Send the correct product types for texts.
+      ///
+      /// Stores each text with its correct product type and the model's current candidates for it,
+      /// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+      /// length, or if a category isn't a ProductType name.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -344,7 +371,11 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_Feedback, null, options, request);
       }
       /// <summary>
-      /// Submit feedback for product type predictions.
+      /// Send the correct product types for texts.
+      ///
+      /// Stores each text with its correct product type and the model's current candidates for it,
+      /// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+      /// length, or if a category isn't a ProductType name.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,7 +388,11 @@ namespace Asgt.V2 {
         return FeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Submit feedback for product type predictions.
+      /// Send the correct product types for texts.
+      ///
+      /// Stores each text with its correct product type and the model's current candidates for it,
+      /// to evaluate the model. Returns 400 if texts is empty, if texts and trueCategories differ in
+      /// length, or if a category isn't a ProductType name.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

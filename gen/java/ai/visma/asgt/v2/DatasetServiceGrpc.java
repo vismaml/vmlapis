@@ -452,7 +452,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the basic information about a dataset.
+     * Get a dataset.
+     * Returns the dataset's name, type, tags, retention policy and timestamps.
+     * Returns 404 if the dataset doesn't exist or has been deleted.
      * </pre>
      */
     default void getDataset(ai.visma.asgt.v2.GetDatasetRequest request,
@@ -462,8 +464,12 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * Create a dataset.
+     * The dataset starts empty. The first example you add sets its type, and adding examples
+     * schedules a training, so no model exists until you add examples and the training is done.
+     * Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+     * dataset, but the new dataset keeps the deleted one's tags and retention policy.
+     * Returns 400 if the name or a tag doesn't match the allowed format.
      * </pre>
      */
     default void createDataset(ai.visma.asgt.v2.CreateDatasetRequest request,
@@ -473,9 +479,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-     * provided data.
+     * [NOT IMPLEMENTED] Create or update a dataset.
+     * Returns 501. Create datasets with POST /v2/datasets.
      * </pre>
      */
     default void createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request,
@@ -485,7 +490,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete a dataset with the specified name.
+     * Delete a dataset.
+     * Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+     * soon as the deletion is accepted, and the examples are removed shortly afterwards.
+     * Returns 404 if the dataset doesn't exist or is already deleted.
      * </pre>
      */
     default void deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request,
@@ -495,8 +503,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete all datasets (and their examples) containing the specified tag.
-     * The datasets' names are not considered in this request - only the tag names is.
+     * Delete all datasets with a tag.
+     * Deletes every one of your datasets that has the tag, with their examples. Dataset names
+     * don't matter, only the tag. The examples are removed shortly after the call returns.
+     * Returns 200 even if no dataset has the tag.
      * </pre>
      */
     default void deleteTag(ai.visma.asgt.v2.DeleteTagRequest request,
@@ -506,7 +516,13 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Uploads a new single example.
+     * Add an example to a dataset.
+     * The first example sets the dataset's type, and every later example must use the same data
+     * structure. Adding examples schedules a training: about a minute later while the dataset is
+     * less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+     * Examples added while a training is scheduled or running are picked up by the next training.
+     * Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+     * field has the wrong format.
      * </pre>
      */
     default void createExample(ai.visma.asgt.v2.CreateExampleRequest request,
@@ -516,10 +532,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     * Uploads or updates a new single example.
-     * If the specified example already exists, the example
-     * is updated with the provided values according to provided ID.
+     * [NOT IMPLEMENTED] Add or update an example.
+     * Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
      * </pre>
      */
     default void createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request,
@@ -529,7 +543,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * Add several examples to a dataset.
+     * Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+     * training. Returns 400 if the list of examples is empty.
      * </pre>
      */
     default void batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request,
@@ -539,8 +555,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-     * removing existing models.
+     * Remove a dataset's examples, but keep its models.
+     * Future trainings only use examples added after this call, and the existing models stay
+     * available for suggestions. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     default void truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request,
@@ -550,8 +567,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trainings.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List a dataset's trainings.
+     * Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     default void getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request,
@@ -561,8 +579,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trained models.
-     * Number of requested models has to be larger than 0 but no larger than 100.
+     * List a dataset's models.
+     * Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     default void getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request,
@@ -572,8 +591,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent trainings accross all consumer's datasets.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List the trainings of all your datasets.
+     * Returns the most recent trainings across your datasets, newest first, each with its
+     * dataset. Set how many with options.limit, from 1 to 100. The default is 10.
      * </pre>
      */
     default void getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request,
@@ -611,7 +631,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the basic information about a dataset.
+     * Get a dataset.
+     * Returns the dataset's name, type, tags, retention policy and timestamps.
+     * Returns 404 if the dataset doesn't exist or has been deleted.
      * </pre>
      */
     public void getDataset(ai.visma.asgt.v2.GetDatasetRequest request,
@@ -622,8 +644,12 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * Create a dataset.
+     * The dataset starts empty. The first example you add sets its type, and adding examples
+     * schedules a training, so no model exists until you add examples and the training is done.
+     * Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+     * dataset, but the new dataset keeps the deleted one's tags and retention policy.
+     * Returns 400 if the name or a tag doesn't match the allowed format.
      * </pre>
      */
     public void createDataset(ai.visma.asgt.v2.CreateDatasetRequest request,
@@ -634,9 +660,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-     * provided data.
+     * [NOT IMPLEMENTED] Create or update a dataset.
+     * Returns 501. Create datasets with POST /v2/datasets.
      * </pre>
      */
     public void createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request,
@@ -647,7 +672,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete a dataset with the specified name.
+     * Delete a dataset.
+     * Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+     * soon as the deletion is accepted, and the examples are removed shortly afterwards.
+     * Returns 404 if the dataset doesn't exist or is already deleted.
      * </pre>
      */
     public void deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request,
@@ -658,8 +686,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete all datasets (and their examples) containing the specified tag.
-     * The datasets' names are not considered in this request - only the tag names is.
+     * Delete all datasets with a tag.
+     * Deletes every one of your datasets that has the tag, with their examples. Dataset names
+     * don't matter, only the tag. The examples are removed shortly after the call returns.
+     * Returns 200 even if no dataset has the tag.
      * </pre>
      */
     public void deleteTag(ai.visma.asgt.v2.DeleteTagRequest request,
@@ -670,7 +700,13 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Uploads a new single example.
+     * Add an example to a dataset.
+     * The first example sets the dataset's type, and every later example must use the same data
+     * structure. Adding examples schedules a training: about a minute later while the dataset is
+     * less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+     * Examples added while a training is scheduled or running are picked up by the next training.
+     * Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+     * field has the wrong format.
      * </pre>
      */
     public void createExample(ai.visma.asgt.v2.CreateExampleRequest request,
@@ -681,10 +717,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     * Uploads or updates a new single example.
-     * If the specified example already exists, the example
-     * is updated with the provided values according to provided ID.
+     * [NOT IMPLEMENTED] Add or update an example.
+     * Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
      * </pre>
      */
     public void createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request,
@@ -695,7 +729,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * Add several examples to a dataset.
+     * Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+     * training. Returns 400 if the list of examples is empty.
      * </pre>
      */
     public void batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request,
@@ -706,8 +742,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-     * removing existing models.
+     * Remove a dataset's examples, but keep its models.
+     * Future trainings only use examples added after this call, and the existing models stay
+     * available for suggestions. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public void truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request,
@@ -718,8 +755,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trainings.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List a dataset's trainings.
+     * Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public void getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request,
@@ -730,8 +768,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trained models.
-     * Number of requested models has to be larger than 0 but no larger than 100.
+     * List a dataset's models.
+     * Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public void getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request,
@@ -742,8 +781,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent trainings accross all consumer's datasets.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List the trainings of all your datasets.
+     * Returns the most recent trainings across your datasets, newest first, each with its
+     * dataset. Set how many with options.limit, from 1 to 100. The default is 10.
      * </pre>
      */
     public void getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request,
@@ -771,7 +811,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the basic information about a dataset.
+     * Get a dataset.
+     * Returns the dataset's name, type, tags, retention policy and timestamps.
+     * Returns 404 if the dataset doesn't exist or has been deleted.
      * </pre>
      */
     public ai.visma.asgt.type.Dataset getDataset(ai.visma.asgt.v2.GetDatasetRequest request) {
@@ -781,8 +823,12 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * Create a dataset.
+     * The dataset starts empty. The first example you add sets its type, and adding examples
+     * schedules a training, so no model exists until you add examples and the training is done.
+     * Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+     * dataset, but the new dataset keeps the deleted one's tags and retention policy.
+     * Returns 400 if the name or a tag doesn't match the allowed format.
      * </pre>
      */
     public com.google.protobuf.Empty createDataset(ai.visma.asgt.v2.CreateDatasetRequest request) {
@@ -792,9 +838,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-     * provided data.
+     * [NOT IMPLEMENTED] Create or update a dataset.
+     * Returns 501. Create datasets with POST /v2/datasets.
      * </pre>
      */
     public com.google.protobuf.Empty createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request) {
@@ -804,7 +849,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete a dataset with the specified name.
+     * Delete a dataset.
+     * Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+     * soon as the deletion is accepted, and the examples are removed shortly afterwards.
+     * Returns 404 if the dataset doesn't exist or is already deleted.
      * </pre>
      */
     public ai.visma.asgt.type.Dataset deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request) {
@@ -814,8 +862,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete all datasets (and their examples) containing the specified tag.
-     * The datasets' names are not considered in this request - only the tag names is.
+     * Delete all datasets with a tag.
+     * Deletes every one of your datasets that has the tag, with their examples. Dataset names
+     * don't matter, only the tag. The examples are removed shortly after the call returns.
+     * Returns 200 even if no dataset has the tag.
      * </pre>
      */
     public com.google.protobuf.Empty deleteTag(ai.visma.asgt.v2.DeleteTagRequest request) {
@@ -825,7 +875,13 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Uploads a new single example.
+     * Add an example to a dataset.
+     * The first example sets the dataset's type, and every later example must use the same data
+     * structure. Adding examples schedules a training: about a minute later while the dataset is
+     * less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+     * Examples added while a training is scheduled or running are picked up by the next training.
+     * Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+     * field has the wrong format.
      * </pre>
      */
     public com.google.protobuf.Empty createExample(ai.visma.asgt.v2.CreateExampleRequest request) {
@@ -835,10 +891,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     * Uploads or updates a new single example.
-     * If the specified example already exists, the example
-     * is updated with the provided values according to provided ID.
+     * [NOT IMPLEMENTED] Add or update an example.
+     * Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
      * </pre>
      */
     public com.google.protobuf.Empty createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request) {
@@ -848,7 +902,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * Add several examples to a dataset.
+     * Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+     * training. Returns 400 if the list of examples is empty.
      * </pre>
      */
     public com.google.protobuf.Empty batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request) {
@@ -858,8 +914,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-     * removing existing models.
+     * Remove a dataset's examples, but keep its models.
+     * Future trainings only use examples added after this call, and the existing models stay
+     * available for suggestions. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public com.google.protobuf.Empty truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request) {
@@ -869,8 +926,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trainings.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List a dataset's trainings.
+     * Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.TrainingsResponse getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request) {
@@ -880,8 +938,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trained models.
-     * Number of requested models has to be larger than 0 but no larger than 100.
+     * List a dataset's models.
+     * Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.ModelsResponse getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request) {
@@ -891,8 +950,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent trainings accross all consumer's datasets.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List the trainings of all your datasets.
+     * Returns the most recent trainings across your datasets, newest first, each with its
+     * dataset. Set how many with options.limit, from 1 to 100. The default is 10.
      * </pre>
      */
     public ai.visma.asgt.v2.TrainingsResponse getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request) {
@@ -919,7 +979,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the basic information about a dataset.
+     * Get a dataset.
+     * Returns the dataset's name, type, tags, retention policy and timestamps.
+     * Returns 404 if the dataset doesn't exist or has been deleted.
      * </pre>
      */
     public ai.visma.asgt.type.Dataset getDataset(ai.visma.asgt.v2.GetDatasetRequest request) {
@@ -929,8 +991,12 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * Create a dataset.
+     * The dataset starts empty. The first example you add sets its type, and adding examples
+     * schedules a training, so no model exists until you add examples and the training is done.
+     * Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+     * dataset, but the new dataset keeps the deleted one's tags and retention policy.
+     * Returns 400 if the name or a tag doesn't match the allowed format.
      * </pre>
      */
     public com.google.protobuf.Empty createDataset(ai.visma.asgt.v2.CreateDatasetRequest request) {
@@ -940,9 +1006,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-     * provided data.
+     * [NOT IMPLEMENTED] Create or update a dataset.
+     * Returns 501. Create datasets with POST /v2/datasets.
      * </pre>
      */
     public com.google.protobuf.Empty createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request) {
@@ -952,7 +1017,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete a dataset with the specified name.
+     * Delete a dataset.
+     * Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+     * soon as the deletion is accepted, and the examples are removed shortly afterwards.
+     * Returns 404 if the dataset doesn't exist or is already deleted.
      * </pre>
      */
     public ai.visma.asgt.type.Dataset deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request) {
@@ -962,8 +1030,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete all datasets (and their examples) containing the specified tag.
-     * The datasets' names are not considered in this request - only the tag names is.
+     * Delete all datasets with a tag.
+     * Deletes every one of your datasets that has the tag, with their examples. Dataset names
+     * don't matter, only the tag. The examples are removed shortly after the call returns.
+     * Returns 200 even if no dataset has the tag.
      * </pre>
      */
     public com.google.protobuf.Empty deleteTag(ai.visma.asgt.v2.DeleteTagRequest request) {
@@ -973,7 +1043,13 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Uploads a new single example.
+     * Add an example to a dataset.
+     * The first example sets the dataset's type, and every later example must use the same data
+     * structure. Adding examples schedules a training: about a minute later while the dataset is
+     * less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+     * Examples added while a training is scheduled or running are picked up by the next training.
+     * Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+     * field has the wrong format.
      * </pre>
      */
     public com.google.protobuf.Empty createExample(ai.visma.asgt.v2.CreateExampleRequest request) {
@@ -983,10 +1059,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     * Uploads or updates a new single example.
-     * If the specified example already exists, the example
-     * is updated with the provided values according to provided ID.
+     * [NOT IMPLEMENTED] Add or update an example.
+     * Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
      * </pre>
      */
     public com.google.protobuf.Empty createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request) {
@@ -996,7 +1070,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * Add several examples to a dataset.
+     * Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+     * training. Returns 400 if the list of examples is empty.
      * </pre>
      */
     public com.google.protobuf.Empty batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request) {
@@ -1006,8 +1082,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-     * removing existing models.
+     * Remove a dataset's examples, but keep its models.
+     * Future trainings only use examples added after this call, and the existing models stay
+     * available for suggestions. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public com.google.protobuf.Empty truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request) {
@@ -1017,8 +1094,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trainings.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List a dataset's trainings.
+     * Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.TrainingsResponse getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request) {
@@ -1028,8 +1106,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trained models.
-     * Number of requested models has to be larger than 0 but no larger than 100.
+     * List a dataset's models.
+     * Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public ai.visma.asgt.v2.ModelsResponse getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request) {
@@ -1039,8 +1118,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent trainings accross all consumer's datasets.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List the trainings of all your datasets.
+     * Returns the most recent trainings across your datasets, newest first, each with its
+     * dataset. Set how many with options.limit, from 1 to 100. The default is 10.
      * </pre>
      */
     public ai.visma.asgt.v2.TrainingsResponse getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request) {
@@ -1067,7 +1147,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the basic information about a dataset.
+     * Get a dataset.
+     * Returns the dataset's name, type, tags, retention policy and timestamps.
+     * Returns 404 if the dataset doesn't exist or has been deleted.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.type.Dataset> getDataset(
@@ -1078,8 +1160,12 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * Create a dataset.
+     * The dataset starts empty. The first example you add sets its type, and adding examples
+     * schedules a training, so no model exists until you add examples and the training is done.
+     * Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+     * dataset, but the new dataset keeps the deleted one's tags and retention policy.
+     * Returns 400 if the name or a tag doesn't match the allowed format.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createDataset(
@@ -1090,9 +1176,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-     * provided data.
+     * [NOT IMPLEMENTED] Create or update a dataset.
+     * Returns 501. Create datasets with POST /v2/datasets.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createOrUpdateDataset(
@@ -1103,7 +1188,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete a dataset with the specified name.
+     * Delete a dataset.
+     * Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+     * soon as the deletion is accepted, and the examples are removed shortly afterwards.
+     * Returns 404 if the dataset doesn't exist or is already deleted.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.type.Dataset> deleteDataset(
@@ -1114,8 +1202,10 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Delete all datasets (and their examples) containing the specified tag.
-     * The datasets' names are not considered in this request - only the tag names is.
+     * Delete all datasets with a tag.
+     * Deletes every one of your datasets that has the tag, with their examples. Dataset names
+     * don't matter, only the tag. The examples are removed shortly after the call returns.
+     * Returns 200 even if no dataset has the tag.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTag(
@@ -1126,7 +1216,13 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Uploads a new single example.
+     * Add an example to a dataset.
+     * The first example sets the dataset's type, and every later example must use the same data
+     * structure. Adding examples schedules a training: about a minute later while the dataset is
+     * less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+     * Examples added while a training is scheduled or running are picked up by the next training.
+     * Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+     * field has the wrong format.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createExample(
@@ -1137,10 +1233,8 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Not implemented yet.
-     * Uploads or updates a new single example.
-     * If the specified example already exists, the example
-     * is updated with the provided values according to provided ID.
+     * [NOT IMPLEMENTED] Add or update an example.
+     * Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createOrUpdateExample(
@@ -1151,7 +1245,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * Add several examples to a dataset.
+     * Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+     * training. Returns 400 if the list of examples is empty.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> batchCreateExample(
@@ -1162,8 +1258,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-     * removing existing models.
+     * Remove a dataset's examples, but keep its models.
+     * Future trainings only use examples added after this call, and the existing models stay
+     * available for suggestions. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> truncateDataset(
@@ -1174,8 +1271,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trainings.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List a dataset's trainings.
+     * Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.TrainingsResponse> getDatasetTrainings(
@@ -1186,8 +1284,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent dataset's trained models.
-     * Number of requested models has to be larger than 0 but no larger than 100.
+     * List a dataset's models.
+     * Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+     * 100. The default is 10. Returns 404 if the dataset doesn't exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.ModelsResponse> getDatasetModels(
@@ -1198,8 +1297,9 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * Get the specified number of the most recent trainings accross all consumer's datasets.
-     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * List the trainings of all your datasets.
+     * Returns the most recent trainings across your datasets, newest first, each with its
+     * dataset. Set how many with options.limit, from 1 to 100. The default is 10.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.TrainingsResponse> getTrainings(

@@ -46,7 +46,7 @@ namespace Asgt.V2.Type {
   }
   #region Messages
   /// <summary>
-  /// A pair of example data and example target values
+  /// An example to train on: input data and the target values it should give.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Example : pb::IMessage<Example>
@@ -112,6 +112,9 @@ namespace Asgt.V2.Type {
     private static readonly pb::FieldCodec<global::Asgt.V2.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.V2.Type.TargetValue.Parser);
     private readonly pbc::RepeatedField<global::Asgt.V2.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.V2.Type.TargetValue>();
+    /// <summary>
+    /// The correct value for each target. At least one is required.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Asgt.V2.Type.TargetValue> TargetValues {
@@ -122,8 +125,9 @@ namespace Asgt.V2.Type {
     public const int IdFieldNumber = 3;
     private string id_ = "";
     /// <summary>
-    /// Not implemented yet.
-    /// An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
+    /// [NOT IMPLEMENTED] Ignored for now. It's meant to identify an example so that
+    /// PUT /v2/datasets/{datasetName}/examples/{example.id} can update it, and that endpoint
+    /// returns 501. If you set it, it must be a UUID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

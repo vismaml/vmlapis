@@ -11,7 +11,7 @@ public interface PageTextOrBuilder extends
 
   /**
    * <pre>
-   * A reference to the page where the text was found.
+   * The page, starting at 1.
    * </pre>
    *
    * <code>uint32 page_ref = 1 [json_name = "pageRef"];</code>
@@ -21,7 +21,7 @@ public interface PageTextOrBuilder extends
 
   /**
    * <pre>
-   * The text content of the page
+   * The text of the page.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>
@@ -30,7 +30,7 @@ public interface PageTextOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * The text content of the page
+   * The text of the page.
    * </pre>
    *
    * <code>string text = 2 [json_name = "text"];</code>

@@ -10,30 +10,55 @@ public interface PredictionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   java.util.List<ai.visma.asgt.type.Prediction.Target> 
       getTargetsList();
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   ai.visma.asgt.type.Prediction.Target getTargets(int index);
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   int getTargetsCount();
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   java.util.List<? extends ai.visma.asgt.type.Prediction.TargetOrBuilder> 
       getTargetsOrBuilderList();
   /**
+   * <pre>
+   * One entry per target of the model.
+   * </pre>
+   *
    * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
    */
   ai.visma.asgt.type.Prediction.TargetOrBuilder getTargetsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Share of the input's tokens the model doesn't know, from 0 to 1. The suggest endpoints don't
+   * fill it in.
+   * </pre>
+   *
    * <code>float unknown_token_percentage = 2 [json_name = "unknownTokenPercentage"];</code>
    * @return The unknownTokenPercentage.
    */

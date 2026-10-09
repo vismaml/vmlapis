@@ -40,9 +40,32 @@ type DataServiceClient interface {
 	ReadDocument(ctx context.Context, in *ReadDocumentRequest, opts ...grpc.CallOption) (*ReadDocumentResponse, error)
 	// For feedback
 	PrepareFeedback(ctx context.Context, in *PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	// Send the correct values for an annotated document.
+	//
+	// Send the values your user confirmed for a document you sent to
+	// POST /v1/document:annotate, identified by the `feedbackId` from that
+	// response. Feedback powers your quality metrics, and it's used to improve
+	// the models. Send it once per document, within 90 days of the annotate
+	// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+	// A successful call returns an empty object.
+	//
+	// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+	// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+	// and 409 if feedback for the ID was already sent.
+	//
+	// For Smartscan Async transactions, send corrections with
+	// PUT /v1/transactions/{id}/results instead.
 	Feedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CalculateMetrics(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetrics, error)
 	CalculateMetricsV2(ctx context.Context, in *MetricsRequest, opts ...grpc.CallOption) (*FeedbackMetricsV2Response, error)
+	// Delete feedback by tag.
+	//
+	// Deletes your project's feedback that has at least one of the given tags,
+	// together with the document image and text stored with it. Only feedback
+	// sent before this call is deleted. The call records the request and
+	// returns an empty object right away; a daily job then deletes the data.
+	//
+	// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
 	SuggestionsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CallsPerMonthResponse, error)
@@ -155,9 +178,32 @@ type DataServiceServer interface {
 	ReadDocument(context.Context, *ReadDocumentRequest) (*ReadDocumentResponse, error)
 	// For feedback
 	PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*emptypb.Empty, error)
+	// Send the correct values for an annotated document.
+	//
+	// Send the values your user confirmed for a document you sent to
+	// POST /v1/document:annotate, identified by the `feedbackId` from that
+	// response. Feedback powers your quality metrics, and it's used to improve
+	// the models. Send it once per document, within 90 days of the annotate
+	// call, and tag it so you can delete it later with POST /v1/feedback:delete.
+	// A successful call returns an empty object.
+	//
+	// Errors: 400 if `paymentDueDate` or `documentDate` isn't a valid date,
+	// 404 if the ID is unknown or the annotate call was more than 90 days ago,
+	// and 409 if feedback for the ID was already sent.
+	//
+	// For Smartscan Async transactions, send corrections with
+	// PUT /v1/transactions/{id}/results instead.
 	Feedback(context.Context, *FeedbackRequest) (*emptypb.Empty, error)
 	CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error)
 	CalculateMetricsV2(context.Context, *MetricsRequest) (*FeedbackMetricsV2Response, error)
+	// Delete feedback by tag.
+	//
+	// Deletes your project's feedback that has at least one of the given tags,
+	// together with the document image and text stored with it. Only feedback
+	// sent before this call is deleted. The call records the request and
+	// returns an empty object right away; a daily job then deletes the data.
+	//
+	// Errors: 400 if no tag is given, and 403 if you call it with a valet key.
 	Delete(context.Context, *DeleteRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)
 	SuggestionsPerMonthMetric(context.Context, *emptypb.Empty) (*CallsPerMonthResponse, error)

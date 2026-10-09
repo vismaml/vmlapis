@@ -11,7 +11,8 @@ public interface CreateDatasetRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+   * letter, digit or ".", up to 256 bytes.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -20,7 +21,8 @@ public interface CreateDatasetRequestOrBuilder extends
   java.lang.String getDatasetName();
   /**
    * <pre>
-   * text-no-spaces
+   * Name of the new dataset. Use letters, digits, ".", "_", "&gt;" and "-", starting with a
+   * letter, digit or ".", up to 256 bytes.
    * </pre>
    *
    * <code>string dataset_name = 1 [json_name = "datasetName", (.validate.rules) = { ... }</code>
@@ -31,7 +33,10 @@ public interface CreateDatasetRequestOrBuilder extends
 
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -41,7 +46,10 @@ public interface CreateDatasetRequestOrBuilder extends
       getTagsList();
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -50,7 +58,10 @@ public interface CreateDatasetRequestOrBuilder extends
   int getTagsCount();
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>
@@ -60,7 +71,10 @@ public interface CreateDatasetRequestOrBuilder extends
   java.lang.String getTags(int index);
   /**
    * <pre>
-   * text-no-spaces
+   * Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+   * later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+   * "&gt;" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+   * to delete datasets.
    * </pre>
    *
    * <code>repeated string tags = 2 [json_name = "tags", (.validate.rules) = { ... }</code>

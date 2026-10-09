@@ -22,13 +22,13 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// Used in scanned-invoice requests.
+// A scanned invoice or receipt, as text. Use it for scanned-invoice datasets.
 type Invoice struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Invoice text from the SmartScan product.
+	// Text of the document, such as its OCR text or other text you have on record.
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
 }
 
@@ -71,13 +71,13 @@ func (x *Invoice) GetText() string {
 	return ""
 }
 
-// Used in bank requests.
+// A bank transaction. Use it for bank datasets.
 type Transaction struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Text of the bank transaction.
+	// Text of the bank transaction, such as its statement text.
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
 	// Amount of the transaction.
 	Amount float32 `protobuf:"fixed32,2,opt,name=amount,proto3" json:"amount,omitempty"`
@@ -129,22 +129,24 @@ func (x *Transaction) GetAmount() float32 {
 	return 0
 }
 
-// Used in electronic-invoice-line requests.
+// One line of an electronic invoice, with the details of its invoice. Send each line as its
+// own example and repeat the invoice details in each one. Use it for electronic-invoice-line
+// datasets.
 type InvoiceLine struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Id of the product (item).
+	// ID of the item, such as a global product ID.
 	ItemId string `protobuf:"bytes,1,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
-	// Text of the invoice line.
-	Text      string                 `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
+	// Text of the line, such as the item's description or name.
+	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
+	// Issue date of the invoice, as an RFC 3339 timestamp such as "2026-04-15T12:32:55Z".
 	IssueDate *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=issue_date,json=issueDate,proto3" json:"issue_date,omitempty"`
-	// Supplier of the invoice.
-	Supplier *Supplier `protobuf:"bytes,4,opt,name=supplier,proto3" json:"supplier,omitempty"`
-	// reference to the customer.
+	Supplier  *Supplier              `protobuf:"bytes,4,opt,name=supplier,proto3" json:"supplier,omitempty"`
+	// Reference to the invoice's recipient, such as the customer's name.
 	CustomerRef string `protobuf:"bytes,5,opt,name=customer_ref,json=customerRef,proto3" json:"customer_ref,omitempty"`
-	// Name of the currency as a string.
+	// Currency of the invoice, as text.
 	Currency string `protobuf:"bytes,6,opt,name=currency,proto3" json:"currency,omitempty"`
 	// Amount of the invoice line.
 	Amount float32 `protobuf:"fixed32,7,opt,name=amount,proto3" json:"amount,omitempty"`
@@ -231,16 +233,17 @@ func (x *InvoiceLine) GetAmount() float32 {
 	return 0
 }
 
+// The supplier of an invoice.
 type Supplier struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Id of the supplier; not nullable.
+	// Your own ID for the supplier. Letters and digits only, up to 64 bytes.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// Name of the supplier.
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	// Global ID of the supplier.
+	// Global ID of the supplier, such as its VAT number.
 	GlobalId string `protobuf:"bytes,3,opt,name=global_id,json=globalId,proto3" json:"global_id,omitempty"`
 }
 
@@ -297,8 +300,10 @@ func (x *Supplier) GetGlobalId() string {
 	return ""
 }
 
-// Specifies data structure for dataset creation. Only one of Transaction, Invoice, InvoiceLine
-// structures can be used at a time.
+// Input data for an example or a suggestion. Set exactly one of transaction, invoice or
+// invoiceLine. The first example in a dataset sets its type, bank, scanned-invoice or
+// electronic-invoice-line, and every later example and suggest input must use the same
+// structure.
 type Data struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -377,17 +382,14 @@ type isData_DataStructure interface {
 }
 
 type Data_Transaction struct {
-	// Transaction-level information; at this time used only with bank transactions
 	Transaction *Transaction `protobuf:"bytes,1,opt,name=transaction,proto3,oneof"`
 }
 
 type Data_Invoice struct {
-	// Invoice-level information for e-invoices and scanned invoices and receipts
 	Invoice *Invoice `protobuf:"bytes,2,opt,name=invoice,proto3,oneof"`
 }
 
 type Data_InvoiceLine struct {
-	// Line-level information for e-invoices; use one sample per invoice line
 	InvoiceLine *InvoiceLine `protobuf:"bytes,3,opt,name=invoice_line,json=invoiceLine,proto3,oneof"`
 }
 

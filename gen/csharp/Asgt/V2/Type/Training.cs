@@ -49,6 +49,9 @@ namespace Asgt.V2.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// A training of a dataset.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Training : pb::IMessage<Training>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -104,7 +107,7 @@ namespace Asgt.V2.Type {
     public const int CreatedAtFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
     /// <summary>
-    /// Creation time of the training
+    /// When the training was scheduled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +121,9 @@ namespace Asgt.V2.Type {
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
     private string status_ = "";
+    /// <summary>
+    /// Always empty, because the listings only return active trainings. Use trainingStatus.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Status {
@@ -131,15 +137,8 @@ namespace Asgt.V2.Type {
     public const int TrainingStatusFieldNumber = 3;
     private string trainingStatus_ = "";
     /// <summary>
-    /// Status of the training.
-    /// SCHEDULED - Training is scheduled to be run in a specific time. This
-    /// could be in between 1 minute or 24 hours depending on how recently the dataset
-    /// was created
-    /// PENDING - The training is ready to be picked up by a worker.
-    /// RUNNING - The training is currently running.
-    /// DONE - The training has completed successfully.
-    /// FAILED - The training failed due to an error. See training status for
-    /// more information.
+    /// State of the training. It's SCHEDULED until its start time and PENDING once it's handed to
+    /// a worker, and it ends as DONE or FAILED. Other in-progress states can appear while it runs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +153,7 @@ namespace Asgt.V2.Type {
     public const int TrainingStatusMessageFieldNumber = 4;
     private string trainingStatusMessage_ = "";
     /// <summary>
-    /// Additional information about the training status.
+    /// More about the state, such as why the training failed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,7 +168,8 @@ namespace Asgt.V2.Type {
     public const int FinishTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp finishTime_;
     /// <summary>
-    /// Specifies when did the training finish.
+    /// When the training finished. It's 0001-01-01T00:00:00Z until the training is DONE, and for
+    /// failed trainings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,7 +184,8 @@ namespace Asgt.V2.Type {
     public const int DatasetFieldNumber = 6;
     private global::Asgt.Type.Dataset dataset_;
     /// <summary>
-    /// Specifies dataset the training ran on.
+    /// The dataset the training ran on, with its consumer, name and type. Only GET /v2/trainings
+    /// fills it in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,7 +200,7 @@ namespace Asgt.V2.Type {
     public const int ScheduleTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
     /// <summary>
-    /// Specifies when the training is scheduled.
+    /// When the training is set to start.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

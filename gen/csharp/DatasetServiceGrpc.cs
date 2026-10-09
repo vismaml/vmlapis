@@ -185,7 +185,10 @@ namespace Asgt.V2 {
     public abstract partial class DatasetServiceBase
     {
       /// <summary>
-      /// Get the basic information about a dataset.
+      /// Get a dataset.
+      ///
+      /// Returns the dataset's name, type, tags, retention policy and timestamps.
+      /// Returns 404 if the dataset doesn't exist or has been deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -197,8 +200,13 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-      /// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+      /// Create a dataset.
+      ///
+      /// The dataset starts empty. The first example you add sets its type, and adding examples
+      /// schedules a training, so no model exists until you add examples and the training is done.
+      /// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+      /// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+      /// Returns 400 if the name or a tag doesn't match the allowed format.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -210,9 +218,9 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Not implemented yet.
-      ///Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-      /// provided data.
+      /// [NOT IMPLEMENTED] Create or update a dataset.
+      ///
+      /// Returns 501. Create datasets with POST /v2/datasets.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -224,7 +232,11 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Delete a dataset with the specified name.
+      /// Delete a dataset.
+      ///
+      /// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+      /// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+      /// Returns 404 if the dataset doesn't exist or is already deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -236,8 +248,11 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Delete all datasets (and their examples) containing the specified tag.
-      /// The datasets' names are not considered in this request - only the tag names is.
+      /// Delete all datasets with a tag.
+      ///
+      /// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+      /// don't matter, only the tag. The examples are removed shortly after the call returns.
+      /// Returns 200 even if no dataset has the tag.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -249,7 +264,14 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Uploads a new single example.
+      /// Add an example to a dataset.
+      ///
+      /// The first example sets the dataset's type, and every later example must use the same data
+      /// structure. Adding examples schedules a training: about a minute later while the dataset is
+      /// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+      /// Examples added while a training is scheduled or running are picked up by the next training.
+      /// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+      /// field has the wrong format.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -261,10 +283,9 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Not implemented yet.
-      /// Uploads or updates a new single example.
-      /// If the specified example already exists, the example
-      /// is updated with the provided values according to provided ID.
+      /// [NOT IMPLEMENTED] Add or update an example.
+      ///
+      /// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -276,7 +297,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+      /// Add several examples to a dataset.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+      /// training. Returns 400 if the list of examples is empty.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -288,8 +312,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-      /// removing existing models.
+      /// Remove a dataset's examples, but keep its models.
+      ///
+      /// Future trainings only use examples added after this call, and the existing models stay
+      /// available for suggestions. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -301,8 +327,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Get the specified number of the most recent dataset's trainings.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List a dataset's trainings.
+      ///
+      /// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -314,8 +342,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Get the specified number of the most recent dataset's trained models.
-      /// Number of requested models has to be larger than 0 but no larger than 100.
+      /// List a dataset's models.
+      ///
+      /// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -327,8 +357,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Get the specified number of the most recent trainings accross all consumer's datasets.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List the trainings of all your datasets.
+      ///
+      /// Returns the most recent trainings across your datasets, newest first, each with its
+      /// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -369,7 +401,10 @@ namespace Asgt.V2 {
       }
 
       /// <summary>
-      /// Get the basic information about a dataset.
+      /// Get a dataset.
+      ///
+      /// Returns the dataset's name, type, tags, retention policy and timestamps.
+      /// Returns 404 if the dataset doesn't exist or has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -382,7 +417,10 @@ namespace Asgt.V2 {
         return GetDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the basic information about a dataset.
+      /// Get a dataset.
+      ///
+      /// Returns the dataset's name, type, tags, retention policy and timestamps.
+      /// Returns 404 if the dataset doesn't exist or has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -393,7 +431,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataset, null, options, request);
       }
       /// <summary>
-      /// Get the basic information about a dataset.
+      /// Get a dataset.
+      ///
+      /// Returns the dataset's name, type, tags, retention policy and timestamps.
+      /// Returns 404 if the dataset doesn't exist or has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -406,7 +447,10 @@ namespace Asgt.V2 {
         return GetDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the basic information about a dataset.
+      /// Get a dataset.
+      ///
+      /// Returns the dataset's name, type, tags, retention policy and timestamps.
+      /// Returns 404 if the dataset doesn't exist or has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -417,8 +461,13 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
       }
       /// <summary>
-      /// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-      /// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+      /// Create a dataset.
+      ///
+      /// The dataset starts empty. The first example you add sets its type, and adding examples
+      /// schedules a training, so no model exists until you add examples and the training is done.
+      /// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+      /// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+      /// Returns 400 if the name or a tag doesn't match the allowed format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -431,8 +480,13 @@ namespace Asgt.V2 {
         return CreateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-      /// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+      /// Create a dataset.
+      ///
+      /// The dataset starts empty. The first example you add sets its type, and adding examples
+      /// schedules a training, so no model exists until you add examples and the training is done.
+      /// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+      /// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+      /// Returns 400 if the name or a tag doesn't match the allowed format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -443,8 +497,13 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataset, null, options, request);
       }
       /// <summary>
-      /// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-      /// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+      /// Create a dataset.
+      ///
+      /// The dataset starts empty. The first example you add sets its type, and adding examples
+      /// schedules a training, so no model exists until you add examples and the training is done.
+      /// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+      /// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+      /// Returns 400 if the name or a tag doesn't match the allowed format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -457,8 +516,13 @@ namespace Asgt.V2 {
         return CreateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
-      /// until CreateExample or BatchCreateExample is called after the creation of the dataset.
+      /// Create a dataset.
+      ///
+      /// The dataset starts empty. The first example you add sets its type, and adding examples
+      /// schedules a training, so no model exists until you add examples and the training is done.
+      /// Returns 409 if a dataset with this name already exists. You can reuse the name of a deleted
+      /// dataset, but the new dataset keeps the deleted one's tags and retention policy.
+      /// Returns 400 if the name or a tag doesn't match the allowed format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -469,9 +533,9 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataset, null, options, request);
       }
       /// <summary>
-      /// Not implemented yet.
-      ///Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-      /// provided data.
+      /// [NOT IMPLEMENTED] Create or update a dataset.
+      ///
+      /// Returns 501. Create datasets with POST /v2/datasets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -484,9 +548,9 @@ namespace Asgt.V2 {
         return CreateOrUpdateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Not implemented yet.
-      ///Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-      /// provided data.
+      /// [NOT IMPLEMENTED] Create or update a dataset.
+      ///
+      /// Returns 501. Create datasets with POST /v2/datasets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -497,9 +561,9 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateOrUpdateDataset, null, options, request);
       }
       /// <summary>
-      /// Not implemented yet.
-      ///Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-      /// provided data.
+      /// [NOT IMPLEMENTED] Create or update a dataset.
+      ///
+      /// Returns 501. Create datasets with POST /v2/datasets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -512,9 +576,9 @@ namespace Asgt.V2 {
         return CreateOrUpdateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Not implemented yet.
-      ///Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
-      /// provided data.
+      /// [NOT IMPLEMENTED] Create or update a dataset.
+      ///
+      /// Returns 501. Create datasets with POST /v2/datasets.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -525,7 +589,11 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateOrUpdateDataset, null, options, request);
       }
       /// <summary>
-      /// Delete a dataset with the specified name.
+      /// Delete a dataset.
+      ///
+      /// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+      /// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+      /// Returns 404 if the dataset doesn't exist or is already deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -538,7 +606,11 @@ namespace Asgt.V2 {
         return DeleteDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a dataset with the specified name.
+      /// Delete a dataset.
+      ///
+      /// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+      /// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+      /// Returns 404 if the dataset doesn't exist or is already deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -549,7 +621,11 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataset, null, options, request);
       }
       /// <summary>
-      /// Delete a dataset with the specified name.
+      /// Delete a dataset.
+      ///
+      /// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+      /// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+      /// Returns 404 if the dataset doesn't exist or is already deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -562,7 +638,11 @@ namespace Asgt.V2 {
         return DeleteDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a dataset with the specified name.
+      /// Delete a dataset.
+      ///
+      /// Deletes the dataset and its examples, and returns the deleted dataset. The call returns as
+      /// soon as the deletion is accepted, and the examples are removed shortly afterwards.
+      /// Returns 404 if the dataset doesn't exist or is already deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -573,8 +653,11 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataset, null, options, request);
       }
       /// <summary>
-      /// Delete all datasets (and their examples) containing the specified tag.
-      /// The datasets' names are not considered in this request - only the tag names is.
+      /// Delete all datasets with a tag.
+      ///
+      /// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+      /// don't matter, only the tag. The examples are removed shortly after the call returns.
+      /// Returns 200 even if no dataset has the tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -587,8 +670,11 @@ namespace Asgt.V2 {
         return DeleteTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete all datasets (and their examples) containing the specified tag.
-      /// The datasets' names are not considered in this request - only the tag names is.
+      /// Delete all datasets with a tag.
+      ///
+      /// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+      /// don't matter, only the tag. The examples are removed shortly after the call returns.
+      /// Returns 200 even if no dataset has the tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -599,8 +685,11 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTag, null, options, request);
       }
       /// <summary>
-      /// Delete all datasets (and their examples) containing the specified tag.
-      /// The datasets' names are not considered in this request - only the tag names is.
+      /// Delete all datasets with a tag.
+      ///
+      /// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+      /// don't matter, only the tag. The examples are removed shortly after the call returns.
+      /// Returns 200 even if no dataset has the tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -613,8 +702,11 @@ namespace Asgt.V2 {
         return DeleteTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete all datasets (and their examples) containing the specified tag.
-      /// The datasets' names are not considered in this request - only the tag names is.
+      /// Delete all datasets with a tag.
+      ///
+      /// Deletes every one of your datasets that has the tag, with their examples. Dataset names
+      /// don't matter, only the tag. The examples are removed shortly after the call returns.
+      /// Returns 200 even if no dataset has the tag.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -625,7 +717,14 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
       }
       /// <summary>
-      /// Uploads a new single example.
+      /// Add an example to a dataset.
+      ///
+      /// The first example sets the dataset's type, and every later example must use the same data
+      /// structure. Adding examples schedules a training: about a minute later while the dataset is
+      /// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+      /// Examples added while a training is scheduled or running are picked up by the next training.
+      /// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+      /// field has the wrong format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -638,7 +737,14 @@ namespace Asgt.V2 {
         return CreateExample(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Uploads a new single example.
+      /// Add an example to a dataset.
+      ///
+      /// The first example sets the dataset's type, and every later example must use the same data
+      /// structure. Adding examples schedules a training: about a minute later while the dataset is
+      /// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+      /// Examples added while a training is scheduled or running are picked up by the next training.
+      /// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+      /// field has the wrong format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -649,7 +755,14 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExample, null, options, request);
       }
       /// <summary>
-      /// Uploads a new single example.
+      /// Add an example to a dataset.
+      ///
+      /// The first example sets the dataset's type, and every later example must use the same data
+      /// structure. Adding examples schedules a training: about a minute later while the dataset is
+      /// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+      /// Examples added while a training is scheduled or running are picked up by the next training.
+      /// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+      /// field has the wrong format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -662,7 +775,14 @@ namespace Asgt.V2 {
         return CreateExampleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Uploads a new single example.
+      /// Add an example to a dataset.
+      ///
+      /// The first example sets the dataset's type, and every later example must use the same data
+      /// structure. Adding examples schedules a training: about a minute later while the dataset is
+      /// less than an hour old, otherwise 24 hours later in production and within minutes on staging.
+      /// Examples added while a training is scheduled or running are picked up by the next training.
+      /// Returns 404 if the dataset doesn't exist, and 400 if the example has no target values or a
+      /// field has the wrong format.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -673,10 +793,9 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExample, null, options, request);
       }
       /// <summary>
-      /// Not implemented yet.
-      /// Uploads or updates a new single example.
-      /// If the specified example already exists, the example
-      /// is updated with the provided values according to provided ID.
+      /// [NOT IMPLEMENTED] Add or update an example.
+      ///
+      /// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -689,10 +808,9 @@ namespace Asgt.V2 {
         return CreateOrUpdateExample(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Not implemented yet.
-      /// Uploads or updates a new single example.
-      /// If the specified example already exists, the example
-      /// is updated with the provided values according to provided ID.
+      /// [NOT IMPLEMENTED] Add or update an example.
+      ///
+      /// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -703,10 +821,9 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateOrUpdateExample, null, options, request);
       }
       /// <summary>
-      /// Not implemented yet.
-      /// Uploads or updates a new single example.
-      /// If the specified example already exists, the example
-      /// is updated with the provided values according to provided ID.
+      /// [NOT IMPLEMENTED] Add or update an example.
+      ///
+      /// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -719,10 +836,9 @@ namespace Asgt.V2 {
         return CreateOrUpdateExampleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Not implemented yet.
-      /// Uploads or updates a new single example.
-      /// If the specified example already exists, the example
-      /// is updated with the provided values according to provided ID.
+      /// [NOT IMPLEMENTED] Add or update an example.
+      ///
+      /// Returns 501. Add examples with POST /v2/datasets/{datasetName}/examples.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -733,7 +849,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateOrUpdateExample, null, options, request);
       }
       /// <summary>
-      /// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+      /// Add several examples to a dataset.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+      /// training. Returns 400 if the list of examples is empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -746,7 +865,10 @@ namespace Asgt.V2 {
         return BatchCreateExample(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+      /// Add several examples to a dataset.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+      /// training. Returns 400 if the list of examples is empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -757,7 +879,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateExample, null, options, request);
       }
       /// <summary>
-      /// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+      /// Add several examples to a dataset.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+      /// training. Returns 400 if the list of examples is empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -770,7 +895,10 @@ namespace Asgt.V2 {
         return BatchCreateExampleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+      /// Add several examples to a dataset.
+      ///
+      /// Works like POST /v2/datasets/{datasetName}/examples for each example, and schedules one
+      /// training. Returns 400 if the list of examples is empty.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -781,8 +909,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateExample, null, options, request);
       }
       /// <summary>
-      /// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-      /// removing existing models.
+      /// Remove a dataset's examples, but keep its models.
+      ///
+      /// Future trainings only use examples added after this call, and the existing models stay
+      /// available for suggestions. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -795,8 +925,10 @@ namespace Asgt.V2 {
         return TruncateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-      /// removing existing models.
+      /// Remove a dataset's examples, but keep its models.
+      ///
+      /// Future trainings only use examples added after this call, and the existing models stay
+      /// available for suggestions. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -807,8 +939,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TruncateDataset, null, options, request);
       }
       /// <summary>
-      /// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-      /// removing existing models.
+      /// Remove a dataset's examples, but keep its models.
+      ///
+      /// Future trainings only use examples added after this call, and the existing models stay
+      /// available for suggestions. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -821,8 +955,10 @@ namespace Asgt.V2 {
         return TruncateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
-      /// removing existing models.
+      /// Remove a dataset's examples, but keep its models.
+      ///
+      /// Future trainings only use examples added after this call, and the existing models stay
+      /// available for suggestions. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -833,8 +969,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_TruncateDataset, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trainings.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List a dataset's trainings.
+      ///
+      /// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -847,8 +985,10 @@ namespace Asgt.V2 {
         return GetDatasetTrainings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trainings.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List a dataset's trainings.
+      ///
+      /// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -859,8 +999,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatasetTrainings, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trainings.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List a dataset's trainings.
+      ///
+      /// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -873,8 +1015,10 @@ namespace Asgt.V2 {
         return GetDatasetTrainingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trainings.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List a dataset's trainings.
+      ///
+      /// Returns the most recent trainings, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -885,8 +1029,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatasetTrainings, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trained models.
-      /// Number of requested models has to be larger than 0 but no larger than 100.
+      /// List a dataset's models.
+      ///
+      /// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -899,8 +1045,10 @@ namespace Asgt.V2 {
         return GetDatasetModels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trained models.
-      /// Number of requested models has to be larger than 0 but no larger than 100.
+      /// List a dataset's models.
+      ///
+      /// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -911,8 +1059,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatasetModels, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trained models.
-      /// Number of requested models has to be larger than 0 but no larger than 100.
+      /// List a dataset's models.
+      ///
+      /// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -925,8 +1075,10 @@ namespace Asgt.V2 {
         return GetDatasetModelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent dataset's trained models.
-      /// Number of requested models has to be larger than 0 but no larger than 100.
+      /// List a dataset's models.
+      ///
+      /// Returns the most recent models, newest first. Set how many with options.limit, from 1 to
+      /// 100. The default is 10. Returns 404 if the dataset doesn't exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -937,8 +1089,10 @@ namespace Asgt.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatasetModels, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent trainings accross all consumer's datasets.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List the trainings of all your datasets.
+      ///
+      /// Returns the most recent trainings across your datasets, newest first, each with its
+      /// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -951,8 +1105,10 @@ namespace Asgt.V2 {
         return GetTrainings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent trainings accross all consumer's datasets.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List the trainings of all your datasets.
+      ///
+      /// Returns the most recent trainings across your datasets, newest first, each with its
+      /// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -963,8 +1119,10 @@ namespace Asgt.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetTrainings, null, options, request);
       }
       /// <summary>
-      /// Get the specified number of the most recent trainings accross all consumer's datasets.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List the trainings of all your datasets.
+      ///
+      /// Returns the most recent trainings across your datasets, newest first, each with its
+      /// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -977,8 +1135,10 @@ namespace Asgt.V2 {
         return GetTrainingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the specified number of the most recent trainings accross all consumer's datasets.
-      /// Number of requested trainings has to be larger than 0 but no larger than 100.
+      /// List the trainings of all your datasets.
+      ///
+      /// Returns the most recent trainings across your datasets, newest first, each with its
+      /// dataset. Set how many with options.limit, from 1 to 100. The default is 10.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

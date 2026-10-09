@@ -26,12 +26,14 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Request for GET /v2/datasets/{datasetName}.
 type GetDatasetRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 }
 
 func (x *GetDatasetRequest) Reset() {
@@ -73,13 +75,20 @@ func (x *GetDatasetRequest) GetDatasetName() string {
 	return ""
 }
 
+// Request body for POST /v2/datasets.
 type CreateDatasetRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName     string                 `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
-	Tags            []string               `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`                                  // text-no-spaces
+	// Name of the new dataset. Use letters, digits, ".", "_", ">" and "-", starting with a
+	// letter, digit or ".", up to 256 bytes.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	// Tags for the dataset, such as a customer ID, so you can delete all datasets with a tag
+	// later with DELETE /v2/tags/{tagName}. Each tag can use letters, digits, spaces, "_", ".",
+	// ">" and "-", up to 64 bytes, and tags must be unique. Only tags without spaces can be used
+	// to delete datasets.
+	Tags            []string               `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
 	RetentionPolicy *_type.RetentionPolicy `protobuf:"bytes,3,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
 }
 
@@ -136,12 +145,14 @@ func (x *CreateDatasetRequest) GetRetentionPolicy() *_type.RetentionPolicy {
 	return nil
 }
 
+// Request for PUT /v2/datasets/{datasetName}, which isn't implemented.
 type CreateOrUpdateDatasetRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 }
 
 func (x *CreateOrUpdateDatasetRequest) Reset() {
@@ -183,12 +194,14 @@ func (x *CreateOrUpdateDatasetRequest) GetDatasetName() string {
 	return ""
 }
 
+// Request for DELETE /v2/datasets/{datasetName}.
 type DeleteDatasetRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 }
 
 func (x *DeleteDatasetRequest) Reset() {
@@ -230,12 +243,15 @@ func (x *DeleteDatasetRequest) GetDatasetName() string {
 	return ""
 }
 
+// Request for DELETE /v2/tags/{tagName}.
 type DeleteTagRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TagName string `protobuf:"bytes,1,opt,name=tag_name,json=tagName,proto3" json:"tag_name,omitempty"` // text-no-spaces
+	// The tag. It must use letters, digits, ".", "_", ">" and "-", starting with a letter, digit
+	// or ".", up to 256 bytes, so tags with spaces can't be used here.
+	TagName string `protobuf:"bytes,1,opt,name=tag_name,json=tagName,proto3" json:"tag_name,omitempty"`
 }
 
 func (x *DeleteTagRequest) Reset() {
@@ -277,12 +293,14 @@ func (x *DeleteTagRequest) GetTagName() string {
 	return ""
 }
 
+// Request body for POST /v2/datasets/{datasetName}/examples.
 type CreateExampleRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string          `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string          `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 	Example     *_type1.Example `protobuf:"bytes,2,opt,name=example,proto3" json:"example,omitempty"`
 }
 
@@ -332,12 +350,14 @@ func (x *CreateExampleRequest) GetExample() *_type1.Example {
 	return nil
 }
 
+// Request for PUT /v2/datasets/{datasetName}/examples/{example.id}, which isn't implemented.
 type CreateOrUpdateExampleRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string          `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string          `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 	Example     *_type1.Example `protobuf:"bytes,2,opt,name=example,proto3" json:"example,omitempty"`
 }
 
@@ -387,13 +407,16 @@ func (x *CreateOrUpdateExampleRequest) GetExample() *_type1.Example {
 	return nil
 }
 
+// Request body for POST /v2/datasets/{datasetName}/examples:batchCreate.
 type BatchCreateExampleRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string            `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
-	Examples    []*_type1.Example `protobuf:"bytes,2,rep,name=examples,proto3" json:"examples,omitempty"`
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	// The examples to add. At least one is required.
+	Examples []*_type1.Example `protobuf:"bytes,2,rep,name=examples,proto3" json:"examples,omitempty"`
 }
 
 func (x *BatchCreateExampleRequest) Reset() {
@@ -442,12 +465,14 @@ func (x *BatchCreateExampleRequest) GetExamples() []*_type1.Example {
 	return nil
 }
 
+// Request for DELETE /v2/datasets/{datasetName}/examples.
 type TruncateDatasetRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 }
 
 func (x *TruncateDatasetRequest) Reset() {
@@ -489,13 +514,14 @@ func (x *TruncateDatasetRequest) GetDatasetName() string {
 	return ""
 }
 
+// Options for listing trainings.
 type TrainingRequestOptions struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The number of trainings to return. Ranges from 1 to 100.
-	Limit int64 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"` // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+	// Number of trainings to return, from 1 to 100. The default is 10.
+	Limit int64 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"`
 }
 
 func (x *TrainingRequestOptions) Reset() {
@@ -537,13 +563,14 @@ func (x *TrainingRequestOptions) GetLimit() int64 {
 	return 0
 }
 
+// Options for listing models.
 type ModelRequestOptions struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// The number of models to return. Ranges from 1 to 100.
-	Limit int64 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"` // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
+	// Number of models to return, from 1 to 100. The default is 10.
+	Limit int64 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"`
 }
 
 func (x *ModelRequestOptions) Reset() {
@@ -585,13 +612,16 @@ func (x *ModelRequestOptions) GetLimit() int64 {
 	return 0
 }
 
+// Request for GET /v2/datasets/{datasetName}/trainings.
 type GetDatasetTrainingsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string                  `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
-	Options     *TrainingRequestOptions `protobuf:"bytes,2,opt,name=options,proto3" json:"options,omitempty"`
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	// Listing options, sent as query parameters such as options.limit.
+	Options *TrainingRequestOptions `protobuf:"bytes,2,opt,name=options,proto3" json:"options,omitempty"`
 }
 
 func (x *GetDatasetTrainingsRequest) Reset() {
@@ -640,13 +670,16 @@ func (x *GetDatasetTrainingsRequest) GetOptions() *TrainingRequestOptions {
 	return nil
 }
 
+// Request for GET /v2/datasets/{datasetName}/models.
 type GetDatasetModelsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DatasetName string               `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"` // text-no-spaces
-	Options     *ModelRequestOptions `protobuf:"bytes,2,opt,name=options,proto3" json:"options,omitempty"`
+	// Name of the dataset.
+	DatasetName string `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	// Listing options, sent as query parameters such as options.limit.
+	Options *ModelRequestOptions `protobuf:"bytes,2,opt,name=options,proto3" json:"options,omitempty"`
 }
 
 func (x *GetDatasetModelsRequest) Reset() {
@@ -695,11 +728,13 @@ func (x *GetDatasetModelsRequest) GetOptions() *ModelRequestOptions {
 	return nil
 }
 
+// Request for GET /v2/trainings.
 type GetTrainingsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Listing options, sent as query parameters such as options.limit.
 	Options *TrainingRequestOptions `protobuf:"bytes,1,opt,name=options,proto3" json:"options,omitempty"`
 }
 
@@ -742,11 +777,13 @@ func (x *GetTrainingsRequest) GetOptions() *TrainingRequestOptions {
 	return nil
 }
 
+// A list of trainings.
 type TrainingsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The trainings, newest first.
 	Trainings []*_type1.Training `protobuf:"bytes,1,rep,name=trainings,proto3" json:"trainings,omitempty"`
 }
 
@@ -789,11 +826,13 @@ func (x *TrainingsResponse) GetTrainings() []*_type1.Training {
 	return nil
 }
 
+// A list of models.
 type ModelsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The models, newest first.
 	Models []*_type1.Model `protobuf:"bytes,1,rep,name=models,proto3" json:"models,omitempty"`
 }
 
@@ -975,7 +1014,7 @@ var file_asgt_v2_dataset_service_proto_rawDesc = []byte{
 	0x6e, 0x73, 0x65, 0x12, 0x2b, 0x0a, 0x06, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x18, 0x01, 0x20,
 	0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e, 0x76, 0x32, 0x2e, 0x74, 0x79,
 	0x70, 0x65, 0x2e, 0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x52, 0x06, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x73,
-	0x32, 0xde, 0x0b, 0x0a, 0x0e, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76,
+	0x32, 0xd3, 0x0b, 0x0a, 0x0e, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x12, 0x61, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65,
 	0x74, 0x12, 0x1a, 0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e, 0x76, 0x32, 0x2e, 0x47, 0x65, 0x74, 0x44,
 	0x61, 0x74, 0x61, 0x73, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e,
@@ -1064,21 +1103,21 @@ var file_asgt_v2_dataset_service_proto_rawDesc = []byte{
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e, 0x76, 0x32, 0x2e,
 	0x54, 0x72, 0x61, 0x69, 0x6e, 0x69, 0x6e, 0x67, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x22, 0x15, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x0f, 0x12, 0x0d, 0x2f, 0x76, 0x32, 0x2f, 0x74,
-	0x72, 0x61, 0x69, 0x6e, 0x69, 0x6e, 0x67, 0x73, 0x1a, 0x47, 0x92, 0x41, 0x44, 0x12, 0x42, 0x4d,
+	0x72, 0x61, 0x69, 0x6e, 0x69, 0x6e, 0x67, 0x73, 0x1a, 0x3c, 0x92, 0x41, 0x39, 0x12, 0x37, 0x4d,
 	0x61, 0x6e, 0x61, 0x67, 0x65, 0x20, 0x64, 0x61, 0x74, 0x61, 0x73, 0x65, 0x74, 0x73, 0x20, 0x61,
-	0x6e, 0x64, 0x20, 0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x73, 0x20, 0x75, 0x73, 0x65, 0x64,
-	0x20, 0x66, 0x6f, 0x72, 0x20, 0x74, 0x72, 0x61, 0x69, 0x6e, 0x69, 0x6e, 0x67, 0x20, 0x41, 0x75,
-	0x74, 0x6f, 0x53, 0x75, 0x67, 0x67, 0x65, 0x73, 0x74, 0x20, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x73,
-	0x2e, 0x42, 0x91, 0x01, 0x0a, 0x10, 0x61, 0x69, 0x2e, 0x76, 0x69, 0x73, 0x6d, 0x61, 0x2e, 0x61,
-	0x73, 0x67, 0x74, 0x2e, 0x76, 0x32, 0x42, 0x13, 0x44, 0x61, 0x74, 0x61, 0x73, 0x65, 0x74, 0x53,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x2b, 0x67,
-	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x2d, 0x63, 0x6f, 0x6e, 0x6f,
-	0x6d, 0x69, 0x63, 0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f,
-	0x67, 0x6f, 0x2f, 0x61, 0x73, 0x67, 0x74, 0x2f, 0x76, 0x32, 0xa2, 0x02, 0x03, 0x41, 0x58, 0x58,
-	0xaa, 0x02, 0x07, 0x41, 0x73, 0x67, 0x74, 0x2e, 0x56, 0x32, 0xca, 0x02, 0x07, 0x41, 0x73, 0x67,
-	0x74, 0x5c, 0x56, 0x32, 0xe2, 0x02, 0x13, 0x41, 0x73, 0x67, 0x74, 0x5c, 0x56, 0x32, 0x5c, 0x47,
-	0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x08, 0x41, 0x73, 0x67,
-	0x74, 0x3a, 0x3a, 0x56, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6e, 0x64, 0x20, 0x74, 0x68, 0x65, 0x20, 0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x73, 0x20,
+	0x41, 0x75, 0x74, 0x6f, 0x73, 0x75, 0x67, 0x67, 0x65, 0x73, 0x74, 0x20, 0x74, 0x72, 0x61, 0x69,
+	0x6e, 0x73, 0x20, 0x6f, 0x6e, 0x2e, 0x42, 0x91, 0x01, 0x0a, 0x10, 0x61, 0x69, 0x2e, 0x76, 0x69,
+	0x73, 0x6d, 0x61, 0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e, 0x76, 0x32, 0x42, 0x13, 0x44, 0x61, 0x74,
+	0x61, 0x73, 0x65, 0x74, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f,
+	0x50, 0x01, 0x5a, 0x2b, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65,
+	0x2d, 0x63, 0x6f, 0x6e, 0x6f, 0x6d, 0x69, 0x63, 0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70, 0x69, 0x73,
+	0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x73, 0x67, 0x74, 0x2f, 0x76, 0x32, 0xa2,
+	0x02, 0x03, 0x41, 0x58, 0x58, 0xaa, 0x02, 0x07, 0x41, 0x73, 0x67, 0x74, 0x2e, 0x56, 0x32, 0xca,
+	0x02, 0x07, 0x41, 0x73, 0x67, 0x74, 0x5c, 0x56, 0x32, 0xe2, 0x02, 0x13, 0x41, 0x73, 0x67, 0x74,
+	0x5c, 0x56, 0x32, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea,
+	0x02, 0x08, 0x41, 0x73, 0x67, 0x74, 0x3a, 0x3a, 0x56, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
