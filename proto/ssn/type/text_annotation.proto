@@ -21,14 +21,9 @@ import "ssn/type/geometry.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
-// TextAnnotation contains a structured representation of OCR extracted text.
-// The hierarchy of an OCR extracted text structure is like this:
-//     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-// Each structural component, starting from Page, may further have their own
-// properties. Properties describe detected languages, breaks etc.. Please refer
-// to the
-// [TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty]
-// message definition below for more detail.
+// The OCR output for a document: its text, and its structure from pages down to single
+// symbols (TextAnnotation, Page, Block, Paragraph, Word, Symbol). Each element from Page
+// down can have properties, such as the detected languages and breaks.
 message TextAnnotation {
   // Detected language for a structural component.
   message DetectedLanguage {
@@ -52,7 +47,7 @@ message TextAnnotation {
       // Line-wrapping break.
       EOL_SURE_SPACE = 3;
       // End-line hyphen that is not present in text; does not co-occur with
-      // `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+      // `SPACE` or `LINE_BREAK`.
       HYPHEN = 4;
       // Line break that ends a paragraph.
       LINE_BREAK = 5;
@@ -69,7 +64,7 @@ message TextAnnotation {
     // Detected start or end of a text segment.
     DetectedBreak detected_break = 2;
   }
-  // List of pages detected by OCR.
+  // The pages, in order.
   repeated Page pages = 1;
   // UTF-8 text detected on the pages.
   string text = 2;
@@ -79,11 +74,9 @@ message TextAnnotation {
 message Page {
   // Additional information detected on the page.
   TextAnnotation.TextProperty property = 1;
-  // Page width. For PDFs the unit is points. For images (including
-  // TIFFs) the unit is pixels.
+  // The width of the page.
   int32 width = 2;
-  // Page height. For PDFs the unit is points. For images (including
-  // TIFFs) the unit is pixels.
+  // The height of the page.
   int32 height = 3;
   // List of blocks of text, images etc on this page.
   repeated Block blocks = 4;
@@ -110,28 +103,8 @@ message Block {
   }
   // Additional information detected for the block.
   TextAnnotation.TextProperty property = 1;
-  // The bounding box for the block.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //
-  // * when the text is horizontal it might look like:
-  //
-  //         0----1
-  //         |    |
-  //         3----2
-  //
-  // * when it's rotated 180 degrees around the top-left corner it becomes:
-  //
-  //         2----3
-  //         |    |
-  //         1----0
-  //
-  //   and the vertex order will still be (0, 1, 2, 3).
   BoundingPoly bounding_box = 2;
-  // List of paragraphs in this block (if this blocks is of type text).
+  // The paragraphs in the block, if it's a text block.
   repeated Paragraph paragraphs = 3;
   // Detected block type (text, image etc) for this block.
   BlockType block_type = 4;
@@ -143,21 +116,6 @@ message Block {
 message Paragraph {
   // Additional information detected for the paragraph.
   TextAnnotation.TextProperty property = 1;
-  // The bounding box for the paragraph.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //   * when the text is horizontal it might look like:
-  //      0----1
-  //      |    |
-  //      3----2
-  //   * when it's rotated 180 degrees around the top-left corner it becomes:
-  //      2----3
-  //      |    |
-  //      1----0
-  //   and the vertex order will still be (0, 1, 2, 3).
   BoundingPoly bounding_box = 2;
   // List of words in this paragraph.
   repeated Word words = 3;
@@ -169,21 +127,6 @@ message Paragraph {
 message Word {
   // Additional information detected for the word.
   TextAnnotation.TextProperty property = 1;
-  // The bounding box for the word.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //   * when the text is horizontal it might look like:
-  //      0----1
-  //      |    |
-  //      3----2
-  //   * when it's rotated 180 degrees around the top-left corner it becomes:
-  //      2----3
-  //      |    |
-  //      1----0
-  //   and the vertex order will still be (0, 1, 2, 3).
   BoundingPoly bounding_box = 2;
   // List of symbols in the word.
   // The order of the symbols follows the natural reading order.
@@ -196,21 +139,6 @@ message Word {
 message Symbol {
   // Additional information detected for the symbol.
   TextAnnotation.TextProperty property = 1;
-  // The bounding box for the symbol.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //   * when the text is horizontal it might look like:
-  //      0----1
-  //      |    |
-  //      3----2
-  //   * when it's rotated 180 degrees around the top-left corner it becomes:
-  //      2----3
-  //      |    |
-  //      1----0
-  //   and the vertice order will still be (0, 1, 2, 3).
   BoundingPoly bounding_box = 2;
   // The actual UTF-8 representation of the symbol.
   string text = 3;

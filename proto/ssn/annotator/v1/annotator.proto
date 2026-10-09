@@ -51,13 +51,38 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   }
 };
 
+// Extract data from documents and get the results in the same call.
 service DocumentAnnotator {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Extract data from a document and get the results in the same call."};
+
+  // Extract data from a document.
+  //
+  // Send the document, as base64 `content` or as a `source.httpUri` to download it
+  // from, and the `features` to extract. `DEFAULT` extracts a set of frequently used
+  // fields. The results come back in the same call. For large documents, and for the
+  // ULTRA tier, use Smartscan Async.
+  //
+  // By default, most features return at most one candidate, and only with the
+  // confidence level HIGH or higher. Set `maxResults` and `minConfidence` on the feature
+  // to change this. Without a `tier`, the request is processed as PREMIUM. A document
+  // without readable text returns an empty response.
+  //
+  // To correct the results, send the `feedbackId` from the response to
+  // POST /v1/feedback:create.
+  //
+  // Errors: 400 when the document can't be downloaded from `source.httpUri` or can't be
+  // read. Requests larger than 10 MiB are rejected.
   rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
     option (google.api.http) = {
       post: "/v1/document:annotate"
       body: "*"
     };
   }
+  // [NOT IMPLEMENTED] Answer questions about a document.
+  //
+  // REST calls return 404 and gRPC calls return UNIMPLEMENTED. Send your questions in
+  // the `questions` field of POST /v1/document:annotate, or of an async transaction,
+  // instead.
   rpc AnswerDocumentQuestion(DocumentQuestionRequest) returns (DocumentQuestionResponse) {
     option (google.api.http) = {
       post: "/v1/document:answerquestion"
@@ -66,339 +91,354 @@ service DocumentAnnotator {
   }
 }
 
+// A feature to extract, with optional limits on its candidates.
 message Feature {
+  // The features Smartscan can extract. Each feature's results come back in the
+  // response field of the same name, in camelCase, unless noted otherwise.
   enum Type {
-    // Run default feature set:
-    // PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
-    // SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE, PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR,
-    // DOCUMENT_NUMBER, DOCUMENT_DATE, SUPPLIER_ORGANISATION_NUMBER
+    // A set of frequently used fields: PAYMENT_DUE_DATE, CURRENCY, TOTAL_VAT,
+    // TOTAL_INCL_VAT, TOTAL_EXCL_VAT, SUPPLIER_COUNTRY_CODE, DOCUMENT_TYPE,
+    // PAYMENT_METHOD, CREDIT_CARD_LAST_FOUR, DOCUMENT_NUMBER, DOCUMENT_DATE and
+    // SUPPLIER_ORGANISATION_NUMBER. Its `maxResults` and `minConfidence` apply to each
+    // of them, unless you also request that feature on its own.
     DEFAULT = 0;
-    // Return text annotation
+    // The full OCR output for the pages Smartscan read.
     TEXT_ANNOTATION = 1;
-    // [DEPRECATED] Run order date detection. Use DOCUMENT_DATE instead.
+    // [DEPRECATED] No longer returns anything. Use DOCUMENT_DATE instead.
     ORDER_DATE = 2 [deprecated = true];
-    // Run due date detection
+    // The date the payment is due.
     PAYMENT_DUE_DATE = 3;
-    // Run currency detection
+    // The currency, as a three-letter code.
     CURRENCY = 4;
-    // Run total vat detection
+    // The total VAT of the document.
     TOTAL_VAT = 5;
-    // Run total incl vat detection
+    // The total of the document including VAT.
     TOTAL_INCL_VAT = 6;
-    // Run total excl vat detection
+    // The total of the document excluding VAT.
     TOTAL_EXCL_VAT = 7;
-    // [DEPRECATED] Run supplier corporate id detection.
-    // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
+    // [DEPRECATED] No longer returns anything. Use SUPPLIER_ORGANISATION_NUMBER or
+    // SUPPLIER_VAT_NUMBER instead.
     SUPPLIER_CORPORATE_ID = 8 [deprecated = true];
-    // Run country code detection
+    // The supplier's country, as a two-letter code.
     SUPPLIER_COUNTRY_CODE = 9;
-    // Run document type detection
+    // The type of document, for example an invoice or a receipt.
     DOCUMENT_TYPE = 10;
-    // Run pyment method detection
+    // How the document was paid, for example in cash or by credit card.
     PAYMENT_METHOD = 11;
-    // Run credit card number detection
+    // The last four digits of the credit card used for the payment.
     CREDIT_CARD_LAST_FOUR = 12;
-    // [DEPRECATED] Run invoice number detection. Use DOCUMENT_NUMBER instead.
+    // [DEPRECATED] No longer returns anything. Use DOCUMENT_NUMBER instead.
     INVOICE_NUMBER = 13 [deprecated = true];
-    // Run danish ocr line detection, for the type
+    // The type field of a Danish payment line (FIK).
     OCR_LINE_DK_TYPE = 14;
-    // Run danish ocr line detection, for the payment id
+    // The payment ID of a Danish payment line (FIK).
     OCR_LINE_DK_PAYMENT_ID = 15;
-    // Run danish ocr line detection, for the creditor id
+    // The creditor ID of a Danish payment line (FIK account number).
     OCR_LINE_DK_CREDITOR_ID = 16;
-    // Run swedish ocr line detection for the payment id
+    // The payment ID of a Swedish payment line.
     OCR_LINE_SE_PAYMENT_ID = 17;
-    // Run swedish ocr line detection for the bankgiro creditor id
+    // The Bankgiro creditor ID of a Swedish payment line.
     OCR_LINE_SE_BANKGIRO_CREDITOR_ID = 18;
-    // Run swedish ocr line detection for the plusgiro creditor id
+    // The Plusgiro creditor ID of a Swedish payment line.
     OCR_LINE_SE_PLUSGIRO_CREDITOR_ID = 19;
-    // Run norwegian ocr line detection or the payment id
+    // The payment ID (KID) of a Norwegian payment line.
     OCR_LINE_NO_PAYMENT_ID = 20;
-    // Run finish ocr line detection or the payment id
+    // The payment ID (viitenumero) of a Finnish payment line.
     OCR_LINE_FI_PAYMENT_ID = 21;
-    // Run dutch ocr line detection for the payment id
+    // The payment ID (betalingskenmerk) of a Dutch payment line.
     OCR_LINE_NL_PAYMENT_ID = 22;
-    // Run belgian ocr line detection for the payment id
+    // The payment ID (OGM) of a Belgian payment line.
     OCR_LINE_BE_PAYMENT_ID = 39;
-    // Return document text
+    // The text of the pages Smartscan read.
     TEXT = 23;
-    // Run IBAN detection
+    // The IBAN.
     IBAN = 24;
-    // Run LINES detection
+    // The lines of the document that hold an amount.
     LINES = 25;
-    // Run first page of PDF to PNG conversion
+    // A base64-encoded image of the first page that holds text.
     PREVIEW = 26;
-    // Run bank account number detection
+    // The bank account number.
     BANK_ACCOUNT_NUMBER = 27;
-    // Run bank registration number detection
+    // The bank registration number, in countries that use one, such as Denmark.
     BANK_REGISTRATION_NUMBER = 28;
-    // Run business identifier code detection
+    // The BIC (SWIFT code).
     BIC = 29;
-    // Run document number detection
+    // The number that identifies the document, such as the invoice number.
     DOCUMENT_NUMBER = 30;
-    // Run document date detection
+    // The date the document was issued.
     DOCUMENT_DATE = 31;
-    // Run order number detection
+    // The order number.
     ORDER_NUMBER = 32;
-    // Run supplier name detection
+    // The supplier's name.
     SUPPLIER_NAME = 33;
-    // [EXPERIMENTAL] Run supplier VAT detection
+    // [EXPERIMENTAL] The supplier's VAT number.
     SUPPLIER_VAT_NUMBER = 34;
-    // [EXPERIMENTAL] Run supplier organisation number detection
+    // [EXPERIMENTAL] The supplier's national company ID, such as the CVR number in Denmark.
     SUPPLIER_ORGANISATION_NUMBER = 35;
-    // [EXPERIMENTAL] Run supplier address detection
+    // [EXPERIMENTAL] The supplier's address. Also returns `structuredSupplierAddress`.
     SUPPLIER_ADDRESS = 36;
-    // [EXPERIMENTAL] Run customer identifier detection
+    // [EXPERIMENTAL] The number that identifies the customer.
     CUSTOMER_NUMBER = 37;
-    // Receiver order number
+    // The receiver's order number.
     RECEIVER_ORDER_NUMBER = 38;
-    // Receiver address
+    // The receiver's address. Also returns `structuredReceiverAddress`.
     RECEIVER_ADDRESS = 40;
-    // Receiver country code
+    // The receiver's country, as a two-letter code.
     RECEIVER_COUNTRY_CODE = 41;
-    // Receiver name
+    // The receiver's name.
     RECEIVER_NAME = 42;
-    // Receiver VAT number
+    // The receiver's VAT number.
     RECEIVER_VAT_NUMBER = 43;
-    // Purchase Lines
+    // The line items, in `purchaseLinesDetails` and, in the older format, in
+    // `purchaseLines`. Read from the first 5 pages.
     PURCHASE_LINES = 44;
-    // Page texts
+    // The text of each page. Read from the first 5 pages.
     PAGE_TEXTS = 45;
-    // VAT distribution
+    // The VAT levels and their amounts, in `vatDistributionDetails` and, in the older
+    // format, in `vatDistribution`. Read from the first and last page.
     VAT_DISTRIBUTION = 46;
-    // Langauge code
+    // The language of the document text. Returned regardless of `minConfidence`.
     LANGUAGE_CODE = 47;
-    // QR code
+    // The decoded text of QR codes. Read from the first 5 pages.
     QR_CODES = 48;
-    // Swiss QR bill
+    // Swiss QR bills found in QR codes. Read from the first 5 pages.
     SWISS_QR_BILLS = 49;
-    // Series of automated verifications and consistency checks
-    // on the document.
+    // Runs consistency checks on the extracted values. Candidates that the checks
+    // confirm or correct get the confidence level VERIFIED. Also requests
+    // DOCUMENT_DATE, DOCUMENT_NUMBER, DOCUMENT_TYPE, PAYMENT_DUE_DATE, PAYMENT_METHOD,
+    // CURRENCY, CREDIT_CARD_LAST_FOUR, TOTAL_VAT, TOTAL_INCL_VAT, TOTAL_EXCL_VAT,
+    // SUPPLIER_COUNTRY_CODE, RECEIVER_COUNTRY_CODE, SUPPLIER_ADDRESS, RECEIVER_ADDRESS,
+    // PURCHASE_LINES and VAT_DISTRIBUTION. Verified line and VAT values are in
+    // `purchaseLinesDetails` and `vatDistributionDetails`.
     VERIFIED = 50;
-    // Hotel dates including check-in and check-out dates
+    // The check-in and check-out dates on documents related to accommodation.
     HOTEL_DATES = 51;
-    // Product type classification for purchase lines
+    // A product type for each purchase line, in `productType` of
+    // `purchaseLinesDetails`. Also requests PURCHASE_LINES.
     PRODUCT_TYPES = 52;
-    // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier.
-    // Extracted via the QA/questions model.
+    // The Polish KSeF (Krajowy System e-Faktur) e-invoice number.
     KSEF = 53;
   }
   Type type = 1;
-  // Maximum number of results of this type. Does not apply to
-  // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+  // The maximum number of candidates to return for this feature. Defaults to 1. It
+  // doesn't apply to PURCHASE_LINES, VAT_DISTRIBUTION, PAGE_TEXTS, QR_CODES,
+  // SWISS_QR_BILLS, HOTEL_DATES and KSEF, or to features without candidates, such as
+  // TEXT.
   int32 max_results = 2;
-  // The minimum confidence for predictions that the caller wants returned
+  // The lowest confidence level to return candidates for. Defaults to HIGH. The levels
+  // from lowest to highest are VERY_LOW, LOW, MID, HIGH, VERY_HIGH and VERIFIED. It
+  // applies to the same features as `maxResults`, except LANGUAGE_CODE, which returns
+  // candidates of any level.
   ssn.type.Confidence.Level min_confidence = 3;
 }
 
+// Request body of POST /v1/document:annotate.
 message DocumentAnnotatorRequest {
+  // The document to scan, a PDF or an image. Send its bytes as `content`, or a URL to
+  // download it from as `source.httpUri`.
   Document document = 1;
+  // The features to extract, for example `[{"type": "DEFAULT"}]`. Without features,
+  // nothing is extracted.
   repeated Feature features = 2;
+  // Labels for the request, such as your customer's ID. They're stored with the
+  // request's usage statistics and don't change the results.
   repeated string tags = 3;
   ssn.type.Tier tier = 4;
+  // More labels for the request, stored with its usage statistics like `tags`. They
+  // don't change the results.
   repeated string segments = 5;
+  // Questions about the document in plain language, for example "What is the order
+  // reference?". The answers come back in `answers`, one per question for each page
+  // read (see `documentMetadata.pageCount`). If answering takes longer than 10
+  // seconds, the call fails.
   repeated string questions = 6;
 }
 
+// Response of POST /v1/document:annotate. Feature fields are only filled for the
+// features you requested.
 message DocumentAnnotatorResponse {
-  // [DEPRECATED] Use document_date instead.
-  // orderDate
-  // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-  // Example: "2019-12-31"
-  repeated ssn.type.Candidate order_date = 1;
-  // paymentDueDate
-  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-  // Example: "2019-12-31"
+  // [DEPRECATED] Always empty. Use `documentDate` instead.
+  repeated ssn.type.Candidate order_date = 1 [deprecated = true];
+  // Candidates for the date the payment is due, as YYYY-MM-DD, for example "2019-12-31".
   repeated ssn.type.Candidate payment_due_date = 2;
-  // currency
-  // ISO 4217 string, ie. a 3-letter capitalized string
-  // Example: "NOK"
+  // Candidates for the currency, as an ISO 4217 code, for example "NOK".
   repeated ssn.type.Candidate currency = 3;
-  // totalVat
-  // A string that parses as a two-decimal number
-  // Example: "10.0" or "11.11"
+  // Candidates for the total VAT, as an absolute amount, for example "11.11".
   repeated ssn.type.Candidate total_vat = 4;
-  // totalInclVat
-  // A string that parses as a two-decimal number
-  // Example: "10.0" or "11.11"
+  // Candidates for the total including VAT, as an absolute amount, for example "11.11".
   repeated ssn.type.Candidate total_incl_vat = 5;
-  // totalExclVat
-  // A string that parses as a two-decimal number
-  // Example: "10.0" or "11.11"
+  // Candidates for the total excluding VAT, as an absolute amount, for example "11.11".
   repeated ssn.type.Candidate total_excl_vat = 6;
-  // [DEPRECATED]
-  // Use SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.
-  // supplierCorporateId
-  // The company VAT number
-  // Example: "123456789B01" (for Dutch companies)
-  // or "12345678" (for Norwegian companies)
-  // Note: The field is repeated because multiple VAT numbers might exist.
-  // If you have the VAT number of you customer, you can use this information
-  // to find out which VAT number belongs to the supplier of the invoice.
-  repeated ssn.type.Candidate supplier_corporate_id = 7;
-  // supplierCountryCode
-  // ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-  // Example: "NO"
+  // [DEPRECATED] Always empty. Use `supplierOrganisationNumber` or `supplierVatNumber`
+  // instead.
+  repeated ssn.type.Candidate supplier_corporate_id = 7 [deprecated = true];
+  // Candidates for the supplier's country, as an ISO 3166-1 alpha-2 code, for example
+  // "NO".
   repeated ssn.type.Candidate supplier_country_code = 8;
-  // documentType
-  // Either "Receipt" or "Invoice"
+  // Candidates for the document type, for example "Invoice" or "Receipt".
   repeated ssn.type.Candidate document_type = 9;
-  // paymentMethod
-  // Either "Cash" or "CreditCard"
+  // Candidates for the payment method, for example "Cash" or "CreditCard".
   repeated ssn.type.Candidate payment_method = 10;
-  // creditCardNumber
-  // Four digits
-  // Example: "0012"
+  // Candidates for the last four digits of the credit card, for example "0012".
   repeated ssn.type.Candidate credit_card_last_four = 11;
-  // [DEPRECATED] Use document_number instead.
-  // invoiceNumber
-  // The supplier defined identifier of the invoice
-  // Example: "12345-A99"
-  repeated ssn.type.Candidate invoice_number = 12;
-  // Return text annotation
+  // [DEPRECATED] Always empty. Use `documentNumber` instead.
+  repeated ssn.type.Candidate invoice_number = 12 [deprecated = true];
+  // The OCR output for the pages Smartscan read: the text and its structure from pages
+  // down to single symbols, with bounding boxes. Returned for TEXT_ANNOTATION.
   ssn.type.TextAnnotation text_annotation = 13;
-  // example: "71"
+  // Candidates for the type field of a Danish payment line (FIK).
   repeated ssn.type.Candidate ocr_line_dk_type = 14;
-  // example: "000002879094031"
+  // Candidates for the payment ID of a Danish payment line (FIK), for example
+  // "000002879094031".
   repeated ssn.type.Candidate ocr_line_dk_payment_id = 15;
-  //example: "86570807"
+  // Candidates for the creditor ID of a Danish payment line (FIK), for example
+  // "86570807".
   repeated ssn.type.Candidate ocr_line_dk_creditor_id = 16;
-  // example: "050765098"
+  // Candidates for the payment ID of a Swedish payment line, for example "050765098".
   repeated ssn.type.Candidate ocr_line_se_payment_id = 17;
-  // example: "2654507"
+  // Candidates for the Bankgiro creditor ID of a Swedish payment line, for example
+  // "2654507".
   repeated ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;
-  // example: "5000872"
+  // Candidates for the Plusgiro creditor ID of a Swedish payment line, for example
+  // "5000872".
   repeated ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;
-  // example: "12345678903"
+  // Candidates for the payment ID (KID) of a Norwegian payment line, for example
+  // "12345678903".
   repeated ssn.type.Candidate ocr_line_no_payment_id = 20;
-  // example: "0817937867870002"
+  // Candidates for the payment ID (viitenumero) of a Finnish payment line, for example
+  // "0817937867870002".
   repeated ssn.type.Candidate ocr_line_fi_payment_id = 21;
-  // example: "00000159220010146012"
+  // Candidates for the payment ID (betalingskenmerk) of a Dutch payment line, for
+  // example "00000159220010146012".
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 22;
-  //
+  // Candidates for the payment ID (OGM) of a Belgian payment line, for example
+  // "+++123/1234/12345+++".
   repeated ssn.type.Candidate ocr_line_be_payment_id = 40;
-  // Return a string containing the text from the document
+  // The text of the pages Smartscan read, as UTF-8. Returned for TEXT.
   string text = 23;
-  // Feedback ID is used to correct made predictions through the
-  // Feedback API.
+  // The ID of this request. To correct the results, send it as `id` to
+  // POST /v1/feedback:create.
   string feedback_id = 24;
-  // The first two letters are a country code. The next two digits are
-  // check digits for the ISO 7064 Mod 97, 10 checksum
-  // example: "DK50 0040 0440 1162 43", "NO8330001234567"
+  // Candidates for the IBAN, for example "DK50 0040 0440 1162 43" or
+  // "NO8330001234567". The first two letters are a country code, and the next two
+  // digits are check digits (ISO 7064 Mod 97-10).
   repeated ssn.type.Candidate iban = 25;
-  // Invoice lines represented in a form of text, amount and page reference
-  // to state on which page the line was found
+  // The lines of the document that hold an amount, with their text, amount and page.
+  // Returned for LINES.
   repeated ssn.type.LineCandidate lines = 26;
-  // Base64 encoded PNG image  of the first page of PDF document sent in request
+  // A base64-encoded image of the first page that holds text. Returned for PREVIEW.
   string preview = 27;
-  // Country specific bank account number
+  // Candidates for the bank account number, in the format of its country.
   repeated ssn.type.Candidate bank_account_number = 28;
-  // Country specific bank registration number
+  // Candidates for the bank registration number, in countries that use one, such as
+  // Denmark.
   repeated ssn.type.Candidate bank_registration_number = 29;
-  // Returns business identifier code
+  // Candidates for the BIC (SWIFT code), for example "DABADKKK".
   repeated ssn.type.Candidate bic = 30;
-  // Represents identifier of the document
+  // Candidates for the number that identifies the document, such as the invoice number.
   repeated ssn.type.Candidate document_number = 31;
-  // Returns document date
+  // Candidates for the date the document was issued, as YYYY-MM-DD, for example
+  // "2019-12-31".
   repeated ssn.type.Candidate document_date = 32;
-  // Represents the identifier that supplier assigned to the order
+  // Candidates for the order number.
   repeated ssn.type.Candidate order_number = 33;
-  // Returns supplier name
+  // Candidates for the supplier's name.
   repeated ssn.type.Candidate supplier_name = 34;
-  // [EXPERIMENTAL]
-  // Returns supplier VAT number
+  // [EXPERIMENTAL] Candidates for the supplier's VAT number.
   repeated ssn.type.Candidate supplier_vat_number = 35;
-  // [EXPERIMENTAL]
-  // Returns the business ID or organisation number of the supplier
+  // [EXPERIMENTAL] Candidates for the supplier's national company ID, such as the
+  // CVR number in Denmark or the KvK number in the Netherlands.
   repeated ssn.type.Candidate supplier_organisation_number = 36;
-  // [EXPERIMENTAL]
-  // Returns supplier address
+  // [EXPERIMENTAL] Candidates for the supplier's address, as written on the document.
+  // See `structuredSupplierAddress` for its parts.
   repeated ssn.type.Candidate supplier_address = 37;
-  // [EXPERIMENTAL]
-  // Returns customer identifier/number
+  // [EXPERIMENTAL] Candidates for the number that identifies the customer.
   repeated ssn.type.Candidate customer_number = 38;
-  // Equivalent of order number for receiver
+  // Candidates for the receiver's order number.
   repeated ssn.type.Candidate receiver_order_number = 39;
-  // Equivalent of address for receiver
+  // Candidates for the receiver's address, as written on the document. See
+  // `structuredReceiverAddress` for its parts.
   repeated ssn.type.Candidate receiver_address = 41;
-  // Equivalent of country code for receiver
+  // Candidates for the receiver's country, as an ISO 3166-1 alpha-2 code.
   repeated ssn.type.Candidate receiver_country_code = 42;
-  // Equivalent of supplier name for receiver
+  // Candidates for the receiver's name.
   repeated ssn.type.Candidate receiver_name = 43;
-  // Equivalent of VAT number for receiver
+  // Candidates for the receiver's VAT number.
   repeated ssn.type.Candidate receiver_vat_number = 44;
-  // Purchase lines for the document. This is a list of candidates, where each
-  // candidate is a single purchase lines. Each purchase line may have page number,
-  // code, description, quantity, item number, unit, total discount, percentage discount,
-  // total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
-  // unit price excl vat
+  // The purchase lines in the older format, with one value for each field. Use
+  // `purchaseLinesDetails` instead: it has candidates with confidence levels, and
+  // VERIFIED results.
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 45;
-  // Answer Candidates for the questions asked in th request about the document
-  // Each Answer is question and answer pair with page number and confidence
+  // The answers to the `questions` in the request, one per question for each page read.
   repeated ssn.type.AnswerCandidate answers = 46;
-  // The page texts of the document
+  // The text of each page read. Returned for PAGE_TEXTS.
   repeated ssn.type.PageText page_texts = 47;
-  // Vat levels for the document, each vat level has vat level percentage and vat level amount
+  // The VAT levels in the older format, with one value for each field. Use
+  // `vatDistributionDetails` instead: it has candidates with confidence levels, and
+  // VERIFIED results.
   repeated ssn.type.VatDistributionCandidate vat_distribution = 48;
-  // Extra information about the document like number of pages
+  // Information about how the document was processed, such as the number of pages
+  // Smartscan read.
   ssn.type.DocumentMetadata document_metadata = 49;
-  // Information about the text language detected from OCR
+  // Candidates for the language of the document text, as a BCP-47 code such as "en".
   repeated ssn.type.Candidate language_code = 50;
-  // QR codes detected in the document
+  // The QR codes found on the pages read. Returned for QR_CODES.
   repeated ssn.type.QrCodeData qr_codes = 51;
-  // Swiss QR bills detected in the document
+  // The Swiss QR bills found in QR codes on the pages read. Returned for SWISS_QR_BILLS.
   repeated ssn.type.SwissQrBill swiss_qr_bills = 52;
-  // The hotelDates cntains check-in and check-out date candidates
+  // Check-in and check-out date candidates on documents related to accommodation, as
+  // YYYY-MM-DD. Returned for HOTEL_DATES.
   ssn.type.HotelDates hotel_dates = 53;
   reserved 54;
   reserved 55;
-  // Purchase lines for the document. This is a list where each field is a candidate.
+  // The purchase lines, with a list of candidates for each field. Returned for
+  // PURCHASE_LINES and PRODUCT_TYPES, and read from the first 5 pages.
   repeated ssn.type.PurchaseLine purchase_lines_details = 56;
-  // VAT distribution for the document. This is a list where each field is a candidate.
+  // The VAT levels, with a list of candidates for each field. Returned for
+  // VAT_DISTRIBUTION.
   repeated ssn.type.VatDistribution vat_distribution_details = 57;
-  // Structured supplier address, returned when VERIFIED feature is requested
-  // and supplier address is available. Parsed from the raw supplier address
-  // using the geo service. Each entry corresponds to the candidate at the
-  // same index in supplier_address.
+  // The supplier address split into its parts, returned for SUPPLIER_ADDRESS. Each entry
+  // belongs to the `supplierAddress` candidate at the same index, and is empty when that
+  // address can't be resolved.
   repeated ssn.type.StructuredAddress structured_supplier_address = 58;
-  // Structured receiver address, returned when VERIFIED feature is requested
-  // and receiver address is available. Parsed from the raw receiver address
-  // using the geo service. Each entry corresponds to the candidate at the
-  // same index in receiver_address.
+  // The receiver address split into its parts, returned for RECEIVER_ADDRESS. Each entry
+  // belongs to the `receiverAddress` candidate at the same index, and is empty when that
+  // address can't be resolved.
   repeated ssn.type.StructuredAddress structured_receiver_address = 59;
-  // Poland KSeF (Krajowy System e-Faktur) e-invoicing identifier, extracted
-  // via the QA/questions model. A reference number of up to 35 characters
-  // (alphanumeric, may contain hyphens).
+  // Candidates for the Polish KSeF (Krajowy System e-Faktur) e-invoice number: 35
+  // characters made of the seller's 10-digit NIP, an 8-digit date, a 12-character
+  // technical part and a 2-character checksum, separated by hyphens. Only numbers with
+  // a valid checksum are returned.
   repeated ssn.type.Candidate ksef = 60;
 }
 
+// A document to scan: a PDF or an image. Send either `content` or `source`.
 message Document {
-  // Document content, represented as a stream of bytes.
-  // Note: As with all `bytes` fields, protobuffers use a pure binary
-  // representation, whereas JSON representations use base64.
+  // The bytes of the file, base64-encoded in JSON. If you send both `content` and
+  // `source`, `content` is used.
   bytes content = 1;
-  // Google Cloud Storage image location, or publicly-accessible image
-  // URL. If both `content` and `source` are provided for a document, `content`
-  // takes precedence and is used to perform the scan request.
+  // Where to download the document from, when you don't send `content`.
   DocumentSource source = 2;
 }
 
+// A location to download a document from.
 message DocumentSource {
-  // The URI of the source document. Can be either:
-  //
-  // 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
-  //    HTTP/HTTPS URLs, We cannot guarantee that the request will be
-  //    completed. Your request may fail if the specified host denies the
-  //    request (e.g. due to request throttling or DOS prevention).
-  //
+  // A public HTTP or HTTPS URL of the document. The server must use port 80 or 443,
+  // answer with HTTP 200 and a Content-Length header, and send at most 10 MiB.
+  // POST /v1/document:annotate waits 2 seconds for it, and async transactions wait 10
+  // seconds. When the download fails, the call returns 400.
   string http_uri = 1;
 }
 
+// Request body of POST /v1/document:answerquestion, which isn't implemented.
 message DocumentQuestionRequest {
+  // The document to ask about.
   Document document = 1;
+  // Questions about the document, in plain language.
   repeated string questions = 2;
 }
 
+// Response of POST /v1/document:answerquestion, which isn't implemented.
 message DocumentQuestionResponse {
   reserved 1;
   repeated ssn.type.AnswerCandidate answers = 2;

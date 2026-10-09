@@ -19,29 +19,30 @@ package ssn.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
-// A vertex represents a 2D point in the image.
-// NOTE: the vertex coordinates are in the same scale as the original image.
+// A point on the page, in pixel coordinates.
 message Vertex {
-  // X coordinate.
+  // The x coordinate.
   int32 x = 1;
-  // Y coordinate.
+  // The y coordinate.
   int32 y = 2;
 }
 
-// A vertex represents a 2D point in the image.
-// NOTE: the normalized vertex coordinates are relative to the original image
-// and range from 0 to 1.
+// A point on the page, relative to the page size. Both coordinates range from 0 to 1.
 message NormalizedVertex {
-  // X coordinate.
+  // The x coordinate, relative to the page width.
   float x = 1;
-  // Y coordinate.
+  // The y coordinate, relative to the page height.
   float y = 2;
 }
 
-// A bounding polygon for the detected image annotation.
+// A box on the page, for example around the text of a candidate. Its four points are
+// ordered top-left, top-right, bottom-right and bottom-left. When the box is rotated,
+// the order follows the text as it's read in its natural orientation, so the first
+// point is always the top-left corner of the text.
 message BoundingPoly {
-  // The bounding polygon vertices.
+  // The four points, in pixel coordinates.
   repeated Vertex vertices = 1;
-  // The bounding polygon normalized vertices.
+  // The same four points relative to the page size, from 0 to 1, so you can place an
+  // overlay without knowing the size of the image.
   repeated NormalizedVertex normalized_vertices = 2;
 }

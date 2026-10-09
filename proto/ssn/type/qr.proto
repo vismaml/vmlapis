@@ -4,51 +4,95 @@ package ssn.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
+// A QR code found in the document, returned for the QR_CODES feature.
 message QrCodeData {
+  // The decoded text of the QR code.
   string content = 1;
 }
 
+// A Swiss QR bill parsed from a QR code in the document, returned for the
+// SWISS_QR_BILLS feature. Only QR codes that follow version 0200 of the Swiss QR bill
+// standard are returned. The fields hold the values of the QR code as they are.
 message SwissQrBill {
+  // The QR type, always "SPC".
   string qr_type = 1;
+  // The version of the Swiss QR bill standard, always "0200".
   string version = 2;
+  // The character encoding type, always "1".
   string coding_type = 3;
 
+  // The IBAN or QR-IBAN of the creditor.
   string account = 4;
 
+  // The format of the creditor's address: "S" for structured or "K" for combined.
   string creditor_address_type = 5;
+  // The name of the creditor.
   string creditor_name = 6;
+  // The street or P.O. box of the creditor, or the first address line.
   string creditor_address_line_1 = 7;
+  // The building number of the creditor, or the second address line.
   string creditor_address_line_2 = 8;
+  // The postal code of the creditor.
   string creditor_address_postal_code = 9;
+  // The town of the creditor.
   string creditor_address_city = 10;
+  // The country of the creditor, as a two-letter code.
   string creditor_address_country = 11;
 
+  // The format of the ultimate creditor's address: "S" for structured or "K" for combined.
+  // Empty when the bill names no ultimate creditor.
   string ultimate_creditor_address_type = 12;
+  // The name of the ultimate creditor.
   string ultimate_creditor_name = 13;
+  // The street or P.O. box of the ultimate creditor, or the first address line.
   string ultimate_creditor_address_line_1 = 14;
+  // The building number of the ultimate creditor, or the second address line.
   string ultimate_creditor_address_line_2 = 15;
+  // The postal code of the ultimate creditor.
   string ultimate_creditor_address_postal_code = 16;
+  // The town of the ultimate creditor.
   string ultimate_creditor_address_city = 17;
+  // The country of the ultimate creditor, as a two-letter code.
   string ultimate_creditor_address_country = 18;
 
+  // The amount to pay, for example "1949.75". Empty when the bill leaves the amount open.
   string amount = 19;
+  // The currency, "CHF" or "EUR".
   string currency = 20;
 
+  // The format of the ultimate debtor's address: "S" for structured or "K" for combined.
+  // Empty when the bill names no ultimate debtor.
   string ultimate_debtor_address_type = 21;
+  // The name of the ultimate debtor.
   string ultimate_debtor_name = 22;
+  // The street or P.O. box of the ultimate debtor, or the first address line.
   string ultimate_debtor_address_line_1 = 23;
+  // The building number of the ultimate debtor, or the second address line.
   string ultimate_debtor_address_line_2 = 24;
+  // The postal code of the ultimate debtor.
   string ultimate_debtor_address_postal_code = 25;
+  // The town of the ultimate debtor.
   string ultimate_debtor_address_city = 26;
+  // The country of the ultimate debtor, as a two-letter code.
   string ultimate_debtor_address_country = 27;
 
+  // The reference type: "QRR" for a QR reference, "SCOR" for a creditor reference, or
+  // "NON" for no reference.
   string payment_reference_type = 28;
+  // The payment reference.
   string payment_reference = 29;
 
+  // Additional information for the payment, for example "Order from 15.10.2020".
   string unstructured_message = 30;
+  // The end of the payment data, always "EPD".
   string trailer = 31;
 
+  // [NOT IMPLEMENTED] Billing information isn't extracted yet, so this is always empty.
   string billing_information = 32;
+  // [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+  // always empty.
   string av1_parameters = 33;
+  // [NOT IMPLEMENTED] Alternative procedure parameters aren't extracted yet, so this is
+  // always empty.
   string av2_parameters = 34;
 }

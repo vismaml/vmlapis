@@ -4,10 +4,16 @@ package ssn.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
+// An address split into its parts. All fields are empty when the address can't be resolved.
 message StructuredAddress {
+  // The street name, without the house number.
   string street = 1;
+  // The postal or ZIP code.
   string postal_code = 2;
+  // The city or town.
   string city = 3;
+  // The full country name.
   string country = 4;
-  string country_code = 5; // ISO 3166-1 alpha-2
+  // The country, as an ISO 3166-1 alpha-2 code in capital letters, for example "DK".
+  string country_code = 5;
 }

@@ -4,11 +4,16 @@ package ssn.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
+// The model tier that processes the document. When no tier is set, PREMIUM is used.
 enum Tier {
-  // Use the default tier. Defaults to the STANDARD option or account default, if set.
+  // No tier set. The document is processed as PREMIUM.
   DEFAULT = 0;
+  // The older tier, kept for existing integrations. Use PREMIUM for new integrations.
   STANDARD = 1;
+  // Our proprietary AI, and the tier used when no tier is set.
   PREMIUM = 2;
+  // Combines our proprietary AI with reasoning LLMs for the highest available quality.
+  // Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
   ULTRA = 3;
   HUMAN = 4;
 }
