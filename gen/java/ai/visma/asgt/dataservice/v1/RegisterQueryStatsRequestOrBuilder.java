@@ -99,4 +99,15 @@ public interface RegisterQueryStatsRequestOrBuilder extends
    * @return The returnedUltraHigh.
    */
   int getReturnedUltraHigh();
+
+  /**
+   * <code>.asgt.type.Tier tier = 11 [json_name = "tier"];</code>
+   * @return The enum numeric value on the wire for tier.
+   */
+  int getTierValue();
+  /**
+   * <code>.asgt.type.Tier tier = 11 [json_name = "tier"];</code>
+   * @return The tier.
+   */
+  ai.visma.asgt.type.Tier getTier();
 }

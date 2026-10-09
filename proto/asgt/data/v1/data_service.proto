@@ -7,6 +7,7 @@ import "asgt/type/model.proto";
 import "asgt/type/prediction.proto";
 import "asgt/type/retention_policy.proto";
 import "asgt/type/sample.proto";
+import "asgt/type/tier.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
@@ -127,4 +128,5 @@ message RegisterQueryStatsRequest {
   int32 returned_high = 8;
   int32 returned_very_high = 9;
   int32 returned_ultra_high = 10;
+  asgt.type.Tier tier = 11;
 }

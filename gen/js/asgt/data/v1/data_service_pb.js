@@ -31,6 +31,8 @@ var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy
 goog.object.extend(proto, asgt_type_retention_policy_pb);
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 goog.object.extend(proto, asgt_type_sample_pb);
+var asgt_type_tier_pb = require('../../../asgt/type/tier_pb.js');
+goog.object.extend(proto, asgt_type_tier_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
@@ -2464,7 +2466,8 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.toObject = function(includeI
     returnedMid: jspb.Message.getFieldWithDefault(msg, 7, 0),
     returnedHigh: jspb.Message.getFieldWithDefault(msg, 8, 0),
     returnedVeryHigh: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    returnedUltraHigh: jspb.Message.getFieldWithDefault(msg, 10, 0)
+    returnedUltraHigh: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    tier: jspb.Message.getFieldWithDefault(msg, 11, 0)
   };
 
   if (includeInstance) {
@@ -2540,6 +2543,10 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.deserializeBinaryFromReader 
     case 10:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setReturnedUltraHigh(value);
+      break;
+    case 11:
+      var value = /** @type {!proto.asgt.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
       break;
     default:
       reader.skipField();
@@ -2637,6 +2644,13 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.serializeBinaryToWriter = fu
   if (f !== 0) {
     writer.writeInt32(
       10,
+      f
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      11,
       f
     );
   }
@@ -2839,6 +2853,24 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getReturnedUltraHi
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setReturnedUltraHigh = function(value) {
   return jspb.Message.setProto3IntField(this, 10, value);
+};
+
+
+/**
+ * optional asgt.type.Tier tier = 11;
+ * @return {!proto.asgt.type.Tier}
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getTier = function() {
+  return /** @type {!proto.asgt.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
+
+
+/**
+ * @param {!proto.asgt.type.Tier} value
+ * @return {!proto.asgt.dataservice.v1.RegisterQueryStatsRequest} returns this
+ */
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setTier = function(value) {
+  return jspb.Message.setProto3EnumField(this, 11, value);
 };
 
 
