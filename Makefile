@@ -41,13 +41,17 @@ all:
 	sed "s/{_FILE_NAME}/asgt\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.v1.yaml
 	buf generate proto --template buf.gen.openapiv2.asgt.v1.yaml --path proto/asgt/data/v1 --path proto/asgt/jester/v1  --verbose
 	sed "s/{_FILE_NAME}/asgt\/v2.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.v2.yaml
-	buf generate proto --template buf.gen.openapiv2.asgt.v2.yaml --path proto/asgt/v2 --exclude-path proto/asgt/v2/type  --verbose
-	rm buf.gen.openapiv2.asgt.v1.yaml buf.gen.openapiv2.asgt.v2.yaml
+	buf generate proto --template buf.gen.openapiv2.asgt.v2.yaml --path proto/asgt/v2 --exclude-path proto/asgt/v2/type --exclude-path proto/asgt/v2/product_service.proto  --verbose
+	sed "s/{_FILE_NAME}/asgt\/producttypes.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.asgt.producttypes.yaml
+	buf generate proto --template buf.gen.openapiv2.asgt.producttypes.yaml --path proto/asgt/v2/product_service.proto  --verbose
+	rm buf.gen.openapiv2.asgt.v1.yaml buf.gen.openapiv2.asgt.v2.yaml buf.gen.openapiv2.asgt.producttypes.yaml
 
 #	openapiv2 (documentation and swagger) for ssn 
 	sed "s/{_FILE_NAME}/ssn\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.ssn.v1.yaml
-	buf generate proto --template buf.gen.openapiv2.ssn.v1.yaml --path proto/ssn/annotator --path proto/ssn/dataservice --path proto/ssn/asyncton  --verbose
-	rm buf.gen.openapiv2.ssn.v1.yaml
+	buf generate proto --template buf.gen.openapiv2.ssn.v1.yaml --path proto/ssn/access --path proto/ssn/annotator --path proto/ssn/dataservice  --verbose
+	sed "s/{_FILE_NAME}/ssn\/async.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.ssn.async.yaml
+	buf generate proto --template buf.gen.openapiv2.ssn.async.yaml --path proto/ssn/asyncton  --verbose
+	rm buf.gen.openapiv2.ssn.v1.yaml buf.gen.openapiv2.ssn.async.yaml
 
 #	descriptor (binary) generated from the service code, only needed for customer-facing services
 	buf build proto -o gen/descriptor.bin \

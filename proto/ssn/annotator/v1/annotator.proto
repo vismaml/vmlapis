@@ -14,13 +14,41 @@ import "ssn/type/tier.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
-    title: "SmartScan"
+    title: "Smartscan"
     version: "v1"
-    description: ""
+    description:
+      "Smartscan extracts data from unstructured documents such as invoices and receipts, "
+      "and returns the results in the same call. This reference also covers feedback and valet keys. "
+      "Async transactions have their own reference, under "
+      "[Smartscan Async](https://docs.vml.visma.ai/smartscan-async/getting-started/).\n\n"
+      "**Hosts:** `api.prod.ssn.visma.ai` for production and `api.stag.ssn.visma.ai` for staging.\n\n"
+      "**Authentication:** send your project token as `Authorization: Bearer <token>`. "
+      "Mobile and web clients can use a short-lived valet key instead. "
+      "See [Authentication](https://docs.vml.visma.ai/authentication/).\n\n"
+      "**Errors:** a failed call returns an HTTP error status with a JSON body that holds `code`, `message` and `details`.\n\n"
+      "**Guides:** [Smartscan](https://docs.vml.visma.ai/smartscan/getting-started/) and "
+      "[limits and rate limits](https://docs.vml.visma.ai/rate-limit/)."
   }
   schemes: HTTPS
   consumes: "application/json"
   produces: "application/json"
+  security_definitions: {
+    security: {
+      key: "BearerAuth"
+      value: {
+        type: TYPE_API_KEY
+        in: IN_HEADER
+        name: "Authorization"
+        description: "Your project token, sent as `Bearer <token>`."
+      }
+    }
+  }
+  security: {
+    security_requirement: {
+      key: "BearerAuth"
+      value: {}
+    }
+  }
 };
 
 service DocumentAnnotator {
@@ -155,7 +183,6 @@ message Feature {
     // Extracted via the QA/questions model.
     KSEF = 53;
   }
-  // The feature type.
   Type type = 1;
   // Maximum number of results of this type. Does not apply to
   // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.

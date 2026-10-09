@@ -6,3 +6,4 @@ plugins:
       - logtostderr=true
       - allow_merge=true
       - merge_file_name={_FILE_NAME}
+      - use_allof_for_refs=true
