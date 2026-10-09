@@ -59,6 +59,18 @@ namespace Ssn.Type {
     /// Only available through Smartscan Async. The synchronous API serves it as PREMIUM.
     /// </summary>
     [pbr::OriginalName("ULTRA")] Ultra = 3,
+    /// <summary>
+    /// A person verifies the AI's results. Only available through Smartscan Async. The
+    /// synchronous API serves it as PREMIUM. The AI processes the document first. Then a person
+    /// verifies its header fields: totals and currency, document type, date and number, order
+    /// number, payment due date, supplier details, and bank and payment details. HUMAN also
+    /// extracts these fields when they aren't requested. While the person works, the
+    /// transaction is PENDING_VERIFICATION and its results hold the AI's candidates. Verified
+    /// values are added as candidates with the confidence level VERIFIED, and the transaction
+    /// ends DONE. If the AI already completed the document, it ends DONE without verification.
+    /// If verification isn't possible or doesn't finish within 24 hours, it ends PARTIAL with
+    /// the error message "human verification was not completed", and the AI results stay.
+    /// </summary>
     [pbr::OriginalName("HUMAN")] Human = 4,
   }
 

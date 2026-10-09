@@ -132,7 +132,7 @@
     "/v1/transactions/results": {
       "get": {
         "summary": "Get the results of a transaction.",
-        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
+        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which\nonly happens with the HUMAN tier, the response holds the AI results, and the verified\nvalues are added when verification is done. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionResults2",
         "responses": {
           "200": {
@@ -235,7 +235,7 @@
     "/v1/transactions/status": {
       "get": {
         "summary": "Get the status of a transaction.",
-        "description": "Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL\nand FAILED are final, so stop polling and fetch the results. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/status with the customId query\nparameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
+        "description": "Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or\nFAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.\nPENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched\nwhile a person verifies them. Refer to the transaction by its ID in the path, or call\nGET /v1/transactions/status with the customId query parameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionStatus2",
         "responses": {
           "200": {
@@ -316,7 +316,7 @@
     "/v1/transactions/{id}/results": {
       "get": {
         "summary": "Get the results of a transaction.",
-        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
+        "description": "Returns the extracted data once processing has finished. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/results with the customId query\nparameter.\n\nAn existing transaction always returns 200, whatever its status. While it's CREATED or\nRUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which\nonly happens with the HUMAN tier, the response holds the AI results, and the verified\nvalues are added when verification is done. When it FAILED, the response holds\nerrorMessage and no annotations. When it's PARTIAL, the response holds the annotations\nof the features that succeeded, and errorMessage.\n\nThe candidates of field features are filtered. By default you get at most one candidate\nper feature, and only at confidence level HIGH or above. Set minConfidence and\nmaxResults to get more.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionResults",
         "responses": {
           "200": {
@@ -420,7 +420,7 @@
     "/v1/transactions/{id}/status": {
       "get": {
         "summary": "Get the status of a transaction.",
-        "description": "Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL\nand FAILED are final, so stop polling and fetch the results. Refer to the transaction by\nits ID in the path, or call GET /v1/transactions/status with the customId query\nparameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
+        "description": "Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or\nFAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.\nPENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched\nwhile a person verifies them. Refer to the transaction by its ID in the path, or call\nGET /v1/transactions/status with the customId query parameter.\n\nReturns 404 when the transaction doesn't exist in your project, and 400 when neither a\ntransaction ID nor a custom ID is given.",
         "operationId": "TransactionService_GetTransactionStatus",
         "responses": {
           "200": {
@@ -1425,7 +1425,7 @@
         "HUMAN"
       ],
       "default": "DEFAULT",
-      "description": "The model tier that processes the document. When no tier is set, PREMIUM is used.\n\n - DEFAULT: No tier set. The document is processed as PREMIUM.\n - STANDARD: The older tier, kept for existing integrations. Use PREMIUM for new integrations.\n - PREMIUM: Our proprietary AI, and the tier used when no tier is set.\n - ULTRA: Combines our proprietary AI with reasoning LLMs for the highest available quality.\nOnly available through Smartscan Async. The synchronous API serves it as PREMIUM."
+      "description": "The model tier that processes the document. When no tier is set, PREMIUM is used.\n\n - DEFAULT: No tier set. The document is processed as PREMIUM.\n - STANDARD: The older tier, kept for existing integrations. Use PREMIUM for new integrations.\n - PREMIUM: Our proprietary AI, and the tier used when no tier is set.\n - ULTRA: Combines our proprietary AI with reasoning LLMs for the highest available quality.\nOnly available through Smartscan Async. The synchronous API serves it as PREMIUM.\n - HUMAN: A person verifies the AI's results. Only available through Smartscan Async. The\nsynchronous API serves it as PREMIUM. The AI processes the document first. Then a person\nverifies its header fields: totals and currency, document type, date and number, order\nnumber, payment due date, supplier details, and bank and payment details. HUMAN also\nextracts these fields when they aren't requested. While the person works, the\ntransaction is PENDING_VERIFICATION and its results hold the AI's candidates. Verified\nvalues are added as candidates with the confidence level VERIFIED, and the transaction\nends DONE. If the AI already completed the document, it ends DONE without verification.\nIf verification isn't possible or doesn't finish within 24 hours, it ends PARTIAL with\nthe error message \"human verification was not completed\", and the AI results stay."
     },
     "typeVatDistribution": {
       "type": "object",
@@ -1669,7 +1669,7 @@
         },
         "status": {
           "type": "string",
-          "description": "The processing status. CREATED: accepted and waiting to be processed. RUNNING: being\nprocessed. DONE: every requested feature finished. PARTIAL: processing finished, but some\nfeatures failed while others succeeded, and the results hold the ones that succeeded.\nFAILED: every feature failed. DONE, PARTIAL and FAILED are final."
+          "description": "The processing status. CREATED: accepted and waiting to be processed. RUNNING: being\nprocessed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to\nfetch while a person verifies them. DONE: every requested feature finished. PARTIAL:\nprocessing finished, but some features failed while others succeeded, and the results\nhold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are\nfinal."
         },
         "errorMessage": {
           "type": "string",

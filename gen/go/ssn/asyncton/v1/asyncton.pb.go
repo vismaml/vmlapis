@@ -578,9 +578,11 @@ type GetTransactionStatusResponse struct {
 	// The transaction ID.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	// The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-	// processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-	// features failed while others succeeded, and the results hold the ones that succeeded.
-	// FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+	// processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+	// fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+	// processing finished, but some features failed while others succeeded, and the results
+	// hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+	// final.
 	Status string `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
 	// Describes a feature that failed, for example "failed to process pdf". Set as soon as any
 	// feature has failed, so always when the status is PARTIAL or FAILED.

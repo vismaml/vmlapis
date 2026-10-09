@@ -297,7 +297,9 @@ public final class TransactionServiceGrpc {
      * its ID in the path, or call GET /v1/transactions/results with the customId query
      * parameter.
      * An existing transaction always returns 200, whatever its status. While it's CREATED or
-     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * RUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which
+     * only happens with the HUMAN tier, the response holds the AI results, and the verified
+     * values are added when verification is done. When it FAILED, the response holds
      * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
      * of the features that succeeded, and errorMessage.
      * The candidates of field features are filtered. By default you get at most one candidate
@@ -315,10 +317,11 @@ public final class TransactionServiceGrpc {
     /**
      * <pre>
      * Get the status of a transaction.
-     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
-     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
-     * its ID in the path, or call GET /v1/transactions/status with the customId query
-     * parameter.
+     * Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or
+     * FAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.
+     * PENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched
+     * while a person verifies them. Refer to the transaction by its ID in the path, or call
+     * GET /v1/transactions/status with the customId query parameter.
      * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
      * transaction ID nor a custom ID is given.
      * </pre>
@@ -437,7 +440,9 @@ public final class TransactionServiceGrpc {
      * its ID in the path, or call GET /v1/transactions/results with the customId query
      * parameter.
      * An existing transaction always returns 200, whatever its status. While it's CREATED or
-     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * RUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which
+     * only happens with the HUMAN tier, the response holds the AI results, and the verified
+     * values are added when verification is done. When it FAILED, the response holds
      * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
      * of the features that succeeded, and errorMessage.
      * The candidates of field features are filtered. By default you get at most one candidate
@@ -456,10 +461,11 @@ public final class TransactionServiceGrpc {
     /**
      * <pre>
      * Get the status of a transaction.
-     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
-     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
-     * its ID in the path, or call GET /v1/transactions/status with the customId query
-     * parameter.
+     * Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or
+     * FAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.
+     * PENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched
+     * while a person verifies them. Refer to the transaction by its ID in the path, or call
+     * GET /v1/transactions/status with the customId query parameter.
      * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
      * transaction ID nor a custom ID is given.
      * </pre>
@@ -565,7 +571,9 @@ public final class TransactionServiceGrpc {
      * its ID in the path, or call GET /v1/transactions/results with the customId query
      * parameter.
      * An existing transaction always returns 200, whatever its status. While it's CREATED or
-     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * RUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which
+     * only happens with the HUMAN tier, the response holds the AI results, and the verified
+     * values are added when verification is done. When it FAILED, the response holds
      * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
      * of the features that succeeded, and errorMessage.
      * The candidates of field features are filtered. By default you get at most one candidate
@@ -583,10 +591,11 @@ public final class TransactionServiceGrpc {
     /**
      * <pre>
      * Get the status of a transaction.
-     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
-     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
-     * its ID in the path, or call GET /v1/transactions/status with the customId query
-     * parameter.
+     * Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or
+     * FAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.
+     * PENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched
+     * while a person verifies them. Refer to the transaction by its ID in the path, or call
+     * GET /v1/transactions/status with the customId query parameter.
      * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
      * transaction ID nor a custom ID is given.
      * </pre>
@@ -688,7 +697,9 @@ public final class TransactionServiceGrpc {
      * its ID in the path, or call GET /v1/transactions/results with the customId query
      * parameter.
      * An existing transaction always returns 200, whatever its status. While it's CREATED or
-     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * RUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which
+     * only happens with the HUMAN tier, the response holds the AI results, and the verified
+     * values are added when verification is done. When it FAILED, the response holds
      * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
      * of the features that succeeded, and errorMessage.
      * The candidates of field features are filtered. By default you get at most one candidate
@@ -706,10 +717,11 @@ public final class TransactionServiceGrpc {
     /**
      * <pre>
      * Get the status of a transaction.
-     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
-     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
-     * its ID in the path, or call GET /v1/transactions/status with the customId query
-     * parameter.
+     * Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or
+     * FAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.
+     * PENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched
+     * while a person verifies them. Refer to the transaction by its ID in the path, or call
+     * GET /v1/transactions/status with the customId query parameter.
      * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
      * transaction ID nor a custom ID is given.
      * </pre>
@@ -812,7 +824,9 @@ public final class TransactionServiceGrpc {
      * its ID in the path, or call GET /v1/transactions/results with the customId query
      * parameter.
      * An existing transaction always returns 200, whatever its status. While it's CREATED or
-     * RUNNING, the response holds only id and customId. When it FAILED, the response holds
+     * RUNNING, the response holds only id and customId. While it's PENDING_VERIFICATION, which
+     * only happens with the HUMAN tier, the response holds the AI results, and the verified
+     * values are added when verification is done. When it FAILED, the response holds
      * errorMessage and no annotations. When it's PARTIAL, the response holds the annotations
      * of the features that succeeded, and errorMessage.
      * The candidates of field features are filtered. By default you get at most one candidate
@@ -831,10 +845,11 @@ public final class TransactionServiceGrpc {
     /**
      * <pre>
      * Get the status of a transaction.
-     * Returns the processing status: CREATED, RUNNING, DONE, PARTIAL or FAILED. DONE, PARTIAL
-     * and FAILED are final, so stop polling and fetch the results. Refer to the transaction by
-     * its ID in the path, or call GET /v1/transactions/status with the customId query
-     * parameter.
+     * Returns the processing status: CREATED, RUNNING, PENDING_VERIFICATION, DONE, PARTIAL or
+     * FAILED. DONE, PARTIAL and FAILED are final, so stop polling and fetch the results.
+     * PENDING_VERIFICATION only happens with the HUMAN tier: the AI results can be fetched
+     * while a person verifies them. Refer to the transaction by its ID in the path, or call
+     * GET /v1/transactions/status with the customId query parameter.
      * Returns 404 when the transaction doesn't exist in your project, and 400 when neither a
      * transaction ID nor a custom ID is given.
      * </pre>

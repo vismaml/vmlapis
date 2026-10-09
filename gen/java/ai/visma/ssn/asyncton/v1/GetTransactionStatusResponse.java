@@ -103,9 +103,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-   * features failed while others succeeded, and the results hold the ones that succeeded.
-   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+   * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+   * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+   * processing finished, but some features failed while others succeeded, and the results
+   * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+   * final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -127,9 +129,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-   * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-   * features failed while others succeeded, and the results hold the ones that succeeded.
-   * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+   * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+   * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+   * processing finished, but some features failed while others succeeded, and the results
+   * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+   * final.
    * </pre>
    *
    * <code>string status = 2 [json_name = "status"];</code>
@@ -714,9 +718,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-     * features failed while others succeeded, and the results hold the ones that succeeded.
-     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+     * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+     * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+     * processing finished, but some features failed while others succeeded, and the results
+     * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+     * final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -737,9 +743,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-     * features failed while others succeeded, and the results hold the ones that succeeded.
-     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+     * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+     * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+     * processing finished, but some features failed while others succeeded, and the results
+     * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+     * final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -761,9 +769,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-     * features failed while others succeeded, and the results hold the ones that succeeded.
-     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+     * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+     * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+     * processing finished, but some features failed while others succeeded, and the results
+     * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+     * final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -781,9 +791,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-     * features failed while others succeeded, and the results hold the ones that succeeded.
-     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+     * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+     * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+     * processing finished, but some features failed while others succeeded, and the results
+     * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+     * final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
@@ -798,9 +810,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The processing status. CREATED: accepted and waiting to be processed. RUNNING: being
-     * processed. DONE: every requested feature finished. PARTIAL: processing finished, but some
-     * features failed while others succeeded, and the results hold the ones that succeeded.
-     * FAILED: every feature failed. DONE, PARTIAL and FAILED are final.
+     * processed. PENDING_VERIFICATION: only with the HUMAN tier; the AI results are ready to
+     * fetch while a person verifies them. DONE: every requested feature finished. PARTIAL:
+     * processing finished, but some features failed while others succeeded, and the results
+     * hold the ones that succeeded. FAILED: every feature failed. DONE, PARTIAL and FAILED are
+     * final.
      * </pre>
      *
      * <code>string status = 2 [json_name = "status"];</code>
