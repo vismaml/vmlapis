@@ -7,3 +7,6 @@ plugins:
       - allow_merge=true
       - merge_file_name={_FILE_NAME}
       - use_allof_for_refs=true
+      # Already the default. Set explicitly so the buf registry regenerates the
+      # specs instead of returning a cached asgt/v2 spec from before the Product Types split.
+      - json_names_for_fields=true
